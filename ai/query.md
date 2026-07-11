@@ -109,3 +109,7 @@ I have logged into my main steam account, so you can investigate. Do not attempt
 > </details>
 >
 
+› Create complete pydantic models for the important and/or touched steam files, so we can detect version/schema updates, which could be dangerous, immediatly.
+The full steam file IO shall be locked down in the plan already.
+Additionally, make it extendible, so later e.g. a gog launcher or epic launcher module could be added besides steam as well.
+
