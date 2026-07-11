@@ -70,3 +70,5 @@ Generate a AGENTS.md in the end, like /init would.
 
 › Also the yaml shall be pydantic verified and get an schema to help autocomplete in IDEs etc. If possible generated from the pydantic.
 
+› Activate the LPLP commit skill once switching to implementation.
+
