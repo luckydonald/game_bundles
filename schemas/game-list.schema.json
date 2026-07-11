@@ -1,0 +1,59 @@
+{
+  "$defs": {
+    "Game": {
+      "additionalProperties": false,
+      "description": "A named game with one or more storefront identities.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "ids"
+      ],
+      "title": "Game",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The complete contents of one ``lists/**/*.yml`` file.",
+  "properties": {
+    "games": {
+      "items": {
+        "$ref": "#/$defs/Game"
+      },
+      "minItems": 1,
+      "title": "Games",
+      "type": "array"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "games"
+  ],
+  "title": "GameList",
+  "type": "object"
+}
