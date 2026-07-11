@@ -2,19 +2,18 @@
 
 ## Summary
 
-Build a Python 3.14+ project that stores storefront-neutral game collections in YAML, validates every file through Pydantic, generates a JSON Schema from those models for IDE completion, determines which collections a Steam user fully owns, and safely adds eligible collections to the local Steam library.
+Build a Python 3.14+ resource of Pydantic-validated YAML game lists plus a guarded Steam synchronizer. List IDs come from their paths below `lists/`; Steam collections use Steam’s current cloud-storage format, discovered read-only from the logged-in client.
 
-The first collection will be Valve’s **The Orange Box** with its five canonical games.
+The first list is `lists/valve/the-orange-box.yml`, whose ID is `valve/the-orange-box`. `lists/README.md` will explain the format and contribution workflow.
 
-## Key Changes
+## Lists And Schema
 
-- At the start of implementation, activate `commit-with-lplp-style`, inspect recent history, and follow its task-scoped commit workflow. Fold the current chained `ai: updated prompt` commits into the appropriate implementation commit, stage only explicit task files, and write commit messages through `ai/git/pending-commit.md`.
-- Define versioned YAML files under `collections/`, using required names and qualified storefront IDs:
+- A list file contains no explicit collection ID. Derive it from its POSIX path relative to `lists/`, without the `.yml` suffix; reject non-`.yml` files, symlinks escaping the root, duplicate derived IDs, and case-colliding paths.
+- Define strict Pydantic models as the single source of truth:
 
 ```yaml
-# yaml-language-server: $schema=../../schemas/collection.schema.json
+# yaml-language-server: $schema=../../schemas/game-list.schema.json
 schema: 1
-id: valve/the-orange-box
 name: The Orange Box
 games:
   - name: Half-Life 2
@@ -29,48 +28,72 @@ games:
     ids: [steam:440]
 ```
 
-- Model the complete YAML contract with strict Pydantic models. Reject unknown fields, unsupported schema versions, malformed collection IDs, missing names, malformed qualified IDs, duplicate games, and duplicate storefront IDs.
-- Load YAML through `yaml.safe_load`, then immediately validate it with Pydantic. Keep Pydantic models as the single authored definition for runtime validation and schema generation.
-- Generate and commit `schemas/collection.schema.json` using Pydantic JSON Schema generation. Provide `game-collections schema` for deterministic regeneration.
-- Put a relative `yaml-language-server` directive in every collection file so compatible IDE YAML extensions provide completion and diagnostics without repository-specific settings.
-- Add a drift test that generates the schema in memory and compares it exactly with the committed schema.
-- Keep collection loading provider-independent. Parse each qualified ID into a provider and provider-specific value so Epic, GOG, and other adapters can follow later.
-- Provide a Typer CLI:
-  - `game-collections validate [PATH]`
-  - `game-collections list`
-  - `game-collections eligible steam`
-  - `game-collections sync steam`
-  - `game-collections sync steam --apply`
-  - `game-collections schema [--output PATH]`
-- Use `STEAM_WEB_API_KEY` and `STEAM_ID` by default, with equivalent CLI options. Mark a collection eligible only when every Steam game in it is owned.
-- Report invalid YAML, precise Pydantic validation locations, unavailable/private ownership data, missing games, and games without Steam IDs explicitly.
-- Synchronize through `userdata/<account-id>/7/remote/sharedconfig.vdf`, deriving the account directory from SteamID64 and supporting `--steam-root`.
-- Create collections by structurally adding the collection name to eligible apps’ Steam tags while preserving unrelated apps, tags, and collections.
-- Make v1 additive and idempotent: add missing tags, but never remove tags or delete collections.
-- Keep dry-run as the default. Require `--apply`, refuse writes while Steam is running, create a timestamped backup, serialize to a temporary file, and replace the VDF atomically.
-- Support standard Linux, Windows, and macOS Steam roots; fail clearly when the installation, account, or configuration file is absent or ambiguous.
-- Replace the inherited README with schema, contribution, credentials, synchronization, backup, and recovery documentation.
-- Expand `pyproject.toml` with dependencies, console entry point, pytest configuration, and Python 3.14 metadata.
-- Generate a project-specific root `AGENTS.md` after implementation, including architecture, commands, schema regeneration, Steam safety rules, typing, early returns, mandatory `# end …` comments, and the repository’s verification workflow.
+- Require names, qualified storefront IDs, and schema version 1. Reject unknown fields, malformed IDs, duplicate games, and duplicate storefront IDs.
+- Load with `yaml.safe_load` and validate immediately through Pydantic.
+- Generate and commit `schemas/game-list.schema.json` through `game-collections schema`; every YAML file carries a relative `yaml-language-server` directive.
+- Add a schema drift test comparing committed JSON Schema with deterministic Pydantic generation.
+- Provide `game-collections validate`, `list`, `eligible steam`, `sync steam`, and `schema` commands.
+- Use `STEAM_WEB_API_KEY` and the selected SteamID64 for `GetOwnedGames`. Treat unavailable/private results as errors, not empty ownership. A list is eligible only when every Steam ID is owned.
 
-## Test Plan
+## Steam Synchronization
 
-- Validate the Orange Box YAML and assert its five names and Steam IDs.
-- Test Pydantic errors for unknown fields, unsupported versions, missing names, malformed IDs, and duplicates.
-- Verify the committed JSON Schema exactly matches deterministic Pydantic generation.
-- Parse every repository collection as part of the test suite.
-- Mock Steam ownership for fully owned, partially owned, empty, private, and failed API cases.
-- Verify Orange Box eligibility requires all five games.
-- Test VDF preservation, additive synchronization, repeat-run idempotency, account selection, backups, and atomic replacement.
-- Verify dry-run never changes files and `--apply` refuses while Steam is active.
-- Add CLI tests for validation output, schema generation, eligibility, failure exit codes, dry-run, and guarded application.
+- Use the current Steam representation, not legacy `sharedconfig.vdf`. The investigated client stores collections in:
+  - `userdata/<account-id>/config/cloudstorage/cloud-storage-namespace-1.json`
+  - `userdata/<account-id>/config/cloudstorage/cloud-storage-namespace-1.modified.json`
+- Select the `MostRecent=1` account from `config/loginusers.vdf`; allow `--steam-id` and `--steam-root` overrides. Derive the userdata account ID from SteamID64 and verify all selected paths agree.
+- Parse namespace 1 as Steam’s array of `[key, entry]` pairs. Static collections use keys named `user-collections.<steam-collection-id>` and compact values shaped as:
+
+```json
+{"id":"uc-...","name":"The Orange Box","added":[220,380,420,400,440],"removed":[]}
+```
+
+- Derive a stable Steam collection ID from the logical list ID: hash `valve/the-orange-box` with SHA-256, take the first 9 bytes, encode them using Steam’s 12-character base64-style user-collection encoding, escape `/` as `*+`, and prefix `uc-`. This follows Steam’s observed user-created ID shape while keeping repeated syncs stable.
+- Abort on a deterministic-ID collision, malformed existing record, dynamic `filterSpec`, system collection name collision, or another user collection already using the requested display name. Never delete or silently merge an unrelated same-name collection.
+- For eligible lists, create or update the deterministic record:
+  - Preserve manually added existing apps by unioning `added` with the list’s Steam IDs.
+  - Remove newly added IDs from `removed`.
+  - Preserve other unrelated record data only when valid for a static collection.
+  - Set a timestamp greater than both current Unix time and every existing namespace timestamp.
+  - Set `conflictResolutionMethod` to `custom` and `strMethodId` to `union-collections`, matching Steam’s client implementation.
+  - Omit `version` for a dirty local update, matching Steam’s own `Upsert`.
+- Add the complete `user-collections.<id>` key to namespace 1’s modified-key array without duplicates. Do not alter `cloud-storage-namespaces.json`, legacy VDF files, or any other namespace.
+- On the next Steam start, Steam will load the dirty key, download current remote state, apply its `union-collections` conflict resolver, upload through `CloudConfigStore.Upload`, assign the server version, and clear the dirty marker.
+- Keep v1 additive: never remove games, collections, or unrelated Steam data.
+
+### Guarded Apply Workflow
+
+- `game-collections sync steam` is entirely read-only and prints the semantic change plan.
+- `game-collections sync steam --apply` initially writes only to a timestamped staging directory on the user’s Desktop, configurable with `--output-dir`. It creates:
+  - candidate replacements for both namespace files;
+  - byte-for-byte timestamped backups made with metadata preservation;
+  - hashes and source/destination paths;
+  - a human-readable semantic diff and recovery instructions.
+- Print every candidate, original, backup, and eventual destination path, then pause so the user can inspect them.
+- Before offering replacement:
+  - require Steam and its PID/pipe to be stopped;
+  - re-hash both originals and abort if either changed since candidate generation;
+  - reparse candidates and originals;
+  - validate pair consistency, unique keys, entry/key agreement, timestamps, dirty markers, and backup hashes;
+  - preserve original ownership and permissions on candidates.
+- Only after those checks, print backup locations again and require an explicit typed confirmation naming the action. There is no non-interactive bypass in v1.
+- Replace the namespace file first and modified-key file second using same-directory temporary files, `fsync`, and atomic `os.replace`. If the second replacement fails, restore the first automatically from its verified backup.
+- After success, print exact restoration commands and require Steam to remain stopped during restoration. Also provide `game-collections steam restore <staging-directory>`, with the same Steam-stopped check and typed confirmation.
+- During implementation and testing, never invoke `--apply` against the real logged-in account without a separate explicit request from the user.
+
+## Verification And Delivery
+
+- Test list-path ID derivation, Orange Box contents, Pydantic failures, schema drift, and validation of every repository list.
+- Mock Steam ownership for complete, partial, private, empty, and failed responses.
+- Build sanitized fixtures matching the observed namespace and modified-key formats; never commit real account data.
+- Test deterministic Steam IDs, static record creation, additive updates, name/ID collisions, timestamp advancement, dirty-key handling, semantic reports, and byte-preserving backups.
+- Test source-change detection, running-Steam refusal, typed confirmation, atomic replacement rollback, restoration, and dry-run immutability.
+- Expand `pyproject.toml`, replace the inherited README, and generate a project-specific root `AGENTS.md` covering architecture, commands, schema regeneration, Steam safety, typing, early returns, and mandatory `# end …` comments.
+- At implementation start, activate `commit-with-lplp-style`, inspect recent history, fold the current task’s chained prompt commits appropriately, stage only explicit task files, and commit each completed task through `ai/git/pending-commit.md`.
 
 ## Assumptions
 
-- “The Orange Box” contains Half-Life 2, Episodes One and Two, Portal, and Team Fortress 2; Lost Coast and ancillary entries are excluded.
-- Required game names aid maintenance; qualified IDs remain authoritative.
-- Pydantic models are the only authored schema definition. The committed JSON Schema is generated output for IDE use.
-- Static Steam collections are supported in v1; dynamic Steam rules are out of scope.
-- Steam has no supported public collection-write API, so v1 uses guarded local configuration synchronization.
-- The existing untracked `pyproject.toml` will be extended rather than discarded.
-- LPLP commit behavior begins only when implementation starts; no commit or history mutation occurs during planning.
+- The Orange Box contains Half-Life 2, Episodes One and Two, Portal, and Team Fortress 2; Lost Coast is excluded.
+- Qualified IDs are authoritative; required names make lists reviewable.
+- Static Steam collections only are supported in v1.
+- Steam’s cloud-storage files are an internal interface and may change; structural preflight failures must stop synchronization rather than guess.
+- The existing untracked `pyproject.toml` is extended rather than discarded.
