@@ -113,3 +113,5 @@ I have logged into my main steam account, so you can investigate. Do not attempt
 The full steam file IO shall be locked down in the plan already.
 Additionally, make it extendible, so later e.g. a gog launcher or epic launcher module could be added besides steam as well.
 
+> › Implement the [Plan](./plans/002_game-collections-v1.md).
+
