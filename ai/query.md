@@ -72,3 +72,40 @@ Generate a AGENTS.md in the end, like /init would.
 
 › Activate the LPLP commit skill once switching to implementation.
 
+› The id of the library corresponds to the filepath + `.yml`, in a `/lists/` root folder which contains a helpful `README.md`.
+Now figure out the steam library tagging in detail and add it to the plan.
+I have logged into my main steam account, so you can investigate. Do not attempt to write without asking, though. I'll be sad if you break my steam account. (famous last words)
+
+› Question answered.
+> <details><summary>
+>
+>> 1. For `lists/valve/the-orange-box.yml`, what is the derived collection ID?
+>> 2. What confirmation should the CLI require before touching Steam’s cloud-storage cache?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **List ID** (1/2) <kbd>Single Select</kbd><br>
+>> For `lists/valve/the-orange-box.yml`, what is the derived collection ID?
+> - [x] 1\. valve/the-orange-box (Recommended)
+>   - _Use the path relative to lists with the .yml suffix removed; the file itself contains no id field._
+>   - > sktop App
+> - [ ] 2\. valve/the-orange-box.yml
+>   - _Include the filename suffix in the logical ID exposed by the tool._
+> - [ ] 3\. _Type something._
+>
+>> **Apply guard** (2/2) <kbd>Single Select</kbd><br>
+>> What confirmation should the CLI require before touching Steam’s cloud-storage cache?
+> - [x] 1\. Flag plus typed prompt (Recommended)
+>   - _Require --apply and an interactive confirmation naming the account and exact files; provide no bypass in v1._
+>   - > `--apply` switches from dry run to actually doing something. It will write the new file into a easy to reach directory, print out the pathes of where they are and where they shall go. A tech savvy user (or me while developing) can then inspect and compare. Then it will check for safty, to _once Steam is stopped and backups are ready_ ask the user if the script should replace them. Again noticing the backup pathes before, to inspect. Lastly, with the confirmation, we can replace. Once more list the backups and tell exactly how to restore to the previous state.
+> - [ ] 2\. Apply flag only
+>   - _Treat --apply itself as sufficient consent once Steam is stopped and backups are ready._
+> - [ ] 3\. Export patch only
+>   - _Generate proposed replacement files elsewhere and leave installation into Steam entirely manual._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
