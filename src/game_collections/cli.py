@@ -24,6 +24,7 @@ from game_collections.schema import write_schema
 from game_collections.schema import write_dailyindiegame_schema
 from game_collections.schema import write_greenmangaming_schema
 from game_collections.schema import write_humblebundle_schema
+from game_collections.schema import write_isthereanydeal_schema
 from game_collections.search import complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
     CrawledDigOffer,
@@ -57,6 +58,13 @@ from game_collections.sources.humblebundle.resolver import (
     StorefrontResolver,
     load_resolution_map,
 )
+from game_collections.sources.isthereanydeal.crawler import (
+    CrawledItadOffer,
+    ItadHttpClient,
+    crawl_itad_offers,
+    write_itad_offer,
+)
+from game_collections.sources.isthereanydeal.provider_config import load_provider_config
 
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
@@ -119,16 +127,22 @@ def schema_command(
         Path,
         typer.Option("--greenmangaming-output", help="Generated Green Man Gaming archive JSON Schema path."),
     ] = Path("schemas/greenmangaming-archive.schema.json"),
+    isthereanydeal_output: Annotated[
+        Path,
+        typer.Option("--isthereanydeal-output", help="Generated isthereanydeal.com archive JSON Schema path."),
+    ] = Path("schemas/isthereanydeal-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
     write_humblebundle_schema(humblebundle_output)
     write_dailyindiegame_schema(dailyindiegame_output)
     write_greenmangaming_schema(greenmangaming_output)
+    write_isthereanydeal_schema(isthereanydeal_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
     typer.echo(dailyindiegame_output)
     typer.echo(greenmangaming_output)
+    typer.echo(isthereanydeal_output)
 # end def schema_command
 
 
@@ -523,6 +537,67 @@ def scrape_greenmangaming_command(
         client.close()
     # end try
 # end def scrape_greenmangaming_command
+
+
+@scrape_app.command("isthereanydeal")
+def scrape_isthereanydeal_command(
+    tabs: Annotated[
+        list[str] | None,
+        typer.Option("--tab", help="Discovery tab(s) to crawl: live, expired, pending. Repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    provider_config_path: Annotated[Path, typer.Option("--provider-config")] = Path(
+        "config/isthereanydeal-providers.yml"
+    ),
+    refresh: Annotated[
+        bool,
+        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+    ] = False,
+) -> None:
+    """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
+    repository_root = Path.cwd().resolve()
+    client = ItadHttpClient()
+    written_count = 0
+
+    def on_offer(offer: CrawledItadOffer) -> None:
+        nonlocal written_count
+        paths = write_itad_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+            log=typer.echo,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.title}: {len(paths)} file(s)")
+    # end def on_offer
+
+    try:
+        provider_config = load_provider_config(provider_config_path)
+        report = crawl_itad_offers(
+            client.fetch,
+            client.list_page,
+            provider_config,
+            tabs=tabs or ("live",),
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(f"Wrote {written_count} file(s) for {len(report.offers)} offer(s).")
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def scrape_isthereanydeal_command
 
 
 def _steam_adapter(
