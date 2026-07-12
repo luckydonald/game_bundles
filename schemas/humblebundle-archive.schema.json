@@ -1,0 +1,494 @@
+{
+  "$defs": {
+    "HumbleCharity": {
+      "additionalProperties": false,
+      "description": "A charity supported by an offer.",
+      "properties": {
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "logo_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Logo Url"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "HumbleCharity",
+      "type": "object"
+    },
+    "HumbleDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "HumbleDates",
+      "type": "object"
+    },
+    "HumbleItem": {
+      "additionalProperties": false,
+      "description": "One product advertised within a Humble tier.",
+      "properties": {
+        "cover_art_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cover Art Url"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "developers": {
+          "items": {
+            "$ref": "#/$defs/HumbleLink"
+          },
+          "title": "Developers",
+          "type": "array"
+        },
+        "excluded_countries": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Excluded Countries",
+          "type": "array"
+        },
+        "genres": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Genres",
+          "type": "array"
+        },
+        "is_game": {
+          "title": "Is Game",
+          "type": "boolean"
+        },
+        "item_type": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Type"
+        },
+        "key_expiration_text": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Key Expiration Text"
+        },
+        "machine_name": {
+          "minLength": 1,
+          "title": "Machine Name",
+          "type": "string"
+        },
+        "platforms": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Platforms",
+          "type": "array"
+        },
+        "publishers": {
+          "items": {
+            "$ref": "#/$defs/HumbleLink"
+          },
+          "title": "Publishers",
+          "type": "array"
+        },
+        "rating": {
+          "additionalProperties": true,
+          "title": "Rating",
+          "type": "object"
+        },
+        "redeem_on": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Redeem On",
+          "type": "array"
+        },
+        "region_locked": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Region Locked"
+        },
+        "resolution": {
+          "$ref": "#/$defs/HumbleResolution"
+        },
+        "retail_price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HumblePrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "tags": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "youtube_urls": {
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Youtube Urls",
+          "type": "array"
+        }
+      },
+      "required": [
+        "machine_name",
+        "title",
+        "is_game"
+      ],
+      "title": "HumbleItem",
+      "type": "object"
+    },
+    "HumbleLink": {
+      "additionalProperties": false,
+      "description": "A named external party such as a developer or publisher.",
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "HumbleLink",
+      "type": "object"
+    },
+    "HumblePrice": {
+      "additionalProperties": false,
+      "description": "A localized price with its unambiguous ISO currency code.",
+      "properties": {
+        "currency": {
+          "minLength": 1,
+          "title": "Currency",
+          "type": "string"
+        },
+        "currency_code": {
+          "minLength": 1,
+          "title": "Currency Code",
+          "type": "string"
+        },
+        "raw": {
+          "minLength": 1,
+          "title": "Raw",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "raw",
+        "value",
+        "currency",
+        "currency_code"
+      ],
+      "title": "HumblePrice",
+      "type": "object"
+    },
+    "HumbleResolution": {
+      "additionalProperties": false,
+      "description": "Storefront identity resolution for one archived item.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Ids",
+          "type": "array"
+        },
+        "unresolved_stores": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Unresolved Stores",
+          "type": "array"
+        }
+      },
+      "title": "HumbleResolution",
+      "type": "object"
+    },
+    "HumbleTier": {
+      "additionalProperties": false,
+      "description": "A cumulative Humble purchase tier.",
+      "properties": {
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "item_count": {
+          "minimum": 0,
+          "title": "Item Count",
+          "type": "integer"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/HumbleItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "minimum_price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HumblePrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier",
+        "name",
+        "item_count",
+        "items"
+      ],
+      "title": "HumbleTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one Choice month or game bundle.",
+  "properties": {
+    "category": {
+      "const": "Games",
+      "default": "Games",
+      "title": "Category",
+      "type": "string"
+    },
+    "charities": {
+      "items": {
+        "$ref": "#/$defs/HumbleCharity"
+      },
+      "title": "Charities",
+      "type": "array"
+    },
+    "dates": {
+      "$ref": "#/$defs/HumbleDates"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "headline": {
+      "minLength": 1,
+      "title": "Headline",
+      "type": "string"
+    },
+    "key_expiration_text": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Key Expiration Text"
+    },
+    "kind": {
+      "enum": [
+        "choice",
+        "bundle"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "machine_name": {
+      "minLength": 1,
+      "title": "Machine Name",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/HumbleTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "kind",
+    "machine_name",
+    "url",
+    "name",
+    "headline",
+    "description",
+    "dates",
+    "tiers"
+  ],
+  "title": "HumbleArchive",
+  "type": "object"
+}

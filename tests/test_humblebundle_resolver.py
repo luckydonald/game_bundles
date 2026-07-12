@@ -42,6 +42,7 @@ def _archive(item: HumbleItem) -> HumbleArchive:
         kind="bundle",
         machine_name="sample_bundle",
         url="https://www.humblebundle.com/games/sample",
+        name="Sample Bundle",
         headline="Sample",
         description="Sample.",
         dates=HumbleDates(crawled=datetime(2026, 7, 12, tzinfo=UTC)),
