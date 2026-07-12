@@ -594,3 +594,60 @@ Especially as bundles change not all at once there will be overlaps.
 > - [Raw log (`790652` chars, `773 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/cd0d5bf6-9b5e-4b83-9236-5f2b9cc6dccb/tasks/ad03196ac0dba4d22.output)
 > - `93` tools, `230247` tokens, `12.9931 s`
 
+❯ /plan Now something really fun and resourceful.
+https://isthereanydeal.com/bundles/
+Notice how the pagination and tabs are json based.
+The archive would be `isthereanydeal`, but it would write to the correct bundle providers in the list.
+
+Some probably very helpful URLs found:
+- `POST` https://isthereanydeal.com/bundles/api/list/?tab=live `{"offset": 0, "sort": null, "filter": null}`
+- `POST` https://isthereanydeal.com/bundles/api/list/?tab=expired `{"offset": 0, "sort": null, "filter": null}`
+- `POST` https://isthereanydeal.com/bundles/api/list/?tab=pending `{"offset": 0, "sort": null, "filter": null}`
+- `POST` https://isthereanydeal.com/bundles/api/list/?tab=live `{"offset": 30, "sort": null, "filter": null}`
+
+We should definitly parse and store that verbatim in the archive.
+
+Also the bundle page itself contains the tiers, their pricing, and pretty much always the steam links.
+I.e. https://isthereanydeal.com/bundles/16255/
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. isthereanydeal.com aggregates bundles from Humble/Fanatical/GreenManGaming/IndieGala/AllYouPlay etc, and ITAD's own bundle detail page already embeds tiers, prices, and (usually) direct Steam appid links for every game — no title-search resolver needed. Should the new source write lists/ for EVERY provider it sees (creating new lists/fanatical/, lists/indiegala/, lists/allyouplay/ dirs using ITAD's own detail-page data, since those providers have no dedicated scraper here), or only for providers we already have a dedicated scraper for (humblebundle, greenmangaming)?
+>> 2. Humble Bundle and GreenManGaming bundles show up BOTH in isthereanydeal's aggregation AND get scraped directly by our existing humblebundle/greenmangaming sources (confirmed: ITAD bundle 16316 'Metroidvania Madness' is the exact same bundle our GMG scraper already archived). How should the new isthereanydeal source handle these to avoid two different pipelines writing conflicting lists for the same real bundle?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Provider scope** (1/2) <kbd>Single Select</kbd><br>
+>> isthereanydeal.com aggregates bundles from Humble/Fanatical/GreenManGaming/IndieGala/AllYouPlay etc, and ITAD's own bundle detail page already embeds tiers, prices, and (usually) direct Steam appid links for every game — no title-search resolver needed. Should the new source write lists/ for EVERY provider it sees (creating new lists/fanatical/, lists/indiegala/, lists/allyouplay/ dirs using ITAD's own detail-page data, since those providers have no dedicated scraper here), or only for providers we already have a dedicated scraper for (humblebundle, greenmangaming)?
+> - [x] 1\. All providers via ITAD data (Recommended)
+>   - _New lists/<provider>/ dirs for Fanatical/IndieGala/AllYouPlay/etc too, sourced entirely from ITAD's detail page (tiers/prices/Steam links) — no separate per-provider scraper needed for those._
+> - [ ] 2\. Only humblebundle + greenmangaming
+>   - _Skip bundles from providers we don't already have a scraper for; narrower scope, leaves Fanatical/IndieGala/AllYouPlay bundles uncovered for now._
+> - [ ] 3\. _Type something._
+>
+>> **Overlap handling** (2/2) <kbd>Single Select</kbd><br>
+>> Humble Bundle and GreenManGaming bundles show up BOTH in isthereanydeal's aggregation AND get scraped directly by our existing humblebundle/greenmangaming sources (confirmed: ITAD bundle 16316 'Metroidvania Madness' is the exact same bundle our GMG scraper already archived). How should the new isthereanydeal source handle these to avoid two different pipelines writing conflicting lists for the same real bundle?
+> - [ ] 1\. Skip providers with a dedicated scraper (Recommended)
+>   - _isthereanydeal source only writes lists for providers it uniquely covers (Fanatical/IndieGala/AllYouPlay/etc); Humble/GMG bundles stay solely owned by their dedicated scrapers._
+> - [ ] 2\. Write all, separate filenames
+>   - _isthereanydeal writes every provider including Humble/GMG too, using ITAD's own bundle-id-based filenames (distinct from the dedicated scrapers' own naming) — accepting there will be duplicate/overlapping list entries for the same real bundle from two pipelines._
+> - [x] 3\. _Type something:_
+>   - > it should end up with the same bundle names if possible, and hence auto-skip them (they already exist)
+>
+> </details>
+>
+
+❯ Plan changes:
+- `page.name`/`.id`/`.shopid` lookup can be a `/config/*.yml`, too.
+- _store this whole object as-is_: Keep the normal archive logic - create pydantic models, sort keys, write with `indent=2` to make best possible diffs.
+- if you can properly derive other game store ids/slugs/whatever (GOG, epicgames, etc.) of the games, you can very well enter them into the `/lists/**.yml`, too.
+
+❯ Sounds like we should extract the `STORE_ROOTS` stuff from `humblebundle`, if it's so universal.
+
+❯ Actually, I want to keep the date-prefix for the bundles, this should be the default.
+The exception is humble bundle monthly, as that's fixed to a month, so we don't really need the day.
+If there were yearly bundles, we'd drop the month, too.
+
