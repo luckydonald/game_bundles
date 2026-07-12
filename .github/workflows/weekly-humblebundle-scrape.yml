@@ -1,0 +1,118 @@
+name: Weekly Humble Bundle scrape
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  UV_CACHE_DIR: /tmp/uv-cache
+  BRANCH_NAME: automation/humblebundle-weekly-scrape
+
+jobs:
+  scrape:
+    name: Scrape Humble Bundle and open/update PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: uv sync --extra test
+
+      - name: Resolve rolling scrape branch
+        run: |
+          git fetch origin "${BRANCH_NAME}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${BRANCH_NAME}"; then
+            git checkout -B "${BRANCH_NAME}" "origin/${BRANCH_NAME}"
+            if git rebase origin/main; then
+              echo "Rebased ${BRANCH_NAME} onto origin/main."
+            else
+              echo "::warning::Rebase of ${BRANCH_NAME} onto origin/main failed, aborting rebase. Continuing on the branch as-is; a human will resolve this on the open PR."
+              git rebase --abort
+            fi
+          else
+            git checkout -B "${BRANCH_NAME}" origin/main
+          fi
+
+      - name: Run Humble Bundle crawler
+        id: crawl
+        run: |
+          set +e
+          uv run game-collections scrape humblebundle --non-interactive | tee /tmp/scrape-output.txt
+          rc=${PIPESTATUS[0]}
+          set -e
+          echo "exit_code=${rc}" >> "$GITHUB_OUTPUT"
+          unresolved=$(grep -c 'unresolved:store:steam:' /tmp/scrape-output.txt || true)
+          echo "unresolved_count=${unresolved:-0}" >> "$GITHUB_OUTPUT"
+          if [ "${rc}" -ne 0 ]; then
+            echo "::warning::game-collections scrape humblebundle exited with code ${rc} (unresolved games and/or crawl errors). Committing whatever it produced anyway; a human resolves the rest via 'game-collections complete'."
+          fi
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -z "$(git status --porcelain -- lists/ archives/ config/humblebundle-store-ids.yml)" ]; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit results
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          UNRESOLVED_COUNT: ${{ steps.crawl.outputs.unresolved_count }}
+        run: |
+          git config user.name "Lucky Lucy (automation)"
+          git config user.email "3._.code@luckydonald.de"
+
+          if [ "${UNRESOLVED_COUNT}" -gt 0 ]; then
+            unresolved_line="${UNRESOLVED_COUNT} unresolved store IDs left as \`unresolved:store:steam:<slug>\` for manual \`game-collections complete\` follow-up."
+          else
+            unresolved_line="None unresolved."
+          fi
+
+          {
+            echo "[humblebundle] weekly scrape: ai: Run: Archived this week's Humble Bundle offers via scheduled CI."
+            echo ""
+            echo "Automated \`game-collections scrape humblebundle --non-interactive\` run from the weekly GitHub Actions workflow (run ${GITHUB_RUN_ID})."
+            echo "${unresolved_line}"
+          } > ai/git/pending-commit.md
+
+          git add lists/ archives/ config/humblebundle-store-ids.yml
+          git commit -F ai/git/pending-commit.md
+          git push --force-with-lease origin "${BRANCH_NAME}"
+
+      - name: Open or update pull request
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UNRESOLVED_COUNT: ${{ steps.crawl.outputs.unresolved_count }}
+        run: |
+          existing_pr="$(gh pr list --head "${BRANCH_NAME}" --state open --json number -q '.[0].number' || true)"
+          if [ -n "${existing_pr}" ]; then
+            gh pr comment "${existing_pr}" --body "New offers added by this week's scrape (run ${GITHUB_RUN_ID}). Unresolved store IDs: ${UNRESOLVED_COUNT}."
+          else
+            {
+              echo "Weekly automated Humble Bundle scrape."
+              echo ""
+              echo "Unresolved store IDs left for manual \`game-collections complete\` follow-up: ${UNRESOLVED_COUNT}."
+            } > /tmp/pr-body.md
+            gh pr create \
+              --base main \
+              --head "${BRANCH_NAME}" \
+              --title "[humblebundle] weekly scrape" \
+              --body-file /tmp/pr-body.md
+          fi
