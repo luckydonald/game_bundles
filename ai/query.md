@@ -117,3 +117,162 @@ Additionally, make it extendible, so later e.g. a gog launcher or epic launcher 
 
 › Alright, write  up the expected result of running the generation for the given orange box file. Add a unittest to confirm they are equal. Commit. Only then run the test, and see if the expected result and actual result match, and fix if needed. Keep commiting as usual.
 
+› implement a script for parsing humblebundle bundles.
+It offers the monthly changing "choice", `humblebundle/choice/YYYY-MM.yml`, https://www.humblebundle.com/membership .
+And sepearatly changing offers at https://www.humblebundle.com/bundles .
+Those are a bit more tricky, as they often have different tiers.
+They do seem to have a fixed ID as seen in the url, which is however not that helpful when looking at the files.
+Therefore if you can figure out from when to when the bundle offer runs, that would be wonderful metadata.
+Either the start or, if unavailable, the end date shall be the prefix of the id/name.
+E.g. `humblebundle/bundle/YYYY-MM-DD_something-foobar-bundle-name/entire-16-item-bundle.yml`.
+While already scraping that page, I'd like to save as much of the available metadata as possible.
+If the listing format disallows for easy extending of the format of a collection, it shall be stored separately.
+However, please collect and archive - one way or another:
+1. Bundle URL, e.g. `https://www.humblebundle.com/games/arc-system-works-evo-collection`
+2. Headline, e.g. _Play Fighting Games. Fight for Something Bigger._
+3. Description, e.g. _What’s better than … disease treatment and research._
+4. Category of the bundle, _Games_ (We skip _Books_ and _Software_)
+5. Dates: from, to, crawl.
+6. Charity, _Fight 4 Rare/Raiden Science Foundation_
+7. Key expiration text, _Keys expire. Please redeem before July 17th, 2027._
+8. Tiers, with their games:
+   1. Name of the tier, e.g. _Entire 16 Item Bundle_, _13 Item Bundle_, _10 Item Bundle_
+   2. Count of items.
+   3. Price (minimal price) `{ "raw": "€5.11", value: 5.11, currency: "€" }
+   4. List of games in that tier (including duplicates to other tiers). Those games need to store:
+      1. Title, e.g. _KILL la KILL - IF_
+      2. Retail price, _€19.99_ as split into an `Price` object as above.
+      3. Youtube Link
+      4. Coverart link
+      5. Developer: `[{ "name": "Arc System Works", "url": "https://www.arcsystemworks.com/" }, { "name": "APLUS Co., Ltd.", "url": "https://www.arcsystemworks.com/developers/aplus-co-ltd/" }]`
+      6. Redeem on, _Steam_, _GOG_, _Epic_, _Ubisoft_, …
+      7. Platform, _Windows_, _Mac_, _Linux_ (list of one or multiple)
+      8. Description, _The critically acclaimed 2013 anime … , the defender wins._
+      9. Extra tags on the product, _Coupon_
+
+› Ah, description shall use markdown conversion.
+
+› Question answered.
+> <details><summary>
+>
+>> 1. How should scraped games satisfy the current required `ids` field when Humble exposes no launcher app ID?
+>> 2. How much source data should be retained beyond the normalized metadata you requested?
+>> 3. What should one scraper invocation crawl by default?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Game IDs** (1/3) <kbd>Single Select</kbd><br>
+>> How should scraped games satisfy the current required `ids` field when Humble exposes no launcher app ID?
+> - [ ] 1\. Humble IDs (Recommended)
+>   - _Write `humblebundle:<machine-name>` now; lists validate but require later Steam/GOG ID enrichment before launcher sync._
+> - [ ] 2\. Archive only
+>   - _Write metadata archives but no standard game-list files until real storefront IDs can be resolved._
+> - [x] 3\. Resolve stores
+>   - _Add separate storefront searches/matching, with ambiguity handling, to try to produce Steam/GOG/Epic IDs automatically._
+> - [ ] 4\. _Type something._
+>
+>> **Raw archive** (2/3) <kbd>Single Select</kbd><br>
+>> How much source data should be retained beyond the normalized metadata you requested?
+> - [ ] 1\. Embedded JSON (Recommended)
+>   - _Keep normalized YAML plus the exact relevant embedded JSON payload for future reparsing, without archiving the full page._
+> - [ ] 2\. Normalized only
+>   - _Keep only strict normalized YAML, minimizing repository size but losing unmodeled source fields._
+> - [ ] 3\. Full HTML
+>   - _Keep normalized YAML and the complete fetched HTML for maximum fidelity at substantial repository growth._
+> - [x] 4\. _Type something:_
+>   - > What's embedded json mean? Does the humblebundle page already has a json providing all the data? in that case, yes. But make sure it's indented with 2 spaces and key sorted for best possible diff.
+>
+>> **Command scope** (3/3) <kbd>Single Select</kbd><br>
+>> What should one scraper invocation crawl by default?
+> - [x] 1\. Choice + all games (Recommended)
+>   - _Discover the current Choice and every active Games bundle, with optional URL filters for focused reruns._
+> - [ ] 2\. Explicit URLs
+>   - _Require one or more bundle/Choice URLs and never crawl the listing automatically._
+> - [ ] 3\. Separate modes
+>   - _Require the caller to select either current Choice or discovered active Games bundles each run._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. What should happen when an item cannot be matched uniquely to a storefront ID?
+>> 2. How should title mismatches and ambiguous storefront matches be corrected durably?
+>> 3. Which storefront resolvers belong in this first implementation?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Unresolved** (1/3) <kbd>Single Select</kbd><br>
+>> What should happen when an item cannot be matched uniquely to a storefront ID?
+> - [ ] 1\. Write partial + report (Recommended)
+>   - _Archive every item, generate tier lists from resolved games only, and exit nonzero with a clear unresolved/ambiguous report._
+> - [ ] 2\. Abort all output
+>   - _Write nothing for that crawl unless every real game in every offer resolves uniquely._
+> - [ ] 3\. Humble fallback
+>   - _Use `humblebundle:<machine-name>` for unresolved items so every tier list is complete but not fully launcher-eligible._
+> - [x] 4\. _Type something:_
+>   - > If not clear, provide a list of possible results, so the user can easily choose. If that fails too (or the user presses the last "Other…" option), have the user paste in the store URL or direct numeric ID, or enter to "abort" finding it. In that case it will be `unresolved:humblebundle:…` in the standartised output. Note that `humble:…` ids can be used for the Humblebundle store.
+>
+>> **Overrides** (2/3) <kbd>Single Select</kbd><br>
+>> How should title mismatches and ambiguous storefront matches be corrected durably?
+> - [x] 1\. Checked-in map (Recommended)
+>   - _Maintain a reviewed YAML mapping from Humble machine names to qualified storefront IDs or explicit ignore decisions._
+> - [ ] 2\. Interactive prompts
+>   - _Prompt during each crawl and save the selected result only in generated output._
+> - [ ] 3\. Exact match only
+>   - _Provide no override mechanism; unresolved items remain unresolved until upstream names align._
+> - [ ] 4\. _Type something._
+>
+>> **Providers** (3/3) <kbd>Single Select</kbd><br>
+>> Which storefront resolvers belong in this first implementation?
+> - [ ] 1\. Steam first (Recommended)
+>   - _Resolve Steam AppIDs through Valve's official catalog; archive other redeem methods as unresolved metadata behind a resolver interface._
+> - [x] 2\. All via web search
+>   - _Scrape/search GOG, Epic, and Ubisoft too, accepting brittle provider-specific heuristics._
+>   - > Using the store's own search should lead to good results, because they usually sort by popularity etc.
+> - [ ] 3\. Require overrides
+>   - _Do no live catalog resolution; all qualified IDs must come from the checked-in override map._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. Which archived tier items should appear in the standard `.yml` game list?
+>> 2. Where should normalized and source metadata live?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **List items** (1/2) <kbd>Single Select</kbd><br>
+>> Which archived tier items should appear in the standard `.yml` game list?
+> - [ ] 1\. All tier items (Recommended)
+>   - _Preserve the advertised tier exactly; coupons/bonuses and unresolved games receive `unresolved:humblebundle:<machine-name>` unless mapped or ignored._
+> - [x] 2\. Games only
+>   - _Exclude coupons and bonuses from standard lists while retaining them fully in metadata._
+> - [ ] 3\. Resolved only
+>   - _Include only products with real storefront IDs, making lists syncable but potentially incomplete._
+> - [ ] 4\. _Type something._
+>
+>> **Metadata** (2/2) <kbd>Single Select</kbd><br>
+>> Where should normalized and source metadata live?
+> - [ ] 1\. Beside lists (Recommended)
+>   - _Store sorted two-space JSON sidecars beside each Choice file or tier directory; list discovery continues to read only `.yml`._
+> - [x] 2\. Archive tree
+>   - _Mirror list IDs under a separate top-level `archives/humblebundle/` tree._
+> - [ ] 3\. Single catalog
+>   - _Store all normalized and source data in centralized Humble catalog JSON files._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
