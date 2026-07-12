@@ -6,6 +6,7 @@ from game_collections.schema import (
     render_dailyindiegame_schema,
     render_greenmangaming_schema,
     render_humblebundle_schema,
+    render_isthereanydeal_schema,
     render_schema,
 )
 
@@ -35,3 +36,9 @@ def test_committed_greenmangaming_schema_matches_pydantic_models() -> None:
     committed = (REPO_ROOT / "schemas/greenmangaming-archive.schema.json").read_text(encoding="utf-8")
     assert committed == render_greenmangaming_schema()
 # end def test_committed_greenmangaming_schema_matches_pydantic_models
+
+
+def test_committed_isthereanydeal_schema_matches_pydantic_models() -> None:
+    committed = (REPO_ROOT / "schemas/isthereanydeal-archive.schema.json").read_text(encoding="utf-8")
+    assert committed == render_isthereanydeal_schema()
+# end def test_committed_isthereanydeal_schema_matches_pydantic_models
