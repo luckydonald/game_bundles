@@ -312,7 +312,7 @@ class StorefrontResolver:
             ids.append(parse_store_identity(typed_provider, selected))
         # end for
         if not ids:
-            ids.append(f"unresolved:humblebundle:{item.machine_name}")
+            ids.append(f"unresolved:source:humblebundle:{item.machine_name}")
         # end if
         mapping.games[item.machine_name] = list(dict.fromkeys(ids))
         return mapping.games[item.machine_name]

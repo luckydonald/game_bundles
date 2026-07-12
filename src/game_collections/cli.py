@@ -16,7 +16,7 @@ from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
 from game_collections.schema import write_humblebundle_schema
-from game_collections.search import complete_game_list, selected_providers
+from game_collections.search import complete_game_list, completion_mode, selected_providers
 from game_collections.sources.humblebundle.crawler import (
     HumbleHttpClient,
     crawl_humble_offers,
@@ -163,36 +163,60 @@ def _print_search_results(
 
 @app.command("search")
 def search_command(
-    name: Annotated[str | None, typer.Argument(help="Game name to search for.")] = None,
-    file: Annotated[
-        Path | None,
-        typer.Option("--file", "-f", help="Draft YAML game list to complete in place."),
-    ] = None,
+    name: Annotated[str, typer.Argument(help="Game name to search for.")],
     provider: Annotated[
         str,
         typer.Option("--provider", "-p", help="Storefront to search; defaults to all."),
     ] = "all",
 ) -> None:
-    """Search storefronts by name or complete missing IDs in a draft list."""
-    if (name is None) == (file is None):
-        typer.echo("provide either a game name or --file", err=True)
-        raise typer.Exit(2)
-    # end if
+    """Search storefronts for a game name."""
     client = HumbleHttpClient()
     try:
-        providers = selected_providers(provider)
+        providers = selected_providers(provider, default="all")
         resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
-        if name is not None:
-            _print_search_results(name, providers, resolver)
-            return
-        # end if
-        assert file is not None
+        _print_search_results(name, providers, resolver)
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def search_command
+
+
+@app.command("complete")
+def complete_command(
+    file: Annotated[Path, typer.Argument(help="Draft YAML game list to complete in place.")],
+    providers: Annotated[
+        list[str] | None,
+        typer.Option(
+            "--provider",
+            "--store",
+            "-p",
+            help="Storefront(s) to search; repeat or comma-separate. Defaults to steam.",
+        ),
+    ] = None,
+    mode: Annotated[
+        str,
+        typer.Option(
+            "--mode",
+            help="Selection mode: blank, missing, unresolved, or refetch_all.",
+        ),
+    ] = "blank",
+) -> None:
+    """Complete storefront IDs in a draft YAML game list."""
+    client = HumbleHttpClient()
+    try:
+        selected = selected_providers(providers, default="steam")
+        selected_mode = completion_mode(mode)
+        resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
         raw = yaml.safe_load(file.read_text(encoding="utf-8"))
         completed, unresolved = complete_game_list(
             raw,
-            providers,
+            selected,
             resolver,
             _choose_search_candidate,
+            selected_mode,
         )
         file.write_text(
             yaml.safe_dump(completed, sort_keys=False, allow_unicode=True),
@@ -211,7 +235,7 @@ def search_command(
     finally:
         client.close()
     # end try
-# end def search_command
+# end def complete_command
 
 
 @scrape_app.command("humblebundle")
