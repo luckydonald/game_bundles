@@ -1,0 +1,228 @@
+{
+  "$defs": {
+    "DigDates": {
+      "additionalProperties": false,
+      "description": "Offer observation timestamp and its estimated expiry.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "DigDates",
+      "type": "object"
+    },
+    "DigItem": {
+      "additionalProperties": false,
+      "description": "One Steam game advertised within a DIG bundle.",
+      "properties": {
+        "cover_art_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cover Art Url"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "individual_price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DigPrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "region": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Region"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "ids",
+        "url"
+      ],
+      "title": "DigItem",
+      "type": "object"
+    },
+    "DigPrice": {
+      "additionalProperties": false,
+      "description": "A USD price as displayed on the site.",
+      "properties": {
+        "currency": {
+          "minLength": 1,
+          "title": "Currency",
+          "type": "string"
+        },
+        "currency_code": {
+          "minLength": 1,
+          "title": "Currency Code",
+          "type": "string"
+        },
+        "raw": {
+          "minLength": 1,
+          "title": "Raw",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "raw",
+        "value",
+        "currency",
+        "currency_code"
+      ],
+      "title": "DigPrice",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one DailyIndieGame weekly bundle.",
+  "properties": {
+    "bundle_price": {
+      "$ref": "#/$defs/DigPrice"
+    },
+    "dates": {
+      "$ref": "#/$defs/DigDates"
+    },
+    "game_count": {
+      "minimum": 0,
+      "title": "Game Count",
+      "type": "integer"
+    },
+    "is_adult": {
+      "title": "Is Adult",
+      "type": "boolean"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/DigItem"
+      },
+      "minItems": 1,
+      "title": "Items",
+      "type": "array"
+    },
+    "kind": {
+      "const": "bundle",
+      "default": "bundle",
+      "title": "Kind",
+      "type": "string"
+    },
+    "machine_name": {
+      "minLength": 1,
+      "title": "Machine Name",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "savings_amount": {
+      "$ref": "#/$defs/DigPrice"
+    },
+    "savings_percent": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Savings Percent",
+      "type": "integer"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "total_value": {
+      "$ref": "#/$defs/DigPrice"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "machine_name",
+    "url",
+    "name",
+    "is_adult",
+    "dates",
+    "game_count",
+    "total_value",
+    "bundle_price",
+    "savings_percent",
+    "savings_amount",
+    "items"
+  ],
+  "title": "DigArchive",
+  "type": "object"
+}

@@ -15,8 +15,14 @@ from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
 from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
+from game_collections.schema import write_dailyindiegame_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.search import complete_game_list, completion_mode, selected_providers
+from game_collections.sources.dailyindiegame.crawler import (
+    DigBrowserClient,
+    crawl_dig_offers,
+    write_dig_offer,
+)
 from game_collections.sources.humblebundle.crawler import (
     HumbleHttpClient,
     crawl_humble_offers,
@@ -84,12 +90,18 @@ def schema_command(
         Path,
         typer.Option("--humblebundle-output", help="Generated Humble archive JSON Schema path."),
     ] = Path("schemas/humblebundle-archive.schema.json"),
+    dailyindiegame_output: Annotated[
+        Path,
+        typer.Option("--dailyindiegame-output", help="Generated DailyIndieGame archive JSON Schema path."),
+    ] = Path("schemas/dailyindiegame-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
     write_humblebundle_schema(humblebundle_output)
+    write_dailyindiegame_schema(dailyindiegame_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
+    typer.echo(dailyindiegame_output)
 # end def schema_command
 
 
@@ -303,6 +315,47 @@ def scrape_humblebundle_command(
         client.close()
     # end try
 # end def scrape_humblebundle_command
+
+
+@scrape_app.command("dailyindiegame")
+def scrape_dailyindiegame_command(
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="Crawl only this weekly bundle URL; repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+) -> None:
+    """Archive currently listed DailyIndieGame Steam bundles."""
+    repository_root = Path.cwd().resolve()
+    client = DigBrowserClient()
+    try:
+        report = crawl_dig_offers(client.fetch, urls)
+        written_count = 0
+        for offer in report.offers:
+            paths = write_dig_offer(
+                offer,
+                lists_root=lists_root,
+                archive_root=archive_root,
+                repository_root=repository_root,
+            )
+            written_count += len(paths)
+            typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+        # end for
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(f"Wrote {written_count} file(s) for {len(report.offers)} offer(s).")
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def scrape_dailyindiegame_command
 
 
 def _steam_adapter(
