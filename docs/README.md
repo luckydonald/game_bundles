@@ -38,6 +38,8 @@ Common commands:
 
 ```console
 uv run game-collections list
+uv run game-collections search "Portal"
+uv run game-collections search --provider steam --file my-list.yml
 uv run game-collections schema
 uv run game-collections scrape humblebundle
 uv run game-collections eligible steam
@@ -47,6 +49,8 @@ uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestam
 ```
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
+
+`game-collections search NAME` prints ranked matches from every supported storefront. Limit it with `--provider steam` (or `gog`, `epic`, `ubisoft`, or `humble`). `game-collections search --file PATH` completes missing `ids` in a draft list in place. Unique exact title matches are accepted automatically; ambiguous matches prompt for a result or a canonical URL/direct ID. Existing IDs are left unchanged, and the default provider selection is `all`.
 
 ## Humble Bundle imports
 
