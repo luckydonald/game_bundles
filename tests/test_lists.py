@@ -31,7 +31,9 @@ def test_orange_box_is_valid_initial_data() -> None:
 
 def test_every_repository_list_validates() -> None:
     loaded = discover_game_lists(REPO_ROOT / "lists")
-    assert [game_list.id for game_list in loaded] == ["valve/the-orange-box"]
+    ids = [game_list.id for game_list in loaded]
+    assert len(ids) == 16
+    assert "valve/the-orange-box" in ids
 # end def test_every_repository_list_validates
 
 
@@ -84,4 +86,3 @@ def test_symlinked_lists_are_rejected(tmp_path: Path) -> None:
         derive_list_id(linked, lists_root)
     # end with
 # end def test_symlinked_lists_are_rejected
-
