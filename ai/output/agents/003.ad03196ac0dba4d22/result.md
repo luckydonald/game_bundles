@@ -1,0 +1,7 @@
+Directive: implement `game-collections scrape greenmangaming` as a full feature (code, tests, docs, schema, commit).
+
+Built a new `src/game_collections/sources/greenmangaming/` package (models/parser/resolver/crawler) mirroring the Humble Bundle pipeline, since GMG bundles need title-based storefront resolution too (only a free-text DRM label per item, no direct storefront link). Key finding that changed the plan mid-flight: cumulative tier membership doesn't need extra `switch_tier` requests — every item on the default bundle-page render is already tagged (via its `hx-vals`) with the tier it unlocks at, verified against the live `/switch_tier/` endpoint before trusting it. CLI got `scrape greenmangaming` with the same `--url`/`--refresh`/`--non-interactive`/`--resolution-map` shape as Humble; schema/docs updated to match.
+
+Tests: 3 new files (parser/resolver/crawler), `test_schema.py` extended — full suite is 106 passing (was 83). Live smoke test archived both currently-listed video-games bundles correctly (lego-at-the-movies: 3 tiers, metroidvania-madness: 3 tiers), 12/16 products resolved to Steam automatically, and a second run resumed fully from cache with no re-fetch.
+
+Committed as `34b119a` (folded a stray `ai: updated prompt` auto-commit in per the lplp skill); pre-existing untracked dailyindiegame files were left alone.
