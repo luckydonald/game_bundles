@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Monsters' Den Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14804/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14804/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14804/source.json
+games:
+- name: 'Monsters'' Den: Book of Dread'
+  ids:
+  - steam:502230
+- name: 'Monsters'' Den: Godfall'
+  ids:
+  - steam:469720
+- name: Monsters' Den Chronicles
+  ids:
+  - steam:1121720
