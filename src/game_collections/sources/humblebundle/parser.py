@@ -432,6 +432,7 @@ def parse_bundle_page(
         kind="bundle",
         machine_name=_required_string(bundle.get("machine_name"), "bundle machine_name"),
         url=urljoin(HUMBLE_ROOT, page_url),
+        name=_required_string(basic.get("human_name"), "bundle name"),
         headline=_required_string(
             basic.get("short_marketing_blurb") or basic.get("human_name"),
             "bundle headline",
@@ -547,6 +548,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
             "Choice machine name",
         ),
         url=_required_string(product.get("url"), "Choice URL"),
+        name=tier_name,
         headline=tier_name,
         description=description,
         dates=HumbleDates(

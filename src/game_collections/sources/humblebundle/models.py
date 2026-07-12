@@ -123,6 +123,7 @@ class HumbleArchive(StrictModel):
     kind: Literal["choice", "bundle"]
     machine_name: NonEmptyString
     url: HttpUrl
+    name: NonEmptyString
     headline: NonEmptyString
     description: str
     category: Literal["Games"] = "Games"
