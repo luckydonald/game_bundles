@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: April 2024 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/april-2024
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2024-04/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2024-04/source.json
+- name: Victoria 3 page
+  url: https://www.humblebundle.com/membership/april-2024/victoria3
+- name: The Callisto Protocol page
+  url: https://www.humblebundle.com/membership/april-2024/thecallistoprotocol
+- name: Humankind Definitive Edition page
+  url: https://www.humblebundle.com/membership/april-2024/humankind_premiumedition
+- name: Fashion Police Squad page
+  url: https://www.humblebundle.com/membership/april-2024/fashionpolicesquad
+- name: Terraformers page
+  url: https://www.humblebundle.com/membership/april-2024/terraformers
+- name: 'Symphony Of War: The Nephilim Saga page'
+  url: https://www.humblebundle.com/membership/april-2024/symphonyofwar_thenephilimsaga
+- name: Coromon page
+  url: https://www.humblebundle.com/membership/april-2024/coromon
+- name: The Excavation Of Hob'S Barrow page
+  url: https://www.humblebundle.com/membership/april-2024/theexcavationofhobsbarrow
+games:
+- name: Victoria 3
+  ids:
+  - steam:529340
+- name: The Callisto Protocol
+  ids:
+  - steam:1544020
+- name: Humankind Definitive Edition
+  ids:
+  - unresolved:store:steam:humankind-definitive-edition
+- name: Fashion Police Squad
+  ids:
+  - steam:1319460
+- name: Terraformers
+  ids:
+  - steam:1244800
+- name: 'Symphony Of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+- name: Coromon
+  ids:
+  - steam:1218210
+- name: The Excavation Of Hob'S Barrow
+  ids:
+  - steam:1182310

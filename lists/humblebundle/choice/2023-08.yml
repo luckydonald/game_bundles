@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: August 2023 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/august-2023
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2023-08/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2023-08/source.json
+- name: Disco Elysium - The Final Cut page
+  url: https://www.humblebundle.com/membership/august-2023/discoelysium-thefinalcut
+- name: Chivalry 2 - Epic Edition page
+  url: https://www.humblebundle.com/membership/august-2023/chivalry2
+- name: Road 96 page
+  url: https://www.humblebundle.com/membership/august-2023/road96
+- name: Trek To Yomi page
+  url: https://www.humblebundle.com/membership/august-2023/trektoyomi
+- name: Arcade Paradise page
+  url: https://www.humblebundle.com/membership/august-2023/arcadeparadise
+- name: 'Suchart: Genius Artist Simulator page'
+  url: https://www.humblebundle.com/membership/august-2023/suchart_geniusartistsimulator
+- name: Tin Can page
+  url: https://www.humblebundle.com/membership/august-2023/tincan
+- name: Hot Brass page
+  url: https://www.humblebundle.com/membership/august-2023/hotbrass
+games:
+- name: Disco Elysium - The Final Cut
+  ids:
+  - steam:632470
+- name: Chivalry 2 - Epic Edition
+  ids:
+  - unresolved:store:steam:chivalry-2---epic-edition
+- name: Road 96
+  ids:
+  - steam:1466640
+- name: Trek To Yomi
+  ids:
+  - steam:1370050
+- name: Arcade Paradise
+  ids:
+  - steam:1388870
+- name: 'Suchart: Genius Artist Simulator'
+  ids:
+  - steam:1293180
+- name: Tin Can
+  ids:
+  - steam:1315980
+- name: Hot Brass
+  ids:
+  - steam:892860

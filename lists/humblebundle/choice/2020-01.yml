@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: January 2020 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/january-2020
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2020-01/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2020-01/source.json
+- name: 'Middle-Earth™: Shadow Of War™ page'
+  url: https://www.humblebundle.com/membership/january-2020/middleearth_shadowofwar
+- name: Graveyard Keeper page
+  url: https://www.humblebundle.com/membership/january-2020/graveyardkeeper
+- name: Two Point Hospital page
+  url: https://www.humblebundle.com/membership/january-2020/twopointhospital
+- name: Dirt Rally 2.0 + 3 Dlcs page
+  url: https://www.humblebundle.com/membership/january-2020/dirtrally2
+- name: Street Fighter V page
+  url: https://www.humblebundle.com/membership/january-2020/streetfighter5
+- name: 'Bad North: Jotunn Edition page'
+  url: https://www.humblebundle.com/membership/january-2020/badnorth
+- name: Trailmakers page
+  url: https://www.humblebundle.com/membership/january-2020/trailmakers
+- name: Unrailed! page
+  url: https://www.humblebundle.com/membership/january-2020/unrailed
+- name: Whispers Of A Machine page
+  url: https://www.humblebundle.com/membership/january-2020/whispersofamachine
+- name: Them'S Fightin' Herds page
+  url: https://www.humblebundle.com/membership/january-2020/themsfightinherds
+- name: Mages Of Mystralia page
+  url: https://www.humblebundle.com/membership/january-2020/magesofmystralia
+- name: Grip + 1 Dlc page
+  url: https://www.humblebundle.com/membership/january-2020/grip
+games:
+- name: 'Middle-Earth™: Shadow Of War™'
+  ids:
+  - steam:356190
+- name: Graveyard Keeper
+  ids:
+  - unresolved:store:steam:graveyard-keeper
+- name: Two Point Hospital
+  ids:
+  - steam:535930
+- name: Dirt Rally 2.0 + 3 Dlcs
+  ids:
+  - unresolved:store:steam:dirt-rally-2.0-+-3-dlcs
+- name: Street Fighter V
+  ids:
+  - steam:310950
+- name: 'Bad North: Jotunn Edition'
+  ids:
+  - steam:688420
+- name: Trailmakers
+  ids:
+  - steam:585420
+- name: Unrailed!
+  ids:
+  - steam:1016920
+- name: Whispers Of A Machine
+  ids:
+  - steam:631570
+- name: Them'S Fightin' Herds
+  ids:
+  - steam:574980
+- name: Mages Of Mystralia
+  ids:
+  - steam:529660
+- name: Grip + 1 Dlc
+  ids:
+  - unresolved:store:steam:grip-+-1-dlc
