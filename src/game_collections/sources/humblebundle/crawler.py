@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import os
 import re
 import time
@@ -14,9 +13,9 @@ from typing import Any
 from urllib.parse import urljoin, urlparse
 
 import httpx
-import yaml
 
 from game_collections.models import Game, GameList, Reference
+from game_collections.sources.common import atomic_write, dump_json, render_game_list_yaml
 from game_collections.sources.humblebundle.models import HumbleArchive
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
@@ -199,38 +198,6 @@ def _offer_key(archive: HumbleArchive) -> str:
 # end def _offer_key
 
 
-def _atomic_write(path: Path, content: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(f".{path.name}.tmp-{os.getpid()}")
-    try:
-        with temporary.open("x", encoding="utf-8", newline="\n") as handle:
-            handle.write(content)
-            handle.flush()
-            os.fsync(handle.fileno())
-        # end with
-        temporary.replace(path)
-    except BaseException:
-        temporary.unlink(missing_ok=True)
-        raise
-    # end try
-# end def _atomic_write
-
-
-def _json(value: object) -> str:
-    return json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
-# end def _json
-
-
-def _game_list_yaml(game_list: GameList, path: Path, repository_root: Path) -> str:
-    schema_path = os.path.relpath(repository_root / "schemas/game-list.schema.json", path.parent)
-    value = game_list.model_dump(by_alias=True, mode="json", exclude_none=True)
-    return (
-        f"# yaml-language-server: $schema={schema_path}\n"
-        + yaml.safe_dump(value, sort_keys=False, allow_unicode=True)
-    )
-# end def _game_list_yaml
-
-
 def write_humble_offer(
     offer: CrawledHumbleOffer,
     lists_root: Path,
@@ -250,8 +217,8 @@ def write_humble_offer(
     written: list[Path] = []
     metadata_path = archive_directory / "metadata.json"
     source_path = archive_directory / "source.json"
-    _atomic_write(metadata_path, _json(archive.model_dump(by_alias=True, mode="json")))
-    _atomic_write(source_path, _json(offer.source))
+    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(source_path, dump_json(offer.source))
     written.extend((metadata_path, source_path))
     for index, tier in enumerate(archive.tiers):
         games: list[Game] = []
@@ -289,7 +256,7 @@ def write_humble_offer(
             ],
             games=games,
         )
-        _atomic_write(path, _game_list_yaml(game_list, path, repository_root))
+        atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
         written.append(path)
     # end for
     return tuple(written)
@@ -298,5 +265,5 @@ def write_humble_offer(
 
 def write_resolution_map(path: Path, mapping: HumbleResolutionMap) -> None:
     """Atomically persist reviewed storefront decisions."""
-    _atomic_write(path, render_resolution_map(mapping))
+    atomic_write(path, render_resolution_map(mapping))
 # end def write_resolution_map
