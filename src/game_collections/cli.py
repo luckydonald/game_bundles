@@ -11,7 +11,13 @@ import typer
 import yaml
 
 from game_collections.lists import ListLoadError, discover_game_lists
-from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
+from game_collections.launchers.steam.adapter import (
+    SteamAdapter,
+    SteamOptions,
+    owned_app_ids_from_api,
+    owned_app_ids_from_installed,
+)
+from game_collections.launchers.steam.api import SteamApiClient
 from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
@@ -392,21 +398,30 @@ def _steam_adapter(
     steam_root: Path | None,
     steam_id: str | None,
     api_key: str | None,
+    source: str = "api",
 ) -> tuple[SteamAdapter, SteamFileGateway]:
+    if source not in ("api", "installed"):
+        raise ValueError(f"unknown ownership source: {source!r}; available: api, installed")
+    # end if
     root = discover_steam_root(steam_root)
     gateway = SteamFileGateway.discover(root, steam_id)
-    key = api_key or os.environ.get("STEAM_WEB_API_KEY")
-    if not key:
-        raise ValueError("provide --api-key or STEAM_WEB_API_KEY")
+    if source == "installed":
+        typer.echo(
+            "warning: --source installed only sees currently installed games; "
+            "owned-but-uninstalled games will show as missing",
+            err=True,
+        )
+        owned_app_ids_source = owned_app_ids_from_installed(root)
+        options = SteamOptions(steam_id=gateway.steam_id, steam_root=root)
+    else:
+        key = api_key or os.environ.get("STEAM_WEB_API_KEY")
+        if not key:
+            raise ValueError("provide --api-key or STEAM_WEB_API_KEY (or use --source installed)")
+        # end if
+        options = SteamOptions(steam_id=gateway.steam_id, steam_root=root, api_key=key)
+        owned_app_ids_source = owned_app_ids_from_api(SteamApiClient(key), options.steam_id)
     # end if
-    adapter = SteamAdapter(
-        SteamOptions(
-            steam_id=gateway.steam_id,
-            api_key=key,
-            steam_root=root,
-        ),
-        gateway=gateway,
-    )
+    adapter = SteamAdapter(options, owned_app_ids_source=owned_app_ids_source, gateway=gateway)
     return adapter, gateway
 # end def _steam_adapter
 
@@ -438,6 +453,7 @@ def eligible_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
+    source: Annotated[str, typer.Option("--source", help="api (Web API, needs a key) or installed (local-only approximation)")] = "api",
 ) -> None:
     """Report which lists are fully owned by the launcher account."""
     if launcher != "steam":
@@ -445,7 +461,7 @@ def eligible_command(
         raise typer.Exit(2)
     # end if
     try:
-        adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key)
+        adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key, source)
         plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
         _print_plan(plan)
     except (OSError, ValueError, RuntimeError) as error:
@@ -464,6 +480,7 @@ def sync_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
+    source: Annotated[str, typer.Option("--source", help="api (Web API, needs a key) or installed (local-only approximation)")] = "api",
 ) -> None:
     """Plan or stage and explicitly apply launcher collection changes."""
     if launcher != "steam":
@@ -471,7 +488,7 @@ def sync_command(
         raise typer.Exit(2)
     # end if
     try:
-        adapter, gateway = _steam_adapter(steam_root, steam_id, api_key)
+        adapter, gateway = _steam_adapter(steam_root, steam_id, api_key, source)
         plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
         _print_plan(plan)
         if not apply_changes:
