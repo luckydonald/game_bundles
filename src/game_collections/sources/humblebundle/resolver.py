@@ -77,36 +77,54 @@ class _StoreLinkParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self._href: str | None = None
         self._parts: list[str] = []
+        self._title_parts: list[str] = []
+        self._inside_title = False
         self.links: list[tuple[str, str]] = []
     # end def __init__
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag != "a" or self._href is not None:
+        values = dict(attrs)
+        if tag == "a" and self._href is None:
+            href = values.get("href")
+            if href:
+                self._href = href
+                self._parts = []
+                self._title_parts = []
+            # end if
             return
         # end if
-        href = dict(attrs).get("href")
-        if href:
-            self._href = href
-            self._parts = []
+        classes = (values.get("class") or "").split()
+        if self._href is not None and tag in {"span", "div"} and "title" in classes:
+            self._inside_title = True
         # end if
     # end def handle_starttag
 
     def handle_data(self, data: str) -> None:
         if self._href is not None:
             self._parts.append(data)
+            if self._inside_title:
+                self._title_parts.append(data)
+            # end if
         # end if
     # end def handle_data
 
     def handle_endtag(self, tag: str) -> None:
+        if tag in {"span", "div"} and self._inside_title:
+            self._inside_title = False
+            return
+        # end if
         if tag != "a" or self._href is None:
             return
         # end if
-        title = " ".join("".join(self._parts).split())
+        preferred = self._title_parts or self._parts
+        title = " ".join("".join(preferred).split())
         if title:
             self.links.append((self._href, title))
         # end if
         self._href = None
         self._parts = []
+        self._title_parts = []
+        self._inside_title = False
     # end def handle_endtag
 
 # end class _StoreLinkParser
