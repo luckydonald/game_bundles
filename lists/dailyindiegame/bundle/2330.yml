@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2330
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2330.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2330/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2330/source.json
+games:
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+- name: PANELKI
+  ids:
+  - steam:1836160
+- name: Deep Despair
+  ids:
+  - steam:1241040
+- name: A Game of Changes
+  ids:
+  - steam:467090
+- name: BARRIER X
+  ids:
+  - steam:463150
+- name: 'Elysium: Blood Games'
+  ids:
+  - steam:430080
+- name: 'Redemption: Eternal Quest'
+  ids:
+  - steam:390880
+- name: Kitchen Simulator 2015
+  ids:
+  - steam:399230
+- name: Caliper
+  ids:
+  - steam:581840
