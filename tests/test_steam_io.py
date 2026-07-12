@@ -84,6 +84,25 @@ def test_stage_creates_inspectable_candidates_without_touching_steam(tmp_path: P
 # end def test_stage_creates_inspectable_candidates_without_touching_steam
 
 
+def test_orange_box_generation_matches_expected_files(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    monkeypatch.setattr("game_collections.launchers.steam.io.time.time", lambda: 1_600_000_000)
+
+    staged = gateway.stage(orange_box_plan(), tmp_path / "Desktop")
+
+    assert (staged / f"candidate-{NAMESPACE_NAME}").read_bytes() == (
+        FIXTURES / "expected-orange-box-cloud-storage-namespace-1.json"
+    ).read_bytes()
+    assert (staged / f"candidate-{MODIFIED_NAME}").read_bytes() == (
+        FIXTURES / "expected-orange-box-cloud-storage-namespace-1.modified.json"
+    ).read_bytes()
+# end def test_orange_box_generation_matches_expected_files
+
+
 def test_apply_requires_confirmation_then_restore_round_trip(tmp_path: Path) -> None:
     steam_root = build_fake_steam(tmp_path)
     cloud = steam_root / "userdata" / ACCOUNT_ID / "config/cloudstorage"
