@@ -19,11 +19,13 @@ from game_collections.schema import write_dailyindiegame_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.search import complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
+    CrawledDigOffer,
     DigBrowserClient,
     crawl_dig_offers,
     write_dig_offer,
 )
 from game_collections.sources.humblebundle.crawler import (
+    CrawledHumbleOffer,
     HumbleHttpClient,
     crawl_humble_offers,
     write_humble_offer,
@@ -265,6 +267,10 @@ def scrape_humblebundle_command(
         bool,
         typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting."),
     ] = False,
+    refresh: Annotated[
+        bool,
+        typer.Option("--refresh", help="Re-resolve every offer, ignoring already-archived output."),
+    ] = False,
 ) -> None:
     """Archive current Humble Choice and active Games bundles."""
     repository_root = Path.cwd().resolve()
@@ -274,22 +280,33 @@ def scrape_humblebundle_command(
         if non_interactive
         else _choose_store_candidate
     )
+    written_count = 0
+
+    def on_offer(offer: CrawledHumbleOffer) -> None:
+        nonlocal written_count
+        paths = write_humble_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+        write_resolution_map(resolution_map, mapping)
+    # end def on_offer
+
     try:
         mapping = load_resolution_map(resolution_map)
         resolver = StorefrontResolver(client.fetch, choose)
-        report = crawl_humble_offers(client.fetch, resolver, mapping, urls)
-        write_resolution_map(resolution_map, mapping)
-        written_count = 0
-        for offer in report.offers:
-            paths = write_humble_offer(
-                offer,
-                lists_root=lists_root,
-                archive_root=archive_root,
-                repository_root=repository_root,
-            )
-            written_count += len(paths)
-            typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
-        # end for
+        report = crawl_humble_offers(
+            client.fetch,
+            resolver,
+            mapping,
+            urls,
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
         unresolved = sorted(
             machine_name
             for machine_name, ids in mapping.games.items()
@@ -325,23 +342,36 @@ def scrape_dailyindiegame_command(
     ] = None,
     lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
     archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    refresh: Annotated[
+        bool,
+        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+    ] = False,
 ) -> None:
     """Archive currently listed DailyIndieGame Steam bundles."""
     repository_root = Path.cwd().resolve()
     client = DigBrowserClient()
+    written_count = 0
+
+    def on_offer(offer: CrawledDigOffer) -> None:
+        nonlocal written_count
+        paths = write_dig_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+    # end def on_offer
+
     try:
-        report = crawl_dig_offers(client.fetch, urls)
-        written_count = 0
-        for offer in report.offers:
-            paths = write_dig_offer(
-                offer,
-                lists_root=lists_root,
-                archive_root=archive_root,
-                repository_root=repository_root,
-            )
-            written_count += len(paths)
-            typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
-        # end for
+        report = crawl_dig_offers(
+            client.fetch,
+            urls,
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
         for error in report.errors:
             typer.echo(f"error: {error}", err=True)
         # end for
