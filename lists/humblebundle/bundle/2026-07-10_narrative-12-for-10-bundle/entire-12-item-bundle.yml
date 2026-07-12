@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
 name: Narrative 12 for $10 Bundle — Entire 12 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/narrative-12-for-10-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-07-10_narrative-12-for-10-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-07-10_narrative-12-for-10-bundle/source.json
 games:
 - name: Roadwarden
   ids:
