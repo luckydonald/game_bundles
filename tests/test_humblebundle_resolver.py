@@ -83,7 +83,9 @@ def test_parse_store_identity_rejects_wrong_host() -> None:
 
 def test_store_candidates_preserve_search_order_and_remove_duplicates() -> None:
     page = """
-    <a href="https://store.steampowered.com/app/10/First/"><span>First Game</span></a>
+    <a href="https://store.steampowered.com/app/10/First/">
+      <span class="title">First Game</span><div>1 Jan, 2026 9.99€</div>
+    </a>
     <a href="https://store.steampowered.com/app/10/First/">First Duplicate</a>
     <a href="https://store.steampowered.com/app/20/Second/">Second Game</a>
     """
@@ -91,6 +93,7 @@ def test_store_candidates_preserve_search_order_and_remove_duplicates() -> None:
     candidates = parse_store_candidates("steam", page)
 
     assert [candidate.qualified_id for candidate in candidates] == ["steam:10", "steam:20"]
+    assert candidates[0].title == "First Game"
 # end def test_store_candidates_preserve_search_order_and_remove_duplicates
 
 
