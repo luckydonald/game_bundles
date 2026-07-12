@@ -53,8 +53,7 @@ Store",1]`) that isn't captured anywhere yet. The user wants this filled into a 
   carries a name but the dedicated Humble scraper's own convention is well known and should be
   matched for consistency (`src/game_collections/sources/humblebundle/crawler.py:279-284`): the
   tier whose `item_count` equals the bundle's total game count is named `entire-{item_count}-item-bundle`,
-  every other tier is named `{item_count}-item-bundle` (match by item_count, not tier index —
-  Humble's own tier list order isn't guaranteed to line up with ours).
+  every other tier is named `{item_count}-item-bundle`.
 - Each `game` entry: `id` (ITAD uuid), `slug`, `title`, `type`, `mature`, `assets`, `tags`,
   `features`, `reviews`, `note`, `drmfree`, `keys` (shop-id ints, e.g. `[61]`), `platforms`,
   `bundled`. `reviews` is a list of `{"source": "Steam", "count", "positive", "neutral",
@@ -72,7 +71,7 @@ Store",1]`) that isn't captured anywhere yet. The user wants this filled into a 
 **Prefer BeautifulSoup4 over regex for HTML structure wherever there's a choice** (already a
 locked project dependency via `uv.lock`, not a new addition). Concretely:
 - `parse_bootstrap_page`'s `<script>` lookup: use BS4 to find the right `<script>` tag (e.g.
-  `soup.find("script", string=re.compile(r"^\s*var g ="))`) instead of a regex scan over the
+  `soup.find("script", string=re.compile(r"^\s*var page ="))`) instead of a regex scan over the
   whole raw HTML document; the JSON-substring extraction *inside* that script's text (balanced-
   brace scanning, since it's a JS variable assignment, not markup) stays as today — that part
   isn't HTML structure, so BS4 doesn't apply to it.
