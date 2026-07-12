@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
+from collections.abc import Callable
 from pathlib import Path
 
 from pydantic import Field
@@ -68,7 +69,7 @@ class LauncherAdapter(ABC):
     # end def stage
 
     @abstractmethod
-    def apply(self, staged_dir: Path) -> None:
+    def apply(self, staged_dir: Path, confirm: Callable[[str], str]) -> None:
         """Apply a previously staged and revalidated synchronization."""
     # end def apply
 
@@ -99,4 +100,3 @@ class LauncherRegistry:
     # end def get
 
 # end class LauncherRegistry
-
