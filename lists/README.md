@@ -31,11 +31,12 @@ game-collections validate
 To create a list from names first, omit `ids` (or use an empty list) in a draft outside the validated `lists/` tree, then complete it in place:
 
 ```console
-game-collections search --file my-draft.yml
-game-collections search --provider steam --file my-draft.yml
+game-collections complete my-draft.yml
+game-collections complete --provider all my-draft.yml
+game-collections complete --store gog,epic --mode missing my-draft.yml
 ```
 
-Existing IDs are preserved. The default searches all supported providers, unique exact title matches are filled automatically, and ambiguous results are presented for selection. Unresolved games remain without `ids`, so the draft can be run through the command again later.
+Completion defaults to Steam and `--mode blank`, which searches only games with an empty `ids` list or no proper ID. Use `missing` to add selected stores not previously attempted, `unresolved` to also retry `unresolved:store:<store>:*` failures, or `refetch_all` to refresh every selected store for every game. Repeat `--provider`/`--store`, comma-separate values, or pass `all`. Existing IDs for unselected stores are preserved. Unique exact title matches are filled automatically, and ambiguous results are presented for selection.
 
 Regenerate the IDE schema after changing the Pydantic contract:
 
@@ -47,6 +48,6 @@ game-collections schema
 
 `game-collections scrape humblebundle` writes current Choice to `humblebundle/choice/YYYY-MM.yml` and active bundle tiers below `humblebundle/bundle/YYYY-MM-DD_<bundle>/`.
 
-Tier counts and names follow Humble's advertised cumulative tiers, while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.
+Tier counts and names follow Humble's advertised cumulative tiers, while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:source:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.
 
 Each generated Humble list references its offer URL plus the matching normalized metadata and raw source archive files.
