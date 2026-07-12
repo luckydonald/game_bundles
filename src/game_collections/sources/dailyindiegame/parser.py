@@ -38,7 +38,7 @@ COUNTDOWN_PATTERN = re.compile(
     re.IGNORECASE,
 )
 GAME_LISTING_PATTERN = re.compile(
-    r"\$([\d.,]+)\s*\(\s*\$[\d.,]+\s*\)\s*You save:\s*\$[\d.,]+\s*\(\d+%\)\s*"
+    r"\$(-?[\d.,]+)\s*\(\s*\$-?[\d.,]+\s*\)\s*[\W]*?You save:\s*\$-?[\d.,]+\s*\(-?\d+%\)\s*"
     r"Region:\s*([A-Z]+)\s*VIEW STEAM PAGE\s*(.*)",
     re.IGNORECASE | re.DOTALL,
 )
