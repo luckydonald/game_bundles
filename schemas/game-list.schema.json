@@ -25,6 +25,50 @@
       ],
       "title": "Game",
       "type": "object"
+    },
+    "Reference": {
+      "additionalProperties": false,
+      "description": "A local/repository file or web source supporting a game list.",
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "format": "file-path",
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Reference",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -42,6 +86,13 @@
       "minLength": 1,
       "title": "Name",
       "type": "string"
+    },
+    "references": {
+      "items": {
+        "$ref": "#/$defs/Reference"
+      },
+      "title": "References",
+      "type": "array"
     },
     "schema": {
       "const": 1,

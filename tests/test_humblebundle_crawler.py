@@ -100,6 +100,14 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     loaded = load_game_list(list_path, lists_root)
     assert loaded.id == f"{bundle_root}/entire-2-item-bundle"
     assert loaded.data.name == "Sample Bundle — Entire 2 Item Bundle"
+    assert [reference.name for reference in loaded.data.references] == [
+        "Humble Bundle offer",
+        "Crawl metadata",
+        "Crawl source",
+    ]
+    assert str(loaded.data.references[0].url) == "https://www.humblebundle.com/games/sample-bundle"
+    assert loaded.data.references[1].path == "../../../../archives/" + bundle_root + "/metadata.json"
+    assert loaded.data.references[2].path == "../../../../archives/" + bundle_root + "/source.json"
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Sample Game", ["steam:42"])]
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     assert [item["title"] for item in metadata["tiers"][0]["items"]] == [

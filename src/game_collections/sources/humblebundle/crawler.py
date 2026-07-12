@@ -16,7 +16,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 import yaml
 
-from game_collections.models import Game, GameList
+from game_collections.models import Game, GameList, Reference
 from game_collections.sources.humblebundle.models import HumbleArchive
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
@@ -223,7 +223,7 @@ def _json(value: object) -> str:
 
 def _game_list_yaml(game_list: GameList, path: Path, repository_root: Path) -> str:
     schema_path = os.path.relpath(repository_root / "schemas/game-list.schema.json", path.parent)
-    value = game_list.model_dump(by_alias=True, mode="json")
+    value = game_list.model_dump(by_alias=True, mode="json", exclude_none=True)
     return (
         f"# yaml-language-server: $schema={schema_path}\n"
         + yaml.safe_dump(value, sort_keys=False, allow_unicode=True)
@@ -267,13 +267,28 @@ def write_humble_offer(
             continue
         # end if
         name = archive.name if archive.kind == "choice" else f"{archive.name} — {tier.name}"
-        game_list = GameList(schema=1, name=name, games=games)
         if archive.kind == "choice":
             path = list_directory / f"{key}.yml"
         else:
             prefix = "entire-" if index == 0 else ""
             path = list_directory / f"{prefix}{tier.item_count}-item-bundle.yml"
         # end if
+        game_list = GameList(
+            schema=1,
+            name=name,
+            references=[
+                Reference(name="Humble Bundle offer", url=archive.url),
+                Reference(
+                    name="Crawl metadata",
+                    path=os.path.relpath(metadata_path, path.parent),
+                ),
+                Reference(
+                    name="Crawl source",
+                    path=os.path.relpath(source_path, path.parent),
+                ),
+            ],
+            games=games,
+        )
         _atomic_write(path, _game_list_yaml(game_list, path, repository_root))
         written.append(path)
     # end for
