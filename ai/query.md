@@ -278,3 +278,5 @@ However, please collect and archive - one way or another:
 
 › Run LPLP style from the beginnng of implementation
 
+> › Implement the [Plan](./plans/003_humble-bundle-crawler-and-archive.md).
+
