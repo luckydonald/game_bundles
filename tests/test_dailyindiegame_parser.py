@@ -116,3 +116,18 @@ def test_game_listing_page_extracts_price_region_description_and_cover() -> None
     assert result["description"] == "Step into the world of high stakes corporate ambition."
     assert result["cover_art_url"] == "https://www.dailyindiegame.com/dig3-images-steam/4543360.jpg"
 # end def test_game_listing_page_extracts_price_region_description_and_cover
+
+
+def test_game_listing_page_handles_negative_savings_and_em_dash_separator() -> None:
+    html = """
+    <table><tr><td>Some Game $0.10 ( $0 ) — You save: $-0.10 (0%)Region: WORLDWIDE
+    VIEW STEAM PAGE A neat little game.
+    <img src="dig3-images-steam/12345.jpg"></td></tr></table>
+    """
+
+    result = parse_game_listing_page(html, "https://www.dailyindiegame.com/site_gamelisting_12345.html")
+
+    assert result["individual_price"].value == 0.10
+    assert result["region"] == "WORLDWIDE"
+    assert result["description"] == "A neat little game."
+# end def test_game_listing_page_handles_negative_savings_and_em_dash_separator
