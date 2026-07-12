@@ -3,7 +3,6 @@ from __future__ import annotations
 from pathlib import Path
 
 from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
-from game_collections.launchers.steam.models import GetOwnedGamesResponse
 from game_collections.lists import LoadedGameList, load_game_list
 
 
@@ -20,30 +19,16 @@ def _orange_box() -> list[LoadedGameList]:
 # end def _orange_box
 
 
-class FakeSteamApiClient:
-    def __init__(self, owned: list[int]) -> None:
-        self.owned = owned
-    # end def __init__
-
-    def get_owned_games(self, _steam_id: str) -> GetOwnedGamesResponse:
-        return GetOwnedGamesResponse.model_validate(
-            {
-                "response": {
-                    "game_count": len(self.owned),
-                    "games": [{"appid": app_id} for app_id in self.owned],
-                }
-            }
-        )
-    # end def get_owned_games
-
-# end class FakeSteamApiClient
+def _fake_source(owned: list[int]) -> object:
+    return lambda: set(owned)
+# end def _fake_source
 
 
 def test_orange_box_requires_every_game() -> None:
     game_lists = _orange_box()
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", api_key="unused"),
-        api_client=FakeSteamApiClient([220, 380, 420, 400]),  # type: ignore[arg-type]
+        SteamOptions(steam_id="76561198044975919"),
+        owned_app_ids_source=_fake_source([220, 380, 420, 400]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate(game_lists)[0]
@@ -56,8 +41,8 @@ def test_orange_box_requires_every_game() -> None:
 def test_orange_box_is_eligible_when_complete() -> None:
     game_lists = _orange_box()
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", api_key="unused"),
-        api_client=FakeSteamApiClient([220, 380, 420, 400, 440]),  # type: ignore[arg-type]
+        SteamOptions(steam_id="76561198044975919"),
+        owned_app_ids_source=_fake_source([220, 380, 420, 400, 440]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate(game_lists)[0]
@@ -65,3 +50,14 @@ def test_orange_box_is_eligible_when_complete() -> None:
     assert result.eligible is True
     assert result.missing_ids == []
 # end def test_orange_box_is_eligible_when_complete
+
+
+def test_adapter_requires_source_or_api_key() -> None:
+    try:
+        SteamAdapter(SteamOptions(steam_id="76561198044975919"))
+    except ValueError as error:
+        assert "owned_app_ids_source" in str(error)
+    else:
+        raise AssertionError("expected ValueError")
+    # end try
+# end def test_adapter_requires_source_or_api_key

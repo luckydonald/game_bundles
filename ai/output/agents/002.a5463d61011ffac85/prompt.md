@@ -1,0 +1,13 @@
+I'm investigating whether a Python project can determine which Steam games/packages a local user account OWNS entirely from local Steam client files, without calling the Steam Web API (which needs STEAM_WEB_API_KEY + steam_id, see GetOwnedGames in this repo at src/game_collections/launchers/steam/api.py).
+
+The repo already parses Steam's config/loginusers.vdf using the `vdf` python package (see src/game_collections/launchers/steam/discovery.py) — that's a plain-text VDF (KeyValues) format.
+
+I need you to research (read any existing code in this repo, and use your general knowledge — do NOT browse the internet, just reason from what you know about Steam client internals) and report back on:
+
+1. Is there a LOCAL file (in the Steam installation directory, e.g. ~/.local/share/Steam on Linux) that contains a full list of owned packages/licenses (not just installed or ever-launched games)? Candidates to assess: `config/licensecache.vdf` (per user, under userdata/<accountid>/), `appcache/appinfo.vdf`, `appcache/packageinfo.vdf`, `userdata/<accountid>/config/localconfig.vdf`, `userdata/<accountid>/7/remote/sharedconfig.vdf`, `steamapps/appmanifest_*.acf` (installed only), `steamapps/libraryfolders.vdf`.
+2. For each candidate, state: what it actually contains (installed-only vs ever-launched vs full-license-list), and whether it's plain-text VDF (KeyValues1, parseable by the `vdf` python package) or Valve's BINARY VDF format (appinfo.vdf/packageinfo.vdf headers, which need a different/custom binary parser, NOT the text `vdf` package).
+3. Does `licensecache.vdf` under userdata exist / is it a real, documented Steam client file, or am I misremembering its name/location? Be honest about uncertainty — if you're not confident a specific file exists or its exact format, say so explicitly rather than asserting it.
+4. Whether STEAM_WEB_API_KEY itself (the developer API key from https://steamcommunity.com/dev/apikey) is ever cached/derivable from any local Steam client file — I strongly suspect the answer is no (it's an account-specific secret issued by Valve's web dev portal, not stored by the client), but confirm/refute.
+5. Check this repo (grep) for any existing code, comments, tests, or fixtures that already reference licensecache, appinfo, packageinfo, or binary VDF parsing, in case prior investigation already happened here.
+
+Report back concisely (under 400 words): for each candidate file, a verdict (contains full owned list: yes/no/partial, format: text-vdf/binary-vdf/acf, confidence: high/medium/low), then a direct answer to Q4, then anything found in Q5.
