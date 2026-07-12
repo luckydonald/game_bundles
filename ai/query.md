@@ -294,3 +294,7 @@ If possible to mark the field as filepath in the schema to aid IDE completion, d
 › Write a `metadata.json` next to the lists in `/lists/humblebundle/bundle/YYYY-MM-DD_*/` consisting of a compact `{"name": "Bundle name", "version": "YYYY-MM-DD - YYYY-MM-DD"}`. JetBrains IDEs like PyCharm do show those in the folder tree view as folder annotations, which is helpful here as well. In the choice folder where every choice is a single item and no folder it however would not add any benifit.
 Similarly, add the crawl date as `"version": "YYYY-MM-DD HH:MM:SS"` field to the already written `/archives/humblebundle/{bundle/YYYY-MM-DD_*,choice/YYYY-MM}/metadata.json` files.
 
+› Make the game search available as a command of it's own.
+Use case: Being able to just write down a list, and point the cli at it to fill out the `ids` and which provider to search for (e.g. "steam"). Default is "all".
+So two variants, enter a name to search for, and provide a file to complete.
+
