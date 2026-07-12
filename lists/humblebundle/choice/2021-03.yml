@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: March 2021 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/march-2021
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2021-03/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2021-03/source.json
+- name: Control Standard Edition page
+  url: https://www.humblebundle.com/membership/march-2021/control
+- name: 'Xcom: Chimera Squad page'
+  url: https://www.humblebundle.com/membership/march-2021/xcom_chimerasquad
+- name: Elex page
+  url: https://www.humblebundle.com/membership/march-2021/elex
+- name: Kingdom Two Crowns page
+  url: https://www.humblebundle.com/membership/march-2021/kingdom_twocrowns
+- name: Wwe 2K Battlegrounds page
+  url: https://www.humblebundle.com/membership/march-2021/wwe2k_battlegrounds
+- name: Hotshot Racing page
+  url: https://www.humblebundle.com/membership/march-2021/hotshotracing
+- name: 'Peaky Blinders: Mastermind page'
+  url: https://www.humblebundle.com/membership/march-2021/peakyblinders_mastermind
+- name: Cyber Hook page
+  url: https://www.humblebundle.com/membership/march-2021/cyberhook
+- name: Pesterquest page
+  url: https://www.humblebundle.com/membership/march-2021/pesterquest
+- name: Wildfire page
+  url: https://www.humblebundle.com/membership/march-2021/wildfire
+- name: Boreal Blade page
+  url: https://www.humblebundle.com/membership/march-2021/borealblade
+- name: Ageless page
+  url: https://www.humblebundle.com/membership/march-2021/ageless
+games:
+- name: Control Standard Edition
+  ids:
+  - unresolved:store:steam:control-standard-edition
+- name: 'Xcom: Chimera Squad'
+  ids:
+  - steam:882100
+- name: Elex
+  ids:
+  - steam:411300
+- name: Kingdom Two Crowns
+  ids:
+  - steam:701160
+- name: Wwe 2K Battlegrounds
+  ids:
+  - unresolved:store:steam:wwe-2k-battlegrounds
+- name: Hotshot Racing
+  ids:
+  - steam:609920
+- name: 'Peaky Blinders: Mastermind'
+  ids:
+  - unresolved:store:steam:peaky-blinders:-mastermind
+- name: Cyber Hook
+  ids:
+  - steam:1130410
+- name: Pesterquest
+  ids:
+  - steam:1144030
+- name: Wildfire
+  ids:
+  - steam:431940
+- name: Boreal Blade
+  ids:
+  - steam:598780
+- name: Ageless
+  ids:
+  - steam:1210150

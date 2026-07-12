@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: February 2025 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/february-2025
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2025-02/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2025-02/source.json
+- name: Immortals Of Aveum page
+  url: https://www.humblebundle.com/membership/february-2025/immortalsofaveum
+- name: Trepang2 page
+  url: https://www.humblebundle.com/membership/february-2025/trepang2
+- name: 'Total War: Pharaoh Dynasties page'
+  url: https://www.humblebundle.com/membership/february-2025/totalwar_pharaohdynasties
+- name: Fabledom page
+  url: https://www.humblebundle.com/membership/february-2025/fabledom
+- name: Griftlands page
+  url: https://www.humblebundle.com/membership/february-2025/griftlands
+- name: Tales & Tactics page
+  url: https://www.humblebundle.com/membership/february-2025/talestactics
+- name: Naheulbeuk'S Dungeon Master page
+  url: https://www.humblebundle.com/membership/february-2025/naheulbeuksdungeonmaster
+- name: My Little Universe page
+  url: https://www.humblebundle.com/membership/february-2025/mylittleuniverse
+- name: 'Bonus: Nested Lands Alpha Playtest page'
+  url: https://www.humblebundle.com/membership/february-2025/nestedlands_alphaplaytest
+games:
+- name: Immortals Of Aveum
+  ids:
+  - unresolved:store:steam:immortals-of-aveum
+- name: Trepang2
+  ids:
+  - steam:1164940
+- name: 'Total War: Pharaoh Dynasties'
+  ids:
+  - steam:2951630
+- name: Fabledom
+  ids:
+  - steam:1651560
+- name: Griftlands
+  ids:
+  - steam:601840
+- name: Tales & Tactics
+  ids:
+  - steam:1652250
+- name: Naheulbeuk'S Dungeon Master
+  ids:
+  - steam:2005160
+- name: My Little Universe
+  ids:
+  - steam:2328750
+- name: 'Bonus: Nested Lands Alpha Playtest'
+  ids:
+  - unresolved:store:steam:bonus:-nested-lands-alpha-playtest

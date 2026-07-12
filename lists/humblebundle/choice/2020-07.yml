@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: July 2020 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/july-2020
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2020-07/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2020-07/source.json
+- name: 'Age Of Wonders: Planetfall - Deluxe Edition page'
+  url: https://www.humblebundle.com/membership/july-2020/ageofwonders_planetfall_deluxe
+- name: Void Bastards page
+  url: https://www.humblebundle.com/membership/july-2020/voidbastards
+- name: Railway Empire page
+  url: https://www.humblebundle.com/membership/july-2020/railwayempire
+- name: Battlestar Galactica Deadlock page
+  url: https://www.humblebundle.com/membership/july-2020/battlestargalactica_deadlock
+- name: Yuppie Psycho page
+  url: https://www.humblebundle.com/membership/july-2020/yuppiepsycho
+- name: Beat Hazard 2 page
+  url: https://www.humblebundle.com/membership/july-2020/beathazard2
+- name: 'Sigma Theory: Global Cold War page'
+  url: https://www.humblebundle.com/membership/july-2020/sigmatheory_globalcoldwar
+- name: Metal Unit page
+  url: https://www.humblebundle.com/membership/july-2020/metalunit
+- name: 'Don''T Escape: 4 Days To Survive page'
+  url: https://www.humblebundle.com/membership/july-2020/dontescape_4daysinawasteland
+- name: Verlet Swing page
+  url: https://www.humblebundle.com/membership/july-2020/verletswing
+- name: Basingstoke page
+  url: https://www.humblebundle.com/membership/july-2020/basingstoke
+- name: Earthlock page
+  url: https://www.humblebundle.com/membership/july-2020/earthlock
+games:
+- name: 'Age Of Wonders: Planetfall - Deluxe Edition'
+  ids:
+  - unresolved:store:steam:age-of-wonders:-planetfall---deluxe-edition
+- name: Void Bastards
+  ids:
+  - steam:857980
+- name: Railway Empire
+  ids:
+  - steam:503940
+- name: Battlestar Galactica Deadlock
+  ids:
+  - unresolved:store:steam:battlestar-galactica-deadlock
+- name: Yuppie Psycho
+  ids:
+  - unresolved:store:steam:yuppie-psycho
+- name: Beat Hazard 2
+  ids:
+  - steam:618740
+- name: 'Sigma Theory: Global Cold War'
+  ids:
+  - steam:716640
+- name: Metal Unit
+  ids:
+  - steam:1173200
+- name: 'Don''T Escape: 4 Days To Survive'
+  ids:
+  - steam:611760
+- name: Verlet Swing
+  ids:
+  - steam:811870
+- name: Basingstoke
+  ids:
+  - unresolved:store:steam:basingstoke
+- name: Earthlock
+  ids:
+  - steam:761030
