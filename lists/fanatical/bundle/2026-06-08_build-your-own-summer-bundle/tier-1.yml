@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Summer Bundle (2026) — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16250/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16250/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16250/source.json
+games:
+- name: 'FURIDASHI: Drift Cyber Sport'
+  ids:
+  - steam:658570
+- name: King of Retail
+  ids:
+  - steam:968250
+- name: RDS - The Official Drift Videogame
+  ids:
+  - steam:934930
+- name: Can't Drive This
+  ids:
+  - steam:466980
+- name: OverDrift Festival
+  ids:
+  - steam:1273440
+- name: 'Fight of Steel: Infinity Warrior'
+  ids:
+  - steam:1631350
+- name: 'Rustler: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16250:rustler-complete-edition
+- name: FOUNTAINS
+  ids:
+  - steam:1841240
+- name: Ten Dates
+  ids:
+  - steam:1946070
+- name: The Spirit of the Samurai
+  ids:
+  - steam:1507120
+- name: The Isle Tide Hotel
+  ids:
+  - steam:2000090
+- name: CLeM
+  ids:
+  - steam:1861440
+- name: Decline's Drops
+  ids:
+  - steam:1500180
+- name: Knock'Em Out
+  ids:
+  - steam:2192900
+- name: Charrua Soccer - Pro Edition
+  ids:
+  - steam:2283380
+- name: KitHack Model Club
+  ids:
+  - steam:2107090
+- name: The Stairway 7 - Anomaly Hunt Loop Horror Game
+  ids:
+  - steam:2911820
+- name: Fight School Simulator
+  ids:
+  - steam:2884190
+- name: 'Backrooms: Partygoers'
+  ids:
+  - steam:2792450
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
