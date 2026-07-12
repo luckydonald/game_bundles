@@ -407,3 +407,97 @@ A leftover `ai/git/pending-commit.md` does not matter, so take that out of the p
 
 ❯ add a commit explaining the scraper tech more, including the existence of github actions. This would be best placed as @src/game_collections/sources/README.md and referenced in th `CLAUDE.md` file.
 
+❯ /plan Now add https://www.dailyindiegame.com/site_content_bundles.html , as a scraper, too.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. dailyindiegame.com sits behind a Cloudflare JS challenge — plain httpx/curl gets 403, only a real browser (or a Cloudflare-solving client) gets through. Humble's crawler is plain httpx and can't be reused as-is. How should the new source fetch pages?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fetch method** (1/1) <kbd>Single Select</kbd><br>
+>> dailyindiegame.com sits behind a Cloudflare JS challenge — plain httpx/curl gets 403, only a real browser (or a Cloudflare-solving client) gets through. Humble's crawler is plain httpx and can't be reused as-is. How should the new source fetch pages?
+> - [x] 1\. Headless browser (Playwright)
+>   - _Add Playwright as a new dependency; crawler launches headless Chromium to fetch/render each page, passing the challenge like a real browser. Heavier (new dep, browser binary download) but robust to Cloudflare changes._
+> - [ ] 2\. cloudscraper-style HTTP client
+>   - _Use a Python library (e.g. `cloudscraper`) that emulates a real browser to programmatically solve/pass Cloudflare's JS challenge over plain HTTP, no browser process needed. Lighter, but such libraries are cat-and-mouse and can break when Cloudflare updates its challenge._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Also add a weekly scheduled GitHub Actions scrape for this new source (mirroring weekly-humblebundle-scrape.yml), or just build the CLI/library scraper for now?
+>> 2. Per-game data: the bundle page itself only gives a title + direct Steam app ID per game (no images/descriptions). Following each game's own site_gamelisting_<id>.html page could add a capsule image/description to the archive, at the cost of N extra page loads per bundle.
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Weekly CI** (1/2) <kbd>Single Select</kbd><br>
+>> Also add a weekly scheduled GitHub Actions scrape for this new source (mirroring weekly-humblebundle-scrape.yml), or just build the CLI/library scraper for now?
+> - [x] 1\. Yes, add weekly workflow too (Recommended)
+>   - _Add .github/workflows/weekly-dailyindiegame-scrape.yml alongside the CLI verb, same rolling-branch/PR pattern, plus a Playwright browser-install step._
+> - [ ] 2\. CLI/library only
+>   - _Just game-collections scrape dailyindiegame for now; skip CI automation, can add it later._
+> - [ ] 3\. _Type something._
+>
+>> **Per-game detail** (2/2) <kbd>Single Select</kbd><br>
+>> Per-game data: the bundle page itself only gives a title + direct Steam app ID per game (no images/descriptions). Following each game's own site_gamelisting_<id>.html page could add a capsule image/description to the archive, at the cost of N extra page loads per bundle.
+> - [ ] 1\. Title + Steam ID only (Recommended)
+>   - _Keep it minimal and fast, matching what's directly on the bundle page — mirrors how Humble list entries are just name+ids too._
+> - [x] 2\. Also follow game listing pages
+>   - _Fetch each site_gamelisting_<id>.html for a cover image/description to enrich the archive metadata._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Headless Playwright Chromium can't pass Cloudflare's challenge on dailyindiegame.com (confirmed live: it hangs forever on the interstitial, even with stealth tweaks). All the parsing/crawling/CLI/schema code is done and unit-tested against fake fetch, so only the real fetch path is blocked. How do you want to proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fetch blocker** (1/1) <kbd>Single Select</kbd><br>
+>> Headless Playwright Chromium can't pass Cloudflare's challenge on dailyindiegame.com (confirmed live: it hangs forever on the interstitial, even with stealth tweaks). All the parsing/crawling/CLI/schema code is done and unit-tested against fake fetch, so only the real fetch path is blocked. How do you want to proceed?
+> - [x] 1\. Try harder to bypass (patchright/stealth plugin)
+>   - _Spend more effort on a Cloudflare-evading headless browser (e.g. the `patchright` fork of Playwright built specifically to evade this detection, or a JS stealth plugin equivalent). Real risk it still fails from this sandbox's network, and it's an ongoing cat-and-mouse maintenance burden._
+> - [ ] 2\. Ship as-is, mark fetch as unverified (Recommended)
+>   - _Keep DigBrowserClient exactly as written (a reasonable headless-Playwright attempt) and land everything else. Document in the source README that live fetching is unverified/may need work, since the actual environment running the scheduled scrape (a GitHub Actions runner, different IP/network) may fare differently than this sandbox._
+> - [ ] 3\. Stop here, don't add live fetch code
+>   - _Keep parser/crawler/models/tests/schema (all fully working offline), but drop DigBrowserClient and the CLI wiring/CI workflow until a working fetch strategy is confirmed — avoid shipping a browser client that's known not to work._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Tried patchright (a Playwright fork built specifically to evade Cloudflare/bot detection) headless — still hangs on the challenge, same as vanilla Playwright. Patchright's own docs say headed mode (a real, non-headless browser window) fares much better, but that needs a virtual display (Xvfb) which isn't installed here and there's no sudo to add it, so I can't verify headed mode in this sandbox. Separately: GitHub Actions runners sit on well-known datacenter IP ranges that Cloudflare's managed challenge often blocks outright regardless of browser fingerprint — so even a working local bypass may not survive in the weekly CI workflow. Given this, how do you want to proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Bypass strategy** (1/1) <kbd>Single Select</kbd><br>
+>> Tried patchright (a Playwright fork built specifically to evade Cloudflare/bot detection) headless — still hangs on the challenge, same as vanilla Playwright. Patchright's own docs say headed mode (a real, non-headless browser window) fares much better, but that needs a virtual display (Xvfb) which isn't installed here and there's no sudo to add it, so I can't verify headed mode in this sandbox. Separately: GitHub Actions runners sit on well-known datacenter IP ranges that Cloudflare's managed challenge often blocks outright regardless of browser fingerprint — so even a working local bypass may not survive in the weekly CI workflow. Given this, how do you want to proceed?
+> - [ ] 1\. Ship library/CLI now, skip CI workflow (Recommended)
+>   - _Keep DigBrowserClient as a best-effort headless-Playwright client (already correct code, just unverified against the live Cloudflare challenge), land the CLI/parser/tests as-is, but don't add the weekly GitHub Actions workflow — the datacenter-IP problem makes it unlikely to work unattended, and you can run the scraper manually from a normal home connection instead._
+> - [ ] 2\. I'll get Xvfb installed myself, then retest headed mode
+>   - _You add Xvfb (or another way to get a real display) to this environment yourself; I retest patchright in headed mode against the live site before deciding whether to keep it, and whether the CI workflow is still worth adding._
+> - [x] 3\. _Type something:_
+>   - > Try patchright and the navigator.webdriver patch stuff. Skip CI workflow for now.
+>
+> </details>
+>
+
