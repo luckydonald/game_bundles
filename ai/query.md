@@ -530,3 +530,56 @@ Especially as bundles change not all at once there will be overlaps.
 
 ❯ Fix the bug when running the dailyindiegame scaper with the price being `$0.10 ( $0 ) — You save: $-0.10 (0%)` breaking the parser.
 
+❯ /plan can I get `STEAM_WEB_API_KEY` or the information which games my account owns from the local steam files?
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. This look informational question, not code change. Want feature added (local-file fallback ownership check, no API key), or just answer?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Goal** (1/1) <kbd>Single Select</kbd><br>
+>> This look informational question, not code change. Want feature added (local-file fallback ownership check, no API key), or just answer?
+> - [ ] 1\. Just answer
+>   - _Explain what local Steam files can/can't give you, no code change._
+> - [x] 2\. Add local fallback feature
+>   - _Plan new code path: derive owned games from local Steam files instead of/alongside Web API, wire into eligible/sync steam._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `a5463d61011ffac85` <kbd>completed</kbd>
+> - Tool `toolu_01LDUoBXtek2nc6GhaNBHLx6`
+> - > Agent "Research local Steam ownership data sources" finished
+> - [Query (`2591` chars, `2.54 KB`)](output/agents/002.a5463d61011ffac85/prompt.md)
+> - [Answer (`2934` chars, `2.89 KB`)](output/agents/002.a5463d61011ffac85/result.md)
+> - [Raw log (`48531` chars, `47.5 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/cd0d5bf6-9b5e-4b83-9236-5f2b9cc6dccb/tasks/a5463d61011ffac85.output)
+> - `3` tools, `18898` tokens, `0.373733 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Research done. No local Steam file reliably lists FULL owned/licensed games — only INSTALLED games are visible locally (via steamapps/libraryfolders.vdf + appmanifest_*.acf), and STEAM_WEB_API_KEY itself can't be derived locally at all (it's a Valve dev-portal secret). Given that, what should the plan cover?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Scope** (1/1) <kbd>Single Select</kbd><br>
+>> Research done. No local Steam file reliably lists FULL owned/licensed games — only INSTALLED games are visible locally (via steamapps/libraryfolders.vdf + appmanifest_*.acf), and STEAM_WEB_API_KEY itself can't be derived locally at all (it's a Valve dev-portal secret). Given that, what should the plan cover?
+> - [x] 1\. Installed-games fallback only (Recommended)
+>   - _New local-only ownership source: read steamapps/libraryfolders.vdf + appmanifest_*.acf, report/sync those app IDs as 'owned' (really 'installed'), clearly documented as a subset of true ownership. No API key needed for this path._
+> - [ ] 2\. Just document limitation, no code
+>   - _Skip new feature; just note in docs/README that full ownership requires STEAM_WEB_API_KEY, and there is no local alternative._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Ah, can't we just scrape `https://steamcommunity.com/id/luckydonald/games/?tab=all` or whatever the user's URL is, as middle fallback?
+

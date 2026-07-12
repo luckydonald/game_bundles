@@ -52,6 +52,8 @@ uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestam
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
 
+`eligible steam` and `sync steam` also accept `--source installed` to skip the Web API and `STEAM_WEB_API_KEY` entirely, approximating ownership from locally installed games (`steamapps/libraryfolders.vdf` + `appmanifest_*.acf`). This only sees what's currently installed, not everything the account owns, so owned-but-uninstalled games are reported as missing; there is no local file that exposes the full owned/licensed games list, and `STEAM_WEB_API_KEY` itself can never be read from local Steam files — it's an account secret from Valve's web dev portal.
+
 `game-collections search NAME` prints ranked matches from every supported storefront. Limit it with `--provider steam` (or `gog`, `epic`, `ubisoft`, or `humble`).
 
 `game-collections complete FILE` fills qualified IDs in a draft list in place and defaults to Steam. Use repeatable `--provider`/`--store` options or comma-separated values to select multiple storefronts; `all` selects every supported storefront. Unique exact title matches are accepted automatically, while ambiguous matches prompt for a result or a canonical URL/direct ID.
