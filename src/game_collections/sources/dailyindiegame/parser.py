@@ -180,13 +180,13 @@ def _dig_price(raw: str, label: str) -> DigPrice:
 # end def _dig_price
 
 
-def _bundle_number(url: str) -> str:
+def bundle_number(url: str) -> str:
     match = BUNDLE_LINK_PATTERN.match(Path(urlparse(url).path).name)
     if not match:
         raise DigParseError(f"URL does not look like a weekly bundle page: {url}")
     # end if
     return match.group(1)
-# end def _bundle_number
+# end def bundle_number
 
 
 def parse_bundle_page(html: str, url: str, crawled: datetime) -> tuple[DigArchive, dict[str, Any]]:
@@ -218,7 +218,7 @@ def parse_bundle_page(html: str, url: str, crawled: datetime) -> tuple[DigArchiv
         end = crawled + timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
     # end if
 
-    machine_name = _bundle_number(url)
+    machine_name = bundle_number(url)
     is_adult = "ADULT" in name.upper()
     items = [
         DigItem(

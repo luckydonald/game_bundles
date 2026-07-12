@@ -501,3 +501,28 @@ A leftover `ai/git/pending-commit.md` does not matter, so take that out of the p
 > </details>
 >
 
+❯ /plan Generally speaking this needs more verbose logging, what it's doing, and how the progress is (bundle x of y; game x of y).
+Additionally, it should write to disk as soon as it has data (pages, bundles) completed, and not wait until its done with all of it.
+Lastly, it should be able to resume, with those entries on disk preferred to re-fetching unless needed (schema change, etc.).
+Especially as bundles change not all at once there will be overlaps.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Does this progress-logging / incremental-write / resume behavior apply to both scrapers (Humble and DailyIndieGame), or just the new DailyIndieGame one?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Scope** (1/1) <kbd>Single Select</kbd><br>
+>> Does this progress-logging / incremental-write / resume behavior apply to both scrapers (Humble and DailyIndieGame), or just the new DailyIndieGame one?
+> - [x] 1\. Both scrapers (Recommended)
+>   - _Apply the same verbose logging, write-as-you-go, and resume-from-disk behavior to both scrape humblebundle and scrape dailyindiegame, sharing the logic where possible._
+> - [ ] 2\. DailyIndieGame only
+>   - _Only change scrape dailyindiegame for now; leave Humble's all-in-memory-then-write-at-end behavior untouched._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+

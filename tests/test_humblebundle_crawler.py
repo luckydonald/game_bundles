@@ -235,3 +235,95 @@ def test_crawl_explicit_choice_is_resolved_without_listing() -> None:
     assert report.errors == ()
     assert report.offers[0].archive.tiers[0].items[0].resolution.ids == ["steam:42"]
 # end def test_crawl_explicit_choice_is_resolved_without_listing
+
+
+def _bundle_page_payload(machine_name: str = "sample_bundle") -> str:
+    game = {
+        "machine_name": "samplegame",
+        "human_name": "Sample Game",
+        "item_content_type": "game",
+        "availability_icons": {"delivery_icons": ["hb-steam"]},
+    }
+    payload = {
+        "bundleData": {
+            "machine_name": machine_name,
+            "page_url": "games/sample-bundle",
+            "basic_data": {
+                "human_name": "Sample Bundle",
+                "short_marketing_blurb": "Play games.",
+                "end_time|datetime": "2026-07-22T18:00:00",
+            },
+            "tier_order": ["all"],
+            "tier_display_data": {"all": {"header": "", "tier_item_machine_names": ["samplegame"]}},
+            "tier_pricing_data": {"all": {"price|money": None}},
+            "tier_item_data": {"samplegame": game},
+        }
+    }
+    return f'<script id="webpack-bundle-page-data">{json.dumps(payload)}</script>'
+# end def _bundle_page_payload
+
+
+def test_crawl_skips_resolution_for_a_cached_offer(tmp_path: Path) -> None:
+    archive_root = tmp_path / "archives"
+    offer = _offer()
+    cached_archive = offer.archive.model_copy(
+        update={
+            "dates": HumbleDates(
+                end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+                crawled=datetime(2026, 7, 12, tzinfo=UTC),
+            )
+        }
+    )
+    write_humble_offer(
+        CrawledHumbleOffer(archive=cached_archive, source={}),
+        tmp_path / "lists",
+        archive_root,
+        tmp_path,
+    )
+
+    def fetch(url: str) -> str:
+        return _bundle_page_payload()
+    # end def fetch
+
+    def unreachable_fetch(url: str) -> str:
+        raise AssertionError(f"storefront search should be skipped for a cached offer: {url}")
+    # end def unreachable_fetch
+
+    resolver = StorefrontResolver(unreachable_fetch, lambda _item, _provider, _candidates: None)
+    report = crawl_humble_offers(
+        fetch,
+        resolver,
+        HumbleResolutionMap(schema=1, games={}),
+        urls=["https://www.humblebundle.com/games/sample-bundle"],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        archive_root=archive_root,
+    )
+
+    assert report.errors == ()
+    assert len(report.offers) == 1
+    assert report.offers[0].archive.tiers[0].items[0].resolution.ids == ["steam:42"]
+# end def test_crawl_skips_resolution_for_a_cached_offer
+
+
+def test_crawl_logs_progress_and_invokes_on_offer_per_offer() -> None:
+    def fetch(url: str) -> str:
+        return _bundle_page_payload()
+    # end def fetch
+
+    resolver = StorefrontResolver(fetch, lambda _item, _provider, _candidates: None)
+    messages: list[str] = []
+    offers: list[CrawledHumbleOffer] = []
+    report = crawl_humble_offers(
+        fetch,
+        resolver,
+        HumbleResolutionMap(schema=1, games={}),
+        urls=["https://www.humblebundle.com/games/sample-bundle"],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        log=messages.append,
+        on_offer=offers.append,
+    )
+
+    assert any("Offer 1/1" in message for message in messages)
+    assert any("Game 1/1" in message for message in messages)
+    assert offers == list(report.offers)
+# end def test_crawl_logs_progress_and_invokes_on_offer_per_offer

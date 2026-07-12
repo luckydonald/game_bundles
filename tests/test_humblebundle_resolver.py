@@ -123,6 +123,17 @@ def test_unique_exact_match_is_accepted_without_prompt() -> None:
 # end def test_unique_exact_match_is_accepted_without_prompt
 
 
+def test_resolve_archive_logs_progress_per_distinct_game() -> None:
+    page = '<a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>'
+    resolver = StorefrontResolver(lambda _url: page, lambda _item, _provider, _candidates: None)
+    messages: list[str] = []
+
+    resolver.resolve_archive(_archive(_item()), HumbleResolutionMap(schema=1, games={}), log=messages.append)
+
+    assert any("Game 1/1" in message and "Sample Game" in message for message in messages)
+# end def test_resolve_archive_logs_progress_per_distinct_game
+
+
 def test_ambiguous_match_uses_selected_url() -> None:
     page = """
     <a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>

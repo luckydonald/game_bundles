@@ -263,6 +263,8 @@ def render_resolution_map(mapping: HumbleResolutionMap) -> str:
 
 CandidateChooser = Callable[[HumbleItem, StoreName, list[StoreCandidate]], str | None]
 Fetcher = Callable[[str], str]
+LogFn = Callable[[str], None]
+_NO_LOG: LogFn = lambda _message: None  # noqa: E731
 
 
 class StorefrontResolver:
@@ -322,23 +324,31 @@ class StorefrontResolver:
         self,
         archive: HumbleArchive,
         mapping: HumbleResolutionMap,
+        log: LogFn = _NO_LOG,
     ) -> HumbleArchive:
         """Resolve every distinct real game and update all cumulative tier copies."""
-        resolved: dict[str, list[str]] = {}
-        unresolved_by_name: dict[str, list[str]] = {}
+        distinct: list[HumbleItem] = []
+        seen_names: set[str] = set()
         for tier in archive.tiers:
             for item in tier.items:
-                if not item.is_game or item.machine_name in resolved:
-                    continue
+                if item.is_game and item.machine_name not in seen_names:
+                    seen_names.add(item.machine_name)
+                    distinct.append(item)
                 # end if
-                ids = self.resolve_item(item, mapping)
-                resolved[item.machine_name] = ids
-                unresolved_by_name[item.machine_name] = [
-                    store
-                    for store in item.redeem_on
-                    if not any(identifier.startswith(f"{store}:") for identifier in ids)
-                ]
             # end for
+        # end for
+        resolved: dict[str, list[str]] = {}
+        unresolved_by_name: dict[str, list[str]] = {}
+        total = len(distinct)
+        for index, item in enumerate(distinct, start=1):
+            log(f"  Game {index}/{total}: {item.title}")
+            ids = self.resolve_item(item, mapping)
+            resolved[item.machine_name] = ids
+            unresolved_by_name[item.machine_name] = [
+                store
+                for store in item.redeem_on
+                if not any(identifier.startswith(f"{store}:") for identifier in ids)
+            ]
         # end for
         tiers = []
         for tier in archive.tiers:
