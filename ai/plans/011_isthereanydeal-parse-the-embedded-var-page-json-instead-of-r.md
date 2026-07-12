@@ -46,9 +46,15 @@ Store",1]`) that isn't captured anywhere yet. The user wants this filled into a 
   bundle (Fanatical, e.g. 16375) has exactly one tier with `price: null` and all games, plus a
   top-level `liveData.byob` list of `{"count": N, "price": [..., "CUR"]}` picks (already
   intentionally unmodeled today — `ItadTier.price` is `None` for this shape, matches as-is).
-  **No tier `name` field exists in the JSON** (unlike the HTML's Bronze/Silver/Gold header text) —
-  synthesize `f"Tier {index + 1}"` for the JSON path; don't try to recover the display label here,
-  that nuance stays exclusive to the legacy HTML-parser fallback.
+  **Tier display name**: `tiers[i].note` *does* carry it when the provider sets one — confirmed
+  `note: "Bronze"/"Silver"/"Gold"` for the GreenManGaming bundle, `note: null` for the Humble/
+  Fanatical/IndieGala fixtures. So: use `tier.note` when non-null/non-empty; when null, use
+  `f"Tier {index + 1}"` — **except** for Humble-provider bundles, where the ITAD JSON never
+  carries a name but the dedicated Humble scraper's own convention is well known and should be
+  matched for consistency (`src/game_collections/sources/humblebundle/crawler.py:279-284`): the
+  tier whose `item_count` equals the bundle's total game count is named `entire-{item_count}-item-bundle`,
+  every other tier is named `{item_count}-item-bundle` (match by item_count, not tier index —
+  Humble's own tier list order isn't guaranteed to line up with ours).
 - Each `game` entry: `id` (ITAD uuid), `slug`, `title`, `type`, `mature`, `assets`, `tags`,
   `features`, `reviews`, `note`, `drmfree`, `keys` (shop-id ints, e.g. `[61]`), `platforms`,
   `bundled`. `reviews` is a list of `{"source": "Steam", "count", "positive", "neutral",
@@ -63,19 +69,39 @@ Store",1]`) that isn't captured anywhere yet. The user wants this filled into a 
 
 ## Design
 
+**Prefer BeautifulSoup4 over regex for HTML structure wherever there's a choice** (already a
+locked project dependency via `uv.lock`, not a new addition). Concretely:
+- `parse_bootstrap_page`'s `<script>` lookup: use BS4 to find the right `<script>` tag (e.g.
+  `soup.find("script", string=re.compile(r"^\s*var g ="))`) instead of a regex scan over the
+  whole raw HTML document; the JSON-substring extraction *inside* that script's text (balanced-
+  brace scanning, since it's a JS variable assignment, not markup) stays as today — that part
+  isn't HTML structure, so BS4 doesn't apply to it.
+- The **legacy fallback** `parse_bundle_detail_page`: rewrite it against a BS4 tree
+  (`BeautifulSoup(html, "html.parser")`, `soup.select("a[href*='/game/']")`,
+  `soup.select_one(".tier-name")`, `.get_text(strip=True)`, etc.) instead of `TITLE_PATTERN`/
+  `TIER_HEADER_PATTERN`/`TIER_PRICE_PATTERN`/`GAME_LINK_PATTERN`/`STORE_LINK_PATTERN`. Same
+  cumulative-building logic and same invariant checks, just walking real DOM nodes instead of
+  regex-matching serialized markup — this is the whole point of keeping this path around as a
+  fallback: it should be *more* resilient to markup changes than today's version, not equally
+  fragile in a different way.
+- The **new JSON path** doesn't touch HTML structure at all once the blob is extracted (it's
+  already parsed JSON), so BS4 isn't relevant there beyond locating the `<script>` tag itself.
+
 1. **`parser.py`**: add `parse_bundle_detail_json(html, bundle_id, expected_game_count) ->
    list[ItadTier] | None`. Returns `None` (not a raised error) when `var page = ` isn't found at
-   all, so the crawler can cleanly try the legacy path next; raises `ItadParseError` same as
-   today for anything found-but-malformed (bad JSON, wrong tuple tag, missing `liveData`, tier/
-   game-count mismatch, etc. — reuse the existing invariant checks at the bottom of
-   `parse_bundle_detail_page`: `len(cumulative) == expected_game_count`, non-empty tiers).
-   Extract the `[...]` blob the same way `_extract_balanced_object` already does for `{...}` (add
-   a bracket-matching sibling, or generalize the existing helper to take the opening delimiter).
-   Refactor the current `_resolve_item_ids(html, start, end, bundle_id, slug)` into a small
-   `_resolve_urls(urls: list[str], bundle_id, slug) -> list[str]` used by **both** parsers: the
-   legacy path calls it with the URLs it scans out of the HTML slice, the new JSON path calls it
+   all (locate via BS4 the same way as the bootstrap token, see above), so the crawler can
+   cleanly try the legacy path next; raises `ItadParseError` same as today for anything
+   found-but-malformed (bad JSON, wrong tuple tag, missing `liveData`, tier/game-count mismatch,
+   etc. — reuse the existing invariant checks at the bottom of `parse_bundle_detail_page`:
+   `len(cumulative) == expected_game_count`, non-empty tiers). Extract the `[...]` blob the same
+   way `_extract_balanced_object` already does for `{...}` (add a bracket-matching sibling, or
+   generalize the existing helper to take the opening delimiter). Refactor the current
+   `_resolve_item_ids(html, start, end, bundle_id, slug)` into a small `_resolve_urls(urls:
+   list[str], bundle_id, slug) -> list[str]` used by **both** parsers: the legacy (BS4) path
+   calls it with the `href`s it collects from the relevant DOM slice, the new JSON path calls it
    with `[r["url"] for r in game["reviews"]]`. Keep `parse_bundle_detail_page` (the legacy
-   regex/positional parser) completely intact and unused-but-present as the fallback.
+   parser, now BS4-based per above) completely intact and present as the fallback — never remove
+   it, per explicit instruction.
 
 2. **`crawler.py`**: change the per-bundle step to call `parse_bundle_detail_json` first; if it
    returns `None` or raises `ItadParseError`, log one line (e.g. `"  <slug>: no embedded page data,
@@ -117,6 +143,11 @@ Store",1]`) that isn't captured anywhere yet. The user wants this filled into a 
   not asked for, keep `ItadItem` as-is (slug/title/ids).
 - No change to `ItadTier`/`ItadItem`/`ItadPrice` models — verified the JSON maps onto the existing
   shapes without changes.
+- `ai/pending.tmp.md` has a note "we need to add support for BYOB" — as implemented today, BYOB
+  bundles already produce one synthetic all-games tier with `price: None` (the per-pick pricing
+  table in `liveData.byob`/the list API's `byob` flag is intentionally not modeled). If that note
+  means something more than this, it's a separate ask — not folded into this plan; flag it back
+  to the user rather than guessing scope.
 
 ## Verification
 

@@ -666,3 +666,6 @@ I noticed pressing that button sets a value in localstorage of `https://istherea
 Ah, check out the inline `<script>`, especially `var page = ["Bundle", {`.
 (While at it, you can fill the store id config file with `var g = {`'s `"shops": {` id-to-name mapping.)
 
+❯ Try to avoid regex based parsers if `BeautifulSoup4` is an option.
+Bronze/Silver/Gold header text is available as `tiers[i].note` (if non-null, otherwise `Tier ${i}` is fine. For humble bundle, `${'entire'?} ${n} item bundle` is fine hardcoded.
+
