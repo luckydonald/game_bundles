@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Discount DLCs
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_1.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/1/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/1/source.json
+games:
+- name: Adult Puzzles - CamGirls ArtBook
+  ids:
+  - steam:1786020
+- name: Adult Puzzles - Fantasy Ladies 2 ArtBook
+  ids:
+  - steam:1805290
+- name: Adult Puzzles - Fantasy Ladies ArtBook
+  ids:
+  - steam:1792180
+- name: Adult Puzzles - Hentai Christmas ArtBook
+  ids:
+  - steam:1816630
+- name: Adult Puzzles - Hentai Halloween ArtBook
+  ids:
+  - steam:1798800
+- name: Adult Puzzles - Hentai NightClub ArtBook
+  ids:
+  - steam:1788580
+- name: Adult Puzzles - Pole Dancer ArtBook
+  ids:
+  - steam:1797730
+- name: Anime Jigsaw Girls - Christmas ArtBook
+  ids:
+  - steam:1819270
+- name: Anime Jigsaw Girls - Office ArtBook
+  ids:
+  - steam:1810910
