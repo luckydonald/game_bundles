@@ -401,3 +401,7 @@ This can be a script in `scripts/`, and doesn't need to be too fancy. Just plop 
 ❯ Instead of merging, it shall rebase. If rebase fails, ignore and just crawl and commit, at some point a human will solve it, keep scraping & commiting though.
 A leftover `ai/git/pending-commit.md` does not matter, so take that out of the plan. User is "Lucky Lucy (automation)", with the email `3._.code@luckydonald.de`.
 
+❯ /init
+
+❯ Make sure it mentions that the lplp commit style is active for this repo.
+
