@@ -12,12 +12,14 @@ from pydantic import Field, model_validator
 from game_collections.models import QualifiedGameId, StrictModel
 from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgResolution
 from game_collections.sources.humblebundle.resolver import (
-    STORE_ROOTS,
     STORE_SEARCH_URLS,
     StoreCandidate,
+    parse_store_candidates,
+)
+from game_collections.sources.storefronts import (
+    STORE_ROOTS,
     StoreName,
     normalized_title,
-    parse_store_candidates,
     parse_store_identity,
 )
 
