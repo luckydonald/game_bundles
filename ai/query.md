@@ -660,3 +660,9 @@ If there were yearly bundles, we'd drop the month, too.
 > - [Raw log (`1566130` chars, `1.49 MB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/b0415bfb-1d4d-4f8d-ba21-2a9b5c037d86/tasks/ae48f472707322c20.output)
 > - `249` tools, `456053` tokens, `31.6696 s`
 
+❯ /plan If the mature one is all client side, this means a browser `fetch`, which in turn means there must be an API?
+Please investigate that - it could be beneficial for all the bundles. If we find that to work, still keep the HTML based one around, just in case it fails at some point.
+I noticed pressing that button sets a value in localstorage of `https://isthereanydeal.com`, it sets `mature` to `true`, so something must change in the way the data is loaded via js.
+Ah, check out the inline `<script>`, especially `var page = ["Bundle", {`.
+(While at it, you can fill the store id config file with `var g = {`'s `"shops": {` id-to-name mapping.)
+
