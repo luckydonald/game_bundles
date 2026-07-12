@@ -1,0 +1,76 @@
+# Game Collections
+
+Game Collections is a Python resource for maintaining portable lists of games and synchronizing fully owned lists into launcher libraries. The initial launcher is Steam; the list format and synchronization contracts are designed for later GOG, Epic, or other integrations.
+
+The original use case is keeping bundles such as **The Orange Box** together in a Steam library.
+
+## List format
+
+Lists live below [`lists/`](lists/). Their ID is their path relative to that directory without `.yml`: `lists/valve/the-orange-box.yml` is `valve/the-orange-box`.
+
+```yaml
+# yaml-language-server: $schema=../../schemas/game-list.schema.json
+schema: 1
+name: The Orange Box
+games:
+  - name: Half-Life 2
+    ids: [steam:220]
+  - name: Portal
+    ids: [steam:400]
+```
+
+Every file is validated by strict Pydantic models. The committed [JSON Schema](schemas/game-list.schema.json) is generated from those models and supplies IDE completion and diagnostics. See [`lists/README.md`](lists/README.md) for contribution details.
+
+## Setup
+
+Python 3.14 or newer and [uv](https://docs.astral.sh/uv/) are required.
+
+```console
+uv sync --extra test
+uv run game-collections validate
+uv run pytest
+```
+
+Common commands:
+
+```console
+uv run game-collections list
+uv run game-collections schema
+uv run game-collections eligible steam
+uv run game-collections sync steam
+uv run game-collections sync steam --apply
+uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestamp>
+```
+
+Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
+
+## Steam behavior
+
+Steam does not expose a public API for creating library collections. Current clients store them in account-scoped cloud configuration:
+
+```text
+userdata/<account-id>/config/cloudstorage/cloud-storage-namespace-1.json
+userdata/<account-id>/config/cloudstorage/cloud-storage-namespace-1.modified.json
+```
+
+This is an internal Steam format. Game Collections therefore models the complete file envelopes and relevant nested payloads with strict Pydantic models. Unknown fields, changed types, duplicate keys, unsupported filter versions, inconsistent dirty keys, or account mismatches stop synchronization.
+
+`sync steam` is a read-only dry run. `sync steam --apply` follows a guarded workflow:
+
+1. Read Steam files through no-follow, descriptor-based checks and validate them completely.
+2. Write candidates, byte-for-byte backups, hashes, a manifest, and an inspection report to a timestamped Desktop directory. Steam is not changed.
+3. Print every source, candidate, backup, and destination path and pause for inspection.
+4. Require Steam to be stopped, then reopen and revalidate the originals. Any metadata or content change aborts.
+5. Require the user to type `REPLACE`.
+6. Replace the namespace and modified-key files with same-directory temporary files, `fsync`, atomic replacement, post-write verification, and rollback if the second file fails.
+7. Preserve backups and print the verified restore command.
+
+Restoration requires Steam to be stopped and the user to type `RESTORE`.
+
+Synchronization is additive in version 1. It creates deterministic static collections, preserves manually added games, and never removes games or collections. Same-name collisions, dynamic collections, and system collection names fail closed.
+
+## Architecture
+
+The core loads qualified IDs such as `steam:440` without launcher knowledge. Launcher adapters separately implement ownership evaluation, semantic planning, staging, and guarded application. Steam-specific models and IO remain under `game_collections.launchers.steam`; adding GOG or Epic should implement the launcher contracts without changing list parsing.
+
+Only the Steam file gateway may open or replace Steam configuration. Tests use sanitized temporary fixtures. Development and automated tests must never run real-account `--apply` or `restore` without explicit user permission.
