@@ -1,6 +1,6 @@
 # Sources
 
-A "source" scrapes a public storefront/bundle page into launcher-neutral `lists/` entries plus a normalized `archives/` record, as opposed to `launchers/`, which synchronizes already-owned lists into a launcher library. `common.py` holds the file-writing helpers shared by every source (`atomic_write`, `dump_json`, `render_game_list_yaml` — temp file + `fsync` + rename, deterministic sorted JSON, and the YAML list renderer with its IDE schema comment) plus `load_cached_archive`, the resume-from-disk helper both sources use (see below). Humble Bundle and DailyIndieGame are the two implemented sources.
+A "source" scrapes a public storefront/bundle page into launcher-neutral `lists/` entries plus a normalized `archives/` record, as opposed to `launchers/`, which synchronizes already-owned lists into a launcher library. `common.py` holds the file-writing helpers shared by every source (`atomic_write`, `dump_json`, `render_game_list_yaml` — temp file + `fsync` + rename, deterministic sorted JSON, and the YAML list renderer with its IDE schema comment) plus `load_cached_archive`, the resume-from-disk helper all three sources use (see below). Humble Bundle, DailyIndieGame, and Green Man Gaming are the three implemented sources.
 
 ### Progress logging, incremental writes, and resuming
 
@@ -10,10 +10,11 @@ Both `crawl_humble_offers`/`crawl_dig_offers` accept:
 - `on_offer: Callable[[CrawledOffer], None] | None` — called immediately once each offer/bundle finishes processing, so the CLI writes it to disk right away (`write_dig_offer`/`write_humble_offer`, plus `write_resolution_map` for Humble) instead of batching every write until the whole crawl completes. A crash or interrupt partway through only loses the in-flight offer, not everything already done.
 - `archive_root: Path | None` — when given, enables resume-from-disk: before doing the expensive part of a target, `sources.common.load_cached_archive(ArchiveModel, metadata_path, source_path)` is tried first. A hit (valid JSON, and the archive still validates against the current `schema_version`) skips the expensive work entirely and reuses the cached, already-processed result. A schema bump makes old cache entries fail validation automatically, so stale cache is never silently trusted — it just falls through to a real fetch. Passing `archive_root=None` (what `--refresh` does on both `scrape` commands) disables this and forces everything to be redone.
 
-The two sources skip different amounts of work on a cache hit, because of what's knowable before any fetch happens:
+The three sources skip different amounts of work on a cache hit, because of what's knowable before any fetch happens:
 
 - **DailyIndieGame**: bundle numbers are known upfront (from the index page or explicit `--url`), so a cache hit skips the bundle-page fetch *and* every per-game listing-page fetch for that bundle — the biggest win, since each is a full headed-browser page load and most bundles in a discovery-mode run were already scraped last time (bundles roll off/on gradually, hence the overlap).
 - **Humble Bundle**: the cache key depends on parsed fields, so the page itself is always fetched — but a cache hit skips `StorefrontResolver.resolve_archive`, which is the actually expensive part (one storefront search per distinct game).
+- **Green Man Gaming**: bundle slugs are known upfront (from the index page or explicit `--url`), so a cache hit skips the bundle-page fetch, every per-item product-fragment fetch, *and* `StorefrontResolver.resolve_archive` — the same two expensive stages DailyIndieGame and Humble each separately skip, combined, since this source needs both a per-item enrichment fetch (DRM label, needed before resolution can pick a store) and title-based resolution.
 
 ## Humble Bundle (`humblebundle/`)
 
@@ -43,6 +44,21 @@ Pipeline pieces:
 - `models.py` — `DigArchive`/`DigItem`/`DigPrice`/`DigDates`: flatter than Humble's shape since there's one flat price tier per bundle (not cumulative tiers) and no resolver-produced fields.
 - `parser.py` — `parse_bundle_index_page` (weekly-bundle numbers from the `site_content_bundles.html` gallery), `parse_bundle_page` (title span, price-summary sentence, countdown, per-game Steam links via a small `<td>`-tracking `HTMLParser`), `parse_game_listing_page` (each game's own `site_gamelisting_<id>.html` for price/region/description/cover art).
 - `crawler.py` — `DigBrowserClient` (see above), `crawl_dig_offers(fetch, ...)` takes an **injectable `fetch` callable** exactly like Humble's crawler (plus `log`/`on_offer`/`archive_root`, see above), so every test exercises real parsing/orchestration logic with a fake `fetch` and never launches a browser; only the CLI wires in the real `DigBrowserClient.fetch`. `write_dig_offer(...)` writes `archives/dailyindiegame/bundle/<N>/{metadata.json,source.json}` and `lists/dailyindiegame/bundle/<N>.yml`.
+
+## Green Man Gaming (`greenmangaming/`)
+
+Backs `game-collections scrape greenmangaming`. Notable differences from the other two sources:
+
+1. **Two domains, both plain server-rendered HTML.** The bundle index lives at `greenmangaming.com/bundles/` (an Angular app, but the bundle grid itself is rendered server-side into a `<div class="product-grid">`, not fetched via an API call); each bundle's own pages live on a *different* domain, `greenmangamingbundles.com` (a separate Django + htmx app). Neither needs a browser or hits a bot challenge — plain `httpx` GETs work for everything, including the htmx product-detail fragment (fetched with an `HX-Request: true` header, same as the real frontend would send).
+2. **Resolver-based ID matching, like Humble.** Bundle pages never link straight to a storefront ID — only a free-text DRM label per item (`<dt>DRM</dt><dd>Steam</dd>`, fetched from that item's own `/bundles/<slug>/product/<id>/` fragment). `resolver.py` mirrors `humblebundle/resolver.py`'s `StorefrontResolver`/store-search machinery (re-exported from it, not reimplemented) with a `redeem_on_for_drm` mapping (`Steam`→`steam`, `GOG`→`gog`, `Uplay`/`Ubisoft Connect`→`ubisoft`; anything unrecognized is left unresolved rather than guessed).
+3. **Cumulative tiers derived from the default page render, no extra requests.** A bundle detail page's default render shows every item across every tier "unlocked" at once, and each item's `hx-vals` attribute (used by the site's own tier-switching htmx interaction) already tags it with the *tier it was originally unlocked at* (`tier_name`). `parser.py` groups items by that tag and accumulates them in ascending tier-price order to build each cumulative tier — this was cross-checked against the live site's `/bundles/<slug>/switch_tier/` endpoint (which returns exactly the same cumulative sets per tier) before trusting it, so no extra per-tier fetch is needed, unlike DailyIndieGame's per-game listing-page fetches.
+
+Pipeline pieces:
+
+- `models.py` — `GmgArchive`/`GmgTier`/`GmgItem`/`GmgPrice`/`GmgResolution`: cumulative tiers like `HumbleArchive`/`HumbleTier`, but flatter items (no `is_game`/bonus distinction — every item observed in a GMG bundle is a purchasable product, DLC included).
+- `resolver.py` — `StorefrontResolver`/`GmgResolutionMap`/`redeem_on_for_drm`, re-exporting Humble's `STORE_SEARCH_URLS`/`parse_store_candidates`/`parse_store_identity`/`normalized_title` instead of duplicating them. Reviewed decisions persist in `config/greenmangaming-store-ids.yml`.
+- `parser.py` — `parse_bundle_index_page` (video-games-category bundle slugs from the index page's `product-card`/`cta-button` markup), `parse_bundle_page` (title, currency, and cumulative tiers per the tier-grouping approach above), `parse_product_fragment` (DRM/platform/developer/publisher/description from one item's htmx fragment).
+- `crawler.py` — `GmgHttpClient` (bounded-retry `httpx` wrapper, sends `HX-Request: true` so product-fragment fetches work), `crawl_gmg_offers(fetch, resolver, mapping, ...)` takes the same **injectable `fetch` callable** plus `log`/`on_offer`/`archive_root` conventions as the other two sources. `write_gmg_offer(...)` writes `archives/greenmangaming/bundle/<slug>/{metadata.json,source.json}` and one `lists/greenmangaming/bundle/<slug>/<tier-id>.yml` per cumulative tier.
 
 ## Adding a new source (e.g. another bundle shop)
 

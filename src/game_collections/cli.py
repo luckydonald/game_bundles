@@ -22,6 +22,7 @@ from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
 from game_collections.schema import write_dailyindiegame_schema
+from game_collections.schema import write_greenmangaming_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.search import complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
@@ -29,6 +30,18 @@ from game_collections.sources.dailyindiegame.crawler import (
     DigBrowserClient,
     crawl_dig_offers,
     write_dig_offer,
+)
+from game_collections.sources.greenmangaming.crawler import (
+    CrawledGmgOffer,
+    GmgHttpClient,
+    crawl_gmg_offers,
+    write_gmg_offer,
+)
+from game_collections.sources.greenmangaming.crawler import write_resolution_map as write_gmg_resolution_map
+from game_collections.sources.greenmangaming.models import GmgItem
+from game_collections.sources.greenmangaming.resolver import (
+    StorefrontResolver as GmgStorefrontResolver,
+    load_resolution_map as load_gmg_resolution_map,
 )
 from game_collections.sources.humblebundle.crawler import (
     CrawledHumbleOffer,
@@ -102,14 +115,20 @@ def schema_command(
         Path,
         typer.Option("--dailyindiegame-output", help="Generated DailyIndieGame archive JSON Schema path."),
     ] = Path("schemas/dailyindiegame-archive.schema.json"),
+    greenmangaming_output: Annotated[
+        Path,
+        typer.Option("--greenmangaming-output", help="Generated Green Man Gaming archive JSON Schema path."),
+    ] = Path("schemas/greenmangaming-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
     write_humblebundle_schema(humblebundle_output)
     write_dailyindiegame_schema(dailyindiegame_output)
+    write_greenmangaming_schema(greenmangaming_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
     typer.echo(dailyindiegame_output)
+    typer.echo(greenmangaming_output)
 # end def schema_command
 
 
@@ -392,6 +411,118 @@ def scrape_dailyindiegame_command(
         client.close()
     # end try
 # end def scrape_dailyindiegame_command
+
+
+def _choose_gmg_store_candidate(
+    item: GmgItem,
+    provider: StoreName,
+    candidates: list[StoreCandidate],
+) -> str | None:
+    typer.echo(f"Resolve {item.title!r} on {provider}:")
+    for index, candidate in enumerate(candidates, start=1):
+        typer.echo(f"  {index}. {candidate.title} — {candidate.qualified_id}")
+        typer.echo(f"     {candidate.url}")
+    # end for
+    other = len(candidates) + 1
+    typer.echo(f"  {other}. Other…")
+    while True:
+        selection = typer.prompt("Select a result", default=str(other))
+        if selection.isdecimal() and 1 <= int(selection) <= len(candidates):
+            return candidates[int(selection) - 1].qualified_id
+        # end if
+        if selection == str(other):
+            manual = typer.prompt(
+                "Paste the store URL or direct ID; leave blank for unresolved",
+                default="",
+                show_default=False,
+            )
+            return manual or None
+        # end if
+        typer.echo(f"Enter a number from 1 to {other}.", err=True)
+    # end while
+# end def _choose_gmg_store_candidate
+
+
+@scrape_app.command("greenmangaming")
+def scrape_greenmangaming_command(
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="Crawl only this bundle detail URL; repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path(
+        "config/greenmangaming-store-ids.yml"
+    ),
+    non_interactive: Annotated[
+        bool,
+        typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting."),
+    ] = False,
+    refresh: Annotated[
+        bool,
+        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+    ] = False,
+) -> None:
+    """Archive currently listed Green Man Gaming video-games bundles."""
+    repository_root = Path.cwd().resolve()
+    client = GmgHttpClient()
+    choose = (
+        (lambda _item, _provider, _candidates: None)
+        if non_interactive
+        else _choose_gmg_store_candidate
+    )
+    written_count = 0
+
+    def on_offer(offer: CrawledGmgOffer) -> None:
+        nonlocal written_count
+        paths = write_gmg_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+        write_gmg_resolution_map(resolution_map, mapping)
+    # end def on_offer
+
+    try:
+        mapping = load_gmg_resolution_map(resolution_map)
+        resolver = GmgStorefrontResolver(client.fetch, choose)
+        report = crawl_gmg_offers(
+            client.fetch,
+            resolver,
+            mapping,
+            urls,
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
+        unresolved = sorted(
+            product_id
+            for product_id, ids in mapping.games.items()
+            if any(value.startswith("unresolved:") for value in ids)
+        )
+        for product_id in unresolved:
+            typer.echo(f"unresolved: {product_id}", err=True)
+        # end for
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(
+            f"Wrote {written_count} file(s) for {len(report.offers)} offer(s); "
+            f"{len(unresolved)} unresolved game(s)."
+        )
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def scrape_greenmangaming_command
 
 
 def _steam_adapter(
