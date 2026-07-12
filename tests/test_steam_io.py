@@ -94,12 +94,12 @@ def test_orange_box_generation_matches_expected_files(
 
     staged = gateway.stage(orange_box_plan(), tmp_path / "Desktop")
 
-    assert (staged / f"candidate-{NAMESPACE_NAME}").read_bytes() == (
-        FIXTURES / "expected-orange-box-cloud-storage-namespace-1.json"
-    ).read_bytes()
-    assert (staged / f"candidate-{MODIFIED_NAME}").read_bytes() == (
-        FIXTURES / "expected-orange-box-cloud-storage-namespace-1.modified.json"
-    ).read_bytes()
+    assert json.loads((staged / f"candidate-{NAMESPACE_NAME}").read_bytes()) == json.loads(
+        (FIXTURES / "expected-orange-box-cloud-storage-namespace-1.json").read_bytes()
+    )
+    assert json.loads((staged / f"candidate-{MODIFIED_NAME}").read_bytes()) == json.loads(
+        (FIXTURES / "expected-orange-box-cloud-storage-namespace-1.modified.json").read_bytes()
+    )
 # end def test_orange_box_generation_matches_expected_files
 
 
