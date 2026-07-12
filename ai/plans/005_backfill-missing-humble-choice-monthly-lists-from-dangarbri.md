@@ -89,9 +89,15 @@ Flow:
      `url: https://www.humblebundle.com/membership/june-2026/theriftbreaker`
 7. Print a short per-month summary (games written, unresolved count).
 
-CLI flags (argparse, kept minimal): `--refresh` (rewrite existing months
-too), `--limit N` (process only first N missing months, for a quick test
-run), `--dry-run` (parse + resolve but don't write files).
+CLI flags (argparse, kept minimal):
+- `--all` — process every missing month found on the page.
+- `--month YYYY-MM` — repeatable, process only these specific months.
+- `--from YYYY-MM --to YYYY-MM` — process the inclusive month range.
+- One of `--all` / `--month` / `--from`+`--to` is required (no accidental
+  full-run default).
+- `--refresh` — also rewrite months that already have a list file.
+- `--dry-run` — parse + resolve but don't write any files, just print the
+  summary.
 
 ## Docs
 
@@ -104,12 +110,13 @@ crawl payload.
 
 ## Verification
 
-- Run `env UV_CACHE_DIR=/tmp/uv-cache uv run python scripts/backfill_humble_choice.py --limit 2` first
-  to sanity check output shape on two months before running the full 37-month
-  backfill (full run makes ~290 Steam search requests, so it takes a while).
-- `env UV_CACHE_DIR=/tmp/uv-cache uv run game-collections validate` after the full run.
-- Spot-check a couple of generated `lists/humblebundle/choice/*.yml` files by
-  eye, and check the unresolved-titles stderr output for names needing manual
+- Run `env UV_CACHE_DIR=/tmp/uv-cache uv run python scripts/backfill_humble_choice.py --month 2026-06 --month 2026-05`
+  first to sanity check output shape on two months. The remaining 35 months
+  are left for the user to trigger later with `--from`/`--to` or `--all`, since
+  a full run makes ~290 Steam search requests and takes a while.
+- `env UV_CACHE_DIR=/tmp/uv-cache uv run game-collections validate` after any run.
+- Spot-check the generated `lists/humblebundle/choice/*.yml` files by eye, and
+  check the unresolved-titles stderr output for names needing manual
   `game-collections complete` follow-up.
 - `env UV_CACHE_DIR=/tmp/uv-cache uv run pytest` (schema is unchanged, so this
   should be unaffected, but confirms nothing else broke).
