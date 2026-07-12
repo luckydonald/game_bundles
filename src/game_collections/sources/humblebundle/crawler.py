@@ -15,7 +15,12 @@ from urllib.parse import urljoin, urlparse
 import httpx
 
 from game_collections.models import Game, GameList, Reference
-from game_collections.sources.common import atomic_write, dump_json, render_game_list_yaml
+from game_collections.sources.common import (
+    atomic_write,
+    dump_json,
+    load_cached_archive,
+    render_game_list_yaml,
+)
 from game_collections.sources.humblebundle.models import HumbleArchive
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
@@ -28,6 +33,10 @@ from game_collections.sources.humblebundle.resolver import (
     StorefrontResolver,
     render_resolution_map,
 )
+
+
+LogFn = Callable[[str], None]
+_NO_LOG: LogFn = lambda _message: None  # noqa: E731
 
 
 BUNDLES_URL = "https://www.humblebundle.com/bundles"
@@ -138,8 +147,19 @@ def crawl_humble_offers(
     mapping: HumbleResolutionMap,
     urls: Iterable[str] | None = None,
     crawled: datetime | None = None,
+    archive_root: Path | None = None,
+    log: LogFn = _NO_LOG,
+    on_offer: Callable[[CrawledHumbleOffer], None] | None = None,
 ) -> HumbleCrawlReport:
-    """Crawl explicit offers or discover current Choice and active Games bundles."""
+    """Crawl explicit offers or discover current Choice and active Games bundles.
+
+    The offer's cache key depends on parsed fields, so its page is always
+    fetched - but when `archive_root` is given and a valid cached archive is
+    already on disk for that key, the (expensive, one-storefront-search-per-
+    game) `resolver.resolve_archive` call is skipped in favor of the cached,
+    already-resolved archive. Pass `on_offer` to write each offer to disk as
+    soon as it's ready, rather than waiting for the whole crawl to finish.
+    """
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     targets: list[tuple[str, dict[str, Any] | None]] = []
     errors: list[str] = []
@@ -156,7 +176,9 @@ def crawl_humble_offers(
         # end try
     # end if
     offers: list[CrawledHumbleOffer] = []
-    for url, listing in targets:
+    total = len(targets)
+    for index, (url, listing) in enumerate(targets, start=1):
+        log(f"Offer {index}/{total}: {url}")
         try:
             page = fetch(url)
             if urlparse(url).path == "/membership":
@@ -164,12 +186,25 @@ def crawl_humble_offers(
             else:
                 archive, source = parse_bundle_page(page, listing, observed)
             # end if
-            offers.append(
-                CrawledHumbleOffer(
-                    archive=resolver.resolve_archive(archive, mapping),
+            cached = None
+            if archive_root is not None:
+                metadata_path, source_path = _archive_paths(archive_root, archive)
+                cached = load_cached_archive(HumbleArchive, metadata_path, source_path)
+            # end if
+            if cached is not None:
+                log(f"Offer {index}/{total}: {url} (cached, skipping resolution)")
+                resolved_archive, cached_source = cached
+                offer = CrawledHumbleOffer(archive=resolved_archive, source=cached_source)
+            else:
+                offer = CrawledHumbleOffer(
+                    archive=resolver.resolve_archive(archive, mapping, log=log),
                     source=source,
                 )
-            )
+            # end if
+            offers.append(offer)
+            if on_offer is not None:
+                on_offer(offer)
+            # end if
         except (OSError, ValueError, HumbleCrawlError) as error:
             errors.append(f"{url}: {error}")
         # end try
@@ -198,6 +233,17 @@ def _offer_key(archive: HumbleArchive) -> str:
 # end def _offer_key
 
 
+def _archive_paths(archive_root: Path, archive: HumbleArchive) -> tuple[Path, Path]:
+    key = _offer_key(archive)
+    if archive.kind == "choice":
+        directory = archive_root / "humblebundle/choice" / key
+    else:
+        directory = archive_root / "humblebundle/bundle" / key
+    # end if
+    return directory / "metadata.json", directory / "source.json"
+# end def _archive_paths
+
+
 def write_humble_offer(
     offer: CrawledHumbleOffer,
     lists_root: Path,
@@ -208,15 +254,12 @@ def write_humble_offer(
     archive = offer.archive
     key = _offer_key(archive)
     if archive.kind == "choice":
-        archive_directory = archive_root / "humblebundle/choice" / key
         list_directory = lists_root / "humblebundle/choice"
     else:
-        archive_directory = archive_root / "humblebundle/bundle" / key
         list_directory = lists_root / "humblebundle/bundle" / key
     # end if
     written: list[Path] = []
-    metadata_path = archive_directory / "metadata.json"
-    source_path = archive_directory / "source.json"
+    metadata_path, source_path = _archive_paths(archive_root, archive)
     atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
     atomic_write(source_path, dump_json(offer.source))
     written.extend((metadata_path, source_path))

@@ -12,15 +12,25 @@ from typing import Any
 from urllib.parse import urlparse
 
 from game_collections.models import Game, GameList, Reference
-from game_collections.sources.common import atomic_write, dump_json, render_game_list_yaml
+from game_collections.sources.common import (
+    atomic_write,
+    dump_json,
+    load_cached_archive,
+    render_game_list_yaml,
+)
 from game_collections.sources.dailyindiegame.models import DigArchive, DigItem
 from game_collections.sources.dailyindiegame.parser import (
     DIG_ROOT,
     BUNDLE_LINK_PATTERN,
+    bundle_number,
     parse_bundle_index_page,
     parse_bundle_page,
     parse_game_listing_page,
 )
+
+
+LogFn = Callable[[str], None]
+_NO_LOG: LogFn = lambda _message: None  # noqa: E731
 
 
 INDEX_URL = f"{DIG_ROOT}site_content_bundles.html"
@@ -147,7 +157,20 @@ def _validated_explicit_url(value: str) -> str:
 # end def _validated_explicit_url
 
 
-def _enrich_item(item: DigItem, fetch: Callable[[str], str]) -> DigItem:
+def _archive_paths(archive_root: Path, number: str) -> tuple[Path, Path]:
+    directory = archive_root / "dailyindiegame/bundle" / number
+    return directory / "metadata.json", directory / "source.json"
+# end def _archive_paths
+
+
+def _enrich_item(
+    item: DigItem,
+    fetch: Callable[[str], str],
+    log: LogFn,
+    index: int,
+    total: int,
+) -> DigItem:
+    log(f"  Game {index}/{total}: {item.title}")
     listing_url = f"{DIG_ROOT}site_gamelisting_{item.ids[0].removeprefix('steam:')}.html"
     listing = parse_game_listing_page(fetch(listing_url), listing_url)
     # model_copy(update=...) does not revalidate, so build via model_validate
@@ -160,8 +183,18 @@ def crawl_dig_offers(
     fetch: Callable[[str], str],
     urls: Iterable[str] | None = None,
     crawled: datetime | None = None,
+    archive_root: Path | None = None,
+    log: LogFn = _NO_LOG,
+    on_offer: Callable[[CrawledDigOffer], None] | None = None,
 ) -> DigCrawlReport:
-    """Crawl explicit bundle pages or discover every currently listed bundle."""
+    """Crawl explicit bundle pages or discover every currently listed bundle.
+
+    When `archive_root` is given, a bundle already written there (and still
+    valid against the current schema) is reused as-is - no bundle-page or
+    per-game listing-page fetch at all - instead of being re-crawled. Pass
+    `on_offer` to write each offer to disk as soon as it's ready, rather than
+    waiting for the whole crawl to finish.
+    """
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     errors: list[str] = []
     explicit = list(urls or [])
@@ -177,13 +210,38 @@ def crawl_dig_offers(
         # end try
     # end if
     offers: list[CrawledDigOffer] = []
-    for url in targets:
+    total = len(targets)
+    for index, url in enumerate(targets, start=1):
+        number = bundle_number(url)
+        log(f"Bundle {index}/{total}: {number}")
         try:
+            if archive_root is not None:
+                metadata_path, source_path = _archive_paths(archive_root, number)
+                cached = load_cached_archive(DigArchive, metadata_path, source_path)
+                if cached is not None:
+                    log(f"Bundle {index}/{total}: {number} (cached)")
+                    archive, source = cached
+                    offer = CrawledDigOffer(archive=archive, source=source)
+                    offers.append(offer)
+                    if on_offer is not None:
+                        on_offer(offer)
+                    # end if
+                    continue
+                # end if
+            # end if
             page = fetch(url)
             archive, source = parse_bundle_page(page, url, observed)
-            enriched_items = [_enrich_item(item, fetch) for item in archive.items]
+            item_total = len(archive.items)
+            enriched_items = [
+                _enrich_item(item, fetch, log, item_index, item_total)
+                for item_index, item in enumerate(archive.items, start=1)
+            ]
             archive = archive.model_copy(update={"items": enriched_items})
-            offers.append(CrawledDigOffer(archive=archive, source=source))
+            offer = CrawledDigOffer(archive=archive, source=source)
+            offers.append(offer)
+            if on_offer is not None:
+                on_offer(offer)
+            # end if
         except (OSError, ValueError, DigCrawlError) as error:
             errors.append(f"{url}: {error}")
         # end try
@@ -200,10 +258,8 @@ def write_dig_offer(
 ) -> tuple[Path, ...]:
     """Atomically write the normalized/source archive and standard game list."""
     archive = offer.archive
-    archive_directory = archive_root / "dailyindiegame/bundle" / archive.machine_name
     list_directory = lists_root / "dailyindiegame/bundle"
-    metadata_path = archive_directory / "metadata.json"
-    source_path = archive_directory / "source.json"
+    metadata_path, source_path = _archive_paths(archive_root, archive.machine_name)
     atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
     atomic_write(source_path, dump_json(offer.source))
     written: list[Path] = [metadata_path, source_path]

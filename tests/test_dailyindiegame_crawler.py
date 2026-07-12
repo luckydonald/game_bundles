@@ -182,3 +182,82 @@ def test_crawl_explicit_url_skips_index_discovery() -> None:
     assert report.errors == ()
     assert len(report.offers) == 1
 # end def test_crawl_explicit_url_skips_index_discovery
+
+
+def test_crawl_skips_fetch_entirely_for_a_cached_bundle(tmp_path: Path) -> None:
+    archive_root = tmp_path / "archives"
+    write_dig_offer(_offer(), tmp_path / "lists", archive_root, tmp_path)
+
+    def fetch(url: str) -> str:
+        raise AssertionError(f"fetch should not be called for a cached bundle: {url}")
+    # end def fetch
+
+    report = crawl_dig_offers(
+        fetch,
+        urls=["https://www.dailyindiegame.com/site_weeklybundle_2351.html"],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        archive_root=archive_root,
+    )
+
+    assert report.errors == ()
+    assert len(report.offers) == 1
+    assert report.offers[0].archive == _offer().archive
+# end def test_crawl_skips_fetch_entirely_for_a_cached_bundle
+
+
+def test_crawl_refetches_when_cached_schema_is_stale(tmp_path: Path) -> None:
+    archive_root = tmp_path / "archives"
+    write_dig_offer(_offer(), tmp_path / "lists", archive_root, tmp_path)
+    metadata_path = archive_root / "dailyindiegame/bundle/2351/metadata.json"
+    metadata_path.write_text(
+        metadata_path.read_text(encoding="utf-8").replace('"schema": 1', '"schema": 2'),
+        encoding="utf-8",
+    )
+    pages = {
+        "https://www.dailyindiegame.com/site_weeklybundle_2351.html": BUNDLE_PAGE,
+        "https://www.dailyindiegame.com/site_gamelisting_4543360.html": GAME_LISTING_PAGE,
+    }
+    fetched: list[str] = []
+
+    def fetch(url: str) -> str:
+        fetched.append(url)
+        return pages[url]
+    # end def fetch
+
+    report = crawl_dig_offers(
+        fetch,
+        urls=["https://www.dailyindiegame.com/site_weeklybundle_2351.html"],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        archive_root=archive_root,
+    )
+
+    assert report.errors == ()
+    assert len(report.offers) == 1
+    assert fetched  # the stale cache was ignored and a real fetch happened
+# end def test_crawl_refetches_when_cached_schema_is_stale
+
+
+def test_crawl_logs_progress_and_invokes_on_offer_per_bundle() -> None:
+    pages = {
+        "https://www.dailyindiegame.com/site_content_bundles.html": INDEX_PAGE,
+        "https://www.dailyindiegame.com/site_weeklybundle_2351.html": BUNDLE_PAGE,
+        "https://www.dailyindiegame.com/site_gamelisting_4543360.html": GAME_LISTING_PAGE,
+    }
+
+    def fetch(url: str) -> str:
+        return pages[url]
+    # end def fetch
+
+    messages: list[str] = []
+    offers: list[CrawledDigOffer] = []
+    report = crawl_dig_offers(
+        fetch,
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        log=messages.append,
+        on_offer=offers.append,
+    )
+
+    assert any("Bundle 1/1: 2351" in message for message in messages)
+    assert any("Game 1/1" in message for message in messages)
+    assert offers == list(report.offers)
+# end def test_crawl_logs_progress_and_invokes_on_offer_per_bundle
