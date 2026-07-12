@@ -30,13 +30,11 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from game_collections.models import Game, GameList, Reference  # noqa: E402
 from game_collections.search import complete_game_list  # noqa: E402
+from game_collections.sources.common import atomic_write, dump_json, render_game_list_yaml  # noqa: E402
 from game_collections.sources.humblebundle.crawler import (  # noqa: E402
     MONTHS,
     HumbleCrawlError,
     HumbleHttpClient,
-    _atomic_write,
-    _game_list_yaml,
-    _json,
 )
 from game_collections.sources.humblebundle.resolver import StorefrontResolver  # noqa: E402
 
@@ -249,8 +247,8 @@ def backfill_month(
         ],
         "excluded": [entry._asdict() for entry in excluded],
     }
-    _atomic_write(metadata_path, _json(metadata_payload))
-    _atomic_write(source_path, _json(source_payload))
+    atomic_write(metadata_path, dump_json(metadata_payload))
+    atomic_write(source_path, dump_json(source_payload))
 
     references = [
         Reference(name="Humble Bundle offer", url=f"https://www.humblebundle.com/membership/{_month_slug(month_key)}"),
@@ -268,7 +266,7 @@ def backfill_month(
         references=references,
         games=games,
     )
-    _atomic_write(list_path, _game_list_yaml(game_list, list_path, REPO_ROOT))
+    atomic_write(list_path, render_game_list_yaml(game_list, list_path, REPO_ROOT))
     print(f"{month_key}: wrote {list_path.relative_to(REPO_ROOT)} ({len(games)} games, {len(unresolved)} unresolved)")
     for title in unresolved:
         print(f"  unresolved: {title}", file=sys.stderr)
