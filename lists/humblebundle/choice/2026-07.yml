@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: July 2026 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2026-07/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2026-07/source.json
 games:
 - name: 'Sea of Stars: Sunset Edition'
   ids:

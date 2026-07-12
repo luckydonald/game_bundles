@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
 name: Let's Go Gambling!...aw dang it. — Entire 9 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/lets-go-gamblingaw-dang-it
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-07-01_lets-go-gamblingaw-dang-it/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-07-01_lets-go-gamblingaw-dang-it/source.json
 games:
 - name: Dicealot
   ids:
