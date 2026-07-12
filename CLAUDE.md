@@ -34,7 +34,7 @@ Storefront identity and launcher synchronization are separate concepts. New GOG 
 - Prefer early returns and early `continue`/`break` over nested control flow.
 - Close every Python indentation level with an `# end …` comment: `# end if`, `# end for`, `# end while`, `# end with`, `# end try`, `# end def`, and `# end class`.
 - Treat unknown external fields and format changes as errors where data may be rewritten.
-- Keep comments limited to non-obvious safety or format reasoning.
+- Keep comments in code intact, never remove them. Add comments where they explain some bigger algorithm or difficult parts, and actually add value.
 
 ## Steam safety invariants
 
