@@ -301,3 +301,28 @@ So two variants, enter a name to search for, and provide a file to complete.
 › Split the file based `search` out as `complete <filename>`, which defaults to steam provider (but also accepts "all"). Also has a `--mode=blank|missing|unresolved|refetch_all`, where  **blank** (default) searches only those without a "proper" id (empty list or only `unresolved:*`). **missing** searches for all games which don't have this particular store in the ids yet. **unresolved** does that, too, but also re-attempts those who failed before, i.e. have `unresolved:store:<store>:*`) in the IDs.
 (Btw, change `unresolved:humblebundle:*` to `unresolved:source:humblebundle:*` to separate those.) The **refetch_all** does a search for every game in the list for every specified store (either provide the `--provider` flag multiple times, or `,` to seprate them. Add `--store` as alias.)
 
+❯ /plan Check out @lists/README.md 
+I want to load the previous monthly bundles from https://dangarbri.tech/humblechoice, to complete the missing ones.
+This can be a script in `scripts/`, and doesn't need to be too fancy. Just plop in the game names. Also try to fill back the extra data at `archive` as best as possible/available. Also the links, e.g. `https://www.humblebundle.com/membership/june-2026/theriftbreaker` are very helpful, I would like those integrated into the list data.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Full backfill needs ~290 Steam search requests (37 months x ~8 games). Should I run the complete backfill after building the script, or just build/test it on a couple months and let you run the full thing yourself?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Backfill scope** (1/1) <kbd>Single Select</kbd><br>
+>> Full backfill needs ~290 Steam search requests (37 months x ~8 games). Should I run the complete backfill after building the script, or just build/test it on a couple months and let you run the full thing yourself?
+> - [ ] 1\. Run full backfill now
+>   - _Build script, test on 2 months, then run all 37 months and commit-ready data appears in lists/ and archives/._
+> - [ ] 2\. Build + test only
+>   - _Build script, verify it works on 1-2 months, leave the full 37-month run for you to trigger._
+> - [x] 3\. _Type something:_
+>   - > Yeah, do a few months. Have a parameter to set which months (including from-to mode or "all")
+>
+> </details>
+>
+
