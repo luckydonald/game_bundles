@@ -25,7 +25,7 @@ Run focused tests with `uv run pytest tests/test_<area>.py -q` (fixtures live in
 
 - `src/game_collections/models.py` and `lists.py`: launcher-neutral YAML contract, path-derived IDs, and discovery.
 - `src/game_collections/search.py`: cross-storefront ranked search used by both `search` and `complete`.
-- `src/game_collections/sources/humblebundle/`: Humble Choice/Games HTML crawler, parser, and storefront resolver backing `scrape humblebundle`; writes `lists/humblebundle/...` and `archives/humblebundle/...`. `scripts/backfill_humble_choice.py` is a standalone historical backfill built on the same crawler internals.
+- `src/game_collections/sources/humblebundle/`: Humble Choice/Games HTML crawler, parser, and storefront resolver backing `scrape humblebundle`; writes `lists/humblebundle/...` and `archives/humblebundle/...`. `scripts/backfill_humble_choice.py` is a standalone historical backfill built on the same crawler internals. See `src/game_collections/sources/README.md` for the crawler/parser/resolver pipeline and the scheduled GitHub Actions scrape.
 - `src/game_collections/launchers/base.py`: adapter registry and shared semantic plan types.
 - `src/game_collections/launchers/steam/models.py`: strict models for every important Steam file envelope and relevant payload.
 - `src/game_collections/launchers/steam/io.py`: the sole Steam file IO and replacement boundary (`SteamFileGateway`).
