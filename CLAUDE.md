@@ -15,16 +15,23 @@ env UV_CACHE_DIR=/tmp/uv-cache uv run game-collections validate
 env UV_CACHE_DIR=/tmp/uv-cache uv run game-collections schema
 ```
 
-Run focused tests with `uv run pytest tests/test_<area>.py -q`. Regenerating `schemas/game-list.schema.json` is required after changing public list models; `tests/test_schema.py` detects drift.
+Run focused tests with `uv run pytest tests/test_<area>.py -q` (fixtures live in `tests/fixtures/`). Regenerating `schemas/game-list.schema.json` and `schemas/humblebundle-archive.schema.json` is required after changing public list or archive models; `tests/test_schema.py` detects drift.
+
+## CLI surface
+
+`src/game_collections/cli.py` is the single Typer entry point (`game-collections`). Verbs: `list`, `search NAME` (ranked matches across storefronts, `--provider`), `complete FILE` (fills draft `ids:`, `--store`/`--provider`, `--mode blank|missing|unresolved|refetch_all`), `schema`, `scrape humblebundle` (`--url` repeatable, `--non-interactive`), `eligible steam`, `sync steam` (dry-run) / `sync steam --apply`, `restore steam <dir>`. See root `README.md` for the full behavior of each verb and `lists/README.md` for the list-authoring workflow.
 
 ## Architecture
 
 - `src/game_collections/models.py` and `lists.py`: launcher-neutral YAML contract, path-derived IDs, and discovery.
+- `src/game_collections/search.py`: cross-storefront ranked search used by both `search` and `complete`.
+- `src/game_collections/sources/humblebundle/`: Humble Choice/Games HTML crawler, parser, and storefront resolver backing `scrape humblebundle`; writes `lists/humblebundle/...` and `archives/humblebundle/...`. `scripts/backfill_humble_choice.py` is a standalone historical backfill built on the same crawler internals.
 - `src/game_collections/launchers/base.py`: adapter registry and shared semantic plan types.
 - `src/game_collections/launchers/steam/models.py`: strict models for every important Steam file envelope and relevant payload.
-- `src/game_collections/launchers/steam/io.py`: the sole Steam file IO and replacement boundary.
+- `src/game_collections/launchers/steam/io.py`: the sole Steam file IO and replacement boundary (`SteamFileGateway`).
 - `lists/`: public collection data. IDs are relative paths without `.yml`.
-- `schemas/game-list.schema.json`: generated from Pydantic; never hand-edit.
+- `archives/`: normalized metadata + raw source archives for scraped/imported lists (e.g. Humble), referenced from the matching list's `references` field.
+- `schemas/`: `game-list.schema.json` and `humblebundle-archive.schema.json`, both generated from Pydantic; never hand-edit.
 
 Storefront identity and launcher synchronization are separate concepts. New GOG or Epic support belongs in its own launcher module implementing the existing contracts. Do not put launcher-specific behavior into YAML loading.
 
@@ -49,4 +56,4 @@ Storefront identity and launcher synchronization are separate concepts. New GOG 
 
 ## Documentation and commits
 
-Update the root README and `lists/README.md` when public behavior or the list format changes. When the user activates `commit-with-lplp-style`, follow the canonical skill: commit each completed task, stage explicit paths only, and write messages through `ai/git/pending-commit.md`.
+Update the root README and `lists/README.md` when public behavior or the list format changes. The `commit-with-lplp-style` skill is active for this repo: commit each completed task, stage explicit paths only, and write messages through `ai/git/pending-commit.md`.
