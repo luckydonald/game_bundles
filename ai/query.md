@@ -583,3 +583,14 @@ Especially as bundles change not all at once there will be overlaps.
 
 ❯ Ah, can't we just scrape `https://steamcommunity.com/id/luckydonald/games/?tab=all` or whatever the user's URL is, as middle fallback?
 
+❯ Add support for scraping https://www.greenmangaming.com/bundles/
+
+❯ Task Notification:
+> - Task `ad03196ac0dba4d22` <kbd>completed</kbd>
+> - Tool `toolu_01A7Xa6TqkZ69M5mcRmWcxAZ`
+> - > Agent "Implement greenmangaming scrape source" finished
+> - [Query (`12530` chars, `12.3 KB`)](output/agents/003.ad03196ac0dba4d22/prompt.md)
+> - [Answer (`1350` chars, `1.32 KB`)](output/agents/003.ad03196ac0dba4d22/result.md)
+> - [Raw log (`790652` chars, `773 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/cd0d5bf6-9b5e-4b83-9236-5f2b9cc6dccb/tasks/ad03196ac0dba4d22.output)
+> - `93` tools, `230247` tokens, `12.9931 s`
+

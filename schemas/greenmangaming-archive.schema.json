@@ -1,0 +1,296 @@
+{
+  "$defs": {
+    "GmgDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.\n\nThe bundles index only exposes `data-end-date=\"YYYY-MM-DDTHH:MM\"` with no\nUTC offset. That's assumed to already be UTC (unconfirmed against the\nserver) rather than silently guessing a different offset - end is kept\noptional so a future value that doesn't parse this way fails loudly\ninstead of being coerced.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "GmgDates",
+      "type": "object"
+    },
+    "GmgItem": {
+      "additionalProperties": false,
+      "description": "One product advertised within a Green Man Gaming bundle tier.",
+      "properties": {
+        "cover_art_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cover Art Url"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "developer": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Developer"
+        },
+        "drm": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Drm"
+        },
+        "platform": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Platform"
+        },
+        "product_id": {
+          "minLength": 1,
+          "title": "Product Id",
+          "type": "string"
+        },
+        "publisher": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publisher"
+        },
+        "redeem_on": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Redeem On",
+          "type": "array"
+        },
+        "resolution": {
+          "$ref": "#/$defs/GmgResolution"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id",
+        "title"
+      ],
+      "title": "GmgItem",
+      "type": "object"
+    },
+    "GmgPrice": {
+      "additionalProperties": false,
+      "description": "A localized price with its unambiguous ISO currency code.",
+      "properties": {
+        "currency": {
+          "minLength": 1,
+          "title": "Currency",
+          "type": "string"
+        },
+        "currency_code": {
+          "minLength": 1,
+          "title": "Currency Code",
+          "type": "string"
+        },
+        "raw": {
+          "minLength": 1,
+          "title": "Raw",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "raw",
+        "value",
+        "currency",
+        "currency_code"
+      ],
+      "title": "GmgPrice",
+      "type": "object"
+    },
+    "GmgResolution": {
+      "additionalProperties": false,
+      "description": "Storefront identity resolution for one archived item.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Ids",
+          "type": "array"
+        },
+        "unresolved_stores": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Unresolved Stores",
+          "type": "array"
+        }
+      },
+      "title": "GmgResolution",
+      "type": "object"
+    },
+    "GmgTier": {
+      "additionalProperties": false,
+      "description": "A cumulative Green Man Gaming purchase tier.",
+      "properties": {
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "item_count": {
+          "minimum": 0,
+          "title": "Item Count",
+          "type": "integer"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/GmgItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GmgPrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "identifier",
+        "name",
+        "item_count",
+        "items"
+      ],
+      "title": "GmgTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one Green Man Gaming bundle offer.",
+  "properties": {
+    "currency_code": {
+      "minLength": 1,
+      "title": "Currency Code",
+      "type": "string"
+    },
+    "dates": {
+      "$ref": "#/$defs/GmgDates"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "slug": {
+      "minLength": 1,
+      "title": "Slug",
+      "type": "string"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/GmgTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "slug",
+    "url",
+    "name",
+    "currency_code",
+    "dates",
+    "tiers"
+  ],
+  "title": "GmgArchive",
+  "type": "object"
+}
