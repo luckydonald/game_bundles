@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: February 2021 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/february-2021
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2021-02/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2021-02/source.json
+- name: Outward + The Soroboreans And Outward Soundtrack page
+  url: https://www.humblebundle.com/membership/february-2021/outwardtheadventurerbundle
+- name: Valkyria Chronicles 4 Complete Edition page
+  url: https://www.humblebundle.com/membership/february-2021/valkyriachronicles4
+- name: Moving Out page
+  url: https://www.humblebundle.com/membership/february-2021/movingout
+- name: 'Trine 4: The Nightmare Prince page'
+  url: https://www.humblebundle.com/membership/february-2021/trine4_thenightmareprince
+- name: The Wild Eight page
+  url: https://www.humblebundle.com/membership/february-2021/thewildeight
+- name: Train Station Renovation page
+  url: https://www.humblebundle.com/membership/february-2021/trainstationrenovation
+- name: Valfaris page
+  url: https://www.humblebundle.com/membership/february-2021/valfaris
+- name: 'Werewolf: The Apocalypse Heart Of The Forest page'
+  url: https://www.humblebundle.com/membership/february-2021/werewolf_theapocalypseheartoftheforest
+- name: Lovecraft'S Untold Stories page
+  url: https://www.humblebundle.com/membership/february-2021/lovecraftsuntoldstories
+- name: Iris And The Giant page
+  url: https://www.humblebundle.com/membership/february-2021/irisandthegiant
+- name: Boomerang Fu page
+  url: https://www.humblebundle.com/membership/february-2021/boomerangfu
+games:
+- name: Outward + The Soroboreans And Outward Soundtrack
+  ids:
+  - unresolved:store:steam:outward-+-the-soroboreans-and-outward-soundtrack
+- name: Valkyria Chronicles 4 Complete Edition
+  ids:
+  - steam:790820
+- name: Moving Out
+  ids:
+  - steam:996770
+- name: 'Trine 4: The Nightmare Prince'
+  ids:
+  - steam:690640
+- name: The Wild Eight
+  ids:
+  - steam:526160
+- name: Train Station Renovation
+  ids:
+  - steam:914010
+- name: Valfaris
+  ids:
+  - steam:600130
+- name: 'Werewolf: The Apocalypse Heart Of The Forest'
+  ids:
+  - steam:1342620
+- name: Lovecraft'S Untold Stories
+  ids:
+  - steam:871420
+- name: Iris And The Giant
+  ids:
+  - steam:1127610
+- name: Boomerang Fu
+  ids:
+  - steam:965680
