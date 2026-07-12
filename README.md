@@ -60,7 +60,7 @@ This is an internal Steam format. Game Collections therefore models the complete
 1. Read Steam files through no-follow, descriptor-based checks and validate them completely.
 2. Write candidates, byte-for-byte backups, hashes, a manifest, and an inspection report to a timestamped Desktop directory. Steam is not changed.
 3. Print every source, candidate, backup, and destination path and pause for inspection.
-4. Require Steam to be stopped, then reread and revalidate the originals. Any metadata or content change aborts.
+4. Require Steam to be stopped, then reopen and revalidate the originals. Any metadata or content change aborts.
 5. Require the user to type `REPLACE`.
 6. Replace the namespace and modified-key files with same-directory temporary files, `fsync`, atomic replacement, post-write verification, and rollback if the second file fails.
 7. Preserve backups and print the verified restore command.
