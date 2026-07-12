@@ -115,3 +115,5 @@ Additionally, make it extendible, so later e.g. a gog launcher or epic launcher 
 
 > › Implement the [Plan](./plans/002_game-collections-v1.md).
 
+› Alright, write  up the expected result of running the generation for the given orange box file. Add a unittest to confirm they are equal. Commit. Only then run the test, and see if the expected result and actual result match, and fix if needed. Keep commiting as usual.
+
