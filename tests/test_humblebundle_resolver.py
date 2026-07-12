@@ -145,7 +145,7 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
 
     ids = resolver.resolve_item(_item(), mapping)
 
-    assert ids == ["unresolved:humblebundle:sample_game"]
+    assert ids == ["unresolved:source:humblebundle:sample_game"]
     assert mapping.games == {"sample_game": ids}
 # end def test_blank_selection_persists_unresolved_fallback
 
