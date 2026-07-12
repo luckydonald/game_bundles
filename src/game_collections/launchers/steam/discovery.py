@@ -21,6 +21,19 @@ class SteamDiscoveryError(RuntimeError):
 # end class SteamDiscoveryError
 
 
+class DuplicateRejectingDict(dict[str, Any]):
+    """VDF mapper which refuses silent last-key-wins parsing."""
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        if key in self:
+            raise ValueError(f"duplicate VDF key: {key!r}")
+        # end if
+        super().__setitem__(key, value)
+    # end def __setitem__
+
+# end class DuplicateRejectingDict
+
+
 def default_steam_roots() -> tuple[Path, ...]:
     """Return platform-standard Steam installation roots in priority order."""
     home = Path.home()
@@ -63,15 +76,29 @@ def load_login_users(steam_root: Path) -> LoginUsersFile:
     """Parse VDF structurally, then enforce the complete Pydantic model."""
     path = steam_root / "config/loginusers.vdf"
     try:
-        raw: Any = vdf.loads(path.read_text(encoding="utf-8"), mapper=dict)
+        return parse_login_users(path.read_bytes())
     except (OSError, ValueError) as error:
         raise SteamDiscoveryError(f"could not parse {path}: {error}") from error
     # end try
+# end def load_login_users
+
+
+def parse_login_users(data: bytes) -> LoginUsersFile:
+    """Parse already locked/read login metadata."""
+    try:
+        raw: Any = vdf.loads(
+            data.decode("utf-8"),
+            mapper=DuplicateRejectingDict,
+            merge_duplicate_keys=False,
+        )
+    except (UnicodeDecodeError, SyntaxError, ValueError) as error:
+        raise SteamDiscoveryError(f"invalid loginusers.vdf: {error}") from error
+    # end try
     if not isinstance(raw, dict) or set(raw) != {"users"}:
-        raise SteamDiscoveryError(f"unsupported loginusers.vdf root structure: {path}")
+        raise SteamDiscoveryError("unsupported loginusers.vdf root structure")
     # end if
     return LoginUsersFile.model_validate(raw["users"])
-# end def load_login_users
+# end def parse_login_users
 
 
 def account_id_from_steam_id(steam_id: str) -> int:
@@ -82,4 +109,3 @@ def account_id_from_steam_id(steam_id: str) -> int:
     # end if
     return account_id
 # end def account_id_from_steam_id
-
