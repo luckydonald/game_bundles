@@ -298,3 +298,6 @@ Similarly, add the crawl date as `"version": "YYYY-MM-DD HH:MM:SS"` field to the
 Use case: Being able to just write down a list, and point the cli at it to fill out the `ids` and which provider to search for (e.g. "steam"). Default is "all".
 So two variants, enter a name to search for, and provide a file to complete.
 
+› Split the file based `search` out as `complete <filename>`, which defaults to steam provider (but also accepts "all"). Also has a `--mode=blank|missing|unresolved|refetch_all`, where  **blank** (default) searches only those without a "proper" id (empty list or only `unresolved:*`). **missing** searches for all games which don't have this particular store in the ids yet. **unresolved** does that, too, but also re-attempts those who failed before, i.e. have `unresolved:store:<store>:*`) in the IDs.
+(Btw, change `unresolved:humblebundle:*` to `unresolved:source:humblebundle:*` to separate those.) The **refetch_all** does a search for every game in the list for every specified store (either provide the `--provider` flag multiple times, or `,` to seprate them. Add `--store` as alias.)
+

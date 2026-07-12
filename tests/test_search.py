@@ -5,8 +5,23 @@ from game_collections.sources.humblebundle.resolver import StoreCandidate, Store
 
 
 def test_selected_providers_defaults_to_every_supported_store() -> None:
-    assert selected_providers("all") == ("steam", "gog", "epic", "ubisoft", "humble")
+    assert selected_providers(None, default="all") == (
+        "steam",
+        "gog",
+        "epic",
+        "ubisoft",
+        "humble",
+    )
 # end def test_selected_providers_defaults_to_every_supported_store
+
+
+def test_selected_providers_accepts_repeated_and_comma_separated_values() -> None:
+    assert selected_providers(["steam,gog", "steam", "epic"], default="steam") == (
+        "steam",
+        "gog",
+        "epic",
+    )
+# end def test_selected_providers_accepts_repeated_and_comma_separated_values
 
 
 def test_complete_game_list_fills_missing_ids_and_preserves_existing_ids() -> None:
@@ -55,7 +70,9 @@ def test_complete_game_list_keeps_unresolved_game_as_draft() -> None:
     )
 
     assert unresolved == ["Unknown"]
-    assert completed["games"] == [{"name": "Unknown"}]
+    assert completed["games"] == [
+        {"name": "Unknown", "ids": ["unresolved:store:steam:unknown"]}
+    ]
 # end def test_complete_game_list_keeps_unresolved_game_as_draft
 
 
@@ -84,3 +101,98 @@ def test_complete_game_list_uses_manual_candidate_selection() -> None:
     assert selected[0].qualified_id == "steam:10"
     assert completed["games"][0]["ids"] == ["steam:10"]
 # end def test_complete_game_list_uses_manual_candidate_selection
+
+
+def test_blank_skips_a_game_with_any_proper_id() -> None:
+    searched: list[str] = []
+
+    def fetch(url: str) -> str:
+        searched.append(url)
+        return ""
+    # end def fetch
+
+    completed, unresolved = complete_game_list(
+        {"schema": 1, "name": "Draft", "games": [{"name": "Portal", "ids": ["gog:portal"]}]},
+        ("steam",),
+        StorefrontResolver(fetch, lambda *_args: None),
+        lambda *_args: None,
+        "blank",
+    )
+
+    assert searched == []
+    assert unresolved == []
+    assert completed["games"][0]["ids"] == ["gog:portal"]
+# end def test_blank_skips_a_game_with_any_proper_id
+
+
+def test_missing_does_not_retry_a_store_failure_but_unresolved_does() -> None:
+    raw = {
+        "schema": 1,
+        "name": "Draft",
+        "games": [{"name": "Portal", "ids": ["unresolved:store:steam:portal"]}],
+    }
+    searches: list[str] = []
+
+    def fetch(url: str) -> str:
+        searches.append(url)
+        return '<a href="https://store.steampowered.com/app/400/Portal/">Portal</a>'
+    # end def fetch
+
+    missing, _unresolved = complete_game_list(
+        raw,
+        ("steam",),
+        StorefrontResolver(fetch, lambda *_args: None),
+        lambda *_args: None,
+        "missing",
+    )
+    retried, _unresolved = complete_game_list(
+        raw,
+        ("steam",),
+        StorefrontResolver(fetch, lambda *_args: None),
+        lambda *_args: None,
+        "unresolved",
+    )
+
+    assert missing["games"][0]["ids"] == ["unresolved:store:steam:portal"]
+    assert retried["games"][0]["ids"] == ["steam:400"]
+    assert len(searches) == 1
+# end def test_missing_does_not_retry_a_store_failure_but_unresolved_does
+
+
+def test_refetch_all_replaces_only_ids_for_selected_stores() -> None:
+    page = '<a href="https://store.steampowered.com/app/401/Portal_New/">Portal</a>'
+    completed, unresolved = complete_game_list(
+        {
+            "schema": 1,
+            "name": "Draft",
+            "games": [{"name": "Portal", "ids": ["steam:400", "gog:portal"]}],
+        },
+        ("steam",),
+        StorefrontResolver(lambda _url: page, lambda *_args: None),
+        lambda *_args: None,
+        "refetch_all",
+    )
+
+    assert unresolved == []
+    assert completed["games"][0]["ids"] == ["gog:portal", "steam:401"]
+# end def test_refetch_all_replaces_only_ids_for_selected_stores
+
+
+def test_success_removes_source_unresolved_marker() -> None:
+    page = '<a href="https://store.steampowered.com/app/400/Portal/">Portal</a>'
+    completed, _unresolved = complete_game_list(
+        {
+            "schema": 1,
+            "name": "Draft",
+            "games": [
+                {"name": "Portal", "ids": ["unresolved:source:humblebundle:portal"]}
+            ],
+        },
+        ("steam",),
+        StorefrontResolver(lambda _url: page, lambda *_args: None),
+        lambda *_args: None,
+        "blank",
+    )
+
+    assert completed["games"][0]["ids"] == ["steam:400"]
+# end def test_success_removes_source_unresolved_marker
