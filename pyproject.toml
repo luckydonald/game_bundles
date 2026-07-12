@@ -13,6 +13,7 @@ dependencies = [
     "pydantic>=2.12,<3",
     "PyYAML>=6.0.2,<7",
     "typer>=0.16,<1",
+    "vdf>=3.4,<4",
 ]
 
 [project.optional-dependencies]
@@ -29,4 +30,3 @@ packages = ["src/game_collections"]
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]
-
