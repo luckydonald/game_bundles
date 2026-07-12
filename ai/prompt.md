@@ -651,3 +651,12 @@ I.e. https://isthereanydeal.com/bundles/16255/
 The exception is humble bundle monthly, as that's fixed to a month, so we don't really need the day.
 If there were yearly bundles, we'd drop the month, too.
 
+❯ Task Notification:
+> - Task `ae48f472707322c20` <kbd>completed</kbd>
+> - Tool `toolu_01MKig84BcgBz7d5mUD3PC8G`
+> - > Agent "Implement isthereanydeal scrape source" finished
+> - [Query (`6807` chars, `6.68 KB`)](output/agents/004.ae48f472707322c20/prompt.md)
+> - [Answer (`1627` chars, `1.59 KB`)](output/agents/004.ae48f472707322c20/result.md)
+> - [Raw log (`1566130` chars, `1.49 MB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/b0415bfb-1d4d-4f8d-ba21-2a9b5c037d86/tasks/ae48f472707322c20.output)
+> - `249` tools, `456053` tokens, `31.6696 s`
+
