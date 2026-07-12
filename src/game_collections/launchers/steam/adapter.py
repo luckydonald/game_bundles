@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from collections.abc import Callable
 from pathlib import Path
 
 from game_collections.launchers.base import (
@@ -12,6 +13,7 @@ from game_collections.launchers.base import (
     SyncPlan,
 )
 from game_collections.launchers.steam.api import SteamApiClient
+from game_collections.launchers.steam.io import SteamFileGateway
 from game_collections.lists import LoadedGameList
 
 
@@ -31,9 +33,15 @@ class SteamAdapter(LauncherAdapter):
 
     name = "steam"
 
-    def __init__(self, options: SteamOptions, api_client: SteamApiClient | None = None) -> None:
+    def __init__(
+        self,
+        options: SteamOptions,
+        api_client: SteamApiClient | None = None,
+        gateway: SteamFileGateway | None = None,
+    ) -> None:
         self.options = options
         self.api_client = api_client or SteamApiClient(options.api_key)
+        self.gateway = gateway
     # end def __init__
 
     def evaluate(self, game_lists: list[LoadedGameList]) -> list[CollectionEligibility]:
@@ -98,12 +106,17 @@ class SteamAdapter(LauncherAdapter):
     # end def plan
 
     def stage(self, plan: SyncPlan, output_dir: Path) -> Path:
-        raise NotImplementedError("Steam staging is provided by the locked sync gateway")
+        if self.gateway is None:
+            raise ValueError("Steam staging requires a locked file gateway")
+        # end if
+        return self.gateway.stage(plan, output_dir)
     # end def stage
 
-    def apply(self, staged_dir: Path) -> None:
-        raise NotImplementedError("Steam apply is provided by the locked sync gateway")
+    def apply(self, staged_dir: Path, confirm: Callable[[str], str]) -> None:
+        if self.gateway is None:
+            raise ValueError("Steam apply requires a locked file gateway")
+        # end if
+        self.gateway.apply(staged_dir, confirm)
     # end def apply
 
 # end class SteamAdapter
-

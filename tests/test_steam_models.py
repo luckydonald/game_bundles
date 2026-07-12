@@ -5,7 +5,12 @@ from pathlib import Path
 
 import pytest
 
-from game_collections.launchers.steam.discovery import account_id_from_steam_id, load_login_users
+from game_collections.launchers.steam.discovery import (
+    SteamDiscoveryError,
+    account_id_from_steam_id,
+    load_login_users,
+    parse_login_users,
+)
 from game_collections.launchers.steam.models import (
     CloudStorageNamespaceFile,
     CloudStorageNamespacesFile,
@@ -80,3 +85,19 @@ def test_filter_format_version_drift_fails_closed() -> None:
     # end with
 # end def test_filter_format_version_drift_fails_closed
 
+
+def test_duplicate_vdf_keys_fail_closed() -> None:
+    data = b'''"users"
+{
+    "76561198044975919"
+    {
+        "AccountName" "one"
+        "AccountName" "two"
+    }
+}
+'''
+
+    with pytest.raises(SteamDiscoveryError, match="duplicate VDF key"):
+        parse_login_users(data)
+    # end with
+# end def test_duplicate_vdf_keys_fail_closed
