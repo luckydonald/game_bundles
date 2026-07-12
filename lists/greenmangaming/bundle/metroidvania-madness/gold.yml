@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: METROIDVANIA MADNESS — Gold
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/metroidvania-madness/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/source.json
+games:
+- name: Afterimage
+  ids:
+  - steam:1701520
+- name: Vomitoreum
+  ids:
+  - steam:1549750
+- name: GRIME
+  ids:
+  - steam:1123050
+- name: Islets
+  ids:
+  - steam:1669420
+- name: 'Laika: Aged Through Blood'
+  ids:
+  - unresolved:source:greenmangaming:346
+- name: 'Bō: Path of the Teal Lotus'
+  ids:
+  - steam:1614440
