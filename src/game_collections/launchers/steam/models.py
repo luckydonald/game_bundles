@@ -225,6 +225,7 @@ class OwnedGame(StrictModel):
 
     appid: StrictInt = Field(gt=0)
     name: StrictStr | None = None
+    playtime_2weeks: StrictInt | None = Field(default=None, ge=0)
     playtime_forever: StrictInt | None = Field(default=None, ge=0)
     img_icon_url: StrictStr | None = None
     has_community_visible_stats: StrictBool | None = None
@@ -289,4 +290,3 @@ def parse_json_strict(data: bytes, model: type[RootModel[Any] | StrictModel]) ->
     # end try
     return model.model_validate(raw)
 # end def parse_json_strict
-
