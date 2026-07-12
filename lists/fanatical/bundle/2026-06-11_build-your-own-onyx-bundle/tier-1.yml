@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Onyx Bundle — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16260/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16260/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16260/source.json
+games:
+- name: Omno
+  ids:
+  - steam:969760
+- name: Russian Subway Dogs
+  ids:
+  - steam:762610
+- name: Fight of Animals
+  ids:
+  - steam:1160330
+- name: SHEEPO
+  ids:
+  - steam:1281790
+- name: Sisters Royale - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16260:sisters-royale-deluxe-edition
+- name: Last Time I Saw You
+  ids:
+  - steam:1909750
+- name: 'Paper Ghost Stories: Third Eye Open'
+  ids:
+  - steam:1983300
+- name: Garden Simulator
+  ids:
+  - steam:1403310
+- name: Hamster on Rails
+  ids:
+  - steam:1722660
+- name: Escape From Lavender Island
+  ids:
+  - steam:2164310
+- name: 'Heroes Of Loot: Gauntlet Of Power'
+  ids:
+  - steam:2374320
+- name: Nasty Zombies
+  ids:
+  - steam:2851700
+- name: 'Surmount: A Mountain Climbing Adventure'
+  ids:
+  - steam:1675000
+- name: 'Phantom Breaker: Battle Grounds Ultimate'
+  ids:
+  - steam:2067350
+- name: Regulators
+  ids:
+  - steam:1892750
+- name: Laser Tag Massacre
+  ids:
+  - steam:3579960
+- name: OrangePixel Classics
+  ids:
+  - unresolved:source:isthereanydeal:16260:orangepixel-classics
+- name: VOSPETKA
+  ids:
+  - steam:4162110
+- name: Puzzle Picks Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:16260:puzzle-picks-triple-pack
+- name: Diorama Builder + Medieval Castle
+  ids:
+  - unresolved:source:isthereanydeal:16260:diorama-builder-and-medieval-castle

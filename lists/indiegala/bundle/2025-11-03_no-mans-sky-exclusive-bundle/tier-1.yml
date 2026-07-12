@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: No Man's Sky Exclusive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15569/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15569/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15569/source.json
+games:
+- name: No Man's Sky
+  ids:
+  - steam:275850
+- name: The Last Campfire
+  ids:
+  - steam:990630
