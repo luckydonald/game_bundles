@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
 name: 'Arc System Works: Evo Collection — 10 Item Bundle'
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/arc-system-works-evo-collection
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-06-26_arc-system-works-evo-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-06-26_arc-system-works-evo-collection/source.json
 games:
 - name: Melty Blood Actress Again Current Code
   ids:
