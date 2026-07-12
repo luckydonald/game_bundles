@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import json
+import os
 from pathlib import Path
 from typing import Annotated
 
 import typer
 
 from game_collections.lists import ListLoadError, discover_game_lists
+from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
+from game_collections.launchers.steam.discovery import discover_steam_root
+from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
 
 
@@ -64,7 +69,143 @@ def schema_command(
 # end def schema_command
 
 
+def _steam_adapter(
+    steam_root: Path | None,
+    steam_id: str | None,
+    api_key: str | None,
+) -> tuple[SteamAdapter, SteamFileGateway]:
+    root = discover_steam_root(steam_root)
+    gateway = SteamFileGateway.discover(root, steam_id)
+    key = api_key or os.environ.get("STEAM_WEB_API_KEY")
+    if not key:
+        raise ValueError("provide --api-key or STEAM_WEB_API_KEY")
+    # end if
+    adapter = SteamAdapter(
+        SteamOptions(
+            steam_id=gateway.steam_id,
+            api_key=key,
+            steam_root=root,
+        ),
+        gateway=gateway,
+    )
+    return adapter, gateway
+# end def _steam_adapter
+
+
+def _print_plan(plan: object) -> None:
+    from game_collections.launchers.base import SyncPlan
+
+    if not isinstance(plan, SyncPlan):
+        raise TypeError("expected SyncPlan")
+    # end if
+    for result in plan.eligibility:
+        state = "eligible" if result.eligible else "skipped"
+        typer.echo(f"{state}: {result.list_id} ({result.name})")
+        if result.missing_ids:
+            typer.echo(f"  missing: {', '.join(result.missing_ids)}")
+        # end if
+        if result.unsupported_ids:
+            typer.echo(f"  no Steam ID: {', '.join(result.unsupported_ids)}")
+        # end if
+    # end for
+    typer.echo(f"Planned collection changes: {len(plan.changes)}")
+# end def _print_plan
+
+
+@app.command("eligible")
+def eligible_command(
+    launcher: Annotated[str, typer.Argument()] = "steam",
+    lists_root: Annotated[Path | None, typer.Option("--lists-root")] = None,
+    steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
+    steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
+    api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
+) -> None:
+    """Report which lists are fully owned by the launcher account."""
+    if launcher != "steam":
+        typer.echo(f"launcher is not implemented: {launcher}", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key)
+        plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
+        _print_plan(plan)
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def eligible_command
+
+
+@app.command("sync")
+def sync_command(
+    launcher: Annotated[str, typer.Argument()] = "steam",
+    apply_changes: Annotated[bool, typer.Option("--apply")] = False,
+    output_dir: Annotated[Path | None, typer.Option("--output-dir")] = None,
+    lists_root: Annotated[Path | None, typer.Option("--lists-root")] = None,
+    steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
+    steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
+    api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
+) -> None:
+    """Plan or stage and explicitly apply launcher collection changes."""
+    if launcher != "steam":
+        typer.echo(f"launcher is not implemented: {launcher}", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        adapter, gateway = _steam_adapter(steam_root, steam_id, api_key)
+        plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
+        _print_plan(plan)
+        if not apply_changes:
+            typer.echo("Dry run only. Use --apply to stage inspectable files.")
+            return
+        # end if
+        staged = adapter.stage(plan, output_dir or default_staging_root())
+        typer.echo(f"Staged candidates and backups: {staged}")
+        typer.echo(f"Inspection report: {staged / 'README.txt'}")
+        for record in json.loads((staged / "manifest.json").read_text(encoding="utf-8"))["replacements"]:
+            typer.echo(f"  source: {record['source']['path']}")
+            typer.echo(f"  candidate: {staged / record['candidate_name']}")
+            typer.echo(f"  backup: {staged / record['backup_name']}")
+        # end for
+        if not typer.confirm("Have you inspected the candidates and closed Steam?"):
+            typer.echo("Nothing in Steam was changed.")
+            return
+        # end if
+        adapter.apply(staged, lambda prompt: typer.prompt(prompt))
+        typer.echo("Steam files replaced and verified. Keep Steam closed if restoring.")
+        typer.echo(f"Restore with: game-collections restore steam {staged}")
+        typer.echo(f"Backups remain in: {staged}")
+    except (OSError, ValueError, RuntimeError, SteamIoError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def sync_command
+
+
+@app.command("restore")
+def restore_command(
+    launcher: Annotated[str, typer.Argument()],
+    staged_dir: Annotated[Path, typer.Argument()],
+    steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
+    steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
+) -> None:
+    """Restore a verified launcher backup while the launcher is stopped."""
+    if launcher != "steam":
+        typer.echo(f"launcher is not implemented: {launcher}", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        gateway = SteamFileGateway.discover(discover_steam_root(steam_root), steam_id)
+        typer.echo(f"Backup directory: {staged_dir.resolve()}")
+        gateway.restore(staged_dir, lambda prompt: typer.prompt(prompt))
+        typer.echo("Steam backups restored and verified.")
+    except (OSError, ValueError, RuntimeError, SteamIoError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def restore_command
+
+
 if __name__ == "__main__":
     app()
 # end if
-
