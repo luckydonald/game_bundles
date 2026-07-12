@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2342
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2342.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2342/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2342/source.json
+games:
+- name: Dark Honor
+  ids:
+  - steam:3331610
+- name: taCam
+  ids:
+  - steam:3250210
+- name: Super Nova
+  ids:
+  - steam:4256450
+- name: Blik Ball
+  ids:
+  - steam:4379890
+- name: Dash Duels
+  ids:
+  - steam:4187910
+- name: Magman
+  ids:
+  - steam:3081540
+- name: In Shape
+  ids:
+  - steam:1781330
+- name: Reaper Rules
+  ids:
+  - steam:3144440
+- name: The Duchess Curse
+  ids:
+  - steam:3304980
