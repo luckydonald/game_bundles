@@ -49,6 +49,37 @@ def test_unknown_fields_are_rejected(tmp_path: Path) -> None:
 # end def test_unknown_fields_are_rejected
 
 
+def test_references_accept_file_paths_and_urls(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "referenced.yml"
+    path.write_text(
+        yaml.safe_dump(
+            {
+                "schema": 1,
+                "name": "Referenced",
+                "references": [
+                    {"name": "Local metadata", "path": "../archives/metadata.json"},
+                    {"name": "Repository source", "path": "/archives/source.json"},
+                    {"name": "Website", "url": "https://example.com/bundle"},
+                ],
+                "games": [{"name": "One", "ids": ["steam:440"]}],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    loaded = load_game_list(path, lists_root)
+
+    assert [reference.path for reference in loaded.data.references] == [
+        "../archives/metadata.json",
+        "/archives/source.json",
+        None,
+    ]
+# end def test_references_accept_file_paths_and_urls
+
+
 def test_duplicate_qualified_ids_are_rejected(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
