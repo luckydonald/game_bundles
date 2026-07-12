@@ -27,3 +27,8 @@ Regenerate the IDE schema after changing the Pydantic contract:
 game-collections schema
 ```
 
+## Generated Humble lists
+
+`game-collections scrape humblebundle` writes current Choice to `humblebundle/choice/YYYY-MM.yml` and active bundle tiers below `humblebundle/bundle/YYYY-MM-DD_<bundle>/`.
+
+Tier counts and names follow Humble's advertised cumulative tiers, while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.

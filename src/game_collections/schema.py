@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from game_collections.models import GameList
+from game_collections.sources.humblebundle.models import HumbleArchive
 
 
 def generate_schema() -> dict[str, object]:
@@ -26,3 +27,26 @@ def write_schema(path: Path) -> None:
     path.write_text(render_schema(), encoding="utf-8")
 # end def write_schema
 
+
+def generate_humblebundle_schema() -> dict[str, object]:
+    """Generate the normalized Humble archive schema."""
+    return HumbleArchive.model_json_schema(by_alias=True, mode="validation")
+# end def generate_humblebundle_schema
+
+
+def render_humblebundle_schema() -> str:
+    """Render the Humble archive schema deterministically."""
+    return json.dumps(
+        generate_humblebundle_schema(),
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=True,
+    ) + "\n"
+# end def render_humblebundle_schema
+
+
+def write_humblebundle_schema(path: Path) -> None:
+    """Write the normalized Humble archive schema."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render_humblebundle_schema(), encoding="utf-8")
+# end def write_humblebundle_schema

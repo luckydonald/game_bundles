@@ -14,9 +14,25 @@ from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
 from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
+from game_collections.schema import write_humblebundle_schema
+from game_collections.sources.humblebundle.crawler import (
+    HumbleHttpClient,
+    crawl_humble_offers,
+    write_humble_offer,
+    write_resolution_map,
+)
+from game_collections.sources.humblebundle.models import HumbleItem
+from game_collections.sources.humblebundle.resolver import (
+    StoreCandidate,
+    StoreName,
+    StorefrontResolver,
+    load_resolution_map,
+)
 
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
+scrape_app = typer.Typer(no_args_is_help=True)
+app.add_typer(scrape_app, name="scrape")
 
 
 def _lists_root(path: Path | None) -> Path:
@@ -62,11 +78,114 @@ def schema_command(
         Path,
         typer.Option("--output", help="Generated JSON Schema path."),
     ] = Path("schemas/game-list.schema.json"),
+    humblebundle_output: Annotated[
+        Path,
+        typer.Option("--humblebundle-output", help="Generated Humble archive JSON Schema path."),
+    ] = Path("schemas/humblebundle-archive.schema.json"),
 ) -> None:
-    """Generate JSON Schema from the runtime Pydantic models."""
+    """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
+    write_humblebundle_schema(humblebundle_output)
     typer.echo(output)
+    typer.echo(humblebundle_output)
 # end def schema_command
+
+
+def _choose_store_candidate(
+    item: HumbleItem,
+    provider: StoreName,
+    candidates: list[StoreCandidate],
+) -> str | None:
+    typer.echo(f"Resolve {item.title!r} on {provider}:")
+    for index, candidate in enumerate(candidates, start=1):
+        typer.echo(f"  {index}. {candidate.title} — {candidate.qualified_id}")
+        typer.echo(f"     {candidate.url}")
+    # end for
+    other = len(candidates) + 1
+    typer.echo(f"  {other}. Other…")
+    while True:
+        selection = typer.prompt("Select a result", default=str(other))
+        if selection.isdecimal() and 1 <= int(selection) <= len(candidates):
+            return candidates[int(selection) - 1].qualified_id
+        # end if
+        if selection == str(other):
+            manual = typer.prompt(
+                "Paste the store URL or direct ID; leave blank for unresolved",
+                default="",
+                show_default=False,
+            )
+            return manual or None
+        # end if
+        typer.echo(f"Enter a number from 1 to {other}.", err=True)
+    # end while
+# end def _choose_store_candidate
+
+
+@scrape_app.command("humblebundle")
+def scrape_humblebundle_command(
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="Crawl only this Choice or Games URL; repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path(
+        "config/humblebundle-store-ids.yml"
+    ),
+    non_interactive: Annotated[
+        bool,
+        typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting."),
+    ] = False,
+) -> None:
+    """Archive current Humble Choice and active Games bundles."""
+    repository_root = Path.cwd().resolve()
+    client = HumbleHttpClient()
+    choose = (
+        (lambda _item, _provider, _candidates: None)
+        if non_interactive
+        else _choose_store_candidate
+    )
+    try:
+        mapping = load_resolution_map(resolution_map)
+        resolver = StorefrontResolver(client.fetch, choose)
+        report = crawl_humble_offers(client.fetch, resolver, mapping, urls)
+        written_count = 0
+        for offer in report.offers:
+            paths = write_humble_offer(
+                offer,
+                lists_root=lists_root,
+                archive_root=archive_root,
+                repository_root=repository_root,
+            )
+            written_count += len(paths)
+            typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+        # end for
+        write_resolution_map(resolution_map, mapping)
+        unresolved = sorted(
+            machine_name
+            for machine_name, ids in mapping.games.items()
+            if any(value.startswith("unresolved:") for value in ids)
+        )
+        for machine_name in unresolved:
+            typer.echo(f"unresolved: {machine_name}", err=True)
+        # end for
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(
+            f"Wrote {written_count} file(s) for {len(report.offers)} offer(s); "
+            f"{len(unresolved)} unresolved game(s)."
+        )
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def scrape_humblebundle_command
 
 
 def _steam_adapter(
