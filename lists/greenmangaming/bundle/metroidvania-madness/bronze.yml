@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: METROIDVANIA MADNESS — Bronze
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/metroidvania-madness/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/source.json
+games:
+- name: Afterimage
+  ids:
+  - steam:1701520
+- name: Vomitoreum
+  ids:
+  - steam:1549750
