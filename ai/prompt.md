@@ -326,3 +326,78 @@ This can be a script in `scripts/`, and doesn't need to be too fancy. Just plop 
 > </details>
 >
 
+❯ write a gitlab workflow which runs the normal crawler (`game-collections scrape humblebundle`) every week, and creates a PR with the results. If the branch still exists from last week, work on that instead of master, and add another commit. The commit shall follow the LPLP commit style, as does this very task right now.
+
+❯ /plan ^
+
+❯ Task Notification:
+> - Task `a6a91004b2b2f8d4f` <kbd>completed</kbd>
+> - Tool `toolu_01C8rmKC8DAKkYFAZxEcqtpR`
+> - > Agent "Explore repo CI, scraper, commit style" finished
+> - [Query (`1658` chars, `1.62 KB`)](output/agents/001.a6a91004b2b2f8d4f/prompt.md)
+> - [Answer (`10821` chars, `10.6 KB`)](output/agents/001.a6a91004b2b2f8d4f/result.md)
+> - [Raw log (`277347` chars, `272 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/0020e83a-19c4-4c30-8bdb-965e32f516ec/tasks/a6a91004b2b2f8d4f.output)
+> - `12` tools, `53544` tokens, `1.61983 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Repo remotes only show GitHub (github.com/luckydonald/base). No GitLab remote or existing .gitlab-ci.yml. Still want a GitLab CI pipeline file (e.g. for a GitLab mirror), or actually mean GitHub Actions?
+>> 2. MR/PR creation from GitLab CI needs a token + tool. Which approach?
+>> 3. Weekly persistent branch: reuse behavior across weeks?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **CI platform** (1/3) <kbd>Single Select</kbd><br>
+>> Repo remotes only show GitHub (github.com/luckydonald/base). No GitLab remote or existing .gitlab-ci.yml. Still want a GitLab CI pipeline file (e.g. for a GitLab mirror), or actually mean GitHub Actions?
+> - [ ] 1\. GitLab CI (.gitlab-ci.yml)
+>   - _Write as asked, assume repo mirrored/pushed to GitLab too or migrating there._
+> - [x] 2\. GitHub Actions instead
+>   - _Repo's actual host is GitHub; use workflow YAML matching existing .github/workflows/ patterns._
+> - [ ] 3\. _Type something._
+>
+>> **MR creation** (2/3) <kbd>Single Select</kbd><br>
+>> MR/PR creation from GitLab CI needs a token + tool. Which approach?
+> - [ ] 1\. glab CLI with GITLAB_TOKEN
+>   - _Install glab in job, auth via CI variable, glab mr create._
+> - [ ] 2\. GitLab API via curl
+>   - _Use project access token + curl to GitLab REST API for branch push and MR create, no extra CLI needed._
+> - [x] 3\. _Type something:_
+>   - > What are the options for github?
+>
+>> **Branch reuse** (3/3) <kbd>Single Select</kbd><br>
+>> Weekly persistent branch: reuse behavior across weeks?
+> - [x] 1\. Single rolling branch (Recommended)
+>   - _Fixed branch name e.g. weekly/humblebundle-scrape. If it exists (open MR), checkout it, add new commit, push. If merged/deleted, recreate from main._
+> - [ ] 2\. Dated branch per week, check prior week's branch
+>   - _Branch name includes ISO week e.g. weekly/humblebundle-scrape-2026-W28; check if last week's branch (W27) still exists/unmerged, and continue on that instead of starting fresh from main._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. GitHub Actions PR creation — which mechanism?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **PR creation** (1/1) <kbd>Single Select</kbd><br>
+>> GitHub Actions PR creation — which mechanism?
+> - [x] 1\. gh CLI (Recommended)
+>   - _Matches existing codex-issue-agent.yml pattern: git commit, git push, `gh pr create` using built-in GITHUB_TOKEN. No extra action needed._
+> - [ ] 2\. peter-evans/create-pull-request action
+>   - _Third-party action that handles branch push + PR create/update in one step, commonly used for automated bot PRs._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Instead of merging, it shall rebase. If rebase fails, ignore and just crawl and commit, at some point a human will solve it, keep scraping & commiting though.
+A leftover `ai/git/pending-commit.md` does not matter, so take that out of the plan. User is "Lucky Lucy (automation)", with the email `3._.code@luckydonald.de`.
+
