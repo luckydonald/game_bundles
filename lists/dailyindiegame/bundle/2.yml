@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Discount DLCs 2
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2/source.json
+games:
+- name: Hacker Evolution Duality Hardcore Package 2
+  ids:
+  - steam:259220
+- name: 'Hacker Evolution Duality: Inception Part 1 DLC'
+  ids:
+  - steam:211990
+- name: 'Hacker Evolution Duality: Inception Part 2 DLC'
+  ids:
+  - steam:211994
+- name: 'Hacker Evolution Duality: Inception Part 3 DLC'
+  ids:
+  - steam:211992
+- name: arcade games collection-New games 3
+  ids:
+  - steam:1496041
+- name: arcade games collection-New games 4
+  ids:
+  - steam:1496042
+- name: arcade games collection-New games 5
+  ids:
+  - steam:1496043
+- name: Dead Ground - Soundtrack
+  ids:
+  - steam:786810
+- name: arcade games collection-The strangest game in the world 15
+  ids:
+  - steam:2867080
