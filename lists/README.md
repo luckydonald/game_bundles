@@ -28,6 +28,15 @@ Validate all lists with:
 game-collections validate
 ```
 
+To create a list from names first, omit `ids` (or use an empty list) in a draft outside the validated `lists/` tree, then complete it in place:
+
+```console
+game-collections search --file my-draft.yml
+game-collections search --provider steam --file my-draft.yml
+```
+
+Existing IDs are preserved. The default searches all supported providers, unique exact title matches are filled automatically, and ambiguous results are presented for selection. Unresolved games remain without `ids`, so the draft can be run through the command again later.
+
 Regenerate the IDE schema after changing the Pydantic contract:
 
 ```console

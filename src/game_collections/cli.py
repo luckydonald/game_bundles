@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
+import yaml
 
 from game_collections.lists import ListLoadError, discover_game_lists
 from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
@@ -15,6 +16,7 @@ from game_collections.launchers.steam.discovery import discover_steam_root
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
 from game_collections.schema import write_humblebundle_schema
+from game_collections.search import complete_game_list, selected_providers
 from game_collections.sources.humblebundle.crawler import (
     HumbleHttpClient,
     crawl_humble_offers,
@@ -119,6 +121,97 @@ def _choose_store_candidate(
         typer.echo(f"Enter a number from 1 to {other}.", err=True)
     # end while
 # end def _choose_store_candidate
+
+
+def _choose_search_candidate(
+    title: str,
+    provider: StoreName,
+    candidates: list[StoreCandidate],
+) -> str | None:
+    """Prompt for one storefront result while completing a draft list."""
+    item = HumbleItem(
+        machine_name="search",
+        title=title,
+        item_type="game",
+        is_game=True,
+        redeem_on=[provider],
+    )
+    return _choose_store_candidate(item, provider, candidates)
+# end def _choose_search_candidate
+
+
+def _print_search_results(
+    title: str,
+    providers: tuple[StoreName, ...],
+    resolver: StorefrontResolver,
+) -> None:
+    """Print ranked candidates for a title without changing files."""
+    for provider in providers:
+        typer.echo(f"{provider}:")
+        candidates = resolver.search(provider, title)
+        if not candidates:
+            typer.echo("  No results.")
+            continue
+        # end if
+        for candidate in candidates:
+            typer.echo(f"  {candidate.title} — {candidate.qualified_id}")
+            typer.echo(f"    {candidate.url}")
+        # end for
+    # end for
+# end def _print_search_results
+
+
+@app.command("search")
+def search_command(
+    name: Annotated[str | None, typer.Argument(help="Game name to search for.")] = None,
+    file: Annotated[
+        Path | None,
+        typer.Option("--file", "-f", help="Draft YAML game list to complete in place."),
+    ] = None,
+    provider: Annotated[
+        str,
+        typer.Option("--provider", "-p", help="Storefront to search; defaults to all."),
+    ] = "all",
+) -> None:
+    """Search storefronts by name or complete missing IDs in a draft list."""
+    if (name is None) == (file is None):
+        typer.echo("provide either a game name or --file", err=True)
+        raise typer.Exit(2)
+    # end if
+    client = HumbleHttpClient()
+    try:
+        providers = selected_providers(provider)
+        resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
+        if name is not None:
+            _print_search_results(name, providers, resolver)
+            return
+        # end if
+        assert file is not None
+        raw = yaml.safe_load(file.read_text(encoding="utf-8"))
+        completed, unresolved = complete_game_list(
+            raw,
+            providers,
+            resolver,
+            _choose_search_candidate,
+        )
+        file.write_text(
+            yaml.safe_dump(completed, sort_keys=False, allow_unicode=True),
+            encoding="utf-8",
+        )
+        typer.echo(f"Updated {file}.")
+        for title in unresolved:
+            typer.echo(f"unresolved: {title}", err=True)
+        # end for
+        if unresolved:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError, yaml.YAMLError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+    # end try
+# end def search_command
 
 
 @scrape_app.command("humblebundle")
