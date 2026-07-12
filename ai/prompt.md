@@ -291,3 +291,6 @@ If possible to mark the field as filepath in the schema to aid IDE completion, d
 
 › You can complete & fix my drafts in those files. Priotise adapting the scripts.
 
+› Write a `metadata.json` next to the lists in `/lists/humblebundle/bundle/YYYY-MM-DD_*/` consisting of a compact `{"name": "Bundle name", "version": "YYYY-MM-DD - YYYY-MM-DD"}`. JetBrains IDEs like PyCharm do show those in the folder tree view as folder annotations, which is helpful here as well. In the choice folder where every choice is a single item and no folder it however would not add any benifit.
+Similarly, add the crawl date as `"version": "YYYY-MM-DD HH:MM:SS"` field to the already written `/archives/humblebundle/{bundle/YYYY-MM-DD_*,choice/YYYY-MM}/metadata.json` files.
+
