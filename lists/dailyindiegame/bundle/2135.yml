@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle AAA
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2135.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2135/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2135/source.json
+games:
+- name: Pseudoregalia
+  ids:
+  - steam:2365810
+- name: Gourdlets
+  ids:
+  - steam:2013730
+- name: Zengeon
+  ids:
+  - steam:1000080
+- name: Big Helmet Heroes
+  ids:
+  - steam:2397250
+- name: Revita
+  ids:
+  - steam:1175460
+- name: Buddy Simulator 1984
+  ids:
+  - steam:1269950
+- name: TheBobaTeashop
+  ids:
+  - steam:3461920
+- name: Founders' Fortune
+  ids:
+  - steam:1104330
+- name: Tales & Tactics
+  ids:
+  - steam:1652250
