@@ -528,3 +528,5 @@ Especially as bundles change not all at once there will be overlaps.
 
 ❯ That hardcoded test makes no sense.
 
+❯ Fix the bug when running the dailyindiegame scaper with the price being `$0.10 ( $0 ) — You save: $-0.10 (0%)` breaking the parser.
+
