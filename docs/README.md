@@ -12,6 +12,9 @@ Lists live below [`lists/`](lists/). Their ID is their path relative to that dir
 # yaml-language-server: $schema=../../schemas/game-list.schema.json
 schema: 1
 name: The Orange Box
+references:
+  - name: Valve bundle page
+    url: https://store.steampowered.com/bundle/232/Valve_Complete_Pack/
 games:
   - name: Half-Life 2
     ids: [steam:220]
@@ -54,6 +57,8 @@ Humble embeds its catalog data in the public HTML. The importer converts descrip
 - launcher-neutral tier lists below `lists/humblebundle/`;
 - normalized metadata below `archives/humblebundle/`;
 - a sorted two-space `source.json` containing the relevant embedded Humble payloads.
+
+Generated lists link back to the Humble offer URL and to their normalized `metadata.json` and raw `source.json` crawl archives through the list's `references` field.
 
 Bundle directories begin with their UTC start date and fall back to the end date when the listing is unavailable. Each advertised cumulative tier becomes a list; coupons and bonuses remain in metadata but are excluded from the standard game list. Choice uses `humblebundle/choice/YYYY-MM`.
 

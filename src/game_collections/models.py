@@ -5,13 +5,18 @@ from __future__ import annotations
 import re
 from typing import Annotated, Literal, Self
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
+from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 
 LIST_ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9._/-]*[a-z0-9]$")
 PROVIDER_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
 
 NonEmptyString = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
+ReferencePath = Annotated[
+    str,
+    StringConstraints(strip_whitespace=True, min_length=1),
+    Field(json_schema_extra={"format": "file-path"}),
+]
 
 
 class StrictModel(BaseModel):
@@ -72,11 +77,33 @@ class Game(StrictModel):
 # end class Game
 
 
+class Reference(StrictModel):
+    """A local/repository file or web source supporting a game list."""
+
+    name: NonEmptyString
+    path: ReferencePath | None = None
+    url: AnyHttpUrl | None = None
+
+    @model_validator(mode="after")
+    def validate_target(self) -> Self:
+        if self.path is None and self.url is None:
+            raise ValueError("reference requires a path or URL")
+        # end if
+        if self.path is not None and "://" in self.path:
+            raise ValueError("reference path must be a local or repository path")
+        # end if
+        return self
+    # end def validate_target
+
+# end class Reference
+
+
 class GameList(StrictModel):
     """The complete contents of one ``lists/**/*.yml`` file."""
 
     schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     name: NonEmptyString
+    references: list[Reference] = Field(default_factory=list)
     games: list[Game] = Field(min_length=1)
 
     @model_validator(mode="after")
@@ -103,4 +130,3 @@ def validate_list_id(value: str) -> str:
     # end if
     return value
 # end def validate_list_id
-
