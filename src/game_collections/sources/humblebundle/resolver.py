@@ -272,7 +272,11 @@ class StorefrontResolver:
         stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
         for store_value in stores:
             typed_provider = cast(StoreName, store_value)
-            candidates = self.search(typed_provider, item.title)
+            try:
+                candidates = self.search(typed_provider, item.title)
+            except (OSError, RuntimeError):
+                candidates = []
+            # end try
             exact = [
                 candidate
                 for candidate in candidates
