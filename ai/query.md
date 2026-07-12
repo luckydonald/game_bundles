@@ -405,3 +405,5 @@ A leftover `ai/git/pending-commit.md` does not matter, so take that out of the p
 
 ❯ Make sure it mentions that the lplp commit style is active for this repo.
 
+❯ add a commit explaining the scraper tech more, including the existence of github actions. This would be best placed as @src/game_collections/sources/README.md and referenced in th `CLAUDE.md` file.
+
