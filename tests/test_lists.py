@@ -32,7 +32,7 @@ def test_orange_box_is_valid_initial_data() -> None:
 def test_every_repository_list_validates() -> None:
     loaded = discover_game_lists(REPO_ROOT / "lists")
     ids = [game_list.id for game_list in loaded]
-    assert len(ids) == 16
+    assert len(ids) == 18
     assert "valve/the-orange-box" in ids
 # end def test_every_repository_list_validates
 
