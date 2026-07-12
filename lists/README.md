@@ -51,3 +51,5 @@ game-collections schema
 Tier counts and names follow Humble's advertised cumulative tiers, while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:source:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.
 
 Each generated Humble list references its offer URL plus the matching normalized metadata and raw source archive files.
+
+Humble's own site doesn't expose past Choice months to guests, so historical months are backfilled separately with `scripts/backfill_humble_choice.py`, which sources titles and per-game membership links from the community mirror at `dangarbri.tech/humblechoice` and resolves Steam IDs the same way `complete` does. Its archive JSON is a best-effort partial record (title, resolved IDs, per-game link) rather than the full official crawl payload the live scraper stores. Run it with `--month YYYY-MM`, `--from`/`--to`, or `--all`; see `--help` for details.
