@@ -171,3 +171,33 @@ def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent(tmp_p
     result = SteamCollectionPayload.from_entry(dict(candidate.root)[key])
     assert result.added == [220, 380, 400, 420, 440, 999]
 # end def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent
+
+
+def test_second_replacement_failure_rolls_back_first_file(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    cloud = steam_root / "userdata" / ACCOUNT_ID / "config/cloudstorage"
+    originals = {name: (cloud / name).read_bytes() for name in (NAMESPACE_NAME, MODIFIED_NAME)}
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    staged = gateway.stage(orange_box_plan(), tmp_path / "Desktop")
+    original_replace = gateway._atomic_replace
+    calls = 0
+
+    def fail_second_replace(target: Path, data: bytes, identity: object) -> None:
+        nonlocal calls
+        calls += 1
+        if calls == 2:
+            raise OSError("simulated second replacement failure")
+        # end if
+        original_replace(target, data, identity)  # type: ignore[arg-type]
+    # end def fail_second_replace
+
+    monkeypatch.setattr(gateway, "_atomic_replace", fail_second_replace)
+
+    with pytest.raises(SteamIoError, match="rollback attempted"):
+        gateway.apply(staged, lambda _prompt: "REPLACE")
+    # end with
+    assert {name: (cloud / name).read_bytes() for name in originals} == originals
+# end def test_second_replacement_failure_rolls_back_first_file
