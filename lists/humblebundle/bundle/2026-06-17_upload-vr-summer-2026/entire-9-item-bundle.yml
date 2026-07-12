@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
 name: Upload VR Summer 2026 — Entire 9 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/upload-vr-summer-2026
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-06-17_upload-vr-summer-2026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-06-17_upload-vr-summer-2026/source.json
 games:
 - name: VTOL VR
   ids:

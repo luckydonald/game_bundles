@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
 name: 'Going Rogue: A Lite Heavy Bundle — Entire 9 Item Bundle'
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/going-rogue-lite-heavy-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-06-24_going-rogue-lite-heavy-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-06-24_going-rogue-lite-heavy-bundle/source.json
 games:
 - name: Brutal Orchestra
   ids:
