@@ -254,11 +254,15 @@ def write_humble_offer(
     _atomic_write(source_path, _json(offer.source))
     written.extend((metadata_path, source_path))
     for index, tier in enumerate(archive.tiers):
-        games = [
-            Game(name=item.title, ids=item.resolution.ids)
-            for item in tier.items
-            if item.is_game
-        ]
+        games: list[Game] = []
+        seen_ids: set[str] = set()
+        for item in tier.items:
+            if not item.is_game or any(value in seen_ids for value in item.resolution.ids):
+                continue
+            # end if
+            games.append(Game(name=item.title, ids=item.resolution.ids))
+            seen_ids.update(item.resolution.ids)
+        # end for
         if not games:
             continue
         # end if

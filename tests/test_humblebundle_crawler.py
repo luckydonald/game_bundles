@@ -110,6 +110,34 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
 # end def test_writer_creates_archive_and_games_only_bundle_list
 
 
+def test_writer_deduplicates_products_with_the_same_storefront_identity(tmp_path: Path) -> None:
+    offer = _offer()
+    duplicate = offer.archive.tiers[0].items[0].model_copy(
+        update={"machine_name": "samplegame-deluxe", "title": "Sample Game Deluxe"}
+    )
+    tier = offer.archive.tiers[0].model_copy(
+        update={
+            "item_count": 3,
+            "items": [*offer.archive.tiers[0].items, duplicate],
+        }
+    )
+    archive = offer.archive.model_copy(update={"tiers": [tier]})
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(
+        CrawledHumbleOffer(archive=archive, source={}),
+        tmp_path / "lists",
+        tmp_path / "archives",
+        tmp_path,
+    )
+
+    list_path = next(path for path in paths if path.suffix == ".yml")
+    loaded = load_game_list(list_path, tmp_path / "lists")
+    assert [(game.name, game.ids) for game in loaded.data.games] == [("Sample Game", ["steam:42"])]
+# end def test_writer_deduplicates_products_with_the_same_storefront_identity
+
+
 def test_writer_uses_choice_month_path_and_is_idempotent(tmp_path: Path) -> None:
     (tmp_path / "schemas").mkdir()
     (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
