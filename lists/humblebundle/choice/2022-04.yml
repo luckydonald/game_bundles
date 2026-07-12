@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: April 2022 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/april-2022
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2022-04/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2022-04/source.json
+- name: Ghostrunner page
+  url: https://www.humblebundle.com/membership/april-2022/ghostrunner
+- name: Destroy All Humans! page
+  url: https://www.humblebundle.com/membership/april-2022/destroyallhumans
+- name: Monster Sanctuary page
+  url: https://www.humblebundle.com/membership/april-2022/monstersanctuary
+- name: Killsquad page
+  url: https://www.humblebundle.com/membership/april-2022/killsquad
+- name: 'Rogue Heroes: Ruins Of Tasos page'
+  url: https://www.humblebundle.com/membership/april-2022/rogueheroes_ruinsoftasos
+- name: Suzerain page
+  url: https://www.humblebundle.com/membership/april-2022/suzerain
+- name: Chicken Police page
+  url: https://www.humblebundle.com/membership/april-2022/chickenpolice
+- name: 'Naruto To Boruto: Shinobi Striker page'
+  url: https://www.humblebundle.com/membership/april-2022/narutotoboruto_shinobistriker
+games:
+- name: Ghostrunner
+  ids:
+  - steam:1139900
+- name: Destroy All Humans!
+  ids:
+  - steam:803330
+- name: Monster Sanctuary
+  ids:
+  - steam:814370
+- name: Killsquad
+  ids:
+  - steam:910490
+- name: 'Rogue Heroes: Ruins Of Tasos'
+  ids:
+  - steam:787810
+- name: Suzerain
+  ids:
+  - steam:1207650
+- name: Chicken Police
+  ids:
+  - unresolved:store:steam:chicken-police
+- name: 'Naruto To Boruto: Shinobi Striker'
+  ids:
+  - steam:633230

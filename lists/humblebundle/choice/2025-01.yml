@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: January 2025 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/january-2025
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2025-01/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2025-01/source.json
+- name: Against The Storm page
+  url: https://www.humblebundle.com/membership/january-2025/againstthestorm
+- name: Jagged Alliance 3 page
+  url: https://www.humblebundle.com/membership/january-2025/jaggedalliance3
+- name: Blasphemous 2 page
+  url: https://www.humblebundle.com/membership/january-2025/blasphemous2
+- name: Beneath Oresa page
+  url: https://www.humblebundle.com/membership/january-2025/beneathoresa
+- name: Fort Solis page
+  url: https://www.humblebundle.com/membership/january-2025/fortsolis
+- name: 'Boxes: Lost Fragments page'
+  url: https://www.humblebundle.com/membership/january-2025/boxes_lostfragments
+- name: Dordogne page
+  url: https://www.humblebundle.com/membership/january-2025/dordogne
+- name: The Pegasus Expedition page
+  url: https://www.humblebundle.com/membership/january-2025/thepegasusexpedition
+games:
+- name: Against The Storm
+  ids:
+  - steam:1336490
+- name: Jagged Alliance 3
+  ids:
+  - steam:1084160
+- name: Blasphemous 2
+  ids:
+  - steam:2114740
+- name: Beneath Oresa
+  ids:
+  - steam:1803400
+- name: Fort Solis
+  ids:
+  - steam:1931730
+- name: 'Boxes: Lost Fragments'
+  ids:
+  - steam:2019810
+- name: Dordogne
+  ids:
+  - steam:1272840
+- name: The Pegasus Expedition
+  ids:
+  - steam:1521070

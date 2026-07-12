@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: December 2019 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/december-2019
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2019-12/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2019-12/source.json
+- name: Shadow Of The Tomb Raider page
+  url: https://www.humblebundle.com/membership/december-2019/shadowofthetombraider
+- name: Blasphemous page
+  url: https://www.humblebundle.com/membership/december-2019/blasphemous
+- name: Ancestors Legacy page
+  url: https://www.humblebundle.com/membership/december-2019/ancestorslegacy
+- name: Phantom Doctrine page
+  url: https://www.humblebundle.com/membership/december-2019/phantomdoctrine
+- name: Dead In Vinland page
+  url: https://www.humblebundle.com/membership/december-2019/deadinvinland
+- name: Horizon Chase Turbo page
+  url: https://www.humblebundle.com/membership/december-2019/horizonchaseturbo
+- name: 'Dark Future: Blood Red States page'
+  url: https://www.humblebundle.com/membership/december-2019/darkfuture_bloodredstates
+- name: 'X-Morph: Defense page'
+  url: https://www.humblebundle.com/membership/december-2019/xmorph_defense
+- name: Aegis Defenders page
+  url: https://www.humblebundle.com/membership/december-2019/aegisdefenders
+- name: Desert Child page
+  url: https://www.humblebundle.com/membership/december-2019/desertchild
+games:
+- name: Shadow Of The Tomb Raider
+  ids:
+  - unresolved:store:steam:shadow-of-the-tomb-raider
+- name: Blasphemous
+  ids:
+  - steam:774361
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+- name: Phantom Doctrine
+  ids:
+  - steam:559100
+- name: Dead In Vinland
+  ids:
+  - steam:573120
+- name: Horizon Chase Turbo
+  ids:
+  - unresolved:store:steam:horizon-chase-turbo
+- name: 'Dark Future: Blood Red States'
+  ids:
+  - unresolved:store:steam:dark-future:-blood-red-states
+- name: 'X-Morph: Defense'
+  ids:
+  - steam:408410
+- name: Aegis Defenders
+  ids:
+  - steam:371140
+- name: Desert Child
+  ids:
+  - steam:844050

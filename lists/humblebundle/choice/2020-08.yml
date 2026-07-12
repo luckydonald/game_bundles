@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: August 2020 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/august-2020
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2020-08/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2020-08/source.json
+- name: Vampyr page
+  url: https://www.humblebundle.com/membership/august-2020/vampyr
+- name: Hello Neighbor + Hello Neighbor Hide And Seek Collection page
+  url: https://www.humblebundle.com/membership/august-2020/helloneighbor_and_hideandseek_aug2020_choice
+- name: Wargroove page
+  url: https://www.humblebundle.com/membership/august-2020/wargroove
+- name: Call Of Cthulhu page
+  url: https://www.humblebundle.com/membership/august-2020/callofcthulhu
+- name: Little Big Workshop page
+  url: https://www.humblebundle.com/membership/august-2020/littlebigworkshop
+- name: Genesis Alpha One Deluxe Edition page
+  url: https://www.humblebundle.com/membership/august-2020/genesisalphaone_deluxeedition
+- name: Automachef page
+  url: https://www.humblebundle.com/membership/august-2020/automachef
+- name: Through The Darkest Of Times page
+  url: https://www.humblebundle.com/membership/august-2020/throughthedarkestoftimes
+- name: American Fugitive page
+  url: https://www.humblebundle.com/membership/august-2020/americanfugitive
+- name: 'The Coma 2: Vicious Sisters page'
+  url: https://www.humblebundle.com/membership/august-2020/thecoma2_vicioussisters
+- name: We Were Here Together page
+  url: https://www.humblebundle.com/membership/august-2020/wewereheretogether
+- name: A Case Of Distrust page
+  url: https://www.humblebundle.com/membership/august-2020/acaseofdistrust
+games:
+- name: Vampyr
+  ids:
+  - steam:427290
+- name: Hello Neighbor + Hello Neighbor Hide And Seek Collection
+  ids:
+  - unresolved:store:steam:hello-neighbor-+-hello-neighbor-hide-and-seek-collection
+- name: Wargroove
+  ids:
+  - steam:607050
+- name: Call Of Cthulhu
+  ids:
+  - steam:399810
+- name: Little Big Workshop
+  ids:
+  - steam:574720
+- name: Genesis Alpha One Deluxe Edition
+  ids:
+  - steam:712190
+- name: Automachef
+  ids:
+  - steam:984800
+- name: Through The Darkest Of Times
+  ids:
+  - steam:1003090
+- name: American Fugitive
+  ids:
+  - steam:934780
+- name: 'The Coma 2: Vicious Sisters'
+  ids:
+  - steam:1045720
+- name: We Were Here Together
+  ids:
+  - steam:865360
+- name: A Case Of Distrust
+  ids:
+  - steam:717610

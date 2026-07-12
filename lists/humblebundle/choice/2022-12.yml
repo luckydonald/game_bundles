@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: December 2022 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership/december-2022
+- name: Backfill source
+  url: https://dangarbri.tech/humblechoice
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2022-12/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2022-12/source.json
+- name: Wasteland 3 page
+  url: https://www.humblebundle.com/membership/december-2022/wasteland3
+- name: Greedfall page
+  url: https://www.humblebundle.com/membership/december-2022/greedfall
+- name: First Class Trouble page
+  url: https://www.humblebundle.com/membership/december-2022/firstclasstrouble
+- name: Backbone page
+  url: https://www.humblebundle.com/membership/december-2022/backbone
+- name: Toem page
+  url: https://www.humblebundle.com/membership/december-2022/toem
+- name: Where The Water Tastes Like Wine page
+  url: https://www.humblebundle.com/membership/december-2022/wherethewatertasteslikewine
+- name: Blade Assault page
+  url: https://www.humblebundle.com/membership/december-2022/bladeassault
+- name: Super Magbot page
+  url: https://www.humblebundle.com/membership/december-2022/supermagbot
+games:
+- name: Wasteland 3
+  ids:
+  - steam:719040
+- name: Greedfall
+  ids:
+  - steam:606880
+- name: First Class Trouble
+  ids:
+  - steam:953880
+- name: Backbone
+  ids:
+  - unresolved:store:steam:backbone
+- name: Toem
+  ids:
+  - unresolved:store:steam:toem
+- name: Where The Water Tastes Like Wine
+  ids:
+  - steam:447120
+- name: Blade Assault
+  ids:
+  - steam:1367300
+- name: Super Magbot
+  ids:
+  - steam:1205170
