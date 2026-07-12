@@ -9,6 +9,7 @@ from game_collections.models import GameList
 from game_collections.sources.dailyindiegame.models import DigArchive
 from game_collections.sources.greenmangaming.models import GmgArchive
 from game_collections.sources.humblebundle.models import HumbleArchive
+from game_collections.sources.isthereanydeal.models import ItadArchive
 
 
 def generate_schema() -> dict[str, object]:
@@ -100,3 +101,27 @@ def write_greenmangaming_schema(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(render_greenmangaming_schema(), encoding="utf-8")
 # end def write_greenmangaming_schema
+
+
+def generate_isthereanydeal_schema() -> dict[str, object]:
+    """Generate the normalized isthereanydeal.com archive schema."""
+    return ItadArchive.model_json_schema(by_alias=True, mode="validation")
+# end def generate_isthereanydeal_schema
+
+
+def render_isthereanydeal_schema() -> str:
+    """Render the isthereanydeal.com archive schema deterministically."""
+    return json.dumps(
+        generate_isthereanydeal_schema(),
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=True,
+    ) + "\n"
+# end def render_isthereanydeal_schema
+
+
+def write_isthereanydeal_schema(path: Path) -> None:
+    """Write the normalized isthereanydeal.com archive schema."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render_isthereanydeal_schema(), encoding="utf-8")
+# end def write_isthereanydeal_schema

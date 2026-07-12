@@ -1,0 +1,218 @@
+{
+  "$defs": {
+    "ItadDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "expiry": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expiry"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "ItadDates",
+      "type": "object"
+    },
+    "ItadItem": {
+      "additionalProperties": false,
+      "description": "One game advertised within an ITAD bundle tier.\n\nUnlike Humble/GreenManGaming, ITAD's own detail page usually links\nstraight to a storefront (most often Steam) per game, so `ids` is\nresolved directly while parsing - there is no durable resolution map or\ninteractive title-search step here. `ids` holds every qualified ID found\n(rarely more than one store), or a single `unresolved:source:...` entry\nwhen the detail page has no recognized storefront link for this game.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "slug": {
+          "minLength": 1,
+          "title": "Slug",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "title",
+        "ids"
+      ],
+      "title": "ItadItem",
+      "type": "object"
+    },
+    "ItadPrice": {
+      "additionalProperties": false,
+      "description": "A localized tier price as shown on the ITAD bundle detail page.",
+      "properties": {
+        "currency": {
+          "minLength": 1,
+          "title": "Currency",
+          "type": "string"
+        },
+        "raw": {
+          "minLength": 1,
+          "title": "Raw",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "raw",
+        "value",
+        "currency"
+      ],
+      "title": "ItadPrice",
+      "type": "object"
+    },
+    "ItadTier": {
+      "additionalProperties": false,
+      "description": "A cumulative ITAD bundle tier.\n\nCovers three real shapes seen on the live site: named cumulative tiers\n(Bronze/Silver/Gold, e.g. GreenManGaming-hosted bundles), a single flat\ntier covering every game at one price (e.g. most Humble/IndieGala-hosted\nbundles), and a single synthetic tier covering every game in a\n\"Build Your Own\"/mix-and-match bundle with no fixed price (`price` is\n`None` there - the per-game marginal pricing table isn't modeled).",
+      "properties": {
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "item_count": {
+          "minimum": 0,
+          "title": "Item Count",
+          "type": "integer"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/ItadItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ItadPrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "identifier",
+        "name",
+        "item_count",
+        "items"
+      ],
+      "title": "ItadTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one ITAD bundle offer.",
+  "properties": {
+    "dates": {
+      "$ref": "#/$defs/ItadDates"
+    },
+    "id": {
+      "exclusiveMinimum": 0,
+      "title": "Id",
+      "type": "integer"
+    },
+    "provider_name": {
+      "minLength": 1,
+      "title": "Provider Name",
+      "type": "string"
+    },
+    "provider_slug": {
+      "minLength": 1,
+      "title": "Provider Slug",
+      "type": "string"
+    },
+    "real_slug": {
+      "minLength": 1,
+      "title": "Real Slug",
+      "type": "string"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/ItadTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "title",
+    "provider_name",
+    "provider_slug",
+    "real_slug",
+    "url",
+    "dates",
+    "tiers"
+  ],
+  "title": "ItadArchive",
+  "type": "object"
+}
