@@ -280,3 +280,14 @@ However, please collect and archive - one way or another:
 
 > › Implement the [Plan](./plans/003_humble-bundle-crawler-and-archive.md).
 
+› For the lists, add a new item before the games, called references,
+which shall contain either local file pathes (`../../../archives/humblebundle/choice/2026-07/metadata.json`)
+or absolute repo pathes (similar to websites - so still relative to the repo root, `/archives/humblebundle/choice/2026-07/source.json`, the leading slash optional).
+Format of a reference would be `{ name: str, path?: RelativePath|RepoPath, url?: URL }`.
+Here it should be automatically filled with our written crawl extra data in the archive folder, and the sourced url (bundle URL).
+If possible to mark the field as filepath in the schema to aid IDE completion, do so.
+
+› You can complete my drafts in those files. Priotise adapting the scripts.
+
+› You can complete & fix my drafts in those files. Priotise adapting the scripts.
+
