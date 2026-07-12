@@ -149,6 +149,7 @@ def scrape_humblebundle_command(
         mapping = load_resolution_map(resolution_map)
         resolver = StorefrontResolver(client.fetch, choose)
         report = crawl_humble_offers(client.fetch, resolver, mapping, urls)
+        write_resolution_map(resolution_map, mapping)
         written_count = 0
         for offer in report.offers:
             paths = write_humble_offer(
@@ -160,7 +161,6 @@ def scrape_humblebundle_command(
             written_count += len(paths)
             typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
         # end for
-        write_resolution_map(resolution_map, mapping)
         unresolved = sorted(
             machine_name
             for machine_name, ids in mapping.games.items()
