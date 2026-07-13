@@ -3,3 +3,6 @@
 - [Reuse existing prefixes](feedback_reuse_existing_prefixes.md) — don't split identity when an external config names something differently than existing internal code
 - [User's ITAD domain expertise](user_isthereanydeal_domain_expertise.md) — user does own live research on isthereanydeal/storefronts, expect iterating scope
 - [isthereanydeal source expansion status](project_isthereanydeal_source_expansion.md) — per-game solver added 2026-07-13; unverified shop parsers + Blizzard limitation still open
+- [Steam collection ownership source](project_steam_collection_ownership_source.md) — `--source collection`/`--collection manual-all` added 2026-07-13, reads a user-curated local Steam collection
+- [Rebase todo script needs $1](feedback_rebase_todo_script_needs_arg1.md) — GIT_SEQUENCE_EDITOR heredoc must target "$1", not a literal empty path
+- [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
