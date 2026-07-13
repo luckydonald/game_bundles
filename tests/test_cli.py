@@ -1,10 +1,15 @@
 from __future__ import annotations
 
-from typer.testing import CliRunner
-from pytest import CaptureFixture
+from datetime import UTC, datetime
+from pathlib import Path
 
+from typer.testing import CliRunner
+from pytest import CaptureFixture, MonkeyPatch
+
+from game_collections.apply.config import ApplySelection
 from game_collections.cli import _print_plan, app
 from game_collections.launchers.base import CollectionEligibility, PlannedCollectionChange, SyncPlan
+from test_steam_io import STEAM_ID, build_fake_steam
 
 
 def _plan_with_eligible_and_skipped_lists() -> SyncPlan:
@@ -108,3 +113,99 @@ def test_sync_rejects_invalid_matching_mode_before_steam_discovery() -> None:
     assert result.exit_code == 2
     assert "Invalid value for '--mode'" in result.output
 # end def test_sync_rejects_invalid_matching_mode_before_steam_discovery
+
+
+def test_apply_help_lists_options() -> None:
+    result = CliRunner().invoke(app, ["apply", "--help"])
+
+    assert result.exit_code == 0
+    assert "--selection-config" in result.output
+    assert "--mode" in result.output
+    assert "--tiers" in result.output
+# end def test_apply_help_lists_options
+
+
+def _write_list(path: Path, name: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(f"schema: 1\nname: {name}\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+# end def _write_list
+
+
+def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root / "vendor/one.yml", "One")
+    _write_list(lists_root / "vendor/two.yml", "Two")
+    selection_config = tmp_path / "config/apply-selection.yml"
+
+    fixed_selection = ApplySelection(
+        schema=1,
+        selected=["vendor/one"],
+        excluded=["vendor/two"],
+        updated_at=datetime(2026, 7, 13, tzinfo=UTC),
+    )
+
+    class _StubPickerApp:
+        def __init__(self, bundles: object, excluded: object) -> None:
+            pass
+        # end def __init__
+
+        def run(self) -> ApplySelection:
+            return fixed_selection
+        # end def run
+    # end class _StubPickerApp
+
+    monkeypatch.setattr("game_collections.apply.tui.ApplyPickerApp", _StubPickerApp)
+
+    result = CliRunner().invoke(
+        app,
+        [
+            "apply",
+            "--lists-root",
+            str(lists_root),
+            "--steam-root",
+            str(steam_root),
+            "--steam-id",
+            STEAM_ID,
+            "--source",
+            "collection",
+            "--collection",
+            "Favorites",
+            "--selection-config",
+            str(selection_config),
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "eligible: vendor/one (One)" in result.output
+    assert "vendor/two" not in result.output
+    assert selection_config.exists()
+# end def test_apply_filters_excluded_list_before_planning
+
+
+def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root / "vendor/one.yml", "One")
+    selection_config = tmp_path / "config/apply-selection.yml"
+
+    class _StubPickerApp:
+        def __init__(self, bundles: object, excluded: object) -> None:
+            pass
+        # end def __init__
+
+        def run(self) -> None:
+            return None
+        # end def run
+    # end class _StubPickerApp
+
+    monkeypatch.setattr("game_collections.apply.tui.ApplyPickerApp", _StubPickerApp)
+
+    result = CliRunner().invoke(
+        app,
+        ["apply", "--lists-root", str(lists_root), "--selection-config", str(selection_config)],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "Cancelled" in result.output
+    assert not selection_config.exists()
+# end def test_apply_cancelled_selection_makes_no_changes

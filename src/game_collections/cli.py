@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Annotated, Literal
@@ -11,7 +12,9 @@ from typing import Annotated, Literal
 import typer
 import yaml
 
-from game_collections.lists import ListLoadError, discover_game_lists
+from game_collections.apply.config import DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
+from game_collections.apply.metadata import load_bundle_metadata
+from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists
 from game_collections.migrate_tiers import (
     TierMigrationError,
     apply_migration_step,
@@ -94,6 +97,18 @@ app.add_typer(scrape_app, name="scrape")
 def _lists_root(path: Path | None) -> Path:
     return path or Path.cwd() / "lists"
 # end def _lists_root
+
+
+def _discover_selected_game_lists(lists_root: Path, selection_config: Path) -> list[LoadedGameList]:
+    """Discover lists, dropping any explicitly excluded by a saved selection config."""
+    selection = load_selection(selection_config)
+    excluded = excluded_list_ids(selection)
+    game_lists = discover_game_lists(lists_root)
+    if not excluded:
+        return game_lists
+    # end if
+    return [game_list for game_list in game_lists if game_list.id not in excluded]
+# end def _discover_selected_game_lists
 
 
 @app.command("validate")
@@ -820,6 +835,7 @@ def eligible_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
+    selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
     """Report which lists are fully owned by the launcher account."""
     if launcher != "steam":
@@ -828,9 +844,10 @@ def eligible_command(
     # end if
     try:
         adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key, source, collection)
-        plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
+        game_lists = _discover_selected_game_lists(_lists_root(lists_root), selection_config)
+        plan = adapter.plan(game_lists)
         _print_plan(plan, log_skips=log_skips)
-    except (OSError, ValueError, RuntimeError) as error:
+    except (OSError, ValueError, RuntimeError, SelectionLoadError) as error:
         typer.echo(str(error), err=True)
         raise typer.Exit(1) from error
     # end try
@@ -851,6 +868,7 @@ def sync_command(
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     mode: Annotated[Literal["any", "all"], typer.Option("--mode", help="Match any or all Steam games in each list.")] = "all",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
+    selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
     """Plan or stage and explicitly apply launcher collection changes."""
     if launcher != "steam":
@@ -868,7 +886,7 @@ def sync_command(
             tier_mode=tiers,
             reconcile_managed=True,
         )
-        plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
+        plan = adapter.plan(_discover_selected_game_lists(_lists_root(lists_root), selection_config))
         _print_plan(plan, log_skips=log_skips)
         if not apply_changes:
             typer.echo("Dry run only. Use --apply to stage inspectable files.")
@@ -890,11 +908,98 @@ def sync_command(
         typer.echo("Steam files replaced and verified. Keep Steam closed if restoring.")
         typer.echo(f"Restore with: game-collections restore steam {staged}")
         typer.echo(f"Backups remain in: {staged}")
-    except (OSError, ValueError, RuntimeError, SteamIoError) as error:
+    except (OSError, ValueError, RuntimeError, SteamIoError, SelectionLoadError) as error:
         typer.echo(str(error), err=True)
         raise typer.Exit(1) from error
     # end try
 # end def sync_command
+
+
+@app.command("apply")
+def apply_command(
+    launcher: Annotated[str, typer.Argument()] = "steam",
+    apply_changes: Annotated[bool, typer.Option("--apply")] = False,
+    output_dir: Annotated[Path | None, typer.Option("--output-dir")] = None,
+    lists_root: Annotated[Path | None, typer.Option("--lists-root")] = None,
+    steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
+    steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
+    api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
+    source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
+    collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
+    mode: Annotated[Literal["any", "all"], typer.Option("--mode", help="Match any or all Steam games in each list.")] = "all",
+    tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
+    selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
+) -> None:
+    """Interactively pick which bundles to sync, then continue like `sync`."""
+    if launcher != "steam":
+        typer.echo(f"launcher is not implemented: {launcher}", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        from game_collections.apply.tui import ApplyPickerApp
+    except ImportError as error:
+        typer.echo(
+            "the `apply` command needs the optional `tui` extra: uv sync --extra tui",
+            err=True,
+        )
+        raise typer.Exit(1) from error
+    # end try
+    try:
+        all_game_lists = discover_game_lists(_lists_root(lists_root))
+        bundles = load_bundle_metadata(all_game_lists)
+        previous_selection = load_selection(selection_config)
+        previously_excluded = excluded_list_ids(previous_selection)
+        picker = ApplyPickerApp(bundles, previously_excluded)
+        selection = picker.run()
+        if selection is None:
+            typer.echo("Cancelled. No selection was saved.")
+            return
+        # end if
+        save_selection(selection, selection_config)
+        typer.echo(f"Saved selection: {selection_config}")
+
+        excluded = set(selection.excluded)
+        game_lists = [game_list for game_list in all_game_lists if game_list.id not in excluded]
+
+        adapter, gateway = _steam_adapter(
+            steam_root,
+            steam_id,
+            api_key,
+            source,
+            collection,
+            match_mode=mode,
+            tier_mode=tiers,
+            reconcile_managed=True,
+        )
+        plan = adapter.plan(game_lists)
+        _print_plan(plan, log_skips=log_skips)
+        if not apply_changes:
+            typer.echo("Dry run only. Use --apply to stage inspectable files.")
+            return
+        # end if
+        staged = adapter.stage(plan, output_dir or default_staging_root())
+        typer.echo(f"Staged candidates and backups: {staged}")
+        typer.echo(f"Inspection report: {staged / 'README.txt'}")
+        for record in json.loads((staged / "manifest.json").read_text(encoding="utf-8"))["replacements"]:
+            typer.echo(f"  source: {record['source']['path']}")
+            typer.echo(f"  candidate: {staged / record['candidate_name']}")
+            typer.echo(f"  backup: {staged / record['backup_name']}")
+        # end for
+        shutil.copy2(selection_config, staged / selection_config.name)
+        if not typer.confirm("Have you inspected the candidates and closed Steam?"):
+            typer.echo("Nothing in Steam was changed.")
+            return
+        # end if
+        adapter.apply(staged, lambda prompt: typer.prompt(prompt))
+        typer.echo("Steam files replaced and verified. Keep Steam closed if restoring.")
+        typer.echo(f"Restore with: game-collections restore steam {staged}")
+        typer.echo(f"Backups remain in: {staged}")
+    except (OSError, ValueError, RuntimeError, SteamIoError, SelectionLoadError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def apply_command
 
 
 @app.command("restore")
