@@ -93,13 +93,14 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     paths = write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
 
     bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
-    list_path = lists_root / bundle_root / "entire-2-item-bundle.yml"
+    list_path = lists_root / bundle_root / "bundle.yml"
     metadata_path = archive_root / bundle_root / "metadata.json"
     source_path = archive_root / bundle_root / "source.json"
     assert set(paths) == {list_path, metadata_path, source_path}
     loaded = load_game_list(list_path, lists_root)
-    assert loaded.id == f"{bundle_root}/entire-2-item-bundle"
+    assert loaded.id == f"{bundle_root}/bundle"
     assert loaded.data.name == "Sample Bundle — Entire 2 Item Bundle"
+    assert loaded.data.tier is None
     assert [reference.name for reference in loaded.data.references] == [
         "Humble Bundle offer",
         "Crawl metadata",
@@ -116,6 +117,45 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     ]
     assert source_path.read_text(encoding="utf-8").startswith('{\n  "alpha": 1,')
 # end def test_writer_creates_archive_and_games_only_bundle_list
+
+
+def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
+    offer = _offer()
+    game_two = HumbleItem(
+        machine_name="samplegame2",
+        title="Sample Game Two",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(ids=["steam:43"]),
+    )
+    second_tier = offer.archive.tiers[0].model_copy(
+        update={
+            "identifier": "all2",
+            "name": "Entire 3 Item Bundle",
+            "item_count": 3,
+            "items": [*offer.archive.tiers[0].items, game_two],
+        }
+    )
+    archive = offer.archive.model_copy(update={"tiers": [offer.archive.tiers[0], second_tier]})
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(
+        CrawledHumbleOffer(archive=archive, source={}),
+        tmp_path / "lists",
+        tmp_path / "archives",
+        tmp_path,
+    )
+
+    bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
+    lists_root = tmp_path / "lists"
+    first_path = lists_root / bundle_root / "tier-1.yml"
+    second_path = lists_root / bundle_root / "tier-2.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
+    assert load_game_list(first_path, lists_root).data.tier == 1
+    assert load_game_list(second_path, lists_root).data.tier == 2
+# end def test_writer_numbers_multiple_tiers
 
 
 def test_writer_deduplicates_products_with_the_same_storefront_identity(tmp_path: Path) -> None:
