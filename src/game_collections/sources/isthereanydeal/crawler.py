@@ -433,6 +433,7 @@ def write_itad_offer(
 
     date_prefix = _bundle_date_prefix(offer.summary, archive.provider_slug, archive.dates.start or archive.dates.crawled)
     list_directory = lists_root / archive.provider_slug / "bundle" / f"{date_prefix}_{archive.real_slug}"
+    tiers_with_games: list[tuple[ItadTier, list[Game]]] = []
     for tier in archive.tiers:
         games: list[Game] = []
         seen_ids: set[str] = set()
@@ -443,13 +444,22 @@ def write_itad_offer(
             games.append(Game(name=item.title, ids=item.ids))
             seen_ids.update(item.ids)
         # end for
-        if not games:
-            continue
+        if games:
+            tiers_with_games.append((tier, games))
         # end if
-        path = list_directory / f"{tier.identifier}.yml"
+    # end for
+    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
+        if len(tiers_with_games) == 1:
+            path = list_directory / "bundle.yml"
+            list_tier = None
+        else:
+            path = list_directory / f"tier-{rank}.yml"
+            list_tier = rank
+        # end if
         game_list = GameList(
             schema=1,
             name=f"{archive.title} — {tier.name}",
+            tier=list_tier,
             references=[
                 Reference(name="isthereanydeal.com bundle", url=archive.url),
                 Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
