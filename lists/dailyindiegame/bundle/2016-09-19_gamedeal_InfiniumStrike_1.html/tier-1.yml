@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Infinium Strike - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4097/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4097/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4097/source.json
+games:
+- name: Infinium Strike
+  ids:
+  - unresolved:source:isthereanydeal:4097:infinium-strike

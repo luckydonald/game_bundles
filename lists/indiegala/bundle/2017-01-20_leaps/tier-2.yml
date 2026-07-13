@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Leaps and Bounds — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4659/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4659/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4659/source.json
+games:
+- name: Sleengster
+  ids:
+  - unresolved:source:isthereanydeal:4659:sleengster
+- name: Attempt[42]
+  ids:
+  - steam:562520
+- name: 'The Lost Battalion: All Out Warfare'
+  ids:
+  - steam:364890
+- name: Clock Simulator
+  ids:
+  - steam:501120
+- name: Leap Up no jutsu
+  ids:
+  - unresolved:source:isthereanydeal:4659:leap-up-no-jutsu
+- name: Holiday Bonus GOLD
+  ids:
+  - steam:572760
+- name: SWEATER-OK!
+  ids:
+  - unresolved:source:isthereanydeal:4659:sweater-ok
+- name: Estiman
+  ids:
+  - steam:560220
+- name: Super Duper Flying Genocide 2017
+  ids:
+  - unresolved:source:isthereanydeal:4659:super-duper-flying-genocide-2017
+- name: Polygon Attack
+  ids:
+  - steam:529900
+- name: To The Capital
+  ids:
+  - steam:574580
+- name: Brain In My Head
+  ids:
+  - unresolved:source:isthereanydeal:4659:brain-in-my-head

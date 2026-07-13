@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platformers Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11757/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11757/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11757/source.json
+games:
+- name: WarriOrb
+  ids:
+  - steam:790360
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: N++ (NPLUSPLUS)
+  ids:
+  - steam:230270
+- name: Double Cross
+  ids:
+  - steam:838010
+- name: ROCKETRON
+  ids:
+  - steam:1177640
+- name: Helheim Hassle
+  ids:
+  - steam:1095120
+- name: 'Underland: The Climb'
+  ids:
+  - steam:1592340

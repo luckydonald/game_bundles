@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Backdrop Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6824/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6824/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6824/source.json
+games:
+- name: 'Last Dream: World Unknown'
+  ids:
+  - steam:448170
+- name: 'Azuran Tales: Trials'
+  ids:
+  - steam:848200
+- name: Propaganda Llama
+  ids:
+  - steam:965490
+- name: Last Dream
+  ids:
+  - steam:266230
+- name: One day in London
+  ids:
+  - steam:465180
+- name: Battle for Orion 2
+  ids:
+  - steam:564470
+- name: Azorian Kings
+  ids:
+  - unresolved:source:isthereanydeal:6824:azorian-kings
+- name: Nihilumbra
+  ids:
+  - steam:252670

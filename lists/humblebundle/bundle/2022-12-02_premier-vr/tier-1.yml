@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Premiere VR Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12619/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12619/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12619/source.json
+games:
+- name: DOOM VFR
+  ids:
+  - steam:650000
+- name: Arizona Sunshine
+  ids:
+  - unresolved:source:isthereanydeal:12619:arizona-sunshine
+- name: 'Cave Digger 2: Dig Harder'
+  ids:
+  - steam:1523510
+- name: Bean Stalker
+  ids:
+  - steam:1704080

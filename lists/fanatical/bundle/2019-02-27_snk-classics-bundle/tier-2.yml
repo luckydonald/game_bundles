@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: SNK Classics Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7089/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7089/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7089/source.json
+games:
+- name: THE KING OF FIGHTERS XIII STEAM EDITION
+  ids:
+  - unresolved:source:isthereanydeal:7089:the-king-of-fighters-xiii-steam-edition
+- name: THE LAST BLADE
+  ids:
+  - steam:465840
+- name: Metal Slug 3
+  ids:
+  - steam:250180
+- name: TWINKLE STAR SPRITES
+  ids:
+  - steam:366280
+- name: METAL SLUG X
+  ids:
+  - steam:312610
+- name: SHOCK TROOPERS
+  ids:
+  - steam:366270
+- name: METAL SLUG
+  ids:
+  - steam:366250
+- name: METAL SLUG 2
+  ids:
+  - steam:366260

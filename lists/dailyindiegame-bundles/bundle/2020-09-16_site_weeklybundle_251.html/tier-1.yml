@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 251 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9161/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9161/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9161/source.json
+games:
+- name: The Rescue of Mermaids
+  ids:
+  - steam:1074770
+- name: Zeus Quest Remastered
+  ids:
+  - unresolved:source:isthereanydeal:9161:zeus-quest-remastered
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+- name: Dude Simulator 3
+  ids:
+  - steam:1086640
+- name: Coffee Crawl
+  ids:
+  - steam:793820
+- name: Samsa and the Knights of Light
+  ids:
+  - steam:371320
+- name: Hiiro
+  ids:
+  - steam:464960
+- name: PRiCERPG
+  ids:
+  - steam:963370
+- name: The Monk and the Warrior. The Heart of the King.
+  ids:
+  - steam:732060

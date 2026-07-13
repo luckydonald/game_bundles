@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jan 2023) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12859/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12859/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12859/source.json
+games:
+- name: 'Encased: a sci-fi post-apocalyptic RPG'
+  ids:
+  - steam:921800
+- name: DOOM Eternal
+  ids:
+  - steam:782330
+- name: Conan Chop Chop
+  ids:
+  - steam:1061880
+- name: Tribes of Midgard
+  ids:
+  - steam:858820
+- name: Hokko Life
+  ids:
+  - steam:824000
+- name: 'Grow: Song of the Evertree'
+  ids:
+  - steam:1380420
+- name: OlliOlli World Rad Edition
+  ids:
+  - unresolved:source:isthereanydeal:12859:olliolli-world-rad-edition
+- name: The Serpent Rogue
+  ids:
+  - steam:1453790

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Action Heroes Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5492/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5492/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5492/source.json
+games:
+- name: Hammerfight
+  ids:
+  - steam:41100
+- name: Boson X
+  ids:
+  - steam:302610
+- name: Cargo Commander
+  ids:
+  - steam:220460
+- name: Wooden Sen'SeY
+  ids:
+  - steam:259830
+- name: Monday Night Combat
+  ids:
+  - steam:63200
+- name: Rooks Keep
+  ids:
+  - steam:299440
+- name: Air Guardians
+  ids:
+  - steam:342230
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+- name: Real Boxing
+  ids:
+  - steam:296770

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Honeymoon on Mars Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8351/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8351/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8351/source.json
+games:
+- name: MIND REFLECTION - Inside the Black Mirror Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:8351:mind-reflection-inside-the-black-mirror-puzzle
+- name: Bastard Bonds
+  ids:
+  - steam:486720
+- name: Mars Underground
+  ids:
+  - steam:578420
+- name: Neverliria
+  ids:
+  - steam:904890
+- name: 'HELLFRONT: HONEYMOON'
+  ids:
+  - steam:824460
+- name: Smile To Fly
+  ids:
+  - steam:1164330

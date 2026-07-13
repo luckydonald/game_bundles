@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 411 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9835/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9835/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9835/source.json
+games:
+- name: Project Lounge
+  ids:
+  - steam:508710
+- name: Dungeon of Elements
+  ids:
+  - steam:302310
+- name: SAWkoban
+  ids:
+  - unresolved:source:isthereanydeal:9835:sawkoban
+- name: 'Eredia: The Diary of Heroes'
+  ids:
+  - steam:713180
+- name: 'Crown Champion: Legends of the Arena'
+  ids:
+  - steam:527710
+- name: 'Outliver: Redemption'
+  ids:
+  - steam:1011370
+- name: Descent - Silence of Mind
+  ids:
+  - steam:652600
+- name: TETRA's Escape
+  ids:
+  - steam:827460
+- name: Vector Race
+  ids:
+  - unresolved:source:isthereanydeal:9835:vector-race

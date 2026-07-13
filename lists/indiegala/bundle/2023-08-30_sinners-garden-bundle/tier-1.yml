@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sinner's Garden Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13440/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13440/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13440/source.json
+games:
+- name: School Idol QT Cool
+  ids:
+  - unresolved:source:isthereanydeal:13440:school-idol-qt-cool
+- name: Detective Masochist2 -The Case of the Tortured Servant
+  ids:
+  - unresolved:source:isthereanydeal:13440:detective-masochist2-the-case-of-the-tortured-servant
+- name: Neighbor Watching
+  ids:
+  - steam:1448630
+- name: Nakadashi Banzai
+  ids:
+  - steam:1201960
+- name: VANILLA - GARDEN OF JUDGEMENT
+  ids:
+  - steam:917690
+- name: 'The Interview: You Know What You''ve Got to Do to Get the Job'
+  ids:
+  - steam:1522020

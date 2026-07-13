@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 298 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9368/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9368/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9368/source.json
+games:
+- name: 'Daily Chthonicle: Editor''s Edition'
+  ids:
+  - steam:490980
+- name: Back to Bed
+  ids:
+  - steam:308040
+- name: Ded Inside
+  ids:
+  - steam:1120240
+- name: Chimpact 1 - Chuck's Adventure
+  ids:
+  - steam:518120
+- name: 'Pixel Puzzles 2: Birds'
+  ids:
+  - steam:344230
+- name: 'Pixel Puzzles 2: Space'
+  ids:
+  - steam:355920
+- name: The Valley In My Mind
+  ids:
+  - unresolved:source:isthereanydeal:9368:the-valley-in-my-mind
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250
+- name: Shield Shock
+  ids:
+  - steam:1169060

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 387 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9741/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9741/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9741/source.json
+games:
+- name: Subway Simulator
+  ids:
+  - unresolved:source:isthereanydeal:9741:subway-simulator
+- name: A Second Chance
+  ids:
+  - steam:908960
+- name: Rotatex
+  ids:
+  - steam:1069270
+- name: Crystallo
+  ids:
+  - steam:1062680
+- name: Soul Valley
+  ids:
+  - steam:1041780
+- name: Brainmelter Deluxe
+  ids:
+  - steam:964060
+- name: Ninja Turdle
+  ids:
+  - steam:1082460
+- name: Pianistic
+  ids:
+  - steam:1325470
+- name: ProjectTeo
+  ids:
+  - steam:1382370

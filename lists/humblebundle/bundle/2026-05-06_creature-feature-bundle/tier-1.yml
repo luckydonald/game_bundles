@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Creature Feature Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16133/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16133/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16133/source.json
+games:
+- name: Cubism
+  ids:
+  - steam:804530
+- name: Prison Boss VR
+  ids:
+  - steam:673600

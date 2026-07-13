@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXVI Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6898/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6898/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6898/source.json
+games:
+- name: Alice In VR
+  ids:
+  - steam:829610
+- name: Ze VR
+  ids:
+  - steam:574220
+- name: EVOKE
+  ids:
+  - steam:965730
+- name: Tippy Tree
+  ids:
+  - steam:966210
+- name: Beat Blocks VR
+  ids:
+  - steam:966590
+- name: Neverout
+  ids:
+  - steam:579720
+- name: Mount Wingsuit
+  ids:
+  - steam:501110
+- name: Poisoner
+  ids:
+  - unresolved:source:isthereanydeal:6898:poisoner

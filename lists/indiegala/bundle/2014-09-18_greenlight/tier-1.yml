@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Steam Greenlight Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1184/source.json
+games:
+- name: 'Sam Glyph: Private Eye!'
+  ids:
+  - steam:326420
+- name: 'BANZAI PECAN: Last Hope for the Young Century'
+  ids:
+  - unresolved:source:isthereanydeal:1184:banzai-pecan-last-hope-for-the-young-century
+- name: Social Justice Warriors
+  ids:
+  - steam:348270
+- name: 'Three Fourths Home: Extended Edition'
+  ids:
+  - steam:344500
+- name: Catmouth Island
+  ids:
+  - steam:336380
+- name: Into The Gloom
+  ids:
+  - steam:342350
+- name: 'Catmouth Island: Episode 1'
+  ids:
+  - unresolved:source:isthereanydeal:1184:catmouth-island-episode-1
+- name: 'Astroloco: Worst Contact'
+  ids:
+  - steam:357490
+- name: Undead Legions
+  ids:
+  - unresolved:source:isthereanydeal:1184:undead-legions
+- name: Mind Dead
+  ids:
+  - steam:442190
+- name: Bomb The Monsters
+  ids:
+  - steam:355020

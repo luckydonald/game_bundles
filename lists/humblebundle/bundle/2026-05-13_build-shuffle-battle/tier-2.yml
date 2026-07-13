@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build, Shuffle, Battle! Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16155/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16155/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16155/source.json
+games:
+- name: Knights in Tight Spaces
+  ids:
+  - steam:2315400
+- name: Placid Plastic Deck - A Quiet Quest
+  ids:
+  - steam:2510020
+- name: Deck of Haunts
+  ids:
+  - steam:3179730
+- name: Occlude
+  ids:
+  - steam:3547010
+- name: Dogpile
+  ids:
+  - steam:3839300
+- name: BOOK OF HOURS
+  ids:
+  - steam:1028310
+- name: THE SPIRIT LIFT
+  ids:
+  - steam:1727590
+- name: Wildfrost
+  ids:
+  - steam:1811990

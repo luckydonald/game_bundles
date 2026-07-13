@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Feb Five Pack 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8386/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8386/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8386/source.json
+games:
+- name: "LEGO® Batman\x99: The Videogame"
+  ids:
+  - steam:21000
+- name: Frozen Synapse Prime
+  ids:
+  - unresolved:source:isthereanydeal:8386:frozen-synapse-prime
+- name: ShockRods
+  ids:
+  - steam:647640
+- name: 'Aporia: Beyond The Valley'
+  ids:
+  - steam:573130
+- name: 'Batman: Arkham Asylum Game of the Year Edition'
+  ids:
+  - steam:35140
+- name: 'Castlevania: Lords of Shadow 2 Digital Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:8386:castlevania-lords-of-shadow-2-digital-bundle

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: War Games Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11469/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11469/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11469/source.json
+games:
+- name: 'Wargame: European Escalation'
+  ids:
+  - steam:58610
+- name: 'Wargame: AirLand Battle'
+  ids:
+  - steam:222750
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020

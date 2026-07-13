@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1215/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1215/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1215/source.json
+games:
+- name: Hyper Fighters
+  ids:
+  - steam:267960
+- name: Gun Metal
+  ids:
+  - steam:267920
+- name: Incoming Forces
+  ids:
+  - unresolved:source:isthereanydeal:1215:incoming-forces
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410

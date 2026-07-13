@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Rhapsody Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6198/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6198/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6198/source.json
+games:
+- name: What is love?
+  ids:
+  - steam:1653180
+- name: Border of her Heart - HD
+  ids:
+  - steam:812750
+- name: One Night Stand
+  ids:
+  - steam:549860
+- name: Border of her Heart
+  ids:
+  - steam:795680

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: LEGO Lord of the Rings Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2504/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2504/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2504/source.json
+games:
+- name: LEGO® The Hobbit™
+  ids:
+  - steam:285160
+- name: 'LEGO: The Lord of the Rings'
+  ids:
+  - steam:214510
+- name: LEGO® The Hobbit™ DLC 1 - The Big Little Character Pack
+  ids:
+  - unresolved:source:isthereanydeal:2504:lego-the-hobbit-dlc-1-the-big-little-character-pack
+- name: LEGO® The Hobbit™ DLC 3 - The Battle Pack
+  ids:
+  - unresolved:source:isthereanydeal:2504:lego-the-hobbit-dlc-3-the-battle-pack
+- name: LEGO® The Hobbit™ DLC 2 - Side Quest Character Pack
+  ids:
+  - unresolved:source:isthereanydeal:2504:lego-the-hobbit-dlc-2-side-quest-character-pack

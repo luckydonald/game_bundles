@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Metroidvania Mania Bundle Encore — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14731/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14731/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14731/source.json
+games:
+- name: Axiom Verge
+  ids:
+  - steam:332200
+- name: Ghost Song
+  ids:
+  - steam:347800
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+- name: Axiom Verge 2
+  ids:
+  - steam:946030
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+- name: The Knight Witch
+  ids:
+  - steam:1872680
+- name: Cookie Cutter
+  ids:
+  - steam:1924430

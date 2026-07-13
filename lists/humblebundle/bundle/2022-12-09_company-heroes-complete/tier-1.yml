@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Company of Heroes Total Command Collection Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12678/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12678/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12678/source.json
+games:
+- name: 'Company of Heroes: Opposing Fronts'
+  ids:
+  - steam:9340
+- name: Company of Heroes
+  ids:
+  - steam:228200

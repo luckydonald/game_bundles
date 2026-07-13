@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8566/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8566/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8566/source.json
+games:
+- name: Mimic Hunter
+  ids:
+  - steam:657400
+- name: Phantasmata
+  ids:
+  - steam:1048790
+- name: Galaxy Ball
+  ids:
+  - unresolved:source:isthereanydeal:8566:galaxy-ball
+- name: The Fragment
+  ids:
+  - steam:1107190
+- name: Ultimate Space Commando
+  ids:
+  - steam:341910
+- name: Pursuer
+  ids:
+  - steam:1013660
+- name: Banana Invaders
+  ids:
+  - unresolved:source:isthereanydeal:8566:banana-invaders
+- name: '航海日記：起航(Uncharted Ocean : Set Sail)'
+  ids:
+  - unresolved:source:isthereanydeal:8566:hang-hai-ri-ji-qi-hang-uncharted-ocean-set-sail
+- name: Lovely Heroines
+  ids:
+  - steam:1170290

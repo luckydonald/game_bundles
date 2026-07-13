@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Millennium Spotlight — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1132/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1132/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1132/source.json
+games:
+- name: Millennium 3 - Cry Wolf
+  ids:
+  - steam:298830
+- name: Millennium 2 - Take Me Higher
+  ids:
+  - steam:298820
+- name: 'Millennium: A New Hope'
+  ids:
+  - steam:280140
+- name: 'Millennium 4: Beyond Sunset'
+  ids:
+  - steam:298840

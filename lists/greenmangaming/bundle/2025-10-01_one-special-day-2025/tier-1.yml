@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: One Special Day Bundle — Supporter
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15463/source.json
+games:
+- name: Old World
+  ids:
+  - steam:597180
+- name: 'RoboCop: Rogue City'
+  ids:
+  - steam:1681430
+- name: Citizen Sleeper
+  ids:
+  - steam:1578650
+- name: Moonscars
+  ids:
+  - steam:1374970
+- name: Battle Shapers
+  ids:
+  - steam:1421290
+- name: Border Pioneer
+  ids:
+  - steam:2346410
+- name: Knights in Tight Spaces
+  ids:
+  - steam:2315400
+- name: 'Model Builder: Complete Edition'
+  ids:
+  - steam:1164250

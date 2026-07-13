@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 17 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1578/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1578/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1578/source.json
+games:
+- name: Sinking Island
+  ids:
+  - steam:333430
+- name: 'UFO: Aftermath'
+  ids:
+  - steam:292160
+- name: Last Inua
+  ids:
+  - steam:331980
+- name: 'Tex Murphy: Martian Memorandum'
+  ids:
+  - steam:302340
+- name: Chaos Ride
+  ids:
+  - unresolved:source:isthereanydeal:1578:chaos-ride

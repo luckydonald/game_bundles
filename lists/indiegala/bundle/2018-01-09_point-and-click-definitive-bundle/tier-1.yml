@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Point & Click Definitive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5789/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5789/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5789/source.json
+games:
+- name: Super Turbo Demon Busters!
+  ids:
+  - steam:262810
+- name: Deponia Doomsday
+  ids:
+  - steam:421050
+- name: 'The Journey Down: Chapter Two'
+  ids:
+  - steam:262850
+- name: Silence
+  ids:
+  - steam:314790
+- name: Gabriel Knight - Sins of the Fathers - 20th Anniversary Edition
+  ids:
+  - steam:262000
+- name: Yesterday Origins
+  ids:
+  - steam:465280
+- name: 'Odysseus Kosmos and his Robot Quest: Adventure Game'
+  ids:
+  - unresolved:source:isthereanydeal:5789:odysseus-kosmos-and-his-robot-quest-adventure-game
+- name: Agatha Christie - The ABC Murders
+  ids:
+  - steam:374900
+- name: Kelvin and the Infamous Machine
+  ids:
+  - steam:376520

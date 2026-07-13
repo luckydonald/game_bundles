@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deep Simulator — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2545/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2545/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2545/source.json
+games:
+- name: Beach Resort Simulator
+  ids:
+  - unresolved:source:isthereanydeal:2545:beach-resort-simulator
+- name: Truck Mechanic Simulator 2015
+  ids:
+  - steam:331880
+- name: Construction Machines Simulator 2016
+  ids:
+  - unresolved:source:isthereanydeal:2545:construction-machines-simulator-2016
+- name: Farm Mechanic Simulator 2015
+  ids:
+  - unresolved:source:isthereanydeal:2545:farm-mechanic-simulator-2015
+- name: Farm Expert 2016
+  ids:
+  - unresolved:source:isthereanydeal:2545:farm-expert-2016

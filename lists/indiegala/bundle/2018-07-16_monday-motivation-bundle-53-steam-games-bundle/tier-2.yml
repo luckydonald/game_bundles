@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #53 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6309/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6309/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6309/source.json
+games:
+- name: 'Honor Cry: Aftermath'
+  ids:
+  - steam:867540
+- name: Vintage Hero
+  ids:
+  - steam:667240
+- name: Life's Playground
+  ids:
+  - steam:873320
+- name: 'Flatwaters: The Curse of Echita'
+  ids:
+  - steam:779870
+- name: Egony
+  ids:
+  - unresolved:source:isthereanydeal:6309:egony
+- name: World Destroyers
+  ids:
+  - steam:550200
+- name: Stereo Aereo
+  ids:
+  - steam:535890
+- name: 'Soul Reaper: Unreap Commander'
+  ids:
+  - unresolved:source:isthereanydeal:6309:soul-reaper-unreap-commander
+- name: Fesnia
+  ids:
+  - unresolved:source:isthereanydeal:6309:fesnia
+- name: The Entity
+  ids:
+  - steam:857370
+- name: World of Islands
+  ids:
+  - steam:810340

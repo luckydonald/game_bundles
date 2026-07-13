@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Zone Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8911/source.json
+games:
+- name: Space Candy
+  ids:
+  - steam:1176190
+- name: The incredible friends
+  ids:
+  - steam:1197840
+- name: Cold wires
+  ids:
+  - steam:1204530
+- name: Bad Girl
+  ids:
+  - steam:1211790
+- name: Vikings Wars
+  ids:
+  - steam:1216930
+- name: Dark Zone
+  ids:
+  - steam:1220910
+- name: Live To Win
+  ids:
+  - steam:1234980

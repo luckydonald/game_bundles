@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wats On Groupees - Play Indies — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4511/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4511/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4511/source.json
+games:
+- name: Zenza
+  ids:
+  - steam:519990
+- name: Krampus
+  ids:
+  - unresolved:source:isthereanydeal:4511:krampus
+- name: Deep Space Dash
+  ids:
+  - steam:493650
+- name: Midnight Carnival
+  ids:
+  - steam:546980

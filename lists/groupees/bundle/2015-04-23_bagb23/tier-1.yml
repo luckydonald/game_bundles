@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 23 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1811/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1811/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1811/source.json
+games:
+- name: Fine Sweeper
+  ids:
+  - steam:367000
+- name: Super Slam Dunk Touchdown
+  ids:
+  - steam:388260
+- name: Project Tarvotan
+  ids:
+  - steam:388660
+- name: The Language Game
+  ids:
+  - steam:372720
+- name: Prism
+  ids:
+  - unresolved:source:isthereanydeal:1811:prism
+- name: 'Withstand: Apotheosis'
+  ids:
+  - unresolved:source:isthereanydeal:1811:withstand-apotheosis
+- name: Industry Transporters
+  ids:
+  - steam:376150
+- name: 'Star Chronicles: Delta Quadrant'
+  ids:
+  - steam:383330
+- name: C. Kane
+  ids:
+  - steam:385030
+- name: Barony
+  ids:
+  - steam:371970

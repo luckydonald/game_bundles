@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Mumbo Jumbo Bundle — Select Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/418/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/418/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/418/source.json
+games:
+- name: 'Midnight Mysteries 3: Devil on the Mississippi'
+  ids:
+  - steam:208630
+- name: 'Luxor: 5th Passage'
+  ids:
+  - steam:60340
+- name: 7 Wonders II
+  ids:
+  - steam:15900
+- name: 'Midnight Mysteries: The Edgar Allan Poe Conspiracy'
+  ids:
+  - unresolved:source:isthereanydeal:418:midnight-mysteries-the-edgar-allan-poe-conspiracy
+- name: 'Midnight Mysteries 2: Salem Witch Trials'
+  ids:
+  - steam:208620
+- name: 'Midnight Mysteries 4: Haunted Houdini'
+  ids:
+  - steam:208640
+- name: Reaxxion
+  ids:
+  - unresolved:source:isthereanydeal:418:reaxxion
+- name: Samantha Swift and the Golden Touch
+  ids:
+  - steam:16060
+- name: 'LUXOR: Mah Jong'
+  ids:
+  - steam:32110
+- name: Little Farm
+  ids:
+  - steam:15960
+- name: 'Chainz 2: Relinked'
+  ids:
+  - steam:32120

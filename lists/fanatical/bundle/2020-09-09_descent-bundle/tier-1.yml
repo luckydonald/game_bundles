@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Descent Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9138/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9138/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9138/source.json
+games:
+- name: 'Salammbô: Battle for Carthage'
+  ids:
+  - steam:301670
+- name: Red Riding Hood - Star-Crossed Lovers
+  ids:
+  - steam:837800
+- name: Garfield Kart
+  ids:
+  - steam:362930
+- name: STEAMPUNKER
+  ids:
+  - steam:774161
+- name: Toki
+  ids:
+  - steam:1058320
+- name: The Descendant - Complete Season (Episodes 1 - 5)
+  ids:
+  - unresolved:source:isthereanydeal:9138:the-descendant-complete-season-episodes-1-5
+- name: SHOWTIME 2073
+  ids:
+  - steam:411080
+- name: Black Moon Chronicles
+  ids:
+  - steam:501500
+- name: XIII - Classic
+  ids:
+  - steam:1170760
+- name: Flashback (2018)
+  ids:
+  - steam:961620

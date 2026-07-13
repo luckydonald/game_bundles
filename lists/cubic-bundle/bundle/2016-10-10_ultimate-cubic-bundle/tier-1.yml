@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ultimate Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4174/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4174/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4174/source.json
+games:
+- name: 'Pixel Puzzles 2: Birds'
+  ids:
+  - steam:344230
+- name: 'Pixel Puzzles 2: Space'
+  ids:
+  - steam:355920
+- name: Rescue Team 5
+  ids:
+  - steam:416320
+- name: Showtime!
+  ids:
+  - unresolved:source:isthereanydeal:4174:showtime

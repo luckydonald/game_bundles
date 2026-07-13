@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 40 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2439/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2439/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2439/source.json
+games:
+- name: Alum
+  ids:
+  - steam:338420
+- name: 'Elements: Soul of Fire'
+  ids:
+  - unresolved:source:isthereanydeal:2439:elements-soul-of-fire
+- name: 'President for a Day: Corruption'
+  ids:
+  - steam:368780
+- name: David.
+  ids:
+  - steam:346180
+- name: 'President for a day: Floodings'
+  ids:
+  - steam:368770
+- name: Hektor
+  ids:
+  - steam:334070

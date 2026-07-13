@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 448 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9955/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9955/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9955/source.json
+games:
+- name: Faux
+  ids:
+  - steam:1032560
+- name: Noob Squad
+  ids:
+  - steam:496550
+- name: Blame!
+  ids:
+  - unresolved:source:isthereanydeal:9955:blame
+- name: School of Horror
+  ids:
+  - unresolved:source:isthereanydeal:9955:school-of-horror
+- name: The Orphan A Tale of An Errant Ghost - Hidden Object Game
+  ids:
+  - steam:1176560
+- name: Black blood
+  ids:
+  - steam:1262080
+- name: Blackjack Math
+  ids:
+  - steam:1341220
+- name: Rescue Rina
+  ids:
+  - steam:1400350
+- name: DIERY HEAVEN
+  ids:
+  - steam:1422740

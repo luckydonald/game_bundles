@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 241 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9124/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9124/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9124/source.json
+games:
+- name: Master of Rogues:The Seven Artifacts
+  ids:
+  - steam:928130
+- name: 'Lemuria: Lost in Space'
+  ids:
+  - steam:563250
+- name: Gabe Newell Simulator 2.0
+  ids:
+  - unresolved:source:isthereanydeal:9124:gabe-newell-simulator-2-0
+- name: The Edge Ball
+  ids:
+  - unresolved:source:isthereanydeal:9124:the-edge-ball
+- name: Rotatex
+  ids:
+  - steam:1069270
+- name: VRAdventure
+  ids:
+  - steam:1057730
+- name: My Isekai After Life is an RPG game!?
+  ids:
+  - unresolved:source:isthereanydeal:9124:my-isekai-after-life-is-an-rpg-game
+- name: Out of Oblivion
+  ids:
+  - steam:1370950
+- name: Dream Knights
+  ids:
+  - steam:1392570

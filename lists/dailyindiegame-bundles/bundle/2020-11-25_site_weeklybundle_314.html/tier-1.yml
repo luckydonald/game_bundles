@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 314 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9431/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9431/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9431/source.json
+games:
+- name: Phantasmata
+  ids:
+  - steam:1048790
+- name: Ancient Anathema
+  ids:
+  - steam:1010540
+- name: EscapeRoute
+  ids:
+  - unresolved:source:isthereanydeal:9431:escaperoute
+- name: Sideral
+  ids:
+  - steam:1095070
+- name: P.3
+  ids:
+  - steam:1149220
+- name: Reek
+  ids:
+  - steam:1212300
+- name: Fever Cabin
+  ids:
+  - steam:1226210
+- name: Fall Of The Mafia
+  ids:
+  - unresolved:source:isthereanydeal:9431:fall-of-the-mafia
+- name: LineArt Jigsaw Puzzle - Erotica 2
+  ids:
+  - steam:1482000

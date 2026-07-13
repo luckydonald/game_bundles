@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Reprisal Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1026/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1026/source.json
+games:
+- name: Hyper Fighters
+  ids:
+  - steam:267960
+- name: iBomber Defense Pacific
+  ids:
+  - steam:206690
+- name: Gun Metal
+  ids:
+  - steam:267920
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+- name: iBomber Attack
+  ids:
+  - steam:218660
+- name: Manhunter
+  ids:
+  - unresolved:source:isthereanydeal:1026:manhunter
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370

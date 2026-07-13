@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remarkable Roguelikes Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10319/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10319/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10319/source.json
+games:
+- name: Blazing Beaks
+  ids:
+  - steam:585710
+- name: Dungreed
+  ids:
+  - steam:753420
+- name: 'SYNTHETIK: Legion Rising'
+  ids:
+  - steam:528230
+- name: Curious Expedition
+  ids:
+  - steam:358130

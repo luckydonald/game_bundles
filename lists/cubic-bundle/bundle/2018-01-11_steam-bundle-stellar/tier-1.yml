@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Stellar Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5798/source.json
+games:
+- name: 'PLAYERUNKN1WN: Friendly Fire'
+  ids:
+  - unresolved:source:isthereanydeal:5798:playerunkn1wn-friendly-fire
+- name: Warriors & Castles
+  ids:
+  - steam:372380
+- name: Kolbeinn
+  ids:
+  - unresolved:source:isthereanydeal:5798:kolbeinn
+- name: The last strategist
+  ids:
+  - unresolved:source:isthereanydeal:5798:the-last-strategist
+- name: 'Story of the Survivor : Prisoner'
+  ids:
+  - steam:676210
+- name: Mount Hill
+  ids:
+  - steam:744010
+- name: FriendShip
+  ids:
+  - steam:542110
+- name: Wanderlust
+  ids:
+  - steam:729670
+- name: Devour them all
+  ids:
+  - unresolved:source:isthereanydeal:5798:devour-them-all
+- name: Crystal Reign
+  ids:
+  - steam:662780

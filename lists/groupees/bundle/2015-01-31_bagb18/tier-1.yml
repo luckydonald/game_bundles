@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 18 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1594/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1594/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1594/source.json
+games:
+- name: DarkBase 01
+  ids:
+  - unresolved:source:isthereanydeal:1594:darkbase-01
+- name: Big Fish Legend
+  ids:
+  - steam:376560
+- name: 'Vortex Attack: Arcade Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1594:vortex-attack-arcade-edition
+- name: The Adventures of Mr. Bobley
+  ids:
+  - steam:375710
+- name: Witches, Heroes and Magic
+  ids:
+  - steam:378510
+- name: Ancestory
+  ids:
+  - steam:349840
+- name: Tachyon Reef 3D
+  ids:
+  - unresolved:source:isthereanydeal:1594:tachyon-reef-3d
+- name: Against HELL
+  ids:
+  - unresolved:source:isthereanydeal:1594:against-hell
+- name: Skyflower
+  ids:
+  - steam:364670
+- name: Hook
+  ids:
+  - steam:367580

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 6 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/187/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/187/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/187/source.json
+games:
+- name: Ceville
+  ids:
+  - steam:23460
+- name: Paranormal
+  ids:
+  - steam:246300
+- name: Enclave Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:187:enclave-gold-edition
+- name: Men of War Condemned Heroes
+  ids:
+  - steam:204860
+- name: 'Cyber-Chicken: Episode 1'
+  ids:
+  - unresolved:source:isthereanydeal:187:cyber-chicken-episode-1
+- name: Rico - A Tale Of Two Brothers
+  ids:
+  - unresolved:source:isthereanydeal:187:rico-a-tale-of-two-brothers
+- name: 'Eschalon: Book I'
+  ids:
+  - steam:25600
+- name: Dawn of Fantasy
+  ids:
+  - unresolved:source:isthereanydeal:187:dawn-of-fantasy
+- name: Earth 2160
+  ids:
+  - steam:1900
+- name: Gorky 17
+  ids:
+  - steam:253920
+- name: Worms Reloaded
+  ids:
+  - steam:22600
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930

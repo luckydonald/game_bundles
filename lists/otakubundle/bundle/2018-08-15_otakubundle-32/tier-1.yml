@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #32 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6384/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6384/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6384/source.json
+games:
+- name: Retroids
+  ids:
+  - unresolved:source:isthereanydeal:6384:retroids
+- name: Devil Sealing Stone
+  ids:
+  - steam:432540
+- name: Boobserman
+  ids:
+  - unresolved:source:isthereanydeal:6384:boobserman
+- name: Germination
+  ids:
+  - steam:428490
+- name: Full Metal Renegade
+  ids:
+  - unresolved:source:isthereanydeal:6384:full-metal-renegade
+- name: SpaceMerc
+  ids:
+  - unresolved:source:isthereanydeal:6384:spacemerc
+- name: Log Drive Runner
+  ids:
+  - steam:464040
+- name: Guardian
+  ids:
+  - steam:543150
+- name: Dive
+  ids:
+  - steam:798170
+- name: Synth Ninja
+  ids:
+  - steam:898320
+- name: Fatal Stormer
+  ids:
+  - steam:818220

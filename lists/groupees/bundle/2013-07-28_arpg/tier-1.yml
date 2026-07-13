@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Adventure Role Playing Groupee — Select Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/208/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/208/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/208/source.json
+games:
+- name: Time Gentlemen Please! & Ben There, Dan That!
+  ids:
+  - unresolved:source:isthereanydeal:208:time-gentlemen-please-and-ben-there-dan-that
+- name: Vox
+  ids:
+  - unresolved:source:isthereanydeal:208:vox
+- name: Laxius Force
+  ids:
+  - unresolved:source:isthereanydeal:208:laxius-force
+- name: Reef Shot
+  ids:
+  - steam:298380
+- name: 'Exoplanet: First Contact'
+  ids:
+  - steam:531660
+- name: Aztaka
+  ids:
+  - unresolved:source:isthereanydeal:208:aztaka
+- name: Pickers
+  ids:
+  - steam:204440
+- name: They Breathe
+  ids:
+  - steam:294140
+- name: Rune Classic
+  ids:
+  - steam:210950

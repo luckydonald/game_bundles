@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bucko — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5406/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5406/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5406/source.json
+games:
+- name: Nanoborg
+  ids:
+  - unresolved:source:isthereanydeal:5406:nanoborg
+- name: Spellbind
+  ids:
+  - steam:353600
+- name: Rack N Ruin
+  ids:
+  - steam:378080
+- name: Onion Force
+  ids:
+  - steam:434980
+- name: HellAngel
+  ids:
+  - unresolved:source:isthereanydeal:5406:hellangel
+- name: Story of a Cube
+  ids:
+  - steam:440750
+- name: Dark Egypt
+  ids:
+  - steam:555920

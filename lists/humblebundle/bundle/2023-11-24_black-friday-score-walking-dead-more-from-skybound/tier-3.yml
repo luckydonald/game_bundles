@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Black Friday Score: Walking Dead & More Bundle — 13-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13650/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13650/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13650/source.json
+games:
+- name: The Walking Dead Season 1
+  ids:
+  - unresolved:source:isthereanydeal:13650:the-walking-dead-season-1
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+- name: The Walking Dead Season 2
+  ids:
+  - unresolved:source:isthereanydeal:13650:the-walking-dead-season-2
+- name: The Big Con
+  ids:
+  - steam:1139280
+- name: 'Thief of Thieves: Season One'
+  ids:
+  - steam:635390
+- name: 'Rainbow Billy: The Curse of the Leviathan'
+  ids:
+  - steam:1106830
+- name: 'Renfield: Bring Your Own Blood'
+  ids:
+  - steam:2354600
+- name: 'The Walking Dead: The Final Season'
+  ids:
+  - steam:866800
+- name: 'The Walking Dead: A New Frontier'
+  ids:
+  - steam:536220
+- name: 'The Walking Dead: Michonne - A Telltale Miniseries'
+  ids:
+  - steam:429570
+- name: Wrestlequest
+  ids:
+  - steam:1867510
+- name: 'Glitch Busters: Stuck on You'
+  ids:
+  - steam:1616110
+- name: Homestead Arcana
+  ids:
+  - steam:1867520

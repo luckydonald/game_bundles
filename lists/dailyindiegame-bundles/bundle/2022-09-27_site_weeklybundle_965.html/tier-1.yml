@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 965: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12133/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12133/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12133/source.json
+games:
+- name: THE DISHWASHER
+  ids:
+  - unresolved:source:isthereanydeal:12133:the-dishwasher
+- name: MMX
+  ids:
+  - steam:1146890
+- name: Fiery catacombs
+  ids:
+  - steam:1138150
+- name: Blood Drift
+  ids:
+  - steam:798140
+- name: Fallen Cube
+  ids:
+  - steam:670370
+- name: Tank Zombie Smasher
+  ids:
+  - steam:1682610
+- name: AirFighter
+  ids:
+  - steam:1686340
+- name: Frog Fall Down
+  ids:
+  - steam:1913360
+- name: Каролина
+  ids:
+  - steam:1874380

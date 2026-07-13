@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Nightmarez Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4492/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4492/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4492/source.json
+games:
+- name: No Ammo
+  ids:
+  - unresolved:source:isthereanydeal:4492:no-ammo
+- name: Kivi, Toilet and Shotgun
+  ids:
+  - steam:428950
+- name: NightmareZ
+  ids:
+  - steam:509930
+- name: Marble Duel
+  ids:
+  - steam:338120
+- name: Star Fields
+  ids:
+  - steam:499420

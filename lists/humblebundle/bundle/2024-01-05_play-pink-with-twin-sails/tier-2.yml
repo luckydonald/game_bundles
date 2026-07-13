@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Play Pink with Twin Sails Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13768/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13768/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13768/source.json
+games:
+- name: Splendor
+  ids:
+  - steam:376680
+- name: Love Letter
+  ids:
+  - steam:926520
+- name: Amberial Dreams
+  ids:
+  - steam:917140
+- name: 'Carcassonne: The Official Board Game'
+  ids:
+  - steam:598810
+- name: Small World 2
+  ids:
+  - steam:235620

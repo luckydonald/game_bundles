@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Wayfarers Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9785/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9785/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9785/source.json
+games:
+- name: 'Fallen Enchantress: Legendary Heroes'
+  ids:
+  - steam:228260
+- name: 'Sins of a Solar Empire: Rebellion'
+  ids:
+  - steam:204880
+- name: Siege of Centauri
+  ids:
+  - steam:524010
+- name: 'Ashes of the Singularity: Escalation'
+  ids:
+  - steam:507490
+- name: The Political Machine 2020
+  ids:
+  - unresolved:source:isthereanydeal:9785:the-political-machine-2020
+- name: 'Star Control: Origins - Galactic Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9785:star-control-origins-galactic-edition
+- name: Offworld Trading Company™
+  ids:
+  - steam:271240
+- name: Offworld Trading Company - Jupiter's Forge
+  ids:
+  - unresolved:source:isthereanydeal:9785:offworld-trading-company-jupiters-forge
+- name: Offworld Trading Company - Limited Supply
+  ids:
+  - steam:756060

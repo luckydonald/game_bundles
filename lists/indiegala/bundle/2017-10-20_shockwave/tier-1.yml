@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Shockwave Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5556/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5556/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5556/source.json
+games:
+- name: Hoo-Boy
+  ids:
+  - steam:707870
+- name: Rebons
+  ids:
+  - unresolved:source:isthereanydeal:5556:rebons
+- name: Oik 2
+  ids:
+  - steam:611980
+- name: Oik
+  ids:
+  - steam:588970
+- name: Brute
+  ids:
+  - steam:451630
+- name: qop
+  ids:
+  - steam:654900
+- name: Waste Cleaner
+  ids:
+  - steam:705260
+- name: Square Head Zombies - FPS Game
+  ids:
+  - steam:711930
+- name: Ambers BOOM
+  ids:
+  - unresolved:source:isthereanydeal:5556:ambers-boom
+- name: Dawn of H'btakh
+  ids:
+  - steam:661730
+- name: Hikaru's Cube
+  ids:
+  - unresolved:source:isthereanydeal:5556:hikarus-cube
+- name: Space Shock III
+  ids:
+  - unresolved:source:isthereanydeal:5556:space-shock-iii

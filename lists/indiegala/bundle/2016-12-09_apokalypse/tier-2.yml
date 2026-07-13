@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Apokalypse Countdown Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4467/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4467/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4467/source.json
+games:
+- name: Apokalypsis
+  ids:
+  - unresolved:source:isthereanydeal:4467:apokalypsis
+- name: SAMOLIOTIK DELUXE EDITION
+  ids:
+  - unresolved:source:isthereanydeal:4467:samoliotik-deluxe-edition
+- name: Leviathan Starblade
+  ids:
+  - steam:549900
+- name: The Lost Valley
+  ids:
+  - steam:360890
+- name: Exteria
+  ids:
+  - steam:532660
+- name: Rescue your chickens
+  ids:
+  - steam:551080
+- name: CRACKHEAD
+  ids:
+  - steam:554530
+- name: Ridge
+  ids:
+  - steam:492600
+- name: Tiny Guardians
+  ids:
+  - steam:431230
+- name: VR Journey
+  ids:
+  - unresolved:source:isthereanydeal:4467:vr-journey
+- name: CountDown
+  ids:
+  - unresolved:source:isthereanydeal:4467:countdown

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 689 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10856/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10856/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10856/source.json
+games:
+- name: BAPTISM
+  ids:
+  - steam:747160
+- name: Master of ABC
+  ids:
+  - steam:673820
+- name: What A Trash Game!
+  ids:
+  - unresolved:source:isthereanydeal:10856:what-a-trash-game
+- name: Short Scary Stories
+  ids:
+  - steam:1172340
+- name: Blackjack Math
+  ids:
+  - steam:1341220
+- name: What a Cluster Fight
+  ids:
+  - unresolved:source:isthereanydeal:10856:what-a-cluster-fight
+- name: Timeline Traveler
+  ids:
+  - unresolved:source:isthereanydeal:10856:timeline-traveler
+- name: Sheriff Rage
+  ids:
+  - steam:1557240
+- name: IsoCubes
+  ids:
+  - steam:1644190

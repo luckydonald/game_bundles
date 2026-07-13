@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Turn-Based Definitive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6296/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6296/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6296/source.json
+games:
+- name: Braveland Pirate
+  ids:
+  - steam:391490
+- name: Penny Arcade's On the Rain-Slick Precipice of Darkness 3
+  ids:
+  - steam:213030
+- name: Necromancer Returns - Soundtrack + Concept Art
+  ids:
+  - steam:796410
+- name: 'Warhammer 40,000: Regicide'
+  ids:
+  - unresolved:source:isthereanydeal:6296:warhammer-40000-regicide
+- name: Post Human W.A.R
+  ids:
+  - unresolved:source:isthereanydeal:6296:post-human-w-a-r
+- name: The Political Machine 2016
+  ids:
+  - unresolved:source:isthereanydeal:6296:the-political-machine-2016
+- name: 'Third Front: WWII'
+  ids:
+  - steam:804730
+- name: Chaos Reborn
+  ids:
+  - steam:319050
+- name: Penny Arcade's On the Rain-Slick Precipice of Darkness 4
+  ids:
+  - steam:237570
+- name: Necromancer Returns
+  ids:
+  - steam:632020

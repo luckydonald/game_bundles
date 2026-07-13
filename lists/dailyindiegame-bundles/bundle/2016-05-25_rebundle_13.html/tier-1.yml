@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3484/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3484/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3484/source.json
+games:
+- name: ShipLord
+  ids:
+  - steam:422250
+- name: Porradaria Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:3484:porradaria-upgrade
+- name: Endorlight
+  ids:
+  - steam:428430
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+- name: Power-Up
+  ids:
+  - unresolved:source:isthereanydeal:3484:power-up
+- name: Collisions
+  ids:
+  - unresolved:source:isthereanydeal:3484:collisions

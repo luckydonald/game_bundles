@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #23 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5718/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5718/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5718/source.json
+games:
+- name: Space Radiance
+  ids:
+  - unresolved:source:isthereanydeal:5718:space-radiance
+- name: Abrix for kids
+  ids:
+  - unresolved:source:isthereanydeal:5718:abrix-for-kids
+- name: Pixel Space Battles
+  ids:
+  - steam:745500
+- name: The Pixeljam Collection
+  ids:
+  - unresolved:source:isthereanydeal:5718:the-pixeljam-collection
+- name: Pixel Shooter
+  ids:
+  - steam:647280
+- name: Railroad Lines
+  ids:
+  - unresolved:source:isthereanydeal:5718:railroad-lines
+- name: Alienzix
+  ids:
+  - steam:685230
+- name: Battle Quiz
+  ids:
+  - unresolved:source:isthereanydeal:5718:battle-quiz
+- name: 'Glorkian Warrior: The Trials Of Glork'
+  ids:
+  - steam:341120
+- name: ATV GP
+  ids:
+  - unresolved:source:isthereanydeal:5718:atv-gp

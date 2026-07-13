@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Flashback Classics Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14220/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14220/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14220/source.json
+games:
+- name: VVVVVV
+  ids:
+  - steam:70300
+- name: Super Meat Boy
+  ids:
+  - steam:40800

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hot Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3581/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3581/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3581/source.json
+games:
+- name: 'Tales of the Orient: The Rising Sun'
+  ids:
+  - steam:339160
+- name: Tank Universal
+  ids:
+  - steam:19200
+- name: Martial Arts Capoeira
+  ids:
+  - steam:307410
+- name: 'GooCubelets: The Algoorithm'
+  ids:
+  - unresolved:source:isthereanydeal:3581:goocubelets-the-algoorithm
+- name: Obulis
+  ids:
+  - unresolved:source:isthereanydeal:3581:obulis
+- name: 'Sacra Terra: Angelic Night'
+  ids:
+  - steam:344440
+- name: Hack Run ZERO
+  ids:
+  - steam:384890
+- name: "Rhiannon \x96 The Curse of the Four Branches"
+  ids:
+  - unresolved:source:isthereanydeal:3581:rhiannon-the-curse-of-the-four-branches

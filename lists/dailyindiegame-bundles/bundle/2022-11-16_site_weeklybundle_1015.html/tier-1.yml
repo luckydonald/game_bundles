@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1015: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12466/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12466/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12466/source.json
+games:
+- name: Trekking and Camping | 远足与露营
+  ids:
+  - steam:1554780
+- name: Green Garden
+  ids:
+  - unresolved:source:isthereanydeal:12466:green-garden
+- name: Magic Crystals 2
+  ids:
+  - unresolved:source:isthereanydeal:12466:magic-crystals-2
+- name: Hero Ring
+  ids:
+  - unresolved:source:isthereanydeal:12466:hero-ring
+- name: Eger
+  ids:
+  - unresolved:source:isthereanydeal:12466:eger
+- name: Astro Bandits
+  ids:
+  - unresolved:source:isthereanydeal:12466:astro-bandits
+- name: Galactic Liberation
+  ids:
+  - unresolved:source:isthereanydeal:12466:galactic-liberation
+- name: Bargain Platfomer
+  ids:
+  - steam:2162970
+- name: Sunny Memories
+  ids:
+  - unresolved:source:isthereanydeal:12466:sunny-memories

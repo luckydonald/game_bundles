@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #7 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5262/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5262/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5262/source.json
+games:
+- name: Cubesis
+  ids:
+  - steam:318440
+- name: Crimson Sword Saga
+  ids:
+  - unresolved:source:isthereanydeal:5262:crimson-sword-saga
+- name: HardCube
+  ids:
+  - unresolved:source:isthereanydeal:5262:hardcube
+- name: BoomTown! Deluxe
+  ids:
+  - steam:536750
+- name: Top Hat
+  ids:
+  - steam:315940
+- name: Hardcube Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5262:hardcube-soundtrack
+- name: Victim of Xen
+  ids:
+  - steam:300220
+- name: Surfasaurus
+  ids:
+  - steam:584860
+- name: Ludwig
+  ids:
+  - steam:4313060

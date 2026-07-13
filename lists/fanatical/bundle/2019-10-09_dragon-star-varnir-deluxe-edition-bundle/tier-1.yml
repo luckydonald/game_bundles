@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dragon Star Varnir - Deluxe Edition Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7991/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7991/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7991/source.json
+games:
+- name: Dragon Star Varnir
+  ids:
+  - steam:1062040
+- name: Dragon Star Varnir Deluxe Pack
+  ids:
+  - steam:1114040

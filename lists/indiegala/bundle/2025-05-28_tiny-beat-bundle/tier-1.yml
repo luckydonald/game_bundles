@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tiny Beat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15141/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15141/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15141/source.json
+games:
+- name: Tiny Witch
+  ids:
+  - steam:1740310
+- name: 'Heartless & Dreadful : Return by 72 hours'
+  ids:
+  - steam:1701890
+- name: Cyber mission
+  ids:
+  - steam:2325720
+- name: Idle Catfarmia
+  ids:
+  - steam:2399080
+- name: BeatBeat
+  ids:
+  - steam:1225840
+- name: YinYang Street Ultimate Edition
+  ids:
+  - steam:2334040

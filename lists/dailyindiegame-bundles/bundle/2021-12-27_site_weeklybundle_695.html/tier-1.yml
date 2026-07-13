@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 695: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10881/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10881/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10881/source.json
+games:
+- name: Bitcoin Collector
+  ids:
+  - steam:704190
+- name: aMAZE Frozen
+  ids:
+  - steam:828910
+- name: Jubox 2
+  ids:
+  - unresolved:source:isthereanydeal:10881:jubox-2
+- name: Slippingcers
+  ids:
+  - unresolved:source:isthereanydeal:10881:slippingcers
+- name: Data mining
+  ids:
+  - steam:907590
+- name: Chocolate makes you happy 5
+  ids:
+  - steam:844160
+- name: Chocolate makes you happy
+  ids:
+  - steam:749340
+- name: Voxel Drivers
+  ids:
+  - unresolved:source:isthereanydeal:10881:voxel-drivers
+- name: Ordeal
+  ids:
+  - steam:1411420

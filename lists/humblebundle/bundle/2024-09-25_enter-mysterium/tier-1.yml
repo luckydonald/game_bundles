@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Enter The Mysterium Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14472/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14472/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14472/source.json
+games:
+- name: Cosmic Osmo and the Worlds Beyond the Mackerel
+  ids:
+  - steam:63620
+- name: 'The Manhole: Masterpiece Edition'
+  ids:
+  - steam:63630
+- name: Spelunx and the Caves of Mr. Seudo
+  ids:
+  - steam:63640

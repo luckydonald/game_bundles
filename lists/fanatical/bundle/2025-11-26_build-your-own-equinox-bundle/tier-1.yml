@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Equinox Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15630/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15630/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15630/source.json
+games:
+- name: Dead In Vinland
+  ids:
+  - steam:573120
+- name: Rustler
+  ids:
+  - steam:844260
+- name: Embr
+  ids:
+  - steam:1062830
+- name: For The King
+  ids:
+  - steam:527230
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+- name: The Ascent
+  ids:
+  - steam:979690
+- name: Wrestledunk Sports
+  ids:
+  - steam:1301520
+- name: 'Frail Hearts: Versicorae Domlion'
+  ids:
+  - steam:1412890
+- name: Soul Stalker
+  ids:
+  - steam:1714240
+- name: 'Code Alkonost: Awakening of Evil'
+  ids:
+  - steam:2062030
+- name: Deep Under
+  ids:
+  - steam:2522660
+- name: 'GRIP: Combat Racing and GRIP: Combat Racing - Artifex Car Pack Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15630:grip-combat-racing-and-grip-combat-racing-artifex-car-pack-double-pack
+- name: Ingression
+  ids:
+  - steam:1966970
+- name: Fargone
+  ids:
+  - steam:2242100
+- name: Gamma Zero
+  ids:
+  - steam:3316750
+- name: Deckline
+  ids:
+  - steam:3481320

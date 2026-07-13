@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Best Of Stardock Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6718/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6718/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6718/source.json
+games:
+- name: Iconpackager
+  ids:
+  - unresolved:source:isthereanydeal:6718:iconpackager
+- name: Start8
+  ids:
+  - unresolved:source:isthereanydeal:6718:start8
+- name: WindowBlinds
+  ids:
+  - unresolved:source:isthereanydeal:6718:windowblinds
+- name: Start10
+  ids:
+  - unresolved:source:isthereanydeal:6718:start10
+- name: SpaceMonger
+  ids:
+  - unresolved:source:isthereanydeal:6718:spacemonger
+- name: Groupy
+  ids:
+  - unresolved:source:isthereanydeal:6718:groupy
+- name: Fences
+  ids:
+  - unresolved:source:isthereanydeal:6718:fences
+- name: DeskScapes
+  ids:
+  - steam:1027220
+- name: Multiplicity
+  ids:
+  - unresolved:source:isthereanydeal:6718:multiplicity

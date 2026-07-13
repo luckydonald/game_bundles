@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bandai Namco - Dark Pictures & Little Nightmares Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15515/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15515/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15515/source.json
+games:
+- name: 'The Dark Pictures Anthology: Man of Medan'
+  ids:
+  - steam:939850
+- name: 'The Dark Pictures Anthology: Little Hope'
+  ids:
+  - steam:1194630
+- name: 'Little Nightmares: Secrets of The Maw Expansion Pass'
+  ids:
+  - steam:640920
+- name: Little Nightmares
+  ids:
+  - steam:424840
+- name: Little Nightmares II Deluxe Edition
+  ids:
+  - steam:860510
+- name: 'The Dark Pictures Anthology: House of Ashes'
+  ids:
+  - steam:1281590

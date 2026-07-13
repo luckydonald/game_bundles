@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Armor Games Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15037/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15037/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15037/source.json
+games:
+- name: 'Don''t Escape: 4 Days to Survive'
+  ids:
+  - steam:611760
+- name: SOLAS 128
+  ids:
+  - steam:1257850
+- name: LumbearJack
+  ids:
+  - steam:1582290
+- name: 'Swords & Souls: Neverseen'
+  ids:
+  - steam:679900
+- name: Bear and Breakfast
+  ids:
+  - steam:1136370
+- name: The Tartarus Key
+  ids:
+  - steam:1431850
+- name: Sonny Legacy Collection
+  ids:
+  - steam:2757720

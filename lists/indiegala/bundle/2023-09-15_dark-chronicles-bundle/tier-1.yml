@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dark Chronicles Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13481/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13481/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13481/source.json
+games:
+- name: IKO 39
+  ids:
+  - steam:1174270
+- name: DarkHouse
+  ids:
+  - unresolved:source:isthereanydeal:13481:darkhouse
+- name: Reclusive
+  ids:
+  - steam:2326100
+- name: Sky traveler
+  ids:
+  - steam:2174460
+- name: The Hermit Chronicles
+  ids:
+  - steam:2151790
+- name: 'Soulsland 3: Spider Invasion'
+  ids:
+  - steam:2490100

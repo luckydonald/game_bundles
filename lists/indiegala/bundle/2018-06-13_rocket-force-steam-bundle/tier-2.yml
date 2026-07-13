@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Rocket Force Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6235/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6235/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6235/source.json
+games:
+- name: Thunderbolt II
+  ids:
+  - unresolved:source:isthereanydeal:6235:thunderbolt-ii
+- name: The Mystery of Devils House
+  ids:
+  - steam:825970
+- name: Burgerwise The Clown
+  ids:
+  - steam:860430
+- name: Rise of Crustaceans
+  ids:
+  - unresolved:source:isthereanydeal:6235:rise-of-crustaceans
+- name: Gray Cat
+  ids:
+  - steam:816710
+- name: Trippy Jump
+  ids:
+  - steam:855700
+- name: Escape the Darkness
+  ids:
+  - steam:793200
+- name: Space Force
+  ids:
+  - steam:864010
+- name: Wheelz2
+  ids:
+  - steam:792970
+- name: Snake, snake, snake!
+  ids:
+  - steam:857140
+- name: Rocket Fist
+  ids:
+  - steam:413500
+- name: One Bit Arena
+  ids:
+  - steam:803270
+- name: Super Flipside
+  ids:
+  - steam:659170

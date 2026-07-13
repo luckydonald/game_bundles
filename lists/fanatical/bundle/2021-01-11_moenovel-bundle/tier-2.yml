@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: MoeNovel Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9621/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9621/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9621/source.json
+games:
+- name: A Sky Full of Stars
+  ids:
+  - steam:745960
+- name: Love Kami -Useless Goddess
+  ids:
+  - unresolved:source:isthereanydeal:9621:love-kami-useless-goddess
+- name: Adventure of a Lifetime
+  ids:
+  - steam:820730
+- name: 'CROSS†CHANNEL: Steam Edition'
+  ids:
+  - steam:812560
+- name: If My Heart Had Wings
+  ids:
+  - steam:326480
+- name: LoveKami -Divinity Stage
+  ids:
+  - steam:547340
+- name: LoveKami -Healing Harem
+  ids:
+  - steam:938270
+- name: 'If My Heart Had Wings -Flight Diary- - New Wings: Akari'
+  ids:
+  - steam:1038710
+- name: If My Heart Had Wings -Flight Diary
+  ids:
+  - steam:923810

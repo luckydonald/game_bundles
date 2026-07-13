@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Commander — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6627/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6627/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6627/source.json
+games:
+- name: 'Company of Heroes 2: Master Collection'
+  ids:
+  - unresolved:source:isthereanydeal:6627:company-of-heroes-2-master-collection
+- name: Endless Space 2 Collection
+  ids:
+  - unresolved:source:isthereanydeal:6627:endless-space-2-collection

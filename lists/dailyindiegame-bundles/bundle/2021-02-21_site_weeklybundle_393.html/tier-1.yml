@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 393 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9769/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9769/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9769/source.json
+games:
+- name: Peace Duke
+  ids:
+  - steam:823100
+- name: Vogue, The Explorer
+  ids:
+  - steam:875550
+- name: The Lost Dungeon Of Knight
+  ids:
+  - steam:1147620
+- name: 'Heroes Of Maidan 3: Crimean Battle'
+  ids:
+  - unresolved:source:isthereanydeal:9769:heroes-of-maidan-3-crimean-battle
+- name: Kids Memory Game
+  ids:
+  - unresolved:source:isthereanydeal:9769:kids-memory-game
+- name: Kids Memory Game 2
+  ids:
+  - unresolved:source:isthereanydeal:9769:kids-memory-game-2
+- name: Pixel Piano
+  ids:
+  - unresolved:source:isthereanydeal:9769:pixel-piano
+- name: Sweets Memory
+  ids:
+  - unresolved:source:isthereanydeal:9769:sweets-memory
+- name: Zombie Alert
+  ids:
+  - steam:1496710

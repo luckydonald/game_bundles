@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wadjet Eye Groupee — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/193/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/193/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/193/source.json
+games:
+- name: The Shivah
+  ids:
+  - steam:252370
+- name: Gemini Rue
+  ids:
+  - steam:80310
+- name: Da New Guys
+  ids:
+  - unresolved:source:isthereanydeal:193:da-new-guys
+- name: Puzzle Bots
+  ids:
+  - steam:80300
+- name: The Blackwell Legacy
+  ids:
+  - steam:80330
+- name: Resonance
+  ids:
+  - steam:212050
+- name: Blackwell Deception
+  ids:
+  - steam:80360
+- name: Blackwell Unbound
+  ids:
+  - steam:80340
+- name: Blackwell Convergence
+  ids:
+  - steam:80350

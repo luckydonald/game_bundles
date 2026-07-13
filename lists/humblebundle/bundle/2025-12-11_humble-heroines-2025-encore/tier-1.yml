@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Heroines: Rebels, Curses, and Mystery Bundle Encore — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15672/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15672/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15672/source.json
+games:
+- name: Beyond Two Souls
+  ids:
+  - steam:960990
+- name: Darksiders III
+  ids:
+  - steam:606280
+- name: 'Thief of Thieves: Season One'
+  ids:
+  - steam:635390
+- name: Control Ultimate Edition
+  ids:
+  - steam:870780
+- name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
+  ids:
+  - steam:1184370
+- name: Pseudoregalia
+  ids:
+  - steam:2365810
+- name: Kill The Crows
+  ids:
+  - steam:2441270

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hero Howls Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15235/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15235/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15235/source.json
+games:
+- name: Twin Edge
+  ids:
+  - steam:1926440
+- name: CANINE
+  ids:
+  - steam:2334780
+- name: Notebook Entries VOL.1
+  ids:
+  - steam:1865510
+- name: 'Bite Size Terrors: Erobos Heaven'
+  ids:
+  - steam:2414640
+- name: Heroes of Spyria
+  ids:
+  - steam:2420930
+- name: Carry Onward
+  ids:
+  - steam:2353440

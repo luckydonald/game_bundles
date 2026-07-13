@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Royalty-Free 001 Game Creator STEM Bundle — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14107/source.json
+games:
+- name: 001 Game Creator
+  ids:
+  - steam:347400
+- name: 001 Game Creator - Visual Novel Kit
+  ids:
+  - steam:1042950
+- name: 001 Game Creator - Point & Click Adventure Kit
+  ids:
+  - steam:567360
+- name: 'E-Book - STEM Course for 001 Game Creator: Resources'
+  ids:
+  - unresolved:source:isthereanydeal:14107:e-book-stem-course-for-001-game-creator-resources
+- name: 'E-Book - STEM Course for 001 Game Creator: Basics'
+  ids:
+  - steam:2221110
+- name: 001 Game Creator - 3D Step Dungeon Maze Kit
+  ids:
+  - unresolved:source:isthereanydeal:14107:001-game-creator-3d-step-dungeon-maze-kit

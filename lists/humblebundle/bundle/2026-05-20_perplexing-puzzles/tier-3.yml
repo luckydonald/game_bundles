@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Perplexing Puzzles Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16182/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16182/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16182/source.json
+games:
+- name: Mind Over Magnet
+  ids:
+  - steam:2685900
+- name: Proverbs
+  ids:
+  - steam:3083300
+- name: Linkito
+  ids:
+  - steam:2312770
+- name: Abra-Cooking-Dabra
+  ids:
+  - steam:3021530
+- name: Taiji
+  ids:
+  - steam:1141580
+- name: Viewfinder
+  ids:
+  - steam:1382070
+- name: Parallel Experiment
+  ids:
+  - steam:2012320
+- name: 'ILA: A Frosty Glide'
+  ids:
+  - steam:1560160

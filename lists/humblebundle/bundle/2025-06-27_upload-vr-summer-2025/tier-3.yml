@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Upload VR Showcase: Summer 2025 Bundle — entire-8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15218/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15218/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15218/source.json
+games:
+- name: Townsmen VR
+  ids:
+  - steam:749960
+- name: 'MOTHERGUNSHIP: FORGE'
+  ids:
+  - steam:1931240
+- name: 'Moss: Book II'
+  ids:
+  - steam:2059670
+- name: Until You Fall
+  ids:
+  - steam:858260
+- name: 'Pirates VR: Jolly Roger'
+  ids:
+  - steam:1443620
+- name: The Light Brigade
+  ids:
+  - steam:1579880
+- name: Vertigo 2
+  ids:
+  - steam:843390
+- name: Hard Bullet
+  ids:
+  - steam:1294760

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Miller on the Roof Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3080/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3080/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3080/source.json
+games:
+- name: ADventure Lib
+  ids:
+  - steam:374950
+- name: ADventure Lib Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:3080:adventure-lib-original-soundtrack
+- name: Rolling Sun
+  ids:
+  - steam:371670
+- name: AstroKill
+  ids:
+  - steam:376880
+- name: 'Kumoon : Ballistic Physics Puzzle'
+  ids:
+  - steam:386290
+- name: Starship Traveller (Standalone)
+  ids:
+  - steam:348180

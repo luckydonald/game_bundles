@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mystic Reboot Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4792/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4792/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4792/source.json
+games:
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+- name: Rack N Ruin
+  ids:
+  - steam:378080
+- name: Year Walk
+  ids:
+  - steam:269050
+- name: Zombie Vikings
+  ids:
+  - steam:337480
+- name: Elliot Quest
+  ids:
+  - steam:293440
+- name: Bloodsports.TV
+  ids:
+  - steam:336420
+- name: Mad Bullets
+  ids:
+  - steam:452860
+- name: Earth Overclocked
+  ids:
+  - steam:387060

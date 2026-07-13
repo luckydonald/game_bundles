@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blitz Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5221/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5221/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5221/source.json
+games:
+- name: Sinister City
+  ids:
+  - steam:326180
+- name: CosmoLands | Space-Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5221:cosmolands-space-adventure
+- name: Cubic complex
+  ids:
+  - unresolved:source:isthereanydeal:5221:cubic-complex
+- name: Trouble In The Manor
+  ids:
+  - steam:338530
+- name: 'Wanderland: Advanced Adventurer Pack'
+  ids:
+  - steam:618980
+- name: Dracula's Legacy
+  ids:
+  - steam:396790
+- name: Introvert Quest
+  ids:
+  - steam:562640
+- name: 'Wanderland: Starter Pack'
+  ids:
+  - steam:607840
+- name: 'Whispers: Last Hope'
+  ids:
+  - unresolved:source:isthereanydeal:5221:whispers-last-hope
+- name: Bloodsports.TV
+  ids:
+  - steam:336420
+- name: Orbox C
+  ids:
+  - steam:544180
+- name: 'Alchemy Mysteries: Prague Legends'
+  ids:
+  - steam:326190

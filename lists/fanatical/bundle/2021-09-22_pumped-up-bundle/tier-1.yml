@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pumped Up Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10492/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10492/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10492/source.json
+games:
+- name: Pumped BMX Pro
+  ids:
+  - steam:966720
+- name: Bomber Crew
+  ids:
+  - steam:537800
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+- name: When Ski Lifts Go Wrong
+  ids:
+  - steam:638000
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+- name: 'Peaky Blinders: Mastermind'
+  ids:
+  - unresolved:source:isthereanydeal:10492:peaky-blinders-mastermind

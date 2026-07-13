@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 641 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10649/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10649/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10649/source.json
+games:
+- name: Astra
+  ids:
+  - steam:1363810
+- name: FPS Tactics
+  ids:
+  - steam:1576790
+- name: The forgotten phobia
+  ids:
+  - steam:1743810
+- name: MOVERS IN THE WAREHOUSE
+  ids:
+  - steam:1751190
+- name: SPICESHIFTER
+  ids:
+  - steam:1782740
+- name: Skull Bullets
+  ids:
+  - steam:1780490
+- name: Kings and Pigs Prequel
+  ids:
+  - steam:1787640
+- name: Sockpuppet Noire
+  ids:
+  - unresolved:source:isthereanydeal:10649:sockpuppet-noire
+- name: Fears of Glasses o-o
+  ids:
+  - steam:1794740

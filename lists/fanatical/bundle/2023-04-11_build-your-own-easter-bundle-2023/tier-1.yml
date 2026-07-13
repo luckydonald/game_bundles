@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Easter Bundle (2023) — Select 1 Title for $1.00, 5 for $2.99,
+  10 for $4.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13101/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13101/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13101/source.json
+games:
+- name: 'Goosebumps: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:13101:goosebumps-the-game
+- name: Tacoma
+  ids:
+  - steam:343860
+- name: Discolored
+  ids:
+  - steam:933860
+- name: Orbital
+  ids:
+  - unresolved:source:isthereanydeal:13101:orbital
+- name: Professor Lupo and his Horrible Pets
+  ids:
+  - steam:741520
+- name: BEAUTIFUL DESOLATION
+  ids:
+  - steam:912570
+- name: Hook
+  ids:
+  - steam:367580
+- name: Air Threat
+  ids:
+  - unresolved:source:isthereanydeal:13101:air-threat
+- name: Cold Blooded Cube
+  ids:
+  - unresolved:source:isthereanydeal:13101:cold-blooded-cube
+- name: klocki
+  ids:
+  - steam:499440
+- name: Mindustry
+  ids:
+  - steam:1127400
+- name: Ultimate Zombie Defense
+  ids:
+  - steam:1035510
+- name: The Divine Invasion
+  ids:
+  - steam:1346960
+- name: Beholgar
+  ids:
+  - steam:1399750
+- name: Startup Panic
+  ids:
+  - steam:1045610
+- name: Osteoblasts
+  ids:
+  - steam:1450650
+- name: 'Twilight Town: A Cyberpunk Day In Life'
+  ids:
+  - steam:1572990
+- name: Instant Farmer - Logic Puzzle
+  ids:
+  - steam:1399670

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sin Slayers Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8037/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8037/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8037/source.json
+games:
+- name: SinSlayers
+  ids:
+  - unresolved:source:isthereanydeal:8037:sinslayers
+- name: Sin Slayers - Little Supporter
+  ids:
+  - unresolved:source:isthereanydeal:8037:sin-slayers-little-supporter
+- name: Sin Slayers - Pharmacist
+  ids:
+  - unresolved:source:isthereanydeal:8037:sin-slayers-pharmacist
+- name: Sin Slayers - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:8037:sin-slayers-soundtrack

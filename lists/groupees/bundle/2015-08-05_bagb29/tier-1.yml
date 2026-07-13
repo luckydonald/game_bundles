@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 29 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2305/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2305/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2305/source.json
+games:
+- name: 'Legends of Solitaire: Curse of the Dragons'
+  ids:
+  - steam:399040
+- name: Moonbase 332
+  ids:
+  - steam:397580
+- name: Unending Galaxy
+  ids:
+  - steam:439720
+- name: Lup
+  ids:
+  - steam:412600
+- name: Chronicles of Witches & Warlocks
+  ids:
+  - unresolved:source:isthereanydeal:2305:chronicles-of-witches-and-warlocks
+- name: Mad Snowboarding
+  ids:
+  - steam:399900
+- name: Bleeding Border
+  ids:
+  - steam:416290
+- name: HORN MAX
+  ids:
+  - unresolved:source:isthereanydeal:2305:horn-max
+- name: Blowy Fish
+  ids:
+  - steam:399920
+- name: High In The Sky
+  ids:
+  - unresolved:source:isthereanydeal:2305:high-in-the-sky

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 95 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8144/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8144/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8144/source.json
+games:
+- name: Shatter
+  ids:
+  - steam:20820
+- name: Surfingers
+  ids:
+  - steam:438080
+- name: Risky Rescue
+  ids:
+  - steam:439910
+- name: Desktop Girls
+  ids:
+  - steam:1044500
+- name: Desktop Girls - New Girls
+  ids:
+  - steam:1099620
+- name: Saving Simon
+  ids:
+  - unresolved:source:isthereanydeal:8144:saving-simon
+- name: Short Scary Stories
+  ids:
+  - steam:1172340
+- name: 'Gangsta Sniper 3: Final Parody'
+  ids:
+  - steam:1173260
+- name: TriangleStorm
+  ids:
+  - steam:1192070

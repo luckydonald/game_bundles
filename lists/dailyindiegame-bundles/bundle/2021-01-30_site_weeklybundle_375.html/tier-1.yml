@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 375 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9684/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9684/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9684/source.json
+games:
+- name: Zen Blocks - Relaxing Puzzle Board Game
+  ids:
+  - steam:733020
+- name: Reprogram
+  ids:
+  - steam:710670
+- name: Apolune
+  ids:
+  - unresolved:source:isthereanydeal:9684:apolune
+- name: 'Seven Mysteries: The Last Page'
+  ids:
+  - steam:783440
+- name: Cherry Island
+  ids:
+  - unresolved:source:isthereanydeal:9684:cherry-island
+- name: Dragon Mission
+  ids:
+  - steam:1479540
+- name: XPock
+  ids:
+  - steam:1475180
+- name: Bow & Crystal Tower Defense
+  ids:
+  - steam:1537940
+- name: LineArt Jigsaw Puzzle - Erotica 3
+  ids:
+  - steam:1532150

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Unleash Destruction Bundle — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10241/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10241/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10241/source.json
+games:
+- name: Master of Magic Classic
+  ids:
+  - steam:1146370

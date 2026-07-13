@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Smashing Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4680/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4680/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4680/source.json
+games:
+- name: Dynamite Alex
+  ids:
+  - steam:527810
+- name: HardCube
+  ids:
+  - unresolved:source:isthereanydeal:4680:hardcube
+- name: Endless room
+  ids:
+  - unresolved:source:isthereanydeal:4680:endless-room
+- name: Dynamic Very, Very, Hard game!!
+  ids:
+  - steam:546340
+- name: Guardian's Oath
+  ids:
+  - steam:531890
+- name: The Lords of The Earth Flame
+  ids:
+  - steam:487180
+- name: PIGMENTUM
+  ids:
+  - unresolved:source:isthereanydeal:4680:pigmentum
+- name: Cranium Conundrum
+  ids:
+  - steam:527790
+- name: Hexoscope
+  ids:
+  - steam:495780
+- name: QUBIC
+  ids:
+  - unresolved:source:isthereanydeal:4680:qubic

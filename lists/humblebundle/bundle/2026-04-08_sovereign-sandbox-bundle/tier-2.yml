@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sovereign Sandbox Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16028/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16028/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16028/source.json
+games:
+- name: Ctrl Alt Ego
+  ids:
+  - steam:1571940
+- name: Wildmender
+  ids:
+  - steam:1599330
+- name: Nova Lands
+  ids:
+  - steam:1501610
+- name: 'My Little Universe: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16028:my-little-universe-complete-edition
+- name: Prehistoric Kingdom
+  ids:
+  - steam:666150
+- name: The Universim
+  ids:
+  - steam:352720
+- name: Worshippers of Cthulhu
+  ids:
+  - steam:2807150
+- name: Overthrown
+  ids:
+  - steam:1133500

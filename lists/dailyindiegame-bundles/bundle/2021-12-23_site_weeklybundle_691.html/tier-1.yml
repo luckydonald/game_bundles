@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 691 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10865/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10865/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10865/source.json
+games:
+- name: Game Tycoon 2
+  ids:
+  - steam:404640
+- name: Kastle Krush
+  ids:
+  - steam:1145590
+- name: Herbalist simulator
+  ids:
+  - steam:1208090
+- name: 'Jack Hayes: The Lazarus Sign'
+  ids:
+  - steam:1295750
+- name: Fleeting World
+  ids:
+  - steam:1365700
+- name: Green Marquis
+  ids:
+  - steam:1475140
+- name: Flying Fish
+  ids:
+  - steam:1346790
+- name: Galactic Refugees
+  ids:
+  - steam:1606460
+- name: Сольфеджио
+  ids:
+  - unresolved:source:isthereanydeal:10865:sol-fedzio

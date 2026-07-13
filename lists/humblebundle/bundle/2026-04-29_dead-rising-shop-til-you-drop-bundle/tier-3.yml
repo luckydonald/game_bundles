@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dead Rising: Shop Til'' You Drop Bundle — entire-5-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16105/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16105/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16105/source.json
+games:
+- name: Dead Rising Deluxe Remaster
+  ids:
+  - steam:2527390
+- name: Dead Rising 3 Apocalypse Edition
+  ids:
+  - steam:265550
+- name: Dead Rising 4
+  ids:
+  - steam:543460
+- name: Dead Rising® 2
+  ids:
+  - steam:45740
+- name: 'Dead Rising® 2: Off The Record'
+  ids:
+  - steam:45770

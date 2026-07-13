@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Learn Japanese — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6622/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6622/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6622/source.json
+games:
+- name: Learn Japanese To Survive! Hiragana Battle
+  ids:
+  - steam:438270
+- name: Learn Japanese To Survive! Katakana War
+  ids:
+  - steam:554600

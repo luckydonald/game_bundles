@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blaze of Glory — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/338/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/338/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/338/source.json
+games:
+- name: 'World War II: Panzer Claws'
+  ids:
+  - steam:254100
+- name: WW3 Black Gold
+  ids:
+  - unresolved:source:isthereanydeal:338:ww3-black-gold
+- name: East India Company Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:338:east-india-company-gold-edition
+- name: KnightShift
+  ids:
+  - steam:254060
+- name: Pirates of Black Cove Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:338:pirates-of-black-cove-gold-edition
+- name: 'Commander: Conquest of the Americas Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:338:commander-conquest-of-the-americas-gold-edition
+- name: 'World War 2 : Panzer Claws 2'
+  ids:
+  - unresolved:source:isthereanydeal:338:world-war-2-panzer-claws-2

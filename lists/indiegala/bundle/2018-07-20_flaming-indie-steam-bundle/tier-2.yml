@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Flaming Indie Steam Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6319/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6319/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6319/source.json
+games:
+- name: Spaceguard 80
+  ids:
+  - steam:676180
+- name: Battle Simulator
+  ids:
+  - steam:879670
+- name: Outrunner 2
+  ids:
+  - unresolved:source:isthereanydeal:6319:outrunner-2
+- name: Flamebound
+  ids:
+  - unresolved:source:isthereanydeal:6319:flamebound
+- name: 'Shadows on the Vatican - Act II: Wrath'
+  ids:
+  - steam:378630
+- name: Flaming Pixels
+  ids:
+  - unresolved:source:isthereanydeal:6319:flaming-pixels
+- name: 'Sonya: The Great Adventure'
+  ids:
+  - steam:558780
+- name: I was rebuilt
+  ids:
+  - steam:560080
+- name: Circle Up
+  ids:
+  - steam:663410
+- name: The Pirates of Sector 7
+  ids:
+  - steam:877270
+- name: Sol Trader
+  ids:
+  - steam:396680

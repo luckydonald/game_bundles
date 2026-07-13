@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Underground Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7212/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7212/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7212/source.json
+games:
+- name: Gryphon Knight Epic
+  ids:
+  - steam:358650
+- name: Fluffy Horde
+  ids:
+  - steam:777880
+- name: SOUL GAMBLER
+  ids:
+  - steam:313020
+- name: Face It - A game to fight inner demons
+  ids:
+  - steam:364050
+- name: Battle Bruise
+  ids:
+  - steam:618510
+- name: Trip to Vinelands
+  ids:
+  - steam:546090
+- name: UBERMOSH:WRAITH
+  ids:
+  - steam:586350
+- name: SWARMRIDER OMEGA
+  ids:
+  - steam:714240
+- name: UBERMOSH:BLACK
+  ids:
+  - steam:444940

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'NeuroVoider: Deluxe Edition Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13529/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13529/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13529/source.json
+games:
+- name: NeuroVoider
+  ids:
+  - steam:400450
+- name: NeuroVoider - Deluxe Upgrade
+  ids:
+  - steam:521010

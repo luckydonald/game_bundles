@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Tiger Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10999/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10999/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10999/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+- name: One Finger Death Punch 2
+  ids:
+  - steam:980300
+- name: Lifeless Planet Premier Edition
+  ids:
+  - steam:261530
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:10999:the-adventures-of-chris
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: Sophie's curse
+  ids:
+  - steam:446380
+- name: Jet Set Knights
+  ids:
+  - steam:405550
+- name: Double Cross
+  ids:
+  - steam:838010
+- name: Dog Sled Saga
+  ids:
+  - steam:286240
+- name: Retimed
+  ids:
+  - steam:760810
+- name: Bite the Bullet
+  ids:
+  - steam:1075550
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+- name: REZPLZ
+  ids:
+  - steam:911680
+- name: Trident's Wake
+  ids:
+  - steam:704880
+- name: Cyber Hook
+  ids:
+  - steam:1130410
+- name: Last Neighbor
+  ids:
+  - steam:1184570
+- name: 'Rain of Reflections: Set Free'
+  ids:
+  - steam:695050
+- name: Geometric Feel the Beats
+  ids:
+  - steam:1284550
+- name: Geometric Sniper
+  ids:
+  - steam:1303660
+- name: Unshaded
+  ids:
+  - steam:1686060
+- name: 'Speed 3: Grand Prix'
+  ids:
+  - steam:1457580

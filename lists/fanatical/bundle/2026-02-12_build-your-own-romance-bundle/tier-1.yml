@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Romance Bundle — 3+ games 1.65 each, 5+ games 1.60 each, 7+ games
+  1.45 each
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15866/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15866/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15866/source.json
+games:
+- name: A Little Lily Princess
+  ids:
+  - steam:449250
+- name: The Confines Of The Crown
+  ids:
+  - steam:356530
+- name: The Language of Love
+  ids:
+  - steam:1027620
+- name: Lucy -The Eternity She Wished For
+  ids:
+  - steam:430960
+- name: Rituals in the Dark
+  ids:
+  - steam:1118880
+- name: The Fairy's Song
+  ids:
+  - steam:1244260
+- name: Five Dates
+  ids:
+  - steam:1353270
+- name: My Dear Prince
+  ids:
+  - steam:1288560
+- name: A YEAR OF SPRINGS
+  ids:
+  - steam:1688580
+- name: Night Cascades
+  ids:
+  - steam:1743080
+- name: Ten Dates
+  ids:
+  - steam:1946070
+- name: The Fairy's Secret
+  ids:
+  - steam:1994760
+- name: THE SACRED MEMORY
+  ids:
+  - steam:2967730
+- name: Love is...
+  ids:
+  - steam:3034130
+- name: Love In Tiny Spaces
+  ids:
+  - steam:3309380
+- name: 'Love & Country: The First Mission'
+  ids:
+  - steam:2548200
+- name: Addy
+  ids:
+  - steam:3637820
+- name: 'Bingus: My Beloved 2-Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15866:bingus-my-beloved-2-pack

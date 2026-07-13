@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Laush Game Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6310/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6310/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6310/source.json
+games:
+- name: Round Mars - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:round-mars-ost
+- name: Round Mars
+  ids:
+  - steam:823340
+- name: What do you hear?? Yanny vs Laurel
+  ids:
+  - steam:868550
+- name: Dangerous Level
+  ids:
+  - steam:779800

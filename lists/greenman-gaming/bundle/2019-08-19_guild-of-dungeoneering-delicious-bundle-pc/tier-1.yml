@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Guild of Dungeoning Delicious Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7791/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7791/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7791/source.json
+games:
+- name: Guild of Dungeoneering
+  ids:
+  - unresolved:source:isthereanydeal:7791:guild-of-dungeoneering
+- name: Guild of Dungeoneering - Pirate's Cove
+  ids:
+  - unresolved:source:isthereanydeal:7791:guild-of-dungeoneering-pirates-cove
+- name: Guild of Dungeoneering - Ice Cream Headaches
+  ids:
+  - unresolved:source:isthereanydeal:7791:guild-of-dungeoneering-ice-cream-headaches
+- name: Guild of Dungeoneering Soundtrack
+  ids:
+  - steam:376820

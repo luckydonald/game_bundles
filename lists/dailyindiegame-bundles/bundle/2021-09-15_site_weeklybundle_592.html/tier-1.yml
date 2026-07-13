@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 592 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10463/source.json
+games:
+- name: Deep Eclipse - New Space Odyssey
+  ids:
+  - steam:326990
+- name: ♞ The Tactics of War ♞
+  ids:
+  - steam:937780
+- name: Balloon
+  ids:
+  - steam:792810
+- name: 'Heroes Of Maidan 3: Crimean Battle'
+  ids:
+  - unresolved:source:isthereanydeal:10463:heroes-of-maidan-3-crimean-battle
+- name: Thomas Scott
+  ids:
+  - steam:1279480
+- name: GOLF MONSTER
+  ids:
+  - steam:1438260
+- name: Home defender
+  ids:
+  - steam:2686350
+- name: Inland
+  ids:
+  - steam:1468280
+- name: Russian Reality
+  ids:
+  - steam:1470730

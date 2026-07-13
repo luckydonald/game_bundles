@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Libredia Summer Sale Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5334/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5334/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5334/source.json
+games:
+- name: Chernobyl Terrorist Attack
+  ids:
+  - unresolved:source:isthereanydeal:5334:chernobyl-terrorist-attack
+- name: Zombie Solitaire
+  ids:
+  - steam:311850
+- name: 'I Am Vegend: Zombiegeddon'
+  ids:
+  - steam:302460
+- name: Kingdom Tales
+  ids:
+  - steam:276440
+- name: Redneck Racers
+  ids:
+  - steam:288730
+- name: Where Angels Cry
+  ids:
+  - steam:277560
+- name: 'Kaptain Brawe: A Brawe New World'
+  ids:
+  - steam:65080
+- name: Fury Of The Gods
+  ids:
+  - steam:373460
+- name: IHF Handball Challenge 12
+  ids:
+  - steam:283490
+- name: Ride 'em Low
+  ids:
+  - steam:65070

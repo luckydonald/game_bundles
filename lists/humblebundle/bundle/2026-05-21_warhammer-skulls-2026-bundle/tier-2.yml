@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Warhammer Skulls 2026 Bundle — 6 Items
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16191/source.json
+games:
+- name: Blood Bowl 2 - Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:16191:blood-bowl-2-legendary-edition
+- name: Space Hulk
+  ids:
+  - steam:242570
+- name: 'Warhammer 40,000: Inquisitor - Prophecy'
+  ids:
+  - steam:1042800
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+- name: 'Warhammer 40,000: Gladius - T''au'
+  ids:
+  - steam:1239450
+- name: 'Warhammer 40,000: Dakka Squadron - Flyboyz Edition'
+  ids:
+  - steam:1253190

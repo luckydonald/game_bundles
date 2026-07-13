@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2250/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2250/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2250/source.json
+games:
+- name: Weird Park Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:2250:weird-park-trilogy
+- name: 'Haunted Past: Realm of Ghosts'
+  ids:
+  - steam:288840
+- name: Princess Isabella
+  ids:
+  - steam:292660
+- name: 'Dreamscapes: The Sandman'
+  ids:
+  - steam:289260
+- name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
+  ids:
+  - steam:373870
+- name: Culpa Innata
+  ids:
+  - steam:12310
+- name: 'Escape The Lost Kingdom: The Forgotten Pharaoh'
+  ids:
+  - steam:294390
+- name: The Emptiness Deluxe Edition
+  ids:
+  - steam:356160

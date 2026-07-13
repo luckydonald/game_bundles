@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ultimate FPS Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7717/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7717/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7717/source.json
+games:
+- name: 'Sniper: Ghost Warrior - Map Pack'
+  ids:
+  - steam:34841
+- name: Sniper Ghost Warrior 2
+  ids:
+  - steam:34870
+- name: 'Sniper: Ghost Warrior - Second Strike'
+  ids:
+  - steam:34842
+- name: Sniper Art of Victory
+  ids:
+  - steam:271500
+- name: Enemy Front
+  ids:
+  - steam:256190
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+- name: Sniper Ghost Warrior
+  ids:
+  - steam:34830

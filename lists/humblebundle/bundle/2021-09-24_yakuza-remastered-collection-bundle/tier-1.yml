@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Yakuza Remastered Collection Bundle — entire-3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10508/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10508/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10508/source.json
+games:
+- name: Yakuza 5 Remastered
+  ids:
+  - steam:1105510
+- name: Yakuza 3 Remastered
+  ids:
+  - steam:1088710
+- name: Yakuza 4 Remastered
+  ids:
+  - steam:1105500

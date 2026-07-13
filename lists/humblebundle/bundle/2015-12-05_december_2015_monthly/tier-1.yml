@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Dec 2015) — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2825/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2825/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2825/source.json
+games:
+- name: Company of Heroes 2
+  ids:
+  - steam:231430
+- name: Banished
+  ids:
+  - steam:242920
+- name: 'PAYDAY 2: Dragan Character Pack'
+  ids:
+  - steam:344140
+- name: Chroma Squad
+  ids:
+  - steam:251130
+- name: 'PAYDAY 2: Gage Assault Pack'
+  ids:
+  - steam:320030
+- name: Rust
+  ids:
+  - steam:252490
+- name: Company of Heroes 2 - The Western Front Armies - US Forces
+  ids:
+  - steam:287370
+- name: NEON STRUCT Deluxe Edition
+  ids:
+  - steam:310740
+- name: Company of Heroes 2 - The Western Front Armies
+  ids:
+  - unresolved:source:isthereanydeal:2825:company-of-heroes-2-the-western-front-armies
+- name: 'PAYDAY 2: Gage Mod Courier'
+  ids:
+  - steam:259381
+- name: Company of Heroes 2 - The British Forces
+  ids:
+  - steam:365820
+- name: PAYDAY 2
+  ids:
+  - steam:218620
+- name: 'PAYDAY 2: The Big Bank Heist'
+  ids:
+  - steam:306690

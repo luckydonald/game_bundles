@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dream Project Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9693/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9693/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9693/source.json
+games:
+- name: .projekt
+  ids:
+  - steam:759000
+- name: Maidens of a Hollow Dream / 虚夢の乙女
+  ids:
+  - unresolved:source:isthereanydeal:9693:maidens-of-a-hollow-dream-xu-mengno-yi-nu
+- name: Knight Swap
+  ids:
+  - steam:1145410
+- name: Steel Vampire
+  ids:
+  - steam:908990
+- name: Colorgrid
+  ids:
+  - steam:1172520
+- name: Unlock The King 3
+  ids:
+  - steam:1255130
+- name: Poker Hands
+  ids:
+  - steam:1261670
+- name: Head Worms
+  ids:
+  - steam:1473930

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Magicka Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2158/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2158/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2158/source.json
+games:
+- name: Magicka
+  ids:
+  - steam:42910
+- name: 'Magicka: Wizards of the Square Tablet'
+  ids:
+  - unresolved:source:isthereanydeal:2158:magicka-wizards-of-the-square-tablet
+- name: Magicka DLC Bundle
+  ids:
+  - unresolved:source:isthereanydeal:2158:magicka-dlc-bundle

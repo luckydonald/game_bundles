@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: At-Home Arcade Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13340/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13340/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13340/source.json
+games:
+- name: Terror of Hemasaurus
+  ids:
+  - steam:1016180
+- name: Mortal Kombat 11 Ultimate
+  ids:
+  - unresolved:source:isthereanydeal:13340:mortal-kombat-11-ultimate
+- name: 'THE HOUSE OF THE DEAD: Remake'
+  ids:
+  - steam:1694600
+- name: 'Pinball FX - Indiana Jones™: The Pinball Adventure Legacy Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:13340:pinball-fx-indiana-jones-the-pinball-adventure-legacy-bundle

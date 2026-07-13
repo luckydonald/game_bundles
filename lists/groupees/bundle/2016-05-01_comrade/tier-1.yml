@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Comrade Miller's Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3369/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3369/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3369/source.json
+games:
+- name: Deadly Sin
+  ids:
+  - steam:354730
+- name: Evertown
+  ids:
+  - steam:432500
+- name: Echoes Of Aetheria
+  ids:
+  - steam:354740
+- name: Russian Front
+  ids:
+  - steam:385960
+- name: Infinity Saga
+  ids:
+  - steam:448750
+- name: Catacombs of the Undercity
+  ids:
+  - steam:352440

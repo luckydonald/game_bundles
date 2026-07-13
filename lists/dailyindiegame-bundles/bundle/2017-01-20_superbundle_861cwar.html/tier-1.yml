@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Super Bundle 86: 1C War — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4660/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4660/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4660/source.json
+games:
+- name: Theatre of War 3 Korea
+  ids:
+  - steam:63960
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+- name: Faces of War
+  ids:
+  - steam:289300
+- name: 'Theatre of War 2: Kursk 1943'
+  ids:
+  - steam:46360
+- name: Theatre of War
+  ids:
+  - steam:46290
+- name: 'Theatre of War 2: Africa 1943'
+  ids:
+  - steam:46340

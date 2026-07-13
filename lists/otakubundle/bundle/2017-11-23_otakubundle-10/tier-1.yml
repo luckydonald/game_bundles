@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #10 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5652/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5652/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5652/source.json
+games:
+- name: Heavy Destinies
+  ids:
+  - steam:726570
+- name: Pure Mind
+  ids:
+  - unresolved:source:isthereanydeal:5652:pure-mind
+- name: M1 Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5652:m1-soundtrack
+- name: Seek Not a Lighthouse
+  ids:
+  - unresolved:source:isthereanydeal:5652:seek-not-a-lighthouse
+- name: 'Apocalypse: The Game'
+  ids:
+  - steam:705050
+- name: Colorless Life
+  ids:
+  - steam:670430
+- name: Mech Ace Combat - Trainer Edition
+  ids:
+  - unresolved:source:isthereanydeal:5652:mech-ace-combat-trainer-edition
+- name: Defense of Roman Britain
+  ids:
+  - steam:657790
+- name: 'M1: A Death in the Desert'
+  ids:
+  - steam:675530

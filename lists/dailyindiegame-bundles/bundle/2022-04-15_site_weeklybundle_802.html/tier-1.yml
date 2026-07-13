@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 802 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11378/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11378/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11378/source.json
+games:
+- name: MCAS Simulation
+  ids:
+  - steam:1191930
+- name: Realistic Tower Destruction
+  ids:
+  - steam:1215550
+- name: Epocria
+  ids:
+  - steam:1313340
+- name: 'Unstrong: Space Calamity'
+  ids:
+  - steam:1781720
+- name: Shiba Army
+  ids:
+  - steam:1734870
+- name: Z-Rush Survival
+  ids:
+  - steam:1899450
+- name: RecMaster Pro - Screen Recorder
+  ids:
+  - steam:1923640
+- name: The Nightmare Inside
+  ids:
+  - steam:1903540
+- name: Win The Diamond
+  ids:
+  - unresolved:source:isthereanydeal:11378:win-the-diamond

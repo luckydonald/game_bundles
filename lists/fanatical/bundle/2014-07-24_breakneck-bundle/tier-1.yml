@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Breakneck Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1021/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1021/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1021/source.json
+games:
+- name: Rush for Glory
+  ids:
+  - steam:303470
+- name: Montas
+  ids:
+  - steam:269350
+- name: 'Clockwork Tales: Of Glass and Ink'
+  ids:
+  - steam:284830
+- name: 'Steel & Steam: Episode 1'
+  ids:
+  - unresolved:source:isthereanydeal:1021:steel-and-steam-episode-1
+- name: 'Ionball 2 : Ionstorm'
+  ids:
+  - steam:287120
+- name: Vector
+  ids:
+  - steam:248970
+- name: Growing Pains
+  ids:
+  - steam:291610
+- name: 'Sugar Cube: Bittersweet Factory'
+  ids:
+  - steam:212110

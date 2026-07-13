@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spring Fling Adventure Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1732/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1732/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1732/source.json
+games:
+- name: Post Mortem
+  ids:
+  - steam:46550
+- name: 'The Egyptian Prophecy: The Fate of Ramses'
+  ids:
+  - steam:302160
+- name: Syberia
+  ids:
+  - steam:46500
+- name: 'Salammbô: Battle for Carthage'
+  ids:
+  - steam:301670
+- name: Nostradamus - The Last Prophecy
+  ids:
+  - steam:287720
+- name: 'Nikopol : Secrets of the Immortals'
+  ids:
+  - steam:11370
+- name: Necronomicon - The Dawning of Darkness
+  ids:
+  - steam:302390
+- name: Curse - The Eye of Isis
+  ids:
+  - steam:302210
+- name: 'Voyage: Journey to the Moon'
+  ids:
+  - steam:302180
+- name: 'The Cameron Files: Secret at Loch Ness'
+  ids:
+  - unresolved:source:isthereanydeal:1732:the-cameron-files-secret-at-loch-ness
+- name: "Rhiannon \x96 The Curse of the Four Branches"
+  ids:
+  - unresolved:source:isthereanydeal:1732:rhiannon-the-curse-of-the-four-branches
+- name: Schein
+  ids:
+  - steam:321920
+- name: Syberia II
+  ids:
+  - steam:46510
+- name: 'Amerzone: The Explorer''s Legacy (1999)'
+  ids:
+  - steam:302190

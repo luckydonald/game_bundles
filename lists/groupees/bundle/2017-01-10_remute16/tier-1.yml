@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute's Retrofuturism Flashback Bundle Part 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4606/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4606/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4606/source.json
+games:
+- name: TransHuman
+  ids:
+  - unresolved:source:isthereanydeal:4606:transhuman
+- name: Its Magic
+  ids:
+  - unresolved:source:isthereanydeal:4606:its-magic
+- name: SLG Remix
+  ids:
+  - steam:454230
+- name: Jim Slim
+  ids:
+  - unresolved:source:isthereanydeal:4606:jim-slim
+- name: Baby Eater
+  ids:
+  - unresolved:source:isthereanydeal:4606:baby-eater

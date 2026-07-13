@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Solstice Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16176/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16176/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16176/source.json
+games:
+- name: Super Hydorah
+  ids:
+  - steam:628800
+- name: The Hong Kong Massacre
+  ids:
+  - steam:741510
+- name: The Land of Pain
+  ids:
+  - steam:568930
+- name: 'Blacksad : Under the Skin'
+  ids:
+  - steam:1003890
+- name: Lumberhill
+  ids:
+  - steam:976900
+- name: 'Defense Grid: Containment Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:16176:defense-grid-containment-bundle
+- name: 'DG2: Defense Grid 2'
+  ids:
+  - steam:221540
+- name: Oriental Empires
+  ids:
+  - steam:357310
+- name: Splatter - Zombiecalypse Now
+  ids:
+  - steam:281920
+- name: 'The Falconeer: Warrior Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16176:the-falconeer-warrior-edition
+- name: World Racing 2 Champion Edition
+  ids:
+  - steam:1301010
+- name: The Cub
+  ids:
+  - steam:1941410
+- name: 'Lysfanga: The Time Shift Warrior'
+  ids:
+  - steam:2161620
+- name: 'Suicide Guy: The Lost Dreams'
+  ids:
+  - steam:2423470
+- name: Golf Club Nostalgia
+  ids:
+  - steam:1556870
+- name: Bloody Ink
+  ids:
+  - steam:2700240
+- name: PC Tycoon 2
+  ids:
+  - steam:2832320
+- name: Au Revoir
+  ids:
+  - steam:3079600
+- name: Retrowave 2
+  ids:
+  - steam:3331000
+- name: Flat Heroes & A Place for the Unwilling Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:16176:flat-heroes-and-a-place-for-the-unwilling-double-pack

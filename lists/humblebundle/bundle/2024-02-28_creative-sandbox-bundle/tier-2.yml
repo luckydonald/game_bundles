@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Creative Sandbox Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13879/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13879/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13879/source.json
+games:
+- name: From The Depths
+  ids:
+  - steam:268650
+- name: TerraTech Deluxe Edition
+  ids:
+  - steam:285920
+- name: Necesse
+  ids:
+  - steam:1169040
+- name: Trailmakers Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13879:trailmakers-deluxe-edition
+- name: 'TerraTech: R&D Labs'
+  ids:
+  - steam:331930
+- name: My Little Universe
+  ids:
+  - steam:2328750
+- name: The Universim
+  ids:
+  - steam:352720
+- name: Above Snakes
+  ids:
+  - steam:1589120

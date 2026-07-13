@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Power Rage Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4487/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4487/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4487/source.json
+games:
+- name: BattleTime
+  ids:
+  - steam:509600
+- name: Rainbow Rage Squad
+  ids:
+  - steam:549780
+- name: PHAT STACKS
+  ids:
+  - steam:556160
+- name: Dawn's Light 2
+  ids:
+  - unresolved:source:isthereanydeal:4487:dawns-light-2
+- name: Bad birthday
+  ids:
+  - unresolved:source:isthereanydeal:4487:bad-birthday
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+- name: '1 Moment of Time: Silentville'
+  ids:
+  - steam:497400
+- name: Crazy Flies
+  ids:
+  - unresolved:source:isthereanydeal:4487:crazy-flies
+- name: The Fleets of Sol
+  ids:
+  - unresolved:source:isthereanydeal:4487:the-fleets-of-sol
+- name: Runeyana
+  ids:
+  - steam:463670
+- name: 'Fairyland: Fairy Power'
+  ids:
+  - unresolved:source:isthereanydeal:4487:fairyland-fairy-power

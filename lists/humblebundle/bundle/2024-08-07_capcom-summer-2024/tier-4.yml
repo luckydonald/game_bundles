@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Summer 2024 Bundle — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14306/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14306/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14306/source.json
+games:
+- name: Dead Rising® 2
+  ids:
+  - steam:45740
+- name: 'Dead Rising® 2: Off The Record'
+  ids:
+  - steam:45770
+- name: 'Dragon''s Dogma: Dark Arisen'
+  ids:
+  - steam:367500
+- name: Dead Rising 3 Apocalypse Edition
+  ids:
+  - steam:265550
+- name: Street Fighter 30th Anniversary Collection
+  ids:
+  - steam:586200
+- name: Street Fighter V - Champion Edition
+  ids:
+  - unresolved:source:isthereanydeal:14306:street-fighter-v-champion-edition
+- name: 'Phoenix Wright: Ace Attorney Trilogy'
+  ids:
+  - steam:787480
+- name: Capcom Beat 'Em Up Bundle
+  ids:
+  - steam:885150
+- name: Dead Rising 4 Frank's Big Package
+  ids:
+  - unresolved:source:isthereanydeal:14306:dead-rising-4-franks-big-package
+- name: The Great Ace Attorney Chronicles
+  ids:
+  - steam:1158850
+- name: Capcom Fighting Collection
+  ids:
+  - steam:1685750
+- name: 'Ghost Trick: Phantom Detective'
+  ids:
+  - steam:1967430

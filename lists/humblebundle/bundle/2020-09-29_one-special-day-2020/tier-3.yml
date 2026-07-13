@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble One Special Day Bundle 2020 — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9229/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9229/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9229/source.json
+games:
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+- name: 'Surgeon Simulator: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9229:surgeon-simulator-anniversary-edition
+- name: Idle Champions - Celeste's Starter Pack
+  ids:
+  - unresolved:source:isthereanydeal:9229:idle-champions-celestes-starter-pack
+- name: Battlezone Gold Edition
+  ids:
+  - steam:312650
+- name: 'Stronghold 2: Steam Edition'
+  ids:
+  - steam:40960
+- name: Portal Knights
+  ids:
+  - steam:374040
+- name: 'Talisman: Digital Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9229:talisman-digital-edition
+- name: Talisman - The City Expansion
+  ids:
+  - steam:267784
+- name: Talisman - The Sacred Pool Expansion
+  ids:
+  - steam:267781
+- name: Talisman - The Frostmarch Expansion
+  ids:
+  - steam:267772
+- name: DiRT Rally 2.0
+  ids:
+  - steam:690790
+- name: Portal Knights - Elves, Rogues, and Rifts
+  ids:
+  - steam:1046050
+- name: Ogre
+  ids:
+  - steam:517780

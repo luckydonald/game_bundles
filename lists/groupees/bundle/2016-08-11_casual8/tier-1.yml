@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Casual Bundle #8 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3890/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3890/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3890/source.json
+games:
+- name: Fruits Inc. Deluxe Pack
+  ids:
+  - steam:349060
+- name: The Worm
+  ids:
+  - steam:405070
+- name: 'Trendpoker 3D: Texas Hold''em Poker'
+  ids:
+  - steam:662230

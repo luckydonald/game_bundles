@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 54 — Select 2 to 8 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7299/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7299/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7299/source.json
+games:
+- name: Mermaid Land
+  ids:
+  - unresolved:source:isthereanydeal:7299:mermaid-land
+- name: MonGirlTile
+  ids:
+  - steam:964110
+- name: The Last Sigil
+  ids:
+  - steam:632100
+- name: Color Knight
+  ids:
+  - unresolved:source:isthereanydeal:7299:color-knight
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7299:grab-bag-game
+- name: Digging Dragon
+  ids:
+  - unresolved:source:isthereanydeal:7299:digging-dragon
+- name: Kick Ass Commandos
+  ids:
+  - steam:359140
+- name: Cross-Stitch Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:7299:cross-stitch-puzzle
+- name: Dig to the Stars
+  ids:
+  - unresolved:source:isthereanydeal:7299:dig-to-the-stars
+- name: Operation Snowman
+  ids:
+  - unresolved:source:isthereanydeal:7299:operation-snowman

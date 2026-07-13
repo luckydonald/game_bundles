@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Double Fine 20th Anniversary Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9021/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9021/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9021/source.json
+games:
+- name: Double Fine Adventure Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:9021:double-fine-adventure-deluxe-edition
+- name: Amnesia Fortnight 2012
+  ids:
+  - unresolved:source:isthereanydeal:9021:amnesia-fortnight-2012
+- name: Psychonauts
+  ids:
+  - steam:3830
+- name: Amnesia Fortnight 2017
+  ids:
+  - unresolved:source:isthereanydeal:9021:amnesia-fortnight-2017
+- name: Amnesia Fortnight 2014
+  ids:
+  - unresolved:source:isthereanydeal:9021:amnesia-fortnight-2014

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 75 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4216/source.json
+games:
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+- name: Nanoborg
+  ids:
+  - unresolved:source:isthereanydeal:4216:nanoborg
+- name: Ballistick
+  ids:
+  - steam:518620
+- name: True Bliss
+  ids:
+  - steam:361620
+- name: Bonsai
+  ids:
+  - steam:444160
+- name: R.O.O.T.S
+  ids:
+  - steam:357930

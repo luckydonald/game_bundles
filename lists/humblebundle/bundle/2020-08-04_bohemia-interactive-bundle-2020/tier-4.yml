@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bohemia Interactive Bundle 2020 — entire-15-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9033/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9033/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9033/source.json
+games:
+- name: Take On Mars
+  ids:
+  - steam:244030
+- name: Take On Helicopters
+  ids:
+  - steam:65730
+- name: Carrier Command Gaea Mission
+  ids:
+  - steam:65740
+- name: 'Arma X: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9033:arma-x-anniversary-edition
+- name: Fairy Tale about Father Frost, Ivan and Nastya
+  ids:
+  - steam:289320
+- name: Original War
+  ids:
+  - steam:235320
+- name: 'UFO: Afterlight'
+  ids:
+  - steam:237950
+- name: Arma 3
+  ids:
+  - steam:107410
+- name: Ylands - Exploration Pack
+  ids:
+  - unresolved:source:isthereanydeal:9033:ylands-exploration-pack
+- name: Arma 3 Jets
+  ids:
+  - steam:601670
+- name: Arma 3 Marksmen
+  ids:
+  - steam:332350
+- name: Arma 3 Apex Edition
+  ids:
+  - unresolved:source:isthereanydeal:9033:arma-3-apex-edition
+- name: Arma 3 Tac-Ops Mission Pack
+  ids:
+  - steam:744950
+- name: DayZ
+  ids:
+  - steam:221100
+- name: Arma 3 Contact Edition
+  ids:
+  - unresolved:source:isthereanydeal:9033:arma-3-contact-edition

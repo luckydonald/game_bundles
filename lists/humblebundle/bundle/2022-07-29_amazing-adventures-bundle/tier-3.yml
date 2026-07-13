@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Amazing Adventures Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11854/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11854/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11854/source.json
+games:
+- name: The Almost Gone
+  ids:
+  - steam:1115780
+- name: Unavowed
+  ids:
+  - steam:336140
+- name: 'Dreamfall Chapters: The Final Cut'
+  ids:
+  - steam:237850
+- name: Quern - Undying Thoughts
+  ids:
+  - steam:512790
+- name: Draugen
+  ids:
+  - steam:770390
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+- name: Alfred Hitchcock - Vertigo
+  ids:
+  - steam:1449320
+- name: 'Agatha Christie - Hercule Poirot: The First Cases'
+  ids:
+  - steam:1573720

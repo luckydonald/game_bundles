@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Software Bundle: Up Your Game! — 1-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6329/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6329/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6329/source.json
+games:
+- name: VoiceBot
+  ids:
+  - steam:374400

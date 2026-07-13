@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Gare Sapphire Mechs - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2122/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2122/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2122/source.json
+games:
+- name: Gare Sapphire Mechs
+  ids:
+  - steam:359090

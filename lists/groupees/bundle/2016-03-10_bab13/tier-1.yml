@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3155/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3155/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3155/source.json
+games:
+- name: 'Goosebumps: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:3155:goosebumps-the-game
+- name: 'Queen''s Quest: Tower of Darkness'
+  ids:
+  - steam:390200
+- name: Pilot Brothers
+  ids:
+  - steam:336760
+- name: SUMICO - The Numbers Game
+  ids:
+  - unresolved:source:isthereanydeal:3155:sumico-the-numbers-game
+- name: 'Forgotten Tales: Day of the Dead'
+  ids:
+  - steam:453770
+- name: Bibou
+  ids:
+  - unresolved:source:isthereanydeal:3155:bibou
+- name: Drizzlepath
+  ids:
+  - steam:355760
+- name: Transport Giant
+  ids:
+  - steam:271370

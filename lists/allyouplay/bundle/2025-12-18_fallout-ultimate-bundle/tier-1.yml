@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fallout Ultimate Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15691/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15691/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15691/source.json
+games:
+- name: Fallout 76
+  ids:
+  - steam:1151340
+- name: Fallout 4 Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:15691:fallout-4-game-of-the-year-edition
+- name: 'Fallout®: New Vegas™ Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15691:fallout-new-vegas-ultimate-edition
+- name: 'Fallout 3: Game of the Year Edition'
+  ids:
+  - steam:22370
+- name: Fallout® Classic Collection
+  ids:
+  - unresolved:source:isthereanydeal:15691:fallout-classic-collection

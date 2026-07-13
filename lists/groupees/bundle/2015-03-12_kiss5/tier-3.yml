@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Kiss Bundle 5 — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1693/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1693/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1693/source.json
+games:
+- name: 'Gunspell: Steam Edition'
+  ids:
+  - steam:328100
+- name: Gold Rush! - Classic
+  ids:
+  - steam:308000
+- name: Fist of Jesus
+  ids:
+  - unresolved:source:isthereanydeal:1693:fist-of-jesus
+- name: DarkEnd
+  ids:
+  - steam:292370
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+- name: Blackbay Asylum
+  ids:
+  - steam:313140
+- name: "Blob From Space \x96"
+  ids:
+  - steam:315070
+- name: iO
+  ids:
+  - steam:324070

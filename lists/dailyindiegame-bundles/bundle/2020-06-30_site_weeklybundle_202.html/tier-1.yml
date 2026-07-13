@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8943/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8943/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8943/source.json
+games:
+- name: Mahjong Classic
+  ids:
+  - unresolved:source:isthereanydeal:8943:mahjong-classic
+- name: Space Waver
+  ids:
+  - steam:668970
+- name: Bear Football
+  ids:
+  - steam:674570
+- name: Build Bridges
+  ids:
+  - unresolved:source:isthereanydeal:8943:build-bridges
+- name: Boom Boom
+  ids:
+  - unresolved:source:isthereanydeal:8943:boom-boom
+- name: 酒店二 The Hotel 2
+  ids:
+  - unresolved:source:isthereanydeal:8943:jiu-dian-er-the-hotel-2
+- name: GlassSmash
+  ids:
+  - steam:1052220
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:8943:frozen-mystery
+- name: Blood Drift
+  ids:
+  - steam:798140

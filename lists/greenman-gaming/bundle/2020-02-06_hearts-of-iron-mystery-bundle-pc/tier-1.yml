@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hearts of Iron Mystery Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8366/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8366/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8366/source.json
+games:
+- name: 'Hearts of Iron IV: Cadet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8366:hearts-of-iron-iv-cadet-edition
+- name: (1st Mystery Steam Key)
+  ids:
+  - unresolved:source:isthereanydeal:8366:1st-mystery-steam-key
+- name: (2nd Mystery Steam Key)
+  ids:
+  - unresolved:source:isthereanydeal:8366:2nd-mystery-steam-key

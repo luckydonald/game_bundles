@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Adventure Cubic Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5647/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5647/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5647/source.json
+games:
+- name: Fruit Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:5647:fruit-sudoku
+- name: Bear Football
+  ids:
+  - steam:674570
+- name: Escape The Past
+  ids:
+  - steam:486120
+- name: Marcus Level
+  ids:
+  - steam:417480
+- name: Funklift
+  ids:
+  - steam:470140
+- name: Classic Fun Collection 5 in 1
+  ids:
+  - steam:431300
+- name: Rage Against The Zombies
+  ids:
+  - steam:556990
+- name: Hyperdrive Massacre
+  ids:
+  - steam:402390
+- name: Hallowed Encounter
+  ids:
+  - steam:724900

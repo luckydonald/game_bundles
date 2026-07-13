@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Visual Choice Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11254/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11254/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11254/source.json
+games:
+- name: Code Romantic
+  ids:
+  - steam:884980
+- name: Tell a Demon
+  ids:
+  - steam:679230
+- name: Fires At Midnight
+  ids:
+  - steam:1282140
+- name: 'The Evolving World: Catalyst Wake'
+  ids:
+  - steam:1600470
+- name: 'Gear of Glass: Eolarn''s war'
+  ids:
+  - steam:1761040
+- name: Pumpkin Eater
+  ids:
+  - steam:1805930
+- name: 'Mysteria of the World: The forest of Death'
+  ids:
+  - steam:1851060

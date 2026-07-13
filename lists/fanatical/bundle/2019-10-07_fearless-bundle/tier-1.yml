@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fearless Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7983/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7983/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7983/source.json
+games:
+- name: Stairs
+  ids:
+  - steam:374060
+- name: Shaolin vs Wutang
+  ids:
+  - steam:466110
+- name: Until I Have You
+  ids:
+  - steam:439310
+- name: Dungeons & Robots
+  ids:
+  - steam:386650
+- name: 'Qbeh-1: The Atlas Cube'
+  ids:
+  - steam:252550
+- name: MMA Arena
+  ids:
+  - steam:1047380
+- name: Kings of Kung Fu
+  ids:
+  - steam:316930
+- name: FortressCraft Evolved!
+  ids:
+  - steam:254200

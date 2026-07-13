@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pool Nation FX Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4583/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4583/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4583/source.json
+games:
+- name: Pool Nation FX - Unlock Decals
+  ids:
+  - steam:407822
+- name: Pool Nation FX - Unlock Online
+  ids:
+  - steam:421770
+- name: Pool Nation FX - Unlock Balls
+  ids:
+  - steam:407821
+- name: FX Unlock ALL Assets DLC Bundle
+  ids:
+  - unresolved:source:isthereanydeal:4583:fx-unlock-all-assets-dlc-bundle
+- name: Pool Nation FX - Unlock Objects
+  ids:
+  - steam:407823
+- name: Pool Nation FX - Unlock Offline
+  ids:
+  - steam:421771
+- name: Pool Nation FX - Unlock Cues
+  ids:
+  - steam:407820
+- name: Pool Nation FX - Lite
+  ids:
+  - steam:314000

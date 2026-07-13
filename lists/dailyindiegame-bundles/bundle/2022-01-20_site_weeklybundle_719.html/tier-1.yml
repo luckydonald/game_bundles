@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 719 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10990/source.json
+games:
+- name: Laserium
+  ids:
+  - unresolved:source:isthereanydeal:10990:laserium
+- name: Johnny Rocket
+  ids:
+  - steam:942300
+- name: Move Forward
+  ids:
+  - steam:1481360
+- name: Evil Buster
+  ids:
+  - unresolved:source:isthereanydeal:10990:evil-buster
+- name: Sato Dreams
+  ids:
+  - unresolved:source:isthereanydeal:10990:sato-dreams
+- name: Crazy Boom
+  ids:
+  - unresolved:source:isthereanydeal:10990:crazy-boom
+- name: Magic LightHouse
+  ids:
+  - unresolved:source:isthereanydeal:10990:magic-lighthouse
+- name: Wild Rat
+  ids:
+  - unresolved:source:isthereanydeal:10990:wild-rat
+- name: HardMinus2k a.k.a. Hard Minus Classic Redux
+  ids:
+  - steam:1591540

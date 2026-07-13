@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Software Bundle: Streaming 2019 — Beat The Average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7467/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7467/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7467/source.json
+games:
+- name: Getting Over It with Bennett Foddy
+  ids:
+  - steam:240720
+- name: 'Darwin Project: Hunter Pack'
+  ids:
+  - unresolved:source:isthereanydeal:7467:darwin-project-hunter-pack
+- name: XSplit VCAM
+  ids:
+  - unresolved:source:isthereanydeal:7467:xsplit-vcam
+- name: FaceRig
+  ids:
+  - unresolved:source:isthereanydeal:7467:facerig
+- name: Aaero
+  ids:
+  - steam:499890

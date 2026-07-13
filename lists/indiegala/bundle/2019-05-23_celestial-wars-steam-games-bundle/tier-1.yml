@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Celestial Wars Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7428/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7428/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7428/source.json
+games:
+- name: Axes and Acres
+  ids:
+  - steam:448910
+- name: Graze Counter
+  ids:
+  - steam:629440
+- name: Rolling in the Reef
+  ids:
+  - steam:884960
+- name: 'Mittelborg: City of Mages'
+  ids:
+  - steam:956060
+- name: 'Of Gods and Men: The Daybreak Empire'
+  ids:
+  - steam:936610
+- name: I & ME
+  ids:
+  - steam:399600

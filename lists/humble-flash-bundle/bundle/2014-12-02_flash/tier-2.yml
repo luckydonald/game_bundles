@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Flash Bundle: Paradox Interactive Giving Tuesday — Beat The Average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1443/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1443/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1443/source.json
+games:
+- name: March of the Eagles
+  ids:
+  - steam:227760
+- name: 'Darkest Hour: A Hearts of Iron Game'
+  ids:
+  - steam:73170
+- name: Sword of the Stars II Enhanced Edition
+  ids:
+  - steam:42990
+- name: 'War of the Roses: Kingmaker'
+  ids:
+  - unresolved:source:isthereanydeal:1443:war-of-the-roses-kingmaker
+- name: Cities in Motion II
+  ids:
+  - unresolved:source:isthereanydeal:1443:cities-in-motion-ii
+- name: 'Warlock: Master of the Arcane'
+  ids:
+  - steam:203630

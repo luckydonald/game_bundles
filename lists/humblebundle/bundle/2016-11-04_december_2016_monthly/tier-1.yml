@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Dec 2016) — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4300/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4300/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4300/source.json
+games:
+- name: The Escapists - Escape Team
+  ids:
+  - steam:376700
+- name: The Escapists - Duct Tapes are Forever
+  ids:
+  - steam:408730
+- name: Yojimbrawl
+  ids:
+  - unresolved:source:isthereanydeal:4300:yojimbrawl
+- name: The Escapists - Alcatraz
+  ids:
+  - steam:349350
+- name: Western Press Mk Cans II Character
+  ids:
+  - unresolved:source:isthereanydeal:4300:western-press-mk-cans-ii-character
+- name: Western Press
+  ids:
+  - steam:377360
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+- name: The Escapists
+  ids:
+  - steam:298630
+- name: 'Dragon''s Dogma: Dark Arisen'
+  ids:
+  - steam:367500
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+- name: Hacknet
+  ids:
+  - steam:365450
+- name: Minion Masters + Premium Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:4300:minion-masters-and-premium-upgrade
+- name: The Escapists - Fhurst Peak Correctional Facility
+  ids:
+  - steam:349310

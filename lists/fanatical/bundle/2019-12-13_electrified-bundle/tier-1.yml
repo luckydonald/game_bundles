@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Electrified Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8213/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8213/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8213/source.json
+games:
+- name: Type:Rider
+  ids:
+  - steam:258890
+- name: Boo! Greedy Kid
+  ids:
+  - steam:770630
+- name: The Next Penelope
+  ids:
+  - steam:332250
+- name: Satellite Rush
+  ids:
+  - steam:429350

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Shootout — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5228/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5228/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5228/source.json
+games:
+- name: aMAZE 2
+  ids:
+  - steam:628750
+- name: Bumper
+  ids:
+  - steam:509850
+- name: HellGunner
+  ids:
+  - unresolved:source:isthereanydeal:5228:hellgunner
+- name: Robo Do It
+  ids:
+  - steam:595640
+- name: P-Walker's Simulation
+  ids:
+  - steam:622920
+- name: NeverEnd
+  ids:
+  - steam:575840
+- name: Ski Sniper
+  ids:
+  - steam:635310
+- name: Trail of Destruction
+  ids:
+  - steam:633430
+- name: 'Deserted: The Story Of Peter'
+  ids:
+  - unresolved:source:isthereanydeal:5228:deserted-the-story-of-peter
+- name: Galaxy of Trian Board Game
+  ids:
+  - steam:525330
+- name: Mystery Mine
+  ids:
+  - unresolved:source:isthereanydeal:5228:mystery-mine
+- name: No Stick Shooter
+  ids:
+  - steam:616880

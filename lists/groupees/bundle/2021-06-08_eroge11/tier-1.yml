@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Eroge Bundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10107/source.json
+games:
+- name: The Tale of the Lewd Kunoichi Sisters
+  ids:
+  - unresolved:source:isthereanydeal:10107:the-tale-of-the-lewd-kunoichi-sisters
+- name: Men's completion plan
+  ids:
+  - unresolved:source:isthereanydeal:10107:mens-completion-plan
+- name: Time Is Mine
+  ids:
+  - unresolved:source:isthereanydeal:10107:time-is-mine
+- name: Fantasy Tavern Sextet -Vol.2 Adventurer's Days
+  ids:
+  - steam:1461770
+- name: DRINK BAR MAID -REGRESSION
+  ids:
+  - steam:1449330
+- name: Spheria's Familiar
+  ids:
+  - steam:1500100

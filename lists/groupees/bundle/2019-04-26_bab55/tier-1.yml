@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 55 — Select 2 to 10 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7341/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7341/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7341/source.json
+games:
+- name: Neon Coliseum
+  ids:
+  - steam:686300
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7341:grab-bag-game
+- name: 'Haunted Jail: Alcatas'
+  ids:
+  - steam:1056650
+- name: 'Redrum: Dead Diary'
+  ids:
+  - steam:541720
+- name: 'Redrum: Time Lies'
+  ids:
+  - steam:353080
+- name: Alter Army
+  ids:
+  - steam:602300
+- name: Inclement
+  ids:
+  - steam:988650
+- name: AtmaSphere
+  ids:
+  - steam:753660
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:7341:frozen-mystery

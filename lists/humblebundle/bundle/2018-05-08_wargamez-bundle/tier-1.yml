@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble War Gamez Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6113/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6113/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6113/source.json
+games:
+- name: Panzer Corps
+  ids:
+  - unresolved:source:isthereanydeal:6113:panzer-corps
+- name: Mercenary Kings Reloaded Edition
+  ids:
+  - steam:218820
+- name: INSURGENCY
+  ids:
+  - steam:222880
+- name: 'Panzer Corps: Allied Corps'
+  ids:
+  - steam:276552

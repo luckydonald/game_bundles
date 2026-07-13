@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Angels Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3483/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3483/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3483/source.json
+games:
+- name: Sword of Asumi - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:3483:sword-of-asumi-deluxe-edition
+- name: Last Days of Spring Visual Novel
+  ids:
+  - steam:407680
+- name: Go! Go! Nippon! ~My First Trip to Japan~
+  ids:
+  - steam:251870

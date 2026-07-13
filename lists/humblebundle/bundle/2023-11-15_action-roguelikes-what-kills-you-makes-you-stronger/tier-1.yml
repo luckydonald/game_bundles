@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Action Roguelikes: What Kills You Makes You Stronger Bundle — 1-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13621/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13621/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13621/source.json
+games:
+- name: Cryptark
+  ids:
+  - steam:344740

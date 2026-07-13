@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Take Control Bundle — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10253/source.json
+games:
+- name: SimplePlanes
+  ids:
+  - steam:397340

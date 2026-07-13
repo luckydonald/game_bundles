@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #75 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6610/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6610/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6610/source.json
+games:
+- name: Super Weekend Mode
+  ids:
+  - steam:828590
+- name: Accurate Segmentation 2
+  ids:
+  - unresolved:source:isthereanydeal:6610:accurate-segmentation-2
+- name: Jorji and Impossible Forest
+  ids:
+  - steam:883190
+- name: TACTICAL
+  ids:
+  - steam:751950
+- name: Match Point
+  ids:
+  - steam:764890
+- name: Master of Mutations
+  ids:
+  - unresolved:source:isthereanydeal:6610:master-of-mutations
+- name: Spectrum Break
+  ids:
+  - steam:765490
+- name: vridniX
+  ids:
+  - steam:817710
+- name: 'Skyscrapers Puzzle: Airi''s tale'
+  ids:
+  - steam:876180
+- name: Crashbots
+  ids:
+  - steam:861940
+- name: Defending Camelot
+  ids:
+  - unresolved:source:isthereanydeal:6610:defending-camelot

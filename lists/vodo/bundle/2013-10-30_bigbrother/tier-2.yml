@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Big Brother Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/376/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/376/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/376/source.json
+games:
+- name: I Have No Mouth, and I Must Scream
+  ids:
+  - steam:245390
+- name: Hacker Evolution Duality
+  ids:
+  - steam:70120

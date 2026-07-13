@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 418: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9855/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9855/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9855/source.json
+games:
+- name: Sinister Halloween
+  ids:
+  - steam:747690
+- name: 'Lemuria: Lost in Space - VR Edition'
+  ids:
+  - steam:679780
+- name: Journey to Alien Worlds
+  ids:
+  - steam:628960
+- name: TimeLock VR
+  ids:
+  - unresolved:source:isthereanydeal:9855:timelock-vr
+- name: Vector Velocity
+  ids:
+  - steam:751480
+- name: Gun Chain
+  ids:
+  - steam:981690
+- name: Cyber Battle 69
+  ids:
+  - steam:1250210
+- name: MOMO.EXE VR
+  ids:
+  - steam:1363600
+- name: Sharecare YOU VR
+  ids:
+  - unresolved:source:isthereanydeal:9855:sharecare-you-vr

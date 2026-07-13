@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fugitive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7537/source.json
+games:
+- name: Devil Daggers
+  ids:
+  - steam:422970
+- name: Blood Bowl - Chaos Edition
+  ids:
+  - steam:216890
+- name: S.T.A.L.K.E.R. Shadow of Chernobyl
+  ids:
+  - steam:4500

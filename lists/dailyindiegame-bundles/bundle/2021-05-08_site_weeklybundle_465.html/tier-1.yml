@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 465: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10008/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10008/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10008/source.json
+games:
+- name: The Botanist Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:10008:the-botanist-soundtrack
+- name: arcade games collection-New games 3
+  ids:
+  - unresolved:source:isthereanydeal:10008:arcade-games-collection-new-games-3
+- name: The hardest game in the universe-Kangel
+  ids:
+  - unresolved:source:isthereanydeal:10008:the-hardest-game-in-the-universe-kangel
+- name: Erotic Jigsaw Puzzle - ArtBook
+  ids:
+  - steam:1610970
+- name: Crazy indian - Monster skins
+  ids:
+  - unresolved:source:isthereanydeal:10008:crazy-indian-monster-skins
+- name: Crazy indian - Minion skins
+  ids:
+  - unresolved:source:isthereanydeal:10008:crazy-indian-minion-skins
+- name: Little adventure - Hunter bow
+  ids:
+  - steam:1606810
+- name: Little adventure - New colors
+  ids:
+  - steam:1606840
+- name: LineArt Jigsaw Puzzle - Airplanes ArtBook
+  ids:
+  - steam:1617730

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Lovecraftian Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1527/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1527/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1527/source.json
+games:
+- name: Wait - Extended Soundtrack Edition
+  ids:
+  - steam:347730
+- name: Exgenesis
+  ids:
+  - unresolved:source:isthereanydeal:1527:exgenesis
+- name: 'Call Of Cthulhu: The Wasted Land'
+  ids:
+  - unresolved:source:isthereanydeal:1527:call-of-cthulhu-the-wasted-land
+- name: Through The Shadows Episode One
+  ids:
+  - unresolved:source:isthereanydeal:1527:through-the-shadows-episode-one

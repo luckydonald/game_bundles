@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 35 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2245/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2245/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2245/source.json
+games:
+- name: 'Lilly and Sasha: Guardian Angels'
+  ids:
+  - unresolved:source:isthereanydeal:2245:lilly-and-sasha-guardian-angels
+- name: 'Global Ops: Commando Libya'
+  ids:
+  - steam:200020
+- name: Speed Kills
+  ids:
+  - steam:284930
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Wooden Floor
+  ids:
+  - steam:348790
+- name: SickBrick
+  ids:
+  - unresolved:source:isthereanydeal:2245:sickbrick

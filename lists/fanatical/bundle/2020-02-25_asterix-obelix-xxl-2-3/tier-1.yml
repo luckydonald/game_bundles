@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Asterix & Obelix XXL2+3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8442/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8442/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8442/source.json
+games:
+- name: Asterix & Obelix XXL 2
+  ids:
+  - steam:887060
+- name: Asterix & Obelix XXL 3 - The Crystal Menhir
+  ids:
+  - steam:1109690

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Retribution Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8042/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8042/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8042/source.json
+games:
+- name: Wings of Vi
+  ids:
+  - steam:318530
+- name: World's Dawn
+  ids:
+  - steam:432010
+- name: 'The Uncertain: Last Quiet Day'
+  ids:
+  - steam:406970
+- name: The Extinction
+  ids:
+  - unresolved:source:isthereanydeal:8042:the-extinction
+- name: Bunker Punks
+  ids:
+  - steam:446120
+- name: The Crown of Leaves
+  ids:
+  - steam:604330
+- name: Asterix & Obelix XXL 2
+  ids:
+  - steam:887060
+- name: Unexplored
+  ids:
+  - steam:506870

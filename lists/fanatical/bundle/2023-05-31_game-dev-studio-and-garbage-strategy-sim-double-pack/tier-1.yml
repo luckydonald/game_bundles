@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Dev Studio & Garbage Strategy Sim Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13231/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13231/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13231/source.json
+games:
+- name: Game Dev Studio
+  ids:
+  - steam:773580
+- name: Garbage
+  ids:
+  - steam:1253710

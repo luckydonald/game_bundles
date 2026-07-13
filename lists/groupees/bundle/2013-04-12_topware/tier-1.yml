@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: TopWare Interactive Groupee — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/197/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/197/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/197/source.json
+games:
+- name: Jagged Alliance 2 Wildfire
+  ids:
+  - steam:215930
+- name: "Knights & Merchants \x96 The Peasants Rebellion"
+  ids:
+  - unresolved:source:isthereanydeal:197:knights-and-merchants-the-peasants-rebellion
+- name: Earth 2160
+  ids:
+  - steam:1900
+- name: 'World War II: Panzer Claws'
+  ids:
+  - steam:254100
+- name: 'World War III: Black Gold'
+  ids:
+  - steam:254080
+- name: East India Company Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:197:east-india-company-gold-edition
+- name: Pirates of Black Cove
+  ids:
+  - steam:49330
+- name: Earth 2150 Trilogy
+  ids:
+  - steam:253880
+- name: Earth 2140
+  ids:
+  - steam:253860

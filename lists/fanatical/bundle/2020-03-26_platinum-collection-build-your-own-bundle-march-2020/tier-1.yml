@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Collection Build Your Own Bundle (Mar 2020) — Select 3 Titles For $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8585/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8585/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8585/source.json
+games:
+- name: Life is Strange Complete Season (Episodes 1-5)
+  ids:
+  - unresolved:source:isthereanydeal:8585:life-is-strange-complete-season-episodes-1-5
+- name: 'Omerta: City of Gangsters - GOLD EDITION'
+  ids:
+  - unresolved:source:isthereanydeal:8585:omerta-city-of-gangsters-gold-edition
+- name: Monster Energy Supercross - The Official Videogame 2
+  ids:
+  - steam:882020
+- name: Abandon Ship
+  ids:
+  - steam:551860
+- name: Fight'N Rage
+  ids:
+  - steam:674520
+- name: MotoGP™18
+  ids:
+  - steam:775900
+- name: Ken Follett's The Pillars of the Earth
+  ids:
+  - steam:234270
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+- name: 'X-Morph: Defense'
+  ids:
+  - steam:408410
+- name: 'Override: Mech City Brawl - Super Charged Mega Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8585:override-mech-city-brawl-super-charged-mega-edition
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+- name: 'Redout: Enhanced Edition'
+  ids:
+  - steam:517710
+- name: 'Shiness: The Lightning Kingdom'
+  ids:
+  - steam:366640
+- name: F1 2018
+  ids:
+  - unresolved:source:isthereanydeal:8585:f1-2018
+- name: State of Mind
+  ids:
+  - steam:437630
+- name: Lords of the Fallen™ (2014) Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:8585:lords-of-the-fallen-2014-game-of-the-year-edition

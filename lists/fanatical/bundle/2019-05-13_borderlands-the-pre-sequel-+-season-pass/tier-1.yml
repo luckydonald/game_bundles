@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Borderlands: The Pre-Sequel & Season Pass Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7384/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7384/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7384/source.json
+games:
+- name: 'Borderlands: The Pre-Sequel Season Pass'
+  ids:
+  - steam:319090
+- name: 'Borderlands: The Pre-Sequel'
+  ids:
+  - steam:261640

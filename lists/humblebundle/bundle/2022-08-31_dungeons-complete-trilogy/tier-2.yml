@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dungeons: The Complete Trilogy Bundle — Beat The Average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12038/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12038/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12038/source.json
+games:
+- name: 'Dungeons: Into the Dark'
+  ids:
+  - steam:57655
+- name: Dungeons
+  ids:
+  - steam:57650
+- name: Dungeons - The Dark Lord
+  ids:
+  - steam:200550
+- name: 'Dungeons: Map Pack'
+  ids:
+  - steam:57656
+- name: 'Dungeons 2: A Chance Of Dragons'
+  ids:
+  - steam:382410
+- name: 'Dungeons 2: A Song of Sand and Fire'
+  ids:
+  - steam:390180
+- name: 'Dungeons 2: A Game of Winter'
+  ids:
+  - steam:382400
+- name: Dungeons 2
+  ids:
+  - steam:262280

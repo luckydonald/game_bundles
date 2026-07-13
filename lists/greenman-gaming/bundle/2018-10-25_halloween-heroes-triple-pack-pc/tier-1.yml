@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Halloween Heroes Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6606/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6606/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6606/source.json
+games:
+- name: Rocket Knight
+  ids:
+  - steam:19030
+- name: Next Up Hero
+  ids:
+  - steam:667810
+- name: 'Injustice: Gods Among Us - Ultimate Edition'
+  ids:
+  - steam:242700

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #43 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5939/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5939/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5939/source.json
+games:
+- name: Crazy Pirate
+  ids:
+  - unresolved:source:isthereanydeal:5939:crazy-pirate
+- name: Dice Tower Defense
+  ids:
+  - unresolved:source:isthereanydeal:5939:dice-tower-defense
+- name: puzzlement
+  ids:
+  - steam:775530
+- name: Dual Snake
+  ids:
+  - steam:752600
+- name: SwapQuest
+  ids:
+  - steam:679690
+- name: Raid On Coasts
+  ids:
+  - steam:668830
+- name: Super Lovely Planet
+  ids:
+  - steam:588540
+- name: Deadliners
+  ids:
+  - steam:671290
+- name: Australian trip
+  ids:
+  - steam:757870
+- name: 'Staff Wars: Wizard Rumble'
+  ids:
+  - steam:664040
+- name: Gulf of Aden - Task Force Somalia
+  ids:
+  - steam:407100

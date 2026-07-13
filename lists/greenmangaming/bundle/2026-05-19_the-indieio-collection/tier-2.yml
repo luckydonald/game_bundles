@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The indie.io Collection — Hearth
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16175/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16175/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16175/source.json
+games:
+- name: To The Rescue!
+  ids:
+  - steam:946720
+- name: Blood And Zombies
+  ids:
+  - steam:1739880
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+- name: Dust Fleet
+  ids:
+  - steam:406160
+- name: One More Island
+  ids:
+  - steam:1454160
+- name: Troublemaker
+  ids:
+  - steam:1498740
+- name: Everwarder
+  ids:
+  - steam:2307170

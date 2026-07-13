@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cursed Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8061/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8061/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8061/source.json
+games:
+- name: The Fool
+  ids:
+  - steam:334490
+- name: Midnight Mysteries - Salem Witch Trials
+  ids:
+  - steam:208620
+- name: 'Angelica Weaver: Catch Me When You Can - Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8061:angelica-weaver-catch-me-when-you-can-collectors-edition
+- name: 'Midnight Mysteries 3: Devil on the Mississippi'
+  ids:
+  - steam:208630
+- name: Adventures of Robinson Crusoe
+  ids:
+  - steam:334470
+- name: Robinson Crusoe and the Cursed Pirates
+  ids:
+  - steam:334480
+- name: Samantha Swift and the Golden Touch
+  ids:
+  - steam:16060
+- name: Samantha Swift and the Hidden Roses of Athena
+  ids:
+  - steam:16020
+- name: Pickers
+  ids:
+  - steam:204440

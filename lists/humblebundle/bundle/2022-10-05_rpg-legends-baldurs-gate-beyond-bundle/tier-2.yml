@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'RPG Legends: Baldur&#39;s Gate & Beyond Bundle — 7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12173/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12173/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12173/source.json
+games:
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300
+- name: 'Baldur''s Gate: Siege of Dragonspear'
+  ids:
+  - steam:385970
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+- name: 'Baldur''s Gate: Enhanced Edition'
+  ids:
+  - steam:228280
+- name: 'Baldur''s Gate: Faces of Good and Evil'
+  ids:
+  - steam:687500
+- name: 'Neverwinter Nights: Complete Adventures'
+  ids:
+  - unresolved:source:isthereanydeal:12173:neverwinter-nights-complete-adventures

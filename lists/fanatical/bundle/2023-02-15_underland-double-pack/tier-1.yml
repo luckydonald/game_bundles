@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Underland Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12977/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12977/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12977/source.json
+games:
+- name: Underland
+  ids:
+  - steam:1528050
+- name: 'Underland: The Climb'
+  ids:
+  - steam:1592340

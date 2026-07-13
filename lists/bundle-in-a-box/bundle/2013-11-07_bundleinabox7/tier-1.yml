@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Indie Strategy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/392/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/392/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/392/source.json
+games:
+- name: Storm over the Pacific
+  ids:
+  - steam:302320
+- name: Creeper World
+  ids:
+  - unresolved:source:isthereanydeal:392:creeper-world
+- name: 'AI War: Fleet Command'
+  ids:
+  - steam:40400
+- name: Age of Conquest III
+  ids:
+  - unresolved:source:isthereanydeal:392:age-of-conquest-iii
+- name: US and THEM
+  ids:
+  - steam:281350
+- name: AI War Prototype
+  ids:
+  - unresolved:source:isthereanydeal:392:ai-war-prototype
+- name: Strategic War in Europe
+  ids:
+  - steam:283000
+- name: The Trouble With Robots
+  ids:
+  - unresolved:source:isthereanydeal:392:the-trouble-with-robots

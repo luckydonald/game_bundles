@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 18 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1746/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1746/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1746/source.json
+games:
+- name: "Nicolas Eymerich Inquisitor \x96 Book 2: The Village"
+  ids:
+  - unresolved:source:isthereanydeal:1746:nicolas-eymerich-inquisitor-book-2-the-village
+- name: The Barbarian
+  ids:
+  - unresolved:source:isthereanydeal:1746:the-barbarian
+- name: Dark Scavenger
+  ids:
+  - steam:293880
+- name: Fabula Mortis 4 Pack
+  ids:
+  - steam:320790

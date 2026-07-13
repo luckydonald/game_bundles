@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Must Play Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3374/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3374/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3374/source.json
+games:
+- name: Tengami
+  ids:
+  - steam:299680
+- name: Lowglow
+  ids:
+  - steam:405950
+- name: Bridge Constructor Stunts
+  ids:
+  - steam:419080
+- name: A Wizard's Lizard
+  ids:
+  - steam:280040
+- name: SPACECOM
+  ids:
+  - steam:263860
+- name: 'Rush for Berlin: Gold Edition'
+  ids:
+  - steam:40320
+- name: WORLD END ECONOMiCA episode.01
+  ids:
+  - steam:269250
+- name: Among the Sleep - Enhanced Edition
+  ids:
+  - steam:250620
+- name: Holodrive - Beginner's Pack
+  ids:
+  - unresolved:source:isthereanydeal:3374:holodrive-beginners-pack
+- name: Moorhuhn - Tiger and Chicken
+  ids:
+  - steam:321940

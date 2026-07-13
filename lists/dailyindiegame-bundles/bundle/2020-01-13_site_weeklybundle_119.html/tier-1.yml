@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 119 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8311/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8311/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8311/source.json
+games:
+- name: Headsnatchers
+  ids:
+  - steam:797410
+- name: 'Kitten and food: adventure park'
+  ids:
+  - unresolved:source:isthereanydeal:8311:kitten-and-food-adventure-park
+- name: Stunt Hill
+  ids:
+  - steam:818790
+- name: MPaliens
+  ids:
+  - steam:1068110
+- name: Mad Hunting Simulator VR
+  ids:
+  - steam:988340
+- name: Put in
+  ids:
+  - steam:1132120
+- name: The Refuge
+  ids:
+  - steam:1128650
+- name: Forest Woodman
+  ids:
+  - steam:1212440
+- name: Hockeysplit
+  ids:
+  - steam:1206000

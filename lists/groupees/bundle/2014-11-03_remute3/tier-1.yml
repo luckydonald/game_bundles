@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute Rewind Your Mind Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1355/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1355/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1355/source.json
+games:
+- name: r0x (Extended Play)
+  ids:
+  - unresolved:source:isthereanydeal:1355:r0x-extended-play
+- name: 'Beekyr : Eco Shoot''em up'
+  ids:
+  - unresolved:source:isthereanydeal:1355:beekyr-eco-shoot-em-up
+- name: Mutant Colossus from Outer Space
+  ids:
+  - unresolved:source:isthereanydeal:1355:mutant-colossus-from-outer-space
+- name: 'Red Goblin: Cursed Forest'
+  ids:
+  - unresolved:source:isthereanydeal:1355:red-goblin-cursed-forest
+- name: Phantasmaburbia
+  ids:
+  - unresolved:source:isthereanydeal:1355:phantasmaburbia
+- name: 'Mind: Path to Thalamus Enhanced Edition'
+  ids:
+  - steam:296070
+- name: 'Level 22: Gary''s Misadventures - 2016 Edition'
+  ids:
+  - steam:431290

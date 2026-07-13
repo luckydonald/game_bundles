@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 58: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7737/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7737/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7737/source.json
+games:
+- name: Victory Race
+  ids:
+  - unresolved:source:isthereanydeal:7737:victory-race
+- name: The Bad Gravedigger
+  ids:
+  - steam:870120
+- name: Zombie Desperation
+  ids:
+  - steam:818570
+- name: 'Away From Earth: Mars'
+  ids:
+  - unresolved:source:isthereanydeal:7737:away-from-earth-mars
+- name: Alien Revival
+  ids:
+  - unresolved:source:isthereanydeal:7737:alien-revival
+- name: Conjuntalia
+  ids:
+  - steam:619340
+- name: Fight For Love
+  ids:
+  - steam:989250
+- name: 'Smash Halloween Pumpkins: The Challenge'
+  ids:
+  - steam:886010
+- name: Neon Warp
+  ids:
+  - steam:485920

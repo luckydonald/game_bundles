@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Return to Metroidvania Bundle Encore — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15668/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15668/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15668/source.json
+games:
+- name: Monster Sanctuary
+  ids:
+  - steam:814370
+- name: Gato Roboto
+  ids:
+  - steam:916730
+- name: 'Astalon: Tears of the Earth'
+  ids:
+  - steam:1046400
+- name: GRIME
+  ids:
+  - steam:1123050
+- name: Shantae and the Seven Sirens
+  ids:
+  - steam:1191630
+- name: Berserk Boy
+  ids:
+  - steam:1561340
+- name: Islets
+  ids:
+  - steam:1669420
+- name: BioGun
+  ids:
+  - steam:1219240

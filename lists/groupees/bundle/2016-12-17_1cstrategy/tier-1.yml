@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 1C Strategy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4498/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4498/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4498/source.json
+games:
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+- name: XIII Century Gold Edition
+  ids:
+  - steam:34420
+- name: 'Perimeter: Emperor''s Testament'
+  ids:
+  - steam:289240
+- name: Freight Tycoon Inc.
+  ids:
+  - steam:289340
+- name: 'Reign: Conflict of Nations'
+  ids:
+  - steam:46380
+- name: 'Soldiers: Heroes of World War II - Enhanced Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4498:soldiers-heroes-of-world-war-ii-enhanced-edition

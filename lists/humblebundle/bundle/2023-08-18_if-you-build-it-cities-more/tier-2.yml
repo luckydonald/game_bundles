@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'If You Build It: Cities & More Bundle — 5-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13413/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13413/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13413/source.json
+games:
+- name: 'Evil Genius 2: World Domination'
+  ids:
+  - steam:700600
+- name: Frozenheim
+  ids:
+  - steam:1134100
+- name: The Tenants
+  ids:
+  - steam:1009560
+- name: Airborne Kingdom
+  ids:
+  - steam:982290
+- name: Pan'orama
+  ids:
+  - steam:1730250

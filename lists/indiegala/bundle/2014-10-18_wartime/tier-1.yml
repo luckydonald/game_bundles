@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wartime Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1295/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1295/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1295/source.json
+games:
+- name: 'Men of War: Assault Squad'
+  ids:
+  - steam:64000
+- name: Men of War
+  ids:
+  - steam:7830
+- name: Men of War Assault Squad DLC Pack
+  ids:
+  - unresolved:source:isthereanydeal:1295:men-of-war-assault-squad-dlc-pack
+- name: Faces of War
+  ids:
+  - steam:289300
+- name: Men of War Red Tide
+  ids:
+  - steam:3130
+- name: 'Theatre of War 2: Africa 1943'
+  ids:
+  - steam:46340
+- name: 'Theatre of War 2: Africa 1943 - Centauro'
+  ids:
+  - steam:46342

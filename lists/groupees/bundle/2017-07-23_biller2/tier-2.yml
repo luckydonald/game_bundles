@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Billerica&#39;s Premiere Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5346/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5346/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5346/source.json
+games:
+- name: SmuggleCraft
+  ids:
+  - steam:592020
+- name: Mars 2030
+  ids:
+  - steam:510850
+- name: 'Sonya: The Great Adventure'
+  ids:
+  - steam:558780
+- name: Dyna Bomb
+  ids:
+  - steam:467220
+- name: 'I Can''t Escape: Darkness'
+  ids:
+  - steam:346090

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 61 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3328/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3328/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3328/source.json
+games:
+- name: Doodle God
+  ids:
+  - steam:348360
+- name: 'Depth Hunter 2: Deep Dive'
+  ids:
+  - steam:248530
+- name: Nordenfelt
+  ids:
+  - steam:428740
+- name: It's Spring Again
+  ids:
+  - steam:434210
+- name: Story Of the Survivor
+  ids:
+  - steam:440950
+- name: Story of a Cube
+  ids:
+  - steam:440750

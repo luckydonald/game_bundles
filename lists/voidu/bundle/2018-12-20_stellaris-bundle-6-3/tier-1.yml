@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Stellaris Synthetic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6804/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6804/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6804/source.json
+games:
+- name: 'Stellaris: Apocalypse'
+  ids:
+  - steam:716670
+- name: 'Stellaris: MegaCorp'
+  ids:
+  - steam:944290
+- name: 'Stellaris: Synthetic Dawn'
+  ids:
+  - unresolved:source:isthereanydeal:6804:stellaris-synthetic-dawn

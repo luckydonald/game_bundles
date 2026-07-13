@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tales From Wales Interactive Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13448/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13448/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13448/source.json
+games:
+- name: Late Shift
+  ids:
+  - steam:584980
+- name: Bloodshore
+  ids:
+  - steam:1490840

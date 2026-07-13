@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blitz Spring Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9798/source.json
+games:
+- name: Zibbs - Alien Survival
+  ids:
+  - steam:1001960
+- name: TankBlitz
+  ids:
+  - steam:620710
+- name: HexON
+  ids:
+  - steam:1203570
+- name: Blackjack Hands
+  ids:
+  - steam:1292250
+- name: Beach Love Shop
+  ids:
+  - steam:1359890
+- name: 'Chess Knights: Shinobi'
+  ids:
+  - steam:1383050
+- name: Lab Craft Survival
+  ids:
+  - steam:1481680
+- name: Reach the Summit
+  ids:
+  - steam:1512790
+- name: Agent Murphy
+  ids:
+  - steam:1518200
+- name: Street karate 3
+  ids:
+  - steam:1524340

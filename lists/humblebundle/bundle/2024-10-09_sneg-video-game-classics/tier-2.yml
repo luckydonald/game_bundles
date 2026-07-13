@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: SNEG Video Game Classics (GOG) — 23 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14509/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14509/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14509/source.json
+games:
+- name: 'War Wind II: Human Onslaught'
+  ids:
+  - steam:1741150
+- name: Star Command
+  ids:
+  - steam:2702090
+- name: Witchaven
+  ids:
+  - unresolved:source:isthereanydeal:14509:witchaven
+- name: 'Witchaven II: Blood Vengeance'
+  ids:
+  - unresolved:source:isthereanydeal:14509:witchaven-ii-blood-vengeance
+- name: Necrodome
+  ids:
+  - steam:2464680
+- name: CyClones
+  ids:
+  - steam:2464690
+- name: Prophecy of the Shadow
+  ids:
+  - steam:2702110
+- name: 'Renegade: Battle for Jacob''s Star'
+  ids:
+  - steam:2702130
+- name: Dark Legions
+  ids:
+  - steam:2414360
+- name: The Summoning
+  ids:
+  - steam:2414350
+- name: Fantasy General
+  ids:
+  - steam:1741120
+- name: Blade of Darkness
+  ids:
+  - steam:1710170
+- name: Pacific General
+  ids:
+  - steam:1741130
+- name: 'Warlords III: Darklords Rising'
+  ids:
+  - steam:2916220
+- name: Warlords I + II
+  ids:
+  - steam:2916210
+- name: 'Diggles: The Myth of Fenris'
+  ids:
+  - steam:1478650
+- name: 'Siege of Avalon: Anthology'
+  ids:
+  - steam:1558990
+- name: 'Chasm: The Rift'
+  ids:
+  - steam:2061230
+- name: Veil of Darkness
+  ids:
+  - steam:2414320
+- name: Star General
+  ids:
+  - steam:2414340
+- name: 'Great Naval Battles: The Final Fury'
+  ids:
+  - steam:2702080
+- name: Phantasie Memorial Set
+  ids:
+  - steam:2702050
+- name: Wargame Construction Set Pack
+  ids:
+  - unresolved:source:isthereanydeal:14509:wargame-construction-set-pack

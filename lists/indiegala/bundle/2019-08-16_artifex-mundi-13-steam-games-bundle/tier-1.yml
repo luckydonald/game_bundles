@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7784/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7784/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7784/source.json
+games:
+- name: Demon Hunter Chronicles from beyond
+  ids:
+  - steam:330990
+- name: 'Time Mysteries 3: The Final Enigma'
+  ids:
+  - steam:319320
+- name: 'Grim Legends: The Forsaken Bride'
+  ids:
+  - steam:284850

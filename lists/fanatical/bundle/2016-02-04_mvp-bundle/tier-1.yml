@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: MVP Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3015/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3015/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3015/source.json
+games:
+- name: Shufflepuck Cantina Deluxe
+  ids:
+  - steam:259510
+- name: Soccertron
+  ids:
+  - steam:334620
+- name: World of Mixed Martial Arts 3
+  ids:
+  - steam:344800
+- name: Out of the Park Baseball 15
+  ids:
+  - unresolved:source:isthereanydeal:3015:out-of-the-park-baseball-15
+- name: Super Snow Fight
+  ids:
+  - steam:365090
+- name: Mad Snowboarding
+  ids:
+  - steam:399900
+- name: Bowl Bound College Football
+  ids:
+  - steam:398640
+- name: Axis Football 2015
+  ids:
+  - steam:370090

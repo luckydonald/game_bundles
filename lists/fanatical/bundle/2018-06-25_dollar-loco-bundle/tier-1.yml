@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Loco Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6268/source.json
+games:
+- name: Out There Somewhere
+  ids:
+  - steam:263980
+- name: House of Caravan
+  ids:
+  - steam:353550
+- name: Chosen 2
+  ids:
+  - steam:569970
+- name: Labyronia RPG
+  ids:
+  - steam:391260
+- name: Labyronia RPG 2
+  ids:
+  - steam:397500
+- name: Legend of Mysteria RPG
+  ids:
+  - steam:407230
+- name: 'DRAGON: A Game About a Dragon'
+  ids:
+  - steam:351150
+- name: 'Marble Mayhem: Fragile Ball'
+  ids:
+  - steam:370510
+- name: 'The Odyssey: Winds of Athena'
+  ids:
+  - steam:416080
+- name: Greyfox RPG
+  ids:
+  - steam:341310

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 14 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1435/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1435/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1435/source.json
+games:
+- name: SanctuaryRPG
+  ids:
+  - unresolved:source:isthereanydeal:1435:sanctuaryrpg
+- name: Doomed'n Damned
+  ids:
+  - steam:383810
+- name: Flix The Flea
+  ids:
+  - steam:371390
+- name: Dangeron
+  ids:
+  - unresolved:source:isthereanydeal:1435:dangeron
+- name: Wooden Floor
+  ids:
+  - steam:348790
+- name: Huenison
+  ids:
+  - steam:410370

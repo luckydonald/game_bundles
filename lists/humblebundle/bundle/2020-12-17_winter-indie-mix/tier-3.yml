@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Winter Indie Mix Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9531/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9531/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9531/source.json
+games:
+- name: LYNE
+  ids:
+  - steam:266010
+- name: Deponia - The Complete Journey
+  ids:
+  - steam:292910
+- name: Butcher
+  ids:
+  - steam:474210
+- name: Felix The Reaper
+  ids:
+  - steam:919410
+- name: Feather
+  ids:
+  - steam:545040
+- name: Cat Quest
+  ids:
+  - steam:593280
+- name: Armello
+  ids:
+  - steam:290340
+- name: CryoFall
+  ids:
+  - steam:829590

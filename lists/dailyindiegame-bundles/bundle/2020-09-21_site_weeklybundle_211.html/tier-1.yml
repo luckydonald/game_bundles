@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 211: Siluman Soft — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9184/source.json
+games:
+- name: Siluman Fantasy
+  ids:
+  - steam:997240
+- name: 'Siluman Fantasy the Novel : A World of Monsters'
+  ids:
+  - unresolved:source:isthereanydeal:9184:siluman-fantasy-the-novel-a-world-of-monsters
+- name: 'Codex Libido : Oriens'
+  ids:
+  - unresolved:source:isthereanydeal:9184:codex-libido-oriens
+- name: Monster Girl Sketch Vol.01
+  ids:
+  - unresolved:source:isthereanydeal:9184:monster-girl-sketch-vol-01
+- name: 'Codex Libido : Mundus'
+  ids:
+  - steam:997253
+- name: 'Codex Libido : Halloween'
+  ids:
+  - unresolved:source:isthereanydeal:9184:codex-libido-halloween
+- name: 'Siluman Fantasy The Novel 2 : The Secrets that were Kept'
+  ids:
+  - unresolved:source:isthereanydeal:9184:siluman-fantasy-the-novel-2-the-secrets-that-were-kept
+- name: 'Siluman Fantasy The Novel 3 : A New World'
+  ids:
+  - unresolved:source:isthereanydeal:9184:siluman-fantasy-the-novel-3-a-new-world
+- name: 'Codex Libido : Aestus'
+  ids:
+  - unresolved:source:isthereanydeal:9184:codex-libido-aestus

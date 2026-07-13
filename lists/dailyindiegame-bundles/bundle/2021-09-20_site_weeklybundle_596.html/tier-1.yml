@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 596 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10486/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10486/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10486/source.json
+games:
+- name: ColorCube
+  ids:
+  - steam:2066920
+- name: Combiner Card Game
+  ids:
+  - unresolved:source:isthereanydeal:10486:combiner-card-game
+- name: PowBall Renaissance
+  ids:
+  - steam:654600
+- name: My Desktop Alive
+  ids:
+  - steam:998330
+- name: Shooting Star
+  ids:
+  - steam:1180700
+- name: Plataforma branca
+  ids:
+  - unresolved:source:isthereanydeal:10486:plataforma-branca
+- name: Fly The Cloud
+  ids:
+  - steam:1495260
+- name: STOP and MOVE
+  ids:
+  - steam:1519850
+- name: Run Ralph Run
+  ids:
+  - steam:1505420

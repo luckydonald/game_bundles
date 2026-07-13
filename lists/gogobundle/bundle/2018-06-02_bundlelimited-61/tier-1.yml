@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #61 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6205/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6205/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6205/source.json
+games:
+- name: Golden Dungeons
+  ids:
+  - steam:801020
+- name: 'Lawnmower Game 2: Drifter'
+  ids:
+  - steam:749550
+- name: Learn to Drive on Moto Wars
+  ids:
+  - unresolved:source:isthereanydeal:6205:learn-to-drive-on-moto-wars
+- name: 'Time Killers: Spot Race'
+  ids:
+  - steam:735530
+- name: Aviation Hurricane Storm
+  ids:
+  - unresolved:source:isthereanydeal:6205:aviation-hurricane-storm
+- name: Space Hurricane Storm
+  ids:
+  - unresolved:source:isthereanydeal:6205:space-hurricane-storm
+- name: MEGALONIA
+  ids:
+  - unresolved:source:isthereanydeal:6205:megalonia
+- name: Internet Simulator
+  ids:
+  - steam:758050
+- name: FORCE TANKS
+  ids:
+  - unresolved:source:isthereanydeal:6205:force-tanks
+- name: Jellyfish
+  ids:
+  - steam:700440
+- name: 'Time Killers: CatchOut'
+  ids:
+  - steam:735520
+- name: Flower Design
+  ids:
+  - steam:546070
+- name: Your Ball Exploded
+  ids:
+  - unresolved:source:isthereanydeal:6205:your-ball-exploded

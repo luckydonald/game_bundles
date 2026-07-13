@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 64 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3457/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3457/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3457/source.json
+games:
+- name: Heaven Island - VR MMO
+  ids:
+  - steam:400250
+- name: Shake your money SIMULATOR 2016
+  ids:
+  - unresolved:source:isthereanydeal:3457:shake-your-money-simulator-2016
+- name: Luna Sky
+  ids:
+  - steam:361600
+- name: Normality
+  ids:
+  - steam:400370
+- name: Bacteria
+  ids:
+  - steam:448470
+- name: SickBrick
+  ids:
+  - unresolved:source:isthereanydeal:3457:sickbrick

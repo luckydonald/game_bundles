@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Redout Complete Edition — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7726/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7726/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7726/source.json
+games:
+- name: Redout - Space Exploration Pack
+  ids:
+  - steam:728910
+- name: Redout - Mars Pack
+  ids:
+  - steam:627440
+- name: Redout - V.E.R.T.E.X. Pack
+  ids:
+  - unresolved:source:isthereanydeal:7726:redout-v-e-r-t-e-x-pack
+- name: 'Redout: Enhanced Edition'
+  ids:
+  - steam:517710
+- name: Redout - Back to Earth Pack
+  ids:
+  - steam:762770

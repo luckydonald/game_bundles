@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Sugoi Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5677/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5677/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5677/source.json
+games:
+- name: Space Girls
+  ids:
+  - steam:2508630
+- name: The Girl on the Train
+  ids:
+  - unresolved:source:isthereanydeal:5677:the-girl-on-the-train
+- name: Wandering in space
+  ids:
+  - steam:1971770
+- name: Jake's Love Story
+  ids:
+  - steam:699080
+- name: 'Songs of Araiah: Re-Mastered Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5677:songs-of-araiah-re-mastered-edition
+- name: Maria the Witch
+  ids:
+  - steam:447860
+- name: Fix Me Fix You Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:5677:fix-me-fix-you-deluxe-edition
+- name: 'Ecchi Sketch: Draw Cute Girls Every Day!'
+  ids:
+  - steam:606690
+- name: 《夏花的轨迹——A summer promise to forever》
+  ids:
+  - unresolved:source:isthereanydeal:5677:xia-hua-de-gui-ji-a-summer-promise-to-forever
+- name: 'AMPLITUDE: A Visual Novel'
+  ids:
+  - steam:704680
+- name: The Merchant Memoirs
+  ids:
+  - steam:726520

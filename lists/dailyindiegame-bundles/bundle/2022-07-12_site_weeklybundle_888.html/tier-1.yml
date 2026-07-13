@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 888: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11758/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11758/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11758/source.json
+games:
+- name: Bow & Crystal Tower Defense
+  ids:
+  - steam:1537940
+- name: Click and Relax
+  ids:
+  - steam:1537960
+- name: Dropshipping Simulator
+  ids:
+  - steam:1573700
+- name: Cute Animals Memory Card Game
+  ids:
+  - steam:1600280
+- name: RunnerDot
+  ids:
+  - unresolved:source:isthereanydeal:11758:runnerdot
+- name: Football tournament
+  ids:
+  - steam:1691700
+- name: Candy gun
+  ids:
+  - unresolved:source:isthereanydeal:11758:candy-gun
+- name: Secrets of the Middle Ages
+  ids:
+  - steam:1727450
+- name: Red Hero Adventure
+  ids:
+  - steam:1892600

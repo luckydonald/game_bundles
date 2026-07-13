@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Twinkly Twelve — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5382/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5382/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5382/source.json
+games:
+- name: Dream Stone
+  ids:
+  - steam:603090
+- name: TAP TOUCH RUN
+  ids:
+  - unresolved:source:isthereanydeal:5382:tap-touch-run
+- name: Died Of Fear
+  ids:
+  - steam:663920

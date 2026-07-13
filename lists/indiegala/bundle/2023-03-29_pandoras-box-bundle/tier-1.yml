@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pandora&#39;s Box Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13079/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13079/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13079/source.json
+games:
+- name: 'Entwined: Strings of Deception'
+  ids:
+  - steam:645420
+- name: 'Unsolved Mystery Club: Ancient Astronauts - Collector''s Edition'
+  ids:
+  - steam:1107350
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:13079:namariel-legends-the-iron-lord-premium-edition
+- name: 'Invasion 2: Doomed'
+  ids:
+  - steam:1418140
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+- name: 'Legacy: Witch Island'
+  ids:
+  - steam:1410500
+- name: 'Witchcraft: Pandora''s Box'
+  ids:
+  - steam:1203400
+- name: 'Ominous Tales: The Forsaken Isle'
+  ids:
+  - steam:645410
+- name: 'Big Adventure: Trip to Europe 2 - Collector''s Edition'
+  ids:
+  - steam:2157670
+- name: Detective Agency Gray Tie - Collector's Edition
+  ids:
+  - steam:2179350

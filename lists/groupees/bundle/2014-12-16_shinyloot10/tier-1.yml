@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shinyloot Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1478/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1478/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1478/source.json
+games:
+- name: Cubetractor
+  ids:
+  - steam:235720
+- name: Survivor Squad
+  ids:
+  - steam:258050
+- name: Cargo! - The Quest for Gravity
+  ids:
+  - steam:41740
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: Snake Blocks
+  ids:
+  - steam:339320
+- name: Stonerid
+  ids:
+  - steam:315920
+- name: Victim of Xen
+  ids:
+  - steam:300220
+- name: Orborun
+  ids:
+  - steam:308580

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Capture, Edit, Create! Video & Gameplay Tools: Movavi Bundle — 2-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13502/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13502/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13502/source.json
+games:
+- name: Gecata by Movavi 6 - Streaming and Game Recording Software
+  ids:
+  - steam:1403840
+- name: Movavi Picverse - Photo Editing Software
+  ids:
+  - steam:1403800

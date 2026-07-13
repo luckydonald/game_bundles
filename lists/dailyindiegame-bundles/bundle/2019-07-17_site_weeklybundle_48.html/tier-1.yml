@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 48: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7646/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7646/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7646/source.json
+games:
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+- name: Project Maze
+  ids:
+  - steam:659220
+- name: Five Rooms
+  ids:
+  - unresolved:source:isthereanydeal:7646:five-rooms
+- name: In Between Games
+  ids:
+  - steam:779700
+- name: Full Body Workout
+  ids:
+  - unresolved:source:isthereanydeal:7646:full-body-workout
+- name: Bubble Rush
+  ids:
+  - steam:717910
+- name: OSES
+  ids:
+  - steam:704990
+- name: SpaceMerc
+  ids:
+  - unresolved:source:isthereanydeal:7646:spacemerc
+- name: Defense of Roman Britain
+  ids:
+  - steam:657790

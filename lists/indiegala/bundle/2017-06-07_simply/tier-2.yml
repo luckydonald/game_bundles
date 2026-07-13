@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Simply Super Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5191/source.json
+games:
+- name: Simple Ball:Extended Edition
+  ids:
+  - steam:487530
+- name: Crappy day enhanced edition
+  ids:
+  - unresolved:source:isthereanydeal:5191:crappy-day-enhanced-edition
+- name: No Time To Live
+  ids:
+  - steam:397940
+- name: Tower Dwellers
+  ids:
+  - steam:461860
+- name: Chromadrome 2
+  ids:
+  - steam:378350
+- name: 'SuperCluster: Void'
+  ids:
+  - steam:610740
+- name: Night of Terror
+  ids:
+  - unresolved:source:isthereanydeal:5191:night-of-terror
+- name: Stunt Toys
+  ids:
+  - steam:597720
+- name: Super Trench Attack™
+  ids:
+  - steam:311870
+- name: Apple Jack 1&2
+  ids:
+  - steam:351690
+- name: Rozkol
+  ids:
+  - unresolved:source:isthereanydeal:5191:rozkol
+- name: 'Valcarta: Rise of the Demon'
+  ids:
+  - steam:488220

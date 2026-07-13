@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 667 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10753/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10753/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10753/source.json
+games:
+- name: GentleMoon 2
+  ids:
+  - steam:488890
+- name: 'The Sacred Stone: A Story Adventure'
+  ids:
+  - steam:432410
+- name: BOW MAN
+  ids:
+  - unresolved:source:isthereanydeal:10753:bow-man
+- name: 'Action Alien: Tropical'
+  ids:
+  - steam:810800
+- name: 'Action Alien: Survival'
+  ids:
+  - steam:773330
+- name: Mysterious Blocks 2
+  ids:
+  - unresolved:source:isthereanydeal:10753:mysterious-blocks-2
+- name: Shopping Mahjong connect
+  ids:
+  - unresolved:source:isthereanydeal:10753:shopping-mahjong-connect
+- name: Hidden Magic Town
+  ids:
+  - steam:1828940
+- name: Mega City Void
+  ids:
+  - steam:1820930

@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Slayer Bundle 7 — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11983/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11983/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11983/source.json
+games:
+- name: 'The Coma 2: Vicious Sisters'
+  ids:
+  - steam:1045720
+- name: Encodya
+  ids:
+  - steam:1137450
+- name: Bomber Crew - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:11983:bomber-crew-deluxe-edition
+- name: Vectronom
+  ids:
+  - steam:925460
+- name: Forge and Fight
+  ids:
+  - unresolved:source:isthereanydeal:11983:forge-and-fight
+- name: Tower of Guns
+  ids:
+  - steam:266110
+- name: The Escapists
+  ids:
+  - steam:298630
+- name: Embr
+  ids:
+  - steam:1062830
+- name: Autonauts
+  ids:
+  - steam:979120
+- name: CryoFall
+  ids:
+  - steam:829590
+- name: Ogre
+  ids:
+  - steam:517780
+- name: 'The Wanderer: Frankenstein''s Creature'
+  ids:
+  - steam:966670
+- name: Pilgrims
+  ids:
+  - steam:1049280
+- name: Jumpala
+  ids:
+  - steam:1278190
+- name: 'GTTOD: Get To The Orange Door'
+  ids:
+  - steam:541200
+- name: Song of Farca
+  ids:
+  - steam:1435670
+- name: They Are Coming!
+  ids:
+  - steam:1736270
+- name: Necrosmith
+  ids:
+  - steam:1949190
+- name: 'Superbugs: Awaken'
+  ids:
+  - steam:1393570

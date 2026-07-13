@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Back to Basics — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2816/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2816/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2816/source.json
+games:
+- name: Sirius
+  ids:
+  - unresolved:source:isthereanydeal:2816:sirius
+- name: Escape Machines
+  ids:
+  - steam:363490
+- name: New kind of adventure
+  ids:
+  - steam:375510
+- name: Stellar 2D
+  ids:
+  - steam:391070
+- name: Tower of Elements
+  ids:
+  - unresolved:source:isthereanydeal:2816:tower-of-elements
+- name: Clergy Splode
+  ids:
+  - steam:403900
+- name: Turbo Pug
+  ids:
+  - steam:418070
+- name: Lup
+  ids:
+  - steam:412600
+- name: 'Terra Incognita ~ Chapter One: The Descendant'
+  ids:
+  - steam:347560
+- name: Eaten Alive
+  ids:
+  - steam:403560
+- name: Flesh Eaters
+  ids:
+  - steam:383580
+- name: Tin Boy
+  ids:
+  - unresolved:source:isthereanydeal:2816:tin-boy
+- name: Ampersand
+  ids:
+  - steam:410210
+- name: 'Star Chronicles: Delta Quadrant'
+  ids:
+  - steam:383330

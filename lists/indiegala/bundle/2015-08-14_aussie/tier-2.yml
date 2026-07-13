@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Downunder Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2333/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2333/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2333/source.json
+games:
+- name: Unhack
+  ids:
+  - steam:340800
+- name: Once Bitten, Twice Dead!
+  ids:
+  - unresolved:source:isthereanydeal:2333:once-bitten-twice-dead
+- name: 'Zafehouse: Diaries'
+  ids:
+  - steam:249360
+- name: Deadnaut
+  ids:
+  - steam:337040
+- name: Freedom Fall
+  ids:
+  - steam:262770
+- name: Bermuda
+  ids:
+  - steam:337630
+- name: '8-Bit Adventures: The Forgotten Journey Remastered Edition'
+  ids:
+  - steam:370300
+- name: Amygdala
+  ids:
+  - steam:369060
+- name: Gamebook Adventures Assassin Game Bundle
+  ids:
+  - unresolved:source:isthereanydeal:2333:gamebook-adventures-assassin-game-bundle
+- name: Blade Kitten
+  ids:
+  - steam:9940
+- name: An Assassin in Orlandes
+  ids:
+  - steam:335460
+- name: Star Gazer
+  ids:
+  - unresolved:source:isthereanydeal:2333:star-gazer

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platform & Adventure Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13165/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13165/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13165/source.json
+games:
+- name: Nihilumbra
+  ids:
+  - steam:252670
+- name: Lila's Sky Ark
+  ids:
+  - steam:1573390

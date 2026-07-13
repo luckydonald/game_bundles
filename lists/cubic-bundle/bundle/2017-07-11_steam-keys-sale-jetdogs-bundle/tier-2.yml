@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Jetdogs Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5312/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5312/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5312/source.json
+games:
+- name: BattleTime
+  ids:
+  - steam:509600
+- name: Galaxy Admirals
+  ids:
+  - steam:411120
+- name: 12 Labours of Hercules
+  ids:
+  - steam:342580
+- name: Among the Heavens
+  ids:
+  - steam:409380
+- name: '1 Moment of Time: Silentville'
+  ids:
+  - steam:497400
+- name: 'Wanderland: Advanced Adventurer Pack'
+  ids:
+  - steam:618980
+- name: 'Frankenstein: Master of Death'
+  ids:
+  - steam:347430
+- name: '12 Labours of Hercules III: Girl Power'
+  ids:
+  - steam:360650
+- name: 'Wanderland: Starter Pack'
+  ids:
+  - steam:607840
+- name: Maze Lord
+  ids:
+  - steam:450190
+- name: '12 Labours of Hercules II: The Cretan Bull'
+  ids:
+  - steam:360640

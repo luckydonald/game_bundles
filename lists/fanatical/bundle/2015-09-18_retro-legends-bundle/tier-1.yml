@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Retro Legends Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2471/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2471/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2471/source.json
+games:
+- name: Super Motherload
+  ids:
+  - steam:269110
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:2471:wizardry-6-and-7
+- name: 'The Original Strife: Veteran Edition'
+  ids:
+  - steam:317040
+- name: 'Carmageddon 2: Carpocalypse Now'
+  ids:
+  - steam:282030
+- name: Duke Nukem Kill-A-Ton Collection
+  ids:
+  - unresolved:source:isthereanydeal:2471:duke-nukem-kill-a-ton-collection
+- name: The Apogee Throwback Pack
+  ids:
+  - steam:238050
+- name: Z.A.R.
+  ids:
+  - unresolved:source:isthereanydeal:2471:z-a-r
+- name: 'Wings : Remastered Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2471:wings-remastered-edition

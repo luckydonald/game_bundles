@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indiespensable Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4923/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4923/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4923/source.json
+games:
+- name: Blitzkrieg Anthology
+  ids:
+  - steam:313480
+- name: Inexistence
+  ids:
+  - steam:444720
+- name: Snake Party
+  ids:
+  - steam:576660

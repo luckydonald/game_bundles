@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Summer 2022 Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11576/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11576/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11576/source.json
+games:
+- name: Street Fighter V
+  ids:
+  - steam:310950
+- name: STRIDER™ / ストライダー飛竜®
+  ids:
+  - steam:235210
+- name: Bionic Commando
+  ids:
+  - steam:21670

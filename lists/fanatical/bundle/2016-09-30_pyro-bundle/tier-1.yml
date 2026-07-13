@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pyro Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4138/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4138/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4138/source.json
+games:
+- name: 'Commandos 3: Destination Berlin'
+  ids:
+  - steam:6840
+- name: 'Commandos: Beyond the Call of Duty'
+  ids:
+  - steam:6810
+- name: Praetorians
+  ids:
+  - steam:277460
+- name: 'Commandos 2: Men of Courage'
+  ids:
+  - steam:6830
+- name: Imperial Glory
+  ids:
+  - steam:277450
+- name: 'Commandos: Behind Enemy Lines'
+  ids:
+  - steam:6800

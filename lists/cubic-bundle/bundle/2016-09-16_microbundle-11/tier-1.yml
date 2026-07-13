@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Microbundle #11 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4065/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4065/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4065/source.json
+games:
+- name: But to Paint a Universe
+  ids:
+  - steam:335220
+- name: Tisnart Tiles
+  ids:
+  - steam:398920

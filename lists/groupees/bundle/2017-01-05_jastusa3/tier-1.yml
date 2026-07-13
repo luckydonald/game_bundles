@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'JAST USA Bundle #3 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4581/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4581/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4581/source.json
+games:
+- name: Cat Girl Alliance
+  ids:
+  - unresolved:source:isthereanydeal:4581:cat-girl-alliance
+- name: Kana ~ Little Sister
+  ids:
+  - unresolved:source:isthereanydeal:4581:kana-little-sister
+- name: Figures of Happiness
+  ids:
+  - unresolved:source:isthereanydeal:4581:figures-of-happiness
+- name: Heart de Roommate
+  ids:
+  - unresolved:source:isthereanydeal:4581:heart-de-roommate
+- name: Snow Drop
+  ids:
+  - unresolved:source:isthereanydeal:4581:snow-drop

@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Resurrection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1573/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1573/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1573/source.json
+games:
+- name: Gun Metal
+  ids:
+  - steam:267920
+- name: Soulbringer
+  ids:
+  - steam:283310
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+- name: Chompy Chomp Chomp
+  ids:
+  - steam:292570
+- name: Grimind
+  ids:
+  - steam:265380
+- name: RADical ROACH Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:1573:radical-roach-deluxe-edition
+- name: Realms of the Haunting
+  ids:
+  - steam:292390
+- name: Humanity Asset
+  ids:
+  - steam:271640
+- name: Manhunter
+  ids:
+  - unresolved:source:isthereanydeal:1573:manhunter
+- name: Nosferatu - The Wrath Of Malachi
+  ids:
+  - steam:283290
+- name: Desert Thunder
+  ids:
+  - steam:283330
+- name: Cobi Treasure Deluxe
+  ids:
+  - steam:301690
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370

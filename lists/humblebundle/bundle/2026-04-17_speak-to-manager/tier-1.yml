@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Speak to the Manager Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16068/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16068/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16068/source.json
+games:
+- name: Rise of Industry
+  ids:
+  - steam:671440
+- name: 'Rise of Industry: 2130'
+  ids:
+  - steam:1139110
+- name: Gladiator Guild Manager
+  ids:
+  - steam:1043260
+- name: Sweet Transit
+  ids:
+  - steam:1612770

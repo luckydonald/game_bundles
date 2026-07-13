@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #67 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6865/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6865/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6865/source.json
+games:
+- name: Razenroth
+  ids:
+  - steam:340830
+- name: Grand Pigeon's Duty
+  ids:
+  - steam:449530

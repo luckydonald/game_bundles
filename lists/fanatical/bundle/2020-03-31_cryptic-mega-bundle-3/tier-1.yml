@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Mega Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8611/source.json
+games:
+- name: Hidden Object Bundle 4 in 1
+  ids:
+  - steam:347610
+- name: Hidden Object 6-in-1 bundle
+  ids:
+  - steam:448400
+- name: Hidden Object Bundle 5 in 1
+  ids:
+  - steam:346140
+- name: 'Sacra Terra: Angelic Night'
+  ids:
+  - steam:344440

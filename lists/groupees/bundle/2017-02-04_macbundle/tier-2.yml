@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Mac Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4723/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4723/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4723/source.json
+games:
+- name: 'Strategy & Tactics: Wargame Collection'
+  ids:
+  - steam:338130
+- name: Outer Rim
+  ids:
+  - steam:604640
+- name: Cave Brawlers
+  ids:
+  - steam:731500
+- name: 'Myths Of Orion: Light from the North'
+  ids:
+  - steam:288670
+- name: Chicken Invaders 3
+  ids:
+  - steam:377460
+- name: 'Strategy & Tactics: Wargame Collection - Vikings!'
+  ids:
+  - steam:536740
+- name: 'Strategy & Tactics: Wargame Collection - USSR vs USA!'
+  ids:
+  - steam:536741
+- name: Marcus Level
+  ids:
+  - steam:417480
+- name: Super Button Soccer
+  ids:
+  - steam:425300
+- name: Bear Haven Nights
+  ids:
+  - steam:434220

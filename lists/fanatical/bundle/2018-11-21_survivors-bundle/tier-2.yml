@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Survivors Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6702/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6702/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6702/source.json
+games:
+- name: Four Sided Fantasy
+  ids:
+  - steam:337490
+- name: Dungeon Rushers
+  ids:
+  - steam:429620
+- name: March of the Living
+  ids:
+  - steam:458000
+- name: Shoppe Keep
+  ids:
+  - steam:381120
+- name: Heart&Slash
+  ids:
+  - steam:326840
+- name: Dead Secret
+  ids:
+  - steam:402260
+- name: The Invisible Hours
+  ids:
+  - steam:582560
+- name: 'HIVESWAP: ACT 1'
+  ids:
+  - steam:623940
+- name: Rise of Insanity
+  ids:
+  - steam:629220
+- name: The Free Ones
+  ids:
+  - unresolved:source:isthereanydeal:6702:the-free-ones
+- name: Sora
+  ids:
+  - steam:390730
+- name: Codex of Victory
+  ids:
+  - steam:464100
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090

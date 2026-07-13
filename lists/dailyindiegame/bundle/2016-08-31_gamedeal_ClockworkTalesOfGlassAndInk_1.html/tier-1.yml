@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Clockwork Tales: Of Glass And Ink - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3980/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3980/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3980/source.json
+games:
+- name: 'Clockwork Tales: Of Glass and Ink'
+  ids:
+  - steam:284830

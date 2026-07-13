@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Fever — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5402/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5402/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5402/source.json
+games:
+- name: 'Laseronium: Over The Line'
+  ids:
+  - unresolved:source:isthereanydeal:5402:laseronium-over-the-line
+- name: Mad Muzzles
+  ids:
+  - unresolved:source:isthereanydeal:5402:mad-muzzles
+- name: A Long Road Home
+  ids:
+  - steam:576160
+- name: Runaway Train
+  ids:
+  - steam:615080
+- name: Slap The Fly
+  ids:
+  - steam:543030
+- name: Mr. Rabbit's Alphabet Forest Adventure
+  ids:
+  - steam:652390
+- name: VThree
+  ids:
+  - steam:567320
+- name: Solitaire - Cat Pirate Portrait
+  ids:
+  - steam:666800
+- name: Golden Fever
+  ids:
+  - unresolved:source:isthereanydeal:5402:golden-fever
+- name: The Revenge of Johnny Bonasera
+  ids:
+  - steam:536430
+- name: Airon Ball
+  ids:
+  - unresolved:source:isthereanydeal:5402:airon-ball
+- name: Spider Wars
+  ids:
+  - steam:454580

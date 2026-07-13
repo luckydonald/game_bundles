@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Limited Bundle (BETA) — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4828/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4828/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4828/source.json
+games:
+- name: Gunjitsu
+  ids:
+  - steam:280010
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+- name: 'Sometimes: Success Requires Sacrifice'
+  ids:
+  - steam:351470
+- name: Pushcat
+  ids:
+  - steam:308440
+- name: Commander Cool 2
+  ids:
+  - steam:356070

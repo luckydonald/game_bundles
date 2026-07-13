@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 113 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8290/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8290/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8290/source.json
+games:
+- name: Meowk and Frocco
+  ids:
+  - unresolved:source:isthereanydeal:8290:meowk-and-frocco
+- name: Sex Simulator
+  ids:
+  - steam:1111810
+- name: Fruit Mess
+  ids:
+  - steam:1085210
+- name: ROAD HOMEWARD 3 underwater world
+  ids:
+  - steam:1106030
+- name: ROAD HOMEWARD
+  ids:
+  - steam:876300
+- name: 'ROAD HOMEWARD 2: river trip'
+  ids:
+  - steam:1059080
+- name: Froggo
+  ids:
+  - steam:1033710
+- name: 'ROAD HOMEWARD 4: last step'
+  ids:
+  - steam:1153120
+- name: Highway Game
+  ids:
+  - steam:1177070

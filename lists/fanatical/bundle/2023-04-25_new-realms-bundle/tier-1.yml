@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: New Realms 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13121/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13121/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13121/source.json
+games:
+- name: Elderand
+  ids:
+  - steam:1413660
+- name: Orbital Bullet
+  ids:
+  - steam:1167680
+- name: Dread X Collection 2
+  ids:
+  - steam:1380390
+- name: Dread X Collection 3
+  ids:
+  - steam:1437500
+- name: Clunky Hero
+  ids:
+  - steam:1687990
+- name: Escape the Backrooms
+  ids:
+  - steam:1943950
+- name: RESTLESS SOUL
+  ids:
+  - steam:1748230

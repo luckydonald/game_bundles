@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Helpings 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5750/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5750/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5750/source.json
+games:
+- name: Ravager
+  ids:
+  - steam:689100
+- name: Undertaker's
+  ids:
+  - steam:653050

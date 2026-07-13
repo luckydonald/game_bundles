@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Sega Strategy Bundle — Beat the average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3209/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3209/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3209/source.json
+games:
+- name: Medieval 2 Total War Collection
+  ids:
+  - unresolved:source:isthereanydeal:3209:medieval-2-total-war-collection
+- name: Columns
+  ids:
+  - unresolved:source:isthereanydeal:3209:columns
+- name: 'Warhammer 40,000: Dawn of War - Master Collection'
+  ids:
+  - unresolved:source:isthereanydeal:3209:warhammer-40000-dawn-of-war-master-collection
+- name: Shining Force II
+  ids:
+  - unresolved:source:isthereanydeal:3209:shining-force-ii
+- name: SEGA Mega Drive and Genesis Classics
+  ids:
+  - unresolved:source:isthereanydeal:3209:sega-mega-drive-and-genesis-classics
+- name: 'Rome: Total War Collection'
+  ids:
+  - unresolved:source:isthereanydeal:3209:rome-total-war-collection
+- name: Company of Heroes Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:3209:company-of-heroes-complete-pack
+- name: Gain Ground
+  ids:
+  - unresolved:source:isthereanydeal:3209:gain-ground
+- name: 'Warhammer 40,000: Dawn of War II - Grand Master Collection'
+  ids:
+  - unresolved:source:isthereanydeal:3209:warhammer-40000-dawn-of-war-ii-grand-master-collection
+- name: Valkyria Chronicles™
+  ids:
+  - steam:294860
+- name: Eastside Hockey Manager
+  ids:
+  - steam:301120
+- name: "Total War: SHOGUN 2 \x96 Fall of the Samurai Collection"
+  ids:
+  - unresolved:source:isthereanydeal:3209:total-war-shogun-2-fall-of-the-samurai-collection

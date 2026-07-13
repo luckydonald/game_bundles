@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Feb 2022) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11020/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11020/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11020/source.json
+games:
+- name: Paradise Lost
+  ids:
+  - steam:982720
+- name: Black Book
+  ids:
+  - steam:1138660
+- name: Per Aspera
+  ids:
+  - steam:803050
+- name: Borderlands 3
+  ids:
+  - steam:397540
+- name: Before We Leave
+  ids:
+  - steam:1073910
+- name: Calico
+  ids:
+  - steam:1112890
+- name: Everhood
+  ids:
+  - steam:1229380
+- name: Just Die Already
+  ids:
+  - steam:979070
+- name: 'Borderlands 3: Director''s Cut'
+  ids:
+  - steam:1361831

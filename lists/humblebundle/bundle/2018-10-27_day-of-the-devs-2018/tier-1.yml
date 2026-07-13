@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Day of the Devs Bundle (2018) — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6616/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6616/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6616/source.json
+games:
+- name: Full Throttle Remastered
+  ids:
+  - steam:228360
+- name: Burly Men at Sea
+  ids:
+  - steam:403290

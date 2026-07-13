@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Beyond Reality Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7459/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7459/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7459/source.json
+games:
+- name: Kartong - Death by Cardboard!
+  ids:
+  - steam:602480
+- name: JetX VR
+  ids:
+  - steam:684620
+- name: Conductor
+  ids:
+  - steam:584930
+- name: Sneaky Bears
+  ids:
+  - steam:712240
+- name: 'SVRVIVE: The Deus Helix'
+  ids:
+  - steam:509540
+- name: Bullets And More VR - BAM VR
+  ids:
+  - steam:525640

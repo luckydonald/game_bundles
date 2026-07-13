@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Summer Adventure Games Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8961/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8961/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8961/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+- name: 'Batman: The Enemy Within - The Telltale Series'
+  ids:
+  - steam:675260
+- name: Oxenfree
+  ids:
+  - steam:388880
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+- name: 'The Walking Dead: Season Two'
+  ids:
+  - steam:261030
+- name: The Wolf Among Us
+  ids:
+  - steam:250320
+- name: 'The Walking Dead: Michonne - A Telltale Miniseries'
+  ids:
+  - steam:429570
+- name: Batman - The Enemy Within Shadows Mode
+  ids:
+  - steam:1181990

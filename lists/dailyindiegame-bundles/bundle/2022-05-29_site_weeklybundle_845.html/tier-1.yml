@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 845 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11545/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11545/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11545/source.json
+games:
+- name: ColorCube
+  ids:
+  - steam:2066920
+- name: Voltage
+  ids:
+  - steam:798710
+- name: RoboBunnies In Space!
+  ids:
+  - steam:941600
+- name: My Desktop Alive
+  ids:
+  - steam:998330
+- name: Brainmelter Deluxe
+  ids:
+  - steam:964060
+- name: Kyo's Routine
+  ids:
+  - steam:1264140
+- name: Battle Royale Pixel Squad
+  ids:
+  - steam:931250
+- name: Hero of Not Our Time
+  ids:
+  - steam:1409730
+- name: Junkyard Fury
+  ids:
+  - steam:1706940

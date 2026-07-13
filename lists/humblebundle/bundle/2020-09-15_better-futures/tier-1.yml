@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Better Futures Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9157/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9157/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9157/source.json
+games:
+- name: Torchlight
+  ids:
+  - steam:41500
+- name: 'Agent A: A puzzle in disguise'
+  ids:
+  - steam:801480
+- name: Throne of Lies ♔ The Online Game of Deceit
+  ids:
+  - unresolved:source:isthereanydeal:9157:throne-of-lies-the-online-game-of-deceit

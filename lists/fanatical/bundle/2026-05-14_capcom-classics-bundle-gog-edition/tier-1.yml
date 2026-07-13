@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Classics Bundle - GOG Edition — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16160/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16160/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16160/source.json
+games:
+- name: 'Dragon''s Dogma: Dark Arisen'
+  ids:
+  - steam:367500
+- name: Street Fighter Alpha 2
+  ids:
+  - unresolved:source:isthereanydeal:16160:street-fighter-alpha-2
+- name: Breath of Fire IV
+  ids:
+  - steam:4249150
+- name: Dino Crisis
+  ids:
+  - steam:4249130
+- name: Dino Crisis 2
+  ids:
+  - steam:4249140
+- name: RESIDENT EVIL 2 (1999)
+  ids:
+  - steam:4249110
+- name: Resident Evil (1997)
+  ids:
+  - steam:4249100
+- name: Resident Evil 3 Nemesis (1999)
+  ids:
+  - steam:4249120

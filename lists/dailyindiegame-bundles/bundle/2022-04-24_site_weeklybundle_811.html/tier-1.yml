@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 811 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11420/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11420/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11420/source.json
+games:
+- name: CastleGuard
+  ids:
+  - steam:961240
+- name: Mountain Taxi Driver
+  ids:
+  - steam:1092980
+- name: Village Bus Driver Simulator
+  ids:
+  - steam:1159510
+- name: RAKETENWASCHMACHINE
+  ids:
+  - steam:1556120
+- name: USA Truck Simulator
+  ids:
+  - unresolved:source:isthereanydeal:11420:usa-truck-simulator
+- name: Rhythm Knights
+  ids:
+  - unresolved:source:isthereanydeal:11420:rhythm-knights
+- name: Frog Ball Rerolled
+  ids:
+  - steam:1774160
+- name: 'Patriots: Back to Civilization'
+  ids:
+  - unresolved:source:isthereanydeal:11420:patriots-back-to-civilization
+- name: VILLAGE THE SIBERIA
+  ids:
+  - steam:1819800

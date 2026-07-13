@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Daedalic Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6667/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6667/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6667/source.json
+games:
+- name: Caravan
+  ids:
+  - steam:352890
+- name: Bounty Train
+  ids:
+  - steam:371520
+- name: Valhalla Hills
+  ids:
+  - steam:351910

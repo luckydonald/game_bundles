@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #59 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6312/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6312/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6312/source.json
+games:
+- name: Toxic Townsmen
+  ids:
+  - unresolved:source:isthereanydeal:6312:toxic-townsmen
+- name: LAST WAR 2044
+  ids:
+  - steam:804460
+- name: MIND BLOX
+  ids:
+  - unresolved:source:isthereanydeal:6312:mind-blox

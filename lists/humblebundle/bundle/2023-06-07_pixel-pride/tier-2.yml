@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Pride Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13263/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13263/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13263/source.json
+games:
+- name: Celeste
+  ids:
+  - steam:504230
+- name: Later Alligator
+  ids:
+  - steam:966320
+- name: Get In The Car, Loser!
+  ids:
+  - steam:938860
+- name: BAD END THEATER
+  ids:
+  - steam:1764390
+- name: Boyfriend Dungeon
+  ids:
+  - steam:674930
+- name: Growing Up
+  ids:
+  - steam:1191120
+- name: Super Lesbian Animal RPG
+  ids:
+  - steam:2124380

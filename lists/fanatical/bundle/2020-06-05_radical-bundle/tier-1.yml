@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Radical Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8861/source.json
+games:
+- name: Railroad Pioneer
+  ids:
+  - steam:306490
+- name: Thunder Wolves
+  ids:
+  - steam:232970
+- name: SkyDrift
+  ids:
+  - steam:91100

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: SteamPunk 4 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2345/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2345/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2345/source.json
+games:
+- name: Crazy Steam Bros 2
+  ids:
+  - steam:355080
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2345:namariel-legends-the-iron-lord-premium-edition
+- name: Damnation
+  ids:
+  - unresolved:source:isthereanydeal:2345:damnation
+- name: Teslagrad
+  ids:
+  - steam:249590
+- name: Avenging Angel
+  ids:
+  - steam:367240

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Kingdom Come: Deliverance - Royal Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8312/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8312/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8312/source.json
+games:
+- name: 'Kingdom Come: Deliverance - From the Ashes'
+  ids:
+  - steam:883150
+- name: 'Kingdom Come: Deliverance'
+  ids:
+  - steam:379430
+- name: 'Kingdom Come: Deliverance - A Woman''s Lot'
+  ids:
+  - steam:1033890
+- name: 'Kingdom Come: Deliverance - The Amorous Adventures of Bold Sir Hans Capon'
+  ids:
+  - steam:921950
+- name: 'Kingdom Come: Deliverance - Band of Bastards'
+  ids:
+  - steam:977420
+- name: 'Kingdom Come: Deliverance - Treasures of the Past'
+  ids:
+  - steam:768530

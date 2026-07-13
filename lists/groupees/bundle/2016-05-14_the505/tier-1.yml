@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Blaster Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3432/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3432/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3432/source.json
+games:
+- name: Blaster Simulator
+  ids:
+  - steam:446450
+- name: The Archetype
+  ids:
+  - steam:391120
+- name: Drakensang
+  ids:
+  - steam:12640
+- name: Zipple World
+  ids:
+  - steam:433110
+- name: City of Fools
+  ids:
+  - steam:359250
+- name: Math Mechanic
+  ids:
+  - unresolved:source:isthereanydeal:3432:math-mechanic

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Treasure Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5551/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5551/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5551/source.json
+games:
+- name: Lily's Epic Quest
+  ids:
+  - steam:507270
+- name: Chateau Garden
+  ids:
+  - steam:636010
+- name: 'Ricky Raccoon 2: Adventures in Egypt'
+  ids:
+  - steam:636030
+- name: Jewel Venture
+  ids:
+  - steam:656890
+- name: 2 Planets Fire and Ice
+  ids:
+  - steam:657110
+- name: Ricky Raccoon
+  ids:
+  - steam:632820
+- name: Aztec Venture
+  ids:
+  - unresolved:source:isthereanydeal:5551:aztec-venture
+- name: India Garden
+  ids:
+  - steam:636020
+- name: Galact Quest
+  ids:
+  - steam:629810
+- name: Safari Venture
+  ids:
+  - steam:630390

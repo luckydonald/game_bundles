@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Jubilant Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14228/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14228/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14228/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: The Hive
+  ids:
+  - steam:325730
+- name: Gedonia
+  ids:
+  - steam:1114220
+- name: Spinch
+  ids:
+  - steam:794240
+- name: Tunche
+  ids:
+  - steam:887450
+- name: Ittle Dew
+  ids:
+  - steam:241320
+- name: Valfaris
+  ids:
+  - steam:600130
+- name: Autonauts
+  ids:
+  - steam:979120
+- name: Ittle Dew 2+
+  ids:
+  - steam:395620
+- name: GoNNER
+  ids:
+  - steam:437570
+- name: Tormentor X Punisher
+  ids:
+  - steam:500670
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+- name: Mutazione
+  ids:
+  - steam:1080750
+- name: Trifox
+  ids:
+  - steam:1211240
+- name: 'The Darkside Detective: A Fumble in the Dark'
+  ids:
+  - steam:795420
+- name: Don't Touch this Button!
+  ids:
+  - steam:1593950
+- name: From Space
+  ids:
+  - steam:1502190
+- name: I Am Fish
+  ids:
+  - steam:1472560
+- name: Forests, Fields and Fortresses
+  ids:
+  - steam:2113450
+- name: 'Access Denied: Escape'
+  ids:
+  - steam:2317300
+- name: Labrys
+  ids:
+  - steam:2330210
+- name: You Suck at Parking Complete Edition
+  ids:
+  - steam:837880

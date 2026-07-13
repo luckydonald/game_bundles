@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Game Lover Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5665/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5665/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5665/source.json
+games:
+- name: CRYLINE
+  ids:
+  - unresolved:source:isthereanydeal:5665:cryline
+- name: Heavy Destinies
+  ids:
+  - steam:726570
+- name: Aerial Destruction
+  ids:
+  - steam:592730
+- name: Cutie Paws
+  ids:
+  - unresolved:source:isthereanydeal:5665:cutie-paws
+- name: 'Freedom: A Time to Reckon'
+  ids:
+  - steam:655220
+- name: Grav Grav Gravity
+  ids:
+  - unresolved:source:isthereanydeal:5665:grav-grav-gravity
+- name: BACK TO THE EGG! Tower Defense
+  ids:
+  - steam:705640
+- name: FallenCore
+  ids:
+  - steam:670090
+- name: 'StrainZ-1: Elimination'
+  ids:
+  - unresolved:source:isthereanydeal:5665:strainz-1-elimination

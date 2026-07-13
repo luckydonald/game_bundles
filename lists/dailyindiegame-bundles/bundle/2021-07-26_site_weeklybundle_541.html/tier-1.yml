@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 541 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10290/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10290/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10290/source.json
+games:
+- name: Save President From Rebels
+  ids:
+  - unresolved:source:isthereanydeal:10290:save-president-from-rebels
+- name: The Quest for Achievements Remix
+  ids:
+  - unresolved:source:isthereanydeal:10290:the-quest-for-achievements-remix
+- name: 70 Seconds! Adventure
+  ids:
+  - steam:1143420
+- name: Kolumno
+  ids:
+  - steam:970710
+- name: Overcast - Walden and the Werewolf
+  ids:
+  - steam:293180
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250
+- name: Gem Master
+  ids:
+  - steam:1279620
+- name: Gravity Mummy
+  ids:
+  - unresolved:source:isthereanydeal:10290:gravity-mummy
+- name: Gold Dust
+  ids:
+  - steam:1447900

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 279 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9286/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9286/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9286/source.json
+games:
+- name: Halloween Pumpkin Story
+  ids:
+  - steam:717330
+- name: TEVA
+  ids:
+  - unresolved:source:isthereanydeal:9286:teva
+- name: Marble Run 2D
+  ids:
+  - steam:807140
+- name: Overcast - Walden and the Werewolf
+  ids:
+  - steam:293180
+- name: Zimbo
+  ids:
+  - unresolved:source:isthereanydeal:9286:zimbo
+- name: Kingdom Defense
+  ids:
+  - steam:756260
+- name: Owen to have fun!
+  ids:
+  - unresolved:source:isthereanydeal:9286:owen-to-have-fun
+- name: Gray platformer
+  ids:
+  - steam:1270870
+- name: Spirit of dungeon
+  ids:
+  - steam:1346860

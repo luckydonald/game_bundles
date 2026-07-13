@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4994/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4994/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4994/source.json
+games:
+- name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
+  ids:
+  - steam:342630
+- name: Robin's Island Adventure
+  ids:
+  - steam:323260
+- name: 'Apothecarium: The Renaissance of Evil - Premium Edition'
+  ids:
+  - steam:373860
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4994:namariel-legends-the-iron-lord-premium-edition
+- name: 'Sea Legends: Phantasmal Light Collector''s Edition'
+  ids:
+  - steam:323280
+- name: 'Taken Souls: Blood Ritual Collector''s Edition'
+  ids:
+  - steam:586930
+- name: 'Dreamscapes: The Sandman'
+  ids:
+  - steam:289260
+- name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
+  ids:
+  - steam:373870
+- name: 'Kingdom of Aurelia: Mystery of the Poisoned Dagger'
+  ids:
+  - steam:550390
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+- name: Fall of the New Age Premium Edition
+  ids:
+  - steam:314510

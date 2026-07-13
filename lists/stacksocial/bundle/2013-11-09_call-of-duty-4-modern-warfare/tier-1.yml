@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'StackSocial: Call Of Duty 4 - Modern Warfare — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/398/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/398/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/398/source.json
+games:
+- name: 'Call Of Duty 4: Modern Warfare (2007)'
+  ids:
+  - steam:7940

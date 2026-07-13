@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 915: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11932/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11932/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11932/source.json
+games:
+- name: Jixxaw
+  ids:
+  - steam:1564830
+- name: Fantasy Sliding Puzzle 3
+  ids:
+  - steam:1776640
+- name: Fantasy Sliding Puzzle 3 - ArtBook
+  ids:
+  - steam:1776950
+- name: Adult Puzzles - Fantasy Ladies ArtBook
+  ids:
+  - steam:1792180
+- name: Adult Puzzles - Fantasy Ladies
+  ids:
+  - steam:1789060
+- name: Comixxx Strip
+  ids:
+  - steam:1805970
+- name: Fantasy Memory - Sexy Mermaids
+  ids:
+  - steam:1832300
+- name: Fantasy Memory - Sexy Mermaids ArtBook
+  ids:
+  - steam:1832770
+- name: Comixxx Jixxaw
+  ids:
+  - steam:1805980

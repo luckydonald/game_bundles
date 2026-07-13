@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 24 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1993/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1993/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1993/source.json
+games:
+- name: Colortone
+  ids:
+  - steam:375320
+- name: 'Icarus-X: Tides of Fire'
+  ids:
+  - steam:375000
+- name: Gravity Error
+  ids:
+  - steam:379760
+- name: Project Druid - 2D Labyrinth Explorer
+  ids:
+  - steam:388160
+- name: Owys
+  ids:
+  - steam:394770
+- name: Grey Cubes
+  ids:
+  - unresolved:source:isthereanydeal:1993:grey-cubes
+- name: Wild Island Quest
+  ids:
+  - steam:392820
+- name: Three Days
+  ids:
+  - steam:375580
+- name: Build 'n Bump
+  ids:
+  - steam:375790
+- name: Volstead
+  ids:
+  - unresolved:source:isthereanydeal:1993:volstead

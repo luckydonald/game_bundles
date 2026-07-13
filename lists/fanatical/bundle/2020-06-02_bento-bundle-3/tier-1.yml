@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bento Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8848/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8848/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8848/source.json
+games:
+- name: Arcana Heart 3 LOVE MAX!!!!!
+  ids:
+  - steam:370460
+- name: Ninja Shodown
+  ids:
+  - steam:598840
+- name: 'XBlaze Code: Embryo'
+  ids:
+  - steam:421610
+- name: Dead or School
+  ids:
+  - steam:789760
+- name: Cat Quest
+  ids:
+  - steam:593280
+- name: CHAOS CODE -NEW SIGN OF CATASTROPHE
+  ids:
+  - steam:536560
+- name: 'Shiness: The Lightning Kingdom'
+  ids:
+  - steam:366640
+- name: 'XBlaze Lost: Memories'
+  ids:
+  - steam:438940

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Rise Of The Phoenix Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2918/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2918/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2918/source.json
+games:
+- name: Face Noir
+  ids:
+  - steam:244690
+- name: 'Heroes & Legends: Conquerors of Kolhar'
+  ids:
+  - steam:306950
+- name: Lost Civilization
+  ids:
+  - steam:264580

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Evil Gates Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13971/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13971/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13971/source.json
+games:
+- name: Get In The Car, Loser!
+  ids:
+  - steam:938860
+- name: Ballistic Zen
+  ids:
+  - steam:1966930
+- name: Awakened Evil
+  ids:
+  - steam:1760640
+- name: Grim Realms
+  ids:
+  - steam:1522280
+- name: Undomestic
+  ids:
+  - steam:2484430
+- name: 'Battlegrounds : At Enemy Gates'
+  ids:
+  - steam:2599320

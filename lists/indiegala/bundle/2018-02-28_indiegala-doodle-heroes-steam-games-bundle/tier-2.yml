@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Doodle Heroes Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5946/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5946/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5946/source.json
+games:
+- name: 'Doodle God: Alchemy Jam'
+  ids:
+  - steam:759750
+- name: Find this!
+  ids:
+  - unresolved:source:isthereanydeal:5946:find-this
+- name: Bloody Mice
+  ids:
+  - steam:676000
+- name: AIDEN
+  ids:
+  - steam:783060
+- name: MY 1980's DASHBOARD
+  ids:
+  - unresolved:source:isthereanydeal:5946:my-1980-s-dashboard
+- name: Acro Storm
+  ids:
+  - steam:546610
+- name: 'Doodle God: 8-bit Mania'
+  ids:
+  - steam:538060
+- name: The Surprising Adventures of Munchausen
+  ids:
+  - steam:696710
+- name: 'Solitaire Mystery: Stolen Power'
+  ids:
+  - steam:679820
+- name: Ersatz
+  ids:
+  - steam:703720
+- name: 'Keatz: The Lonely Bird'
+  ids:
+  - steam:707320
+- name: Heroes of Delum
+  ids:
+  - steam:676700

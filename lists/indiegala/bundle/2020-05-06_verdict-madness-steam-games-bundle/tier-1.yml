@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Verdict Madness Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8754/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8754/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8754/source.json
+games:
+- name: Airport Madness 3D
+  ids:
+  - steam:445770
+- name: Verdict Guilty - 유죄 평결
+  ids:
+  - steam:449210
+- name: 'Kz NTools : Fix Your Network'
+  ids:
+  - steam:911310
+- name: The spy who shot me™
+  ids:
+  - steam:771810
+- name: Dungeon Marathon™
+  ids:
+  - steam:682590
+- name: The Valley of Super Flowers
+  ids:
+  - steam:1257270

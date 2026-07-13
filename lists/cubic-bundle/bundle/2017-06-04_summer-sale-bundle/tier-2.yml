@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Sale Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5177/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5177/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5177/source.json
+games:
+- name: Jackal
+  ids:
+  - steam:3124230
+- name: Cavern Escape Extremely Hard game!!!
+  ids:
+  - steam:546400
+- name: Jumping Tank
+  ids:
+  - unresolved:source:isthereanydeal:5177:jumping-tank
+- name: Etaria | Survival Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5177:etaria-survival-adventure
+- name: Socxel | Pixel Soccer
+  ids:
+  - unresolved:source:isthereanydeal:5177:socxel-pixel-soccer
+- name: Chicken Assassin - Master of Humiliation
+  ids:
+  - unresolved:source:isthereanydeal:5177:chicken-assassin-master-of-humiliation
+- name: Call to 10
+  ids:
+  - unresolved:source:isthereanydeal:5177:call-to-10
+- name: Beerman
+  ids:
+  - steam:508950
+- name: Hoplite
+  ids:
+  - unresolved:source:isthereanydeal:5177:hoplite
+- name: Nuclear Contingency
+  ids:
+  - steam:540900
+- name: 'Unforgiving Trials: The Space Crusade'
+  ids:
+  - steam:535760
+- name: Bootombaa!!!
+  ids:
+  - unresolved:source:isthereanydeal:5177:bootombaa

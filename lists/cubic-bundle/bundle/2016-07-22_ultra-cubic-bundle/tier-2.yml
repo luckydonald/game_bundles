@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ultra Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3784/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3784/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3784/source.json
+games:
+- name: Flix The Flea
+  ids:
+  - steam:371390
+- name: Bard to the Future
+  ids:
+  - unresolved:source:isthereanydeal:3784:bard-to-the-future
+- name: 'Avencast: Rise of the Mage'
+  ids:
+  - steam:46410
+- name: Victim of Xen
+  ids:
+  - steam:300220
+- name: The Big Elk
+  ids:
+  - unresolved:source:isthereanydeal:3784:the-big-elk
+- name: 35MM
+  ids:
+  - steam:466500
+- name: The Magical Silence
+  ids:
+  - unresolved:source:isthereanydeal:3784:the-magical-silence
+- name: The Last Error
+  ids:
+  - unresolved:source:isthereanydeal:3784:the-last-error
+- name: Nihilumbra
+  ids:
+  - steam:252670

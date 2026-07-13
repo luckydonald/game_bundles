@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Fight to Survive Bundle — 3+ games 3.00 each, 5+ games 2.80 each,
+  7+ games 2.60 each
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15807/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15807/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15807/source.json
+games:
+- name: Dishonored - Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:15807:dishonored-definitive-edition
+- name: The Evil Within
+  ids:
+  - steam:268050
+- name: Dishonored 2
+  ids:
+  - steam:403640
+- name: The Evil Within 2
+  ids:
+  - steam:601430
+- name: Blazing Sails
+  ids:
+  - steam:1158940
+- name: Berserk Boy
+  ids:
+  - steam:1561340
+- name: Tails of Iron
+  ids:
+  - steam:1283410
+- name: Withering Rooms
+  ids:
+  - steam:2006140
+- name: Death Relives
+  ids:
+  - steam:1987400
+- name: Rotten Flesh - Cosmic Horror Survival Game
+  ids:
+  - steam:2657600
+- name: 'Cthulhu''s Reach: Devil Reef'
+  ids:
+  - steam:2412200
+- name: NO-SKIN
+  ids:
+  - steam:3011030
+- name: 'Backrooms: Partygoers'
+  ids:
+  - steam:2792450
+- name: Luck & Loot
+  ids:
+  - steam:3208110
+- name: NEDRA
+  ids:
+  - steam:3357380
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
+- name: Crypt Keeper
+  ids:
+  - steam:3514820
+- name: 'P1: Anchor Light'
+  ids:
+  - steam:3842700

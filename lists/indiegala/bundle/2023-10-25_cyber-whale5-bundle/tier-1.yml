@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyber Whale 5 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13566/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13566/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13566/source.json
+games:
+- name: 'Euphoria: Supreme Mechanics'
+  ids:
+  - steam:1283500
+- name: 'Firelight Fantasy: Phoenix Crew'
+  ids:
+  - steam:1595000
+- name: 'Firelight Fantasy: Vengeance'
+  ids:
+  - steam:1668780
+- name: Synthwave Burnout
+  ids:
+  - steam:1693040
+- name: NeuraGun
+  ids:
+  - steam:1842480
+- name: NeverSynth
+  ids:
+  - steam:2131200

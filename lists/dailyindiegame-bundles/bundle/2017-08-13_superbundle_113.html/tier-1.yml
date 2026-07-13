@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 113 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5390/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5390/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5390/source.json
+games:
+- name: Vickinachi
+  ids:
+  - steam:652550
+- name: OHOTA KREPKOE
+  ids:
+  - unresolved:source:isthereanydeal:5390:ohota-krepkoe
+- name: Defence to death
+  ids:
+  - steam:603150
+- name: Chamber 19
+  ids:
+  - steam:477170
+- name: Copter and Sky
+  ids:
+  - steam:499610
+- name: Pixel Sketch
+  ids:
+  - steam:648120

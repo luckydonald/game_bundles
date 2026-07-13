@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Nostalgia Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1434/source.json
+games:
+- name: 'Jack Orlando: Directors Cut'
+  ids:
+  - steam:253960
+- name: Square Heroes
+  ids:
+  - steam:334560
+- name: GEARCRACK Arena
+  ids:
+  - unresolved:source:isthereanydeal:1434:gearcrack-arena

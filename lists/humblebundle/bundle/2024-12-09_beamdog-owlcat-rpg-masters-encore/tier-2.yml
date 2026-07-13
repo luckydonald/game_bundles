@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Beamdog & Owlcat: RPG Masters Bundle Encore — entire-11-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14701/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14701/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14701/source.json
+games:
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300
+- name: 'Pathfinder: Kingmaker - Season Pass'
+  ids:
+  - unresolved:source:isthereanydeal:14701:pathfinder-kingmaker-season-pass
+- name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
+  ids:
+  - steam:640820
+- name: 'Pathfinder: Wrath of the Righteous - Season Pass'
+  ids:
+  - steam:1694801
+- name: 'Neverwinter Nights: Complete Adventures'
+  ids:
+  - unresolved:source:isthereanydeal:14701:neverwinter-nights-complete-adventures
+- name: 'Baldur''s Gate: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14701:baldurs-gate-deluxe-edition
+- name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
+  ids:
+  - steam:1184370
+- name: 'Pathfinder: Wrath of the Righteous - Season Pass 2'
+  ids:
+  - steam:2145870
+- name: 'Warhammer 40,000: Rogue Trader'
+  ids:
+  - steam:2186680

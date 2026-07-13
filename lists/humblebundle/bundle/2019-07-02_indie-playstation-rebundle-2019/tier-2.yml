@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Indie Playstation ReBundle 2019 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7597/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7597/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7597/source.json
+games:
+- name: InnerSpace
+  ids:
+  - steam:347000
+- name: The Bard's Tale - Remastered and Resnarkled
+  ids:
+  - unresolved:source:isthereanydeal:7597:the-bards-tale-remastered-and-resnarkled
+- name: Grim Fandango Remastered
+  ids:
+  - steam:316790
+- name: Grim Fandango Remastered - Soundtrack
+  ids:
+  - steam:368190
+- name: InnerSpace - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:7597:innerspace-soundtrack
+- name: Layers of Fear - Soundtrack
+  ids:
+  - steam:2402240
+- name: 'Wasteland 2: Director''s Cut'
+  ids:
+  - steam:240760
+- name: Layers of Fear
+  ids:
+  - steam:1946700
+- name: The Talos Principle
+  ids:
+  - steam:257510
+- name: Broken Age - Soundtrack
+  ids:
+  - steam:271950
+- name: Broken Age
+  ids:
+  - steam:232790

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Red Goblin: Cursed Forest - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1511/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1511/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1511/source.json
+games:
+- name: 'Red Goblin: Cursed Forest'
+  ids:
+  - unresolved:source:isthereanydeal:1511:red-goblin-cursed-forest

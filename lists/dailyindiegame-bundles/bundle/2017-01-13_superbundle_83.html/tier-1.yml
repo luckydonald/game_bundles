@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 83 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4623/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4623/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4623/source.json
+games:
+- name: BitMaster
+  ids:
+  - steam:514660
+- name: Dungeon Journey
+  ids:
+  - steam:485490
+- name: Alien Attack In Space
+  ids:
+  - steam:391310
+- name: Envoy
+  ids:
+  - steam:2561200
+- name: The Land of Dasthir
+  ids:
+  - steam:545700
+- name: Hiiro
+  ids:
+  - steam:464960

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: With Soulslike These...You Need Enemies Bundle — 3 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13795/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13795/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13795/source.json
+games:
+- name: Hellpoint
+  ids:
+  - steam:628670
+- name: Arboria
+  ids:
+  - steam:924070
+- name: Tails of Iron
+  ids:
+  - steam:1283410

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Casual Bundle #10 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4740/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4740/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4740/source.json
+games:
+- name: 'Revenge of the Spirit: Rite of Resurrection'
+  ids:
+  - steam:491020
+- name: Socxel | Pixel Soccer
+  ids:
+  - unresolved:source:isthereanydeal:4740:socxel-pixel-soccer
+- name: Puzzle Cube
+  ids:
+  - steam:539460
+- name: Square n Fair
+  ids:
+  - steam:575680
+- name: MARS SIMULATOR - RED PLANET
+  ids:
+  - steam:587330
+- name: Beerman
+  ids:
+  - steam:508950
+- name: MontaSayer
+  ids:
+  - unresolved:source:isthereanydeal:4740:montasayer

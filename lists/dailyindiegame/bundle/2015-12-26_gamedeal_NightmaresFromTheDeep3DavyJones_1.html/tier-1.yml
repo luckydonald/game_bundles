@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Nightmares From The Deep 3: Davy Jones - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2886/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2886/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2886/source.json
+games:
+- name: 'Nightmares from the Deep 3: Davy Jones'
+  ids:
+  - unresolved:source:isthereanydeal:2886:nightmares-from-the-deep-3-davy-jones

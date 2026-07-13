@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3519/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3519/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3519/source.json
+games:
+- name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
+  ids:
+  - steam:342630
+- name: Hidden Object 6-in-1 bundle
+  ids:
+  - steam:448400
+- name: Millionaire Manor
+  ids:
+  - steam:299180
+- name: Mirror Mysteries
+  ids:
+  - steam:291630
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:3519:namariel-legends-the-iron-lord-premium-edition
+- name: Theatre of the Absurd
+  ids:
+  - steam:299110
+- name: 'Dark Lore Mysteries: Hunt For the Truth'
+  ids:
+  - unresolved:source:isthereanydeal:3519:dark-lore-mysteries-hunt-for-the-truth
+- name: 'Princess Isabella: Return of the Curse'
+  ids:
+  - steam:292670
+- name: 'Voodoo Whisperer: Curse of a Legend'
+  ids:
+  - steam:288830
+- name: Mirror Mysteries 2
+  ids:
+  - steam:291640
+- name: Fall of the New Age Premium Edition
+  ids:
+  - steam:314510

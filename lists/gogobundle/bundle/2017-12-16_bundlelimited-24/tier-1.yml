@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #24 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5734/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5734/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5734/source.json
+games:
+- name: Retro Dungeons
+  ids:
+  - steam:3134120
+- name: 8bit Invasion
+  ids:
+  - unresolved:source:isthereanydeal:5734:8bit-invasion
+- name: CortexGear:AngryDroids
+  ids:
+  - steam:375620
+- name: Douche bag
+  ids:
+  - unresolved:source:isthereanydeal:5734:douche-bag
+- name: Business-hooiznes
+  ids:
+  - steam:683220
+- name: Magic and Challenge RPG
+  ids:
+  - unresolved:source:isthereanydeal:5734:magic-and-challenge-rpg
+- name: O! STRELALKA!!!
+  ids:
+  - unresolved:source:isthereanydeal:5734:o-strelalka
+- name: Kamikaze Cube
+  ids:
+  - steam:708430
+- name: C2H60
+  ids:
+  - unresolved:source:isthereanydeal:5734:c2h60
+- name: German fortress 3D
+  ids:
+  - steam:664350

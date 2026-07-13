@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble CI Games 2020 Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9191/source.json
+games:
+- name: "Art of Murder \x96 Cards of Destiny"
+  ids:
+  - steam:836770
+- name: Chronicles of Mystery The Tree of Life
+  ids:
+  - steam:837090
+- name: Dogfight 1942
+  ids:
+  - steam:217790
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+- name: 'Chronicles of Mystery: The Scorpio Ritual'
+  ids:
+  - steam:34800
+- name: Sniper Ghost Warrior 3
+  ids:
+  - steam:368070
+- name: Sniper Ghost Warrior 3 - All-terrain vehicle
+  ids:
+  - steam:575290
+- name: Sniper Ghost Warrior 3 - Sniper Rifle McMillan TAC-338A
+  ids:
+  - steam:575291
+- name: Lords of the Fallen™ (2014) Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:9191:lords-of-the-fallen-2014-game-of-the-year-edition

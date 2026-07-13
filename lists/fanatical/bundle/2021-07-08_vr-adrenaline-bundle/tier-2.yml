@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: VR Adrenaline Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10236/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10236/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10236/source.json
+games:
+- name: Battlewake
+  ids:
+  - steam:814400
+- name: Sprint Vector
+  ids:
+  - steam:590690
+- name: Raw Data
+  ids:
+  - steam:436320
+- name: Electronauts - VR Music
+  ids:
+  - steam:691160
+- name: 'Creed: Rise to Glory™'
+  ids:
+  - steam:804490

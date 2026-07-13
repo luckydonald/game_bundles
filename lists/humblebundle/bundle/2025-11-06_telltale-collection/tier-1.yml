@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Best of Humble Bundle: The Telltale Collection Bundle — entire-9-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15581/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15581/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15581/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+- name: Tales of Monkey Island Complete Season
+  ids:
+  - steam:31170
+- name: 'Batman: The Enemy Within - The Telltale Series'
+  ids:
+  - steam:675260
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+- name: The Wolf Among Us
+  ids:
+  - steam:250320
+- name: Batman - The Telltale Series
+  ids:
+  - steam:498240
+- name: Batman - The Telltale Series Shadows Mode
+  ids:
+  - steam:1182000
+- name: Batman - The Enemy Within Shadows Mode
+  ids:
+  - steam:1181990
+- name: The Expanse - A Telltale Series
+  ids:
+  - steam:1708010

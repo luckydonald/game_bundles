@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pandemic Evolved Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9873/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9873/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9873/source.json
+games:
+- name: 'Plague Inc: Evolved'
+  ids:
+  - steam:246620
+- name: Shadowgrounds Survivor
+  ids:
+  - steam:11200
+- name: Shadowgrounds
+  ids:
+  - steam:2500
+- name: Vaccine Delivery Simulator
+  ids:
+  - steam:1540130
+- name: 'Hentai vs Virus: I Am Waifu'
+  ids:
+  - steam:1270930

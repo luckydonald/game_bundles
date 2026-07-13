@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Adventure Mega Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1836/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1836/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1836/source.json
+games:
+- name: 'The Journey Down: Chapter One'
+  ids:
+  - steam:220090
+- name: 'Runaway: Dream of the Turtle'
+  ids:
+  - unresolved:source:isthereanydeal:1836:runaway-dream-of-the-turtle
+- name: 'Mushroom Men: Truffle Trouble'
+  ids:
+  - steam:222180
+- name: Runaway A Twist Of Fate
+  ids:
+  - steam:58560
+- name: About Love, Hate and the other ones
+  ids:
+  - steam:277680
+- name: 'The Journey Down: Chapter Two'
+  ids:
+  - steam:262850
+- name: 'The Last Tinker™: City of Colors'
+  ids:
+  - steam:260160
+- name: War, the Game.
+  ids:
+  - steam:322900
+- name: 'Runaway: A Road Adventure'
+  ids:
+  - steam:7210
+- name: Venetica
+  ids:
+  - steam:338140
+- name: Eidolon
+  ids:
+  - steam:286140

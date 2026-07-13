@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 343 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9572/source.json
+games:
+- name: Space Trade Fleet 1.5
+  ids:
+  - steam:1060110
+- name: Mad Cat's World
+  ids:
+  - steam:954860
+- name: The Mystery Of Woolley Mountain
+  ids:
+  - steam:521560
+- name: Starboost EX
+  ids:
+  - steam:917990
+- name: 'Codename: Ghost Hunt'
+  ids:
+  - steam:844030
+- name: Die In The Dark
+  ids:
+  - steam:847860
+- name: After The Suns
+  ids:
+  - steam:1101200
+- name: Contract Killers
+  ids:
+  - steam:1176360
+- name: TWELVE CONTAINERS
+  ids:
+  - steam:1288600

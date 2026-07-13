@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Indie RPG Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/313/source.json
+games:
+- name: Unemployment Quest
+  ids:
+  - unresolved:source:isthereanydeal:313:unemployment-quest
+- name: Inaria
+  ids:
+  - unresolved:source:isthereanydeal:313:inaria
+- name: 'Empires & Dungeons 2: The Sultanate'
+  ids:
+  - unresolved:source:isthereanydeal:313:empires-and-dungeons-2-the-sultanate
+- name: Styrateg
+  ids:
+  - unresolved:source:isthereanydeal:313:styrateg
+- name: 'Frayed Knights: The Skull of S''makh-Daon'
+  ids:
+  - steam:314120
+- name: 'Gamebook Adventures 2: Siege of the Necromancer'
+  ids:
+  - unresolved:source:isthereanydeal:313:gamebook-adventures-2-siege-of-the-necromancer
+- name: Dungeon Fray
+  ids:
+  - unresolved:source:isthereanydeal:313:dungeon-fray
+- name: Hack, Slash, Loot
+  ids:
+  - steam:207430

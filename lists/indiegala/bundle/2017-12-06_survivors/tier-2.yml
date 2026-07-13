@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Indie Survivors Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5691/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5691/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5691/source.json
+games:
+- name: SQR
+  ids:
+  - steam:3433200
+- name: Olson's Boxing Challenge
+  ids:
+  - steam:747790
+- name: Space Lagat
+  ids:
+  - unresolved:source:isthereanydeal:5691:space-lagat
+- name: Happy Neighbors
+  ids:
+  - steam:729980
+- name: Torn Tales
+  ids:
+  - steam:388960
+- name: 'Infectonator : Survivors'
+  ids:
+  - steam:269310
+- name: Spark
+  ids:
+  - steam:601130
+- name: Magicat
+  ids:
+  - steam:656970
+- name: Infernales
+  ids:
+  - steam:705060
+- name: Speedball 2 HD
+  ids:
+  - steam:251690
+- name: All That Remains
+  ids:
+  - steam:749580

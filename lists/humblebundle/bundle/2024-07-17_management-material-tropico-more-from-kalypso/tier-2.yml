@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Management Material Tropico And More From Kalypso Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14244/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14244/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14244/source.json
+games:
+- name: 'Tropico 3: Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14244:tropico-3-gold-edition
+- name: Tropico 4 Collectors Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14244:tropico-4-collectors-bundle
+- name: 'Port Royale 3: Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14244:port-royale-3-gold-edition
+- name: Spacebase Startopia
+  ids:
+  - steam:840390
+- name: Tropico 5 - Complete Collection
+  ids:
+  - unresolved:source:isthereanydeal:14244:tropico-5-complete-collection
+- name: 'Port Royale 4: Extended Edition'
+  ids:
+  - steam:1024650

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Doodle Heroes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5946/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5946/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5946/source.json
+games:
+- name: 'Doodle God: Alchemy Jam'
+  ids:
+  - steam:759750
+- name: Find this!
+  ids:
+  - unresolved:source:isthereanydeal:5946:find-this
+- name: Bloody Mice
+  ids:
+  - steam:676000

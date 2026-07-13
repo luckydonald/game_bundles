@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Mighty Monday GameBundle 2 — Beat The Average + $0.20
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4345/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4345/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4345/source.json
+games:
+- name: Roogoo
+  ids:
+  - steam:38210
+- name: Castle Chaos
+  ids:
+  - steam:412410
+- name: Stronghold 3 Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:4345:stronghold-3-gold-edition
+- name: House of Snark 6-in-1 Bundle
+  ids:
+  - steam:486810
+- name: Robin's Island Adventure
+  ids:
+  - steam:323260
+- name: Fleeting Ages
+  ids:
+  - steam:373880
+- name: Hidden Object Bundle 5 in 1
+  ids:
+  - steam:346140
+- name: Hexus
+  ids:
+  - steam:323250

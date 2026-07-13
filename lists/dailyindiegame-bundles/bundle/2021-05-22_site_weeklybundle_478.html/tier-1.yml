@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 478: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10039/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10039/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10039/source.json
+games:
+- name: Sweet fantasy
+  ids:
+  - steam:612110
+- name: Sniper Operation Z
+  ids:
+  - unresolved:source:isthereanydeal:10039:sniper-operation-z
+- name: Ero Tennis
+  ids:
+  - steam:1521770
+- name: Russian Anime
+  ids:
+  - unresolved:source:isthereanydeal:10039:russian-anime
+- name: Flirtatious
+  ids:
+  - steam:1565970
+- name: Russian Hentai 2
+  ids:
+  - unresolved:source:isthereanydeal:10039:russian-hentai-2
+- name: Sweety Little Witch
+  ids:
+  - unresolved:source:isthereanydeal:10039:sweety-little-witch
+- name: LineArt Jigsaw Puzzle - Erotica 5
+  ids:
+  - steam:1616190
+- name: LineArt Jigsaw Puzzle - Erotica 5 ArtBook
+  ids:
+  - steam:1644760

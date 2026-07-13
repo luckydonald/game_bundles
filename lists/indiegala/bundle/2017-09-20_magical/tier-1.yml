@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Magical Gates — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5486/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5486/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5486/source.json
+games:
+- name: Power Overwhelming
+  ids:
+  - unresolved:source:isthereanydeal:5486:power-overwhelming
+- name: Green Cat
+  ids:
+  - unresolved:source:isthereanydeal:5486:green-cat
+- name: ROAD OF DANGER
+  ids:
+  - unresolved:source:isthereanydeal:5486:road-of-danger
+- name: 'Magical Mysteries: Path of the Sorceress'
+  ids:
+  - steam:548320
+- name: Glowing Sokoban
+  ids:
+  - unresolved:source:isthereanydeal:5486:glowing-sokoban
+- name: Adventures of the Worm
+  ids:
+  - steam:681410
+- name: Torch Cave 3
+  ids:
+  - unresolved:source:isthereanydeal:5486:torch-cave-3
+- name: PaintPool
+  ids:
+  - unresolved:source:isthereanydeal:5486:paintpool
+- name: Vacant
+  ids:
+  - steam:696190
+- name: flChess
+  ids:
+  - unresolved:source:isthereanydeal:5486:flchess
+- name: Colorless Life
+  ids:
+  - steam:670430
+- name: HardBall
+  ids:
+  - unresolved:source:isthereanydeal:5486:hardball

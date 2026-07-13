@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Giana Sisters: Twisted Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7527/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7527/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7527/source.json
+games:
+- name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
+  ids:
+  - steam:246960
+- name: 'Giana Sisters: Twisted Dreams'
+  ids:
+  - steam:223220

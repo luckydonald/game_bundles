@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Capcom Bundle (BundleFest 2025) — Select 2 for 12.99, 3 for 18.99,
+  4 for 24.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14901/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14901/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14901/source.json
+games:
+- name: RESIDENT EVIL 7 biohazard
+  ids:
+  - steam:418370
+- name: 'Phoenix Wright: Ace Attorney Trilogy'
+  ids:
+  - steam:787480
+- name: 'Onimusha: Warlords / 鬼武者'
+  ids:
+  - steam:761600
+- name: Mega Man X Legacy Collection 2
+  ids:
+  - steam:743900
+- name: DMC - Devil May Cry
+  ids:
+  - steam:220440
+- name: Devil May Cry® 4 Special Edition
+  ids:
+  - steam:329050
+- name: Mega Man 11
+  ids:
+  - steam:742300
+- name: Capcom Beat 'Em Up Bundle
+  ids:
+  - steam:885150
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020
+- name: Mega Man X Legacy Collection
+  ids:
+  - steam:743890
+- name: Street Fighter 30th Anniversary Collection
+  ids:
+  - steam:586200
+- name: Dead Rising 4 Frank's Big Package
+  ids:
+  - unresolved:source:isthereanydeal:14901:dead-rising-4-franks-big-package
+- name: 'Marvel vs. Capcom: Infinite - Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14901:marvel-vs-capcom-infinite-deluxe-edition
+- name: Street Fighter V - Champion Edition
+  ids:
+  - unresolved:source:isthereanydeal:14901:street-fighter-v-champion-edition
+- name: The Great Ace Attorney Chronicles
+  ids:
+  - steam:1158850
+- name: Devil May Cry 5 + Vergil
+  ids:
+  - steam:601150
+- name: 'Ghost Trick: Phantom Detective'
+  ids:
+  - steam:1967430
+- name: RESIDENT EVIL 2 (2019)
+  ids:
+  - steam:883710
+- name: RESIDENT EVIL 3 (2020)
+  ids:
+  - steam:952060
+- name: Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14901:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
+- name: Resident Evil & Resident Evil 0 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14901:resident-evil-and-resident-evil-0-double-pack

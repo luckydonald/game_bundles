@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cthulhu Chaos Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13415/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13415/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13415/source.json
+games:
+- name: Cleaner
+  ids:
+  - unresolved:source:isthereanydeal:13415:cleaner
+- name: Palallel
+  ids:
+  - steam:1155300
+- name: Cthulhu pub
+  ids:
+  - steam:1609220
+- name: MerFight
+  ids:
+  - steam:1719690
+- name: We See You
+  ids:
+  - steam:1951660
+- name: Fear Of Mine 001 (Novel)
+  ids:
+  - steam:1929480

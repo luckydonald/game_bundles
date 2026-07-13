@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6031/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6031/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6031/source.json
+games:
+- name: Cat Interstellar
+  ids:
+  - steam:384740
+- name: 35MM
+  ids:
+  - steam:466500
+- name: Car Mechanic Simulator 2015
+  ids:
+  - steam:320300
+- name: Ara Fell
+  ids:
+  - unresolved:source:isthereanydeal:6031:ara-fell

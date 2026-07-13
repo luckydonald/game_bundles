@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Steampunk Bundle 5 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6507/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6507/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6507/source.json
+games:
+- name: Trainpunk Run
+  ids:
+  - unresolved:source:isthereanydeal:6507:trainpunk-run
+- name: DARCO - Reign of Elements
+  ids:
+  - unresolved:source:isthereanydeal:6507:darco-reign-of-elements
+- name: Steam Tactics
+  ids:
+  - steam:708950
+- name: Acaratus
+  ids:
+  - steam:376410
+- name: Steamroll
+  ids:
+  - steam:378810

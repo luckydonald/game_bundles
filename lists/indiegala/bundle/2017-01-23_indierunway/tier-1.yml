@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Runway Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4669/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4669/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4669/source.json
+games:
+- name: Mission Runway
+  ids:
+  - steam:12670
+- name: Freddi Fish and Luther's Water Worries
+  ids:
+  - steam:294580
+- name: Knights of the Sky
+  ids:
+  - steam:347270

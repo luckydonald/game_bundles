@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi PC & Mobile Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4099/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4099/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4099/source.json
+games:
+- name: 'Dark Heritage: Guardians of Hope'
+  ids:
+  - steam:394280
+- name: 'The Secret Order 2: Masked Intent'
+  ids:
+  - steam:399890
+- name: 'Vampire Legends: The True Story of Kisilova'
+  ids:
+  - steam:414660
+- name: 'Eventide: Slavic Fable'
+  ids:
+  - steam:406870
+- name: 'Grim Legends 2: Song of the Dark Swan'
+  ids:
+  - steam:279800
+- name: 'The Secret Order 3: Ancient Times'
+  ids:
+  - steam:437420
+- name: 'Grim Legends: The Forsaken Bride'
+  ids:
+  - steam:284850
+- name: 'Crime Secrets: Crimson Lily'
+  ids:
+  - steam:465170

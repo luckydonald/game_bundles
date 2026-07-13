@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Devious Deckbuilders 2 Bundle — ms
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15619/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15619/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15619/source.json
+games:
+- name: Ring of Pain
+  ids:
+  - steam:998740
+- name: Evolings
+  ids:
+  - steam:2281820
+- name: Roguebook
+  ids:
+  - steam:1076200
+- name: Heretic's Fork
+  ids:
+  - steam:2181610
+- name: 'Deepest Chamber: Resurrection'
+  ids:
+  - steam:1552080
+- name: Vault of the Void
+  ids:
+  - steam:1135810
+- name: Breach Wanderers
+  ids:
+  - steam:1394130

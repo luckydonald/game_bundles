@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sometimes, Tuesday - Strategic Impact  Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7285/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7285/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7285/source.json
+games:
+- name: 'Age of Castles: Warlords'
+  ids:
+  - steam:371710
+- name: Not So Middle Ages
+  ids:
+  - unresolved:source:isthereanydeal:7285:not-so-middle-ages
+- name: Hide and Secret Treasure of the Ages
+  ids:
+  - steam:489470
+- name: Chronicles of Vinland
+  ids:
+  - unresolved:source:isthereanydeal:7285:chronicles-of-vinland
+- name: 'Imperialism: Fate of India'
+  ids:
+  - unresolved:source:isthereanydeal:7285:imperialism-fate-of-india
+- name: 'Imperialism: The Dark Continent'
+  ids:
+  - unresolved:source:isthereanydeal:7285:imperialism-the-dark-continent
+- name: Nuclear Power Station Creator
+  ids:
+  - unresolved:source:isthereanydeal:7285:nuclear-power-station-creator

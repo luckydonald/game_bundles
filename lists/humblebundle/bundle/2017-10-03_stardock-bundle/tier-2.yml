@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Bundle — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5518/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5518/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5518/source.json
+games:
+- name: Fallen Enchantress
+  ids:
+  - unresolved:source:isthereanydeal:5518:fallen-enchantress
+- name: 'Sorcerer King: Rivals'
+  ids:
+  - steam:496730
+- name: The Corporate Machine
+  ids:
+  - steam:351080
+- name: The Political Machine 2016
+  ids:
+  - unresolved:source:isthereanydeal:5518:the-political-machine-2016
+- name: 'Sins of a Solar Empire: Rebellion'
+  ids:
+  - steam:204880
+- name: Fallen Enchantress Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:5518:fallen-enchantress-ultimate-edition
+- name: Galactic Civilizations III
+  ids:
+  - steam:226860

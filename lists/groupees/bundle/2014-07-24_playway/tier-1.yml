@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: PlayWay Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1024/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1024/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1024/source.json
+games:
+- name: Western Shooter
+  ids:
+  - unresolved:source:isthereanydeal:1024:western-shooter
+- name: Dino Speedboat
+  ids:
+  - unresolved:source:isthereanydeal:1024:dino-speedboat
+- name: Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:1024:sudoku
+- name: 'Police: Destruction Street'
+  ids:
+  - unresolved:source:isthereanydeal:1024:police-destruction-street
+- name: ELF - Crazy Adventures
+  ids:
+  - unresolved:source:isthereanydeal:1024:elf-crazy-adventures
+- name: Pinocchio
+  ids:
+  - unresolved:source:isthereanydeal:1024:pinocchio
+- name: Crazy Planes
+  ids:
+  - unresolved:source:isthereanydeal:1024:crazy-planes
+- name: "Sweet Home \x96 Pets"
+  ids:
+  - unresolved:source:isthereanydeal:1024:sweet-home-pets
+- name: Dino
+  ids:
+  - unresolved:source:isthereanydeal:1024:dino
+- name: Trucker
+  ids:
+  - steam:451660
+- name: Santa Claus
+  ids:
+  - unresolved:source:isthereanydeal:1024:santa-claus
+- name: Reindeer Adventure
+  ids:
+  - unresolved:source:isthereanydeal:1024:reindeer-adventure
+- name: Little Ghost
+  ids:
+  - unresolved:source:isthereanydeal:1024:little-ghost
+- name: ATV GP
+  ids:
+  - unresolved:source:isthereanydeal:1024:atv-gp
+- name: Aqua Fish
+  ids:
+  - steam:763090
+- name: Magic Solitaire
+  ids:
+  - unresolved:source:isthereanydeal:1024:magic-solitaire
+- name: Kroc And Roll
+  ids:
+  - unresolved:source:isthereanydeal:1024:kroc-and-roll
+- name: Mouse Boy
+  ids:
+  - unresolved:source:isthereanydeal:1024:mouse-boy

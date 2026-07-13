@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fighting Juggernauts Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10592/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10592/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10592/source.json
+games:
+- name: One Finger Death Punch 2
+  ids:
+  - steam:980300
+- name: Slap City
+  ids:
+  - steam:725480
+- name: Mortal Kombat XL
+  ids:
+  - unresolved:source:isthereanydeal:10592:mortal-kombat-xl
+- name: Killer Instinct
+  ids:
+  - steam:577940
+- name: Injustice 2 Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:10592:injustice-2-legendary-edition
+- name: 'Power Rangers: Battle for the Grid'
+  ids:
+  - steam:1110100
+- name: SOULCALIBUR VI
+  ids:
+  - steam:544750

@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Royal Bundle — Select 2 for 10.99, 3 for 14.99, 4 for 18.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14700/source.json
+games:
+- name: Saints Row
+  ids:
+  - steam:742420
+- name: 'Kingdom Come: Deliverance Royal Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14700:kingdom-come-deliverance-royal-edition
+- name: Undying
+  ids:
+  - steam:638990
+- name: Lords of Exile
+  ids:
+  - steam:1329360
+- name: 'Operation: Tango'
+  ids:
+  - steam:1335790
+- name: 'Destroyer: The U-Boat Hunter'
+  ids:
+  - steam:1272010
+- name: 'Batora: Lost Haven'
+  ids:
+  - steam:1506440
+- name: ABRISS - build to destroy
+  ids:
+  - steam:1671480
+- name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
+  ids:
+  - steam:1931020
+- name: Bravery and Greed
+  ids:
+  - steam:943370
+- name: Nova Lands
+  ids:
+  - steam:1501610
+- name: Affogato
+  ids:
+  - steam:1983970
+- name: 'Double Dragon Gaiden: Rise Of The Dragons'
+  ids:
+  - steam:1967260
+- name: Mahokenshi - The Samurai Deckbuilder
+  ids:
+  - steam:1717640

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Non-Halloween Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2654/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2654/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2654/source.json
+games:
+- name: Nandeyanen!? - The 1st Sūtra
+  ids:
+  - steam:386090
+- name: Alum
+  ids:
+  - steam:338420
+- name: Crayon Chronicles
+  ids:
+  - steam:341510
+- name: Nyctophobia
+  ids:
+  - steam:378100
+- name: Luna's Wandering Stars
+  ids:
+  - steam:330660
+- name: 'SBX: Invasion'
+  ids:
+  - steam:371620

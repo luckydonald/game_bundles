@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble UK Games Collective Bundle — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10151/source.json
+games:
+- name: Her Majesty's SPIFFING
+  ids:
+  - steam:488770
+- name: Master Reboot
+  ids:
+  - steam:251850
+- name: Lumino City
+  ids:
+  - steam:205020
+- name: 'The Ship: Murder Party'
+  ids:
+  - steam:2400
+- name: 'Warhammer 40,000: Sanctus Reach'
+  ids:
+  - unresolved:source:isthereanydeal:10151:warhammer-40000-sanctus-reach
+- name: Old School RuneScape 1-Month Membership
+  ids:
+  - steam:1474630

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble One Special Day Bundle — Pay $1 to Unlock
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6479/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6479/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6479/source.json
+games:
+- name: Crazy Taxi™
+  ids:
+  - unresolved:source:isthereanydeal:6479:crazy-taxi
+- name: 'OlliOlli2: Welcome to Olliwood'
+  ids:
+  - steam:365660
+- name: Streets of Rage
+  ids:
+  - unresolved:source:isthereanydeal:6479:streets-of-rage
+- name: Binary Domain Collection
+  ids:
+  - unresolved:source:isthereanydeal:6479:binary-domain-collection

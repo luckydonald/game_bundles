@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mega Pick & Mix Bundle 7 — Select 5 Titles for $1.49, 10 Titles for $2.49, 20
+  Titles for $3.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5500/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5500/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5500/source.json
+games:
+- name: Prisoner
+  ids:
+  - steam:653210
+- name: Showdown Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5500:showdown-adventure
+- name: PING 1.5+
+  ids:
+  - steam:363580
+- name: Beta Runner
+  ids:
+  - steam:656020
+- name: Deadly Traps
+  ids:
+  - steam:690080
+- name: Alpha Runner
+  ids:
+  - steam:387840
+- name: ANIMALITY
+  ids:
+  - steam:576470
+- name: 'Strategy & Tactics: Wargame Collection'
+  ids:
+  - steam:338130
+- name: The Haunting of Billy
+  ids:
+  - steam:445170
+- name: Western Press
+  ids:
+  - steam:377360
+- name: Tribal Pass
+  ids:
+  - steam:470270
+- name: Amaranthine
+  ids:
+  - steam:454900
+- name: Pixel Shooter
+  ids:
+  - steam:647280
+- name: Gelu
+  ids:
+  - steam:664610
+- name: The Away Team
+  ids:
+  - unresolved:source:isthereanydeal:5500:the-away-team
+- name: Cubway
+  ids:
+  - steam:511160
+- name: Card of spirits-卡灵
+  ids:
+  - unresolved:source:isthereanydeal:5500:card-of-spirits-ka-ling
+- name: idleBeer
+  ids:
+  - unresolved:source:isthereanydeal:5500:idlebeer
+- name: Lawnmower Game
+  ids:
+  - steam:658600
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+- name: Marble Duel
+  ids:
+  - steam:338120
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+- name: Alchemyland
+  ids:
+  - steam:610670
+- name: 'Survival driver 2: Heavy vehicles'
+  ids:
+  - steam:693190
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740

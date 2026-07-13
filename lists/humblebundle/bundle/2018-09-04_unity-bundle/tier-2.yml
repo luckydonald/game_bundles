@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Unity Bundle — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6435/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6435/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6435/source.json
+games:
+- name: Oxenfree
+  ids:
+  - steam:388880
+- name: AER Memories of Old
+  ids:
+  - steam:331870
+- name: 'Wasteland 2: Director''s Cut'
+  ids:
+  - steam:240760
+- name: The Final Station
+  ids:
+  - steam:435530
+- name: Last Day of June
+  ids:
+  - steam:635320

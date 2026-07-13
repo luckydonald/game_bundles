@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XVIII Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5773/source.json
+games:
+- name: Miniature TD - VR
+  ids:
+  - steam:679670
+- name: Quizality
+  ids:
+  - steam:566350
+- name: The Slopes
+  ids:
+  - steam:620790

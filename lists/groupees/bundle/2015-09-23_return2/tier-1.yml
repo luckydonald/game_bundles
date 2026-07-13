@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Return Returns Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2497/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2497/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2497/source.json
+games:
+- name: Crystal Picnic
+  ids:
+  - unresolved:source:isthereanydeal:2497:crystal-picnic
+- name: Job the Leprechaun
+  ids:
+  - steam:386420
+- name: 'Challenge of the Five Realms: Spellbound in the World of Nhagardia'
+  ids:
+  - steam:347240
+- name: Ninja Trek
+  ids:
+  - unresolved:source:isthereanydeal:2497:ninja-trek
+- name: F-19 Stealth Fighter
+  ids:
+  - steam:347250
+- name: Fitz the Fox
+  ids:
+  - steam:372830
+- name: Test Chamber
+  ids:
+  - unresolved:source:isthereanydeal:2497:test-chamber

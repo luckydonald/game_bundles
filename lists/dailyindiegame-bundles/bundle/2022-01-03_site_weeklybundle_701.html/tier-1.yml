@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 701 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10927/source.json
+games:
+- name: Downhill
+  ids:
+  - unresolved:source:isthereanydeal:10927:downhill
+- name: The Fall of Eskaria
+  ids:
+  - steam:1339530
+- name: SIDE
+  ids:
+  - steam:1440680
+- name: Sphere Game Epic
+  ids:
+  - steam:1843750
+- name: LawnMower City
+  ids:
+  - steam:1831930
+- name: ILLUMI-NAUGHTY ;) - Remastered
+  ids:
+  - steam:1835220
+- name: The rise of Tianling Sect
+  ids:
+  - steam:1791410
+- name: PineconeGame
+  ids:
+  - unresolved:source:isthereanydeal:10927:pineconegame
+- name: Golden Mine Pickaxe
+  ids:
+  - steam:1857070

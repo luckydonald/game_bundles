@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1060/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1060/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1060/source.json
+games:
+- name: Project Night
+  ids:
+  - unresolved:source:isthereanydeal:1060:project-night
+- name: Space Slice
+  ids:
+  - unresolved:source:isthereanydeal:1060:space-slice
+- name: 'Revenge: Rhobar''s myth'
+  ids:
+  - steam:324270
+- name: 500 Years Act 1
+  ids:
+  - steam:357200
+- name: Onager
+  ids:
+  - steam:705440
+- name: Little Trus Man
+  ids:
+  - unresolved:source:isthereanydeal:1060:little-trus-man

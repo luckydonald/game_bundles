@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Tax Year Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3258/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3258/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3258/source.json
+games:
+- name: 'Kimulator : Fight for your destiny'
+  ids:
+  - unresolved:source:isthereanydeal:3258:kimulator-fight-for-your-destiny
+- name: New York Taxi Simulator
+  ids:
+  - steam:446470
+- name: Death block puzzle
+  ids:
+  - unresolved:source:isthereanydeal:3258:death-block-puzzle
+- name: 'Watch Paint Dry: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:3258:watch-paint-dry-the-game
+- name: Bundle Clicker
+  ids:
+  - unresolved:source:isthereanydeal:3258:bundle-clicker
+- name: 'Flatout 3: Chaos & Destruction'
+  ids:
+  - steam:201510
+- name: MoonWalkingDead
+  ids:
+  - unresolved:source:isthereanydeal:3258:moonwalkingdead
+- name: Elves Adventure
+  ids:
+  - steam:504980
+- name: 'Bad Rats: the Rat''s Revenge'
+  ids:
+  - steam:34900

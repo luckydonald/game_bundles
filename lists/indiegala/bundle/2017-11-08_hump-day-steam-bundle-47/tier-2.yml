@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #47 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5606/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5606/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5606/source.json
+games:
+- name: 'Case #9'
+  ids:
+  - unresolved:source:isthereanydeal:5606:case-9
+- name: House of Velez - part 1
+  ids:
+  - steam:724010
+- name: 'Dungeons Of Kremlin: Remastered'
+  ids:
+  - unresolved:source:isthereanydeal:5606:dungeons-of-kremlin-remastered
+- name: Neighboring Islands
+  ids:
+  - steam:588710
+- name: Freedom Defender
+  ids:
+  - steam:686570
+- name: Depths of Limbo
+  ids:
+  - steam:568400
+- name: Sandra and Woo in the Cursed Adventure
+  ids:
+  - steam:619350
+- name: Mimpi Dreams
+  ids:
+  - steam:444770
+- name: Strain Tactics
+  ids:
+  - steam:621810
+- name: Rencounter
+  ids:
+  - steam:431810

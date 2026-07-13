@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Rhapsody Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6198/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6198/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6198/source.json
+games:
+- name: What is love?
+  ids:
+  - steam:1653180
+- name: Border of her Heart - HD
+  ids:
+  - steam:812750
+- name: One Night Stand
+  ids:
+  - steam:549860
+- name: Border of her Heart
+  ids:
+  - steam:795680
+- name: Yozora Rhapsody
+  ids:
+  - steam:569210
+- name: Wild Romance
+  ids:
+  - steam:493450
+- name: Four Horsemen
+  ids:
+  - steam:668200
+- name: 'School of Talent: SUZU-ROUTE'
+  ids:
+  - steam:573040
+- name: A Hand in the Darkness
+  ids:
+  - unresolved:source:isthereanydeal:6198:a-hand-in-the-darkness
+- name: One day in London
+  ids:
+  - steam:465180
+- name: Yandere School
+  ids:
+  - steam:687750
+- name: Pawn
+  ids:
+  - steam:557770

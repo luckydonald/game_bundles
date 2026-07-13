@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Indie Cubic Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5700/source.json
+games:
+- name: The Lady
+  ids:
+  - steam:341060
+- name: Chicken Invaders 4
+  ids:
+  - steam:301300
+- name: Stay Dead Evolution
+  ids:
+  - steam:341070
+- name: Mechanic Escape
+  ids:
+  - steam:268240
+- name: Galactic Inheritors
+  ids:
+  - steam:322540
+- name: Yrminsul
+  ids:
+  - steam:412490
+- name: Project Temporality
+  ids:
+  - steam:290320
+- name: Navpoint
+  ids:
+  - steam:297080
+- name: PolyRace
+  ids:
+  - unresolved:source:isthereanydeal:5700:polyrace

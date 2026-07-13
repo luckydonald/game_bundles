@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Indie Ordinary Gamer Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/441/source.json
+games:
+- name: Star Saviors
+  ids:
+  - steam:314450
+- name: 'Cognition Episode 1: The Hangman'
+  ids:
+  - unresolved:source:isthereanydeal:441:cognition-episode-1-the-hangman
+- name: 'Slender: The Five Pages'
+  ids:
+  - unresolved:source:isthereanydeal:441:slender-the-five-pages
+- name: QbQbQb
+  ids:
+  - steam:329320
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+- name: 'Cognition Episode 2: The Wise Monkey'
+  ids:
+  - unresolved:source:isthereanydeal:441:cognition-episode-2-the-wise-monkey
+- name: Along Came A Spider
+  ids:
+  - unresolved:source:isthereanydeal:441:along-came-a-spider
+- name: Isaac the Adventurer
+  ids:
+  - steam:341260
+- name: Hairy Tales
+  ids:
+  - unresolved:source:isthereanydeal:441:hairy-tales
+- name: Rooks Keep
+  ids:
+  - steam:299440
+- name: The Grave Digger
+  ids:
+  - steam:345340

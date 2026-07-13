@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mashup Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/215/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/215/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/215/source.json
+games:
+- name: StarDrone
+  ids:
+  - unresolved:source:isthereanydeal:215:stardrone
+- name: "JAZZ : Trumpâ\x80\x99s Journey"
+  ids:
+  - unresolved:source:isthereanydeal:215:jazz-trumpas-journey

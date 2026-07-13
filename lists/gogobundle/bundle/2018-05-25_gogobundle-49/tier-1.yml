@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #49 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6178/source.json
+games:
+- name: 'Changeover: Decisions'
+  ids:
+  - steam:788480
+- name: 'Linea, the Game: Broken Chiptunes'
+  ids:
+  - steam:453330
+- name: 'Carnage in Space: Ignition'
+  ids:
+  - steam:748650
+- name: Intralism
+  ids:
+  - steam:513510
+- name: Adrenaline adventure
+  ids:
+  - unresolved:source:isthereanydeal:6178:adrenaline-adventure
+- name: The Admin
+  ids:
+  - steam:420300
+- name: SUPER ROBO MOUSE
+  ids:
+  - unresolved:source:isthereanydeal:6178:super-robo-mouse
+- name: Mad Digger
+  ids:
+  - steam:584100
+- name: Milky Way Map
+  ids:
+  - steam:806020
+- name: Linea, the Game
+  ids:
+  - steam:428900
+- name: 'Changeover: Decisions - Original Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:6178:changeover-decisions-original-soundtrack

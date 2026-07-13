@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 19 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7305/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7305/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7305/source.json
+games:
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+- name: STOORM
+  ids:
+  - unresolved:source:isthereanydeal:7305:stoorm
+- name: You Deserve
+  ids:
+  - steam:502240
+- name: Nightmare Trails
+  ids:
+  - unresolved:source:isthereanydeal:7305:nightmare-trails
+- name: Galactic Fighters
+  ids:
+  - steam:513960
+- name: Bubble Rush
+  ids:
+  - steam:717910
+- name: VR Shooter Guns
+  ids:
+  - steam:489160
+- name: Master Pyrox Wizard Smackdown
+  ids:
+  - steam:861960
+- name: VR Fun World
+  ids:
+  - steam:535750

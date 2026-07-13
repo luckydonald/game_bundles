@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Indie Cubic Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5437/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5437/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5437/source.json
+games:
+- name: LOG the game!
+  ids:
+  - unresolved:source:isthereanydeal:5437:log-the-game
+- name: Power of Love
+  ids:
+  - steam:368710
+- name: FreeFly Burning
+  ids:
+  - steam:683530

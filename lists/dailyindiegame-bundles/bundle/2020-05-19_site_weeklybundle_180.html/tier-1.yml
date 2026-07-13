@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 180 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8805/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8805/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8805/source.json
+games:
+- name: The Mystery Of Woolley Mountain
+  ids:
+  - steam:521560
+- name: 'Demon King Domination: Deluxe Edition'
+  ids:
+  - steam:921530
+- name: 'ESCAPE: MOUSE GUN'
+  ids:
+  - unresolved:source:isthereanydeal:8805:escape-mouse-gun
+- name: Laservasion
+  ids:
+  - steam:1133310
+- name: 'Elf Enchanter: Arousing Anima'
+  ids:
+  - steam:1031170
+- name: 'Magebuster: Amorous Augury'
+  ids:
+  - steam:956600
+- name: Steamy Sextet
+  ids:
+  - steam:1154110
+- name: 'HellScape: Two Brothers'
+  ids:
+  - steam:1218090
+- name: Boston AInamics
+  ids:
+  - steam:1306210
+- name: Get Over Blood
+  ids:
+  - steam:1306160

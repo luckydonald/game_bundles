@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fall XP Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10525/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10525/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10525/source.json
+games:
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: Out of Reach
+  ids:
+  - steam:327090
+- name: STASIS
+  ids:
+  - steam:380150
+- name: Strike Buster Prototype
+  ids:
+  - unresolved:source:isthereanydeal:10525:strike-buster-prototype

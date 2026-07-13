@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Sep 2017) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5389/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5389/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5389/source.json
+games:
+- name: Stories Untold
+  ids:
+  - steam:558420
+- name: Worms W.M.D
+  ids:
+  - steam:327030
+- name: 'Momodora: Reverie Under the Moonlight'
+  ids:
+  - steam:428550
+- name: Eterium
+  ids:
+  - unresolved:source:isthereanydeal:5389:eterium
+- name: 'Volantia: Kingdom in the Sky'
+  ids:
+  - unresolved:source:isthereanydeal:5389:volantia-kingdom-in-the-sky
+- name: Killing Floor 2
+  ids:
+  - steam:232090
+- name: HackyZack
+  ids:
+  - steam:508530
+- name: The Banner Saga 2
+  ids:
+  - steam:281640

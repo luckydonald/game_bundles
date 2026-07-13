@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 396: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9779/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9779/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9779/source.json
+games:
+- name: Mermaid Land
+  ids:
+  - unresolved:source:isthereanydeal:9779:mermaid-land
+- name: BomberZone
+  ids:
+  - steam:473140
+- name: Super Commander XL
+  ids:
+  - steam:939240
+- name: Bouncers
+  ids:
+  - steam:2517800
+- name: Slippingcers
+  ids:
+  - unresolved:source:isthereanydeal:9779:slippingcers
+- name: Peas Adventure
+  ids:
+  - steam:1062120
+- name: My Haunted Doll
+  ids:
+  - steam:1181470
+- name: Proxy Air Force
+  ids:
+  - steam:1303000
+- name: Power Tester
+  ids:
+  - steam:1350390

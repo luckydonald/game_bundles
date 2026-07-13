@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Untamed Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8879/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8879/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8879/source.json
+games:
+- name: The Way
+  ids:
+  - steam:311010
+- name: 'Space Rangers HD: A War Apart'
+  ids:
+  - steam:214730
+- name: Figment
+  ids:
+  - steam:493540
+- name: 'The Coma: Recut Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8879:the-coma-recut-deluxe-edition
+- name: Killing Room
+  ids:
+  - steam:407560
+- name: Bunker Punks
+  ids:
+  - steam:446120
+- name: Savage Lands
+  ids:
+  - steam:307880
+- name: Toki
+  ids:
+  - steam:1058320
+- name: Through the Woods
+  ids:
+  - steam:368430
+- name: Windward
+  ids:
+  - steam:326410

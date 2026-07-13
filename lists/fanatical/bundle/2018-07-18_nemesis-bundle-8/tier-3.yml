@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 8 — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6313/source.json
+games:
+- name: Black & White Bushido
+  ids:
+  - unresolved:source:isthereanydeal:6313:black-and-white-bushido
+- name: Awe
+  ids:
+  - steam:371450
+- name: A.R.E.S. Extinction Agenda EX
+  ids:
+  - steam:315340
+- name: Super Mutant Alien Assault
+  ids:
+  - steam:368680
+- name: Original Journey
+  ids:
+  - steam:639470
+- name: Nightmare Boy
+  ids:
+  - steam:597860
+- name: FIM Speedway Grand Prix 4
+  ids:
+  - unresolved:source:isthereanydeal:6313:fim-speedway-grand-prix-4
+- name: Dungeon Souls
+  ids:
+  - steam:383230
+- name: 'True Fear: Forsaken Souls'
+  ids:
+  - steam:440420
+- name: Windward
+  ids:
+  - steam:326410
+- name: Deployment
+  ids:
+  - steam:755980
+- name: DreadOut Soundtrack & Manga
+  ids:
+  - steam:298680
+- name: DreadOut
+  ids:
+  - steam:269790
+- name: 'DreadOut: Keepers of The Dark'
+  ids:
+  - steam:418950

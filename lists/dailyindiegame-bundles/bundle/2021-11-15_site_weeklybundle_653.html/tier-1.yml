@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 653 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10695/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10695/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10695/source.json
+games:
+- name: 'Mermaid Adventures: The Magic Pearl'
+  ids:
+  - steam:1486520
+- name: final m00n - Defender of Cubes
+  ids:
+  - unresolved:source:isthereanydeal:10695:final-m00n-defender-of-cubes
+- name: Telekinetic
+  ids:
+  - steam:992000
+- name: Sideral
+  ids:
+  - steam:1095070
+- name: lil' Sherman
+  ids:
+  - steam:1210620
+- name: Sunrise7
+  ids:
+  - unresolved:source:isthereanydeal:10695:sunrise7
+- name: EyeRoll
+  ids:
+  - unresolved:source:isthereanydeal:10695:eyeroll
+- name: Joe and the Gun
+  ids:
+  - steam:1560130
+- name: 'Cyber Hunter: Awakening'
+  ids:
+  - steam:1610560

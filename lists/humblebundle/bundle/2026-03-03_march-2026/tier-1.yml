@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Mar 2026) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15923/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15923/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15923/source.json
+games:
+- name: SWORN
+  ids:
+  - steam:1763250
+- name: Zero Hour
+  ids:
+  - steam:1359090
+- name: Bread & Fred
+  ids:
+  - steam:1607680
+- name: Hard West 2
+  ids:
+  - steam:1282410
+- name: Tempest Rising
+  ids:
+  - steam:1486920
+- name: Etrian Odyssey III HD
+  ids:
+  - steam:1810820
+- name: 'Smalland: Survive the Wilds'
+  ids:
+  - steam:768200
+- name: Chants of Sennaar
+  ids:
+  - steam:1931770

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mega Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9673/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9673/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9673/source.json
+games:
+- name: Four Sided Fantasy
+  ids:
+  - steam:337490
+- name: Quantum Replica
+  ids:
+  - steam:470090
+- name: 'Warhammer 40,000: Space Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:9673:warhammer-40000-space-wolf
+- name: Gift of Parthax
+  ids:
+  - steam:795610
+- name: Shark Attack Deathmatch 2
+  ids:
+  - steam:330580
+- name: 'Dungelot : Shattered Lands'
+  ids:
+  - steam:403940
+- name: SPACECOM
+  ids:
+  - steam:263860
+- name: 'Lovely Planet 2: April Skies'
+  ids:
+  - steam:1019590
+- name: This Strange Realm Of Mine
+  ids:
+  - steam:655730
+- name: Eternity - The Last Unicorn
+  ids:
+  - steam:714250
+- name: Clutch
+  ids:
+  - steam:35310
+- name: Re-Legion
+  ids:
+  - steam:782140
+- name: Through the Woods
+  ids:
+  - steam:368430
+- name: Guts and Glory
+  ids:
+  - steam:537340
+- name: Master Spy Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:9673:master-spy-deluxe-edition
+- name: Western 1849 Reloaded
+  ids:
+  - steam:576980
+- name: Hyperdrive Massacre
+  ids:
+  - steam:402390
+- name: Fantasy Versus
+  ids:
+  - steam:787400
+- name: Anomaly Warzone Earth
+  ids:
+  - steam:91200
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740

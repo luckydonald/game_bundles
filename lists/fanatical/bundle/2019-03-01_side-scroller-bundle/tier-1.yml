@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Side Scroller Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7097/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7097/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7097/source.json
+games:
+- name: Earth Atlantis
+  ids:
+  - steam:997030
+- name: 'River City Ransom: Underground'
+  ids:
+  - steam:422810
+- name: 'Slain: Back from Hell'
+  ids:
+  - steam:369070
+- name: Seraph
+  ids:
+  - steam:425670
+- name: Never Alone Arctic Collection
+  ids:
+  - steam:295790

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Helpings 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4539/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4539/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4539/source.json
+games:
+- name: 'Strategy & Tactics: Dark Ages'
+  ids:
+  - steam:508300
+- name: Cublast HD
+  ids:
+  - steam:580590
+- name: ROSWELL
+  ids:
+  - unresolved:source:isthereanydeal:4539:roswell
+- name: Adam Wolfe
+  ids:
+  - steam:483420
+- name: DOGOS
+  ids:
+  - steam:507050
+- name: Edge of Twilight - Return to Glory
+  ids:
+  - steam:489070
+- name: Bastard Bonds
+  ids:
+  - steam:486720
+- name: Fast and Curious
+  ids:
+  - unresolved:source:isthereanydeal:4539:fast-and-curious

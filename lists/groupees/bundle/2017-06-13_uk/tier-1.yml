@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The UK Solidarity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5215/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5215/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5215/source.json
+games:
+- name: 'Forge of Gods: Team of Justice Pack'
+  ids:
+  - unresolved:source:isthereanydeal:5215:forge-of-gods-team-of-justice-pack
+- name: 'Mighty Party: Battle and Toads Pack'
+  ids:
+  - unresolved:source:isthereanydeal:5215:mighty-party-battle-and-toads-pack
+- name: Pixel Poetry
+  ids:
+  - unresolved:source:isthereanydeal:5215:pixel-poetry
+- name: 'Tap Adventure: Time Travel - Promo Pack'
+  ids:
+  - steam:608730
+- name: Let's Play
+  ids:
+  - unresolved:source:isthereanydeal:5215:lets-play
+- name: Cyber-Chicken
+  ids:
+  - steam:339710
+- name: Trouble In The Manor
+  ids:
+  - steam:338530

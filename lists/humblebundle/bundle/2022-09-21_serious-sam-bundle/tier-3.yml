@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Serious Sam Bundle — entire-17-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12107/source.json
+games:
+- name: Serious Sam Double D XXL
+  ids:
+  - steam:111600
+- name: 'Serious Sam: The Random Encounter'
+  ids:
+  - steam:201480
+- name: 'Serious Sam: Kamikaze Attack'
+  ids:
+  - steam:1623420
+- name: 'Serious Sam Classics: Revolution'
+  ids:
+  - steam:227780
+- name: 'Serious Sam HD: The Second Encounter'
+  ids:
+  - steam:41014
+- name: Serious Sam 2
+  ids:
+  - steam:204340
+- name: Serious Sam 3 Jewel of the Nile
+  ids:
+  - steam:41074
+- name: Serious Sam 3 Bonus Content
+  ids:
+  - unresolved:source:isthereanydeal:12107:serious-sam-3-bonus-content
+- name: 'Serious Sam 3: BFE'
+  ids:
+  - steam:41070
+- name: 'Serious Sam HD: The First Encounter'
+  ids:
+  - steam:41000
+- name: Serious Sam's Bogus Detour
+  ids:
+  - steam:272620
+- name: 'Serious Sam HD: The Second Encounter - Legend of the Beast'
+  ids:
+  - steam:41019
+- name: I Hate Running Backwards
+  ids:
+  - steam:575820
+- name: 'Serious Sam HD: The Second Encounter - Serious 8'
+  ids:
+  - unresolved:source:isthereanydeal:12107:serious-sam-hd-the-second-encounter-serious-8
+- name: 'Serious Sam: Tormental'
+  ids:
+  - steam:640340
+- name: Serious Sam 4
+  ids:
+  - steam:257420
+- name: 'Serious Sam: Siberian Mayhem'
+  ids:
+  - steam:1792250

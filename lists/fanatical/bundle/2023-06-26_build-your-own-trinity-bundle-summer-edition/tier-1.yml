@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Trinity Bundle (Summer 2023) — Select 3 Titles for $4.99, 5 Titles
+  for $7.99, 7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13303/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13303/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13303/source.json
+games:
+- name: YouTubers Life
+  ids:
+  - steam:428690
+- name: Road Redemption
+  ids:
+  - steam:300380
+- name: Iconoclasts
+  ids:
+  - steam:393520
+- name: Dusk
+  ids:
+  - steam:519860
+- name: Breathedge
+  ids:
+  - steam:738520
+- name: For The King
+  ids:
+  - steam:527230
+- name: Deep Sky Derelicts
+  ids:
+  - steam:698640
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+- name: Mutazione
+  ids:
+  - steam:1080750
+- name: Mindustry
+  ids:
+  - steam:1127400
+- name: Everhood
+  ids:
+  - steam:1229380
+- name: 'The Darkside Detective: A Fumble in the Dark'
+  ids:
+  - steam:795420
+- name: Lawn Mowing Simulator
+  ids:
+  - steam:1480560

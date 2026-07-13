@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hot Cappuccino Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13878/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13878/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13878/source.json
+games:
+- name: Project Cappuccino
+  ids:
+  - steam:1117380
+- name: The Future You've Been Dreaming Of
+  ids:
+  - steam:1885130
+- name: Zombie Shooting Star
+  ids:
+  - steam:1328000
+- name: beat refle
+  ids:
+  - steam:1947940
+- name: 'Project: Mirror'
+  ids:
+  - steam:2171840
+- name: NPC Capture Academy
+  ids:
+  - unresolved:source:isthereanydeal:13878:npc-capture-academy
+- name: Eliminator Kaede
+  ids:
+  - unresolved:source:isthereanydeal:13878:eliminator-kaede

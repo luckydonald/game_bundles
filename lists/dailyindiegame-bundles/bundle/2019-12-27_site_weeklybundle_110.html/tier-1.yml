@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 110 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8270/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8270/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8270/source.json
+games:
+- name: Stickman Fighting
+  ids:
+  - unresolved:source:isthereanydeal:8270:stickman-fighting
+- name: Space Trade Fleet 1.5
+  ids:
+  - steam:1060110
+- name: Reflex
+  ids:
+  - steam:281860
+- name: Pichon
+  ids:
+  - steam:497190
+- name: 'Human Pinball : Iceage'
+  ids:
+  - steam:1044300
+- name: Crazy Critters - Combat Cats
+  ids:
+  - steam:1141880
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:8270:the-visitors
+- name: Sufoco
+  ids:
+  - steam:930110
+- name: 'War Robots: Planet Defender'
+  ids:
+  - unresolved:source:isthereanydeal:8270:war-robots-planet-defender

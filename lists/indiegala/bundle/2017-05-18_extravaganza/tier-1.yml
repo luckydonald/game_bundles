@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Extravaganza Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5107/source.json
+games:
+- name: Cat Goes Platform
+  ids:
+  - unresolved:source:isthereanydeal:5107:cat-goes-platform
+- name: Santa's Special Delivery
+  ids:
+  - steam:564420
+- name: 'Strike Squadron: Caracará'
+  ids:
+  - steam:507340

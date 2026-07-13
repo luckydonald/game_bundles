@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 425 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9874/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9874/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9874/source.json
+games:
+- name: Debtor
+  ids:
+  - unresolved:source:isthereanydeal:9874:debtor
+- name: 'Captain Lycop : Invasion of the Heters'
+  ids:
+  - steam:525070
+- name: Jade's Dungeon Descent
+  ids:
+  - steam:864600
+- name: 'Elysium: Blood Games'
+  ids:
+  - steam:430080
+- name: Réel Futur
+  ids:
+  - unresolved:source:isthereanydeal:9874:reel-futur
+- name: Little Bunny
+  ids:
+  - steam:1285870
+- name: Alien Cat 3
+  ids:
+  - steam:1339550
+- name: Parking Attendant
+  ids:
+  - unresolved:source:isthereanydeal:9874:parking-attendant
+- name: Spinning_Kid_2
+  ids:
+  - steam:1447070

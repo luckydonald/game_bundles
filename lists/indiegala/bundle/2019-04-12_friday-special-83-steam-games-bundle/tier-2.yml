@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #83 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7300/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7300/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7300/source.json
+games:
+- name: Ink Plane
+  ids:
+  - steam:922150
+- name: 'Super Ledgehop: Double Laser'
+  ids:
+  - steam:787070
+- name: Thugs Law
+  ids:
+  - steam:1018960
+- name: Frog Hop
+  ids:
+  - steam:568490
+- name: The Red Solstice
+  ids:
+  - steam:265590
+- name: BattleRush 2
+  ids:
+  - steam:871990
+- name: Chime Sharp
+  ids:
+  - steam:326520
+- name: 'ChemCaper: Act I - Petticles in Peril'
+  ids:
+  - unresolved:source:isthereanydeal:7300:chemcaper-act-i-petticles-in-peril

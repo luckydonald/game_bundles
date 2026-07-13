@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 299 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9374/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9374/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9374/source.json
+games:
+- name: Peekaboo
+  ids:
+  - steam:1048100
+- name: Factory Manager
+  ids:
+  - steam:877380
+- name: Enoki
+  ids:
+  - steam:1447050
+- name: Era of Survival
+  ids:
+  - steam:1234380
+- name: Mystic Escape - Diary of a Prisoner
+  ids:
+  - steam:1251520
+- name: SWORDSHOT
+  ids:
+  - steam:1257600
+- name: Zerowood
+  ids:
+  - unresolved:source:isthereanydeal:9374:zerowood
+- name: Speed Swing
+  ids:
+  - steam:1314930
+- name: The Fall of Eskaria
+  ids:
+  - steam:1339530

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #12 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5799/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5799/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5799/source.json
+games:
+- name: Deep Blue 3D Maze
+  ids:
+  - unresolved:source:isthereanydeal:5799:deep-blue-3d-maze
+- name: Bit Bullet
+  ids:
+  - steam:726260
+- name: Bomb Defense
+  ids:
+  - steam:656680
+- name: Wanderlust OST - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5799:wanderlust-ost-soundtrack
+- name: Insanely Twisted Shadow Planet
+  ids:
+  - steam:205730
+- name: SoM Soul Of Mask
+  ids:
+  - unresolved:source:isthereanydeal:5799:som-soul-of-mask
+- name: Butterfly Moment
+  ids:
+  - unresolved:source:isthereanydeal:5799:butterfly-moment
+- name: Wanderlust
+  ids:
+  - steam:729670
+- name: The Valley In My Mind
+  ids:
+  - unresolved:source:isthereanydeal:5799:the-valley-in-my-mind
+- name: Maze Run VR
+  ids:
+  - steam:681550

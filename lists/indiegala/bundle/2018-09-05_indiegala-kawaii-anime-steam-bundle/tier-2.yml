@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Kawaii Anime Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6439/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6439/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6439/source.json
+games:
+- name: Teleportals. I swear it's a nice game
+  ids:
+  - steam:873200
+- name: NALOGI
+  ids:
+  - steam:810670
+- name: Gothicc Breaker
+  ids:
+  - steam:819230
+- name: Panzer Hearts - War Visual Novel
+  ids:
+  - steam:809680
+- name: NALOGI 2
+  ids:
+  - steam:841350
+- name: 'Paper Shakespeare: To Date Or Not To Date?'
+  ids:
+  - steam:702940
+- name: 'Frequent Flyer: A Long Distance Love Story'
+  ids:
+  - unresolved:source:isthereanydeal:6439:frequent-flyer-a-long-distance-love-story
+- name: Nusakana
+  ids:
+  - steam:401290
+- name: Blind Men
+  ids:
+  - steam:657290
+- name: American University Life ~Welcome Week!~
+  ids:
+  - steam:904050
+- name: Ignis Avis Venatio
+  ids:
+  - steam:809570

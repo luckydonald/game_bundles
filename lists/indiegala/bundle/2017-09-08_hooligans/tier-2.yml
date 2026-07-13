@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Hooligans — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5442/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5442/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5442/source.json
+games:
+- name: Exorcist
+  ids:
+  - steam:1983330
+- name: Ezy
+  ids:
+  - unresolved:source:isthereanydeal:5442:ezy
+- name: Hooligan Vasja - Christmas Edition
+  ids:
+  - unresolved:source:isthereanydeal:5442:hooligan-vasja-christmas-edition
+- name: 'Catacombs 1: Demon War'
+  ids:
+  - steam:654250
+- name: Brave Path
+  ids:
+  - steam:669310
+- name: Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:5442:sudoku
+- name: The Brave Mouse
+  ids:
+  - unresolved:source:isthereanydeal:5442:the-brave-mouse
+- name: Hover Havoc
+  ids:
+  - steam:504500
+- name: Distorted Reality
+  ids:
+  - steam:681780
+- name: Slug
+  ids:
+  - unresolved:source:isthereanydeal:5442:slug
+- name: Watergate Xtreme
+  ids:
+  - steam:666320
+- name: German fortress 3D
+  ids:
+  - steam:664350
+- name: Hooligan Vasja - Halloween Edition
+  ids:
+  - unresolved:source:isthereanydeal:5442:hooligan-vasja-halloween-edition
