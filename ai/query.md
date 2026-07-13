@@ -864,3 +864,120 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 › Add `🗃️` as prefix for all of our exported to-steam collections.
 
+› Add `--mode=any|all` toggle to `game-collections sync --source collection --apply`. The `any` means to include bundles, of which one was mached with the bundles here (I believe, the current mode of operation). `all` means, you need to have all games of that bundle in your library (in that case, all `steam` games in your `steam` library). `all` will be the new default. And add `--tiers=all|highest`, controlling which tiers should be included. `all` is as before. `highest`, new default, means that if tier 3 is matching, we don't include tier 2 or 1.
+
+› Question answered.
+> <details><summary>
+>
+>> 1. How should games without a Steam ID affect `all` matching?
+>> 2. Where should `--mode` and `--tiers` be available?
+>> 3. What should `--tiers highest` do with lower-tier managed collections created by an earlier sync?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Steam IDs** (1/3) <kbd>Single Select</kbd><br>
+>> How should games without a Steam ID affect `all` matching?
+> - [x] 1\. Ignore non-Steam (Recommended)
+>   - _Require ownership of every Steam AppID, require at least one Steam AppID, and ignore unresolved/non-Steam games for eligibility._
+> - [ ] 2\. Disqualify bundle
+>   - _Keep current strict behavior where any game lacking a Steam ID makes the whole bundle ineligible._
+> - [ ] 3\. _Type something._
+>
+>> **Flag scope** (2/3) <kbd>Single Select</kbd><br>
+>> Where should `--mode` and `--tiers` be available?
+> - [ ] 1\. Sync collection only (Recommended)
+>   - _Add them to `sync`, validate that ownership source is `collection`, and support both dry-run and `--apply`._
+> - [x] 2\. All Steam sync
+>   - _Add them to `sync` for collection, API, and installed ownership sources._
+> - [ ] 3\. Sync + eligible
+>   - _Add them consistently to both commands and all Steam ownership sources._
+> - [ ] 4\. _Type something._
+>
+>> **Old tiers** (3/3) <kbd>Single Select</kbd><br>
+>> What should `--tiers highest` do with lower-tier managed collections created by an earlier sync?
+> - [ ] 1\. Leave them (Recommended)
+>   - _Preserve the additive safety invariant; highest only controls which collections are planned now._
+> - [x] 2\. Delete managed
+>   - _Add managed-collection deletion for redundant lower tiers, expanding scope and changing the no-removal invariant._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. When `--tiers highest` selects tier N, which existing managed sibling tier collections should be deleted?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Tier cleanup** (1/1) <kbd>Single Select</kbd><br>
+>> When `--tiers highest` selects tier N, which existing managed sibling tier collections should be deleted?
+> - [ ] 1\. Lower tiers only (Recommended)
+>   - _Delete managed tiers below N as requested; leave higher currently-ineligible tiers and delete nothing when no tier matches._
+> - [ ] 2\. All other tiers
+>   - _Keep exactly the selected tier and delete managed siblings both below and above it; delete nothing when no tier matches._
+> - [ ] 3\. Full reconcile
+>   - _Keep exactly the selected tier, and delete every managed tier collection when no tier matches._
+> - [x] 4\. _Type something:_
+>   - > Deletion is not bound to `--tiers` but is general cleanup - removing those managed lists which no longer fit/match. The tier list must also support the humblebundle tier lists (`[etire-]{num}-item-bundle`).
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. Which existing Steam collections should general cleanup treat as tool-managed?
+>> 2. If a previously exported collection no longer matches the selected ownership mode, should cleanup delete it even when its bundle has no replacement tier?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Managed set** (1/2) <kbd>Single Select</kbd><br>
+>> Which existing Steam collections should general cleanup treat as tool-managed?
+> - [x] 1\. Prefix namespace (Recommended)
+>   - _Reconcile every static `🗃️ `-prefixed collection, including exports whose source list no longer exists; also recognize legacy unprefixed deterministic collections for still-discovered lists._
+> - [ ] 2\. Current list IDs only
+>   - _Only reconcile deterministic collection IDs derived from lists still present in the repository; orphaned exports remain._
+> - [ ] 3\. Prefixed current IDs
+>   - _Require both the `🗃️ ` prefix and a deterministic ID for a currently discovered list, maximizing caution but leaving legacy and orphaned exports._
+> - [ ] 4\. _Type something._
+>
+>> **No match** (2/2) <kbd>Single Select</kbd><br>
+>> If a previously exported collection no longer matches the selected ownership mode, should cleanup delete it even when its bundle has no replacement tier?
+> - [ ] 1\. Delete it (Recommended)
+>   - _Fully reconcile Steam to the current selected/matching set, as described in your general-cleanup clarification._
+> - [ ] 2\. Keep without replacement
+>   - _Delete only when another tier from the same bundle replaces it; otherwise preserve stale exports._
+> - [x] 3\. _Type something:_
+>   - > What does _ownership mode_ mean here?
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. In that concrete no-longer-matching case, what should cleanup do?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Stale match** (1/1) <kbd>Single Select</kbd><br>
+>> In that concrete no-longer-matching case, what should cleanup do?
+> - [x] 1\. Delete export (Recommended)
+>   - _Steam is fully reconciled to the lists that match this run's `--mode` and `--tiers` selection._
+> - [ ] 2\. Keep export
+>   - _Cleanup removes only superseded sibling tiers or orphaned prefixed exports, not collections that merely stop matching ownership._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+

@@ -47,6 +47,7 @@ def orange_box_plan() -> SyncPlan:
         changes=[
             PlannedCollectionChange(
                 list_id="valve/the-orange-box",
+                target_id=steam_collection_id("valve/the-orange-box"),
                 name="🗃️ The Orange Box",
                 action="create-or-update",
                 added_ids=["steam:220", "steam:380", "steam:420", "steam:400", "steam:440"],
@@ -54,6 +55,23 @@ def orange_box_plan() -> SyncPlan:
         ],
     )
 # end def orange_box_plan
+
+
+def orange_box_deletion_plan() -> SyncPlan:
+    return SyncPlan(
+        launcher="steam",
+        account=STEAM_ID,
+        eligibility=[],
+        changes=[
+            PlannedCollectionChange(
+                list_id="valve/the-orange-box",
+                target_id=steam_collection_id("valve/the-orange-box"),
+                name="🗃️ The Orange Box",
+                action="delete",
+            )
+        ],
+    )
+# end def orange_box_deletion_plan
 
 
 def test_stage_creates_inspectable_candidates_without_touching_steam(tmp_path: Path) -> None:
@@ -190,6 +208,39 @@ def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent(tmp_p
     result = SteamCollectionPayload.from_entry(dict(candidate.root)[key])
     assert result.added == [220, 380, 400, 420, 440, 999]
 # end def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent
+
+
+def test_delete_stages_tombstone_and_restores_previous_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    cloud = steam_root / "userdata" / ACCOUNT_ID / "config/cloudstorage"
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    created = gateway.stage(orange_box_plan(), tmp_path / "Desktop")
+    gateway.apply(created, lambda _prompt: "REPLACE")
+    before_delete = {name: (cloud / name).read_bytes() for name in (NAMESPACE_NAME, MODIFIED_NAME)}
+
+    staged = gateway.stage(orange_box_deletion_plan(), tmp_path / "Desktop")
+
+    namespace = parse_json_strict(
+        (staged / f"candidate-{NAMESPACE_NAME}").read_bytes(),
+        CloudStorageNamespaceFile,
+    )
+    modified = parse_json_strict(
+        (staged / f"candidate-{MODIFIED_NAME}").read_bytes(),
+        ModifiedKeysFile,
+    )
+    key = f"user-collections.{steam_collection_id('valve/the-orange-box')}"
+    assert dict(namespace.root)[key].is_deleted is True
+    assert key in modified.root
+    assert "delete: valve/the-orange-box (🗃️ The Orange Box)" in (
+        staged / "README.txt"
+    ).read_text(encoding="utf-8")
+
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    deleted = parse_json_strict((cloud / NAMESPACE_NAME).read_bytes(), CloudStorageNamespaceFile)
+    assert dict(deleted.root)[key].is_deleted is True
+    gateway.restore(staged, lambda _prompt: "RESTORE")
+    assert {name: (cloud / name).read_bytes() for name in before_delete} == before_delete
+# end def test_delete_stages_tombstone_and_restores_previous_collection
 
 
 def test_read_collection_returns_static_collection_case_insensitively(tmp_path: Path) -> None:

@@ -47,6 +47,7 @@ uv run game-collections scrape dailyindiegame
 uv run game-collections scrape greenmangaming
 uv run game-collections eligible steam
 uv run game-collections sync steam
+uv run game-collections sync steam --mode any --tiers all
 uv run game-collections sync steam --log-skips
 uv run game-collections sync steam --apply
 uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestamp>
@@ -55,6 +56,8 @@ uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestam
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
 
 `eligible steam` and `sync steam` print eligible lists and the planned-change count by default. Pass `--log-skips` to also print every skipped list with its missing or unsupported IDs.
+
+`sync steam` defaults to `--mode all --tiers highest`. `--mode all` requires every Steam ID in a list to be owned, while `--mode any` requires at least one and exports only the owned Steam IDs; games without Steam IDs do not affect either match mode. `--tiers highest` recognizes sibling `tier-N.yml` and `(entire-)?N-item-bundle.yml` lists and keeps only the numerically highest matching tier per bundle directory. Use `--tiers all` to export every matching tier.
 
 `eligible steam` and `sync steam` also accept `--source installed` to skip the Web API and `STEAM_WEB_API_KEY` entirely, approximating ownership from locally installed games (`steamapps/libraryfolders.vdf` + `appmanifest_*.acf`). This only sees what's currently installed, not everything the account owns, so owned-but-uninstalled games are reported as missing; there is no local file that exposes the full owned/licensed games list, and `STEAM_WEB_API_KEY` itself can never be read from local Steam files — it's an account secret from Valve's web dev portal.
 
@@ -167,7 +170,7 @@ This is an internal Steam format. Game Collections therefore models the complete
 
 1. Read Steam files through no-follow, descriptor-based checks and validate them completely.
 2. Write candidates, byte-for-byte backups, hashes, a manifest, and an inspection report to a timestamped Desktop directory. Steam is not changed.
-3. Print every source, candidate, backup, and destination path and pause for inspection.
+3. Print every source, candidate, backup, destination path, and managed collection deletion and pause for inspection.
 4. Require Steam to be stopped, then reread and revalidate the originals. Any metadata or content change aborts.
 5. Require the user to type `REPLACE`.
 6. Replace the namespace and modified-key files with same-directory temporary files, `fsync`, atomic replacement, post-write verification, and rollback if the second file fails.
@@ -175,7 +178,7 @@ This is an internal Steam format. Game Collections therefore models the complete
 
 Restoration requires Steam to be stopped and the user to type `RESTORE`.
 
-Synchronization is additive in version 1. It creates deterministic static collections whose Steam-visible names start with `🗃️ `, preserves manually added games, and never removes games or collections. Same-name collisions, dynamic collections, and system collection names fail closed.
+Steam-visible collection names beginning with `🗃️ ` are reserved for Game Collections and form its managed namespace. Each sync reconciles that namespace to the current `--mode`/`--tiers` selection: selected collections are created or updated, while stale, superseded, no-longer-matching, and orphaned managed collections are staged for deletion. The collection used by `--source collection` is always protected. Retained collections preserve manually added games, unrelated non-prefixed collections and opaque namespace values remain untouched, and dynamic managed collections, same-name collisions, and unsafe IDs fail closed. Every deletion uses the same inspectable candidates, backups, Steam-stopped check, typed confirmation, atomic replacement, verification, rollback, and restore path as an update.
 
 ## Architecture
 

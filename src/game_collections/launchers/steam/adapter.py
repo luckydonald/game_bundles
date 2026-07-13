@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+import re
 from collections.abc import Callable
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 
 from game_collections.launchers.base import (
     CollectionEligibility,
@@ -13,7 +15,11 @@ from game_collections.launchers.base import (
     SyncPlan,
 )
 from game_collections.launchers.steam.api import SteamApiClient
-from game_collections.launchers.steam.io import SteamFileGateway
+from game_collections.launchers.steam.io import (
+    STEAM_USER_COLLECTION_ID_PATTERN,
+    SteamFileGateway,
+    steam_collection_id,
+)
 from game_collections.launchers.steam.local_ownership import get_installed_app_ids
 from game_collections.lists import LoadedGameList
 
@@ -23,6 +29,10 @@ from game_collections.lists import LoadedGameList
 # are interchangeable without SteamAdapter knowing which one it got.
 OwnedAppIdsSource = Callable[[], set[int]]
 STEAM_COLLECTION_PREFIX = "🗃️ "
+SteamMatchMode = Literal["any", "all"]
+SteamTierMode = Literal["all", "highest"]
+TIER_STEM_PATTERN = re.compile(r"^tier-(?P<rank>[0-9]+)$")
+ITEM_BUNDLE_STEM_PATTERN = re.compile(r"^(?:entire-)?(?P<rank>[0-9]+)-item-bundle$")
 
 
 @dataclass(frozen=True, slots=True)
@@ -32,6 +42,19 @@ class SteamOptions:
     steam_id: str
     steam_root: Path | None = None
     api_key: str | None = None
+    match_mode: SteamMatchMode = "all"
+    tier_mode: SteamTierMode = "all"
+    reconcile_managed: bool = False
+    protected_collection_name: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.match_mode not in ("any", "all"):
+            raise ValueError(f"invalid Steam match mode: {self.match_mode!r}")
+        # end if
+        if self.tier_mode not in ("all", "highest"):
+            raise ValueError(f"invalid Steam tier mode: {self.tier_mode!r}")
+        # end if
+    # end def __post_init__
 
 # end class SteamOptions
 
@@ -113,11 +136,16 @@ class SteamAdapter(LauncherAdapter):
             # end for
             missing = sorted(set(required) - owned_app_ids)
             owned = sorted(set(required) & owned_app_ids)
+            if self.options.match_mode == "any":
+                eligible = bool(owned)
+            else:
+                eligible = bool(required) and not missing
+            # end if
             results.append(
                 CollectionEligibility(
                     list_id=game_list.id,
                     name=game_list.data.name,
-                    eligible=not missing and not unsupported and bool(required),
+                    eligible=eligible,
                     owned_ids=[f"steam:{app_id}" for app_id in owned],
                     missing_ids=[f"steam:{app_id}" for app_id in missing],
                     unsupported_ids=unsupported,
@@ -129,16 +157,21 @@ class SteamAdapter(LauncherAdapter):
 
     def plan(self, game_lists: list[LoadedGameList]) -> SyncPlan:
         eligibility = self.evaluate(game_lists)
+        selected_ids = self._selected_list_ids(eligibility)
         changes = [
             PlannedCollectionChange(
                 list_id=result.list_id,
+                target_id=steam_collection_id(result.list_id),
                 name=f"{STEAM_COLLECTION_PREFIX}{result.name}",
                 action="create-or-update",
                 added_ids=result.owned_ids,
             )
             for result in eligibility
-            if result.eligible
+            if result.list_id in selected_ids
         ]
+        if self.options.reconcile_managed:
+            changes.extend(self._managed_deletions(game_lists, changes))
+        # end if
         return SyncPlan(
             launcher=self.name,
             account=self.options.steam_id,
@@ -146,6 +179,105 @@ class SteamAdapter(LauncherAdapter):
             changes=changes,
         )
     # end def plan
+
+    def _selected_list_ids(self, eligibility: list[CollectionEligibility]) -> set[str]:
+        eligible_ids = {result.list_id for result in eligibility if result.eligible}
+        if self.options.tier_mode == "all":
+            return eligible_ids
+        # end if
+
+        tiers: dict[tuple[str, int], str] = {}
+        selected: set[str] = set()
+        highest: dict[str, tuple[int, str]] = {}
+        for result in eligibility:
+            tier = _tier_identity(result.list_id)
+            if tier is None:
+                if result.eligible:
+                    selected.add(result.list_id)
+                # end if
+                continue
+            # end if
+            parent, rank = tier
+            key = (parent, rank)
+            previous = tiers.get(key)
+            if previous is not None:
+                raise ValueError(f"ambiguous tier rank {rank} in {parent!r}: {previous!r} and {result.list_id!r}")
+            # end if
+            tiers[key] = result.list_id
+            if not result.eligible:
+                continue
+            # end if
+            current = highest.get(parent)
+            if current is None or rank > current[0]:
+                highest[parent] = (rank, result.list_id)
+            # end if
+        # end for
+        selected.update(list_id for _rank, list_id in highest.values())
+        return selected
+    # end def _selected_list_ids
+
+    def _managed_deletions(
+        self,
+        game_lists: list[LoadedGameList],
+        selected_changes: list[PlannedCollectionChange],
+    ) -> list[PlannedCollectionChange]:
+        if self.gateway is None:
+            raise ValueError("managed Steam collection reconciliation requires a file gateway")
+        # end if
+        selected_ids = {change.target_id for change in selected_changes}
+        current_by_target: dict[str, LoadedGameList] = {}
+        for game_list in game_lists:
+            target_id = steam_collection_id(game_list.id)
+            previous = current_by_target.get(target_id)
+            if previous is not None:
+                raise ValueError(f"Steam collection ID collision: {previous.id!r} and {game_list.id!r}")
+            # end if
+            current_by_target[target_id] = game_list
+        # end for
+
+        deletions: list[PlannedCollectionChange] = []
+        protected_name = self.options.protected_collection_name
+        for payload in self.gateway.read_collections():
+            if protected_name is not None and payload.name.casefold() == protected_name.casefold():
+                continue
+            # end if
+            game_list = current_by_target.get(payload.id)
+            source_name = game_list.data.name if game_list is not None else None
+            expected_name = f"{STEAM_COLLECTION_PREFIX}{source_name}" if source_name is not None else None
+            legacy_managed = source_name is not None and payload.name == source_name
+            prefixed_managed = payload.name.startswith(STEAM_COLLECTION_PREFIX)
+
+            if payload.id in selected_ids:
+                if payload.name not in (source_name, expected_name):
+                    raise ValueError(
+                        f"managed Steam collection ID collision for {payload.id!r}: {payload.name!r}"
+                    )
+                # end if
+                if payload.filterSpec is not None:
+                    raise ValueError(f"managed Steam collection became dynamic: {payload.name!r}")
+                # end if
+                continue
+            # end if
+            if not legacy_managed and not prefixed_managed:
+                continue
+            # end if
+            if not STEAM_USER_COLLECTION_ID_PATTERN.fullmatch(payload.id):
+                raise ValueError(f"managed Steam collection has an unsafe ID: {payload.id!r}")
+            # end if
+            if payload.filterSpec is not None:
+                raise ValueError(f"managed Steam collection became dynamic: {payload.name!r}")
+            # end if
+            deletions.append(
+                PlannedCollectionChange(
+                    list_id=game_list.id if game_list is not None else None,
+                    target_id=payload.id,
+                    name=payload.name,
+                    action="delete",
+                )
+            )
+        # end for
+        return sorted(deletions, key=lambda change: (change.name.casefold(), change.target_id))
+    # end def _managed_deletions
 
     def stage(self, plan: SyncPlan, output_dir: Path) -> Path:
         if self.gateway is None:
@@ -162,3 +294,16 @@ class SteamAdapter(LauncherAdapter):
     # end def apply
 
 # end class SteamAdapter
+
+
+def _tier_identity(list_id: str) -> tuple[str, int] | None:
+    parent, separator, stem = list_id.rpartition("/")
+    if not separator:
+        return None
+    # end if
+    match = TIER_STEM_PATTERN.fullmatch(stem) or ITEM_BUNDLE_STEM_PATTERN.fullmatch(stem)
+    if match is None:
+        return None
+    # end if
+    return parent, int(match.group("rank"))
+# end def _tier_identity
