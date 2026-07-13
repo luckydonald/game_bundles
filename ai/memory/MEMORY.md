@@ -1,2 +1,7 @@
 # Memory
 - [History-master replay guards](2026-07-20-history-master-replay-guards.md) — TODO: summarize this file.
+- [Verify, don't guess external shapes](feedback_verify_dont_guess_external_shapes.md) — fetch real URL/API shapes live before writing parsers; skip unverified cases, never guess
+- [Real examples, not placeholders](feedback_real_examples_not_placeholders.md) — use confirmed-real slugs/ids in docs/tests, not invented-looking ones
+- [Reuse existing prefixes](feedback_reuse_existing_prefixes.md) — don't split identity when an external config names something differently than existing internal code
+- [User's ITAD domain expertise](user_isthereanydeal_domain_expertise.md) — user does own live research on isthereanydeal/storefronts, expect iterating scope
+- [isthereanydeal source expansion status](project_isthereanydeal_source_expansion.md) — per-game solver added 2026-07-13; unverified shop parsers + Blizzard limitation still open
