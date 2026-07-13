@@ -103,6 +103,7 @@ class GameList(StrictModel):
 
     schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     name: NonEmptyString
+    tier: Annotated[int, Field(ge=1)] | None = None
     references: list[Reference] = Field(default_factory=list)
     games: list[Game] = Field(min_length=1)
 
