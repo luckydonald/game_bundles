@@ -5,8 +5,9 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from collections.abc import Callable
 from pathlib import Path
+from typing import Literal, Self
 
-from pydantic import Field
+from pydantic import Field, model_validator
 
 from game_collections.lists import LoadedGameList
 from game_collections.models import StrictModel
@@ -28,11 +29,23 @@ class CollectionEligibility(StrictModel):
 class PlannedCollectionChange(StrictModel):
     """A launcher-neutral collection change."""
 
-    list_id: str
+    list_id: str | None = None
+    target_id: str
     name: str
-    action: str
+    action: Literal["create-or-update", "delete"]
     added_ids: list[str] = Field(default_factory=list)
     preserved_ids: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def validate_action(self) -> Self:
+        if self.action == "create-or-update" and self.list_id is None:
+            raise ValueError("create-or-update collection change requires a list ID")
+        # end if
+        if self.action == "delete" and (self.added_ids or self.preserved_ids):
+            raise ValueError("delete collection change must not contain game IDs")
+        # end if
+        return self
+    # end def validate_action
 
 # end class PlannedCollectionChange
 
