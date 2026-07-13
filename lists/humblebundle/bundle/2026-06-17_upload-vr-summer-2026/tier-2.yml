@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Upload VR Summer 2026 — Entire 9 Item Bundle
+name: Upload VR Summer 2026 — 5 Item Bundle
+tier: 2
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/upload-vr-summer-2026
@@ -9,18 +10,6 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-06-17_upload-vr-summer-2026/source.json
 games:
-- name: VTOL VR
-  ids:
-  - steam:667970
-- name: Zero Caliber 2 Remastered
-  ids:
-  - steam:2719740
-- name: Metro Awakening
-  ids:
-  - steam:2669410
-- name: 'Thief VR: Legacy of Shadow'
-  ids:
-  - steam:2800080
 - name: Tactical Assault VR
   ids:
   - steam:2314160
