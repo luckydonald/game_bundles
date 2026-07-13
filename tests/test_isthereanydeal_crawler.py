@@ -97,9 +97,12 @@ def test_crawl_discovers_and_normalizes_offer_from_list_and_detail() -> None:
 # end def test_crawl_discovers_and_normalizes_offer_from_list_and_detail
 
 
-def test_crawl_skips_mature_bundles_without_fetching_detail_page() -> None:
+def test_crawl_fully_parses_mature_bundles() -> None:
+    """The mature-content gate is purely visual - the detail page's own data isn't hidden."""
+    pages = {"https://isthereanydeal.com/bundles/1/": DETAIL_PAGE}
+
     def fetch(url: str) -> str:
-        raise AssertionError(f"fetch should not be called for a mature bundle: {url}")
+        return pages[url]
     # end def fetch
 
     report = crawl_itad_offers(
@@ -110,8 +113,95 @@ def test_crawl_skips_mature_bundles_without_fetching_detail_page() -> None:
     )
 
     assert report.errors == ()
+    assert len(report.offers) == 1
+    assert report.offers[0].archive.tiers[0].items[0].ids == ["steam:1123050"]
+# end def test_crawl_fully_parses_mature_bundles
+
+
+def _json_detail_page(live_data: dict) -> str:
+    page_json = json.dumps(["Bundle", {"liveData": live_data}])
+    return '<html><script>var g = {"shops": {}, "token": "tok"}; ' f"var page = {page_json};</script></html>"
+# end def _json_detail_page
+
+
+def test_crawl_falls_back_to_html_parsing_and_logs_when_no_embedded_data() -> None:
+    pages = {"https://isthereanydeal.com/bundles/1/": DETAIL_PAGE}
+
+    def fetch(url: str) -> str:
+        return pages[url]
+    # end def fetch
+
+    messages: list[str] = []
+    report = crawl_itad_offers(
+        fetch,
+        _list_page_of(_summary()),
+        DEFAULT_PROVIDER_CONFIG,
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        log=messages.append,
+    )
+
+    assert report.errors == ()
+    assert len(report.offers) == 1
+    assert any("falling back to HTML parsing" in message for message in messages)
+# end def test_crawl_falls_back_to_html_parsing_and_logs_when_no_embedded_data
+
+
+def test_crawl_prefers_embedded_json_over_html_fallback() -> None:
+    live_data = {
+        "tiers": [
+            {
+                "price": [999, "EUR"],
+                "addon": False,
+                "note": "Gold",
+                "games": [
+                    {
+                        "slug": "grime",
+                        "title": "GRIME",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1123050/"}],
+                        "keys": [61],
+                    }
+                ],
+            }
+        ]
+    }
+    pages = {"https://isthereanydeal.com/bundles/1/": _json_detail_page(live_data)}
+
+    def fetch(url: str) -> str:
+        return pages[url]
+    # end def fetch
+
+    report = crawl_itad_offers(
+        fetch,
+        _list_page_of(_summary()),
+        DEFAULT_PROVIDER_CONFIG,
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+    )
+
+    assert report.errors == ()
+    archive = report.offers[0].archive
+    assert archive.tiers[0].name == "Gold"
+    assert archive.tiers[0].price is not None
+    assert archive.tiers[0].price.value == 9.99
+# end def test_crawl_prefers_embedded_json_over_html_fallback
+
+
+def test_crawl_records_error_when_both_parse_paths_fail() -> None:
+    pages = {"https://isthereanydeal.com/bundles/1/": "<html>nothing here at all</html>"}
+
+    def fetch(url: str) -> str:
+        return pages[url]
+    # end def fetch
+
+    report = crawl_itad_offers(
+        fetch,
+        _list_page_of(_summary()),
+        DEFAULT_PROVIDER_CONFIG,
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+    )
+
     assert report.offers == ()
-# end def test_crawl_skips_mature_bundles_without_fetching_detail_page
+    assert len(report.errors) == 1
+# end def test_crawl_records_error_when_both_parse_paths_fail
 
 
 def test_crawl_isolates_per_bundle_failures() -> None:

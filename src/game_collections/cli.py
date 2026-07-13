@@ -65,6 +65,7 @@ from game_collections.sources.isthereanydeal.crawler import (
     write_itad_offer,
 )
 from game_collections.sources.isthereanydeal.provider_config import load_provider_config
+from game_collections.sources.isthereanydeal.shop_config import load_shop_config
 
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
@@ -550,6 +551,7 @@ def scrape_isthereanydeal_command(
     provider_config_path: Annotated[Path, typer.Option("--provider-config")] = Path(
         "config/isthereanydeal-providers.yml"
     ),
+    shop_config_path: Annotated[Path, typer.Option("--shop-config")] = Path("config/isthereanydeal-shops.yml"),
     refresh: Annotated[
         bool,
         typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
@@ -575,6 +577,7 @@ def scrape_isthereanydeal_command(
 
     try:
         provider_config = load_provider_config(provider_config_path)
+        shop_names = load_shop_config(shop_config_path)
         report = crawl_itad_offers(
             client.fetch,
             client.list_page,
@@ -583,6 +586,7 @@ def scrape_isthereanydeal_command(
             archive_root=None if refresh else archive_root,
             log=typer.echo,
             on_offer=on_offer,
+            shop_names=shop_names,
         )
         for error in report.errors:
             typer.echo(f"error: {error}", err=True)
