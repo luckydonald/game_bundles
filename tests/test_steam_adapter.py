@@ -58,6 +58,18 @@ def test_orange_box_is_eligible_when_complete() -> None:
 # end def test_orange_box_is_eligible_when_complete
 
 
+def test_plan_prefixes_exported_collection_name() -> None:
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919"),
+        owned_app_ids_source=_fake_source([220, 380, 420, 400, 440]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan(_orange_box())
+
+    assert plan.changes[0].name == "🗃️ The Orange Box"
+# end def test_plan_prefixes_exported_collection_name
+
+
 def test_owned_app_ids_from_collection_reads_local_collection(tmp_path: Path) -> None:
     steam_root = build_fake_steam(tmp_path)
     gateway = SteamFileGateway(steam_root, STEAM_ID)

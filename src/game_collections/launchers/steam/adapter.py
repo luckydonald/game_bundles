@@ -22,6 +22,7 @@ from game_collections.lists import LoadedGameList
 # plain callable seam so the Web API and the local-installed-games fallback
 # are interchangeable without SteamAdapter knowing which one it got.
 OwnedAppIdsSource = Callable[[], set[int]]
+STEAM_COLLECTION_PREFIX = "🗃️ "
 
 
 @dataclass(frozen=True, slots=True)
@@ -131,7 +132,7 @@ class SteamAdapter(LauncherAdapter):
         changes = [
             PlannedCollectionChange(
                 list_id=result.list_id,
-                name=result.name,
+                name=f"{STEAM_COLLECTION_PREFIX}{result.name}",
                 action="create-or-update",
                 added_ids=result.owned_ids,
             )
