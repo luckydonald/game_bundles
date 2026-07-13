@@ -20,7 +20,7 @@ from game_collections.sources.common import (
     load_cached_archive,
     render_game_list_yaml,
 )
-from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem
+from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgTier
 from game_collections.sources.greenmangaming.parser import (
     GMG_ROOT,
     bundle_url,
@@ -244,6 +244,7 @@ def write_gmg_offer(
     atomic_write(source_path, dump_json(offer.source))
     written: list[Path] = [metadata_path, source_path]
 
+    tiers_with_games: list[tuple[GmgTier, list[Game]]] = []
     for tier in archive.tiers:
         games: list[Game] = []
         seen_ids: set[str] = set()
@@ -254,13 +255,22 @@ def write_gmg_offer(
             games.append(Game(name=item.title, ids=item.resolution.ids))
             seen_ids.update(item.resolution.ids)
         # end for
-        if not games:
-            continue
+        if games:
+            tiers_with_games.append((tier, games))
         # end if
-        path = list_directory / f"{tier.identifier}.yml"
+    # end for
+    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
+        if len(tiers_with_games) == 1:
+            path = list_directory / "bundle.yml"
+            list_tier = None
+        else:
+            path = list_directory / f"tier-{rank}.yml"
+            list_tier = rank
+        # end if
         game_list = GameList(
             schema=1,
             name=f"{archive.name} — {tier.name}",
+            tier=list_tier,
             references=[
                 Reference(name="Green Man Gaming bundle", url=archive.url),
                 Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
