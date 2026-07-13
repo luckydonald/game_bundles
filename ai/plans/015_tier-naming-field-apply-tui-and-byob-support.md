@@ -107,8 +107,8 @@ Commit order for Phase 5: 5a → 5d (ships right after 5a, only needs the field)
 ## Todos
 
 - [x] Phase 0: add tier field to GameList model + schema
-- [ ] Phase 1: crawlers write bundle.yml/tier-N.yml + populate tier *(in progress)*
-- [ ] Phase 2: adapter reads tier field, retires filename regex
+- [x] Phase 1: crawlers write bundle.yml/tier-N.yml + populate tier
+- [ ] Phase 2: adapter reads tier field, retires filename regex *(in progress)*
 - [ ] Phase 3: migrate-tiers CLI subcommand + migrate lists/**
 - [ ] Phase 4: apply Textual TUI + selection config
 - [ ] Phase 5a+5d: pick_quota model field + adapter quota matching
