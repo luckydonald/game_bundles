@@ -102,6 +102,27 @@ class ItadArchive(StrictModel):
 # end class ItadArchive
 
 
+class ItadGameArchive(StrictModel):
+    """Normalized metadata for one ITAD per-game detail page (`/game/<slug>/info/`).
+
+    `appid` is the Steam AppID read directly off the page's own embedded
+    `detail.appid` field when present - `None` for games with no Steam
+    release. `ids` is every qualified ID resolved for this game (Steam via
+    `appid`, plus any other storefront resolved from its `deals`), always
+    including `isthereanydeal:<slug>` itself.
+    """
+
+    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
+    slug: NonEmptyString
+    title: NonEmptyString
+    appid: int | None = Field(default=None, gt=0)
+    ids: list[NonEmptyString] = Field(min_length=1)
+    url: HttpUrl
+    dates: ItadDates
+
+# end class ItadGameArchive
+
+
 class ItadPageInfo(StrictModel):
     """The aggregator's label for a bundle's origin selling platform."""
 
