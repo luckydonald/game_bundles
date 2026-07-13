@@ -981,3 +981,122 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 > </details>
 >
 
+❯ /init#
+
+❯ /plan Some new features:
+- if there's a single tier, call it just "Bundle", I don't want so many `tier-1.yml` without any other tier, `bundle.yml` is much better.
+- the bundle downloaders should add a `tier: int` field (1+), making the order easier and not filename-based in the future.
+- have a TUI application for `game-collections apply` - being the graphical variant to `sync`. One big new feature is to select the bundles to sync, with filters.
+  - select/unselect specific bundle type (humble bundle/fantastical/…)
+  - select/unselect bundles with size under/over/between N items (hiding ≤2 is pretty common wish)
+  - manually select/unselect entries
+  - s/us by date (before/after/range)
+  - result of that is written as a config file in the repo, and in the backup folder.
+- We need to add support for BYOB (~~bring~~ ~~buy~~ build your own bundle), where thouse would allow for the usual 3-4 game selections to match. Ideas?
+
+❯ Task Notification:
+> - Task `af0c4388b897fe03c` <kbd>completed</kbd>
+> - Tool `toolu_01BCZa9yFuQKpqeAPL8qujsQ`
+> - > Agent "Find sync/apply CLI and steam plan/ownership logic" finished
+> - [Query (`1376` chars, `1.35 KB`)](output/agents/008.af0c4388b897fe03c/prompt.md)
+> - [Answer (`10710` chars, `10.5 KB`)](output/agents/008.af0c4388b897fe03c/result.md)
+> - [Raw log (`297577` chars, `291 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/5b7af8d4-502a-45f0-bb5c-9059c020894e/tasks/af0c4388b897fe03c.output)
+> - `12` tools, `61891` tokens, `1.15065 s`
+
+❯ Task Notification:
+> - Task `a2ef58acdc467d104` <kbd>completed</kbd>
+> - Tool `toolu_016vdVb3Y2ycKt4zv421fKVX`
+> - > Agent "Find tier file-writing logic across sources" finished
+> - [Query (`1153` chars, `1.13 KB`)](output/agents/009.a2ef58acdc467d104/prompt.md)
+> - [Answer (`9710` chars, `9.51 KB`)](output/agents/009.a2ef58acdc467d104/result.md)
+> - [Raw log (`341573` chars, `334 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/5b7af8d4-502a-45f0-bb5c-9059c020894e/tasks/a2ef58acdc467d104.output)
+> - `20` tools, `65940` tokens, `1.75695 s`
+
+❯ Task Notification:
+> - Task `afc69af71652a9234` <kbd>completed</kbd>
+> - Tool `toolu_01DCgGmAENfCrWUQQB5Zz7cC`
+> - > Agent "Find Humble Choice pick-N-of-pool handling" finished
+> - [Query (`1722` chars, `1.69 KB`)](output/agents/010.afc69af71652a9234/prompt.md)
+> - [Answer (`11918` chars, `11.7 KB`)](output/agents/010.afc69af71652a9234/result.md)
+> - [Raw log (`283465` chars, `277 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/5b7af8d4-502a-45f0-bb5c-9059c020894e/tasks/afc69af71652a9234.output)
+> - `12` tools, `59055` tokens, `1.57412 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Tier field + rename: should this migrate every already-generated list file (all sources, many files) now, or only apply to newly scraped/refreshed bundles going forward (old files keep old names/no tier field until next --refresh)?
+>> 2. TUI for `game-collections apply`: which approach for the interactive picker/filter UI? Repo has no TUI lib yet (only typer/click).
+>> 3. BYOB ("own N of M" bundles): you asked for ideas — how deep should this plan go?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Tier migration** (1/3) <kbd>Single Select</kbd><br>
+>> Tier field + rename: should this migrate every already-generated list file (all sources, many files) now, or only apply to newly scraped/refreshed bundles going forward (old files keep old names/no tier field until next --refresh)?
+> - [ ] 1\. Forward-only (Recommended)
+>   - _Only new/refreshed scrapes get `tier:` field + `bundle.yml` naming. Old files untouched until re-scraped. Small, safe, no bulk rewrite/rename commit._
+> - [x] 2\. Migrate everything now
+>   - _One-time script adds `tier:` field to and renames every existing list file across all sources. Bigger diff, touches lots of already-committed history/paths (including `references` links from archives), but fully consistent immediately._
+> - [ ] 3\. _Type something._
+>
+>> **TUI library** (2/3) <kbd>Single Select</kbd><br>
+>> TUI for `game-collections apply`: which approach for the interactive picker/filter UI? Repo has no TUI lib yet (only typer/click).
+> - [x] 1\. Textual (Recommended)
+>   - _Full-screen TUI framework (checkboxes, scrollable lists, filter inputs) — richer UX matching "select/filter bundles" ask, but a new sizeable dependency._
+> - [ ] 2\. questionary/InquirerPy
+>   - _Lightweight checkbox/select prompts layered over existing typer flow — closer to current numbered-prompt style, less new surface area, but weaker for combined multi-filter screens._
+> - [ ] 3\. Extend typer prompts only
+>   - _No new dependency — reuse the existing numbered `typer.prompt` loop pattern (like `_choose_store_candidate`) for filters/selection. Simplest, but clunkier UX for combined filters + big lists._
+> - [ ] 4\. _Type something._
+>
+>> **BYOB scope** (3/3) <kbd>Single Select</kbd><br>
+>> BYOB ("own N of M" bundles): you asked for ideas — how deep should this plan go?
+> - [ ] 1\. Design ideas only (Recommended)
+>   - _Plan proposes a model/matching approach (e.g. new pick-quota field + sync mode) for discussion, no implementation yet — matches the open-ended "ideas?" ask and the fact ITAD already flags this as unmodeled/deferred._
+> - [ ] 2\. Full implementation plan
+>   - _Plan commits to a specific schema change (GameList/Game fields), scraper changes for ITAD `byob` data + Humble Choice pick-count, and sync/adapter matching changes — ready to build now._
+> - [x] 3\. _Type something:_
+>   - > all of the above, step after step
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `aad87838f2f391682` <kbd>completed</kbd>
+> - Tool `toolu_01FJgKAPKMk5thvGwuxmLUWj`
+> - > Agent "Design implementation plan for 4 features" finished
+> - [Query (`11856` chars, `11.6 KB`)](output/agents/011.aad87838f2f391682/prompt.md)
+> - [Answer (`34325` chars, `33.8 KB`)](output/agents/011.aad87838f2f391682/result.md)
+> - [Raw log (`211357` chars, `207 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/5b7af8d4-502a-45f0-bb5c-9059c020894e/tasks/aad87838f2f391682.output)
+> - `19` tools, `38055` tokens, `3.26167 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Selection config file (`config/apply-selection.yml`): track only excluded bundles (everything else defaults to selected/synced, so an empty/missing file = today's full-sync behavior unchanged) or track full selected+excluded state explicitly?
+>> 2. Textual dependency: add as a required core dependency, or an optional extra (`uv sync --extra tui`) since it's only needed for the new `apply` command?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Config shape** (1/2) <kbd>Single Select</kbd><br>
+>> Selection config file (`config/apply-selection.yml`): track only excluded bundles (everything else defaults to selected/synced, so an empty/missing file = today's full-sync behavior unchanged) or track full selected+excluded state explicitly?
+> - [ ] 1\. excluded-only (Recommended)
+>   - _Single `excluded: list[str]` field. Missing file = no change to current sync behavior. Checkboxes in TUI start pre-checked; unchecking adds to excluded list. Simpler, safer default._
+> - [x] 2\. selected + excluded lists
+>   - _Explicit selected/excluded lists let 'undecided new bundle' be its own state, but adds complexity and a default-policy decision for bundles never seen by the TUI._
+> - [ ] 3\. _Type something._
+>
+>> **Textual dep** (2/2) <kbd>Single Select</kbd><br>
+>> Textual dependency: add as a required core dependency, or an optional extra (`uv sync --extra tui`) since it's only needed for the new `apply` command?
+> - [x] 1\. Optional extra (Recommended)
+>   - _`[project.optional-dependencies] tui = ["textual"]`. Keeps core CLI/scrape/sync lightweight; matches `--extra test` pattern already in pyproject.toml. `apply` command errors with an install hint if textual isn't installed._
+> - [ ] 2\. Required core dependency
+>   - _Always installed via base `uv sync`. Simpler (no conditional import guard needed in cli.py), but every user gets a TUI framework even if they never touch `apply`._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
