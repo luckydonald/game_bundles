@@ -65,6 +65,7 @@ def _archive(item: HumbleItem) -> HumbleArchive:
         ("steam", "https://store.steampowered.com/app/440/Team_Fortress_2/", "steam:440"),
         ("gog", "https://www.gog.com/en/game/alpha_protocol", "gog:alpha_protocol"),
         ("epic", "https://store.epicgames.com/en-US/p/fortnite", "epic:fortnite"),
+        ("epic", "https://www.epicgames.com/store/p/cyberpunk-2077", "epic:cyberpunk-2077"),
         ("ubisoft", "https://store.ubisoft.com/us/game/example.html", "ubisoft:example"),
         ("humble", "https://www.humblebundle.com/store/sample-game", "humble:sample-game"),
     ],
