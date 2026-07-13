@@ -35,6 +35,13 @@ MAX_STEAM_FILE_SIZE = 4 * 1024 * 1024
 NAMESPACE_NAME = "cloud-storage-namespace-1.json"
 MODIFIED_NAME = "cloud-storage-namespace-1.modified.json"
 MANIFEST_NAME = "manifest.json"
+MANUAL_COLLECTION_HINT = (
+    "To create it in Steam: open your Library, select all games (click the first, "
+    "scroll to the bottom, shift-click the last), then click and hold any highlighted "
+    "tile and drag it into the main pane. Hover the 'DRAG and HOLD HERE to view All "
+    "Collections' area top-left, then drop onto the collection (or onto '+ DRAG HERE TO "
+    "CREATE A NEW COLLECTION' and name it), then close Steam."
+)
 
 
 class SteamIoError(RuntimeError):
@@ -186,6 +193,34 @@ class SteamFileGateway:
             modified_file=modified_file,
         )
     # end def load_snapshot
+
+    def read_collection(self, name: str) -> SteamCollectionPayload:
+        """Read a single named local Steam collection (case-insensitive) for use as an ownership source."""
+        snapshot = self.load_snapshot()
+        by_name: dict[str, SteamCollectionPayload] = {}
+        for key, entry in snapshot.namespace.root:
+            if not key.startswith("user-collections.") or entry.is_deleted:
+                continue
+            # end if
+            payload = SteamCollectionPayload.from_entry(entry)
+            by_name[payload.name.casefold()] = payload
+        # end for
+        match = by_name.get(name.casefold())
+        if match is None:
+            available = ", ".join(sorted(payload.name for payload in by_name.values())) or "(none found locally)"
+            raise SteamIoError(
+                f"Steam collection {name!r} not found locally; available collections: {available}.\n"
+                f"{MANUAL_COLLECTION_HINT}"
+            )
+        # end if
+        if match.filterSpec is not None:
+            raise SteamIoError(
+                f"Steam collection {name!r} is a dynamic (filter-based) collection; "
+                "only a manually curated (static) collection can be used as an ownership source"
+            )
+        # end if
+        return match
+    # end def read_collection
 
     def stage(self, plan: SyncPlan, output_root: Path) -> Path:
         """Write candidates and backups outside Steam without modifying Steam."""

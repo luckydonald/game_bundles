@@ -2,8 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
+from game_collections.launchers.steam.adapter import (
+    SteamAdapter,
+    SteamOptions,
+    owned_app_ids_from_collection,
+)
+from game_collections.launchers.steam.io import SteamFileGateway
 from game_collections.lists import LoadedGameList, load_game_list
+from test_steam_io import STEAM_ID, build_fake_steam
 
 
 REPO_ROOT = Path(__file__).parents[1]
@@ -50,6 +56,15 @@ def test_orange_box_is_eligible_when_complete() -> None:
     assert result.eligible is True
     assert result.missing_ids == []
 # end def test_orange_box_is_eligible_when_complete
+
+
+def test_owned_app_ids_from_collection_reads_local_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    source = owned_app_ids_from_collection(gateway, "Favorites")
+
+    assert source() == {440}
+# end def test_owned_app_ids_from_collection_reads_local_collection
 
 
 def test_adapter_requires_source_or_api_key() -> None:
