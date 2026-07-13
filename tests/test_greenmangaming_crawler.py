@@ -66,12 +66,13 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
     paths = write_gmg_offer(_offer(), lists_root, archive_root, tmp_path)
 
     bundle_root = "greenmangaming/bundle/metroidvania-madness"
-    list_path = lists_root / bundle_root / "bronze.yml"
+    list_path = lists_root / bundle_root / "bundle.yml"
     metadata_path = archive_root / "greenmangaming/bundle/metroidvania-madness/metadata.json"
     source_path = archive_root / "greenmangaming/bundle/metroidvania-madness/source.json"
     assert set(paths) == {list_path, metadata_path, source_path}
 
     loaded = load_game_list(list_path, lists_root)
+    assert loaded.data.tier is None
     assert loaded.data.name == "METROIDVANIA MADNESS — Bronze"
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Afterimage", ["steam:1235140"])]
     assert [reference.name for reference in loaded.data.references] == [
@@ -82,6 +83,34 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     assert metadata["slug"] == "metroidvania-madness"
 # end def test_writer_creates_archive_and_dedupes_shared_steam_ids
+
+
+def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
+    offer = _offer()
+    silver_item = GmgItem(
+        product_id="345",
+        title="Silver Game",
+        drm="Steam",
+        redeem_on=["steam"],
+        resolution=GmgResolution(ids=["steam:9999"]),
+    )
+    silver_tier = GmgTier(
+        identifier="silver", name="Silver", item_count=1, price=_price(12.0), items=[silver_item]
+    )
+    archive = offer.archive.model_copy(update={"tiers": [*offer.archive.tiers, silver_tier]})
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_gmg_offer(CrawledGmgOffer(archive=archive, source={}), tmp_path / "lists", tmp_path / "archives", tmp_path)
+
+    bundle_root = "greenmangaming/bundle/metroidvania-madness"
+    lists_root = tmp_path / "lists"
+    first_path = lists_root / bundle_root / "tier-1.yml"
+    second_path = lists_root / bundle_root / "tier-2.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
+    assert load_game_list(first_path, lists_root).data.tier == 1
+    assert load_game_list(second_path, lists_root).data.tier == 2
+# end def test_writer_numbers_multiple_tiers
 
 
 def test_writer_is_idempotent(tmp_path: Path) -> None:
