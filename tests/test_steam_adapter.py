@@ -41,6 +41,7 @@ def _list(
     *,
     unsupported: bool = False,
     tier: int | None = None,
+    pick_quota: int | None = None,
 ) -> LoadedGameList:
     games = [
         {"name": f"Game {app_id}", "ids": [f"steam:{app_id}"]}
@@ -52,6 +53,9 @@ def _list(
     payload: dict[str, object] = {"schema": 1, "name": list_id, "games": games}
     if tier is not None:
         payload["tier"] = tier
+    # end if
+    if pick_quota is not None:
+        payload["pick_quota"] = pick_quota
     # end if
     data = GameList.model_validate(payload)
     return LoadedGameList(id=list_id, path=Path(f"lists/{list_id}.yml"), data=data)
@@ -125,6 +129,48 @@ def test_any_mode_requires_at_least_one_owned_steam_id() -> None:
 
     assert result.eligible is False
 # end def test_any_mode_requires_at_least_one_owned_steam_id
+
+
+def test_pick_quota_met_is_eligible_regardless_of_match_mode() -> None:
+    game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="all"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+# end def test_pick_quota_met_is_eligible_regardless_of_match_mode
+
+
+def test_pick_quota_not_met_is_ineligible_even_in_any_mode() -> None:
+    game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        owned_app_ids_source=_fake_source([10]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is False
+# end def test_pick_quota_not_met_is_ineligible_even_in_any_mode
+
+
+def test_pick_quota_combines_with_highest_tier_selection() -> None:
+    game_lists = [
+        _list("example/byob/tier-1", [10, 20, 30], tier=1, pick_quota=1),
+        _list("example/byob/tier-2", [10, 20, 30], tier=2, pick_quota=2),
+    ]
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan(game_lists)
+
+    assert [change.list_id for change in plan.changes] == ["example/byob/tier-2"]
+# end def test_pick_quota_combines_with_highest_tier_selection
 
 
 def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories() -> None:
