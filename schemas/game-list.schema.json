@@ -87,6 +87,19 @@
       "title": "Name",
       "type": "string"
     },
+    "pick_quota": {
+      "anyOf": [
+        {
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Pick Quota"
+    },
     "references": {
       "items": {
         "$ref": "#/$defs/Reference"

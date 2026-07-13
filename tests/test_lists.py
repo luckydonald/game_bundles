@@ -141,6 +141,49 @@ def test_tier_field_round_trips_when_set(tmp_path: Path) -> None:
 # end def test_tier_field_round_trips_when_set
 
 
+def test_pick_quota_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text("schema: 1\nname: Bundle\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.pick_quota is None
+# end def test_pick_quota_field_is_optional_and_defaults_to_none
+
+
+def test_pick_quota_field_round_trips_when_set(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "byob.yml"
+    path.write_text(
+        "schema: 1\nname: BYOB\npick_quota: 1\n"
+        "games:\n  - name: One\n    ids: [steam:440]\n  - name: Two\n    ids: [steam:441]\n",
+        encoding="utf-8",
+    )
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.pick_quota == 1
+# end def test_pick_quota_field_round_trips_when_set
+
+
+def test_pick_quota_exceeding_game_count_is_rejected(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "invalid.yml"
+    path.write_text(
+        "schema: 1\nname: Invalid\npick_quota: 5\ngames:\n  - name: One\n    ids: [steam:440]\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ListLoadError, match="pick_quota"):
+        load_game_list(path, lists_root)
+    # end with
+# end def test_pick_quota_exceeding_game_count_is_rejected
+
+
 def test_symlinked_lists_are_rejected(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()

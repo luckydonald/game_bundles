@@ -113,12 +113,14 @@ class SteamAdapter(LauncherAdapter):
         for game_list in game_lists:
             required: list[int] = []
             unsupported: list[str] = []
+            owned_game_count = 0
             for game in game_list.data.games:
                 steam_ids = [identifier for identifier in game.qualified_ids if identifier.provider == "steam"]
                 if not steam_ids:
                     unsupported.append(game.name)
                     continue
                 # end if
+                game_app_ids: list[int] = []
                 for identifier in steam_ids:
                     try:
                         app_id = int(identifier.value)
@@ -128,12 +130,19 @@ class SteamAdapter(LauncherAdapter):
                     if app_id <= 0:
                         raise ValueError(f"invalid Steam app ID {app_id} in {game_list.id}")
                     # end if
-                    required.append(app_id)
+                    game_app_ids.append(app_id)
                 # end for
+                required.extend(game_app_ids)
+                if any(app_id in owned_app_ids for app_id in game_app_ids):
+                    owned_game_count += 1
+                # end if
             # end for
             missing = sorted(set(required) - owned_app_ids)
             owned = sorted(set(required) & owned_app_ids)
-            if self.options.match_mode == "any":
+            pick_quota = game_list.data.pick_quota
+            if pick_quota is not None:
+                eligible = owned_game_count >= pick_quota
+            elif self.options.match_mode == "any":
                 eligible = bool(owned)
             else:
                 eligible = bool(required) and not missing
