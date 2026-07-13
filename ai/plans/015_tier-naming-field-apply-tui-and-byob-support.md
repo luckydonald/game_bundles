@@ -110,6 +110,6 @@ Commit order for Phase 5: 5a → 5d (ships right after 5a, only needs the field)
 - [x] Phase 1: crawlers write bundle.yml/tier-N.yml + populate tier
 - [x] Phase 2: adapter reads tier field, retires filename regex
 - [x] Phase 3: migrate-tiers CLI subcommand + migrate lists/**
-- [ ] Phase 4: apply Textual TUI + selection config
-- [ ] Phase 5a+5d: pick_quota model field + adapter quota matching
+- [x] Phase 4: apply Textual TUI + selection config
+- [ ] Phase 5a+5d: pick_quota model field + adapter quota matching *(in progress)*
 - [ ] Phase 5b/5c: verify ITAD byob + Humble Choice pick-count live shapes (gated)
