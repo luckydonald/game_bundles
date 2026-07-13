@@ -791,3 +791,58 @@ I've update the format of `config/isthereanydeal-shops.yml` to not need ID but b
 
 ❯ document your learnings
 
+❯ /plan I've added a `manual-all` game collection in steam, which manually includes all games I own in my library.
+For that the script shall have a `--collection=manual-all` (just `--collection` also defaults to `manual-all`) flag, to take that as source for the local library, hence being an alternative to the api key stuff to look up the owned games.
+Side note, the collection `all` seems to be used internally - but is not exposed anywhere.
+
+❯ Task Notification:
+> - Task `aaebfcc5eae9ff611` <kbd>completed</kbd>
+> - Tool `toolu_013nLkrq1EqC5FHYdpafn8iy`
+> - > Agent "Explore Steam launcher owned-games and collections code" finished
+> - [Query (`1420` chars, `1.39 KB`)](output/agents/007.aaebfcc5eae9ff611/prompt.md)
+> - [Answer (`15051` chars, `14.8 KB`)](output/agents/007.aaebfcc5eae9ff611/result.md)
+> - [Raw log (`300168` chars, `294 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/a808247f-045f-4315-84b5-49fb38c66f8e/tasks/aaebfcc5eae9ff611.output)
+> - `19` tools, `61099` tokens, `9.61462 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. How should the `--collection` flag behave with `--source`, and what happens if the local collection is missing/empty?
+>> 2. If the named local collection (e.g. manual-all) doesn't exist in Steam's local config, or exists but is a dynamic/filterSpec collection (no static added list), what should happen?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Flag wiring** (1/2) <kbd>Single Select</kbd><br>
+>> How should the `--collection` flag behave with `--source`, and what happens if the local collection is missing/empty?
+> - [x] 1\. New --source collection value
+>   - _Keep `--source api|installed` as-is, add third value `collection`. `--collection NAME` (default `manual-all`) only takes effect when `--source collection` is set. Bare `--collection` (no value typed) is not supported by Click without a value; passing just `--collection` on its own (implying source=collection) means: presence of `--collection` alone implies source=collection too._
+>   - ```
+>     --source collection --collection manual-all
+>     --source collection            # uses default name manual-all
+>     --collection manual-all        # ALSO implies source=collection (no --source needed)
+>     ```
+> - [ ] 2\. --collection alone is enough, no --source needed
+>   - _Drop the collection case from --source entirely. Just passing --collection (with or without an explicit name) selects the local-collection ownership source; omitting --collection entirely keeps the current api/installed --source behavior unchanged._
+>   - ```text
+>     --collection                   # source = local collection named manual-all
+>     --collection=my-owned          # source = local collection named my-owned
+>     (no --collection)              # existing --source api|installed behavior, unchanged
+>     ```
+> - [ ] 3\. _Notes: Add notes on this design._
+>
+>> **Missing collection** (2/2) <kbd>Single Select</kbd><br>
+>> If the named local collection (e.g. manual-all) doesn't exist in Steam's local config, or exists but is a dynamic/filterSpec collection (no static added list), what should happen?
+> - [ ] 1\. Hard error, list available collection names (Recommended)
+>   - _Raise a clear error naming the collection that was requested and listing the names of collections actually found locally, so the user can fix a typo or create the collection in Steam first._
+> - [ ] 2\. Hard error, no listing
+>   - _Just raise 'collection X not found' without enumerating what does exist locally._
+> - [x] 3\. _Type something:_
+>   - > Hard error, list available collection names (Recommended); also print short instructions, on how to create it: 1) go to library 2) select all games on the left (select first, scroll down, shift+click the last item) 3) click and hold any of the now highlighted items 4) drag over to main part of the window 5) if not on the collection page on the top left there will be `DRAG and HOLD HERE` \n `to view All Collections`. Move the mouse over that. 6) Either drag onto an existing `manual-all` collection or on the first tile which says `+ FRAG HERE TO CREATE A NEW COLLECTION`. 7) in the **New Collection** dialogue enter the name `manual-all`, then click <kbd>CREATE COLLECTION</kbd>. 8) Done, shut down steam.
+>
+> </details>
+>
+
+❯ first commit cleanly, then rebase.
+
