@@ -1,15 +1,27 @@
 from __future__ import annotations
 
+import json
+
 import pytest
 
 from game_collections.sources.isthereanydeal.parser import (
     ItadParseError,
     parse_bootstrap_page,
+    parse_bundle_detail_json,
     parse_bundle_detail_page,
     parse_list_page,
     real_provider_slug,
     real_provider_url,
 )
+
+
+def _detail_json_html(live_data: dict) -> str:
+    page_json = json.dumps(["Bundle", {"liveData": live_data}])
+    return (
+        '<html><script>var g = {"shops": {}, "token": "tok"}; '
+        f"var page = {page_json};</script></html>"
+    )
+# end def _detail_json_html
 
 
 BOOTSTRAP_HTML = """
@@ -220,3 +232,189 @@ def test_parse_bundle_detail_page_count_mismatch_raises() -> None:
         parse_bundle_detail_page(html, bundle_id=6, expected_game_count=99)
     # end with
 # end def test_parse_bundle_detail_page_count_mismatch_raises
+
+
+def test_parse_bundle_detail_json_returns_none_without_embedded_data() -> None:
+    assert parse_bundle_detail_json("<html>no script here</html>", 1, 1, "fanatical") is None
+# end def test_parse_bundle_detail_json_returns_none_without_embedded_data
+
+
+def test_parse_bundle_detail_json_cumulative_named_tiers() -> None:
+    live_data = {
+        "tiers": [
+            {
+                "price": [800, "EUR"],
+                "addon": False,
+                "note": "Bronze",
+                "games": [
+                    {
+                        "slug": "laika",
+                        "title": "Laika",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1796220/"}],
+                        "keys": [61],
+                    },
+                    {
+                        "slug": "bo",
+                        "title": "Bo",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1614440/"}],
+                        "keys": [61],
+                    },
+                ],
+            },
+            {
+                "price": [1200, "EUR"],
+                "addon": False,
+                "note": "Silver",
+                "games": [
+                    {
+                        "slug": "grime",
+                        "title": "GRIME",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1123050/"}],
+                        "keys": [61],
+                    },
+                    {
+                        "slug": "islets",
+                        "title": "Islets",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1669420/"}],
+                        "keys": [61],
+                    },
+                ],
+            },
+        ]
+    }
+    html = _detail_json_html(live_data)
+    tiers = parse_bundle_detail_json(html, bundle_id=1, expected_game_count=4, provider_slug="greenmangaming")
+    assert tiers is not None
+    assert [tier.name for tier in tiers] == ["Bronze", "Silver"]
+    assert [tier.item_count for tier in tiers] == [2, 4]
+    assert {item.slug for item in tiers[1].items} == {"laika", "bo", "grime", "islets"}
+    assert tiers[0].price is not None
+    assert tiers[0].price.value == 8.0
+# end def test_parse_bundle_detail_json_cumulative_named_tiers
+
+
+def test_parse_bundle_detail_json_humble_tier_naming_without_note() -> None:
+    live_data = {
+        "tiers": [
+            {
+                "price": [1059, "EUR"],
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "phogs",
+                        "title": "PHOGS!",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1/"}],
+                        "keys": [61],
+                    }
+                ],
+            }
+        ]
+    }
+    html = _detail_json_html(live_data)
+    tiers = parse_bundle_detail_json(html, bundle_id=1, expected_game_count=1, provider_slug="humblebundle")
+    assert tiers is not None
+    assert tiers[0].name == "entire-1-item-bundle"
+# end def test_parse_bundle_detail_json_humble_tier_naming_without_note
+
+
+def test_parse_bundle_detail_json_byob_single_tier_no_price() -> None:
+    live_data = {
+        "tiers": [
+            {
+                "price": None,
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "a",
+                        "title": "A",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1/"}],
+                        "keys": [61],
+                    },
+                    {"slug": "b", "title": "B", "reviews": [], "keys": []},
+                ],
+            }
+        ]
+    }
+    html = _detail_json_html(live_data)
+    tiers = parse_bundle_detail_json(html, bundle_id=2, expected_game_count=2, provider_slug="fanatical")
+    assert tiers is not None
+    assert len(tiers) == 1
+    assert tiers[0].price is None
+    ids = {item.slug: item.ids for item in tiers[0].items}
+    assert ids["a"] == ["steam:1"]
+    assert ids["b"][0].startswith("unresolved:")
+# end def test_parse_bundle_detail_json_byob_single_tier_no_price
+
+
+def test_parse_bundle_detail_json_count_mismatch_raises() -> None:
+    live_data = {
+        "tiers": [{"price": None, "addon": False, "note": None, "games": [{"slug": "a", "title": "A", "reviews": [], "keys": []}]}]
+    }
+    html = _detail_json_html(live_data)
+    with pytest.raises(ItadParseError):
+        parse_bundle_detail_json(html, bundle_id=9, expected_game_count=99, provider_slug="fanatical")
+    # end with
+# end def test_parse_bundle_detail_json_count_mismatch_raises
+
+
+def test_parse_bundle_detail_json_mature_bundle_parses_fully() -> None:
+    """The mature-content gate is purely visual - the embedded data isn't hidden behind it."""
+    live_data = {
+        "mature": True,
+        "tiers": [
+            {
+                "price": [131, "EUR"],
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "horny-spell",
+                        "title": "Horny Spell",
+                        "mature": True,
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/2206280/"}],
+                        "keys": [61],
+                    }
+                ],
+            }
+        ],
+    }
+    html = _detail_json_html(live_data)
+    tiers = parse_bundle_detail_json(html, bundle_id=16299, expected_game_count=1, provider_slug="indiegala")
+    assert tiers is not None
+    assert tiers[0].items[0].ids == ["steam:2206280"]
+# end def test_parse_bundle_detail_json_mature_bundle_parses_fully
+
+
+def test_parse_bundle_detail_json_logs_shop_key_mismatch_without_raising() -> None:
+    live_data = {
+        "tiers": [
+            {
+                "price": [500, "EUR"],
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "a",
+                        "title": "A",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1/"}],
+                        "keys": [35],
+                    }
+                ],
+            }
+        ]
+    }
+    html = _detail_json_html(live_data)
+    messages: list[str] = []
+    tiers = parse_bundle_detail_json(
+        html,
+        bundle_id=3,
+        expected_game_count=1,
+        provider_slug="fanatical",
+        shop_names={35: "GOG", 61: "Steam"},
+        log=messages.append,
+    )
+    assert tiers is not None
+    assert any("shop 35" in message for message in messages)
+# end def test_parse_bundle_detail_json_logs_shop_key_mismatch_without_raising
