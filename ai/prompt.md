@@ -848,3 +848,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ While rebasing, make sure everything since `origin/mane` is cleaned up as well.
 
+❯ document your learnings
+
