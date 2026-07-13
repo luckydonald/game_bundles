@@ -862,3 +862,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 › Display skip logs only if `--log-skips`.
 
+› Add `🗃️` as prefix for all of our exported to-steam collections.
+
