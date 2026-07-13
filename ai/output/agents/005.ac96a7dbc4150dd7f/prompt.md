@@ -1,0 +1,41 @@
+Implement the approved plan at /home/user/.claude/plans/steady-swinging-umbrella.md in full. Read that file now — it has the complete design. This is a full implementation task (code, tests, docs, commit) — not research; the investigation is done and documented there.
+
+Summary of what changed since the isthereanydeal source shipped (commit c152f25, then a follow-up storefronts refactor): we discovered the mature-content gate on isthereanydeal.com is purely a client-side visual overlay — every `/bundles/<id>/` detail page, fetched with a plain unauthenticated GET, already embeds the full bundle data (tiers, prices, per-game storefront review URLs) in an inline `<script>var page = ["Bundle", {"liveData": {...}}];</script>` block, mature or not. So: add this as the PRIMARY parser path (much more robust than the current positional-regex HTML parser), keep the current regex parser as a fallback (rewritten to use BeautifulSoup4 instead of raw regex, per the plan — bs4 is already a locked dependency, not a new addition), and remove the mature-bundle skip in the crawler since mature bundles now parse fully.
+
+## Fixtures already on disk (real fetched pages, use these — read via Read tool or python3, don't assume you need to re-curl)
+Directory: `/tmp/claude-1000/-home-user-git-luckydonald-game-collections/cd0d5bf6-9b5e-4b83-9236-5f2b9cc6dccb/scratchpad/itad/`
+- `bundle_16316.html` — GreenManGaming, 3-tier cumulative (Bronze/Silver/Gold via `tiers[i].note`), already deduped against our own `lists/greenmangaming/bundle/metroidvania-madness/` in production.
+- `bundle_16375.html` — Fanatical, Build-Your-Own (single tier, `price: null`, `note: null`, `byob: [...]` picks).
+- `bundle_16381.html` — Humble Bundle, single flat tier (`note: null` — this is the case needing the hardcoded `entire-N-item-bundle`/`N-item-bundle` naming from the plan, matching `humblebundle/crawler.py`'s own convention, IF a Humble bundle ever isn't deduped away).
+- `bundle_16339.html` — IndieGala, single flat tier (`note: null`).
+- `bundle_16299_mature.html` — IndieGala, **mature-rated** (`liveData.mature: true`), 16 games, real Steam review URLs present despite the gate — this is your end-to-end regression fixture proving mature bundles now parse.
+- `bundles_page.html` / `cookies.txt` / `token.txt` — the anonymous bootstrap page + its cookie jar + extracted token, for reference/re-fetching if you need a live request (session token may have expired by now; redo the bootstrap GET yourself if so, per the pattern already in `crawler.py`'s `ItadHttpClient`).
+- `list_live_offset0.json` / `list_expired_offset0.json` / `list_pending_offset0.json` — real list-API responses, already used by the existing test suite's fixtures presumably; check `tests/test_isthereanydeal_parser.py`/`tests/test_isthereanydeal_crawler.py` for what's already there before duplicating.
+
+## Existing code to read first
+- `src/game_collections/sources/isthereanydeal/parser.py` — current regex-based `parse_bundle_detail_page`, `parse_bootstrap_page` (token/shops extraction), `_extract_balanced_object`, `_resolve_item_ids`. Full file was already read during planning; the plan file quotes its exact structure and line-level behavior.
+- `src/game_collections/sources/isthereanydeal/crawler.py` — the mature-skip branch is around where `summary.is_mature` is checked (~line 249), followed by the `parse_bundle_detail_page` call (~line 276).
+- `src/game_collections/sources/isthereanydeal/provider_config.py` and `config/isthereanydeal-providers.yml` — existing pattern for the new `config/isthereanydeal-shops.yml` to mirror.
+- `src/game_collections/sources/humblebundle/crawler.py` lines ~279-284 — the exact `entire-{n}-item-bundle`/`{n}-item-bundle` naming logic to replicate for Humble-provider ITAD bundles with no `tier.note`.
+- `src/game_collections/sources/isthereanydeal/models.py` — `ItadTier`/`ItadItem`/`ItadPrice` need NO changes (verified during planning that the JSON maps onto them as-is).
+
+## Full shop-id → name table for `config/isthereanydeal-shops.yml`
+Already captured during planning from `var g.shops` on the live bootstrap page (~77 entries: `"1":["Adventure Shop",0]` ... `"61":["Steam",0]` ... `"77":["Muve",1]`). Re-extract it yourself from `bundles_page.html` (or any of the bundle_*.html fixtures, same `var g = {...}` blob appears on every page) via the same `parse_bootstrap_page`-style extraction rather than trusting a hand-copied list from a stale conversation — get the authoritative current set directly from the fixture file on disk.
+
+## Do
+1. Rewrite the legacy `parse_bundle_detail_page` fallback using BeautifulSoup4 (`from bs4 import BeautifulSoup`) instead of regex, preserving identical behavior/output shape and all existing invariant checks (cumulative item-count validation, no-empty-tiers, etc.) — the existing tests for this path must still pass.
+2. Add `parse_bundle_detail_json(html, bundle_id, expected_game_count) -> list[ItadTier] | None` as described in the plan: locate the `var page = [...]` script via BS4, extract+validate the JSON, accumulate per-tier-exclusive `games` into cumulative `ItadTier.items`, tier naming via `tier.note` → Humble-specific hardcoded convention → generic `Tier N` fallback (in that priority order), resolve each game's `reviews[].url` entries via the shared `_resolve_urls` helper (refactored out of `_resolve_item_ids` so both parsers use it).
+3. Wire the crawler to try the JSON path first, falling back to the legacy BS4 path on `None`/`ItadParseError`, logging one line when falling back.
+4. Remove the `summary.is_mature` skip branch entirely.
+5. Add `config/isthereanydeal-shops.yml` + loader, used only for a corroboration log line (game `keys` shop-ids vs. which provider(s) its resolved ids actually belong to) — never for resolving ids themselves.
+6. Tests per the plan's Tests section (JSON-path parsing, legacy fallback still works when the JSON script is stripped, both-paths-fail still raises, the mature bundle now fully parses end-to-end, shops-config mismatch logs without raising).
+7. Docs: update the isthereanydeal section of root `README.md` per the plan.
+8. This repo's active `commit-with-lplp-style` skill governs commits — invoke it explicitly, message via `ai/git/pending-commit.md`, `-F` commit, explicit-path staging, fold any stray auto-commits sitting on top of the last real commit (check `git log --oneline -10` first — there was `647ab13`/`34cb831` for the isthereanydeal feature, and possibly an `ai: updated prompt` auto-commit on top from this session already, per earlier `git log` output showing `235a848 ai: updated prompt` at HEAD).
+
+## Verification (per the plan)
+- `env UV_CACHE_DIR=/tmp/uv-cache uv run pytest -q` fully green.
+- Live smoke test: `env UV_CACHE_DIR=/tmp/uv-cache uv run game-collections scrape isthereanydeal --refresh` against the real site. Confirm the two previously-skipped mature bundles (16299 "Sensual Clinic Bundle"/IndieGala, 15363 "High on Life: DLC Bundle"/AllYouPlay — verify these are still live/present, the live bundle list changes over time) now produce real `lists/indiegala/...`/`lists/allyouplay/...` entries instead of being skipped, and diff before/after to confirm nothing else regressed. If either of those two specific bundles has expired/rotated off by now, find any other currently-mature-flagged bundle in the live list and use that instead — the point is proving at least one real mature bundle now parses end-to-end.
+
+Do not touch pre-existing untracked `archives/dailyindiegame/...`/`lists/dailyindiegame/...` files. Also do not act on the unrelated `ai/pending.tmp.md` "BYOB" note beyond what's already described in the plan's Out of Scope section — it's explicitly flagged there as a possibly-separate ask, not part of this task.
+
+When done, report: what you built, full test pass/fail counts, the live smoke-test outcome (which mature bundle(s) now parse, any before/after diff surprises), and the final commit hash(es). Note anything that deviated from the plan or surprised you. Keep it factual and reasonably brief.

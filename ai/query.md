@@ -669,3 +669,16 @@ Ah, check out the inline `<script>`, especially `var page = ["Bundle", {`.
 ❯ Try to avoid regex based parsers if `BeautifulSoup4` is an option.
 Bronze/Silver/Gold header text is available as `tiers[i].note` (if non-null, otherwise `Tier ${i}` is fine. For humble bundle, `${'entire'?} ${n} item bundle` is fine hardcoded.
 
+❯ Task Notification:
+> - Task `ac96a7dbc4150dd7f` <kbd>completed</kbd>
+> - Tool `toolu_01JzsAYrWQYtFYZaFgjaNpz8`
+> - > Agent "Add JSON-based ITAD detail parser, drop mature skip" finished
+> - [Query (`8071` chars, `7.94 KB`)](output/agents/005.ac96a7dbc4150dd7f/prompt.md)
+> - [Answer (`2554` chars, `2.52 KB`)](output/agents/005.ac96a7dbc4150dd7f/result.md)
+> - [Raw log (`924570` chars, `904 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/b0415bfb-1d4d-4f8d-ba21-2a9b5c037d86/tasks/ac96a7dbc4150dd7f.output)
+> - `190` tools, `419867` tokens, `20.034 s`
+
+❯ `bundle 15183 'transformers-battlegrounds': shop 61 (Steam) has no matching resolved id (resolved: none)` - what does that mean?
+
+❯ clean up the auto ai commits into the feature commits, everything after `647ab131734f78916408c37d41fbabb1a1a1e8fb`.
+
