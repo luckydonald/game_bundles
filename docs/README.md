@@ -54,13 +54,15 @@ uv run game-collections sync steam --mode any --tiers all
 uv run game-collections sync steam --log-skips
 uv run game-collections sync steam --apply
 uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestamp>
+uv run game-collections apply steam
+uv run game-collections migrate-tiers
 ```
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
 
 `eligible steam` and `sync steam` print eligible lists and the planned-change count by default. Pass `--log-skips` to also print every skipped list with its missing or unsupported IDs.
 
-`sync steam` defaults to `--mode all --tiers highest`. `--mode all` requires every Steam ID in a list to be owned, while `--mode any` requires at least one and exports only the owned Steam IDs; games without Steam IDs do not affect either match mode. `--tiers highest` recognizes sibling `tier-N.yml` and `(entire-)?N-item-bundle.yml` lists and keeps only the numerically highest matching tier per bundle directory. Use `--tiers all` to export every matching tier.
+`sync steam` defaults to `--mode all --tiers highest`. `--mode all` requires every Steam ID in a list to be owned, while `--mode any` requires at least one and exports only the owned Steam IDs; games without Steam IDs do not affect either match mode. `--tiers highest` groups sibling lists by bundle directory using each list's `tier:` field (a single-tier bundle has no `tier:` field and is always included) and keeps only the numerically highest matching tier per directory. Use `--tiers all` to export every matching tier. Every bundle-writing scraper sets `tier:` itself; `game-collections migrate-tiers` (`--apply` to write, dry-run by default) brings already-generated `lists/**/*.yml` files onto this convention — a lone tier is renamed to `bundle.yml` with no `tier:` field, siblings become `tier-1.yml`, `tier-2.yml`, ... with the field set.
 
 `eligible steam` and `sync steam` also accept `--source installed` to skip the Web API and `STEAM_WEB_API_KEY` entirely, approximating ownership from locally installed games (`steamapps/libraryfolders.vdf` + `appmanifest_*.acf`). This only sees what's currently installed, not everything the account owns, so owned-but-uninstalled games are reported as missing; there is no local file that exposes the full owned/licensed games list, and `STEAM_WEB_API_KEY` itself can never be read from local Steam files — it's an account secret from Valve's web dev portal.
 
@@ -73,6 +75,8 @@ Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used
 5. Drop onto an existing `manual-all` collection, or onto the "+ DRAG HERE TO CREATE A NEW COLLECTION" tile.
 6. In the **New Collection** dialog, enter the name `manual-all` and click **CREATE COLLECTION**.
 7. Close Steam before running `game-collections` against it.
+
+`game-collections apply steam` is a graphical, interactive variant of `sync steam`: it opens a full-screen [Textual](https://textual.textualize.io/) picker (needs the optional `tui` extra: `uv sync --extra tui`) over every discovered bundle, letting you filter by source/type, item-count range, and date range, and manually check/uncheck individual bundles, before continuing through the exact same plan/stage/confirm/apply flow as `sync steam --apply`. Saving (`ctrl+s` or the Save button) writes your selection to `config/apply-selection.yml` (`--selection-config` to change the path) and, when combined with `--apply`, also copies it into the staged backup directory. `sync steam` and `eligible steam` also accept `--selection-config`, so a saved selection filters those too; a missing selection config is silently ignored (no filtering, matching prior behavior). A bundle absent from both the `selected` and `excluded` lists in the config is included by default.
 
 `game-collections search NAME` prints ranked matches from every supported storefront. Limit it with `--provider steam` (or `gog`, `epic`, `ubisoft`, or `humble`).
 
