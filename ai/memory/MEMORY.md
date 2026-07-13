@@ -2,16 +2,16 @@
 - [Repo commit hooks](repo_commit_hooks.md) — pre-commit hook rejects Co-Authored-By/Claude-Session commit trailers; `allowCoAuthoredEtc: false` in `ai/tool-settings/settings.json` suppresses Claude Code's own footer.
 - [History-master replay guards](2026-07-20-history-master-replay-guards.md) — TODO: summarize this file.
 - [end comment bare form](feedback_end_comment_bare_form.md) — TODO: summarize this file.
-- [full range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — TODO: summarize this file.
+- [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
 - [live validation runs fix bugs found](feedback_live_validation_runs_fix_bugs_found.md) — TODO: summarize this file.
 - [no private prefix split modules](feedback_no_private_prefix_split_modules.md) — TODO: summarize this file.
 - [plan prose formatting](feedback_plan_prose_formatting.md) — TODO: summarize this file.
 - [Real examples, not placeholders](feedback_real_examples_not_placeholders.md) — use confirmed-real slugs/ids in docs/tests, not invented-looking ones
-- [rebase todo script needs arg1](feedback_rebase_todo_script_needs_arg1.md) — TODO: summarize this file.
+- [Rebase todo script needs $1](feedback_rebase_todo_script_needs_arg1.md) — GIT_SEQUENCE_EDITOR heredoc must target "$1", not a literal empty path
 - [Reuse existing prefixes](feedback_reuse_existing_prefixes.md) — don't split identity when an external config names something differently than existing internal code
 - [Verify, don't guess external shapes](feedback_verify_dont_guess_external_shapes.md) — fetch real URL/API shapes live before writing parsers; skip unverified cases, never guess
 - [isthereanydeal source expansion status](project_isthereanydeal_source_expansion.md) — per-game solver added 2026-07-13; unverified shop parsers + Blizzard limitation still open
-- [project steam collection ownership source](project_steam_collection_ownership_source.md) — TODO: summarize this file.
+- [Steam collection ownership source](project_steam_collection_ownership_source.md) — `--source collection`/`--collection manual-all` added 2026-07-13, reads a user-curated local Steam collection
 - [project todo md evolves mid session](project_todo_md_evolves_mid_session.md) — TODO: summarize this file.
 - [reference typer optional value flag limitation](reference_typer_optional_value_flag_limitation.md) — TODO: summarize this file.
 - [User's ITAD domain expertise](user_isthereanydeal_domain_expertise.md) — user does own live research on isthereanydeal/storefronts, expect iterating scope
