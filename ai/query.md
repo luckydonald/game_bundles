@@ -850,3 +850,13 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ document your learnings
 
+› `!`
+> ```shell
+> game-collections sync --source collection
+> ```
+
+
+› fix.
+
+› I squashed the memory ai commits already.
+
