@@ -860,3 +860,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 › I squashed the memory ai commits already.
 
+› Display skip logs only if `--log-skips`.
+

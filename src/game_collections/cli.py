@@ -692,13 +692,16 @@ def _steam_adapter(
 # end def _steam_adapter
 
 
-def _print_plan(plan: object) -> None:
+def _print_plan(plan: object, *, log_skips: bool = False) -> None:
     from game_collections.launchers.base import SyncPlan
 
     if not isinstance(plan, SyncPlan):
         raise TypeError("expected SyncPlan")
     # end if
     for result in plan.eligibility:
+        if not result.eligible and not log_skips:
+            continue
+        # end if
         state = "eligible" if result.eligible else "skipped"
         typer.echo(f"{state}: {result.list_id} ({result.name})")
         if result.missing_ids:
@@ -721,6 +724,7 @@ def eligible_command(
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
 ) -> None:
     """Report which lists are fully owned by the launcher account."""
     if launcher != "steam":
@@ -730,7 +734,7 @@ def eligible_command(
     try:
         adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key, source, collection)
         plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
-        _print_plan(plan)
+        _print_plan(plan, log_skips=log_skips)
     except (OSError, ValueError, RuntimeError) as error:
         typer.echo(str(error), err=True)
         raise typer.Exit(1) from error
@@ -749,6 +753,7 @@ def sync_command(
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
 ) -> None:
     """Plan or stage and explicitly apply launcher collection changes."""
     if launcher != "steam":
@@ -758,7 +763,7 @@ def sync_command(
     try:
         adapter, gateway = _steam_adapter(steam_root, steam_id, api_key, source, collection)
         plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
-        _print_plan(plan)
+        _print_plan(plan, log_skips=log_skips)
         if not apply_changes:
             typer.echo("Dry run only. Use --apply to stage inspectable files.")
             return
