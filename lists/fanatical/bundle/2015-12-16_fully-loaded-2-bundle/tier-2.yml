@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fully Loaded 2 Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2857/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2857/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2857/source.json
+games:
+- name: Funk of Titans
+  ids:
+  - steam:383750
+- name: Zombie Office Politics
+  ids:
+  - unresolved:source:isthereanydeal:2857:zombie-office-politics
+- name: Black Sails - The Ghost Ship
+  ids:
+  - steam:373240
+- name: Supreme Ruler 1936
+  ids:
+  - steam:244410
+- name: ShipLord
+  ids:
+  - steam:422250
+- name: TY the Tasmanian Tiger 4
+  ids:
+  - steam:287840
+- name: Zombie Kill of the Week - Reborn
+  ids:
+  - steam:342300
+- name: Terra Lander Remastered
+  ids:
+  - steam:338550
+- name: 'Store Manager: Cellular Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2857:store-manager-cellular-edition
+- name: The Troma Project
+  ids:
+  - steam:279640
+- name: Son of Nor
+  ids:
+  - steam:264000
+- name: The Legend of Dark Witch
+  ids:
+  - steam:420770

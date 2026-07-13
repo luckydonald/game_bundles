@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 813 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11428/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11428/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11428/source.json
+games:
+- name: Elven Magic
+  ids:
+  - steam:923140
+- name: Crystallo
+  ids:
+  - steam:1062680
+- name: Detective March Forward - The Missing Will
+  ids:
+  - steam:1265680
+- name: PUFIWEHO
+  ids:
+  - steam:1352660
+- name: Cafe Simulator
+  ids:
+  - unresolved:source:isthereanydeal:11428:cafe-simulator
+- name: Dear Mom
+  ids:
+  - steam:1518140
+- name: Aurora - Cores Ocultas
+  ids:
+  - steam:1184530
+- name: Historic Fighters
+  ids:
+  - unresolved:source:isthereanydeal:11428:historic-fighters
+- name: L.S.S II
+  ids:
+  - steam:1056330

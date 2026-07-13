@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of the Damned 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6586/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6586/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6586/source.json
+games:
+- name: Queen's Garden Halloween
+  ids:
+  - unresolved:source:isthereanydeal:6586:queens-garden-halloween
+- name: MUTATION PHASE
+  ids:
+  - steam:871850
+- name: 'Shining Hotel: Lost in Nowhere'
+  ids:
+  - unresolved:source:isthereanydeal:6586:shining-hotel-lost-in-nowhere
+- name: Strangers
+  ids:
+  - unresolved:source:isthereanydeal:6586:strangers
+- name: Witch The Bloodlines
+  ids:
+  - steam:925690
+- name: Last Alive
+  ids:
+  - unresolved:source:isthereanydeal:6586:last-alive

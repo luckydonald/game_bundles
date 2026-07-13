@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Puzzle Pizzazz Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15178/source.json
+games:
+- name: A Guidebook of Babel
+  ids:
+  - steam:1467920
+- name: Paper Trail
+  ids:
+  - steam:1889740
+- name: Homebody
+  ids:
+  - steam:1959350
+- name: Kingsgrave
+  ids:
+  - steam:2644360
+- name: 'Behind the Frame: The Finest Scenery'
+  ids:
+  - steam:1634150
+- name: The Entropy Centre
+  ids:
+  - steam:1730590
+- name: The Star Named EOS
+  ids:
+  - steam:1619230
+- name: The Abandoned Planet
+  ids:
+  - steam:2014470

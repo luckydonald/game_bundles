@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Friday Funday Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2513/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2513/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2513/source.json
+games:
+- name: Get Rich or Die Gaming
+  ids:
+  - steam:395910
+- name: Pilot Crusader
+  ids:
+  - unresolved:source:isthereanydeal:2513:pilot-crusader
+- name: Naninights
+  ids:
+  - unresolved:source:isthereanydeal:2513:naninights
+- name: Break Into Zatwor
+  ids:
+  - unresolved:source:isthereanydeal:2513:break-into-zatwor
+- name: gShift
+  ids:
+  - steam:396730
+- name: Urizen Shadows of the Cold Deluxe Frosty Edition
+  ids:
+  - unresolved:source:isthereanydeal:2513:urizen-shadows-of-the-cold-deluxe-frosty-edition

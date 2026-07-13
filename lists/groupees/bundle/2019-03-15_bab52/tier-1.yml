@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 52 — Select 2 to 10 titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7180/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7180/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7180/source.json
+games:
+- name: Flying Soul
+  ids:
+  - steam:909270
+- name: VR Chair Games
+  ids:
+  - steam:605110
+- name: Revhead
+  ids:
+  - steam:589760
+- name: Papper Balls
+  ids:
+  - steam:946170
+- name: The Story of My Life
+  ids:
+  - unresolved:source:isthereanydeal:7180:the-story-of-my-life
+- name: The Barbarian and the Subterranean Caves
+  ids:
+  - steam:490690
+- name: UBERMOSH Vol.5
+  ids:
+  - steam:640380
+- name: AmazeD 3D
+  ids:
+  - unresolved:source:isthereanydeal:7180:amazed-3d
+- name: Survive in Angaria 2
+  ids:
+  - steam:912820

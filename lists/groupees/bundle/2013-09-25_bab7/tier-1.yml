@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 7 — Select Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/325/source.json
+games:
+- name: Oknytt
+  ids:
+  - steam:286320
+- name: cloudphobia
+  ids:
+  - steam:329340
+- name: Duke Nukem
+  ids:
+  - unresolved:source:isthereanydeal:325:duke-nukem
+- name: Primal Fears
+  ids:
+  - steam:211280
+- name: Duke Nukem 2
+  ids:
+  - unresolved:source:isthereanydeal:325:duke-nukem-2
+- name: Frogatto & Friends
+  ids:
+  - steam:865030
+- name: Zack Zero
+  ids:
+  - steam:234290
+- name: Retrovirus
+  ids:
+  - unresolved:source:isthereanydeal:325:retrovirus
+- name: 'Hydrophobia: Prophecy'
+  ids:
+  - steam:92000
+- name: Project Aftermath
+  ids:
+  - unresolved:source:isthereanydeal:325:project-aftermath
+- name: BigHead BASH In-game Content pack
+  ids:
+  - unresolved:source:isthereanydeal:325:bighead-bash-in-game-content-pack

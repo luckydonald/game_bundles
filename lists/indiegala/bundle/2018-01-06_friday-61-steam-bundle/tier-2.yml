@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #61 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5786/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5786/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5786/source.json
+games:
+- name: Bottle
+  ids:
+  - steam:2384850
+- name: Dark Days
+  ids:
+  - steam:422020
+- name: DeathMetal
+  ids:
+  - steam:553820
+- name: 'Space Merchants: Arena'
+  ids:
+  - steam:548080
+- name: 'Squareboy vs Bullies: Arena Edition'
+  ids:
+  - steam:709620
+- name: 'Gemini: Heroes Reborn'
+  ids:
+  - steam:324650
+- name: 'Drizzlepath: Genie'
+  ids:
+  - steam:438340
+- name: Project Remedium
+  ids:
+  - steam:475090
+- name: Until None Remain
+  ids:
+  - unresolved:source:isthereanydeal:5786:until-none-remain
+- name: Ancient Siberia
+  ids:
+  - unresolved:source:isthereanydeal:5786:ancient-siberia

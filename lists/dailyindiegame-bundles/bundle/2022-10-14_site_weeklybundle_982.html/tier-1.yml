@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 982: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12238/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12238/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12238/source.json
+games:
+- name: Padak
+  ids:
+  - unresolved:source:isthereanydeal:12238:padak
+- name: Waves of the Atlantide
+  ids:
+  - steam:992210
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:12238:the-adventures-of-chris
+- name: Traffix
+  ids:
+  - steam:1102580
+- name: Crimson Shift
+  ids:
+  - steam:837330
+- name: Bird Missions
+  ids:
+  - steam:1281530
+- name: DriftZ
+  ids:
+  - steam:1322180
+- name: Blockicker
+  ids:
+  - steam:1337080
+- name: Hexia
+  ids:
+  - steam:1173730

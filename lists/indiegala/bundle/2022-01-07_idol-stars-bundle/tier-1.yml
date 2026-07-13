@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Idol Stars Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10950/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10950/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10950/source.json
+games:
+- name: KALEIDO STELLA
+  ids:
+  - steam:1005890
+- name: Kirakira Stars Idol Project Nagisa
+  ids:
+  - steam:1281510
+- name: Kirakira stars idol project Reika
+  ids:
+  - steam:1396050
+- name: Ren the Summoner and the Erotic Dungeon
+  ids:
+  - steam:1653030
+- name: Ecstasy Elf Shotenken -Naruru's Sexy Adventure
+  ids:
+  - steam:1678770
+- name: Invasion! Seeding Corp's Ambition
+  ids:
+  - unresolved:source:isthereanydeal:10950:invasion-seeding-corps-ambition

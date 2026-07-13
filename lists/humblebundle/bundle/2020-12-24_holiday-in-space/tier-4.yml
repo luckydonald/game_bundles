@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Holiday in Space Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9568/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9568/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9568/source.json
+games:
+- name: Space Run
+  ids:
+  - steam:275670
+- name: Tacoma
+  ids:
+  - steam:343860
+- name: Rover Mechanic Simulator
+  ids:
+  - steam:864680
+- name: Siege of Centauri
+  ids:
+  - steam:524010
+- name: Deep Sky Derelicts
+  ids:
+  - steam:698640
+- name: AVICII Invector
+  ids:
+  - steam:986800
+- name: Moons of Madness
+  ids:
+  - steam:1012840
+- name: Breathedge
+  ids:
+  - steam:738520

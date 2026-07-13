@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 630: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10611/source.json
+games:
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+- name: Symphony of Stars
+  ids:
+  - steam:973310
+- name: Journey to Alien Worlds
+  ids:
+  - steam:628960
+- name: World of Virtual Reality (VR)
+  ids:
+  - unresolved:source:isthereanydeal:10611:world-of-virtual-reality-vr
+- name: Gun Chain
+  ids:
+  - steam:981690
+- name: VRAdventure
+  ids:
+  - steam:1057730
+- name: Reality End
+  ids:
+  - steam:1417740
+- name: You, Calligrapher
+  ids:
+  - steam:1593700
+- name: Smashing time
+  ids:
+  - steam:1478670

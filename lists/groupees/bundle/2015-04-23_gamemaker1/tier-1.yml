@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Game Maker Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1810/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1810/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1810/source.json
+games:
+- name: Axis Game Factory's AGFPRO Battlemat Multi-Player
+  ids:
+  - steam:270942
+- name: Axis Game Factory's AGFPRO - Drone Kombat FPS Multiplayer
+  ids:
+  - unresolved:source:isthereanydeal:1810:axis-game-factorys-agfpro-drone-kombat-fps-multiplayer
+- name: Stagelight
+  ids:
+  - unresolved:source:isthereanydeal:1810:stagelight
+- name: Axis Game Factory's AGFPRO & Zombie FPS Player
+  ids:
+  - unresolved:source:isthereanydeal:1810:axis-game-factorys-agfpro-and-zombie-fps-player
+- name: Axis Game Factory's AGFPRO v3
+  ids:
+  - steam:253370
+- name: Axis Game Factory Premium
+  ids:
+  - unresolved:source:isthereanydeal:1810:axis-game-factory-premium
+- name: Axis Game Factory's AGFPRO Fantasy Side-Scroller Player
+  ids:
+  - steam:270941

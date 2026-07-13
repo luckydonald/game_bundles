@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Champions Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2485/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2485/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2485/source.json
+games:
+- name: The Forest of Doom
+  ids:
+  - steam:856950
+- name: 'Lethal RPG: War'
+  ids:
+  - steam:385590
+- name: Hoven the Sages Spinel
+  ids:
+  - steam:398960
+- name: Deity Quest
+  ids:
+  - steam:340330
+- name: Ittle Dew
+  ids:
+  - steam:241320
+- name: Heroes of Loot
+  ids:
+  - steam:359280
+- name: Before the Echo
+  ids:
+  - steam:200910
+- name: Deep Dungeons of Doom
+  ids:
+  - steam:325090

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #64 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5965/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5965/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5965/source.json
+games:
+- name: Temple Escape
+  ids:
+  - unresolved:source:isthereanydeal:5965:temple-escape
+- name: Super Samurai Rampage
+  ids:
+  - steam:675030
+- name: Click&Fight
+  ids:
+  - steam:769200
+- name: 'Dark Train: Soundtrack'
+  ids:
+  - steam:645040
+- name: Elementium
+  ids:
+  - steam:783420
+- name: Light of the Mountain
+  ids:
+  - steam:674230
+- name: 'Rex: Another Island'
+  ids:
+  - steam:699150
+- name: Chronicle of Innsmouth
+  ids:
+  - steam:420180
+- name: 'Forgotten Places: Regained Castle'
+  ids:
+  - steam:777160
+- name: Bonbon
+  ids:
+  - steam:734120
+- name: Snake 3D Adventures
+  ids:
+  - steam:572240
+- name: Dark Train
+  ids:
+  - steam:532290

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 6 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5941/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5941/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5941/source.json
+games:
+- name: 'Super Mega Baseball: Extra Innings'
+  ids:
+  - steam:314070
+- name: Slice Dice & Rice
+  ids:
+  - steam:598450
+- name: Kathy Rain
+  ids:
+  - steam:370910
+- name: 'TASTEE: Lethal Tactics'
+  ids:
+  - unresolved:source:isthereanydeal:5941:tastee-lethal-tactics
+- name: Panzer Corps
+  ids:
+  - unresolved:source:isthereanydeal:5941:panzer-corps
+- name: Dungeon Rushers
+  ids:
+  - steam:429620
+- name: Killing Room
+  ids:
+  - steam:407560
+- name: 'The Metronomicon: Slay The Dance Floor'
+  ids:
+  - steam:416790
+- name: Phoning Home
+  ids:
+  - steam:431650
+- name: Seraph
+  ids:
+  - steam:425670
+- name: 'Table Top Racing: World Tour'
+  ids:
+  - unresolved:source:isthereanydeal:5941:table-top-racing-world-tour
+- name: Juanito Arcade Mayhem
+  ids:
+  - steam:617440

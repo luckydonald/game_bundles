@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 901: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11814/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11814/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11814/source.json
+games:
+- name: Formula X
+  ids:
+  - unresolved:source:isthereanydeal:11814:formula-x
+- name: AirShock
+  ids:
+  - unresolved:source:isthereanydeal:11814:airshock
+- name: Master of ABC
+  ids:
+  - steam:673820
+- name: Knockdown the Ball Twice
+  ids:
+  - steam:1268280
+- name: Zerowood
+  ids:
+  - unresolved:source:isthereanydeal:11814:zerowood
+- name: ACIDTRIP
+  ids:
+  - unresolved:source:isthereanydeal:11814:acidtrip
+- name: Timeline Traveler
+  ids:
+  - unresolved:source:isthereanydeal:11814:timeline-traveler
+- name: Sphere Game Epic
+  ids:
+  - steam:1843750
+- name: One Way To Exit 2
+  ids:
+  - steam:1120750

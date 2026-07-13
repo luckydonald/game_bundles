@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Flurry Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2179/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2179/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2179/source.json
+games:
+- name: Aero's Quest
+  ids:
+  - steam:367780
+- name: Unium
+  ids:
+  - steam:357600
+- name: TransPlan
+  ids:
+  - steam:374410
+- name: 'Wimp: Who Stole My Pants?'
+  ids:
+  - steam:331570
+- name: Ice Cream Surfer
+  ids:
+  - steam:361560
+- name: Robo Miner
+  ids:
+  - steam:378570
+- name: Koala Kids
+  ids:
+  - steam:381870
+- name: 'Sparkle 3: Genesis'
+  ids:
+  - steam:361190

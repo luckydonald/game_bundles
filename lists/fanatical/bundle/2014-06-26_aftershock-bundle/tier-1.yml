@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Aftershock Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/928/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/928/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/928/source.json
+games:
+- name: 'UFO: Aftermath'
+  ids:
+  - steam:292160
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:928:wizardry-6-and-7
+- name: Wizardry 8
+  ids:
+  - steam:245450
+- name: Ascension to the Throne
+  ids:
+  - steam:289200
+- name: 'UFO: Aftershock'
+  ids:
+  - steam:289500
+- name: Harvester
+  ids:
+  - unresolved:source:isthereanydeal:928:harvester
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:928:system-shock-2-1999

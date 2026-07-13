@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tank Warfare Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7771/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7771/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7771/source.json
+games:
+- name: 'Tank Warfare: Operation Pugilist'
+  ids:
+  - unresolved:source:isthereanydeal:7771:tank-warfare-operation-pugilist
+- name: 'Tank Warfare: Tunisia 1943'
+  ids:
+  - unresolved:source:isthereanydeal:7771:tank-warfare-tunisia-1943
+- name: 'Tank Warfare: El Guettar'
+  ids:
+  - unresolved:source:isthereanydeal:7771:tank-warfare-el-guettar
+- name: 'Tank Warfare: Longstop Hill'
+  ids:
+  - unresolved:source:isthereanydeal:7771:tank-warfare-longstop-hill
+- name: 'Tank Warfare: Chewy Gooey Pass'
+  ids:
+  - unresolved:source:isthereanydeal:7771:tank-warfare-chewy-gooey-pass

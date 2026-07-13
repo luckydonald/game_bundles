@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Extra Life Bundle — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5587/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5587/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5587/source.json
+games:
+- name: PAC-MAN™ Championship Edition 2
+  ids:
+  - steam:441380
+- name: Majesty 2
+  ids:
+  - steam:25980
+- name: Majesty Gold HD
+  ids:
+  - steam:25990
+- name: Pathfinder Online Early Enrollment (30-day)
+  ids:
+  - unresolved:source:isthereanydeal:5587:pathfinder-online-early-enrollment-30-day
+- name: Guacamelee! Super Turbo Championship Edition
+  ids:
+  - steam:275390
+- name: Kingsway
+  ids:
+  - steam:588950
+- name: 'Leviathan: Warships'
+  ids:
+  - unresolved:source:isthereanydeal:5587:leviathan-warships

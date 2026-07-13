@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Superpower Sims Bundle Reloaded — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/373/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/373/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/373/source.json
+games:
+- name: 'Agricultural Simulator 2011: Extended Edition'
+  ids:
+  - steam:92900
+- name: Trainz Simulator 12
+  ids:
+  - steam:24670
+- name: 'IL-2 Sturmovik™: 1946'
+  ids:
+  - steam:15320
+- name: GT Legends
+  ids:
+  - steam:44690
+- name: "Air Conflicts \x96 Secret Wars"
+  ids:
+  - steam:95900
+- name: 'Trainz Simulator: Murchison 2'
+  ids:
+  - unresolved:source:isthereanydeal:373:trainz-simulator-murchison-2
+- name: GTR - FIA GT Racing Game
+  ids:
+  - steam:44600
+- name: Euro Truck Simulator
+  ids:
+  - steam:232010
+- name: RignRoll
+  ids:
+  - unresolved:source:isthereanydeal:373:rignroll

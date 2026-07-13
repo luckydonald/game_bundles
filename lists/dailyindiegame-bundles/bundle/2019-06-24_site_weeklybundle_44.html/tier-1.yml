@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 44: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7556/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7556/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7556/source.json
+games:
+- name: Nightmare Trails
+  ids:
+  - unresolved:source:isthereanydeal:7556:nightmare-trails
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+- name: Stary
+  ids:
+  - steam:995280
+- name: Flagsplosion
+  ids:
+  - steam:652340
+- name: Operation Lone Wolf
+  ids:
+  - steam:926010
+- name: Pursuer
+  ids:
+  - steam:1013660
+- name: 'A New World: Kingdoms'
+  ids:
+  - steam:628650
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+- name: JumpBall 2
+  ids:
+  - steam:750870

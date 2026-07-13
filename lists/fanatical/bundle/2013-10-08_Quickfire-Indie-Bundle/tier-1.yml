@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Quickfire Indie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/348/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/348/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/348/source.json
+games:
+- name: GTR Evolution
+  ids:
+  - unresolved:source:isthereanydeal:348:gtr-evolution
+- name: 'Guardians of Graxia: Elves & Dwarves'
+  ids:
+  - unresolved:source:isthereanydeal:348:guardians-of-graxia-elves-and-dwarves
+- name: 1953 - KGB Unleashed
+  ids:
+  - steam:248490
+- name: Race 07
+  ids:
+  - steam:8600
+- name: Guardians of Graxia Map Pack
+  ids:
+  - unresolved:source:isthereanydeal:348:guardians-of-graxia-map-pack
+- name: Dark Sector
+  ids:
+  - steam:29900
+- name: Space Pirates and Zombies
+  ids:
+  - steam:107200
+- name: Cannon Fodder 3
+  ids:
+  - steam:209750
+- name: Warframe $10 Platinum Package
+  ids:
+  - unresolved:source:isthereanydeal:348:warframe-10-platinum-package
+- name: 'Septerra Core: Legacy of the Creator'
+  ids:
+  - unresolved:source:isthereanydeal:348:septerra-core-legacy-of-the-creator
+- name: Guardians of Graxia
+  ids:
+  - unresolved:source:isthereanydeal:348:guardians-of-graxia

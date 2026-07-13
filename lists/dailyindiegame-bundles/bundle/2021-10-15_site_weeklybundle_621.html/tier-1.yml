@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 621 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10573/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10573/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10573/source.json
+games:
+- name: Bunny adventure
+  ids:
+  - steam:797070
+- name: ProjectTeo
+  ids:
+  - steam:1382370
+- name: Clan of Death
+  ids:
+  - steam:1570420
+- name: Gachimuchi Life Simulator
+  ids:
+  - steam:1690360
+- name: Prank!
+  ids:
+  - steam:3429710
+- name: WORDDING
+  ids:
+  - steam:1360380
+- name: Cosmic Cat
+  ids:
+  - steam:3873550
+- name: Master Whip
+  ids:
+  - unresolved:source:isthereanydeal:10573:master-whip
+- name: Spidded
+  ids:
+  - unresolved:source:isthereanydeal:10573:spidded

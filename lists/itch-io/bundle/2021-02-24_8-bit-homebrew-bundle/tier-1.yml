@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 8-Bit Homebrew Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9777/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9777/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9777/source.json
+games:
+- name: 'Nix: The Paradox Relic'
+  ids:
+  - unresolved:source:isthereanydeal:9777:nix-the-paradox-relic
+- name: Flea NES Full Game
+  ids:
+  - unresolved:source:isthereanydeal:9777:flea-nes-full-game
+- name: Space Raft NES
+  ids:
+  - unresolved:source:isthereanydeal:9777:space-raft-nes
+- name: Doodle World
+  ids:
+  - unresolved:source:isthereanydeal:9777:doodle-world

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #8 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5578/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5578/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5578/source.json
+games:
+- name: Gunman Taco Truck
+  ids:
+  - steam:586310
+- name: Urizen Shadows of the Cold Deluxe Frosty Edition
+  ids:
+  - unresolved:source:isthereanydeal:5578:urizen-shadows-of-the-cold-deluxe-frosty-edition
+- name: Fable Rush OST
+  ids:
+  - unresolved:source:isthereanydeal:5578:fable-rush-ost
+- name: Photon Flux
+  ids:
+  - unresolved:source:isthereanydeal:5578:photon-flux
+- name: 'Malavisión: Origin'
+  ids:
+  - unresolved:source:isthereanydeal:5578:malavision-origin
+- name: The Village
+  ids:
+  - steam:632050
+- name: Baobabs Mausoleum Ep. 1 Ovnifagos Don't Eat Flamingos
+  ids:
+  - steam:646600
+- name: Septic Savages
+  ids:
+  - steam:547000
+- name: Fable Rush
+  ids:
+  - unresolved:source:isthereanydeal:5578:fable-rush

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 24 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4396/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4396/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4396/source.json
+games:
+- name: DinoOps
+  ids:
+  - unresolved:source:isthereanydeal:4396:dinoops
+- name: VITATIO
+  ids:
+  - steam:659560
+- name: Turbo Pug 3D
+  ids:
+  - steam:528510
+- name: Atomic Reconstruction
+  ids:
+  - steam:568500
+- name: Chicka Wars | Chicken Meat
+  ids:
+  - unresolved:source:isthereanydeal:4396:chicka-wars-chicken-meat
+- name: Navpoint
+  ids:
+  - steam:297080
+- name: Joana's Life
+  ids:
+  - steam:513740
+- name: Life of Pixel
+  ids:
+  - unresolved:source:isthereanydeal:4396:life-of-pixel

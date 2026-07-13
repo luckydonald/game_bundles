@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wayback Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1386/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1386/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1386/source.json
+games:
+- name: BloodNet
+  ids:
+  - steam:327920
+- name: Sword of the Samurai
+  ids:
+  - steam:327950
+- name: 7th Legion
+  ids:
+  - steam:327910
+- name: Shadow Ops - Red Mercury
+  ids:
+  - steam:286770
+- name: Gunship!
+  ids:
+  - steam:286730
+- name: Rex Nebular & The Cosmic Gender Bender
+  ids:
+  - steam:328430
+- name: Slave Zero
+  ids:
+  - steam:328470

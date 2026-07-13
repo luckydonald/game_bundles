@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nightdive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1144/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1144/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1144/source.json
+games:
+- name: 11th Hour, The
+  ids:
+  - unresolved:source:isthereanydeal:1144:11th-hour-the
+- name: I Have No Mouth, and I Must Scream
+  ids:
+  - steam:245390
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:1144:wizardry-6-and-7
+- name: Wizardry 8
+  ids:
+  - steam:245450
+- name: Bad Mojo Redux
+  ids:
+  - steam:255960
+- name: Shadow Man
+  ids:
+  - unresolved:source:isthereanydeal:1144:shadow-man
+- name: 7th Guest, The
+  ids:
+  - unresolved:source:isthereanydeal:1144:7th-guest-the
+- name: Harvester
+  ids:
+  - unresolved:source:isthereanydeal:1144:harvester
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:1144:system-shock-2-1999

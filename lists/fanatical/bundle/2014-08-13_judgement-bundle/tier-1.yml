@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Judgement Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1078/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1078/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1078/source.json
+games:
+- name: Cubetractor
+  ids:
+  - steam:235720
+- name: 'Duke Nukem: Manhattan Project'
+  ids:
+  - unresolved:source:isthereanydeal:1078:duke-nukem-manhattan-project
+- name: Duke Nukem
+  ids:
+  - unresolved:source:isthereanydeal:1078:duke-nukem
+- name: Dustforce DX
+  ids:
+  - steam:65300
+- name: 'Arsenal of Democracy: A Hearts of Iron Game'
+  ids:
+  - steam:42850
+- name: 'Postmortem: one must die'
+  ids:
+  - unresolved:source:isthereanydeal:1078:postmortem-one-must-die
+- name: Duke Nukem 2
+  ids:
+  - unresolved:source:isthereanydeal:1078:duke-nukem-2
+- name: A New Reckoning
+  ids:
+  - unresolved:source:isthereanydeal:1078:a-new-reckoning
+- name: Overcast - Walden and the Werewolf
+  ids:
+  - steam:293180
+- name: 'Containment: The Zombie Puzzler'
+  ids:
+  - steam:203560
+- name: 'Viscera Cleanup Detail: Santa''s Rampage'
+  ids:
+  - steam:265210
+- name: EvilQuest
+  ids:
+  - steam:263820

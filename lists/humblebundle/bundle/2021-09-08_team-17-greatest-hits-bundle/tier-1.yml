@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Team 17 Greatest Hits Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10434/source.json
+games:
+- name: Overruled!
+  ids:
+  - steam:297740
+- name: Mugsters
+  ids:
+  - steam:712180

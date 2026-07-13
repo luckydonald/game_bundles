@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Workshop Bundle Remix — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8411/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8411/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8411/source.json
+games:
+- name: The Way
+  ids:
+  - steam:311010
+- name: EarthWorms
+  ids:
+  - steam:320330
+- name: Escape Doodland
+  ids:
+  - steam:670930
+- name: Slice Dice & Rice
+  ids:
+  - steam:598450
+- name: Clinically Dead
+  ids:
+  - steam:927840
+- name: Car Mechanic Simulator 2015
+  ids:
+  - steam:320300
+- name: Demolish & Build 2017
+  ids:
+  - steam:470740
+- name: Car Mechanic Simulator 2014
+  ids:
+  - steam:270850
+- name: Train Mechanic Simulator 2017
+  ids:
+  - steam:538810
+- name: 'Bad Dream: Coma'
+  ids:
+  - steam:538070

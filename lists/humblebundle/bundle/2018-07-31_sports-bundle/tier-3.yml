@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Sports Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6354/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6354/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6354/source.json
+games:
+- name: GRID 2
+  ids:
+  - unresolved:source:isthereanydeal:6354:grid-2
+- name: Eastside Hockey Manager
+  ids:
+  - steam:301120
+- name: SEGA Bass Fishing
+  ids:
+  - unresolved:source:isthereanydeal:6354:sega-bass-fishing
+- name: Motorsport Manager
+  ids:
+  - steam:415200
+- name: DiRT Rally
+  ids:
+  - unresolved:source:isthereanydeal:6354:dirt-rally
+- name: Super Blood Hockey
+  ids:
+  - steam:532190
+- name: F1 2017
+  ids:
+  - unresolved:source:isthereanydeal:6354:f1-2017

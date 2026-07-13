@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble&#39;s Early Access All-Stars Bundle — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10295/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10295/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10295/source.json
+games:
+- name: Retrowave
+  ids:
+  - steam:1239690
+- name: Golf It!
+  ids:
+  - steam:571740
+- name: I-NFECTED
+  ids:
+  - unresolved:source:isthereanydeal:10295:i-nfected
+- name: 'Snowtopia: Ski Resort Tycoon'
+  ids:
+  - unresolved:source:isthereanydeal:10295:snowtopia-ski-resort-tycoon
+- name: Warpips
+  ids:
+  - steam:1291010
+- name: Luck be a Landlord
+  ids:
+  - steam:1404850

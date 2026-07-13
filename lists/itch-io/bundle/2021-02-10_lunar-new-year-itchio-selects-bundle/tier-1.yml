@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Lunar New Year Itch.io Selects Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9731/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9731/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9731/source.json
+games:
+- name: Quiet as a Stone
+  ids:
+  - steam:872060
+- name: 'Frog Detective 2: The Case of the Invisible Wizard'
+  ids:
+  - steam:1047220
+- name: Baba Is You
+  ids:
+  - steam:736260
+- name: 10 Beautiful Postcards
+  ids:
+  - unresolved:source:isthereanydeal:9731:10-beautiful-postcards
+- name: 'FAITH: Chapter II'
+  ids:
+  - unresolved:source:isthereanydeal:9731:faith-chapter-ii
+- name: 'Frog Fractions: Game of the Decade Edition'
+  ids:
+  - steam:1194840

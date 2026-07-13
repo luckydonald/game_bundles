@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Innovation Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5034/source.json
+games:
+- name: Verdict Guilty - 유죄 평결
+  ids:
+  - steam:449210
+- name: Sleengster 2
+  ids:
+  - unresolved:source:isthereanydeal:5034:sleengster-2
+- name: Miner Ultra Adventures
+  ids:
+  - unresolved:source:isthereanydeal:5034:miner-ultra-adventures

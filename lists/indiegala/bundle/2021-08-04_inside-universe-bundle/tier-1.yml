@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Inside Universe Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10318/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10318/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10318/source.json
+games:
+- name: 'Archeo: Shinar'
+  ids:
+  - steam:1001980
+- name: Poly Universe
+  ids:
+  - steam:801040
+- name: Suite 776
+  ids:
+  - steam:1197370
+- name: Car Dealer
+  ids:
+  - steam:1271080
+- name: Ragdoll Madness
+  ids:
+  - steam:1605440
+- name: Inside Depth 6
+  ids:
+  - steam:1553320

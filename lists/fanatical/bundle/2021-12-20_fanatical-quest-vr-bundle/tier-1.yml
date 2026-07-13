@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Quest VR Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10850/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10850/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10850/source.json
+games:
+- name: Gadgeteer (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:gadgeteer-quest-vr
+- name: Gloomy Eyes (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:gloomy-eyes-quest-vr
+- name: Death Lap (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:death-lap-quest-vr
+- name: 'Zombieland: Headshot Fever (Quest VR)'
+  ids:
+  - unresolved:source:isthereanydeal:10850:zombieland-headshot-fever-quest-vr
+- name: Accounting+ (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:accounting_plus-quest-vr
+- name: 'Skyworld: Kingdom Brawl (Quest VR)'
+  ids:
+  - unresolved:source:isthereanydeal:10850:skyworld-kingdom-brawl-quest-vr
+- name: Ghost Giant (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:ghost-giant-quest-vr
+- name: SculptrVR (Quest VR)
+  ids:
+  - unresolved:source:isthereanydeal:10850:sculptrvr-quest-vr

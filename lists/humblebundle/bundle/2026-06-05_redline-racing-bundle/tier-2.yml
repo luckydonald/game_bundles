@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Redline Racing Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16243/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16243/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16243/source.json
+games:
+- name: MudRunner
+  ids:
+  - steam:675010
+- name: Descenders
+  ids:
+  - steam:681280
+- name: Parking Garage Rally Circuit
+  ids:
+  - steam:2737300
+- name: art of rally
+  ids:
+  - steam:550320
+- name: Assetto Corsa Competizione
+  ids:
+  - steam:805550
+- name: TRAIL OUT
+  ids:
+  - steam:1664220
+- name: DRIFT CE
+  ids:
+  - steam:520950

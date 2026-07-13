@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Weird and Wonderful Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7789/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7789/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7789/source.json
+games:
+- name: Blackbay Asylum
+  ids:
+  - steam:313140
+- name: Platypus
+  ids:
+  - steam:307340
+- name: 'Ohr: אור'
+  ids:
+  - steam:376480
+- name: Nux
+  ids:
+  - steam:307350
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:7789:chernobyl-commando
+- name: Truffle Saga
+  ids:
+  - steam:302260
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:7789:n-p-p-d-rush-the-milk-of-ultra-violet
+- name: RunGunJumpGun
+  ids:
+  - unresolved:source:isthereanydeal:7789:rungunjumpgun
+- name: HyperSonic 4
+  ids:
+  - unresolved:source:isthereanydeal:7789:hypersonic-4

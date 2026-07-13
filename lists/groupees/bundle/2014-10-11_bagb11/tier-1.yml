@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1268/source.json
+games:
+- name: Kazgar's Revenge
+  ids:
+  - unresolved:source:isthereanydeal:1268:kazgars-revenge
+- name: An Imp? A Fiend!
+  ids:
+  - steam:354960
+- name: Star Nomad
+  ids:
+  - steam:338830
+- name: VolChaos
+  ids:
+  - steam:354030
+- name: A Camp in the woods
+  ids:
+  - unresolved:source:isthereanydeal:1268:a-camp-in-the-woods
+- name: 'Ghost Encounters: Deadwood - Collector''s Edition'
+  ids:
+  - steam:353070
+- name: Thief Town
+  ids:
+  - steam:331220
+- name: Barter Empire
+  ids:
+  - steam:346160
+- name: Why So Evil
+  ids:
+  - unresolved:source:isthereanydeal:1268:why-so-evil
+- name: HassleHeart - I <3 Hearts
+  ids:
+  - unresolved:source:isthereanydeal:1268:hassleheart-i-3-hearts

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 206 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8957/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8957/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8957/source.json
+games:
+- name: Sick Way
+  ids:
+  - steam:1200430
+- name: Chibi Volleyball
+  ids:
+  - unresolved:source:isthereanydeal:8957:chibi-volleyball
+- name: 'Need for Spirit: Drink & Drive Simulator/醉驾模拟器'
+  ids:
+  - unresolved:source:isthereanydeal:8957:need-for-spirit-drink-and-drive-simulator-zui-jia-mo-ni-qi
+- name: Mumps
+  ids:
+  - steam:777020
+- name: Cyberprank Girls 2077
+  ids:
+  - unresolved:source:isthereanydeal:8957:cyberprank-girls-2077
+- name: Doom of the Clawn
+  ids:
+  - steam:1185480
+- name: Poly Duels
+  ids:
+  - steam:1245000
+- name: Colouration
+  ids:
+  - steam:1253460
+- name: My psychedelic world
+  ids:
+  - unresolved:source:isthereanydeal:8957:my-psychedelic-world

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Frontline Assault — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3022/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3022/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3022/source.json
+games:
+- name: Alien Shooter
+  ids:
+  - steam:33100
+- name: Praetorians
+  ids:
+  - steam:277460
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+- name: Zombie Shooter
+  ids:
+  - steam:33130
+- name: YASAI NINJA
+  ids:
+  - steam:372150
+- name: What's under your blanket !?
+  ids:
+  - unresolved:source:isthereanydeal:3022:whats-under-your-blanket

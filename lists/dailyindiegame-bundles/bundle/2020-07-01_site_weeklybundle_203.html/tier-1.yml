@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8946/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8946/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8946/source.json
+games:
+- name: 'Zombie Wars: Invasion'
+  ids:
+  - steam:429060
+- name: 'Kabitis 2: Fire Sword'
+  ids:
+  - unresolved:source:isthereanydeal:8946:kabitis-2-fire-sword
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:8946:great-ball-of-fire
+- name: TRIP
+  ids:
+  - unresolved:source:isthereanydeal:8946:trip
+- name: Space BloX
+  ids:
+  - steam:1086270
+- name: Dangerous Lands - Magic and RPG
+  ids:
+  - steam:913710
+- name: Bloody Faerie
+  ids:
+  - steam:811950
+- name: My Desktop Alive
+  ids:
+  - steam:998330
+- name: Mr. Fast
+  ids:
+  - steam:1213370

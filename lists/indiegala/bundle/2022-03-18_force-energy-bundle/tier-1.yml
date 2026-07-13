@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Force Energy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11174/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11174/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11174/source.json
+games:
+- name: A Conversation With Mister Rabbit
+  ids:
+  - steam:1556610
+- name: Sacrificial Lighthouse
+  ids:
+  - steam:1468220
+- name: 'I Am The Prosecutor: No Evidence? No Problem!'
+  ids:
+  - steam:1591470
+- name: 'Firelight Fantasy: Force Energy'
+  ids:
+  - steam:1619330
+- name: Hidden Post-Apocalyptic Top-Down 3D
+  ids:
+  - steam:1912710
+- name: 'Vesper: Zero Light Edition'
+  ids:
+  - steam:1187840

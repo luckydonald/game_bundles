@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Runway Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4669/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4669/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4669/source.json
+games:
+- name: Mission Runway
+  ids:
+  - steam:12670
+- name: Freddi Fish and Luther's Water Worries
+  ids:
+  - steam:294580
+- name: Knights of the Sky
+  ids:
+  - steam:347270
+- name: Sword of the Samurai
+  ids:
+  - steam:327950
+- name: '18 Wheels of Steel: Across America'
+  ids:
+  - steam:514160
+- name: Hunting Unlimited 2009
+  ids:
+  - steam:545940
+- name: Putt-Putt and Fatty Bear's Activity Pack
+  ids:
+  - steam:294720
+- name: Command H.Q.
+  ids:
+  - unresolved:source:isthereanydeal:4669:command-h-q
+- name: Capitalism Plus
+  ids:
+  - steam:450120
+- name: 'Uprising 2: Lead and Destroy'
+  ids:
+  - steam:514050
+- name: The Search for Amelia Earhart
+  ids:
+  - steam:33760
+- name: Slave Zero
+  ids:
+  - steam:328470

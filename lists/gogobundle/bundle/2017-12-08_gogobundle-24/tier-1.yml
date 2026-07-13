@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #24 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5704/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5704/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5704/source.json
+games:
+- name: 'Origin Of Destiny - Donation #2'
+  ids:
+  - unresolved:source:isthereanydeal:5704:origin-of-destiny-donation-2
+- name: Dino Run DX
+  ids:
+  - steam:248330
+- name: Dino Run DX OST
+  ids:
+  - steam:510800
+- name: 'Police: Destruction Street'
+  ids:
+  - unresolved:source:isthereanydeal:5704:police-destruction-street
+- name: Easy Red
+  ids:
+  - steam:741670
+- name: 'Origin Of Destiny - Donation #1'
+  ids:
+  - unresolved:source:isthereanydeal:5704:origin-of-destiny-donation-1
+- name: Paintball eXtreme
+  ids:
+  - unresolved:source:isthereanydeal:5704:paintball-extreme
+- name: Chaos and the White Robot
+  ids:
+  - steam:698950
+- name: Cublast HD
+  ids:
+  - steam:580590
+- name: Fight desserts
+  ids:
+  - steam:750900

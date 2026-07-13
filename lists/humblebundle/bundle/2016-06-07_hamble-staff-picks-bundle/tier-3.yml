@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Staff Picks: Hamble — Premium'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3547/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3547/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3547/source.json
+games:
+- name: Snakebird
+  ids:
+  - steam:357300
+- name: Absolute Drift
+  ids:
+  - steam:320140
+- name: 1001 Spikes
+  ids:
+  - steam:260790
+- name: Hand of Fate
+  ids:
+  - steam:266510
+- name: Soul Axiom
+  ids:
+  - steam:279900
+- name: Bulb Boy
+  ids:
+  - steam:390290
+- name: Deathtrap
+  ids:
+  - steam:310510
+- name: Viscera Cleanup Detail
+  ids:
+  - steam:246900
+- name: Viscera Cleanup Detail - House of Horror
+  ids:
+  - steam:413160
+- name: Craft The World
+  ids:
+  - steam:248390

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #9 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5614/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5614/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5614/source.json
+games:
+- name: WAR DRONES
+  ids:
+  - unresolved:source:isthereanydeal:5614:war-drones
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+- name: ARRAYNIUM
+  ids:
+  - steam:681340
+- name: All Evil Night
+  ids:
+  - steam:682100
+- name: BLOK DROP NEO
+  ids:
+  - steam:722680
+- name: Jet Buster
+  ids:
+  - steam:618070
+- name: Gold Rush In The Oort Cloud
+  ids:
+  - steam:661530
+- name: The God Paradox
+  ids:
+  - steam:636330
+- name: PARSE
+  ids:
+  - steam:697530

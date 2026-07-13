@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tower Defense 2 Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16044/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16044/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16044/source.json
+games:
+- name: Kingdom Rush Origins
+  ids:
+  - steam:816340
+- name: Legion TD 2 - Multiplayer Tower Defense
+  ids:
+  - steam:469600
+- name: Tower Escape
+  ids:
+  - steam:2009860
+- name: Border Pioneer
+  ids:
+  - steam:2346410
+- name: 'Dungeon Defenders: Awakened'
+  ids:
+  - steam:1101190
+- name: Orcs Must Die! 3 Complete Bundle
+  ids:
+  - unresolved:source:isthereanydeal:16044:orcs-must-die-3-complete-bundle
+- name: 'Axon TD: Uprising'
+  ids:
+  - steam:2296550
+- name: Affogato
+  ids:
+  - steam:1983970
+- name: Thronefall
+  ids:
+  - steam:2239150

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Space Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7605/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7605/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7605/source.json
+games:
+- name: Starbound
+  ids:
+  - steam:211820
+- name: MirrorMoon EP
+  ids:
+  - steam:231310
+- name: Destination Primus Vita
+  ids:
+  - unresolved:source:isthereanydeal:7605:destination-primus-vita

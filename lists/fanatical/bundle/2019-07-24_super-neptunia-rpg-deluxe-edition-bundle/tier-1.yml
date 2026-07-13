@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Super Neptunia RPG Deluxe Edition Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7676/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7676/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7676/source.json
+games:
+- name: Super Neptunia RPG
+  ids:
+  - steam:1016960
+- name: Super Neptunia RPG - Deluxe Pack
+  ids:
+  - steam:1055680

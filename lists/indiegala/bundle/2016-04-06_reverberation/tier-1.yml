@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Reverberation Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3268/source.json
+games:
+- name: Project Root
+  ids:
+  - steam:284970
+- name: 'Shadowgate: MacVenture Series'
+  ids:
+  - steam:343800
+- name: 'Sherlock Holmes Consulting Detective: The Case of the Mystified Murderess'
+  ids:
+  - steam:376790

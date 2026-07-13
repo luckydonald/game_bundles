@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 190 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8884/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8884/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8884/source.json
+games:
+- name: Soul Valley
+  ids:
+  - steam:1041780
+- name: Super Lobster Run
+  ids:
+  - steam:1123310
+- name: Ninjapple
+  ids:
+  - steam:1171410
+- name: Malus
+  ids:
+  - unresolved:source:isthereanydeal:8884:malus
+- name: Death World
+  ids:
+  - steam:1277390
+- name: Beyond The Underworld
+  ids:
+  - steam:1223380
+- name: The Battle of Angels
+  ids:
+  - steam:1286210
+- name: Rocky Ride
+  ids:
+  - steam:1297890
+- name: 'Battle For Crown: Multiplayer'
+  ids:
+  - unresolved:source:isthereanydeal:8884:battle-for-crown-multiplayer

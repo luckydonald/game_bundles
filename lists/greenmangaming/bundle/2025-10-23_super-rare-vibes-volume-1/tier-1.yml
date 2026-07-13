@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Super Rare Vibes: Volume 1 Bundle — Chill'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15518/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15518/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15518/source.json
+games:
+- name: OTXO
+  ids:
+  - steam:1608640
+- name: Lone Ruin
+  ids:
+  - steam:1452070
+- name: Go Mecha Ball
+  ids:
+  - steam:2008510
+- name: 'Grapple Dogs: Cosmic Canines'
+  ids:
+  - steam:2278790
+- name: Completely Stretchy
+  ids:
+  - steam:1587570
+- name: Tiny Garden
+  ids:
+  - steam:2812450

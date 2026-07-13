@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Elder Scrolls Bundle — 6 Products
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14384/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14384/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14384/source.json
+games:
+- name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
+  ids:
+  - steam:22320
+- name: 'The Elder Scrolls V: Skyrim Special Edition'
+  ids:
+  - steam:489830
+- name: 'An Elder Scrolls Legend: Battlespire'
+  ids:
+  - steam:1812420
+- name: The Elder Scrolls Online
+  ids:
+  - steam:306130
+- name: 'The Elder Scrolls Adventures: Redguard'
+  ids:
+  - steam:1812410
+- name: 'The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)'
+  ids:
+  - steam:22330

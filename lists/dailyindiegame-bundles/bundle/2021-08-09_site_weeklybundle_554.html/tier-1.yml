@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 554: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10337/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10337/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10337/source.json
+games:
+- name: Mad Gun Range VR Simulator
+  ids:
+  - steam:1031200
+- name: Symphony of Stars
+  ids:
+  - steam:973310
+- name: COMPLEX a VR Puzzle Game
+  ids:
+  - steam:772420
+- name: Banana Invaders
+  ids:
+  - unresolved:source:isthereanydeal:10337:banana-invaders
+- name: Vector Velocity
+  ids:
+  - steam:751480
+- name: Gun Chain
+  ids:
+  - steam:981690
+- name: Cyber Battle 69
+  ids:
+  - steam:1250210
+- name: The Surreal Imaginarium
+  ids:
+  - steam:1348980
+- name: Astrotour VR
+  ids:
+  - steam:1416850

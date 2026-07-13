@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 769 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11156/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11156/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11156/source.json
+games:
+- name: The Island Combat
+  ids:
+  - steam:886310
+- name: Ace of Space
+  ids:
+  - steam:1304310
+- name: RUSSIAN QUARANTINE
+  ids:
+  - unresolved:source:isthereanydeal:11156:russian-quarantine
+- name: POG
+  ids:
+  - steam:1602990
+- name: Puppy Adventure
+  ids:
+  - unresolved:source:isthereanydeal:11156:puppy-adventure
+- name: Robbed Money
+  ids:
+  - unresolved:source:isthereanydeal:11156:robbed-money
+- name: RunnerDot
+  ids:
+  - unresolved:source:isthereanydeal:11156:runnerdot
+- name: Dark Side of Fate
+  ids:
+  - steam:1681120
+- name: The Adventures of Dinobot and Tiara!
+  ids:
+  - steam:1699820

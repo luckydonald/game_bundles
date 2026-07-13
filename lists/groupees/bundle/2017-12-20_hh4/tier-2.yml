@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Helpings 4 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5750/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5750/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5750/source.json
+games:
+- name: Ravager
+  ids:
+  - steam:689100
+- name: Undertaker's
+  ids:
+  - steam:653050
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+- name: 'Space Pilgrim Episode I: Alpha Centauri'
+  ids:
+  - steam:429470
+- name: Momonga Pinball Adventures
+  ids:
+  - steam:491560
+- name: Xmas Shooting - Scramble!!
+  ids:
+  - steam:560050
+- name: Save Jesus
+  ids:
+  - steam:509220
+- name: Dead In Bermuda
+  ids:
+  - steam:384310

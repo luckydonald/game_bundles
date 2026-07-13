@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 562 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10357/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10357/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10357/source.json
+games:
+- name: Everyone Dies
+  ids:
+  - steam:1203560
+- name: Plumber 2
+  ids:
+  - steam:1699770
+- name: Pirates vs monkeys
+  ids:
+  - steam:1704780
+- name: Jelly
+  ids:
+  - unresolved:source:isthereanydeal:10357:jelly
+- name: Balls! Balls!
+  ids:
+  - unresolved:source:isthereanydeal:10357:balls-balls
+- name: SpaceSeals
+  ids:
+  - steam:1708030
+- name: 12 locks and keys
+  ids:
+  - steam:1703470
+- name: Candy gun
+  ids:
+  - unresolved:source:isthereanydeal:10357:candy-gun
+- name: Jelly 2
+  ids:
+  - unresolved:source:isthereanydeal:10357:jelly-2

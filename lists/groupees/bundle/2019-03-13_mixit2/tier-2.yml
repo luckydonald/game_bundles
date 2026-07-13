@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Mix It Up Bundle #2 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7171/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7171/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7171/source.json
+games:
+- name: Planet Assault
+  ids:
+  - unresolved:source:isthereanydeal:7171:planet-assault
+- name: JumpBall 2
+  ids:
+  - steam:750870
+- name: 'MeatPossible: Chapter 1.5'
+  ids:
+  - steam:922810
+- name: Adam Wolfe All Episodes (Episodes 1-4)
+  ids:
+  - unresolved:source:isthereanydeal:7171:adam-wolfe-all-episodes-episodes-1-4
+- name: Heaven & Hell 2
+  ids:
+  - steam:962060
+- name: Jack the Barbarian
+  ids:
+  - steam:852160
+- name: Survive in Angaria
+  ids:
+  - steam:803260

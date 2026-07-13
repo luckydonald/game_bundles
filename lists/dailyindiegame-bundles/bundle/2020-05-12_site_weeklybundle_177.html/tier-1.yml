@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 177 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8774/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8774/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8774/source.json
+games:
+- name: Enchanted Path
+  ids:
+  - steam:993580
+- name: Snowball Rush
+  ids:
+  - steam:1051160
+- name: Tricky Fox
+  ids:
+  - steam:1083450
+- name: Voxel Bot
+  ids:
+  - steam:1095370
+- name: Hexa Path
+  ids:
+  - steam:1052760
+- name: Shuffle World
+  ids:
+  - steam:1165280
+- name: Planet Lander
+  ids:
+  - steam:1183140
+- name: 'Angry Bunny 2: Lost hole'
+  ids:
+  - steam:1235460
+- name: PiLKO
+  ids:
+  - steam:1287420

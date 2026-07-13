@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Helpings 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8235/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8235/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8235/source.json
+games:
+- name: Lethal League
+  ids:
+  - steam:261180
+- name: Super Kitty Boing Boing
+  ids:
+  - steam:440380
+- name: Christmas Cats Revenge
+  ids:
+  - steam:1201500

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Nexus Bundle — 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14052/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14052/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14052/source.json
+games:
+- name: Apocalipsis
+  ids:
+  - steam:505330
+- name: Wolfenstein 3D
+  ids:
+  - steam:2270
+- name: Overloop
+  ids:
+  - steam:720660
+- name: DESOLATE
+  ids:
+  - steam:671510
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+- name: StrikeForce Kitty
+  ids:
+  - steam:745330
+- name: Demon Pit
+  ids:
+  - steam:548240
+- name: This is the Zodiac Speaking
+  ids:
+  - steam:907710
+- name: Grotto
+  ids:
+  - steam:1538850
+- name: Creepy Tale
+  ids:
+  - steam:1224020
+- name: 'Outliver: Tribulation'
+  ids:
+  - steam:1236930
+- name: Castle on the Coast
+  ids:
+  - steam:1341900
+- name: Just Die Already
+  ids:
+  - steam:979070
+- name: Osteoblasts
+  ids:
+  - steam:1450650
+- name: DEATHRUN TV
+  ids:
+  - steam:1591690
+- name: Just Die Already 2-Pack
+  ids:
+  - unresolved:source:isthereanydeal:14052:just-die-already-2-pack
+- name: Hands of Necromancy
+  ids:
+  - steam:1898610
+- name: Funtasia
+  ids:
+  - steam:1795010
+- name: 'May''s Mysteries: The Secret of Dragonville Remastered'
+  ids:
+  - steam:2062350
+- name: Creepy Tale 1 & 2 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14052:creepy-tale-1-and-2-double-pack

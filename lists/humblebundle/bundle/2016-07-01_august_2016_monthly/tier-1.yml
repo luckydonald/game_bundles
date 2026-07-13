@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Aug 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3657/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3657/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3657/source.json
+games:
+- name: Planet of the Eyes
+  ids:
+  - steam:350970
+- name: Starward Rogue
+  ids:
+  - steam:410820
+- name: Poi
+  ids:
+  - steam:401810
+- name: Random Access Murder
+  ids:
+  - steam:438790
+- name: Disc Room
+  ids:
+  - steam:1229580
+- name: The Jackbox Party Pack 2
+  ids:
+  - steam:397460
+- name: The Incredible Adventures of Van Helsing Final Cut
+  ids:
+  - steam:400170
+- name: 'Call of Duty: Black Ops III - Multiplayer Starter Pack'
+  ids:
+  - steam:437350

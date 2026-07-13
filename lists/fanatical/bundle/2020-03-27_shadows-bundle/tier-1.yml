@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shadows Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8594/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8594/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8594/source.json
+games:
+- name: 'Shadows: Awakening'
+  ids:
+  - steam:585450
+- name: 'Shadows: Awakening - Legendary Armory Pack'
+  ids:
+  - unresolved:source:isthereanydeal:8594:shadows-awakening-legendary-armory-pack
+- name: 'Shadows: Awakening - Necrophage''s Curse'
+  ids:
+  - steam:953981
+- name: 'Shadows: Heretic Kingdoms'
+  ids:
+  - steam:256030
+- name: 'Shadows: Awakening - The Chromaton Chronicles'
+  ids:
+  - steam:953980
+- name: 'Shadows: Heretic Kingdoms - Official Soundtrack'
+  ids:
+  - steam:334090

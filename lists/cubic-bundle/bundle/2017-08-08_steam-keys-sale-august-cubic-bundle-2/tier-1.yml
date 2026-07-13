@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'August Cubic Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5374/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5374/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5374/source.json
+games:
+- name: Envoy 2
+  ids:
+  - unresolved:source:isthereanydeal:5374:envoy-2
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+- name: Double Cubes
+  ids:
+  - unresolved:source:isthereanydeal:5374:double-cubes
+- name: Hollow Halls
+  ids:
+  - steam:576700
+- name: Inferno Puzzle
+  ids:
+  - steam:654980
+- name: Pic Guesser
+  ids:
+  - unresolved:source:isthereanydeal:5374:pic-guesser
+- name: Gump Runner
+  ids:
+  - unresolved:source:isthereanydeal:5374:gump-runner
+- name: Simulator gas station
+  ids:
+  - unresolved:source:isthereanydeal:5374:simulator-gas-station
+- name: Alien Attack In Space
+  ids:
+  - steam:391310
+- name: 'Alien Attack: Zero'
+  ids:
+  - steam:601690
+- name: Rozkol
+  ids:
+  - unresolved:source:isthereanydeal:5374:rozkol

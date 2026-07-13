@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jul 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3528/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3528/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3528/source.json
+games:
+- name: Copoka
+  ids:
+  - steam:582620
+- name: Cthulhu Realms - Full Version
+  ids:
+  - steam:486040
+- name: TIS-100
+  ids:
+  - steam:370360
+- name: The Red Solstice
+  ids:
+  - steam:265590
+- name: Hurtworld
+  ids:
+  - steam:393420
+- name: Satellite Reign
+  ids:
+  - steam:268870
+- name: 'Avernum 2: Crystal Souls'
+  ids:
+  - steam:337850
+- name: 'Kentucky Route Zero: PC Edition'
+  ids:
+  - steam:231200

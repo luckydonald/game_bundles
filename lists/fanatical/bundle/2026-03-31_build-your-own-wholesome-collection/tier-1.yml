@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Wholesome Collection Bundle — 3+ for 9.99 (3.33 each), 5+ for
+  14.99 (3.00 each), 7+ for 19.95 (2.85 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16002/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16002/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16002/source.json
+games:
+- name: Mineko's Night Market
+  ids:
+  - steam:762940
+- name: Swords 'n Magic and Stuff
+  ids:
+  - steam:810040
+- name: Time to Morp
+  ids:
+  - steam:977510
+- name: SANYA
+  ids:
+  - steam:1667360
+- name: Escape Academy
+  ids:
+  - steam:1812090
+- name: 'Daydream: Forgotten Sorrow'
+  ids:
+  - steam:1542110
+- name: Henry Halfhead
+  ids:
+  - steam:2058140
+- name: Escape From Mystwood Mansion
+  ids:
+  - steam:2292650
+- name: Worlds of Aria
+  ids:
+  - steam:1866980
+- name: VORON
+  ids:
+  - steam:2245180
+- name: Urban Jungle
+  ids:
+  - steam:2744010
+- name: Hidden in my Paradise
+  ids:
+  - steam:2834330
+- name: Magical Bakery
+  ids:
+  - steam:2595940
+- name: Rekindled Trails
+  ids:
+  - steam:3378330
+- name: Unboxathon
+  ids:
+  - steam:3565100
+- name: Twinkleby
+  ids:
+  - steam:3362960
+- name: My Little Cafe Nightmare
+  ids:
+  - steam:3726250
+- name: Dogpile
+  ids:
+  - steam:3839300

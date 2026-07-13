@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Train Sim World 3 Mega Haul Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13309/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13309/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13309/source.json
+games:
+- name: 'Train Sim World® 2: LIRR M3 EMU Loco Add-On'
+  ids:
+  - steam:1304463
+- name: 'Train Sim World 2: Clinchfield Railroad: Elkhorn - Dante Route Add-On'
+  ids:
+  - steam:1418849
+- name: 'Train Sim World 2: Cathcart Circle Line: Glasgow - Newton & Neilston Route
+    Add-On'
+  ids:
+  - steam:1490112
+- name: Train Sim World 3
+  ids:
+  - steam:1944790
+- name: 'Train Sim World 2: Class 20 ''Chopper'''
+  ids:
+  - unresolved:source:isthereanydeal:13309:train-sim-world-2-class-20-chopper

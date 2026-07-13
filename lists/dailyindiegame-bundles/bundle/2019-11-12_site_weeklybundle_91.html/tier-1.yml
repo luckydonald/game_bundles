@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 91: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8120/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8120/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8120/source.json
+games:
+- name: RGB RUN Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:8120:rgb-run-original-soundtrack
+- name: PBT - GOLD
+  ids:
+  - steam:1131910
+- name: 'Suncore Chronicles: The Tower - Level 2'
+  ids:
+  - unresolved:source:isthereanydeal:8120:suncore-chronicles-the-tower-level-2
+- name: In Between Games - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:8120:in-between-games-soundtrack
+- name: OSES - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:8120:oses-soundtrack
+- name: 'Button Tales: Way Home'
+  ids:
+  - steam:1114750
+- name: Button Tales - Original Soundtrack
+  ids:
+  - steam:565310
+- name: 'Suncore Chronicles: The Tower - Level 1'
+  ids:
+  - steam:634420
+- name: O.C.D. - Comorbidity Pack
+  ids:
+  - unresolved:source:isthereanydeal:8120:ocd-comorbidity-pack

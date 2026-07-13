@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Devolver Digital Films Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3558/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3558/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3558/source.json
+games:
+- name: Mars Odyssey
+  ids:
+  - steam:465150
+- name: Motivational Growth
+  ids:
+  - unresolved:source:isthereanydeal:3558:motivational-growth
+- name: Magnetic
+  ids:
+  - unresolved:source:isthereanydeal:3558:magnetic

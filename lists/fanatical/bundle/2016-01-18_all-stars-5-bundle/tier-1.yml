@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 5 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2948/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2948/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2948/source.json
+games:
+- name: Divekick
+  ids:
+  - steam:244730
+- name: 'Painkiller: Black Edition'
+  ids:
+  - steam:39530
+- name: Town of Salem
+  ids:
+  - steam:334230
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+- name: Planetary Annihilation - Digital Deluxe Commander Bundle
+  ids:
+  - unresolved:source:isthereanydeal:2948:planetary-annihilation-digital-deluxe-commander-bundle
+- name: Rise of the Triad
+  ids:
+  - steam:217140
+- name: 100% Orange Juice
+  ids:
+  - steam:282800
+- name: Universe Sandbox Legacy
+  ids:
+  - unresolved:source:isthereanydeal:2948:universe-sandbox-legacy

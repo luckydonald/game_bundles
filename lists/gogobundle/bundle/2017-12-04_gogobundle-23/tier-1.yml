@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #23 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5683/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5683/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5683/source.json
+games:
+- name: Moving Day
+  ids:
+  - steam:750020
+- name: Battle Runner
+  ids:
+  - steam:749040
+- name: Project Abyss - Art & Music Collection
+  ids:
+  - unresolved:source:isthereanydeal:5683:project-abyss-art-and-music-collection
+- name: Project Abyss
+  ids:
+  - steam:552410
+- name: The Land Of Lamia
+  ids:
+  - steam:385310
+- name: Monarch of Greed - Act 1
+  ids:
+  - steam:746220
+- name: 'Fairyland: Manuscript'
+  ids:
+  - unresolved:source:isthereanydeal:5683:fairyland-manuscript
+- name: The Dark Maze
+  ids:
+  - unresolved:source:isthereanydeal:5683:the-dark-maze
+- name: Mind Dead
+  ids:
+  - steam:442190

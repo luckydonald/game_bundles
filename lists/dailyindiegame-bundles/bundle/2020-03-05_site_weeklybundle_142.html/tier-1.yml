@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 142: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8463/source.json
+games:
+- name: Platform Builder Pro
+  ids:
+  - steam:892250
+- name: One Manga Day - Bonus Content
+  ids:
+  - steam:367380
+- name: Mighty Gemstones - Hardest Levels
+  ids:
+  - steam:827350
+- name: PBT - GOLD
+  ids:
+  - steam:1131910
+- name: 'Suncore Chronicles: The Tower - Level 2'
+  ids:
+  - unresolved:source:isthereanydeal:8463:suncore-chronicles-the-tower-level-2
+- name: Desktop Girls - New Girls
+  ids:
+  - steam:1099620
+- name: The Mystery Of Woolley Mountain Soundtrack
+  ids:
+  - steam:1223950
+- name: Shuyan Saga Original Soundtrack
+  ids:
+  - steam:678080
+- name: 'Suncore Chronicles: The Tower - Level 1'
+  ids:
+  - steam:634420

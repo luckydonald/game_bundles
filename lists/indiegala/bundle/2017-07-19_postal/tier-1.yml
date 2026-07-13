@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Postal Party Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5335/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5335/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5335/source.json
+games:
+- name: Samurai Wars
+  ids:
+  - unresolved:source:isthereanydeal:5335:samurai-wars
+- name: Breezeblox
+  ids:
+  - steam:370080
+- name: Stardust Vanguards
+  ids:
+  - steam:341530

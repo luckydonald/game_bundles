@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 24 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3253/source.json
+games:
+- name: Wild Season
+  ids:
+  - steam:328220
+- name: Shallow Space
+  ids:
+  - steam:305840
+- name: Warhammer Quest
+  ids:
+  - steam:326670
+- name: Adventure Apes and the Mayan Mystery
+  ids:
+  - steam:461830
+- name: Anna's Quest
+  ids:
+  - steam:327220
+- name: Techwars Online
+  ids:
+  - steam:444180
+- name: Shooting Stars!
+  ids:
+  - steam:415350
+- name: 'Divinia Chronicles: Relics of Gan-Ti'
+  ids:
+  - steam:302810

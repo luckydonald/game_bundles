@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Lunar Bundle+ — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1149/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1149/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1149/source.json
+games:
+- name: Smash Cat
+  ids:
+  - unresolved:source:isthereanydeal:1149:smash-cat
+- name: Pester
+  ids:
+  - steam:354920
+- name: Pressured
+  ids:
+  - steam:292620
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+- name: Storm in a Teacup
+  ids:
+  - steam:104020
+- name: Lunar Panda Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:1149:lunar-panda-deluxe
+- name: Steam Heroes
+  ids:
+  - steam:341160
+- name: 'Q.U.B.E: Director''s Cut'
+  ids:
+  - unresolved:source:isthereanydeal:1149:q-u-b-e-directors-cut

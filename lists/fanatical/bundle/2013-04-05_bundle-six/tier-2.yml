@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Catnip Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/216/source.json
+games:
+- name: Pushcat
+  ids:
+  - steam:308440
+- name: Metal Drift
+  ids:
+  - steam:32200
+- name: Post Mortem
+  ids:
+  - steam:46550
+- name: Chains
+  ids:
+  - unresolved:source:isthereanydeal:216:chains
+- name: 'Nikopol : Secrets of the Immortals'
+  ids:
+  - steam:11370
+- name: Obulis
+  ids:
+  - unresolved:source:isthereanydeal:216:obulis
+- name: Chrome - SpecForce
+  ids:
+  - unresolved:source:isthereanydeal:216:chrome-specforce
+- name: 'Scratches: Director''s Cut'
+  ids:
+  - steam:46460
+- name: 'Avencast: Rise of the Mage'
+  ids:
+  - steam:46410
+- name: Wasteland Angel
+  ids:
+  - steam:46520

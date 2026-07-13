@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tokyo Xanadu eX+ Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8407/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8407/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8407/source.json
+games:
+- name: 'Tokyo Xanadu eX+: S-Pom Treat Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:8407:tokyo-xanadu-ex_pluss-pom-treat-bundle
+- name: 'Tokyo Xanadu eX+: Outfit & Accessory Bundle'
+  ids:
+  - steam:750910
+- name: Tokyo Xanadu eX+
+  ids:
+  - steam:587260
+- name: 'Tokyo Xanadu eX+: Item Bundle'
+  ids:
+  - steam:750911

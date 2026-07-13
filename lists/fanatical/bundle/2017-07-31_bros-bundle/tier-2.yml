@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bros Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5364/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5364/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5364/source.json
+games:
+- name: Super Duper Party Pooper
+  ids:
+  - steam:485870
+- name: Luke Sidewalker
+  ids:
+  - steam:545860
+- name: Frisky Business
+  ids:
+  - steam:588240
+- name: There's Poop In My Soup
+  ids:
+  - steam:449540
+- name: Toadled
+  ids:
+  - steam:521630
+- name: Albert and Otto
+  ids:
+  - steam:368590
+- name: Flix and Chill
+  ids:
+  - steam:595460
+- name: Tanks vs Aliens
+  ids:
+  - steam:634200
+- name: Evil Glitch
+  ids:
+  - steam:619890

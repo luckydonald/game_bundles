@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Action Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4433/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4433/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4433/source.json
+games:
+- name: 'Space Trader: Merchant Marine'
+  ids:
+  - steam:11240
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: 'Avencast: Rise of the Mage'
+  ids:
+  - steam:46410
+- name: Biology Battle
+  ids:
+  - unresolved:source:isthereanydeal:4433:biology-battle
+- name: Rage Pig
+  ids:
+  - unresolved:source:isthereanydeal:4433:rage-pig
+- name: Farnham Fables Tape 1 Episode 2
+  ids:
+  - steam:524360
+- name: Space Hack
+  ids:
+  - steam:315260
+- name: 'Nikopol : Secrets of the Immortals'
+  ids:
+  - steam:11370
+- name: Larva Mortus
+  ids:
+  - steam:11340
+- name: No Time To Live
+  ids:
+  - steam:397940
+- name: Gone In November Collector's Edition Content
+  ids:
+  - steam:511240
+- name: Gone In November
+  ids:
+  - steam:507390

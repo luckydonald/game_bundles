@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Neon Lights Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15041/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15041/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15041/source.json
+games:
+- name: The Red Strings Club
+  ids:
+  - steam:589780
+- name: Black Future '88
+  ids:
+  - steam:751820
+- name: Neon Abyss
+  ids:
+  - steam:788100

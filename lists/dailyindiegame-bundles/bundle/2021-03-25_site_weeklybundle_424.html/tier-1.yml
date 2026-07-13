@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 424 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9870/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9870/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9870/source.json
+games:
+- name: 'Countryballs: Over The World'
+  ids:
+  - unresolved:source:isthereanydeal:9870:countryballs-over-the-world
+- name: Crazy Belts
+  ids:
+  - steam:355510
+- name: 'Catgirl Magic: Fury Duel'
+  ids:
+  - unresolved:source:isthereanydeal:9870:catgirl-magic-fury-duel
+- name: Total Madness
+  ids:
+  - unresolved:source:isthereanydeal:9870:total-madness
+- name: Danger Zombies
+  ids:
+  - steam:1284150
+- name: Finger Guessing King
+  ids:
+  - steam:1296580
+- name: Juicy Memory Card
+  ids:
+  - unresolved:source:isthereanydeal:9870:juicy-memory-card
+- name: Unicorn Dream
+  ids:
+  - unresolved:source:isthereanydeal:9870:unicorn-dream
+- name: Alien Cat 5
+  ids:
+  - unresolved:source:isthereanydeal:9870:alien-cat-5

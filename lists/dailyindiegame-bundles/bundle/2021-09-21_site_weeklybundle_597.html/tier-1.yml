@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 597: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10490/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10490/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10490/source.json
+games:
+- name: AEGYPTUS
+  ids:
+  - steam:675130
+- name: Sos i pie sos 2 kycb edition
+  ids:
+  - unresolved:source:isthereanydeal:10490:sos-i-pie-sos-2-kycb-edition
+- name: 'The Thing: Space X'
+  ids:
+  - steam:709700
+- name: Colorcers
+  ids:
+  - unresolved:source:isthereanydeal:10490:colorcers
+- name: Blood Drift
+  ids:
+  - steam:798140
+- name: SHELL_BREAK
+  ids:
+  - steam:988590
+- name: Angry Zombies
+  ids:
+  - steam:1183670
+- name: Defense high
+  ids:
+  - steam:1280550
+- name: Orange Santa
+  ids:
+  - steam:1495460

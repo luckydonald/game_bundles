@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Tax Year Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7257/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7257/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7257/source.json
+games:
+- name: ALONE...
+  ids:
+  - steam:514240
+- name: '03.04'
+  ids:
+  - steam:952950
+- name: Ladybird Reflect
+  ids:
+  - steam:778770
+- name: Low Blow
+  ids:
+  - unresolved:source:isthereanydeal:7257:low-blow
+- name: Grab Sack
+  ids:
+  - unresolved:source:isthereanydeal:7257:grab-sack
+- name: King Erik
+  ids:
+  - unresolved:source:isthereanydeal:7257:king-erik
+- name: Ball Buster
+  ids:
+  - unresolved:source:isthereanydeal:7257:ball-buster
+- name: RabbiruN
+  ids:
+  - steam:806160

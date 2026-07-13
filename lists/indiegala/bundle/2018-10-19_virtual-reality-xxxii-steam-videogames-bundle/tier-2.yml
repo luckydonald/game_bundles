@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXII Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6587/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6587/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6587/source.json
+games:
+- name: Conjuror's Eye
+  ids:
+  - steam:805320
+- name: Crashed Lander
+  ids:
+  - steam:340450
+- name: Drunkn Bar Fight on Halloween
+  ids:
+  - steam:933140
+- name: NightKnight
+  ids:
+  - steam:908710
+- name: inVokeR
+  ids:
+  - steam:627070
+- name: Unruly Ghouls
+  ids:
+  - steam:523720
+- name: The Tavern of Magic
+  ids:
+  - steam:777250
+- name: Science:The world is in your hands
+  ids:
+  - unresolved:source:isthereanydeal:6587:science-the-world-is-in-your-hands
+- name: World of Virtual Reality (VR)
+  ids:
+  - unresolved:source:isthereanydeal:6587:world-of-virtual-reality-vr

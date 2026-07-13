@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: IGN Live Bundle 2026 — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16236/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16236/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16236/source.json
+games:
+- name: The Last Campfire
+  ids:
+  - steam:990630
+- name: 'TOEM: A Photo Adventure'
+  ids:
+  - steam:1307580
+- name: Blair Witch
+  ids:
+  - steam:1092660
+- name: 'Paradise Killer: Perfect 25 Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16236:paradise-killer-perfect-25-edition
+- name: Fear the Spotlight
+  ids:
+  - steam:1959390
+- name: Control Ultimate Edition
+  ids:
+  - steam:870780
+- name: Rollerdrome
+  ids:
+  - steam:1294420
+- name: 'Shadow Gambit: The Cursed Crew'
+  ids:
+  - steam:1545560
+- name: 'OFF'
+  ids:
+  - steam:3339880

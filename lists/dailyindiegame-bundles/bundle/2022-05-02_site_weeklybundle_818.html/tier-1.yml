@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 818: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11452/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11452/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11452/source.json
+games:
+- name: Blocky Snake
+  ids:
+  - unresolved:source:isthereanydeal:11452:blocky-snake
+- name: Wall To Wall
+  ids:
+  - steam:1826640
+- name: Math Game
+  ids:
+  - steam:1872730
+- name: Downhill
+  ids:
+  - unresolved:source:isthereanydeal:11452:downhill
+- name: ARMORED
+  ids:
+  - steam:1641780
+- name: Snowboarding
+  ids:
+  - steam:1659170
+- name: Splash Fly Fire
+  ids:
+  - steam:1830830
+- name: Insipid
+  ids:
+  - steam:1879570
+- name: Pick the Lockl
+  ids:
+  - unresolved:source:isthereanydeal:11452:pick-the-lockl

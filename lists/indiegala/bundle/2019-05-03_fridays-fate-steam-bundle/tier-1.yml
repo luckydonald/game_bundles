@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Friday&#39;s Fate Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7363/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7363/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7363/source.json
+games:
+- name: Fate Tectonics
+  ids:
+  - steam:379530
+- name: 'Airscape: The Fall of Gravity'
+  ids:
+  - steam:317250
+- name: Splatter - Zombie Apocalypse
+  ids:
+  - unresolved:source:isthereanydeal:7363:splatter-zombie-apocalypse
+- name: Sins Of The Demon RPG
+  ids:
+  - steam:461640
+- name: Secret Of Magia
+  ids:
+  - steam:396160
+- name: 'Battle Ranch: Pigs vs Plants'
+  ids:
+  - steam:340070
+- name: Particle Mace
+  ids:
+  - steam:295690
+- name: Earth Overclocked
+  ids:
+  - steam:387060
+- name: Greyfox RPG
+  ids:
+  - steam:341310

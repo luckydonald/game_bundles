@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 749 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11074/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11074/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11074/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+- name: The King's Bird
+  ids:
+  - steam:812550
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:11074:the-adventures-of-chris
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: Trident's Wake
+  ids:
+  - steam:704880
+- name: Cyber Hook
+  ids:
+  - steam:1130410
+- name: Nira
+  ids:
+  - steam:1171120
+- name: Turnip Boy Commits Tax Evasion
+  ids:
+  - steam:1205450
+- name: Blue Fire
+  ids:
+  - steam:1220150

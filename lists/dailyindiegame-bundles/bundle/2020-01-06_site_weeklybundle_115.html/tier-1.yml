@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 115 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8295/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8295/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8295/source.json
+games:
+- name: Fly Flew Flown
+  ids:
+  - steam:1027800
+- name: The Ring of Truth
+  ids:
+  - steam:1098760
+- name: Harts
+  ids:
+  - steam:769360
+- name: Reveal
+  ids:
+  - steam:882200
+- name: FallenCore
+  ids:
+  - steam:670090
+- name: Era of Miracles
+  ids:
+  - steam:1037930
+- name: Gang District
+  ids:
+  - steam:1196170
+- name: Defending Frontiers
+  ids:
+  - unresolved:source:isthereanydeal:8295:defending-frontiers
+- name: Fourthy
+  ids:
+  - steam:1212470

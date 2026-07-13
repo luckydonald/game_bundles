@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #39 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5956/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5956/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5956/source.json
+games:
+- name: Happy New Year Clicker
+  ids:
+  - steam:760560
+- name: MEGALONIA
+  ids:
+  - unresolved:source:isthereanydeal:5956:megalonia
+- name: 'ASCII Game Series: Beginning'
+  ids:
+  - unresolved:source:isthereanydeal:5956:ascii-game-series-beginning
+- name: SCREW-NUT
+  ids:
+  - unresolved:source:isthereanydeal:5956:screw-nut
+- name: 'ASCII Game Series: Snake'
+  ids:
+  - unresolved:source:isthereanydeal:5956:ascii-game-series-snake
+- name: 'ASCII Game Series: Blocks'
+  ids:
+  - unresolved:source:isthereanydeal:5956:ascii-game-series-blocks
+- name: The Scarecrow
+  ids:
+  - unresolved:source:isthereanydeal:5956:the-scarecrow
+- name: TANKS
+  ids:
+  - steam:866420
+- name: Home Alone Girlfriend
+  ids:
+  - unresolved:source:isthereanydeal:5956:home-alone-girlfriend
+- name: Infinite Fall
+  ids:
+  - unresolved:source:isthereanydeal:5956:infinite-fall
+- name: Demon robot runner
+  ids:
+  - unresolved:source:isthereanydeal:5956:demon-robot-runner

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 60 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3308/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3308/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3308/source.json
+games:
+- name: Undead vs Plants
+  ids:
+  - unresolved:source:isthereanydeal:3308:undead-vs-plants
+- name: Plight of the Zombie
+  ids:
+  - steam:434070
+- name: 'Postmortem: One Must Die (Extended Cut)'
+  ids:
+  - steam:263140
+- name: Apocalypse Hotel - The Post-Apocalyptic Hotel Simulator!
+  ids:
+  - steam:423700
+- name: Snake Blocks
+  ids:
+  - steam:339320
+- name: 24 Hours 'til Rescue
+  ids:
+  - steam:444420

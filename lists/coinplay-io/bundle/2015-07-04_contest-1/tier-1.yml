@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Contest Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2197/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2197/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2197/source.json
+games:
+- name: Lightfish
+  ids:
+  - steam:116120
+- name: Crayon Chronicles
+  ids:
+  - steam:341510
+- name: Volt
+  ids:
+  - steam:290280
+- name: Obludia
+  ids:
+  - steam:314290
+- name: Stonerid
+  ids:
+  - steam:315920

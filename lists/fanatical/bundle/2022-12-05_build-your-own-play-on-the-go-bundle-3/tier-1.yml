@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Play on the Go Bundle 3 — Select 3 Titles for $4.99, 5 Titles
+  for $6.99, 8 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12634/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12634/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12634/source.json
+games:
+- name: God's Trigger
+  ids:
+  - steam:488730
+- name: Redout - Space Exploration Pack
+  ids:
+  - steam:728910
+- name: Darkwood
+  ids:
+  - steam:274520
+- name: The House
+  ids:
+  - unresolved:source:isthereanydeal:12634:the-house
+- name: Shift Happens
+  ids:
+  - steam:359840
+- name: Blasphemous
+  ids:
+  - steam:774361
+- name: Crumble
+  ids:
+  - steam:1061180
+- name: Redout - Mars Pack
+  ids:
+  - steam:627440
+- name: Aragami
+  ids:
+  - steam:280160
+- name: Liberated
+  ids:
+  - steam:875310
+- name: Redout - V.E.R.T.E.X. Pack
+  ids:
+  - unresolved:source:isthereanydeal:12634:redout-v-e-r-t-e-x-pack
+- name: Redout - Neptune Pack
+  ids:
+  - steam:580620
+- name: 'Redout: Enhanced Edition'
+  ids:
+  - steam:517710
+- name: 'Shadow Tactics: Blades of the Shogun'
+  ids:
+  - steam:418240
+- name: Cat Quest
+  ids:
+  - steam:593280
+- name: Blazing Chrome
+  ids:
+  - steam:609110
+- name: Among the Sleep - Enhanced Edition
+  ids:
+  - steam:250620
+- name: Redout - Back to Earth Pack
+  ids:
+  - steam:762770
+- name: Arietta of Spirits
+  ids:
+  - steam:1140170
+- name: Going Under
+  ids:
+  - steam:1154810
+- name: OUTBUDDIES DX
+  ids:
+  - steam:1083310
+- name: Tiny Lands
+  ids:
+  - steam:1354910
+- name: Kingdom Rush Vengeance
+  ids:
+  - steam:1367550
+- name: 'Tested on Humans: Escape Room'
+  ids:
+  - steam:1483780
+- name: The Ramp
+  ids:
+  - steam:1506510
+- name: 'Grand Mountain Adventure: Wonderlands'
+  ids:
+  - steam:1247360
+- name: Legends of Kingdom Rush
+  ids:
+  - steam:1904860

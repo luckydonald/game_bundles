@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 24 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12125/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12125/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12125/source.json
+games:
+- name: Darkwood
+  ids:
+  - steam:274520
+- name: 'Call of Juarez: Gunslinger'
+  ids:
+  - steam:204450
+- name: 'Interstellar Space: Genesis'
+  ids:
+  - steam:984680
+- name: Deliver Us The Moon
+  ids:
+  - steam:428660
+- name: 'Unexplored 2: The Wayfarer''s Legacy'
+  ids:
+  - steam:1095040
+- name: Survive the Nights
+  ids:
+  - steam:541300
+- name: Anuchard
+  ids:
+  - steam:1386620

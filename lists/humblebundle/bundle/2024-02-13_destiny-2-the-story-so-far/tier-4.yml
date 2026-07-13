@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Destiny 2: The Story So Far Bundle — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13841/source.json
+games:
+- name: 'Destiny 2: Shadowkeep'
+  ids:
+  - unresolved:source:isthereanydeal:13841:destiny-2-shadowkeep
+- name: 'Destiny 2: Forsaken Pack'
+  ids:
+  - steam:1090150
+- name: 'Destiny 2: Beyond Light'
+  ids:
+  - steam:1314563
+- name: 'Destiny 2: Bungie 30th Anniversary Pack'
+  ids:
+  - steam:1656370
+- name: 'Destiny 2: The Witch Queen'
+  ids:
+  - steam:1656330
+- name: 'Destiny 2: Lightfall'
+  ids:
+  - steam:1945340
+- name: 'Destiny 2: Lightfall + Annual Pass'
+  ids:
+  - unresolved:source:isthereanydeal:13841:destiny-2-lightfall-and-annual-pass

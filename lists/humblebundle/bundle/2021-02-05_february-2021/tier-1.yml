@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Feb 2021) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9707/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9707/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9707/source.json
+games:
+- name: The Wild Eight
+  ids:
+  - steam:526160
+- name: Moving Out
+  ids:
+  - steam:996770
+- name: 'Trine 4: The Nightmare Prince'
+  ids:
+  - steam:690640
+- name: Outward
+  ids:
+  - unresolved:source:isthereanydeal:9707:outward
+- name: Train Station Renovation
+  ids:
+  - steam:914010
+- name: Endless Space® 2 - Digital Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:9707:endless-space-2-digital-deluxe-edition
+- name: Valfaris
+  ids:
+  - steam:600130
+- name: Boomerang Fu
+  ids:
+  - steam:965680
+- name: Lovecraft's Untold Stories
+  ids:
+  - steam:871420
+- name: Iris and the Giant
+  ids:
+  - steam:1127610
+- name: Valkyria Chronicles 4 Complete Edition
+  ids:
+  - steam:790820
+- name: Outward - Soundtrack
+  ids:
+  - steam:1244560
+- name: Outward - The Soroboreans
+  ids:
+  - steam:1194010
+- name: 'Werewolf: The Apocalypse - Heart of the Forest'
+  ids:
+  - steam:1342620
+- name: Co-Open
+  ids:
+  - unresolved:source:isthereanydeal:9707:co-open

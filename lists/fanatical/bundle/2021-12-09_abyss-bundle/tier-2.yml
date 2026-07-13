@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Abyss Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10799/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10799/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10799/source.json
+games:
+- name: Torchlight
+  ids:
+  - steam:41500
+- name: Main Assembly
+  ids:
+  - steam:1078920
+- name: 'Oddworld: Stranger''s Wrath HD'
+  ids:
+  - steam:15750
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+- name: Fling to the Finish
+  ids:
+  - steam:1054430
+- name: Verdun
+  ids:
+  - steam:242860
+- name: Warpips
+  ids:
+  - steam:1291010

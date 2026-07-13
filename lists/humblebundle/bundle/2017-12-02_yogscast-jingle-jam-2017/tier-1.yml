@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Yogscast Jingle Jam 2017 — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5678/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5678/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5678/source.json
+games:
+- name: Team Fortress 2 Badges
+  ids:
+  - unresolved:source:isthereanydeal:5678:team-fortress-2-badges

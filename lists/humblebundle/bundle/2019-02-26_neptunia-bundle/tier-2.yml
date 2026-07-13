@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Neptunia Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7087/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7087/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7087/source.json
+games:
+- name: Hyperdimension Neptunia Re;Birth1
+  ids:
+  - steam:282900
+- name: Hyperdimension Neptunia Re;Birth 1 - Colosseum + Characters
+  ids:
+  - unresolved:source:isthereanydeal:7087:hyperdimension-neptunia-re-birth-1-colosseum-and-characters
+- name: Hyperdimension Neptunia Re;Birth2 Sisters Generation
+  ids:
+  - steam:351710
+- name: Hyperdimension Neptunia Re;Birth2 Deluxe Pack
+  ids:
+  - steam:532720
+- name: Hyperdimension Neptunia Re;Birth1 Deluxe Pack
+  ids:
+  - steam:513730
+- name: 'Amnesia™: Memories'
+  ids:
+  - steam:359390
+- name: 'Hyperdimension Neptunia U: Action Unleashed'
+  ids:
+  - steam:387340
+- name: Hyperdimension Neptunia Re;Birth3 V Generation
+  ids:
+  - steam:353270
+- name: 'Cyberdimension Neptunia: 4 Goddesses Online - Deluxe Pack'
+  ids:
+  - steam:730720
+- name: Hyperdimension Neptunia Re;Birth3 Deluxe Pack
+  ids:
+  - steam:545020

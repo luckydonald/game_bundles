@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of Mystery & Adventure — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3280/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3280/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3280/source.json
+games:
+- name: Highland Warriors
+  ids:
+  - steam:446460
+- name: The Hole Story
+  ids:
+  - steam:356730
+- name: 'Fairy Tale Mysteries 2: The Beanstalk'
+  ids:
+  - steam:403510
+- name: Lost In Woods 2
+  ids:
+  - unresolved:source:isthereanydeal:3280:lost-in-woods-2
+- name: Lost In Purple
+  ids:
+  - unresolved:source:isthereanydeal:3280:lost-in-purple
+- name: 'Dreamscapes: The Sandman'
+  ids:
+  - steam:289260

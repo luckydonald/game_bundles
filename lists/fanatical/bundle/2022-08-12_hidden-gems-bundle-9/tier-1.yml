@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11950/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11950/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11950/source.json
+games:
+- name: Discolored
+  ids:
+  - steam:933860
+- name: The Beast Inside
+  ids:
+  - steam:792300
+- name: SHEEPO
+  ids:
+  - steam:1281790
+- name: Crown Trick
+  ids:
+  - steam:1000010
+- name: TERMINUS
+  ids:
+  - steam:1455060

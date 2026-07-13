@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Barbarian Taco Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6223/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6223/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6223/source.json
+games:
+- name: Gravity Light
+  ids:
+  - steam:706240
+- name: Zombie Quarantine
+  ids:
+  - steam:360400
+- name: Space Elite Force
+  ids:
+  - steam:855850

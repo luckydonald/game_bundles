@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: MomCore Games for a Busy Life Game Bundle — 5 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15502/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15502/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15502/source.json
+games:
+- name: Bombfest
+  ids:
+  - steam:729640
+- name: 'Beans: The Coffee Shop Simulator'
+  ids:
+  - steam:549240
+- name: Where the Bees Make Honey
+  ids:
+  - steam:1001640
+- name: We should talk.
+  ids:
+  - steam:1255990
+- name: Beasts of Maravilla Island
+  ids:
+  - steam:1378020

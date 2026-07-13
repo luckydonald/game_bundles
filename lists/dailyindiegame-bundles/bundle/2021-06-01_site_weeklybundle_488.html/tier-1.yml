@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 488 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10074/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10074/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10074/source.json
+games:
+- name: Street karate 3
+  ids:
+  - steam:1524340
+- name: FALCO AXE
+  ids:
+  - steam:1561870
+- name: Caveman
+  ids:
+  - steam:1579030
+- name: Sheriff Rage
+  ids:
+  - steam:1557240
+- name: Galaxy Arena
+  ids:
+  - steam:1558420
+- name: Heltons Haunted Hotel
+  ids:
+  - steam:1605310
+- name: Jungle Rumble
+  ids:
+  - steam:1608210
+- name: 'Cyber Hunter: Awakening'
+  ids:
+  - steam:1610560
+- name: Сольфеджио
+  ids:
+  - unresolved:source:isthereanydeal:10074:sol-fedzio

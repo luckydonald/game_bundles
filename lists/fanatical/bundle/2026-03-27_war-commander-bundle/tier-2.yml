@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: War Commander Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15993/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15993/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15993/source.json
+games:
+- name: Starship Troopers - Terran Command
+  ids:
+  - steam:1202130
+- name: 'Warhammer 40,000: Battlesector'
+  ids:
+  - steam:1295500
+- name: Headquarters World War II
+  ids:
+  - steam:1840800
+- name: Panzer Corps 2
+  ids:
+  - steam:1072040
+- name: Distant Worlds 2
+  ids:
+  - steam:1531540
+- name: 'Terminator: Dark Fate - Defiance'
+  ids:
+  - steam:1839950

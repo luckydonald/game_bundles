@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Software Bundle: Work Remote — 3-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8679/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8679/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8679/source.json
+games:
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+- name: Parallels Access 1-Year Subscription
+  ids:
+  - unresolved:source:isthereanydeal:8679:parallels-access-1-year-subscription
+- name: Evernote Premium 3-Month Subscription
+  ids:
+  - unresolved:source:isthereanydeal:8679:evernote-premium-3-month-subscription

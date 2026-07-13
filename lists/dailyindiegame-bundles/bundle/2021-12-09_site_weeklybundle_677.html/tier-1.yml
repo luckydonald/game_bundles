@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 677 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10800/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10800/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10800/source.json
+games:
+- name: Q-YO Blaster
+  ids:
+  - steam:772610
+- name: GORILLA TOWN
+  ids:
+  - steam:1217560
+- name: Reek
+  ids:
+  - steam:1212300
+- name: Shattering Obsidian
+  ids:
+  - steam:1383920
+- name: Throne of Fate
+  ids:
+  - steam:1403190
+- name: Memories of East Coast
+  ids:
+  - steam:1607430
+- name: Urizen Frosty Plus
+  ids:
+  - unresolved:source:isthereanydeal:10800:urizen-frosty-plus
+- name: Jungle Rumble
+  ids:
+  - steam:1608210
+- name: ARMORED
+  ids:
+  - steam:1641780

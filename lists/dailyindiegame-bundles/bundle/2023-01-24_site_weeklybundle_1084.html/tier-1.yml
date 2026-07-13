@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1084: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12922/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12922/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12922/source.json
+games:
+- name: Blocky McBlockFace
+  ids:
+  - steam:974970
+- name: The Orb Chambers REMASTERED
+  ids:
+  - unresolved:source:isthereanydeal:12922:the-orb-chambers-remastered
+- name: Sky Goddess
+  ids:
+  - unresolved:source:isthereanydeal:12922:sky-goddess
+- name: Goddess Of War Ashley
+  ids:
+  - unresolved:source:isthereanydeal:12922:goddess-of-war-ashley
+- name: Elemental Angel
+  ids:
+  - unresolved:source:isthereanydeal:12922:elemental-angel
+- name: Soulstopia -PHI
+  ids:
+  - steam:1752760
+- name: Sky Goddess II
+  ids:
+  - unresolved:source:isthereanydeal:12922:sky-goddess-ii
+- name: Slime Rule!
+  ids:
+  - steam:2069550

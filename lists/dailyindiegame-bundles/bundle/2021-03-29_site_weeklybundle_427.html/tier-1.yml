@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 427 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9878/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9878/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9878/source.json
+games:
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+- name: Jaywalker
+  ids:
+  - unresolved:source:isthereanydeal:9878:jaywalker
+- name: Gabe Newell Simulator
+  ids:
+  - steam:407420
+- name: Marble Trap
+  ids:
+  - steam:1145560
+- name: Tower Blitz
+  ids:
+  - steam:1237820
+- name: Tricky Cat
+  ids:
+  - steam:1042330
+- name: Hiking Simulator 2018
+  ids:
+  - steam:791950
+- name: ClickMonster
+  ids:
+  - steam:1341660
+- name: I wanna build a robot
+  ids:
+  - steam:1337210

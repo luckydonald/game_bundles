@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1045 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12773/source.json
+games:
+- name: 位面穿越者-三国传-进化(A Bit Crosser-Three Kingdoms-Revolution)
+  ids:
+  - steam:768010
+- name: Princess's Peak
+  ids:
+  - steam:1071770
+- name: Tactics & Strategy Master:Joan of Arc
+  ids:
+  - steam:820760
+- name: Solar Cram School
+  ids:
+  - steam:1146660
+- name: Robogal
+  ids:
+  - steam:1676710
+- name: Paradise Beach Girls
+  ids:
+  - steam:1811290
+- name: Streamers' Secret Life
+  ids:
+  - steam:2064090
+- name: Furry Tale
+  ids:
+  - unresolved:source:isthereanydeal:12773:furry-tale
+- name: Furry Dream
+  ids:
+  - unresolved:source:isthereanydeal:12773:furry-dream

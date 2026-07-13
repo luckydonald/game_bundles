@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble One Special Day Bundle 2020 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9229/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9229/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9229/source.json
+games:
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+- name: 'Surgeon Simulator: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9229:surgeon-simulator-anniversary-edition
+- name: Idle Champions - Celeste's Starter Pack
+  ids:
+  - unresolved:source:isthereanydeal:9229:idle-champions-celestes-starter-pack

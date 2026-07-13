@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 17 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3686/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3686/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3686/source.json
+games:
+- name: Wooden Floor 2 - Resurrection
+  ids:
+  - steam:433790
+- name: Puzzles Under The Hill
+  ids:
+  - steam:487600
+- name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
+  ids:
+  - steam:373870
+- name: Tales from the Void
+  ids:
+  - unresolved:source:isthereanydeal:3686:tales-from-the-void
+- name: 'Safety Driving Simulator: Car'
+  ids:
+  - steam:450590
+- name: Wooden Floor
+  ids:
+  - steam:348790
+- name: Marble Duel
+  ids:
+  - steam:338120
+- name: Gone In November
+  ids:
+  - steam:507390
+- name: Vindictive Drive
+  ids:
+  - steam:507400

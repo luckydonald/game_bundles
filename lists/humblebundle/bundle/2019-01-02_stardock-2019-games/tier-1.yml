@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Bundle 2019 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6864/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6864/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6864/source.json
+games:
+- name: 'Sins of a Solar Empire: Rebellion'
+  ids:
+  - steam:204880
+- name: 'Galactic Civilizations I: Ultimate Edition'
+  ids:
+  - steam:214150
+- name: 'Galactic Civilizations II: Ultimate Edition'
+  ids:
+  - steam:202200

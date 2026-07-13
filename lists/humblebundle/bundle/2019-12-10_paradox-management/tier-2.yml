@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Paradox Management Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8193/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8193/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8193/source.json
+games:
+- name: Cities in Motion II
+  ids:
+  - unresolved:source:isthereanydeal:8193:cities-in-motion-ii
+- name: Prison Architect
+  ids:
+  - steam:233450
+- name: Cities in Motion
+  ids:
+  - steam:73010
+- name: Prison Architect - Aficionado
+  ids:
+  - steam:1195240
+- name: 'Cities in Motion 2: European Cities'
+  ids:
+  - steam:283530
+- name: Cities in Motion US Cities
+  ids:
+  - steam:73187
+- name: 'Cities: Skylines - Content Creator Pack: European Suburbia'
+  ids:
+  - steam:715190
+- name: 'Cities: Skylines'
+  ids:
+  - steam:255710
+- name: 'Cities: Skylines - Green Cities'
+  ids:
+  - steam:614580
+- name: Cities in Motion German Cities
+  ids:
+  - steam:73185
+- name: Cities in Motion Tokyo
+  ids:
+  - steam:73181
+- name: 'Cities: Skylines - Synthetic Dawn Radio'
+  ids:
+  - steam:944070

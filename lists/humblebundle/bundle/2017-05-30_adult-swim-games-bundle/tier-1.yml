@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Adult Swim Games Bundle — Pay What You Want
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5160/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5160/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5160/source.json
+games:
+- name: Small Radios Big Televisions
+  ids:
+  - steam:390040
+- name: Volgarr the Viking
+  ids:
+  - steam:247240
+- name: WASTED
+  ids:
+  - steam:327510
+- name: 'Westerado: Double Barreled'
+  ids:
+  - steam:275200

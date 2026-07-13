@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 5 — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/184/source.json
+games:
+- name: X-Blades
+  ids:
+  - steam:7510
+- name: NEO Scavenger
+  ids:
+  - steam:248860
+- name: 'King''s Bounty: The Legend'
+  ids:
+  - steam:25900
+- name: 'Kung Fu Strike: The Warrior''s Rise'
+  ids:
+  - steam:212030
+- name: 'Oddworld: Stranger''s Wrath HD'
+  ids:
+  - steam:15750
+- name: Tropico 3
+  ids:
+  - steam:23490
+- name: Dreamscape
+  ids:
+  - steam:271990
+- name: Earth 2150 Trilogy
+  ids:
+  - steam:253880
+- name: 'Septerra Core: Legacy of the Creator'
+  ids:
+  - unresolved:source:isthereanydeal:184:septerra-core-legacy-of-the-creator

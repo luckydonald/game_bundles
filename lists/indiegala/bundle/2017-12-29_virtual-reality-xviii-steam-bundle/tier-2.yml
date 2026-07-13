@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XVIII Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5773/source.json
+games:
+- name: Miniature TD - VR
+  ids:
+  - steam:679670
+- name: Quizality
+  ids:
+  - steam:566350
+- name: The Slopes
+  ids:
+  - steam:620790
+- name: Protagon VR
+  ids:
+  - unresolved:source:isthereanydeal:5773:protagon-vr
+- name: Hex Tunnel
+  ids:
+  - steam:652470
+- name: VRQB
+  ids:
+  - steam:569420
+- name: Galaxis Wars
+  ids:
+  - steam:583500
+- name: Tevris
+  ids:
+  - steam:748520
+- name: Darknet
+  ids:
+  - steam:401910
+- name: 'Until None Remain: Battle Royale VR'
+  ids:
+  - unresolved:source:isthereanydeal:5773:until-none-remain-battle-royale-vr

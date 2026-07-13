@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 23 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1681/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1681/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1681/source.json
+games:
+- name: 'Chronicles of a Dark Lord: Episode 1 Tides of Fate'
+  ids:
+  - unresolved:source:isthereanydeal:1681:chronicles-of-a-dark-lord-episode-1-tides-of-fate
+- name: 'The Journey Down: Chapter One'
+  ids:
+  - steam:220090
+- name: Crunch Time!
+  ids:
+  - steam:340550
+- name: 'Chronicles of a Dark Lord Episode II: War of the Abyss'
+  ids:
+  - unresolved:source:isthereanydeal:1681:chronicles-of-a-dark-lord-episode-ii-war-of-the-abyss
+- name: Retention
+  ids:
+  - steam:339470
+- name: 'Evil Pumpkin: The Lost Halloween'
+  ids:
+  - steam:300360

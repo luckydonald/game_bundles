@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Team17: From Gold Greens to Battle Scenes Bundle — entire-8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14019/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14019/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14019/source.json
+games:
+- name: Moving Out
+  ids:
+  - steam:996770
+- name: Golf With Your Friends
+  ids:
+  - steam:431240
+- name: The Escapists 2
+  ids:
+  - steam:641990
+- name: Worms W.M.D
+  ids:
+  - steam:327030
+- name: Neon Abyss Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14019:neon-abyss-deluxe-edition
+- name: Gord
+  ids:
+  - steam:1351210
+- name: 'Headbangers: Rhythm Royale'
+  ids:
+  - steam:1761620
+- name: Trepang2
+  ids:
+  - steam:1164940

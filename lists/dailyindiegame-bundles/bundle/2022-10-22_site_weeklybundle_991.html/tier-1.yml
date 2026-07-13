@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 991 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12277/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12277/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12277/source.json
+games:
+- name: X-Racer
+  ids:
+  - unresolved:source:isthereanydeal:12277:x-racer
+- name: Beach Restaurant
+  ids:
+  - unresolved:source:isthereanydeal:12277:beach-restaurant
+- name: Cubic Juice
+  ids:
+  - steam:1245360
+- name: Girl Type
+  ids:
+  - steam:1983600
+- name: Air defenders
+  ids:
+  - steam:2143160
+- name: Slicing Slicing
+  ids:
+  - unresolved:source:isthereanydeal:12277:slicing-slicing
+- name: Tile Town
+  ids:
+  - steam:2164780
+- name: Angelic Wishes
+  ids:
+  - unresolved:source:isthereanydeal:12277:angelic-wishes
+- name: Waifu Museum
+  ids:
+  - unresolved:source:isthereanydeal:12277:waifu-museum

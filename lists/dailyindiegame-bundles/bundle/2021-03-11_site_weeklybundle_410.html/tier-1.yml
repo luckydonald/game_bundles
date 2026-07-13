@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 410 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9826/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9826/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9826/source.json
+games:
+- name: 'Behind These Eyes: A Short Horror Story'
+  ids:
+  - steam:666620
+- name: Infinity Imperium
+  ids:
+  - unresolved:source:isthereanydeal:9826:infinity-imperium
+- name: Crunch
+  ids:
+  - steam:1091260
+- name: BalloonBoyBob
+  ids:
+  - steam:1223110
+- name: Malvin`s Prehistoric Adventures
+  ids:
+  - steam:1228670
+- name: 'Texas Holdem Poker: Solo King'
+  ids:
+  - steam:1213420
+- name: The Last Archwing
+  ids:
+  - steam:1236160
+- name: The Adventures Of Maximus
+  ids:
+  - steam:1405320
+- name: Battle Royal Pixel Squad
+  ids:
+  - unresolved:source:isthereanydeal:9826:battle-royal-pixel-squad

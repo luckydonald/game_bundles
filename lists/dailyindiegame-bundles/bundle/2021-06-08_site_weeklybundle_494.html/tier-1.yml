@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 494 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10105/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10105/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10105/source.json
+games:
+- name: Pirate Island
+  ids:
+  - unresolved:source:isthereanydeal:10105:pirate-island
+- name: POG
+  ids:
+  - steam:1602990
+- name: Puppy Adventure
+  ids:
+  - unresolved:source:isthereanydeal:10105:puppy-adventure
+- name: Crazy Boom
+  ids:
+  - unresolved:source:isthereanydeal:10105:crazy-boom
+- name: Drowned Gems
+  ids:
+  - unresolved:source:isthereanydeal:10105:drowned-gems
+- name: POG 2
+  ids:
+  - steam:1635120
+- name: Red Adventure
+  ids:
+  - unresolved:source:isthereanydeal:10105:red-adventure
+- name: Zen Cube
+  ids:
+  - steam:1606670
+- name: IsoCubes
+  ids:
+  - steam:1644190

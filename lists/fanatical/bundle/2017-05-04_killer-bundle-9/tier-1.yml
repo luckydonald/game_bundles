@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5059/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5059/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5059/source.json
+games:
+- name: Shark Attack Deathmatch 2
+  ids:
+  - steam:330580
+- name: Guardians of Ember
+  ids:
+  - unresolved:source:isthereanydeal:5059:guardians-of-ember
+- name: STANDBY
+  ids:
+  - steam:494580
+- name: Death By Game Show
+  ids:
+  - steam:409730
+- name: Livelock
+  ids:
+  - steam:251230
+- name: Candle
+  ids:
+  - steam:420060
+- name: Manual Samuel
+  ids:
+  - steam:504130
+- name: Good Robot
+  ids:
+  - steam:358830

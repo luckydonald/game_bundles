@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyber Whale 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12491/source.json
+games:
+- name: 'Euphoria: Supreme Mechanics'
+  ids:
+  - steam:1283500
+- name: Cybernetic Fault
+  ids:
+  - steam:1409740
+- name: Cyberpunk SFX
+  ids:
+  - steam:1465260
+- name: Synthwave Burnout
+  ids:
+  - steam:1693040
+- name: Inquisitor's Heart and Soul
+  ids:
+  - steam:1780940
+- name: NeuraGun
+  ids:
+  - steam:1842480

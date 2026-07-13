@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Extinction Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4424/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4424/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4424/source.json
+games:
+- name: Torch Cave 2
+  ids:
+  - unresolved:source:isthereanydeal:4424:torch-cave-2
+- name: Vektor Wars
+  ids:
+  - steam:365760
+- name: 'GooCubelets: OCD'
+  ids:
+  - unresolved:source:isthereanydeal:4424:goocubelets-ocd
+- name: Pro Skater 2D
+  ids:
+  - unresolved:source:isthereanydeal:4424:pro-skater-2d
+- name: Ubinota
+  ids:
+  - steam:323630
+- name: Sword 'N' Board
+  ids:
+  - steam:425230
+- name: 'Tracks of Triumph: Summertime'
+  ids:
+  - unresolved:source:isthereanydeal:4424:tracks-of-triumph-summertime
+- name: Project Hovercraft
+  ids:
+  - unresolved:source:isthereanydeal:4424:project-hovercraft
+- name: 'A.R.E.S.: Extinction Agenda'
+  ids:
+  - unresolved:source:isthereanydeal:4424:a-r-es-extinction-agenda
+- name: Lone Leader
+  ids:
+  - steam:518800
+- name: A.R.E.S. Extinction Agenda EX
+  ids:
+  - steam:315340

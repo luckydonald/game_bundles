@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Go! Go! Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14062/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14062/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14062/source.json
+games:
+- name: The Chess Variants Club
+  ids:
+  - steam:1292240
+- name: TrashMorfers
+  ids:
+  - steam:2304510
+- name: Go Go Jump!!
+  ids:
+  - steam:2098080
+- name: EternaMine
+  ids:
+  - steam:2175570
+- name: 'Confabulation: Homestead'
+  ids:
+  - steam:2355350
+- name: Sandtrix+
+  ids:
+  - steam:2546310

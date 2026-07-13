@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Support Indie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13778/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13778/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13778/source.json
+games:
+- name: Run Bunnie Run
+  ids:
+  - unresolved:source:isthereanydeal:13778:run-bunnie-run
+- name: Underhaul
+  ids:
+  - unresolved:source:isthereanydeal:13778:underhaul
+- name: Micurama
+  ids:
+  - unresolved:source:isthereanydeal:13778:micurama
+- name: mamma is you
+  ids:
+  - unresolved:source:isthereanydeal:13778:mamma-is-you
+- name: Topplers
+  ids:
+  - unresolved:source:isthereanydeal:13778:topplers
+- name: 'S.snowboarders: Kiri Adventures'
+  ids:
+  - unresolved:source:isthereanydeal:13778:s-snowboarders-kiri-adventures
+- name: The Bee Pollinator
+  ids:
+  - unresolved:source:isthereanydeal:13778:the-bee-pollinator

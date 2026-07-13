@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'BattleRush Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6379/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6379/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6379/source.json
+games:
+- name: BattleRush - Heavy Tanks
+  ids:
+  - steam:739250
+- name: BattleRush - US AT Infantry
+  ids:
+  - steam:764660
+- name: BattleRush - US Marine Corps
+  ids:
+  - steam:750490
+- name: BattleRush - German Snipers
+  ids:
+  - steam:739256
+- name: BattleRush - Medium Tanks
+  ids:
+  - steam:739251
+- name: BattleRush - German Special Forces
+  ids:
+  - steam:750492
+- name: BattleRush - German AT Infantry
+  ids:
+  - steam:764661
+- name: BattleRush - US Special Forces
+  ids:
+  - steam:750491
+- name: BattleRush - USSR Army
+  ids:
+  - steam:739253
+- name: BattleRush - Imperial Japanese Army
+  ids:
+  - steam:739255

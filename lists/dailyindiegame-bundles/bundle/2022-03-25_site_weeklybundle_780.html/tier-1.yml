@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 780: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11208/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11208/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11208/source.json
+games:
+- name: Tempo Wizard
+  ids:
+  - steam:916370
+- name: Apple Pop
+  ids:
+  - unresolved:source:isthereanydeal:11208:apple-pop
+- name: 3D Tower
+  ids:
+  - unresolved:source:isthereanydeal:11208:3d-tower
+- name: The Federal Rescue
+  ids:
+  - steam:869340
+- name: HARTS ISLAND
+  ids:
+  - steam:1322270
+- name: История бомжа
+  ids:
+  - steam:1388430
+- name: Mr. Parkour
+  ids:
+  - unresolved:source:isthereanydeal:11208:mr-parkour
+- name: Mr. Parkour 2
+  ids:
+  - unresolved:source:isthereanydeal:11208:mr-parkour-2
+- name: Dead Night
+  ids:
+  - steam:1596610

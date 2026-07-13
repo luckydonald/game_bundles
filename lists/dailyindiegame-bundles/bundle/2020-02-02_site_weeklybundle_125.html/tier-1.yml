@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 125 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8359/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8359/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8359/source.json
+games:
+- name: Tengami
+  ids:
+  - steam:299680
+- name: Owl Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8359:owl-simulator
+- name: 'Cube & Star: An Arbitrary Love'
+  ids:
+  - steam:261960
+- name: Cockatrice Attacking the city
+  ids:
+  - unresolved:source:isthereanydeal:8359:cockatrice-attacking-the-city
+- name: Star-Twine
+  ids:
+  - steam:548110
+- name: Feed the Pets
+  ids:
+  - unresolved:source:isthereanydeal:8359:feed-the-pets
+- name: NC Tower Defense 2
+  ids:
+  - unresolved:source:isthereanydeal:8359:nc-tower-defense-2
+- name: The Sentient
+  ids:
+  - steam:411600
+- name: Nanoworld
+  ids:
+  - steam:1166510

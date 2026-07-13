@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jan 2021) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9597/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9597/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9597/source.json
+games:
+- name: Deleveled
+  ids:
+  - steam:1045580
+- name: Not Tonight
+  ids:
+  - steam:733790
+- name: 'Ancestors: The Humankind Odyssey'
+  ids:
+  - steam:536270
+- name: Tales of the Neon Sea
+  ids:
+  - steam:828740
+- name: Pathologic 2
+  ids:
+  - steam:505230
+- name: PC Building Simulator
+  ids:
+  - steam:621060
+- name: Total Tank Simulator
+  ids:
+  - steam:674500
+- name: Minoria
+  ids:
+  - steam:940910
+- name: 'Warhammer: Chaosbane'
+  ids:
+  - steam:774241
+- name: 'Vampire: The Masquerade - Shadows of New York'
+  ids:
+  - steam:1279630
+- name: SONG OF HORROR Complete Edition
+  ids:
+  - steam:1096570
+- name: 'The Ambassador: Fractured Timelines'
+  ids:
+  - steam:1171660
+- name: Heeey! Park-Boy
+  ids:
+  - unresolved:source:isthereanydeal:9597:heeey-park-boy

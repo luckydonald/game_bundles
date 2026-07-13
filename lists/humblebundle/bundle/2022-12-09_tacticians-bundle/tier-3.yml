@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Tactician&#39;s Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12710/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12710/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12710/source.json
+games:
+- name: Hard West
+  ids:
+  - steam:307670
+- name: Phantom Doctrine
+  ids:
+  - steam:559100
+- name: 'Warhammer 40,000: Mechanicus'
+  ids:
+  - steam:673880
+- name: Star Renegades
+  ids:
+  - steam:651670
+- name: John Wick Hex
+  ids:
+  - unresolved:source:isthereanydeal:12710:john-wick-hex
+- name: 'The Red Solstice 2: Survivors'
+  ids:
+  - unresolved:source:isthereanydeal:12710:the-red-solstice-2-survivors
+- name: Gears Tactics
+  ids:
+  - steam:1184050
+- name: Dark Deity
+  ids:
+  - steam:1374840

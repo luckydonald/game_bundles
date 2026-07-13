@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jul 2017) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5302/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5302/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5302/source.json
+games:
+- name: 'DARK SOULS™ II: Scholar of the First Sin'
+  ids:
+  - steam:335300
+- name: Hyper Light Drifter
+  ids:
+  - steam:257850
+- name: Kero Blaster
+  ids:
+  - steam:292500
+- name: Armello
+  ids:
+  - steam:290340
+- name: Galactic Civilizations III
+  ids:
+  - steam:226860
+- name: 'Sherlock Holmes: The Devil''s Daughter'
+  ids:
+  - steam:350640
+- name: SimplePlanes
+  ids:
+  - steam:397340
+- name: '2000 to 1: A Space Felony'
+  ids:
+  - unresolved:source:isthereanydeal:5302:2000-to-1-a-space-felony

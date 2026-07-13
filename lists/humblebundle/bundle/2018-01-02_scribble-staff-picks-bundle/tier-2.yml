@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Staff Picks Bundle: Scribble — Pay more than the average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5776/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5776/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5776/source.json
+games:
+- name: LiEat
+  ids:
+  - steam:373770
+- name: 'Tempest: Pirate Action RPG'
+  ids:
+  - steam:418180
+- name: Punch Club
+  ids:
+  - steam:394310
+- name: BioShock Infinite
+  ids:
+  - steam:8870
+- name: Aragami
+  ids:
+  - steam:280160
+- name: Beholder
+  ids:
+  - steam:475550

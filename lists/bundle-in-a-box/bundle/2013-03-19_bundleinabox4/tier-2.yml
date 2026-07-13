@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cerebral Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/223/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/223/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/223/source.json
+games:
+- name: Dédale
+  ids:
+  - unresolved:source:isthereanydeal:223:dedale
+- name: Phantasmaburbia
+  ids:
+  - unresolved:source:isthereanydeal:223:phantasmaburbia
+- name: Amidos Puzzle Collection
+  ids:
+  - unresolved:source:isthereanydeal:223:amidos-puzzle-collection
+- name: Vampires!
+  ids:
+  - unresolved:source:isthereanydeal:223:vampires
+- name: Dinner Date
+  ids:
+  - steam:94000
+- name: Necrotic Drift Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:223:necrotic-drift-deluxe
+- name: 'Cognition Episode 1: The Hangman'
+  ids:
+  - unresolved:source:isthereanydeal:223:cognition-episode-1-the-hangman
+- name: Reversion - The Meeting
+  ids:
+  - unresolved:source:isthereanydeal:223:reversion-the-meeting
+- name: I Get This Call Every Day
+  ids:
+  - unresolved:source:isthereanydeal:223:i-get-this-call-every-day
+- name: J.U.L.I.A.
+  ids:
+  - unresolved:source:isthereanydeal:223:j-u-l-i-a

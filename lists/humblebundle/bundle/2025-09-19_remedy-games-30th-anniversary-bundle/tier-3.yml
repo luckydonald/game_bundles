@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remedy Games - 30th Anniversary Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15442/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15442/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15442/source.json
+games:
+- name: Max Payne
+  ids:
+  - steam:202570
+- name: Alan Wake's American Nightmare
+  ids:
+  - steam:202750
+- name: Death Rally
+  ids:
+  - steam:108700
+- name: 'Max Payne 2: The Fall of Max Payne'
+  ids:
+  - steam:12150
+- name: Alan Wake Collector's Edition
+  ids:
+  - unresolved:source:isthereanydeal:15442:alan-wake-collectors-edition
+- name: Quantum Break
+  ids:
+  - steam:474960
+- name: Control Ultimate Edition
+  ids:
+  - steam:870780
+- name: Alan Wake Remastered
+  ids:
+  - unresolved:source:isthereanydeal:15442:alan-wake-remastered
+- name: Alan Wake 2 Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15442:alan-wake-2-deluxe-edition

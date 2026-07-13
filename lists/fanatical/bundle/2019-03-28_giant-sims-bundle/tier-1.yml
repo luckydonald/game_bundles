@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Giant Sims Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7235/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7235/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7235/source.json
+games:
+- name: Giant Machines 2017
+  ids:
+  - steam:402750
+- name: Robot Squad Simulator 2017
+  ids:
+  - steam:405760
+- name: Demolish & Build 2017
+  ids:
+  - steam:470740
+- name: Train Mechanic Simulator 2017
+  ids:
+  - steam:538810

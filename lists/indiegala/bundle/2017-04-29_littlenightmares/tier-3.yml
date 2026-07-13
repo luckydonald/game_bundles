@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Little Nightmares Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5042/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5042/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5042/source.json
+games:
+- name: Attractio
+  ids:
+  - unresolved:source:isthereanydeal:5042:attractio
+- name: Ridge Racer Unbounded Bundle
+  ids:
+  - unresolved:source:isthereanydeal:5042:ridge-racer-unbounded-bundle
+- name: DeadCore
+  ids:
+  - steam:284460
+- name: "Ace Combat\x99 Assault Horizon Enhanced Edition"
+  ids:
+  - unresolved:source:isthereanydeal:5042:ace-combat-assault-horizon-enhanced-edition
+- name: 'Enslaved: Odyssey to the West Premium Edition'
+  ids:
+  - steam:245280
+- name: PAC-MAN 256
+  ids:
+  - steam:455400
+- name: Platformines
+  ids:
+  - steam:264540
+- name: Little Nightmares
+  ids:
+  - steam:424840

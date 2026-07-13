@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 32 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2554/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2554/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2554/source.json
+games:
+- name: BroBots
+  ids:
+  - unresolved:source:isthereanydeal:2554:brobots
+- name: Monster RPG 2
+  ids:
+  - unresolved:source:isthereanydeal:2554:monster-rpg-2
+- name: Mimic Arena
+  ids:
+  - steam:432620
+- name: Marble Mountain
+  ids:
+  - steam:409390
+- name: Infinitrap
+  ids:
+  - unresolved:source:isthereanydeal:2554:infinitrap
+- name: Message Quest
+  ids:
+  - steam:408280
+- name: Prisoner Tambo
+  ids:
+  - unresolved:source:isthereanydeal:2554:prisoner-tambo
+- name: Twelve
+  ids:
+  - unresolved:source:isthereanydeal:2554:twelve
+- name: Chronicle of Innsmouth
+  ids:
+  - steam:420180
+- name: Ampersand
+  ids:
+  - steam:410210

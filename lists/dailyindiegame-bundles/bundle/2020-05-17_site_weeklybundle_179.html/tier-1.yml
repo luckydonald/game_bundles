@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 179 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8803/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8803/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8803/source.json
+games:
+- name: 21+
+  ids:
+  - steam:904990
+- name: AKUATICA
+  ids:
+  - steam:401330
+- name: Ground Pounders
+  ids:
+  - steam:267730
+- name: Wanderer
+  ids:
+  - steam:1599560
+- name: Hills of Glory 3D
+  ids:
+  - steam:317920
+- name: Mistwood Heroes
+  ids:
+  - steam:573210
+- name: Wooden House
+  ids:
+  - steam:513570
+- name: Zombie World Apocalypse VR
+  ids:
+  - unresolved:source:isthereanydeal:8803:zombie-world-apocalypse-vr
+- name: Choco Pixel 5
+  ids:
+  - steam:1307640

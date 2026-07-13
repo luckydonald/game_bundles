@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: World of Animals — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3836/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3836/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3836/source.json
+games:
+- name: My Best Friends Cats & Dogs
+  ids:
+  - steam:276220
+- name: My Riding Stables
+  ids:
+  - unresolved:source:isthereanydeal:3836:my-riding-stables
+- name: My Pet Hotel
+  ids:
+  - steam:276380
+- name: Riding Star
+  ids:
+  - unresolved:source:isthereanydeal:3836:riding-star
+- name: 'My Vet Practice: In the Country'
+  ids:
+  - steam:276240
+- name: 'My Riding Stables: Life with Horses'
+  ids:
+  - steam:276340
+- name: My Pet Hotel 2
+  ids:
+  - steam:276430

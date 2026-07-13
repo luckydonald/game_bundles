@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Drastik Measure Take 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1837/source.json
+games:
+- name: Yargis - Space Melee
+  ids:
+  - steam:369040
+- name: AERENA - Masters Edition
+  ids:
+  - unresolved:source:isthereanydeal:1837:aerena-masters-edition
+- name: Survivors
+  ids:
+  - steam:2563120
+- name: '8-Bit Adventures: The Forgotten Journey'
+  ids:
+  - unresolved:source:isthereanydeal:1837:8-bit-adventures-the-forgotten-journey
+- name: Incognito
+  ids:
+  - unresolved:source:isthereanydeal:1837:incognito
+- name: Nyctophobia
+  ids:
+  - steam:378100
+- name: SickBrick
+  ids:
+  - unresolved:source:isthereanydeal:1837:sickbrick

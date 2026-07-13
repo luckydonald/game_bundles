@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 510: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10186/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10186/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10186/source.json
+games:
+- name: Data mining 2
+  ids:
+  - steam:960820
+- name: The first thrust of God
+  ids:
+  - steam:773650
+- name: Seek Love
+  ids:
+  - steam:966160
+- name: Psychiatrist Simulator
+  ids:
+  - steam:791590
+- name: Fantasy Land
+  ids:
+  - unresolved:source:isthereanydeal:10186:fantasy-land
+- name: Skywriter
+  ids:
+  - steam:919040
+- name: JuBOX
+  ids:
+  - unresolved:source:isthereanydeal:10186:jubox
+- name: Achievements printer
+  ids:
+  - steam:806140
+- name: Crazy Car
+  ids:
+  - steam:652230

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3111/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3111/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3111/source.json
+games:
+- name: Rush for Glory
+  ids:
+  - steam:303470
+- name: Frozen Hearth
+  ids:
+  - unresolved:source:isthereanydeal:3111:frozen-hearth
+- name: Final Dusk
+  ids:
+  - unresolved:source:isthereanydeal:3111:final-dusk
+- name: 'Global Ops: Commando Libya'
+  ids:
+  - steam:200020
+- name: Naval Warfare
+  ids:
+  - steam:98500
+- name: Blood of Old - The Rise to Greatness!
+  ids:
+  - unresolved:source:isthereanydeal:3111:blood-of-old-the-rise-to-greatness

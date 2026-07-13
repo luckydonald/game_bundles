@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: August Eclipse Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14322/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14322/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14322/source.json
+games:
+- name: Listeria Wars
+  ids:
+  - steam:1183010
+- name: Age of Jura
+  ids:
+  - steam:1643820
+- name: Extinction Eclipse
+  ids:
+  - steam:1961250
+- name: A Most Extraordinary Gnome
+  ids:
+  - steam:2089710
+- name: 'Grey Heritage: Faded Vision'
+  ids:
+  - steam:1772310
+- name: Locked in my darkness
+  ids:
+  - steam:2095140

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Warhammer Bundle 2020 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8977/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8977/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8977/source.json
+games:
+- name: 'Warhammer® 40000®: Kill Team™'
+  ids:
+  - unresolved:source:isthereanydeal:8977:warhammer-40000-kill-team
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: 'Warhammer® 40,000: Dawn of War® - Game of the Year Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8977:warhammer-40000-dawn-of-war-game-of-the-year-edition
+- name: 'Legacy of Dorn: Herald of Oblivion'
+  ids:
+  - steam:389850
+- name: "Warhammer® 40,000\x99: Dawn of War® II"
+  ids:
+  - unresolved:source:isthereanydeal:8977:warhammer-40000-dawn-of-war-ii
+- name: 'Battlefleet Gothic: Armada'
+  ids:
+  - steam:363680
+- name: 'Warhammer 40,000: Deathwatch - Enhanced Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8977:warhammer-40000-deathwatch-enhanced-edition
+- name: 'Warhammer 40,000: Sanctus Reach'
+  ids:
+  - unresolved:source:isthereanydeal:8977:warhammer-40000-sanctus-reach

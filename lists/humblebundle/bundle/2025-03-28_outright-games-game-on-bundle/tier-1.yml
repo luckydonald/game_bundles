@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Outright Games: Game On! Bundle — 3 Items'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15023/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15023/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15023/source.json
+games:
+- name: 'PAW Patrol The Movie: Adventure City Calls'
+  ids:
+  - steam:1434310
+- name: 'Gigantosaurus: Dino Sports'
+  ids:
+  - steam:2238260
+- name: Nick Jr. Party Adventure
+  ids:
+  - steam:2339320

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #36 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5911/source.json
+games:
+- name: Depopulation
+  ids:
+  - steam:718210
+- name: Air Combat
+  ids:
+  - steam:746350
+- name: Witches, Heroes and Magic
+  ids:
+  - steam:378510
+- name: Dark Rising
+  ids:
+  - steam:710880
+- name: NeoBalls2
+  ids:
+  - unresolved:source:isthereanydeal:5911:neoballs2
+- name: House of Velez - part 1
+  ids:
+  - steam:724010
+- name: 'Apocalypse: The Game'
+  ids:
+  - steam:705050
+- name: 'Snail Bob 2: Tiny Troubles'
+  ids:
+  - steam:349760
+- name: Escape
+  ids:
+  - steam:365050
+- name: To The Capital
+  ids:
+  - steam:574580

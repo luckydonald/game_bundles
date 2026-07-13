@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 24 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1719/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1719/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1719/source.json
+games:
+- name: Sinister City
+  ids:
+  - steam:326180
+- name: "Rhiannon \x96 The Curse of the Four Branches"
+  ids:
+  - unresolved:source:isthereanydeal:1719:rhiannon-the-curse-of-the-four-branches
+- name: Crash Time 2
+  ids:
+  - steam:11390
+- name: Luna Shattered Hearts Episode 1
+  ids:
+  - steam:331400
+- name: 'Millennium: A New Hope'
+  ids:
+  - steam:280140
+- name: 'Alchemy Mysteries: Prague Legends'
+  ids:
+  - steam:326190

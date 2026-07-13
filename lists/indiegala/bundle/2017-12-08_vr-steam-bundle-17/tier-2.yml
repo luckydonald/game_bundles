@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XVII — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5701/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5701/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5701/source.json
+games:
+- name: VRog
+  ids:
+  - steam:589380
+- name: Astral Domine
+  ids:
+  - steam:458990
+- name: Vehicle VR
+  ids:
+  - steam:648810
+- name: The Last Sorcerer
+  ids:
+  - steam:672320
+- name: Hurl VR
+  ids:
+  - steam:680350
+- name: The Impossible Travel Agency
+  ids:
+  - steam:460990
+- name: Virush
+  ids:
+  - steam:617060
+- name: VRZ Torment
+  ids:
+  - steam:484350
+- name: Stunt Kite Masters VR
+  ids:
+  - steam:589280
+- name: Goalie VR
+  ids:
+  - steam:668010
+- name: Podium Bash
+  ids:
+  - unresolved:source:isthereanydeal:5701:podium-bash

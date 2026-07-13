@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tokyo Core Anime Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6730/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6730/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6730/source.json
+games:
+- name: 'Tokyo Twilight Ghost Hunters Daybreak: Special Gigs'
+  ids:
+  - steam:425460
+- name: BAD END
+  ids:
+  - steam:415850
+- name: Insurgence - Chains of Renegade
+  ids:
+  - unresolved:source:isthereanydeal:6730:insurgence-chains-of-renegade
+- name: World's Dawn
+  ids:
+  - steam:432010
+- name: Main Character Simulator
+  ids:
+  - steam:930710
+- name: Aozora Meikyuu
+  ids:
+  - steam:427980
+- name: 'The Reject Demon: Toko Chapter 0 — Prelude'
+  ids:
+  - steam:358770
+- name: YumeCore
+  ids:
+  - steam:771240
+- name: 'Inexplicable Geeks: Dawn of Just Us'
+  ids:
+  - steam:704670

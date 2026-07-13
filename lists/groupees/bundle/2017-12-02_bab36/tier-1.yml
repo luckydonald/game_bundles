@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 36 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5680/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5680/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5680/source.json
+games:
+- name: Fruit Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:5680:fruit-sudoku
+- name: Action Alien
+  ids:
+  - steam:382080
+- name: Yashik
+  ids:
+  - steam:754800
+- name: Megatronic Void
+  ids:
+  - steam:706690
+- name: 'Case #9'
+  ids:
+  - unresolved:source:isthereanydeal:5680:case-9
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+- name: Pivot Pilot
+  ids:
+  - steam:569360
+- name: Lamp Head
+  ids:
+  - unresolved:source:isthereanydeal:5680:lamp-head

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Uprising Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7421/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7421/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7421/source.json
+games:
+- name: Lifeless Planet Premier Edition
+  ids:
+  - steam:261530
+- name: Ziggurat
+  ids:
+  - steam:308420
+- name: 'Masquerada: Songs and Shadows'
+  ids:
+  - steam:459090
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+- name: Republique
+  ids:
+  - steam:317100
+- name: Tracks - The Train Set Game
+  ids:
+  - steam:657240
+- name: Fantasy Versus
+  ids:
+  - steam:787400
+- name: Oriental Empires
+  ids:
+  - steam:357310
+- name: Snake Pass
+  ids:
+  - steam:544330
+- name: 'Asura: Vengeance Edition'
+  ids:
+  - steam:524640

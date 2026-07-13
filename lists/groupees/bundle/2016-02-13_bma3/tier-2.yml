@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine Anniversary 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3054/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3054/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3054/source.json
+games:
+- name: Kunoi
+  ids:
+  - unresolved:source:isthereanydeal:3054:kunoi
+- name: Vektor Wars
+  ids:
+  - steam:365760
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330
+- name: The Hive
+  ids:
+  - steam:325730
+- name: Zanzarah - The Hidden Portal
+  ids:
+  - steam:384570
+- name: 'Tempest: Pirate Action RPG'
+  ids:
+  - steam:418180
+- name: Major Contract
+  ids:
+  - unresolved:source:isthereanydeal:3054:major-contract
+- name: 'Corrosion: Cold Winter Waiting [Enhanced Edition]'
+  ids:
+  - steam:349140

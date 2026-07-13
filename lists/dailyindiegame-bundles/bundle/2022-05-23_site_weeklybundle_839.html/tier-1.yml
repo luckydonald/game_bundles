@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 839: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11522/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11522/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11522/source.json
+games:
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:11522:great-ball-of-fire
+- name: Iesabel
+  ids:
+  - steam:248710
+- name: Space Flowers
+  ids:
+  - steam:821480
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+- name: Orange Santa
+  ids:
+  - steam:1495460
+- name: Plataforma branca
+  ids:
+  - unresolved:source:isthereanydeal:11522:plataforma-branca
+- name: Click on their Heads
+  ids:
+  - steam:1498630
+- name: Fly The Cloud
+  ids:
+  - steam:1495260
+- name: Tap-Tap Adventure
+  ids:
+  - steam:1482510

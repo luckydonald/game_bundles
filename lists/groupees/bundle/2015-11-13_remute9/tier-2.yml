@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: High and Strange Bundle by remute — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2734/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2734/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2734/source.json
+games:
+- name: Anki
+  ids:
+  - steam:395380
+- name: Gardenarium
+  ids:
+  - steam:423750
+- name: Operation KREEP
+  ids:
+  - steam:446050
+- name: 'Philia : the Sequel to Elansar'
+  ids:
+  - steam:435080
+- name: Elansar
+  ids:
+  - steam:435070
+- name: High Strangeness
+  ids:
+  - steam:268340
+- name: Tcheco in the Castle of Lucio
+  ids:
+  - steam:377600
+- name: Lost in Japan
+  ids:
+  - unresolved:source:isthereanydeal:2734:lost-in-japan
+- name: Noctropolis
+  ids:
+  - steam:377070
+- name: SodaCity
+  ids:
+  - steam:424210

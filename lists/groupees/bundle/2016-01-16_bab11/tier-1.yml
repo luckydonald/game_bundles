@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2943/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2943/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2943/source.json
+games:
+- name: World War 1
+  ids:
+  - unresolved:source:isthereanydeal:2943:world-war-1
+- name: Bad Caterpillar
+  ids:
+  - steam:447950
+- name: Kingdom Tales 2
+  ids:
+  - steam:288610
+- name: GRAVITY GAMMA
+  ids:
+  - unresolved:source:isthereanydeal:2943:gravity-gamma
+- name: Tisnart Tiles
+  ids:
+  - steam:398920
+- name: Pinball Thrills Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:2943:pinball-thrills-triple-pack
+- name: Starion Tactics
+  ids:
+  - steam:312960
+- name: Moonlight Minions
+  ids:
+  - steam:311170

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Itch.io Bundle 10 — Select 4 to 10 Titles for $1.00 up to $2.50
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7981/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7981/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7981/source.json
+games:
+- name: Adelantado Trilogy. Book Three
+  ids:
+  - steam:573690
+- name: Doodle Kingdom
+  ids:
+  - steam:431640
+- name: Royal Defense
+  ids:
+  - steam:291170
+- name: Lantern of Worlds - The First Quest
+  ids:
+  - steam:952910
+- name: Jane's Hotel
+  ids:
+  - unresolved:source:isthereanydeal:7981:janes-hotel
+- name: Northern Tale 2
+  ids:
+  - steam:573340
+- name: Island Tribe 4
+  ids:
+  - steam:573700
+- name: 'Farm Mania 3: Hot Vacation'
+  ids:
+  - unresolved:source:isthereanydeal:7981:farm-mania-3-hot-vacation
+- name: Ozzy Bubbles
+  ids:
+  - unresolved:source:isthereanydeal:7981:ozzy-bubbles
+- name: 3 Days Zoo Mystery
+  ids:
+  - steam:573650

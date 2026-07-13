@@ -1,0 +1,104 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Plentiful Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14616/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14616/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14616/source.json
+games:
+- name: Tinhead
+  ids:
+  - steam:1137690
+- name: Medieval Kingdom Wars
+  ids:
+  - steam:499660
+- name: The Hong Kong Massacre
+  ids:
+  - steam:741510
+- name: Dorke and Ymp
+  ids:
+  - steam:474810
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+- name: Unity of Command - Black Turn
+  ids:
+  - steam:258420
+- name: Prophecy I - The Viking Child
+  ids:
+  - steam:719290
+- name: 'The Humans: Meet The Ancestors'
+  ids:
+  - steam:2214040
+- name: Iron Commando - Koutetsu no Senshi
+  ids:
+  - steam:418640
+- name: Unity of Command - Red Turn
+  ids:
+  - steam:218100
+- name: 'Kingdom Wars 2: Definitive Edition'
+  ids:
+  - steam:1036440
+- name: 'Unity of Command: Stalingrad Campaign'
+  ids:
+  - steam:218090
+- name: Dreamscaper
+  ids:
+  - steam:1040420
+- name: Karma City Police
+  ids:
+  - steam:1270850
+- name: Noah's Ark
+  ids:
+  - steam:1539100
+- name: FORECLOSED
+  ids:
+  - steam:1308880
+- name: Motor Mash
+  ids:
+  - steam:1257950
+- name: One More Island
+  ids:
+  - steam:1454160
+- name: Gearshifters
+  ids:
+  - steam:1017160
+- name: From Space
+  ids:
+  - steam:1502190
+- name: Risky Woods
+  ids:
+  - steam:1920520
+- name: Slaycation Paradise
+  ids:
+  - steam:1643850
+- name: Time on Frog Island
+  ids:
+  - steam:1717510
+- name: Dolmenjord - Viking Islands
+  ids:
+  - steam:1899950
+- name: Doomed Lands
+  ids:
+  - steam:1611960
+- name: Froggy's Battle
+  ids:
+  - steam:2424650
+- name: Labrys
+  ids:
+  - steam:2330210
+- name: The Immortal
+  ids:
+  - steam:1539080
+- name: Kingdom Wars 4
+  ids:
+  - steam:1300700
+- name: Island Cities - Jigsaw Puzzle
+  ids:
+  - steam:2093900
+- name: My Hidden Things - Indie Support Edition
+  ids:
+  - unresolved:source:isthereanydeal:14616:my-hidden-things-indie-support-edition

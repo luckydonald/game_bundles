@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5980/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5980/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5980/source.json
+games:
+- name: Totem
+  ids:
+  - unresolved:source:isthereanydeal:5980:totem
+- name: Space Beret
+  ids:
+  - steam:547960
+- name: Zenodyne R
+  ids:
+  - steam:466820
+- name: Zenohell
+  ids:
+  - steam:402030
+- name: Alien Run
+  ids:
+  - unresolved:source:isthereanydeal:5980:alien-run
+- name: Zenodyne R - Soundtrack
+  ids:
+  - steam:471410
+- name: False Shelter
+  ids:
+  - steam:621150
+- name: Fire Arrow Plus
+  ids:
+  - steam:509780
+- name: 'Green Game: TimeSwapper'
+  ids:
+  - steam:432990
+- name: Red Game Without A Great Name
+  ids:
+  - unresolved:source:isthereanydeal:5980:red-game-without-a-great-name

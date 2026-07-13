@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7177/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7177/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7177/source.json
+games:
+- name: Miniballist
+  ids:
+  - steam:628580
+- name: Easy Racing
+  ids:
+  - steam:891290
+- name: Cube XL
+  ids:
+  - steam:645360
+- name: Terror
+  ids:
+  - steam:900340
+- name: Kalaban
+  ids:
+  - steam:571520
+- name: Conjuntalia
+  ids:
+  - steam:619340
+- name: Telekinetic
+  ids:
+  - steam:992000
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+- name: 'Battle Arena: Euro Wars'
+  ids:
+  - unresolved:source:isthereanydeal:7177:battle-arena-euro-wars

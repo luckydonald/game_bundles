@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 52: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7690/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7690/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7690/source.json
+games:
+- name: ARENA 8
+  ids:
+  - steam:856730
+- name: TimeTekker
+  ids:
+  - steam:849680
+- name: Time Splatter
+  ids:
+  - steam:949530
+- name: Freedom Fighter
+  ids:
+  - steam:514360
+- name: Naughty study for exams with a ghost
+  ids:
+  - steam:833670
+- name: Psychiatrist Simulator
+  ids:
+  - steam:791590
+- name: Bouncers
+  ids:
+  - steam:2517800
+- name: Heroes Arena
+  ids:
+  - unresolved:source:isthereanydeal:7690:heroes-arena
+- name: Voxel Drivers
+  ids:
+  - unresolved:source:isthereanydeal:7690:voxel-drivers

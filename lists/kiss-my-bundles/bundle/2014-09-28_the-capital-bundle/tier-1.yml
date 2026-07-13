@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Capital Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1218/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1218/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1218/source.json
+games:
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:1218:chernobyl-commando
+- name: Project Root
+  ids:
+  - steam:284970
+- name: Pester
+  ids:
+  - steam:354920
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:1218:n-p-p-d-rush-the-milk-of-ultra-violet
+- name: Chip
+  ids:
+  - steam:275470
+- name: Humanity Asset
+  ids:
+  - steam:271640
+- name: Manhunter
+  ids:
+  - unresolved:source:isthereanydeal:1218:manhunter
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370

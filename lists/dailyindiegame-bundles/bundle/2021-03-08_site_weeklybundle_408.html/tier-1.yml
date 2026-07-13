@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 408 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9817/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9817/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9817/source.json
+games:
+- name: Molly Can you survive 100 nights
+  ids:
+  - steam:1014030
+- name: Bassline Sinker
+  ids:
+  - steam:945100
+- name: RRRR2
+  ids:
+  - steam:1041450
+- name: Cube Mission
+  ids:
+  - steam:1008740
+- name: Space Flowers
+  ids:
+  - steam:821480
+- name: Tricky Fox
+  ids:
+  - steam:1083450
+- name: Stickman go
+  ids:
+  - unresolved:source:isthereanydeal:9817:stickman-go
+- name: BOMBERX
+  ids:
+  - steam:1208900
+- name: 'Axizon Labs: Zombies'
+  ids:
+  - steam:1280310

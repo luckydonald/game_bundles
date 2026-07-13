@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #57 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6217/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6217/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6217/source.json
+games:
+- name: Hard Place
+  ids:
+  - steam:763520
+- name: Gunlock
+  ids:
+  - steam:750450
+- name: Air Threat
+  ids:
+  - unresolved:source:isthereanydeal:6217:air-threat
+- name: Dark SASI
+  ids:
+  - steam:856130
+- name: Marble Skies
+  ids:
+  - steam:742460
+- name: Nakiti Generations
+  ids:
+  - steam:512120
+- name: PION
+  ids:
+  - steam:667550
+- name: DEATHPIT 3000
+  ids:
+  - steam:718720
+- name: TRÁFICO
+  ids:
+  - steam:769220
+- name: Bad School Boy
+  ids:
+  - steam:678540

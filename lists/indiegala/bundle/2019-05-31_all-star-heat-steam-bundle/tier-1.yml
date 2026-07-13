@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: All-Star Heat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7449/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7449/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7449/source.json
+games:
+- name: 'Tokyo Twilight Ghost Hunters Daybreak: Special Gigs'
+  ids:
+  - steam:425460
+- name: Muddledash
+  ids:
+  - steam:769840
+- name: STAY
+  ids:
+  - steam:753230
+- name: RAZED
+  ids:
+  - steam:726710
+- name: Don't Disturb
+  ids:
+  - steam:501840
+- name: All-Star Fruit Racing
+  ids:
+  - steam:673190
+- name: Street Heat
+  ids:
+  - steam:744040

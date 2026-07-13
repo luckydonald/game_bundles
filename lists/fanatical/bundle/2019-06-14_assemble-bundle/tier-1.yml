@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Assemble Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7510/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7510/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7510/source.json
+games:
+- name: Ceville
+  ids:
+  - steam:23460
+- name: Nova Nukers!
+  ids:
+  - steam:445000
+- name: The Great Art Race
+  ids:
+  - steam:33580
+- name: Pizza Connection 2
+  ids:
+  - steam:599000
+- name: Epic Car Factory
+  ids:
+  - steam:656510
+- name: Twickles
+  ids:
+  - steam:695110
+- name: Hanse - The Hanseatic League
+  ids:
+  - unresolved:source:isthereanydeal:7510:hanse-the-hanseatic-league
+- name: Pizza Connection
+  ids:
+  - steam:598990

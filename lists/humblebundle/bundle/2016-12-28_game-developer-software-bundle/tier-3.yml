@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble GameDev Software Bundle — Pay $10 or more to also unlock!
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4541/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4541/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4541/source.json
+games:
+- name: Spriter Pro
+  ids:
+  - steam:332360
+- name: 'Spriter: Game Effects Pack'
+  ids:
+  - steam:333770
+- name: Clickteam Fusion 2.5
+  ids:
+  - steam:248170
+- name: Pyxel Edit
+  ids:
+  - unresolved:source:isthereanydeal:4541:pyxel-edit
+- name: 'Spriter: Run N'' Gun Pack'
+  ids:
+  - steam:333773
+- name: Todoist Premium 1 year subscription
+  ids:
+  - unresolved:source:isthereanydeal:4541:todoist-premium-1-year-subscription
+- name: 'Spriter: Basic Platformer Pack'
+  ids:
+  - steam:333771
+- name: 'Spriter: Adventure Platformer Pack'
+  ids:
+  - steam:333772
+- name: Marmoset Hexels 3
+  ids:
+  - steam:428340
+- name: HTML5 Exporter for Clickteam Fusion 2.5
+  ids:
+  - steam:267652
+- name: 'Spriter: Radius-Wing SHMUP Animated Art Pack'
+  ids:
+  - steam:543340
+- name: 'Spriter: RPG Heroes Pack'
+  ids:
+  - steam:418320
+- name: 1Password Families 1 year subscription
+  ids:
+  - unresolved:source:isthereanydeal:4541:1password-families-1-year-subscription
+- name: SpriteIlluminator Lifetime License
+  ids:
+  - unresolved:source:isthereanydeal:4541:spriteilluminator-lifetime-license
+- name: Voxatron
+  ids:
+  - unresolved:source:isthereanydeal:4541:voxatron

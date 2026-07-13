@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #48 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6106/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6106/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6106/source.json
+games:
+- name: Theorem
+  ids:
+  - steam:838490
+- name: 'Mermaid Adventures: The Frozen Time'
+  ids:
+  - steam:798610
+- name: AEGYPTUS
+  ids:
+  - steam:675130
+- name: Running Gods
+  ids:
+  - steam:496320
+- name: Rainbow Rage Squad
+  ids:
+  - steam:549780
+- name: Through Abandoned
+  ids:
+  - unresolved:source:isthereanydeal:6106:through-abandoned
+- name: 'Beast Mode: Night of the Werewolf'
+  ids:
+  - steam:655760
+- name: Through Abandoned 2. The Forest
+  ids:
+  - unresolved:source:isthereanydeal:6106:through-abandoned-2-the-forest
+- name: Project Velocity
+  ids:
+  - steam:776440
+- name: Retro Sphere
+  ids:
+  - unresolved:source:isthereanydeal:6106:retro-sphere
+- name: Mutants Must Die!
+  ids:
+  - unresolved:source:isthereanydeal:6106:mutants-must-die

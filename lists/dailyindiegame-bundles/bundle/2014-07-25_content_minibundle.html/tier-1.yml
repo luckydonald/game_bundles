@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Mini Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1025/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1025/source.json
+games:
+- name: 1Quest
+  ids:
+  - steam:332710
+- name: 'Wisps: The Redeeming'
+  ids:
+  - unresolved:source:isthereanydeal:1025:wisps-the-redeeming
+- name: '"Glow Ball" - The billiard puzzle game'
+  ids:
+  - steam:388390
+- name: In Between
+  ids:
+  - steam:388420
+- name: 'SBX: Invasion'
+  ids:
+  - steam:371620
+- name: Koya Rift
+  ids:
+  - steam:328990

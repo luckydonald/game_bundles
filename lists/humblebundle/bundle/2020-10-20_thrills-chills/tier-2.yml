@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Thrills & Chills Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9305/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9305/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9305/source.json
+games:
+- name: DISTRAINT 2
+  ids:
+  - steam:743390
+- name: DISTRAINT 2 - OST
+  ids:
+  - steam:1117030
+- name: Pacify
+  ids:
+  - steam:967050
+- name: The Letter - Horror Visual Novel
+  ids:
+  - steam:460430
+- name: Detention
+  ids:
+  - steam:555220
+- name: DESOLATE
+  ids:
+  - steam:671510
+- name: 'Blood: Fresh Supply'
+  ids:
+  - steam:1010750
+- name: 'DARQ: Complete Edition'
+  ids:
+  - steam:433550

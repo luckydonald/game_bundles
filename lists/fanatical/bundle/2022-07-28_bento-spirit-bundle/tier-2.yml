@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bento Spirit Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11845/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11845/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11845/source.json
+games:
+- name: Dusk Diver 酉閃町
+  ids:
+  - steam:911220
+- name: Tokyo Xanadu eX+
+  ids:
+  - steam:587260
+- name: Neverinth
+  ids:
+  - steam:966430
+- name: Zengeon
+  ids:
+  - steam:1000080
+- name: Nigate Tale
+  ids:
+  - steam:1048350
+- name: 'Spirit Hunter: Death Mark'
+  ids:
+  - steam:980830
+- name: 'Spirit Hunter: NG'
+  ids:
+  - steam:1100430

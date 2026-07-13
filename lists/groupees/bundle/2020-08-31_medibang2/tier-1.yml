@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: It&#39;s A Wonderful Waifu Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9109/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9109/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9109/source.json
+games:
+- name: ItazuraVR
+  ids:
+  - steam:935360
+- name: Tenkiame
+  ids:
+  - unresolved:source:isthereanydeal:9109:tenkiame
+- name: Kamimachi Site - Dating story
+  ids:
+  - steam:989580
+- name: NekoMiko
+  ids:
+  - steam:969700
+- name: Super Naughty Maid 2
+  ids:
+  - steam:1097880

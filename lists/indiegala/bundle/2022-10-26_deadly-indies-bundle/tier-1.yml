@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deadly Indies Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12291/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12291/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12291/source.json
+games:
+- name: Deadly Land
+  ids:
+  - steam:1234260
+- name: 'Raptor Boyfriend: A High School Romance'
+  ids:
+  - steam:1273080
+- name: Super Grave Snatchers
+  ids:
+  - steam:1649570
+- name: Língua
+  ids:
+  - steam:1702450
+- name: Mr.Brocco & Co
+  ids:
+  - steam:2074560
+- name: Runaway Animals
+  ids:
+  - steam:1792660

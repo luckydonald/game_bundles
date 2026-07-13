@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 35 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6323/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6323/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6323/source.json
+games:
+- name: 'A New World: Kingdoms'
+  ids:
+  - steam:628650

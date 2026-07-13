@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Epic Event Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13308/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13308/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13308/source.json
+games:
+- name: Event Horizon
+  ids:
+  - steam:465000
+- name: 'Almost There: The Platformer'
+  ids:
+  - steam:951940
+- name: Definitely Sneaky But Not Sneaky
+  ids:
+  - steam:954010
+- name: BLOCKADE War Stories
+  ids:
+  - steam:1051890
+- name: 'Legendary Eleven: Epic Football'
+  ids:
+  - steam:839300
+- name: Eyes Over Us
+  ids:
+  - steam:1819660

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Drive Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5388/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5388/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5388/source.json
+games:
+- name: 'Drift King: Survival'
+  ids:
+  - steam:553290
+- name: Dungeon Journey
+  ids:
+  - steam:485490
+- name: Coma:Mortuary
+  ids:
+  - steam:293320
+- name: Envoy
+  ids:
+  - steam:2561200
+- name: Android John
+  ids:
+  - unresolved:source:isthereanydeal:5388:android-john
+- name: Card of spirits-卡灵
+  ids:
+  - unresolved:source:isthereanydeal:5388:card-of-spirits-ka-ling
+- name: Heroic Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:5388:heroic-dungeon
+- name: Alchemyland
+  ids:
+  - steam:610670
+- name: Flat Path
+  ids:
+  - steam:512740
+- name: Final Core
+  ids:
+  - steam:556250

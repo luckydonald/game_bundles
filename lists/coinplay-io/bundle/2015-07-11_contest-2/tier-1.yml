@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Contest Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2222/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2222/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2222/source.json
+games:
+- name: Garden Rescue
+  ids:
+  - steam:346210
+- name: "Odysseus \x96 Long Way Home"
+  ids:
+  - steam:348960
+- name: Trace Vector
+  ids:
+  - steam:297410
+- name: Dreaming Sarah
+  ids:
+  - steam:296870
+- name: 'Biglands: A Game Made By Kids'
+  ids:
+  - steam:316740

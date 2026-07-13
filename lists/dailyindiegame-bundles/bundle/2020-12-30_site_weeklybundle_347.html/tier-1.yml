@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 347 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9590/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9590/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9590/source.json
+games:
+- name: TRAGO
+  ids:
+  - steam:869080
+- name: CaptainMarlene
+  ids:
+  - steam:1064580
+- name: Chishiki Runner
+  ids:
+  - unresolved:source:isthereanydeal:9590:chishiki-runner
+- name: Eggys Games Flash Collection
+  ids:
+  - steam:1002520
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+- name: New Tricks for Old Gods
+  ids:
+  - steam:1165490
+- name: Killer Dog
+  ids:
+  - steam:1359170
+- name: Over'n Over
+  ids:
+  - steam:1358730
+- name: Lloyd the Monkey 2
+  ids:
+  - steam:1381370

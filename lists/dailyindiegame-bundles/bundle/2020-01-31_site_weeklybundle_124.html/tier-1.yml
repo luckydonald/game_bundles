@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 124 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8358/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8358/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8358/source.json
+games:
+- name: Albert and Otto - The Adventure Begins
+  ids:
+  - steam:368590
+- name: Mad Gun Range VR Simulator
+  ids:
+  - steam:1031200
+- name: 'Kabitis 2: Fire Sword'
+  ids:
+  - unresolved:source:isthereanydeal:8358:kabitis-2-fire-sword
+- name: Marble Mountain
+  ids:
+  - steam:409390
+- name: Royal Offense
+  ids:
+  - unresolved:source:isthereanydeal:8358:royal-offense
+- name: Galactic Rangers VR
+  ids:
+  - steam:1151680
+- name: Plasmoid
+  ids:
+  - unresolved:source:isthereanydeal:8358:plasmoid
+- name: Easter Egg
+  ids:
+  - steam:1151090
+- name: Angry food
+  ids:
+  - unresolved:source:isthereanydeal:8358:angry-food

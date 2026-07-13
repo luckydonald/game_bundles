@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #62 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5840/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5840/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5840/source.json
+games:
+- name: Bullet Party
+  ids:
+  - steam:655910
+- name: 'Atomic Adam: Episode 1'
+  ids:
+  - steam:764280
+- name: Endless Horde
+  ids:
+  - steam:618610
+- name: TZOMPANTLI
+  ids:
+  - steam:542240
+- name: Baezult 2
+  ids:
+  - steam:546460
+- name: Dragonpath
+  ids:
+  - steam:425820
+- name: Dark and Bright
+  ids:
+  - steam:652270
+- name: Initiation
+  ids:
+  - steam:748050
+- name: Take the Cake
+  ids:
+  - steam:500440
+- name: 'Global Outbreak: Doomsday Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5840:global-outbreak-doomsday-edition

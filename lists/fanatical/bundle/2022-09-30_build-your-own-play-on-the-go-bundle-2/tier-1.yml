@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Play on the Go Bundle 2 — Select 3 Titles for $4.99, 5 Titles
+  for $6.99, 8 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12150/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12150/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12150/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+- name: Who's Your Daddy
+  ids:
+  - steam:427730
+- name: American Fugitive
+  ids:
+  - steam:934780
+- name: Blasphemous
+  ids:
+  - steam:774361
+- name: 'Blacksad : Under the Skin'
+  ids:
+  - steam:1003890
+- name: Horizon Chase Turbo
+  ids:
+  - unresolved:source:isthereanydeal:12150:horizon-chase-turbo
+- name: 'Door Kickers: Action Squad'
+  ids:
+  - steam:686200
+- name: 198X
+  ids:
+  - steam:1086010
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+- name: Speed Limit
+  ids:
+  - steam:1058280
+- name: 'FAR: Lone Sails'
+  ids:
+  - steam:609320
+- name: NUTS
+  ids:
+  - steam:768450
+- name: 'Morbid: The Seven Acolytes'
+  ids:
+  - steam:1140890
+- name: Intravenous
+  ids:
+  - steam:1486630
+- name: 'Golf Club: Wasteland'
+  ids:
+  - unresolved:source:isthereanydeal:12150:golf-club-wasteland

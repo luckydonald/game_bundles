@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mumbo Jumbo Mega Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3554/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3554/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3554/source.json
+games:
+- name: Luxor Evolved
+  ids:
+  - steam:205830
+- name: 7 Wonders II
+  ids:
+  - steam:15900
+- name: 'Midnight Mysteries: The Edgar Allan Poe Conspiracy'
+  ids:
+  - unresolved:source:isthereanydeal:3554:midnight-mysteries-the-edgar-allan-poe-conspiracy
+- name: Glowfish
+  ids:
+  - steam:60350
+- name: Samantha Swift and the Hidden Roses of Athena
+  ids:
+  - steam:16020
+- name: Pickers
+  ids:
+  - steam:204440
+- name: Luxor 2 HD
+  ids:
+  - steam:234350
+- name: '7 Wonders: Ancient Alien Makeover'
+  ids:
+  - steam:223000
+- name: 'Midnight Mysteries 3: Devil on the Mississippi'
+  ids:
+  - steam:208630
+- name: 'Midnight Mysteries 2: Salem Witch Trials'
+  ids:
+  - steam:208620
+- name: 'LUXOR: Mah Jong'
+  ids:
+  - steam:32110
+- name: Zombie Bowl-o-Rama
+  ids:
+  - steam:32160

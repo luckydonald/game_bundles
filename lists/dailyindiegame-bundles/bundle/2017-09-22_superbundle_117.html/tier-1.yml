@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 117 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5494/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5494/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5494/source.json
+games:
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+- name: 'Depth Hunter 2: Deep Dive'
+  ids:
+  - steam:248530
+- name: Tales from the Void
+  ids:
+  - unresolved:source:isthereanydeal:5494:tales-from-the-void
+- name: Marble Duel
+  ids:
+  - steam:338120
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740

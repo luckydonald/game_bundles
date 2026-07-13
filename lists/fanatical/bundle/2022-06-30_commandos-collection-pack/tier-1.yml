@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Commandos Collection Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11688/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11688/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11688/source.json
+games:
+- name: 'Commandos 3: Destination Berlin'
+  ids:
+  - steam:6840
+- name: 'Commandos 2: Men of Courage'
+  ids:
+  - steam:6830
+- name: 'Commandos: Behind Enemy Lines'
+  ids:
+  - steam:6800

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 896 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11801/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11801/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11801/source.json
+games:
+- name: Noob Squad
+  ids:
+  - steam:496550
+- name: The Governer
+  ids:
+  - steam:1109350
+- name: Valley
+  ids:
+  - steam:378610
+- name: The Big SokoBang
+  ids:
+  - steam:1204210
+- name: lil' Sherman
+  ids:
+  - steam:1210620
+- name: Goofy Golf Remastered Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:11801:goofy-golf-remastered-steam-edition
+- name: Dark Disharmony
+  ids:
+  - steam:1253180
+- name: I wanna build a robot
+  ids:
+  - steam:1337210
+- name: RENEGADE
+  ids:
+  - unresolved:source:isthereanydeal:11801:renegade

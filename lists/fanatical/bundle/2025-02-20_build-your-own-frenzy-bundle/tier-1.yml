@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Frenzy Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14942/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14942/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14942/source.json
+games:
+- name: Demetrios - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14942:demetrios-deluxe-edition
+- name: Stars End
+  ids:
+  - steam:623340
+- name: Unity of Command Trilogy Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14942:unity-of-command-trilogy-bundle
+- name: Doodle God
+  ids:
+  - steam:348360
+- name: Ziggurat
+  ids:
+  - steam:308420
+- name: Broken Sword Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:14942:broken-sword-trilogy
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+- name: Varenje - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:14942:varenje-complete-edition
+- name: Burst Fighter
+  ids:
+  - steam:642600
+- name: Legacy of Sin the father sacrifice
+  ids:
+  - steam:1240790
+- name: Patch Quest
+  ids:
+  - steam:1347970
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+- name: Legacy of Sin blood oath
+  ids:
+  - steam:1969820
+- name: Teslagrad 2
+  ids:
+  - steam:1698220
+- name: Ruined Kingdom
+  ids:
+  - steam:2206490
+- name: Cycle Chaser H-5
+  ids:
+  - steam:2274550
+- name: Yet Another Climbing Game
+  ids:
+  - steam:3329220
+- name: Prophecy I - The Viking Child & Dorke and Ymp Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14942:prophecy-i-the-viking-child-and-dorke-and-ymp-double-pack

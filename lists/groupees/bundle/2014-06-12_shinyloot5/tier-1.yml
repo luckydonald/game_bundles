@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shinyloot Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/885/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/885/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/885/source.json
+games:
+- name: Sweezy Gunner
+  ids:
+  - steam:295730
+- name: Rogue's Tale
+  ids:
+  - steam:265990
+- name: Faerie Solitaire
+  ids:
+  - steam:38600
+- name: Agon - The Lost Sword of Toledo
+  ids:
+  - steam:410130
+- name: 'The Oil Blue: Steam Legacy Edition'
+  ids:
+  - steam:386700
+- name: Hero of the Kingdom
+  ids:
+  - steam:259550

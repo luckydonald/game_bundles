@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Jam Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1272/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1272/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1272/source.json
+games:
+- name: Hammerfight
+  ids:
+  - steam:41100
+- name: Ichi
+  ids:
+  - steam:300300
+- name: Oknytt
+  ids:
+  - steam:286320
+- name: Akane the Kunoichi
+  ids:
+  - steam:291130
+- name: Mini Motor Racing EVO
+  ids:
+  - unresolved:source:isthereanydeal:1272:mini-motor-racing-evo
+- name: 'SOL: Exodus'
+  ids:
+  - steam:200410
+- name: 'Oozi: Earth Adventure'
+  ids:
+  - steam:257990
+- name: Rhythm Destruction
+  ids:
+  - steam:301540
+- name: They Breathe
+  ids:
+  - steam:294140
+- name: GEARCRACK Arena
+  ids:
+  - unresolved:source:isthereanydeal:1272:gearcrack-arena

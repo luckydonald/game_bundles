@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Clickteam Fusion Bundle — Pay $15 or more to also unlock
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4126/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4126/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4126/source.json
+games:
+- name: Necromonads
+  ids:
+  - unresolved:source:isthereanydeal:4126:necromonads
+- name: Plantera
+  ids:
+  - steam:421040
+- name: Tick Tock Isle
+  ids:
+  - steam:418440
+- name: 'Oniken: Unstoppable Edition'
+  ids:
+  - steam:252010
+- name: Clickteam Fusion 2.5
+  ids:
+  - steam:248170
+- name: UWP Exporter for Clickteam Fusion 2.5
+  ids:
+  - unresolved:source:isthereanydeal:4126:uwp-exporter-for-clickteam-fusion-2-5
+- name: Quadle
+  ids:
+  - unresolved:source:isthereanydeal:4126:quadle
+- name: The Yawhg
+  ids:
+  - steam:269030
+- name: Five Nights at Freddy's 3
+  ids:
+  - steam:354140
+- name: room13
+  ids:
+  - steam:314590
+- name: iOS Exporter for Clickteam Fusion 2.5
+  ids:
+  - steam:267651
+- name: Clickteam Fusion 2.5 Mac Editor
+  ids:
+  - unresolved:source:isthereanydeal:4126:clickteam-fusion-2-5-mac-editor
+- name: Install Creator Pro
+  ids:
+  - unresolved:source:isthereanydeal:4126:install-creator-pro
+- name: HTML5 Exporter for Clickteam Fusion 2.5
+  ids:
+  - steam:267652
+- name: Android Exporter for Clickteam Fusion 2.5
+  ids:
+  - steam:267650
+- name: Environmental Station Alpha
+  ids:
+  - steam:350070
+- name: Concrete Jungle
+  ids:
+  - steam:400160
+- name: Clickteam Fusion 2.5 Developer Upgrade
+  ids:
+  - steam:267810

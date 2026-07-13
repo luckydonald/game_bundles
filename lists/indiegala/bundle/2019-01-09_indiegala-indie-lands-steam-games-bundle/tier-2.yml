@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Lands Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6889/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6889/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6889/source.json
+games:
+- name: 'MeatPossible: Chapter 1.5'
+  ids:
+  - steam:922810
+- name: Preventive Strike
+  ids:
+  - steam:740280
+- name: Lawless Lands
+  ids:
+  - steam:880130
+- name: 'Last Knight: Rogue Rider Edition'
+  ids:
+  - steam:262210
+- name: Necro Immortallis
+  ids:
+  - steam:864530
+- name: Ramen
+  ids:
+  - steam:801870
+- name: Arcane Golf
+  ids:
+  - steam:897800
+- name: Lil Tanks
+  ids:
+  - steam:495820
+- name: Hanger World
+  ids:
+  - steam:484390

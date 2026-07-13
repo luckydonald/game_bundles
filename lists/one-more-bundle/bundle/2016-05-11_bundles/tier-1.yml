@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: EU Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3409/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3409/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3409/source.json
+games:
+- name: 'OCEAN CITY RACING: Redux'
+  ids:
+  - unresolved:source:isthereanydeal:3409:ocean-city-racing-redux
+- name: But to Paint a Universe
+  ids:
+  - steam:335220
+- name: The Deer
+  ids:
+  - steam:400240
+- name: Woodle Tree Adventures
+  ids:
+  - steam:299460
+- name: Russian Horror Story
+  ids:
+  - unresolved:source:isthereanydeal:3409:russian-horror-story
+- name: Invasion
+  ids:
+  - steam:503630
+- name: Bloodbath Kavkaz
+  ids:
+  - unresolved:source:isthereanydeal:3409:bloodbath-kavkaz

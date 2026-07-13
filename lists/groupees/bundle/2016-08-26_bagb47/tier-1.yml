@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 47 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3963/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3963/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3963/source.json
+games:
+- name: '"The Writer"'
+  ids:
+  - unresolved:source:isthereanydeal:3963:the-writer
+- name: SkyTime
+  ids:
+  - steam:513620
+- name: Arena Omega
+  ids:
+  - unresolved:source:isthereanydeal:3963:arena-omega
+- name: The Thanatos Disorder
+  ids:
+  - unresolved:source:isthereanydeal:3963:the-thanatos-disorder
+- name: RX squad
+  ids:
+  - steam:494120
+- name: BitMaster
+  ids:
+  - steam:514660
+- name: Spikit
+  ids:
+  - steam:509110
+- name: Galactic Fighters
+  ids:
+  - steam:513960
+- name: Stone Age Wars
+  ids:
+  - steam:521230
+- name: Shuttle Siege
+  ids:
+  - steam:519020

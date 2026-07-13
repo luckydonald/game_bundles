@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mexican Entertainment System Bundle — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16121/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16121/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16121/source.json
+games:
+- name: Mulaka
+  ids:
+  - steam:623640
+- name: Pato Box
+  ids:
+  - steam:682080
+- name: Lonesome Village
+  ids:
+  - steam:1418360
+- name: So Below
+  ids:
+  - steam:2140700
+- name: 'The end is nahual: If I may say so'
+  ids:
+  - steam:2161110
+- name: Re:Fresh
+  ids:
+  - steam:2297650
+- name: Another Crusade
+  ids:
+  - steam:2016190
+- name: A Tiny Sticker Tale
+  ids:
+  - steam:2322180
+- name: RKGK / Rakugaki
+  ids:
+  - steam:2146570
+- name: Idle Waters
+  ids:
+  - steam:2963540
+- name: Desktop Fishes
+  ids:
+  - steam:3618880
+- name: PancitoMerge
+  ids:
+  - steam:3655610

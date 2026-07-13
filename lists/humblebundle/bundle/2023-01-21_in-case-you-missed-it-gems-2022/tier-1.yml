@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'In Case You Missed It: Gems of 2022 Bundle — 4-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12911/source.json
+games:
+- name: Haiku, the Robot
+  ids:
+  - steam:1231880
+- name: Source of Madness
+  ids:
+  - steam:1315610
+- name: PowerSlave Exhumed
+  ids:
+  - steam:1678430
+- name: Supraland Six Inches Under
+  ids:
+  - steam:1522870

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Case Z — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3964/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3964/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3964/source.json
+games:
+- name: The Falling Sun
+  ids:
+  - unresolved:source:isthereanydeal:3964:the-falling-sun
+- name: Collider
+  ids:
+  - steam:371880
+- name: Build 'n Bump
+  ids:
+  - steam:375790

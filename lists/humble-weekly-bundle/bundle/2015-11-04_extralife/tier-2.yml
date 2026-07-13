@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Extra life — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2704/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2704/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2704/source.json
+games:
+- name: Overlord™
+  ids:
+  - steam:11450
+- name: 'Jazzpunk: Director''s Cut'
+  ids:
+  - steam:250260
+- name: How To Survive
+  ids:
+  - steam:250400
+- name: 'How To Survive: Third Person Standalone'
+  ids:
+  - steam:360150
+- name: 'Shadowgate: MacVenture Series'
+  ids:
+  - steam:343800
+- name: Overlord II
+  ids:
+  - steam:12810
+- name: Shadowgate
+  ids:
+  - steam:294440
+- name: it came from space and ate our brains
+  ids:
+  - steam:342620

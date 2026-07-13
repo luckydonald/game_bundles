@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Adventure Beats Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1775/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1775/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1775/source.json
+games:
+- name: The Great Fusion
+  ids:
+  - steam:341690
+- name: Alphabeats
+  ids:
+  - unresolved:source:isthereanydeal:1775:alphabeats
+- name: Sentinel
+  ids:
+  - steam:293200
+- name: Red Johnson's Chronicles - 1+2 - Steam Special Edition
+  ids:
+  - steam:312050
+- name: Dancewall Remix
+  ids:
+  - unresolved:source:isthereanydeal:1775:dancewall-remix
+- name: 'Beatbuddy: Tale of the Guardians'
+  ids:
+  - steam:231040

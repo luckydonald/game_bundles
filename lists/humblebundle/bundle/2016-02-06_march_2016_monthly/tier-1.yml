@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Mar 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3023/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3023/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3023/source.json
+games:
+- name: Switchcars
+  ids:
+  - steam:442210
+- name: 'Wasteland 2: Director''s Cut'
+  ids:
+  - steam:240760
+- name: GRAV
+  ids:
+  - steam:332500
+- name: 'ARK: Survival Evolved'
+  ids:
+  - steam:346110
+- name: 'Battlesloths 2025: The Great Pizza Wars'
+  ids:
+  - steam:459350
+- name: I am Bread
+  ids:
+  - steam:327890
+- name: Shantae and the Pirate's Curse
+  ids:
+  - steam:345820
+- name: Sentinels of the Multiverse
+  ids:
+  - steam:337150

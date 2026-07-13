@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 697 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10887/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10887/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10887/source.json
+games:
+- name: Heart Chain Kitty
+  ids:
+  - steam:933210
+- name: One Finger Death Punch 2
+  ids:
+  - steam:980300
+- name: Cyberline Racing
+  ids:
+  - steam:514460
+- name: Deleveled
+  ids:
+  - steam:1045580
+- name: Fire Arrow Plus
+  ids:
+  - steam:509780
+- name: Death Rattle - Hell Unleashed
+  ids:
+  - steam:1412560
+- name: Starlight Alliance
+  ids:
+  - steam:1544530
+- name: 'Unstrong: Space Calamity'
+  ids:
+  - steam:1781720
+- name: 'OnlySociety: Arena'
+  ids:
+  - unresolved:source:isthereanydeal:10887:onlysociety-arena

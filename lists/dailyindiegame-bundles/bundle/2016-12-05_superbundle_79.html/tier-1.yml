@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 79 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4451/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4451/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4451/source.json
+games:
+- name: Aztecalypse
+  ids:
+  - steam:517010
+- name: Warriors' Wrath
+  ids:
+  - steam:466420
+- name: 'Unforgiving Trials: The Darkest Crusade'
+  ids:
+  - steam:489220
+- name: Squirbs
+  ids:
+  - steam:429700
+- name: Dynamic Very, Very, Hard game!!
+  ids:
+  - steam:546340
+- name: KickHim
+  ids:
+  - unresolved:source:isthereanydeal:4451:kickhim

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Outlaw Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9142/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9142/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9142/source.json
+games:
+- name: Railroad Pioneer
+  ids:
+  - steam:306490
+- name: 'Enforcer: Police Crime Action'
+  ids:
+  - steam:318220
+- name: The Little Acre
+  ids:
+  - steam:423590
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: 'Odallus: The Dark Call'
+  ids:
+  - steam:319480
+- name: 'Tropico 4: Steam Special Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9142:tropico-4-steam-special-edition
+- name: Serial Cleaner
+  ids:
+  - steam:522210
+- name: JYDGE
+  ids:
+  - unresolved:source:isthereanydeal:9142:jydge

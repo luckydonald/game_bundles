@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special #60 Bundle — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5730/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5730/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5730/source.json
+games:
+- name: Ghoulboy - Dark Sword of Goblin
+  ids:
+  - steam:752500
+- name: Transcend
+  ids:
+  - steam:760860
+- name: ZOMBIE CAR MASSACRE
+  ids:
+  - unresolved:source:isthereanydeal:5730:zombie-car-massacre
+- name: Little Lords of Twilight®
+  ids:
+  - unresolved:source:isthereanydeal:5730:little-lords-of-twilight
+- name: The Survey
+  ids:
+  - steam:547910
+- name: Easy Red
+  ids:
+  - steam:741670
+- name: Orbiz
+  ids:
+  - steam:572480
+- name: Deep Sorrow
+  ids:
+  - steam:736110
+- name: Legend of Dungeon
+  ids:
+  - steam:238280
+- name: Die With Glory — Point and Click Adventure Game
+  ids:
+  - steam:551050
+- name: The Caretaker - Dungeon Nightshift
+  ids:
+  - steam:486550

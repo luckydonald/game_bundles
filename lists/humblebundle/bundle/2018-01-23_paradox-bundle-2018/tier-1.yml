@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Paradox Interactive Bundle 2018 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5833/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5833/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5833/source.json
+games:
+- name: Cities in Motion II
+  ids:
+  - unresolved:source:isthereanydeal:5833:cities-in-motion-ii
+- name: Majesty 2 Collection
+  ids:
+  - steam:73020
+- name: Magicka 2
+  ids:
+  - steam:238370

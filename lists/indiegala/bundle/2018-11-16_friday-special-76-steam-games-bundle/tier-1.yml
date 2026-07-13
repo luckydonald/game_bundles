@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #76 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6690/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6690/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6690/source.json
+games:
+- name: Super Blasting Boy
+  ids:
+  - steam:961860
+- name: Super Potato Bruh
+  ids:
+  - steam:951360

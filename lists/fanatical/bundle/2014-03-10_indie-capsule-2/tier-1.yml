@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Capsule Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/631/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/631/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/631/source.json
+games:
+- name: CreaVures
+  ids:
+  - steam:49810
+- name: Hexcells
+  ids:
+  - steam:265890
+- name: 'Tiny & Big: Grandpa''s Leftovers'
+  ids:
+  - steam:205910
+- name: 'Foreign Legion: Buckets of Blood'
+  ids:
+  - steam:36000
+- name: Paranormal
+  ids:
+  - steam:246300
+- name: Critical Mass
+  ids:
+  - steam:105300
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+- name: Adventures of Shuggy
+  ids:
+  - steam:211440

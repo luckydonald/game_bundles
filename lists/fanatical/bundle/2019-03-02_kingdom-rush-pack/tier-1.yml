@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Kingdom Rush Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7104/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7104/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7104/source.json
+games:
+- name: Kingdom Rush
+  ids:
+  - steam:246420
+- name: Kingdom Rush Frontiers
+  ids:
+  - steam:458710

@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Fishing Season: Bassmaster & More Bundle — 14-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12994/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12994/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12994/source.json
+games:
+- name: 'Fishing Sim World®: Pro Tour - Lago Del Mundo'
+  ids:
+  - steam:978880
+- name: 'Fishing Sim World®: Pro Tour'
+  ids:
+  - steam:834280
+- name: 'Euro Fishing: The Moat'
+  ids:
+  - steam:321475
+- name: 'Euro Fishing: Foundry Dock'
+  ids:
+  - steam:321460
+- name: Euro Fishing
+  ids:
+  - steam:314520
+- name: 'Fishing Sim World®: Pro Tour - Talon Fishery'
+  ids:
+  - steam:1136001
+- name: 'Euro Fishing: Waldsee'
+  ids:
+  - steam:321473
+- name: 'Fishing Sim World®: Pro Tour - Lake Arnold'
+  ids:
+  - steam:931530
+- name: 'Fishing Sim World®: Pro Tour - Laguna Iquitos'
+  ids:
+  - steam:1136000
+- name: 'Fishing Sim World®: Pro Tour - Big Fish Lure Pack'
+  ids:
+  - steam:1203720
+- name: 'Fishing Sim World: Pro Tour - Bass Pro Shops Equipment Pack'
+  ids:
+  - steam:1369000
+- name: 'The Catch: Carp & Coarse Fishing'
+  ids:
+  - steam:1237610
+- name: Bassmaster® Fishing 2022
+  ids:
+  - unresolved:source:isthereanydeal:12994:bassmaster-fishing-2022
+- name: 'Bassmaster® Fishing 2022: Predator Equipment Pack'
+  ids:
+  - steam:1796151

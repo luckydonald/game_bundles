@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Fleet Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5990/source.json
+games:
+- name: World Inside Out
+  ids:
+  - unresolved:source:isthereanydeal:5990:world-inside-out
+- name: Christmas Race 2
+  ids:
+  - steam:801890
+- name: Mortos
+  ids:
+  - steam:377980
+- name: 'Mermaid Adventures: The Frozen Time'
+  ids:
+  - steam:798610
+- name: AEGYPTUS
+  ids:
+  - steam:675130
+- name: 7th Deep
+  ids:
+  - steam:806580
+- name: Empty Soul - S&S Edition
+  ids:
+  - steam:464670
+- name: Nomad Fleet
+  ids:
+  - steam:371010
+- name: Army of squirrels
+  ids:
+  - steam:793260
+- name: 'Exorcism: Case Zero'
+  ids:
+  - unresolved:source:isthereanydeal:5990:exorcism-case-zero
+- name: Green Slaughter
+  ids:
+  - unresolved:source:isthereanydeal:5990:green-slaughter
+- name: Insert Paper
+  ids:
+  - steam:661490

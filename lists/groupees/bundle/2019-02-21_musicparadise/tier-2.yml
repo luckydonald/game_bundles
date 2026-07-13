@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Music Paradise Software Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7063/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7063/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7063/source.json
+games:
+- name: Song Writer
+  ids:
+  - unresolved:source:isthereanydeal:7063:song-writer
+- name: Volume Maximizer
+  ids:
+  - unresolved:source:isthereanydeal:7063:volume-maximizer
+- name: Audio Converter
+  ids:
+  - unresolved:source:isthereanydeal:7063:audio-converter
+- name: Audio Editor
+  ids:
+  - unresolved:source:isthereanydeal:7063:audio-editor
+- name: Party Mixer 3D
+  ids:
+  - unresolved:source:isthereanydeal:7063:party-mixer-3d
+- name: Electronic Piano
+  ids:
+  - unresolved:source:isthereanydeal:7063:electronic-piano
+- name: Circuit Loops
+  ids:
+  - unresolved:source:isthereanydeal:7063:circuit-loops
+- name: DJ Mix Pads
+  ids:
+  - unresolved:source:isthereanydeal:7063:dj-mix-pads
+- name: Pro Microphone
+  ids:
+  - unresolved:source:isthereanydeal:7063:pro-microphone
+- name: Spectrum Analyzer
+  ids:
+  - unresolved:source:isthereanydeal:7063:spectrum-analyzer

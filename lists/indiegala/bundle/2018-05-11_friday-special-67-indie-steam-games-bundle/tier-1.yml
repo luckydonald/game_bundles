@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #67 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6129/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6129/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6129/source.json
+games:
+- name: Quanect
+  ids:
+  - steam:745940
+- name: Drop The Bomb
+  ids:
+  - unresolved:source:isthereanydeal:6129:drop-the-bomb
+- name: EXIST
+  ids:
+  - steam:804130

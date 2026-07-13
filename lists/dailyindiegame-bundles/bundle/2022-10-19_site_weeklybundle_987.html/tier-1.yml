@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 987 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12251/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12251/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12251/source.json
+games:
+- name: Another Hardcore Game
+  ids:
+  - steam:951050
+- name: Bob Wants to Go Home
+  ids:
+  - steam:1234540
+- name: Lloyd the Monkey 2
+  ids:
+  - steam:1381370
+- name: Battle Royale Pixel Squad
+  ids:
+  - steam:931250
+- name: 6 Feet Behind
+  ids:
+  - steam:1557760
+- name: Meteoroids 3D
+  ids:
+  - unresolved:source:isthereanydeal:12251:meteoroids-3d
+- name: In Marte - The First Moon
+  ids:
+  - steam:1583370
+- name: Skattered Dream
+  ids:
+  - steam:1745410
+- name: Junkyard Fury
+  ids:
+  - steam:1706940

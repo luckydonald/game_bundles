@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Extreme Sims 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2491/source.json
+games:
+- name: Roller Coaster Rampage
+  ids:
+  - steam:209610
+- name: Zoo Park
+  ids:
+  - steam:307760
+- name: Post Master
+  ids:
+  - steam:275080
+- name: Draft Day Sports Pro Basketball 4
+  ids:
+  - unresolved:source:isthereanydeal:2491:draft-day-sports-pro-basketball-4
+- name: Scania Truck Driving Simulator
+  ids:
+  - steam:258760
+- name: Monster Truck Destruction
+  ids:
+  - steam:324760
+- name: 3D Mini Golf
+  ids:
+  - steam:362830
+- name: Trucks & Trailers
+  ids:
+  - steam:302060
+- name: World of Mixed Martial Arts 3
+  ids:
+  - steam:344800
+- name: Total Extreme Wrestling 2010
+  ids:
+  - steam:344810
+- name: Taxi
+  ids:
+  - unresolved:source:isthereanydeal:2491:taxi
+- name: Bus Driver
+  ids:
+  - steam:302080

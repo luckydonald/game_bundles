@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Capcom Horror Bundle — Select 2 for 12.99, 3 for 18.99, 4 for
+  24.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15491/source.json
+games:
+- name: DMC - Devil May Cry
+  ids:
+  - steam:220440
+- name: Devil May Cry HD Collection
+  ids:
+  - steam:631510
+- name: Devil May Cry® 4 Special Edition
+  ids:
+  - steam:329050
+- name: Dead Rising 3 Apocalypse Edition
+  ids:
+  - steam:265550
+- name: Dead Rising 4
+  ids:
+  - steam:543460
+- name: Resident Evil Village
+  ids:
+  - steam:1196590
+- name: Devil May Cry 5 + Vergil
+  ids:
+  - steam:601150
+- name: RESIDENT EVIL 2 (2019)
+  ids:
+  - steam:883710
+- name: RESIDENT EVIL 3 (2020)
+  ids:
+  - steam:952060
+- name: Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15491:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
+- name: 'Resident Evil: Revelations 1 & 2 Deluxe Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15491:resident-evil-revelations-1-and-2-deluxe-double-pack
+- name: Resident Evil & Resident Evil 0 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15491:resident-evil-and-resident-evil-0-double-pack
+- name: Resident Evil 6 Complete & Resident Evil 7 Biohazard Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15491:resident-evil-6-complete-and-resident-evil-7-biohazard-double-pack
+- name: 'Dead Rising 2 & Dead Rising 2: Off the Record Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15491:dead-rising-2-and-dead-rising-2-off-the-record-double-pack

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Slitherine Strategy Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15096/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15096/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15096/source.json
+games:
+- name: Battlestar Galactica Deadlock
+  ids:
+  - unresolved:source:isthereanydeal:15096:battlestar-galactica-deadlock
+- name: Buzz Aldrin's Space Program Manager
+  ids:
+  - steam:308270
+- name: 'Distant Worlds: Universe'
+  ids:
+  - steam:261470
+- name: Master of Magic
+  ids:
+  - steam:1623070
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+- name: 'Flashpoint Campaigns: Red Storm Player''s Edition'
+  ids:
+  - steam:330720
+- name: WarPlan
+  ids:
+  - steam:1084790
+- name: Panzer Corps 2
+  ids:
+  - steam:1072040
+- name: 'Combat Mission: Battle for Normandy'
+  ids:
+  - steam:2297010
+- name: 'Stargate: Timekeepers'
+  ids:
+  - steam:1523650

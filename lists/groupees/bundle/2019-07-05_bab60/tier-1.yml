@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 60 — Select 2 to 10 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7603/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7603/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7603/source.json
+games:
+- name: Wrestlers Without Boundaries
+  ids:
+  - unresolved:source:isthereanydeal:7603:wrestlers-without-boundaries
+- name: Samurai Wish
+  ids:
+  - steam:877040
+- name: CHAIN SAW
+  ids:
+  - steam:1098670
+- name: 'Steel Arena: Robot War'
+  ids:
+  - unresolved:source:isthereanydeal:7603:steel-arena-robot-war
+- name: Galaxy Ball
+  ids:
+  - unresolved:source:isthereanydeal:7603:galaxy-ball
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7603:grab-bag-game
+- name: The Renovator
+  ids:
+  - steam:1059280
+- name: GraFi
+  ids:
+  - steam:1067650
+- name: 'Ski Drive: Biathlon'
+  ids:
+  - unresolved:source:isthereanydeal:7603:ski-drive-biathlon
+- name: '6120'
+  ids:
+  - steam:1063230

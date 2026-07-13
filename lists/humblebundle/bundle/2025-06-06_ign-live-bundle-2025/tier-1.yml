@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: IGN Live Bundle (2025) — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15167/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15167/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15167/source.json
+games:
+- name: Slay the Spire
+  ids:
+  - steam:646570
+- name: Bloodroots
+  ids:
+  - steam:820540
+- name: 'Potion Craft: Alchemist Simulator'
+  ids:
+  - steam:1210320

@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Scorching Bundle (Aug 2025) — Select 1 for 1.00, 5 for 2.99,
+  10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15328/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15328/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15328/source.json
+games:
+- name: Metamorphosis
+  ids:
+  - steam:1025410
+- name: Ruin Raiders
+  ids:
+  - steam:1262720
+- name: Dr Livingstone, I Presume?
+  ids:
+  - steam:1237510
+- name: Broken Pieces
+  ids:
+  - steam:1293730
+- name: THRIVE
+  ids:
+  - steam:1779200
+- name: 'Monument Valley: Panoramic Edition'
+  ids:
+  - steam:1927720
+- name: 'Monument Valley 2: Panoramic Edition'
+  ids:
+  - steam:1927740
+- name: Forrader Hero
+  ids:
+  - steam:2056490
+- name: Teslagrad 2
+  ids:
+  - steam:1698220
+- name: Against All Odds
+  ids:
+  - steam:1465560
+- name: Teslagrad Remastered
+  ids:
+  - steam:2168150
+- name: The Simulacrum
+  ids:
+  - steam:2263510
+- name: Subterror
+  ids:
+  - steam:2846060
+- name: The Sinking Forest - 沈んだ森
+  ids:
+  - steam:3206410
+- name: Prophecy I - The Viking Child & Dorke and Ymp Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15328:prophecy-i-the-viking-child-and-dorke-and-ymp-double-pack

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 688 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10847/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10847/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10847/source.json
+games:
+- name: Shotgun Raiders
+  ids:
+  - unresolved:source:isthereanydeal:10847:shotgun-raiders
+- name: Pestis
+  ids:
+  - steam:853480
+- name: REC
+  ids:
+  - unresolved:source:isthereanydeal:10847:rec
+- name: Chaos Town
+  ids:
+  - steam:620130
+- name: 30 days to survive
+  ids:
+  - steam:645270
+- name: Post War Dreams
+  ids:
+  - steam:616490
+- name: Last Room
+  ids:
+  - steam:1334010
+- name: 'Pnevmo-Capsula: Domiki'
+  ids:
+  - steam:1614380
+- name: Once in Flowerlake
+  ids:
+  - steam:1679740

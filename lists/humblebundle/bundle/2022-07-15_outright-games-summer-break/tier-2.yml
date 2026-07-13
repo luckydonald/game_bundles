@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Outright Games Summer Break Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11769/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11769/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11769/source.json
+games:
+- name: Crayola Scoot
+  ids:
+  - unresolved:source:isthereanydeal:11769:crayola-scoot
+- name: Ben 10
+  ids:
+  - steam:703180
+- name: 'Adventure Time: Pirates of the Enchiridion'
+  ids:
+  - steam:728240
+- name: DreamWorks Dragons Dawn of New Riders
+  ids:
+  - steam:896960
+- name: 'TRANSFORMERS: BATTLEGROUNDS'
+  ids:
+  - unresolved:source:isthereanydeal:11769:transformers-battlegrounds

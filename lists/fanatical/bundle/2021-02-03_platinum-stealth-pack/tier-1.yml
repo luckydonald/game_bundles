@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Stealth Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9695/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9695/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9695/source.json
+games:
+- name: THIEF
+  ids:
+  - steam:239160
+- name: 'Seven: Enhanced Edition'
+  ids:
+  - steam:471010
+- name: 'Peaky Blinders: Mastermind'
+  ids:
+  - unresolved:source:isthereanydeal:9695:peaky-blinders-mastermind

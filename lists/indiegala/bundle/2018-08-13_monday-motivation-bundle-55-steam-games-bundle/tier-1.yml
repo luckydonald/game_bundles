@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #55 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6376/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6376/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6376/source.json
+games:
+- name: Bad Day
+  ids:
+  - steam:803080
+- name: Riverhill Trials
+  ids:
+  - steam:810460
+- name: Seat of War
+  ids:
+  - steam:887520

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Down Under Bundle — Pay What You Want ($1 for Steam Keys)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5549/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5549/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5549/source.json
+games:
+- name: The Warlock of Firetop Mountain
+  ids:
+  - steam:324740
+- name: Hand of Fate
+  ids:
+  - steam:266510
+- name: Screencheat
+  ids:
+  - steam:301970
+- name: Satellite Reign
+  ids:
+  - steam:268870

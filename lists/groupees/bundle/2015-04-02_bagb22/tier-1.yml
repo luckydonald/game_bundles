@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 22 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1763/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1763/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1763/source.json
+games:
+- name: The Story Goes On
+  ids:
+  - steam:369560
+- name: PING 1.5+
+  ids:
+  - steam:363580
+- name: Spoko and Poko
+  ids:
+  - steam:365400
+- name: Breakout Invaders
+  ids:
+  - steam:366700
+- name: Titanis
+  ids:
+  - steam:365060
+- name: City Z
+  ids:
+  - steam:392120
+- name: Chronoclysm
+  ids:
+  - steam:368690
+- name: 'Gem Wars: Attack of the Jiblets'
+  ids:
+  - steam:370590
+- name: Not without my donuts
+  ids:
+  - steam:366610
+- name: Escape Machines
+  ids:
+  - steam:363490

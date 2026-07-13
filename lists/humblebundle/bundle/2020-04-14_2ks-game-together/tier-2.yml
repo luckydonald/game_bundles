@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble 2K&#39;s Game Together Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8673/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8673/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8673/source.json
+games:
+- name: Sid Meier's Pirates!
+  ids:
+  - steam:3920
+- name: 'Spec Ops: The Line'
+  ids:
+  - unresolved:source:isthereanydeal:8673:spec-ops-the-line
+- name: Carnival Games® VR
+  ids:
+  - steam:458920
+- name: The Darkness II
+  ids:
+  - steam:67370
+- name: 'BioShock: The Collection'
+  ids:
+  - unresolved:source:isthereanydeal:8673:bioshock-the-collection
+- name: 'Sid Meier''s Civilization® III: Complete'
+  ids:
+  - steam:3910
+- name: NBA 2K Playgrounds 2
+  ids:
+  - unresolved:source:isthereanydeal:8673:nba-2k-playgrounds-2
+- name: The Golf Club™ 2019 Featuring PGA TOUR
+  ids:
+  - unresolved:source:isthereanydeal:8673:the-golf-club-2019-featuring-pga-tour

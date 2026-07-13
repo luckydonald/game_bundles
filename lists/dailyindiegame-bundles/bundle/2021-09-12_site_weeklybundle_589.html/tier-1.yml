@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 589 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10448/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10448/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10448/source.json
+games:
+- name: Voltage
+  ids:
+  - steam:798710
+- name: Anstorm
+  ids:
+  - steam:966010
+- name: Vertigo FPS
+  ids:
+  - steam:833940
+- name: Apolune
+  ids:
+  - unresolved:source:isthereanydeal:10448:apolune
+- name: Crushing Blow
+  ids:
+  - steam:653760
+- name: Battle Ram
+  ids:
+  - steam:1262060
+- name: Booobjz
+  ids:
+  - steam:1190820
+- name: Ice Star
+  ids:
+  - unresolved:source:isthereanydeal:10448:ice-star
+- name: Lloyd the Monkey 2
+  ids:
+  - steam:1381370

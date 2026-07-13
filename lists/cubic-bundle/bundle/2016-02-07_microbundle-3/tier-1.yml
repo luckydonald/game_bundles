@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Microbundle #3 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3026/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3026/source.json
+games:
+- name: Mayhem Intergalactic
+  ids:
+  - steam:18600
+- name: PeriAreion
+  ids:
+  - steam:349540

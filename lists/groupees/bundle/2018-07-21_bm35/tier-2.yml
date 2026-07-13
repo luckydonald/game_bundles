@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 35 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6323/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6323/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6323/source.json
+games:
+- name: 'A New World: Kingdoms'
+  ids:
+  - steam:628650
+- name: Padak
+  ids:
+  - unresolved:source:isthereanydeal:6323:padak
+- name: Dungeon Gambit Boy
+  ids:
+  - steam:776720
+- name: Morphite
+  ids:
+  - steam:661740
+- name: Pixel To The West
+  ids:
+  - steam:697160
+- name: Pirate Code
+  ids:
+  - steam:370120
+- name: Ebony Spire - Heresy
+  ids:
+  - steam:725040

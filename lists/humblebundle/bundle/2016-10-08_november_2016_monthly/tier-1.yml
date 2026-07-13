@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Nov 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4167/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4167/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4167/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: Stardew Valley
+  ids:
+  - steam:413150
+- name: BROFORCE
+  ids:
+  - steam:274190
+- name: Pirate Pop Plus
+  ids:
+  - steam:487350
+- name: Kathy Rain
+  ids:
+  - steam:370910
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+- name: Beyond Eyes
+  ids:
+  - unresolved:source:isthereanydeal:4167:beyond-eyes
+- name: Keyboard Sports
+  ids:
+  - unresolved:source:isthereanydeal:4167:keyboard-sports

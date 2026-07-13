@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Let&#39;s Go Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13034/source.json
+games:
+- name: Let's Go Camping!
+  ids:
+  - unresolved:source:isthereanydeal:13034:lets-go-camping
+- name: MechDefender
+  ids:
+  - steam:562730
+- name: Archery simulator
+  ids:
+  - steam:1264420
+- name: Mountain Offroad Simulator
+  ids:
+  - unresolved:source:isthereanydeal:13034:mountain-offroad-simulator
+- name: Empire of Empires
+  ids:
+  - steam:2082730
+- name: Fix My Legs Doc
+  ids:
+  - steam:2126300
+- name: Fury of West
+  ids:
+  - steam:2133360
+- name: Highway Cross
+  ids:
+  - steam:2159880

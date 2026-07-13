@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hipster Orgy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1658/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1658/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1658/source.json
+games:
+- name: Pluck
+  ids:
+  - unresolved:source:isthereanydeal:1658:pluck
+- name: Ball'N'Flag
+  ids:
+  - unresolved:source:isthereanydeal:1658:ball-n-flag
+- name: Slinki
+  ids:
+  - steam:354930
+- name: Pitiri 1977
+  ids:
+  - steam:305740
+- name: Labyrinth of Time, The
+  ids:
+  - unresolved:source:isthereanydeal:1658:labyrinth-of-time-the
+- name: Sumo! Revise
+  ids:
+  - steam:379290
+- name: Super Hipster Lumberjack
+  ids:
+  - steam:388340
+- name: Little Walker
+  ids:
+  - steam:448500
+- name: Battle Buggy Grounds
+  ids:
+  - unresolved:source:isthereanydeal:1658:battle-buggy-grounds
+- name: Swordlord
+  ids:
+  - steam:512150
+- name: 'Nobu: Fat Revenge'
+  ids:
+  - unresolved:source:isthereanydeal:1658:nobu-fat-revenge

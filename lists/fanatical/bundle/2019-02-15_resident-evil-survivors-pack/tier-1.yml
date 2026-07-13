@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Resident Evil Survivors Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7031/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7031/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7031/source.json
+games:
+- name: Resident Evil 6
+  ids:
+  - steam:221040
+- name: Resident Evil 5 GOLD Edition
+  ids:
+  - steam:21690
+- name: Resident Evil 4 (2005)
+  ids:
+  - steam:254700

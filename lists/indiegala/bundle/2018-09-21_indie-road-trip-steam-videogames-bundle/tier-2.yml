@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Road Trip Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6491/source.json
+games:
+- name: goto
+  ids:
+  - steam:906880
+- name: Again?
+  ids:
+  - steam:906850
+- name: Call of Bitcoin
+  ids:
+  - steam:836260
+- name: Piano Cat
+  ids:
+  - unresolved:source:isthereanydeal:6491:piano-cat
+- name: SpaceExile
+  ids:
+  - steam:905800
+- name: Dwarf Defense
+  ids:
+  - steam:857850
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+- name: Combat rush
+  ids:
+  - steam:906280
+- name: TripTrip
+  ids:
+  - steam:859820
+- name: 'Survival: Last Day'
+  ids:
+  - unresolved:source:isthereanydeal:6491:survival-last-day
+- name: Road Doom
+  ids:
+  - steam:792860
+- name: Survive in Angaria 2
+  ids:
+  - steam:912820

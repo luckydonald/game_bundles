@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Lego Games Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7354/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7354/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7354/source.json
+games:
+- name: "LEGO® Batman\x99: The Videogame"
+  ids:
+  - steam:21000
+- name: 'LEGO Harry Potter: Years 1-4'
+  ids:
+  - steam:21130

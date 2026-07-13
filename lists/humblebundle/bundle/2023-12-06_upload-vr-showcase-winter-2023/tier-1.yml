@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The UploadVR Showcase Bundle (Winter 2023) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13679/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13679/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13679/source.json
+games:
+- name: 'Angry Birds VR: Isle of Pigs'
+  ids:
+  - steam:1001140
+- name: Arizona Sunshine - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13679:arizona-sunshine-deluxe-edition
+- name: Cooking Simulator VR
+  ids:
+  - steam:1358140
+- name: Guardians VR
+  ids:
+  - unresolved:source:isthereanydeal:13679:guardians-vr
+- name: AMID EVIL VR
+  ids:
+  - steam:2320910
+- name: The Break-In
+  ids:
+  - steam:1397390
+- name: Garden of the Sea (VR)
+  ids:
+  - steam:1086850

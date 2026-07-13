@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Guns n' Mazes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15043/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15043/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15043/source.json
+games:
+- name: Rule with an Iron Fish
+  ids:
+  - steam:645750
+- name: Miss Fisher and the Deathly Maze
+  ids:
+  - steam:711430
+- name: Guns N' Runs
+  ids:
+  - steam:1545700
+- name: FUR Squadron
+  ids:
+  - steam:2269980
+- name: Exiled
+  ids:
+  - steam:2741620
+- name: Riddle Tower
+  ids:
+  - steam:3044540

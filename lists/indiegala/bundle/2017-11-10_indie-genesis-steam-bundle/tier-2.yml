@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Genesis Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5616/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5616/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5616/source.json
+games:
+- name: Mighty Action RPG
+  ids:
+  - unresolved:source:isthereanydeal:5616:mighty-action-rpg
+- name: Devour them all
+  ids:
+  - unresolved:source:isthereanydeal:5616:devour-them-all
+- name: Iron Impact
+  ids:
+  - unresolved:source:isthereanydeal:5616:iron-impact
+- name: Half Past Disaster
+  ids:
+  - steam:683630
+- name: Alphadia Genesis
+  ids:
+  - steam:323450
+- name: Side Quest
+  ids:
+  - steam:433570
+- name: Sponchies
+  ids:
+  - steam:593670
+- name: Bug Killers
+  ids:
+  - steam:676720
+- name: Gravity Quest
+  ids:
+  - steam:645450
+- name: Tears Revolude
+  ids:
+  - steam:504660
+- name: Deaths Maze
+  ids:
+  - unresolved:source:isthereanydeal:5616:deaths-maze
+- name: Reverie
+  ids:
+  - steam:708850

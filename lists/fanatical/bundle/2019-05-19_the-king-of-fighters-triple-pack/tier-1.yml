@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The King of Fighters Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7408/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7408/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7408/source.json
+games:
+- name: THE KING OF FIGHTERS XIII STEAM EDITION
+  ids:
+  - unresolved:source:isthereanydeal:7408:the-king-of-fighters-xiii-steam-edition
+- name: THE KING OF FIGHTERS 2002 UNLIMITED MATCH
+  ids:
+  - steam:222440
+- name: THE KING OF FIGHTERS '98 ULTIMATE MATCH FINAL EDITION
+  ids:
+  - steam:222420

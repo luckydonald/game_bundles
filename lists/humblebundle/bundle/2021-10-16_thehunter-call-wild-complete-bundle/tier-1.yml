@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'theHunter: Call of the Wild Complete Bundle — 1-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10580/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10580/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10580/source.json
+games:
+- name: 'theHunter™: Call of the Wild'
+  ids:
+  - steam:518790

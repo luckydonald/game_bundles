@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Case Z — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3964/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3964/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3964/source.json
+games:
+- name: The Falling Sun
+  ids:
+  - unresolved:source:isthereanydeal:3964:the-falling-sun
+- name: Collider
+  ids:
+  - steam:371880
+- name: Build 'n Bump
+  ids:
+  - steam:375790
+- name: Worst Case Z
+  ids:
+  - unresolved:source:isthereanydeal:3964:worst-case-z
+- name: Abrix the robot
+  ids:
+  - steam:461850
+- name: Dance of Death
+  ids:
+  - steam:430020
+- name: Scoregasm
+  ids:
+  - steam:202410
+- name: Abrix for kids
+  ids:
+  - unresolved:source:isthereanydeal:3964:abrix-for-kids
+- name: The Orb Chambers II
+  ids:
+  - unresolved:source:isthereanydeal:3964:the-orb-chambers-ii
+- name: Pinga Ponga
+  ids:
+  - steam:509960
+- name: Lord Mayor
+  ids:
+  - steam:499330

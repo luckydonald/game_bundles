@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Train Simulator Classic: On the Fast Track Bundle — 6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13049/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13049/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13049/source.json
+games:
+- name: 'Train Simulator: DB BR 204 Loco Add-On'
+  ids:
+  - steam:1098161
+- name: 'Train Simulator: Norfolk Southern Coal District'
+  ids:
+  - steam:258654
+- name: London Faversham High Speed
+  ids:
+  - steam:222557
+- name: European Loco & Asset Pack
+  ids:
+  - steam:208300
+- name: 'Train Simulator: Sherman Hill'
+  ids:
+  - steam:208286
+- name: Train Simulator Classic
+  ids:
+  - unresolved:source:isthereanydeal:13049:train-simulator-classic

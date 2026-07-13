@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Night! by Asmodee Digital Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11349/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11349/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11349/source.json
+games:
+- name: Love Letter
+  ids:
+  - steam:926520
+- name: Small World 2
+  ids:
+  - steam:235620
+- name: Small World - Grand Dames
+  ids:
+  - steam:259591

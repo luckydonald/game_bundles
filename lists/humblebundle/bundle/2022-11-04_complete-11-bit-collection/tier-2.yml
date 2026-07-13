@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: '11 Bit Studios: The Complete Collection Bundle — Beat The Average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12393/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12393/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12393/source.json
+games:
+- name: Anomaly 2
+  ids:
+  - steam:236730
+- name: SPACECOM
+  ids:
+  - steam:263860
+- name: Anomaly Defenders
+  ids:
+  - steam:294750
+- name: Anomaly Warzone Earth
+  ids:
+  - steam:91200
+- name: Anomaly Korea
+  ids:
+  - steam:251530
+- name: 'This War of Mine: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12393:this-war-of-mine-complete-edition
+- name: Beat Cop
+  ids:
+  - steam:461950
+- name: Tower 57
+  ids:
+  - steam:530950

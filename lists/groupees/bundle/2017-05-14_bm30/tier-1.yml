@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 30 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5092/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5092/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5092/source.json
+games:
+- name: Farabel
+  ids:
+  - steam:364200
+- name: 'DROD: Gunthro and the Epic Blunder'
+  ids:
+  - steam:314330
+- name: One Small Fire At A Time
+  ids:
+  - steam:476410
+- name: IS Defense
+  ids:
+  - steam:448370
+- name: 'Grave Danger: Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5092:grave-danger-ultimate-edition
+- name: Security Hole
+  ids:
+  - steam:503460

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Realms Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9589/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9589/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9589/source.json
+games:
+- name: Enclave
+  ids:
+  - steam:253980
+- name: Jagged Alliance 2 Wildfire
+  ids:
+  - steam:215930
+- name: 'World War II: Panzer Claws'
+  ids:
+  - steam:254100
+- name: Battle vs Chess
+  ids:
+  - steam:211050
+- name: Septerra Core
+  ids:
+  - steam:253940
+- name: Gorky 17
+  ids:
+  - steam:253920
+- name: Jagged Alliance 2 Classic
+  ids:
+  - steam:545210
+- name: KnightShift
+  ids:
+  - steam:254060
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930
+- name: Earth 2150 Trilogy
+  ids:
+  - steam:253880
+- name: 'Two Worlds II: Velvet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9589:two-worlds-ii-velvet-edition
+- name: Earth 2140
+  ids:
+  - steam:253860

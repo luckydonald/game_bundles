@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dystopian Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6682/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6682/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6682/source.json
+games:
+- name: Distrust
+  ids:
+  - steam:635200
+- name: Tokyo 42
+  ids:
+  - steam:490450
+- name: 'Orwell: Keeping an Eye On You'
+  ids:
+  - steam:491950
+- name: Beholder
+  ids:
+  - steam:475550

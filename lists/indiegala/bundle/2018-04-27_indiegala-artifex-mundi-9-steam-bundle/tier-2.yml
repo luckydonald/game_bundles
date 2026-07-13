@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 9 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6087/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6087/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6087/source.json
+games:
+- name: 'Nightmares from the Deep 3: Davy Jones'
+  ids:
+  - unresolved:source:isthereanydeal:6087:nightmares-from-the-deep-3-davy-jones
+- name: 'Nightmares from the Deep 2: The Siren`s Call'
+  ids:
+  - unresolved:source:isthereanydeal:6087:nightmares-from-the-deep-2-the-sirens-call
+- name: 'Abyss: The Wraiths of Eden'
+  ids:
+  - steam:284710
+- name: 'Persian Nights: Sands of Wonders'
+  ids:
+  - steam:621080
+- name: 'The Secret Order 6: Bloodline'
+  ids:
+  - steam:662190
+- name: 'Agent Walker: Secret Journey'
+  ids:
+  - steam:497580
+- name: 'Eventide: Slavic Fable'
+  ids:
+  - steam:406870
+- name: 'Eventide 3: Legacy of Legends'
+  ids:
+  - steam:677020
+- name: 'The Secret Order 3: Ancient Times'
+  ids:
+  - steam:437420
+- name: 'Crime Secrets: Crimson Lily'
+  ids:
+  - steam:465170

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Handheld PC Power Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11487/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11487/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11487/source.json
+games:
+- name: Orcs Must Die! 2 - Family Ties Booster Pack
+  ids:
+  - steam:201805
+- name: Parkasaurus
+  ids:
+  - steam:591460
+- name: Orcs Must Die 2 - Are We There Yeti?
+  ids:
+  - steam:201802
+- name: Orcs Must Die! 2
+  ids:
+  - steam:201790
+- name: Orcs Must Die! 2 - Fire and Water Booster Pack
+  ids:
+  - steam:201804
+- name: Exanima
+  ids:
+  - steam:362490
+- name: Paint the Town Red
+  ids:
+  - steam:337320

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Horizon Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5837/source.json
+games:
+- name: Chimpology
+  ids:
+  - steam:604010
+- name: Harts
+  ids:
+  - steam:769360
+- name: Dragon Boar and Lady Rabbit
+  ids:
+  - steam:769370
+- name: Nemo_DO
+  ids:
+  - unresolved:source:isthereanydeal:5837:nemo_do
+- name: Avoid The Monsters
+  ids:
+  - steam:687560
+- name: Willful
+  ids:
+  - steam:664060
+- name: Blue Horizon
+  ids:
+  - unresolved:source:isthereanydeal:5837:blue-horizon
+- name: Free Yourself - A Gravity Puzzle Game Starring YOU!
+  ids:
+  - steam:768820
+- name: SEGFAULT
+  ids:
+  - steam:715290
+- name: 'Water Heroes: A Game for Change'
+  ids:
+  - steam:530010
+- name: Albert Mort - Desert Heat
+  ids:
+  - steam:670780

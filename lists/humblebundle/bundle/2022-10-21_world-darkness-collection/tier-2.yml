@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: World of Darkness Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12274/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12274/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12274/source.json
+games:
+- name: 'Vampire: The Masquerade - Coteries of New York'
+  ids:
+  - steam:1096410
+- name: 'Vampire: The Masquerade - Shadows of New York'
+  ids:
+  - steam:1279630
+- name: 'Vampire: The Masquerade — Night Road'
+  ids:
+  - steam:1290270
+- name: 'Werewolf: The Apocalypse - Heart of the Forest'
+  ids:
+  - steam:1342620

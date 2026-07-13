@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Tavern Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8365/source.json
+games:
+- name: Intake
+  ids:
+  - steam:237760
+- name: Chop is dish
+  ids:
+  - steam:974370
+- name: Lord of the click
+  ids:
+  - steam:1044170
+- name: 'TAVERN GUARDIANS: BANQUET'
+  ids:
+  - steam:878350
+- name: Dead Dust
+  ids:
+  - steam:816990
+- name: Domino Sky
+  ids:
+  - steam:457480
+- name: Ghost In The Barn House
+  ids:
+  - steam:1219220

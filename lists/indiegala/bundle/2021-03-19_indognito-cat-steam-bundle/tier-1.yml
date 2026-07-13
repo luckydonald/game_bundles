@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: InDognito Cat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9853/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9853/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9853/source.json
+games:
+- name: Blacksmith Run
+  ids:
+  - steam:1062670
+- name: The Guilt and the Shadow
+  ids:
+  - steam:332630
+- name: Beeftacular
+  ids:
+  - steam:491620
+- name: Just Get Through
+  ids:
+  - steam:338190
+- name: One Dog Story
+  ids:
+  - steam:588110
+- name: '6.0'
+  ids:
+  - steam:1165860
+- name: 'Quest: Escape Room 3'
+  ids:
+  - steam:1543210

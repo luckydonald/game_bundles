@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 93 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4849/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4849/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4849/source.json
+games:
+- name: Double Cubes
+  ids:
+  - unresolved:source:isthereanydeal:4849:double-cubes
+- name: STARUSHKO LUB
+  ids:
+  - unresolved:source:isthereanydeal:4849:starushko-lub
+- name: Leap Up no jutsu
+  ids:
+  - unresolved:source:isthereanydeal:4849:leap-up-no-jutsu
+- name: Elems
+  ids:
+  - steam:528670
+- name: Moon Colonization Project
+  ids:
+  - unresolved:source:isthereanydeal:4849:moon-colonization-project
+- name: The Return Home Remastered
+  ids:
+  - steam:502910

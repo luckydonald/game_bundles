@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 873: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11658/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11658/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11658/source.json
+games:
+- name: Challenging Dogfights
+  ids:
+  - unresolved:source:isthereanydeal:11658:challenging-dogfights
+- name: Color Guardian
+  ids:
+  - steam:937130
+- name: 'Achievement Collector: Dog'
+  ids:
+  - steam:1008370
+- name: The Occluder
+  ids:
+  - steam:897880
+- name: Blocky McBlockFace
+  ids:
+  - steam:974970
+- name: Jumperbird
+  ids:
+  - steam:1310480
+- name: Cute animal jigsaw puzzle
+  ids:
+  - steam:1499660
+- name: Athena Trivia
+  ids:
+  - steam:1225660
+- name: Athena Trivia - All Answers
+  ids:
+  - steam:1650940

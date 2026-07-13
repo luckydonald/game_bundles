@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tactical Combat Bundle — entire-20-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11951/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11951/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11951/source.json
+games:
+- name: Verdun
+  ids:
+  - steam:242860
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+- name: Call to Arms - Basic Edition
+  ids:
+  - unresolved:source:isthereanydeal:11951:call-to-arms-basic-edition
+- name: 'Brigador: Up-Armored Deluxe'
+  ids:
+  - unresolved:source:isthereanydeal:11951:brigador-up-armored-deluxe
+- name: The Intruder
+  ids:
+  - steam:2556740
+- name: Perfect Heist 2
+  ids:
+  - steam:1521580
+- name: Sniper Elite 4 - Target Führer
+  ids:
+  - steam:474763
+- name: Sniper Elite 4
+  ids:
+  - steam:312660
+- name: 'Sniper Elite 4 - Deathstorm Part 1: Inception'
+  ids:
+  - steam:474764
+- name: Sniper Elite 4 - Silent Warfare Weapons Pack
+  ids:
+  - steam:474761
+- name: Sniper Elite 4 - Cold Warfare Winter Expansion Pack
+  ids:
+  - steam:513033
+- name: Sniper Elite 4 - Lock and Load Weapons Pack
+  ids:
+  - steam:513030
+- name: Sniper Elite 4 - Allied Forces Rifle Pack
+  ids:
+  - steam:513034
+- name: Sniper Elite 4 - Covert Heroes Character Pack
+  ids:
+  - steam:474762
+- name: 'Sniper Elite 4 - Deathstorm Part 3: Obliteration'
+  ids:
+  - steam:474766
+- name: Sniper Elite 4 - Camouflage Rifles Skin Pack
+  ids:
+  - steam:474760
+- name: 'Sniper Elite 4 - Deathstorm Part 2: Infiltration'
+  ids:
+  - steam:474765
+- name: Sniper Elite 4 - Night Fighter Expansion Pack
+  ids:
+  - steam:513032
+- name: Sniper Elite 4 - Urban Assault Expansion Pack
+  ids:
+  - steam:513031
+- name: 'Call to Arms - Gates of Hell: Ostfront'
+  ids:
+  - steam:400750

@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Gems Bundle — Select 1 Title for $1.00, 5 Titles for $2.99, 10
+  Titles for $4.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10420/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10420/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10420/source.json
+games:
+- name: Spartan Fist
+  ids:
+  - steam:632170
+- name: Deadly Days
+  ids:
+  - steam:740080
+- name: Pizza Connection 1 & 2
+  ids:
+  - unresolved:source:isthereanydeal:10420:pizza-connection-1-and-2
+- name: Achtung! Cthulhu Tactics
+  ids:
+  - steam:874460
+- name: MindSeize
+  ids:
+  - steam:851280
+- name: Path to Mnemosyne
+  ids:
+  - steam:770410
+- name: Marooners
+  ids:
+  - steam:423810
+- name: 'Glass Masquerade 2: Illusions'
+  ids:
+  - steam:935880
+- name: Glass Masquerade
+  ids:
+  - steam:511470
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: 'Hot Tin Roof: The Cat That Wore A Fedora'
+  ids:
+  - steam:253390
+- name: Lovecraft's Untold Stories
+  ids:
+  - steam:871420
+- name: Crash Drive 2 + FREE Gift Copy
+  ids:
+  - steam:343440
+- name: Eidolon
+  ids:
+  - steam:286140
+- name: Dungeons 2
+  ids:
+  - steam:262280
+- name: Creepy Tale
+  ids:
+  - steam:1224020
+- name: Last Room
+  ids:
+  - steam:1334010
+- name: Wordle Franchise Bundle
+  ids:
+  - unresolved:source:isthereanydeal:10420:wordle-franchise-bundle
+- name: Pizza Connection 1 and 2 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:10420:pizza-connection-1-and-2-double-pack

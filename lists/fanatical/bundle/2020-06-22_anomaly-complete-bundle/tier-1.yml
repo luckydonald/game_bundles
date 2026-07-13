@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anomaly Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8923/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8923/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8923/source.json
+games:
+- name: Anomaly 2
+  ids:
+  - steam:236730
+- name: Anomaly Warzone Earth Mobile Campaign
+  ids:
+  - steam:252170
+- name: Anomaly Defenders
+  ids:
+  - steam:294750
+- name: Anomaly Warzone Earth
+  ids:
+  - steam:91200
+- name: Anomaly Korea
+  ids:
+  - steam:251530

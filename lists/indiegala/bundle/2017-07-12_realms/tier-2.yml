@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Realms Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5317/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5317/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5317/source.json
+games:
+- name: Adventure Rage
+  ids:
+  - unresolved:source:isthereanydeal:5317:adventure-rage
+- name: Castle Defender
+  ids:
+  - steam:651520
+- name: Desert Ashes
+  ids:
+  - steam:324420
+- name: Oddplanet
+  ids:
+  - steam:465930
+- name: Siege Saga + Optika
+  ids:
+  - unresolved:source:isthereanydeal:5317:siege-saga-and-optika
+- name: The Tale of Doris and the Dragon - Episode 1
+  ids:
+  - steam:516840
+- name: Mushroom Wars
+  ids:
+  - steam:431250
+- name: Plague Road
+  ids:
+  - steam:622080
+- name: Awakened
+  ids:
+  - unresolved:source:isthereanydeal:5317:awakened
+- name: Twisty's Asylum Escapades
+  ids:
+  - steam:506760
+- name: My Super Tower 2
+  ids:
+  - unresolved:source:isthereanydeal:5317:my-super-tower-2

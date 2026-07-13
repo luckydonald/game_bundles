@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Depths of Fear Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1311/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1311/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1311/source.json
+games:
+- name: 'Haegemonia: Legions of Iron'
+  ids:
+  - steam:294770
+- name: Streets of Chaos
+  ids:
+  - unresolved:source:isthereanydeal:1311:streets-of-chaos
+- name: Bermuda
+  ids:
+  - steam:337630
+- name: Haegemonia - The Solon Heritage
+  ids:
+  - steam:294790

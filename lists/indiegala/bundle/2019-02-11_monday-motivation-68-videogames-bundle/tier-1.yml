@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #68 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7010/source.json
+games:
+- name: Sudoku Zenkai
+  ids:
+  - steam:809850
+- name: '03.04'
+  ids:
+  - steam:952950

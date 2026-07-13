@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Vortex Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1764/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1764/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1764/source.json
+games:
+- name: 'ThreadSpace: Hyperbol'
+  ids:
+  - steam:2720
+- name: Dodge!
+  ids:
+  - steam:350630
+- name: 'Elements: Soul of Fire'
+  ids:
+  - unresolved:source:isthereanydeal:1764:elements-soul-of-fire
+- name: StuntMANIA Reloaded
+  ids:
+  - steam:324750
+- name: Foresight
+  ids:
+  - steam:315080
+- name: Incognito
+  ids:
+  - unresolved:source:isthereanydeal:1764:incognito
+- name: Alien Breed™ Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:1764:alien-breed-trilogy
+- name: Starlaxis Supernova Edition
+  ids:
+  - steam:336200
+- name: Cooking Academy Fire and Knives
+  ids:
+  - unresolved:source:isthereanydeal:1764:cooking-academy-fire-and-knives
+- name: Qora
+  ids:
+  - steam:304460

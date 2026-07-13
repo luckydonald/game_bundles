@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pure VR Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5123/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5123/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5123/source.json
+games:
+- name: Just VR Slingshot Target Practice
+  ids:
+  - steam:586990
+- name: Duckpocalypse
+  ids:
+  - steam:512240
+- name: VRog
+  ids:
+  - steam:589380
+- name: Doritos VR Battle
+  ids:
+  - steam:523180
+- name: Henry The Hamster Handler
+  ids:
+  - steam:566880
+- name: SaberSaw VR
+  ids:
+  - steam:504610
+- name: Quizality
+  ids:
+  - steam:566350
+- name: Light and Dance VR - Music, Action, Relaxation
+  ids:
+  - steam:576720
+- name: Spacecats with Lasers VR
+  ids:
+  - steam:565190
+- name: Wacky Wings VR
+  ids:
+  - steam:566900

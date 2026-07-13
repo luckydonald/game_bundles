@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 636 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10628/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10628/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10628/source.json
+games:
+- name: Akihabara - Feel the Rhythm Remixed
+  ids:
+  - steam:636740
+- name: Lumen
+  ids:
+  - steam:520040
+- name: Bite the Bullet
+  ids:
+  - steam:1075550
+- name: AMazing TD
+  ids:
+  - steam:1140030
+- name: Cyber Hook
+  ids:
+  - steam:1130410
+- name: 'HellScape: Two Brothers'
+  ids:
+  - steam:1218090
+- name: SSTR
+  ids:
+  - unresolved:source:isthereanydeal:10628:sstr
+- name: Super Arcade Soccer 2021
+  ids:
+  - steam:1256710
+- name: Death Realm
+  ids:
+  - steam:1671240

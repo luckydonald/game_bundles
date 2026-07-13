@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5838/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5838/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5838/source.json
+games:
+- name: Galak-Z
+  ids:
+  - steam:300580
+- name: 'Infectonator : Survivors'
+  ids:
+  - steam:269310
+- name: Still Not Dead
+  ids:
+  - steam:337290
+- name: Holy Potatoes! A Weapon Shop?!
+  ids:
+  - steam:363600

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: NukGames Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7837/source.json
+games:
+- name: Hyper Simon X
+  ids:
+  - steam:878180
+- name: Planes, Bullets and Vodka
+  ids:
+  - steam:562360
+- name: 'Road Scars: Origins'
+  ids:
+  - steam:346500
+- name: Bighead Runner
+  ids:
+  - steam:863490
+- name: Razortron 2000
+  ids:
+  - steam:539720
+- name: Cyberhunt
+  ids:
+  - steam:636150
+- name: Rock'n Roll Defense
+  ids:
+  - steam:438480
+- name: Polygoneer
+  ids:
+  - steam:684680
+- name: 'Blackout Z: Slaughterhouse Edition'
+  ids:
+  - steam:729660

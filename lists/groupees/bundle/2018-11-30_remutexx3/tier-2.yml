@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Pixeljam — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6722/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6722/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6722/source.json
+games:
+- name: Dino Run DX
+  ids:
+  - steam:248330
+- name: Dino Run DX OST
+  ids:
+  - steam:510800
+- name: Potatoman Seeks The Troof OST
+  ids:
+  - steam:335170
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500
+- name: Snowball
+  ids:
+  - steam:546550
+- name: Glorkian Warrior OST
+  ids:
+  - unresolved:source:isthereanydeal:6722:glorkian-warrior-ost
+- name: Last Horizon
+  ids:
+  - steam:394220
+- name: Last Horizon OST
+  ids:
+  - unresolved:source:isthereanydeal:6722:last-horizon-ost
+- name: 'Rex: Another Island OST'
+  ids:
+  - steam:788400
+- name: 'Rex: Another Island'
+  ids:
+  - steam:699150
+- name: 'Glorkian Warrior: The Trials Of Glork'
+  ids:
+  - steam:341120
+- name: Bonbon
+  ids:
+  - steam:734120

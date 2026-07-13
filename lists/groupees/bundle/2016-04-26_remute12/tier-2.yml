@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute's Cyberpunk Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3341/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3341/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3341/source.json
+games:
+- name: Caravanserail
+  ids:
+  - steam:448480
+- name: Box Life
+  ids:
+  - steam:314370
+- name: Potato Thriller Steamed Potato Edition
+  ids:
+  - steam:486650
+- name: NO THING
+  ids:
+  - steam:444800
+- name: AdvertCity
+  ids:
+  - steam:365800
+- name: Julai
+  ids:
+  - unresolved:source:isthereanydeal:3341:julai
+- name: Hotel Blind
+  ids:
+  - steam:457690
+- name: Rising Runner
+  ids:
+  - unresolved:source:isthereanydeal:3341:rising-runner

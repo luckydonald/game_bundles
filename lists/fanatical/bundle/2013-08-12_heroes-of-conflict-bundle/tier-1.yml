@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Heroes of Conflict Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/19/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/19/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/19/source.json
+games:
+- name: Genesis Rising
+  ids:
+  - steam:3230
+- name: Tower Wars
+  ids:
+  - steam:214360
+- name: Chaser
+  ids:
+  - steam:39670
+- name: Really Big Sky
+  ids:
+  - steam:201570
+- name: 'Numen: Contest of Heroes'
+  ids:
+  - steam:60800
+- name: Pid
+  ids:
+  - steam:218740
+- name: Men of War Condemned Heroes
+  ids:
+  - steam:204860
+- name: Dogfight 1942
+  ids:
+  - steam:217790
+- name: Sniper Ghost Warrior
+  ids:
+  - steam:34830
+- name: AirBuccaneers
+  ids:
+  - steam:223630

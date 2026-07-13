@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Battle Stations Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3103/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3103/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3103/source.json
+games:
+- name: Space Hack
+  ids:
+  - steam:315260
+- name: 'Space Trader: Merchant Marine'
+  ids:
+  - steam:11240
+- name: Tank Universal
+  ids:
+  - steam:19200
+- name: Crash Time 2
+  ids:
+  - steam:11390
+- name: Dark Matter
+  ids:
+  - steam:251410
+- name: Chains
+  ids:
+  - unresolved:source:isthereanydeal:3103:chains
+- name: 'Nikopol : Secrets of the Immortals'
+  ids:
+  - steam:11370
+- name: RIP Trilogy
+  ids:
+  - steam:2540
+- name: 'Avencast: Rise of the Mage'
+  ids:
+  - steam:46410
+- name: "Rhiannon \x96 The Curse of the Four Branches"
+  ids:
+  - unresolved:source:isthereanydeal:3103:rhiannon-the-curse-of-the-four-branches
+- name: Biology Battle
+  ids:
+  - unresolved:source:isthereanydeal:3103:biology-battle
+- name: Gunnheim
+  ids:
+  - steam:371510
+- name: Hektor
+  ids:
+  - steam:334070
+- name: Schein
+  ids:
+  - steam:321920

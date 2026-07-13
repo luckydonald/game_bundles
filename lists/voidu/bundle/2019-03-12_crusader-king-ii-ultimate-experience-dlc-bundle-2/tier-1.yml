@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Crusaders Kings II - Ultimate Experience DLC Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7157/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7157/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7157/source.json
+games:
+- name: 'Crusader Kings II: Holy Fury'
+  ids:
+  - steam:756660
+- name: 'Crusader Kings II: Jade Dragon'
+  ids:
+  - steam:640140
+- name: Crusader Kings The Reaper Due
+  ids:
+  - unresolved:source:isthereanydeal:7157:crusader-kings-the-reaper-due
+- name: 'Crusader Kings II: Sword of Islam'
+  ids:
+  - steam:203778

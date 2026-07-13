@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Strategy Bundle (Jan 2023) — Select 3 Titles for $4.99, 5 Titles
+  for $7.99, 7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12925/source.json
+games:
+- name: 'Wargame: European Escalation'
+  ids:
+  - steam:58610
+- name: 'Tropico 4: Propaganda'
+  ids:
+  - steam:205637
+- name: 'Tropico 4: Voodoo'
+  ids:
+  - steam:205638
+- name: 'Tropico 4: Megalopolis'
+  ids:
+  - steam:205633
+- name: Blood Bowl 2 - Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:12925:blood-bowl-2-legendary-edition
+- name: 'Tropico 4: Quick-Dry-Cement'
+  ids:
+  - steam:57697
+- name: 'Tropico 4: Vigilante'
+  ids:
+  - steam:205634
+- name: Townsmen - A Kingdom Rebuilt
+  ids:
+  - steam:938380
+- name: 'Tropico 4: Plantador'
+  ids:
+  - steam:57695
+- name: 'Wargame: AirLand Battle'
+  ids:
+  - steam:222750
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020
+- name: Tropico 4 - Pirate Heaven
+  ids:
+  - steam:205632
+- name: Tropico 4 - Modern Times
+  ids:
+  - steam:205630
+- name: 'Grand Ages: Rome Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12925:grand-ages-rome-gold-edition
+- name: Train Valley 2
+  ids:
+  - steam:602320
+- name: Tropico 4 Junta Military
+  ids:
+  - steam:57696
+- name: Secret Government
+  ids:
+  - steam:946990
+- name: 'Interstellar Space: Genesis'
+  ids:
+  - steam:984680
+- name: 'Tropico 4: Steam Special Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12925:tropico-4-steam-special-edition
+- name: 'Tropico 4: The Academy'
+  ids:
+  - steam:205635
+- name: The Shrouded Isle
+  ids:
+  - steam:501320
+- name: Tropico 4 Apocalypse
+  ids:
+  - steam:205636
+- name: Crookz - The Big Heist
+  ids:
+  - steam:310490
+- name: Deep Sky Derelicts
+  ids:
+  - steam:698640
+- name: Company of Crime
+  ids:
+  - steam:1229420
+- name: War Mongrels
+  ids:
+  - steam:1101790
+- name: Beholder 3
+  ids:
+  - steam:1570070

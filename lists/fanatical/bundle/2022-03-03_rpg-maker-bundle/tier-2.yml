@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Maker Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11123/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11123/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11123/source.json
+games:
+- name: RPG Maker XP
+  ids:
+  - steam:235900
+- name: The Last Word
+  ids:
+  - unresolved:source:isthereanydeal:11123:the-last-word
+- name: Edolie
+  ids:
+  - steam:349240
+- name: RPG Maker VX Ace
+  ids:
+  - steam:220700
+- name: RPG Maker VX Ace - Modern Day Tiles Resource Pack
+  ids:
+  - steam:229752
+- name: RPG Maker VX Ace - Old School Modern 2 Resource Pack
+  ids:
+  - unresolved:source:isthereanydeal:11123:rpg-maker-vx-ace-old-school-modern-2-resource-pack
+- name: 'RPG Maker: Zombie Survival Graphic Pack'
+  ids:
+  - unresolved:source:isthereanydeal:11123:rpg-maker-zombie-survival-graphic-pack
+- name: Game Character Hub
+  ids:
+  - steam:292230
+- name: RPG Maker VX Ace - DS+ Resource Pack
+  ids:
+  - steam:258743
+- name: 'RPG Maker VX Ace - POP!: Horror City'
+  ids:
+  - steam:297644
+- name: RPG Maker VX Ace - Always Sometimes Monsters Asset Pack
+  ids:
+  - steam:321100

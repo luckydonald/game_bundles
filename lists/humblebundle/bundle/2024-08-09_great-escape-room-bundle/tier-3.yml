@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Great Escape Room Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14317/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14317/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14317/source.json
+games:
+- name: 'We Were Here Expeditions: The FriendShip'
+  ids:
+  - steam:2296990
+- name: Escape First Alchemist
+  ids:
+  - steam:2094320
+- name: Escape Simulator
+  ids:
+  - steam:1435790
+- name: We Were Here Forever
+  ids:
+  - steam:1341290
+- name: 'Doors: Paradox'
+  ids:
+  - steam:1622770
+- name: Escape Academy
+  ids:
+  - steam:1812090
+- name: Escape From Mystwood Mansion
+  ids:
+  - steam:2292650

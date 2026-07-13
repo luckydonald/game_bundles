@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Games Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6603/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6603/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6603/source.json
+games:
+- name: Dead Age
+  ids:
+  - steam:363930
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: Manual Samuel
+  ids:
+  - steam:504130

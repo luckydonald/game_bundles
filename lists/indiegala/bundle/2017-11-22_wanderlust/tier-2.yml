@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Wanderlust Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5646/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5646/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5646/source.json
+games:
+- name: Lost in the Forest
+  ids:
+  - steam:715060
+- name: Tower of Lust
+  ids:
+  - unresolved:source:isthereanydeal:5646:tower-of-lust
+- name: meleng
+  ids:
+  - steam:735260
+- name: Kolbeinn
+  ids:
+  - unresolved:source:isthereanydeal:5646:kolbeinn
+- name: Math Combat Challenge
+  ids:
+  - unresolved:source:isthereanydeal:5646:math-combat-challenge
+- name: Crimson Earth 2
+  ids:
+  - unresolved:source:isthereanydeal:5646:crimson-earth-2
+- name: The last strategist
+  ids:
+  - unresolved:source:isthereanydeal:5646:the-last-strategist
+- name: Blue Rider
+  ids:
+  - steam:402340
+- name: 'BLEAK: Welcome to Glimmer'
+  ids:
+  - steam:364830
+- name: Wanderlust
+  ids:
+  - steam:729670
+- name: Totally Mayhem
+  ids:
+  - steam:679740

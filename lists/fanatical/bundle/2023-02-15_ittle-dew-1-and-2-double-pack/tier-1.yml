@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ittle Dew 1 & 2 Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12982/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12982/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12982/source.json
+games:
+- name: Ittle Dew
+  ids:
+  - steam:241320
+- name: Ittle Dew 2+
+  ids:
+  - steam:395620

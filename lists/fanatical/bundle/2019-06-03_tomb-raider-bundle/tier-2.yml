@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tomb Raider Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7457/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7457/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7457/source.json
+games:
+- name: Tomb Raider I (1996)
+  ids:
+  - steam:224960
+- name: Tomb Raider II (1997)
+  ids:
+  - steam:225300
+- name: Tomb Raider III (1998)
+  ids:
+  - steam:225320
+- name: 'Tomb Raider: Underworld'
+  ids:
+  - steam:8140
+- name: 'Tomb Raider: Anniversary'
+  ids:
+  - steam:8000
+- name: 'Tomb Raider: Legend'
+  ids:
+  - steam:7000

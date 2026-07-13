@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 628 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10608/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10608/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10608/source.json
+games:
+- name: Extreme Racing on Highway
+  ids:
+  - steam:1034160
+- name: Miracle field
+  ids:
+  - unresolved:source:isthereanydeal:10608:miracle-field
+- name: Toroom
+  ids:
+  - steam:1684080
+- name: velvet clouds
+  ids:
+  - steam:1738500
+- name: 'LineVox 2: Forward to the Past'
+  ids:
+  - unresolved:source:isthereanydeal:10608:linevox-2-forward-to-the-past
+- name: Devil Tears
+  ids:
+  - steam:1758030
+- name: Dungeon Color
+  ids:
+  - steam:1772490
+- name: Rain Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10608:rain-puzzle
+- name: Halloween Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10608:halloween-puzzle

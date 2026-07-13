@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Oct 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3995/source.json
+games:
+- name: Fidel - Dungeon Rescue
+  ids:
+  - steam:573170
+- name: 'Hotline Miami 2: Wrong Number'
+  ids:
+  - steam:274170
+- name: Train Valley
+  ids:
+  - steam:353640
+- name: Grim Dawn
+  ids:
+  - steam:219990
+- name: Deponia Doomsday
+  ids:
+  - steam:421050
+- name: THOTH
+  ids:
+  - steam:510620
+- name: Action Henk
+  ids:
+  - steam:285820
+- name: Slime Rancher
+  ids:
+  - steam:433340

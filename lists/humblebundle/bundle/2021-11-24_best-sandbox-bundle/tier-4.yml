@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Best of Sandbox Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10739/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10739/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10739/source.json
+games:
+- name: People Playground
+  ids:
+  - steam:1118200
+- name: Kerbal Space Program
+  ids:
+  - steam:220200
+- name: Totally Accurate Battle Simulator
+  ids:
+  - steam:508440
+- name: Main Assembly
+  ids:
+  - steam:1078920
+- name: Besiege
+  ids:
+  - steam:346010
+- name: Space Haven
+  ids:
+  - steam:979110
+- name: Universe Sandbox
+  ids:
+  - steam:230290

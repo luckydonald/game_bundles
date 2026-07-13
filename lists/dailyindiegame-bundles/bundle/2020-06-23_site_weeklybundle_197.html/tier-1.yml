@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8928/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8928/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8928/source.json
+games:
+- name: Master of Mutations
+  ids:
+  - unresolved:source:isthereanydeal:8928:master-of-mutations
+- name: 'Climatic Survival: Northern Storm'
+  ids:
+  - steam:1131640
+- name: Voltage
+  ids:
+  - steam:798710
+- name: Kontrakt
+  ids:
+  - steam:924370
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+- name: Grunt1914
+  ids:
+  - steam:1059040
+- name: Shuyan Saga
+  ids:
+  - steam:594680
+- name: After The Suns
+  ids:
+  - steam:1101200
+- name: 'War Robots: Planet Defender'
+  ids:
+  - unresolved:source:isthereanydeal:8928:war-robots-planet-defender

@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: For Kids Steam Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6300/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6300/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6300/source.json
+games:
+- name: 'Pixel Traffic: Highway Racing'
+  ids:
+  - unresolved:source:isthereanydeal:6300:pixel-traffic-highway-racing
+- name: Beyond the Wall
+  ids:
+  - steam:684560
+- name: Vampires! - Wallpapers & OST
+  ids:
+  - unresolved:source:isthereanydeal:6300:vampires-wallpapers-and-ost
+- name: 'Pixel Traffic: Risky Bridge'
+  ids:
+  - unresolved:source:isthereanydeal:6300:pixel-traffic-risky-bridge
+- name: Deconstructor
+  ids:
+  - unresolved:source:isthereanydeal:6300:deconstructor
+- name: Fluffy Friends
+  ids:
+  - unresolved:source:isthereanydeal:6300:fluffy-friends
+- name: Vampires!
+  ids:
+  - unresolved:source:isthereanydeal:6300:vampires
+- name: Fluffy Friends 2 - Wallpapers & OST
+  ids:
+  - unresolved:source:isthereanydeal:6300:fluffy-friends-2-wallpapers-and-ost
+- name: 'Pixel Traffic: Circle Rush'
+  ids:
+  - unresolved:source:isthereanydeal:6300:pixel-traffic-circle-rush
+- name: Fluffy Friends 2
+  ids:
+  - unresolved:source:isthereanydeal:6300:fluffy-friends-2
+- name: 'Viki Spotter: The Farm'
+  ids:
+  - unresolved:source:isthereanydeal:6300:viki-spotter-the-farm
+- name: 'My Coloring Book: Food and Beverage'
+  ids:
+  - unresolved:source:isthereanydeal:6300:my-coloring-book-food-and-beverage
+- name: Dragon Hunter
+  ids:
+  - unresolved:source:isthereanydeal:6300:dragon-hunter
+- name: Fairy Escape
+  ids:
+  - unresolved:source:isthereanydeal:6300:fairy-escape

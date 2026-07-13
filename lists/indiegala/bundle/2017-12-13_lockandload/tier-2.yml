@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Lock & Load Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5726/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5726/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5726/source.json
+games:
+- name: FMatheg
+  ids:
+  - unresolved:source:isthereanydeal:5726:fmatheg
+- name: Pozzo Jello Crusade
+  ids:
+  - steam:511380
+- name: Interloper
+  ids:
+  - steam:356420
+- name: Violent Vectors
+  ids:
+  - unresolved:source:isthereanydeal:5726:violent-vectors
+- name: Sector 177
+  ids:
+  - unresolved:source:isthereanydeal:5726:sector-177
+- name: I'm Awesome
+  ids:
+  - steam:615490
+- name: Neighborhorde
+  ids:
+  - steam:446760
+- name: Nightingale Downs
+  ids:
+  - steam:727220
+- name: 'Putrefaction 2: Rumble in the hometown'
+  ids:
+  - steam:715690
+- name: Cannon Fodder 3
+  ids:
+  - steam:209750
+- name: The Barbarian and the Subterranean Caves
+  ids:
+  - steam:490690
+- name: Clutch
+  ids:
+  - steam:35310

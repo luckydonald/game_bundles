@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Indie Bundle #19 — Pay What You Want'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6010/source.json
+games:
+- name: Mini Metro
+  ids:
+  - steam:287980
+- name: 'Halcyon 6: Lightspeed Edition'
+  ids:
+  - steam:651660
+- name: Rakuen
+  ids:
+  - steam:559210

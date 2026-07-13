@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8925/source.json
+games:
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:8925:airplane-sky-voyage
+- name: VaporFly
+  ids:
+  - steam:1119770
+- name: Seasonal Soccer
+  ids:
+  - steam:818380
+- name: The Risers
+  ids:
+  - steam:857770
+- name: Desktop Girls
+  ids:
+  - steam:1044500
+- name: Operation Lone Wolf
+  ids:
+  - steam:926010
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:8925:orbs
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:8925:the-visitors
+- name: Die In The Dark
+  ids:
+  - steam:847860

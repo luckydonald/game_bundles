@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 32 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5820/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5820/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5820/source.json
+games:
+- name: Riskers
+  ids:
+  - steam:581310
+- name: Riskers Soundtrack
+  ids:
+  - steam:732120
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:5820:system-shock-2-1999
+- name: 'SCALPERS: Turtle & the moonshine gang'
+  ids:
+  - steam:577280
+- name: Aeternum
+  ids:
+  - steam:454750
+- name: Toonstruck
+  ids:
+  - steam:369830
+- name: Stereo Aereo
+  ids:
+  - steam:535890
+- name: Starship Titanic
+  ids:
+  - steam:467290

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Survival Instinct Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12933/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12933/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12933/source.json
+games:
+- name: Volcanoids
+  ids:
+  - steam:951440
+- name: SCUM
+  ids:
+  - steam:513710
+- name: 'State of Decay 2: Juggernaut Edition'
+  ids:
+  - steam:495420
+- name: Starsand
+  ids:
+  - steam:1380220
+- name: SurrounDead
+  ids:
+  - steam:1645820
+- name: 'The Long Dark: Survival Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12933:the-long-dark-survival-edition
+- name: Chernobylite Enhanced Edition
+  ids:
+  - unresolved:source:isthereanydeal:12933:chernobylite-enhanced-edition

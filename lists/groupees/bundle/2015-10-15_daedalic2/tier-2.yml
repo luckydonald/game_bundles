@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Daedalic Entertainment Limited Bundle #2 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2609/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2609/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2609/source.json
+games:
+- name: Decay - The Mare
+  ids:
+  - steam:323720
+- name: 'The Dark Eye: Chains of Satinav'
+  ids:
+  - steam:203830
+- name: Goodbye Deponia - Premium Edition
+  ids:
+  - unresolved:source:isthereanydeal:2609:goodbye-deponia-premium-edition
+- name: 'The Last Tinker™: City of Colors'
+  ids:
+  - steam:260160
+- name: 'The Dark Eye: Memoria'
+  ids:
+  - steam:243200

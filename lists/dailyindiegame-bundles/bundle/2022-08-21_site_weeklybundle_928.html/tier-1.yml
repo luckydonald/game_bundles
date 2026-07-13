@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 928 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11993/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11993/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11993/source.json
+games:
+- name: IN
+  ids:
+  - steam:1420980
+- name: 'Lemuria: Lost in Space'
+  ids:
+  - steam:563250
+- name: The Botanist
+  ids:
+  - unresolved:source:isthereanydeal:11993:the-botanist
+- name: Leap of Champions
+  ids:
+  - steam:650740
+- name: Super Toy Cars 2
+  ids:
+  - steam:1028840
+- name: Mystic Escape - Diary of a Prisoner
+  ids:
+  - steam:1251520
+- name: Naturalist Stories
+  ids:
+  - steam:1260340
+- name: SIK Space Invader Kreature
+  ids:
+  - steam:1485970
+- name: The Legend of the War Axe
+  ids:
+  - steam:1844110

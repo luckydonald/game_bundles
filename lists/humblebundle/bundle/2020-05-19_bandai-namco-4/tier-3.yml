@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bandai Namco Bundle 4 — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8807/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8807/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8807/source.json
+games:
+- name: 'Enslaved: Odyssey to the West Premium Edition'
+  ids:
+  - steam:245280
+- name: Get Even
+  ids:
+  - steam:299950
+- name: PAC-MAN 256
+  ids:
+  - steam:455400
+- name: Katamari Damacy REROLL
+  ids:
+  - steam:848350
+- name: RAD
+  ids:
+  - steam:722560
+- name: .hack//G.U. Last Recode
+  ids:
+  - steam:525480
+- name: Tales of Berseria
+  ids:
+  - steam:429660
+- name: TEKKEN 7
+  ids:
+  - steam:389730

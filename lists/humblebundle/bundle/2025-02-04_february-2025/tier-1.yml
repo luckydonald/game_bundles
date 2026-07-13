@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Feb 2025) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14881/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14881/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14881/source.json
+games:
+- name: Griftlands
+  ids:
+  - steam:601840
+- name: Trepang2
+  ids:
+  - steam:1164940
+- name: Fabledom
+  ids:
+  - steam:1651560
+- name: Immortals of Aveum™
+  ids:
+  - steam:2009100
+- name: Tales & Tactics
+  ids:
+  - steam:1652250
+- name: My Little Universe
+  ids:
+  - steam:2328750
+- name: Naheulbeuk's Dungeon Master
+  ids:
+  - steam:2005160
+- name: Nested Lands
+  ids:
+  - steam:2553040
+- name: 'Total War: PHARAOH DYNASTIES'
+  ids:
+  - steam:2951630

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Action League Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7372/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7372/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7372/source.json
+games:
+- name: The Initiate
+  ids:
+  - steam:659480
+- name: Tallowmere
+  ids:
+  - steam:340520
+- name: Balthazar's Dream
+  ids:
+  - steam:583890
+- name: UNLOVED
+  ids:
+  - steam:321270
+- name: Shadwen
+  ids:
+  - steam:425210
+- name: Verlet Swing
+  ids:
+  - steam:811870
+- name: 'Hot Tin Roof: The Cat That Wore A Fedora'
+  ids:
+  - steam:253390
+- name: Super Panda Adventures
+  ids:
+  - steam:311190

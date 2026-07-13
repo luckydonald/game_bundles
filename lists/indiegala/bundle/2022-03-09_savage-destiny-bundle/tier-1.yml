@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Savage Destiny Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11141/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11141/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11141/source.json
+games:
+- name: The GoD Unit
+  ids:
+  - steam:1204440
+- name: Do Animals Dream?
+  ids:
+  - steam:1338320
+- name: Arcana Sands of Destiny
+  ids:
+  - steam:1431270
+- name: Through The Fragmentation
+  ids:
+  - steam:1572040
+- name: 'ppL: The Animated Adventures'
+  ids:
+  - steam:1586840
+- name: Sweet Collector
+  ids:
+  - steam:1860500

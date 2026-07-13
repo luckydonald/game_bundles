@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 25 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3424/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3424/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3424/source.json
+games:
+- name: Stowaway
+  ids:
+  - steam:1428470
+- name: Link
+  ids:
+  - steam:454030
+- name: Fire!
+  ids:
+  - unresolved:source:isthereanydeal:3424:fire
+- name: 'Gemini: Heroes Reborn'
+  ids:
+  - steam:324650
+- name: Super Mega Neo Pug
+  ids:
+  - steam:469730
+- name: A-Gents
+  ids:
+  - steam:460910
+- name: The Masterplan
+  ids:
+  - steam:313080

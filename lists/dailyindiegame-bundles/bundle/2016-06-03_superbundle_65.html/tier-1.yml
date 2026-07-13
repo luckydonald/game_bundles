@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 65 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3529/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3529/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3529/source.json
+games:
+- name: Of Carrots And Blood
+  ids:
+  - steam:439440
+- name: Rise of the Ancients
+  ids:
+  - steam:485950
+- name: Collider
+  ids:
+  - steam:371880
+- name: Tales from the Void
+  ids:
+  - unresolved:source:isthereanydeal:3529:tales-from-the-void
+- name: ASMR Universe
+  ids:
+  - steam:448830
+- name: The Strayed
+  ids:
+  - steam:567620

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of the Damned 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5545/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5545/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5545/source.json
+games:
+- name: In Fear I Trust
+  ids:
+  - steam:522690
+- name: In Fear I Trust - Episode 4
+  ids:
+  - steam:523852
+- name: Octave
+  ids:
+  - steam:537700
+- name: In Fear I Trust - Episode 2
+  ids:
+  - steam:523850
+- name: Rage Against The Zombies
+  ids:
+  - steam:556990
+- name: Graveyard Shift
+  ids:
+  - steam:511190
+- name: In Fear I Trust - Episode 3
+  ids:
+  - steam:523851
+- name: Zombies on a Plane Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:5545:zombies-on-a-plane-deluxe
+- name: 'Zombies on a Plane: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5545:zombies-on-a-plane-deluxe-edition

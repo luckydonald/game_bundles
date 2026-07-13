@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: MidWeek Attack Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2572/source.json
+games:
+- name: Metrocide
+  ids:
+  - steam:313130
+- name: 'Postmortem: One Must Die (Extended Cut)'
+  ids:
+  - steam:263140
+- name: 'Mind: Path to Thalamus Enhanced Edition'
+  ids:
+  - steam:296070
+- name: Party of Sin
+  ids:
+  - steam:212700

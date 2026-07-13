@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Xplorer Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3889/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3889/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3889/source.json
+games:
+- name: Heavenly Battle
+  ids:
+  - unresolved:source:isthereanydeal:3889:heavenly-battle
+- name: Sixtieth Kilometer
+  ids:
+  - steam:448780
+- name: Cavernus
+  ids:
+  - steam:475080
+- name: Conan the mighty pig
+  ids:
+  - steam:487700
+- name: Moon Colonization Project
+  ids:
+  - unresolved:source:isthereanydeal:3889:moon-colonization-project
+- name: Survivalist
+  ids:
+  - steam:340050
+- name: Coma:Mortuary
+  ids:
+  - steam:293320
+- name: Pesadelo - Regressão™
+  ids:
+  - unresolved:source:isthereanydeal:3889:pesadelo-regressao
+- name: ASMR Universe
+  ids:
+  - steam:448830
+- name: Habitus
+  ids:
+  - steam:394990
+- name: BARRIER X
+  ids:
+  - steam:463150
+- name: Evo Explores
+  ids:
+  - steam:467210

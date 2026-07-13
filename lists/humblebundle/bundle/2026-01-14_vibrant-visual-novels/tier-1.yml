@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Vibrant Visual Novels Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15783/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15783/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15783/source.json
+games:
+- name: Eden
+  ids:
+  - steam:315810
+- name: Go! Go! Nippon! Complete Collection
+  ids:
+  - unresolved:source:isthereanydeal:15783:go-go-nippon-complete-collection
+- name: If My Heart Had Wings
+  ids:
+  - steam:326480
+- name: Gal*Gun Returns
+  ids:
+  - steam:1425730
+- name: 'Endless Monday: Dreams and Deadlines'
+  ids:
+  - steam:2262610

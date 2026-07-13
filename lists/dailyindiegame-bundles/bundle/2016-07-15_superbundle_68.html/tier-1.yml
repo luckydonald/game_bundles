@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 68 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3745/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3745/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3745/source.json
+games:
+- name: RePete
+  ids:
+  - steam:448010
+- name: The Dreamatorium of Dr. Magnus 2
+  ids:
+  - steam:393150
+- name: Candy Blast
+  ids:
+  - steam:474050
+- name: Space Codex
+  ids:
+  - steam:469890
+- name: NORTH
+  ids:
+  - steam:461890
+- name: Road Madness
+  ids:
+  - steam:457710

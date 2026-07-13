@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Bundle 2019 — entire-11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6864/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6864/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6864/source.json
+games:
+- name: 'Sins of a Solar Empire: Rebellion'
+  ids:
+  - steam:204880
+- name: 'Galactic Civilizations I: Ultimate Edition'
+  ids:
+  - steam:214150
+- name: 'Galactic Civilizations II: Ultimate Edition'
+  ids:
+  - steam:202200
+- name: Galactic Civilizations III - Mega Events
+  ids:
+  - steam:389930
+- name: Galactic Civilizations III
+  ids:
+  - steam:226860
+- name: 'Galactic Civilizations III: Crusade Expansion Pack'
+  ids:
+  - steam:527070
+- name: 'Ashes of the Singularity: Escalation'
+  ids:
+  - steam:507490
+- name: 'Ashes of the Singularity: Escalation - Epic Map Pack'
+  ids:
+  - steam:520642
+- name: Offworld Trading Company - Gold Bundle
+  ids:
+  - unresolved:source:isthereanydeal:6864:offworld-trading-company-gold-bundle
+- name: 'Ashes of the Singularity: Escalation - Turtle Wars'
+  ids:
+  - steam:520643
+- name: 'Galactic Civilizations III: Intrigue Expansion'
+  ids:
+  - steam:747060

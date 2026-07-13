@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Complete Your Twin Sails Collection Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12434/source.json
+games:
+- name: 'Mysterium: a Psychic Clue Game'
+  ids:
+  - steam:556180
+- name: Ticket to Ride
+  ids:
+  - steam:2477010
+- name: Splendor
+  ids:
+  - steam:376680
+- name: Small World 2
+  ids:
+  - steam:235620
+- name: Carcassonne - Tiles & Tactics
+  ids:
+  - steam:598810
+- name: 'Blood Rage : Digital Edition'
+  ids:
+  - steam:1015930

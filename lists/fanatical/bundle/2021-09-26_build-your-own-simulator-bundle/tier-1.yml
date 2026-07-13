@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Simulator Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10514/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10514/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10514/source.json
+games:
+- name: Zoo Park
+  ids:
+  - steam:307760
+- name: Equilinox
+  ids:
+  - steam:853550
+- name: Internet Cafe Simulator
+  ids:
+  - steam:1136160
+- name: Transport INC
+  ids:
+  - steam:936500
+- name: Size Matters
+  ids:
+  - steam:976700
+- name: Fishing Adventure
+  ids:
+  - steam:1101140
+- name: Shoppe Keep 2
+  ids:
+  - steam:684580
+- name: 'Resort Boss: Golf'
+  ids:
+  - steam:869060
+- name: Cyber Ops
+  ids:
+  - steam:863460
+- name: 'Professional Fishing: Starter Kit Pro'
+  ids:
+  - steam:988750
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+- name: Robot Squad Simulator 2017
+  ids:
+  - steam:405760
+- name: Demolish & Build 2017
+  ids:
+  - steam:470740
+- name: Counter Terrorist Agency
+  ids:
+  - steam:936490
+- name: European Ship Simulator
+  ids:
+  - steam:299250
+- name: 911 Operator
+  ids:
+  - steam:503560
+- name: Airport Madness 4
+  ids:
+  - steam:387850
+- name: Radio Commander
+  ids:
+  - steam:871530

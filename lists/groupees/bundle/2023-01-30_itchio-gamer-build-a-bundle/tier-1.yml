@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Itch.io Gamer Build-a-Bundle — Select 1 Title for $0.75 up to 12 Titles for
+  $9.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12935/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12935/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12935/source.json
+games:
+- name: 'DragonScales 4: Master Chambers'
+  ids:
+  - unresolved:source:isthereanydeal:12935:dragonscales-4-master-chambers
+- name: Airport Madness World Edition
+  ids:
+  - steam:369290
+- name: Airport Madness 3D
+  ids:
+  - steam:445770
+- name: Airport Madness Time Machine
+  ids:
+  - steam:402210
+- name: 'DragonScales 5: The Frozen Tomb'
+  ids:
+  - steam:971640
+- name: 'DragonScales 3: Eternal Prophecy of Darkness'
+  ids:
+  - steam:1215310
+- name: 'DragonScales 1: Chambers of The Dragon Whisperer'
+  ids:
+  - unresolved:source:isthereanydeal:12935:dragonscales-1-chambers-of-the-dragon-whisperer
+- name: All My Gods
+  ids:
+  - steam:404270
+- name: 'DragonScales 2: Beneath a Bloodstained Moon'
+  ids:
+  - unresolved:source:isthereanydeal:12935:dragonscales-2-beneath-a-bloodstained-moon
+- name: Chronology
+  ids:
+  - steam:269330
+- name: Airport Madness 4
+  ids:
+  - steam:387850
+- name: 'Airport Madness 3D: Volume 2'
+  ids:
+  - steam:748610

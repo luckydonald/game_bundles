@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Xbox Game Studios Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15102/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15102/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15102/source.json
+games:
+- name: Broken Age
+  ids:
+  - steam:232790
+- name: Sunset Overdrive
+  ids:
+  - steam:847370
+- name: Battletoads
+  ids:
+  - steam:1244950

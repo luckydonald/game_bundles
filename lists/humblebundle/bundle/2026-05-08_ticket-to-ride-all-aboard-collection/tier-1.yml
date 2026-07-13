@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Ticket to Ride: All Aboard Collection Bundle — 4-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16145/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16145/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16145/source.json
+games:
+- name: Ticket to Ride
+  ids:
+  - steam:2477010
+- name: Ticket to Ride - USA 1910 Ticket Pack
+  ids:
+  - steam:2938560
+- name: Ticket to Ride® - Winter Wonderland bundle
+  ids:
+  - unresolved:source:isthereanydeal:16145:ticket-to-ride-winter-wonderland-bundle
+- name: 'Ticket to Ride: San Francisco City Expansion'
+  ids:
+  - steam:3252260

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Action Heroes Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3036/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3036/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3036/source.json
+games:
+- name: Drive to Hell
+  ids:
+  - steam:334840
+- name: 'Alien Breed: Impact'
+  ids:
+  - steam:22610
+- name: Crimsonland
+  ids:
+  - steam:262830
+- name: The Apogee Throwback Pack
+  ids:
+  - steam:238050
+- name: Gunnheim
+  ids:
+  - steam:371510
+- name: Super Cyborg
+  ids:
+  - steam:341550
+- name: SkyDrift
+  ids:
+  - steam:91100
+- name: Ubersoldier II
+  ids:
+  - steam:281410

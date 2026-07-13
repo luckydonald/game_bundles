@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2836/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2836/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2836/source.json
+games:
+- name: 'Flying Tigers: Shadows Over China'
+  ids:
+  - steam:365810
+- name: Cast of the Seven Godsends
+  ids:
+  - steam:373360
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+- name: CrossCode
+  ids:
+  - steam:368340
+- name: Battle vs Chess
+  ids:
+  - steam:211050
+- name: Super 3-D Noah's Ark
+  ids:
+  - steam:371180
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+- name: Horizon Shift
+  ids:
+  - steam:326120
+- name: 3D Realms Anthology - Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:2836:3d-realms-anthology-steam-edition
+- name: Monstrum
+  ids:
+  - steam:296710

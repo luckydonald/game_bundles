@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'February Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3098/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3098/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3098/source.json
+games:
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+- name: Botology
+  ids:
+  - steam:363610
+- name: Hare In The Hat
+  ids:
+  - steam:359810

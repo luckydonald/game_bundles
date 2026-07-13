@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own RPG & Fantasy Bundle (Fall 2025) — Select 3 for 4.95, 5 for 7.99,
+  7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15544/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15544/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15544/source.json
+games:
+- name: Din's Curse
+  ids:
+  - steam:217290
+- name: Zombasite
+  ids:
+  - steam:408960
+- name: Depths of Peril
+  ids:
+  - steam:23600
+- name: Juicy Realm
+  ids:
+  - steam:732370
+- name: Vigilantes
+  ids:
+  - steam:545600
+- name: Din's Legacy
+  ids:
+  - steam:911550
+- name: Drox Operative
+  ids:
+  - steam:274480
+- name: 'Raji: An Ancient Epic'
+  ids:
+  - steam:730390
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15544:moonlighter-complete-edition
+- name: 'The Dungeon Of Naheulbeuk: The Amulet Of Chaos'
+  ids:
+  - steam:970830
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15544:for-the-king-deluxe-edition
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15544:children-of-morta-complete-edition
+- name: Stones Keeper
+  ids:
+  - steam:1723530
+- name: 'Lysfanga: The Time Shift Warrior'
+  ids:
+  - steam:2161620
+- name: Novus Orbis
+  ids:
+  - steam:2437330
+- name: Schism
+  ids:
+  - steam:2084300
+- name: StormEdge - Supporter Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15544:stormedge-supporter-bundle

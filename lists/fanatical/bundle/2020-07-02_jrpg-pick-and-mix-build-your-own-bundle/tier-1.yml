@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: JRPG Pick & Mix Build Your Own Bundle — Select 1 Title For $4.99, 2 For $8.99,
+  3 For $11.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8950/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8950/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8950/source.json
+games:
+- name: Revenant Dogma
+  ids:
+  - steam:860490
+- name: Illusion of L'Phalcia
+  ids:
+  - steam:1076100
+- name: Alvastia Chronicles
+  ids:
+  - steam:948660
+- name: Fernz Gate
+  ids:
+  - steam:860480
+- name: Sephirothic Stories
+  ids:
+  - steam:1015540
+- name: 'Frane: Dragons'' Odyssey'
+  ids:
+  - steam:265730
+- name: Asdivine Hearts II
+  ids:
+  - steam:948650
+- name: Chronus Arc
+  ids:
+  - steam:831650
+- name: Legend of the Tetrarchs
+  ids:
+  - steam:1040740
+- name: Bonds of the Skies
+  ids:
+  - steam:1015530
+- name: Asdivine Menace
+  ids:
+  - steam:1076110
+- name: Asdivine Dios
+  ids:
+  - steam:1015550

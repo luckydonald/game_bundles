@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Opus Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7441/source.json
+games:
+- name: 'OPUS: The Day We Found Earth'
+  ids:
+  - steam:457680
+- name: Save One More
+  ids:
+  - steam:820240
+- name: Weaves of Fate
+  ids:
+  - steam:467270
+- name: Thunder Paw
+  ids:
+  - steam:1064990
+- name: Linelight
+  ids:
+  - steam:469790
+- name: Blockwick 2
+  ids:
+  - steam:377660
+- name: Cyber Gun
+  ids:
+  - steam:1065570
+- name: Jump with Friends
+  ids:
+  - steam:1077550

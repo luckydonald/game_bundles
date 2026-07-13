@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #66 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6751/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6751/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6751/source.json
+games:
+- name: CropDuster Supreme
+  ids:
+  - steam:412620
+- name: OutDrive
+  ids:
+  - steam:441870
+- name: Pool Nation & Bumper Pack Bundle
+  ids:
+  - unresolved:source:isthereanydeal:6751:pool-nation-and-bumper-pack-bundle
+- name: Odium To the Core
+  ids:
+  - steam:795570
+- name: Dino D-Day
+  ids:
+  - steam:70000
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+- name: Car Mechanic Simulator 2015
+  ids:
+  - steam:320300
+- name: Glass Masquerade
+  ids:
+  - steam:511470

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 720 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10995/source.json
+games:
+- name: Swag and Sorcery
+  ids:
+  - steam:929010
+- name: Karma City Police
+  ids:
+  - steam:1270850
+- name: Cube Space
+  ids:
+  - steam:1590260
+- name: Slime Factory
+  ids:
+  - steam:1733860
+- name: Through the world
+  ids:
+  - steam:1803560
+- name: Army To Army
+  ids:
+  - steam:1853270
+- name: Shiba Army
+  ids:
+  - steam:1734870
+- name: Race! Beauty! Bugs!
+  ids:
+  - steam:1864320
+- name: Cat and Fish
+  ids:
+  - steam:1872130

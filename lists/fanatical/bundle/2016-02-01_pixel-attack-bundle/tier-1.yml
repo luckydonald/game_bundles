@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Attack Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3005/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3005/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3005/source.json
+games:
+- name: '12 Labours of Hercules IV: Mother Nature (Platinum Edition)'
+  ids:
+  - steam:396800
+- name: Plastiland
+  ids:
+  - steam:421880
+- name: Trap Them - Sniper Edition
+  ids:
+  - steam:407150
+- name: 'Gem Wars: Attack of the Jiblets'
+  ids:
+  - steam:370590
+- name: Bleeding Border
+  ids:
+  - steam:416290
+- name: Stone Tales
+  ids:
+  - steam:405590
+- name: Pocket God vs Desert Ashes
+  ids:
+  - steam:324400
+- name: Life of Pixel
+  ids:
+  - unresolved:source:isthereanydeal:3005:life-of-pixel

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Stories from Latin America Bundle — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15457/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15457/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15457/source.json
+games:
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+- name: The Bunny Graveyard
+  ids:
+  - steam:1892420
+- name: Dreamcore
+  ids:
+  - steam:2453060
+- name: 'Arranger: A Role-Puzzling Adventure'
+  ids:
+  - steam:2596420
+- name: Keylocker | Turn Based Cyberpunk Action
+  ids:
+  - steam:1325040
+- name: Tormented Souls
+  ids:
+  - steam:1367590
+- name: despelote
+  ids:
+  - steam:2367820
+- name: Kulebra and the Souls of Limbo
+  ids:
+  - steam:2246470

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Total War: Warhammer Pack — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7795/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7795/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7795/source.json
+games:
+- name: 'Total War: WARHAMMER - Chaos Warriors'
+  ids:
+  - steam:404010
+- name: 'Total War: WARHAMMER - The King and the Warlord'
+  ids:
+  - steam:404014
+- name: 'Total War: WARHAMMER - The Grim & The Grave'
+  ids:
+  - steam:404013
+- name: 'Total War™: WARHAMMER®'
+  ids:
+  - steam:364360
+- name: 'Total War: WARHAMMER - Call of the Beastmen'
+  ids:
+  - steam:404012
+- name: 'Total War: WARHAMMER - Realm Of The Wood Elves'
+  ids:
+  - steam:534331
+- name: 'Total War: WARHAMMER - Norsca'
+  ids:
+  - steam:455040

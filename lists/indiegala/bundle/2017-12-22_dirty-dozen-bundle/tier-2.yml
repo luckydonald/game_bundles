@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Dirty Dozen Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5760/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5760/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5760/source.json
+games:
+- name: Ropelike
+  ids:
+  - unresolved:source:isthereanydeal:5760:ropelike
+- name: The Under
+  ids:
+  - unresolved:source:isthereanydeal:5760:the-under
+- name: Operation Antiterror
+  ids:
+  - unresolved:source:isthereanydeal:5760:operation-antiterror
+- name: SK8
+  ids:
+  - unresolved:source:isthereanydeal:5760:sk8
+- name: Warlock Revenge
+  ids:
+  - unresolved:source:isthereanydeal:5760:warlock-revenge
+- name: Purple Heart
+  ids:
+  - steam:745370
+- name: sWORD MASTER
+  ids:
+  - steam:698980
+- name: The Mystery Room
+  ids:
+  - steam:727060
+- name: Lost Home
+  ids:
+  - steam:728020
+- name: Your Bunny Wrote
+  ids:
+  - unresolved:source:isthereanydeal:5760:your-bunny-wrote
+- name: Awesome Machine
+  ids:
+  - steam:626160
+- name: Heroes of Myths - Warriors of Gods
+  ids:
+  - steam:680100

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 841 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11530/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11530/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11530/source.json
+games:
+- name: Bunny Mania 2
+  ids:
+  - steam:746770
+- name: 'A Front Too Far: Normandy'
+  ids:
+  - steam:958320
+- name: Lumen
+  ids:
+  - steam:520040
+- name: 'Seven Mysteries: The Last Page'
+  ids:
+  - steam:783440
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:11530:orbs
+- name: Solar Rogue
+  ids:
+  - steam:1301410
+- name: Towards The Stars
+  ids:
+  - steam:1491980
+- name: Push The Box 3D
+  ids:
+  - steam:1549620
+- name: Survive after hell
+  ids:
+  - steam:1524990

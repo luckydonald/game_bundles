@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 273 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9257/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9257/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9257/source.json
+games:
+- name: TKKG - Die Feuerprobe
+  ids:
+  - steam:1104870
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+- name: A Second Chance
+  ids:
+  - steam:908960
+- name: Pursuer
+  ids:
+  - steam:1013660
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:9257:a-d-m-angels-demons-and-men
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:9257:orbs
+- name: Forep Man
+  ids:
+  - unresolved:source:isthereanydeal:9257:forep-man
+- name: Destructivator 2
+  ids:
+  - steam:1124990
+- name: Rocky Ride
+  ids:
+  - steam:1297890

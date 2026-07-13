@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Master Builders Collection — Timber
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16230/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16230/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16230/source.json
+games:
+- name: Flooded
+  ids:
+  - steam:1795470

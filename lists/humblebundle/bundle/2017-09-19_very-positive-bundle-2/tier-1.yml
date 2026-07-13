@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Very Positive Bundle 2 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5482/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5482/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5482/source.json
+games:
+- name: RIVE
+  ids:
+  - steam:278100
+- name: Dungeon Souls
+  ids:
+  - steam:383230
+- name: Neon Chrome
+  ids:
+  - steam:428750

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Amazing Adventures Bundle — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11854/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11854/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11854/source.json
+games:
+- name: The Almost Gone
+  ids:
+  - steam:1115780

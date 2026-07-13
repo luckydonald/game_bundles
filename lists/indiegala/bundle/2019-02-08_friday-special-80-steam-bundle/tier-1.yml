@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #80 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7002/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7002/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7002/source.json
+games:
+- name: Deer Man
+  ids:
+  - steam:459940
+- name: Easy Red
+  ids:
+  - steam:741670

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 161 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8648/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8648/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8648/source.json
+games:
+- name: RepairBot
+  ids:
+  - steam:991620
+- name: ECCHI NEKO GIRLS PUZZLE
+  ids:
+  - steam:1019630
+- name: Little hidden city
+  ids:
+  - steam:706490
+- name: Moves
+  ids:
+  - steam:1202420
+- name: 'Raccoon: The Orc Invasion'
+  ids:
+  - steam:1199150
+- name: Street Racing 2020
+  ids:
+  - steam:1233120
+- name: Sakura Girls
+  ids:
+  - unresolved:source:isthereanydeal:8648:sakura-girls
+- name: Redemption Girls
+  ids:
+  - unresolved:source:isthereanydeal:8648:redemption-girls
+- name: SUMMER Girls
+  ids:
+  - unresolved:source:isthereanydeal:8648:summer-girls

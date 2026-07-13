@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Egyptian Senet - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2828/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2828/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2828/source.json
+games:
+- name: Egyptian Senet
+  ids:
+  - steam:391580

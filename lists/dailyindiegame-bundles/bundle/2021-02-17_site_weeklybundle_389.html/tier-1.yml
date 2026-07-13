@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 389 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9751/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9751/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9751/source.json
+games:
+- name: Dungeons of the Fallen
+  ids:
+  - steam:701610
+- name: The Donnerwald Experiment
+  ids:
+  - steam:705770
+- name: 'The Detective Chapters: Part One'
+  ids:
+  - steam:981660
+- name: Leap of Champions
+  ids:
+  - steam:650740
+- name: SteamCity Chronicles - Rise Of The Rose
+  ids:
+  - steam:1153730
+- name: Hidden Shelter
+  ids:
+  - steam:1422820
+- name: Nether Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:9751:nether-nightmare
+- name: Snowboard
+  ids:
+  - steam:1547500
+- name: GOLD IS MINE
+  ids:
+  - unresolved:source:isthereanydeal:9751:gold-is-mine

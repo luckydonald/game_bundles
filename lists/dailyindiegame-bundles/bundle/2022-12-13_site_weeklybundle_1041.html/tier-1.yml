@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1041: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12750/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12750/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12750/source.json
+games:
+- name: Angel Tears
+  ids:
+  - unresolved:source:isthereanydeal:12750:angel-tears
+- name: Jixxaw
+  ids:
+  - steam:1564830
+- name: Fantasy Sliding Puzzle
+  ids:
+  - steam:1738630
+- name: Fantasy Sliding Puzzle - ArtBook
+  ids:
+  - steam:1746690
+- name: Fantasy Jigsaw Puzzle 4
+  ids:
+  - steam:1752410
+- name: Fantasy Jigsaw Puzzle 4 - ArtBook
+  ids:
+  - steam:1752920
+- name: Adult Puzzles - CamGirls
+  ids:
+  - steam:1780780
+- name: Adult Puzzles - CamGirls ArtBook
+  ids:
+  - steam:1786020
+- name: Furry Sex Madness
+  ids:
+  - steam:1782970

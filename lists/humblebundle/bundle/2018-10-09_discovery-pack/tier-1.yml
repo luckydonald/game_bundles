@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Discovery Pack — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6562/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6562/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6562/source.json
+games:
+- name: War for the Overworld
+  ids:
+  - steam:230190
+- name: 'Osiris: New Dawn'
+  ids:
+  - unresolved:source:isthereanydeal:6562:osiris-new-dawn
+- name: 'RWBY: Grimm Eclipse'
+  ids:
+  - steam:418340
+- name: 'War for the Overworld: Heart of Gold'
+  ids:
+  - unresolved:source:isthereanydeal:6562:war-for-the-overworld-heart-of-gold
+- name: Tricky Towers
+  ids:
+  - steam:437920
+- name: Phantom Brave
+  ids:
+  - steam:409870
+- name: 'Kentucky Route Zero: PC Edition'
+  ids:
+  - steam:231200

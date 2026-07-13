@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 696 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10884/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10884/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10884/source.json
+games:
+- name: 5Rings
+  ids:
+  - steam:790610
+- name: XENOS Defense
+  ids:
+  - unresolved:source:isthereanydeal:10884:xenos-defense
+- name: Z.A.R.
+  ids:
+  - unresolved:source:isthereanydeal:10884:z-a-r
+- name: Drunken Fight Simulator
+  ids:
+  - steam:576480
+- name: TETRA's Escape
+  ids:
+  - steam:827460
+- name: Out of Oblivion
+  ids:
+  - steam:1370950
+- name: The Last Place
+  ids:
+  - unresolved:source:isthereanydeal:10884:the-last-place
+- name: Battle for Sea 3D
+  ids:
+  - steam:1584350
+- name: Island World
+  ids:
+  - unresolved:source:isthereanydeal:10884:island-world

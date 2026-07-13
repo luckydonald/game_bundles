@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Galactic Strike Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6162/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6162/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6162/source.json
+games:
+- name: Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:6162:sudoku
+- name: 'Reroll: Back to the throne'
+  ids:
+  - unresolved:source:isthereanydeal:6162:reroll-back-to-the-throne
+- name: The Battle for the Hut
+  ids:
+  - unresolved:source:isthereanydeal:6162:the-battle-for-the-hut

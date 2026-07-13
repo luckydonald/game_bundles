@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 52 — $1 Minimum
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4370/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4370/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4370/source.json
+games:
+- name: Punchmen
+  ids:
+  - unresolved:source:isthereanydeal:4370:punchmen
+- name: Darkness and a Crowd
+  ids:
+  - unresolved:source:isthereanydeal:4370:darkness-and-a-crowd
+- name: The Spirit Underneath
+  ids:
+  - steam:562240
+- name: Boozy Dwarf
+  ids:
+  - unresolved:source:isthereanydeal:4370:boozy-dwarf
+- name: All Haze Eve
+  ids:
+  - steam:680680
+- name: Mr. Triangle's Adventure
+  ids:
+  - steam:574690
+- name: idleBeer
+  ids:
+  - unresolved:source:isthereanydeal:4370:idlebeer
+- name: Surfasaurus
+  ids:
+  - steam:584860
+- name: Sailors of Steel
+  ids:
+  - unresolved:source:isthereanydeal:4370:sailors-of-steel
+- name: Ralie
+  ids:
+  - unresolved:source:isthereanydeal:4370:ralie

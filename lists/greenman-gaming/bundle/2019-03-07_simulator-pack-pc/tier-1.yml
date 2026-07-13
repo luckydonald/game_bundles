@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Simulator Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7137/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7137/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7137/source.json
+games:
+- name: Post Master
+  ids:
+  - steam:275080
+- name: 'Enforcer: Police Crime Action'
+  ids:
+  - steam:318220
+- name: Bomber Crew
+  ids:
+  - steam:537800
+- name: Recovery Search & Rescue Simulation
+  ids:
+  - steam:262870
+- name: Evil Genius
+  ids:
+  - steam:3720
+- name: Taxi
+  ids:
+  - unresolved:source:isthereanydeal:7137:taxi
+- name: Big Buck Hunter Arcade
+  ids:
+  - unresolved:source:isthereanydeal:7137:big-buck-hunter-arcade
+- name: Stable Orbit
+  ids:
+  - steam:481190
+- name: Air Conflicts Pacific Carriers
+  ids:
+  - steam:214910
+- name: Beyond Eyes
+  ids:
+  - unresolved:source:isthereanydeal:7137:beyond-eyes
+- name: Farming World
+  ids:
+  - steam:277500
+- name: Quarantine
+  ids:
+  - steam:489370

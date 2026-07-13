@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 12 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7377/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7377/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7377/source.json
+games:
+- name: 'Grim Legends 2: Song of the Dark Swan'
+  ids:
+  - steam:279800
+- name: 'The Secret Order 2: Masked Intent'
+  ids:
+  - steam:399890

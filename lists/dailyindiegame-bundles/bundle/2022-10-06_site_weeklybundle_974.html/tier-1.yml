@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 974 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12179/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12179/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12179/source.json
+games:
+- name: Hackerman
+  ids:
+  - unresolved:source:isthereanydeal:12179:hackerman
+- name: Bjorn.
+  ids:
+  - steam:1682200
+- name: SIDE
+  ids:
+  - steam:1440680
+- name: Wordle 4
+  ids:
+  - steam:1477020
+- name: Elon's Dream 2
+  ids:
+  - unresolved:source:isthereanydeal:12179:elons-dream-2
+- name: 'Detective Story: Reporter'
+  ids:
+  - steam:1660590
+- name: Chaos Girl
+  ids:
+  - unresolved:source:isthereanydeal:12179:chaos-girl
+- name: Gasnator
+  ids:
+  - steam:1963950
+- name: 'Age of Valakas: Vietnam'
+  ids:
+  - steam:1823570

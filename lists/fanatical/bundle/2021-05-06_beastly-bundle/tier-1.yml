@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Beastly Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10004/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10004/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10004/source.json
+games:
+- name: Sherlock Holmes versus Jack the Ripper
+  ids:
+  - steam:11190
+- name: 'The Dark Eye: Chains of Satinav'
+  ids:
+  - steam:203830
+- name: The Crown of Leaves
+  ids:
+  - steam:604330
+- name: Gray Dawn
+  ids:
+  - steam:747360
+- name: Skyhill
+  ids:
+  - steam:382140
+- name: Papo & Yo
+  ids:
+  - steam:227080
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090

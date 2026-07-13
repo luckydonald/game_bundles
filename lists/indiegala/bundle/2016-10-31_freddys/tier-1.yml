@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Freddy's Halloween Bundle — Pay $1 or more for Steam keys
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4281/source.json
+games:
+- name: Gynophobia
+  ids:
+  - steam:365020
+- name: Shutter
+  ids:
+  - steam:359560
+- name: Spectre
+  ids:
+  - steam:314950

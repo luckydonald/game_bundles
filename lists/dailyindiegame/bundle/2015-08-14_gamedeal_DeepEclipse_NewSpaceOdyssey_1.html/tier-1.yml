@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Deep Eclipse: New Space Odyssey - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2332/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2332/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2332/source.json
+games:
+- name: Deep Eclipse - New Space Odyssey
+  ids:
+  - steam:326990

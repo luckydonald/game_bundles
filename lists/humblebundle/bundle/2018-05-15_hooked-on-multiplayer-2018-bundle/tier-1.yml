@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Hooked on Multiplayer Bundle 2018 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6135/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6135/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6135/source.json
+games:
+- name: Tumblestone
+  ids:
+  - steam:269710
+- name: 'Stick Fight: The Game'
+  ids:
+  - steam:674940
+- name: Rampage Knights
+  ids:
+  - steam:314410

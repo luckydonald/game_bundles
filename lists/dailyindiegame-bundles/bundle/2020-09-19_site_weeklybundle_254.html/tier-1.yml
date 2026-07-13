@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 254 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9181/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9181/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9181/source.json
+games:
+- name: Combiner Card Game
+  ids:
+  - unresolved:source:isthereanydeal:9181:combiner-card-game
+- name: Story of one Night
+  ids:
+  - steam:1057770
+- name: BlackEye
+  ids:
+  - steam:627410
+- name: Infinity Imperium
+  ids:
+  - unresolved:source:isthereanydeal:9181:infinity-imperium
+- name: Crystallo
+  ids:
+  - steam:1062680
+- name: Malvin`s Prehistoric Adventures
+  ids:
+  - steam:1228670
+- name: Shivering Hearts
+  ids:
+  - steam:1351820
+- name: The Adventures Of Maximus
+  ids:
+  - steam:1405320
+- name: Truck Truck
+  ids:
+  - steam:1419440

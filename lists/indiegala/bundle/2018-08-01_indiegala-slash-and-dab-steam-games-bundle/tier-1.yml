@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Slash & Dab Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6355/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6355/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6355/source.json
+games:
+- name: Laser Ball
+  ids:
+  - steam:826170
+- name: Strangers
+  ids:
+  - unresolved:source:isthereanydeal:6355:strangers
+- name: Elude
+  ids:
+  - steam:825240

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Kingdom: 10th Anniversary Bundle — 2-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15528/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15528/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15528/source.json
+games:
+- name: 'Kingdom: New Lands Royal Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15528:kingdom-new-lands-royal-edition
+- name: Kingdom Eighties
+  ids:
+  - steam:1956040

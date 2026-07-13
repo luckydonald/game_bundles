@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1019 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12505/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12505/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12505/source.json
+games:
+- name: Trivia Night
+  ids:
+  - steam:628570
+- name: GEAR TuNNEL
+  ids:
+  - steam:1553980
+- name: DRUM'N'BASS MASSACRE
+  ids:
+  - steam:1636360
+- name: Hidden Lands
+  ids:
+  - steam:1765810
+- name: 'Puzzle Art: Birds'
+  ids:
+  - steam:1767940
+- name: 'Puzzle Art: Horses'
+  ids:
+  - unresolved:source:isthereanydeal:12505:puzzle-art-horses
+- name: 'Maze Art: Orange'
+  ids:
+  - steam:1818790
+- name: Akapulka - The Rainbow
+  ids:
+  - steam:1994520
+- name: Stickman Synthwave Escape
+  ids:
+  - steam:1994350

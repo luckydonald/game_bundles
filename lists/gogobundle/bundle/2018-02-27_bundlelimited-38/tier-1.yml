@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Limited Bundle #38 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5944/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5944/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5944/source.json
+games:
+- name: Colony On Mars
+  ids:
+  - steam:773640
+- name: Africa Hunting
+  ids:
+  - steam:758470
+- name: Gravity puzzles
+  ids:
+  - unresolved:source:isthereanydeal:5944:gravity-puzzles
+- name: Business clicker
+  ids:
+  - unresolved:source:isthereanydeal:5944:business-clicker
+- name: Pixel Shooter
+  ids:
+  - steam:647280
+- name: Railroad Lines
+  ids:
+  - unresolved:source:isthereanydeal:5944:railroad-lines
+- name: Santa Run
+  ids:
+  - steam:761440
+- name: Battle Quiz
+  ids:
+  - unresolved:source:isthereanydeal:5944:battle-quiz
+- name: Ukrainian ball in search of gas
+  ids:
+  - steam:758480
+- name: The Dark Maze
+  ids:
+  - unresolved:source:isthereanydeal:5944:the-dark-maze
+- name: Mind Dead
+  ids:
+  - steam:442190
+- name: JUMP STOP
+  ids:
+  - unresolved:source:isthereanydeal:5944:jump-stop

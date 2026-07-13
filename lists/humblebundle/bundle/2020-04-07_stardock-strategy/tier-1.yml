@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Strategy Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8653/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8653/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8653/source.json
+games:
+- name: Dead Man's Draw
+  ids:
+  - steam:262450
+- name: 'Sorcerer King: Rivals'
+  ids:
+  - steam:496730

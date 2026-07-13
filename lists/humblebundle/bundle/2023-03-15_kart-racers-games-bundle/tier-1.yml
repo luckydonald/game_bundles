@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Kart Club: Best Indie Kart Racers Bundle — 7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13054/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13054/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13054/source.json
+games:
+- name: Garfield Kart - Furious Racing
+  ids:
+  - steam:1085510
+- name: All-Star Fruit Racing
+  ids:
+  - steam:673190
+- name: Monster League
+  ids:
+  - steam:767360
+- name: Super Indie Karts
+  ids:
+  - steam:323670
+- name: Beach Buggy Racing 2
+  ids:
+  - steam:1230800
+- name: 'Nickelodeon Kart Racers 2: Grand Prix'
+  ids:
+  - steam:1383960
+- name: Zeepkist
+  ids:
+  - steam:1440670

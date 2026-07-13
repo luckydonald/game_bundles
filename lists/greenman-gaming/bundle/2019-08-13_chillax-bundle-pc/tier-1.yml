@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Chillax Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7744/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7744/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7744/source.json
+games:
+- name: The Story Goes On
+  ids:
+  - steam:369560
+- name: Racer 8
+  ids:
+  - steam:292380
+- name: Uriel's Chasm
+  ids:
+  - steam:292630
+- name: 'Ionball 2 : Ionstorm'
+  ids:
+  - steam:287120
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:7744:canyon-capers
+- name: Puzzle Showdown 4K
+  ids:
+  - steam:631220
+- name: Pressured
+  ids:
+  - steam:292620
+- name: Numba Deluxe
+  ids:
+  - steam:301700
+- name: True Bliss
+  ids:
+  - steam:361620
+- name: Nihilumbra
+  ids:
+  - steam:252670
+- name: Cobi Treasure Deluxe
+  ids:
+  - steam:301690

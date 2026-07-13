@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Civilization Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4813/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4813/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4813/source.json
+games:
+- name: 'Sid Meier''s Civilization® III: Complete'
+  ids:
+  - steam:3910
+- name: 'Sid Meier''s Civilization IV: The Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4813:sid-meiers-civilization-iv-the-complete-edition

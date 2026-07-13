@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: '2K Classic Trilogies: Mafia X BioShock Bundle — 3-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15209/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15209/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15209/source.json
+games:
+- name: BioShock Infinite
+  ids:
+  - steam:8870
+- name: BioShock 2 Remastered
+  ids:
+  - steam:409720
+- name: BioShock Remastered
+  ids:
+  - steam:409710

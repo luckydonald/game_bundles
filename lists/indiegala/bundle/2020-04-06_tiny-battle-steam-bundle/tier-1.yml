@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tiny Battle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8649/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8649/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8649/source.json
+games:
+- name: VICCP
+  ids:
+  - steam:950700
+- name: Tiny Battle Simulator
+  ids:
+  - steam:914000
+- name: ❂ Hexaluga ❂ Weapon and Shield ☯
+  ids:
+  - steam:845200
+- name: Johnny Rocket
+  ids:
+  - steam:942300
+- name: lil' Sherman
+  ids:
+  - steam:1210620
+- name: 'Code Brown: A Game About Pooping'
+  ids:
+  - steam:930640

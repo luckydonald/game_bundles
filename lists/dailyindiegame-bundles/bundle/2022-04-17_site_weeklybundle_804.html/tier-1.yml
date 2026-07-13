@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 804 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11382/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11382/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11382/source.json
+games:
+- name: All Of Zhem
+  ids:
+  - steam:988070
+- name: Defense Of Greece TD
+  ids:
+  - steam:537200
+- name: Robbotto
+  ids:
+  - steam:881190
+- name: Bob The Cube
+  ids:
+  - steam:854060
+- name: NO-GO
+  ids:
+  - unresolved:source:isthereanydeal:11382:no-go
+- name: Contract Killers
+  ids:
+  - steam:1176360
+- name: Slime Up
+  ids:
+  - steam:1340420
+- name: The Elysian Field
+  ids:
+  - steam:1657290
+- name: 'BattleGrounds : War, Tanks And Nukes'
+  ids:
+  - steam:1703640

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Adventure Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/220/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/220/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/220/source.json
+games:
+- name: Gemini Rue
+  ids:
+  - steam:80310
+- name: Ben There, Dan That!
+  ids:
+  - unresolved:source:isthereanydeal:220:ben-there-dan-that
+- name: The Sea Will Claim Everything
+  ids:
+  - steam:337720
+- name: Time Gentlemen, Please! and Ben There, Dan That! Special Edition Double Pack
+  ids:
+  - steam:37400
+- name: '1893: A World''s Fair Mystery'
+  ids:
+  - unresolved:source:isthereanydeal:220:1893-a-worlds-fair-mystery
+- name: The Shivah
+  ids:
+  - steam:252370
+- name: Metal Dead
+  ids:
+  - steam:302690

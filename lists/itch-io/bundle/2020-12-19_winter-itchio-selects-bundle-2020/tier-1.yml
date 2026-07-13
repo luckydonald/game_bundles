@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Winter itch.io Selects Bundle 2020 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9537/source.json
+games:
+- name: The House
+  ids:
+  - unresolved:source:isthereanydeal:9537:the-house
+- name: Fit For a King
+  ids:
+  - steam:1110380
+- name: Tales From Off-Peak City Vol. 1
+  ids:
+  - steam:1129920
+- name: PIXELJAM COMPLETE
+  ids:
+  - unresolved:source:isthereanydeal:9537:pixeljam-complete
+- name: Shutter Stroll
+  ids:
+  - steam:1513480
+- name: 'EXTREME MEATPUNKS FOREVER: BOUND BY ASH'
+  ids:
+  - unresolved:source:isthereanydeal:9537:extreme-meatpunks-forever-bound-by-ash

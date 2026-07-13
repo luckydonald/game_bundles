@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Epic Valley Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15986/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15986/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15986/source.json
+games:
+- name: 'Viking Chess: Hnefatafl'
+  ids:
+  - steam:1133070
+- name: Test Of Courage
+  ids:
+  - steam:1267400
+- name: Stunt Paradise
+  ids:
+  - steam:2435310
+- name: Cloudy Valley
+  ids:
+  - steam:2600720
+- name: Birdfull
+  ids:
+  - steam:3194890
+- name: Shoot The Wall
+  ids:
+  - steam:3544500

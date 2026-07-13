@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 461 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9992/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9992/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9992/source.json
+games:
+- name: Pixel Robot Hunter
+  ids:
+  - steam:935660
+- name: Angry Golf
+  ids:
+  - steam:1145780
+- name: Master of ABC
+  ids:
+  - steam:673820
+- name: Rugosi
+  ids:
+  - steam:905510
+- name: Chessmates
+  ids:
+  - steam:1265110
+- name: Jumperbird
+  ids:
+  - steam:1310480
+- name: Fury Captain
+  ids:
+  - unresolved:source:isthereanydeal:9992:fury-captain
+- name: Robo Terror
+  ids:
+  - unresolved:source:isthereanydeal:9992:robo-terror
+- name: Metal Strike
+  ids:
+  - steam:1441090

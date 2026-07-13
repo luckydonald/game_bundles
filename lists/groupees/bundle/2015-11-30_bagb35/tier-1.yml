@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 35 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2796/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2796/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2796/source.json
+games:
+- name: Furfly
+  ids:
+  - steam:429040
+- name: Super Stone Legacy
+  ids:
+  - steam:580300
+- name: Multi Dominoes
+  ids:
+  - unresolved:source:isthereanydeal:2796:multi-dominoes
+- name: Abrix the robot
+  ids:
+  - steam:461850
+- name: Solitaire Christmas Match 2 Cards
+  ids:
+  - steam:428510
+- name: The Fall of Gods
+  ids:
+  - steam:424170
+- name: Bulby - Diamond Course
+  ids:
+  - steam:461390
+- name: 'Ninja Moo: The fight against darkness'
+  ids:
+  - unresolved:source:isthereanydeal:2796:ninja-moo-the-fight-against-darkness
+- name: BanHammer
+  ids:
+  - unresolved:source:isthereanydeal:2796:banhammer
+- name: Wanderer of Teandria
+  ids:
+  - steam:477910

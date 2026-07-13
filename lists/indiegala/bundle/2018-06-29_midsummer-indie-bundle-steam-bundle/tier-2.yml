@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Midsummer Indie Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6281/source.json
+games:
+- name: 15 seconds
+  ids:
+  - steam:856350
+- name: Geometry Rush
+  ids:
+  - steam:861710
+- name: Dead Noir the Heart
+  ids:
+  - steam:718920
+- name: The Bad Gravedigger
+  ids:
+  - steam:870120
+- name: InkSplosion
+  ids:
+  - steam:827450
+- name: iterform
+  ids:
+  - steam:873210
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+- name: Magic Siege - Defender
+  ids:
+  - unresolved:source:isthereanydeal:6281:magic-siege-defender
+- name: 'Pottery Crafts: Hand-Made Simulator'
+  ids:
+  - unresolved:source:isthereanydeal:6281:pottery-crafts-hand-made-simulator
+- name: TD Ultimate (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:6281:td-ultimate-restocked
+- name: Another Brick in Space
+  ids:
+  - unresolved:source:isthereanydeal:6281:another-brick-in-space
+- name: Let's Go Nuts!
+  ids:
+  - steam:848230

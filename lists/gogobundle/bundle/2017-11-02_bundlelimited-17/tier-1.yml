@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #17 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5596/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5596/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5596/source.json
+games:
+- name: Kronos
+  ids:
+  - steam:562090
+- name: Ablepsia
+  ids:
+  - steam:713680
+- name: Inferno Puzzle
+  ids:
+  - steam:654980
+- name: Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:5596:sudoku
+- name: Kronos Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5596:kronos-soundtrack
+- name: 'Snail Bob 2: Tiny Troubles'
+  ids:
+  - steam:349760
+- name: 'The Oil Blue: Steam Legacy Edition'
+  ids:
+  - steam:386700
+- name: OddEven
+  ids:
+  - unresolved:source:isthereanydeal:5596:oddeven
+- name: Judgement
+  ids:
+  - steam:383780

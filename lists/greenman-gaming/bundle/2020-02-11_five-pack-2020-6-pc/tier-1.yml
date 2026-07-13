@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Feb Five Pack 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8387/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8387/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8387/source.json
+games:
+- name: Puzzle Chronicles
+  ids:
+  - steam:19020
+- name: Gun Monkeys
+  ids:
+  - unresolved:source:isthereanydeal:8387:gun-monkeys
+- name: Three Dead Zed
+  ids:
+  - steam:291390
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:8387:canyon-capers
+- name: Huntsman:The Orphanage
+  ids:
+  - steam:246740
+- name: Corporate Lifestyle Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8387:corporate-lifestyle-simulator

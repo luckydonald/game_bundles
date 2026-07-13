@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fight For Sanity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8392/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8392/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8392/source.json
+games:
+- name: Kautic - The Bald Wizard
+  ids:
+  - steam:600530
+- name: Skautfold - Usurper
+  ids:
+  - steam:603020
+- name: There's a Butcher Around
+  ids:
+  - steam:1077430
+- name: MINDCUBES - Inside the Twisted Gravity Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:8392:mindcubes-inside-the-twisted-gravity-puzzle
+- name: The Death of Erin Myers
+  ids:
+  - steam:1064660
+- name: 'Skautfold: Shrouded in Sanity'
+  ids:
+  - steam:444590
+- name: Fight of Animals
+  ids:
+  - steam:1160330
+- name: 'Raccoon: The Orc Invasion'
+  ids:
+  - steam:1199150

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #13 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5483/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5483/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5483/source.json
+games:
+- name: Project of the Developer
+  ids:
+  - unresolved:source:isthereanydeal:5483:project-of-the-developer
+- name: Grind Zones
+  ids:
+  - unresolved:source:isthereanydeal:5483:grind-zones
+- name: The Last Hope
+  ids:
+  - steam:522570
+- name: Wooden Floor 2 - Resurrection
+  ids:
+  - steam:433790
+- name: HardCube
+  ids:
+  - unresolved:source:isthereanydeal:5483:hardcube
+- name: Hardcube Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5483:hardcube-soundtrack
+- name: Eight Mini Racers
+  ids:
+  - steam:434890
+- name: Victim of Xen
+  ids:
+  - steam:300220
+- name: The Return Home Remastered
+  ids:
+  - steam:502910

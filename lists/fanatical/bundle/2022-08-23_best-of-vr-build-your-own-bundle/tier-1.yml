@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Best of VR Build Your Own Bundle — Select 3 Titles for $14.99, 4 for $18.99,
+  5 for $21.99, 10 for $39.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11996/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11996/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11996/source.json
+games:
+- name: 'WOLFENSTEIN: Cyberpilot'
+  ids:
+  - steam:1056970
+- name: 'Racket: Nx'
+  ids:
+  - steam:428080
+- name: 'FATED: The Silent Oath'
+  ids:
+  - steam:401820
+- name: DOOM VFR
+  ids:
+  - steam:650000
+- name: The Invisible Hours
+  ids:
+  - steam:582560
+- name: Karnage Chronicles
+  ids:
+  - steam:611160
+- name: A-Tech Cybernetic VR
+  ids:
+  - steam:578210
+- name: Arizona Sunshine
+  ids:
+  - unresolved:source:isthereanydeal:11996:arizona-sunshine
+- name: Pixel Ripped 1989
+  ids:
+  - steam:577530
+- name: Prison Boss VR
+  ids:
+  - steam:673600
+- name: A Fisherman's Tale
+  ids:
+  - steam:559330
+- name: Operation Warcade VR
+  ids:
+  - steam:639270
+- name: Zero Caliber VR
+  ids:
+  - steam:877200
+- name: 'Skyworld: Kingdom Brawl'
+  ids:
+  - unresolved:source:isthereanydeal:11996:skyworld-kingdom-brawl
+- name: Touring Karts
+  ids:
+  - steam:1088950
+- name: OhShape
+  ids:
+  - steam:1098100
+- name: Contractors
+  ids:
+  - steam:963930
+- name: Dance Collider
+  ids:
+  - steam:692690
+- name: Pixel Ripped 1995
+  ids:
+  - steam:1178140
+- name: 'SoundSelf: A Technodelic'
+  ids:
+  - unresolved:source:isthereanydeal:11996:soundself-a-technodelic
+- name: Traffic Jams
+  ids:
+  - steam:1301930
+- name: Pangman
+  ids:
+  - steam:1319320
+- name: 1976 - Back to midway
+  ids:
+  - steam:1118070
+- name: 'Unplugged: Air Guitar (Quest 1 & 2 VR)'
+  ids:
+  - unresolved:source:isthereanydeal:11996:unplugged-air-guitar-quest-1-and-2-vr
+- name: Yupitergrad 🚀(Virtual Reality Adventure)
+  ids:
+  - steam:1352020

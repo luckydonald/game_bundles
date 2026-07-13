@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Yuri Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5851/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5851/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5851/source.json
+games:
+- name: Dead End Junction
+  ids:
+  - steam:518280
+- name: A Kiss for the Petals - Remembering How We Met
+  ids:
+  - steam:397270
+- name: 'Moékuri: Adorable + Tactical SRPG'
+  ids:
+  - steam:529160
+- name: Kindred Spirits on the Roof
+  ids:
+  - steam:402620

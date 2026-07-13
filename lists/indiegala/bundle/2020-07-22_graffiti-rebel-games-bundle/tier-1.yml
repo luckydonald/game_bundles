@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Graffiti Rebel 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8998/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8998/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8998/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+- name: The King's Bird
+  ids:
+  - steam:812550
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: Double Cross
+  ids:
+  - steam:838010
+- name: Trident's Wake
+  ids:
+  - steam:704880
+- name: 'Days of War: Definitive Edition'
+  ids:
+  - steam:454350

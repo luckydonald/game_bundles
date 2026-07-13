@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Santa&#39;s Workshop Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9562/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9562/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9562/source.json
+games:
+- name: Season's Beatings
+  ids:
+  - steam:749410
+- name: Frosty Nights
+  ids:
+  - steam:733800
+- name: Santa Rockstar
+  ids:
+  - steam:567980
+- name: Santa's Holiday
+  ids:
+  - steam:1199780
+- name: The Santa Challenge
+  ids:
+  - steam:1197360
+- name: Christmas Rampage
+  ids:
+  - steam:1447800

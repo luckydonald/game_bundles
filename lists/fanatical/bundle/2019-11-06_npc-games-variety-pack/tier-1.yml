@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: NPC Games Variety Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8100/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8100/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8100/source.json
+games:
+- name: Eightieth kilometer
+  ids:
+  - steam:611110
+- name: The Agony
+  ids:
+  - steam:568720
+- name: Sixtieth Kilometer
+  ids:
+  - steam:448780
+- name: Classic Racers
+  ids:
+  - unresolved:source:isthereanydeal:8100:classic-racers

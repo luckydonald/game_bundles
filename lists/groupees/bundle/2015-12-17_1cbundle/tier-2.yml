@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 1C End Year Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2864/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2864/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2864/source.json
+games:
+- name: "7.62 \x96 High Calibre"
+  ids:
+  - steam:289890
+- name: A.I.M. 2 - Clan Wars
+  ids:
+  - unresolved:source:isthereanydeal:2864:a-i-m-2-clan-wars
+- name: 'UFO: Aftermath'
+  ids:
+  - steam:292160
+- name: 'Real Warfare: 1242'
+  ids:
+  - steam:46350
+- name: Parkan 2
+  ids:
+  - steam:289400
+- name: RignRoll
+  ids:
+  - unresolved:source:isthereanydeal:2864:rignroll
+- name: Cuban Missile Crisis + Ice Crusade Pack
+  ids:
+  - unresolved:source:isthereanydeal:2864:cuban-missile-crisis-and-ice-crusade-pack
+- name: Death to Spies
+  ids:
+  - steam:9800
+- name: Elven Legacy
+  ids:
+  - steam:25850
+- name: El Matador
+  ids:
+  - steam:289280
+- name: NecroVisioN Lost Company
+  ids:
+  - steam:46250
+- name: 'Theatre of War 2: Africa 1943'
+  ids:
+  - steam:46340

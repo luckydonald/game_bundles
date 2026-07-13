@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Sims 1 Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11837/source.json
+games:
+- name: Fireworks Simulator
+  ids:
+  - steam:323780
+- name: TransOcean - The Shipping Company
+  ids:
+  - steam:289930
+- name: Take Off - The Flight Simulator
+  ids:
+  - steam:657470
+- name: Drone Swarm
+  ids:
+  - steam:401760
+- name: Construction-Simulator 2015 Deluxe Edition
+  ids:
+  - steam:289950

@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 9 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/31/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/31/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/31/source.json
+games:
+- name: The 39 Steps
+  ids:
+  - steam:234940
+- name: Particulars
+  ids:
+  - steam:259470
+- name: Chompy Chomp Chomp
+  ids:
+  - steam:292570
+- name: Mini Motor Racing EVO
+  ids:
+  - unresolved:source:isthereanydeal:31:mini-motor-racing-evo
+- name: Depths of Peril
+  ids:
+  - steam:23600
+- name: Super Panda Adventures
+  ids:
+  - steam:311190
+- name: Splatter - Blood Red Edition
+  ids:
+  - unresolved:source:isthereanydeal:31:splatter-blood-red-edition
+- name: Whispered World, The
+  ids:
+  - unresolved:source:isthereanydeal:31:whispered-world-the
+- name: Eador. Masters of the Broken World
+  ids:
+  - steam:232050
+- name: Ittle Dew
+  ids:
+  - steam:241320
+- name: 'Eador: Genesis'
+  ids:
+  - steam:235660
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: 'Angelica Weaver: Catch Me When You Can'
+  ids:
+  - steam:218700

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Vertigo Games Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13452/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13452/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13452/source.json
+games:
+- name: A Fisherman's Tale
+  ids:
+  - steam:559330
+- name: Traffic Jams
+  ids:
+  - steam:1301930
+- name: Arizona Sunshine
+  ids:
+  - unresolved:source:isthereanydeal:13452:arizona-sunshine
+- name: Arizona Sunshine - Deluxe Upgrade
+  ids:
+  - steam:1325790
