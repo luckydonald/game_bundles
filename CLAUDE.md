@@ -2,7 +2,7 @@
 
 ## Project
 
-This repository maintains Pydantic-validated YAML game lists and launcher adapters which can synchronize fully owned lists into launcher collections. Python 3.14+ is required. Steam is the only implemented launcher, but core list loading and CLI orchestration must remain launcher-neutral.
+This repository maintains Pydantic-validated YAML game lists and launcher adapters which can synchronize ownership-matched lists into launcher collections. Python 3.14+ is required. Steam is the only implemented launcher, but core list loading and CLI orchestration must remain launcher-neutral.
 
 `AGENTS.md` is intentionally a symlink to this file, so this content is the root guidance for both Codex and Claude.
 
@@ -19,7 +19,7 @@ Run focused tests with `uv run pytest tests/test_<area>.py -q` (fixtures live in
 
 ## CLI surface
 
-`src/game_collections/cli.py` is the single Typer entry point (`game-collections`). Verbs: `list`, `search NAME` (ranked matches across storefronts, `--provider`), `complete FILE` (fills draft `ids:`, `--store`/`--provider`, `--mode blank|missing|unresolved|refetch_all`), `schema`, `scrape humblebundle` (`--url` repeatable, `--non-interactive`, `--refresh`), `scrape dailyindiegame` (`--url` repeatable, `--refresh`; opens a real browser window, see below), `eligible steam`, `sync steam` (dry-run) / `sync steam --apply`, `restore steam <dir>`. Both `scrape` commands log progress live ("Bundle/Offer x/y", "  Game x/y"), write each offer to disk as soon as it's ready, and resume from already-archived output by default (skipping re-fetch/re-resolution unless the archive schema changed or `--refresh` is passed). See root `README.md` for the full behavior of each verb and `lists/README.md` for the list-authoring workflow.
+`src/game_collections/cli.py` is the single Typer entry point (`game-collections`). Verbs: `list`, `search NAME` (ranked matches across storefronts, `--provider`), `complete FILE` (fills draft `ids:`, `--store`/`--provider`, `--mode blank|missing|unresolved|refetch_all`), `schema`, `scrape humblebundle` (`--url` repeatable, `--non-interactive`, `--refresh`), `scrape dailyindiegame` (`--url` repeatable, `--refresh`; opens a real browser window, see below), `eligible steam`, `sync steam` (dry-run, defaults to `--mode all --tiers highest`) / `sync steam --apply`, `restore steam <dir>`. Both `scrape` commands log progress live ("Bundle/Offer x/y", "  Game x/y"), write each offer to disk as soon as it's ready, and resume from already-archived output by default (skipping re-fetch/re-resolution unless the archive schema changed or `--refresh` is passed). See root `README.md` for the full behavior of each verb and `lists/README.md` for the list-authoring workflow.
 
 ## Architecture
 
@@ -53,7 +53,7 @@ Storefront identity and launcher synchronization are separate concepts. New GOG 
 - Dry-run remains read-only. `--apply` first stages candidates and backups outside Steam.
 - Validate account mapping, paths, ownership, file type, link count, permissions, metadata, hashes, complete Pydantic models, and cross-file invariants before replacement.
 - Require Steam to be stopped and typed confirmation before replacement or restore.
-- Preserve unrelated namespace entries and opaque values. Steam synchronization is additive; never remove collections or manually added games.
+- Preserve unrelated namespace entries and opaque values. Reconcile only static `🗃️ `-prefixed managed collections (plus recognized legacy deterministic collections), protect the ownership-source collection, and preserve manually added games in retained collections.
 - Keep namespace and modified-key replacement paired, atomic per file, verified, and rollback-capable.
 - Tests must use sanitized temporary fixtures, never copied personal account data.
 

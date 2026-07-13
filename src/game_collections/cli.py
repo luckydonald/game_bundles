@@ -6,7 +6,7 @@ import json
 import os
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Literal
 
 import typer
 import yaml
@@ -14,7 +14,9 @@ import yaml
 from game_collections.lists import ListLoadError, discover_game_lists
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
+    SteamMatchMode,
     SteamOptions,
+    SteamTierMode,
     owned_app_ids_from_api,
     owned_app_ids_from_collection,
     owned_app_ids_from_installed,
@@ -660,6 +662,9 @@ def _steam_adapter(
     api_key: str | None,
     source: str | None = None,
     collection: str | None = None,
+    match_mode: SteamMatchMode = "all",
+    tier_mode: SteamTierMode = "all",
+    reconcile_managed: bool = False,
 ) -> tuple[SteamAdapter, SteamFileGateway]:
     resolved_source = source or ("collection" if collection is not None else "api")
     if resolved_source not in ("api", "installed", "collection"):
@@ -674,17 +679,37 @@ def _steam_adapter(
             err=True,
         )
         owned_app_ids_source = owned_app_ids_from_installed(root)
-        options = SteamOptions(steam_id=gateway.steam_id, steam_root=root)
+        options = SteamOptions(
+            steam_id=gateway.steam_id,
+            steam_root=root,
+            match_mode=match_mode,
+            tier_mode=tier_mode,
+            reconcile_managed=reconcile_managed,
+        )
     elif resolved_source == "collection":
         collection_name = collection or "manual-all"
         owned_app_ids_source = owned_app_ids_from_collection(gateway, collection_name)
-        options = SteamOptions(steam_id=gateway.steam_id, steam_root=root)
+        options = SteamOptions(
+            steam_id=gateway.steam_id,
+            steam_root=root,
+            match_mode=match_mode,
+            tier_mode=tier_mode,
+            reconcile_managed=reconcile_managed,
+            protected_collection_name=collection_name,
+        )
     else:
         key = api_key or os.environ.get("STEAM_WEB_API_KEY")
         if not key:
             raise ValueError("provide --api-key or STEAM_WEB_API_KEY (or use --source installed/collection)")
         # end if
-        options = SteamOptions(steam_id=gateway.steam_id, steam_root=root, api_key=key)
+        options = SteamOptions(
+            steam_id=gateway.steam_id,
+            steam_root=root,
+            api_key=key,
+            match_mode=match_mode,
+            tier_mode=tier_mode,
+            reconcile_managed=reconcile_managed,
+        )
         owned_app_ids_source = owned_app_ids_from_api(SteamApiClient(key), options.steam_id)
     # end if
     adapter = SteamAdapter(options, owned_app_ids_source=owned_app_ids_source, gateway=gateway)
@@ -698,20 +723,40 @@ def _print_plan(plan: object, *, log_skips: bool = False) -> None:
     if not isinstance(plan, SyncPlan):
         raise TypeError("expected SyncPlan")
     # end if
+    selected_ids = {
+        change.list_id
+        for change in plan.changes
+        if change.action == "create-or-update" and change.list_id is not None
+    }
     for result in plan.eligibility:
+        if result.eligible and result.list_id not in selected_ids:
+            continue
+        # end if
         if not result.eligible and not log_skips:
             continue
         # end if
         state = "eligible" if result.eligible else "skipped"
         typer.echo(f"{state}: {result.list_id} ({result.name})")
-        if result.missing_ids:
+        if log_skips and result.missing_ids:
             typer.echo(f"  missing: {', '.join(result.missing_ids)}")
         # end if
-        if result.unsupported_ids:
+        if log_skips and result.unsupported_ids:
             typer.echo(f"  no Steam ID: {', '.join(result.unsupported_ids)}")
         # end if
     # end for
-    typer.echo(f"Planned collection changes: {len(plan.changes)}")
+    for change in plan.changes:
+        if change.action != "delete":
+            continue
+        # end if
+        identifier = change.list_id or change.target_id
+        typer.echo(f"delete: {identifier} ({change.name})")
+    # end for
+    update_count = sum(change.action == "create-or-update" for change in plan.changes)
+    delete_count = sum(change.action == "delete" for change in plan.changes)
+    typer.echo(
+        f"Planned collection changes: {len(plan.changes)} "
+        f"({update_count} create/update, {delete_count} delete)"
+    )
 # end def _print_plan
 
 
@@ -754,6 +799,8 @@ def sync_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
+    mode: Annotated[Literal["any", "all"], typer.Option("--mode", help="Match any or all Steam games in each list.")] = "all",
+    tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
 ) -> None:
     """Plan or stage and explicitly apply launcher collection changes."""
     if launcher != "steam":
@@ -761,7 +808,16 @@ def sync_command(
         raise typer.Exit(2)
     # end if
     try:
-        adapter, gateway = _steam_adapter(steam_root, steam_id, api_key, source, collection)
+        adapter, gateway = _steam_adapter(
+            steam_root,
+            steam_id,
+            api_key,
+            source,
+            collection,
+            match_mode=mode,
+            tier_mode=tiers,
+            reconcile_managed=True,
+        )
         plan = adapter.plan(discover_game_lists(_lists_root(lists_root)))
         _print_plan(plan, log_skips=log_skips)
         if not apply_changes:
