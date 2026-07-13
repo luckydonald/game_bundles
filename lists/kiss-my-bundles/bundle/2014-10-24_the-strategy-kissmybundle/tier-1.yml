@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Strategy & Action Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1323/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1323/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1323/source.json
+games:
+- name: 'Age of Fear: The Undead King'
+  ids:
+  - steam:351480
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:1323:chernobyl-commando
+- name: Age of Fear 2 The Chaos Lord
+  ids:
+  - unresolved:source:isthereanydeal:1323:age-of-fear-2-the-chaos-lord
+- name: 'Battleplan: American Civil War'
+  ids:
+  - steam:285130
+- name: Manhunter
+  ids:
+  - unresolved:source:isthereanydeal:1323:manhunter
+- name: Desert Thunder
+  ids:
+  - steam:283330
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370

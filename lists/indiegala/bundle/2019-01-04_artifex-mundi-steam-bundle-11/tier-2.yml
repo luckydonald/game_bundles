@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 11 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6872/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6872/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6872/source.json
+games:
+- name: 'Dark Arcana: The Carnival'
+  ids:
+  - steam:284730
+- name: 'Fairy Tale Mysteries 2: The Beanstalk'
+  ids:
+  - steam:403510
+- name: 'Nightmares From the Deep: The Cursed Heart'
+  ids:
+  - unresolved:source:isthereanydeal:6872:nightmares-from-the-deep-the-cursed-heart
+- name: 'Faces of Illusion: The Twin Phantoms'
+  ids:
+  - steam:558340
+- name: 'The Secret Order 5: The Buried Kingdom'
+  ids:
+  - steam:574260
+- name: 'Lost Grimoires 3: The Forgotten Well'
+  ids:
+  - steam:740090
+- name: 'Enigmatis 3: The Shadow of Karkhala'
+  ids:
+  - steam:495110
+- name: 'Noir Chronicles: City of Crime'
+  ids:
+  - steam:756500
+- name: 'Demon Hunter 4: Riddles of Light'
+  ids:
+  - steam:762520
+- name: '9 Clues 2: The Ward'
+  ids:
+  - steam:369420

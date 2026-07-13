@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Libredia Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2593/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2593/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2593/source.json
+games:
+- name: 'Zombie Camp: Last Survivor'
+  ids:
+  - steam:357840
+- name: 'Kaptain Brawe: A Brawe New World'
+  ids:
+  - steam:65080
+- name: Kingdom Tales
+  ids:
+  - steam:276440
+- name: Redneck Racers
+  ids:
+  - steam:288730
+- name: Martial Arts Capoeira
+  ids:
+  - steam:307410
+- name: Spirit Run - Fire vs. Ice
+  ids:
+  - steam:311490

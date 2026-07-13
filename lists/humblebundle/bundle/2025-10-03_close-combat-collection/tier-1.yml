@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Close Combat Collection Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15474/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15474/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15474/source.json
+games:
+- name: Chronicon
+  ids:
+  - steam:375480
+- name: Dungeons of Sundaria
+  ids:
+  - steam:587520

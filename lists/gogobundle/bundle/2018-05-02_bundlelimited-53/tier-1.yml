@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #53 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6100/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6100/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6100/source.json
+games:
+- name: Creature Clicker - Capture, Train, Ascend!
+  ids:
+  - steam:529240
+- name: Brave Path
+  ids:
+  - steam:669310
+- name: Close the Window!
+  ids:
+  - unresolved:source:isthereanydeal:6100:close-the-window
+- name: Squarism
+  ids:
+  - steam:745030
+- name: 'Squarism: Soundtrack'
+  ids:
+  - steam:750640
+- name: Urizen Shadows of the Cold Deluxe Frosty Edition
+  ids:
+  - unresolved:source:isthereanydeal:6100:urizen-shadows-of-the-cold-deluxe-frosty-edition
+- name: FreeFly Burning
+  ids:
+  - steam:683530
+- name: Creature Clicker - Deluxe Pack
+  ids:
+  - steam:631332
+- name: Brainy Joy
+  ids:
+  - unresolved:source:isthereanydeal:6100:brainy-joy
+- name: Space of Darkness
+  ids:
+  - steam:666310
+- name: FPS - Fun Puzzle Shooter
+  ids:
+  - steam:697850

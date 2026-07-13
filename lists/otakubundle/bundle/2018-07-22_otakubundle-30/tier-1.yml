@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #30 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6327/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6327/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6327/source.json
+games:
+- name: Pony World 3
+  ids:
+  - steam:364940
+- name: Dark SASI
+  ids:
+  - steam:856130
+- name: When They Arrived
+  ids:
+  - steam:843860
+- name: A SECOND BEFORE US
+  ids:
+  - steam:625370
+- name: A Hand in the Darkness
+  ids:
+  - unresolved:source:isthereanydeal:6327:a-hand-in-the-darkness
+- name: 'Football Girls: Dream Team'
+  ids:
+  - unresolved:source:isthereanydeal:6327:football-girls-dream-team
+- name: Longboard Stunts and Tricks
+  ids:
+  - unresolved:source:isthereanydeal:6327:longboard-stunts-and-tricks
+- name: Firewood Soundtrack
+  ids:
+  - steam:693910
+- name: Hero of the Galactic Core
+  ids:
+  - unresolved:source:isthereanydeal:6327:hero-of-the-galactic-core
+- name: Leviathan
+  ids:
+  - steam:882630
+- name: The Dungeons of Castle Madness
+  ids:
+  - steam:506840
+- name: Firewood
+  ids:
+  - steam:615180

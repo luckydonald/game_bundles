@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Completionist Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5455/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5455/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5455/source.json
+games:
+- name: PHAT STACKS 2
+  ids:
+  - steam:655600
+- name: It Comes Around - A Kinetic Novel
+  ids:
+  - steam:520520
+- name: Lamp Head
+  ids:
+  - unresolved:source:isthereanydeal:5455:lamp-head
+- name: Z69
+  ids:
+  - unresolved:source:isthereanydeal:5455:z69
+- name: The Braves & Bows
+  ids:
+  - unresolved:source:isthereanydeal:5455:the-braves-and-bows
+- name: VITATIO
+  ids:
+  - steam:659560
+- name: Dungeons And Geese
+  ids:
+  - steam:660290
+- name: Joy Pony
+  ids:
+  - steam:685950
+- name: Forgotten, Not Lost - A Kinetic Novel
+  ids:
+  - steam:457490
+- name: Skyfall
+  ids:
+  - steam:1551330
+- name: Wizhood
+  ids:
+  - unresolved:source:isthereanydeal:5455:wizhood
+- name: Numberline 2
+  ids:
+  - steam:654970
+- name: 'Kumoon : Ballistic Physics Puzzle'
+  ids:
+  - steam:386290

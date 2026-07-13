@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Action Packed Bundle — Select 1 Title for $1.00, 5 Titles for
+  $2.99, 10 Titles for $4.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10300/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10300/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10300/source.json
+games:
+- name: Medieval Kingdom Wars
+  ids:
+  - steam:499660
+- name: The Signal From Tölva
+  ids:
+  - steam:457760
+- name: DARK
+  ids:
+  - steam:225360
+- name: Shark Attack Deathmatch 2
+  ids:
+  - steam:330580
+- name: American Fugitive
+  ids:
+  - steam:934780
+- name: Subdivision Infinity DX
+  ids:
+  - steam:908790
+- name: Killing Room
+  ids:
+  - steam:407560
+- name: Bunker Punks
+  ids:
+  - steam:446120
+- name: CastleStorm
+  ids:
+  - steam:241410
+- name: Sine Mora EX
+  ids:
+  - steam:606730
+- name: Enemy Front
+  ids:
+  - steam:256190
+- name: Still Not Dead
+  ids:
+  - steam:337290
+- name: Devil Daggers
+  ids:
+  - steam:422970
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+- name: Tower 57
+  ids:
+  - steam:530950
+- name: Kawaii Deathu Desu
+  ids:
+  - steam:1102880
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+- name: Tenta Shooter
+  ids:
+  - steam:704910
+- name: F1 Race Stars Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:10300:f1-race-stars-complete-edition

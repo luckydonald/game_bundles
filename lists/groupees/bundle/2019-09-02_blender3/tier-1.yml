@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blender Games Bundle 3 — Select 4 to 10 Titles for $1.00 up to $2.50
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7861/source.json
+games:
+- name: Bitcoin Collector
+  ids:
+  - steam:704190
+- name: aMAZE Frozen
+  ids:
+  - steam:828910
+- name: aMAZE Untouchable
+  ids:
+  - steam:776540
+- name: aMAZE ABC
+  ids:
+  - steam:928610
+- name: 'aMAZE: Halloween'
+  ids:
+  - steam:949030
+- name: aMAZE 3D
+  ids:
+  - steam:667300
+- name: aMAZE Dark Times
+  ids:
+  - steam:692200
+- name: 'Chocolate makes you happy: New Year'
+  ids:
+  - steam:983280
+- name: 'Chocolate makes you happy: Halloween'
+  ids:
+  - steam:941790

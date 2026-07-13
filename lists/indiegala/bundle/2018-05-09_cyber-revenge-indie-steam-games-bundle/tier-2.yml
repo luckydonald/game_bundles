@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyber Revenge Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6115/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6115/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6115/source.json
+games:
+- name: Cyber Fight
+  ids:
+  - unresolved:source:isthereanydeal:6115:cyber-fight
+- name: Fear Half Factor
+  ids:
+  - steam:805690
+- name: Ball laB
+  ids:
+  - steam:780800
+- name: Squareface
+  ids:
+  - steam:517350
+- name: 'REPULSE: Galactic Rivals'
+  ids:
+  - steam:692310
+- name: Kyurinaga's Revenge
+  ids:
+  - steam:529580
+- name: Love
+  ids:
+  - steam:269270
+- name: Go-Kart Racing
+  ids:
+  - steam:844750
+- name: Placement
+  ids:
+  - steam:700920
+- name: Knight Bewitched
+  ids:
+  - steam:815150
+- name: Lotia
+  ids:
+  - steam:552540

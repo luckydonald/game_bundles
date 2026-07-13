@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tower Defense Bundle Reloaded — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9250/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9250/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9250/source.json
+games:
+- name: Age of Defense
+  ids:
+  - steam:603320
+- name: Warstone TD
+  ids:
+  - steam:562500
+- name: Guards
+  ids:
+  - steam:460340
+- name: Warstone OST, Artbook and Comics
+  ids:
+  - steam:768240
+- name: Warstone - Astral Voyage
+  ids:
+  - steam:1225210

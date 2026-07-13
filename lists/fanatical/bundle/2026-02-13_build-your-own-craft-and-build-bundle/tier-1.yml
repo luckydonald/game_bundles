@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Craft and Build Bundle — Select 2 for 9.99 (5.00 each), 3 for
+  13.49 (4.50 each), 5 for 19.99 (4.00 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15871/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15871/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15871/source.json
+games:
+- name: 'Frostpunk: Game of the Year edition'
+  ids:
+  - unresolved:source:isthereanydeal:15871:frostpunk-game-of-the-year-edition
+- name: Let Them Trade
+  ids:
+  - steam:1313290
+- name: Moonstone Island
+  ids:
+  - steam:1658150
+- name: 'Smalland: Survive the Wilds'
+  ids:
+  - steam:768200
+- name: Furnish Master
+  ids:
+  - steam:2004080
+- name: 'Medieval Crafter: Blacksmith'
+  ids:
+  - steam:2331280
+- name: 'Tales of Old: Dominus'
+  ids:
+  - steam:2761000
+- name: Inn Tycoon
+  ids:
+  - steam:2749000
+- name: Forgotten Seas
+  ids:
+  - steam:2168260
+- name: Border Pioneer
+  ids:
+  - steam:2346410
+- name: Small Spaces
+  ids:
+  - steam:3151380
+- name: Witchy Business
+  ids:
+  - steam:3415230
+- name: Mercury Fallen & One Lonely Outpost Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15871:mercury-fallen-and-one-lonely-outpost-double-pack

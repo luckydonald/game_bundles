@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Jurassic World Evolution 2: Ultimate Dino Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15210/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15210/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15210/source.json
+games:
+- name: 'Jurassic World Evolution 2: Camp Cretaceous Dinosaur Pack'
+  ids:
+  - steam:1882470
+- name: 'Jurassic World Evolution 2: Dominion Biosyn Expansion'
+  ids:
+  - steam:1966010
+- name: 'Jurassic World Evolution 2: Late Cretaceous Pack'
+  ids:
+  - steam:2106800
+- name: 'Jurassic World Evolution 2: Dominion Malta Expansion'
+  ids:
+  - steam:2177430
+- name: 'Jurassic World Evolution 2: Cretaceous Predator Pack'
+  ids:
+  - steam:2610980
+- name: 'Jurassic World Evolution 2: Secret Species Pack'
+  ids:
+  - steam:2806860

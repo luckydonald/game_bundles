@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Weekend Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2638/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2638/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2638/source.json
+games:
+- name: Project Druid - 2D Labyrinth Explorer
+  ids:
+  - steam:388160
+- name: The Darkness Assault
+  ids:
+  - unresolved:source:isthereanydeal:2638:the-darkness-assault
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+- name: 'The Defenders: The Second Wave'
+  ids:
+  - steam:351400
+- name: 'World War 2: Time of Wrath'
+  ids:
+  - steam:305390

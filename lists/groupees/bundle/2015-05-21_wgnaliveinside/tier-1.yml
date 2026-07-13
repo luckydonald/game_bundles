@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Alive Inside Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2018/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2018/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2018/source.json
+games:
+- name: Space Drifters 2D
+  ids:
+  - steam:377570
+- name: The Tower of Elements
+  ids:
+  - steam:377310
+- name: New kind of adventure
+  ids:
+  - steam:375510
+- name: Stellar 2D
+  ids:
+  - steam:391070

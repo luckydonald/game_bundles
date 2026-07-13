@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 226 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9047/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9047/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9047/source.json
+games:
+- name: Miniballist
+  ids:
+  - steam:628580
+- name: Cube XL
+  ids:
+  - steam:645360
+- name: Darkness and a Crowd
+  ids:
+  - unresolved:source:isthereanydeal:9047:darkness-and-a-crowd
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: Crazy Critters - Combat Cats
+  ids:
+  - steam:1141880
+- name: Cyber OutRun
+  ids:
+  - steam:1132410
+- name: Lighthouse of guiding flames
+  ids:
+  - steam:1107060
+- name: Paul's World
+  ids:
+  - steam:1160880
+- name: Guardians Of Rings
+  ids:
+  - steam:1200400

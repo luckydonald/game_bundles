@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Day Of The Dead - 10 Pack — Limited Stock
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6645/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6645/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6645/source.json
+games:
+- name: 'Teleglitch: Die More Edition'
+  ids:
+  - steam:234390
+- name: 'Castlevania: Lords of Shadow Ultimate Edition'
+  ids:
+  - steam:234080
+- name: 'Castlevania: Lords of Shadow - Mirror of Fate HD'
+  ids:
+  - steam:282530
+- name: 'Batman: Arkham Asylum Game of the Year Edition'
+  ids:
+  - steam:35140
+- name: Dead Age
+  ids:
+  - steam:363930
+- name: F.E.A.R. 3
+  ids:
+  - unresolved:source:isthereanydeal:6645:f-e-a-r-3
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: Rage
+  ids:
+  - steam:9200
+- name: 'Castlevania: Lords of Shadow 2 Digital Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:6645:castlevania-lords-of-shadow-2-digital-bundle
+- name: Quarantine
+  ids:
+  - steam:489370

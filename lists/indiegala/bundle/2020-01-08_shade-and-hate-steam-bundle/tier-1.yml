@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shade & Hate Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8298/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8298/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8298/source.json
+games:
+- name: Daedalus - no escape
+  ids:
+  - steam:315830
+- name: ZOMBIE CAR MASSACRE
+  ids:
+  - unresolved:source:isthereanydeal:8298:zombie-car-massacre
+- name: Hatred
+  ids:
+  - steam:341940
+- name: ChromaGun
+  ids:
+  - steam:408650
+- name: 'BATTLE ZOMBIE SHOOTER: SURVIVAL OF THE DEAD'
+  ids:
+  - unresolved:source:isthereanydeal:8298:battle-zombie-shooter-survival-of-the-dead
+- name: Shadowgrounds Survivor
+  ids:
+  - steam:11200
+- name: Shadowgrounds
+  ids:
+  - steam:2500
+- name: Tomato Way 2
+  ids:
+  - steam:886970

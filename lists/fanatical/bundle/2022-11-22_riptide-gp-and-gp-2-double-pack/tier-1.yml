@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Riptide GP & GP2 Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12534/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12534/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12534/source.json
+games:
+- name: Riptide GP2
+  ids:
+  - steam:257790
+- name: 'Riptide GP: Renegade'
+  ids:
+  - steam:443860

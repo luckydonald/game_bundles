@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #44 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6028/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6028/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6028/source.json
+games:
+- name: NeoBoom2
+  ids:
+  - unresolved:source:isthereanydeal:6028:neoboom2
+- name: Go Kart Survival
+  ids:
+  - steam:713570
+- name: Thundering Skies
+  ids:
+  - steam:725660
+- name: YAGZZ!
+  ids:
+  - steam:709720
+- name: Evil Spirits
+  ids:
+  - steam:690580
+- name: Cyborg Invasion Shooter
+  ids:
+  - steam:723830
+- name: Cornflakestein
+  ids:
+  - unresolved:source:isthereanydeal:6028:cornflakestein
+- name: Wanderlust
+  ids:
+  - steam:729670
+- name: Sky Road
+  ids:
+  - steam:756190
+- name: Virus Z
+  ids:
+  - steam:666290
+- name: 'Nash Racing 2: Muscle cars'
+  ids:
+  - steam:713580

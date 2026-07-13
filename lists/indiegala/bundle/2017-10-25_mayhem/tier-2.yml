@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mayhem — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5572/source.json
+games:
+- name: The Deed
+  ids:
+  - steam:420740
+- name: Circularity
+  ids:
+  - steam:709380
+- name: Forgotten Land
+  ids:
+  - steam:685990
+- name: Slugs Destroyer
+  ids:
+  - unresolved:source:isthereanydeal:5572:slugs-destroyer
+- name: TRIPLICATA
+  ids:
+  - steam:701800
+- name: 60 Second Strike
+  ids:
+  - steam:696540
+- name: Abstractanoid
+  ids:
+  - steam:714640
+- name: Mall Mayhem
+  ids:
+  - steam:629400
+- name: Don't Panic!
+  ids:
+  - steam:720000
+- name: Hard Rock Zombie Truck
+  ids:
+  - unresolved:source:isthereanydeal:5572:hard-rock-zombie-truck
+- name: Infinite Gateway
+  ids:
+  - steam:713800
+- name: Apez
+  ids:
+  - steam:683210

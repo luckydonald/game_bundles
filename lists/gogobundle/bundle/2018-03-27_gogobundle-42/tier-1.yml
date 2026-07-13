@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #42 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6009/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6009/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6009/source.json
+games:
+- name: Qubika
+  ids:
+  - steam:797060
+- name: Clickdraw Clicker
+  ids:
+  - steam:541370
+- name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
+  ids:
+  - steam:358080
+- name: Bit Bullet
+  ids:
+  - steam:726260
+- name: Timbertales
+  ids:
+  - steam:673480
+- name: Neon Blocks 87
+  ids:
+  - unresolved:source:isthereanydeal:6009:neon-blocks-87
+- name: ANIMALITY
+  ids:
+  - steam:576470
+- name: PHAT STACKS
+  ids:
+  - steam:556160
+- name: FlatFatCat
+  ids:
+  - steam:690130
+- name: 'Precision Archery: Competitive'
+  ids:
+  - steam:763490

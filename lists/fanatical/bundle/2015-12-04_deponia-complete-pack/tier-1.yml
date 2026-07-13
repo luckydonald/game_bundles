@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deponia Complete Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2818/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2818/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2818/source.json
+games:
+- name: Goodbye Deponia - Premium Edition
+  ids:
+  - unresolved:source:isthereanydeal:2818:goodbye-deponia-premium-edition
+- name: Deponia
+  ids:
+  - steam:214340
+- name: Chaos on Deponia
+  ids:
+  - steam:220740

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cold Spaghetti Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11978/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11978/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11978/source.json
+games:
+- name: All Walls Must Fall
+  ids:
+  - unresolved:source:isthereanydeal:11978:all-walls-must-fall
+- name: Freddy Spaghetti
+  ids:
+  - steam:1265120
+- name: Freddy Spaghetti 2.0
+  ids:
+  - steam:1452220
+- name: 'Firelight Fantasy: Resistance'
+  ids:
+  - steam:1558490
+- name: Adventures at the North Pole
+  ids:
+  - steam:2006530
+- name: 'Niflhel''s Fables: The Book of Gypsies'
+  ids:
+  - steam:1928650

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Jam Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/36/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/36/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/36/source.json
+games:
+- name: 'Grotesque Tactics: Evil Heroes'
+  ids:
+  - steam:46450
+- name: Unstoppable Gorg
+  ids:
+  - steam:18120
+- name: Trauma
+  ids:
+  - steam:98100
+- name: Grotesque Tactics 2 - Dungeons & Donuts
+  ids:
+  - steam:46570
+- name: Trapped Dead
+  ids:
+  - steam:46540
+- name: Future Wars
+  ids:
+  - steam:46440
+- name: Dead Horde
+  ids:
+  - steam:27940
+- name: "Greed \x96 Black Border"
+  ids:
+  - steam:46400
+- name: Stellar Impact
+  ids:
+  - unresolved:source:isthereanydeal:36:stellar-impact
+- name: Twin Sector
+  ids:
+  - steam:27900

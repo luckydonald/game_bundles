@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #66 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6909/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6909/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6909/source.json
+games:
+- name: Varius
+  ids:
+  - steam:816830
+- name: Olea's Descent
+  ids:
+  - unresolved:source:isthereanydeal:6909:oleas-descent
+- name: Taco Tom 2
+  ids:
+  - steam:727420
+- name: Tales of the Tiny Planet
+  ids:
+  - steam:616040
+- name: Monkeys & Dragons
+  ids:
+  - steam:934120
+- name: Planar Conquest
+  ids:
+  - steam:449300
+- name: Duality
+  ids:
+  - unresolved:source:isthereanydeal:6909:duality
+- name: 'War Heroes: Invasion'
+  ids:
+  - steam:622700

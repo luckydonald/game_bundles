@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Extreme Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3016/source.json
+games:
+- name: Abduction Action! Plus
+  ids:
+  - steam:360580
+- name: LaserCat
+  ids:
+  - steam:496120
+- name: Dashy Square
+  ids:
+  - steam:461230
+- name: The Darkness Assault
+  ids:
+  - unresolved:source:isthereanydeal:3016:the-darkness-assault
+- name: It's Hard To Be A Cube
+  ids:
+  - unresolved:source:isthereanydeal:3016:its-hard-to-be-a-cube
+- name: Game Type DX
+  ids:
+  - steam:373630

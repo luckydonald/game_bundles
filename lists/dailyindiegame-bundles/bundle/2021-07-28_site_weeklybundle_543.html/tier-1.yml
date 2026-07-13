@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 543 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10297/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10297/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10297/source.json
+games:
+- name: Defence War
+  ids:
+  - unresolved:source:isthereanydeal:10297:defence-war
+- name: Dropshipping Simulator
+  ids:
+  - steam:1573700
+- name: Cave Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:10297:cave-nightmare
+- name: Skeleton Wave
+  ids:
+  - unresolved:source:isthereanydeal:10297:skeleton-wave
+- name: Robbed Money
+  ids:
+  - unresolved:source:isthereanydeal:10297:robbed-money
+- name: Sweet Dream
+  ids:
+  - unresolved:source:isthereanydeal:10297:sweet-dream
+- name: Queen of Honor
+  ids:
+  - steam:1686880
+- name: Light Fighter
+  ids:
+  - unresolved:source:isthereanydeal:10297:light-fighter
+- name: Virus ON
+  ids:
+  - steam:1691170

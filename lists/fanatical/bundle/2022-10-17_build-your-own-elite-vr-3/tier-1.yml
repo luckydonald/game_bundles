@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Elite VR Bundle 3 — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12243/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12243/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12243/source.json
+games:
+- name: Beat Blaster
+  ids:
+  - steam:1020390
+- name: Cosmic Trip
+  ids:
+  - steam:427240
+- name: Catch & Release
+  ids:
+  - steam:679750
+- name: Boiling Steel
+  ids:
+  - steam:1016860
+- name: Operation Warcade VR
+  ids:
+  - steam:639270
+- name: Stranger
+  ids:
+  - steam:1902150
+- name: Visionarium
+  ids:
+  - steam:928300
+- name: 'Skyworld: Kingdom Brawl'
+  ids:
+  - unresolved:source:isthereanydeal:12243:skyworld-kingdom-brawl
+- name: Touring Karts
+  ids:
+  - steam:1088950
+- name: Final Soccer VR
+  ids:
+  - steam:555060
+- name: Narcosis
+  ids:
+  - steam:366870
+- name: TOTALLY BASEBALL
+  ids:
+  - steam:1192380
+- name: Traffic Jams
+  ids:
+  - steam:1301930
+- name: Soulace
+  ids:
+  - steam:1339360
+- name: Hyper Dash
+  ids:
+  - steam:1386890
+- name: Cave Digger VR
+  ids:
+  - steam:844380
+- name: 1976 - Back to midway
+  ids:
+  - steam:1118070
+- name: BoomBox
+  ids:
+  - steam:1485120
+- name: 'Warplanes: WW1 Fighters'
+  ids:
+  - steam:1546500
+- name: Trails Of Gold Privateers
+  ids:
+  - steam:1804440

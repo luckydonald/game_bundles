@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Nikopol: Secrets Of The Immortals - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1475/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1475/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1475/source.json
+games:
+- name: Nikopol - Meridian4
+  ids:
+  - unresolved:source:isthereanydeal:1475:nikopol-meridian4

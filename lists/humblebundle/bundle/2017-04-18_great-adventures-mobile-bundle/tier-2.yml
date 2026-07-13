@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Mobile Bundle: Great Adventures — $4+'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5013/source.json
+games:
+- name: Machinarium
+  ids:
+  - steam:40700
+- name: Kathy Rain
+  ids:
+  - steam:370910
+- name: Grim Fandango Remastered
+  ids:
+  - steam:316790
+- name: Burly Men at Sea
+  ids:
+  - steam:403290
+- name: Her Story
+  ids:
+  - steam:368370
+- name: Sorcery! Part 4
+  ids:
+  - steam:504800

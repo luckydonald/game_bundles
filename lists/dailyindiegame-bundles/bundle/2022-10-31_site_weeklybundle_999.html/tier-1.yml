@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 999: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12340/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12340/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12340/source.json
+games:
+- name: Temptations X
+  ids:
+  - steam:1457020
+- name: Broken Ecchi Gallery
+  ids:
+  - steam:1465200
+- name: 'Flirtatious: Fallen Angels'
+  ids:
+  - steam:1682300
+- name: Fantasy Sliding Puzzle 3
+  ids:
+  - steam:1776640
+- name: Fantasy Sliding Puzzle 3 - ArtBook
+  ids:
+  - steam:1776950
+- name: Fantasy Sliding Puzzle 4
+  ids:
+  - steam:1795080
+- name: Fantasy Sliding Puzzle 4 - ArtBook
+  ids:
+  - steam:1795650
+- name: Memory Puzzle - Mystery Mermaids ArtBook
+  ids:
+  - steam:1840260
+- name: Memory Puzzle - Mystery Mermaids
+  ids:
+  - steam:1839840

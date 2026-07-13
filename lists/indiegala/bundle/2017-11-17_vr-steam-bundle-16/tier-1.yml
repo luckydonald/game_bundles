@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XVI — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5636/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5636/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5636/source.json
+games:
+- name: VR Coaster Extreme
+  ids:
+  - steam:616660
+- name: Tengutana
+  ids:
+  - steam:630070
+- name: Butterfly Moment
+  ids:
+  - unresolved:source:isthereanydeal:5636:butterfly-moment

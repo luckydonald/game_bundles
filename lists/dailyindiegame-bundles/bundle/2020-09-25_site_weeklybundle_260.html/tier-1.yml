@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 260: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9209/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9209/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9209/source.json
+games:
+- name: One Manga Day - Bonus Content
+  ids:
+  - steam:367380
+- name: Robbotto - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9209:robbotto-soundtrack
+- name: OSES - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9209:oses-soundtrack
+- name: 'Button Tales: Way Home'
+  ids:
+  - steam:1114750
+- name: Akihabara - Feel the Rhythm Remixed - Electric Symphony Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9209:akihabara-feel-the-rhythm-remixed-electric-symphony-soundtrack
+- name: Desktop Girls - New Girls
+  ids:
+  - steam:1099620
+- name: The Mystery Of Woolley Mountain Soundtrack
+  ids:
+  - steam:1223950
+- name: RRRR3 - Piranha
+  ids:
+  - steam:1192680
+- name: The Mystery Of Woolley Mountain - Art Book
+  ids:
+  - steam:1264780

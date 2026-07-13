@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Devil May Cry: Devil Trigger Collection Bundle — 2-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15264/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15264/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15264/source.json
+games:
+- name: DMC - Devil May Cry
+  ids:
+  - steam:220440
+- name: Devil May Cry HD Collection
+  ids:
+  - steam:631510

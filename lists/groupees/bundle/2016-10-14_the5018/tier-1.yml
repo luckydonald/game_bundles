@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Firestarter Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4197/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4197/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4197/source.json
+games:
+- name: Firefighters - The Simulation
+  ids:
+  - steam:502420
+- name: Kick-Ass 2
+  ids:
+  - steam:304170
+- name: Invisible Mind
+  ids:
+  - steam:502090
+- name: Professional Construction - The Simulation
+  ids:
+  - steam:502450
+- name: Airport Fire Department - The Simulation
+  ids:
+  - steam:502410

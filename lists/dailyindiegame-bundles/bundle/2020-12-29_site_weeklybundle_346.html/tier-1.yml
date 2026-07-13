@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 346 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9584/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9584/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9584/source.json
+games:
+- name: 'Honor Cry: Aftermath'
+  ids:
+  - steam:867540
+- name: Ultra Pig
+  ids:
+  - steam:985580
+- name: The Quest for Achievements Remix
+  ids:
+  - unresolved:source:isthereanydeal:9584:the-quest-for-achievements-remix
+- name: Cowboy's Adventure
+  ids:
+  - steam:666960
+- name: Elections Simulator 2018
+  ids:
+  - unresolved:source:isthereanydeal:9584:elections-simulator-2018
+- name: Topfold
+  ids:
+  - steam:1217820
+- name: Zulup
+  ids:
+  - steam:1228730
+- name: Polary
+  ids:
+  - steam:1262780
+- name: HARTS ISLAND
+  ids:
+  - steam:1322270

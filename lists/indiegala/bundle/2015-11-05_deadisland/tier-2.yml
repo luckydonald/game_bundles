@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dead Island Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2712/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2712/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2712/source.json
+games:
+- name: Dead Island Riptide
+  ids:
+  - unresolved:source:isthereanydeal:2712:dead-island-riptide
+- name: Dead Island Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:2712:dead-island-game-of-the-year-edition
+- name: "Dead Island Riptide \x96 Fashion Victim"
+  ids:
+  - unresolved:source:isthereanydeal:2712:dead-island-riptide-fashion-victim
+- name: 'Dead Island Riptide: Survivor Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2712:dead-island-riptide-survivor-pack
+- name: Escape Dead Island
+  ids:
+  - steam:226560

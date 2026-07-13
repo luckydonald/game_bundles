@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Infamy — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3568/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3568/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3568/source.json
+games:
+- name: Planets Under Attack
+  ids:
+  - steam:218510
+- name: Grab Bag
+  ids:
+  - unresolved:source:isthereanydeal:3568:grab-bag
+- name: Quest For Infamy
+  ids:
+  - steam:264560
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930

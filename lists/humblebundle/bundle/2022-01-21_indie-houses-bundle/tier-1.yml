@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Houses Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10994/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10994/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10994/source.json
+games:
+- name: Super Mutant Alien Assault
+  ids:
+  - steam:368680
+- name: The Count Lucanor
+  ids:
+  - steam:440880

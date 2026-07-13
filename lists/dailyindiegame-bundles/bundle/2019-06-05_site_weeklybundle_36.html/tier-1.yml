@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 36: Virtual Reality — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7471/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7471/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7471/source.json
+games:
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+- name: airRevo VR
+  ids:
+  - steam:594150
+- name: VR Hero Sentry
+  ids:
+  - steam:843080
+- name: COMPLEX a VR Puzzle Game
+  ids:
+  - steam:772420
+- name: Spirit Guide Crucible
+  ids:
+  - steam:619100
+- name: VR Shooter Guns
+  ids:
+  - steam:489160
+- name: Magic Tavern
+  ids:
+  - steam:560960
+- name: VR Fun World
+  ids:
+  - steam:535750
+- name: World of Virtual Reality (VR)
+  ids:
+  - unresolved:source:isthereanydeal:7471:world-of-virtual-reality-vr

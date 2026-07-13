@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Online Multi-Player Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7644/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7644/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7644/source.json
+games:
+- name: Mystic Vale
+  ids:
+  - steam:908070
+- name: Blockstorm
+  ids:
+  - steam:263060
+- name: Peekaboo
+  ids:
+  - steam:1048100
+- name: Animal Fight Club
+  ids:
+  - steam:1022780
+- name: Mini Thief
+  ids:
+  - steam:481870
+- name: SHiRO 011
+  ids:
+  - unresolved:source:isthereanydeal:7644:shiro-011
+- name: KABOUNCE
+  ids:
+  - steam:431930
+- name: 'ORION: Prelude'
+  ids:
+  - steam:104900

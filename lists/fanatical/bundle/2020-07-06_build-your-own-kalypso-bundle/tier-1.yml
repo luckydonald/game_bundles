@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Kalypso Bundle — Select 3 Titles for $1.99, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8959/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8959/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8959/source.json
+games:
+- name: 'Dungeons: Into the Dark'
+  ids:
+  - steam:57655
+- name: "Rise of Venice \x96 Beyond the Sea"
+  ids:
+  - steam:260860
+- name: Port Royale 3
+  ids:
+  - steam:205610
+- name: Patrician IV
+  ids:
+  - steam:57620
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+- name: 'Tropico 3: Absolute Power'
+  ids:
+  - steam:57600
+- name: 'Dungeons 2: A Chance Of Dragons'
+  ids:
+  - steam:382410
+- name: Anna Extended Edition
+  ids:
+  - steam:217690
+- name: Port Royale 3 Dawn of Pirates
+  ids:
+  - steam:215971
+- name: Dungeons
+  ids:
+  - steam:57650
+- name: 'Imperium Romanum: Gold Edition'
+  ids:
+  - steam:23400
+- name: 'Dungeons 2: A Song of Sand and Fire'
+  ids:
+  - steam:390180
+- name: Airline Tycoon 2
+  ids:
+  - steam:201490
+- name: Tropico 3
+  ids:
+  - steam:23490
+- name: Port Royale 3 New Adventures
+  ids:
+  - steam:215972
+- name: Sudden Strike 2 Gold
+  ids:
+  - steam:612520
+- name: Tropico Reloaded
+  ids:
+  - steam:33520
+- name: 'Dungeons 2: A Game of Winter'
+  ids:
+  - steam:382400
+- name: Sudden Strike Gold
+  ids:
+  - steam:612300
+- name: 'Commandos: Behind Enemy Lines'
+  ids:
+  - steam:6800
+- name: 'Dungeons: Map Pack'
+  ids:
+  - steam:57656
+- name: Rise of Venice
+  ids:
+  - steam:227020
+- name: Dungeons 2
+  ids:
+  - steam:262280
+- name: Sudden Strike 3
+  ids:
+  - steam:612540
+- name: The First Templar - Special Edition
+  ids:
+  - steam:57680

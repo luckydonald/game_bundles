@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Thrills 'n' Skills Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2432/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2432/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2432/source.json
+games:
+- name: Hotel Giant 2
+  ids:
+  - steam:38230
+- name: Vortex
+  ids:
+  - steam:383530
+- name: The Falling Sun
+  ids:
+  - unresolved:source:isthereanydeal:2432:the-falling-sun
+- name: Nyctophobia
+  ids:
+  - steam:378100
+- name: Veteran Combat
+  ids:
+  - steam:351420
+- name: Fantastic Pinball Thrills
+  ids:
+  - steam:373800
+- name: Rats - Time is running out!
+  ids:
+  - unresolved:source:isthereanydeal:2432:rats-time-is-running-out
+- name: Volstead
+  ids:
+  - unresolved:source:isthereanydeal:2432:volstead

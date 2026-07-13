@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blasting Blocks Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4708/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4708/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4708/source.json
+games:
+- name: Mad Combat Marines
+  ids:
+  - steam:485370
+- name: 'NeXus: One Core'
+  ids:
+  - steam:341080
+- name: Mars Industries
+  ids:
+  - unresolved:source:isthereanydeal:4708:mars-industries
+- name: Russian Car Driver
+  ids:
+  - unresolved:source:isthereanydeal:4708:russian-car-driver
+- name: Tank Blast
+  ids:
+  - unresolved:source:isthereanydeal:4708:tank-blast
+- name: The Travels of Marco Polo
+  ids:
+  - steam:366670
+- name: The Orphan Dreams
+  ids:
+  - steam:456440
+- name: Tesla's Best Friend
+  ids:
+  - unresolved:source:isthereanydeal:4708:teslas-best-friend
+- name: Bleeding Blocks
+  ids:
+  - steam:400710
+- name: Pitiri 1977
+  ids:
+  - steam:305740
+- name: Danko and treasure map
+  ids:
+  - unresolved:source:isthereanydeal:4708:danko-and-treasure-map
+- name: 'Duckles: the Jigsaw Witch'
+  ids:
+  - steam:512700

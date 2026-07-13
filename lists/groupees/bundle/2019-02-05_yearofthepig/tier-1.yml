@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Year of the Pig Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6986/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6986/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6986/source.json
+games:
+- name: Snares of Ruin Zero
+  ids:
+  - steam:970090
+- name: Fruit Lockers Reborn! 2
+  ids:
+  - steam:1012390
+- name: Fish's Trip
+  ids:
+  - steam:701960
+- name: Crashbots
+  ids:
+  - steam:861940
+- name: Fight For Love
+  ids:
+  - steam:989250
+- name: Franky the Bumwalker
+  ids:
+  - unresolved:source:isthereanydeal:6986:franky-the-bumwalker

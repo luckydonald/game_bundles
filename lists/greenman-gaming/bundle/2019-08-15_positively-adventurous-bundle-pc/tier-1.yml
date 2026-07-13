@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Positively Adventurous Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7780/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7780/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7780/source.json
+games:
+- name: Safety First
+  ids:
+  - steam:497700
+- name: Aerial Destruction
+  ids:
+  - steam:592730
+- name: Dub Dash
+  ids:
+  - steam:406940
+- name: 'Supreme League of Patriots - Issue 2: Patriot Frames'
+  ids:
+  - steam:336710
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:7780:race-a-bit
+- name: 'After The End: The Harvest'
+  ids:
+  - steam:386140
+- name: 'Lead and Gold: Gangs of the Wild West'
+  ids:
+  - steam:42120
+- name: Incandescent
+  ids:
+  - steam:380550
+- name: 'A Trip to Yugoslavia: Director''s Cut'
+  ids:
+  - steam:545410
+- name: The Flame in the Flood
+  ids:
+  - steam:318600

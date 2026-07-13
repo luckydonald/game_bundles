@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #10 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5319/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5319/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5319/source.json
+games:
+- name: Kronos
+  ids:
+  - steam:562090
+- name: Labyrinth Escape
+  ids:
+  - steam:654950
+- name: Kronos Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5319:kronos-soundtrack
+- name: Tangled Up!
+  ids:
+  - steam:502380
+- name: Obludia
+  ids:
+  - steam:314290
+- name: '1 vs 1 : Global Operations'
+  ids:
+  - unresolved:source:isthereanydeal:5319:1-vs-1-global-operations
+- name: Iron Impact
+  ids:
+  - unresolved:source:isthereanydeal:5319:iron-impact
+- name: Great Permutator
+  ids:
+  - steam:319270
+- name: Employee Recycling Center
+  ids:
+  - steam:629030

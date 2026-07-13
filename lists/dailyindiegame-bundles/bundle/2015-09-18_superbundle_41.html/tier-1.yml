@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 41 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2472/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2472/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2472/source.json
+games:
+- name: 'Data Hacker: Corruption'
+  ids:
+  - steam:329000
+- name: Data Hacker - Initiation
+  ids:
+  - steam:311860
+- name: Dungeon Hero
+  ids:
+  - unresolved:source:isthereanydeal:2472:dungeon-hero
+- name: Incognito
+  ids:
+  - unresolved:source:isthereanydeal:2472:incognito
+- name: Dead Effect
+  ids:
+  - steam:286040
+- name: 'Data Hacker: Reboot'
+  ids:
+  - steam:331790

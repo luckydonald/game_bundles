@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 23 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11816/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11816/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11816/source.json
+games:
+- name: Sparklite
+  ids:
+  - steam:943140
+- name: Valfaris
+  ids:
+  - steam:600130
+- name: Everhood
+  ids:
+  - steam:1229380
+- name: The Ramp
+  ids:
+  - steam:1506510
+- name: 'Grand Mountain Adventure: Wonderlands'
+  ids:
+  - steam:1247360
+- name: Nomad Survival
+  ids:
+  - steam:1929870

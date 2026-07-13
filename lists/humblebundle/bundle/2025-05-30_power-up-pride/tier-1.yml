@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Power Up Pride Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15150/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15150/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15150/source.json
+games:
+- name: A Normal Lost Phone
+  ids:
+  - steam:523210
+- name: Welcome To Elk
+  ids:
+  - steam:1015940
+- name: Heart of the Woods
+  ids:
+  - steam:844660

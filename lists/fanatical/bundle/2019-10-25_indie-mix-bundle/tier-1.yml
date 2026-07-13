@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mix Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8048/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8048/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8048/source.json
+games:
+- name: Super Treasure Arena
+  ids:
+  - steam:338330
+- name: Super Blackjack Battle 2 Turbo Edition - The Card Warriors
+  ids:
+  - steam:545200
+- name: Sunny Hillride
+  ids:
+  - steam:378490
+- name: Dub Dash
+  ids:
+  - steam:406940
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:8048:race-a-bit

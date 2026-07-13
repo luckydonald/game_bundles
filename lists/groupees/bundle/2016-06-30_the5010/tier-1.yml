@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Jackal Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3652/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3652/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3652/source.json
+games:
+- name: 'Safety Driving Simulator: Motorbike'
+  ids:
+  - steam:450600
+- name: Drayt Empire
+  ids:
+  - steam:502140
+- name: Jackal
+  ids:
+  - steam:3124230
+- name: Base Squad 49
+  ids:
+  - unresolved:source:isthereanydeal:3652:base-squad-49
+- name: Skilltree Saga
+  ids:
+  - steam:315320

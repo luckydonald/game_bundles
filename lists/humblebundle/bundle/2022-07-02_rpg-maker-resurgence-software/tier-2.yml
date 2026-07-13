@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Maker Resurgence Software Bundle — 11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11709/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11709/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11709/source.json
+games:
+- name: RPG Maker VX Ace
+  ids:
+  - steam:220700
+- name: RPG Maker VX Ace - Dark Hero Character Pack
+  ids:
+  - steam:330650
+- name: 'RPG Maker MV - Fantastic Buildings: Medieval'
+  ids:
+  - steam:721060
+- name: RPG Maker VX Ace - Wild West Music Variety Pack
+  ids:
+  - steam:357262
+- name: RPG Maker VX Ace - Wild West Tiles Pack
+  ids:
+  - steam:271963
+- name: 'RPG Maker VX Ace - Fantastic Buildings: Modern'
+  ids:
+  - steam:525440
+- name: RPG Maker VX
+  ids:
+  - steam:521880
+- name: RPG Maker VX Ace - Time Fantasy
+  ids:
+  - steam:268614
+- name: RPG Maker VX Ace - Tyler Warren RPG Battlers - 2nd 50
+  ids:
+  - steam:277841
+- name: RPG Maker VX Ace - Wonderland Music Pack
+  ids:
+  - unresolved:source:isthereanydeal:11709:rpg-maker-vx-ace-wonderland-music-pack
+- name: RPG Maker MV - Tyler Warren RPG Battlers - 1st 50
+  ids:
+  - unresolved:source:isthereanydeal:11709:rpg-maker-mv-tyler-warren-rpg-battlers-1st-50

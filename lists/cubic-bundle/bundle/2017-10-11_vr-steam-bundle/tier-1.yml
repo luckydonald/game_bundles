@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: VR Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5534/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5534/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5534/source.json
+games:
+- name: Stack
+  ids:
+  - steam:637330
+- name: VR Journey
+  ids:
+  - unresolved:source:isthereanydeal:5534:vr-journey
+- name: Sky Jac
+  ids:
+  - steam:518190
+- name: 'Tower Island: Explore, Discover and Disassemble'
+  ids:
+  - unresolved:source:isthereanydeal:5534:tower-island-explore-discover-and-disassemble
+- name: Sky Climbers
+  ids:
+  - unresolved:source:isthereanydeal:5534:sky-climbers
+- name: Magic Tavern
+  ids:
+  - steam:560960
+- name: Weird creatures
+  ids:
+  - steam:543920
+- name: Spacecats with Lasers VR
+  ids:
+  - steam:565190
+- name: DREAMFLIGHT VR
+  ids:
+  - steam:365140
+- name: RunVR
+  ids:
+  - steam:542570

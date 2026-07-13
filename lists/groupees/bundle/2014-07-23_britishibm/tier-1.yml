@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The British IBM Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1017/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1017/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1017/source.json
+games:
+- name: Kairo
+  ids:
+  - steam:233230
+- name: iBomber Defense Pacific
+  ids:
+  - steam:206690
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:1017:canyon-capers
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:1017:n-p-p-d-rush-the-milk-of-ultra-violet
+- name: Lunar Panda Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:1017:lunar-panda-deluxe
+- name: Numba Deluxe
+  ids:
+  - steam:301700
+- name: Chip
+  ids:
+  - steam:275470
+- name: Cobi Treasure Deluxe
+  ids:
+  - steam:301690

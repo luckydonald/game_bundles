@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 19 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10484/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10484/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10484/source.json
+games:
+- name: Tannenberg
+  ids:
+  - steam:633460
+- name: Golf It!
+  ids:
+  - steam:571740
+- name: Tacoma
+  ids:
+  - steam:343860
+- name: Iconoclasts
+  ids:
+  - steam:393520
+- name: 'Fell Seal: Arbiter''s Mark'
+  ids:
+  - steam:699170
+- name: Heroes of Hammerwatch
+  ids:
+  - steam:677120
+- name: 'The Battle of Polytopia: Moonrise - Deluxe'
+  ids:
+  - unresolved:source:isthereanydeal:10484:the-battle-of-polytopia-moonrise-deluxe
+- name: Crash Drive 3
+  ids:
+  - steam:346820

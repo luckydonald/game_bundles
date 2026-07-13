@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Heroes Bundle — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10307/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10307/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10307/source.json
+games:
+- name: Delver
+  ids:
+  - steam:249630
+- name: Tower of Time
+  ids:
+  - steam:617480
+- name: 'Swords & Souls: Neverseen'
+  ids:
+  - steam:679900
+- name: Dreadlands
+  ids:
+  - steam:1054690
+- name: Slasher's Keep
+  ids:
+  - steam:598060
+- name: Quest Hunter
+  ids:
+  - steam:487000

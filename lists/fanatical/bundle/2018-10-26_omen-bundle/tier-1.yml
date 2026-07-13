@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Omen Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6609/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6609/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6609/source.json
+games:
+- name: I Shall Remain
+  ids:
+  - steam:293460
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+- name: 'DISTRAINT: Deluxe Edition'
+  ids:
+  - steam:395170
+- name: Betrayer
+  ids:
+  - unresolved:source:isthereanydeal:6609:betrayer
+- name: Damned
+  ids:
+  - steam:251170
+- name: Lethe - Episode One
+  ids:
+  - steam:407780
+- name: 35MM
+  ids:
+  - steam:466500
+- name: Wick
+  ids:
+  - steam:418300
+- name: Survivalist
+  ids:
+  - steam:340050
+- name: Claire
+  ids:
+  - steam:252830
+- name: Monstrum
+  ids:
+  - steam:296710

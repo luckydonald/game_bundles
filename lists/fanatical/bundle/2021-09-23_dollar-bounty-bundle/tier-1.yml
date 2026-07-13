@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Bounty Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10497/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10497/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10497/source.json
+games:
+- name: Men of War
+  ids:
+  - steam:7830
+- name: King's Bounty Warriors of the North
+  ids:
+  - steam:203350
+- name: A.I.M. 2 - Clan Wars
+  ids:
+  - unresolved:source:isthereanydeal:10497:a-i-m-2-clan-wars
+- name: Parkan 2
+  ids:
+  - steam:289400
+- name: Ascension to the Throne
+  ids:
+  - steam:289200
+- name: Star Wolves
+  ids:
+  - steam:46270
+- name: El Matador
+  ids:
+  - steam:289280
+- name: Planet Alcatraz
+  ids:
+  - steam:289420
+- name: Konung 2
+  ids:
+  - steam:289360
+- name: NecroVisioN Lost Company
+  ids:
+  - steam:46250

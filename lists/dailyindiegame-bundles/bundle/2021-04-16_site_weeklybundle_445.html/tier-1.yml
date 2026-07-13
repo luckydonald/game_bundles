@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 445 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9941/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9941/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9941/source.json
+games:
+- name: HoloSprint
+  ids:
+  - steam:1119670
+- name: Mighty Forest
+  ids:
+  - steam:1523800
+- name: Mysterious Blocks
+  ids:
+  - unresolved:source:isthereanydeal:9941:mysterious-blocks
+- name: Cutie Bear
+  ids:
+  - steam:1557540
+- name: Inside My Mind
+  ids:
+  - steam:1563820
+- name: Battle Cat vs Treacherous Mice
+  ids:
+  - steam:1563830
+- name: Rogues Adventure
+  ids:
+  - steam:1557550
+- name: Shots fired in the Dark Forest
+  ids:
+  - steam:1564920
+- name: My Sweet Ants!
+  ids:
+  - unresolved:source:isthereanydeal:9941:my-sweet-ants

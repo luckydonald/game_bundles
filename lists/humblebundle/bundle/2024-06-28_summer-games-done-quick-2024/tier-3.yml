@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Summer GDQ: Games Done Quick Bundle (2024) — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14170/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14170/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14170/source.json
+games:
+- name: Dishonored
+  ids:
+  - steam:217980
+- name: Blazing Chrome
+  ids:
+  - steam:609110
+- name: Hyperbolica
+  ids:
+  - steam:1256230
+- name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
+  ids:
+  - steam:22320
+- name: 'Arzette: The Jewel of Faramore'
+  ids:
+  - steam:1924780
+- name: Penny's Big Breakaway
+  ids:
+  - steam:1955230
+- name: Nickelodeon All-Star Brawl 2
+  ids:
+  - steam:2017080

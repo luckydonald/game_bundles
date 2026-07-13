@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 1C Limited Steam Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8419/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8419/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8419/source.json
+games:
+- name: 'Space Rangers: Quest'
+  ids:
+  - steam:503450
+- name: 'Space Rangers HD: A War Apart'
+  ids:
+  - steam:214730
+- name: Haimrik
+  ids:
+  - steam:492180
+- name: BLACKHOLE
+  ids:
+  - steam:322680
+- name: Through the Woods
+  ids:
+  - steam:368430
+- name: Unknown Fate
+  ids:
+  - steam:510390

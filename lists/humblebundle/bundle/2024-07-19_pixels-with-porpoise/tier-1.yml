@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixels with Porpoise Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14253/source.json
+games:
+- name: TowerFall Ascension
+  ids:
+  - steam:251470
+- name: Celeste
+  ids:
+  - steam:504230
+- name: TowerFall Dark World Expansion
+  ids:
+  - steam:337840
+- name: Webbed
+  ids:
+  - steam:1390350

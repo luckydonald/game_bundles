@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Dream Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7203/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7203/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7203/source.json
+games:
+- name: When Our Journey Ends - A Visual Novel
+  ids:
+  - steam:563520
+- name: Equivoque
+  ids:
+  - steam:652700
+- name: Cursed Sight
+  ids:
+  - steam:360550
+- name: 'Demon King Domination: Deluxe Edition'
+  ids:
+  - steam:921530
+- name: Oppaidius Summer Trouble!
+  ids:
+  - steam:716030
+- name: Empty Horizons
+  ids:
+  - steam:496630
+- name: Mutiny!
+  ids:
+  - unresolved:source:isthereanydeal:7203:mutiny
+- name: Wish -tale of the sixteenth night of lunar month
+  ids:
+  - steam:392370
+- name: A Winter's Daydream
+  ids:
+  - steam:925340

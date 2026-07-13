@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Epic Games Store Celebration Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11042/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11042/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11042/source.json
+games:
+- name: 'Shakedown: Hawaii'
+  ids:
+  - steam:598730
+- name: WHAT THE GOLF?
+  ids:
+  - steam:785790
+- name: The Last Campfire
+  ids:
+  - steam:990630

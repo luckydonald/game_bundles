@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 16 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7268/source.json
+games:
+- name: Grater
+  ids:
+  - unresolved:source:isthereanydeal:7268:grater
+- name: Mayhem ZX
+  ids:
+  - steam:522950
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+- name: 'Suncore Chronicles: The Tower - Level 2'
+  ids:
+  - unresolved:source:isthereanydeal:7268:suncore-chronicles-the-tower-level-2
+- name: Asteroid Hideout
+  ids:
+  - unresolved:source:isthereanydeal:7268:asteroid-hideout
+- name: Poly Towns
+  ids:
+  - steam:438730
+- name: 70 Seconds Survival
+  ids:
+  - steam:878470
+- name: Defense of Roman Britain
+  ids:
+  - steam:657790
+- name: 'Suncore Chronicles: The Tower - Level 1'
+  ids:
+  - steam:634420

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: '!That Dick Is Trying To Steal Our Gold! - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1115/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1115/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1115/source.json
+games:
+- name: '! That Dick Trying To Steal Our Gold !'
+  ids:
+  - unresolved:source:isthereanydeal:1115:that-dick-trying-to-steal-our-gold

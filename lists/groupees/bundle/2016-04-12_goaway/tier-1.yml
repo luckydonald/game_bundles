@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Go Away, There's Miller Over There! Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3294/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3294/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3294/source.json
+games:
+- name: Resonance
+  ids:
+  - steam:212050
+- name: The Big Elk
+  ids:
+  - unresolved:source:isthereanydeal:3294:the-big-elk
+- name: 'StarFringe: Adversus'
+  ids:
+  - steam:458030
+- name: Draw Rider
+  ids:
+  - steam:448610
+- name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
+  ids:
+  - steam:427930
+- name: Mind Games
+  ids:
+  - steam:448560
+- name: Ninja Outbreak
+  ids:
+  - steam:453880
+- name: GO AWAY, THERE'S KUMIS OVER THERE!
+  ids:
+  - steam:545580

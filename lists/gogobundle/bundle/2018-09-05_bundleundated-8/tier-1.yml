@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #8 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6438/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6438/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6438/source.json
+games:
+- name: Golden Dungeons
+  ids:
+  - steam:801020
+- name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
+  ids:
+  - steam:358080
+- name: Fruit Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:6438:fruit-sudoku
+- name: Bunker 58
+  ids:
+  - unresolved:source:isthereanydeal:6438:bunker-58
+- name: Infinity Wings - Scout & Grunt
+  ids:
+  - steam:448790
+- name: Plankton
+  ids:
+  - steam:542550
+- name: Control Craft 2
+  ids:
+  - steam:439930
+- name: FreeFly Burning
+  ids:
+  - steam:683530
+- name: SQR 2
+  ids:
+  - unresolved:source:isthereanydeal:6438:sqr-2
+- name: Control Craft 3
+  ids:
+  - steam:490910
+- name: Bob The Cube
+  ids:
+  - steam:854060
+- name: Goblins Keep Coming - Tower Defense
+  ids:
+  - steam:739850

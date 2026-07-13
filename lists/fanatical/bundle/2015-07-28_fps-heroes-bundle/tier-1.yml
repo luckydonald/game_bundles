@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: FPS Heroes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2271/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2271/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2271/source.json
+games:
+- name: Fancy Skulls
+  ids:
+  - steam:307090
+- name: Xotic Temple Crypt Expansion Pack
+  ids:
+  - unresolved:source:isthereanydeal:2271:xotic-temple-crypt-expansion-pack
+- name: Zeno Clash
+  ids:
+  - steam:22200
+- name: Betrayer
+  ids:
+  - unresolved:source:isthereanydeal:2271:betrayer
+- name: Dino D-Day
+  ids:
+  - steam:70000
+- name: Dead Effect
+  ids:
+  - steam:286040
+- name: 'Xotic: Warp Field Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2271:xotic-warp-field-expansion-pack
+- name: Xotic
+  ids:
+  - steam:92600
+- name: 'Xotic: Pipe Works Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2271:xotic-pipe-works-expansion-pack
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:2271:system-shock-2-1999

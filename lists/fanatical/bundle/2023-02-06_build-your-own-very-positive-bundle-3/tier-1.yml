@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Very Positive Bundle 3 — Select 1 Title for $1.00, 5 Titles for
+  $2.99, 10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12950/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12950/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12950/source.json
+games:
+- name: Divekick
+  ids:
+  - steam:244730
+- name: Deadly Days
+  ids:
+  - steam:740080
+- name: Tower of Time
+  ids:
+  - steam:617480
+- name: Cosmic Star Heroine
+  ids:
+  - steam:256460
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:12950:the-adventures-of-chris
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: THE CORRIDOR
+  ids:
+  - steam:1347030
+- name: 'FAR: Lone Sails'
+  ids:
+  - steam:609320
+- name: ClusterTruck
+  ids:
+  - steam:397950
+- name: Monstrum
+  ids:
+  - steam:296710
+- name: Astronarch
+  ids:
+  - steam:1234940
+- name: Buddy Simulator 1984
+  ids:
+  - steam:1269950
+- name: 'Nobodies: Murder Cleaner'
+  ids:
+  - steam:1038280
+- name: Save Room - Organization Puzzle
+  ids:
+  - steam:1955330
+- name: Nomad Survival
+  ids:
+  - steam:1929870
+- name: 'Superbugs: Awaken'
+  ids:
+  - steam:1393570

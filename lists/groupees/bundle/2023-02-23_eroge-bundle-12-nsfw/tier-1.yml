@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Eroge Bundle 12 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13010/source.json
+games:
+- name: Hero Zex
+  ids:
+  - steam:1684780
+- name: Grayscale Memories
+  ids:
+  - steam:1645780
+- name: NinNinDays2
+  ids:
+  - steam:1698030

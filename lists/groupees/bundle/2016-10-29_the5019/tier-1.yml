@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Haunting Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4272/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4272/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4272/source.json
+games:
+- name: Oz Orwell and the Exorcist
+  ids:
+  - unresolved:source:isthereanydeal:4272:oz-orwell-and-the-exorcist
+- name: Sixtieth Kilometer
+  ids:
+  - steam:448780
+- name: Joe's Diner
+  ids:
+  - steam:346040
+- name: Pineview Drive
+  ids:
+  - steam:288880
+- name: Red Lake
+  ids:
+  - steam:357290

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Warhammer Alliance — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5515/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5515/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5515/source.json
+games:
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+- name: 'Tempest: Pirate Action RPG'
+  ids:
+  - steam:418180
+- name: Yet Another Zombie Defense
+  ids:
+  - steam:270550
+- name: Dungeon Lords Steam Edition
+  ids:
+  - steam:271760
+- name: 'Warhammer 40,000: Space Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:5515:warhammer-40000-space-wolf
+- name: Tempest - Original Soundtrack
+  ids:
+  - steam:527010
+- name: Lethal League
+  ids:
+  - steam:261180
+- name: Guns of Icarus Alliance
+  ids:
+  - steam:608800
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: Tempest - Treasure Lands
+  ids:
+  - steam:651020
+- name: Impossible Creatures
+  ids:
+  - steam:324680

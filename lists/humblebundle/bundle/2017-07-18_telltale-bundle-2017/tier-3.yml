@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Telltale Games Bundle — entire-21-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5332/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5332/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5332/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+- name: Bone Complete Bundle
+  ids:
+  - unresolved:source:isthereanydeal:5332:bone-complete-bundle
+- name: 'Hector: Badge of Carnage'
+  ids:
+  - unresolved:source:isthereanydeal:5332:hector-badge-of-carnage
+- name: Puzzle Agent
+  ids:
+  - steam:31270
+- name: Puzzle Agent 2
+  ids:
+  - steam:94590
+- name: 'Sam & Max: Season One'
+  ids:
+  - unresolved:source:isthereanydeal:5332:sam-and-max-season-one
+- name: 'Sam & Max: Season Two'
+  ids:
+  - unresolved:source:isthereanydeal:5332:sam-and-max-season-two
+- name: Telltale Texas Hold ‘Em
+  ids:
+  - steam:8330
+- name: Poker Night at the Inventory (2010 Original Version)
+  ids:
+  - unresolved:source:isthereanydeal:5332:poker-night-at-the-inventory-2010-original-version
+- name: 'Sam & Max: The Devil''s Playhouse'
+  ids:
+  - unresolved:source:isthereanydeal:5332:sam-and-max-the-devils-playhouse
+- name: 'The Walking Dead: Season Two'
+  ids:
+  - steam:261030
+- name: Poker Night 2
+  ids:
+  - unresolved:source:isthereanydeal:5332:poker-night-2
+- name: Game of Thrones - A Telltale Games Series
+  ids:
+  - unresolved:source:isthereanydeal:5332:game-of-thrones-a-telltale-games-series
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+- name: The Wolf Among Us
+  ids:
+  - steam:250320
+- name: 'Jurassic Park: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:5332:jurassic-park-the-game
+- name: 'The Walking Dead: Michonne - A Telltale Miniseries'
+  ids:
+  - steam:429570
+- name: Tales from the Borderlands
+  ids:
+  - steam:330830
+- name: 'Minecraft: Story Mode - A Telltale Games Series'
+  ids:
+  - unresolved:source:isthereanydeal:5332:minecraft-story-mode-a-telltale-games-series
+- name: Batman - The Telltale Series
+  ids:
+  - steam:498240
+- name: 'Minecraft: Story Mode - Adventure Pass'
+  ids:
+  - unresolved:source:isthereanydeal:5332:minecraft-story-mode-adventure-pass

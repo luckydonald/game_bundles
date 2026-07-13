@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 786 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11255/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11255/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11255/source.json
+games:
+- name: Boston AInamics
+  ids:
+  - steam:1306210
+- name: FPS Tactics
+  ids:
+  - steam:1576790
+- name: Space Ship DRIFT
+  ids:
+  - unresolved:source:isthereanydeal:11255:space-ship-drift
+- name: Magic gems
+  ids:
+  - steam:1664090
+- name: Angels vs Demons
+  ids:
+  - steam:1756490
+- name: Searching for Objects in the Forest
+  ids:
+  - unresolved:source:isthereanydeal:11255:searching-for-objects-in-the-forest
+- name: Hidden Town
+  ids:
+  - steam:1778470
+- name: Skull Bullets
+  ids:
+  - steam:1780490
+- name: Fears of Glasses o-o
+  ids:
+  - steam:1794740

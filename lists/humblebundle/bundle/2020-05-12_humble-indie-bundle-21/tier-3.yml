@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Indie Bundle 21 — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8773/source.json
+games:
+- name: Dustforce DX
+  ids:
+  - steam:65300
+- name: Beat Cop
+  ids:
+  - steam:461950
+- name: Hotline Miami
+  ids:
+  - steam:219150
+- name: Downwell
+  ids:
+  - steam:360740
+- name: Gato Roboto
+  ids:
+  - steam:916730
+- name: Moonlighter
+  ids:
+  - steam:606150
+- name: Starbound
+  ids:
+  - steam:211820
+- name: Hypnospace Outlaw
+  ids:
+  - steam:844590

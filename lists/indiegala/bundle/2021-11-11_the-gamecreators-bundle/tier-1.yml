@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Game Creators 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10685/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10685/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10685/source.json
+games:
+- name: GameGuru - Sci-Fi Mission to Mars Pack
+  ids:
+  - steam:404570
+- name: AppGameKit Classic - Giant Asset Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:10685:appgamekit-classic-giant-asset-pack-1
+- name: GameGuru
+  ids:
+  - steam:266310
+- name: GameGuru Fantasy Pack
+  ids:
+  - steam:365530
+- name: AppGameKit Classic - Games Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:10685:appgamekit-classic-games-pack-1
+- name: GameGuru Mega Pack 3
+  ids:
+  - steam:321142
+- name: GameGuru Mega Pack 2
+  ids:
+  - steam:321141
+- name: AppGameKit Classic
+  ids:
+  - unresolved:source:isthereanydeal:10685:appgamekit-classic
+- name: GameGuru Mega Pack 1
+  ids:
+  - steam:321140
+- name: GameGuru - Buildings Pack
+  ids:
+  - steam:365520
+- name: GameGuru - Walled Garden Pack
+  ids:
+  - steam:1154060
+- name: GameGuru - Tool Shed Pack
+  ids:
+  - steam:1315570

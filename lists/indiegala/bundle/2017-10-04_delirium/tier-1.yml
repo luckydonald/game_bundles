@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Delirium — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5520/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5520/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5520/source.json
+games:
+- name: Ripple
+  ids:
+  - steam:601240
+- name: Air Tactical
+  ids:
+  - unresolved:source:isthereanydeal:5520:air-tactical
+- name: Huygens Principle
+  ids:
+  - steam:1819620
+- name: 2D Neon Cube
+  ids:
+  - steam:701720
+- name: Behind the Door
+  ids:
+  - steam:676730
+- name: Business-hooiznes
+  ids:
+  - steam:683220
+- name: Yoba
+  ids:
+  - steam:688690
+- name: Brickochet
+  ids:
+  - steam:671550
+- name: Psychical Madness
+  ids:
+  - unresolved:source:isthereanydeal:5520:psychical-madness
+- name: Loot'N Shoot
+  ids:
+  - unresolved:source:isthereanydeal:5520:loot-n-shoot
+- name: Spacecraft
+  ids:
+  - unresolved:source:isthereanydeal:5520:spacecraft
+- name: Skyraine
+  ids:
+  - steam:679430
+- name: Combat Raccoon
+  ids:
+  - unresolved:source:isthereanydeal:5520:combat-raccoon

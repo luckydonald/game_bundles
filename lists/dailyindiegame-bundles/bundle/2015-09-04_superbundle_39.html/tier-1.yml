@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 39 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2413/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2413/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2413/source.json
+games:
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: In Exilium
+  ids:
+  - unresolved:source:isthereanydeal:2413:in-exilium
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+- name: 'Atonement: Scourge of Time'
+  ids:
+  - steam:385070
+- name: Intergalactic Bubbles
+  ids:
+  - steam:351490
+- name: Incitement 3
+  ids:
+  - steam:391660

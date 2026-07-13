@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Inferno Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1127/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1127/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1127/source.json
+games:
+- name: Jet Car Stunts
+  ids:
+  - steam:274880
+- name: Heavy Fire Afghanistan
+  ids:
+  - steam:305980
+- name: Orbital Gear
+  ids:
+  - steam:298520
+- name: Freedom Fall
+  ids:
+  - steam:262770
+- name: Dungeons the Eye of Draconus
+  ids:
+  - steam:303510
+- name: Urban Trial Freestyle
+  ids:
+  - steam:243450
+- name: Speed Kills
+  ids:
+  - steam:284930
+- name: Residue
+  ids:
+  - unresolved:source:isthereanydeal:1127:residue
+- name: The Few
+  ids:
+  - steam:300320
+- name: 8BitBoy
+  ids:
+  - steam:296910

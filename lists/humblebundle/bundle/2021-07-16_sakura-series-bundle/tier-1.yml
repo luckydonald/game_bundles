@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sakura Series Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10261/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10261/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10261/source.json
+games:
+- name: Sakura Space
+  ids:
+  - steam:521500
+- name: Sakura Shrine Girls
+  ids:
+  - steam:517000
+- name: Sakura Sadist
+  ids:
+  - steam:813700
+- name: Sakura Agent
+  ids:
+  - steam:575510
+- name: Sakura Gamer
+  ids:
+  - steam:685680

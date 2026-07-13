@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: FPS Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7174/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7174/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7174/source.json
+games:
+- name: Killing Floor
+  ids:
+  - steam:1250
+- name: Action Alien
+  ids:
+  - steam:382080
+- name: INSURGENCY
+  ids:
+  - steam:222880
+- name: F.E.A.R. 3
+  ids:
+  - unresolved:source:isthereanydeal:7174:f-e-a-r-3
+- name: Rage
+  ids:
+  - steam:9200
+- name: Tales of Destruction
+  ids:
+  - steam:486480
+- name: 'CTU: Counter Terrorism Unit'
+  ids:
+  - steam:397320

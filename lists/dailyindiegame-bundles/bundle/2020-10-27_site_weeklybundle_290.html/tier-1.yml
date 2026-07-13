@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 290 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9332/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9332/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9332/source.json
+games:
+- name: Restricted Area
+  ids:
+  - unresolved:source:isthereanydeal:9332:restricted-area
+- name: FACE
+  ids:
+  - unresolved:source:isthereanydeal:9332:face
+- name: Langoth
+  ids:
+  - steam:581100
+- name: Kill The Censored
+  ids:
+  - steam:1032270
+- name: 3D Tower
+  ids:
+  - unresolved:source:isthereanydeal:9332:3d-tower
+- name: Kill The Censored 2
+  ids:
+  - steam:1077110
+- name: PIDO1
+  ids:
+  - unresolved:source:isthereanydeal:9332:pido1
+- name: Hooligan Vasja - Halloween Edition
+  ids:
+  - unresolved:source:isthereanydeal:9332:hooligan-vasja-halloween-edition
+- name: Curse of the dungeon
+  ids:
+  - steam:1174810

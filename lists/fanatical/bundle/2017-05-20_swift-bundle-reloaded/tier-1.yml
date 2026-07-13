@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Swift Bundle Reloaded — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5119/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5119/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5119/source.json
+games:
+- name: The Growth Journey - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5119:the-growth-journey-soundtrack
+- name: Swiftly
+  ids:
+  - steam:418610
+- name: Three Digits - Soundtrack
+  ids:
+  - steam:394400
+- name: Snik
+  ids:
+  - steam:388050
+- name: Tenrow
+  ids:
+  - steam:449760
+- name: The Growth Journey
+  ids:
+  - steam:416610
+- name: Permute
+  ids:
+  - steam:575630
+- name: Snik - Soundtrack
+  ids:
+  - steam:399460
+- name: Multimirror
+  ids:
+  - steam:533860
+- name: Three Digits
+  ids:
+  - steam:390570
+- name: Multimirror - Soundtrack
+  ids:
+  - steam:550070
+- name: Two Digits
+  ids:
+  - steam:371330

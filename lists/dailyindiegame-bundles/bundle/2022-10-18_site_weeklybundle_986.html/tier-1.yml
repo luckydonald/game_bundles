@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 986: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12246/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12246/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12246/source.json
+games:
+- name: Flow
+  ids:
+  - steam:1453870
+- name: Imaginator
+  ids:
+  - unresolved:source:isthereanydeal:12246:imaginator
+- name: 'HuH?: and the Adventures of something'
+  ids:
+  - unresolved:source:isthereanydeal:12246:huh-and-the-adventures-of-something
+- name: Cavebound
+  ids:
+  - steam:1522980
+- name: Planets Battle
+  ids:
+  - steam:1607850
+- name: Water Drift
+  ids:
+  - unresolved:source:isthereanydeal:12246:water-drift
+- name: Model Building Restoration
+  ids:
+  - steam:1623300
+- name: Jo-Jo Fighter
+  ids:
+  - unresolved:source:isthereanydeal:12246:jo-jo-fighter
+- name: Hidden Islands
+  ids:
+  - steam:1864860

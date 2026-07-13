@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Best of Humble Bundle: Beamdog & Owlcat - RPG Masters Bundle — 6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15885/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15885/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15885/source.json
+games:
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300
+- name: MythForce
+  ids:
+  - steam:363860
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+- name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
+  ids:
+  - steam:640820
+- name: 'Baldur''s Gate: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15885:baldurs-gate-deluxe-edition

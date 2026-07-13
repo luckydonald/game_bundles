@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #21 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5645/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5645/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5645/source.json
+games:
+- name: Unite Cell
+  ids:
+  - unresolved:source:isthereanydeal:5645:unite-cell
+- name: Undead Hunter
+  ids:
+  - steam:3316330
+- name: 'PLAYER-UNKN4WN: Zombie'
+  ids:
+  - unresolved:source:isthereanydeal:5645:player-unkn4wn-zombie
+- name: Fjong - Original Soundtrack
+  ids:
+  - steam:706000
+- name: 'Mission: Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:5645:mission-wolf
+- name: Robo-orders
+  ids:
+  - unresolved:source:isthereanydeal:5645:robo-orders
+- name: Cooking Witch
+  ids:
+  - steam:514580
+- name: Fjong
+  ids:
+  - steam:694980
+- name: Trapped Souls
+  ids:
+  - steam:568670

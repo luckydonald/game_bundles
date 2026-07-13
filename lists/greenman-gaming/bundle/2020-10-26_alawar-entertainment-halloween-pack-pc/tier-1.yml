@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Alawar Entertainment Halloween Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9327/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9327/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9327/source.json
+games:
+- name: 'The Fog: Trap for Moths'
+  ids:
+  - steam:1048900
+- name: 'House of 1000 Doors: Serpent Flame'
+  ids:
+  - steam:1090390
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+- name: 'House of 1000 Doors: Evil Inside'
+  ids:
+  - steam:1038620
+- name: 'Incredible Dracula 4: Games Of Gods'
+  ids:
+  - steam:1092510
+- name: 'Dark Angels: Masquerade of Shadows'
+  ids:
+  - steam:560720
+- name: 'Sacra Terra: Angelic Night'
+  ids:
+  - steam:344440
+- name: Rune Lord
+  ids:
+  - steam:1069460
+- name: 'Incredible Dracula: Chasing Love Collector''s Edition'
+  ids:
+  - steam:435040
+- name: 'Incredible Dracula III: Family Secret'
+  ids:
+  - unresolved:source:isthereanydeal:9327:incredible-dracula-iii-family-secret

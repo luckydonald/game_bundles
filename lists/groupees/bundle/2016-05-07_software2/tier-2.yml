@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Software Bundle 2 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3396/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3396/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3396/source.json
+games:
+- name: Pixel Proof
+  ids:
+  - unresolved:source:isthereanydeal:3396:pixel-proof
+- name: Circuit Craft
+  ids:
+  - unresolved:source:isthereanydeal:3396:circuit-craft
+- name: Jessie The A.I. Robotic Companion
+  ids:
+  - unresolved:source:isthereanydeal:3396:jessie-the-a-i-robotic-companion
+- name: RaySupreme 3D
+  ids:
+  - steam:262650
+- name: VoiceBot
+  ids:
+  - steam:374400
+- name: '"Zoom Player 13 : Steam Edition" and "Zoom Player 14 : Steam Edition"'
+  ids:
+  - unresolved:source:isthereanydeal:3396:zoom-player-13-steam-edition-and-zoom-player-14-steam-edition
+- name: EasyAudioTools Company Pack
+  ids:
+  - unresolved:source:isthereanydeal:3396:easyaudiotools-company-pack

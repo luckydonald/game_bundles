@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 16 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1411/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1411/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1411/source.json
+games:
+- name: Kingdom Rush
+  ids:
+  - steam:246420
+- name: Blue Rose
+  ids:
+  - steam:362660
+- name: Betrayer
+  ids:
+  - unresolved:source:isthereanydeal:1411:betrayer
+- name: Beyond Space
+  ids:
+  - unresolved:source:isthereanydeal:1411:beyond-space
+- name: 'Depth Hunter 2: Deep Dive'
+  ids:
+  - steam:248530
+- name: DANGEROUS DUELS
+  ids:
+  - steam:524650
+- name: Surgeon Simulator 2013
+  ids:
+  - unresolved:source:isthereanydeal:1411:surgeon-simulator-2013
+- name: Quest For Infamy
+  ids:
+  - steam:264560
+- name: World War 1 Centennial Edition
+  ids:
+  - unresolved:source:isthereanydeal:1411:world-war-1-centennial-edition
+- name: Point Perfect
+  ids:
+  - steam:303840
+- name: '1954: Alcatraz'
+  ids:
+  - steam:255280

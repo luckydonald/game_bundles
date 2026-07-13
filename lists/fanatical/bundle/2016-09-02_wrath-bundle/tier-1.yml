@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wrath Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3990/source.json
+games:
+- name: Anki
+  ids:
+  - steam:395380
+- name: Spectrubes
+  ids:
+  - steam:447990
+- name: Warriors' Wrath
+  ids:
+  - steam:466420
+- name: Silver Knight
+  ids:
+  - steam:432170
+- name: Big Journey to Home
+  ids:
+  - steam:388440
+- name: Dungeon Journey
+  ids:
+  - steam:485490
+- name: Alien Attack In Space
+  ids:
+  - steam:391310
+- name: Moustache Mountain
+  ids:
+  - steam:457520
+- name: Rock'n Roll Defense
+  ids:
+  - steam:438480

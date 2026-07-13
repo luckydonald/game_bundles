@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 664 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10744/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10744/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10744/source.json
+games:
+- name: Project Maze
+  ids:
+  - steam:659220
+- name: CuberPunk 2089
+  ids:
+  - steam:938300
+- name: CastleGuard
+  ids:
+  - steam:961240
+- name: The Governer
+  ids:
+  - steam:1109350
+- name: Obsolete
+  ids:
+  - steam:1369560
+- name: Beat Me If You Can
+  ids:
+  - steam:1385540
+- name: 'Save daddy trump 2: The Final Triumph'
+  ids:
+  - steam:1493450
+- name: Chinese mother in law
+  ids:
+  - unresolved:source:isthereanydeal:10744:chinese-mother-in-law
+- name: Snow Wars
+  ids:
+  - unresolved:source:isthereanydeal:10744:snow-wars

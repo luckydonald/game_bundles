@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Karma Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4869/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4869/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4869/source.json
+games:
+- name: SkyTime
+  ids:
+  - steam:513620
+- name: Ball of Wonder
+  ids:
+  - steam:508760
+- name: SweatShop
+  ids:
+  - steam:496680
+- name: Remnants of a Beautiful Day
+  ids:
+  - unresolved:source:isthereanydeal:4869:remnants-of-a-beautiful-day

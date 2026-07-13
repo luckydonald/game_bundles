@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Digital Tribe Groupee — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/190/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/190/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/190/source.json
+games:
+- name: 'Monster Madness: Battle for Suburbia'
+  ids:
+  - unresolved:source:isthereanydeal:190:monster-madness-battle-for-suburbia
+- name: Roogoo
+  ids:
+  - steam:38210
+- name: Section 8
+  ids:
+  - unresolved:source:isthereanydeal:190:section-8

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 550 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10324/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10324/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10324/source.json
+games:
+- name: Tempo Wizard
+  ids:
+  - steam:916370
+- name: Defense Of Greece TD
+  ids:
+  - steam:537200
+- name: Labirinto
+  ids:
+  - steam:765100
+- name: Owen to have fun!
+  ids:
+  - unresolved:source:isthereanydeal:10324:owen-to-have-fun
+- name: История бомжа
+  ids:
+  - steam:1388430
+- name: Zoo Cleaner
+  ids:
+  - steam:1538620
+- name: Wild Times
+  ids:
+  - unresolved:source:isthereanydeal:10324:wild-times
+- name: Jacob The Farmer
+  ids:
+  - steam:1586300
+- name: Hit Confirmed
+  ids:
+  - steam:1710530

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: GameGuru Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8416/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8416/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8416/source.json
+games:
+- name: GameGuru - Sci-Fi Mission to Mars Pack
+  ids:
+  - steam:404570
+- name: GameGuru
+  ids:
+  - steam:266310
+- name: GameGuru Fantasy Pack
+  ids:
+  - steam:365530
+- name: GameGuru Mega Pack 3
+  ids:
+  - steam:321142
+- name: GameGuru Mega Pack 2
+  ids:
+  - steam:321141
+- name: GameGuru Death Valley Pack
+  ids:
+  - steam:365540
+- name: GameGuru Mega Pack 1
+  ids:
+  - steam:321140

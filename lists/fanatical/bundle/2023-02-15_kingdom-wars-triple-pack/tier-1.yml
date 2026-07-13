@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Kingdom Wars Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12981/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12981/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12981/source.json
+games:
+- name: Medieval Kingdom Wars
+  ids:
+  - steam:499660
+- name: 'Kingdom Wars 2: Definitive Edition'
+  ids:
+  - steam:1036440
+- name: 'The Plague: Kingdom Wars'
+  ids:
+  - unresolved:source:isthereanydeal:12981:the-plague-kingdom-wars

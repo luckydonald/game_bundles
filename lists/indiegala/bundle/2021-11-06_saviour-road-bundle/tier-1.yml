@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Saviour Road Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10654/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10654/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10654/source.json
+games:
+- name: Urban Tale
+  ids:
+  - steam:1000770
+- name: My Jigsaw Adventures - Roads of Life
+  ids:
+  - steam:1224450
+- name: Ur Game
+  ids:
+  - steam:1324870
+- name: The Last Saviour
+  ids:
+  - steam:1339870
+- name: 'Pnevmo-Capsula: Domiki'
+  ids:
+  - steam:1614380
+- name: Flappy Shooter
+  ids:
+  - steam:1717880

@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Hacker Bundle Reloaded — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5146/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5146/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5146/source.json
+games:
+- name: Hacker Evolution Duality
+  ids:
+  - steam:70120
+- name: 'Hacker Evolution Duality: Hacker Bootcamp'
+  ids:
+  - steam:261070
+- name: 'Hacker Evolution Duality: Inception Part 2'
+  ids:
+  - steam:211994
+- name: 'Hacker Evolution: Hardcore Package Part 1'
+  ids:
+  - unresolved:source:isthereanydeal:5146:hacker-evolution-hardcore-package-part-1
+- name: 'Hacker Evolution Duality: Hardcore Package Part 1'
+  ids:
+  - steam:241950
+- name: 'Hacker Evolution: Untold'
+  ids:
+  - steam:70110
+- name: 'Hardcore Package Part 1 / for Hacker Evolution: Untold'
+  ids:
+  - steam:259240
+- name: 'Hacker Evolution Duality: Inception Part 1'
+  ids:
+  - steam:211990
+- name: 'Hacker Evolution: Hardcore Package Part 2'
+  ids:
+  - unresolved:source:isthereanydeal:5146:hacker-evolution-hardcore-package-part-2
+- name: 'Hardcore Package Part 2 / for Hacker Evolution: Untold'
+  ids:
+  - steam:279830
+- name: 'Hacker Evolution Duality: Hardcore Package Part 2'
+  ids:
+  - steam:259220
+- name: 'Hacker Evolution Duality: Inception Part 3'
+  ids:
+  - steam:211992
+- name: Hacker Evolution
+  ids:
+  - steam:70100

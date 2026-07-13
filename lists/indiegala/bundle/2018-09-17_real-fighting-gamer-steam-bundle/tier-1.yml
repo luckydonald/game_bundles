@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Real Fighting Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6468/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6468/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6468/source.json
+games:
+- name: Stickman Fighting
+  ids:
+  - unresolved:source:isthereanydeal:6468:stickman-fighting
+- name: 'Steel Arena: Robot War'
+  ids:
+  - unresolved:source:isthereanydeal:6468:steel-arena-robot-war
+- name: 'Sea Battle: Through the Ages'
+  ids:
+  - unresolved:source:isthereanydeal:6468:sea-battle-through-the-ages

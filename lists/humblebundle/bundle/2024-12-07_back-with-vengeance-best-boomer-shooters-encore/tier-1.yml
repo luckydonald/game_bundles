@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Back with a Vengeance: Best of Boomer Shooters Bundle Encore — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14692/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14692/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14692/source.json
+games:
+- name: Prodeus
+  ids:
+  - steam:964800
+- name: QUAKE II
+  ids:
+  - steam:2320
+- name: ULTRAKILL
+  ids:
+  - steam:1229490
+- name: Turbo Overkill
+  ids:
+  - steam:1328350
+- name: Deadlink
+  ids:
+  - steam:1676130
+- name: 'POSTAL: Brain Damaged - Connoisseur Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14692:postal-brain-damaged-connoisseur-edition
+- name: Forgive Me Father 2
+  ids:
+  - steam:2272250

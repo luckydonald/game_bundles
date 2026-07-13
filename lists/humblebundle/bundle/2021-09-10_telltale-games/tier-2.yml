@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Telltale Games Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10445/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10445/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10445/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+- name: Batman - The Telltale Series
+  ids:
+  - steam:498240
+- name: The Walking Dead Season 2
+  ids:
+  - unresolved:source:isthereanydeal:10445:the-walking-dead-season-2
+- name: 'The Walking Dead: Michonne - A Telltale Miniseries'
+  ids:
+  - steam:429570

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Mighty Monday GameBundle 4 — Beat The Average + $0.40
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4481/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4481/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4481/source.json
+games:
+- name: 'Shadow Ninja: Apocalypse'
+  ids:
+  - steam:389160
+- name: IACTURA
+  ids:
+  - steam:512770
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+- name: Grey phobia
+  ids:
+  - steam:465050
+- name: 'Shadow Ninja: endless runner'
+  ids:
+  - steam:420050
+- name: Veilia
+  ids:
+  - steam:516920
+- name: BLACK HOLE HAZARD
+  ids:
+  - steam:485160
+- name: 'Dreamscapes: The Sandman'
+  ids:
+  - steam:289260
+- name: Beat The Dictators
+  ids:
+  - unresolved:source:isthereanydeal:4481:beat-the-dictators

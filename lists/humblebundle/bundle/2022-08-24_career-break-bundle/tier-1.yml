@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Career Break Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12008/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12008/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12008/source.json
+games:
+- name: Not Tonight
+  ids:
+  - steam:733790
+- name: Little Big Workshop
+  ids:
+  - steam:574720

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Overwhelmingly Positive Gems Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11088/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11088/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11088/source.json
+games:
+- name: Finding Paradise
+  ids:
+  - steam:337340
+- name: Huntdown
+  ids:
+  - steam:598550
+- name: 'There is no game : Wrong dimension'
+  ids:
+  - steam:1240210
+- name: Clone Drone in the Danger Zone
+  ids:
+  - steam:597170
+- name: 'Bang-On Balls: Chronicles'
+  ids:
+  - steam:1227650
+- name: 'Kathy Rain: Director''s Cut'
+  ids:
+  - steam:1395030
+- name: Shadow Man Remastered
+  ids:
+  - steam:1413870

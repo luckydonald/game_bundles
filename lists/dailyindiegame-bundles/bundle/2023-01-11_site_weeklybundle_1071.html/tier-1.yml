@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1071: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12878/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12878/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12878/source.json
+games:
+- name: Round Rooms
+  ids:
+  - steam:1107660
+- name: Aircraft War
+  ids:
+  - steam:1094630
+- name: The Forgotten Void
+  ids:
+  - steam:600290
+- name: 'ATROFIL: THE KEY'
+  ids:
+  - steam:1196350
+- name: FireTry
+  ids:
+  - unresolved:source:isthereanydeal:12878:firetry
+- name: All Hit All Her
+  ids:
+  - steam:1404630
+- name: Sin-Cay
+  ids:
+  - steam:1680440
+- name: Nerraia
+  ids:
+  - steam:1862850
+- name: Rise Of A Hero
+  ids:
+  - steam:2122010

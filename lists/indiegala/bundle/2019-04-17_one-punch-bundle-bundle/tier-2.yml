@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: One Punch Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7312/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7312/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7312/source.json
+games:
+- name: ШП - ShP
+  ids:
+  - steam:727640
+- name: Mint
+  ids:
+  - steam:670100
+- name: One Finger Death Punch 2
+  ids:
+  - steam:980300
+- name: Neighbor
+  ids:
+  - steam:937490
+- name: On Earth As It Is In Heaven - A Kinetic Novel
+  ids:
+  - steam:662260
+- name: Cefore
+  ids:
+  - steam:625730
+- name: Postmen Of Horizon
+  ids:
+  - unresolved:source:isthereanydeal:7312:postmen-of-horizon
+- name: LifeZ - Survival
+  ids:
+  - steam:809210

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: indie.io Indie Game Favorites Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15595/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15595/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15595/source.json
+games:
+- name: To The Rescue!
+  ids:
+  - steam:946720
+- name: Airborne Kingdom
+  ids:
+  - steam:982290
+- name: One More Island
+  ids:
+  - steam:1454160
+- name: Troublemaker
+  ids:
+  - steam:1498740
+- name: Everwarder
+  ids:
+  - steam:2307170

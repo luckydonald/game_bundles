@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tactical Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7751/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7751/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7751/source.json
+games:
+- name: 'DGU: Death God University'
+  ids:
+  - steam:352850
+- name: Commando Jack
+  ids:
+  - steam:299260
+- name: 'Megamagic: Wizards of the Neon Age'
+  ids:
+  - steam:422650
+- name: Hard West
+  ids:
+  - steam:307670
+- name: Sleepwalker
+  ids:
+  - steam:814640
+- name: StarSmashers
+  ids:
+  - steam:504450
+- name: Crush Your Enemies
+  ids:
+  - steam:406850

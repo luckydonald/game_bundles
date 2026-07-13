@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Indie Bundle 16 — BTA + $2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3095/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3095/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3095/source.json
+games:
+- name: Never Alone (Kisima Ingitchuna)
+  ids:
+  - steam:295790
+- name: Retro City Rampage™ DX
+  ids:
+  - steam:204630
+- name: 'Never Alone: Foxtales'
+  ids:
+  - steam:355740
+- name: Outlast
+  ids:
+  - steam:238320
+- name: 'Trine 3: The Artifacts of Power'
+  ids:
+  - steam:319910
+- name: 'FORCED: Slightly Better Edition'
+  ids:
+  - steam:249990
+- name: Door Kickers
+  ids:
+  - steam:248610
+- name: Duet
+  ids:
+  - steam:292600
+- name: Else Heart.Break()
+  ids:
+  - steam:400110
+- name: Sunless Sea
+  ids:
+  - steam:304650

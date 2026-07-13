@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (May 2016) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3254/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3254/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3254/source.json
+games:
+- name: 1993 - Space machine
+  ids:
+  - steam:373480
+- name: 'Oddworld: New ''n'' Tasty'
+  ids:
+  - steam:314660
+- name: Galak-Z
+  ids:
+  - steam:300580
+- name: Mad Max
+  ids:
+  - steam:234140
+- name: Crawl
+  ids:
+  - steam:293780
+- name: Gunmetal Arcadia Zero
+  ids:
+  - steam:555610
+- name: Infinifactory
+  ids:
+  - steam:300570
+- name: Fran Bow
+  ids:
+  - steam:362680
+- name: JumpJet Rex
+  ids:
+  - steam:329460

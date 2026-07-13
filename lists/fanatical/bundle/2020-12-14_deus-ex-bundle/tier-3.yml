@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deus Ex Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9502/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9502/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9502/source.json
+games:
+- name: 'Deus Ex: Invisible War'
+  ids:
+  - steam:6920
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910
+- name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
+  ids:
+  - steam:238010
+- name: 'Deus Ex: Mankind Divided - Digital Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9502:deus-ex-mankind-divided-digital-deluxe-edition

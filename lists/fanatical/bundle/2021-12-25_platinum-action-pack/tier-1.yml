@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Action Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10875/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10875/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10875/source.json
+games:
+- name: Mighty Switch Force! Collection
+  ids:
+  - steam:832320
+- name: Iconoclasts
+  ids:
+  - steam:393520

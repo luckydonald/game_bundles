@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Magic Trip Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9665/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9665/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9665/source.json
+games:
+- name: Poi
+  ids:
+  - steam:401810
+- name: The Last Sky
+  ids:
+  - unresolved:source:isthereanydeal:9665:the-last-sky
+- name: Art of Deception
+  ids:
+  - steam:1200930
+- name: Heart of Smoke
+  ids:
+  - steam:1052100
+- name: Edge Of Galaxy
+  ids:
+  - steam:1025000
+- name: Pendula Swing - The Complete Journey
+  ids:
+  - steam:1230200

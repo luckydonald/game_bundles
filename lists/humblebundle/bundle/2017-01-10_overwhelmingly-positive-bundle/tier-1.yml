@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Overwhelmingly Positive Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4603/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4603/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4603/source.json
+games:
+- name: Pony Island
+  ids:
+  - steam:405640
+- name: Shantae and the Pirate's Curse
+  ids:
+  - steam:345820
+- name: Epic Battle Fantasy 4
+  ids:
+  - steam:265610

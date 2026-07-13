@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indiestructible Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5101/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5101/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5101/source.json
+games:
+- name: 'Cannons-Defenders: Steam Edition'
+  ids:
+  - steam:617710
+- name: On The Path Remastered
+  ids:
+  - unresolved:source:isthereanydeal:5101:on-the-path-remastered
+- name: Game Tycoon 2
+  ids:
+  - steam:404640
+- name: Astervoid 2000 Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5101:astervoid-2000-soundtrack
+- name: MakeThatMoney
+  ids:
+  - steam:600600
+- name: Crazy Buggy Racing
+  ids:
+  - steam:610780
+- name: Satellite Repairman
+  ids:
+  - steam:567780
+- name: Kalaban
+  ids:
+  - steam:571520
+- name: Defence to death
+  ids:
+  - steam:603150
+- name: Runaway
+  ids:
+  - unresolved:source:isthereanydeal:5101:runaway
+- name: AsterVoid 2000
+  ids:
+  - steam:423870

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Aug 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14302/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14302/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14302/source.json
+games:
+- name: This Means Warp
+  ids:
+  - steam:1269300
+- name: Astral Ascent
+  ids:
+  - steam:1280930
+- name: Diluvian Ultra
+  ids:
+  - steam:1306970
+- name: SIFU
+  ids:
+  - steam:2138710
+- name: Universe For Sale
+  ids:
+  - steam:1627840
+- name: BLACKTAIL
+  ids:
+  - steam:1532690
+- name: Gotham Knights
+  ids:
+  - steam:1496790
+- name: High On Life
+  ids:
+  - steam:1583230

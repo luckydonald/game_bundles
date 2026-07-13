@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Mar 2018) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5860/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5860/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5860/source.json
+games:
+- name: Splasher
+  ids:
+  - steam:446840
+- name: Overgrowth
+  ids:
+  - steam:25000
+- name: Drawkanoid
+  ids:
+  - steam:951370
+- name: DARK SOULS III - Ashes of Ariandel
+  ids:
+  - steam:506970
+- name: Aviary Attorney
+  ids:
+  - steam:384630
+- name: DARK SOULS III
+  ids:
+  - steam:374320
+- name: Lost Castle
+  ids:
+  - steam:434650
+- name: Last Day of June
+  ids:
+  - steam:635320
+- name: Holy Potatoes! We're in Space?!
+  ids:
+  - steam:505730

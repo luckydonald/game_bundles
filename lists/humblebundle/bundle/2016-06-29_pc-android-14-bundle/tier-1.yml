@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble PC & Android Bundle 14 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3642/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3642/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3642/source.json
+games:
+- name: 'BADLAND: Game of the Year Edition'
+  ids:
+  - steam:269670
+- name: 10,000,000
+  ids:
+  - steam:227580
+- name: SPACECOM
+  ids:
+  - steam:263860

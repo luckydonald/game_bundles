@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jul 2025) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15225/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15225/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15225/source.json
+games:
+- name: Neo Cab
+  ids:
+  - steam:794540
+- name: DAEMON X MACHINA
+  ids:
+  - steam:1167450
+- name: Everafter Falls
+  ids:
+  - steam:1416960
+- name: Death's Door
+  ids:
+  - steam:894020
+- name: Wizard with a Gun
+  ids:
+  - steam:1150530
+- name: 'Warhammer 40,000: Rogue Trader'
+  ids:
+  - steam:2186680
+- name: Blanc
+  ids:
+  - steam:1982340
+- name: Cat Quest III
+  ids:
+  - steam:2305840

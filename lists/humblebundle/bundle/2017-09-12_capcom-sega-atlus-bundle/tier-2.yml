@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom X Sega X Atlus Bundle — Pay more than the average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5452/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5452/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5452/source.json
+games:
+- name: "Sonic Adventure\x99 2"
+  ids:
+  - steam:213610
+- name: Rollers of the Realm
+  ids:
+  - steam:262470
+- name: Zeno Clash 2
+  ids:
+  - steam:215690
+- name: Citizens of Earth
+  ids:
+  - unresolved:source:isthereanydeal:5452:citizens-of-earth
+- name: Bionic Commando
+  ids:
+  - steam:21670
+- name: Renegade Ops Collection
+  ids:
+  - unresolved:source:isthereanydeal:5452:renegade-ops-collection
+- name: Sonic Generations Collection
+  ids:
+  - steam:71340
+- name: Dead Rising
+  ids:
+  - steam:427190
+- name: 'Tesla Effect: A Tex Murphy Adventure'
+  ids:
+  - steam:261510
+- name: Resident Evil 4 (2005)
+  ids:
+  - steam:254700

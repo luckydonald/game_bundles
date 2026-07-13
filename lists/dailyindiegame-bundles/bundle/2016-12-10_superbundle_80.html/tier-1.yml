@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 80 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4471/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4471/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4471/source.json
+games:
+- name: 'Chopper: Lethal darkness'
+  ids:
+  - unresolved:source:isthereanydeal:4471:chopper-lethal-darkness
+- name: Spoiler Alert
+  ids:
+  - steam:283230
+- name: Vapour
+  ids:
+  - steam:345440
+- name: CortexGear:AngryDroids
+  ids:
+  - steam:375620
+- name: Coma:Mortuary
+  ids:
+  - steam:293320
+- name: Snake Blocks
+  ids:
+  - steam:339320

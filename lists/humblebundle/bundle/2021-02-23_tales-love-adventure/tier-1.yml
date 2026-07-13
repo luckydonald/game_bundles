@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Tales of Love & Adventure Bundle — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9773/source.json
+games:
+- name: Tales of Monkey Island Complete Season
+  ids:
+  - steam:31170

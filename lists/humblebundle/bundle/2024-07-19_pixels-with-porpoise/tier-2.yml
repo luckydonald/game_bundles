@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixels with Porpoise Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14253/source.json
+games:
+- name: TowerFall Ascension
+  ids:
+  - steam:251470
+- name: Celeste
+  ids:
+  - steam:504230
+- name: TowerFall Dark World Expansion
+  ids:
+  - steam:337840
+- name: Webbed
+  ids:
+  - steam:1390350
+- name: Rivals of Aether
+  ids:
+  - steam:383980
+- name: Hero's Hour
+  ids:
+  - steam:1656780
+- name: Anvil Saga
+  ids:
+  - steam:1587540
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14253:children-of-morta-complete-edition

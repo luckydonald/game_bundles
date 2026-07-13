@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Outright Games: Heroes of Film & Television Bundle — 11-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13764/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13764/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13764/source.json
+games:
+- name: Ben 10
+  ids:
+  - steam:703180
+- name: 'Adventure Time: Pirates of the Enchiridion'
+  ids:
+  - steam:728240
+- name: 'Hotel Transylvania 3: Monsters Overboard'
+  ids:
+  - steam:757600
+- name: 'Trollhunters: Defenders of Arcadia'
+  ids:
+  - steam:1344070
+- name: 'TRANSFORMERS: BATTLEGROUNDS'
+  ids:
+  - unresolved:source:isthereanydeal:13764:transformers-battlegrounds
+- name: 'Fast & Furious: Spy Racers Rise of SH1FT3R'
+  ids:
+  - steam:1434320
+- name: 'JUMANJI: The Video Game'
+  ids:
+  - steam:896950
+- name: DreamWorks Dragons Dawn of New Riders
+  ids:
+  - steam:896960
+- name: Ice Age Scrat's Nutty Adventure
+  ids:
+  - steam:751060
+- name: Last Kids on Earth and the Staff of Doom
+  ids:
+  - steam:1263100
+- name: 'DC League of Super-Pets: The Adventures of Krypto & Ace'
+  ids:
+  - unresolved:source:isthereanydeal:13764:dc-league-of-super-pets-the-adventures-of-krypto-and-ace

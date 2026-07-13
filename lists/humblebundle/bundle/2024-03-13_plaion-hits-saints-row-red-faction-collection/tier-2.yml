@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Plaion: The Hits - Saints Row & Red Faction Bundle — 7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13909/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13909/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13909/source.json
+games:
+- name: Red Faction
+  ids:
+  - steam:20530
+- name: Saints Row 2
+  ids:
+  - steam:9480
+- name: Red Faction II
+  ids:
+  - steam:20550
+- name: 'Red Faction: Armageddon - Path to War'
+  ids:
+  - steam:55115
+- name: 'Saints Row: The Third'
+  ids:
+  - steam:55230
+- name: 'Saints Row: Gat Out of Hell'
+  ids:
+  - steam:301910
+- name: 'Red Faction: Armageddon'
+  ids:
+  - steam:55110

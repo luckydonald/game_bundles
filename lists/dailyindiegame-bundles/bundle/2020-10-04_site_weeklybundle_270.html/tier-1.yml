@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 270 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9249/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9249/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9249/source.json
+games:
+- name: Mahjong Solitaire
+  ids:
+  - steam:805400
+- name: SLIDER
+  ids:
+  - steam:884900
+- name: Super Arcade Soccer
+  ids:
+  - steam:1024430
+- name: Gachi Heroes
+  ids:
+  - steam:944220
+- name: 'Gachi Heroes 2: Flexboll'
+  ids:
+  - steam:1179560
+- name: Position
+  ids:
+  - steam:1206180
+- name: Blood Branched Sakura
+  ids:
+  - unresolved:source:isthereanydeal:9249:blood-branched-sakura
+- name: Magic Forms
+  ids:
+  - steam:1291990
+- name: Target Runner
+  ids:
+  - unresolved:source:isthereanydeal:9249:target-runner

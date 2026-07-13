@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Oct 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9241/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9241/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9241/source.json
+games:
+- name: Lightmatter
+  ids:
+  - steam:994140
+- name: Fantasy Blacksmith
+  ids:
+  - steam:959520
+- name: Tropico 6 El-Prez Edition
+  ids:
+  - unresolved:source:isthereanydeal:9241:tropico-6-el-prez-edition
+- name: Fae Tactics
+  ids:
+  - steam:995980
+- name: Sunless Sea
+  ids:
+  - steam:304650
+- name: 'Shadows: Awakening'
+  ids:
+  - steam:585450
+- name: 'The Uncertain: Last Quiet Day'
+  ids:
+  - steam:406970
+- name: Goat of Duty
+  ids:
+  - steam:555000
+- name: Basement
+  ids:
+  - steam:340150
+- name: Iron Danger
+  ids:
+  - steam:899310
+- name: Autonauts
+  ids:
+  - steam:979120
+- name: SYZYGY
+  ids:
+  - steam:1298020
+- name: The Suicide of Rachel Foster
+  ids:
+  - steam:1057750
+- name: Fate of Kai
+  ids:
+  - steam:1426480
+- name: 'Sunless Skies: Sovereign Edition'
+  ids:
+  - steam:596970

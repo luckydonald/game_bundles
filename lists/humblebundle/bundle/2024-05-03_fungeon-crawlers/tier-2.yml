@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: FUNgeon Crawlers Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14028/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14028/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14028/source.json
+games:
+- name: Going Under
+  ids:
+  - steam:1154810
+- name: Hellslave
+  ids:
+  - steam:1608450
+- name: Devil Spire
+  ids:
+  - steam:1861290
+- name: Siralim Ultimate
+  ids:
+  - steam:1289810
+- name: Lunacid
+  ids:
+  - steam:1745510

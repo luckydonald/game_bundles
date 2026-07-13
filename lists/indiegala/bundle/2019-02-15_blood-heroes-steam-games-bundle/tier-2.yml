@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blood Heroes Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7032/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7032/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7032/source.json
+games:
+- name: Swordbreaker The Game
+  ids:
+  - steam:411760
+- name: Galactic Missile Defense
+  ids:
+  - steam:388550
+- name: Signal Simulator
+  ids:
+  - steam:839310
+- name: HexLab
+  ids:
+  - steam:833370
+- name: Night of the Blood Moon
+  ids:
+  - steam:894000
+- name: Super Man Or Monster
+  ids:
+  - steam:393220
+- name: Ravva and the Cyclops Curse
+  ids:
+  - steam:945340
+- name: Nine Worlds - A Viking saga
+  ids:
+  - steam:700460

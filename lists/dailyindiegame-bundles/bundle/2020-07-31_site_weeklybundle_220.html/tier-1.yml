@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 220 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9026/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9026/source.json
+games:
+- name: Frog Demon
+  ids:
+  - steam:810770
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+- name: Football Club Simulator - FCS
+  ids:
+  - unresolved:source:isthereanydeal:9026:football-club-simulator-fcs
+- name: Gun Chain
+  ids:
+  - steam:981690
+- name: Relow
+  ids:
+  - steam:966070
+- name: TYPICAL RUSSIAN QUARANTINE
+  ids:
+  - unresolved:source:isthereanydeal:9026:typical-russian-quarantine
+- name: Thomas Scott
+  ids:
+  - steam:1279480
+- name: TWELVE CONTAINERS
+  ids:
+  - steam:1288600
+- name: Paladin Lias
+  ids:
+  - steam:1097370

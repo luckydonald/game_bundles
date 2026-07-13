@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'PUBG: Survivor Pass 3 Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7435/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7435/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7435/source.json
+games:
+- name: PLAYERUNKNOWN'S BATTLEGROUNDS
+  ids:
+  - unresolved:source:isthereanydeal:7435:playerunknowns-battlegrounds
+- name: 'PLAYERUNKNOWN''S BATTLEGROUNDS: Survivor Pass 3 - Wild Card'
+  ids:
+  - unresolved:source:isthereanydeal:7435:playerunknowns-battlegrounds-survivor-pass-3-wild-card

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: FaceRig Bundle (Oct 2019) — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5919/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5919/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5919/source.json
+games:
+- name: FaceRig
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig
+- name: FaceRig Halloween Avatars 2014
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-halloween-avatars-2014
+- name: FaceRig Strong Paws
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-strong-paws
+- name: FaceRig Halloween Avatars 2015
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-halloween-avatars-2015
+- name: FaceRig Winter Holidays Avatars 2015
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-winter-holidays-avatars-2015
+- name: FaceRig Warriors
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-warriors
+- name: FaceRig Pro Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:5919:facerig-pro-upgrade

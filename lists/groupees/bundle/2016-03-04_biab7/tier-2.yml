@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle In A Box 7 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3128/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3128/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3128/source.json
+games:
+- name: Lemurzin
+  ids:
+  - unresolved:source:isthereanydeal:3128:lemurzin
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: Ping Ping
+  ids:
+  - unresolved:source:isthereanydeal:3128:ping-ping
+- name: Aozora Meikyuu
+  ids:
+  - steam:427980
+- name: Pilot Brothers 2
+  ids:
+  - steam:336770
+- name: '9 Clues 2: The Ward'
+  ids:
+  - steam:369420

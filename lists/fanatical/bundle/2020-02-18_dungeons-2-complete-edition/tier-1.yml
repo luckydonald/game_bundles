@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dungeons 2: Complete Edition Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8412/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8412/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8412/source.json
+games:
+- name: 'Dungeons 2: A Chance Of Dragons'
+  ids:
+  - steam:382410
+- name: 'Dungeons 2: A Song of Sand and Fire'
+  ids:
+  - steam:390180
+- name: 'Dungeons 2: A Game of Winter'
+  ids:
+  - steam:382400
+- name: Dungeons 2
+  ids:
+  - steam:262280

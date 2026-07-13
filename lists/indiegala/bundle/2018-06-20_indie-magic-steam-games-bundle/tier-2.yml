@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Magic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6253/source.json
+games:
+- name: Corpse Mob
+  ids:
+  - unresolved:source:isthereanydeal:6253:corpse-mob
+- name: They Are Hundreds
+  ids:
+  - steam:806860
+- name: 36 Fragments of Midnight
+  ids:
+  - steam:679930
+- name: Runefall
+  ids:
+  - steam:813650
+- name: 'The Last Dawn : The first invasion'
+  ids:
+  - unresolved:source:isthereanydeal:6253:the-last-dawn-the-first-invasion
+- name: H.I.S.T.O.R.Y T.O.R.C.H.K.A 2
+  ids:
+  - unresolved:source:isthereanydeal:6253:h-is-t-o-r-y-t-o-r-c-h-k-a-2
+- name: Worlds of Magic
+  ids:
+  - steam:265970
+- name: Fatal Stormer
+  ids:
+  - steam:818220
+- name: MIND SHIFT
+  ids:
+  - unresolved:source:isthereanydeal:6253:mind-shift
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+- name: Daddy
+  ids:
+  - steam:867480

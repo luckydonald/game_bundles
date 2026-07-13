@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 22 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7334/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7334/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7334/source.json
+games:
+- name: Jubox 2
+  ids:
+  - unresolved:source:isthereanydeal:7334:jubox-2
+- name: Gravitycers
+  ids:
+  - unresolved:source:isthereanydeal:7334:gravitycers
+- name: Bouncers
+  ids:
+  - steam:2517800
+- name: Colorcers
+  ids:
+  - unresolved:source:isthereanydeal:7334:colorcers
+- name: PixZomb
+  ids:
+  - unresolved:source:isthereanydeal:7334:pixzomb
+- name: Slippingcers
+  ids:
+  - unresolved:source:isthereanydeal:7334:slippingcers
+- name: Chromium Man Clicker
+  ids:
+  - unresolved:source:isthereanydeal:7334:chromium-man-clicker
+- name: Jamping
+  ids:
+  - unresolved:source:isthereanydeal:7334:jamping
+- name: JuBOX
+  ids:
+  - unresolved:source:isthereanydeal:7334:jubox

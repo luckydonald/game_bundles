@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Software Bundle: Organize Your PC — entire-11-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9591/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9591/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9591/source.json
+games:
+- name: WindowBlinds
+  ids:
+  - unresolved:source:isthereanydeal:9591:windowblinds
+- name: Iconpackager
+  ids:
+  - unresolved:source:isthereanydeal:9591:iconpackager
+- name: CursorFX
+  ids:
+  - steam:1299980
+- name: DeskScapes
+  ids:
+  - steam:1027220
+- name: Start10
+  ids:
+  - unresolved:source:isthereanydeal:9591:start10
+- name: SpaceMonger
+  ids:
+  - unresolved:source:isthereanydeal:9591:spacemonger
+- name: WindowFX
+  ids:
+  - unresolved:source:isthereanydeal:9591:windowfx
+- name: Groupy
+  ids:
+  - unresolved:source:isthereanydeal:9591:groupy
+- name: Fences
+  ids:
+  - unresolved:source:isthereanydeal:9591:fences
+- name: Multiplicity
+  ids:
+  - unresolved:source:isthereanydeal:9591:multiplicity
+- name: SoundPackager 10
+  ids:
+  - steam:975550

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 307 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9406/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9406/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9406/source.json
+games:
+- name: Save President From Rebels
+  ids:
+  - unresolved:source:isthereanydeal:9406:save-president-from-rebels
+- name: Rogue Port - Blue Nightmare
+  ids:
+  - steam:595780
+- name: Crab Dub
+  ids:
+  - steam:539450
+- name: Rampage Online
+  ids:
+  - unresolved:source:isthereanydeal:9406:rampage-online
+- name: Battle Of Keys
+  ids:
+  - steam:777310
+- name: Click and Manage Tycoon
+  ids:
+  - steam:919690
+- name: Nice Way
+  ids:
+  - unresolved:source:isthereanydeal:9406:nice-way
+- name: Squares
+  ids:
+  - steam:3088680
+- name: Flying propeller
+  ids:
+  - steam:1367770

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 778: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11183/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11183/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11183/source.json
+games:
+- name: Labirinto 2
+  ids:
+  - steam:824770
+- name: SUDOKU TIME
+  ids:
+  - unresolved:source:isthereanydeal:11183:sudoku-time
+- name: Gravity Mummy
+  ids:
+  - unresolved:source:isthereanydeal:11183:gravity-mummy
+- name: Gurney to Gurney
+  ids:
+  - unresolved:source:isthereanydeal:11183:gurney-to-gurney
+- name: Jacob The Farmer
+  ids:
+  - steam:1586300
+- name: Angry Squirrel
+  ids:
+  - steam:1596070
+- name: Light Fighter
+  ids:
+  - unresolved:source:isthereanydeal:11183:light-fighter
+- name: Virus ON
+  ids:
+  - steam:1691170
+- name: Golden Boy
+  ids:
+  - unresolved:source:isthereanydeal:11183:golden-boy

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Battle of Polytopia: Moonrise Deluxe Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12531/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12531/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12531/source.json
+games:
+- name: The Battle of Polytopia
+  ids:
+  - steam:874390
+- name: The Battle of Polytopia - Aquarion Tribe
+  ids:
+  - steam:982200
+- name: The Battle of Polytopia - Polaris Tribe
+  ids:
+  - steam:1237430
+- name: The Battle of Polytopia - Elyrion Tribe
+  ids:
+  - steam:982201
+- name: The Battle of Polytopia - Cymanti Tribe
+  ids:
+  - steam:1529660

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 5 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5838/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5838/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5838/source.json
+games:
+- name: Galak-Z
+  ids:
+  - steam:300580
+- name: 'Infectonator : Survivors'
+  ids:
+  - steam:269310
+- name: Still Not Dead
+  ids:
+  - steam:337290
+- name: Holy Potatoes! A Weapon Shop?!
+  ids:
+  - steam:363600
+- name: The Way
+  ids:
+  - steam:311010
+- name: The Warlock of Firetop Mountain
+  ids:
+  - steam:324740
+- name: Wick
+  ids:
+  - steam:418300
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: The Fall of the Dungeon Guardians - Enhanced Edition
+  ids:
+  - steam:409450
+- name: Holy Potatoes! We're in Space?!
+  ids:
+  - steam:505730
+- name: Mytheon
+  ids:
+  - steam:413030
+- name: Space Hulk Ascension Edition
+  ids:
+  - unresolved:source:isthereanydeal:5838:space-hulk-ascension-edition

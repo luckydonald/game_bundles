@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Darkness Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3533/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3533/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3533/source.json
+games:
+- name: Locked-in syndrome
+  ids:
+  - unresolved:source:isthereanydeal:3533:locked-in-syndrome
+- name: Epsilon corp.
+  ids:
+  - unresolved:source:isthereanydeal:3533:epsilon-corp
+- name: My Bones
+  ids:
+  - steam:389700
+- name: Lucius II
+  ids:
+  - steam:296830
+- name: 'Case #8'
+  ids:
+  - unresolved:source:isthereanydeal:3533:case-8
+- name: Morphine
+  ids:
+  - steam:410430

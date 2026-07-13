@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Entertainment Jam Bundle — Premium
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2925/source.json
+games:
+- name: Frederic - Resurrection of Music
+  ids:
+  - steam:301190
+- name: Sparkle 2 Evo
+  ids:
+  - steam:253650
+- name: 16 bit trader
+  ids:
+  - unresolved:source:isthereanydeal:2925:16-bit-trader
+- name: 'Frederic: Evil Strikes Back'
+  ids:
+  - steam:301200
+- name: Millie
+  ids:
+  - steam:294230
+- name: Timberman
+  ids:
+  - steam:398710
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:2925:teddy-floppy-ear-kayaking
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:2925:teddy-floppy-ear-the-race
+- name: Merchants of Kaidan
+  ids:
+  - steam:294020
+- name: Teddy Floppy Ear - Mountain Adventure
+  ids:
+  - unresolved:source:isthereanydeal:2925:teddy-floppy-ear-mountain-adventure
+- name: Violett - Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:2925:violett-remastered-edition
+- name: 'Sparkle 3: Genesis'
+  ids:
+  - steam:361190

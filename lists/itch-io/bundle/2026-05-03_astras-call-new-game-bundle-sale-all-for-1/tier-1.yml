@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Adventure Game Sale Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16126/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16126/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16126/source.json
+games:
+- name: Sapphire City
+  ids:
+  - unresolved:source:isthereanydeal:16126:sapphire-city
+- name: Sapphire City Part 2
+  ids:
+  - unresolved:source:isthereanydeal:16126:sapphire-city-part-2
+- name: The Sons
+  ids:
+  - unresolved:source:isthereanydeal:16126:the-sons
+- name: Sapphire City Part 3
+  ids:
+  - unresolved:source:isthereanydeal:16126:sapphire-city-part-3
+- name: 'Penance: Alba'
+  ids:
+  - unresolved:source:isthereanydeal:16126:penance-alba
+- name: Penance 1
+  ids:
+  - unresolved:source:isthereanydeal:16126:penance-1
+- name: Astra's Call
+  ids:
+  - unresolved:source:isthereanydeal:16126:astras-call

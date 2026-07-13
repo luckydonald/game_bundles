@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie League Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7243/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7243/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7243/source.json
+games:
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+- name: Puzzle Chambers
+  ids:
+  - steam:740410
+- name: Defend your Crypt
+  ids:
+  - steam:457450

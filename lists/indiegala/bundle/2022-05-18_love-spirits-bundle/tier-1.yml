@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Love Spirits Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11504/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11504/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11504/source.json
+games:
+- name: Möira
+  ids:
+  - unresolved:source:isthereanydeal:11504:moira
+- name: PROTOThYPE _ a love story
+  ids:
+  - steam:587070
+- name: 'A Painter''s Tale: Curon, 1950'
+  ids:
+  - steam:1283370
+- name: Forgotten Spirits
+  ids:
+  - steam:1542060
+- name: Visual Novel Sisters
+  ids:
+  - steam:1734890
+- name: Panty&Demons
+  ids:
+  - steam:1385940

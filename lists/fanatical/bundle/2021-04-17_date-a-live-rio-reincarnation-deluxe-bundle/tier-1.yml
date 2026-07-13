@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Date A Live: Rio Reincarnation Deluxe Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9945/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9945/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9945/source.json
+games:
+- name: 'DATE A LIVE: Rio Reincarnation HD - Deluxe Pack'
+  ids:
+  - unresolved:source:isthereanydeal:9945:date-a-live-rio-reincarnation-hd-deluxe-pack
+- name: 'Date A Live: Rio Reincarnation'
+  ids:
+  - steam:1047440

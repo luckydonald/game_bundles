@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #20 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6059/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6059/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6059/source.json
+games:
+- name: AIDEN
+  ids:
+  - steam:783060
+- name: Ghoulboy - Dark Sword of Goblin
+  ids:
+  - steam:752500
+- name: Broken Armor
+  ids:
+  - steam:508840
+- name: SEGFAULT
+  ids:
+  - steam:715290
+- name: Fantasyland All Heroes
+  ids:
+  - unresolved:source:isthereanydeal:6059:fantasyland-all-heroes
+- name: Fantasy Land
+  ids:
+  - unresolved:source:isthereanydeal:6059:fantasy-land
+- name: Homeworld Defense
+  ids:
+  - steam:787100
+- name: The Secrets of The Forest
+  ids:
+  - unresolved:source:isthereanydeal:6059:the-secrets-of-the-forest
+- name: War Hunter
+  ids:
+  - steam:842560
+- name: Shotgun Legend
+  ids:
+  - steam:597230

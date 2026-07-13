@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 33 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5294/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5294/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5294/source.json
+games:
+- name: Mythic Victory Arena
+  ids:
+  - steam:514200
+- name: 'Sharpe Investigations: Death on the Seine'
+  ids:
+  - steam:288630
+- name: Cosmic Pioneer
+  ids:
+  - steam:629380
+- name: Casino Noir
+  ids:
+  - unresolved:source:isthereanydeal:5294:casino-noir
+- name: Squeezone
+  ids:
+  - unresolved:source:isthereanydeal:5294:squeezone
+- name: Detective Noir
+  ids:
+  - unresolved:source:isthereanydeal:5294:detective-noir
+- name: The Theodore Adventures
+  ids:
+  - steam:656940
+- name: Spacebar
+  ids:
+  - steam:3599040

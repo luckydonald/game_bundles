@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shooter Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7586/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7586/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7586/source.json
+games:
+- name: War Tech Fighters
+  ids:
+  - steam:630030
+- name: Killing Floor
+  ids:
+  - steam:1250
+- name: 'Teleglitch: Die More Edition'
+  ids:
+  - steam:234390
+- name: Rage
+  ids:
+  - steam:9200

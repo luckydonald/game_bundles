@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: CY Oriental Power Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6677/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6677/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6677/source.json
+games:
+- name: Power Overwhelming
+  ids:
+  - unresolved:source:isthereanydeal:6677:power-overwhelming
+- name: RunningDead
+  ids:
+  - steam:584220
+- name: 位面穿越者-三国传-进化(A Bit Crosser-Three Kingdoms-Revolution)
+  ids:
+  - steam:768010
+- name: Merlin adventurer store
+  ids:
+  - steam:561340
+- name: Drift 7 islands
+  ids:
+  - unresolved:source:isthereanydeal:6677:drift-7-islands
+- name: Fire in the Goal "轰个球"
+  ids:
+  - unresolved:source:isthereanydeal:6677:fire-in-the-goal-hong-ge-qiu
+- name: 冒险村传说（Tales of Legends）
+  ids:
+  - steam:578440
+- name: Catch Me
+  ids:
+  - steam:1741160

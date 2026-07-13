@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #42 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5888/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5888/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5888/source.json
+games:
+- name: Flag N Frag
+  ids:
+  - steam:456160
+- name: Hangover
+  ids:
+  - unresolved:source:isthereanydeal:5888:hangover
+- name: BAE 2
+  ids:
+  - unresolved:source:isthereanydeal:5888:bae-2
+- name: Singularity Roller
+  ids:
+  - steam:684820
+- name: Supermagical
+  ids:
+  - steam:681100
+- name: Waiting For the Loop
+  ids:
+  - steam:717830
+- name: Golf Extreme
+  ids:
+  - unresolved:source:isthereanydeal:5888:golf-extreme
+- name: Roulette Simulator
+  ids:
+  - steam:779570
+- name: Hunahpu Quest. Mechanoid
+  ids:
+  - steam:773010
+- name: Link Twin
+  ids:
+  - steam:612890
+- name: Race Arcade
+  ids:
+  - steam:355010
+- name: Ripped Pants at Work
+  ids:
+  - steam:752550

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capsule Computers Groupee — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/87/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/87/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/87/source.json
+games:
+- name: Three Dead Zed
+  ids:
+  - steam:291390
+- name: Transcripted
+  ids:
+  - steam:215450
+- name: 'Cognition: An Erica Reed Thriller Episode 2 The Wise Monkey'
+  ids:
+  - unresolved:source:isthereanydeal:87:cognition-an-erica-reed-thriller-episode-2-the-wise-monkey
+- name: Turba
+  ids:
+  - steam:58400
+- name: Astro Drop
+  ids:
+  - unresolved:source:isthereanydeal:87:astro-drop
+- name: 'Cognition: An Erica Reed Thriller Episode 1 The Hangman'
+  ids:
+  - unresolved:source:isthereanydeal:87:cognition-an-erica-reed-thriller-episode-1-the-hangman
+- name: Super Sanctum TD
+  ids:
+  - steam:235250
+- name: SpaceChem
+  ids:
+  - steam:92800
+- name: Lost Marbles
+  ids:
+  - steam:291430
+- name: Pressure
+  ids:
+  - unresolved:source:isthereanydeal:87:pressure
+- name: 'Swords and Soldiers: Super Saucy Sausage Fest'
+  ids:
+  - steam:210510
+- name: Swords & Soldiers HD
+  ids:
+  - steam:63500

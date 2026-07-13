@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Stomp & Chomp Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15126/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15126/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15126/source.json
+games:
+- name: Parkasaurus
+  ids:
+  - steam:591460
+- name: Terror of Hemasaurus
+  ids:
+  - steam:1016180
+- name: I Wani Hug that Gator!
+  ids:
+  - steam:1895350
+- name: Prehistoric Kingdom
+  ids:
+  - steam:666150
+- name: Amber Isle
+  ids:
+  - steam:1663040
+- name: Fossilfuel 2
+  ids:
+  - steam:2299660
+- name: 'Turok 3: Shadow of Oblivion Remastered'
+  ids:
+  - steam:1996770

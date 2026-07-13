@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Strange Vices Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7392/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7392/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7392/source.json
+games:
+- name: Aspect
+  ids:
+  - steam:959260
+- name: Eliosi's Hunt
+  ids:
+  - steam:494700
+- name: Dungeons & Vampires
+  ids:
+  - steam:759160
+- name: This Strange Realm Of Mine
+  ids:
+  - steam:655730
+- name: Bot Vice
+  ids:
+  - steam:491040
+- name: Westboro
+  ids:
+  - steam:416060
+- name: Koloro
+  ids:
+  - steam:574590

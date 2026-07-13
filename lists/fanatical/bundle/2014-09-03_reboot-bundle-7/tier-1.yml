@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Reboot Bundle 7.0 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1134/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1134/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1134/source.json
+games:
+- name: Legendary
+  ids:
+  - steam:16730
+- name: Cargo Commander
+  ids:
+  - steam:220460
+- name: Velvet Assassin
+  ids:
+  - steam:16720
+- name: 'Kung Fu Strike: The Warrior''s Rise'
+  ids:
+  - steam:212030
+- name: 'Runespell: Overture'
+  ids:
+  - steam:102200
+- name: 'Kung Fu Strike: The Warrior''s Rise - Master Level'
+  ids:
+  - steam:212041
+- name: 'Hydrophobia: Prophecy'
+  ids:
+  - steam:92000

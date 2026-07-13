@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5425/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5425/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5425/source.json
+games:
+- name: No Ammo
+  ids:
+  - unresolved:source:isthereanydeal:5425:no-ammo
+- name: Giusto Intonation Training
+  ids:
+  - unresolved:source:isthereanydeal:5425:giusto-intonation-training
+- name: '8-Bit Adventures: The Forgotten Journey Remastered Edition'
+  ids:
+  - steam:370300
+- name: Space Rogue Classic
+  ids:
+  - steam:569200
+- name: Orion Trail
+  ids:
+  - steam:381260
+- name: The Barbarian and the Subterranean Caves
+  ids:
+  - steam:490690
+- name: RAGE - Fighting Game
+  ids:
+  - unresolved:source:isthereanydeal:5425:rage-fighting-game

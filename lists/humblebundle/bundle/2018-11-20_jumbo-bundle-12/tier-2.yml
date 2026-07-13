@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Jumbo Bundle 12 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6700/source.json
+games:
+- name: Rise & Shine
+  ids:
+  - steam:347290
+- name: Pinstripe
+  ids:
+  - steam:331480
+- name: Super House of Dead Ninjas
+  ids:
+  - steam:224820
+- name: 'Super House of Dead Ninjas: True Ninja Pack'
+  ids:
+  - steam:238570
+- name: Construction Simulator 2015
+  ids:
+  - steam:289950
+- name: Project Highrise
+  ids:
+  - steam:423580
+- name: Battle Chef Brigade Deluxe
+  ids:
+  - steam:452570

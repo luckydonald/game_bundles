@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artsy Pixel Puzzles Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15413/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15413/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15413/source.json
+games:
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Zombies'
+  ids:
+  - steam:1534118
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Legendary Beasts'
+  ids:
+  - steam:1534123
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Warriors'
+  ids:
+  - steam:1534115
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Gun Girls'
+  ids:
+  - steam:1534112
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Musix'
+  ids:
+  - steam:1534120
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Fairies'
+  ids:
+  - unresolved:source:isthereanydeal:15413:pixel-puzzles-illustrations-and-anime-jigsaw-pack-fairies
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Book Of Nature'
+  ids:
+  - steam:1577800
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Van Gogh'
+  ids:
+  - unresolved:source:isthereanydeal:15413:pixel-puzzles-illustrations-and-anime-jigsaw-pack-van-gogh

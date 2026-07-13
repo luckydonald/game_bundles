@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 954 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12095/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12095/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12095/source.json
+games:
+- name: Metal Strike
+  ids:
+  - steam:1441090
+- name: Monkey vs Dino
+  ids:
+  - steam:1588140
+- name: 1/2 Red Riding Hood
+  ids:
+  - steam:1782130
+- name: Maverta
+  ids:
+  - steam:1799570
+- name: 'Patriots: Back to Civilization'
+  ids:
+  - unresolved:source:isthereanydeal:12095:patriots-back-to-civilization
+- name: Mega City Void
+  ids:
+  - steam:1820930
+- name: 'HOGuru Presents: The House With Too Many Zombies In It'
+  ids:
+  - steam:1785510
+- name: Endless Zombie Weekend
+  ids:
+  - steam:1835560
+- name: Pirates of the Maverta
+  ids:
+  - steam:1848280

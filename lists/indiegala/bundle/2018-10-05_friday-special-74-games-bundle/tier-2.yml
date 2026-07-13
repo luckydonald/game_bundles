@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #74 — Includes Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6550/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6550/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6550/source.json
+games:
+- name: Draw It! 2
+  ids:
+  - steam:876890
+- name: Bars and Balance
+  ids:
+  - steam:731940
+- name: 'BATTLE ZOMBIE SHOOTER: SURVIVAL OF THE DEAD'
+  ids:
+  - unresolved:source:isthereanydeal:6550:battle-zombie-shooter-survival-of-the-dead
+- name: Earth Muncher
+  ids:
+  - steam:809460
+- name: Welcome to Bummertown
+  ids:
+  - steam:925520
+- name: Robbotto
+  ids:
+  - steam:881190
+- name: The Great Story of a Mighty Hero - Remastered
+  ids:
+  - steam:862850
+- name: Spiritlands
+  ids:
+  - steam:618270
+- name: Asemblance
+  ids:
+  - steam:452970
+- name: Memetown USA
+  ids:
+  - steam:911100
+- name: Blacksmith
+  ids:
+  - steam:787840

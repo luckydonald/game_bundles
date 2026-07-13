@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Best of Stealth Bundle: Holiday Encore — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12770/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12770/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12770/source.json
+games:
+- name: Hitman Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:12770:hitman-game-of-the-year-edition
+- name: Ghost of a Tale
+  ids:
+  - steam:417290
+- name: ECHO
+  ids:
+  - steam:551770
+- name: HITMAN™2 Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:12770:hitman-2-gold-edition
+- name: Aragami
+  ids:
+  - steam:280160
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+- name: Heat Signature
+  ids:
+  - steam:268130

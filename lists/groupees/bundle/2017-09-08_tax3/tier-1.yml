@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Tax Year 3: Late + Penalties — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5443/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5443/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5443/source.json
+games:
+- name: Island Flight Simulator
+  ids:
+  - steam:363660
+- name: 'Ferrum''s secrets: where is grandpa?'
+  ids:
+  - steam:391340
+- name: '1914: Prelude to Chaos'
+  ids:
+  - steam:627950
+- name: 'Garshasp: The Monster Slayer'
+  ids:
+  - steam:99400
+- name: 'Garshasp: Temple of the Dragon'
+  ids:
+  - steam:99410
+- name: Lost & Found
+  ids:
+  - unresolved:source:isthereanydeal:5443:lost-and-found

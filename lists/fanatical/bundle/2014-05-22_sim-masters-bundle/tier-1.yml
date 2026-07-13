@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sim Masters Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/812/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/812/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/812/source.json
+games:
+- name: Demolition Master 3D
+  ids:
+  - steam:288710
+- name: Mining & Tunneling Simulator
+  ids:
+  - steam:273820
+- name: Xpand Rally
+  ids:
+  - steam:3010
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+- name: Recovery Search & Rescue Simulation
+  ids:
+  - steam:262870
+- name: Bridge Constructor
+  ids:
+  - steam:250460
+- name: Construction Machines 2014
+  ids:
+  - steam:252050

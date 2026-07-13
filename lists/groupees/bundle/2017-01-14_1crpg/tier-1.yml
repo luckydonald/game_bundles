@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 1C RPG Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4630/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4630/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4630/source.json
+games:
+- name: A.I.M. 2 - Clan Wars
+  ids:
+  - unresolved:source:isthereanydeal:4630:a-i-m-2-clan-wars
+- name: Death to Spies Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:4630:death-to-spies-gold-edition
+- name: Time of Shadows
+  ids:
+  - steam:33550
+- name: Planet Alcatraz
+  ids:
+  - steam:289420
+- name: Konung 2
+  ids:
+  - steam:289360
+- name: 'Konung III: Ties of the Dynasty'
+  ids:
+  - steam:289380

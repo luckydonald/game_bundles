@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Hope for Orphans Bundle — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5794/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5794/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5794/source.json
+games:
+- name: Killing Floor
+  ids:
+  - steam:1250
+- name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm'
+  ids:
+  - steam:35450
+- name: 'IL-2 Sturmovik™: 1946'
+  ids:
+  - steam:15320
+- name: BLACKHOLE
+  ids:
+  - steam:322680
+- name: 'Homefront®: The Revolution'
+  ids:
+  - steam:223100
+- name: King's Bounty Platinum Edition
+  ids:
+  - unresolved:source:isthereanydeal:5794:kings-bounty-platinum-edition
+- name: Killing Floor 2
+  ids:
+  - steam:232090
+- name: Call to Arms - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:5794:call-to-arms-deluxe-edition
+- name: 'Rising Storm 2: Vietnam'
+  ids:
+  - steam:418460
+- name: Call to Arms
+  ids:
+  - steam:302670

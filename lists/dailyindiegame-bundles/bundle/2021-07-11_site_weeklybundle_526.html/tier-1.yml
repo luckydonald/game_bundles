@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 526 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10244/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10244/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10244/source.json
+games:
+- name: Robot Chase
+  ids:
+  - unresolved:source:isthereanydeal:10244:robot-chase
+- name: 'Deep Dungeon: Gym'
+  ids:
+  - steam:1067050
+- name: Useful Cat
+  ids:
+  - steam:1631700
+- name: Wild Rat
+  ids:
+  - unresolved:source:isthereanydeal:10244:wild-rat
+- name: RunnerDot
+  ids:
+  - unresolved:source:isthereanydeal:10244:runnerdot
+- name: Lovely Kitchen
+  ids:
+  - unresolved:source:isthereanydeal:10244:lovely-kitchen
+- name: Baseball Adventure
+  ids:
+  - unresolved:source:isthereanydeal:10244:baseball-adventure
+- name: Soer Dolls
+  ids:
+  - steam:1666260
+- name: Hoverboard Chase
+  ids:
+  - unresolved:source:isthereanydeal:10244:hoverboard-chase

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Heart Attack Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1622/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1622/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1622/source.json
+games:
+- name: Bionic Heart
+  ids:
+  - steam:314200
+- name: 'Flower Shop: Summer In Fairbrook'
+  ids:
+  - steam:290990
+- name: 'Heileen 1: Sail Away'
+  ids:
+  - steam:302950
+- name: 'Heileen 2: The Hands Of Fate'
+  ids:
+  - steam:305480
+- name: 'Flower Shop: Winter In Fairbrook'
+  ids:
+  - steam:311680
+- name: 'Heileen 3: New Horizons Deluxe Edition'
+  ids:
+  - steam:305490
+- name: Spirited Heart Deluxe
+  ids:
+  - steam:293920
+- name: Always Remember Me - Deluxe Edition
+  ids:
+  - steam:291030
+- name: Bionic Heart 2 - Deluxe Edition
+  ids:
+  - steam:317290

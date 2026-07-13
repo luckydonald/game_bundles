@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mayhem Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8258/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8258/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8258/source.json
+games:
+- name: Shütshimi
+  ids:
+  - steam:332530
+- name: Laserlife
+  ids:
+  - steam:323040
+- name: 'Dragon Fantasy: The Black Tome of Ice'
+  ids:
+  - steam:328000
+- name: Tharsis
+  ids:
+  - steam:323060
+- name: 'Dragon Fantasy: The Volumes of Westeria'
+  ids:
+  - steam:327980
+- name: Drive!Drive!Drive!
+  ids:
+  - steam:356460
+- name: Destructamundo
+  ids:
+  - steam:323020
+- name: Woah Dave!
+  ids:
+  - steam:315110
+- name: Runner3
+  ids:
+  - steam:516130

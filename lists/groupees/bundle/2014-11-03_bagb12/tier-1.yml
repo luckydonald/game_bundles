@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 12 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1353/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1353/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1353/source.json
+games:
+- name: Cold Contract
+  ids:
+  - unresolved:source:isthereanydeal:1353:cold-contract
+- name: Downpour
+  ids:
+  - steam:371400
+- name: Synonymy
+  ids:
+  - steam:342890
+- name: Dungeon of Gain
+  ids:
+  - steam:340030
+- name: Final Dusk
+  ids:
+  - unresolved:source:isthereanydeal:1353:final-dusk
+- name: Fake Colours
+  ids:
+  - steam:334300
+- name: Station
+  ids:
+  - steam:3411540
+- name: Super Cyborg
+  ids:
+  - steam:341550
+- name: Seven Kingdoms 2 HD
+  ids:
+  - steam:338800
+- name: Abomination Tower
+  ids:
+  - unresolved:source:isthereanydeal:1353:abomination-tower

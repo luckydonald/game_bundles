@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 162 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8663/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8663/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8663/source.json
+games:
+- name: Enclave
+  ids:
+  - steam:253980
+- name: Fly Flew Flown
+  ids:
+  - steam:1027800
+- name: Jagged Alliance 2 Wildfire
+  ids:
+  - steam:215930
+- name: Endless Space Collection
+  ids:
+  - unresolved:source:isthereanydeal:8663:endless-space-collection
+- name: RoBoRumble
+  ids:
+  - steam:420970
+- name: Earth 2160
+  ids:
+  - steam:1900
+- name: 'World War II: Panzer Claws'
+  ids:
+  - steam:254100
+- name: 'Puss in Boots: Fear Not Hooman'
+  ids:
+  - steam:1034820
+- name: Earth 2150 Trilogy
+  ids:
+  - steam:253880

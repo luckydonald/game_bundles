@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Civilization Bundle — entire-21-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4813/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4813/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4813/source.json
+games:
+- name: 'Sid Meier''s Civilization® III: Complete'
+  ids:
+  - steam:3910
+- name: 'Sid Meier''s Civilization IV: The Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4813:sid-meiers-civilization-iv-the-complete-edition
+- name: 'Sid Meier''s Civilization V: Gods and Kings'
+  ids:
+  - steam:16870
+- name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Korea'
+  ids:
+  - steam:99612
+- name: 'Sid Meier''s Civilization V: Brave New World'
+  ids:
+  - steam:235580
+- name: Sid Meier's Civilization V
+  ids:
+  - steam:8930
+- name: Sid Meier's Civilization V - Scrambled Nations Map Pack
+  ids:
+  - steam:235585
+- name: Sid Meier's Civilization V - Explorer's Map Pack
+  ids:
+  - steam:16866
+- name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Polynesia'
+  ids:
+  - steam:99610
+- name: Sid Meier's Civilization V - Scrambled Continents Map Pack
+  ids:
+  - steam:235584
+- name: 'Sid Meier''s Civilization V - Scenario Pack: Wonders of the Ancient World'
+  ids:
+  - steam:99614
+- name: Sid Meier's Civilization V - Babylon (Nebuchadnezzar II)
+  ids:
+  - steam:16868
+- name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Denmark (The
+    Vikings)'
+  ids:
+  - steam:99611
+- name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Mesopotamia'
+  ids:
+  - steam:16863
+- name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Mediterranean'
+  ids:
+  - steam:16860
+- name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Asia'
+  ids:
+  - steam:16861
+- name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Americas'
+  ids:
+  - steam:16862
+- name: 'Sid Meier''s Civilization V - Civilization and Scenario Double Pack: Spain
+    and Inca'
+  ids:
+  - steam:16867
+- name: 'Sid Meier''s Civilization: Beyond Earth'
+  ids:
+  - steam:65980
+- name: 'Sid Meier''s Civilization®: Beyond Earth™ - Exoplanets Map Pack'
+  ids:
+  - steam:304010
+- name: 'Sid Meier''s Civilization: Beyond Earth - Rising Tide'
+  ids:
+  - steam:353830

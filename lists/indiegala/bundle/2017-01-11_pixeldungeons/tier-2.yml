@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Dungeons — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4611/source.json
+games:
+- name: Hide and Secret Treasure of the Ages
+  ids:
+  - steam:489470
+- name: CrazyCars3D
+  ids:
+  - steam:454180
+- name: Cube Master
+  ids:
+  - unresolved:source:isthereanydeal:4611:cube-master
+- name: Distant Space
+  ids:
+  - steam:569610
+- name: The Agony
+  ids:
+  - steam:568720
+- name: Smash Pixel Racing
+  ids:
+  - steam:455990
+- name: Plantera
+  ids:
+  - steam:421040
+- name: Operation KREEP
+  ids:
+  - steam:446050
+- name: Tapocalypse
+  ids:
+  - unresolved:source:isthereanydeal:4611:tapocalypse
+- name: One More Dungeon
+  ids:
+  - steam:415030
+- name: 'Child Phobia: Nightcoming Fears'
+  ids:
+  - steam:570500
+- name: Santa's big adventures
+  ids:
+  - steam:571020

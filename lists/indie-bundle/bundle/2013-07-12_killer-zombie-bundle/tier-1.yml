@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Zombie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13/source.json
+games:
+- name: Deadly 30
+  ids:
+  - steam:264730
+- name: Dead Pixels
+  ids:
+  - steam:222980
+- name: Jimmy Vs Zombies
+  ids:
+  - unresolved:source:isthereanydeal:13:jimmy-vs-zombies
+- name: Zombies.
+  ids:
+  - steam:1389980
+- name: Zombies Ruined My Day
+  ids:
+  - steam:3191230

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 8-Bit Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6572/source.json
+games:
+- name: 8-Bit Hordes
+  ids:
+  - steam:497850
+- name: 8-Bit Armies - Guardians Campaign
+  ids:
+  - steam:482420
+- name: 8-Bit Invaders!
+  ids:
+  - steam:531680
+- name: 8-Bit Armies
+  ids:
+  - steam:427250

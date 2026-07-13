@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Razor Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1357/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1357/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1357/source.json
+games:
+- name: 4 Elements
+  ids:
+  - unresolved:source:isthereanydeal:1357:4-elements
+- name: Data Hacker - Initiation
+  ids:
+  - steam:311860
+- name: Rage Runner
+  ids:
+  - steam:279520
+- name: Skyborn
+  ids:
+  - steam:278460
+- name: Syder Arcade
+  ids:
+  - steam:252310
+- name: Galactic Arms Race
+  ids:
+  - steam:249610
+- name: Super Monday Night Combat - Turbocross Bundle
+  ids:
+  - unresolved:source:isthereanydeal:1357:super-monday-night-combat-turbocross-bundle
+- name: Saturday Morning RPG
+  ids:
+  - steam:263320
+- name: Orborun
+  ids:
+  - steam:308580
+- name: Deadly Sin 2
+  ids:
+  - steam:285420

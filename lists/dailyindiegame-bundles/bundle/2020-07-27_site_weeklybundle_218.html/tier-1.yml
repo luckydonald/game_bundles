@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 218 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9010/source.json
+games:
+- name: Monster Shooter™
+  ids:
+  - steam:2843970
+- name: 'ROBOTIX: The Escape'
+  ids:
+  - unresolved:source:isthereanydeal:9010:robotix-the-escape
+- name: Cursed Mummies
+  ids:
+  - unresolved:source:isthereanydeal:9010:cursed-mummies
+- name: Unicorn Dream
+  ids:
+  - unresolved:source:isthereanydeal:9010:unicorn-dream
+- name: Robo Terror
+  ids:
+  - unresolved:source:isthereanydeal:9010:robo-terror
+- name: Parking Attendant
+  ids:
+  - unresolved:source:isthereanydeal:9010:parking-attendant
+- name: WestLand Adventure
+  ids:
+  - unresolved:source:isthereanydeal:9010:westland-adventure
+- name: Dangerous Zone
+  ids:
+  - unresolved:source:isthereanydeal:9010:dangerous-zone
+- name: Factory of Sweets
+  ids:
+  - unresolved:source:isthereanydeal:9010:factory-of-sweets

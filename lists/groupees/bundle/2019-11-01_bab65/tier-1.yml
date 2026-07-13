@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 65 — Select 2 to 9 Titles for $1.00 up to $3.37
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8084/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8084/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8084/source.json
+games:
+- name: 'Atonement 2: Ruptured by Despair'
+  ids:
+  - steam:533820
+- name: Fruit Lockers Reborn! 2
+  ids:
+  - steam:1012390
+- name: Space Struck Run
+  ids:
+  - steam:994650
+- name: Incoming Evil
+  ids:
+  - steam:926210
+- name: GraFi 4
+  ids:
+  - steam:1150790
+- name: Dragon Chase
+  ids:
+  - steam:1011240
+- name: Escape From The Dragons
+  ids:
+  - steam:975770
+- name: Dread of Laughter
+  ids:
+  - steam:953050
+- name: Orc Raid
+  ids:
+  - steam:1061160

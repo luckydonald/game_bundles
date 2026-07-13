@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deep Silver Bundle 2 — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3441/source.json
+games:
+- name: Risen
+  ids:
+  - steam:40300
+- name: 'Risen 2: Dark Waters Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:3441:risen-2-dark-waters-gold-edition
+- name: Dead Island Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:3441:dead-island-game-of-the-year-edition
+- name: Sacred 3 Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:3441:sacred-3-gold-edition
+- name: Saints Row 2
+  ids:
+  - steam:9480
+- name: 'Saints Row: The Third - The Full Package'
+  ids:
+  - unresolved:source:isthereanydeal:3441:saints-row-the-third-the-full-package
+- name: Dead Island Riptide Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:3441:dead-island-riptide-complete-edition
+- name: Killer is Dead - Nightmare Edition
+  ids:
+  - steam:261110

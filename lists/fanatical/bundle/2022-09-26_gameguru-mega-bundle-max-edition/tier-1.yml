@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: GameGuru Mega Bundle (Max Edition) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12129/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12129/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12129/source.json
+games:
+- name: GameGuru - Sci-Fi Mission to Mars Pack
+  ids:
+  - steam:404570
+- name: GameGuru - Melee Weapons Pack
+  ids:
+  - steam:822010
+- name: GameGuru
+  ids:
+  - steam:266310
+- name: GameGuru Fantasy Pack
+  ids:
+  - steam:365530
+- name: GameGuru Mega Pack 3
+  ids:
+  - steam:321142
+- name: GameGuru Mega Pack 2
+  ids:
+  - steam:321141
+- name: GameGuru - Enhanced Weapons Pack
+  ids:
+  - steam:907510
+- name: GameGuru Mega Pack 1
+  ids:
+  - steam:321140

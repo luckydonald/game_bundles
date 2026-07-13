@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humanity 2.0 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1058/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1058/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1058/source.json
+games:
+- name: Bloop
+  ids:
+  - steam:340200
+- name: Pester
+  ids:
+  - steam:354920
+- name: Chip
+  ids:
+  - steam:275470
+- name: Humanity Asset
+  ids:
+  - steam:271640

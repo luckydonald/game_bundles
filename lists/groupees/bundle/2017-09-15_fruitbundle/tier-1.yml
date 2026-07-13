@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fruitbat Factory Bundle (2017) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5470/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5470/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5470/source.json
+games:
+- name: 100% Orange Juice - Sham & Sherry Character Pack
+  ids:
+  - steam:425360
+- name: RE:HT - War of the Human Tanks Remix Album
+  ids:
+  - steam:578560
+- name: Sound of the Human Tanks
+  ids:
+  - steam:271010
+- name: 100% Orange Juice - Acceleration Pack
+  ids:
+  - steam:537330
+- name: War of the Human Tanks
+  ids:
+  - steam:263400
+- name: 100% Orange Juice
+  ids:
+  - steam:282800

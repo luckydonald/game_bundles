@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 239 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9112/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9112/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9112/source.json
+games:
+- name: Shop Battle
+  ids:
+  - unresolved:source:isthereanydeal:9112:shop-battle
+- name: Nightingale Downs
+  ids:
+  - steam:727220
+- name: Alien Cat 5
+  ids:
+  - unresolved:source:isthereanydeal:9112:alien-cat-5
+- name: MotoRun
+  ids:
+  - unresolved:source:isthereanydeal:9112:motorun
+- name: Total Dark
+  ids:
+  - unresolved:source:isthereanydeal:9112:total-dark
+- name: Battle Village
+  ids:
+  - unresolved:source:isthereanydeal:9112:battle-village
+- name: Stealthy ninja
+  ids:
+  - unresolved:source:isthereanydeal:9112:stealthy-ninja
+- name: SuperNatural Duels
+  ids:
+  - unresolved:source:isthereanydeal:9112:supernatural-duels
+- name: Milky Strike
+  ids:
+  - unresolved:source:isthereanydeal:9112:milky-strike

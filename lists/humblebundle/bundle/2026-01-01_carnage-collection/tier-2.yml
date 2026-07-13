@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Carnage Collection Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15757/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15757/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15757/source.json
+games:
+- name: Easy Red 2
+  ids:
+  - steam:1324780
+- name: Warstride Challenges
+  ids:
+  - steam:1608470
+- name: Death in the Water 2
+  ids:
+  - steam:1338840
+- name: Maneater
+  ids:
+  - steam:629820
+- name: 'Laika: Aged Through Blood'
+  ids:
+  - steam:1796220
+- name: Hellboy Web of Wyrd
+  ids:
+  - steam:2160480

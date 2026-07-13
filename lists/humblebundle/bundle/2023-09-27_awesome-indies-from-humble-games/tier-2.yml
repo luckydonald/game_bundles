@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Awesome Indies from Humble Games Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13505/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13505/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13505/source.json
+games:
+- name: Fae Tactics
+  ids:
+  - steam:995980
+- name: Ikenfell
+  ids:
+  - steam:854940
+- name: Ring of Pain
+  ids:
+  - steam:998740
+- name: 'Flynn: Son of Crimson'
+  ids:
+  - steam:737520
+- name: Unsighted
+  ids:
+  - steam:1062110
+- name: Void Bastards
+  ids:
+  - steam:857980
+- name: Archvale
+  ids:
+  - steam:1296360

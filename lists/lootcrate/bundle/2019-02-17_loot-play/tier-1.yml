@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Loot Play Monthly - March 2019 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7035/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7035/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7035/source.json
+games:
+- name: Death's Hangover
+  ids:
+  - steam:521920
+- name: Convoy
+  ids:
+  - steam:318230
+- name: Reign of Bullets
+  ids:
+  - steam:355350
+- name: 'Exoplanet: First Contact'
+  ids:
+  - steam:531660
+- name: The spy who shot me™
+  ids:
+  - steam:771810

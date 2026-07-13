@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Surprise Attack Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1826/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1826/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1826/source.json
+games:
+- name: Megabyte Punch
+  ids:
+  - steam:248550
+- name: Ironclad Tactics
+  ids:
+  - steam:226960
+- name: Huntsman:The Orphanage
+  ids:
+  - steam:246740
+- name: 'Postmortem: One Must Die (Extended Cut)'
+  ids:
+  - steam:263140
+- name: Critical Mass
+  ids:
+  - steam:105300
+- name: 'Mind: Path to Thalamus Enhanced Edition'
+  ids:
+  - steam:296070
+- name: 'Zombie Tycoon 2: Brainhov''s Revenge'
+  ids:
+  - steam:252270
+- name: Party of Sin
+  ids:
+  - steam:212700

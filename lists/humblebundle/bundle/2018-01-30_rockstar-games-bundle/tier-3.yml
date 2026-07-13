@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Rockstar Games Humble Bundle — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5847/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5847/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5847/source.json
+games:
+- name: Grand Theft Auto - Vice City
+  ids:
+  - unresolved:source:isthereanydeal:5847:grand-theft-auto-vice-city
+- name: Max Payne
+  ids:
+  - steam:202570
+- name: Grand Theft Auto III
+  ids:
+  - unresolved:source:isthereanydeal:5847:grand-theft-auto-iii
+- name: Manhunt
+  ids:
+  - steam:12130
+- name: Grand Theft Auto - San Andreas
+  ids:
+  - unresolved:source:isthereanydeal:5847:grand-theft-auto-san-andreas
+- name: 'Bully: Scholarship Edition'
+  ids:
+  - steam:12200
+- name: 'Max Payne 2: The Fall of Max Payne'
+  ids:
+  - steam:12150
+- name: L.A. Noire
+  ids:
+  - steam:110800
+- name: 'Grand Theft Auto: Episodes from Liberty City'
+  ids:
+  - steam:12220
+- name: L.A. Noire DLC Bundle
+  ids:
+  - unresolved:source:isthereanydeal:5847:l-a-noire-dlc-bundle
+- name: Grand Theft Auto IV
+  ids:
+  - unresolved:source:isthereanydeal:5847:grand-theft-auto-iv
+- name: Max Payne 3 - Rockstar Pass
+  ids:
+  - unresolved:source:isthereanydeal:5847:max-payne-3-rockstar-pass
+- name: Max Payne 3
+  ids:
+  - steam:204100

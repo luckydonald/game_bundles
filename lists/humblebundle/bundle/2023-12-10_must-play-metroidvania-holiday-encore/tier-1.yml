@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Must-Play Metroidvanias Bundle (Holiday Encore) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13688/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13688/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13688/source.json
+games:
+- name: Blasphemous
+  ids:
+  - steam:774361
+- name: Hollow Knight
+  ids:
+  - steam:367520
+- name: 'Bloodstained: Ritual of the Night'
+  ids:
+  - steam:692850
+- name: Rain World
+  ids:
+  - steam:312520
+- name: Haiku, the Robot
+  ids:
+  - steam:1231880
+- name: Lost Ruins
+  ids:
+  - steam:1306630
+- name: Lone Fungus
+  ids:
+  - steam:1674780

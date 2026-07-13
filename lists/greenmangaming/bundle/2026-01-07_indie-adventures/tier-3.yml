@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Adventures Bundle — Legend
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15769/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15769/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15769/source.json
+games:
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+- name: Disco Elysium - The Final Cut
+  ids:
+  - steam:632470
+- name: For The King II
+  ids:
+  - steam:1676840
+- name: 'Shadow Gambit: The Cursed Crew'
+  ids:
+  - steam:1545560
+- name: 'Flintlock: The Siege of Dawn'
+  ids:
+  - steam:1832040
+- name: The Thaumaturge
+  ids:
+  - steam:1684350

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Space Farmers - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2580/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2580/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2580/source.json
+games:
+- name: Space Farmers
+  ids:
+  - steam:271570

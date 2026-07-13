@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Square Enix Pick & Mix Bundle — Select 3 Titles for $8.99 or 5 Titles for $12.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7903/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7903/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7903/source.json
+games:
+- name: 'Kane & Lynch : Dead Men'
+  ids:
+  - steam:8080
+- name: Dungeon Siege
+  ids:
+  - steam:39190
+- name: Dungeon Siege II
+  ids:
+  - steam:39200
+- name: Dungeon Siege III
+  ids:
+  - steam:39160
+- name: Tomb Raider Game of the Year Edition
+  ids:
+  - steam:203160
+- name: Just Cause 2
+  ids:
+  - steam:8190
+- name: 'Legacy of Kain: Soul Reaver 2'
+  ids:
+  - steam:224940
+- name: 'Thief: Deadly Shadows'
+  ids:
+  - steam:6980
+- name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
+  ids:
+  - steam:238010
+- name: 'Deus Ex: Invisible War'
+  ids:
+  - steam:6920
+- name: Just Cause
+  ids:
+  - steam:6880
+- name: 'Tomb Raider: Underworld'
+  ids:
+  - steam:8140
+- name: 'Hitman GO: Definitive Edition'
+  ids:
+  - steam:427820
+- name: 'Legacy of Kain: Soul Reaver'
+  ids:
+  - unresolved:source:isthereanydeal:7903:legacy-of-kain-soul-reaver
+- name: Lara Croft and the Guardian of Light
+  ids:
+  - steam:35130
+- name: Lara Croft GO
+  ids:
+  - steam:540840
+- name: Just Cause™ 3
+  ids:
+  - steam:225540
+- name: 'Tomb Raider: Anniversary'
+  ids:
+  - steam:8000
+- name: 'Kane & Lynch 2: Dog Days'
+  ids:
+  - steam:28000
+- name: 'Tomb Raider: Legend'
+  ids:
+  - steam:7000
+- name: 'Legacy of Kain: Defiance'
+  ids:
+  - steam:224300
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910
+- name: Tomb Raider I (1996)
+  ids:
+  - steam:224960
+- name: Tomb Raider II (1997)
+  ids:
+  - steam:225300
+- name: Tomb Raider III (1998)
+  ids:
+  - steam:225320
+- name: 'Tomb Raider IV: The Last Revelation (1999)'
+  ids:
+  - steam:224980
+- name: 'Tomb Raider VI: The Angel of Darkness (2003)'
+  ids:
+  - steam:225020
+- name: 'Tomb Raider V: Chronicles (2000)'
+  ids:
+  - steam:225000

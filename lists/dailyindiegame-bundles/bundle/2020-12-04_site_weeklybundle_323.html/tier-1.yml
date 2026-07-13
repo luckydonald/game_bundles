@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 323 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9479/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9479/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9479/source.json
+games:
+- name: Baby Redemption
+  ids:
+  - steam:1029040
+- name: Six Sides of the World
+  ids:
+  - steam:384480
+- name: Creepy Vision
+  ids:
+  - steam:1014560
+- name: Active Neurons - Puzzle game
+  ids:
+  - steam:1168630
+- name: D3D INSIDE
+  ids:
+  - steam:1181330
+- name: Diesel Punch
+  ids:
+  - steam:1321400
+- name: 'CORONAVIRUS BATTLEGROUNDS: Coronavirus News'
+  ids:
+  - unresolved:source:isthereanydeal:9479:coronavirus-battlegrounds-coronavirus-news
+- name: Allotropy
+  ids:
+  - unresolved:source:isthereanydeal:9479:allotropy
+- name: 'Code Brown: A Game About Pooping'
+  ids:
+  - steam:930640

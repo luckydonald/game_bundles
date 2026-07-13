@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Radical Mix Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7511/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7511/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7511/source.json
+games:
+- name: Unreal Estate
+  ids:
+  - unresolved:source:isthereanydeal:7511:unreal-estate
+- name: Hazardous Space
+  ids:
+  - unresolved:source:isthereanydeal:7511:hazardous-space
+- name: Cheap Golf
+  ids:
+  - steam:616520
+- name: Rad Rodgers Radical Edition
+  ids:
+  - steam:805660
+- name: Rogue Stormers
+  ids:
+  - steam:299480

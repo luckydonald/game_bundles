@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Casual Bundle 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1800/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1800/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1800/source.json
+games:
+- name: Cubetractor
+  ids:
+  - steam:235720
+- name: Zombie Solitaire
+  ids:
+  - steam:311850
+- name: Toilet Tycoon
+  ids:
+  - steam:390220
+- name: Rush on Rome
+  ids:
+  - steam:710460
+- name: Super Mega Berry
+  ids:
+  - unresolved:source:isthereanydeal:1800:super-mega-berry
+- name: Dark Matter
+  ids:
+  - steam:251410
+- name: 'Nightmares from the Deep 3: Davy Jones'
+  ids:
+  - unresolved:source:isthereanydeal:1800:nightmares-from-the-deep-3-davy-jones
+- name: Save the Furries
+  ids:
+  - steam:325110
+- name: Default Dan
+  ids:
+  - steam:337670

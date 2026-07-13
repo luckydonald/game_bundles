@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Chicken Nuggets — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5930/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5930/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5930/source.json
+games:
+- name: Cyber-Chicken
+  ids:
+  - steam:339710
+- name: Cyber Chicken - OST
+  ids:
+  - unresolved:source:isthereanydeal:5930:cyber-chicken-ost

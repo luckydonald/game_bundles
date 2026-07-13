@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 35 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5557/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5557/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5557/source.json
+games:
+- name: GoVenture MICRO BUSINESS
+  ids:
+  - steam:510380
+- name: Bunnyrama
+  ids:
+  - steam:567210
+- name: 'Fairyland: Manuscript'
+  ids:
+  - unresolved:source:isthereanydeal:5557:fairyland-manuscript
+- name: Mini Metal
+  ids:
+  - steam:454420
+- name: 'Super Army of Tentacles 3: The Search for Army of Tentacles 2'
+  ids:
+  - steam:592200
+- name: Systematic Immunity
+  ids:
+  - steam:395100
+- name: Gnome Light
+  ids:
+  - steam:682350
+- name: Dots eXtreme
+  ids:
+  - steam:521130

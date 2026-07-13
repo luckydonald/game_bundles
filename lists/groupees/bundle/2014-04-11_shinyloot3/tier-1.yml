@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: ShinyLoot Roguelike Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/702/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/702/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/702/source.json
+games:
+- name: Hero Siege
+  ids:
+  - steam:269210
+- name: Crayon Chronicles
+  ids:
+  - steam:341510
+- name: Tower of Eglathia
+  ids:
+  - steam:351220
+- name: Kilgazar
+  ids:
+  - unresolved:source:isthereanydeal:702:kilgazar
+- name: Tales of Maj'Eyal
+  ids:
+  - steam:259680
+- name: Flatspace
+  ids:
+  - steam:1210780

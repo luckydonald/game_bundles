@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 173 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8746/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8746/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8746/source.json
+games:
+- name: ❂ Hexaluga ❂ Weapon and Shield ☯
+  ids:
+  - steam:845200
+- name: Johnny Rocket
+  ids:
+  - steam:942300
+- name: Defence War
+  ids:
+  - unresolved:source:isthereanydeal:8746:defence-war
+- name: lil' Sherman
+  ids:
+  - steam:1210620
+- name: 'Dish Life: The Game'
+  ids:
+  - steam:1223270
+- name: Buried Chambers
+  ids:
+  - unresolved:source:isthereanydeal:8746:buried-chambers
+- name: Total Madness
+  ids:
+  - unresolved:source:isthereanydeal:8746:total-madness
+- name: Dark Disharmony
+  ids:
+  - steam:1253180
+- name: Karma City Police
+  ids:
+  - steam:1270850

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble MangaGamer and Friends Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5724/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5724/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5724/source.json
+games:
+- name: Eden
+  ids:
+  - steam:315810
+- name: A Kiss for the Petals - Remembering How We Met
+  ids:
+  - steam:397270
+- name: Higurashi When They Cry Hou - Ch.2 Watanagashi
+  ids:
+  - steam:410890
+- name: Higurashi When They Cry Hou - Ch.1 Onikakushi
+  ids:
+  - steam:310360

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Star Forge Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15655/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15655/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15655/source.json
+games:
+- name: Onirike
+  ids:
+  - steam:1229270
+- name: Puzzle Forge Dungeon
+  ids:
+  - steam:1245370
+- name: Star Hunter DX
+  ids:
+  - steam:1451030
+- name: Rob Riches
+  ids:
+  - steam:1655670
+- name: Suika Shapes
+  ids:
+  - steam:2686690
+- name: Movie Cinema Simulator
+  ids:
+  - steam:2682120
