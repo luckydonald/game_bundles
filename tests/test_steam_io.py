@@ -192,6 +192,37 @@ def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent(tmp_p
 # end def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent
 
 
+def test_read_collection_returns_static_collection_case_insensitively(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+
+    payload = gateway.read_collection("FAVORITES")
+
+    assert payload.id == "favorite"
+    assert payload.added == [440]
+# end def test_read_collection_returns_static_collection_case_insensitively
+
+
+def test_read_collection_raises_with_available_names_when_missing(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+
+    with pytest.raises(SteamIoError, match="not found locally"):
+        gateway.read_collection("manual-all")
+    # end with
+# end def test_read_collection_raises_with_available_names_when_missing
+
+
+def test_read_collection_rejects_dynamic_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+
+    with pytest.raises(SteamIoError, match="dynamic"):
+        gateway.read_collection("Dynamic")
+    # end with
+# end def test_read_collection_rejects_dynamic_collection
+
+
 def test_second_replacement_failure_rolls_back_first_file(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,

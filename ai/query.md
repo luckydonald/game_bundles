@@ -846,3 +846,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ first commit cleanly, then rebase.
 
+❯ While rebasing, make sure everything since `origin/mane` is cleaned up as well.
+
