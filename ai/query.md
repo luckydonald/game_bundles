@@ -682,3 +682,5 @@ Bronze/Silver/Gold header text is available as `tiers[i].note` (if non-null, oth
 
 ❯ clean up the auto ai commits into the feature commits, everything after `647ab131734f78916408c37d41fbabb1a1a1e8fb`.
 
+❯ Add `game-collections scrape isthereanydeal --tab=live` to the weekly crawl job.
+
