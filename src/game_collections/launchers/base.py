@@ -18,6 +18,7 @@ class CollectionEligibility(StrictModel):
 
     list_id: str
     name: str
+    tier: int | None = None
     eligible: bool
     owned_ids: list[str]
     missing_ids: list[str]
