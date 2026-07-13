@@ -36,6 +36,16 @@ def test_every_repository_list_validates() -> None:
 # end def test_every_repository_list_validates
 
 
+def test_path_derived_id_accepts_source_filename_characters(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "bundle" / "Steam's-(Christmas)-sale+bonus-&-%20.yml"
+    path.parent.mkdir(parents=True)
+    path.write_text("schema: 1\nname: Sale\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+
+    assert derive_list_id(path, lists_root) == "bundle/Steam's-(Christmas)-sale+bonus-&-%20"
+# end def test_path_derived_id_accepts_source_filename_characters
+
+
 def test_unknown_fields_are_rejected(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
