@@ -114,6 +114,33 @@ def test_duplicate_qualified_ids_are_rejected(tmp_path: Path) -> None:
 # end def test_duplicate_qualified_ids_are_rejected
 
 
+def test_tier_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text("schema: 1\nname: Bundle\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.tier is None
+# end def test_tier_field_is_optional_and_defaults_to_none
+
+
+def test_tier_field_round_trips_when_set(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "tier-2.yml"
+    path.write_text(
+        "schema: 1\nname: Tier 2\ntier: 2\ngames:\n  - name: One\n    ids: [steam:440]\n",
+        encoding="utf-8",
+    )
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.tier == 2
+# end def test_tier_field_round_trips_when_set
+
+
 def test_symlinked_lists_are_rejected(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
