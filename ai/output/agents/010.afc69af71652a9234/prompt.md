@@ -1,0 +1,9 @@
+In this Python repo (game_collections), Humble Choice bundles let a buyer pick a fixed number of games from a larger pool (e.g. "pick 9 of 12"). I'm evaluating whether this existing mechanic can be reused/adapted for a new "BYOB" (build-your-own-bundle) feature request, where a storefront bundle lets you pick e.g. 3-4 games out of a larger selection to build your own bundle (similar mix-and-match idea, different site).
+
+Report with file:line citations:
+1. How src/game_collections/sources/humblebundle/ handles Choice bundles today — does it model the "pick N of pool" mechanic explicitly anywhere (in the crawler, parser, or models), or does it only ever emit the full pool as one list assuming the buyer got everything? Look at the humblebundle source directory's crawler.py/parser.py/models.py (or equivalently named files) and any tests (tests/test_humblebundle_*.py) that reference "choice" pool/pick counts.
+2. src/game_collections/models.py — the full GameList/Game Pydantic model definitions (verbatim), since a BYOB feature would need to represent "ownership requires picking N of these M games" as opposed to today's model of "own all/any of a fixed list".
+3. Whether there is any existing concept in the repo of a bundle requiring a subset/partial match rather than all-or-any of a fixed game list (grep for "pick", "choice", "subset", "any_of", "partial" across src/game_collections).
+4. lists/README.md and any docs describing the list authoring workflow and existing match semantics (--mode all vs any in sync steam), so I understand how "own N of M" would fit into or extend that.
+
+Be thorough, read full files/functions, not just grep snippets. This is for planning a new feature, not implementing yet.
