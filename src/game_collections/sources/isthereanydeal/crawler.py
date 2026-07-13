@@ -23,6 +23,7 @@ from game_collections.sources.isthereanydeal.models import ItadArchive, ItadDate
 from game_collections.sources.isthereanydeal.parser import (
     ItadParseError,
     parse_bootstrap_page,
+    parse_bundle_detail_json,
     parse_bundle_detail_page,
     parse_list_page,
     real_provider_slug,
@@ -221,6 +222,7 @@ def crawl_itad_offers(
     archive_root: Path | None = None,
     log: LogFn = _NO_LOG,
     on_offer: Callable[[CrawledItadOffer], None] | None = None,
+    shop_names: dict[int, str] | None = None,
 ) -> ItadCrawlReport:
     """Discover bundles across the requested tabs and normalize each one's detail page.
 
@@ -232,7 +234,10 @@ def crawl_itad_offers(
     cached archive already exists for a bundle id, its detail page
     fetch/parse is skipped entirely in favor of the cached, already-
     normalized archive. Pass `on_offer` to write each offer to disk as soon
-    as it's ready, rather than waiting for the whole crawl to finish.
+    as it's ready, rather than waiting for the whole crawl to finish. Pass
+    `shop_names` (the reviewed `config/isthereanydeal-shops.yml` table) to
+    get a corroboration log line when a game's shop-key ids don't match any
+    resolved storefront id - purely informational, never affects resolution.
     """
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     errors: list[str] = []
@@ -246,15 +251,6 @@ def crawl_itad_offers(
     total = len(summaries)
     for index, summary in enumerate(summaries, start=1):
         log(f"Bundle {index}/{total}: {summary.title} ({summary.page.name})")
-        if summary.is_mature:
-            # Mature-rated bundles hide their entire game list behind a
-            # client-side age gate with no server-rendered fallback (unlike
-            # GreenManGaming's per-item gate, which still renders titles) -
-            # there's nothing to scrape without interactively confirming an
-            # age, which this crawler doesn't attempt. Skip, not an error.
-            log(f"Bundle {index}/{total}: {summary.title} (mature-rated, skipping - no scrapeable game list)")
-            continue
-        # end if
         try:
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, summary.id)
@@ -273,8 +269,26 @@ def crawl_itad_offers(
             # end if
             detail_url = f"{ITAD_ROOT}bundles/{summary.id}/"
             html = fetch(detail_url)
-            tiers: list[ItadTier] = parse_bundle_detail_page(html, summary.id, summary.counts.games)
             provider_slug = resolve_provider_slug(summary.page, provider_config, log)
+            tiers: list[ItadTier] | None = None
+            try:
+                tiers = parse_bundle_detail_json(
+                    html, summary.id, summary.counts.games, provider_slug, shop_names=shop_names, log=log
+                )
+            except ItadParseError as error:
+                log(f"  {summary.id}: embedded page data failed to parse ({error}), falling back to HTML parsing")
+            # end try
+            if tiers is None:
+                if not summary.is_mature:
+                    # Mature-rated bundles normally parse fine via the JSON
+                    # path above (their embedded data isn't gated, only the
+                    # page's visual rendering is) - the legacy HTML fallback
+                    # only works for non-mature bundles, whose titles/links
+                    # still render even without the JSON blob.
+                    log(f"  {summary.id}: no embedded page data, falling back to HTML parsing")
+                # end if
+                tiers = parse_bundle_detail_page(html, summary.id, summary.counts.games)
+            # end if
             slug = real_provider_slug(summary.url)
             archive = ItadArchive(
                 schema=1,
