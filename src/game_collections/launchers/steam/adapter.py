@@ -54,6 +54,15 @@ def owned_app_ids_from_installed(steam_root: Path) -> OwnedAppIdsSource:
 # end def owned_app_ids_from_installed
 
 
+def owned_app_ids_from_collection(gateway: SteamFileGateway, collection_name: str) -> OwnedAppIdsSource:
+    """Wrap a manually curated local Steam collection as an :data:`OwnedAppIdsSource`."""
+    def source() -> set[int]:
+        return set(gateway.read_collection(collection_name).added)
+    # end def source
+    return source
+# end def owned_app_ids_from_collection
+
+
 class SteamAdapter(LauncherAdapter):
     """Steam ownership and collection synchronization adapter."""
 
