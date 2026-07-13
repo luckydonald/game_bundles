@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -31,8 +30,6 @@ OwnedAppIdsSource = Callable[[], set[int]]
 STEAM_COLLECTION_PREFIX = "🗃️ "
 SteamMatchMode = Literal["any", "all"]
 SteamTierMode = Literal["all", "highest"]
-TIER_STEM_PATTERN = re.compile(r"^tier-(?P<rank>[0-9]+)$")
-ITEM_BUNDLE_STEM_PATTERN = re.compile(r"^(?:entire-)?(?P<rank>[0-9]+)-item-bundle$")
 
 
 @dataclass(frozen=True, slots=True)
@@ -145,6 +142,7 @@ class SteamAdapter(LauncherAdapter):
                 CollectionEligibility(
                     list_id=game_list.id,
                     name=game_list.data.name,
+                    tier=game_list.data.tier,
                     eligible=eligible,
                     owned_ids=[f"steam:{app_id}" for app_id in owned],
                     missing_ids=[f"steam:{app_id}" for app_id in missing],
@@ -190,14 +188,14 @@ class SteamAdapter(LauncherAdapter):
         selected: set[str] = set()
         highest: dict[str, tuple[int, str]] = {}
         for result in eligibility:
-            tier = _tier_identity(result.list_id)
-            if tier is None:
+            if result.tier is None:
                 if result.eligible:
                     selected.add(result.list_id)
                 # end if
                 continue
             # end if
-            parent, rank = tier
+            parent = result.list_id.rpartition("/")[0]
+            rank = result.tier
             key = (parent, rank)
             previous = tiers.get(key)
             if previous is not None:
@@ -294,16 +292,3 @@ class SteamAdapter(LauncherAdapter):
     # end def apply
 
 # end class SteamAdapter
-
-
-def _tier_identity(list_id: str) -> tuple[str, int] | None:
-    parent, separator, stem = list_id.rpartition("/")
-    if not separator:
-        return None
-    # end if
-    match = TIER_STEM_PATTERN.fullmatch(stem) or ITEM_BUNDLE_STEM_PATTERN.fullmatch(stem)
-    if match is None:
-        return None
-    # end if
-    return parent, int(match.group("rank"))
-# end def _tier_identity

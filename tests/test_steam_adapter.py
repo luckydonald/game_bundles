@@ -35,7 +35,13 @@ def _fake_source(owned: list[int]) -> object:
 # end def _fake_source
 
 
-def _list(list_id: str, steam_ids: list[int], *, unsupported: bool = False) -> LoadedGameList:
+def _list(
+    list_id: str,
+    steam_ids: list[int],
+    *,
+    unsupported: bool = False,
+    tier: int | None = None,
+) -> LoadedGameList:
     games = [
         {"name": f"Game {app_id}", "ids": [f"steam:{app_id}"]}
         for app_id in steam_ids
@@ -43,7 +49,11 @@ def _list(list_id: str, steam_ids: list[int], *, unsupported: bool = False) -> L
     if unsupported:
         games.append({"name": "Other Store Game", "ids": ["gog:other"]})
     # end if
-    data = GameList.model_validate({"schema": 1, "name": list_id, "games": games})
+    payload: dict[str, object] = {"schema": 1, "name": list_id, "games": games}
+    if tier is not None:
+        payload["tier"] = tier
+    # end if
+    data = GameList.model_validate(payload)
     return LoadedGameList(id=list_id, path=Path(f"lists/{list_id}.yml"), data=data)
 # end def _list
 
@@ -117,12 +127,12 @@ def test_any_mode_requires_at_least_one_owned_steam_id() -> None:
 # end def test_any_mode_requires_at_least_one_owned_steam_id
 
 
-def test_highest_tier_supports_ordinal_and_humble_item_count_names() -> None:
+def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories() -> None:
     game_lists = [
-        _list("provider/bundle/ordinal/tier-1", [10]),
-        _list("provider/bundle/ordinal/tier-3", [10, 20]),
-        _list("humblebundle/bundle/items/2-item-bundle", [10]),
-        _list("humblebundle/bundle/items/entire-5-item-bundle", [10, 20]),
+        _list("provider/bundle/ordinal/tier-1", [10], tier=1),
+        _list("provider/bundle/ordinal/tier-3", [10, 20], tier=3),
+        _list("humblebundle/bundle/items/tier-1", [10], tier=1),
+        _list("humblebundle/bundle/items/tier-2", [10, 20], tier=2),
         _list("provider/choice/standalone", [10]),
     ]
     adapter = SteamAdapter(
@@ -134,16 +144,16 @@ def test_highest_tier_supports_ordinal_and_humble_item_count_names() -> None:
 
     assert [change.list_id for change in plan.changes] == [
         "provider/bundle/ordinal/tier-3",
-        "humblebundle/bundle/items/entire-5-item-bundle",
+        "humblebundle/bundle/items/tier-2",
         "provider/choice/standalone",
     ]
-# end def test_highest_tier_supports_ordinal_and_humble_item_count_names
+# end def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories
 
 
 def test_all_tiers_keeps_every_matching_tier() -> None:
     game_lists = [
-        _list("provider/bundle/example/tier-1", [10]),
-        _list("provider/bundle/example/tier-2", [10, 20]),
+        _list("provider/bundle/example/tier-1", [10], tier=1),
+        _list("provider/bundle/example/tier-2", [10, 20], tier=2),
     ]
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919", tier_mode="all"),
@@ -161,8 +171,8 @@ def test_all_tiers_keeps_every_matching_tier() -> None:
 
 def test_highest_tier_rejects_ambiguous_numeric_rank() -> None:
     game_lists = [
-        _list("provider/bundle/example/tier-3", [10]),
-        _list("provider/bundle/example/3-item-bundle", [10]),
+        _list("provider/bundle/example/tier-3", [10], tier=3),
+        _list("provider/bundle/example/other-3", [10], tier=3),
     ]
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
@@ -224,8 +234,8 @@ def test_reconciliation_deletes_superseded_lower_tier(tmp_path: Path) -> None:
     steam_root = build_fake_steam(tmp_path)
     gateway = SteamFileGateway(steam_root, STEAM_ID)
     game_lists = [
-        _list("provider/bundle/example/tier-1", [10]),
-        _list("provider/bundle/example/tier-2", [10, 20]),
+        _list("provider/bundle/example/tier-1", [10], tier=1),
+        _list("provider/bundle/example/tier-2", [10, 20], tier=2),
     ]
     creator = SteamAdapter(
         SteamOptions(steam_id=STEAM_ID, tier_mode="all"),
