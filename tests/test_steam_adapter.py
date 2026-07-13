@@ -1,15 +1,20 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
+import pytest
+
+from game_collections.launchers.base import PlannedCollectionChange, SyncPlan
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
     SteamOptions,
     owned_app_ids_from_collection,
 )
-from game_collections.launchers.steam.io import SteamFileGateway
+from game_collections.launchers.steam.io import NAMESPACE_NAME, SteamFileGateway, steam_collection_id
 from game_collections.lists import LoadedGameList, load_game_list
-from test_steam_io import STEAM_ID, build_fake_steam
+from game_collections.models import GameList
+from test_steam_io import ACCOUNT_ID, STEAM_ID, build_fake_steam
 
 
 REPO_ROOT = Path(__file__).parents[1]
@@ -28,6 +33,19 @@ def _orange_box() -> list[LoadedGameList]:
 def _fake_source(owned: list[int]) -> object:
     return lambda: set(owned)
 # end def _fake_source
+
+
+def _list(list_id: str, steam_ids: list[int], *, unsupported: bool = False) -> LoadedGameList:
+    games = [
+        {"name": f"Game {app_id}", "ids": [f"steam:{app_id}"]}
+        for app_id in steam_ids
+    ]
+    if unsupported:
+        games.append({"name": "Other Store Game", "ids": ["gog:other"]})
+    # end if
+    data = GameList.model_validate({"schema": 1, "name": list_id, "games": games})
+    return LoadedGameList(id=list_id, path=Path(f"lists/{list_id}.yml"), data=data)
+# end def _list
 
 
 def test_orange_box_requires_every_game() -> None:
@@ -58,6 +76,105 @@ def test_orange_box_is_eligible_when_complete() -> None:
 # end def test_orange_box_is_eligible_when_complete
 
 
+def test_all_mode_ignores_games_without_steam_ids() -> None:
+    game_list = _list("example/mixed", [10, 20], unsupported=True)
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="all"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+    assert result.unsupported_ids == ["Other Store Game"]
+# end def test_all_mode_ignores_games_without_steam_ids
+
+
+def test_any_mode_selects_partial_ownership_and_exports_only_owned_ids() -> None:
+    game_list = _list("example/partial", [10, 20, 30])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        owned_app_ids_source=_fake_source([20]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan([game_list])
+
+    assert plan.eligibility[0].eligible is True
+    assert plan.eligibility[0].missing_ids == ["steam:10", "steam:30"]
+    assert plan.changes[0].added_ids == ["steam:20"]
+# end def test_any_mode_selects_partial_ownership_and_exports_only_owned_ids
+
+
+def test_any_mode_requires_at_least_one_owned_steam_id() -> None:
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([_list("example/none", [10])])[0]
+
+    assert result.eligible is False
+# end def test_any_mode_requires_at_least_one_owned_steam_id
+
+
+def test_highest_tier_supports_ordinal_and_humble_item_count_names() -> None:
+    game_lists = [
+        _list("provider/bundle/ordinal/tier-1", [10]),
+        _list("provider/bundle/ordinal/tier-3", [10, 20]),
+        _list("humblebundle/bundle/items/2-item-bundle", [10]),
+        _list("humblebundle/bundle/items/entire-5-item-bundle", [10, 20]),
+        _list("provider/choice/standalone", [10]),
+    ]
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan(game_lists)
+
+    assert [change.list_id for change in plan.changes] == [
+        "provider/bundle/ordinal/tier-3",
+        "humblebundle/bundle/items/entire-5-item-bundle",
+        "provider/choice/standalone",
+    ]
+# end def test_highest_tier_supports_ordinal_and_humble_item_count_names
+
+
+def test_all_tiers_keeps_every_matching_tier() -> None:
+    game_lists = [
+        _list("provider/bundle/example/tier-1", [10]),
+        _list("provider/bundle/example/tier-2", [10, 20]),
+    ]
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", tier_mode="all"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan(game_lists)
+
+    assert [change.list_id for change in plan.changes] == [
+        "provider/bundle/example/tier-1",
+        "provider/bundle/example/tier-2",
+    ]
+# end def test_all_tiers_keeps_every_matching_tier
+
+
+def test_highest_tier_rejects_ambiguous_numeric_rank() -> None:
+    game_lists = [
+        _list("provider/bundle/example/tier-3", [10]),
+        _list("provider/bundle/example/3-item-bundle", [10]),
+    ]
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
+        owned_app_ids_source=_fake_source([10]),  # type: ignore[arg-type]
+    )
+
+    with pytest.raises(ValueError, match="ambiguous tier rank"):
+        adapter.plan(game_lists)
+    # end with
+# end def test_highest_tier_rejects_ambiguous_numeric_rank
+
+
 def test_plan_prefixes_exported_collection_name() -> None:
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919"),
@@ -77,6 +194,168 @@ def test_owned_app_ids_from_collection_reads_local_collection(tmp_path: Path) ->
 
     assert source() == {440}
 # end def test_owned_app_ids_from_collection_reads_local_collection
+
+
+def test_reconciliation_deletes_managed_collection_that_no_longer_matches(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    creator = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID),
+        owned_app_ids_source=_fake_source([220, 380, 420, 400, 440]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+    staged = gateway.stage(creator.plan(_orange_box()), tmp_path / "Desktop")
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    reconciler = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, reconcile_managed=True),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = reconciler.plan(_orange_box())
+
+    assert [(change.action, change.list_id) for change in plan.changes] == [
+        ("delete", "valve/the-orange-box")
+    ]
+# end def test_reconciliation_deletes_managed_collection_that_no_longer_matches
+
+
+def test_reconciliation_deletes_superseded_lower_tier(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    game_lists = [
+        _list("provider/bundle/example/tier-1", [10]),
+        _list("provider/bundle/example/tier-2", [10, 20]),
+    ]
+    creator = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, tier_mode="all"),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+    staged = gateway.stage(creator.plan(game_lists), tmp_path / "Desktop")
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    reconciler = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, tier_mode="highest", reconcile_managed=True),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = reconciler.plan(game_lists)
+
+    assert [(change.action, change.list_id) for change in plan.changes] == [
+        ("create-or-update", "provider/bundle/example/tier-2"),
+        ("delete", "provider/bundle/example/tier-1"),
+    ]
+# end def test_reconciliation_deletes_superseded_lower_tier
+
+
+def test_reconciliation_recognizes_legacy_unprefixed_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    legacy_plan = SyncPlan(
+        launcher="steam",
+        account=STEAM_ID,
+        eligibility=[],
+        changes=[
+            PlannedCollectionChange(
+                list_id="valve/the-orange-box",
+                target_id=steam_collection_id("valve/the-orange-box"),
+                name="The Orange Box",
+                action="create-or-update",
+                added_ids=["steam:440"],
+            )
+        ],
+    )
+    staged = gateway.stage(legacy_plan, tmp_path / "Desktop")
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    reconciler = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, reconcile_managed=True),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = reconciler.plan(_orange_box())
+
+    assert len(plan.changes) == 1
+    assert plan.changes[0].action == "delete"
+    assert plan.changes[0].name == "The Orange Box"
+# end def test_reconciliation_recognizes_legacy_unprefixed_collection
+
+
+def test_reconciliation_deletes_prefixed_orphan_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    removed_list = _list("removed/bundle/tier-1", [10])
+    creator = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID),
+        owned_app_ids_source=_fake_source([10]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+    staged = gateway.stage(creator.plan([removed_list]), tmp_path / "Desktop")
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    reconciler = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, reconcile_managed=True),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = reconciler.plan([])
+
+    assert len(plan.changes) == 1
+    assert plan.changes[0].action == "delete"
+    assert plan.changes[0].list_id is None
+    assert plan.changes[0].name == "🗃️ removed/bundle/tier-1"
+# end def test_reconciliation_deletes_prefixed_orphan_collection
+
+
+def test_reconciliation_protects_collection_used_as_ownership_source(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    creator = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID),
+        owned_app_ids_source=_fake_source([220, 380, 420, 400, 440]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+    staged = gateway.stage(creator.plan(_orange_box()), tmp_path / "Desktop")
+    gateway.apply(staged, lambda _prompt: "REPLACE")
+    reconciler = SteamAdapter(
+        SteamOptions(
+            steam_id=STEAM_ID,
+            reconcile_managed=True,
+            protected_collection_name="🗃️ The Orange Box",
+        ),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = reconciler.plan(_orange_box())
+
+    assert plan.changes == []
+# end def test_reconciliation_protects_collection_used_as_ownership_source
+
+
+def test_reconciliation_rejects_prefixed_dynamic_collection(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    namespace_path = (
+        steam_root / "userdata" / ACCOUNT_ID / "config/cloudstorage" / NAMESPACE_NAME
+    )
+    namespace = json.loads(namespace_path.read_text(encoding="utf-8"))
+    dynamic_entry = next(entry for key, entry in namespace if key == "user-collections.uc-existing123")
+    payload = json.loads(dynamic_entry["value"])
+    payload["name"] = "🗃️ Dynamic"
+    dynamic_entry["value"] = json.dumps(payload, separators=(",", ":"))
+    namespace_path.write_text(json.dumps(namespace, separators=(",", ":")), encoding="utf-8")
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    reconciler = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, reconcile_managed=True),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    with pytest.raises(ValueError, match="became dynamic"):
+        reconciler.plan([])
+    # end with
+# end def test_reconciliation_rejects_prefixed_dynamic_collection
 
 
 def test_adapter_requires_source_or_api_key() -> None:
