@@ -1,0 +1,13 @@
+Investigate this repo (/home/user/git/luckydonald/game_collections) to prep a plan for a new feature. I need a full picture of:
+
+1. The "unresolved solver" — search for where `unresolved:source:...` or `unresolved:` IDs get parsed/resolved (likely in complete/search flow, maybe src/game_collections/search.py or a dedicated resolver module). Find how existing `unresolved:source:isthereanydeal:<bundle-id>:<game-slug>` (or similar unresolved schemes for other sources like humblebundle) get parsed into real ids, and how the solver dispatches by source name. Show the exact code paths and function signatures involved.
+
+2. The existing isthereanydeal source module: src/game_collections/sources/isthereanydeal/ — crawler, parser (bundle detail parser mentioned in recent commits: "Parse each bundle's embedded `var page` JSON"), models, archive writing helpers (source.json/metadata.json layout), and how `ids:` arrays get populated for tier list games currently (to see where to add `isthereanydeal:<game-slug>` id).
+
+3. Look for an analogous "game detail page" parser/resolver if one exists for another source (e.g. humblebundle resolver in src/game_collections/sources/humblebundle/) that fetches a per-game page and writes archives/<source>/game/<slug>/{source,metadata}.json — to mirror conventions (file writing helpers in sources/common.py, models.py patterns, Pydantic strict models, "# end" comment style).
+
+4. Find where the archive JSON schema files (schemas/*.json) get generated/tested (tests/test_schema.py) and what naming convention for a new "isthereanydeal-archive.schema.json" alternative would need, or if archives/isthereanydeal reuses an existing schema.
+
+5. Find existing tests for isthereanydeal source (tests/ directory) and fixtures (tests/fixtures/) to understand testing conventions for HTTP parsing (probably using saved HTML/JSON fixture files) and for the unresolved solver.
+
+Report back with: exact file paths + line numbers for all key pieces, function/class signatures, the shape of the `var page = ["Game", {...}]` JSON if any fixture/example exists in the repo showing `detail.appid`, the exact current dispatch mechanism for unresolved sources (e.g. a dict of source name -> handler, or a match statement), and how ids arrays currently look for isthereanydeal tier list games (any example YAML in lists/isthereanydeal/). Also report the CLI command structure for `complete` in cli.py including flags relevant to unresolved solving. Be thorough and quote relevant code snippets. This is research only — do not modify any files.
