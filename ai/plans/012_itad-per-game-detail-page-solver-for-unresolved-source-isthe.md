@@ -56,6 +56,84 @@ instead of placeholder-looking names like `no-mans-sky`/`wildstar`):
 `my-little-pony-a-zephyr-heights-mystery` (appid `2235440`),
 `my-little-pony-a-maretime-bay-adventure` (appid `1600780`).
 
+## 0. Generalized storefront-id extraction (using the new shops.yml v2)
+
+The user separately updated `config/isthereanydeal-shops.yml` to `schema: 2`
+(list of `{name, id, slug}` — `id` optional for two ITAD-less entries: App
+Store/Google Play; `slug` optional for shops with no known qualified-id
+scheme yet, e.g. Adventure Shop) specifically so ITAD's per-game/per-bundle
+data can populate `ids` with more than just Steam/GOG/Epic/Ubisoft/Humble.
+This applies to **both** the existing bundle-tier parser's `_resolve_urls`
+(matches `reviews[].url` on bundle detail pages) and the new per-game
+solver's `deals[]` (matched after following each `itad.link/...` redirect to
+its real URL) — both ultimately just need "given a URL, which store, which
+id" once the deal's redirect is resolved.
+
+**Confirmed via live requests during planning** (see conversation — not
+fabricated):
+- Epic Game Store links ITAD actually serves use host **`www.epicgames.com`**
+  (e.g. `https://www.epicgames.com/store/p/cyberpunk-2077?...`), not
+  `store.epicgames.com` as `parse_store_identity` currently requires — this
+  is an existing latent bug. Fix: accept both hosts.
+- Humble Store (shop id 37, config slug `humble-store`) links resolve to
+  `https://www.humblebundle.com/store/<slug>?...` — already matched
+  correctly by the existing `parse_store_identity("humble", ...)` un­changed
+  (same host/`/store/` path shape as Humble's own bundle sync). No new
+  prefix needed; reuse `humble:` (confirmed with the user — do not introduce
+  `humble-store:` as a separate prefix from the existing `humble:`).
+- Similarly Epic reuses the existing `epic:` prefix, not `epicgames:` (also
+  confirmed with the user), once the host fix above lands.
+- GOG and Steam links already match `parse_store_identity` unchanged.
+- Microsoft Store (shop id 48, config slug `microsoft`) links resolve to
+  `https://apps.microsoft.com/detail/<product-id>?...` — new parser:
+  host `apps.microsoft.com`, path `/detail/<id>` → `microsoft:<id>`.
+- Blizzard (shop id 4, config slug `blizzard`) — **no reliable automatic
+  extraction is possible**: its redirect lands on an anonymous OAuth login
+  page (`https://eu.shop.battle.net/login/oauth2/code/storefront#optLogin=true`)
+  with no product identifier anywhere in the URL, because Battle.net's own
+  store requires an authenticated session to render a product page at all
+  (confirmed live against a real Diablo IV deal). This *is* Blizzard's own
+  launcher/store (answering the user's question), just not one ITAD's
+  anonymous redirect can expose a usable id for. Treat as a known,
+  documented gap: log a line and add no id for Blizzard deals, rather than
+  guessing or storing the meaningless login URL.
+- 2game (shop id 19, no dedicated prefix requested by the user) resolves to
+  `https://www.2game.com/<locale>/products/<slug>?ref=itad` — generic
+  fallback (last non-empty path segment) produces a reasonable
+  `2game:<slug>`.
+- Amazon (`asin:`), Fanatical, itch.io, EA, Oculus, Razer, WinGameStore,
+  MacGameStore, App Store, Google Play, and the remaining ~15 config
+  entries with a `slug` set were **not** hit by any real deal in this
+  session's sample games, so their real redirect-URL shape is still
+  unverified. Per the user's explicit direction ("URL parsers needs to be
+  added still" — i.e. don't hand-wave a generic fallback in place of a real
+  parser), these are added incrementally: each gets its own bespoke
+  host/path rule added to the shared table only once a real example URL has
+  been captured (e.g. by running the new solver/crawler against a game
+  known to be sold there and inspecting the archived `deals_resolved`
+  output — the archive writing in section 3 makes this self-bootstrapping).
+  Until a shop has a verified rule, its deals are simply skipped (same as
+  today's behavior for any unmatched `STORE_ROOTS` prefix) — logged, never
+  silently guessed.
+
+**Implementation**: extend `src/game_collections/sources/storefronts.py`
+rather than keeping this ITAD-local. Broaden `StoreName`/`STORE_ROOTS` (or
+add a parallel table alongside it, if mixing ITAD-only shops into the
+launcher-relevant `StoreName` enum used by `search.py`/launcher sync is
+undesirable — needs a quick look at every existing `StoreName` usage site
+before deciding) with the newly-verified entries (`microsoft`), fix the
+Epic host check, and add a small per-store extension point (a dict of
+`provider -> Callable[[str], str | None]` custom path parsers, falling back
+to the existing generic `_canonical_slug`-style logic) so future shops are
+a one-function addition. `shop_config.py` needs a matching rewrite for the
+new `schema: 2` list-of-`{name, id, slug}` shape (`load_shop_config` return
+type changes from `dict[int, str]` name-lookup to something that also
+exposes `slug`, e.g. `dict[int, ItadShopEntry]` with `.name`/`.slug`).
+
+Both `_resolve_urls` (section 2a) and the new per-game `resolve_game`
+(section 3, step 3) call into this same extended matching logic instead of
+the current `STORE_ROOTS`-only loop.
+
 ## 1. `models.py` — new archive model
 
 Add `ItadGameArchive(StrictModel)` next to `ItadArchive`:
@@ -72,14 +150,16 @@ Add `ItadGameArchive(StrictModel)` next to `ItadArchive`:
 
 ## 2. `sources/isthereanydeal/parser.py` — two changes
 
-**a. Always record the game's own id.** In `_resolve_urls` (line ~307),
-append `f"isthereanydeal:{slug}"` unconditionally after the existing
-storefront-URL loop, regardless of whether any storefront id resolved (so
-the id list may now contain both `isthereanydeal:<slug>` and an
-`unresolved:source:isthereanydeal:...` marker together — that's expected).
-Update `tests/test_isthereanydeal_parser.py` fixtures/assertions
-accordingly (every `ItadItem.ids` gains a trailing `isthereanydeal:<slug>`
-entry).
+**a. Always record the game's own id, and widen the matched stores.** In
+`_resolve_urls` (line ~307): switch its URL-matching loop to the extended
+store table from section 0 (so bundle reviews linking to e.g. Microsoft
+Store also resolve now, not just the original 5), and append
+`f"isthereanydeal:{slug}"` unconditionally after that loop, regardless of
+whether any storefront id resolved (so the id list may now contain both
+`isthereanydeal:<slug>` and an `unresolved:source:isthereanydeal:...` marker
+together — that's expected). Update `tests/test_isthereanydeal_parser.py`
+fixtures/assertions accordingly (every `ItadItem.ids` gains a trailing
+`isthereanydeal:<slug>` entry).
 
 **b. New parser for the per-game detail page.** Add
 `parse_game_detail_json(html: str, slug: str) -> ItadGameDetail` (a small
@@ -113,12 +193,13 @@ naming convention (this source's own "resolve an id" module):
   1. Fetch `https://isthereanydeal.com/game/{slug}/info/`, run
      `parse_game_detail_json`.
   2. Fetch deals via `fetch_deals(gid)`.
-  3. For every deal, resolve its redirect and, if the resolved URL matches a
-     known `STORE_ROOTS` prefix, resolve via `parse_store_identity` (reuse
-     the same dedupe-and-match loop `_resolve_urls` uses — factor that inner
-     loop out of `parser.py` into a small shared helper, e.g.
+  3. For every deal, resolve its redirect and match the resolved URL against
+     the extended store table from section 0 (same shared helper
+     `_resolve_urls` uses — factor that matching loop out of `parser.py`
+     into a small shared function, e.g.
      `qualified_ids_from_urls(urls: list[str]) -> list[str]`, called by both
-     `_resolve_urls` and this new path).
+     `_resolve_urls` and this new path). Deals on a shop with no verified
+     rule yet (section 0) are logged and skipped, not guessed.
   4. Build final `ids`: `steam:<appid>` if present, plus every qualified id
      found via deals, plus `isthereanydeal:<slug>` always, deduped.
   5. `source` dict for archiving: `{"page": <raw data[1]>, "deals":
@@ -219,6 +300,15 @@ and `complete_command`'s closure should actually call — not bare
 
 ## 7. Tests
 
+- `tests/test_storefronts.py` (or wherever `parse_store_identity` is
+  currently tested): add the Epic `www.epicgames.com` host case (regression
+  for the real bug found), the new Microsoft `apps.microsoft.com/detail/<id>`
+  case, and a case confirming an unmatched shop (no rule yet) is skipped
+  rather than raising.
+- `tests/test_isthereanydeal_shop_config.py` (rename/update the existing
+  shop-config test for the new `schema: 2` list shape): loads `id`-less
+  entries (App Store, Google Play) and `slug`-less entries (Adventure Shop)
+  without error.
 - `tests/test_isthereanydeal_parser.py`: update `_resolve_urls`
   fixtures/assertions for the always-appended `isthereanydeal:<slug>` id;
   add cases for `parse_game_detail_json` (appid present / `null` / missing

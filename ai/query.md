@@ -741,3 +741,51 @@ Anyway, in that ajax, there's `deals` with objects telling how much it costs in 
 
 ❯ Re: _use Fallout New Vegas or MLP game slugs as the worked examples, not real-looking placeholders like `no-mans-sky` or `wildstar`. Use real placeholder, but of those games. The current MLP games are (itad): `my-little-pony-a-zephyr-heights-mystery`, `my-little-pony-a-maretime-bay-adventure`, `pinball-fx-my-little-pony-pinball`, `my-little-pony-pinball` (the two last ones are actually the same, one steam dlc, one epic store dlc, ooops, so much for always the same, lol. Add a config file to patch them together for our crawling purposes and all that)
 
+❯ With the quite helpful `isthereanydeal` crawler, we get all those neat other storefronts for free. Add them to the `ids` already.
+The shop mapping contains, amongst others:
+- `3`: Amazon `asin:…` (Well, not really a store, and probably sells Steam keys, but still helpful in the long run)
+- `4`: Blizzard `blizzard:…` (is that a store/gamelauncher of it's own?)
+- `16`: Epic Game Store `epicgames:…`
+- `35`: GOG `gog:…`
+and so on.
+I've update the format of `config/isthereanydeal-shops.yml` to not need ID but be a handy reference for what `slug:…` slugs exist.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Epic Game Store / Humble Store: config/isthereanydeal-shops.yml uses slugs `epicgames` and `humble-store`, but the rest of the codebase already uses `epic:` and `humble:` prefixes (StoreName, existing lists/ ids, launcher-sync code). Which prefix should new ITAD-derived ids use for these two?
+>> 2. Should this generalized storefront-id extraction also apply to the existing bundle-tier parser (_resolve_urls, matching reviews[].url on bundle detail pages), or only to the new per-game detail-page solver (deals array + resolved redirect URLs)?
+>> 3. For shops with no bespoke id-extraction rule yet (Blizzard, Fanatical, itch.io, Microsoft Store, Oculus, EA, Razer, WinGameStore, App Store, Google Play, etc.) - how should the id value be derived?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Prefix reuse** (1/3) <kbd>Single Select</kbd><br>
+>> Epic Game Store / Humble Store: config/isthereanydeal-shops.yml uses slugs `epicgames` and `humble-store`, but the rest of the codebase already uses `epic:` and `humble:` prefixes (StoreName, existing lists/ ids, launcher-sync code). Which prefix should new ITAD-derived ids use for these two?
+> - [x] 1\. Reuse existing epic:/humble: (Recommended)
+>   - _Map shop slugs epicgames->epic and humble-store->humble, run the existing parse_store_identity("epic"/"humble", url) logic, produce ids in the same epic:/humble: form already used everywhere else in the repo. No naming split for the same real store._
+> - [ ] 2\. Use shops.yml slugs verbatim
+>   - _Produce epicgames:... and humble-store:... ids as new, separate provider prefixes exactly matching the config file, even though epic:/humble: already exist elsewhere for the same stores. Two provider names per store going forward._
+> - [ ] 3\. _Type something._
+>
+>> **Scope** (2/3) <kbd>Single Select</kbd><br>
+>> Should this generalized storefront-id extraction also apply to the existing bundle-tier parser (_resolve_urls, matching reviews[].url on bundle detail pages), or only to the new per-game detail-page solver (deals array + resolved redirect URLs)?
+> - [x] 1\. Both bundle parser and game solver (Recommended)
+>   - _Extend the shared store-matching table once (steam/gog/epic/ubisoft/humble plus the new shops), use it in both _resolve_urls (bundle reviews) and the new per-game deals resolution. More consistent, bundles pick up e.g. Amazon/Fanatical/itch ids too, not just the per-game solver._
+> - [ ] 2\. Game solver only
+>   - _Only the new per-game detail-page solver gains the wider store set; the bundle-tier parser keeps matching just the original 5 stores (steam/gog/epic/ubisoft/humble) via STORE_ROOTS as-is._
+> - [ ] 3\. _Type something._
+>
+>> **Fallback id shape** (3/3) <kbd>Single Select</kbd><br>
+>> For shops with no bespoke id-extraction rule yet (Blizzard, Fanatical, itch.io, Microsoft Store, Oculus, EA, Razer, WinGameStore, App Store, Google Play, etc.) - how should the id value be derived?
+> - [ ] 1\. Generic path-based fallback (Recommended)
+>   - _provider:<last non-empty URL path segment> (same fallback style Ubisoft already uses), falling back to the full resolved URL if the path has no usable segment. Low effort, works reasonably for most storefronts, upgradable per-store later. Amazon gets a dedicated ASIN regex since the user named that shape explicitly._
+> - [ ] 2\. Raw resolved URL only
+>   - _provider:<full resolved URL> for every non-bespoke shop, including Amazon - simplest, no per-store regex work at all, but noisier/less normalized ids._
+> - [x] 3\. _Type something:_
+>   - > URL parsers needs to be added still.
+>
+> </details>
+>
+
