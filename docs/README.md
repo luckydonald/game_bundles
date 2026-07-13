@@ -55,6 +55,16 @@ Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used
 
 `eligible steam` and `sync steam` also accept `--source installed` to skip the Web API and `STEAM_WEB_API_KEY` entirely, approximating ownership from locally installed games (`steamapps/libraryfolders.vdf` + `appmanifest_*.acf`). This only sees what's currently installed, not everything the account owns, so owned-but-uninstalled games are reported as missing; there is no local file that exposes the full owned/licensed games list, and `STEAM_WEB_API_KEY` itself can never be read from local Steam files — it's an account secret from Valve's web dev portal.
 
+`eligible steam` and `sync steam` also accept `--source collection` (or just `--collection NAME`, which implies it) to read ownership from a manually curated local Steam collection instead of the Web API. `--collection` defaults to a collection named `manual-all` when its value is omitted. Steam has no local file exposing the full owned/licensed games list (that's why `--source installed` only sees what's installed), and Steam's own "All Games" view isn't a stored collection either — it's computed by the client. So if you want a real local snapshot of everything you own, you maintain it yourself as a plain (non-dynamic/non-filter) collection and point `--collection` at it. To create one named `manual-all`:
+
+1. Open your Steam Library.
+2. Select every game on the left (click the first, scroll to the bottom, then shift-click the last).
+3. Click and hold any of the now-highlighted tiles and drag it into the main pane.
+4. If you're not already on the collections page, hover the "DRAG and HOLD HERE to view All Collections" area in the top-left.
+5. Drop onto an existing `manual-all` collection, or onto the "+ DRAG HERE TO CREATE A NEW COLLECTION" tile.
+6. In the **New Collection** dialog, enter the name `manual-all` and click **CREATE COLLECTION**.
+7. Close Steam before running `game-collections` against it.
+
 `game-collections search NAME` prints ranked matches from every supported storefront. Limit it with `--provider steam` (or `gog`, `epic`, `ubisoft`, or `humble`).
 
 `game-collections complete FILE` fills qualified IDs in a draft list in place and defaults to Steam. Use repeatable `--provider`/`--store` options or comma-separated values to select multiple storefronts; `all` selects every supported storefront. Unique exact title matches are accepted automatically, while ambiguous matches prompt for a result or a canonical URL/direct ID.
