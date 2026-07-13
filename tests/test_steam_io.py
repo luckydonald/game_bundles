@@ -47,7 +47,7 @@ def orange_box_plan() -> SyncPlan:
         changes=[
             PlannedCollectionChange(
                 list_id="valve/the-orange-box",
-                name="The Orange Box",
+                name="🗃️ The Orange Box",
                 action="create-or-update",
                 added_ids=["steam:220", "steam:380", "steam:420", "steam:400", "steam:440"],
             )
@@ -78,7 +78,7 @@ def test_stage_creates_inspectable_candidates_without_touching_steam(tmp_path: P
     collection_id = steam_collection_id("valve/the-orange-box")
     key = f"user-collections.{collection_id}"
     payload = SteamCollectionPayload.from_entry(dict(namespace.root)[key])
-    assert payload.name == "The Orange Box"
+    assert payload.name == "🗃️ The Orange Box"
     assert payload.added == [220, 380, 400, 420, 440]
     assert key in modified.root
 # end def test_stage_creates_inspectable_candidates_without_touching_steam
