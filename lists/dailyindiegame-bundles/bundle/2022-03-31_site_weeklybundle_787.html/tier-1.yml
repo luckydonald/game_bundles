@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 787 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11268/source.json
+games:
+- name: Starboost EX
+  ids:
+  - steam:917990
+- name: Super Arcade Soccer
+  ids:
+  - steam:1024430
+- name: Zen Blocks
+  ids:
+  - steam:733020
+- name: Crushing Blow
+  ids:
+  - steam:653760
+- name: Over'n Over
+  ids:
+  - steam:1358730
+- name: Oracle Trials
+  ids:
+  - steam:1533070
+- name: 'Alzheimer''s: Memories'
+  ids:
+  - steam:1624990
+- name: 'Jump Hero: Beginning'
+  ids:
+  - steam:1396390
+- name: Sin-Cay
+  ids:
+  - steam:1680440

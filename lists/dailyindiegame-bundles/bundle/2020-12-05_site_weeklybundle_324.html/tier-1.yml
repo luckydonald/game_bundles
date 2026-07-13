@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 324 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9484/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9484/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9484/source.json
+games:
+- name: Padak
+  ids:
+  - unresolved:source:isthereanydeal:9484:padak
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+- name: Deep Space
+  ids:
+  - steam:1453940
+- name: Vanguard Princess Online Deluxe
+  ids:
+  - steam:1083590
+- name: Jane Westlake Adventures - The Mystery Train
+  ids:
+  - steam:1158430
+- name: The Surreal Imaginarium
+  ids:
+  - steam:1348980
+- name: Vortex Escape
+  ids:
+  - unresolved:source:isthereanydeal:9484:vortex-escape
+- name: Temptations X
+  ids:
+  - steam:1457020
+- name: 'Borderus: Angels & Demons'
+  ids:
+  - steam:1459720

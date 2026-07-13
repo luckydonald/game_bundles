@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Apocalypse Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2191/source.json
+games:
+- name: Macabre™
+  ids:
+  - unresolved:source:isthereanydeal:2191:macabre
+- name: Air Guardians
+  ids:
+  - steam:342230
+- name: 'Zombie Camp: Last Survivor'
+  ids:
+  - steam:357840
+- name: Infect and Destroy
+  ids:
+  - steam:305660
+- name: Xenocide
+  ids:
+  - steam:381910
+- name: The Apocalypse:Elder Ones
+  ids:
+  - unresolved:source:isthereanydeal:2191:the-apocalypse-elder-ones

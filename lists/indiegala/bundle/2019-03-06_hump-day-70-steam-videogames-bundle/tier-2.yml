@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #70 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7131/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7131/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7131/source.json
+games:
+- name: StrikeForce Kitty
+  ids:
+  - steam:745330
+- name: Lines Infinite
+  ids:
+  - steam:733050
+- name: The Artifact
+  ids:
+  - steam:532920
+- name: Tiny Guardians
+  ids:
+  - steam:431230
+- name: Distortions
+  ids:
+  - steam:772500
+- name: Volleyball Unbound - Pro Beach Volleyball
+  ids:
+  - steam:518040
+- name: Rise of Insanity
+  ids:
+  - steam:629220
+- name: 'Little Imps: A Dungeon Builder'
+  ids:
+  - unresolved:source:isthereanydeal:7131:little-imps-a-dungeon-builder

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ampu-Tea - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1780/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1780/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1780/source.json
+games:
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090

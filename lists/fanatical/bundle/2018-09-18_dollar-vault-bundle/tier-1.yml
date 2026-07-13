@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Vault Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6476/source.json
+games:
+- name: 'Fairy Lands: Rinka and the Fairy Gems'
+  ids:
+  - steam:680930
+- name: ШП - ShP
+  ids:
+  - steam:727640
+- name: Void Source
+  ids:
+  - steam:611770
+- name: Drill Arena
+  ids:
+  - steam:799610
+- name: Galactic Lords
+  ids:
+  - steam:716230
+- name: Pixel Gladiator
+  ids:
+  - steam:542400
+- name: Castle of no Escape
+  ids:
+  - steam:635060
+- name: Castle of no Escape 2
+  ids:
+  - steam:542350
+- name: W4RR-i/o-RS
+  ids:
+  - steam:752780
+- name: Er-Spectro
+  ids:
+  - steam:768310
+- name: Walhall
+  ids:
+  - steam:781800
+- name: 'Nogibator: Way Of Legs'
+  ids:
+  - unresolved:source:isthereanydeal:6476:nogibator-way-of-legs

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 276 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9273/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9273/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9273/source.json
+games:
+- name: Millie
+  ids:
+  - steam:294230
+- name: DollKart
+  ids:
+  - steam:895370
+- name: The Culling Of The Cows
+  ids:
+  - steam:297020
+- name: JigsawMania
+  ids:
+  - unresolved:source:isthereanydeal:9273:jigsawmania
+- name: 'Pixel Puzzles: UndeadZ'
+  ids:
+  - steam:285010
+- name: The Mummy Pharaoh
+  ids:
+  - steam:948120
+- name: 'Pixel Puzzles 2: RADical ROACH'
+  ids:
+  - steam:504880
+- name: 'A Trip to Yugoslavia: Director''s Cut'
+  ids:
+  - steam:545410
+- name: Particula
+  ids:
+  - steam:343360

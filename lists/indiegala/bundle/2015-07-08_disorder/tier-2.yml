@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Digital Disorder Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2213/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2213/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2213/source.json
+games:
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:2213:chernobyl-commando
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+- name: Desert Thunder
+  ids:
+  - steam:283330
+- name: Motorama
+  ids:
+  - steam:327010
+- name: Incoming Forces
+  ids:
+  - unresolved:source:isthereanydeal:2213:incoming-forces
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+- name: Chompy Chomp Chomp
+  ids:
+  - steam:292570
+- name: Bin Weevils Arty Arcade
+  ids:
+  - steam:322410
+- name: //SNOWFLAKE TATTOO//
+  ids:
+  - steam:355430
+- name: 'Purgatory: War of the Damned'
+  ids:
+  - steam:284910
+- name: Melissa K. and the Heart of Gold Collector's Edition
+  ids:
+  - steam:321150
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+- name: Z Steel Soldiers
+  ids:
+  - steam:275510
+- name: Steam Heroes
+  ids:
+  - steam:341160

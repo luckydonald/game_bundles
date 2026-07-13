@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 534 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10267/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10267/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10267/source.json
+games:
+- name: SUDOKU TIME
+  ids:
+  - unresolved:source:isthereanydeal:10267:sudoku-time
+- name: 'Corridor: Amount of Fear'
+  ids:
+  - unresolved:source:isthereanydeal:10267:corridor-amount-of-fear
+- name: MAGIC POT&TER BATTLEGROUNDS
+  ids:
+  - steam:1470750
+- name: Swift Elf
+  ids:
+  - steam:1642250
+- name: Express Simulator
+  ids:
+  - steam:1656650
+- name: 'At the behest of the Pike: Time To Run'
+  ids:
+  - steam:1627240
+- name: Witch's Reign
+  ids:
+  - steam:1520150
+- name: Mini Kart Racing
+  ids:
+  - steam:1673520
+- name: Starveling Way
+  ids:
+  - steam:1696310

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #69 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7016/source.json
+games:
+- name: 'Suits: A Business RPG'
+  ids:
+  - steam:410670
+- name: EvilQuest
+  ids:
+  - steam:263820
+- name: Syrian Warfare
+  ids:
+  - steam:485980
+- name: Galak-Z
+  ids:
+  - steam:300580
+- name: Music Racer
+  ids:
+  - steam:893030
+- name: Super Trench Attack™
+  ids:
+  - steam:311870
+- name: Zombie Flick
+  ids:
+  - unresolved:source:isthereanydeal:7016:zombie-flick
+- name: AWAKE - Definitive Edition
+  ids:
+  - steam:1002630

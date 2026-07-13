@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Québec Indies Bundle — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9507/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9507/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9507/source.json
+games:
+- name: Leap of Fate
+  ids:
+  - steam:363420
+- name: Toto Temple Deluxe
+  ids:
+  - steam:342920
+- name: Aeolis Tournament
+  ids:
+  - steam:1097770
+- name: Knight Squad
+  ids:
+  - steam:294000
+- name: 'Jotun: Valhalla Edition'
+  ids:
+  - steam:323580
+- name: Light Fall
+  ids:
+  - steam:416830
+- name: Epic Manager - Create Your Own Adventuring Agency!
+  ids:
+  - steam:391280
+- name: 'Crew 167: The Grand Block Odyssey'
+  ids:
+  - steam:772570
+- name: 'Crew 167: The Grand Block Odyssey Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:9507:crew-167-the-grand-block-odyssey-soundtrack
+- name: 'Tales from Candlekeep: Tomb of Annihilation'
+  ids:
+  - unresolved:source:isthereanydeal:9507:tales-from-candlekeep-tomb-of-annihilation
+- name: Mages of Mystralia
+  ids:
+  - steam:529660
+- name: Speed Brawl
+  ids:
+  - steam:468670
+- name: Castle Story
+  ids:
+  - steam:227860

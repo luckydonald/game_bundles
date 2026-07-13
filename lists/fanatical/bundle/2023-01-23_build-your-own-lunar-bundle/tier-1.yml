@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Lunar Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12918/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12918/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12918/source.json
+games:
+- name: Size Matters
+  ids:
+  - steam:976700
+- name: Monster Slayers - Advanced Classes Unlocker
+  ids:
+  - steam:621840
+- name: The Indie Mixtape
+  ids:
+  - steam:352640
+- name: Those Who Remain
+  ids:
+  - steam:715380
+- name: Heal
+  ids:
+  - steam:1056610
+- name: 'Redeemer: Enhanced Edition'
+  ids:
+  - steam:447290
+- name: My Big Sister
+  ids:
+  - steam:733300
+- name: Monster Slayers
+  ids:
+  - steam:496620
+- name: 'Shadowhand: RPG Card Game'
+  ids:
+  - steam:427490
+- name: S.W.I.N.E. HD Remaster
+  ids:
+  - unresolved:source:isthereanydeal:12918:s-w-i-n-e-hd-remaster
+- name: RIOT- Civil Unrest
+  ids:
+  - steam:342310
+- name: Monster Slayers - Fire & Steel Expansion
+  ids:
+  - steam:634030
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+- name: Heroes of Hammerwatch
+  ids:
+  - steam:677120
+- name: AVICII Invector
+  ids:
+  - steam:986800
+- name: Cat Lady - The Card Game
+  ids:
+  - steam:869690
+- name: Helheim Hassle
+  ids:
+  - steam:1095120
+- name: Red Ronin
+  ids:
+  - steam:1222570
+- name: Savage Halloween
+  ids:
+  - steam:1232810
+- name: AVICII Invector - TIM Track Pack
+  ids:
+  - steam:1356410
+- name: AVICII Invector - Magma Track Pack
+  ids:
+  - steam:1356411

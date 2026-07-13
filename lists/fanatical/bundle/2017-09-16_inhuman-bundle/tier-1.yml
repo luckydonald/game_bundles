@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Inhuman Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5474/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5474/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5474/source.json
+games:
+- name: Lumini
+  ids:
+  - steam:360840
+- name: 'Fist Slash: Of Ultimate Fury'
+  ids:
+  - steam:409070
+- name: The Marvellous Miss Take
+  ids:
+  - steam:327310
+- name: The Land of Eyas
+  ids:
+  - steam:299800
+- name: I Want To Be Human
+  ids:
+  - unresolved:source:isthereanydeal:5474:i-want-to-be-human
+- name: Tulpa
+  ids:
+  - steam:331340
+- name: '- Ratz Instagib'
+  ids:
+  - steam:338170
+- name: 'Deadly Premonition: The Director''s Cut'
+  ids:
+  - steam:247660

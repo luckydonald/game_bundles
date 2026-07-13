@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Tabletop & Deckbuilder Games Bundle — Select 3 for 9.99, 5 for
+  14.99, 7 for 19.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15609/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15609/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15609/source.json
+games:
+- name: Wingspan
+  ids:
+  - steam:1054490
+- name: Gordian Quest
+  ids:
+  - steam:981430
+- name: 'Fuzz Force: Spook Squad'
+  ids:
+  - steam:1422190
+- name: Lost In Fantaland
+  ids:
+  - steam:1266430
+- name: Overrogue
+  ids:
+  - steam:1960800
+- name: 'FORWARD: Escape the Fold - Ultimate Edition'
+  ids:
+  - steam:1766390
+- name: Quilts and Cats of Calico
+  ids:
+  - steam:1993180
+- name: Isle of Swaps
+  ids:
+  - steam:2294160
+- name: Pyrene
+  ids:
+  - steam:2468100
+- name: 'Deepest Chamber: Resurrection'
+  ids:
+  - steam:1552080
+- name: Roll Player - The Board Game
+  ids:
+  - steam:1939940
+- name: SuperTaxCity
+  ids:
+  - steam:2881800
+- name: Necromancer For A Week
+  ids:
+  - steam:2987110
+- name: How We Die
+  ids:
+  - steam:3008240
+- name: Jewel Match Atlantis Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:15609:jewel-match-atlantis-triple-pack
+- name: Journey of Greed Complete
+  ids:
+  - unresolved:source:isthereanydeal:15609:journey-of-greed-complete
+- name: Dire Wolf Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15609:dire-wolf-quad-pack

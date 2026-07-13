@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Shifty&#39;s Discovery Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5861/source.json
+games:
+- name: Defendoooooor!!!
+  ids:
+  - steam:683230
+- name: Cyberline Racing
+  ids:
+  - steam:514460
+- name: 'Zarya - 1: Mystery on the Moon'
+  ids:
+  - steam:640090
+- name: Babylon 2055 Pinball
+  ids:
+  - steam:458500
+- name: Secret Of The Royal Throne
+  ids:
+  - steam:464630
+- name: Blowhards
+  ids:
+  - steam:552000

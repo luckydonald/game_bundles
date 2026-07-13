@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 932 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12014/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12014/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12014/source.json
+games:
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+- name: Phantasmata
+  ids:
+  - steam:1048790
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+- name: Hacker Evolution - 2019 HD remaster
+  ids:
+  - steam:1153990
+- name: The Shenanigans of Cherry and Trix
+  ids:
+  - steam:1192840
+- name: Jubeez
+  ids:
+  - steam:1352300
+- name: Asteroad
+  ids:
+  - unresolved:source:isthereanydeal:12014:asteroad
+- name: Chezzle
+  ids:
+  - steam:1765960
+- name: Ducky
+  ids:
+  - steam:1737130

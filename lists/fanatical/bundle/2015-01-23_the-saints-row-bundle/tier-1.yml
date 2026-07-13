@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Saints Row The Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1572/source.json
+games:
+- name: 'Saints Row: The Third - The Full Package'
+  ids:
+  - unresolved:source:isthereanydeal:1572:saints-row-the-third-the-full-package
+- name: Saints Row 2
+  ids:
+  - steam:9480

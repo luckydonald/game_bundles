@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Steamy Summer Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3585/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3585/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3585/source.json
+games:
+- name: POPixel
+  ids:
+  - steam:485560
+- name: Neon Space ULTRA
+  ids:
+  - unresolved:source:isthereanydeal:3585:neon-space-ultra
+- name: Car Mechanic Simulator 2014
+  ids:
+  - steam:270850
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+- name: Warriors' Wrath
+  ids:
+  - steam:466420
+- name: Era of Majesty
+  ids:
+  - unresolved:source:isthereanydeal:3585:era-of-majesty
+- name: Beater Spirit
+  ids:
+  - unresolved:source:isthereanydeal:3585:beater-spirit
+- name: Survive in Space
+  ids:
+  - steam:467950
+- name: Cuties
+  ids:
+  - steam:2506860
+- name: Zombie Rush
+  ids:
+  - steam:2355790
+- name: Sky Mercenaries
+  ids:
+  - steam:336090

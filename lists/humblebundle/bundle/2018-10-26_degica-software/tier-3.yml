@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Software Bundle: RPG Maker — 18-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6611/source.json
+games:
+- name: RPG Maker XP
+  ids:
+  - steam:235900
+- name: 'Game Character Hub PE: DS Generator Parts'
+  ids:
+  - steam:531601
+- name: 'Game Character Hub: Second Story'
+  ids:
+  - steam:372710
+- name: 'Game Character Hub: Portfolio Edition'
+  ids:
+  - steam:529830
+- name: The Last Word
+  ids:
+  - unresolved:source:isthereanydeal:6611:the-last-word
+- name: Skyborn
+  ids:
+  - steam:278460
+- name: RPG Maker VX
+  ids:
+  - steam:521880
+- name: Always Sometimes Monsters
+  ids:
+  - steam:274310
+- name: RPG Maker VX Ace - Fantasy Hero Character Pack
+  ids:
+  - steam:265464
+- name: RPG Maker VX Ace
+  ids:
+  - steam:220700
+- name: Echoes Of Aetheria
+  ids:
+  - steam:354740
+- name: RPG Maker VX Ace - Futuristic Tiles Resource Pack
+  ids:
+  - steam:229750
+- name: 'RPG Maker VX Ace - Animations Collection I: Quintessence'
+  ids:
+  - steam:542500
+- name: 'RPG Maker VX Ace - Ancient Dungeons: Base Pack'
+  ids:
+  - steam:406071
+- name: RPG Maker VX Ace - Fantastic Buildings - Medieval
+  ids:
+  - steam:333091
+- name: Pale Echoes
+  ids:
+  - steam:377190
+- name: 'RPG Maker VX Ace - POP!: Horror City'
+  ids:
+  - steam:297644
+- name: 'RPG Maker VX Ace - Seraph Circle: Monster Pack 1'
+  ids:
+  - unresolved:source:isthereanydeal:6611:rpg-maker-vx-ace-seraph-circle-monster-pack-1

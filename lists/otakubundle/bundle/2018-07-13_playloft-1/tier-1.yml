@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Playloft Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6303/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6303/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6303/source.json
+games:
+- name: Mahjong Classic
+  ids:
+  - unresolved:source:isthereanydeal:6303:mahjong-classic
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:6303:airplane-sky-voyage
+- name: Cross And Crush
+  ids:
+  - unresolved:source:isthereanydeal:6303:cross-and-crush
+- name: Kitten Life Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6303:kitten-life-simulator
+- name: 'Ashley: The Story Of Survival Original Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:6303:ashley-the-story-of-survival-original-soundtrack
+- name: Recursive Dragon
+  ids:
+  - unresolved:source:isthereanydeal:6303:recursive-dragon
+- name: Parkour Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6303:parkour-simulator
+- name: Galaxy Ball
+  ids:
+  - unresolved:source:isthereanydeal:6303:galaxy-ball
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:6303:magic-chess
+- name: Magic League
+  ids:
+  - unresolved:source:isthereanydeal:6303:magic-league
+- name: Achievement Machine
+  ids:
+  - unresolved:source:isthereanydeal:6303:achievement-machine
+- name: 'Ashley: The Story Of Survival'
+  ids:
+  - unresolved:source:isthereanydeal:6303:ashley-the-story-of-survival

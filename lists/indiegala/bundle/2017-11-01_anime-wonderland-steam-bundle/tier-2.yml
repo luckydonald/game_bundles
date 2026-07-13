@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Wonderland Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5588/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5588/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5588/source.json
+games:
+- name: Games&Girls
+  ids:
+  - steam:610750
+- name: Swordbreaker The Game
+  ids:
+  - steam:411760
+- name: Sixtieth Kilometer
+  ids:
+  - steam:448780
+- name: Serafina's Crown
+  ids:
+  - steam:449340
+- name: Book Series - Alice in Wonderland
+  ids:
+  - unresolved:source:isthereanydeal:5588:book-series-alice-in-wonderland
+- name: Crystal City
+  ids:
+  - unresolved:source:isthereanydeal:5588:crystal-city
+- name: Animal Lover
+  ids:
+  - steam:542200
+- name: Aozora Meikyuu
+  ids:
+  - steam:427980
+- name: The Legend of Dark Witch
+  ids:
+  - steam:420770
+- name: Blade Kitten
+  ids:
+  - steam:9940
+- name: One Last Chance
+  ids:
+  - steam:460150

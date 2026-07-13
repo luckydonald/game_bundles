@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #33 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5880/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5880/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5880/source.json
+games:
+- name: Dogstar
+  ids:
+  - unresolved:source:isthereanydeal:5880:dogstar
+- name: MechTroid
+  ids:
+  - steam:789680
+- name: Cactus Jumper
+  ids:
+  - steam:791960
+- name: Dad's co-worker
+  ids:
+  - unresolved:source:isthereanydeal:5880:dads-co-worker
+- name: Paint Skills
+  ids:
+  - unresolved:source:isthereanydeal:5880:paint-skills
+- name: Murazu
+  ids:
+  - unresolved:source:isthereanydeal:5880:murazu
+- name: The God Paradox
+  ids:
+  - steam:636330
+- name: 'OutBreak: The Escape'
+  ids:
+  - steam:756350
+- name: Island Build Masters
+  ids:
+  - unresolved:source:isthereanydeal:5880:island-build-masters
+- name: Neonicum
+  ids:
+  - unresolved:source:isthereanydeal:5880:neonicum

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Brutal Heroes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5848/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5848/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5848/source.json
+games:
+- name: Gryphon Knight Epic
+  ids:
+  - steam:358650
+- name: Death By Game Show
+  ids:
+  - steam:409730
+- name: Dead Age
+  ids:
+  - steam:363930
+- name: Riff Racer - Race Your Music!
+  ids:
+  - unresolved:source:isthereanydeal:5848:riff-racer-race-your-music
+- name: Mushroom Wars
+  ids:
+  - steam:431250
+- name: Daddy's gone a-hunting
+  ids:
+  - steam:755580
+- name: Home is Where One Starts
+  ids:
+  - steam:355970
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330

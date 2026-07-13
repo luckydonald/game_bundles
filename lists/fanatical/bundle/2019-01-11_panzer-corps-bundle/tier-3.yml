@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Panzer Corps Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6899/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6899/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6899/source.json
+games:
+- name: Panzer Corps
+  ids:
+  - unresolved:source:isthereanydeal:6899:panzer-corps
+- name: 'Panzer Corps: Grand Campaign ''39'
+  ids:
+  - steam:276550
+- name: Panzer Corps Grand Campaign '42
+  ids:
+  - steam:279962
+- name: Panzer Corps Grand Campaign '42-'43
+  ids:
+  - steam:279963
+- name: Panzer Corps Grand Campaign '40
+  ids:
+  - steam:279960
+- name: Panzer Corps Grand Campaign '41
+  ids:
+  - steam:279961
+- name: Panzer Corps Grand Campaign '43
+  ids:
+  - steam:279964
+- name: 'Panzer Corps: Afrika Korps'
+  ids:
+  - steam:276551
+- name: Panzer Corps Grand Campaign '45 West
+  ids:
+  - steam:279968
+- name: Panzer Corps Grand Campaign '44 West
+  ids:
+  - steam:279966
+- name: Panzer Corps Grand Campaign '44 East
+  ids:
+  - steam:279965
+- name: Panzer Corps Grand Campaign '45 East
+  ids:
+  - steam:279967

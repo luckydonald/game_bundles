@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hype Tower Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14027/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14027/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14027/source.json
+games:
+- name: Hype Prototype
+  ids:
+  - steam:1694550
+- name: Screams from the Past
+  ids:
+  - steam:2250470
+- name: Risk of Pain
+  ids:
+  - steam:2701050
+- name: TELETEXT
+  ids:
+  - steam:2727470
+- name: The Tower Of Babel
+  ids:
+  - steam:2762390
+- name: 'TEEFAX: Cold Case'
+  ids:
+  - steam:2843530
+- name: 'Battlegrounds : The Pirate King'
+  ids:
+  - steam:2907650

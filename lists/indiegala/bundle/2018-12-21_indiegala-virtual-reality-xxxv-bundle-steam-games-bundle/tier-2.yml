@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXV Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6808/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6808/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6808/source.json
+games:
+- name: '[ R.U.M.A ]'
+  ids:
+  - unresolved:source:isthereanydeal:6808:r-u-m-a
+- name: airRevo VR
+  ids:
+  - steam:594150
+- name: iOMoon
+  ids:
+  - steam:465450
+- name: Drunk or Dead
+  ids:
+  - steam:577290
+- name: The Haunted Graveyard
+  ids:
+  - steam:931930
+- name: Chunky Orbits
+  ids:
+  - steam:535190
+- name: DreamTank
+  ids:
+  - steam:664560
+- name: VR Party Club
+  ids:
+  - steam:949150
+- name: Diorama Worlds
+  ids:
+  - steam:602630

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Battle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3460/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3460/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3460/source.json
+games:
+- name: 'Rabiez: Epidemic'
+  ids:
+  - steam:448630
+- name: Earth 2160
+  ids:
+  - steam:1900
+- name: Lucius
+  ids:
+  - steam:218640
+- name: 'AI: Rampage'
+  ids:
+  - steam:438020
+- name: 'Jack Orlando: Directors Cut'
+  ids:
+  - steam:253960
+- name: 'Septerra Core: Legacy of the Creator'
+  ids:
+  - unresolved:source:isthereanydeal:3460:septerra-core-legacy-of-the-creator

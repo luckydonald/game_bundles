@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hard Reset Redux + Redeemer Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10505/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10505/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10505/source.json
+games:
+- name: Hard Reset Redux
+  ids:
+  - steam:407810
+- name: 'Redeemer: Enhanced Edition'
+  ids:
+  - steam:447290

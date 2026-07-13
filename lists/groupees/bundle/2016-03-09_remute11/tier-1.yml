@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Remute 11: Trippy? Arty? Fun! — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3152/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3152/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3152/source.json
+games:
+- name: Silver Knight
+  ids:
+  - steam:432170
+- name: Elems
+  ids:
+  - steam:528670
+- name: NAL Is Dead
+  ids:
+  - unresolved:source:isthereanydeal:3152:nal-is-dead
+- name: '"BUTTS: The VR Experience"'
+  ids:
+  - steam:439260
+- name: Division-A
+  ids:
+  - unresolved:source:isthereanydeal:3152:division-a
+- name: Vilmonic
+  ids:
+  - steam:458330

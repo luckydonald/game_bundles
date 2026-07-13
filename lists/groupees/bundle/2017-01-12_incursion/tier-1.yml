@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Incursion Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4613/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4613/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4613/source.json
+games:
+- name: The Youthdrainers
+  ids:
+  - unresolved:source:isthereanydeal:4613:the-youthdrainers
+- name: Autumn Dream
+  ids:
+  - steam:521980
+- name: Amazon Rush
+  ids:
+  - unresolved:source:isthereanydeal:4613:amazon-rush
+- name: 'Fairyland: Incursion'
+  ids:
+  - unresolved:source:isthereanydeal:4613:fairyland-incursion
+- name: Tower Defense Ultimate
+  ids:
+  - unresolved:source:isthereanydeal:4613:tower-defense-ultimate
+- name: Wooden House
+  ids:
+  - steam:513570
+- name: Disposable heroes
+  ids:
+  - steam:366180

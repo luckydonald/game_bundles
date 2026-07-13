@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Lone Survivor Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15451/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15451/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15451/source.json
+games:
+- name: Breathedge
+  ids:
+  - steam:738520
+- name: 'State of Decay 2: Juggernaut Edition'
+  ids:
+  - steam:495420
+- name: Above Snakes
+  ids:
+  - steam:1589120
+- name: 'Force of Nature 2: Ghost Keeper'
+  ids:
+  - steam:1316230

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Action Fu Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6966/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6966/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6966/source.json
+games:
+- name: Treasure Hunter Man 2
+  ids:
+  - steam:870140
+- name: Super Destronaut
+  ids:
+  - steam:510250

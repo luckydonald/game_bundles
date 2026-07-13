@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 69 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3899/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3899/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3899/source.json
+games:
+- name: Drayt Empire
+  ids:
+  - steam:502140
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: 'Go Mission: Space Travel'
+  ids:
+  - unresolved:source:isthereanydeal:3899:go-mission-space-travel
+- name: Pinga Ponga
+  ids:
+  - steam:509960
+- name: Extravaganza Rising
+  ids:
+  - steam:501030
+- name: 'Elysium: Blood Games'
+  ids:
+  - steam:430080

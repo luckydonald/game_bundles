@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Summer GameBundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3797/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3797/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3797/source.json
+games:
+- name: Vapour
+  ids:
+  - steam:345440
+- name: Collider
+  ids:
+  - steam:371880
+- name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
+  ids:
+  - steam:427930
+- name: Story of a Cube
+  ids:
+  - steam:440750

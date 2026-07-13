@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Very Positive Bundle (2023) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13338/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13338/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13338/source.json
+games:
+- name: Mythic Ocean
+  ids:
+  - steam:814360
+- name: Alwa's Legacy
+  ids:
+  - steam:1205900
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+- name: Karma City Police
+  ids:
+  - steam:1270850
+- name: The Dungeon Beneath
+  ids:
+  - steam:1359120
+- name: Dynopunk
+  ids:
+  - steam:1596730
+- name: Scarlet Tower
+  ids:
+  - steam:2181720

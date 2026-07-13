@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Kingdom Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8378/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8378/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8378/source.json
+games:
+- name: The Trials of Olympus
+  ids:
+  - steam:985280
+- name: 'Victorian Mysteries: The Yellow Room'
+  ids:
+  - steam:1108190
+- name: 'The Far Kingdoms: Winter Solitaire'
+  ids:
+  - steam:1034250
+- name: The Adventures of Perseus
+  ids:
+  - steam:1031590
+- name: Juice Mania
+  ids:
+  - unresolved:source:isthereanydeal:8378:juice-mania
+- name: Winter Magic Factory
+  ids:
+  - steam:1127690
+- name: The Mysterious Case of Dr Jekyll and Mr Hyde
+  ids:
+  - steam:1215900
+- name: 1912 Titanic Mystery
+  ids:
+  - steam:1114270
+- name: 'Bato: Treasures of Tibet'
+  ids:
+  - steam:1218560

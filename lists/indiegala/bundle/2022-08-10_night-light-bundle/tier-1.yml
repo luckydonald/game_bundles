@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Night Light Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11941/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11941/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11941/source.json
+games:
+- name: Strange Night
+  ids:
+  - steam:496640
+- name: Dungeons of Betrayal
+  ids:
+  - steam:402940
+- name: JetX VR
+  ids:
+  - steam:684620
+- name: Drift Horizon Online
+  ids:
+  - steam:491280
+- name: iREC
+  ids:
+  - steam:557260
+- name: CrashMetal Cyberpunk
+  ids:
+  - steam:1490130

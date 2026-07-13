@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyber Whale 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13111/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13111/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13111/source.json
+games:
+- name: 'Firelight Fantasy: Resistance'
+  ids:
+  - steam:1558490
+- name: 'Firelight Fantasy: Force Energy'
+  ids:
+  - steam:1619330
+- name: 'PolyClassic: Wild'
+  ids:
+  - steam:1631850
+- name: Hell Division
+  ids:
+  - steam:2004360
+- name: The Wraith of the Galaxy
+  ids:
+  - steam:2057430
+- name: 'Swords Fantasy: Battlefield'
+  ids:
+  - steam:1916280

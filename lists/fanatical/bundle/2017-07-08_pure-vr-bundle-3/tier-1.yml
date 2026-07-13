@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pure VR Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5309/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5309/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5309/source.json
+games:
+- name: Marlene Betwixt
+  ids:
+  - steam:536530
+- name: Caketomino
+  ids:
+  - unresolved:source:isthereanydeal:5309:caketomino
+- name: Seabed Prelude
+  ids:
+  - unresolved:source:isthereanydeal:5309:seabed-prelude
+- name: Warpaint
+  ids:
+  - steam:600150
+- name: VectorWars
+  ids:
+  - steam:600350
+- name: Crashed Lander
+  ids:
+  - steam:340450
+- name: Gem Hunter
+  ids:
+  - steam:613020
+- name: Sky Climbers
+  ids:
+  - unresolved:source:isthereanydeal:5309:sky-climbers
+- name: Candy Kingdom VR
+  ids:
+  - steam:525500
+- name: VR Fun World
+  ids:
+  - steam:535750

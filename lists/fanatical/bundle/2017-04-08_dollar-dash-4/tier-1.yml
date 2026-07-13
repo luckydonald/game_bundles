@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Dash Bundle 4 — Select 1 Title for $1.00, 4 Titles for $2.99, 8 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4987/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4987/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4987/source.json
+games:
+- name: Unrest
+  ids:
+  - steam:292400
+- name: The Story Goes On
+  ids:
+  - steam:369560
+- name: Bedlam
+  ids:
+  - unresolved:source:isthereanydeal:4987:bedlam
+- name: Hidden Object Bundle 4 in 1
+  ids:
+  - steam:347610
+- name: Knights & Merchants
+  ids:
+  - steam:253900
+- name: King's Bounty Warriors of the North
+  ids:
+  - steam:203350
+- name: The Silent Age
+  ids:
+  - steam:352520
+- name: Deponia
+  ids:
+  - steam:214340
+- name: Stronghold HD
+  ids:
+  - steam:40950
+- name: Dead Effect 2
+  ids:
+  - steam:394760
+- name: Game Corp DX
+  ids:
+  - steam:399670
+- name: POSTAL 2
+  ids:
+  - steam:223470
+- name: Hidden Object Bundle 5 in 1
+  ids:
+  - steam:346140
+- name: 'Real Heroes: Firefighter'
+  ids:
+  - unresolved:source:isthereanydeal:4987:real-heroes-firefighter
+- name: 'Sword of the Stars: The Pit'
+  ids:
+  - steam:233700
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+- name: Shooting Stars!
+  ids:
+  - steam:415350
+- name: Townsmen
+  ids:
+  - unresolved:source:isthereanydeal:4987:townsmen
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Dead Effect
+  ids:
+  - steam:286040
+- name: Kaiju-A-GoGo
+  ids:
+  - steam:333210
+- name: In Between
+  ids:
+  - steam:388420
+- name: 'Two Worlds II: Velvet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4987:two-worlds-ii-velvet-edition
+- name: 'Soulless: Ray Of Hope'
+  ids:
+  - steam:528300

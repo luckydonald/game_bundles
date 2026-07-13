@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle In A Box 2 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1504/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1504/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1504/source.json
+games:
+- name: Keen Dreams
+  ids:
+  - unresolved:source:isthereanydeal:1504:keen-dreams
+- name: Porradaria Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:1504:porradaria-upgrade
+- name: Gorky 17
+  ids:
+  - steam:253920
+- name: TriBlaster
+  ids:
+  - steam:303880
+- name: Jagged Alliance 2 Wildfire
+  ids:
+  - steam:215930
+- name: Quest of Dungeons
+  ids:
+  - steam:270050
+- name: Dungeons the Eye of Draconus
+  ids:
+  - steam:303510
+- name: Experience 112
+  ids:
+  - steam:324770

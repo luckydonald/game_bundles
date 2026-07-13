@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Power Box Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9414/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9414/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9414/source.json
+games:
+- name: Superior Wizards
+  ids:
+  - steam:926610
+- name: Egress
+  ids:
+  - steam:750800
+- name: Taste of Power
+  ids:
+  - steam:758250
+- name: Box Kid Adventures
+  ids:
+  - steam:1217870
+- name: FLATLAND Vol.1
+  ids:
+  - steam:1143350
+- name: 'Chess Knights: Viking Lands'
+  ids:
+  - steam:1338980

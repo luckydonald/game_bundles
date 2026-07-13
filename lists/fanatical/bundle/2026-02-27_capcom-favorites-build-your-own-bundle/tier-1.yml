@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Capcom Favorites Bundle (BundleFest 2026) — Select 2 for 12.99
+  (6.40 each), 3 for 18.99 (6.33 each), 4 for 24.99 (6.25 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15918/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15918/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15918/source.json
+games:
+- name: 'Phoenix Wright: Ace Attorney Trilogy'
+  ids:
+  - steam:787480
+- name: 'Monster Hunter: World Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15918:monster-hunter-world-deluxe-edition
+- name: 'Onimusha: Warlords / 鬼武者'
+  ids:
+  - steam:761600
+- name: Okami HD
+  ids:
+  - steam:587620
+- name: RESIDENT EVIL 7 biohazard Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:15918:resident-evil-7-biohazard-gold-edition
+- name: Capcom Beat 'Em Up Bundle
+  ids:
+  - steam:885150
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020
+- name: Mega Man Legacy Collection 1 & 2 Combo Pack
+  ids:
+  - unresolved:source:isthereanydeal:15918:mega-man-legacy-collection-1-and-2-combo-pack
+- name: 'Marvel vs. Capcom: Infinite - Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15918:marvel-vs-capcom-infinite-deluxe-edition
+- name: Resident Evil Village
+  ids:
+  - steam:1196590
+- name: 'Street Fighter V: Champion Edition + Season 5 Premium Pass Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:15918:street-fighter-v-champion-edition-and-season-5-premium-pass-bundle
+- name: The Great Ace Attorney Chronicles
+  ids:
+  - steam:1158850
+- name: Devil May Cry 5 + Vergil
+  ids:
+  - steam:601150
+- name: Capcom Fighting Collection
+  ids:
+  - steam:1685750
+- name: 'Ghost Trick: Phantom Detective'
+  ids:
+  - steam:1967430

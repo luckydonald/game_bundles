@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Apr 2018) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5959/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5959/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5959/source.json
+games:
+- name: Mafia III
+  ids:
+  - unresolved:source:isthereanydeal:5959:mafia-iii
+- name: GOD EATER 2 Rage Burst
+  ids:
+  - steam:438490
+- name: 'Mafia III: Sign of the Times'
+  ids:
+  - unresolved:source:isthereanydeal:5959:mafia-iii-sign-of-the-times
+- name: 'Deus Ex: Mankind Divided'
+  ids:
+  - steam:337000
+- name: Lyric Sonata
+  ids:
+  - unresolved:source:isthereanydeal:5959:lyric-sonata
+- name: Lara Croft GO
+  ids:
+  - steam:540840
+- name: AER Memories of Old
+  ids:
+  - steam:331870
+- name: Outlast 2
+  ids:
+  - steam:414700
+- name: Subterrain
+  ids:
+  - steam:340490
+- name: 'Laser League: World Arena'
+  ids:
+  - unresolved:source:isthereanydeal:5959:laser-league-world-arena

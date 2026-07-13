@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar War Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6495/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6495/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6495/source.json
+games:
+- name: 'Civil War: 1864'
+  ids:
+  - steam:699860
+- name: 'Tank Battle: Pacific'
+  ids:
+  - steam:665310
+- name: 'Tank Battle: East Front'
+  ids:
+  - steam:613120
+- name: 'Civil War: 1862'
+  ids:
+  - steam:532890
+- name: 'Civil War: 1861'
+  ids:
+  - steam:540230
+- name: 'Tank Battle: 1944'
+  ids:
+  - steam:396320
+- name: 'Civil War: Bull Run 1861'
+  ids:
+  - steam:374960
+- name: 'Civil War: Gettysburg'
+  ids:
+  - steam:665440
+- name: 'Civil War: 1865'
+  ids:
+  - steam:620630
+- name: 'Tank Battle: 1945'
+  ids:
+  - steam:540250
+- name: 'Tank Battle: Blitzkrieg'
+  ids:
+  - steam:540150
+- name: 'Tank Battle: North Africa'
+  ids:
+  - steam:465750
+- name: 'Civil War: 1863'
+  ids:
+  - steam:436270
+- name: 'Tank Battle: Normandy'
+  ids:
+  - steam:374940

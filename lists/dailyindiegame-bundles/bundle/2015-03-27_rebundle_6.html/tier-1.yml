@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1742/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1742/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1742/source.json
+games:
+- name: Soulbringer
+  ids:
+  - steam:283310
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:1742:chernobyl-commando
+- name: Commando Jack
+  ids:
+  - steam:299260
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+- name: Darkout
+  ids:
+  - steam:257050
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370

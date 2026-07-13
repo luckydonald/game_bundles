@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Warhammer: Vermintide Franchise Bundle — 2-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12184/source.json
+games:
+- name: 'Warhammer: End Times - Vermintide Collector''s Edition Upgrade'
+  ids:
+  - steam:373540
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540

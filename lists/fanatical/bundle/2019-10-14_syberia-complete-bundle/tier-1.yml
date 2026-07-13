@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Syberia Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8005/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8005/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8005/source.json
+games:
+- name: Syberia
+  ids:
+  - steam:46500
+- name: Syberia 3 - An Automaton with a plan
+  ids:
+  - steam:673500
+- name: Syberia 3 - Deluxe Upgrade
+  ids:
+  - steam:625350
+- name: Syberia 3
+  ids:
+  - steam:464340
+- name: Syberia II
+  ids:
+  - steam:46510

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #65 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6859/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6859/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6859/source.json
+games:
+- name: Cryptozookeeper
+  ids:
+  - steam:868910
+- name: OK/NORMAL
+  ids:
+  - steam:862580
+- name: Dungeon League
+  ids:
+  - steam:362310
+- name: WASDead
+  ids:
+  - unresolved:source:isthereanydeal:6859:wasdead
+- name: Linelight
+  ids:
+  - steam:469790
+- name: Systematic Immunity
+  ids:
+  - steam:395100
+- name: Master Pyrox Wizard Smackdown
+  ids:
+  - steam:861960
+- name: ASTRAL
+  ids:
+  - steam:703600

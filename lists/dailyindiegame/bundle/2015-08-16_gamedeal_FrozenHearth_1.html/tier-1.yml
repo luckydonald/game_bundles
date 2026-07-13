@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Frozen Hearth - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2336/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2336/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2336/source.json
+games:
+- name: Frozen Hearth
+  ids:
+  - unresolved:source:isthereanydeal:2336:frozen-hearth

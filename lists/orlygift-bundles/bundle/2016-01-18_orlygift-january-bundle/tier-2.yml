@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: January Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2944/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2944/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2944/source.json
+games:
+- name: Alter World
+  ids:
+  - steam:357280
+- name: Red Lake
+  ids:
+  - steam:357290
+- name: Lilly Looking Through
+  ids:
+  - steam:250030
+- name: Hidden Object Bundle 4 in 1
+  ids:
+  - steam:347610
+- name: The Archetype
+  ids:
+  - steam:391120
+- name: Nightmare on Azathoth
+  ids:
+  - steam:414470
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330

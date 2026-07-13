@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 225 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9045/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9045/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9045/source.json
+games:
+- name: Robot Chase
+  ids:
+  - unresolved:source:isthereanydeal:9045:robot-chase
+- name: Cube jumper
+  ids:
+  - steam:3021970
+- name: Laserium
+  ids:
+  - unresolved:source:isthereanydeal:9045:laserium
+- name: Debtor
+  ids:
+  - unresolved:source:isthereanydeal:9045:debtor
+- name: 150,000 B.C.
+  ids:
+  - unresolved:source:isthereanydeal:9045:150000-b-c
+- name: Truck Crash
+  ids:
+  - unresolved:source:isthereanydeal:9045:truck-crash
+- name: Juicy Memory Card
+  ids:
+  - unresolved:source:isthereanydeal:9045:juicy-memory-card
+- name: Fury Captain
+  ids:
+  - unresolved:source:isthereanydeal:9045:fury-captain
+- name: World Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:9045:world-puzzle

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Aug 2025) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15325/source.json
+games:
+- name: Warpips
+  ids:
+  - steam:1291010
+- name: My Time at Sandrock
+  ids:
+  - steam:1084600
+- name: Persona 5 Royal
+  ids:
+  - steam:1687950
+- name: Lil Gator Game
+  ids:
+  - steam:1586800
+- name: Wildmender
+  ids:
+  - steam:1599330
+- name: 'Banishers: Ghosts of New Eden'
+  ids:
+  - steam:1493640
+- name: Tiny Terry's Turbo Trip
+  ids:
+  - steam:2238040
+- name: Let's School
+  ids:
+  - steam:1937500

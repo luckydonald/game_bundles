@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4399/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4399/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4399/source.json
+games:
+- name: 'Left in the Dark: No One on Board'
+  ids:
+  - steam:284890
+- name: 'Grim Legends: The Forsaken Bride'
+  ids:
+  - steam:284850
+- name: 'Enigmatis 2: The Mists of Ravenwood'
+  ids:
+  - steam:284770
+- name: 'Enigmatis: Ghosts of Maple Creek'
+  ids:
+  - unresolved:source:isthereanydeal:4399:enigmatis-ghosts-of-maple-creek
+- name: 'Enigmatis 3: The Shadow of Karkhala'
+  ids:
+  - steam:495110
+- name: 'Grim Legends 3: The Dark City'
+  ids:
+  - steam:458470
+- name: 'The Secret Order 4: Beyond Time'
+  ids:
+  - steam:517360
+- name: 'Demon Hunter 2: New Chapter'
+  ids:
+  - steam:465720
+- name: 'Grim Legends 2: Song of the Dark Swan'
+  ids:
+  - steam:279800
+- name: 'Crime Secrets: Crimson Lily'
+  ids:
+  - steam:465170

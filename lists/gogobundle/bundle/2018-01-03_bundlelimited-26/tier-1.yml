@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Limited Bundle #26 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5779/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5779/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5779/source.json
+games:
+- name: The Dead Cloud Forest
+  ids:
+  - unresolved:source:isthereanydeal:5779:the-dead-cloud-forest
+- name: Hellphobia
+  ids:
+  - unresolved:source:isthereanydeal:5779:hellphobia
+- name: PooSky - Halloween
+  ids:
+  - unresolved:source:isthereanydeal:5779:poosky-halloween
+- name: Megatronic Void
+  ids:
+  - steam:706690
+- name: Relax Walk VR
+  ids:
+  - steam:645340
+- name: Waste Cleaner
+  ids:
+  - steam:705260
+- name: Crappy day enhanced edition
+  ids:
+  - unresolved:source:isthereanydeal:5779:crappy-day-enhanced-edition
+- name: Er-Spectro
+  ids:
+  - steam:768310
+- name: PooSky - Artbook "Great statements by Capitain Pooper"
+  ids:
+  - unresolved:source:isthereanydeal:5779:poosky-artbook-great-statements-by-capitain-pooper
+- name: The Theodore Adventures
+  ids:
+  - steam:656940
+- name: PooSky
+  ids:
+  - steam:715840

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 357 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9617/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9617/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9617/source.json
+games:
+- name: 'Shtriga: Summer Camp'
+  ids:
+  - steam:560740
+- name: Running Man 3D
+  ids:
+  - steam:911230
+- name: Ultimate Solid
+  ids:
+  - steam:534200
+- name: Your Bunny Wrote
+  ids:
+  - unresolved:source:isthereanydeal:9617:your-bunny-wrote
+- name: Oil Baron
+  ids:
+  - steam:936930
+- name: Zombow
+  ids:
+  - steam:823650
+- name: SnL
+  ids:
+  - unresolved:source:isthereanydeal:9617:snl
+- name: 'Meridian: Age of Invention'
+  ids:
+  - steam:397770
+- name: BoatMan
+  ids:
+  - unresolved:source:isthereanydeal:9617:boatman

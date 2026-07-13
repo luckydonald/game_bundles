@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 49 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4079/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4079/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4079/source.json
+games:
+- name: Spin Rush
+  ids:
+  - steam:528660
+- name: Citalis
+  ids:
+  - steam:539440
+- name: Crab Dub
+  ids:
+  - steam:539450
+- name: Drones, The Human Condition
+  ids:
+  - steam:556130
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+- name: The Space Garden
+  ids:
+  - steam:536320
+- name: Groggers!
+  ids:
+  - steam:536920
+- name: Rush Rumble
+  ids:
+  - unresolved:source:isthereanydeal:4079:rush-rumble
+- name: Snatcrisee
+  ids:
+  - unresolved:source:isthereanydeal:4079:snatcrisee
+- name: Dying Engine
+  ids:
+  - unresolved:source:isthereanydeal:4079:dying-engine

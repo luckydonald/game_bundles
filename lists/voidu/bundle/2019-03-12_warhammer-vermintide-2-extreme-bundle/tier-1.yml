@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Warhammer Vermintide 2 - Extreme Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7160/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7160/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7160/source.json
+games:
+- name: 'Warhammer: Vermintide 2 - Shadows Over Bögenhafen'
+  ids:
+  - steam:828790
+- name: 'Warhammer: Vermintide 2 - Back to Ubersreik'
+  ids:
+  - steam:975400

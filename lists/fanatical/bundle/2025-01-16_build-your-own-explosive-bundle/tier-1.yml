@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Explosive Bundle — Select 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14837/source.json
+games:
+- name: 'WRATH: Aeon of Ruin'
+  ids:
+  - steam:1000410
+- name: QUAKE
+  ids:
+  - steam:2310
+- name: Prey
+  ids:
+  - steam:480490
+- name: 'Wolfenstein®: The New Order'
+  ids:
+  - steam:201810
+- name: 'Deathbloom: Chapter 1'
+  ids:
+  - steam:1058560
+- name: 'Deathbloom: Chapter 2'
+  ids:
+  - steam:1185470
+- name: 'BPM: BULLETS PER MINUTE'
+  ids:
+  - steam:1286350
+- name: Viscerafest
+  ids:
+  - steam:1406780
+- name: Diluvian Ultra
+  ids:
+  - steam:1306970
+- name: HYPERVIOLENT
+  ids:
+  - steam:1409200
+- name: GRAVEN
+  ids:
+  - steam:1371690
+- name: Jawbreaker
+  ids:
+  - steam:2137460
+- name: SPRAWL
+  ids:
+  - steam:1549690
+- name: GROSS
+  ids:
+  - steam:1647420
+- name: Anomalous
+  ids:
+  - steam:1435970
+- name: DIMENSIONAL SLAUGHTER
+  ids:
+  - steam:2086060
+- name: Chop Goblins
+  ids:
+  - steam:1935660
+- name: The Pony Factory
+  ids:
+  - steam:2536530
+- name: Hands of Necromancy II
+  ids:
+  - steam:2706450
+- name: The Hong Kong Massacre & Splatter - Zombiecalypse Now Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14837:the-hong-kong-massacre-and-splatter-zombiecalypse-now-double-pack
+- name: Genesis Survivors
+  ids:
+  - steam:3073350

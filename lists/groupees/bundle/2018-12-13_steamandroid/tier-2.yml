@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Steamy Android Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6760/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6760/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6760/source.json
+games:
+- name: Stickman Fighting
+  ids:
+  - unresolved:source:isthereanydeal:6760:stickman-fighting
+- name: Cross And Crush
+  ids:
+  - unresolved:source:isthereanydeal:6760:cross-and-crush
+- name: Achievement Machine
+  ids:
+  - unresolved:source:isthereanydeal:6760:achievement-machine
+- name: A Normal Lost Phone
+  ids:
+  - steam:523210
+- name: Mahjong Classic
+  ids:
+  - unresolved:source:isthereanydeal:6760:mahjong-classic
+- name: Dead Age
+  ids:
+  - steam:363930
+- name: Pocket Kingdom
+  ids:
+  - steam:462620
+- name: Dead In Bermuda
+  ids:
+  - steam:384310

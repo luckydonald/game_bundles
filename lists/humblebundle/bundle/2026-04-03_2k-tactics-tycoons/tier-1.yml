@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 2k Tactics & Tycoons Bundle — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16018/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16018/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16018/source.json
+games:
+- name: Shattered Union
+  ids:
+  - steam:3960
+- name: Homeworld Remastered Collection
+  ids:
+  - steam:244160
+- name: 'Army Men: Toys In Space'
+  ids:
+  - steam:549180
+- name: Army Men II
+  ids:
+  - steam:549170
+- name: 'CivCity: Rome'
+  ids:
+  - steam:3980
+- name: Army Men RTS
+  ids:
+  - steam:694500
+- name: 'Homeworld: Deserts of Kharak Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16018:homeworld-deserts-of-kharak-deluxe-edition
+- name: Railroad Tycoon II Platinum
+  ids:
+  - steam:7620
+- name: Freedom Force
+  ids:
+  - steam:8880
+- name: Railroad Tycoon 3
+  ids:
+  - steam:7610
+- name: Freedom Force vs. the 3rd Reich
+  ids:
+  - steam:8890
+- name: Army Men
+  ids:
+  - steam:549160

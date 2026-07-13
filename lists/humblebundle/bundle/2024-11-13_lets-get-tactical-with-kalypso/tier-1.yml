@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Let's Get Tactical - Kalypso Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14615/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14615/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14615/source.json
+games:
+- name: Sudden Strike 2 Gold
+  ids:
+  - steam:612520
+- name: Sudden Strike Gold
+  ids:
+  - steam:612300
+- name: Sudden Strike 3
+  ids:
+  - steam:612540

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Rawfury: RAWcember to Remember Bundle (2025) — 11-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15649/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15649/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15649/source.json
+games:
+- name: Pizza Possum
+  ids:
+  - steam:1951230
+- name: 'Friends vs Friends: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15649:friends-vs-friends-deluxe-edition
+- name: Regions Of Ruin
+  ids:
+  - steam:680360
+- name: Sable
+  ids:
+  - steam:757310
+- name: Townscaper
+  ids:
+  - steam:1291340
+- name: Atomicrops Deluxe Edition + DLC
+  ids:
+  - unresolved:source:isthereanydeal:15649:atomicrops-deluxe-edition-and-dlc
+- name: Tails Noir Preludes
+  ids:
+  - steam:2020030
+- name: Tails Noir
+  ids:
+  - steam:865610
+- name: 'Bad North: Jotunn Edition'
+  ids:
+  - steam:688420
+- name: Call of the Sea
+  ids:
+  - steam:1042490
+- name: 'Kathy Rain: Director''s Cut'
+  ids:
+  - steam:1395030

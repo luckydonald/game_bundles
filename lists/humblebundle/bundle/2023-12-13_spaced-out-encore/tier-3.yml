@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spaced Out Bundle (Holiday Encore) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13701/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13701/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13701/source.json
+games:
+- name: Breathedge
+  ids:
+  - steam:738520
+- name: Journey To The Savage Planet
+  ids:
+  - steam:973810
+- name: Trover Saves the Universe
+  ids:
+  - steam:1051200
+- name: The Outer Worlds
+  ids:
+  - unresolved:source:isthereanydeal:13701:the-outer-worlds
+- name: The Entropy Centre
+  ids:
+  - steam:1730590
+- name: The Outer Worlds Expansion Pass
+  ids:
+  - unresolved:source:isthereanydeal:13701:the-outer-worlds-expansion-pass
+- name: High On Life
+  ids:
+  - steam:1583230

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monday Motivation Bundle #50 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6207/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6207/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6207/source.json
+games:
+- name: Draw It!
+  ids:
+  - steam:816190
+- name: Dreamlike Worlds
+  ids:
+  - steam:602200
+- name: SLICE
+  ids:
+  - steam:840310

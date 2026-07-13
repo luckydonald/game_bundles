@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Barbarian Taco Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6223/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6223/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6223/source.json
+games:
+- name: Gravity Light
+  ids:
+  - steam:706240
+- name: Zombie Quarantine
+  ids:
+  - steam:360400
+- name: Space Elite Force
+  ids:
+  - steam:855850
+- name: Crafting Tycoon
+  ids:
+  - steam:757440
+- name: AKUATICA
+  ids:
+  - steam:401330
+- name: Taco Gun
+  ids:
+  - steam:842990
+- name: 'Sentience: The Android''s Tale'
+  ids:
+  - steam:635850
+- name: 'The Deed: Dynasty'
+  ids:
+  - steam:460960
+- name: God Vs Zombies
+  ids:
+  - unresolved:source:isthereanydeal:6223:god-vs-zombies
+- name: 'Midnight at the Red Light : An Investigation'
+  ids:
+  - unresolved:source:isthereanydeal:6223:midnight-at-the-red-light-an-investigation
+- name: Jack the Barbarian
+  ids:
+  - steam:852160
+- name: Solenars Edge Heroes
+  ids:
+  - steam:847450

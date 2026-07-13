@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Gravity Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5061/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5061/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5061/source.json
+games:
+- name: Devade
+  ids:
+  - steam:614900
+- name: The Last Photon
+  ids:
+  - unresolved:source:isthereanydeal:5061:the-last-photon
+- name: LaserCat
+  ids:
+  - steam:496120
+- name: Narborion Saga
+  ids:
+  - steam:581340
+- name: The Morgue Fissure Between Worlds
+  ids:
+  - steam:547150
+- name: PuppyStory
+  ids:
+  - unresolved:source:isthereanydeal:5061:puppystory
+- name: SmashZombies
+  ids:
+  - unresolved:source:isthereanydeal:5061:smashzombies
+- name: 'Ant-gravity: Tiny''s Adventure'
+  ids:
+  - steam:522890
+- name: 28 Waves Later
+  ids:
+  - unresolved:source:isthereanydeal:5061:28-waves-later
+- name: Armored Gear
+  ids:
+  - unresolved:source:isthereanydeal:5061:armored-gear
+- name: Jump Like A Pirate
+  ids:
+  - unresolved:source:isthereanydeal:5061:jump-like-a-pirate
+- name: 'Barclay: The Marrowdale Murder'
+  ids:
+  - unresolved:source:isthereanydeal:5061:barclay-the-marrowdale-murder

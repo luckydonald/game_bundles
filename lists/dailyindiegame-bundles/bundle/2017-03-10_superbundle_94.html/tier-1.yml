@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 94 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4887/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4887/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4887/source.json
+games:
+- name: "Brigade E5 \x96 New Jagged Union"
+  ids:
+  - steam:296210
+- name: 'Death Track: Resurrection'
+  ids:
+  - steam:7840
+- name: 'IL-2 Sturmovik™: 1946'
+  ids:
+  - steam:15320
+- name: Hexus
+  ids:
+  - steam:323250
+- name: Ascension to the Throne
+  ids:
+  - steam:289200
+- name: A.I.M Racing
+  ids:
+  - unresolved:source:isthereanydeal:4887:a-i-m-racing

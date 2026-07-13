@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Armada Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5537/source.json
+games:
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+- name: The Theodore Adventures
+  ids:
+  - steam:656940
+- name: L.S.S
+  ids:
+  - steam:701760
+- name: The Seven Years War (1756-1763)
+  ids:
+  - steam:400470
+- name: Colortone
+  ids:
+  - steam:375320
+- name: Middle Ages Hero
+  ids:
+  - unresolved:source:isthereanydeal:5537:middle-ages-hero
+- name: Edge of Twilight - Return to Glory
+  ids:
+  - steam:489070
+- name: Steel punk Ball
+  ids:
+  - steam:679510
+- name: Defender of Earth vs The Alien Armada
+  ids:
+  - steam:677680
+- name: Dead Army - Radio Frequency
+  ids:
+  - unresolved:source:isthereanydeal:5537:dead-army-radio-frequency
+- name: 'Brain Storm: Tower Bombarde'
+  ids:
+  - steam:669750

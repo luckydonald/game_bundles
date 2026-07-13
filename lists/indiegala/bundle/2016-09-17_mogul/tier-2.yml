@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mogul Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4085/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4085/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4085/source.json
+games:
+- name: Noir Syndrome
+  ids:
+  - steam:299780
+- name: Erusal
+  ids:
+  - steam:509230
+- name: Cubicle Quest
+  ids:
+  - steam:349500
+- name: Lovely Weather We're Having
+  ids:
+  - unresolved:source:isthereanydeal:4085:lovely-weather-we-re-having
+- name: Football Mogul 15
+  ids:
+  - steam:514010
+- name: 'BADLAND: Game of the Year Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4085:badland-game-of-the-year-deluxe-edition
+- name: RX squad
+  ids:
+  - steam:494120
+- name: Football Mogul 2014
+  ids:
+  - steam:371850
+- name: Super GunWorld 2
+  ids:
+  - steam:514220
+- name: Baseball Mogul Diamond
+  ids:
+  - steam:507080
+- name: Baseball Mogul 2015
+  ids:
+  - steam:388270

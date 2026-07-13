@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 686 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10841/source.json
+games:
+- name: The Lost Valley
+  ids:
+  - steam:360890
+- name: Dungeon of Elements
+  ids:
+  - steam:302310
+- name: Descent - Silence of Mind
+  ids:
+  - steam:652600
+- name: Vogue, The Explorer
+  ids:
+  - steam:875550
+- name: FlyManMissile
+  ids:
+  - steam:1200290
+- name: Corridors of their memories
+  ids:
+  - steam:1371040
+- name: Mr. Parkour 3
+  ids:
+  - unresolved:source:isthereanydeal:10841:mr-parkour-3
+- name: Super tanks RPG
+  ids:
+  - steam:1477880
+- name: MINI Wars
+  ids:
+  - unresolved:source:isthereanydeal:10841:mini-wars

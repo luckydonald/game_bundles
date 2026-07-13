@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 610 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10542/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10542/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10542/source.json
+games:
+- name: How to create a Multiplayer First Person Shooter (FPS)
+  ids:
+  - unresolved:source:isthereanydeal:10542:how-to-create-a-multiplayer-first-person-shooter-fps
+- name: Fishing Maniacs (TD)
+  ids:
+  - unresolved:source:isthereanydeal:10542:fishing-maniacs-td
+- name: Mercury Race
+  ids:
+  - steam:817530
+- name: Critical Damage
+  ids:
+  - steam:1482610
+- name: Cherry Island
+  ids:
+  - unresolved:source:isthereanydeal:10542:cherry-island
+- name: Ninja Turdle
+  ids:
+  - steam:1082460
+- name: Robotic Learn
+  ids:
+  - steam:1350480
+- name: Battle Royale Pixel Squad
+  ids:
+  - steam:931250
+- name: Ghost in the pool
+  ids:
+  - steam:919330

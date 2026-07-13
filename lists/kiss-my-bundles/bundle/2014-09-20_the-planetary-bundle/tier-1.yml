@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Planetary Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1194/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1194/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1194/source.json
+games:
+- name: Lifeless Planet Premier Edition
+  ids:
+  - steam:261530
+- name: Project Root
+  ids:
+  - steam:284970
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:1194:canyon-capers
+- name: Pester
+  ids:
+  - steam:354920
+- name: Pressured
+  ids:
+  - steam:292620
+- name: Lunar Panda Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:1194:lunar-panda-deluxe
+- name: Chip
+  ids:
+  - steam:275470
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410

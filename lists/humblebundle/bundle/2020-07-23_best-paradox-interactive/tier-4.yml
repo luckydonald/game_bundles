@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Best of Paradox Interactive Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9004/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9004/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9004/source.json
+games:
+- name: 'Warlock: Master of the Arcane'
+  ids:
+  - steam:203630
+- name: Europa Universalis IV
+  ids:
+  - steam:236850
+- name: Age of Wonders III
+  ids:
+  - steam:226840
+- name: 'Necropolis: Brutal Edition'
+  ids:
+  - steam:384490
+- name: Stellaris
+  ids:
+  - steam:281990
+- name: Victoria Collection
+  ids:
+  - unresolved:source:isthereanydeal:9004:victoria-collection
+- name: Tyranny
+  ids:
+  - steam:362960
+- name: BATTLETECH - Digital Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:9004:battletech-digital-deluxe-edition
+- name: 'Imperator: Rome'
+  ids:
+  - steam:859580

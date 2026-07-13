@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own FPS Bundle (Bundle Bash Edition) — Select 3 for 4.99, 5 for 7.99,
+  7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14252/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14252/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14252/source.json
+games:
+- name: QUAKE
+  ids:
+  - steam:2310
+- name: 'Rising Storm 2: Vietnam'
+  ids:
+  - steam:418460
+- name: Dusk
+  ids:
+  - steam:519860
+- name: INDUSTRIA
+  ids:
+  - steam:1172650
+- name: 'Deathbloom: Chapter 1'
+  ids:
+  - steam:1058560
+- name: Rage
+  ids:
+  - steam:9200
+- name: Killing Floor 2
+  ids:
+  - steam:232090
+- name: 'Deathbloom: Chapter 2'
+  ids:
+  - steam:1185470
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+- name: 'RICO: London'
+  ids:
+  - steam:1265720
+- name: DIMENSIONAL SLAUGHTER
+  ids:
+  - steam:2086060
+- name: Bloodhound
+  ids:
+  - steam:1926270

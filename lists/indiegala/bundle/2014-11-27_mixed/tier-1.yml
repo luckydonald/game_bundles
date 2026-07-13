@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Mixed Up Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1426/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1426/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1426/source.json
+games:
+- name: Puzzle Kingdoms
+  ids:
+  - steam:23700
+- name: The Flying Dutchman
+  ids:
+  - steam:321600
+- name: Shannon Tweed's Attack of the Groupies
+  ids:
+  - steam:289050

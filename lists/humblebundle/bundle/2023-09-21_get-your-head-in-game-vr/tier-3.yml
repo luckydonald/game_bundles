@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Get Your Head in the Game VR Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13491/source.json
+games:
+- name: 'Rick and Morty: Virtual Rick-ality'
+  ids:
+  - steam:469610
+- name: Zero Caliber VR
+  ids:
+  - steam:877200
+- name: STRIDE
+  ids:
+  - steam:1292040
+- name: After the Fall - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13491:after-the-fall-deluxe-edition
+- name: 'Propagation: Paradise Hotel'
+  ids:
+  - steam:1824960
+- name: 'I Expect You To Die 2: The Spy and the Liar'
+  ids:
+  - steam:1499120
+- name: Demeo
+  ids:
+  - steam:1484280
+- name: Grimlord
+  ids:
+  - steam:1910860

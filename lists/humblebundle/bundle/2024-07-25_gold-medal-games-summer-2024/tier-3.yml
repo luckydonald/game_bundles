@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Gold Medal Games Summer 2024 Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14264/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14264/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14264/source.json
+games:
+- name: Descenders
+  ids:
+  - steam:681280
+- name: 'Session: Skate Sim'
+  ids:
+  - steam:861650
+- name: PGA Tour 2K23
+  ids:
+  - unresolved:source:isthereanydeal:14264:pga-tour-2k23
+- name: NBA 2K24 Kobe Bryant Edition
+  ids:
+  - unresolved:source:isthereanydeal:14264:nba-2k24-kobe-bryant-edition
+- name: Skater XL - The Ultimate Skateboarding Game
+  ids:
+  - steam:962730
+- name: Matchpoint - Tennis Championships
+  ids:
+  - steam:1345760
+- name: Barton Lynch Pro Surfing
+  ids:
+  - steam:1776170

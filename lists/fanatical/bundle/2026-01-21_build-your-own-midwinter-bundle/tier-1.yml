@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own  Midwinter Bundle — Select 1 for 1.00 (1.00 each), 5 for 2.99
+  (0.60 each), 10 for 4.99 (0.50 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15798/source.json
+games:
+- name: Stars in Shadow
+  ids:
+  - steam:464880
+- name: Conarium
+  ids:
+  - steam:313780
+- name: Railroad Corporation
+  ids:
+  - steam:797400
+- name: Technotopia
+  ids:
+  - steam:2825110
+- name: Oriental Empires
+  ids:
+  - steam:357310
+- name: Vostok 2061
+  ids:
+  - steam:1463830
+- name: The Adventure of NAYU
+  ids:
+  - steam:1476340
+- name: Guns N' Runs
+  ids:
+  - steam:1545700
+- name: Necrosmith 2
+  ids:
+  - steam:2277320
+- name: Oxytone
+  ids:
+  - steam:2594020
+- name: Margoq's Lair
+  ids:
+  - steam:2516550
+- name: The Gunk
+  ids:
+  - steam:1087760
+- name: 'GRIP: Combat Racing and GRIP: Combat Racing - Artifex Car Pack Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15798:grip-combat-racing-and-grip-combat-racing-artifex-car-pack-double-pack
+- name: Necroking
+  ids:
+  - steam:2852980
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+- name: Loop//Error
+  ids:
+  - steam:3489460
+- name: Boomer Shooters Triple Pack 3
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-3
+- name: Boomer Shooters Triple Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-1
+- name: Boomer Shooters Triple Pack 2
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-2

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Rhythm is Gonna Get You VR Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14433/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14433/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14433/source.json
+games:
+- name: Thumper
+  ids:
+  - steam:356400
+- name: Spin Rhythm XD
+  ids:
+  - steam:1058830

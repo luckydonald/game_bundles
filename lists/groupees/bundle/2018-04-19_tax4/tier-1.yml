@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Tax Year Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6067/source.json
+games:
+- name: Princezz Dress Up
+  ids:
+  - unresolved:source:isthereanydeal:6067:princezz-dress-up
+- name: Project First Contact
+  ids:
+  - unresolved:source:isthereanydeal:6067:project-first-contact
+- name: aMaze of Silence
+  ids:
+  - unresolved:source:isthereanydeal:6067:amaze-of-silence
+- name: 3D Hardcore Cube 2
+  ids:
+  - steam:754510
+- name: Super Robolom
+  ids:
+  - steam:783330
+- name: Space Hero Line
+  ids:
+  - unresolved:source:isthereanydeal:6067:space-hero-line
+- name: 'The Last Hope: Trump vs Mafia'
+  ids:
+  - steam:581030

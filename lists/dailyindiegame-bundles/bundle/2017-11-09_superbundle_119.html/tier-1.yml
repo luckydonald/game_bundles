@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 119 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5610/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5610/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5610/source.json
+games:
+- name: NanoScape
+  ids:
+  - steam:698320
+- name: Mr. Rabbit's Alphabet Forest Adventure
+  ids:
+  - steam:652390
+- name: 'Story of the Survivor : Prisoner'
+  ids:
+  - steam:676210
+- name: Tanker
+  ids:
+  - unresolved:source:isthereanydeal:5610:tanker
+- name: Mr Rabbit's Jigsaw Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:5610:mr-rabbits-jigsaw-puzzle
+- name: 位面穿越者-三国传(A Bit Crosser-Three Kingdoms)
+  ids:
+  - steam:658610

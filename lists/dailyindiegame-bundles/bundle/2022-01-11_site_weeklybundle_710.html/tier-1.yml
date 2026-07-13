@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 710 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10971/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10971/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10971/source.json
+games:
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+- name: Debtor
+  ids:
+  - unresolved:source:isthereanydeal:10971:debtor
+- name: Super Robolom
+  ids:
+  - steam:783330
+- name: Last Escape
+  ids:
+  - steam:1398570
+- name: Furgal's Jetpack
+  ids:
+  - steam:1398270
+- name: Planet Station
+  ids:
+  - steam:1417500
+- name: Skill at Time
+  ids:
+  - unresolved:source:isthereanydeal:10971:skill-at-time
+- name: Jetpack astronaut
+  ids:
+  - steam:1554140
+- name: Planets Battle
+  ids:
+  - steam:1607850

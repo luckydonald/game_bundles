@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 558 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10348/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10348/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10348/source.json
+games:
+- name: Take On Mars
+  ids:
+  - steam:244030
+- name: Sorcery! Part 4
+  ids:
+  - steam:504800
+- name: Yoku's Island Express
+  ids:
+  - steam:334940
+- name: 'Warhammer 40,000: Sanctus Reach'
+  ids:
+  - unresolved:source:isthereanydeal:10348:warhammer-40000-sanctus-reach
+- name: Retimed
+  ids:
+  - steam:760810
+- name: Colt Canyon
+  ids:
+  - steam:940710
+- name: MOLEK-SYNTEZ
+  ids:
+  - steam:1168880
+- name: 'Vampire: The Masquerade - Shadows of New York'
+  ids:
+  - steam:1279630
+- name: 'Werewolf: The Apocalypse - Heart of the Forest'
+  ids:
+  - steam:1342620

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 507 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10172/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10172/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10172/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+- name: The King's Bird
+  ids:
+  - steam:812550
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:10172:the-adventures-of-chris
+- name: Joggernauts
+  ids:
+  - steam:747620
+- name: Double Cross
+  ids:
+  - steam:838010
+- name: Bite the Bullet
+  ids:
+  - steam:1075550
+- name: REZPLZ
+  ids:
+  - steam:911680
+- name: Trident's Wake
+  ids:
+  - steam:704880
+- name: Cyber Hook
+  ids:
+  - steam:1130410

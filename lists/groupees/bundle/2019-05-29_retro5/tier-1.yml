@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Retro Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7440/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7440/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7440/source.json
+games:
+- name: Serenade of the Sirens
+  ids:
+  - steam:901000
+- name: 'Sea Battle: Through the Ages'
+  ids:
+  - unresolved:source:isthereanydeal:7440:sea-battle-through-the-ages
+- name: 'Princess Remedy 2: In A Heap of Trouble'
+  ids:
+  - steam:522040
+- name: 'Bitcoin Collector: Spinners Attack'
+  ids:
+  - steam:722020
+- name: 'The Pepper Prince: Episode 1 - Red Hot Chili Wedding'
+  ids:
+  - steam:975290
+- name: GUNMAN
+  ids:
+  - steam:4307790
+- name: Mission XAM
+  ids:
+  - steam:1060690

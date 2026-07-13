@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bandai Namco Bundle 3 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7259/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7259/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7259/source.json
+games:
+- name: 'Enslaved: Odyssey to the West Premium Edition'
+  ids:
+  - steam:245280
+- name: PAC-MAN Championship Edition DX+
+  ids:
+  - steam:236450
+- name: Impact Winter
+  ids:
+  - unresolved:source:isthereanydeal:7259:impact-winter

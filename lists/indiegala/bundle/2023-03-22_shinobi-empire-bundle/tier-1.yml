@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Shinobi Empire Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13065/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13065/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13065/source.json
+games:
+- name: Influent
+  ids:
+  - unresolved:source:isthereanydeal:13065:influent
+- name: 'Pixel Shinobi: Nine demons of Mamoru'
+  ids:
+  - steam:622870
+- name: 'Shogun''s Empire: Hex Commander'
+  ids:
+  - steam:1093760
+- name: Zic
+  ids:
+  - steam:1051290
+- name: Inexistence Rebirth
+  ids:
+  - steam:1297390
+- name: Unshaded
+  ids:
+  - steam:1686060

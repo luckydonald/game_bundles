@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (May 2022) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11455/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11455/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11455/source.json
+games:
+- name: If Found...
+  ids:
+  - steam:1041920
+- name: Planet Zoo
+  ids:
+  - steam:703080
+- name: 'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated'
+  ids:
+  - steam:969990
+- name: Genesis Noir
+  ids:
+  - steam:735290
+- name: Embr
+  ids:
+  - steam:1062830
+- name: Spellcaster University
+  ids:
+  - steam:895620
+- name: Surviving the Aftermath
+  ids:
+  - steam:684450
+- name: Command & Conquer™ Remastered Collection
+  ids:
+  - steam:1213210

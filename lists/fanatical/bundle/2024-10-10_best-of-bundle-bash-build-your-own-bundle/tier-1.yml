@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Best of Bundle Bash - Build Your Own Bundle — Select 3 for 4.99, 5 for 7.99,
+  7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14521/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14521/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14521/source.json
+games:
+- name: 'Deathbloom: Chapter 1'
+  ids:
+  - steam:1058560
+- name: King's Bounty II
+  ids:
+  - steam:1135300
+- name: The Quest
+  ids:
+  - steam:428880
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14521:moonlighter-complete-edition
+- name: 'Deathbloom: Chapter 2'
+  ids:
+  - steam:1185470
+- name: Animal Shelter
+  ids:
+  - steam:1239320
+- name: 'A Game of Thrones: The Board Game - Digital Edition'
+  ids:
+  - steam:1075190
+- name: Luck be a Landlord
+  ids:
+  - steam:1404850
+- name: 'Warhammer: Chaosbane - Slayer Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14521:warhammer-chaosbane-slayer-edition
+- name: THE GAME OF LIFE 2
+  ids:
+  - steam:1455630
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14521:for-the-king-deluxe-edition
+- name: Untamed Tactics
+  ids:
+  - steam:1538900
+- name: Paleon
+  ids:
+  - steam:1554220
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+- name: 'Gibbon: Beyond the Trees'
+  ids:
+  - steam:1837330
+- name: DIMENSIONAL SLAUGHTER
+  ids:
+  - steam:2086060
+- name: URBO
+  ids:
+  - steam:2141770
+- name: 'Boti: Byteland Overclocked'
+  ids:
+  - steam:2161050
+- name: Clue/Cluedo
+  ids:
+  - steam:2506480
+- name: 'Clue/Cluedo: Classic Edition'
+  ids:
+  - steam:794800

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Headup Games: Brilliant Bargains — 10 Items'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15612/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15612/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15612/source.json
+games:
+- name: 'The Inner World: The Last Wind Monk'
+  ids:
+  - steam:613470
+- name: INDUSTRIA
+  ids:
+  - steam:1172650
+- name: Bridge Constructor Portal
+  ids:
+  - steam:684410
+- name: Tinkertown
+  ids:
+  - steam:1276660
+- name: Dr. Fetus' Mean Meat Machine
+  ids:
+  - steam:2228030
+- name: Ben and Ed - Blood Party
+  ids:
+  - steam:500260
+- name: 'The Textorcist: The Story of Ray Bibbia'
+  ids:
+  - steam:940680
+- name: Hell Pie
+  ids:
+  - steam:889910
+- name: Pumpkin Jack
+  ids:
+  - steam:1186640
+- name: Soulslinger - Envoy of Death
+  ids:
+  - steam:2429240

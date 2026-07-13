@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: May Multiplayer Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13172/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13172/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13172/source.json
+games:
+- name: Northgard
+  ids:
+  - steam:466560
+- name: Generation Zero®
+  ids:
+  - steam:704270
+- name: Midnight Ghost Hunt
+  ids:
+  - steam:915810
+- name: Gloria Victis
+  ids:
+  - unresolved:source:isthereanydeal:13172:gloria-victis
+- name: Borderlands 3 Super Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13172:borderlands-3-super-deluxe-edition
+- name: 'PULSAR: Lost Colony'
+  ids:
+  - steam:252870
+- name: 'Destiny 2: Beyond Light'
+  ids:
+  - steam:1314563

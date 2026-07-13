@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Postal Party Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5335/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5335/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5335/source.json
+games:
+- name: Samurai Wars
+  ids:
+  - unresolved:source:isthereanydeal:5335:samurai-wars
+- name: Breezeblox
+  ids:
+  - steam:370080
+- name: Stardust Vanguards
+  ids:
+  - steam:341530
+- name: Get CARNAGE!!!
+  ids:
+  - unresolved:source:isthereanydeal:5335:get-carnage
+- name: 'POSTAL 2: Paradise Lost'
+  ids:
+  - steam:360960
+- name: POSTAL 2
+  ids:
+  - steam:223470
+- name: Castle of no Escape
+  ids:
+  - steam:635060
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Zzzz-Zzzz-Zzzz
+  ids:
+  - steam:507520
+- name: Deadly Metal
+  ids:
+  - unresolved:source:isthereanydeal:5335:deadly-metal
+- name: Pixel Sketch
+  ids:
+  - steam:648120

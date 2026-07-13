@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Distraction Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7854/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7854/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7854/source.json
+games:
+- name: 'BADLAND: Game of the Year Edition'
+  ids:
+  - steam:269670
+- name: Rush Bros
+  ids:
+  - steam:234490
+- name: Frank & the TimeTwister Machine
+  ids:
+  - steam:1062470
+- name: Kate's Test
+  ids:
+  - steam:790260
+- name: Linelight
+  ids:
+  - steam:469790
+- name: Franchise Wars
+  ids:
+  - steam:1058590
+- name: Master Pyrox Wizard Smackdown
+  ids:
+  - steam:861960
+- name: Hook
+  ids:
+  - steam:367580

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Uplifting Adventures: A Wholesome Games Bundle — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13663/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13663/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13663/source.json
+games:
+- name: Bear and Breakfast
+  ids:
+  - steam:1136370
+- name: Venba
+  ids:
+  - steam:1491670
+- name: Tinykin
+  ids:
+  - steam:1599020
+- name: Mail Time
+  ids:
+  - steam:1607240
+- name: Smushi Come Home
+  ids:
+  - steam:1740300
+- name: Wylde Flowers
+  ids:
+  - steam:1896700
+- name: 'Passpartout 2: The Lost Artist'
+  ids:
+  - steam:1571100

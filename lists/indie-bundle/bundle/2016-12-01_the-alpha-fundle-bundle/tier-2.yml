@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Alpha Fundle Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4428/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4428/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4428/source.json
+games:
+- name: Super Tower Rush
+  ids:
+  - unresolved:source:isthereanydeal:4428:super-tower-rush
+- name: Gravi
+  ids:
+  - steam:247310
+- name: Monsters!
+  ids:
+  - steam:336160
+- name: Samphi
+  ids:
+  - steam:341270
+- name: Twisty's Asylum Escapades
+  ids:
+  - steam:506760

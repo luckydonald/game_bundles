@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 121 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5670/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5670/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5670/source.json
+games:
+- name: Candy Machine
+  ids:
+  - steam:581980
+- name: Inferno Puzzle
+  ids:
+  - steam:654980
+- name: NeverEnd
+  ids:
+  - steam:575840
+- name: SPACE CHAOS
+  ids:
+  - steam:2819410
+- name: Steel punk Ball
+  ids:
+  - steam:679510
+- name: False Shelter
+  ids:
+  - steam:621150

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 12 Days of Indie Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5709/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5709/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5709/source.json
+games:
+- name: Molemen Must Die!
+  ids:
+  - steam:602120
+- name: Over 9000 Zombies!
+  ids:
+  - steam:273500
+- name: Zombo Buster Rising
+  ids:
+  - steam:518730
+- name: Miner Meltdown
+  ids:
+  - steam:426190
+- name: Zup!
+  ids:
+  - steam:533300
+- name: 'The Deed: Dynasty'
+  ids:
+  - steam:460960
+- name: Zup! 2
+  ids:
+  - steam:562220
+- name: Aritana and the Harpy's Feather
+  ids:
+  - steam:314360
+- name: ClickRaid
+  ids:
+  - steam:658160
+- name: Star Vikings Forever
+  ids:
+  - steam:488960
+- name: Ara Fell
+  ids:
+  - unresolved:source:isthereanydeal:5709:ara-fell
+- name: POLYCRUSHER
+  ids:
+  - unresolved:source:isthereanydeal:5709:polycrusher

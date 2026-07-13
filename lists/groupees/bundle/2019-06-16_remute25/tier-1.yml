@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute&#39;s Mega Drive Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7531/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7531/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7531/source.json
+games:
+- name: Coffee Crisis
+  ids:
+  - steam:596380
+- name: Coffee Crisis - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:7531:coffee-crisis-soundtrack

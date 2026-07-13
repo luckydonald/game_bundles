@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Feb Five Pack 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8385/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8385/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8385/source.json
+games:
+- name: War Tech Fighters
+  ids:
+  - steam:630030
+- name: Killing Floor
+  ids:
+  - steam:1250
+- name: 'Fahrenheit: Indigo Prophecy Remastered'
+  ids:
+  - steam:312840
+- name: Toybox Turbos
+  ids:
+  - unresolved:source:isthereanydeal:8385:toybox-turbos
+- name: Evil Genius
+  ids:
+  - steam:3720

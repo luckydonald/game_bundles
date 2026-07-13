@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bundle's Best of 2016 — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4645/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4645/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4645/source.json
+games:
+- name: Else Heart.Break()
+  ids:
+  - steam:400110
+- name: Victor Vran
+  ids:
+  - steam:345180
+- name: Evoland 2
+  ids:
+  - steam:359310
+- name: Stronghold Crusader 2
+  ids:
+  - steam:232890
+- name: Rust
+  ids:
+  - steam:252490
+- name: Shadowrun Hong Kong - Extended Edition
+  ids:
+  - steam:346940

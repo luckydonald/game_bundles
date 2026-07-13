@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Stardock Legends Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6638/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6638/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6638/source.json
+games:
+- name: Dead Man's Draw
+  ids:
+  - steam:262450
+- name: 'Fallen Enchantress: Legendary Heroes'
+  ids:
+  - steam:228260
+- name: 'Galactic Civilizations I: Ultimate Edition'
+  ids:
+  - steam:214150
+- name: Demigod
+  ids:
+  - steam:202710
+- name: The Corporate Machine
+  ids:
+  - steam:351080
+- name: 'Sins of a Solar Empire: Trinity'
+  ids:
+  - steam:201290
+- name: 'Galactic Civilizations II: Ultimate Edition'
+  ids:
+  - steam:202200

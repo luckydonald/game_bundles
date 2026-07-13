@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 1C Adventure Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4562/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4562/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4562/source.json
+games:
+- name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
+  ids:
+  - steam:342630
+- name: Jane Angel Templar Mystery
+  ids:
+  - steam:323270
+- name: Robin's Island Adventure
+  ids:
+  - steam:323260
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4562:namariel-legends-the-iron-lord-premium-edition
+- name: 'Sea Legends: Phantasmal Light Collector''s Edition'
+  ids:
+  - steam:323280
+- name: Fall of the New Age Premium Edition
+  ids:
+  - steam:314510

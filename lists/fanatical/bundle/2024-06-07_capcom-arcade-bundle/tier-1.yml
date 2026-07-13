@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Arcade Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14116/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14116/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14116/source.json
+games:
+- name: Ultra Street Fighter IV
+  ids:
+  - steam:45760
+- name: Street Fighter 30th Anniversary Collection
+  ids:
+  - steam:586200
+- name: Street Fighter V - Champion Edition
+  ids:
+  - unresolved:source:isthereanydeal:14116:street-fighter-v-champion-edition
+- name: Capcom Arcade Stadium
+  ids:
+  - steam:1515950
+- name: Capcom Arcade 2nd Stadium
+  ids:
+  - steam:1755910

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Black Christmas Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2872/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2872/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2872/source.json
+games:
+- name: 'Lethal RPG: War'
+  ids:
+  - steam:385590
+- name: Scott in Space
+  ids:
+  - steam:385980
+- name: Cosmic Rocket Defender
+  ids:
+  - unresolved:source:isthereanydeal:2872:cosmic-rocket-defender
+- name: Forest Warrior
+  ids:
+  - steam:378590
+- name: Pilot Crusader
+  ids:
+  - unresolved:source:isthereanydeal:2872:pilot-crusader
+- name: Belladonna
+  ids:
+  - steam:351340
+- name: 'After The End: The Harvest'
+  ids:
+  - steam:386140
+- name: Skyflower
+  ids:
+  - steam:364670
+- name: BlastZone 2
+  ids:
+  - steam:349260
+- name: Enola
+  ids:
+  - steam:263520

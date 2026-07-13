@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sandbox Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6689/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6689/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6689/source.json
+games:
+- name: Flashing Lights - Police, Fire, EMS
+  ids:
+  - steam:605740
+- name: Jalopy
+  ids:
+  - steam:446020
+- name: Shoppe Keep 2
+  ids:
+  - steam:684580
+- name: Tracks - The Train Set Game
+  ids:
+  - steam:657240

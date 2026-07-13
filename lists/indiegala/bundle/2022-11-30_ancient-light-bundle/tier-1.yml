@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ancient Light Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12594/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12594/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12594/source.json
+games:
+- name: Saints & Sinners
+  ids:
+  - steam:1497590
+- name: Ur Game
+  ids:
+  - steam:1324870
+- name: I hope she's ok
+  ids:
+  - steam:1384490
+- name: IncrediMarble
+  ids:
+  - steam:1488100
+- name: 7Days Origins
+  ids:
+  - steam:1494140
+- name: 'Firelight Fantasy: Phoenix Crew'
+  ids:
+  - steam:1595000

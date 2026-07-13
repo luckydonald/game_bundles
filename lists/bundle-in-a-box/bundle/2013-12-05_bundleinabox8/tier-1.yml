@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Indie Ordinary Gamer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/441/source.json
+games:
+- name: Star Saviors
+  ids:
+  - steam:314450
+- name: 'Cognition Episode 1: The Hangman'
+  ids:
+  - unresolved:source:isthereanydeal:441:cognition-episode-1-the-hangman
+- name: 'Slender: The Five Pages'
+  ids:
+  - unresolved:source:isthereanydeal:441:slender-the-five-pages
+- name: QbQbQb
+  ids:
+  - steam:329320
+- name: One Finger Death Punch
+  ids:
+  - steam:264200

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 711 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10974/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10974/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10974/source.json
+games:
+- name: Hail To The King
+  ids:
+  - steam:998730
+- name: How does it work!?
+  ids:
+  - steam:1553690
+- name: Duty on Forest
+  ids:
+  - unresolved:source:isthereanydeal:10974:duty-on-forest
+- name: Island Domination
+  ids:
+  - steam:1561020
+- name: Drift Mania
+  ids:
+  - unresolved:source:isthereanydeal:10974:drift-mania
+- name: Pirat Island
+  ids:
+  - unresolved:source:isthereanydeal:10974:pirat-island
+- name: Train Tycoon
+  ids:
+  - steam:1606620
+- name: Model Building Restoration
+  ids:
+  - steam:1623300
+- name: Space puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10974:space-puzzle

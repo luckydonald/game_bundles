@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 477 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10037/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10037/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10037/source.json
+games:
+- name: Spin Rush
+  ids:
+  - steam:528660
+- name: Dino Run DX
+  ids:
+  - steam:248330
+- name: Reliefs
+  ids:
+  - unresolved:source:isthereanydeal:10037:reliefs
+- name: Purple Heart
+  ids:
+  - steam:745370
+- name: Suna
+  ids:
+  - steam:803920
+- name: Snake Eyes Dungeon
+  ids:
+  - steam:740240
+- name: Solitaire. Dragon Light
+  ids:
+  - steam:990400
+- name: Cube Runner
+  ids:
+  - steam:567280
+- name: 'D3D INSIDE 2: HELL'
+  ids:
+  - steam:1256920

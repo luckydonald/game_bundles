@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: June Tunes Bundle Encore — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15676/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15676/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15676/source.json
+games:
+- name: Wandersong
+  ids:
+  - steam:530320
+- name: 节奏快打/Rhythm Fighter
+  ids:
+  - steam:1198400
+- name: Everhood
+  ids:
+  - steam:1229380
+- name: Trombone Champ
+  ids:
+  - steam:1059990
+- name: Ragnaröck
+  ids:
+  - steam:1345820
+- name: ODDADA
+  ids:
+  - steam:1627870
+- name: Onde
+  ids:
+  - steam:1676910

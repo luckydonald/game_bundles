@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Paradox Interactive Bundle 2019 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6989/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6989/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6989/source.json
+games:
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+- name: 'Darkest Hour: A Hearts of Iron Game'
+  ids:
+  - steam:73170
+- name: Magicka 2
+  ids:
+  - steam:238370
+- name: 'Age of Wonders II: The Wizard''s Throne'
+  ids:
+  - steam:61510
+- name: Crusader Kings II The Old Gods
+  ids:
+  - steam:210908
+- name: Europa Universalis IV
+  ids:
+  - steam:236850
+- name: Age of Wonders III
+  ids:
+  - steam:226840

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Reboot Bundle 3.0 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/692/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/692/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/692/source.json
+games:
+- name: Planets Under Attack
+  ids:
+  - steam:218510
+- name: Knights & Merchants
+  ids:
+  - steam:253900
+- name: HOARD Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:692:hoard-complete-pack
+- name: X-Blades
+  ids:
+  - steam:7510
+- name: Ion Assault
+  ids:
+  - steam:41730
+- name: Rune Classic
+  ids:
+  - steam:210950

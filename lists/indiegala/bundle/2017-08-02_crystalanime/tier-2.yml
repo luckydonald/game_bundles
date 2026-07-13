@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Crystal Anime Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5366/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5366/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5366/source.json
+games:
+- name: Games&Girls
+  ids:
+  - steam:610750
+- name: BAD END
+  ids:
+  - steam:415850
+- name: Sorry. (Entschuldigung) ~ A Psychological Horror Visual Novel
+  ids:
+  - unresolved:source:isthereanydeal:5366:sorry-entschuldigung-a-psychological-horror-visual-novel
+- name: Book Series - Alice in Wonderland
+  ids:
+  - unresolved:source:isthereanydeal:5366:book-series-alice-in-wonderland
+- name: '1931: Scheherazade at the Library of Pergamum'
+  ids:
+  - steam:334850
+- name: Crystal City
+  ids:
+  - unresolved:source:isthereanydeal:5366:crystal-city
+- name: 'The Reject Demon: Toko Chapter 0 — Prelude'
+  ids:
+  - steam:358770
+- name: 'Super Army of Tentacles 3: The Search for Army of Tentacles 2'
+  ids:
+  - steam:592200
+- name: Anime Studio Simulator
+  ids:
+  - steam:508230
+- name: A Foretold Affair
+  ids:
+  - steam:586670

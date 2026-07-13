@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Digital Game Factory Groupee — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/192/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/192/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/192/source.json
+games:
+- name: 'Broken Sword 2 - The Smoking Mirror: Remastered'
+  ids:
+  - steam:33600
+- name: 'Commandos: Beyond the Call of Duty'
+  ids:
+  - steam:6810
+- name: 'Commandos: Strike Force'
+  ids:
+  - unresolved:source:isthereanydeal:192:commandos-strike-force
+- name: 'Commandos 2: Men of Courage'
+  ids:
+  - steam:6830
+- name: Imperial Glory
+  ids:
+  - steam:277450
+- name: 'Commandos: Behind Enemy Lines'
+  ids:
+  - steam:6800

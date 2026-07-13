@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 30 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4960/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4960/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4960/source.json
+games:
+- name: Medieval Battlefields Black Edition
+  ids:
+  - steam:459040
+- name: Mystery Maze Of Balthasar Castle
+  ids:
+  - steam:368880
+- name: Fergus The Fly
+  ids:
+  - unresolved:source:isthereanydeal:4960:fergus-the-fly
+- name: European Fishing
+  ids:
+  - steam:310640
+- name: Jumping Tank
+  ids:
+  - unresolved:source:isthereanydeal:4960:jumping-tank
+- name: 'Red Crow Mysteries: Legion'
+  ids:
+  - steam:372890
+- name: 'Green Game: TimeSwapper'
+  ids:
+  - steam:432990
+- name: Crash And Burn Racing
+  ids:
+  - steam:336630

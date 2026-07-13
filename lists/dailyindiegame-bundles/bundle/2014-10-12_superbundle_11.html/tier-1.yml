@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1271/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1271/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1271/source.json
+games:
+- name: Make it indie!
+  ids:
+  - steam:357900
+- name: '! That Dick Trying To Steal Our Gold !'
+  ids:
+  - unresolved:source:isthereanydeal:1271:that-dick-trying-to-steal-our-gold
+- name: Agapan
+  ids:
+  - unresolved:source:isthereanydeal:1271:agapan
+- name: 'Railyard: Match-3 Evolved'
+  ids:
+  - unresolved:source:isthereanydeal:1271:railyard-match-3-evolved
+- name: Voyager
+  ids:
+  - steam:1351180
+- name: STARTAG
+  ids:
+  - unresolved:source:isthereanydeal:1271:startag

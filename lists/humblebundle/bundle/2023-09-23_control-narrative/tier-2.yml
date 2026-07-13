@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Control The Narrative Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13500/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13500/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13500/source.json
+games:
+- name: Tales from the Borderlands
+  ids:
+  - steam:330830
+- name: Impostor Factory
+  ids:
+  - steam:1182620
+- name: Before Your Eyes
+  ids:
+  - steam:1082430
+- name: Beyond Two Souls
+  ids:
+  - steam:960990
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+- name: Twin Mirror
+  ids:
+  - steam:1552810

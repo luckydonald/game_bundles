@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Very Positive Bundle 2 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5482/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5482/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5482/source.json
+games:
+- name: RIVE
+  ids:
+  - steam:278100
+- name: Dungeon Souls
+  ids:
+  - steam:383230
+- name: Neon Chrome
+  ids:
+  - steam:428750
+- name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5482:middle-earth-shadow-of-mordor-game-of-the-year-edition
+- name: Ultimate Chicken Horse
+  ids:
+  - steam:386940
+- name: Oxenfree
+  ids:
+  - steam:388880

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Champions Glory Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10259/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10259/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10259/source.json
+games:
+- name: To the Moon
+  ids:
+  - steam:206440
+- name: Die Young
+  ids:
+  - steam:433170
+- name: 'Exit Limbo: Opening'
+  ids:
+  - steam:1051900
+- name: Hatred
+  ids:
+  - steam:341940
+- name: 'Plague Inc: Evolved'
+  ids:
+  - steam:246620
+- name: Holy Potatoes! We're in Space?!
+  ids:
+  - steam:505730

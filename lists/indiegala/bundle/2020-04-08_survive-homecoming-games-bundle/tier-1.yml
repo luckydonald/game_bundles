@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Survive Homecoming Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8654/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8654/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8654/source.json
+games:
+- name: Shark Attack Deathmatch 2
+  ids:
+  - steam:330580
+- name: Infecto
+  ids:
+  - steam:815800
+- name: StarsOne
+  ids:
+  - steam:457010
+- name: Market Tycoon
+  ids:
+  - steam:563360
+- name: Survive the Blackout
+  ids:
+  - steam:1044040
+- name: 'Centralia: Homecoming'
+  ids:
+  - steam:1166740

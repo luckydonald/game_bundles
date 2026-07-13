@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Renegade Sector — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6739/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6739/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6739/source.json
+games:
+- name: Cold Vengeance
+  ids:
+  - steam:502540
+- name: Kill the Superweapon
+  ids:
+  - steam:758070
+- name: Venusian Vengeance
+  ids:
+  - steam:351240
+- name: 'Space Captain McCallery - Episode 1: Crash Landing'
+  ids:
+  - steam:852900
+- name: Ninja Outbreak
+  ids:
+  - steam:453880

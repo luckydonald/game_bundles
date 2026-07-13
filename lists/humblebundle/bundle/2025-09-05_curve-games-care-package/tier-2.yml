@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Curve Games: Care Package Bundle — entire-10-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15396/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15396/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15396/source.json
+games:
+- name: Bomber Crew - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15396:bomber-crew-deluxe-edition
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15396:for-the-king-deluxe-edition
+- name: I Am Fish
+  ids:
+  - steam:1472560
+- name: You Suck at Parking Complete Edition
+  ids:
+  - steam:837880
+- name: KitHack Model Club
+  ids:
+  - steam:2107090
+- name: 'Lawn Mowing Simulator: Landmark Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15396:lawn-mowing-simulator-landmark-edition
+- name: Badlands Crew
+  ids:
+  - steam:2078230
+- name: Super Loco World - Cozy Train Automation
+  ids:
+  - steam:3109280
+- name: The Ascent - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:15396:the-ascent-complete-edition
+- name: Dungeons of Hinterberg - Support Pack Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15396:dungeons-of-hinterberg-support-pack-bundle

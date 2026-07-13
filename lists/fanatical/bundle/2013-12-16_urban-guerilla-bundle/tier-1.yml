@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Urban Guerilla Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/459/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/459/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/459/source.json
+games:
+- name: Clickr
+  ids:
+  - unresolved:source:isthereanydeal:459:clickr
+- name: Coniclysm
+  ids:
+  - steam:39900
+- name: Governor of Poker 2 Premium Edition
+  ids:
+  - unresolved:source:isthereanydeal:459:governor-of-poker-2-premium-edition
+- name: Arena Wars 2
+  ids:
+  - steam:207730
+- name: 'Prime World: Defenders'
+  ids:
+  - steam:235360
+- name: 'APB Reloaded: Stackable Premium Pack'
+  ids:
+  - unresolved:source:isthereanydeal:459:apb-reloaded-stackable-premium-pack

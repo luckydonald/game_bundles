@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #69 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7016/source.json
+games:
+- name: 'Suits: A Business RPG'
+  ids:
+  - steam:410670
+- name: EvilQuest
+  ids:
+  - steam:263820

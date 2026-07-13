@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Living in a Simulation Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13544/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13544/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13544/source.json
+games:
+- name: Lumberjack's Dynasty
+  ids:
+  - steam:968970
+- name: SimpleRockets 2
+  ids:
+  - unresolved:source:isthereanydeal:13544:simplerockets-2
+- name: Electrician Simulator
+  ids:
+  - steam:1080020
+- name: Fresh Start Cleaning Simulator
+  ids:
+  - steam:1856030

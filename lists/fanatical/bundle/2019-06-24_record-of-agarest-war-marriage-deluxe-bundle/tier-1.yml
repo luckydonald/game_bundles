@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Record of Agarest War Mariage - Deluxe Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7553/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7553/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7553/source.json
+games:
+- name: Record of Agarest War Mariage
+  ids:
+  - steam:740550
+- name: Record of Agarest War Mariage Deluxe Pack
+  ids:
+  - steam:1015490

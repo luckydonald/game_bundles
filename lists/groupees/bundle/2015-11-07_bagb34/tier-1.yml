@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 34 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2719/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2719/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2719/source.json
+games:
+- name: Invisible X
+  ids:
+  - unresolved:source:isthereanydeal:2719:invisible-x
+- name: 'I must kill...: Fresh Meat'
+  ids:
+  - steam:420880
+- name: 'Store Manager: Cellular Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2719:store-manager-cellular-edition
+- name: The Admin
+  ids:
+  - steam:420300
+- name: Project Arrhythmia
+  ids:
+  - unresolved:source:isthereanydeal:2719:project-arrhythmia
+- name: 'Age of Steel: Recharge'
+  ids:
+  - steam:421060
+- name: 'ZaciSa: Defense of the Crayon Dimension!'
+  ids:
+  - steam:2462890
+- name: Mech Anarchy
+  ids:
+  - steam:420900
+- name: A Wild Catgirl Appears!
+  ids:
+  - steam:429580
+- name: 'Adam and Eve: The Game - Chapter 1'
+  ids:
+  - steam:443530

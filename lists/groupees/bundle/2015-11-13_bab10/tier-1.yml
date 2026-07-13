@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 10 — Build a Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2735/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2735/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2735/source.json
+games:
+- name: Cave Coaster
+  ids:
+  - steam:371000
+- name: Industry Giant 2
+  ids:
+  - steam:271360
+- name: Cosmic Leap
+  ids:
+  - steam:420850
+- name: Desert Law
+  ids:
+  - steam:356280
+- name: 'STATIC: Investigator Training'
+  ids:
+  - steam:354720
+- name: 'Umbra: Shadow of Death'
+  ids:
+  - unresolved:source:isthereanydeal:2735:umbra-shadow-of-death
+- name: Bridge Constructor Playground
+  ids:
+  - steam:279990
+- name: Professional Farmer 2014 Platinum Edition
+  ids:
+  - unresolved:source:isthereanydeal:2735:professional-farmer-2014-platinum-edition

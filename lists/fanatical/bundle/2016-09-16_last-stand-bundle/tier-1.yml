@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Last Stand Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4064/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4064/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4064/source.json
+games:
+- name: 'Nuts!: The Battle of the Bulge'
+  ids:
+  - steam:431680
+- name: 'Tank Battle: 1944'
+  ids:
+  - steam:396320
+- name: 'Tank Battle: North Africa'
+  ids:
+  - steam:465750
+- name: Assault on Arnhem
+  ids:
+  - steam:450290
+- name: 'Civil War: 1863'
+  ids:
+  - steam:436270

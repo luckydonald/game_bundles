@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Odyssey Bundle Reloaded — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5954/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5954/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5954/source.json
+games:
+- name: 'The Last Door: Collectors Edition'
+  ids:
+  - steam:284390
+- name: Face Noir
+  ids:
+  - steam:244690
+- name: Quest For Infamy
+  ids:
+  - steam:264560

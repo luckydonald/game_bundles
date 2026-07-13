@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: WGN's Never Forget, Never Surrender — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2121/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2121/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2121/source.json
+games:
+- name: Journey Of The Light
+  ids:
+  - unresolved:source:isthereanydeal:2121:journey-of-the-light
+- name: Roses and Gems
+  ids:
+  - steam:406690
+- name: Meadowland
+  ids:
+  - steam:320120
+- name: Voxelized
+  ids:
+  - unresolved:source:isthereanydeal:2121:voxelized
+- name: Bliss
+  ids:
+  - steam:315450
+- name: NSE CIRCUIT BUNDLE
+  ids:
+  - unresolved:source:isthereanydeal:2121:nse-circuit-bundle
+- name: 'Ancients of Fasaria: Battle Tactics'
+  ids:
+  - unresolved:source:isthereanydeal:2121:ancients-of-fasaria-battle-tactics
+- name: AoF Chess Club 2.0
+  ids:
+  - unresolved:source:isthereanydeal:2121:aof-chess-club-2-0

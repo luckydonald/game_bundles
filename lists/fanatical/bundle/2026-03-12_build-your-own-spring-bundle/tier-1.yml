@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Spring Bundle (2026) — 1+ Games 1.00 each, 5+ Games 0.60 each,
+  10+ Games 0.50 each
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15957/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15957/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15957/source.json
+games:
+- name: Degrees of Separation
+  ids:
+  - steam:809880
+- name: Alwa's Legacy
+  ids:
+  - steam:1205900
+- name: Causality Digital Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15957:causality-digital-deluxe-edition
+- name: Soulstice
+  ids:
+  - steam:1602080
+- name: Iron Lung
+  ids:
+  - steam:1846170
+- name: Saga of Sins
+  ids:
+  - steam:2094550
+- name: The Space-Eating Croc
+  ids:
+  - steam:2020090
+- name: Anomaly Agent
+  ids:
+  - steam:2378620
+- name: Black Dragon Mage
+  ids:
+  - steam:2207230
+- name: Andro Dunos II
+  ids:
+  - steam:1856900
+- name: Angvik 2
+  ids:
+  - steam:2921600
+- name: Cape Hideous
+  ids:
+  - steam:3187550
+- name: Fingerdance
+  ids:
+  - steam:3633450
+- name: Bloodmatch
+  ids:
+  - steam:3777500
+- name: Boomer Shooters Reloaded - Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15957:boomer-shooters-reloaded-quad-pack
+- name: Alwa's Awakening + The 8-Bit Edition Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15957:alwas-awakening-and-the-8-bit-edition-double-pack

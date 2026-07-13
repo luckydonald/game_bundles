@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Gamer Steam Bundle 2023 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12913/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12913/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12913/source.json
+games:
+- name: The Deed
+  ids:
+  - steam:420740
+- name: 'The Deed: Dynasty'
+  ids:
+  - steam:460960
+- name: Lamia's Plan
+  ids:
+  - steam:1670890
+- name: 'Valkyrie: Journey To Midgard'
+  ids:
+  - steam:1724470
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+- name: 'Space Pilgrim Episode IV: Sol'
+  ids:
+  - steam:446640
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250

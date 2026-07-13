@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Disorder Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8174/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8174/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8174/source.json
+games:
+- name: Symmetry
+  ids:
+  - steam:537520
+- name: Dex
+  ids:
+  - steam:269650
+- name: Yet Another Zombie Defense HD
+  ids:
+  - steam:674750
+- name: Next Hero
+  ids:
+  - steam:756490
+- name: 'Morphies Law: Remorphed'
+  ids:
+  - steam:948960
+- name: The Light Keeps Us Safe
+  ids:
+  - steam:853240
+- name: Morphite
+  ids:
+  - steam:661740
+- name: 'Auto Age: Standoff'
+  ids:
+  - unresolved:source:isthereanydeal:8174:auto-age-standoff
+- name: Supreme Ruler The Great War
+  ids:
+  - unresolved:source:isthereanydeal:8174:supreme-ruler-the-great-war
+- name: Super Life of Pixel
+  ids:
+  - steam:327260
+- name: My Memory of Us
+  ids:
+  - steam:651500
+- name: Downfall
+  ids:
+  - steam:2712470

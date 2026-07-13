@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 54 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3104/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3104/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3104/source.json
+games:
+- name: Lilly Looking Through
+  ids:
+  - steam:250030
+- name: 'STAR-BOX: RPG Adventures in Space'
+  ids:
+  - steam:363510
+- name: Vector Strain
+  ids:
+  - steam:419090
+- name: Woodle Tree Adventures
+  ids:
+  - steam:299460
+- name: City of Fools
+  ids:
+  - steam:359250
+- name: Volstead
+  ids:
+  - unresolved:source:isthereanydeal:3104:volstead

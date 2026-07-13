@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: GunCraft Complete Bundle Edition — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6131/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6131/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6131/source.json
+games:
+- name: Guncraft
+  ids:
+  - steam:241720
+- name: 'Guncraft: Horror SFX Pack'
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-horror-sfx-pack
+- name: 'Guncraft: Holiday Block Pack'
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-holiday-block-pack
+- name: 'Guncraft: Sci-Fi SFX Pack'
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-sci-fi-sfx-pack
+- name: Guncraft Wild West Block Pack
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-wild-west-block-pack
+- name: Guncraft Under the Sea Block Pack
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-under-the-sea-block-pack
+- name: Guncraft Deep Cave Block Pack
+  ids:
+  - unresolved:source:isthereanydeal:6131:guncraft-deep-cave-block-pack

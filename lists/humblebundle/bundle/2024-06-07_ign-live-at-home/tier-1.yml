@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: IGN Live At Home Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14117/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14117/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14117/source.json
+games:
+- name: Bread & Fred
+  ids:
+  - steam:1607680
+- name: Grindstone
+  ids:
+  - steam:1818690

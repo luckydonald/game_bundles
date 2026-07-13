@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Schein - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2252/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2252/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2252/source.json
+games:
+- name: Schein
+  ids:
+  - steam:321920

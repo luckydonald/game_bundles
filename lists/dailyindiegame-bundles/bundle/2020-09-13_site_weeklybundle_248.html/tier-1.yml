@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 248 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9151/source.json
+games:
+- name: 'Countryballs: Over The World'
+  ids:
+  - unresolved:source:isthereanydeal:9151:countryballs-over-the-world
+- name: Adventures of the Worm
+  ids:
+  - steam:681410
+- name: Chicken Shoot Gold
+  ids:
+  - steam:259340
+- name: Introvert
+  ids:
+  - steam:1235950
+- name: Iesabel
+  ids:
+  - steam:248710
+- name: Endless Ski
+  ids:
+  - steam:1125800
+- name: Fourthy
+  ids:
+  - steam:1212470
+- name: Bob Wants to Go Home
+  ids:
+  - steam:1234540
+- name: Réel Futur
+  ids:
+  - unresolved:source:isthereanydeal:9151:reel-futur

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Holiday Bundle (2022) — Select 3 Titles for $4.99, 5 Titles for
+  $7.99, 7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12766/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12766/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12766/source.json
+games:
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+- name: Main Assembly
+  ids:
+  - steam:1078920
+- name: Moonlighter
+  ids:
+  - steam:606150
+- name: Overloop
+  ids:
+  - steam:720660
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+- name: 'This War of Mine: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12766:this-war-of-mine-complete-edition
+- name: VirtuaVerse
+  ids:
+  - steam:1019310
+- name: Deliver Us The Moon
+  ids:
+  - steam:428660
+- name: For The King
+  ids:
+  - steam:527230
+- name: Autonauts
+  ids:
+  - steam:979120
+- name: My Time At Portia
+  ids:
+  - steam:666140
+- name: A Musical Story
+  ids:
+  - steam:1546100
+- name: Space Crew Legendary Edition
+  ids:
+  - steam:1176710

@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Supreme Collection Bundle — Select 2 for 24.99, 3 for 35.99,
+  4 for 45.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15574/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15574/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15574/source.json
+games:
+- name: Construction Simulator
+  ids:
+  - steam:1273400
+- name: Dead Island 2
+  ids:
+  - steam:934700
+- name: Bomb Rush Cyberfunk
+  ids:
+  - steam:1353230
+- name: Conan Exiles - Isle of Siptah Edition
+  ids:
+  - unresolved:source:isthereanydeal:15574:conan-exiles-isle-of-siptah-edition
+- name: Survive the Fall
+  ids:
+  - steam:1579340
+- name: Metal Slug Tactics
+  ids:
+  - steam:1590760
+- name: Infection Free Zone
+  ids:
+  - steam:1465460
+- name: Sengoku Dynasty
+  ids:
+  - steam:1702010
+- name: Another Crab's Treasure
+  ids:
+  - steam:1887840
+- name: Reality Break
+  ids:
+  - steam:1473060
+- name: Gas Station Simulator - Car Junkyard
+  ids:
+  - steam:2782920
+- name: Aztecs The Last Sun
+  ids:
+  - steam:1409840
+- name: Starless Abyss
+  ids:
+  - steam:3167970
+- name: Tomb Raider IV-VI Remastered
+  ids:
+  - steam:2525380
+- name: Cabernet Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15574:cabernet-deluxe-edition
+- name: Still Wakes the Deep - The Complete Collection
+  ids:
+  - unresolved:source:isthereanydeal:15574:still-wakes-the-deep-the-complete-collection
+- name: EVERSPACE 2 + EVERSPACE 2 - Titans
+  ids:
+  - unresolved:source:isthereanydeal:15574:everspace-2-and-everspace-2-titans

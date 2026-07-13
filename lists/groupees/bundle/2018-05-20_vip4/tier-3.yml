@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Interplay 35th Anniversary Limited VIP Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6149/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6149/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6149/source.json
+games:
+- name: MDK 2
+  ids:
+  - steam:38460
+- name: Earthworm Jim Collection
+  ids:
+  - unresolved:source:isthereanydeal:6149:earthworm-jim-collection
+- name: MDK
+  ids:
+  - steam:38450
+- name: 'Kingpin: Life of Crime'
+  ids:
+  - steam:38430
+- name: Sacrifice
+  ids:
+  - steam:38440
+- name: 'Descent: Freespace - The Great War'
+  ids:
+  - steam:273600
+- name: 'Giants: Citizen Kabuto'
+  ids:
+  - steam:557750
+- name: 'Star Trek™: Starfleet Command Gold Edition'
+  ids:
+  - steam:364820
+- name: 'Star Trek™: Starfleet Academy'
+  ids:
+  - steam:364810
+- name: 'Star Trek™: 25th Anniversary'
+  ids:
+  - steam:359650
+- name: 'Star Trek™: Judgment Rites'
+  ids:
+  - steam:364800

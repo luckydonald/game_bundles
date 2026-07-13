@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: CodeMasters Bundle — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/434/source.json
+games:
+- name: Damnation
+  ids:
+  - unresolved:source:isthereanydeal:434:damnation
+- name: Clive Barker's Jericho
+  ids:
+  - unresolved:source:isthereanydeal:434:clive-barkers-jericho
+- name: Overlord™
+  ids:
+  - steam:11450
+- name: FUEL
+  ids:
+  - unresolved:source:isthereanydeal:434:fuel
+- name: 'Operation Flashpoint: Red River'
+  ids:
+  - unresolved:source:isthereanydeal:434:operation-flashpoint-red-river
+- name: 'Operation Flashpoint: Dragon Rising'
+  ids:
+  - unresolved:source:isthereanydeal:434:operation-flashpoint-dragon-rising
+- name: Overlord II
+  ids:
+  - steam:12810
+- name: 'Overlord™: Raising Hell'
+  ids:
+  - steam:12710

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Greenlight Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3606/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3606/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3606/source.json
+games:
+- name: The Spellbent Keep
+  ids:
+  - unresolved:source:isthereanydeal:3606:the-spellbent-keep
+- name: Dawn's Light
+  ids:
+  - unresolved:source:isthereanydeal:3606:dawns-light
+- name: Nary
+  ids:
+  - steam:491720
+- name: Clumsy God
+  ids:
+  - unresolved:source:isthereanydeal:3606:clumsy-god
+- name: Green Ranch
+  ids:
+  - steam:493980
+- name: gates of the road
+  ids:
+  - unresolved:source:isthereanydeal:3606:gates-of-the-road
+- name: Extravaganza Rising
+  ids:
+  - steam:501030
+- name: Echoes of MK-ULTRA
+  ids:
+  - steam:510770

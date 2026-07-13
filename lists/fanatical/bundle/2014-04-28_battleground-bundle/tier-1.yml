@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Battleground Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/744/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/744/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/744/source.json
+games:
+- name: Cossacks Back to War
+  ids:
+  - steam:4850
+- name: 'Commandos 3: Destination Berlin'
+  ids:
+  - steam:6840
+- name: 'Commandos: Beyond the Call of Duty'
+  ids:
+  - steam:6810
+- name: 'Cossacks: Art of War'
+  ids:
+  - steam:4870
+- name: 'American Conquest: Fight Back'
+  ids:
+  - steam:115220
+- name: 'Cossacks II: Battle for Europe'
+  ids:
+  - steam:4890
+- name: 'Commandos 2: Men of Courage'
+  ids:
+  - steam:6830
+- name: 'Commandos: Behind Enemy Lines'
+  ids:
+  - steam:6800

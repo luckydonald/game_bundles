@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 866: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11633/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11633/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11633/source.json
+games:
+- name: Adventures of the Worm
+  ids:
+  - steam:681410
+- name: Total 15
+  ids:
+  - steam:895550
+- name: Falling Blocks
+  ids:
+  - steam:891470
+- name: Little Bunny
+  ids:
+  - steam:1285870
+- name: Tankfight
+  ids:
+  - steam:1310470
+- name: The Orb Chambers REMASTERED
+  ids:
+  - unresolved:source:isthereanydeal:11633:the-orb-chambers-remastered
+- name: Move Forward
+  ids:
+  - steam:1481360
+- name: Soldier in the darkness
+  ids:
+  - steam:1526790
+- name: Hard Minus Classic Redux
+  ids:
+  - steam:1591540

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Idea Factory Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8038/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8038/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8038/source.json
+games:
+- name: Neptunia Shooter
+  ids:
+  - steam:1037590
+- name: 'Trillion: God of Destruction'
+  ids:
+  - steam:451780
+- name: Moero Chronicle
+  ids:
+  - steam:638160
+- name: MegaTagmension Blanc Deluxe Edition Bundle
+  ids:
+  - unresolved:source:isthereanydeal:8038:megatagmension-blanc-deluxe-edition-bundle
+- name: Fairy Fencer F
+  ids:
+  - steam:347830
+- name: 'Hyperdevotion Noire: Goddess Black Heart (Neptunia)'
+  ids:
+  - steam:415480
+- name: Superdimension Neptune VS Sega Hard Girls
+  ids:
+  - steam:571530
+- name: 'Fairy Fencer F: Advent Dark Force Complete Deluxe Set'
+  ids:
+  - unresolved:source:isthereanydeal:8038:fairy-fencer-f-advent-dark-force-complete-deluxe-set

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Sweet Farm Fall Bundle — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9404/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9404/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9404/source.json
+games:
+- name: 'ToeJam & Earl: Back in the Groove! Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:9404:toejam-and-earl-back-in-the-groove-soundtrack
+- name: 'Out There: Ω Edition'
+  ids:
+  - steam:334420
+- name: 'ToeJam & Earl: Back in the Groove!'
+  ids:
+  - steam:516110
+- name: CHUCHEL Cherry Edition
+  ids:
+  - unresolved:source:isthereanydeal:9404:chuchel-cherry-edition
+- name: Moonlighter
+  ids:
+  - steam:606150
+- name: SUPERHOT
+  ids:
+  - steam:322500
+- name: A Hat in Time
+  ids:
+  - steam:253230
+- name: Coffee Talk
+  ids:
+  - steam:914800
+- name: 'Necronator: Dead Wrong'
+  ids:
+  - steam:1144970
+- name: 'Sigma Theory: Global Cold War'
+  ids:
+  - steam:716640

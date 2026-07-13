@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 84: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8045/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8045/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8045/source.json
+games:
+- name: 'Cartoonway : Mini Cars'
+  ids:
+  - unresolved:source:isthereanydeal:8045:cartoonway-mini-cars
+- name: Five Rooms
+  ids:
+  - unresolved:source:isthereanydeal:8045:five-rooms
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+- name: 'Sea Battle: Through the Ages'
+  ids:
+  - unresolved:source:isthereanydeal:8045:sea-battle-through-the-ages
+- name: 'Freedom March: Rebel Leader'
+  ids:
+  - unresolved:source:isthereanydeal:8045:freedom-march-rebel-leader
+- name: FriendShip
+  ids:
+  - steam:542110
+- name: VR Shooter Guns
+  ids:
+  - steam:489160
+- name: Digital Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:8045:digital-dungeon
+- name: Titanic
+  ids:
+  - unresolved:source:isthereanydeal:8045:titanic

@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jul 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8954/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8954/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8954/source.json
+games:
+- name: Battlestar Galactica Deadlock
+  ids:
+  - unresolved:source:isthereanydeal:8954:battlestar-galactica-deadlock
+- name: 'Age of Wonders: Planetfall - Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8954:age-of-wonders-planetfall-deluxe-edition
+- name: Beat Hazard 2
+  ids:
+  - steam:618740
+- name: Railway Empire
+  ids:
+  - steam:503940
+- name: Verlet Swing
+  ids:
+  - steam:811870
+- name: Void Bastards
+  ids:
+  - steam:857980
+- name: 'Don''t Escape: 4 Days to Survive'
+  ids:
+  - steam:611760
+- name: 'Sigma Theory: Global Cold War'
+  ids:
+  - steam:716640
+- name: Vikings - Wolves of Midgard
+  ids:
+  - steam:404590
+- name: EARTHLOCK
+  ids:
+  - steam:761030
+- name: Grotto
+  ids:
+  - steam:1538850
+- name: Metal Unit
+  ids:
+  - steam:1173200
+- name: Popup Dungeon Sneak Peek
+  ids:
+  - unresolved:source:isthereanydeal:8954:popup-dungeon-sneak-peek
+- name: 'Yuppie Psycho: Executive Edition'
+  ids:
+  - steam:597760
+- name: Welcome to Basingstoke
+  ids:
+  - steam:336940

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Metro Mania: Planes, Trains, and Automobiles! Bundle — 4-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15977/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15977/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15977/source.json
+games:
+- name: SimplePlanes
+  ids:
+  - steam:397340
+- name: 'Juno: New Origins'
+  ids:
+  - steam:870200
+- name: The Slaverian Trucker
+  ids:
+  - steam:1822450
+- name: Super Loco World - Cozy Train Automation
+  ids:
+  - steam:3109280

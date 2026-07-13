@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 579 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10407/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10407/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10407/source.json
+games:
+- name: Oracle Trials
+  ids:
+  - steam:1533070
+- name: Medieval Heros
+  ids:
+  - unresolved:source:isthereanydeal:10407:medieval-heros
+- name: Fantasy Mahjong connect
+  ids:
+  - unresolved:source:isthereanydeal:10407:fantasy-mahjong-connect
+- name: Lucky day
+  ids:
+  - unresolved:source:isthereanydeal:10407:lucky-day
+- name: PIXASSO
+  ids:
+  - unresolved:source:isthereanydeal:10407:pixasso
+- name: PIXASSO 2
+  ids:
+  - unresolved:source:isthereanydeal:10407:pixasso-2
+- name: Freon
+  ids:
+  - steam:1721520
+- name: Robo Go
+  ids:
+  - unresolved:source:isthereanydeal:10407:robo-go
+- name: Space Adventures
+  ids:
+  - steam:1731860

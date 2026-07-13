@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 564 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10365/source.json
+games:
+- name: HIKE
+  ids:
+  - unresolved:source:isthereanydeal:10365:hike
+- name: Apple Pop
+  ids:
+  - unresolved:source:isthereanydeal:10365:apple-pop
+- name: The Village
+  ids:
+  - steam:632050
+- name: Work Trip
+  ids:
+  - unresolved:source:isthereanydeal:10365:work-trip
+- name: 'Alzheimer''s: Memories'
+  ids:
+  - steam:1624990
+- name: Infected City
+  ids:
+  - steam:1640670
+- name: Fancy the Frog
+  ids:
+  - steam:1643280
+- name: The Elysian Field
+  ids:
+  - steam:1657290
+- name: Find the cubs
+  ids:
+  - unresolved:source:isthereanydeal:10365:find-the-cubs

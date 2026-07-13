@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Aftermath — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4676/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4676/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4676/source.json
+games:
+- name: Tick Tock Isle
+  ids:
+  - steam:418440
+- name: Gal-X-E
+  ids:
+  - steam:473510
+- name: Let's Draw
+  ids:
+  - steam:575490
+- name: Ghostship Aftermath
+  ids:
+  - steam:280890
+- name: Double Cubes
+  ids:
+  - unresolved:source:isthereanydeal:4676:double-cubes
+- name: UnderEarth
+  ids:
+  - steam:377100
+- name: Defend Your Life!
+  ids:
+  - steam:357780
+- name: VIDEOBALL
+  ids:
+  - steam:277390
+- name: Demon Hearts
+  ids:
+  - steam:367350
+- name: 'Word Killer: Zorgilonian Chronicles'
+  ids:
+  - unresolved:source:isthereanydeal:4676:word-killer-zorgilonian-chronicles
+- name: Rogue Port - Red Nightmare
+  ids:
+  - steam:467310

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble You Can Pet The Dog Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9169/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9169/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9169/source.json
+games:
+- name: Scribblenauts Unlimited
+  ids:
+  - steam:218680
+- name: Bulb Boy
+  ids:
+  - steam:390290
+- name: Dog Sled Saga
+  ids:
+  - steam:286240
+- name: Bulb Boy - Soundtrack Remastered
+  ids:
+  - steam:497010
+- name: Beyond Eyes
+  ids:
+  - unresolved:source:isthereanydeal:9169:beyond-eyes
+- name: Shenmue I & II
+  ids:
+  - steam:758330
+- name: Where the Water Tastes Like Wine
+  ids:
+  - steam:447120
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+- name: Blair Witch
+  ids:
+  - steam:1092660

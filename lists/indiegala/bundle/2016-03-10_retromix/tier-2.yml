@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Retro Mix Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3156/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3156/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3156/source.json
+games:
+- name: Starlord
+  ids:
+  - steam:410540
+- name: Silent Service
+  ids:
+  - steam:329660
+- name: Pajama Sam's Sock Works
+  ids:
+  - steam:292840
+- name: Tycoon City New York
+  ids:
+  - steam:9730
+- name: Sid Meier's Pirates! Gold Plus (Classic)
+  ids:
+  - steam:327380
+- name: World War II GI
+  ids:
+  - steam:376750
+- name: "Wars and Warriors \x96 Joan of Arc"
+  ids:
+  - steam:294590
+- name: Sid Meier's Covert Action (Classic)
+  ids:
+  - steam:327390
+- name: FALCON A.T.
+  ids:
+  - unresolved:source:isthereanydeal:3156:falcon-a-t
+- name: 'Tank: M1A1 Abrams Battle Simulation'
+  ids:
+  - steam:410550
+- name: FALCON
+  ids:
+  - steam:374080
+- name: 'Deadlock II: Shrine Wars'
+  ids:
+  - steam:328450

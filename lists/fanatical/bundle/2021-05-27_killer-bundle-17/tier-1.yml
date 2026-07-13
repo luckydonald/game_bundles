@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 17 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10056/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10056/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10056/source.json
+games:
+- name: Battlestar Galactica Deadlock
+  ids:
+  - unresolved:source:isthereanydeal:10056:battlestar-galactica-deadlock
+- name: Undead Horde
+  ids:
+  - steam:790850
+- name: Tower of Time
+  ids:
+  - steam:617480
+- name: Out of Space
+  ids:
+  - steam:400080
+- name: 'Blacksad : Under the Skin'
+  ids:
+  - steam:1003890
+- name: Railway Empire
+  ids:
+  - steam:503940
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Side Out Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6374/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6374/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6374/source.json
+games:
+- name: Adventures of Heroes
+  ids:
+  - unresolved:source:isthereanydeal:6374:adventures-of-heroes
+- name: World Inside Out
+  ids:
+  - unresolved:source:isthereanydeal:6374:world-inside-out
+- name: Crazy Alien
+  ids:
+  - unresolved:source:isthereanydeal:6374:crazy-alien
+- name: Dots
+  ids:
+  - steam:1462860
+- name: Crazy Pirate
+  ids:
+  - unresolved:source:isthereanydeal:6374:crazy-pirate
+- name: Stickman - Killer of Apples
+  ids:
+  - unresolved:source:isthereanydeal:6374:stickman-killer-of-apples
+- name: The Battle for the Hut
+  ids:
+  - unresolved:source:isthereanydeal:6374:the-battle-for-the-hut
+- name: Ghost Killer
+  ids:
+  - unresolved:source:isthereanydeal:6374:ghost-killer
+- name: Flotus
+  ids:
+  - unresolved:source:isthereanydeal:6374:flotus
+- name: Sinister Zombies
+  ids:
+  - unresolved:source:isthereanydeal:6374:sinister-zombies
+- name: Draw_Love
+  ids:
+  - unresolved:source:isthereanydeal:6374:draw_love
+- name: Combat Raccoon
+  ids:
+  - unresolved:source:isthereanydeal:6374:combat-raccoon

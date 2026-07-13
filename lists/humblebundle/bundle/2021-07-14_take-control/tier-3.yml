@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Take Control Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10253/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10253/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10253/source.json
+games:
+- name: SimplePlanes
+  ids:
+  - steam:397340
+- name: Elite Dangerous
+  ids:
+  - steam:359320
+- name: Overload
+  ids:
+  - steam:448850
+- name: Rebel Galaxy Outlaw
+  ids:
+  - steam:910830
+- name: Heliborne
+  ids:
+  - unresolved:source:isthereanydeal:10253:heliborne
+- name: 'EVE: Valkyrie - Warzone'
+  ids:
+  - unresolved:source:isthereanydeal:10253:eve-valkyrie-warzone
+- name: War Thunder - Japanese Pacific Campaign
+  ids:
+  - unresolved:source:isthereanydeal:10253:war-thunder-japanese-pacific-campaign
+- name: Heliborne - Enhanced Edition
+  ids:
+  - steam:433530
+- name: War Thunder - USA Pacific Campaign (YP-38)
+  ids:
+  - unresolved:source:isthereanydeal:10253:war-thunder-usa-pacific-campaign-yp-38

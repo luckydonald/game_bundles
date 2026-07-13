@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Battles & Emprises — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4298/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4298/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4298/source.json
+games:
+- name: "7.62 \x96 High Calibre"
+  ids:
+  - steam:289890
+- name: Pilot Brothers
+  ids:
+  - steam:336760
+- name: Ascension to the Throne
+  ids:
+  - steam:289200

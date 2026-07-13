@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Alicia Quatermain Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7252/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7252/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7252/source.json
+games:
+- name: 'Alicia Quatermain: Secrets of the Lost Treasures'
+  ids:
+  - steam:646470
+- name: Alicia Quatermain and the Stone of Fate
+  ids:
+  - steam:667040
+- name: 'Alicia Quatermain 3: The Mystery of the Flaming Gold'
+  ids:
+  - steam:818030

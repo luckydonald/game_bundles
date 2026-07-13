@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5420/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5420/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5420/source.json
+games:
+- name: simian.interface++
+  ids:
+  - steam:467780
+- name: Gun Bombers
+  ids:
+  - steam:416180
+- name: A Druid's Duel
+  ids:
+  - steam:333970
+- name: Fabric
+  ids:
+  - steam:489660
+- name: That's Mahjong!
+  ids:
+  - steam:547310
+- name: Spiritual Warfare & Wisdom Tree Collection
+  ids:
+  - steam:624550
+- name: Dark Days
+  ids:
+  - steam:422020
+- name: Battles of Norghan Gold Version Bundle
+  ids:
+  - unresolved:source:isthereanydeal:5420:battles-of-norghan-gold-version-bundle
+- name: Mayhem Triple
+  ids:
+  - steam:391390
+- name: Extreme Forklifting 2
+  ids:
+  - steam:498570
+- name: 'Street Legal Racing: Redline v2.3.1'
+  ids:
+  - steam:497180
+- name: Fort Meow
+  ids:
+  - steam:352070

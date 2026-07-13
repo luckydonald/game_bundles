@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 55 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3138/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3138/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3138/source.json
+games:
+- name: The Dark Stone from Mebara
+  ids:
+  - steam:346950
+- name: Heckabomb
+  ids:
+  - steam:344300
+- name: Energy Cycle
+  ids:
+  - steam:415960
+- name: 'Age of Steel: Recharge'
+  ids:
+  - steam:421060
+- name: BanHammer
+  ids:
+  - unresolved:source:isthereanydeal:3138:banhammer
+- name: 'Selfie: Sisters of the Amniotic Lens'
+  ids:
+  - unresolved:source:isthereanydeal:3138:selfie-sisters-of-the-amniotic-lens

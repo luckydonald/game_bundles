@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Go Postal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3645/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3645/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3645/source.json
+games:
+- name: Lands Of Devastation
+  ids:
+  - unresolved:source:isthereanydeal:3645:lands-of-devastation
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Six Sides of the World
+  ids:
+  - steam:384480

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 4 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/182/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/182/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/182/source.json
+games:
+- name: Metal Drift
+  ids:
+  - steam:32200
+- name: Laxius Force
+  ids:
+  - unresolved:source:isthereanydeal:182:laxius-force
+- name: Zero Gear
+  ids:
+  - steam:18820
+- name: 'Kaptain Brawe: A Brawe New World'
+  ids:
+  - steam:65080
+- name: Guns of Icarus
+  ids:
+  - unresolved:source:isthereanydeal:182:guns-of-icarus
+- name: Revelations 2012
+  ids:
+  - steam:201070
+- name: Battlemass
+  ids:
+  - unresolved:source:isthereanydeal:182:battlemass
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+- name: "Dwarfs!\x81"
+  ids:
+  - steam:35480

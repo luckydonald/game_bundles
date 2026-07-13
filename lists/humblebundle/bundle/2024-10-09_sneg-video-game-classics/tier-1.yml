@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: SNEG Video Game Classics (GOG) — 10 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14509/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14509/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14509/source.json
+games:
+- name: 'War Wind II: Human Onslaught'
+  ids:
+  - steam:1741150
+- name: Star Command
+  ids:
+  - steam:2702090
+- name: Witchaven
+  ids:
+  - unresolved:source:isthereanydeal:14509:witchaven
+- name: 'Witchaven II: Blood Vengeance'
+  ids:
+  - unresolved:source:isthereanydeal:14509:witchaven-ii-blood-vengeance
+- name: Necrodome
+  ids:
+  - steam:2464680
+- name: CyClones
+  ids:
+  - steam:2464690
+- name: Prophecy of the Shadow
+  ids:
+  - steam:2702110
+- name: 'Renegade: Battle for Jacob''s Star'
+  ids:
+  - steam:2702130
+- name: Dark Legions
+  ids:
+  - steam:2414360
+- name: The Summoning
+  ids:
+  - steam:2414350

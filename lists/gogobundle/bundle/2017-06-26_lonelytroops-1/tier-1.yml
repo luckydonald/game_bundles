@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Lonely Troops Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5261/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5261/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5261/source.json
+games:
+- name: Empire of the Gods
+  ids:
+  - steam:436140
+- name: War on Folvos
+  ids:
+  - steam:317380
+- name: Romopolis
+  ids:
+  - steam:471170
+- name: Megapolis
+  ids:
+  - steam:485080
+- name: Townopolis
+  ids:
+  - steam:462730
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+- name: Hero of the Kingdom
+  ids:
+  - steam:259550

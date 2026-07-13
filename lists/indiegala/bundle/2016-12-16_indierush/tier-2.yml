@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Rush — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4495/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4495/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4495/source.json
+games:
+- name: The Adventures of Tree
+  ids:
+  - steam:354860
+- name: The Magical Silence
+  ids:
+  - unresolved:source:isthereanydeal:4495:the-magical-silence
+- name: The Last Error
+  ids:
+  - unresolved:source:isthereanydeal:4495:the-last-error
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+- name: Mimic Arena
+  ids:
+  - steam:432620
+- name: Orczz
+  ids:
+  - steam:502200
+- name: Adrenaline adventure
+  ids:
+  - unresolved:source:isthereanydeal:4495:adrenaline-adventure
+- name: 'Sarab: The Dark Tower'
+  ids:
+  - unresolved:source:isthereanydeal:4495:sarab-the-dark-tower
+- name: Primitive Road
+  ids:
+  - steam:552270
+- name: Magic Tavern
+  ids:
+  - steam:560960
+- name: Runestone Keeper
+  ids:
+  - steam:339400
+- name: Timber! The Logging Experts
+  ids:
+  - steam:553100

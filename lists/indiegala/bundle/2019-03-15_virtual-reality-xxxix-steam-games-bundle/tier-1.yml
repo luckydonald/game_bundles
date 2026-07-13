@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXIX Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7181/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7181/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7181/source.json
+games:
+- name: aMAZEing adventures
+  ids:
+  - steam:552870
+- name: Don't Look Back
+  ids:
+  - steam:601550

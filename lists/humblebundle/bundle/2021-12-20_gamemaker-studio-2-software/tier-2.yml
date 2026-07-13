@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: GameMaker Studio 2 Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10851/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10851/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10851/source.json
+games:
+- name: Post Void
+  ids:
+  - steam:1285670
+- name: Super Raft Boat
+  ids:
+  - unresolved:source:isthereanydeal:10851:super-raft-boat
+- name: GameMaker Studio 2 Creator
+  ids:
+  - unresolved:source:isthereanydeal:10851:gamemaker-studio-2-creator
+- name: Last Horizon
+  ids:
+  - steam:394220
+- name: Space Gladiators
+  ids:
+  - steam:1144910

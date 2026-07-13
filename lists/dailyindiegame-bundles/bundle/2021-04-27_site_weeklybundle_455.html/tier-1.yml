@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 455 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9977/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9977/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9977/source.json
+games:
+- name: All Guns On Deck
+  ids:
+  - steam:315330
+- name: 5Rings
+  ids:
+  - steam:790610
+- name: Strange Night
+  ids:
+  - steam:496640
+- name: Fighters Unleashed
+  ids:
+  - steam:566560
+- name: Prism
+  ids:
+  - unresolved:source:isthereanydeal:9977:prism
+- name: 'Forgotten Faces, Episode One: Strange Day'
+  ids:
+  - steam:664870
+- name: Rover Rescue
+  ids:
+  - unresolved:source:isthereanydeal:9977:rover-rescue
+- name: Through the Mirror
+  ids:
+  - steam:548720
+- name: RAKETENWASCHMACHINE
+  ids:
+  - steam:1556120

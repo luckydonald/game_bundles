@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mecha Mania Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16090/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16090/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16090/source.json
+games:
+- name: Star Renegades
+  ids:
+  - steam:651670
+- name: Mech Mechanic Simulator
+  ids:
+  - steam:1044980
+- name: UFO ROBOT GRENDIZER - The Feast of the Wolves
+  ids:
+  - steam:2295970
+- name: Mechabellum
+  ids:
+  - steam:669330
+- name: Vox Machinae
+  ids:
+  - steam:334540
+- name: Oblivion Override
+  ids:
+  - steam:1952370
+- name: 'Project MIKHAIL: A Muv-Luv War Story'
+  ids:
+  - steam:1557480

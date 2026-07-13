@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bridge Constructor Combo Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3067/source.json
+games:
+- name: Bridge Constructor
+  ids:
+  - steam:250460
+- name: Bridge Constructor Playground
+  ids:
+  - steam:279990
+- name: Bridge Constructor Medieval
+  ids:
+  - steam:319850

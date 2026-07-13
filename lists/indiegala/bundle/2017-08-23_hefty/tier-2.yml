@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Hefty Indie Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5411/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5411/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5411/source.json
+games:
+- name: Western FPS
+  ids:
+  - unresolved:source:isthereanydeal:5411:western-fps
+- name: ArmyCraft
+  ids:
+  - unresolved:source:isthereanydeal:5411:armycraft
+- name: Starving
+  ids:
+  - unresolved:source:isthereanydeal:5411:starving
+- name: Hexagon Defense
+  ids:
+  - unresolved:source:isthereanydeal:5411:hexagon-defense
+- name: Heavily Armed
+  ids:
+  - steam:554770
+- name: ProviAnt
+  ids:
+  - unresolved:source:isthereanydeal:5411:proviant
+- name: 'Forgotten Faces, Episode One: Strange Day'
+  ids:
+  - steam:664870
+- name: 'Mission: Escape from Island'
+  ids:
+  - unresolved:source:isthereanydeal:5411:mission-escape-from-island
+- name: Glasswinged Ascension
+  ids:
+  - steam:668670
+- name: Virus Z
+  ids:
+  - steam:666290
+- name: SINISTRY SILINIUM
+  ids:
+  - unresolved:source:isthereanydeal:5411:sinistry-silinium
+- name: Insane Road
+  ids:
+  - unresolved:source:isthereanydeal:5411:insane-road

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Step On It Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3570/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3570/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3570/source.json
+games:
+- name: CoreBreach
+  ids:
+  - unresolved:source:isthereanydeal:3570:corebreach
+- name: Hovercraft Racing
+  ids:
+  - steam:1752660
+- name: Musclecar Online
+  ids:
+  - steam:346440
+- name: Nitro Racer XD
+  ids:
+  - unresolved:source:isthereanydeal:3570:nitro-racer-xd

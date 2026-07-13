@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Remute 11: Trippy? Arty? Fun! — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3152/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3152/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3152/source.json
+games:
+- name: Silver Knight
+  ids:
+  - steam:432170
+- name: Elems
+  ids:
+  - steam:528670
+- name: NAL Is Dead
+  ids:
+  - unresolved:source:isthereanydeal:3152:nal-is-dead
+- name: '"BUTTS: The VR Experience"'
+  ids:
+  - steam:439260
+- name: Division-A
+  ids:
+  - unresolved:source:isthereanydeal:3152:division-a
+- name: Vilmonic
+  ids:
+  - steam:458330
+- name: 'Burning Man: Beyond Black Rock'
+  ids:
+  - unresolved:source:isthereanydeal:3152:burning-man-beyond-black-rock
+- name: Gobbo Goes
+  ids:
+  - unresolved:source:isthereanydeal:3152:gobbo-goes
+- name: New Lethes
+  ids:
+  - unresolved:source:isthereanydeal:3152:new-lethes
+- name: Jupitron Game Collection Vol.1
+  ids:
+  - unresolved:source:isthereanydeal:3152:jupitron-game-collection-vol-1
+- name: 'Blasting Agent: Ultimate Edition'
+  ids:
+  - steam:453810
+- name: Mondrian - Abstraction in Beauty
+  ids:
+  - steam:392780

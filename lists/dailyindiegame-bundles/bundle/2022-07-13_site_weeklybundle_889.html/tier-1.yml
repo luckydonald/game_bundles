@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 889 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11764/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11764/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11764/source.json
+games:
+- name: zombie wars
+  ids:
+  - steam:1638870
+- name: ADM 2(WHEN WORLDS COLLIDE)
+  ids:
+  - steam:1082780
+- name: Pursuer
+  ids:
+  - steam:1013660
+- name: Colorful 3D II
+  ids:
+  - steam:1251760
+- name: Endurance - space shooter
+  ids:
+  - steam:1378390
+- name: Retro Tank Party
+  ids:
+  - steam:1568570
+- name: IsoCubes
+  ids:
+  - steam:1644190
+- name: Block Collide
+  ids:
+  - steam:1797250
+- name: Mega Zombie Explosion
+  ids:
+  - unresolved:source:isthereanydeal:11764:mega-zombie-explosion

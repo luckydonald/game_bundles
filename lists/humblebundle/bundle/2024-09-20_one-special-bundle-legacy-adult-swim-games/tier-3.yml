@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'One Special Bundle: The Legacy of Adult Swim Games — 8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14459/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14459/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14459/source.json
+games:
+- name: 'Jazzpunk: Director''s Cut'
+  ids:
+  - steam:250260
+- name: Duck Game
+  ids:
+  - steam:312530
+- name: Battle Chef Brigade Deluxe
+  ids:
+  - steam:452570
+- name: Pool Panic
+  ids:
+  - steam:522240
+- name: Rain World
+  ids:
+  - steam:312520
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+- name: 'Death''s Gambit: Afterlife - Ashes of Vados'
+  ids:
+  - steam:1866620
+- name: 'Rain World: Downpour'
+  ids:
+  - steam:1933390

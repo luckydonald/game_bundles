@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Reaper Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9207/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9207/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9207/source.json
+games:
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+- name: GRID (2019)
+  ids:
+  - unresolved:source:isthereanydeal:9207:grid-2019
+- name: 'Streets of Red : Devil''s Dare Deluxe'
+  ids:
+  - steam:946650
+- name: DiRT 4
+  ids:
+  - unresolved:source:isthereanydeal:9207:dirt-4
+- name: Hard Reset Redux
+  ids:
+  - steam:407810
+- name: 'Redeemer: Enhanced Edition'
+  ids:
+  - steam:447290
+- name: Zombie Night Terror
+  ids:
+  - steam:416680
