@@ -38,6 +38,8 @@ game-collections complete --store gog,epic --mode missing my-draft.yml
 
 Completion defaults to Steam and `--mode blank`, which searches only games with an empty `ids` list or no proper ID. Use `missing` to add selected stores not previously attempted, `unresolved` to also retry `unresolved:store:<store>:*` failures, or `refetch_all` to refresh every selected store for every game. Repeat `--provider`/`--store`, comma-separate values, or pass `all`. Existing IDs for unselected stores are preserved. Unique exact title matches are filled automatically, and ambiguous results are presented for selection.
 
+`--provider isthereanydeal --mode unresolved` is different: instead of a storefront title search, it solves `unresolved:source:isthereanydeal:<bundle-id>:<slug>` markers (left by isthereanydeal-sourced lists below) via that game's own isthereanydeal.com detail page and its cross-store deal listing; see the root `README.md` for details.
+
 Regenerate the IDE schema after changing the Pydantic contract:
 
 ```console

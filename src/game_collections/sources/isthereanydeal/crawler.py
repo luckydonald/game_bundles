@@ -9,6 +9,7 @@ from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
 
 import httpx
 
@@ -38,6 +39,7 @@ _NO_LOG: LogFn = lambda _message: None  # noqa: E731
 ITAD_ROOT = "https://isthereanydeal.com/"
 BUNDLES_INDEX_URL = f"{ITAD_ROOT}bundles/"
 LIST_API_URL = f"{ITAD_ROOT}bundles/api/list/"
+GAME_INFO_API_URL = f"{ITAD_ROOT}api/game/info/"
 PAGE_SIZE = 30
 DEFAULT_TABS: tuple[str, ...] = ("live",)
 
@@ -147,6 +149,49 @@ class ItadHttpClient:
             raise ItadCrawlError(f"list API response for tab={tab} offset={offset}: {error}") from error
         # end try
     # end def list_page
+
+    def fetch_deals(self, gid: str) -> dict[str, Any]:
+        """Fetch one game's raw `deals` payload from the anonymous game-info API."""
+        if self._token is None:
+            self.bootstrap()
+        # end if
+
+        def send() -> httpx.Response:
+            return self._client.post(
+                GAME_INFO_API_URL,
+                json={"gid": gid},
+                headers={"Accept": "application/json", "itad-sessiontoken": self._token or ""},
+            )
+        # end def send
+
+        response = self._send(send)
+        if response.status_code == 400:
+            # Same anonymous-token expiry/invalidity as `list_page`; refresh once.
+            self.bootstrap()
+            response = self._send(send)
+        # end if
+        response.raise_for_status()
+        try:
+            payload = response.json()
+        except ValueError as error:
+            raise ItadCrawlError(f"game info API returned invalid JSON: {error}") from error
+        # end try
+        if not isinstance(payload, dict):
+            raise ItadCrawlError(f"game info API response for gid={gid} has an unexpected shape")
+        # end if
+        return payload
+    # end def fetch_deals
+
+    def resolve_redirect(self, url: str) -> str:
+        """Follow one `itad.link/...` deal redirect to its real storefront URL.
+
+        Uses GET, not HEAD - some destination stores (confirmed: Microsoft
+        Store) reject HEAD requests with a 403 even though GET succeeds.
+        """
+        response = self._send(lambda: self._client.get(url))
+        response.raise_for_status()
+        return str(response.url)
+    # end def resolve_redirect
 
 # end class ItadHttpClient
 

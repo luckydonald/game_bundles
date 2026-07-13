@@ -1,0 +1,45 @@
+from __future__ import annotations
+
+from game_collections.sources.storefronts import (
+    is_known_store_url,
+    match_store,
+    qualified_ids_from_urls,
+)
+
+
+def test_match_store_recognizes_both_epic_hosts() -> None:
+    assert match_store("https://store.epicgames.com/en-US/p/fortnite") == "epic"
+    assert match_store("https://www.epicgames.com/store/p/cyberpunk-2077") == "epic"
+# end def test_match_store_recognizes_both_epic_hosts
+
+
+def test_match_store_unknown_host_returns_none() -> None:
+    assert match_store("https://example.com/app/440") is None
+# end def test_match_store_unknown_host_returns_none
+
+
+def test_qualified_ids_from_urls_resolves_known_stores_and_skips_unknown() -> None:
+    urls = [
+        "https://store.steampowered.com/app/440/",
+        "https://apps.microsoft.com/detail/9n0h62kz3bxv?hl=en-US&gl=DE",
+        "https://www.2game.com/de-de/products/diablo-iv-standard-edition-microsoft?ref=itad",
+        "https://eu.shop.battle.net/login/oauth2/code/storefront",
+    ]
+    assert qualified_ids_from_urls(urls) == [
+        "steam:440",
+        "microsoft:9n0h62kz3bxv",
+        "2game:diablo-iv-standard-edition-microsoft",
+    ]
+# end def test_qualified_ids_from_urls_resolves_known_stores_and_skips_unknown
+
+
+def test_qualified_ids_from_urls_dedupes() -> None:
+    urls = ["https://store.steampowered.com/app/440/", "https://store.steampowered.com/app/440/Team_Fortress/"]
+    assert qualified_ids_from_urls(urls) == ["steam:440"]
+# end def test_qualified_ids_from_urls_dedupes
+
+
+def test_is_known_store_url() -> None:
+    assert is_known_store_url("https://apps.microsoft.com/detail/9n0h62kz3bxv") is True
+    assert is_known_store_url("https://eu.shop.battle.net/login/oauth2/code/storefront") is False
+# end def test_is_known_store_url

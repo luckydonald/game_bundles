@@ -179,8 +179,8 @@ def test_parse_bundle_detail_page_single_flat_tier() -> None:
     assert tiers[0].price is not None
     assert tiers[0].price.value == 8.0
     ids = {item.slug: item.ids for item in tiers[0].items}
-    assert ids["grime"] == ["steam:1123050"]
-    assert ids["islets"] == ["steam:1669420"]
+    assert ids["grime"] == ["steam:1123050", "isthereanydeal:grime"]
+    assert ids["islets"] == ["steam:1669420", "isthereanydeal:islets"]
 # end def test_parse_bundle_detail_page_single_flat_tier
 
 
@@ -198,7 +198,10 @@ def test_parse_bundle_detail_page_cumulative_named_tiers() -> None:
 def test_parse_bundle_detail_page_unresolved_game_gets_fallback_id() -> None:
     html = _tier_block("", "3,50 €", _game_block("mystery-game", "Mystery Game", None))
     tiers = parse_bundle_detail_page(html, bundle_id=99, expected_game_count=1)
-    assert tiers[0].items[0].ids == ["unresolved:source:isthereanydeal:99:mystery-game"]
+    assert tiers[0].items[0].ids == [
+        "unresolved:source:isthereanydeal:99:mystery-game",
+        "isthereanydeal:mystery-game",
+    ]
 # end def test_parse_bundle_detail_page_unresolved_game_gets_fallback_id
 
 
@@ -343,8 +346,9 @@ def test_parse_bundle_detail_json_byob_single_tier_no_price() -> None:
     assert len(tiers) == 1
     assert tiers[0].price is None
     ids = {item.slug: item.ids for item in tiers[0].items}
-    assert ids["a"] == ["steam:1"]
+    assert ids["a"] == ["steam:1", "isthereanydeal:a"]
     assert ids["b"][0].startswith("unresolved:")
+    assert ids["b"][1] == "isthereanydeal:b"
 # end def test_parse_bundle_detail_json_byob_single_tier_no_price
 
 
@@ -383,7 +387,7 @@ def test_parse_bundle_detail_json_mature_bundle_parses_fully() -> None:
     html = _detail_json_html(live_data)
     tiers = parse_bundle_detail_json(html, bundle_id=16299, expected_game_count=1, provider_slug="indiegala")
     assert tiers is not None
-    assert tiers[0].items[0].ids == ["steam:2206280"]
+    assert tiers[0].items[0].ids == ["steam:2206280", "isthereanydeal:horny-spell"]
 # end def test_parse_bundle_detail_json_mature_bundle_parses_fully
 
 
