@@ -175,7 +175,7 @@ This is an internal Steam format. Game Collections therefore models the complete
 
 Restoration requires Steam to be stopped and the user to type `RESTORE`.
 
-Synchronization is additive in version 1. It creates deterministic static collections, preserves manually added games, and never removes games or collections. Same-name collisions, dynamic collections, and system collection names fail closed.
+Synchronization is additive in version 1. It creates deterministic static collections whose Steam-visible names start with `🗃️ `, preserves manually added games, and never removes games or collections. Same-name collisions, dynamic collections, and system collection names fail closed.
 
 ## Architecture
 
