@@ -1,0 +1,107 @@
+{
+  "$defs": {
+    "ItadDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "expiry": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expiry"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "ItadDates",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one ITAD per-game detail page (`/game/<slug>/info/`).\n\n`appid` is the Steam AppID read directly off the page's own embedded\n`detail.appid` field when present - `None` for games with no Steam\nrelease. `ids` is every qualified ID resolved for this game (Steam via\n`appid`, plus any other storefront resolved from its `deals`), always\nincluding `isthereanydeal:<slug>` itself.",
+  "properties": {
+    "appid": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Appid"
+    },
+    "dates": {
+      "$ref": "#/$defs/ItadDates"
+    },
+    "ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Ids",
+      "type": "array"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "slug": {
+      "minLength": 1,
+      "title": "Slug",
+      "type": "string"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "slug",
+    "title",
+    "ids",
+    "url",
+    "dates"
+  ],
+  "title": "ItadGameArchive",
+  "type": "object"
+}

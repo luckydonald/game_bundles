@@ -1,7 +1,13 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
+import pytest
+
 from game_collections.search import complete_game_list, selected_providers
 from game_collections.sources.humblebundle.resolver import StoreCandidate, StorefrontResolver
+from game_collections.sources.isthereanydeal.models import ItadDates, ItadGameArchive
+from game_collections.sources.isthereanydeal.resolver import ItadGameResolution
 
 
 def test_selected_providers_defaults_to_every_supported_store() -> None:
@@ -196,3 +202,72 @@ def test_success_removes_source_unresolved_marker() -> None:
 
     assert completed["games"][0]["ids"] == ["steam:400"]
 # end def test_success_removes_source_unresolved_marker
+
+
+def _itad_resolution(slug: str, appid: int) -> ItadGameResolution:
+    archive = ItadGameArchive(
+        schema=1,
+        slug=slug,
+        title=slug,
+        appid=appid,
+        ids=[f"steam:{appid}", f"isthereanydeal:{slug}"],
+        url=f"https://isthereanydeal.com/game/{slug}/info/",
+        dates=ItadDates(crawled=datetime(2026, 7, 13, tzinfo=UTC)),
+    )
+    return ItadGameResolution(archive=archive, source={})
+# end def _itad_resolution
+
+
+def test_complete_game_list_resolves_isthereanydeal_marker() -> None:
+    completed, unresolved = complete_game_list(
+        {
+            "schema": 1,
+            "name": "Draft",
+            "games": [
+                {
+                    "name": "WildStar",
+                    "ids": ["unresolved:source:isthereanydeal:2126:wildstar"],
+                }
+            ],
+        },
+        ("isthereanydeal",),
+        StorefrontResolver(lambda _url: "", lambda *_args: None),
+        lambda *_args: None,
+        "unresolved",
+        itad_resolve=lambda slug: _itad_resolution(slug, 376870),
+    )
+
+    assert completed["games"][0]["ids"] == ["steam:376870", "isthereanydeal:wildstar"]
+    assert unresolved == []
+# end def test_complete_game_list_resolves_isthereanydeal_marker
+
+
+def test_complete_game_list_leaves_non_matching_games_untouched() -> None:
+    completed, _unresolved = complete_game_list(
+        {
+            "schema": 1,
+            "name": "Draft",
+            "games": [{"name": "Already Resolved", "ids": ["steam:1"]}],
+        },
+        ("isthereanydeal",),
+        StorefrontResolver(lambda _url: "", lambda *_args: None),
+        lambda *_args: None,
+        "unresolved",
+        itad_resolve=lambda _slug: (_ for _ in ()).throw(AssertionError("should not be called")),
+    )
+
+    assert completed["games"][0]["ids"] == ["steam:1"]
+# end def test_complete_game_list_leaves_non_matching_games_untouched
+
+
+def test_complete_game_list_raises_when_itad_resolve_omitted() -> None:
+    with pytest.raises(ValueError, match="itad_resolve"):
+        complete_game_list(
+            {"schema": 1, "name": "Draft", "games": [{"name": "X", "ids": ["unresolved:source:isthereanydeal:1:x"]}]},
+            ("isthereanydeal",),
+            StorefrontResolver(lambda _url: "", lambda *_args: None),
+            lambda *_args: None,
+            "unresolved",
+        )
+    # end with
+# end def test_complete_game_list_raises_when_itad_resolve_omitted

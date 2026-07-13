@@ -5,13 +5,14 @@ from __future__ import annotations
 import json
 import re
 from collections.abc import Callable
+from dataclasses import dataclass
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 from bs4 import BeautifulSoup, Tag
 
 from game_collections.sources.isthereanydeal.models import ItadItem, ItadListSummary, ItadPrice, ItadTier
-from game_collections.sources.storefronts import STORE_ROOTS, StoreName, parse_store_identity
+from game_collections.sources.storefronts import StoreName, is_known_store_url, qualified_ids_from_urls
 
 
 class ItadParseError(ValueError):
@@ -268,7 +269,7 @@ def _dedupe_tier_name(name: str, seen_names: set[str]) -> str:
 # Loose substrings for matching a shop's display name (from the reviewed
 # `config/isthereanydeal-shops.yml`) against the provider of a resolved
 # qualified ID - used only for a corroboration log line, never for
-# resolution itself (`reviews[].url` + `parse_store_identity` remains the
+# resolution itself (`reviews[].url` + `qualified_ids_from_urls` remains the
 # sole source of truth for ids).
 _PROVIDER_SHOP_HINTS: dict[StoreName, str] = {
     "steam": "steam",
@@ -305,28 +306,18 @@ def _log_unmatched_shop_keys(
 
 
 def _resolve_urls(urls: list[str], bundle_id: int, slug: str) -> list[str]:
-    """Resolve every recognized storefront URL into a qualified ID, deduped and ordered."""
-    ids: list[str] = []
-    seen: set[str] = set()
-    for url in urls:
-        provider = next((name for name, root in STORE_ROOTS.items() if url.startswith(root)), None)
-        if provider is None:
-            continue
-        # end if
-        try:
-            qualified_id = parse_store_identity(provider, url)
-        except ValueError:
-            continue
-        # end try
-        if qualified_id in seen:
-            continue
-        # end if
-        seen.add(qualified_id)
-        ids.append(qualified_id)
-    # end for
+    """Resolve every recognized storefront URL into a qualified ID, deduped and ordered.
+
+    Always includes the game's own `isthereanydeal:<slug>` id, even when no
+    storefront URL resolved (in that case alongside the `unresolved:` marker)
+    - a stable anchor for later resolution independent of the bundle it was
+    first seen in (see the ITAD per-game detail-page solver).
+    """
+    ids = qualified_ids_from_urls(urls)
     if not ids:
         ids.append(f"unresolved:source:isthereanydeal:{bundle_id}:{slug}")
     # end if
+    ids.append(f"isthereanydeal:{slug}")
     return ids
 # end def _resolve_urls
 
@@ -469,6 +460,66 @@ def parse_bundle_detail_json(
 # end def parse_bundle_detail_json
 
 
+@dataclass(frozen=True, slots=True)
+class ItadGameDetail:
+    """The pieces of a per-game detail page's embedded JSON the solver needs."""
+
+    gid: str
+    title: str
+    appid: int | None
+    payload: dict[str, Any]
+
+# end class ItadGameDetail
+
+
+def parse_game_detail_json(html: str, slug: str) -> ItadGameDetail:
+    """Extract the gid, title, and Steam appid from a `/game/<slug>/info/` page.
+
+    Every game detail page carries the same shared inline script the bundle
+    detail pages do, but with `var page = ["Game", {"game": {...}, "detail":
+    {...}}];` (confirmed live). `detail.appid` is the Steam AppID directly -
+    `None` when the game has no Steam release (confirmed live: the key is
+    always present, just `null`). No DOM fallback: like the Bundle page, the
+    embedded script isn't rendering-gated, so there's no known case where
+    it's missing on a real detail page.
+    """
+    text = _find_page_script(html)
+    if text is None:
+        raise ItadParseError(f"game {slug!r} detail page is missing its embedded page data")
+    # end if
+    match = _PAGE_SCRIPT_PATTERN.search(text)
+    if not match:
+        raise ItadParseError(f"game {slug!r} detail page is missing its embedded page data")
+    # end if
+    bracket_start = text.index("[", match.end() - 1)
+    raw_array = _extract_balanced(text, bracket_start, "[", "]")
+    try:
+        data = json.loads(raw_array)
+    except json.JSONDecodeError as error:
+        raise ItadParseError(f"game {slug!r} embedded page data is not valid JSON: {error}") from error
+    # end try
+    if not isinstance(data, list) or len(data) < 2 or data[0] != "Game" or not isinstance(data[1], dict):
+        raise ItadParseError(f"game {slug!r} embedded page data has an unexpected shape")
+    # end if
+    payload = data[1]
+    game = payload.get("game")
+    detail = payload.get("detail")
+    if not isinstance(game, dict) or not isinstance(detail, dict):
+        raise ItadParseError(f"game {slug!r} embedded page data is missing game/detail")
+    # end if
+    gid = game.get("id")
+    title = game.get("title")
+    if not isinstance(gid, str) or not gid or not isinstance(title, str) or not title:
+        raise ItadParseError(f"game {slug!r} embedded page data is missing game.id/game.title")
+    # end if
+    appid = detail.get("appid")
+    if appid is not None and not isinstance(appid, int):
+        raise ItadParseError(f"game {slug!r} detail.appid has an unexpected shape: {appid!r}")
+    # end if
+    return ItadGameDetail(gid=gid, title=title, appid=appid, payload=payload)
+# end def parse_game_detail_json
+
+
 def parse_bundle_detail_page(html: str, bundle_id: int, expected_game_count: int) -> list[ItadTier]:
     """Extract cumulative tiers, prices, and per-game storefront IDs from an ITAD bundle page.
 
@@ -531,7 +582,7 @@ def parse_bundle_detail_page(html: str, bundle_id: int, expected_game_count: int
             current_slug = slug
             continue
         # end if
-        if current_slug is not None and any(href.startswith(root) for root in STORE_ROOTS.values()):
+        if current_slug is not None and is_known_store_url(href):
             urls_by_slug[current_slug].append(href)
         # end if
     # end for
