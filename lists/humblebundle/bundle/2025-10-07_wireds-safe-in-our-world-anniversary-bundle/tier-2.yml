@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wired's Safe in our World Anniversary Bundle — 9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15478/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15478/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15478/source.json
+games:
+- name: Those Who Remain
+  ids:
+  - steam:715380
+- name: Tin Hearts
+  ids:
+  - steam:1831700
+- name: Fractured Minds
+  ids:
+  - steam:688740
+- name: 'Tiny Troopers: Global Ops'
+  ids:
+  - steam:1374350
+- name: The Last Worker
+  ids:
+  - steam:1579280
+- name: 'GRIP: Combat Racing'
+  ids:
+  - steam:396900
+- name: The Falconeer
+  ids:
+  - unresolved:source:isthereanydeal:15478:the-falconeer
+- name: Arcade Paradise
+  ids:
+  - steam:1388870
+- name: Aaero2
+  ids:
+  - steam:3010090

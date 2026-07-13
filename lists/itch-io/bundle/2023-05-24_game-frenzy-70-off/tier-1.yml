@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Frenzy 70% Off Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13195/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13195/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13195/source.json
+games:
+- name: 'Drop it: Block Paradise!'
+  ids:
+  - steam:2265520
+- name: Brickbreaker 1.0
+  ids:
+  - unresolved:source:isthereanydeal:13195:brickbreaker-1-0
+- name: Karporam
+  ids:
+  - unresolved:source:isthereanydeal:13195:karporam
+- name: Hokutobu
+  ids:
+  - unresolved:source:isthereanydeal:13195:hokutobu
+- name: Pushle
+  ids:
+  - unresolved:source:isthereanydeal:13195:pushle
+- name: Endless Jumper
+  ids:
+  - unresolved:source:isthereanydeal:13195:endless-jumper
+- name: Mr.Elder
+  ids:
+  - unresolved:source:isthereanydeal:13195:mr-elder
+- name: Guess it
+  ids:
+  - unresolved:source:isthereanydeal:13195:guess-it
+- name: Time to Maze
+  ids:
+  - unresolved:source:isthereanydeal:13195:time-to-maze

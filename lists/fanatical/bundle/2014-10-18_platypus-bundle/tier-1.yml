@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Platypus Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1298/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1298/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1298/source.json
+games:
+- name: Platypus
+  ids:
+  - steam:307340
+- name: Nux
+  ids:
+  - steam:307350
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+- name: The Culling Of The Cows
+  ids:
+  - steam:297020
+- name: Platypus II
+  ids:
+  - steam:319180
+- name: Chip
+  ids:
+  - steam:275470
+- name: Psichodelya
+  ids:
+  - unresolved:source:isthereanydeal:1298:psichodelya

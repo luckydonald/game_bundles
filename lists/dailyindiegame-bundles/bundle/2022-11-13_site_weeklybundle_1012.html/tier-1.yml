@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1012: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12442/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12442/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12442/source.json
+games:
+- name: Sinister Halloween
+  ids:
+  - steam:747690
+- name: 'Fancy Skiing: Speed'
+  ids:
+  - steam:1081910
+- name: Starblazer
+  ids:
+  - unresolved:source:isthereanydeal:12442:starblazer
+- name: COMPLEX a VR Puzzle Game
+  ids:
+  - steam:772420
+- name: TimeLock VR
+  ids:
+  - unresolved:source:isthereanydeal:12442:timelock-vr
+- name: Banana Invaders
+  ids:
+  - unresolved:source:isthereanydeal:12442:banana-invaders
+- name: VRAdventure
+  ids:
+  - steam:1057730
+- name: Reality End
+  ids:
+  - steam:1417740
+- name: Behind Border Zone
+  ids:
+  - steam:1897520

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble LEGO Built To Bundle — 1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9970/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9970/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9970/source.json
+games:
+- name: The LEGO® NINJAGO® Movie Video Game
+  ids:
+  - steam:640590

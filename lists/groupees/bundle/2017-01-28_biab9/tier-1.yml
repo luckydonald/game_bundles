@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle in a Box 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4689/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4689/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4689/source.json
+games:
+- name: 'Onikira: Demon Killer'
+  ids:
+  - steam:310850
+- name: "Odysseus \x96 Long Way Home"
+  ids:
+  - steam:348960
+- name: Lavapools
+  ids:
+  - unresolved:source:isthereanydeal:4689:lavapools
+- name: Save Their Souls
+  ids:
+  - steam:596810
+- name: Infinitum
+  ids:
+  - steam:555670
+- name: Fluffy
+  ids:
+  - unresolved:source:isthereanydeal:4689:fluffy

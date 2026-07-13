@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: VR Hope Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11806/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11806/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11806/source.json
+games:
+- name: The Great C
+  ids:
+  - unresolved:source:isthereanydeal:11806:the-great-c
+- name: Legendary Hunter VR
+  ids:
+  - steam:642170
+- name: Dodo Adventures
+  ids:
+  - unresolved:source:isthereanydeal:11806:dodo-adventures
+- name: VR Walking Simulator
+  ids:
+  - steam:1539640
+- name: Dark Threads
+  ids:
+  - unresolved:source:isthereanydeal:11806:dark-threads
+- name: 'HOPE VR: Progressive Meditation'
+  ids:
+  - steam:1703740

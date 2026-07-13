@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Codemasters Woot Crate Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6195/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6195/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6195/source.json
+games:
+- name: Overlord™
+  ids:
+  - steam:11450
+- name: 'Operation Flashpoint: Red River'
+  ids:
+  - unresolved:source:isthereanydeal:6195:operation-flashpoint-red-river
+- name: 'Operation Flashpoint: Dragon Rising'
+  ids:
+  - unresolved:source:isthereanydeal:6195:operation-flashpoint-dragon-rising
+- name: Overlord II
+  ids:
+  - steam:12810

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Plunder Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4662/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4662/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4662/source.json
+games:
+- name: Dash Fleet
+  ids:
+  - steam:586160
+- name: 'Uriel''s Chasm 2: את'
+  ids:
+  - steam:414580
+- name: Horizon Shift
+  ids:
+  - steam:326120
+- name: 'Arson & Plunder: Unleashed'
+  ids:
+  - steam:293600
+- name: Trouble In The Manor
+  ids:
+  - steam:338530

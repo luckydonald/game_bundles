@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Game Creators 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10933/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10933/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10933/source.json
+games:
+- name: GameGuru
+  ids:
+  - steam:266310
+- name: GameGuru Fantasy Pack
+  ids:
+  - steam:365530
+- name: AppGameKit Classic - Games Pack 2
+  ids:
+  - unresolved:source:isthereanydeal:10933:appgamekit-classic-games-pack-2
+- name: GameGuru - Antiques In The Attic Pack
+  ids:
+  - steam:935590
+- name: GameGuru - Construction Site Pack
+  ids:
+  - steam:854050
+- name: AppGameKit Classic
+  ids:
+  - unresolved:source:isthereanydeal:10933:appgamekit-classic
+- name: GameGuru - Medical Pack
+  ids:
+  - steam:964530
+- name: AppGameKit Classic - Giant Asset Pack 2
+  ids:
+  - unresolved:source:isthereanydeal:10933:appgamekit-classic-giant-asset-pack-2
+- name: GameGuru - Military Pack
+  ids:
+  - steam:1150680
+- name: GameGuru - Cemetery Pack
+  ids:
+  - steam:1306830
+- name: GameGuru - Camping Pack
+  ids:
+  - steam:1338070
+- name: GameGuru - Retro 80's Pack
+  ids:
+  - steam:1343490

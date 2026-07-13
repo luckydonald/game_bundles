@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: EQ Games Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4218/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4218/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4218/source.json
+games:
+- name: Destiny Warriors RPG
+  ids:
+  - steam:399790
+- name: Secret Of Magia
+  ids:
+  - steam:396160
+- name: Gun Rocket
+  ids:
+  - steam:391420

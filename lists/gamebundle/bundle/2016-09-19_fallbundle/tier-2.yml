@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Fall GameBundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4098/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4098/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4098/source.json
+games:
+- name: Militia
+  ids:
+  - steam:421260
+- name: ONE DAY for Ched
+  ids:
+  - steam:321030
+- name: CONTASION 2
+  ids:
+  - steam:428940
+- name: Rover The Dragonslayer
+  ids:
+  - unresolved:source:isthereanydeal:4098:rover-the-dragonslayer
+- name: Envy the Dead
+  ids:
+  - steam:453960
+- name: 'Sky To Fly: Faster Than Wind'
+  ids:
+  - steam:403850

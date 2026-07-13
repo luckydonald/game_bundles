@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble CI Games Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6311/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6311/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6311/source.json
+games:
+- name: 'Combat Wings: Battle of Britain'
+  ids:
+  - steam:34820
+- name: 'Sniper: Ghost Warrior Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6311:sniper-ghost-warrior-gold-edition
+- name: 'Chronicles of Mystery: The Scorpio Ritual'
+  ids:
+  - steam:34800
+- name: 'Sniper: Ghost Warrior 2 Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6311:sniper-ghost-warrior-2-collectors-edition
+- name: 'Sniper: Ghost Warrior 2: World Hunter Pack'
+  ids:
+  - steam:232647
+- name: Lords of the Fallen™ (2014) Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:6311:lords-of-the-fallen-2014-game-of-the-year-edition
+- name: Sniper Ghost Warrior 3 - Multiplayer Map Pack
+  ids:
+  - steam:575301
+- name: Sniper Ghost Warrior 3
+  ids:
+  - steam:368070

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 2K Sports Champions Bundle — entire-5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16238/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16238/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16238/source.json
+games:
+- name: NBA 2K26
+  ids:
+  - steam:3472040
+- name: NBA 2K26 35,000 Virtual Currency Pack
+  ids:
+  - unresolved:source:isthereanydeal:16238:nba-2k26-35000-virtual-currency-pack
+- name: OlliOlli World Rad Edition
+  ids:
+  - unresolved:source:isthereanydeal:16238:olliolli-world-rad-edition
+- name: TopSpin 2K25 Grand Slam Edition
+  ids:
+  - steam:1785650
+- name: PGA TOUR 2K25
+  ids:
+  - steam:2385530

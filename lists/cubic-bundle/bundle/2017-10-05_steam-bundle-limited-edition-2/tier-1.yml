@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Limited Edition Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5523/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5523/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5523/source.json
+games:
+- name: 'Female #2 + Booster Pack'
+  ids:
+  - steam:604610
+- name: Arcane RE-Raise
+  ids:
+  - unresolved:source:isthereanydeal:5523:arcane-re-raise
+- name: MOAR ZAMBIZ (ZAMBI 2 KIL DLC)
+  ids:
+  - unresolved:source:isthereanydeal:5523:moar-zambiz-zambi-2-kil-dlc
+- name: Glitch Simulator 2018
+  ids:
+  - unresolved:source:isthereanydeal:5523:glitch-simulator-2018
+- name: '- Occult RERaise'
+  ids:
+  - unresolved:source:isthereanydeal:5523:occult-reraise
+- name: '- Occult Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5523:occult-raise
+- name: Arcane Raise
+  ids:
+  - steam:603750
+- name: ZAMBI 2 KIL
+  ids:
+  - unresolved:source:isthereanydeal:5523:zambi-2-kil
+- name: Jane (Character for Occult RERaise)
+  ids:
+  - unresolved:source:isthereanydeal:5523:jane-character-for-occult-reraise
+- name: Arcane (pre)Raise
+  ids:
+  - unresolved:source:isthereanydeal:5523:arcane-pre-raise
+- name: Nina (Character for Occult Raise)
+  ids:
+  - unresolved:source:isthereanydeal:5523:nina-character-for-occult-raise
+- name: 'Extra Character (Female #3) + Item Pack for Arcane RE-Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5523:extra-character-female-3-and-item-pack-for-arcane-re-raise
+- name: 'Female #3 + Starter Pack for Arcane (pre)Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5523:female-3-and-starter-pack-for-arcane-pre-raise

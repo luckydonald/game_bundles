@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Best of Humble Bundle: WB Play the Legends Encore Bundle — entire-16-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15681/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15681/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15681/source.json
+games:
+- name: 'Batman™: Arkham Knight Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15681:batman-arkham-knight-premium-edition
+- name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15681:middle-earth-shadow-of-mordor-game-of-the-year-edition
+- name: 'Watchmen: The End is Nigh Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:15681:watchmen-the-end-is-nigh-bundle
+- name: 'Batman: Arkham Asylum Game of the Year Edition'
+  ids:
+  - steam:35140
+- name: Mad Max
+  ids:
+  - steam:234140
+- name: 'Batman: Arkham Origins'
+  ids:
+  - steam:209000
+- name: 'Injustice: Gods Among Us - Ultimate Edition'
+  ids:
+  - steam:242700
+- name: Mortal Kombat XL
+  ids:
+  - unresolved:source:isthereanydeal:15681:mortal-kombat-xl
+- name: Injustice 2 Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:15681:injustice-2-legendary-edition
+- name: Batman Arkham City Game of the Year Edition
+  ids:
+  - steam:200260
+- name: FEAR Ultimate Shooter Edition
+  ids:
+  - steam:21090
+- name: Mortal Kombat 11 Ultimate
+  ids:
+  - unresolved:source:isthereanydeal:15681:mortal-kombat-11-ultimate
+- name: Back 4 Blood
+  ids:
+  - steam:924970
+- name: Gotham Knights
+  ids:
+  - steam:1496790
+- name: 'Suicide Squad: Kill the Justice League'
+  ids:
+  - steam:315210
+- name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15681:middle-earth-shadow-of-war-definitive-edition

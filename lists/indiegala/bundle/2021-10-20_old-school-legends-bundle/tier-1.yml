@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Old School Legends Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10591/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10591/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10591/source.json
+games:
+- name: 'Sentinel 3: Homeworld'
+  ids:
+  - steam:275350
+- name: 'Vegas: Make It Big'
+  ids:
+  - steam:6210
+- name: 'Making History: The Calm & the Storm'
+  ids:
+  - steam:6250
+- name: Darkstar One
+  ids:
+  - steam:12330
+- name: Fleet Command
+  ids:
+  - steam:2910
+- name: 'Disciples II: Gallean''s Return'
+  ids:
+  - steam:1640
+- name: 'Warrior Kings: Battles'
+  ids:
+  - steam:299070
+- name: Submarine Titans
+  ids:
+  - steam:1259380

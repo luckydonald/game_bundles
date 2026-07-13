@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 332 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9503/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9503/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9503/source.json
+games:
+- name: 'Cold Cable: Lifeshift'
+  ids:
+  - steam:1043610
+- name: Handy
+  ids:
+  - steam:1113390
+- name: 'Achievement Collector: Dog'
+  ids:
+  - steam:1008370
+- name: GUNMAN
+  ids:
+  - steam:4307790
+- name: Crisis of the Middle Ages
+  ids:
+  - steam:1081260
+- name: Picross Floof
+  ids:
+  - steam:1043040
+- name: Edge of Reality
+  ids:
+  - steam:1236860
+- name: Fire Guild
+  ids:
+  - unresolved:source:isthereanydeal:9503:fire-guild
+- name: L.S.S II
+  ids:
+  - steam:1056330

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 257 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9192/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9192/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9192/source.json
+games:
+- name: Beer!
+  ids:
+  - steam:782280
+- name: Red Risk
+  ids:
+  - steam:448070
+- name: Rogue Port - Red Nightmare
+  ids:
+  - steam:467310
+- name: HELLO PLAYER
+  ids:
+  - unresolved:source:isthereanydeal:9192:hello-player
+- name: Choco Pixel 2
+  ids:
+  - steam:1229590
+- name: Choco Pixel 3
+  ids:
+  - steam:1254590
+- name: GraFi Easter
+  ids:
+  - steam:1282370
+- name: Data mining 8
+  ids:
+  - steam:1326330
+- name: Skeasy
+  ids:
+  - unresolved:source:isthereanydeal:9192:skeasy

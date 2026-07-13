@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fugitives and Outlaws Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13170/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13170/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13170/source.json
+games:
+- name: American Fugitive
+  ids:
+  - steam:934780
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110

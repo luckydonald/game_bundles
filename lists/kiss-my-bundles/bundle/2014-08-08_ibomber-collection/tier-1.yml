@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The iBomber++ Collection — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1068/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1068/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1068/source.json
+games:
+- name: iBomber Defense
+  ids:
+  - steam:104000
+- name: iBomber Defense Pacific
+  ids:
+  - steam:206690
+- name: iBomber Attack
+  ids:
+  - steam:218660
+- name: Storm in a Teacup
+  ids:
+  - steam:104020
+- name: Numba Deluxe
+  ids:
+  - steam:301700

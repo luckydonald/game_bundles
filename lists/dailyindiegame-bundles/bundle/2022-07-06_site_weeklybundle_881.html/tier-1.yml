@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 881: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11730/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11730/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11730/source.json
+games:
+- name: BBlocks
+  ids:
+  - steam:940330
+- name: PiLKO
+  ids:
+  - steam:1287420
+- name: Game Localization
+  ids:
+  - steam:1438940
+- name: MAGIC POT&TER BATTLEGROUNDS
+  ids:
+  - steam:1470750
+- name: My Sweet Ants!
+  ids:
+  - unresolved:source:isthereanydeal:11730:my-sweet-ants
+- name: Cat from the box
+  ids:
+  - steam:1683010
+- name: Conundrum
+  ids:
+  - unresolved:source:isthereanydeal:11730:conundrum
+- name: Dark Forest Project
+  ids:
+  - unresolved:source:isthereanydeal:11730:dark-forest-project
+- name: Balls! Balls!
+  ids:
+  - unresolved:source:isthereanydeal:11730:balls-balls

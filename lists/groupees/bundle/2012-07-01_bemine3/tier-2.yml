@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/180/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/180/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/180/source.json
+games:
+- name: 'Oddworld: Abe''s Oddysee'
+  ids:
+  - steam:15700
+- name: 'Red Orchestra: Ostfront 41-45'
+  ids:
+  - steam:1200
+- name: Syberia
+  ids:
+  - steam:46500
+- name: Avernum Trilogy Bundle
+  ids:
+  - unresolved:source:isthereanydeal:180:avernum-trilogy-bundle
+- name: Hamilton's Great Adventure
+  ids:
+  - steam:42140
+- name: POSTAL 2
+  ids:
+  - steam:223470
+- name: 'Oddworld: Abe''s Exoddus'
+  ids:
+  - steam:15710
+- name: 'Garshasp: The Monster Slayer'
+  ids:
+  - steam:99400

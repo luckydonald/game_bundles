@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: April Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3260/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3260/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3260/source.json
+games:
+- name: Red Bit Ninja
+  ids:
+  - steam:364900
+- name: Helena The 3rd
+  ids:
+  - steam:367060
+- name: Wild Island Quest
+  ids:
+  - steam:392820
+- name: Meadowland
+  ids:
+  - steam:320120
+- name: Caveman Craig
+  ids:
+  - steam:363240
+- name: Samsa and the Knights of Light
+  ids:
+  - steam:371320
+- name: Volstead
+  ids:
+  - unresolved:source:isthereanydeal:3260:volstead
+- name: 'Sometimes: Success Requires Sacrifice'
+  ids:
+  - steam:351470

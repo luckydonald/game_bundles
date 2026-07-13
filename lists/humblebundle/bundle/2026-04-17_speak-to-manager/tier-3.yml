@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Speak to the Manager Bundle — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16068/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16068/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16068/source.json
+games:
+- name: Rise of Industry
+  ids:
+  - steam:671440
+- name: 'Rise of Industry: 2130'
+  ids:
+  - steam:1139110
+- name: Gladiator Guild Manager
+  ids:
+  - steam:1043260
+- name: Sweet Transit
+  ids:
+  - steam:1612770
+- name: Endzone - A World Apart | Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:16068:endzone-a-world-apart-complete-edition
+- name: Good Company
+  ids:
+  - steam:911430
+- name: Empires of the Undergrowth
+  ids:
+  - steam:463530
+- name: The Colonists
+  ids:
+  - steam:677340
+- name: Lawn Mowing Simulator
+  ids:
+  - steam:1480560
+- name: The Colonists - New Lands
+  ids:
+  - steam:2784480

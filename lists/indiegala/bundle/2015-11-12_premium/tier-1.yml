@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Premium Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2729/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2729/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2729/source.json
+games:
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+- name: Agent Awesome
+  ids:
+  - steam:345220
+- name: 'Broadsword : Age of Chivalry'
+  ids:
+  - unresolved:source:isthereanydeal:2729:broadsword-age-of-chivalry
+- name: 'Pixel Puzzles 2: Birds'
+  ids:
+  - steam:344230
+- name: Bloop Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:2729:bloop-reloaded
+- name: 'Pixel Puzzles 2: Anime'
+  ids:
+  - steam:350810

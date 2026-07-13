@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Naval Warfare - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2320/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2320/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2320/source.json
+games:
+- name: Naval Warfare
+  ids:
+  - steam:98500

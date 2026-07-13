@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Indie Jam Bundle: Super Mix — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3090/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3090/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3090/source.json
+games:
+- name: Bernie Needs Love
+  ids:
+  - steam:373120
+- name: 'Last Knight: Rogue Rider Edition'
+  ids:
+  - steam:262210
+- name: Pixel Star
+  ids:
+  - steam:367300
+- name: Gateways
+  ids:
+  - steam:216290
+- name: Albert and Otto
+  ids:
+  - steam:368590
+- name: Towers of Altrac - Epic Defense Battles
+  ids:
+  - steam:333660
+- name: Death Goat
+  ids:
+  - unresolved:source:isthereanydeal:3090:death-goat
+- name: Hektor
+  ids:
+  - steam:334070
+- name: 'The Defenders: The Second Wave'
+  ids:
+  - steam:351400
+- name: 'Comic Book Hero: The Greatest Cape'
+  ids:
+  - steam:422130

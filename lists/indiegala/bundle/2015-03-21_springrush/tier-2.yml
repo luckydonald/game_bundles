@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spring Rush Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1720/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1720/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1720/source.json
+games:
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+- name: 'The Joylancer: Legendary Motor Knight'
+  ids:
+  - steam:315540
+- name: Deep Dungeons of Doom
+  ids:
+  - steam:325090
+- name: Motorama
+  ids:
+  - steam:327010
+- name: Down To One
+  ids:
+  - steam:334040
+- name: Surgeon Simulator 2013
+  ids:
+  - unresolved:source:isthereanydeal:1720:surgeon-simulator-2013
+- name: 'Last Knight: Rogue Rider Edition'
+  ids:
+  - steam:262210
+- name: BlazeRush
+  ids:
+  - steam:302710
+- name: 'The Old City: Leviathan'
+  ids:
+  - steam:297350

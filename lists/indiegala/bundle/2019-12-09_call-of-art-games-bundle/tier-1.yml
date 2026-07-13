@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Call of Art Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8190/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8190/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8190/source.json
+games:
+- name: Call of Fries
+  ids:
+  - steam:1045510
+- name: Grottesco Absurdus
+  ids:
+  - steam:948990
+- name: Merry Glade
+  ids:
+  - steam:838390
+- name: Dungeon Escape
+  ids:
+  - steam:454100
+- name: 'Action Alien : Prelude'
+  ids:
+  - unresolved:source:isthereanydeal:8190:action-alien-prelude
+- name: Herd is Coming
+  ids:
+  - steam:1028740
+- name: Defence War
+  ids:
+  - unresolved:source:isthereanydeal:8190:defence-war

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Black Dungeon Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4004/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4004/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4004/source.json
+games:
+- name: Cosmic Leap
+  ids:
+  - steam:420850
+- name: Mr. Nibbles Forever
+  ids:
+  - steam:448050
+- name: Super Ubie Island REMIX
+  ids:
+  - steam:405860
+- name: Curvatron
+  ids:
+  - steam:404700
+- name: Overture
+  ids:
+  - steam:343100

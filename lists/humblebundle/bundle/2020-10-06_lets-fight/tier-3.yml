@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Let&#39;s Fight Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9254/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9254/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9254/source.json
+games:
+- name: Divekick
+  ids:
+  - steam:244730
+- name: 'Stick Fight: The Game OST'
+  ids:
+  - steam:726050
+- name: Nidhogg
+  ids:
+  - steam:94400
+- name: 'Stick Fight: The Game'
+  ids:
+  - steam:674940
+- name: Overgrowth
+  ids:
+  - steam:25000
+- name: Absolver
+  ids:
+  - steam:473690
+- name: 'RWBY: Grimm Eclipse'
+  ids:
+  - steam:418340
+- name: Injustice 2
+  ids:
+  - steam:627270

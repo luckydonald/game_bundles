@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 15 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1318/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1318/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1318/source.json
+games:
+- name: Tesla Breaks the World!
+  ids:
+  - steam:314210
+- name: Braveland
+  ids:
+  - steam:285800
+- name: 'Lionheart: Legacy of the Crusader'
+  ids:
+  - steam:595060
+- name: Project Temporality
+  ids:
+  - steam:290320
+- name: 'Voyage: Journey to the Moon'
+  ids:
+  - steam:302180
+- name: 'Ku: Shroud of the Morrigan'
+  ids:
+  - steam:270330
+- name: Spy Fox in Dry Cereal
+  ids:
+  - steam:283980
+- name: Boo Bunny Plague - Deluxe Edition
+  ids:
+  - steam:313590
+- name: Blood Star
+  ids:
+  - unresolved:source:isthereanydeal:1318:blood-star
+- name: Darkstone
+  ids:
+  - steam:320320

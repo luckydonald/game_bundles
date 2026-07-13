@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Tycoon — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6629/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6629/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6629/source.json
+games:
+- name: Two Point Hospital
+  ids:
+  - steam:535930
+- name: Frostpunk
+  ids:
+  - steam:323190

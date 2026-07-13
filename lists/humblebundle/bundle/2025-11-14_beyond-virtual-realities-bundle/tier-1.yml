@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Beyond Virtual Realities Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15601/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15601/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15601/source.json
+games:
+- name: Arcaxer
+  ids:
+  - steam:1354540
+- name: Frenzy VR
+  ids:
+  - steam:1750110
+- name: Venture's Gauntlet VR
+  ids:
+  - steam:1840140
+- name: 'Pixel Ripped 1978: An Atari Adventure'
+  ids:
+  - steam:2360690
+- name: Elements Divided
+  ids:
+  - steam:2805770

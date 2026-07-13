@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dharker Studio Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6503/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6503/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6503/source.json
+games:
+- name: Battle Girls Deluxe Edition
+  ids:
+  - steam:404170
+- name: Alexa's Wild Night
+  ids:
+  - steam:457370
+- name: Starlight Drifter
+  ids:
+  - steam:326060
+- name: Army Gals
+  ids:
+  - steam:420980
+- name: Galaxy Girls
+  ids:
+  - steam:560250
+- name: Negligee
+  ids:
+  - steam:432100

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Broken Sword Anthology Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7754/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7754/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7754/source.json
+games:
+- name: 'Broken Sword 3: The Sleeping Dragon'
+  ids:
+  - steam:33610
+- name: 'Broken Sword 2 - The Smoking Mirror: Remastered'
+  ids:
+  - steam:33600
+- name: 'Broken Sword 5: The Serpent''s Curse'
+  ids:
+  - steam:262940
+- name: 'Broken Sword - Shadow of the Templars: The Directors Cut'
+  ids:
+  - unresolved:source:isthereanydeal:7754:broken-sword-shadow-of-the-templars-the-directors-cut
+- name: 'Broken Sword 4: The Angel of Death'
+  ids:
+  - steam:316160

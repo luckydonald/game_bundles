@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Strategic Minds Collection Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16008/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16008/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16008/source.json
+games:
+- name: Valkyria Chronicles 4 Complete Edition
+  ids:
+  - steam:790820
+- name: Old World
+  ids:
+  - steam:597180
+- name: Songs of Conquest
+  ids:
+  - steam:867210
+- name: The Last Spell
+  ids:
+  - steam:1105670
+- name: 'Terminator: Dark Fate - Defiance'
+  ids:
+  - steam:1839950
+- name: Showgunners Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16008:showgunners-deluxe-edition
+- name: 'Galactic Civilizations IV: Supernova Edition'
+  ids:
+  - steam:1357210

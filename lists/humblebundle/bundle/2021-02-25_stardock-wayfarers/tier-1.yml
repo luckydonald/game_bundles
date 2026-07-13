@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Stardock Wayfarers Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9785/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9785/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9785/source.json
+games:
+- name: 'Fallen Enchantress: Legendary Heroes'
+  ids:
+  - steam:228260
+- name: 'Sins of a Solar Empire: Rebellion'
+  ids:
+  - steam:204880

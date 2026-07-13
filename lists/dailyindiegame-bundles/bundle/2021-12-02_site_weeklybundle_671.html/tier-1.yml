@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 671 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10777/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10777/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10777/source.json
+games:
+- name: Scroll Of Life
+  ids:
+  - steam:1807250
+- name: The Hero of Bangaona
+  ids:
+  - steam:1727250
+- name: Return Alive
+  ids:
+  - unresolved:source:isthereanydeal:10777:return-alive
+- name: Jo-Jo Fighter
+  ids:
+  - unresolved:source:isthereanydeal:10777:jo-jo-fighter
+- name: Fly Or Die
+  ids:
+  - unresolved:source:isthereanydeal:10777:fly-or-die
+- name: Angels Prayer
+  ids:
+  - unresolved:source:isthereanydeal:10777:angels-prayer
+- name: Fruit Basket
+  ids:
+  - unresolved:source:isthereanydeal:10777:fruit-basket
+- name: Charades Movie One
+  ids:
+  - steam:1832370
+- name: Splash Fly Fire
+  ids:
+  - steam:1830830

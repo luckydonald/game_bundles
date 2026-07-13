@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Visual Delight Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11406/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11406/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11406/source.json
+games:
+- name: Townscaper
+  ids:
+  - steam:1291340
+- name: El Hijo - A Wild West Tale
+  ids:
+  - steam:853050
+- name: 'Labyrinth City: Pierre the Maze Detective'
+  ids:
+  - steam:1421790
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+- name: Rubber Bandits
+  ids:
+  - steam:1206610
+- name: Space Crew
+  ids:
+  - unresolved:source:isthereanydeal:11406:space-crew
+- name: 'TOEM: A Photo Adventure'
+  ids:
+  - steam:1307580

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Besieged — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1558/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1558/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1558/source.json
+games:
+- name: March of the Eagles
+  ids:
+  - steam:227760
+- name: 'Impire: Black and White Demons'
+  ids:
+  - steam:230920
+- name: 'Teleglitch: Die More Edition'
+  ids:
+  - steam:234390
+- name: Impire
+  ids:
+  - steam:202130
+- name: 'Teleglitch: Guns and Tunes'
+  ids:
+  - steam:240820
+- name: 'Impire: Creatures of the Night'
+  ids:
+  - steam:230900
+- name: 'Naval War: Arctic Circle'
+  ids:
+  - unresolved:source:isthereanydeal:1558:naval-war-arctic-circle
+- name: Sengoku
+  ids:
+  - steam:73210
+- name: "Woody Two\x96Legs: Attack of the Zombie Pirates"
+  ids:
+  - steam:49320

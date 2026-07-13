@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Call Of Duty Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/336/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/336/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/336/source.json
+games:
+- name: 'Call of Duty®: Black Ops “Annihilation & Escalation” Content Pack'
+  ids:
+  - unresolved:source:isthereanydeal:336:call-of-duty-black-ops-annihilation-and-escalation-content-pack
+- name: 'Call of Duty®: Black Ops - Rezurrection'
+  ids:
+  - steam:42719
+- name: Call of Duty® 2
+  ids:
+  - steam:2630
+- name: 'Call of Duty: Black Ops - Mac Edition'
+  ids:
+  - unresolved:source:isthereanydeal:336:call-of-duty-black-ops-mac-edition
+- name: 'Call Of Duty 4: Modern Warfare (2007)'
+  ids:
+  - steam:7940

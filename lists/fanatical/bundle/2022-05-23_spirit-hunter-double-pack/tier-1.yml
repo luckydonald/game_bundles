@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spirit Hunter Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11520/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11520/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11520/source.json
+games:
+- name: 'Spirit Hunter: Death Mark'
+  ids:
+  - steam:980830
+- name: 'Spirit Hunter: NG'
+  ids:
+  - steam:1100430

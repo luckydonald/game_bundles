@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Software Bundle for PC Lovers — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4783/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4783/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4783/source.json
+games:
+- name: 3DMark
+  ids:
+  - steam:223850

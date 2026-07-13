@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Mystica — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3950/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3950/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3950/source.json
+games:
+- name: Get Over Here
+  ids:
+  - steam:393950
+- name: Boon Boon
+  ids:
+  - steam:1092750
+- name: Minuteman
+  ids:
+  - unresolved:source:isthereanydeal:3950:minuteman
+- name: 'Mystica: The Ninth Society'
+  ids:
+  - steam:448150
+- name: Squarelands
+  ids:
+  - steam:383560

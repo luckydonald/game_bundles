@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 694 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10877/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10877/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10877/source.json
+games:
+- name: Septerra Core
+  ids:
+  - steam:253940
+- name: Bleeding Border
+  ids:
+  - steam:416290
+- name: 'Elysium: Blood Games'
+  ids:
+  - steam:430080
+- name: 'Meridian: Age of Invention'
+  ids:
+  - steam:397770
+- name: The Lost Dungeon Of Knight
+  ids:
+  - steam:1147620
+- name: PSIONIC
+  ids:
+  - steam:1467260
+- name: Pripyat-3
+  ids:
+  - unresolved:source:isthereanydeal:10877:pripyat-3
+- name: LineVox
+  ids:
+  - steam:1495250
+- name: Elon's Dream 2
+  ids:
+  - unresolved:source:isthereanydeal:10877:elons-dream-2

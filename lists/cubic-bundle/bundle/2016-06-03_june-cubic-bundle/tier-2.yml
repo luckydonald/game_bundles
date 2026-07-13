@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'June Cubic Bundle #1 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3530/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3530/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3530/source.json
+games:
+- name: Frontline Tactics Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:3530:frontline-tactics-complete-pack
+- name: Beast Blaster
+  ids:
+  - unresolved:source:isthereanydeal:3530:beast-blaster
+- name: It's Spring Again
+  ids:
+  - steam:434210
+- name: Of Carrots And Blood
+  ids:
+  - steam:439440
+- name: Whispering Willows
+  ids:
+  - steam:288060
+- name: 'Incredible Dracula: Chasing Love Collector''s Edition'
+  ids:
+  - steam:435040
+- name: 'Karmaflow: Deluxe Edition'
+  ids:
+  - steam:317940

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 528 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10247/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10247/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10247/source.json
+games:
+- name: Neon
+  ids:
+  - steam:723050
+- name: ★Fallalypse ★ Disconnect ❄
+  ids:
+  - steam:978610
+- name: 'TURK: The Demon Slayer'
+  ids:
+  - steam:1604540
+- name: Crossy Bridge
+  ids:
+  - steam:1605050
+- name: The Killer of Dishonor
+  ids:
+  - steam:1606590
+- name: Cladmen
+  ids:
+  - unresolved:source:isthereanydeal:10247:cladmen
+- name: Vortex Rolling
+  ids:
+  - steam:1653200
+- name: Splash Road
+  ids:
+  - steam:1671670
+- name: Spinner Breaker
+  ids:
+  - unresolved:source:isthereanydeal:10247:spinner-breaker

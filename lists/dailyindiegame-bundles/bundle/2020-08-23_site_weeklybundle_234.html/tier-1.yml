@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 234 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9083/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9083/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9083/source.json
+games:
+- name: CaptainMarlene
+  ids:
+  - steam:1064580
+- name: The Orphaned Soul
+  ids:
+  - steam:911690
+- name: 'AVA: Dark History'
+  ids:
+  - steam:1162320
+- name: Ninja Turdle
+  ids:
+  - steam:1082460
+- name: Battle Ram
+  ids:
+  - steam:1262060
+- name: Knife Quest
+  ids:
+  - steam:1303760
+- name: Booobjz
+  ids:
+  - steam:1190820
+- name: Don't Look
+  ids:
+  - steam:1377140
+- name: Battle Royale Pixel Squad
+  ids:
+  - steam:931250

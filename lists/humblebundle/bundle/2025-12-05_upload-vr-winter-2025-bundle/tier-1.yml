@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'UploadVR Showcase: Winter 2025 Bundle — 4-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15656/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15656/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15656/source.json
+games:
+- name: 'The Walking Dead: Saints & Sinners'
+  ids:
+  - steam:916840
+- name: After the Fall - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15656:after-the-fall-deluxe-edition
+- name: Guardians Frontline
+  ids:
+  - steam:1481440
+- name: A Fisherman's Tale 2
+  ids:
+  - steam:2096570

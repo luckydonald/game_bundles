@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Vanguard Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5184/source.json
+games:
+- name: Power Overwhelming
+  ids:
+  - unresolved:source:isthereanydeal:5184:power-overwhelming
+- name: Ghost Cleaner
+  ids:
+  - unresolved:source:isthereanydeal:5184:ghost-cleaner
+- name: HoPiKo
+  ids:
+  - steam:437390
+- name: Jelly Killer
+  ids:
+  - steam:441670
+- name: The Keep
+  ids:
+  - steam:317370
+- name: Chicken Invaders 5
+  ids:
+  - steam:353090
+- name: The Rivers of Alice - Extended Version
+  ids:
+  - steam:411590
+- name: Dead In Bermuda
+  ids:
+  - steam:384310
+- name: XLarn
+  ids:
+  - steam:360030
+- name: Vertigo Void
+  ids:
+  - steam:410440

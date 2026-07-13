@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 401 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9793/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9793/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9793/source.json
+games:
+- name: Master of Rogues:The Seven Artifacts
+  ids:
+  - steam:928130
+- name: Super Jet Juck
+  ids:
+  - steam:774121
+- name: Raffle Blast
+  ids:
+  - steam:967060
+- name: Iesabel
+  ids:
+  - steam:248710
+- name: Sausage Hunter
+  ids:
+  - steam:1296880
+- name: Knife Quest
+  ids:
+  - steam:1303760
+- name: InMaze
+  ids:
+  - steam:1371160
+- name: Bor
+  ids:
+  - steam:1373580
+- name: Tusk of Spirit
+  ids:
+  - steam:1340760

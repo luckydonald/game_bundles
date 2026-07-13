@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 2 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/178/source.json
+games:
+- name: Beat Hazard Ultra
+  ids:
+  - steam:49604
+- name: Madballs BDI Evolution Skin Rollup
+  ids:
+  - steam:25762
+- name: The Baconing
+  ids:
+  - steam:18070
+- name: Sol Survivor
+  ids:
+  - unresolved:source:isthereanydeal:178:sol-survivor
+- name: Madballs Scorched Evolution Skin Rollup
+  ids:
+  - steam:25763
+- name: 'Scratches: Director''s Cut'
+  ids:
+  - steam:46460
+- name: Plain Sight
+  ids:
+  - steam:49900
+- name: Beat Hazard
+  ids:
+  - steam:49600
+- name: Madballs in Babo:Invasion
+  ids:
+  - steam:25700
+- name: The Baconing DLC - Roesha - One Bad Mutha Co-op Character
+  ids:
+  - steam:18080
+- name: Win XP Only - Beat Hazard - iTunes & m4a file support
+  ids:
+  - unresolved:source:isthereanydeal:178:win-xp-only-beat-hazard-itunes-and-m4a-file-support
+- name: Killing Floor
+  ids:
+  - steam:1250

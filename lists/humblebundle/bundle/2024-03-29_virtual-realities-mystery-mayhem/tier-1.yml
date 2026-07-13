@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Virtual Realities: Mystery & Mayhem Bundle — 1-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13962/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13962/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13962/source.json
+games:
+- name: A Fisherman's Tale
+  ids:
+  - steam:559330

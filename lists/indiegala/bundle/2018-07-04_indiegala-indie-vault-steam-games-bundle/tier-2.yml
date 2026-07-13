@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Vault Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6288/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6288/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6288/source.json
+games:
+- name: FIRST TELEGRAM WAR
+  ids:
+  - unresolved:source:isthereanydeal:6288:first-telegram-war
+- name: Maybe Drinking. Russian Style
+  ids:
+  - unresolved:source:isthereanydeal:6288:maybe-drinking-russian-style
+- name: HellCat
+  ids:
+  - steam:864860
+- name: R.O.V.E.R.
+  ids:
+  - unresolved:source:isthereanydeal:6288:r-o-v-e-r
+- name: Total Singu
+  ids:
+  - steam:856240
+- name: Revenge Quest
+  ids:
+  - steam:569130
+- name: Mushroom Quest
+  ids:
+  - steam:868230
+- name: 'Rogue Quest: The Vault of the Lost Tyrant'
+  ids:
+  - steam:728420
+- name: 'A Tale of Caos: Overture'
+  ids:
+  - steam:500320
+- name: Battle for Orion 2
+  ids:
+  - steam:564470
+- name: Blueprint Word
+  ids:
+  - steam:870180
+- name: Ripped Pants at Work
+  ids:
+  - steam:752550

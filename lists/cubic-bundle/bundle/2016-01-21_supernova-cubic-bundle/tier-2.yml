@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Supernova Cubic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2958/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2958/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2958/source.json
+games:
+- name: Energy Balance
+  ids:
+  - steam:375010
+- name: Dungeon of Gain
+  ids:
+  - steam:340030
+- name: Retaliation
+  ids:
+  - unresolved:source:isthereanydeal:2958:retaliation
+- name: Bomb The Monsters
+  ids:
+  - steam:355020
+- name: Nebula Online
+  ids:
+  - unresolved:source:isthereanydeal:2958:nebula-online
+- name: But to Paint a Universe
+  ids:
+  - steam:335220
+- name: Project Pulsation
+  ids:
+  - steam:424000
+- name: Cold Dreams
+  ids:
+  - unresolved:source:isthereanydeal:2958:cold-dreams

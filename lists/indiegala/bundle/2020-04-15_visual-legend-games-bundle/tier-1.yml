@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Visual Legend Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8674/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8674/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8674/source.json
+games:
+- name: This World Unknown
+  ids:
+  - steam:521540
+- name: The Way We ALL GO
+  ids:
+  - unresolved:source:isthereanydeal:8674:the-way-we-all-go
+- name: Animal Lover
+  ids:
+  - steam:542200
+- name: Lily of the Valley
+  ids:
+  - steam:628460
+- name: The Legend of Arcadieu
+  ids:
+  - steam:1178710
+- name: Witch College 2
+  ids:
+  - steam:1244850

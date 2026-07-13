@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Coinplay.io Holiday Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2807/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2807/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2807/source.json
+games:
+- name: Uncanny Valley
+  ids:
+  - steam:359580
+- name: The Deer God
+  ids:
+  - steam:328940
+- name: Quest For Infamy
+  ids:
+  - steam:264560
+- name: NSE CIRCUIT BUNDLE
+  ids:
+  - unresolved:source:isthereanydeal:2807:nse-circuit-bundle
+- name: Three Dead Zed
+  ids:
+  - steam:291390
+- name: House of Caravan
+  ids:
+  - steam:353550
+- name: STOORM - Full Edition.
+  ids:
+  - unresolved:source:isthereanydeal:2807:stoorm-full-edition
+- name: Just Get Through
+  ids:
+  - steam:338190
+- name: Ludoku
+  ids:
+  - steam:366410
+- name: Luminosity
+  ids:
+  - steam:346780
+- name: Cyto
+  ids:
+  - steam:302650
+- name: Rooks Keep
+  ids:
+  - steam:299440

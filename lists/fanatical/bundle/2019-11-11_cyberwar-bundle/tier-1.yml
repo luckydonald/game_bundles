@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyberwar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8118/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8118/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8118/source.json
+games:
+- name: Defend Your Life!
+  ids:
+  - steam:357780
+- name: Forward to the Sky
+  ids:
+  - steam:333250
+- name: Killing Room
+  ids:
+  - steam:407560
+- name: Convoy
+  ids:
+  - steam:318230
+- name: BLACKHOLE
+  ids:
+  - steam:322680
+- name: Neon Chrome
+  ids:
+  - steam:428750
+- name: 'The walking zombie: Dead city'
+  ids:
+  - unresolved:source:isthereanydeal:8118:the-walking-zombie-dead-city
+- name: Band of Defenders
+  ids:
+  - steam:644640

@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: THQ Nordic Build Your Own Bundle — Select 3 titles For 45% Off, 5 titles For
+  65% Off, 7+ titles For 80% Off
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7533/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7533/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7533/source.json
+games:
+- name: ELEX
+  ids:
+  - steam:411300
+- name: Red Faction Guerrilla Re-Mars-tered
+  ids:
+  - steam:667720
+- name: The Raven Remastered
+  ids:
+  - steam:736810
+- name: Black Mirror Bundle
+  ids:
+  - unresolved:source:isthereanydeal:7533:black-mirror-bundle
+- name: 'Battle Chasers: Nightwar'
+  ids:
+  - steam:451020
+- name: The Dwarves Digital Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:7533:the-dwarves-digital-deluxe-edition
+- name: This Is the Police
+  ids:
+  - steam:443810
+- name: Titan Quest Anniversary Edition
+  ids:
+  - steam:475150
+- name: Legend of Kay Anniversary
+  ids:
+  - steam:313810
+- name: The Book of Unwritten Tales Collection
+  ids:
+  - unresolved:source:isthereanydeal:7533:the-book-of-unwritten-tales-collection

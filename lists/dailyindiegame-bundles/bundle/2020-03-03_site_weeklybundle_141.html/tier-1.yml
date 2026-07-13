@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 141 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8460/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8460/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8460/source.json
+games:
+- name: Slay.one
+  ids:
+  - steam:743350
+- name: Introvert
+  ids:
+  - steam:1235950
+- name: 'Pixel Puzzles 2: Christmas'
+  ids:
+  - steam:490510
+- name: Fallen Threats
+  ids:
+  - steam:946330
+- name: Love in the Glen
+  ids:
+  - steam:459130
+- name: Axis Football 2018
+  ids:
+  - steam:932980
+- name: World of Zombies
+  ids:
+  - steam:869130
+- name: Blue sky fighter
+  ids:
+  - unresolved:source:isthereanydeal:8460:blue-sky-fighter
+- name: Bob Wants to Go Home
+  ids:
+  - steam:1234540

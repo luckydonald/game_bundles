@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute&#39;s Adventurous Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5320/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5320/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5320/source.json
+games:
+- name: YBit
+  ids:
+  - steam:712660
+- name: '[ V A S T ] VAPORWAVE AESTHETIC SIMULATOR TYCOON'
+  ids:
+  - unresolved:source:isthereanydeal:5320:v-as-t-vaporwave-aesthetic-simulator-tycoon
+- name: BURGERWAVE
+  ids:
+  - unresolved:source:isthereanydeal:5320:burgerwave

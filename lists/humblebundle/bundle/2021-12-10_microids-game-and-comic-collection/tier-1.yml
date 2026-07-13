@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Microids Games & Comics Crossover Collection Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10808/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10808/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10808/source.json
+games:
+- name: Syberia
+  ids:
+  - steam:46500
+- name: Garfield Kart
+  ids:
+  - steam:362930
+- name: Syberia II
+  ids:
+  - steam:46510

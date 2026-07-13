@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality Bundle XXIX — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6388/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6388/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6388/source.json
+games:
+- name: Lone Pirate VR
+  ids:
+  - unresolved:source:isthereanydeal:6388:lone-pirate-vr
+- name: Protonwar
+  ids:
+  - steam:461410
+- name: Combat Tested
+  ids:
+  - steam:750010
+- name: Orb Labs, Inc.
+  ids:
+  - steam:843010
+- name: 'Sign Here: _________'
+  ids:
+  - steam:845330
+- name: 'NIGHTSTAR: Alliance'
+  ids:
+  - steam:864970
+- name: No Clue VR
+  ids:
+  - steam:625320
+- name: Barrels Up
+  ids:
+  - steam:728950
+- name: Devil and the Fairy
+  ids:
+  - steam:744750

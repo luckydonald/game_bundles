@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Intergalactic Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4996/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4996/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4996/source.json
+games:
+- name: 'Galactic Civilizations I: Ultimate Edition'
+  ids:
+  - steam:214150
+- name: 'Sins of a Solar Empire: Trinity'
+  ids:
+  - steam:201290
+- name: 'Galactic Civilizations II: Ultimate Edition'
+  ids:
+  - steam:202200
+- name: Space Hulk Ascension Edition
+  ids:
+  - unresolved:source:isthereanydeal:4996:space-hulk-ascension-edition
+- name: 'Planetary Annihilation: TITANS'
+  ids:
+  - steam:386070
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+- name: Offworld Trading Company™
+  ids:
+  - steam:271240
+- name: Galactic Civilizations III
+  ids:
+  - steam:226860

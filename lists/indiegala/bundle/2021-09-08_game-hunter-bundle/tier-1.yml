@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Hunter Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10432/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10432/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10432/source.json
+games:
+- name: 'Detached: Non-VR Edition'
+  ids:
+  - steam:848410
+- name: Excive A-1000
+  ids:
+  - steam:1008870
+- name: Ragdoll Party Online
+  ids:
+  - steam:1228910
+- name: Whiskey.Mafia. Leo's Family
+  ids:
+  - steam:1300430
+- name: 'Road Z : The Last Drive'
+  ids:
+  - steam:1357410
+- name: Hunter Girls
+  ids:
+  - steam:1683900

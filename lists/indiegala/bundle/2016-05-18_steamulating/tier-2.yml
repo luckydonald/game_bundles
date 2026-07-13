@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Steamulating Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3447/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3447/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3447/source.json
+games:
+- name: Oknytt
+  ids:
+  - steam:286320
+- name: Akane the Kunoichi
+  ids:
+  - steam:291130
+- name: Death Goat
+  ids:
+  - unresolved:source:isthereanydeal:3447:death-goat
+- name: Our Love Will Grow
+  ids:
+  - steam:423770
+- name: Galacide
+  ids:
+  - steam:356790
+- name: Blade Symphony
+  ids:
+  - steam:225600
+- name: The Dwarf Run
+  ids:
+  - steam:395420
+- name: Jackal
+  ids:
+  - steam:3124230
+- name: The Last Photon
+  ids:
+  - unresolved:source:isthereanydeal:3447:the-last-photon
+- name: Olympia Rising
+  ids:
+  - steam:295910
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+- name: 'Q.U.B.E: Director''s Cut'
+  ids:
+  - unresolved:source:isthereanydeal:3447:q-u-b-e-directors-cut

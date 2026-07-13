@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mega Man Franchise Pack — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13824/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13824/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13824/source.json
+games:
+- name: Mega Man Legacy Collection
+  ids:
+  - steam:363440
+- name: Mega Man Legacy Collection 2
+  ids:
+  - steam:495050
+- name: Mega Man X Legacy Collection
+  ids:
+  - steam:743890
+- name: Mega Man X Legacy Collection 2
+  ids:
+  - steam:743900
+- name: Mega Man 11
+  ids:
+  - steam:742300
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020

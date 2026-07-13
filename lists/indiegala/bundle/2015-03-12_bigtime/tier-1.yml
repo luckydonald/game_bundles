@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Big Time Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1696/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1696/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1696/source.json
+games:
+- name: Whos That Flying?!
+  ids:
+  - steam:57700
+- name: Bang Bang Racing
+  ids:
+  - steam:207020

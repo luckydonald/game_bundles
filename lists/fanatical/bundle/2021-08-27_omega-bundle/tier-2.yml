@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Omega Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10387/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10387/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10387/source.json
+games:
+- name: 'Shadows: Awakening'
+  ids:
+  - steam:585450
+- name: JumpJet Rex
+  ids:
+  - steam:329460
+- name: Caveblazers
+  ids:
+  - steam:452060
+- name: Drink More Glurp
+  ids:
+  - steam:1056690
+- name: Vectronom
+  ids:
+  - steam:925460
+- name: Verlet Swing
+  ids:
+  - steam:811870
+- name: Hyper Knights
+  ids:
+  - steam:597150
+- name: Fictorum
+  ids:
+  - steam:503620
+- name: 'The Wanderer: Frankenstein''s Creature'
+  ids:
+  - steam:966670

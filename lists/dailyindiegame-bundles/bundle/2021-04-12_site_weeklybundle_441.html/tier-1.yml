@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 441 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9924/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9924/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9924/source.json
+games:
+- name: House of Evil
+  ids:
+  - steam:759610
+- name: Japocaliptyca/ Япокалиптика
+  ids:
+  - steam:1112950
+- name: Psi Cards
+  ids:
+  - steam:815390
+- name: Physical Glitch
+  ids:
+  - steam:1206900
+- name: Sheptun
+  ids:
+  - steam:1234900
+- name: Spirit of dungeon
+  ids:
+  - steam:1346860
+- name: Skeasy
+  ids:
+  - unresolved:source:isthereanydeal:9924:skeasy
+- name: MotoRun
+  ids:
+  - unresolved:source:isthereanydeal:9924:motorun
+- name: Sweet Tooth 3
+  ids:
+  - unresolved:source:isthereanydeal:9924:sweet-tooth-3

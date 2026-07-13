@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Smile Day Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4183/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4183/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4183/source.json
+games:
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+- name: Apokalypsis
+  ids:
+  - unresolved:source:isthereanydeal:4183:apokalypsis
+- name: Turbo Pug DX
+  ids:
+  - steam:513780
+- name: Plant Fire Department - The Simulation
+  ids:
+  - steam:502440
+- name: Chess Knight 2
+  ids:
+  - steam:526880
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740

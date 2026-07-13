@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Doujin Visual Novel #1 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2060/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2060/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2060/source.json
+games:
+- name: Nicole
+  ids:
+  - steam:307190
+- name: Go! Go! Nippon! ~My First Trip to Japan~
+  ids:
+  - steam:251870
+- name: Deus Machina Demonbane
+  ids:
+  - unresolved:source:isthereanydeal:2060:deus-machina-demonbane
+- name: Aselia the Eternal
+  ids:
+  - unresolved:source:isthereanydeal:2060:aselia-the-eternal

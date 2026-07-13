@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXVIII Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7077/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7077/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7077/source.json
+games:
+- name: 'Yanone: Letter Splatter'
+  ids:
+  - unresolved:source:isthereanydeal:7077:yanone-letter-splatter
+- name: Battle Ion
+  ids:
+  - unresolved:source:isthereanydeal:7077:battle-ion
+- name: Virtual Islands
+  ids:
+  - steam:519540
+- name: Captain 13 Beyond the Hero
+  ids:
+  - unresolved:source:isthereanydeal:7077:captain-13-beyond-the-hero
+- name: RollerForce
+  ids:
+  - steam:506550
+- name: ELASH
+  ids:
+  - steam:975690
+- name: Attack of the Bugs
+  ids:
+  - steam:597590
+- name: EggTime 2
+  ids:
+  - steam:630080
+- name: Etherian
+  ids:
+  - steam:836460

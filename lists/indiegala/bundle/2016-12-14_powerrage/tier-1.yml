@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Power Rage Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4487/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4487/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4487/source.json
+games:
+- name: BattleTime
+  ids:
+  - steam:509600
+- name: Rainbow Rage Squad
+  ids:
+  - steam:549780
+- name: PHAT STACKS
+  ids:
+  - steam:556160

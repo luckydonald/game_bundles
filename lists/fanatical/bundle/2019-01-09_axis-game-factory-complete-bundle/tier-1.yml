@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Axis Game Factory Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6887/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6887/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6887/source.json
+games:
+- name: Axis Game Factory's AGFPRO Battlemat Multi-Player
+  ids:
+  - steam:270942
+- name: Axis Game Factory's AGFPRO - Drone Kombat FPS Multiplayer
+  ids:
+  - unresolved:source:isthereanydeal:6887:axis-game-factorys-agfpro-drone-kombat-fps-multiplayer
+- name: Axis Game Factory's AGFPRO & Zombie FPS Player
+  ids:
+  - unresolved:source:isthereanydeal:6887:axis-game-factorys-agfpro-and-zombie-fps-player
+- name: Axis Game Factory's AGFPRO - Voxel Sculpt
+  ids:
+  - steam:352111
+- name: Axis Game Factory's AGFPRO - Zombie Survival Pack
+  ids:
+  - steam:361210
+- name: Axis Game Factory's AGFPRO Fantasy Side-Scroller Player
+  ids:
+  - steam:270941
+- name: Axis Game Factory's AGFPRO v3 & Premium Bundle
+  ids:
+  - unresolved:source:isthereanydeal:6887:axis-game-factorys-agfpro-v3-and-premium-bundle
+- name: GeoVox
+  ids:
+  - steam:368470

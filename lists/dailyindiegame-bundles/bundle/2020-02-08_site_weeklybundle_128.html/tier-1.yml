@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 128 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8375/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8375/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8375/source.json
+games:
+- name: 'Demon King Domination: Deluxe Edition'
+  ids:
+  - steam:921530
+- name: Double Cross
+  ids:
+  - steam:838010
+- name: 'Elf Enchanter: Arousing Anima'
+  ids:
+  - steam:1031170
+- name: 'Magebuster: Amorous Augury'
+  ids:
+  - steam:956600
+- name: Trident's Wake
+  ids:
+  - steam:704880
+- name: Strip Shooter
+  ids:
+  - steam:1154170
+- name: Let's make... sports
+  ids:
+  - steam:1118600
+- name: Beautiful elves
+  ids:
+  - unresolved:source:isthereanydeal:8375:beautiful-elves
+- name: Aria Dating Simulator
+  ids:
+  - steam:1181290
+- name: Steamy Sextet
+  ids:
+  - steam:1154110

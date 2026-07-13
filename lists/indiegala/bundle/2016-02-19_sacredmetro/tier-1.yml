@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sacred Metro — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3077/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3077/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3077/source.json
+games:
+- name: Metro 2033 Redux
+  ids:
+  - steam:286690
+- name: Sacred 2 Gold Edition
+  ids:
+  - steam:225640

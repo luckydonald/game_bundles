@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 474 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10029/source.json
+games:
+- name: Bright Bob
+  ids:
+  - steam:789550
+- name: Space Redemption
+  ids:
+  - steam:1250960
+- name: Gun Skaters
+  ids:
+  - steam:1062130
+- name: Urizen Frosty Plus
+  ids:
+  - unresolved:source:isthereanydeal:10029:urizen-frosty-plus
+- name: Sato Dreams
+  ids:
+  - unresolved:source:isthereanydeal:10029:sato-dreams
+- name: Cat Knight
+  ids:
+  - unresolved:source:isthereanydeal:10029:cat-knight
+- name: The Sunken Hero
+  ids:
+  - unresolved:source:isthereanydeal:10029:the-sunken-hero
+- name: Hero Sword
+  ids:
+  - unresolved:source:isthereanydeal:10029:hero-sword
+- name: The Adventures of Mr. Poop
+  ids:
+  - steam:1587700

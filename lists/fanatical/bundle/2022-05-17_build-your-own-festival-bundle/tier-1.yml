@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Festival Bundle (May 2022) — Select 1 for $1.00, 5 for $2.99,
+  10 for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11501/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11501/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11501/source.json
+games:
+- name: Do Not Feed the Monkeys
+  ids:
+  - steam:658850
+- name: DISTRAINT 2
+  ids:
+  - steam:743390
+- name: V-Rally 4
+  ids:
+  - steam:658700
+- name: Omerta City of Gangsters
+  ids:
+  - steam:208520
+- name: Smile For Me
+  ids:
+  - steam:1018850
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+- name: Detention
+  ids:
+  - steam:555220
+- name: 'BLACKHOLE: Complete Edition'
+  ids:
+  - steam:322680
+- name: 'Shadows: Awakening'
+  ids:
+  - steam:585450
+- name: Party Hard
+  ids:
+  - steam:356570
+- name: Horizon Chase Turbo
+  ids:
+  - unresolved:source:isthereanydeal:11501:horizon-chase-turbo
+- name: Ittle Dew
+  ids:
+  - steam:241320
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+- name: Enemy Front
+  ids:
+  - steam:256190
+- name: Dex
+  ids:
+  - steam:269650
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+- name: Crookz - The Big Heist
+  ids:
+  - steam:310490
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+- name: Tropico 5
+  ids:
+  - steam:245620
+- name: ClusterTruck
+  ids:
+  - steam:397950
+- name: Ittle Dew 2+
+  ids:
+  - steam:395620
+- name: Niffelheim
+  ids:
+  - steam:351100
+- name: Company of Crime
+  ids:
+  - steam:1229420
+- name: XIII - Classic
+  ids:
+  - steam:1170760

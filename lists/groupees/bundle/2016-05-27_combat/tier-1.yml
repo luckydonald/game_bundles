@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Combat Fighting Action Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3495/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3495/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3495/source.json
+games:
+- name: Dusty Revenge:Co-Op Edition
+  ids:
+  - steam:252430
+- name: Jim Power - The Lost Dimension
+  ids:
+  - steam:370270
+- name: Devil's Dare 悪魔の挑戦
+  ids:
+  - steam:279580
+- name: Gemstone Keeper
+  ids:
+  - steam:522080
+- name: Retrovirus
+  ids:
+  - unresolved:source:isthereanydeal:3495:retrovirus
+- name: Heavy Fire Shattered Spear
+  ids:
+  - steam:385600
+- name: 'Toy Soldiers: Complete'
+  ids:
+  - steam:262120
+- name: Legend (1994)
+  ids:
+  - steam:412380

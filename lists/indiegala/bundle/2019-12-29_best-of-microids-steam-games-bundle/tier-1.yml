@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Best of Microids Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8277/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8277/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8277/source.json
+games:
+- name: Syberia
+  ids:
+  - steam:46500
+- name: Garfield Kart
+  ids:
+  - steam:362930
+- name: Syberia 3
+  ids:
+  - steam:464340
+- name: Asterix & Obelix XXL 2
+  ids:
+  - steam:887060
+- name: Yesterday Origins
+  ids:
+  - steam:465280
+- name: The Descendant - Complete Season (Episodes 1 - 5)
+  ids:
+  - unresolved:source:isthereanydeal:8277:the-descendant-complete-season-episodes-1-5
+- name: Agatha Christie - The ABC Murders
+  ids:
+  - steam:374900
+- name: Home Design 3D
+  ids:
+  - steam:420000
+- name: Moto Racer 4
+  ids:
+  - steam:417430
+- name: Syberia II
+  ids:
+  - steam:46510

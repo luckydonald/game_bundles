@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Best of Humble: Fight 4 Your Friends Bundle — 6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16010/source.json
+games:
+- name: Zombie Army Trilogy
+  ids:
+  - steam:301640
+- name: 'Warhammer: Vermintide 2 - Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16010:warhammer-vermintide-2-collectors-edition
+- name: Killing Floor 2 Digital Deluxe Edition
+  ids:
+  - steam:354020
+- name: Killing Floor 2 - Armory Season Pass
+  ids:
+  - steam:1524820
+- name: The Anacrusis
+  ids:
+  - steam:1120480
+- name: Killing Floor 2 - Season Pass 2022
+  ids:
+  - steam:1914490

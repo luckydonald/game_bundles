@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Build Your Own Bundle: Command Modern Operations DLCs — Select 3 for 9.99,
+  5 for 14.99, 9 for 19.99'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14390/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14390/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14390/source.json
+games:
+- name: Command:MO - Northern Inferno
+  ids:
+  - steam:1182291
+- name: Command:MO - Shifting Sands
+  ids:
+  - steam:1182290
+- name: Command:MO - The Silent Service
+  ids:
+  - steam:1182293
+- name: Command:MO - Desert Storm
+  ids:
+  - steam:1182294
+- name: Command:MO - Chains of War
+  ids:
+  - steam:1182292
+- name: Command:MO - Kashmir Fire
+  ids:
+  - steam:1594140
+- name: Command:MO - Red Tide
+  ids:
+  - steam:1712070
+- name: 'Command: Showcase'
+  ids:
+  - steam:1178900
+- name: Command:MO - Falkland War 1982
+  ids:
+  - steam:2141010
+- name: 'Command: Showcase - Ford Class'
+  ids:
+  - steam:2306370
+- name: 'Command: Showcase - Operation Desert Falcon'
+  ids:
+  - steam:2516840
+- name: 'Command: Showcase - Icebreakers'
+  ids:
+  - steam:2676020

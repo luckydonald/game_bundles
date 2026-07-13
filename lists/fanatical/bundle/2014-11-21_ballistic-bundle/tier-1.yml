@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ballistic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1408/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1408/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1408/source.json
+games:
+- name: 'Chuck''s Challenge 3D: DLC & Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:1408:chucks-challenge-3d-dlc-and-soundtrack
+- name: Chuck's Challenge 3D
+  ids:
+  - unresolved:source:isthereanydeal:1408:chucks-challenge-3d
+- name: Tiestru
+  ids:
+  - steam:317720
+- name: Spoiler Alert
+  ids:
+  - steam:283230
+- name: Panzer Tactics HD
+  ids:
+  - steam:277630
+- name: Enemy Mind
+  ids:
+  - steam:285840
+- name: Waves
+  ids:
+  - steam:107600
+- name: Guns and Robots - Terminator Pack
+  ids:
+  - unresolved:source:isthereanydeal:1408:guns-and-robots-terminator-pack
+- name: QbQbQb
+  ids:
+  - steam:329320
+- name: Wickland
+  ids:
+  - unresolved:source:isthereanydeal:1408:wickland

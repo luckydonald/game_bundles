@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Jumbo Bundle 6 — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3144/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3144/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3144/source.json
+games:
+- name: 'WARMACHINE: Tactics - Mercenaries Faction Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:3144:warmachine-tactics-mercenaries-faction-bundle
+- name: 'WARMACHINE: Tactics'
+  ids:
+  - steam:253510
+- name: Shadowrun Chronicles - Boston Lockdown
+  ids:
+  - unresolved:source:isthereanydeal:3144:shadowrun-chronicles-boston-lockdown
+- name: 'Oceanhorn: Monster of Uncharted Seas'
+  ids:
+  - steam:339200

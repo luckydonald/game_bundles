@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 77 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7987/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7987/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7987/source.json
+games:
+- name: Fury Race
+  ids:
+  - unresolved:source:isthereanydeal:7987:fury-race
+- name: Castle Of Cthulhu
+  ids:
+  - unresolved:source:isthereanydeal:7987:castle-of-cthulhu
+- name: Voltage
+  ids:
+  - steam:798710
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:7987:great-ball-of-fire
+- name: Voltage Super Retro
+  ids:
+  - unresolved:source:isthereanydeal:7987:voltage-super-retro
+- name: mmmmm donuts arhhh......
+  ids:
+  - steam:1151750
+- name: Peas Adventure
+  ids:
+  - steam:1062120
+- name: Banana Invaders
+  ids:
+  - unresolved:source:isthereanydeal:7987:banana-invaders
+- name: mAIn COMPetition
+  ids:
+  - steam:1107580

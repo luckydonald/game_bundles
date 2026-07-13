@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: tinyBuild x Versus Evil Smashup Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12082/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12082/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12082/source.json
+games:
+- name: Hello Neighbor
+  ids:
+  - steam:521890
+- name: Guts and Glory
+  ids:
+  - steam:537340
+- name: Let Them Come
+  ids:
+  - steam:505630
+- name: HitchHiker - A Mystery Game
+  ids:
+  - steam:1003120
+- name: Wintermoor Tactics Club
+  ids:
+  - steam:917840
+- name: Cardpocalypse
+  ids:
+  - steam:904400

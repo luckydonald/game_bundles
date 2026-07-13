@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jun 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8867/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8867/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8867/source.json
+games:
+- name: Supraland
+  ids:
+  - steam:813630
+- name: Before I Forget
+  ids:
+  - steam:1126600
+- name: 'Stygian: Reign of the Old Ones'
+  ids:
+  - steam:779290
+- name: GRID (2019)
+  ids:
+  - unresolved:source:isthereanydeal:8867:grid-2019
+- name: Barotrauma
+  ids:
+  - steam:602960
+- name: The King's Bird
+  ids:
+  - steam:812550
+- name: The Messenger Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:8867:the-messenger-soundtrack
+- name: Felix The Reaper
+  ids:
+  - steam:919410
+- name: 'Hellblade: Senua''s Sacrifice'
+  ids:
+  - steam:414340
+- name: 'Men of War: Assault Squad 2 War Chest Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8867:men-of-war-assault-squad-2-war-chest-edition
+- name: Boundless
+  ids:
+  - steam:324510
+- name: Overload
+  ids:
+  - steam:448850
+- name: The Stillness of the Wind
+  ids:
+  - steam:828900
+- name: Remnants of Naezith
+  ids:
+  - steam:590590
+- name: Ikenfell Sneak Peek
+  ids:
+  - unresolved:source:isthereanydeal:8867:ikenfell-sneak-peek
+- name: The Messenger
+  ids:
+  - steam:764790

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 47 — Select 2 to 10 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6714/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6714/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6714/source.json
+games:
+- name: 'Electroquest: Resistance is Futile'
+  ids:
+  - unresolved:source:isthereanydeal:6714:electroquest-resistance-is-futile
+- name: 'Dawn of China: Rise of Qin'
+  ids:
+  - unresolved:source:isthereanydeal:6714:dawn-of-china-rise-of-qin
+- name: bLogic Blox
+  ids:
+  - steam:784110
+- name: 'Ancient Warlords: Aequilibrium'
+  ids:
+  - unresolved:source:isthereanydeal:6714:ancient-warlords-aequilibrium
+- name: The Christmas Gifts
+  ids:
+  - steam:897420
+- name: The Mystery of Devils House
+  ids:
+  - steam:825970
+- name: Eternal Space Battles
+  ids:
+  - steam:926820
+- name: BalanCity
+  ids:
+  - steam:462680
+- name: Shuyan Saga + Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6714:shuyan-saga-and-soundtrack

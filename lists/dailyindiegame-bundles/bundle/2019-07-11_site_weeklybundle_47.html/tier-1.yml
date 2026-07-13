@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 47 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7623/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7623/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7623/source.json
+games:
+- name: Gregor Hills Haunted Hospital
+  ids:
+  - steam:1084770
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+- name: '2100'
+  ids:
+  - steam:1018090
+- name: Seasonal Soccer
+  ids:
+  - steam:818380
+- name: Empires
+  ids:
+  - unresolved:source:isthereanydeal:7623:empires
+- name: Space - The Return Of The Pixxelfrazzer
+  ids:
+  - steam:385100
+- name: Mission XAM
+  ids:
+  - steam:1060690
+- name: Sunset Planet
+  ids:
+  - steam:1029160
+- name: Titanic
+  ids:
+  - unresolved:source:isthereanydeal:7623:titanic

@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Ruthless Bundle — Select 2 for 5.99, 3 for 7.99,  5 for 11.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14855/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14855/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14855/source.json
+games:
+- name: Mana Spark
+  ids:
+  - steam:630720
+- name: Dark Devotion
+  ids:
+  - steam:718590
+- name: Aura of Worlds
+  ids:
+  - steam:841600
+- name: Rampage Knights
+  ids:
+  - steam:314410
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14855:moonlighter-complete-edition
+- name: Aeterna Noctis
+  ids:
+  - steam:1517970
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14855:for-the-king-deluxe-edition
+- name: Zoeti
+  ids:
+  - steam:1434540
+- name: Souldiers
+  ids:
+  - steam:1419160
+- name: GRIME - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14855:grime-deluxe-edition
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14855:children-of-morta-complete-edition
+- name: Deflector
+  ids:
+  - steam:1736550
+- name: Duck Paradox
+  ids:
+  - steam:2058150
+- name: The Golden Eyed Ghosts
+  ids:
+  - steam:1950930
+- name: Spectator
+  ids:
+  - steam:2132450
+- name: Asterogues
+  ids:
+  - steam:2083240
+- name: Dwarven Realms
+  ids:
+  - steam:2015240
+- name: Bosorka
+  ids:
+  - steam:2118370
+- name: 'Hellbreach: Vegas'
+  ids:
+  - steam:1691320
+- name: Margoq's Lair
+  ids:
+  - steam:2516550
+- name: Wall World Complete
+  ids:
+  - unresolved:source:isthereanydeal:14855:wall-world-complete
+- name: Arboria + Flame Keeper
+  ids:
+  - unresolved:source:isthereanydeal:14855:arboria-and-flame-keeper
+- name: Nephilim Resurrection
+  ids:
+  - steam:2847830

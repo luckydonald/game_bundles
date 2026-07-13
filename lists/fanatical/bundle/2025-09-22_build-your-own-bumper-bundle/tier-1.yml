@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Bumper Bundle (2025) — Select 1 for 1.00, 5 for 2.99, 10 for
+  4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15446/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15446/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15446/source.json
+games:
+- name: 911 Operator
+  ids:
+  - steam:503560
+- name: Sclash
+  ids:
+  - steam:1284130
+- name: Legend of Keepers
+  ids:
+  - steam:978520
+- name: Soul Stalker
+  ids:
+  - steam:1714240
+- name: Hammerwatch II
+  ids:
+  - steam:1538970
+- name: Quadroids
+  ids:
+  - steam:2419690
+- name: Rocket Rats
+  ids:
+  - steam:3069810
+- name: RATSHAKER
+  ids:
+  - steam:3290710
+- name: Teslagrad Remastered & Teslagrad 2 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:teslagrad-remastered-and-teslagrad-2-double-pack
+- name: Zen Chess Sextuple Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:zen-chess-sextuple-pack
+- name: Wanted Shadows + Lootbox Lyfe Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:wanted-shadows-and-lootbox-lyfe-pack
+- name: Chess Knights Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:chess-knights-quad-pack
+- name: Chess King Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:chess-king-quad-pack
+- name: Wild Wild + Samurai + Ragnarok Chess Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:wild-wild-and-samurai-and-ragnarok-chess-pack
+- name: Mars Power Industries Deluxe 2-Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:mars-power-industries-deluxe-2-pack
+- name: Jigsaw Chess Tale Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15446:jigsaw-chess-tale-double-pack

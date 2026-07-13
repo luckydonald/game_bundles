@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Two Point Hospital Bigfoot Bundle - ROW — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7130/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7130/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7130/source.json
+games:
+- name: Two Point Hospital
+  ids:
+  - steam:535930
+- name: 'two point Hospital: Bigfoot-ROW'
+  ids:
+  - unresolved:source:isthereanydeal:7130:two-point-hospital-bigfoot-row

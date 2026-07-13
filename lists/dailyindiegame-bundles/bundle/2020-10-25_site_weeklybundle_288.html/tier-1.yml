@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 288 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9320/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9320/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9320/source.json
+games:
+- name: Space Monster
+  ids:
+  - unresolved:source:isthereanydeal:9320:space-monster
+- name: Good Boy!
+  ids:
+  - steam:840440
+- name: House of Evil
+  ids:
+  - steam:759610
+- name: Dim Glow
+  ids:
+  - steam:1347010
+- name: Motionless
+  ids:
+  - steam:1367970
+- name: Dead Body Killer
+  ids:
+  - unresolved:source:isthereanydeal:9320:dead-body-killer
+- name: Fugitive Criminal
+  ids:
+  - unresolved:source:isthereanydeal:9320:fugitive-criminal
+- name: Furgal's Jetpack
+  ids:
+  - steam:1398270
+- name: Forest Problems
+  ids:
+  - unresolved:source:isthereanydeal:9320:forest-problems

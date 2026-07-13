@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Award Nominations Bundle (2025) — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15670/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15670/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15670/source.json
+games:
+- name: 'The Vale: Shadow of the Crown'
+  ids:
+  - steam:989790
+- name: Pocket Bravery
+  ids:
+  - steam:1555150
+- name: 'Chicory: A Colorful Tale'
+  ids:
+  - steam:1123450
+- name: Immortality
+  ids:
+  - steam:1350200
+- name: Ghostrunner 2
+  ids:
+  - steam:2144740

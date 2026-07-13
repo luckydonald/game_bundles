@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Jam Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/35/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/35/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/35/source.json
+games:
+- name: Planets Under Attack
+  ids:
+  - steam:218510
+- name: Two Worlds II
+  ids:
+  - steam:7520
+- name: 'Two Worlds II: Castle Defense'
+  ids:
+  - steam:7530
+- name: Nuclear Dawn
+  ids:
+  - steam:17710
+- name: Holy Avatar vs. Maidens of the Dead
+  ids:
+  - steam:261720
+- name: 'Iron Grip: Warlord'
+  ids:
+  - steam:31700
+- name: X-Blades
+  ids:
+  - steam:7510
+- name: Ion Assault
+  ids:
+  - steam:41730
+- name: Shattered Horizon
+  ids:
+  - unresolved:source:isthereanydeal:35:shattered-horizon

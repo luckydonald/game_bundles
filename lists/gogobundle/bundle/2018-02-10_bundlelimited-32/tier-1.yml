@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Limited Bundle #32 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5882/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5882/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5882/source.json
+games:
+- name: 'Creatio Ex Nihilo: Aition'
+  ids:
+  - steam:738080
+- name: 'Zombie Wars: Invasion'
+  ids:
+  - steam:429060
+- name: All Evil Night
+  ids:
+  - steam:682100
+- name: dead_file.exe
+  ids:
+  - unresolved:source:isthereanydeal:5882:dead_file-exe
+- name: Steel punk Ball
+  ids:
+  - steam:679510
+- name: 'Postmortem: One Must Die (Extended Cut)'
+  ids:
+  - steam:263140
+- name: Lopp
+  ids:
+  - unresolved:source:isthereanydeal:5882:lopp
+- name: Surviving in the forest
+  ids:
+  - unresolved:source:isthereanydeal:5882:surviving-in-the-forest
+- name: I want cookies
+  ids:
+  - unresolved:source:isthereanydeal:5882:i-want-cookies
+- name: Endless room
+  ids:
+  - unresolved:source:isthereanydeal:5882:endless-room
+- name: dead_file.mp3
+  ids:
+  - unresolved:source:isthereanydeal:5882:dead_file-mp3
+- name: BLED NAVALNY
+  ids:
+  - unresolved:source:isthereanydeal:5882:bled-navalny

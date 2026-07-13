@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Oct 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14491/source.json
+games:
+- name: Jack Move
+  ids:
+  - steam:1099640
+- name: Persona 5 Strikers
+  ids:
+  - steam:1382330
+- name: McPixel 3
+  ids:
+  - steam:1338580
+- name: Dome Keeper
+  ids:
+  - steam:1637320
+- name: Remnant Records
+  ids:
+  - steam:1916310
+- name: Jusant
+  ids:
+  - steam:1977170
+- name: Station to Station
+  ids:
+  - steam:2272400
+- name: Remnant II
+  ids:
+  - steam:1282100

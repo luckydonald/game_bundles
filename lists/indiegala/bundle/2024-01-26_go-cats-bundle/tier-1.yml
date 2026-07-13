@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Go Cats Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13800/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13800/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13800/source.json
+games:
+- name: 'Puzzles for smart: Cats'
+  ids:
+  - steam:877780
+- name: 'Intelligence: Cats'
+  ids:
+  - steam:911270
+- name: 'Test your knowledge: Cats'
+  ids:
+  - steam:918180
+- name: 'Animals Memory: Cats'
+  ids:
+  - steam:799800
+- name: 'IN THE BUILDING: CATS'
+  ids:
+  - steam:2203730
+- name: 'IN THE BUILDING: CATS 2'
+  ids:
+  - steam:2237940
+- name: 'IN THE BUILDING: CATS 3'
+  ids:
+  - steam:2252850
+- name: Cat city
+  ids:
+  - steam:2519420

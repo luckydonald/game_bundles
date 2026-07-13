@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Glacier 3: The Meltdown - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1289/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1289/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1289/source.json
+games:
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Lucius Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9326/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9326/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9326/source.json
+games:
+- name: Lucius
+  ids:
+  - steam:218640
+- name: Lucius II
+  ids:
+  - steam:296830
+- name: Lucius III
+  ids:
+  - steam:513290
+- name: Lucius Demake
+  ids:
+  - steam:364230

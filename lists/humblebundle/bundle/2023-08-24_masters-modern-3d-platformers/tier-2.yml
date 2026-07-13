@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Masterful Modern 3D Platformers Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13418/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13418/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13418/source.json
+games:
+- name: Pumpkin Jack
+  ids:
+  - steam:1186640
+- name: New Super Lucky's Tale
+  ids:
+  - steam:1038300
+- name: Hell Pie
+  ids:
+  - steam:889910
+- name: Demon Turf
+  ids:
+  - unresolved:source:isthereanydeal:13418:demon-turf
+- name: The Spirit and the Mouse
+  ids:
+  - steam:1679210
+- name: 'Kao the Kangaroo: Anniversary Edition'
+  ids:
+  - steam:1370140

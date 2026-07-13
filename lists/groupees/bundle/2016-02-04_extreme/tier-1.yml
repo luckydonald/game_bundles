@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Extreme Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3016/source.json
+games:
+- name: Abduction Action! Plus
+  ids:
+  - steam:360580
+- name: LaserCat
+  ids:
+  - steam:496120
+- name: Dashy Square
+  ids:
+  - steam:461230

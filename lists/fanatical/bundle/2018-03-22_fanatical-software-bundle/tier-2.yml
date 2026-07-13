@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Software Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5993/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5993/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5993/source.json
+games:
+- name: Decent Icons
+  ids:
+  - steam:395760
+- name: Rytmik Lite Chiptune Synthesizer
+  ids:
+  - steam:432330
+- name: Live Wallpaper Master
+  ids:
+  - steam:597840
+- name: Rytmik Ultimate - Rock Expansion DLC + Voice & Acoustic Expansion
+  ids:
+  - unresolved:source:isthereanydeal:5993:rytmik-ultimate-rock-expansion-dlc-and-voice-and-acoustic-expansion
+- name: Nimble Writer
+  ids:
+  - steam:348200
+- name: Rytmik Ultimate Expansions
+  ids:
+  - unresolved:source:isthereanydeal:5993:rytmik-ultimate-expansions
+- name: Spatial Sound Card
+  ids:
+  - steam:444970
+- name: VoiceWarrior
+  ids:
+  - steam:601780

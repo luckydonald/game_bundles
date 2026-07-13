@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XXXVI Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6898/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6898/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6898/source.json
+games:
+- name: Alice In VR
+  ids:
+  - steam:829610
+- name: Ze VR
+  ids:
+  - steam:574220

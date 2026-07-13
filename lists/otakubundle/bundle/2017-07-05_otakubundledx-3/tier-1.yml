@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle DX #3 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5297/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5297/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5297/source.json
+games:
+- name: Alien Shooter TD
+  ids:
+  - steam:541230
+- name: Tank Blast
+  ids:
+  - unresolved:source:isthereanydeal:5297:tank-blast
+- name: Stunt Toys
+  ids:
+  - steam:597720
+- name: Painted Memories
+  ids:
+  - steam:542930
+- name: Darkness Ahead
+  ids:
+  - steam:547710
+- name: 'Captain Lycop : Invasion of the Heters'
+  ids:
+  - steam:525070

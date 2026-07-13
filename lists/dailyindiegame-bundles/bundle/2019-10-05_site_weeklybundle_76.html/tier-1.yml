@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 76: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7982/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7982/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7982/source.json
+games:
+- name: 'Welcome To... Chichester OVN : The Beach'
+  ids:
+  - unresolved:source:isthereanydeal:7982:welcome-to-chichester-ovn-the-beach
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+- name: In Between Games
+  ids:
+  - steam:779700
+- name: Puzlogic
+  ids:
+  - steam:865220
+- name: Nin! Nin! Ninja!!!
+  ids:
+  - unresolved:source:isthereanydeal:7982:nin-nin-ninja
+- name: PixZomb
+  ids:
+  - unresolved:source:isthereanydeal:7982:pixzomb
+- name: 'Welcome To... Chichester 1/Redux : The Spy Of America And The Long Vacation'
+  ids:
+  - steam:963770
+- name: Powerless
+  ids:
+  - steam:775200
+- name: Sunset Planet
+  ids:
+  - steam:1029160

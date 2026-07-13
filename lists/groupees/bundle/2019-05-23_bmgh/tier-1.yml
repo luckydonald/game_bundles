@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Be Mine: Greatest Hits — Be Mine 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7430/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7430/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7430/source.json
+games:
+- name: The Ball
+  ids:
+  - steam:35460
+- name: BEEP
+  ids:
+  - steam:104200
+- name: Xotic Temple Crypt Expansion Pack
+  ids:
+  - unresolved:source:isthereanydeal:7430:xotic-temple-crypt-expansion-pack
+- name: Dream Aquarium
+  ids:
+  - unresolved:source:isthereanydeal:7430:dream-aquarium
+- name: BEEP - Soundtrack
+  ids:
+  - steam:456470
+- name: Sideway™ New York
+  ids:
+  - steam:200190
+- name: 'Xotic: Warp Field Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:7430:xotic-warp-field-expansion-pack
+- name: Xotic
+  ids:
+  - steam:92600
+- name: 'Xotic: Pipe Works Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:7430:xotic-pipe-works-expansion-pack
+- name: Wasteland Angel
+  ids:
+  - steam:46520

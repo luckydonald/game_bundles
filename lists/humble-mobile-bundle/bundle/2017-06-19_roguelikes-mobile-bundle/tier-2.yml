@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Mobile Bundle: Roguelikes — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5239/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5239/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5239/source.json
+games:
+- name: Desktop Dungeons
+  ids:
+  - steam:226620
+- name: bit Dungeon I
+  ids:
+  - unresolved:source:isthereanydeal:5239:bit-dungeon-i
+- name: bit Dungeon II
+  ids:
+  - steam:331440
+- name: 'Pixel Heroes: Byte & Magic'
+  ids:
+  - steam:338320
+- name: Road Not Taken
+  ids:
+  - steam:293740
+- name: 'Dungelot : Shattered Lands'
+  ids:
+  - steam:403940

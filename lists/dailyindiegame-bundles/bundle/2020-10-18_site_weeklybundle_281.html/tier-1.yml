@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 281 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9296/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9296/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9296/source.json
+games:
+- name: The Governor
+  ids:
+  - unresolved:source:isthereanydeal:9296:the-governor
+- name: FISHERY
+  ids:
+  - steam:809730
+- name: Ninjapple
+  ids:
+  - steam:1171410
+- name: Starship Renata
+  ids:
+  - steam:1398990
+- name: Traveler of Artcaster
+  ids:
+  - steam:1413260
+- name: Astrotour VR
+  ids:
+  - steam:1416850
+- name: RENEGADE
+  ids:
+  - unresolved:source:isthereanydeal:9296:renegade
+- name: travelsolar
+  ids:
+  - steam:1411880
+- name: Tantal
+  ids:
+  - steam:1425280

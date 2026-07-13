@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Oh... Sir! Saga Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9535/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9535/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9535/source.json
+games:
+- name: Oh...Sir! The Insult Simulator
+  ids:
+  - steam:512250
+- name: Oh...Sir! The Hollywood Roast
+  ids:
+  - steam:575330

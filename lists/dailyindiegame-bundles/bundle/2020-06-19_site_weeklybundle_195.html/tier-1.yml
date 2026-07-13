@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 195 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8918/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8918/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8918/source.json
+games:
+- name: AirShock
+  ids:
+  - unresolved:source:isthereanydeal:8918:airshock
+- name: 'Monopolist: Technological Revolution'
+  ids:
+  - steam:893590
+- name: 血腥之日228-Vampire Martina-Bloody Day 2.28
+  ids:
+  - steam:1060360
+- name: Storms
+  ids:
+  - unresolved:source:isthereanydeal:8918:storms
+- name: Jane Westlake Adventures - The Mystery Train
+  ids:
+  - steam:1158430
+- name: Samosbor
+  ids:
+  - steam:1034060
+- name: The Valley of Super Flowers
+  ids:
+  - steam:1257270
+- name: '幸存者:星星之火 Survivor: Spark'
+  ids:
+  - steam:1256220
+- name: Mushroom Challenge
+  ids:
+  - steam:1345150

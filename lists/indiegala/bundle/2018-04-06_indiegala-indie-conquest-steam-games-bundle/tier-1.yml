@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Conquest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6038/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6038/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6038/source.json
+games:
+- name: Trials of the Gauntlet
+  ids:
+  - steam:764410
+- name: ToaZZle
+  ids:
+  - steam:817470
+- name: MRS SNAKE
+  ids:
+  - steam:811910

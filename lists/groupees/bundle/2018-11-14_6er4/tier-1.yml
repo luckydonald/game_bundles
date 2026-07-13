@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 6er Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6685/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6685/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6685/source.json
+games:
+- name: ARMED SEVEN
+  ids:
+  - steam:349690
+- name: La Mulana
+  ids:
+  - steam:230700
+- name: Boo Bunny Plague - Deluxe Edition
+  ids:
+  - steam:313590

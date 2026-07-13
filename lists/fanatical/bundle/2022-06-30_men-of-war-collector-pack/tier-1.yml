@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Men of War: Collector Pack — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11689/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11689/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11689/source.json
+games:
+- name: 'Men of War: Assault Squad - Skirmish Pack 2'
+  ids:
+  - steam:64017
+- name: 'Men of War: Assault Squad'
+  ids:
+  - steam:64000
+- name: 'Men of War: Assault Squad - MP Supply Pack Alpha'
+  ids:
+  - steam:64005
+- name: 'Men of War: Assault Squad - MP Supply Pack Charlie'
+  ids:
+  - steam:64016
+- name: Men of War
+  ids:
+  - steam:7830
+- name: 'Men of War: Vietnam'
+  ids:
+  - steam:63940
+- name: Men of War Condemned Heroes
+  ids:
+  - steam:204860
+- name: Men of War Red Tide
+  ids:
+  - steam:3130
+- name: 'Men of War: Assault Squad - MP Supply Pack Bravo'
+  ids:
+  - steam:64014
+- name: Men of War Vietnam - Special Edition upgrade pack
+  ids:
+  - steam:63942
+- name: 'Men of War: Assault Squad - Skirmish Pack'
+  ids:
+  - steam:64013

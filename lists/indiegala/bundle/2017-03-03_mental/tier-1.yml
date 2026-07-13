@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mental — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4853/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4853/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4853/source.json
+games:
+- name: Bullet Candy
+  ids:
+  - steam:6600
+- name: Super Switch
+  ids:
+  - steam:521430
+- name: Nuclear Contingency
+  ids:
+  - steam:540900

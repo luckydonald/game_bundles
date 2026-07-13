@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Rockin' Anime 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4866/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4866/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4866/source.json
+games:
+- name: Gundemonium Recollection
+  ids:
+  - unresolved:source:isthereanydeal:4866:gundemonium-recollection
+- name: cloudphobia
+  ids:
+  - steam:329340
+- name: Bunny Must Die! Chelsea and the 7 Devils
+  ids:
+  - unresolved:source:isthereanydeal:4866:bunny-must-die-chelsea-and-the-7-devils
+- name: SUGURI
+  ids:
+  - steam:262240
+- name: Diadra Empty
+  ids:
+  - steam:284220
+- name: Hitogata Happa
+  ids:
+  - unresolved:source:isthereanydeal:4866:hitogata-happa
+- name: Angel Express [Tokkyu Tenshi]
+  ids:
+  - steam:470480
+- name: Acceleration of SUGURI X-Edition HD
+  ids:
+  - steam:265170
+- name: GundeadliGne
+  ids:
+  - unresolved:source:isthereanydeal:4866:gundeadligne

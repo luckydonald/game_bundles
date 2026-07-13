@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 793: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11325/source.json
+games:
+- name: Moon Defense
+  ids:
+  - unresolved:source:isthereanydeal:11325:moon-defense
+- name: Wavy trip
+  ids:
+  - steam:1729080
+- name: Neon Arena
+  ids:
+  - steam:1747940
+- name: Connect the Dots.
+  ids:
+  - steam:1605190
+- name: Hit Confirmed
+  ids:
+  - steam:1710530
+- name: Air Strike
+  ids:
+  - steam:1741520
+- name: Badlands Racer
+  ids:
+  - steam:1752500
+- name: Bouncy Cube
+  ids:
+  - unresolved:source:isthereanydeal:11325:bouncy-cube
+- name: Sniper Game
+  ids:
+  - steam:1789270

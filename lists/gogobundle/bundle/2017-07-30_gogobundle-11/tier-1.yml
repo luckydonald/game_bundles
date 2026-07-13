@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #11 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5361/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5361/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5361/source.json
+games:
+- name: The Planet of the Vicious Creatures
+  ids:
+  - steam:530290
+- name: Ultimate Russian Zombie Rush
+  ids:
+  - unresolved:source:isthereanydeal:5361:ultimate-russian-zombie-rush
+- name: Alchemist
+  ids:
+  - steam:1942050
+- name: Disposable Heroes Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5361:disposable-heroes-soundtrack
+- name: The Haunting of Billy
+  ids:
+  - steam:445170
+- name: Last Tale
+  ids:
+  - unresolved:source:isthereanydeal:5361:last-tale
+- name: Yeti Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5361:yeti-adventure
+- name: Disposable heroes
+  ids:
+  - steam:366180
+- name: Brain In My Head
+  ids:
+  - unresolved:source:isthereanydeal:5361:brain-in-my-head

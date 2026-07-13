@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Guilty Gear Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10052/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10052/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10052/source.json
+games:
+- name: Guilty Gear Isuka
+  ids:
+  - steam:267900
+- name: Guilty Gear X2 Reload
+  ids:
+  - steam:314030
+- name: GUILTY GEAR XX ACCENT CORE PLUS R
+  ids:
+  - steam:348550
+- name: GUILTY GEAR 2 -OVERTURE
+  ids:
+  - steam:437000
+- name: GUILTY GEAR
+  ids:
+  - steam:850980
+- name: GUILTY GEAR Xrd -SIGN- Big Blast Bundle
+  ids:
+  - unresolved:source:isthereanydeal:10052:guilty-gear-xrd-sign-big-blast-bundle
+- name: GUILTY GEAR Xrd REV 2 Upgrade
+  ids:
+  - steam:631560
+- name: GUILTY GEAR Xrd -REVELATOR- Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:10052:guilty-gear-xrd-revelator-deluxe-edition

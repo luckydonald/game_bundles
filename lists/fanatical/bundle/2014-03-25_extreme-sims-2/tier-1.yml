@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Extreme Sims Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/662/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/662/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/662/source.json
+games:
+- name: Roller Coaster Rampage
+  ids:
+  - steam:209610
+- name: 'Air Conflicts: Vietnam'
+  ids:
+  - steam:233210
+- name: Warehouse & Logistics Simulator
+  ids:
+  - steam:273940
+- name: Bridge Project
+  ids:
+  - steam:232950
+- name: Pole Position 2012
+  ids:
+  - unresolved:source:isthereanydeal:662:pole-position-2012
+- name: 'Race: The WTCC Game + Caterham Expansion'
+  ids:
+  - unresolved:source:isthereanydeal:662:race-the-wtcc-game-and-caterham-expansion
+- name: World of Zoo
+  ids:
+  - steam:43100
+- name: Professional Farmer 2014
+  ids:
+  - steam:258880
+- name: Towtruck Simulator 2015
+  ids:
+  - steam:273760
+- name: Ride 'em Low
+  ids:
+  - steam:65070

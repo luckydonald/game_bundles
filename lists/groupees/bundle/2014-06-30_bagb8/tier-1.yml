@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/939/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/939/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/939/source.json
+games:
+- name: 'Elements: Soul of Fire'
+  ids:
+  - unresolved:source:isthereanydeal:939:elements-soul-of-fire
+- name: QRTH-PHYL
+  ids:
+  - steam:451930
+- name: KEL Reaper of Entropy
+  ids:
+  - steam:317950
+- name: Leave Home
+  ids:
+  - unresolved:source:isthereanydeal:939:leave-home
+- name: The Sun at Night
+  ids:
+  - steam:314570
+- name: ARKADIANAX
+  ids:
+  - unresolved:source:isthereanydeal:939:arkadianax
+- name: 'Angels of Fasaria: Version 2.0'
+  ids:
+  - steam:335900
+- name: Waffles (And Then Some)
+  ids:
+  - unresolved:source:isthereanydeal:939:waffles-and-then-some
+- name: Radium
+  ids:
+  - steam:355410
+- name: ClusterPuck 99
+  ids:
+  - steam:337960
+- name: Cyberpunk 3776
+  ids:
+  - steam:343170
+- name: Pirates Deck
+  ids:
+  - unresolved:source:isthereanydeal:939:pirates-deck

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Brutal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6632/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6632/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6632/source.json
+games:
+- name: 'Kingdom Come: Deliverance'
+  ids:
+  - steam:379430
+- name: Lords of the Fallen™ (2014) Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:6632:lords-of-the-fallen-2014-game-of-the-year-edition

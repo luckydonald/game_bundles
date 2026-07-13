@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle 3 — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5481/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5481/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5481/source.json
+games:
+- name: Eon Altar
+  ids:
+  - steam:382050
+- name: Shoppe Keep
+  ids:
+  - steam:381120
+- name: Shadowrun Returns
+  ids:
+  - steam:234650
+- name: 'S.T.A.L.K.E.R.: Clear Sky'
+  ids:
+  - steam:20510
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: Phantaruk
+  ids:
+  - steam:468930
+- name: 'Slain: Back from Hell'
+  ids:
+  - steam:369070
+- name: SpellForce 2 - Anniversary Edition
+  ids:
+  - steam:39550
+- name: FaceRig
+  ids:
+  - unresolved:source:isthereanydeal:5481:facerig
+- name: 'Planetary Annihilation: TITANS'
+  ids:
+  - steam:386070
+- name: S.T.A.L.K.E.R. Shadow of Chernobyl
+  ids:
+  - steam:4500
+- name: Tropico 5
+  ids:
+  - steam:245620
+- name: Blood (One Unit Whole Blood)
+  ids:
+  - unresolved:source:isthereanydeal:5481:blood-one-unit-whole-blood

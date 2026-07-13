@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Big Itch.io Bundle 1 — Select 3 to 16 titles; $0.99 up to $4.01
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6775/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6775/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6775/source.json
+games:
+- name: 'Showing Tonight: Mindhunters Incident'
+  ids:
+  - steam:416370
+- name: Exorcist
+  ids:
+  - steam:1983330
+- name: Little Kite
+  ids:
+  - steam:610120
+- name: 'Christmas Adventure: Candy Storm'
+  ids:
+  - steam:456430
+- name: Roads of Rome
+  ids:
+  - steam:410770
+- name: Desert Stormfront
+  ids:
+  - unresolved:source:isthereanydeal:6775:desert-stormfront
+- name: Ghost Sweeper
+  ids:
+  - steam:496990
+- name: Christmas Griddlers
+  ids:
+  - steam:1545360
+- name: All My Gods
+  ids:
+  - steam:404270
+- name: Demetrios - The BIG Cynical Adventure
+  ids:
+  - steam:451570
+- name: Rescue Quest Gold
+  ids:
+  - steam:618370
+- name: Gingerbread Story
+  ids:
+  - unresolved:source:isthereanydeal:6775:gingerbread-story
+- name: The Best Of MagiCats
+  ids:
+  - unresolved:source:isthereanydeal:6775:the-best-of-magicats
+- name: Age of Japan
+  ids:
+  - unresolved:source:isthereanydeal:6775:age-of-japan
+- name: 'Holiday Jigsaw: Christmas'
+  ids:
+  - steam:1859110
+- name: Dashing Dinos
+  ids:
+  - unresolved:source:isthereanydeal:6775:dashing-dinos
+- name: Sig.Null
+  ids:
+  - steam:501930
+- name: Family Vacation 2 - Road Trip
+  ids:
+  - unresolved:source:isthereanydeal:6775:family-vacation-2-road-trip

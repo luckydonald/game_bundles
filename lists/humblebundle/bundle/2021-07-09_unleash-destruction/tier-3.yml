@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Unleash Destruction Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10241/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10241/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10241/source.json
+games:
+- name: Master of Magic Classic
+  ids:
+  - steam:1146370
+- name: Battlestar Galactica Deadlock
+  ids:
+  - unresolved:source:isthereanydeal:10241:battlestar-galactica-deadlock
+- name: 'Distant Worlds: Universe'
+  ids:
+  - steam:261470
+- name: Field of Glory II
+  ids:
+  - steam:660160
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+- name: 'Strategic Command WWII: World at War'
+  ids:
+  - steam:957720
+- name: 'Warhammer 40,000: Gladius - Tyranids'
+  ids:
+  - steam:995860
+- name: 'Warhammer 40,000: Gladius - Fortification Pack'
+  ids:
+  - steam:1170010

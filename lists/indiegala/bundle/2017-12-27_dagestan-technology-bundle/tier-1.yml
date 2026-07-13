@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dagestan Technology Bundle #3 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5771/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5771/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5771/source.json
+games:
+- name: Stolen Mouth
+  ids:
+  - unresolved:source:isthereanydeal:5771:stolen-mouth
+- name: Midsummer Night
+  ids:
+  - steam:1289690
+- name: PhysicsN
+  ids:
+  - unresolved:source:isthereanydeal:5771:physicsn
+- name: INWAY
+  ids:
+  - unresolved:source:isthereanydeal:5771:inway
+- name: Underground Gossip
+  ids:
+  - unresolved:source:isthereanydeal:5771:underground-gossip
+- name: Bryan Audley's Numbers
+  ids:
+  - unresolved:source:isthereanydeal:5771:bryan-audleys-numbers
+- name: Super Trashforce
+  ids:
+  - steam:710520
+- name: Idolzzz
+  ids:
+  - unresolved:source:isthereanydeal:5771:idolzzz
+- name: NewOld
+  ids:
+  - unresolved:source:isthereanydeal:5771:newold
+- name: Blaster Cop
+  ids:
+  - unresolved:source:isthereanydeal:5771:blaster-cop

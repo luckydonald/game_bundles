@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Narrative Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3516/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3516/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3516/source.json
+games:
+- name: '2064: Read Only Memories'
+  ids:
+  - steam:330820
+- name: Her Story
+  ids:
+  - steam:368370
+- name: Cibele
+  ids:
+  - steam:408120
+- name: Broken Age
+  ids:
+  - steam:232790
+- name: Sorcery! Parts 1 & 2
+  ids:
+  - steam:411000
+- name: 80 days
+  ids:
+  - steam:381780
+- name: Shadowrun Hong Kong - Extended Edition
+  ids:
+  - steam:346940

@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Chaos Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4767/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4767/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4767/source.json
+games:
+- name: Game Corp DX
+  ids:
+  - steam:399670
+- name: Precursors
+  ids:
+  - steam:547930
+- name: Tricky Towers
+  ids:
+  - steam:437920
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+- name: Starward Rogue
+  ids:
+  - steam:410820
+- name: Shu
+  ids:
+  - steam:528720
+- name: 'C.A.S.E: Animatronics'
+  ids:
+  - unresolved:source:isthereanydeal:4767:c-as-e-animatronics
+- name: 'Dungelot : Shattered Lands'
+  ids:
+  - steam:403940
+- name: Grappledrome
+  ids:
+  - unresolved:source:isthereanydeal:4767:grappledrome
+- name: I am Bread
+  ids:
+  - steam:327890
+- name: CONTRAST
+  ids:
+  - steam:224460
+- name: CATLATERAL DAMAGE
+  ids:
+  - steam:329860
+- name: Convoy
+  ids:
+  - steam:318230

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Untold Tales: Indie Roulette Bundle — 8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15269/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15269/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15269/source.json
+games:
+- name: 'ATONE: Heart of the Elder Tree'
+  ids:
+  - steam:894620
+- name: Mythic Ocean
+  ids:
+  - steam:814360
+- name: Don't Be Afraid
+  ids:
+  - steam:760410
+- name: What the Duck
+  ids:
+  - steam:1034590
+- name: Golf Club Nostalgia
+  ids:
+  - steam:1556870
+- name: The Hong Kong Massacre
+  ids:
+  - steam:741510
+- name: 'Arise: A Simple Story'
+  ids:
+  - steam:866140
+- name: Flame Keeper
+  ids:
+  - steam:1374230

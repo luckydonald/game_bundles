@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Horror Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/350/source.json
+games:
+- name: The Horror at MS Aurora
+  ids:
+  - unresolved:source:isthereanydeal:350:the-horror-at-ms-aurora
+- name: 'Into the Dark: Ultimate Trash Edition'
+  ids:
+  - steam:266050
+- name: The Grave Digger
+  ids:
+  - steam:345340

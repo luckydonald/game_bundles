@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 863 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11619/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11619/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11619/source.json
+games:
+- name: Choco Pixel 6
+  ids:
+  - steam:1339450
+- name: Data mining X
+  ids:
+  - steam:1373410
+- name: aMAZE Gears 3
+  ids:
+  - steam:1543470
+- name: Alone on Mars
+  ids:
+  - steam:1637490
+- name: Hardcore Trivia
+  ids:
+  - steam:1698910
+- name: Skullnight
+  ids:
+  - unresolved:source:isthereanydeal:11619:skullnight
+- name: Chloe Puzzle Game
+  ids:
+  - steam:2002550
+- name: Mysterious Things
+  ids:
+  - unresolved:source:isthereanydeal:11619:mysterious-things
+- name: Adventures at the North Pole
+  ids:
+  - steam:2006530

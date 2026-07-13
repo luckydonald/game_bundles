@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Uncharted Realms Bundle — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15343/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15343/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15343/source.json
+games:
+- name: A Short Hike
+  ids:
+  - steam:1055540
+- name: 'Alba: A Wildlife Adventure'
+  ids:
+  - steam:1337010
+- name: 'FAR: Changing Tides'
+  ids:
+  - steam:1570010
+- name: The Forgotten City
+  ids:
+  - steam:874260
+- name: Under the Waves
+  ids:
+  - steam:1975440
+- name: Journey To The Savage Planet
+  ids:
+  - steam:973810
+- name: The Eternal Cylinder
+  ids:
+  - steam:865680
+- name: Moon Mystery
+  ids:
+  - steam:1933840

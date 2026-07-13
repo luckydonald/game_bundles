@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Hooked on Multiplayer Bundle 2017 — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4954/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4954/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4954/source.json
+games:
+- name: Eon Altar
+  ids:
+  - steam:382050
+- name: 'Primal Carnage: Extinction'
+  ids:
+  - steam:321360
+- name: Tricky Towers
+  ids:
+  - steam:437920
+- name: Ultimate Chicken Horse
+  ids:
+  - steam:386940
+- name: Move or Die
+  ids:
+  - steam:323850
+- name: Rampage Knights
+  ids:
+  - steam:314410
+- name: HELLDIVERS™
+  ids:
+  - unresolved:source:isthereanydeal:4954:helldivers
+- name: HELLDIVERS™ - Ranger Pack
+  ids:
+  - steam:395230

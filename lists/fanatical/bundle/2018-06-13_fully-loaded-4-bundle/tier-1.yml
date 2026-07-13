@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fully Loaded 4 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6234/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6234/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6234/source.json
+games:
+- name: Cat Interstellar
+  ids:
+  - steam:384740
+- name: 'Grand Ages: Rome Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6234:grand-ages-rome-gold-edition
+- name: GT Legends
+  ids:
+  - steam:44690
+- name: Circuit Breakers
+  ids:
+  - steam:390870
+- name: 35MM
+  ids:
+  - steam:466500
+- name: 'Nether: Resurrected'
+  ids:
+  - unresolved:source:isthereanydeal:6234:nether-resurrected
+- name: One More Dungeon
+  ids:
+  - steam:415030
+- name: Ara Fell
+  ids:
+  - unresolved:source:isthereanydeal:6234:ara-fell
+- name: Good Robot
+  ids:
+  - steam:358830
+- name: Memoranda
+  ids:
+  - steam:430410

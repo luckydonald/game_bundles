@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Pioneer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1518/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1518/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1518/source.json
+games:
+- name: Sid Meier's Pirates! Gold Plus (Classic)
+  ids:
+  - steam:327380
+- name: Across The Rhine
+  ids:
+  - steam:329620
+- name: Sid Meier's Covert Action (Classic)
+  ids:
+  - steam:327390
+- name: 'B-17 Flying Fortress: The Mighty 8th'
+  ids:
+  - steam:328900
+- name: Command H.Q.
+  ids:
+  - unresolved:source:isthereanydeal:1518:command-h-q
+- name: Dragonsphere
+  ids:
+  - steam:327940
+- name: Sid Meier's Colonization (Classic)
+  ids:
+  - steam:327400
+- name: Silent Service
+  ids:
+  - steam:329660

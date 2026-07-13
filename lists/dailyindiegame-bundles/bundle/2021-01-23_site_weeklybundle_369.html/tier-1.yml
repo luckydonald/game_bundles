@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 369 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9654/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9654/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9654/source.json
+games:
+- name: final m00n - Defender of Cubes
+  ids:
+  - unresolved:source:isthereanydeal:9654:final-m00n-defender-of-cubes
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+- name: Sinister Halloween
+  ids:
+  - steam:747690
+- name: The Unintended Consequences of Curiosity
+  ids:
+  - steam:814660
+- name: Deployment
+  ids:
+  - steam:755980
+- name: Neon
+  ids:
+  - steam:723050
+- name: Kingdoms In Chaos
+  ids:
+  - steam:1333650
+- name: Sharecare YOU
+  ids:
+  - unresolved:source:isthereanydeal:9654:sharecare-you
+- name: Librarian
+  ids:
+  - steam:1505390

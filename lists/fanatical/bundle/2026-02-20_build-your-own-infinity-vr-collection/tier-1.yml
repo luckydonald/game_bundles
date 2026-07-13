@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Infinity VR Collection — 2+ Games 7.50 ea, 3+ Games 7.25 ea,
+  5+ Games 7.00 ea
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15902/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15902/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15902/source.json
+games:
+- name: VR Giants
+  ids:
+  - steam:1124160
+- name: Sairento VR
+  ids:
+  - steam:555880
+- name: Undead Citadel
+  ids:
+  - steam:819190
+- name: cyubeVR
+  ids:
+  - steam:619500
+- name: Escape Simulator
+  ids:
+  - steam:1435790
+- name: Cosmodread
+  ids:
+  - steam:1256060
+- name: Arizona Sunshine® Remake
+  ids:
+  - steam:2897700
+- name: Crossings
+  ids:
+  - steam:2782960
+- name: Wiped Clean VR
+  ids:
+  - steam:3437820
+- name: Wired VR 5-Game Pack
+  ids:
+  - unresolved:source:isthereanydeal:15902:wired-vr-5-game-pack
+- name: A Fisherman's Tale 1 and 2 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15902:a-fishermans-tale-1-and-2-double-pack
+- name: 'Crime Shop Simulator: A Prison Boss Game'
+  ids:
+  - steam:2973830

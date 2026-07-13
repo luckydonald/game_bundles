@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Viscera Cleanup Detail - The Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7427/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7427/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7427/source.json
+games:
+- name: Viscera Cleanup Detail
+  ids:
+  - steam:246900
+- name: Viscera Cleanup Detail - House of Horror
+  ids:
+  - steam:413160
+- name: 'Viscera Cleanup Detail: Santa''s Rampage'
+  ids:
+  - steam:265210
+- name: Viscera Cleanup Detail - The Vulcan Affair
+  ids:
+  - steam:982110

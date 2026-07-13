@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Brain Eaters Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2622/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2622/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2622/source.json
+games:
+- name: Zombie Killtime
+  ids:
+  - unresolved:source:isthereanydeal:2622:zombie-killtime
+- name: 'NecroVisioN + NecroVisioN: Lost Company'
+  ids:
+  - unresolved:source:isthereanydeal:2622:necrovision-and-necrovision-lost-company
+- name: Dead Pixels
+  ids:
+  - steam:222980
+- name: Zombie Solitaire
+  ids:
+  - steam:311850
+- name: Belladonna
+  ids:
+  - steam:351340
+- name: All Zombies Must Die! Scorepocalypse
+  ids:
+  - steam:209360
+- name: Enola
+  ids:
+  - steam:263520
+- name: I, Zombie
+  ids:
+  - steam:307230
+- name: The Music Machine
+  ids:
+  - steam:359040
+- name: Burn Zombie Burn!
+  ids:
+  - steam:50510

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #71 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6361/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6361/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6361/source.json
+games:
+- name: Lost In Space 2
+  ids:
+  - unresolved:source:isthereanydeal:6361:lost-in-space-2
+- name: Battle Bruise
+  ids:
+  - steam:618510
+- name: Vogue, The Explorer
+  ids:
+  - steam:875550
+- name: Bustories
+  ids:
+  - steam:778570
+- name: Ancient Rush 2
+  ids:
+  - steam:835560
+- name: Earthtongue
+  ids:
+  - steam:358070
+- name: Geo
+  ids:
+  - steam:513480
+- name: Anomalies
+  ids:
+  - steam:546780
+- name: 'Seven Mysteries: The Last Page'
+  ids:
+  - steam:783440
+- name: Dreamstones
+  ids:
+  - steam:645920
+- name: New Ice York
+  ids:
+  - steam:855530
+- name: Sleeping Dawn
+  ids:
+  - steam:742900

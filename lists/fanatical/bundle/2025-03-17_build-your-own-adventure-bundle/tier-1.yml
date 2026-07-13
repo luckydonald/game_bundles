@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Adventure Bundle (Spring 2025) — Select 3 for 4.99, 5 for 7.99,
+  7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14995/source.json
+games:
+- name: Lamentum
+  ids:
+  - steam:1033950
+- name: Welcome To Elk
+  ids:
+  - steam:1015940
+- name: 'ATONE: Heart of the Elder Tree'
+  ids:
+  - steam:894620
+- name: 'Broken Sword 5: The Serpent''s Curse'
+  ids:
+  - steam:262940
+- name: CryoFall
+  ids:
+  - steam:829590
+- name: 'Broken Sword 4: The Angel of Death'
+  ids:
+  - steam:316160
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+- name: Arboria
+  ids:
+  - steam:924070
+- name: Hazel Sky
+  ids:
+  - steam:1094920
+- name: Sclash
+  ids:
+  - steam:1284130
+- name: Dr Livingstone, I Presume?
+  ids:
+  - steam:1237510
+- name: Insurmountable
+  ids:
+  - steam:1385100
+- name: TERRACOTTA
+  ids:
+  - steam:748020
+- name: Puzzles For Clef
+  ids:
+  - steam:1802190
+- name: Deponia & Friends Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:14995:deponia-and-friends-triple-pack
+- name: Epic Journeys Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14995:epic-journeys-double-pack
+- name: Sea, Space & The Surreal Adventure Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:14995:sea-space-and-the-surreal-adventure-triple-pack
+- name: Mysterious Worlds Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:14995:mysterious-worlds-triple-pack

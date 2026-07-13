@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Surf'n'Kerf — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3324/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3324/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3324/source.json
+games:
+- name: Millie
+  ids:
+  - steam:294230
+- name: Merchants of Kaidan
+  ids:
+  - steam:294020
+- name: Sparkle 2 Evo
+  ids:
+  - steam:253650
+- name: Sinless + OST
+  ids:
+  - steam:340320
+- name: Cat on a Diet
+  ids:
+  - steam:447890
+- name: Surfingers
+  ids:
+  - steam:438080
+- name: Timberman
+  ids:
+  - steam:398710
+- name: Risky Rescue
+  ids:
+  - steam:439910
+- name: Sparkle ZERO
+  ids:
+  - steam:448000
+- name: Violett - Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:3324:violett-remastered-edition
+- name: 'Sparkle 3: Genesis'
+  ids:
+  - steam:361190

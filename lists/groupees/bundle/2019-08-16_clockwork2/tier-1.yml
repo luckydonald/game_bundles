@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Clockwork Bundle #2: Weekend Sale — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7783/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7783/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7783/source.json
+games:
+- name: Lawless Lands
+  ids:
+  - steam:880130
+- name: Super BOO Quest
+  ids:
+  - steam:947450
+- name: 'The Far Kingdoms: Sacred Grove Solitaire'
+  ids:
+  - steam:1034260
+- name: The Tales of Epicton Kingdom
+  ids:
+  - unresolved:source:isthereanydeal:7783:the-tales-of-epicton-kingdom

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 134 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8427/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8427/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8427/source.json
+games:
+- name: Megatect
+  ids:
+  - steam:369270
+- name: Don't open the doors!
+  ids:
+  - steam:533950
+- name: Dangerous Lands - Magic and RPG
+  ids:
+  - steam:913710
+- name: Alien Blitz
+  ids:
+  - steam:434240
+- name: Zombie Apocalypse Survivor
+  ids:
+  - unresolved:source:isthereanydeal:8427:zombie-apocalypse-survivor
+- name: Dead territory
+  ids:
+  - steam:1197340
+- name: Tinieblas Jr's Adventures
+  ids:
+  - steam:1233990
+- name: Jane Westlake Adventures - The Mystery Train
+  ids:
+  - steam:1158430
+- name: World of Voidia（虚亚世界）
+  ids:
+  - steam:1211390

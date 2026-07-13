@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Train Simulator Classic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13379/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13379/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13379/source.json
+games:
+- name: 'Train Simulator: Woodhead Electric Railway in Blue Route Add-On'
+  ids:
+  - steam:678001
+- name: 'Train Simulator: North Somerset Railway Route Add-On'
+  ids:
+  - steam:325993
+- name: 'Train Simulator: London to Brighton Route Add-On'
+  ids:
+  - steam:208280
+- name: 'Train Simulator: Union Pacific Heritage SD70ACes Loco Add-On'
+  ids:
+  - steam:222596
+- name: 'Train Simulator: Isle of Wight Route Add-On'
+  ids:
+  - steam:24021
+- name: Train Simulator Classic
+  ids:
+  - unresolved:source:isthereanydeal:13379:train-simulator-classic
+- name: 'Train Simulator: South Wales Coastal: Bristol - Swansea Route Add-On'
+  ids:
+  - steam:1429752
+- name: 'Train Simulator: DB BR 204 Loco Add-On'
+  ids:
+  - steam:1098161
+- name: 'Train Simulator: Midland Main Line London-Bedford Route Add-On'
+  ids:
+  - steam:277760
+- name: 'Train Simulator: Soldier Summit Route Add-On'
+  ids:
+  - steam:277775
+- name: 'Train Simulator: Liverpool-Manchester Route Add-On'
+  ids:
+  - steam:258653
+- name: 'Train Simulator: Norddeutsche-Bahn: Kiel - Lübeck Route Add-On'
+  ids:
+  - steam:1109209

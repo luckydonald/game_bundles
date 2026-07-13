@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Slash & Dab Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6355/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6355/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6355/source.json
+games:
+- name: Laser Ball
+  ids:
+  - steam:826170
+- name: Strangers
+  ids:
+  - unresolved:source:isthereanydeal:6355:strangers
+- name: Elude
+  ids:
+  - steam:825240
+- name: Gold Rush! 2
+  ids:
+  - steam:609100
+- name: Reaching for Petals
+  ids:
+  - steam:636170
+- name: Slash or Die 2
+  ids:
+  - steam:644580
+- name: San Matias - Mafia City
+  ids:
+  - steam:728830
+- name: Dab on 'em Haterz
+  ids:
+  - steam:769060
+- name: 'Hegis'' Grasp: Evil Resurrected'
+  ids:
+  - steam:644380
+- name: Battles of Norghan
+  ids:
+  - steam:531110
+- name: AmazeD 3D
+  ids:
+  - unresolved:source:isthereanydeal:6355:amazed-3d
+- name: Graveyard Birds
+  ids:
+  - steam:808360

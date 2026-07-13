@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 87 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4672/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4672/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4672/source.json
+games:
+- name: 'Playing History: Vikings'
+  ids:
+  - steam:368760
+- name: 'Playing History 2: Slave Trade'
+  ids:
+  - steam:386870
+- name: 'President for a Day: Corruption'
+  ids:
+  - steam:368780
+- name: Journey to the Center of the Earth
+  ids:
+  - steam:474240
+- name: 'Playing History: The Plague'
+  ids:
+  - steam:395920
+- name: 'President for a day: Floodings'
+  ids:
+  - steam:368770

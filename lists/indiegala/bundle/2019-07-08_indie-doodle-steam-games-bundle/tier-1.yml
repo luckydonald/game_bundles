@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Doodle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7611/source.json
+games:
+- name: Cyborg Arena
+  ids:
+  - steam:706440
+- name: EarthWorms
+  ids:
+  - steam:320330
+- name: Escape Doodland
+  ids:
+  - steam:670930
+- name: Grave Keeper
+  ids:
+  - steam:979810
+- name: 'Paper Shakespeare: Loves Labor(s) Lost'
+  ids:
+  - unresolved:source:isthereanydeal:7611:paper-shakespeare-loves-labors-lost
+- name: Drive on Moscow
+  ids:
+  - steam:520610

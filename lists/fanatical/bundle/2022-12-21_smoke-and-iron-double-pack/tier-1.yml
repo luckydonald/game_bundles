@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Smoke and Iron Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12809/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12809/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12809/source.json
+games:
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+- name: Iron Fisticle
+  ids:
+  - steam:306700

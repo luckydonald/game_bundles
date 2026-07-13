@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #39 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5967/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5967/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5967/source.json
+games:
+- name: Golden Dungeons
+  ids:
+  - steam:801020
+- name: Defendoooooor!!!
+  ids:
+  - steam:683230
+- name: Lozenge
+  ids:
+  - steam:775720
+- name: Stunt Toys
+  ids:
+  - steam:597720
+- name: Masha Rescues Grandma
+  ids:
+  - unresolved:source:isthereanydeal:5967:masha-rescues-grandma
+- name: Super Dungeon Boy
+  ids:
+  - steam:718180
+- name: Wells - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5967:wells-soundtrack
+- name: Dialing
+  ids:
+  - steam:775730
+- name: Wells
+  ids:
+  - steam:528430
+- name: The Quarter Game
+  ids:
+  - steam:703630
+- name: Stickman Destruction
+  ids:
+  - unresolved:source:isthereanydeal:5967:stickman-destruction

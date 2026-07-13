@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XV — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5580/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5580/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5580/source.json
+games:
+- name: Spirit Guide Crucible
+  ids:
+  - steam:619100
+- name: VirtuGO
+  ids:
+  - steam:699990
+- name: Gooblins
+  ids:
+  - steam:517620
+- name: Bounce!
+  ids:
+  - steam:464400
+- name: InMind 2 VR
+  ids:
+  - steam:522220
+- name: ALICE VR
+  ids:
+  - steam:513320
+- name: BREACH IT
+  ids:
+  - steam:591790
+- name: Ready, Aim, Splat!
+  ids:
+  - steam:559170
+- name: 'VRobot: VR Giant Robot Destruction Simulator'
+  ids:
+  - steam:588560

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Nacon Collection: Space, Sports & Orcs Bundle — 1-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10702/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10702/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10702/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640

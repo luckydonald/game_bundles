@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Twinkly Twelve — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5382/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5382/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5382/source.json
+games:
+- name: Dream Stone
+  ids:
+  - steam:603090
+- name: TAP TOUCH RUN
+  ids:
+  - unresolved:source:isthereanydeal:5382:tap-touch-run
+- name: Died Of Fear
+  ids:
+  - steam:663920
+- name: 'GooCubelets: Color Blocking'
+  ids:
+  - unresolved:source:isthereanydeal:5382:goocubelets-color-blocking
+- name: Ra²
+  ids:
+  - unresolved:source:isthereanydeal:5382:ra2
+- name: 'GooCubelets: RGB'
+  ids:
+  - unresolved:source:isthereanydeal:5382:goocubelets-rgb
+- name: Urban War Defense
+  ids:
+  - unresolved:source:isthereanydeal:5382:urban-war-defense
+- name: Never Ending Night
+  ids:
+  - steam:344100
+- name: Exocomets
+  ids:
+  - steam:655950
+- name: Survival Tycoon
+  ids:
+  - steam:667920
+- name: A Goo Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5382:a-goo-adventure
+- name: Crimson Earth
+  ids:
+  - unresolved:source:isthereanydeal:5382:crimson-earth

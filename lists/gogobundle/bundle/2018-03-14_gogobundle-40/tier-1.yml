@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #40 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5973/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5973/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5973/source.json
+games:
+- name: Deadly Escape
+  ids:
+  - steam:649450
+- name: Robo Encryption Zup
+  ids:
+  - unresolved:source:isthereanydeal:5973:robo-encryption-zup
+- name: The Evil Party
+  ids:
+  - steam:773230
+- name: Deep Ones Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5973:deep-ones-soundtrack
+- name: HOST
+  ids:
+  - steam:828240
+- name: 'Time Killers: Spot Race'
+  ids:
+  - steam:735530
+- name: Drill Arena
+  ids:
+  - steam:799610
+- name: Deep Ones
+  ids:
+  - unresolved:source:isthereanydeal:5973:deep-ones
+- name: Hollow Steps
+  ids:
+  - steam:802900
+- name: 'Time Killers: CatchOut'
+  ids:
+  - steam:735520

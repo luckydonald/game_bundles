@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #69 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6263/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6263/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6263/source.json
+games:
+- name: Plandzz
+  ids:
+  - unresolved:source:isthereanydeal:6263:plandzz
+- name: Plandzz 2
+  ids:
+  - unresolved:source:isthereanydeal:6263:plandzz-2
+- name: Spiny Adventures
+  ids:
+  - unresolved:source:isthereanydeal:6263:spiny-adventures
+- name: The Eerie Adventures Of Kally
+  ids:
+  - steam:753390
+- name: 'STE: Save the Earth'
+  ids:
+  - steam:823280
+- name: Soldiers of the Universe
+  ids:
+  - steam:640050
+- name: Cally's Caves 4
+  ids:
+  - steam:642580
+- name: Reprisal Universe
+  ids:
+  - steam:319560
+- name: Abyss Cave
+  ids:
+  - steam:348740
+- name: Famousity Card Game
+  ids:
+  - unresolved:source:isthereanydeal:6263:famousity-card-game
+- name: Swarm Universe
+  ids:
+  - steam:407110
+- name: Detrita Battlegrounds
+  ids:
+  - unresolved:source:isthereanydeal:6263:detrita-battlegrounds

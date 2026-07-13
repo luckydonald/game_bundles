@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Great Story Of A Mighty Hero - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1598/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1598/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1598/source.json
+games:
+- name: The Great Story of a Mighty Hero
+  ids:
+  - unresolved:source:isthereanydeal:1598:the-great-story-of-a-mighty-hero

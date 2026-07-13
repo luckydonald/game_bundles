@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spaced Out Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5085/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5085/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5085/source.json
+games:
+- name: Amber Tail Adventure
+  ids:
+  - steam:614460
+- name: MAD DAGGER
+  ids:
+  - unresolved:source:isthereanydeal:5085:mad-dagger
+- name: Last Tale
+  ids:
+  - unresolved:source:isthereanydeal:5085:last-tale
+- name: 'Glorch''s Great Escape: Walking is for Chumps'
+  ids:
+  - steam:549790
+- name: Space Impact Glitch
+  ids:
+  - unresolved:source:isthereanydeal:5085:space-impact-glitch
+- name: Absoloot
+  ids:
+  - unresolved:source:isthereanydeal:5085:absoloot
+- name: Sphere Complex
+  ids:
+  - steam:550600
+- name: Rhythm Rush
+  ids:
+  - steam:614030
+- name: Starship Rubicon
+  ids:
+  - steam:372030
+- name: 'Chronicles of a Dark Lord: Tides of Fate Remastered'
+  ids:
+  - unresolved:source:isthereanydeal:5085:chronicles-of-a-dark-lord-tides-of-fate-remastered
+- name: Star Merchant
+  ids:
+  - steam:594720
+- name: iGrow Game
+  ids:
+  - steam:489020

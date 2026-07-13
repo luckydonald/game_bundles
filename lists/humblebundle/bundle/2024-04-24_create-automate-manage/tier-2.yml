@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Create, Automate & Manage Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14009/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14009/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14009/source.json
+games:
+- name: Factory Town
+  ids:
+  - steam:860890
+- name: Buggos
+  ids:
+  - steam:789660
+- name: Recipe for Disaster
+  ids:
+  - steam:1492360
+- name: The Colonists
+  ids:
+  - steam:677340
+- name: Astro Colony
+  ids:
+  - steam:1614550
+- name: Cardboard Town
+  ids:
+  - steam:2198070
+- name: Mob Factory
+  ids:
+  - steam:2182630

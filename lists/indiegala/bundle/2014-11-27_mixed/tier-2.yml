@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Mixed Up Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1426/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1426/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1426/source.json
+games:
+- name: Puzzle Kingdoms
+  ids:
+  - steam:23700
+- name: The Flying Dutchman
+  ids:
+  - steam:321600
+- name: Shannon Tweed's Attack of the Groupies
+  ids:
+  - steam:289050
+- name: Vault Cracker
+  ids:
+  - steam:299170
+- name: Mirror Mysteries
+  ids:
+  - steam:291630
+- name: Empress of the Deep
+  ids:
+  - steam:299150
+- name: Warrior Kings
+  ids:
+  - steam:297570
+- name: 'Bad Rats: the Rat''s Revenge'
+  ids:
+  - steam:34900
+- name: Fireburst
+  ids:
+  - steam:207190
+- name: 'Adventure Chronicles: The Search for Lost Treasure'
+  ids:
+  - steam:281240

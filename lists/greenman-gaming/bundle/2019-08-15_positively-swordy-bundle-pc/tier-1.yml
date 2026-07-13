@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Positively Swordy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7776/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7776/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7776/source.json
+games:
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+- name: 'Mount and Blade: With Fire and Sword'
+  ids:
+  - steam:48720
+- name: Magicka
+  ids:
+  - steam:42910
+- name: Mount & Blade
+  ids:
+  - steam:22100

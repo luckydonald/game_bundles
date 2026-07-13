@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Pixeljam — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6722/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6722/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6722/source.json
+games:
+- name: Dino Run DX
+  ids:
+  - steam:248330
+- name: Dino Run DX OST
+  ids:
+  - steam:510800
+- name: Potatoman Seeks The Troof OST
+  ids:
+  - steam:335170
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500

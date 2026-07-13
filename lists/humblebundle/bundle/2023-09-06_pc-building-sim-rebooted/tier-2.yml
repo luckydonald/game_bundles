@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: PC Building Simulator Rebooted Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13455/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13455/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13455/source.json
+games:
+- name: PC Building Simulator
+  ids:
+  - steam:621060
+- name: PC Building Simulator - Republic of Gamers Workshop
+  ids:
+  - steam:1067590
+- name: PC Building Simulator - Overclocked Edition Content
+  ids:
+  - steam:973910
+- name: PC Building Simulator - Razer Workshop
+  ids:
+  - steam:982590
+- name: PC Building Simulator - Overclockers UK Workshop
+  ids:
+  - steam:1295800

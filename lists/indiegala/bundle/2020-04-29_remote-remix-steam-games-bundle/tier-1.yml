@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remote Remix Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8735/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8735/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8735/source.json
+games:
+- name: Survivor Squad
+  ids:
+  - steam:258050
+- name: Pizza Connection 2
+  ids:
+  - steam:599000
+- name: Arcadecraft
+  ids:
+  - steam:297330
+- name: Twickles
+  ids:
+  - steam:695110
+- name: The Quest for Achievements Remix
+  ids:
+  - unresolved:source:isthereanydeal:8735:the-quest-for-achievements-remix
+- name: HotFloor
+  ids:
+  - steam:865190
+- name: Energy Invasion
+  ids:
+  - steam:513600
+- name: Pizza Connection
+  ids:
+  - steam:598990

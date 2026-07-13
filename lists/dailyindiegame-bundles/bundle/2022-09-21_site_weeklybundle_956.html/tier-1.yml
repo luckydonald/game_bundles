@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 956 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12108/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12108/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12108/source.json
+games:
+- name: Nira
+  ids:
+  - steam:1171120
+- name: Infected zone
+  ids:
+  - steam:1353250
+- name: Starlight Alliance
+  ids:
+  - steam:1544530
+- name: 'Unstrong: Space Calamity'
+  ids:
+  - steam:1781720
+- name: 'Shankaram: CODE REBORN'
+  ids:
+  - steam:1809420
+- name: Shiba Army
+  ids:
+  - steam:1734870
+- name: 'Hidden Objects: Tranquil Valley'
+  ids:
+  - steam:1921210
+- name: Win The Diamond
+  ids:
+  - unresolved:source:isthereanydeal:12108:win-the-diamond
+- name: L.S.S II
+  ids:
+  - steam:1056330

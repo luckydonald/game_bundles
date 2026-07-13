@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Laush Game Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6310/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6310/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6310/source.json
+games:
+- name: Round Mars - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:round-mars-ost
+- name: Round Mars
+  ids:
+  - steam:823340
+- name: What do you hear?? Yanny vs Laurel
+  ids:
+  - steam:868550
+- name: Dangerous Level
+  ids:
+  - steam:779800
+- name: WannaMine - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:wannamine-ost
+- name: Virus Petya
+  ids:
+  - steam:796130
+- name: Putin takes taxes
+  ids:
+  - steam:798960
+- name: Putin takes taxes - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:putin-takes-taxes-ost
+- name: Virus Petya - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:virus-petya-ost
+- name: WannaMine
+  ids:
+  - steam:801500
+- name: Crazzers - OST
+  ids:
+  - unresolved:source:isthereanydeal:6310:crazzers-ost
+- name: Crazzers
+  ids:
+  - steam:816380

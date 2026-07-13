@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Black Hell Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8035/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8035/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8035/source.json
+games:
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+- name: Violet Cycle
+  ids:
+  - steam:595010
+- name: Black Paradox
+  ids:
+  - steam:858680
+- name: 'The Joylancer: Legendary Motor Knight'
+  ids:
+  - steam:315540
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090

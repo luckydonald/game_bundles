@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Styx: Master of Shadows & Shards of Darkness Double Pack — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13930/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13930/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13930/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Traditions Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16050/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16050/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16050/source.json
+games:
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Cats'
+  ids:
+  - steam:1176156
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Dogs'
+  ids:
+  - steam:1176184
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Butterflies'
+  ids:
+  - steam:1176203
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Chihuahuas'
+  ids:
+  - steam:1176217
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Frogs'
+  ids:
+  - unresolved:source:isthereanydeal:16050:pixel-puzzles-traditional-jigsaws-pack-frogs
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Cats 2'
+  ids:
+  - unresolved:source:isthereanydeal:16050:pixel-puzzles-traditional-jigsaws-pack-cats-2
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Dogs 2'
+  ids:
+  - unresolved:source:isthereanydeal:16050:pixel-puzzles-traditional-jigsaws-pack-dogs-2
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Colorful Animals'
+  ids:
+  - unresolved:source:isthereanydeal:16050:pixel-puzzles-traditional-jigsaws-pack-colorful-animals

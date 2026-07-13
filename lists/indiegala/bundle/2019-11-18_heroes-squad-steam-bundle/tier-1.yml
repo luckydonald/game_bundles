@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Heroes Squad Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8142/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8142/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8142/source.json
+games:
+- name: Loot Hero - DX
+  ids:
+  - steam:294040
+- name: Dungeons of Betrayal
+  ids:
+  - steam:402940
+- name: Tap Heroes
+  ids:
+  - steam:371570
+- name: 'Putrefaction 2: Void Walker'
+  ids:
+  - steam:567060
+- name: '8-Bit Adventures: The Forgotten Journey Remastered Edition'
+  ids:
+  - steam:370300
+- name: 'CO-OP : DECRYPTED'
+  ids:
+  - steam:315130
+- name: Defending Camelot
+  ids:
+  - unresolved:source:isthereanydeal:8142:defending-camelot
+- name: Galaxy Squad
+  ids:
+  - steam:921710
+- name: Tower of Fate
+  ids:
+  - unresolved:source:isthereanydeal:8142:tower-of-fate

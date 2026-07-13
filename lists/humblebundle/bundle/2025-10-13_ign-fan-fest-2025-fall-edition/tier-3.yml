@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: IGN Fan Fest Bundle (Fall 2025) — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15487/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15487/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15487/source.json
+games:
+- name: TerraTech
+  ids:
+  - steam:285920
+- name: 'Predator: Hunting Grounds'
+  ids:
+  - steam:1556200
+- name: 'Invincible Presents: Atom Eve'
+  ids:
+  - steam:2060870
+- name: 'SpongeBob SquarePants: The Cosmic Shake'
+  ids:
+  - steam:1282150
+- name: Wandering Sword
+  ids:
+  - steam:1876890
+- name: Koira
+  ids:
+  - steam:1626620
+- name: 'Warhammer 40,000: Rogue Trader'
+  ids:
+  - steam:2186680
+- name: 'Train Sim World® 6: MBTA Providence/Stoughton Line HSP46 Add-On'
+  ids:
+  - steam:3663860
+- name: 'Train Sim World® 6: Maintalbahn: Aschaffenburg - Miltenberg Route Add-On'
+  ids:
+  - steam:3663230
+- name: 'Train Sim World® 6: MBTA Commuter: Boston - Framingham/Worcester Line Route
+    Add-On'
+  ids:
+  - steam:3663500
+- name: 'Train Sim World® 6: Sand Patch Grade Route Add-On'
+  ids:
+  - steam:3662880
+- name: 'Train Sim World ® 6: Free Starter Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15487:train-sim-world-6-free-starter-pack

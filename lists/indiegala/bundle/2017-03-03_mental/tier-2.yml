@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mental — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4853/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4853/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4853/source.json
+games:
+- name: Bullet Candy
+  ids:
+  - steam:6600
+- name: Super Switch
+  ids:
+  - steam:521430
+- name: Nuclear Contingency
+  ids:
+  - steam:540900
+- name: WayOut
+  ids:
+  - steam:551110
+- name: Interstellar Logistics Inc.
+  ids:
+  - steam:502150
+- name: Only One Hope
+  ids:
+  - unresolved:source:isthereanydeal:4853:only-one-hope
+- name: PROJECT XINATRA
+  ids:
+  - steam:508610
+- name: The Fall of Gods
+  ids:
+  - steam:424170
+- name: '''n Verlore Verstand'
+  ids:
+  - steam:439550
+- name: Bulby - Diamond Course
+  ids:
+  - steam:461390
+- name: Fire Arrow Plus
+  ids:
+  - steam:509780
+- name: The Dungeons of Castle Madness
+  ids:
+  - steam:506840

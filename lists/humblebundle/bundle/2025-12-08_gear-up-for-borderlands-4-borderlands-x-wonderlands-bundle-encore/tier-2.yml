@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Gear Up for Borderlands 4: Borderlands X Wonderlands Encore — 9-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15662/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15662/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15662/source.json
+games:
+- name: Borderlands 2
+  ids:
+  - steam:49520
+- name: 'Borderlands: The Pre-Sequel'
+  ids:
+  - steam:261640
+- name: 'Borderlands: Game of the Year Enhanced'
+  ids:
+  - steam:729040
+- name: Borderlands 3
+  ids:
+  - steam:397540
+- name: Tales from the Borderlands
+  ids:
+  - steam:330830
+- name: Borderlands 2 VR
+  ids:
+  - steam:991260
+- name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15662:tiny-tinas-wonderlands-chaotic-great-edition
+- name: New Tales from the Borderlands
+  ids:
+  - steam:1454970
+- name: Borderlands 4
+  ids:
+  - unresolved:source:isthereanydeal:15662:borderlands-4

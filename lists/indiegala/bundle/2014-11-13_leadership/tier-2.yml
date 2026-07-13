@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The Leadership Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1381/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1381/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1381/source.json
+games:
+- name: Patrician IV
+  ids:
+  - steam:57620
+- name: Grand Ages Rome
+  ids:
+  - steam:23450
+- name: 'Imperium Romanum: Gold Edition'
+  ids:
+  - steam:23400
+- name: Tropico 3
+  ids:
+  - steam:23490
+- name: Jagged Alliance - Back in Action
+  ids:
+  - steam:57740

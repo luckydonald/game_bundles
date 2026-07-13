@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1077: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12902/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12902/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12902/source.json
+games:
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+- name: Colo Grid Zation
+  ids:
+  - unresolved:source:isthereanydeal:12902:colo-grid-zation
+- name: Phantasmata
+  ids:
+  - steam:1048790
+- name: Timen runner
+  ids:
+  - steam:623550
+- name: Cosmic collapse
+  ids:
+  - steam:860000
+- name: Super Slinger
+  ids:
+  - steam:1903100
+- name: Nea Edem
+  ids:
+  - steam:1907020
+- name: Battle of Tanks
+  ids:
+  - steam:2057720
+- name: WordBed
+  ids:
+  - steam:2072580

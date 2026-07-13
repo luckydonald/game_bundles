@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 676 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10798/source.json
+games:
+- name: Blocky Snake
+  ids:
+  - unresolved:source:isthereanydeal:10798:blocky-snake
+- name: PROVIDER
+  ids:
+  - steam:1604390
+- name: 'Lawnmower Game: Battle'
+  ids:
+  - steam:1733660
+- name: 'Patriots: Back to Civilization'
+  ids:
+  - unresolved:source:isthereanydeal:10798:patriots-back-to-civilization
+- name: Flannel Amethyst
+  ids:
+  - steam:1813890
+- name: VILLAGE THE SIBERIA
+  ids:
+  - steam:1819800
+- name: 'Poly Memory: Cats'
+  ids:
+  - steam:1825060
+- name: Stopocop
+  ids:
+  - unresolved:source:isthereanydeal:10798:stopocop
+- name: 'HOGuru Presents: The House With Too Many Zombies In It'
+  ids:
+  - steam:1785510

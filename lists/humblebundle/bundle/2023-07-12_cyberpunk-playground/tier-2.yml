@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cyberpunk Playground Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13336/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13336/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13336/source.json
+games:
+- name: Cloudpunk
+  ids:
+  - steam:746850
+- name: Voltage High Society
+  ids:
+  - steam:2063480
+- name: Ghostrunner
+  ids:
+  - steam:1139900
+- name: Severed Steel
+  ids:
+  - steam:1227690

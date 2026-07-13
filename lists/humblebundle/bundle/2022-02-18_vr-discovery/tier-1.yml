@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: VR Discovery Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11071/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11071/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11071/source.json
+games:
+- name: Tower Tag
+  ids:
+  - steam:1187330
+- name: Tower Tag Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:11071:tower-tag-soundtrack

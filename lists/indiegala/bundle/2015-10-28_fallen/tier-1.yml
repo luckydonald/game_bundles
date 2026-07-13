@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Lords of the Fallen Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2657/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2657/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2657/source.json
+games:
+- name: Lords of the Fallen
+  ids:
+  - steam:1501750

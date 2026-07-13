@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 654: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10696/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10696/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10696/source.json
+games:
+- name: Jaywalker
+  ids:
+  - unresolved:source:isthereanydeal:10696:jaywalker
+- name: Super Commander XL
+  ids:
+  - steam:939240
+- name: Warships On The Halloween Night
+  ids:
+  - steam:1144260
+- name: Pet Puzzle
+  ids:
+  - steam:1092080
+- name: InMaze
+  ids:
+  - steam:1371160
+- name: Spinning_Kid
+  ids:
+  - steam:1420950
+- name: BRAVE HERO
+  ids:
+  - steam:1493310
+- name: Synth Drift
+  ids:
+  - steam:1564100
+- name: O.C.D. - On Completeness & Dissonance
+  ids:
+  - unresolved:source:isthereanydeal:10696:ocd-on-completeness-and-dissonance

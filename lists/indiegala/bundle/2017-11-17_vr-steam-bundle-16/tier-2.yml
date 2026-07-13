@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Reality XVI — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5636/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5636/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5636/source.json
+games:
+- name: VR Coaster Extreme
+  ids:
+  - steam:616660
+- name: Tengutana
+  ids:
+  - steam:630070
+- name: Butterfly Moment
+  ids:
+  - unresolved:source:isthereanydeal:5636:butterfly-moment
+- name: Cliffstone Manor
+  ids:
+  - steam:698910
+- name: Planet Protector VR
+  ids:
+  - steam:656320
+- name: 'Lunar Stone: Origin of Blood'
+  ids:
+  - steam:553800
+- name: Munch VR
+  ids:
+  - steam:549000
+- name: CubeWorks
+  ids:
+  - steam:636220
+- name: Hyperide VR
+  ids:
+  - unresolved:source:isthereanydeal:5636:hyperide-vr

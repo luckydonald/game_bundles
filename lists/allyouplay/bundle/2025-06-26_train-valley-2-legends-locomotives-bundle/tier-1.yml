@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Train Valley 2: Legends & Locomotives Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15211/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15211/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15211/source.json
+games:
+- name: Train Valley 2 - Passenger Flow
+  ids:
+  - steam:1154780
+- name: Train Valley 2 - Myths & Rails
+  ids:
+  - steam:1874870
+- name: 'Train Valley 2: Workshop Gems - Ruby'
+  ids:
+  - steam:2098230
+- name: 'Train Valley 2: Workshop Gems - Emerald'
+  ids:
+  - steam:2098232
+- name: 'Train Valley 2: Workshop Gems - Sapphire'
+  ids:
+  - steam:2098231
+- name: Train Valley 2 - Editor's Bulletin
+  ids:
+  - steam:2330180
+- name: Train Valley 2 - The Pandeia Project
+  ids:
+  - steam:2440700
+- name: Train Valley 2 - Patent Pending
+  ids:
+  - steam:2848820

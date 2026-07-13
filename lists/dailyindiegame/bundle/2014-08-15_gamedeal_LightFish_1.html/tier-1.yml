@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: LightFish - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1084/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1084/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1084/source.json
+games:
+- name: Lightfish
+  ids:
+  - steam:116120

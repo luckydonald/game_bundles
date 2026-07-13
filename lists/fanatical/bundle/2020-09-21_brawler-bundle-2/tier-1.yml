@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Brawler Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9185/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9185/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9185/source.json
+games:
+- name: Divekick
+  ids:
+  - steam:244730
+- name: Shark Attack Deathmatch 2
+  ids:
+  - steam:330580
+- name: GUILTY GEAR XX ACCENT CORE PLUS R
+  ids:
+  - steam:348550
+- name: Kings of Kung Fu
+  ids:
+  - steam:316930
+- name: Double Dragon IV
+  ids:
+  - steam:528610
+- name: Hive Jump
+  ids:
+  - steam:295670

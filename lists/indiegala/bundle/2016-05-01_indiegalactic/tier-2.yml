@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Galactic Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3365/source.json
+games:
+- name: Scott in Space
+  ids:
+  - steam:385980
+- name: TeraBlaster
+  ids:
+  - steam:384150
+- name: Skyflower
+  ids:
+  - steam:364670
+- name: Void Invaders
+  ids:
+  - steam:391170
+- name: Quick Slick Deadly
+  ids:
+  - unresolved:source:isthereanydeal:3365:quick-slick-deadly
+- name: Zamarian
+  ids:
+  - steam:429120
+- name: Super Intergalactic Gang
+  ids:
+  - steam:429260
+- name: The Adventures of Mr. Bobley
+  ids:
+  - steam:375710
+- name: Vampire of the Sands
+  ids:
+  - steam:386160
+- name: Sumo! Revise
+  ids:
+  - steam:379290
+- name: Protoshift
+  ids:
+  - unresolved:source:isthereanydeal:3365:protoshift
+- name: Rubber & Lead
+  ids:
+  - steam:389810
+- name: Run Run And Die
+  ids:
+  - steam:397670
+- name: Ruzh Delta Z
+  ids:
+  - steam:370190
+- name: Space Moth DX
+  ids:
+  - steam:425340
+- name: Stone Tales
+  ids:
+  - steam:405590
+- name: Super Ubie Island REMIX
+  ids:
+  - steam:405860

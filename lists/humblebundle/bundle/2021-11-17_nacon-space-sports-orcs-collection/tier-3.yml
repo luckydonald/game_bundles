@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Nacon Collection: Space, Sports & Orcs Bundle — entire-9-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10702/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10702/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10702/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+- name: 'Warhammer: Chaosbane'
+  ids:
+  - steam:774241
+- name: Street Power Football
+  ids:
+  - steam:1275760
+- name: Blood Bowl 2 - Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:10702:blood-bowl-2-legendary-edition
+- name: RUGBY 20
+  ids:
+  - steam:846730
+- name: Hunting Simulator 2
+  ids:
+  - steam:1135910
+- name: Tour de France 2020
+  ids:
+  - steam:1287590

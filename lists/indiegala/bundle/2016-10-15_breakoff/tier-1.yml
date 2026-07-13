@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Break Off Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4200/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4200/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4200/source.json
+games:
+- name: The Extinction
+  ids:
+  - unresolved:source:isthereanydeal:4200:the-extinction
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: Torch Cave
+  ids:
+  - unresolved:source:isthereanydeal:4200:torch-cave

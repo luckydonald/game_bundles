@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: HeroCraftPC Complete Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15001/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15001/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15001/source.json
+games:
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740
+- name: 'INSOMNIA: The Ark'
+  ids:
+  - steam:783170
+- name: Odysseus Kosmos and his Robot Quest (Complete Season)
+  ids:
+  - steam:645820
+- name: Organs Please
+  ids:
+  - steam:1593780
+- name: Gravewood High - Complete
+  ids:
+  - steam:2097360
+- name: 'Tempest: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15001:tempest-complete-edition

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deep Space Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/221/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/221/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/221/source.json
+games:
+- name: Death Ray Manta
+  ids:
+  - steam:338760
+- name: Bagfull of Wrong
+  ids:
+  - unresolved:source:isthereanydeal:221:bagfull-of-wrong
+- name: War Mac 2000
+  ids:
+  - unresolved:source:isthereanydeal:221:war-mac-2000
+- name: The Wreckless
+  ids:
+  - unresolved:source:isthereanydeal:221:the-wreckless
+- name: Dark Scavenger
+  ids:
+  - steam:293880
+- name: Armalyte
+  ids:
+  - unresolved:source:isthereanydeal:221:armalyte
+- name: Space Giraffe
+  ids:
+  - steam:27800
+- name: Miner Wars Arena
+  ids:
+  - steam:219070
+- name: 'SOL: Exodus'
+  ids:
+  - steam:200410
+- name: RobotRiot
+  ids:
+  - unresolved:source:isthereanydeal:221:robotriot

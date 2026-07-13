@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Abyss Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10799/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10799/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10799/source.json
+games:
+- name: Torchlight
+  ids:
+  - steam:41500
+- name: Main Assembly
+  ids:
+  - steam:1078920

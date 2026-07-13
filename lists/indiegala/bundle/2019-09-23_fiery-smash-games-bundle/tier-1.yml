@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fiery Smash Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7945/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7945/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7945/source.json
+games:
+- name: Crayon Chronicles
+  ids:
+  - steam:341510
+- name: Space Smash
+  ids:
+  - steam:1036490
+- name: 'Space War: Infinity'
+  ids:
+  - steam:1086160
+- name: 'In Game Adventure: Legend of Monsters'
+  ids:
+  - steam:640970
+- name: Fiery catacombs
+  ids:
+  - steam:1138150
+- name: Space Elite Force
+  ids:
+  - steam:855850
+- name: Daemon 9
+  ids:
+  - unresolved:source:isthereanydeal:7945:daemon-9
+- name: Loot Hunter
+  ids:
+  - steam:341470

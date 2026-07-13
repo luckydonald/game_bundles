@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Patrick Scott Patterson Indie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/767/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/767/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/767/source.json
+games:
+- name: Survivor Squad
+  ids:
+  - steam:258050
+- name: SpaceChem
+  ids:
+  - steam:92800
+- name: Dwarf Quest
+  ids:
+  - unresolved:source:isthereanydeal:767:dwarf-quest
+- name: 'Ring Runner: Flight of the Sages'
+  ids:
+  - steam:258010
+- name: Residue
+  ids:
+  - unresolved:source:isthereanydeal:767:residue
+- name: 3 Stars of Destiny
+  ids:
+  - steam:278530

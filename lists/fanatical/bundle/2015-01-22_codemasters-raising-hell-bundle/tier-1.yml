@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Raising Hell — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1564/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1564/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1564/source.json
+games:
+- name: Overlord™
+  ids:
+  - steam:11450
+- name: 'Maelstrom: The Battle for Earth Begins'
+  ids:
+  - unresolved:source:isthereanydeal:1564:maelstrom-the-battle-for-earth-begins
+- name: Hospital Tycoon
+  ids:
+  - unresolved:source:isthereanydeal:1564:hospital-tycoon
+- name: Damnation
+  ids:
+  - unresolved:source:isthereanydeal:1564:damnation
+- name: 'Operation Flashpoint: Red River'
+  ids:
+  - unresolved:source:isthereanydeal:1564:operation-flashpoint-red-river
+- name: Rise of the Argonauts
+  ids:
+  - unresolved:source:isthereanydeal:1564:rise-of-the-argonauts
+- name: 'Operation Flashpoint: Dragon Rising'
+  ids:
+  - unresolved:source:isthereanydeal:1564:operation-flashpoint-dragon-rising
+- name: Overlord II
+  ids:
+  - steam:12810
+- name: 'Overlord™: Raising Hell'
+  ids:
+  - steam:12710

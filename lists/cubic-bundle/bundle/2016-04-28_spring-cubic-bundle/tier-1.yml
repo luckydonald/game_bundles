@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spring Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3354/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3354/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3354/source.json
+games:
+- name: Dungeons Are Random
+  ids:
+  - steam:431330
+- name: Wake
+  ids:
+  - steam:233530
+- name: Project Pulsation
+  ids:
+  - steam:424000
+- name: Predator Simulator
+  ids:
+  - steam:369100
+- name: My Bones
+  ids:
+  - steam:389700
+- name: Caribbean Odyssey
+  ids:
+  - steam:414500
+- name: Lunnye Devitsy
+  ids:
+  - steam:233510
+- name: Red Lake
+  ids:
+  - steam:357290

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Extreme VR Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10064/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10064/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10064/source.json
+games:
+- name: A-Tech Cybernetic VR
+  ids:
+  - steam:578210
+- name: 'PROZE: Enlightenment'
+  ids:
+  - steam:924250
+- name: SculptrVR
+  ids:
+  - steam:418520
+- name: Gadgeteer
+  ids:
+  - steam:746560
+- name: Sprint Vector
+  ids:
+  - steam:590690
+- name: Moose Life
+  ids:
+  - steam:1342740
+- name: Summoner The Ruined Village
+  ids:
+  - unresolved:source:isthereanydeal:10064:summoner-the-ruined-village
+- name: Operation Warcade VR
+  ids:
+  - steam:639270
+- name: Zero Caliber VR
+  ids:
+  - steam:877200
+- name: Contractors VR
+  ids:
+  - steam:963930

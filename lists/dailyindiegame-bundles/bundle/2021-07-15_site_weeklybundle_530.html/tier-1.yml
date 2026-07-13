@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 530 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10257/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10257/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10257/source.json
+games:
+- name: Devious Dungeon
+  ids:
+  - steam:1059880
+- name: Starblazer
+  ids:
+  - unresolved:source:isthereanydeal:10257:starblazer
+- name: 123 Slaughter Me Street 2
+  ids:
+  - steam:551190
+- name: The Unintended Consequences of Curiosity
+  ids:
+  - steam:814660
+- name: War Trains
+  ids:
+  - steam:1173340
+- name: Green Dragon/グリーンドラゴン
+  ids:
+  - steam:935340
+- name: HEDE Game Engine
+  ids:
+  - steam:1313330
+- name: Divine Stone
+  ids:
+  - steam:1464200
+- name: RUSSIAN QUARANTINE
+  ids:
+  - unresolved:source:isthereanydeal:10257:russian-quarantine

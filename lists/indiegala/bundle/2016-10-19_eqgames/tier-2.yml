@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: EQ Games Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4218/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4218/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4218/source.json
+games:
+- name: Destiny Warriors RPG
+  ids:
+  - steam:399790
+- name: Secret Of Magia
+  ids:
+  - steam:396160
+- name: Gun Rocket
+  ids:
+  - steam:391420
+- name: Defy Gravity Extended
+  ids:
+  - steam:96100
+- name: Storm Of Spears RPG
+  ids:
+  - steam:463350
+- name: Out There Somewhere
+  ids:
+  - steam:263980
+- name: Sins Of The Demon RPG
+  ids:
+  - steam:461640
+- name: Labyronia RPG
+  ids:
+  - steam:391260
+- name: Labyronia RPG 2
+  ids:
+  - steam:397500
+- name: Legend of Mysteria RPG
+  ids:
+  - steam:407230
+- name: 'Marble Mayhem: Fragile Ball'
+  ids:
+  - steam:370510
+- name: Waveform
+  ids:
+  - steam:204180
+- name: The Howler
+  ids:
+  - steam:306040
+- name: The Chosen RPG
+  ids:
+  - steam:434420

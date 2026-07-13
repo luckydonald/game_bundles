@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 275 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9268/source.json
+games:
+- name: Colo Grid Zation
+  ids:
+  - unresolved:source:isthereanydeal:9268:colo-grid-zation
+- name: Crafting Tycoon
+  ids:
+  - steam:757440
+- name: Sea Explorer
+  ids:
+  - steam:846210
+- name: Business Simulator
+  ids:
+  - steam:1420330
+- name: Super Arcade Soccer 2021
+  ids:
+  - steam:1256710
+- name: Stormblades
+  ids:
+  - steam:1358940
+- name: Timeline Traveler
+  ids:
+  - unresolved:source:isthereanydeal:9268:timeline-traveler
+- name: DIERY HEAVEN
+  ids:
+  - steam:1422740
+- name: Metal Strike
+  ids:
+  - steam:1441090

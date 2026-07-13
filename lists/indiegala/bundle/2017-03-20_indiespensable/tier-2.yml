@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indiespensable Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4923/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4923/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4923/source.json
+games:
+- name: Blitzkrieg Anthology
+  ids:
+  - steam:313480
+- name: Inexistence
+  ids:
+  - steam:444720
+- name: Snake Party
+  ids:
+  - steam:576660
+- name: Dark Project
+  ids:
+  - unresolved:source:isthereanydeal:4923:dark-project
+- name: 'Megamagic: Wizards of the Neon Age'
+  ids:
+  - steam:422650
+- name: Flat Kingdom Paper's Cut Edition
+  ids:
+  - steam:405970
+- name: Marooners
+  ids:
+  - steam:423810
+- name: The guard of dungeon
+  ids:
+  - steam:601640
+- name: Tactical Soccer The New Season
+  ids:
+  - steam:400380
+- name: Burgers 2
+  ids:
+  - steam:555890
+- name: Blitzkrieg 2 Anthology
+  ids:
+  - steam:313500

@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Crescent Moon Mini Game Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12851/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12851/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12851/source.json
+games:
+- name: Morphite
+  ids:
+  - steam:661740
+- name: Trashed
+  ids:
+  - steam:1268360

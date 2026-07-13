@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Springtide Indies Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11511/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11511/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11511/source.json
+games:
+- name: Dungeon Rushers
+  ids:
+  - steam:429620
+- name: Impulsion
+  ids:
+  - steam:811270
+- name: Out of Space
+  ids:
+  - steam:400080
+- name: 'Sigma Theory: Global Cold War'
+  ids:
+  - steam:716640
+- name: Tiny Lands
+  ids:
+  - steam:1354910
+- name: Recompile
+  ids:
+  - steam:986310
+- name: Arietta of Spirits
+  ids:
+  - steam:1140170
+- name: As Far As The Eye
+  ids:
+  - steam:1119700
+- name: Paper Beast - Folded Edition
+  ids:
+  - steam:1403830

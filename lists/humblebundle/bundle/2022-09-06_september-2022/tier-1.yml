@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Sep 2022) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12061/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12061/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12061/source.json
+games:
+- name: INDUSTRIA
+  ids:
+  - steam:1172650
+- name: Descenders
+  ids:
+  - steam:681280
+- name: Crusader Kings III
+  ids:
+  - steam:1158310
+- name: Just Cause™ 4 Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:12061:just-cause-4-complete-edition
+- name: 'The Dungeon Of Naheulbeuk: The Amulet Of Chaos'
+  ids:
+  - steam:970830
+- name: Crown Trick
+  ids:
+  - steam:1000010
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+- name: shapez
+  ids:
+  - steam:1318690
+- name: shapez - Puzzle
+  ids:
+  - steam:1625400

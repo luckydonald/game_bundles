@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Must Play Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6079/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6079/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6079/source.json
+games:
+- name: '1775: Rebellion'
+  ids:
+  - steam:422610
+- name: Nom Nom Galaxy
+  ids:
+  - steam:226100
+- name: Alwa's Awakening
+  ids:
+  - steam:549260
+- name: The Cat Games
+  ids:
+  - steam:603260
+- name: Cally's Caves 4
+  ids:
+  - steam:642580
+- name: Geo
+  ids:
+  - steam:513480
+- name: 'Star Story: The Horizon Escape'
+  ids:
+  - steam:610310
+- name: Dreamstones
+  ids:
+  - steam:645920
+- name: Voodoo Garden
+  ids:
+  - steam:502770
+- name: The Mims Beginning
+  ids:
+  - steam:337820

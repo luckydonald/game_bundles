@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 243 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9135/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9135/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9135/source.json
+games:
+- name: The Last Shot
+  ids:
+  - steam:1295000
+- name: Revenge Quest
+  ids:
+  - steam:569130
+- name: Thunderbolt
+  ids:
+  - steam:803390
+- name: School of Horror
+  ids:
+  - unresolved:source:isthereanydeal:9135:school-of-horror
+- name: Star Sweet
+  ids:
+  - steam:760350
+- name: Clicker Age
+  ids:
+  - steam:1215660
+- name: Inglorious Pirate
+  ids:
+  - unresolved:source:isthereanydeal:9135:inglorious-pirate
+- name: Live To Win
+  ids:
+  - steam:1234980
+- name: Beach anime day
+  ids:
+  - steam:1240600

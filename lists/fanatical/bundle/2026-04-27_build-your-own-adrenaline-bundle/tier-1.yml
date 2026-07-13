@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Adrenaline Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16096/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16096/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16096/source.json
+games:
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+- name: The Darkest Tales
+  ids:
+  - steam:1307690
+- name: 'Blind Fate: Edo no Yami'
+  ids:
+  - steam:1294880
+- name: HYPER DEMON
+  ids:
+  - steam:1743850
+- name: Xmas Apocalypse
+  ids:
+  - steam:2197050
+- name: Afterimage Deluxe Edition
+  ids:
+  - steam:1701520
+- name: Hammerwatch II
+  ids:
+  - steam:1538970
+- name: StormEdge
+  ids:
+  - steam:2321350
+- name: Cosmic Waves
+  ids:
+  - steam:2292540
+- name: Aaero2
+  ids:
+  - steam:3010090

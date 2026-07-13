@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel & Cartoon Enthusiasts Bundle (GOG.com) — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15286/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15286/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15286/source.json
+games:
+- name: Gunslugs
+  ids:
+  - steam:371890
+- name: Sir Questionnaire
+  ids:
+  - steam:2124790
+- name: Heroes of Loot
+  ids:
+  - steam:359280
+- name: Snake Core
+  ids:
+  - steam:1262770
+- name: Space Grunts
+  ids:
+  - steam:371430
+- name: Gunslugs 2
+  ids:
+  - steam:340750
+- name: Meganoid
+  ids:
+  - steam:606030
+- name: Heroes of Loot 2
+  ids:
+  - steam:439880

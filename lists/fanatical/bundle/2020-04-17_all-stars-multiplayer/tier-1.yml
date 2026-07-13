@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars Multiplayer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8691/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8691/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8691/source.json
+games:
+- name: Guns, Gore & Cannoli
+  ids:
+  - steam:322210
+- name: Neon Chrome
+  ids:
+  - steam:428750
+- name: GIBZ
+  ids:
+  - steam:448320
+- name: Cook, Serve, Delicious! 2!!
+  ids:
+  - steam:386620
+- name: Rain World
+  ids:
+  - steam:312520
+- name: White Noise 2
+  ids:
+  - steam:503350
+- name: Caveblazers
+  ids:
+  - steam:452060

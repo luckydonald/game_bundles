@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 496 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10111/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10111/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10111/source.json
+games:
+- name: Hollow's Land
+  ids:
+  - steam:338840
+- name: Truffle Saga
+  ids:
+  - steam:302260
+- name: That's Mahjong!
+  ids:
+  - steam:547310
+- name: Trigger
+  ids:
+  - steam:855650
+- name: Green Marquis
+  ids:
+  - steam:1475140
+- name: Black Ido
+  ids:
+  - steam:1474850
+- name: Retro Clicker
+  ids:
+  - unresolved:source:isthereanydeal:10111:retro-clicker
+- name: ARMORED
+  ids:
+  - steam:1641780
+- name: Space puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10111:space-puzzle

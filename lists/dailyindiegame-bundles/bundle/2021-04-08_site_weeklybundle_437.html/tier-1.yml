@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 437 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9914/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9914/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9914/source.json
+games:
+- name: Bounce!
+  ids:
+  - steam:464400
+- name: Mr. Dubstep
+  ids:
+  - steam:654610
+- name: Survive in Space
+  ids:
+  - steam:467950
+- name: Rym 9000
+  ids:
+  - steam:774561
+- name: Neon Space 2
+  ids:
+  - steam:505210
+- name: Inexistence Rebirth
+  ids:
+  - steam:1297390
+- name: Necrojacks
+  ids:
+  - unresolved:source:isthereanydeal:9914:necrojacks
+- name: SAW HELL
+  ids:
+  - steam:1500860
+- name: 'Cybernetica: Final'
+  ids:
+  - steam:1549710

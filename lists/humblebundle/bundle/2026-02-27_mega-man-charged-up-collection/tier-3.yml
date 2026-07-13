@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Mega Man Charged Up Collection Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15920/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15920/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15920/source.json
+games:
+- name: Mega Man Battle Network Legacy Collection Vol. 1
+  ids:
+  - steam:1798010
+- name: Mega Man Battle Network Legacy Collection Vol. 2
+  ids:
+  - steam:1798020
+- name: MEGA MAN X DiVE Offline
+  ids:
+  - steam:2183650
+- name: Mega Man 11
+  ids:
+  - steam:742300
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020
+- name: Mega Man X Legacy Collection 2
+  ids:
+  - steam:743900
+- name: Mega Man Legacy Collection 2
+  ids:
+  - steam:495050

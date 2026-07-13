@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Call of Duty: Black Ops - Mac Edition Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6404/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6404/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6404/source.json
+games:
+- name: 'Call of Duty®: Black Ops Annihilation & Escalation Bundle - Mac Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6404:call-of-duty-black-ops-annihilation-and-escalation-bundle-mac-edition
+- name: 'Call of Duty®: Black Ops - Rezurrection'
+  ids:
+  - steam:42719
+- name: 'Call of Duty: Black Ops - Mac Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6404:call-of-duty-black-ops-mac-edition

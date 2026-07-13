@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Dash Pick & Mix Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6265/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6265/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6265/source.json
+games:
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+- name: FarSky
+  ids:
+  - unresolved:source:isthereanydeal:6265:farsky
+- name: Last Dream
+  ids:
+  - steam:266230
+- name: Stronghold HD
+  ids:
+  - steam:40950
+- name: DEADLIGHT
+  ids:
+  - steam:211400
+- name: Lucius
+  ids:
+  - steam:218640
+- name: POSTAL 2
+  ids:
+  - steam:223470
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+- name: Lucius II
+  ids:
+  - steam:296830
+- name: Stronghold 3 Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:6265:stronghold-3-gold-edition
+- name: Glass Masquerade
+  ids:
+  - steam:511470
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Lucius Demake
+  ids:
+  - steam:364230

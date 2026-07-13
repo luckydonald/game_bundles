@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Enter The Mysterium Bundle — 11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14472/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14472/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14472/source.json
+games:
+- name: Cosmic Osmo and the Worlds Beyond the Mackerel
+  ids:
+  - steam:63620
+- name: 'The Manhole: Masterpiece Edition'
+  ids:
+  - steam:63630
+- name: Spelunx and the Caves of Mr. Seudo
+  ids:
+  - steam:63640
+- name: 'Uru: Complete Chronicles'
+  ids:
+  - steam:63650
+- name: 'Myst V: End of Ages'
+  ids:
+  - steam:208110
+- name: Riven (1997)
+  ids:
+  - steam:63610
+- name: 'Myst IV: Revelation'
+  ids:
+  - steam:925940
+- name: 'Myst: Masterpiece Edition'
+  ids:
+  - steam:63660
+- name: Obduction
+  ids:
+  - steam:306760
+- name: 'realMyst: Masterpiece Edition'
+  ids:
+  - steam:244430
+- name: 'Myst III: Exile'
+  ids:
+  - steam:925930

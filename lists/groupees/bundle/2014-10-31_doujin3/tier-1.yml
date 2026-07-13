@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Let&#39;s Build a Doujin Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1340/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1340/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1340/source.json
+games:
+- name: Grand Class Melee 2
+  ids:
+  - steam:340440
+- name: 'QUALIA 3: Multi Agent Deluxe Edition'
+  ids:
+  - steam:290440
+- name: Akane the Kunoichi
+  ids:
+  - steam:291130
+- name: dUpLicity ~Beyond the Lies~
+  ids:
+  - steam:335690

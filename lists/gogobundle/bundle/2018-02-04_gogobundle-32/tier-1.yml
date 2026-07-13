@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #32 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5862/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5862/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5862/source.json
+games:
+- name: Little Adventurer III
+  ids:
+  - steam:785030
+- name: Violent Vectors
+  ids:
+  - unresolved:source:isthereanydeal:5862:violent-vectors
+- name: Half Past Impossible
+  ids:
+  - unresolved:source:isthereanydeal:5862:half-past-impossible
+- name: Tank 51
+  ids:
+  - steam:782610
+- name: Mini Knight
+  ids:
+  - unresolved:source:isthereanydeal:5862:mini-knight
+- name: Restoration
+  ids:
+  - steam:688380
+- name: Solenars Edge Rebirth
+  ids:
+  - steam:679470
+- name: BLOK DROP NEO
+  ids:
+  - steam:722680
+- name: 'Solenars Edge Rebirth: SqueakyWafflez Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:5862:solenars-edge-rebirth-squeakywafflez-soundtrack
+- name: Soul for two
+  ids:
+  - steam:778810
+- name: Eternal Maze
+  ids:
+  - steam:652990
+- name: 'Solenars Edge Rebirth: Nathuz Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:5862:solenars-edge-rebirth-nathuz-soundtrack

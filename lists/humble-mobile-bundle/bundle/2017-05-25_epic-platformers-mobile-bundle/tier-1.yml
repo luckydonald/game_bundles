@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Mobile Bundle: Epic Platformers — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5141/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5141/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5141/source.json
+games:
+- name: Devious Dungeon
+  ids:
+  - steam:1059880
+- name: Eggggg - The platform puker
+  ids:
+  - steam:638470
+- name: Devious Dungeon 2
+  ids:
+  - steam:1059890

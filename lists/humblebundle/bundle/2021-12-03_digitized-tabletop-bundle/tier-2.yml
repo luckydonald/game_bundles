@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Digitized Tabletop Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10784/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10784/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10784/source.json
+games:
+- name: Solitairica
+  ids:
+  - steam:463980
+- name: WARTILE
+  ids:
+  - steam:404200
+- name: 'Talisman: Digital Edition'
+  ids:
+  - unresolved:source:isthereanydeal:10784:talisman-digital-edition
+- name: Talisman - The City Expansion
+  ids:
+  - steam:267784
+- name: Talisman - The Sacred Pool Expansion
+  ids:
+  - steam:267781
+- name: Talisman - The Frostmarch Expansion
+  ids:
+  - steam:267772

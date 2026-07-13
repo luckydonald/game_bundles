@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 998: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12333/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12333/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12333/source.json
+games:
+- name: The Bad Gravedigger
+  ids:
+  - steam:870120
+- name: Endorlight
+  ids:
+  - steam:428430
+- name: 'BattleCubes: Arena'
+  ids:
+  - unresolved:source:isthereanydeal:12333:battlecubes-arena
+- name: Bob The Cube
+  ids:
+  - steam:854060
+- name: I'm a King
+  ids:
+  - steam:1556670
+- name: Eternal Space
+  ids:
+  - steam:1976590
+- name: Bean Story
+  ids:
+  - steam:1978920
+- name: Nine Lives or Less
+  ids:
+  - steam:2001060
+- name: Tiny Robo Puzzles
+  ids:
+  - steam:2005150

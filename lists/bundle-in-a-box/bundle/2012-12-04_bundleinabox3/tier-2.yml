@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Eclectic Delights Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/222/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/222/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/222/source.json
+games:
+- name: Delve Deeper
+  ids:
+  - steam:63800
+- name: Fibrillation
+  ids:
+  - unresolved:source:isthereanydeal:222:fibrillation
+- name: 'Shadows on the Vatican - Act 1: Greed'
+  ids:
+  - unresolved:source:isthereanydeal:222:shadows-on-the-vatican-act-1-greed
+- name: War of the Human Tanks
+  ids:
+  - steam:263400
+- name: 'Delve Deeper: Treasures and Tunnels'
+  ids:
+  - steam:63802
+- name: eversion
+  ids:
+  - steam:33680
+- name: StayDead
+  ids:
+  - unresolved:source:isthereanydeal:222:staydead
+- name: Skylight
+  ids:
+  - steam:750440
+- name: 'Shadows on the Vatican - Act II: Wrath'
+  ids:
+  - steam:378630
+- name: Fibble
+  ids:
+  - unresolved:source:isthereanydeal:222:fibble
+- name: Adventures of Shuggy
+  ids:
+  - steam:211440
+- name: The 4th Wall
+  ids:
+  - steam:3383190

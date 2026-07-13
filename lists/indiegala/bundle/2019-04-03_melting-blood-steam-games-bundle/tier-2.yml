@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Melting Blood Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7263/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7263/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7263/source.json
+games:
+- name: 'Holobunnies: Pause Café'
+  ids:
+  - steam:497710
+- name: Twinship
+  ids:
+  - steam:1029920
+- name: The Thin Silence
+  ids:
+  - steam:314630
+- name: OVIVO
+  ids:
+  - steam:597700
+- name: 'Blood Alloy: Reborn'
+  ids:
+  - steam:355310
+- name: The Mims Beginning
+  ids:
+  - steam:337820
+- name: Melting World Online
+  ids:
+  - unresolved:source:isthereanydeal:7263:melting-world-online
+- name: TAP
+  ids:
+  - steam:1010650

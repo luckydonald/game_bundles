@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble MicroJumbo Bundle — 7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5376/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5376/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5376/source.json
+games:
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+- name: 'Space Pilgrim Episode I: Alpha Centauri'
+  ids:
+  - steam:429470
+- name: Oh...Sir! The Insult Simulator
+  ids:
+  - steam:512250
+- name: Geometry Dash
+  ids:
+  - steam:322170
+- name: 'Space Pilgrim Episode IV: Sol'
+  ids:
+  - steam:446640
+- name: Pony Island
+  ids:
+  - steam:405640
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250

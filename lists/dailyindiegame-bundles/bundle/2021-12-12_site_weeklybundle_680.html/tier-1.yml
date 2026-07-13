@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 680 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10811/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10811/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10811/source.json
+games:
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+- name: EscapeRoute
+  ids:
+  - unresolved:source:isthereanydeal:10811:escaperoute
+- name: The Unintended Consequences of Curiosity
+  ids:
+  - steam:814660
+- name: Deployment
+  ids:
+  - steam:755980
+- name: YORG.io 3
+  ids:
+  - steam:1134480
+- name: Endurance - space shooter
+  ids:
+  - steam:1378390
+- name: Lynium
+  ids:
+  - steam:1415010
+- name: Monkey vs Dino
+  ids:
+  - steam:1588140
+- name: shapez
+  ids:
+  - steam:1318690

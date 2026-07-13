@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Arena Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5905/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5905/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5905/source.json
+games:
+- name: WAR DRONES
+  ids:
+  - unresolved:source:isthereanydeal:5905:war-drones
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+- name: Far Space Halloween edition
+  ids:
+  - unresolved:source:isthereanydeal:5905:far-space-halloween-edition
+- name: GEARGUNS - Tank offensive
+  ids:
+  - unresolved:source:isthereanydeal:5905:gearguns-tank-offensive
+- name: Cyberpunk Arena
+  ids:
+  - unresolved:source:isthereanydeal:5905:cyberpunk-arena
+- name: DeepFear
+  ids:
+  - unresolved:source:isthereanydeal:5905:deepfear
+- name: Xbird
+  ids:
+  - unresolved:source:isthereanydeal:5905:xbird
+- name: REPTILOIDS
+  ids:
+  - unresolved:source:isthereanydeal:5905:reptiloids
+- name: Far Space
+  ids:
+  - unresolved:source:isthereanydeal:5905:far-space

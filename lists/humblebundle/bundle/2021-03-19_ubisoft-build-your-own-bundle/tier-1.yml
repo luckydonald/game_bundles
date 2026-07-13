@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ubisoft Build Your Own Bundle — Select 3 Titles For 80% Off, 4 Titles For 83%
+  Off, 5 Titles For 85% Off
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9856/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9856/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9856/source.json
+games:
+- name: Far Cry 3
+  ids:
+  - steam:220240
+- name: 'South Park™: The Fractured but Whole™'
+  ids:
+  - steam:488790
+- name: For Honor
+  ids:
+  - steam:304390
+- name: Tom Clancy's Ghost Recon® Wildlands
+  ids:
+  - steam:460930
+- name: Tom Clancy's Ghost Recon® Breakpoint
+  ids:
+  - steam:2231380
+- name: Far Cry Primal
+  ids:
+  - steam:371660
+- name: Far Cry 5
+  ids:
+  - steam:552520
+- name: Watch_Dogs® 2
+  ids:
+  - steam:447040
+- name: Tom Clancy's Rainbow Six® Siege
+  ids:
+  - steam:359550
+- name: Assassin's Creed Odyssey
+  ids:
+  - steam:812140
+- name: Anno 1800
+  ids:
+  - steam:916440
+- name: ANNO 2205
+  ids:
+  - steam:375910
+- name: Far Cry New Dawn
+  ids:
+  - steam:939960
+- name: Rocksmith 2014 Edition
+  ids:
+  - unresolved:source:isthereanydeal:9856:rocksmith-2014-edition

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cursed Kingdom Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7403/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7403/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7403/source.json
+games:
+- name: 'The Far Kingdoms: Age Of Solitaire'
+  ids:
+  - steam:997480
+- name: Summer Rush
+  ids:
+  - steam:1075480
+- name: Luxor Solitaire
+  ids:
+  - steam:1034270
+- name: 'The Far Kingdoms: Awakening Solitaire'
+  ids:
+  - steam:1034240
+- name: Amanda's Sticker Book 2 - Amazing Wildlife
+  ids:
+  - steam:1039560
+- name: The Voice from Heaven
+  ids:
+  - steam:1013350
+- name: Mundus - Impossible Universe
+  ids:
+  - unresolved:source:isthereanydeal:7403:mundus-impossible-universe
+- name: 'Tales of Sorrow: Strawsbrough Town'
+  ids:
+  - steam:1009780
+- name: 'Epic Adventures: Cursed Onboard'
+  ids:
+  - steam:1056080

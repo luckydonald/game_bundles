@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 46: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7612/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7612/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7612/source.json
+games:
+- name: Deadly Escape
+  ids:
+  - steam:649450
+- name: Close the Window!
+  ids:
+  - unresolved:source:isthereanydeal:7612:close-the-window
+- name: Mayhem ZX
+  ids:
+  - steam:522950
+- name: Impossible Quest
+  ids:
+  - steam:485860
+- name: Nin! Nin! Ninja!!!
+  ids:
+  - unresolved:source:isthereanydeal:7612:nin-nin-ninja
+- name: Snake, snake, snake!
+  ids:
+  - steam:857140
+- name: 'Battle Arena: Euro Wars'
+  ids:
+  - unresolved:source:isthereanydeal:7612:battle-arena-euro-wars
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+- name: Grab the Bottle
+  ids:
+  - steam:546410

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: ShinyLoot 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/613/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/613/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/613/source.json
+games:
+- name: 'Will Fight for Food: Super Actual Sellout: Game of the Hour'
+  ids:
+  - steam:307210
+- name: Soulcaster
+  ids:
+  - steam:1389300
+- name: So Blonde
+  ids:
+  - unresolved:source:isthereanydeal:613:so-blonde
+- name: Soulcaster II
+  ids:
+  - unresolved:source:isthereanydeal:613:soulcaster-ii
+- name: Mark Leung Revenge of the Bitch
+  ids:
+  - unresolved:source:isthereanydeal:613:mark-leung-revenge-of-the-bitch
+- name: Fortix 2
+  ids:
+  - steam:45450
+- name: Dark Scavenger
+  ids:
+  - steam:293880
+- name: Caster
+  ids:
+  - steam:29800
+- name: Mosby's Confederacy
+  ids:
+  - steam:17180
+- name: The Grave Digger
+  ids:
+  - steam:345340

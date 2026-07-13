@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Match III March Bundle — T
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11114/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11114/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11114/source.json
+games:
+- name: 'The Chronicles of King Arthur - Episode 1: Excalibur'
+  ids:
+  - steam:989640
+- name: Eleven Islands
+  ids:
+  - steam:1030530
+- name: Mundus - Impossible Universe 2
+  ids:
+  - unresolved:source:isthereanydeal:11114:mundus-impossible-universe-2
+- name: 'Gaslamp Cases: The deadly Machine'
+  ids:
+  - steam:1588510
+- name: 'Allura: Curse of the Mermaid'
+  ids:
+  - steam:1626130
+- name: 10th Corpse
+  ids:
+  - steam:1718560
+- name: Home Designer - Makeover Blast
+  ids:
+  - steam:1736260
+- name: 'Rorys Restaurant: Winter Rush'
+  ids:
+  - steam:1801920
+- name: Dream Fruit Farm
+  ids:
+  - steam:1838680

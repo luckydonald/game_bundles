@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bohemia Interactive Bundle 2020 — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9033/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9033/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9033/source.json
+games:
+- name: Take On Mars
+  ids:
+  - steam:244030
+- name: Take On Helicopters
+  ids:
+  - steam:65730
+- name: Carrier Command Gaea Mission
+  ids:
+  - steam:65740
+- name: 'Arma X: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9033:arma-x-anniversary-edition
+- name: Fairy Tale about Father Frost, Ivan and Nastya
+  ids:
+  - steam:289320

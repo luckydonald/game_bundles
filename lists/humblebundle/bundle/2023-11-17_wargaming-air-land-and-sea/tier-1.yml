@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Wargaming.net: By Air, Land and Sea Bundle — 3-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13629/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13629/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13629/source.json
+games:
+- name: World of Warplanes -I-16-29 Pack
+  ids:
+  - steam:1001291
+- name: World of Tanks - French Express Pack
+  ids:
+  - unresolved:source:isthereanydeal:13629:world-of-tanks-french-express-pack
+- name: World of Warships — Smith Pack
+  ids:
+  - steam:934650

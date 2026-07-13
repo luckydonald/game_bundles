@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Retro Classics Quad Pack: Vol. 1 - Rampage — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13925/source.json
+games:
+- name: Dorke and Ymp
+  ids:
+  - steam:474810
+- name: Alien Rampage
+  ids:
+  - steam:516440
+- name: Prophecy I - The Viking Child
+  ids:
+  - steam:719290
+- name: Iron Commando - Koutetsu no Senshi
+  ids:
+  - steam:418640

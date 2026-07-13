@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Destiny 2: Expansions Bundle 2026 — 3-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16029/source.json
+games:
+- name: 'Destiny 2: Beyond Light'
+  ids:
+  - steam:1314563
+- name: 'Destiny 2: Forsaken Pack'
+  ids:
+  - steam:1090150
+- name: 'Destiny 2: Shadowkeep Pack'
+  ids:
+  - steam:1090200

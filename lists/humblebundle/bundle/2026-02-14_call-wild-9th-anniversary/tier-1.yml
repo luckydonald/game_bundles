@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'theHunter: Call of the Wild 9th Anniversary Bundle — 6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15876/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15876/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15876/source.json
+games:
+- name: 'theHunter™: Call of the Wild - ATV SABER 4X4'
+  ids:
+  - steam:630940
+- name: 'theHunter™: Call of the Wild - Weapon Pack 1'
+  ids:
+  - steam:766870
+- name: 'theHunter™: Call of the Wild'
+  ids:
+  - steam:518790
+- name: 'theHunter: Call of the Wild - Tents & Ground Blinds'
+  ids:
+  - steam:622450
+- name: theHunter™ Call of the Wild - Silver Ridge Peaks
+  ids:
+  - steam:1316840
+- name: 'theHunter: Call of the Wild™ - Silver Ridge Peaks Cosmetic Pack'
+  ids:
+  - steam:2198095

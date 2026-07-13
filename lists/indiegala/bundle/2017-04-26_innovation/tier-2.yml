@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Innovation Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5034/source.json
+games:
+- name: Verdict Guilty - 유죄 평결
+  ids:
+  - steam:449210
+- name: Sleengster 2
+  ids:
+  - unresolved:source:isthereanydeal:5034:sleengster-2
+- name: Miner Ultra Adventures
+  ids:
+  - unresolved:source:isthereanydeal:5034:miner-ultra-adventures
+- name: Ino
+  ids:
+  - steam:398140
+- name: Recursion Deluxe
+  ids:
+  - steam:425160
+- name: Mythic Victory Arena
+  ids:
+  - steam:514200
+- name: Space Scaven
+  ids:
+  - steam:456130
+- name: Zenza
+  ids:
+  - steam:519990
+- name: Go Go Electric Samurai
+  ids:
+  - steam:475530
+- name: Running Sausage
+  ids:
+  - unresolved:source:isthereanydeal:5034:running-sausage
+- name: CONTRACTED
+  ids:
+  - steam:600330
+- name: Sector 724
+  ids:
+  - steam:459410

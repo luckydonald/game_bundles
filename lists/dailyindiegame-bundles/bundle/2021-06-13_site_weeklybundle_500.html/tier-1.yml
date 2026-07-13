@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 500 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10139/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10139/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10139/source.json
+games:
+- name: Crafting Tycoon v0.8
+  ids:
+  - steam:757440
+- name: Longboard Stunts and Tricks
+  ids:
+  - unresolved:source:isthereanydeal:10139:longboard-stunts-and-tricks
+- name: 'Alien Revival: Episode 1'
+  ids:
+  - unresolved:source:isthereanydeal:10139:alien-revival-episode-1
+- name: Space Defense
+  ids:
+  - steam:1432630
+- name: Unveloped
+  ids:
+  - steam:776740
+- name: Knockdown the Ball Twice
+  ids:
+  - steam:1268280
+- name: travelsolar
+  ids:
+  - steam:1411880
+- name: Jump Again!
+  ids:
+  - steam:1430040
+- name: Mage World - The Wizard's Stone
+  ids:
+  - steam:1431380

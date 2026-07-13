@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Revolution Bundle — Tier 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7836/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7836/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7836/source.json
+games:
+- name: Jagged Alliance 2 Wildfire
+  ids:
+  - steam:215930
+- name: Jagged Alliance 2 Classic
+  ids:
+  - steam:545210
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910
+- name: Dungeon Rats
+  ids:
+  - steam:531930
+- name: Learn Japanese To Survive! Hiragana Battle
+  ids:
+  - steam:438270
+- name: 'Star Wars: Knights of the Old Republic'
+  ids:
+  - steam:32370
+- name: The Age of Decadence
+  ids:
+  - steam:230070
+- name: 'Halcyon 6: Lightspeed Edition'
+  ids:
+  - steam:651660
+- name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
+  ids:
+  - steam:238010

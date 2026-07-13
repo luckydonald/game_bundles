@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Bundle Revelmode — entire-14-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3722/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3722/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3722/source.json
+games:
+- name: Robot Roller-Derby Disco Dodgeball
+  ids:
+  - steam:270450
+- name: Nidhogg
+  ids:
+  - steam:94400
+- name: Choice Chamber
+  ids:
+  - steam:359960
+- name: 'Skullgirls: Beowulf'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-beowulf
+- name: 'Skullgirls: Robo-Fortune'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-robo-fortune
+- name: 'Skullgirls: Eliza'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-eliza
+- name: 'Skullgirls: Color Palette Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-color-palette-bundle
+- name: Spelunky
+  ids:
+  - steam:239350
+- name: Golf With Your Friends
+  ids:
+  - steam:431240
+- name: 'Skullgirls: Big Band'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-big-band
+- name: Skullgirls
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls
+- name: Roguelands
+  ids:
+  - steam:364420
+- name: 'Skullgirls: Squigly'
+  ids:
+  - unresolved:source:isthereanydeal:3722:skullgirls-squigly
+- name: Rocket League
+  ids:
+  - unresolved:source:isthereanydeal:3722:rocket-league

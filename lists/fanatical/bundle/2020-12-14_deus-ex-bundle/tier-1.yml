@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Deus Ex Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9502/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9502/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9502/source.json
+games:
+- name: 'Deus Ex: Invisible War'
+  ids:
+  - steam:6920
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910

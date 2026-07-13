@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Bundle Limited #12 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5404/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5404/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5404/source.json
+games:
+- name: Moccasin
+  ids:
+  - unresolved:source:isthereanydeal:5404:moccasin
+- name: Mouse in Lab
+  ids:
+  - unresolved:source:isthereanydeal:5404:mouse-in-lab
+- name: Ballistic Protection
+  ids:
+  - unresolved:source:isthereanydeal:5404:ballistic-protection
+- name: NeonGalaxy Wars
+  ids:
+  - unresolved:source:isthereanydeal:5404:neongalaxy-wars
+- name: Pixel War
+  ids:
+  - unresolved:source:isthereanydeal:5404:pixel-war
+- name: O! STRELALKA!!!
+  ids:
+  - unresolved:source:isthereanydeal:5404:o-strelalka
+- name: MAD DAGGER
+  ids:
+  - unresolved:source:isthereanydeal:5404:mad-dagger
+- name: Mad Hunter
+  ids:
+  - unresolved:source:isthereanydeal:5404:mad-hunter
+- name: Magazime Editor
+  ids:
+  - unresolved:source:isthereanydeal:5404:magazime-editor

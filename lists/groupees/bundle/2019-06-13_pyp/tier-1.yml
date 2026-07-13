@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pick Your Poison Bundle — Select 2 to 10 Titles for $1.00 up to $5.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7502/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7502/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7502/source.json
+games:
+- name: Summer Rush
+  ids:
+  - steam:1075480
+- name: Kitten Life Simulator
+  ids:
+  - unresolved:source:isthereanydeal:7502:kitten-life-simulator
+- name: Packed Train
+  ids:
+  - steam:821400
+- name: Global Infection
+  ids:
+  - steam:1060470
+- name: Empires
+  ids:
+  - unresolved:source:isthereanydeal:7502:empires
+- name: Titanic
+  ids:
+  - unresolved:source:isthereanydeal:7502:titanic

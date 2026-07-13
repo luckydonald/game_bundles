@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Unity Games and Game Dev Assets Bundle — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9141/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9141/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9141/source.json
+games:
+- name: Skybolt Zack
+  ids:
+  - steam:909670
+- name: One Deck Dungeon
+  ids:
+  - steam:770100
+- name: 'Aeronautica Imperialis: Flight Command'
+  ids:
+  - unresolved:source:isthereanydeal:9141:aeronautica-imperialis-flight-command

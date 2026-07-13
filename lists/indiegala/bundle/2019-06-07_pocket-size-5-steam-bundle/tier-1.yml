@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Pocket-Size Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7478/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7478/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7478/source.json
+games:
+- name: Hammerwatch
+  ids:
+  - steam:239070
+- name: Gates Of Nowhere
+  ids:
+  - steam:614260
+- name: IS Defense
+  ids:
+  - steam:448370
+- name: Hatred
+  ids:
+  - steam:341940

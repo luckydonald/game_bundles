@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tycoon Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8426/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8426/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8426/source.json
+games:
+- name: Zoo Park
+  ids:
+  - steam:307760
+- name: Shoppe Keep 2
+  ids:
+  - steam:684580
+- name: Shoppe Keep
+  ids:
+  - steam:381120
+- name: 'Resort Boss: Golf | Golf Tycoon Management Game'
+  ids:
+  - unresolved:source:isthereanydeal:8426:resort-boss-golf-golf-tycoon-management-game
+- name: Farming World
+  ids:
+  - steam:277500
+- name: Craft Keep VR
+  ids:
+  - steam:546350

@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Ultimate VR Bundle 2 — Select 2 for $8.99, 4 for $14.99, 6 for
+  $19.99, 10 for $29.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11079/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11079/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11079/source.json
+games:
+- name: Beat Blaster
+  ids:
+  - steam:1020390
+- name: Swords of Gurrah
+  ids:
+  - steam:833090
+- name: 'Overkill VR: Action Shooter FPS'
+  ids:
+  - unresolved:source:isthereanydeal:11079:overkill-vr-action-shooter-fps
+- name: The Assembly
+  ids:
+  - steam:373650
+- name: Contractors VR
+  ids:
+  - steam:963930
+- name: Touring Karts
+  ids:
+  - steam:1088950
+- name: Bloody Zombies
+  ids:
+  - steam:449640
+- name: 'Doctor Who: The Edge Of Time'
+  ids:
+  - steam:1075400
+- name: Fujii
+  ids:
+  - steam:589040
+- name: Dance Collider
+  ids:
+  - steam:692690
+- name: Pixel Ripped 1995
+  ids:
+  - steam:1178140
+- name: Republique VR
+  ids:
+  - steam:915200
+- name: Pangman
+  ids:
+  - steam:1319320
+- name: 1976 - Back to midway
+  ids:
+  - steam:1118070
+- name: Hello Puppets! VR
+  ids:
+  - steam:1426280

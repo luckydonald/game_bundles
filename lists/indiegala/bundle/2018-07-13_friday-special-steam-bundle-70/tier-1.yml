@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Friday Special Bundle #70 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6302/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6302/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6302/source.json
+games:
+- name: Lepur
+  ids:
+  - unresolved:source:isthereanydeal:6302:lepur
+- name: BattleStar Mazay
+  ids:
+  - unresolved:source:isthereanydeal:6302:battlestar-mazay
+- name: mr.Vegan
+  ids:
+  - steam:873610

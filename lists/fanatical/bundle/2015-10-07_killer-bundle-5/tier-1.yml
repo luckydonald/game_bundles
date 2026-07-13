@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2573/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2573/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2573/source.json
+games:
+- name: Town of Salem
+  ids:
+  - steam:334230
+- name: Blues and Bullets - Episode 1
+  ids:
+  - steam:378660
+- name: Quarries of Scred
+  ids:
+  - unresolved:source:isthereanydeal:2573:quarries-of-scred
+- name: ChargeShot
+  ids:
+  - steam:401840
+- name: rFactor
+  ids:
+  - steam:339790
+- name: Paperbound
+  ids:
+  - steam:339690
+- name: Runestone Keeper
+  ids:
+  - steam:339400
+- name: Rise of the Triad
+  ids:
+  - steam:217140
+- name: Contradiction - Spot The Liar!
+  ids:
+  - steam:373390
+- name: Malebolgia
+  ids:
+  - steam:318860

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1024 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12585/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12585/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12585/source.json
+games:
+- name: Dangerous Orbit
+  ids:
+  - unresolved:source:isthereanydeal:12585:dangerous-orbit
+- name: Outlast
+  ids:
+  - steam:238320
+- name: Carrier Trail
+  ids:
+  - steam:1009920
+- name: 'Gems of Fate: the Charmed King'
+  ids:
+  - steam:1301310
+- name: Rubble Bubble
+  ids:
+  - unresolved:source:isthereanydeal:12585:rubble-bubble
+- name: Virus Blast
+  ids:
+  - steam:1305060
+- name: Cute Triplets
+  ids:
+  - unresolved:source:isthereanydeal:12585:cute-triplets
+- name: Sunset 20 Drone Racer
+  ids:
+  - steam:1334240
+- name: 幸存者
+  ids:
+  - steam:1139000

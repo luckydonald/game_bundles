@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Raving Aces Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3778/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3778/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3778/source.json
+games:
+- name: Annie Amber
+  ids:
+  - steam:464440
+- name: Beasts Battle
+  ids:
+  - steam:487030
+- name: Starsphere
+  ids:
+  - steam:408750
+- name: Never Alone (Kisima Ingitchuna)
+  ids:
+  - steam:295790
+- name: 'Raiden IV: OverKill'
+  ids:
+  - unresolved:source:isthereanydeal:3778:raiden-iv-overkill
+- name: Guilty Gear X2 Reload
+  ids:
+  - steam:314030
+- name: Blockstorm
+  ids:
+  - steam:263060
+- name: Between Me And The Night
+  ids:
+  - steam:285070
+- name: Dark Fear
+  ids:
+  - steam:454160
+- name: Tyler
+  ids:
+  - steam:390460

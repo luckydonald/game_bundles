@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dark Spells Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9967/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9967/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9967/source.json
+games:
+- name: 'Victorian Mysteries: Woman in White'
+  ids:
+  - steam:1101940
+- name: 'Amulet of Time: Shadow of La Rochelle'
+  ids:
+  - steam:1478600
+- name: 'Invasion 2: Doomed'
+  ids:
+  - steam:1418140
+- name: 'The Far Kingdoms: Sacred Grove Solitaire'
+  ids:
+  - steam:1034260
+- name: Lost Labyrinth
+  ids:
+  - unresolved:source:isthereanydeal:9967:lost-labyrinth
+- name: 'Legacy: Witch Island'
+  ids:
+  - steam:1410500
+- name: 'Epic Adventures: Cursed Onboard'
+  ids:
+  - steam:1056080
+- name: Murder by Moonlight - Call of the Wolf
+  ids:
+  - steam:1431840
+- name: Halloween Trouble 2
+  ids:
+  - steam:1519800

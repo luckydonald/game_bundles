@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 377: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9689/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9689/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9689/source.json
+games:
+- name: The Unintended Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9689:the-unintended-soundtrack
+- name: final m00n - Defender of the Cubes The Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9689:final-m00n-defender-of-the-cubes-the-soundtrack
+- name: 'Brigand: Panama'
+  ids:
+  - steam:709830
+- name: the fairytale of DEATH Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9689:the-fairytale-of-death-soundtrack
+- name: Ghost In The Pool - Art Book
+  ids:
+  - unresolved:source:isthereanydeal:9689:ghost-in-the-pool-art-book
+- name: The Art of I'm Oh, So Busy - Artbook & Wallpapers
+  ids:
+  - unresolved:source:isthereanydeal:9689:the-art-of-i-m-oh-so-busy-artbook-and-wallpapers
+- name: LineArt Jigsaw Puzzle - Erotica 2 ArtBook
+  ids:
+  - steam:1536330
+- name: Ghost In The Pool Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9689:ghost-in-the-pool-original-soundtrack
+- name: O.C.D. - Comorbidity Pack
+  ids:
+  - unresolved:source:isthereanydeal:9689:ocd-comorbidity-pack

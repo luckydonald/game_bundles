@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mayhem — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5572/source.json
+games:
+- name: The Deed
+  ids:
+  - steam:420740
+- name: Circularity
+  ids:
+  - steam:709380
+- name: Forgotten Land
+  ids:
+  - steam:685990

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Narrative Celebration Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14391/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14391/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14391/source.json
+games:
+- name: Genesis Noir
+  ids:
+  - steam:735290
+- name: Death and Taxes
+  ids:
+  - steam:1166290
+- name: Suzerain
+  ids:
+  - steam:1207650
+- name: The Pale Beyond
+  ids:
+  - steam:1266030
+- name: Do Not Feed the Monkeys 2099
+  ids:
+  - steam:1964040
+- name: A Space For The Unbound
+  ids:
+  - steam:1201270
+- name: A Highland Song
+  ids:
+  - steam:1240060

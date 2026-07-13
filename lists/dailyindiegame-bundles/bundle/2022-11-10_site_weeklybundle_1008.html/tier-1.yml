@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1008 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12413/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12413/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12413/source.json
+games:
+- name: 'Maze Art: Green'
+  ids:
+  - steam:1816420
+- name: The Zombie Smasher
+  ids:
+  - unresolved:source:isthereanydeal:12413:the-zombie-smasher
+- name: Coins Collector Simulator
+  ids:
+  - steam:1868280
+- name: Two Sedans Driving Simulator
+  ids:
+  - unresolved:source:isthereanydeal:12413:two-sedans-driving-simulator
+- name: Animals Transport Simulator
+  ids:
+  - steam:1988990
+- name: Obelixes Tower Defense
+  ids:
+  - unresolved:source:isthereanydeal:12413:obelixes-tower-defense
+- name: Road Draftsman
+  ids:
+  - steam:2069410
+- name: Climb Challenge - Castle
+  ids:
+  - steam:2108420
+- name: FEATHERED RUN
+  ids:
+  - steam:2163460

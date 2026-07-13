@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Wholesome Snack Bundle 2024 — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14683/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14683/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14683/source.json
+games:
+- name: Minami Lane
+  ids:
+  - steam:2678990
+- name: Rusty's Retirement
+  ids:
+  - steam:2666510
+- name: 'Spirit City: Lofi Sessions'
+  ids:
+  - steam:2113850
+- name: Little Kitty, Big City
+  ids:
+  - steam:1177980
+- name: The Ranch of Rivershine
+  ids:
+  - steam:1559600
+- name: Fae Farm
+  ids:
+  - steam:2230110
+- name: Fae Farm - Original Soundtrack
+  ids:
+  - steam:2468260

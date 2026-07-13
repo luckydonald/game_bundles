@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Digital Illusion Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8004/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8004/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8004/source.json
+games:
+- name: Fine China
+  ids:
+  - steam:529040
+- name: VRRCC
+  ids:
+  - steam:1076410
+- name: TimeLock VR
+  ids:
+  - unresolved:source:isthereanydeal:8004:timelock-vr
+- name: Orc Towers VR
+  ids:
+  - steam:971340
+- name: Hoops VR
+  ids:
+  - steam:487770
+- name: Flairtender
+  ids:
+  - steam:586020
+- name: Vector Velocity
+  ids:
+  - steam:751480

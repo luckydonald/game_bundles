@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Arcen Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1363/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1363/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1363/source.json
+games:
+- name: Tidalis
+  ids:
+  - steam:40420
+- name: A Valley Without Wind 1 and 2 Dual Pack
+  ids:
+  - unresolved:source:isthereanydeal:1363:a-valley-without-wind-1-and-2-dual-pack
+- name: Crystals of Time
+  ids:
+  - steam:306410
+- name: Bionic Dues
+  ids:
+  - steam:238910
+- name: Shattered Haven
+  ids:
+  - steam:234370
+- name: Skyward Collapse
+  ids:
+  - steam:238890

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Sonic 25th Anniversary Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3610/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3610/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3610/source.json
+games:
+- name: Sonic CD
+  ids:
+  - unresolved:source:isthereanydeal:3610:sonic-cd
+- name: Sonic the Hedgehog
+  ids:
+  - unresolved:source:isthereanydeal:3610:sonic-the-hedgehog
+- name: Sonic Adventure DX
+  ids:
+  - steam:71250
+- name: Sonic 3D Blast
+  ids:
+  - unresolved:source:isthereanydeal:3610:sonic-3d-blast

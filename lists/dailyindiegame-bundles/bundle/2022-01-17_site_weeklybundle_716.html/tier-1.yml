@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 716 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10983/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10983/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10983/source.json
+games:
+- name: Bounce!
+  ids:
+  - steam:464400
+- name: 'Squareboy vs Bullies: Arena Edition'
+  ids:
+  - steam:709620
+- name: Reliefs
+  ids:
+  - unresolved:source:isthereanydeal:10983:reliefs
+- name: Wizodd
+  ids:
+  - steam:1299750
+- name: Key Escape
+  ids:
+  - steam:1501100
+- name: SAW HELL
+  ids:
+  - steam:1500860
+- name: Hyposphere Z
+  ids:
+  - steam:1572190
+- name: Fruit Juice
+  ids:
+  - steam:1589040
+- name: Unicorn and Sweets
+  ids:
+  - steam:1625790

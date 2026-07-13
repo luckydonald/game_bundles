@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Maker Resurgence Software Bundle — 4-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11709/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11709/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11709/source.json
+games:
+- name: RPG Maker VX Ace
+  ids:
+  - steam:220700
+- name: RPG Maker VX Ace - Dark Hero Character Pack
+  ids:
+  - steam:330650
+- name: 'RPG Maker MV - Fantastic Buildings: Medieval'
+  ids:
+  - steam:721060
+- name: RPG Maker VX Ace - Wild West Music Variety Pack
+  ids:
+  - steam:357262

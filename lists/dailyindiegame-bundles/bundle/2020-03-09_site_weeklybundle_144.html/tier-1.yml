@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 144 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8477/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8477/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8477/source.json
+games:
+- name: Human, we have a problem
+  ids:
+  - steam:491100
+- name: 'Iron Sky: Invasion'
+  ids:
+  - steam:224900
+- name: 3D ParticleGen Visual FX
+  ids:
+  - steam:279740
+- name: Inside Me
+  ids:
+  - steam:404860
+- name: '1010650'
+  ids:
+  - unresolved:source:isthereanydeal:8477:1010650
+- name: Inside The Park VR
+  ids:
+  - steam:1140970
+- name: Devil_catching_bees
+  ids:
+  - unresolved:source:isthereanydeal:8477:devil_catching_bees
+- name: 'Global Outbreak: Doomsday Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8477:global-outbreak-doomsday-edition
+- name: Peg Solitaire Adventure
+  ids:
+  - unresolved:source:isthereanydeal:8477:peg-solitaire-adventure

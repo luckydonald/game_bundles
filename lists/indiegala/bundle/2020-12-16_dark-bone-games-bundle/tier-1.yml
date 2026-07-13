@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dark Bone Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9513/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9513/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9513/source.json
+games:
+- name: Chop is dish
+  ids:
+  - steam:974370
+- name: Lord of the click
+  ids:
+  - steam:1044170
+- name: Dead Dust
+  ids:
+  - steam:816990
+- name: More dark
+  ids:
+  - steam:1167770
+- name: Bone Marrow
+  ids:
+  - steam:1234840
+- name: Rusty gun
+  ids:
+  - steam:1305540

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Daedalic Premium Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2820/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2820/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2820/source.json
+games:
+- name: Blackguards 2
+  ids:
+  - steam:314830
+- name: Blackguards
+  ids:
+  - steam:249650
+- name: 'The Dark Eye: Chains of Satinav'
+  ids:
+  - steam:203830
+- name: 'The Dark Eye: Memoria'
+  ids:
+  - steam:243200

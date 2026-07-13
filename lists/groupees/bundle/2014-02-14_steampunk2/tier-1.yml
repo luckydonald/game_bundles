@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Steampunk 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/572/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/572/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/572/source.json
+games:
+- name: Syberia
+  ids:
+  - steam:46500
+- name: 'Steel & Steam: Episode 1'
+  ids:
+  - unresolved:source:isthereanydeal:572:steel-and-steam-episode-1
+- name: Airship Dragoon
+  ids:
+  - steam:308380
+- name: Bionic Dues
+  ids:
+  - steam:238910
+- name: 'Telepath RPG: Servants of God'
+  ids:
+  - unresolved:source:isthereanydeal:572:telepath-rpg-servants-of-god
+- name: Syberia II
+  ids:
+  - steam:46510

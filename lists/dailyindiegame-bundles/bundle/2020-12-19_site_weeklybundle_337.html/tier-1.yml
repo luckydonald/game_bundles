@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 337 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9540/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9540/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9540/source.json
+games:
+- name: Rainyday
+  ids:
+  - steam:712980
+- name: Symphony of Stars
+  ids:
+  - steam:973310
+- name: The Risers
+  ids:
+  - steam:857770
+- name: Emergency Robot Simulator
+  ids:
+  - unresolved:source:isthereanydeal:9540:emergency-robot-simulator
+- name: Space BloX
+  ids:
+  - steam:1086270
+- name: Gravity Ball
+  ids:
+  - steam:716870
+- name: Streamer Shall Not Pass!
+  ids:
+  - steam:1191540
+- name: Defence War
+  ids:
+  - unresolved:source:isthereanydeal:9540:defence-war
+- name: Fear of Dark
+  ids:
+  - steam:1084350

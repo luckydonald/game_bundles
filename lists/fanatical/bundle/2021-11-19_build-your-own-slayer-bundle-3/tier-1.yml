@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Slayer Bundle 3 — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10710/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10710/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10710/source.json
+games:
+- name: Dark Devotion
+  ids:
+  - steam:718590
+- name: The World Next Door
+  ids:
+  - steam:755470
+- name: Tower of Time
+  ids:
+  - steam:617480
+- name: Levelhead
+  ids:
+  - steam:792710
+- name: 'Hitman GO: Definitive Edition'
+  ids:
+  - steam:427820
+- name: 'Driftland: The Magic Revival'
+  ids:
+  - steam:718650
+- name: 'Fell Seal: Arbiter''s Mark'
+  ids:
+  - steam:699170
+- name: Ken Follett's The Pillars of the Earth
+  ids:
+  - steam:234270
+- name: Verdant Skies
+  ids:
+  - steam:730050
+- name: 'Rogue Heroes: Ruins of Tasos'
+  ids:
+  - steam:787810
+- name: Verlet Swing
+  ids:
+  - steam:811870
+- name: 'Murdered: Soul Suspect'
+  ids:
+  - steam:233290
+- name: 'Shadow Tactics: Blades of the Shogun'
+  ids:
+  - steam:418240
+- name: Turmoil
+  ids:
+  - steam:361280
+- name: Blazing Chrome
+  ids:
+  - steam:609110
+- name: 'Orwell: Keeping an Eye On You'
+  ids:
+  - steam:491950
+- name: 'Fun with Ragdolls: The Game'
+  ids:
+  - steam:1142500
+- name: Rise of Industry + 2130
+  ids:
+  - unresolved:source:isthereanydeal:10710:rise-of-industry-and-2130
+- name: Tale of Tales 5-pack
+  ids:
+  - unresolved:source:isthereanydeal:10710:tale-of-tales-5-pack

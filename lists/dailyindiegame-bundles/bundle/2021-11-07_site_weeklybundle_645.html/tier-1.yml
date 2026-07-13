@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 645 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10663/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10663/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10663/source.json
+games:
+- name: Fishing Frenzy
+  ids:
+  - steam:1764000
+- name: Penguin Quest
+  ids:
+  - unresolved:source:isthereanydeal:10663:penguin-quest
+- name: Let Me Die (inside)
+  ids:
+  - steam:1710890
+- name: Skeleton Troubles
+  ids:
+  - unresolved:source:isthereanydeal:10663:skeleton-troubles
+- name: Alien Hunt
+  ids:
+  - unresolved:source:isthereanydeal:10663:alien-hunt
+- name: Cyber Runner 2048
+  ids:
+  - steam:1780340
+- name: Bullet Grinder
+  ids:
+  - steam:1777380
+- name: Happy Summer Quest
+  ids:
+  - steam:1781230
+- name: Undead Menace
+  ids:
+  - steam:1740010

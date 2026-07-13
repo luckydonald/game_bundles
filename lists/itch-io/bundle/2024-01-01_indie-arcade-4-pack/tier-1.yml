@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Arcade 4-Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13757/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13757/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13757/source.json
+games:
+- name: 'In The Land of Zero Gravity: Upsee Town'
+  ids:
+  - unresolved:source:isthereanydeal:13757:in-the-land-of-zero-gravity-upsee-town
+- name: Saga of Song
+  ids:
+  - unresolved:source:isthereanydeal:13757:saga-of-song
+- name: Snowboarders Christmas-Winter Exclusive
+  ids:
+  - unresolved:source:isthereanydeal:13757:snowboarders-christmas-winter-exclusive
+- name: Not a Drill
+  ids:
+  - unresolved:source:isthereanydeal:13757:not-a-drill

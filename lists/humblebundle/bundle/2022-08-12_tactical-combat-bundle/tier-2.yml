@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Tactical Combat Bundle — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11951/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11951/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11951/source.json
+games:
+- name: Verdun
+  ids:
+  - steam:242860
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+- name: Call to Arms - Basic Edition
+  ids:
+  - unresolved:source:isthereanydeal:11951:call-to-arms-basic-edition
+- name: 'Brigador: Up-Armored Deluxe'
+  ids:
+  - unresolved:source:isthereanydeal:11951:brigador-up-armored-deluxe
+- name: The Intruder
+  ids:
+  - steam:2556740
+- name: Perfect Heist 2
+  ids:
+  - steam:1521580

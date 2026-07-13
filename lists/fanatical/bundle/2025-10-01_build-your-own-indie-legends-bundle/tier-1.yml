@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Indie Legends Bundle (Fall 2025) — Select 2 for 4.99, 4 for 8.99,
+  7 for 13.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15465/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15465/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15465/source.json
+games:
+- name: Jupiter Hell
+  ids:
+  - steam:811320
+- name: Windward
+  ids:
+  - steam:326410
+- name: 'Defense Grid: Containment Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:15465:defense-grid-containment-bundle
+- name: Clone Drone in the Danger Zone
+  ids:
+  - steam:597170
+- name: Rampage Knights 2-Pack
+  ids:
+  - steam:314410
+- name: Blazing Sails
+  ids:
+  - steam:1158940
+- name: 'FAITH: The Unholy Trinity'
+  ids:
+  - steam:1179080
+- name: Terraformers
+  ids:
+  - steam:1244800
+- name: 'Bang-On Balls: Chronicles'
+  ids:
+  - steam:1227650
+- name: ROUNDS
+  ids:
+  - steam:1557740
+- name: KINGDOM of the DEAD
+  ids:
+  - steam:1547380
+- name: The Darkside Detective - Series Edition
+  ids:
+  - unresolved:source:isthereanydeal:15465:the-darkside-detective-series-edition
+- name: 'Brewmaster: Beer Brewing Simulator'
+  ids:
+  - steam:1569200
+- name: Nova Lands
+  ids:
+  - steam:1501610
+- name: EMPTY SHELL
+  ids:
+  - steam:2243110
+- name: 4-Player Mayhem Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15465:4-player-mayhem-bundle

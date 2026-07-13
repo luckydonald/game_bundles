@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Ballistic Finale Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4566/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4566/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4566/source.json
+games:
+- name: Death Stair
+  ids:
+  - steam:444880
+- name: Zolg
+  ids:
+  - steam:555710
+- name: Orbital
+  ids:
+  - unresolved:source:isthereanydeal:4566:orbital
+- name: Voxel Warfare Online
+  ids:
+  - unresolved:source:isthereanydeal:4566:voxel-warfare-online
+- name: D/Generation HD
+  ids:
+  - steam:389740
+- name: Ballistic Protection
+  ids:
+  - unresolved:source:isthereanydeal:4566:ballistic-protection
+- name: Shot Shot Tactic
+  ids:
+  - steam:562270
+- name: Alien Hostage
+  ids:
+  - steam:562430
+- name: Raise Your Own Clone
+  ids:
+  - steam:473540
+- name: 'Stick ''Em Up 2: Paper Adventures'
+  ids:
+  - steam:282780
+- name: Breaking Bones
+  ids:
+  - steam:560570
+- name: Super Moose
+  ids:
+  - unresolved:source:isthereanydeal:4566:super-moose

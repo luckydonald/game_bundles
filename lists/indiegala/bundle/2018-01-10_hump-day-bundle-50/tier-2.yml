@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #50 — Tier 2'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5795/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5795/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5795/source.json
+games:
+- name: 21 Days
+  ids:
+  - steam:607660
+- name: VODKA
+  ids:
+  - unresolved:source:isthereanydeal:5795:vodka
+- name: Bob
+  ids:
+  - steam:680620
+- name: Loot Run
+  ids:
+  - steam:733570
+- name: CTHON
+  ids:
+  - steam:595100
+- name: Pathos
+  ids:
+  - steam:679300
+- name: 'Make America Great Again: The Trump Presidency'
+  ids:
+  - steam:515040
+- name: The Overdreamer
+  ids:
+  - steam:625560
+- name: Darkest Hunters
+  ids:
+  - steam:654300
+- name: Wild Wolf
+  ids:
+  - steam:749540
+- name: Rivais Em Batalha
+  ids:
+  - steam:493820

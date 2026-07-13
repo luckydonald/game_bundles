@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Total FlatOut Bundle — Price Increase at 30 Sep 2021 15:00 GMT
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8795/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8795/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8795/source.json
+games:
+- name: Flat Out 2
+  ids:
+  - unresolved:source:isthereanydeal:8795:flat-out-2
+- name: FlatOut
+  ids:
+  - steam:6220
+- name: 'Flatout 3: Chaos & Destruction'
+  ids:
+  - steam:201510
+- name: 'FlatOut 4: Total Insanity'
+  ids:
+  - steam:402130
+- name: 'FlatOut 4: Total Insanity Soundtrack'
+  ids:
+  - steam:1299740
+- name: 'FlatOut: Ultimate Carnage Collector''s Edition'
+  ids:
+  - steam:12360

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Jackbox Party Bundle 2019 — 6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7764/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7764/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7764/source.json
+games:
+- name: YOU DON'T KNOW JACK HEADRUSH
+  ids:
+  - steam:260060
+- name: YOU DON'T KNOW JACK SPORTS
+  ids:
+  - steam:260020
+- name: YOU DON'T KNOW JACK MOVIES
+  ids:
+  - steam:260000
+- name: YOU DON'T KNOW JACK Vol. 1 XL
+  ids:
+  - steam:252730
+- name: YOU DON'T KNOW JACK Vol. 6 The Lost Gold
+  ids:
+  - steam:260080
+- name: YOU DON'T KNOW JACK TELEVISION
+  ids:
+  - steam:260040

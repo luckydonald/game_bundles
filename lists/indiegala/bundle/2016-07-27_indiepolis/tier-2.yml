@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indiepolis Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3811/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3811/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3811/source.json
+games:
+- name: Super Helmets on Fire DX Ultra Edition Plus Alpha
+  ids:
+  - steam:429200
+- name: Candy Blast
+  ids:
+  - steam:474050
+- name: The Apotheosis Project
+  ids:
+  - steam:364350
+- name: 123 Slaughter Me Street
+  ids:
+  - steam:405180
+- name: Empire of the Gods
+  ids:
+  - steam:436140
+- name: Pills4Skills
+  ids:
+  - steam:427770
+- name: Romopolis
+  ids:
+  - steam:471170
+- name: The Samaritan Paradox
+  ids:
+  - steam:283180
+- name: Planet Driller
+  ids:
+  - steam:492170
+- name: Megapolis
+  ids:
+  - steam:485080
+- name: Townopolis
+  ids:
+  - steam:462730
+- name: Android John
+  ids:
+  - unresolved:source:isthereanydeal:3811:android-john

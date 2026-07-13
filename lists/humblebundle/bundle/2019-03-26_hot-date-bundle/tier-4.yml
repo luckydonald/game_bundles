@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Hot Date Bundle — entire-11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7225/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7225/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7225/source.json
+games:
+- name: Highway Blossoms
+  ids:
+  - steam:451760
+- name: 'Creature Romances: Kokonoe Kokoro'
+  ids:
+  - steam:356450
+- name: Just Deserts
+  ids:
+  - steam:488660
+- name: Ladykiller in a Bind
+  ids:
+  - steam:560000
+- name: Purrfect Date - Visual Novel/Dating Simulator
+  ids:
+  - steam:520600
+- name: Genital Jousting
+  ids:
+  - steam:469820
+- name: 'Sunrider: Liberation Day - Theme Song'
+  ids:
+  - steam:451290
+- name: 'Sunrider: Liberation Day - Captain''s Edition'
+  ids:
+  - steam:358750
+- name: Sunrider Academy
+  ids:
+  - steam:340730
+- name: G-senjou no Maou - The Devil on G-String Voiced Edition
+  ids:
+  - steam:377670
+- name: CLANNAD
+  ids:
+  - steam:324160

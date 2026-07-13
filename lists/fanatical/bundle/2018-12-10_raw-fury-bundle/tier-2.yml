@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Raw Fury Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6743/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6743/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6743/source.json
+games:
+- name: 'Kingdom: Classic'
+  ids:
+  - steam:368230
+- name: Kathy Rain
+  ids:
+  - steam:370910
+- name: GoNNER
+  ids:
+  - steam:437570
+- name: Tormentor X Punisher
+  ids:
+  - steam:500670
+- name: Uurnog Uurnlimited
+  ids:
+  - steam:678850
+- name: 'Kingdom: New Lands Royal Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6743:kingdom-new-lands-royal-edition

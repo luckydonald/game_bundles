@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fists, Fugitives, Parking & Passengers Quad Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14645/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14645/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14645/source.json
+games:
+- name: American Fugitive
+  ids:
+  - steam:934780
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+- name: When Ski Lifts Go Wrong
+  ids:
+  - steam:638000
+- name: You Suck at Parking Complete Edition
+  ids:
+  - steam:837880

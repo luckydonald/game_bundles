@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Kingdoms Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/509/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/509/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/509/source.json
+games:
+- name: Hearts of Iron III
+  ids:
+  - steam:25890
+- name: Magicka
+  ids:
+  - steam:42910
+- name: Sword of the Stars Complete Collection
+  ids:
+  - steam:42890
+- name: 'Europa Universalis: Rome - Gold Edition'
+  ids:
+  - steam:23420
+- name: Europa Universalis 3 Complete
+  ids:
+  - unresolved:source:isthereanydeal:509:europa-universalis-3-complete
+- name: The Kings' Crusade
+  ids:
+  - steam:42920

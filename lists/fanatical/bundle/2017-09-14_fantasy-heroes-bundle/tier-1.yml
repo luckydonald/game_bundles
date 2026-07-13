@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fantasy Heroes Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5462/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5462/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5462/source.json
+games:
+- name: 'Pixel Heroes: Byte & Magic'
+  ids:
+  - steam:338320
+- name: Fortix 2
+  ids:
+  - steam:45450
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+- name: Inquisitor Deluxe Edition
+  ids:
+  - steam:241620
+- name: 'Northmark: Hour of the Wolf'
+  ids:
+  - steam:307010
+- name: Shadowgate (2014)
+  ids:
+  - unresolved:source:isthereanydeal:5462:shadowgate-2014
+- name: The First Templar - Special Edition
+  ids:
+  - steam:57680

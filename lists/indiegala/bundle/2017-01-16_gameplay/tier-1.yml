@@ -1,0 +1,113 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: GamePlay Bundle — Select Up To 5 Titles / Price Varies Based on Score
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4642/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4642/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4642/source.json
+games:
+- name: Escape Dead Island
+  ids:
+  - steam:226560
+- name: Bedlam
+  ids:
+  - unresolved:source:isthereanydeal:4642:bedlam
+- name: Spoiler Alert Collector's Edition
+  ids:
+  - unresolved:source:isthereanydeal:4642:spoiler-alert-collectors-edition
+- name: 'Spec Ops: The Line'
+  ids:
+  - unresolved:source:isthereanydeal:4642:spec-ops-the-line
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+- name: Blackguards 2
+  ids:
+  - steam:314830
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+- name: Lifeless Planet Premier Edition
+  ids:
+  - steam:261530
+- name: Seven boys 2
+  ids:
+  - steam:671240
+- name: Intake
+  ids:
+  - steam:237760
+- name: Splice
+  ids:
+  - steam:209790
+- name: Hammerwatch
+  ids:
+  - steam:239070
+- name: Blockstorm
+  ids:
+  - steam:263060
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+- name: Call of Juarez™
+  ids:
+  - steam:3020
+- name: Sword of the Stars II Enhanced Edition
+  ids:
+  - steam:42990
+- name: Vertical Drop Heroes HD
+  ids:
+  - steam:311480
+- name: Lucius
+  ids:
+  - steam:218640
+- name: Merchants of Kaidan
+  ids:
+  - steam:294020
+- name: Between Me And The Night
+  ids:
+  - steam:285070
+- name: 'Three Fourths Home: Extended Edition'
+  ids:
+  - steam:344500
+- name: Hard Room
+  ids:
+  - unresolved:source:isthereanydeal:4642:hard-room
+- name: Initia Elemental Arena
+  ids:
+  - steam:463920
+- name: Endless Legend - Classic Edition
+  ids:
+  - unresolved:source:isthereanydeal:4642:endless-legend-classic-edition
+- name: nail'd
+  ids:
+  - steam:40380
+- name: Sparkle 2 Evo
+  ids:
+  - steam:253650
+- name: Fist of Jesus
+  ids:
+  - unresolved:source:isthereanydeal:4642:fist-of-jesus
+- name: Viking Brothers
+  ids:
+  - steam:286520
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+- name: 'Life is Feudal: Your Own'
+  ids:
+  - steam:290080
+- name: Lethal Brutal Racing
+  ids:
+  - unresolved:source:isthereanydeal:4642:lethal-brutal-racing
+- name: Startide
+  ids:
+  - steam:598500
+- name: Nosferatu - The Wrath Of Malachi
+  ids:
+  - steam:283290
+- name: 'Deadly Premonition: The Director''s Cut'
+  ids:
+  - steam:247660

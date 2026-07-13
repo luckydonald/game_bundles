@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'February Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2999/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2999/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2999/source.json
+games:
+- name: ONE DAY for Ched
+  ids:
+  - steam:321030
+- name: On A Roll 3D
+  ids:
+  - steam:341090
+- name: Egyptian Senet
+  ids:
+  - steam:391580

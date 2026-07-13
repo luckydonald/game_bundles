@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1001: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12359/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12359/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12359/source.json
+games:
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:12359:great-ball-of-fire
+- name: Sea Explorer
+  ids:
+  - steam:846210
+- name: Space Flowers
+  ids:
+  - steam:821480
+- name: Sideral
+  ids:
+  - steam:1095070
+- name: Kick the Ball!
+  ids:
+  - unresolved:source:isthereanydeal:12359:kick-the-ball
+- name: Shooting Star
+  ids:
+  - steam:1180700
+- name: Save The Octo
+  ids:
+  - steam:1676920
+- name: Hungry Fish
+  ids:
+  - steam:1683720
+- name: Yui Tui
+  ids:
+  - steam:1807000

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 5th Birthday Pack 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1874/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1874/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1874/source.json
+games:
+- name: Tidalis
+  ids:
+  - steam:40420
+- name: Battlepaths
+  ids:
+  - steam:296050
+- name: Tower Wars
+  ids:
+  - steam:214360
+- name: Skara Starter Package
+  ids:
+  - unresolved:source:isthereanydeal:1874:skara-starter-package
+- name: Rush Bros
+  ids:
+  - steam:234490
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:1874:canyon-capers
+- name: Post Apocalyptic Mayhem
+  ids:
+  - steam:91900
+- name: 'Steel Storm: Burning Retribution'
+  ids:
+  - steam:96200
+- name: Zack Zero
+  ids:
+  - steam:234290
+- name: Shattered Haven
+  ids:
+  - steam:234370

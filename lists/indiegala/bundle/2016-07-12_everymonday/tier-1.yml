@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Every Monday Bundle #119 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3717/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3717/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3717/source.json
+games:
+- name: Devil Sealing Stone
+  ids:
+  - steam:432540
+- name: CosmoLands | Space-Adventure
+  ids:
+  - unresolved:source:isthereanydeal:3717:cosmolands-space-adventure
+- name: 'Fairyland: Incursion'
+  ids:
+  - unresolved:source:isthereanydeal:3717:fairyland-incursion
+- name: Star Drifter
+  ids:
+  - steam:485330
+- name: Etaria | Survival Adventure
+  ids:
+  - unresolved:source:isthereanydeal:3717:etaria-survival-adventure
+- name: Freebie
+  ids:
+  - steam:487220
+- name: ASCII Attack
+  ids:
+  - steam:370490

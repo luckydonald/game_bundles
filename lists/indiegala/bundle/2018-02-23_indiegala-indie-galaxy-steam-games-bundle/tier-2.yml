@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Galaxy Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5922/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5922/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5922/source.json
+games:
+- name: Fidget Spinner In Space
+  ids:
+  - steam:745510
+- name: Sumetrick
+  ids:
+  - steam:771950
+- name: Adventures Of Pipi
+  ids:
+  - steam:744420
+- name: Signs Of Darkness
+  ids:
+  - steam:715410
+- name: 'Infinite Space III: Sea of Stars'
+  ids:
+  - steam:269990
+- name: Blood Harvest 2
+  ids:
+  - steam:753170
+- name: Asteroids Millennium
+  ids:
+  - steam:669830
+- name: 'Going Nowhere: The Dream'
+  ids:
+  - steam:691240
+- name: 'Precision Archery: Competitive'
+  ids:
+  - steam:763490
+- name: 'Above: The Fallen'
+  ids:
+  - steam:715490
+- name: 'SPACE ASTEROID SHOOTER : RETRO ACHIEVEMENT ODYSSEY'
+  ids:
+  - unresolved:source:isthereanydeal:5922:space-asteroid-shooter-retro-achievement-odyssey
+- name: Soul Grabber
+  ids:
+  - steam:788250

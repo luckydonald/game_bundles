@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Vengeance Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1322/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1322/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1322/source.json
+games:
+- name: Incoming + Incoming Forces
+  ids:
+  - steam:283390
+- name: Gun Metal
+  ids:
+  - steam:267920
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+- name: Humanity Asset
+  ids:
+  - steam:271640
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+- name: Desert Thunder
+  ids:
+  - steam:283330

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Weekend Cubic Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5306/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5306/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5306/source.json
+games:
+- name: Anki
+  ids:
+  - steam:395380
+- name: Rogue Port - Blue Nightmare
+  ids:
+  - steam:595780
+- name: Finnish Roller
+  ids:
+  - unresolved:source:isthereanydeal:5306:finnish-roller
+- name: RoboMatch
+  ids:
+  - steam:600210
+- name: 'The Saint: Abyss of Despair'
+  ids:
+  - steam:560820
+- name: Tomb Joe
+  ids:
+  - steam:575860
+- name: Survival Driver
+  ids:
+  - steam:586130
+- name: Leviathan Starblade
+  ids:
+  - steam:549900
+- name: Fruit Arranger
+  ids:
+  - steam:575700
+- name: Galactic Storm
+  ids:
+  - steam:521990
+- name: GrottyScape
+  ids:
+  - unresolved:source:isthereanydeal:5306:grottyscape

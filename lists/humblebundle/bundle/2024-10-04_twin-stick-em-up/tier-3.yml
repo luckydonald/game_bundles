@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Twin Stick 'Em Up Bundle — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14496/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14496/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14496/source.json
+games:
+- name: RUINER
+  ids:
+  - steam:464060
+- name: Lone Ruin
+  ids:
+  - steam:1452070
+- name: windowkill
+  ids:
+  - steam:2726450
+- name: OTXO
+  ids:
+  - steam:1608640
+- name: Go Mecha Ball
+  ids:
+  - steam:2008510
+- name: 'The Last Stand: Aftermath'
+  ids:
+  - steam:1266840
+- name: The Ascent
+  ids:
+  - steam:979690
+- name: The Ascent - Cybersec Pack
+  ids:
+  - steam:1802450
+- name: The Ascent - Cyber Warrior Pack
+  ids:
+  - steam:1802451
+- name: The Ascent - Cyber Heist
+  ids:
+  - steam:1802470

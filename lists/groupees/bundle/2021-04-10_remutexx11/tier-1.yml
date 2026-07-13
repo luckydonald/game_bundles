@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Artifice Machine — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9920/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9920/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9920/source.json
+games:
+- name: Shootout
+  ids:
+  - unresolved:source:isthereanydeal:9920:shootout
+- name: Passifism
+  ids:
+  - unresolved:source:isthereanydeal:9920:passifism
+- name: Ars Dominus
+  ids:
+  - unresolved:source:isthereanydeal:9920:ars-dominus
+- name: Huespace (2011 Version)
+  ids:
+  - unresolved:source:isthereanydeal:9920:huespace-2011-version
+- name: Trash Hero
+  ids:
+  - unresolved:source:isthereanydeal:9920:trash-hero
+- name: The Key
+  ids:
+  - unresolved:source:isthereanydeal:9920:the-key
+- name: Rubber Tree
+  ids:
+  - unresolved:source:isthereanydeal:9920:rubber-tree
+- name: Miserable World
+  ids:
+  - unresolved:source:isthereanydeal:9920:miserable-world
+- name: Brikabrak
+  ids:
+  - unresolved:source:isthereanydeal:9920:brikabrak
+- name: Noise Buffoons
+  ids:
+  - unresolved:source:isthereanydeal:9920:noise-buffoons

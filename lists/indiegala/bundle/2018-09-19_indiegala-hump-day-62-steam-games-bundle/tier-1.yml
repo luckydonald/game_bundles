@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Hump Day Bundle #62 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6481/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6481/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6481/source.json
+games:
+- name: Mini Ghost
+  ids:
+  - steam:586880
+- name: Hentai Sokoban
+  ids:
+  - unresolved:source:isthereanydeal:6481:hentai-sokoban
+- name: Pixel Hentai Mosaic
+  ids:
+  - unresolved:source:isthereanydeal:6481:pixel-hentai-mosaic

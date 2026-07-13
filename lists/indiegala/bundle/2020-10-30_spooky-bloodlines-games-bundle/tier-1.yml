@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Spooky Bloodlines Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9344/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9344/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9344/source.json
+games:
+- name: IOTA
+  ids:
+  - steam:1273430
+- name: The Survey
+  ids:
+  - steam:547910
+- name: Witch The Bloodlines
+  ids:
+  - steam:925690
+- name: Gunkid 99
+  ids:
+  - steam:906600
+- name: Bot Vice
+  ids:
+  - steam:491040
+- name: Strikey Sisters
+  ids:
+  - steam:643880
+- name: Timore Inferno
+  ids:
+  - steam:486360
+- name: STASIS
+  ids:
+  - steam:380150

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble 15 for $15 Bundle (Apr 2026) — 10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16054/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16054/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16054/source.json
+games:
+- name: Streets of Rogue
+  ids:
+  - steam:512900
+- name: 'An Elder Scrolls Legend: Battlespire'
+  ids:
+  - steam:1812420
+- name: Embr
+  ids:
+  - steam:1062830
+- name: Yaga
+  ids:
+  - steam:888530
+- name: Patch Quest
+  ids:
+  - steam:1347970
+- name: 'UFO: Unidentified Falling Objects'
+  ids:
+  - steam:2087610
+- name: Dragon Eclipse
+  ids:
+  - steam:2626860
+- name: Gun Frog
+  ids:
+  - steam:3173130
+- name: 'Blacksmith: Ignite the Forge'
+  ids:
+  - steam:2651220
+- name: The Dark Queen of Mortholme
+  ids:
+  - steam:3587610

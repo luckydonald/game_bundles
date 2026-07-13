@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Just Cause Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7821/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7821/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7821/source.json
+games:
+- name: Just Cause 2
+  ids:
+  - steam:8190
+- name: Just Cause™ 3 XXL Edition
+  ids:
+  - unresolved:source:isthereanydeal:7821:just-cause-3-xxl-edition
+- name: Just Cause
+  ids:
+  - steam:6880

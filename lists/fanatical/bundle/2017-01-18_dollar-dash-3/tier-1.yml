@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Dash Bunde 3 — Select 1 Title for $1.00, 4 Titles for $2.99, 8 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4651/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4651/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4651/source.json
+games:
+- name: Decay - The Mare
+  ids:
+  - steam:323720
+- name: 'Trulon: The Shadow Engine'
+  ids:
+  - steam:433840
+- name: 'Doorways: The Underworld'
+  ids:
+  - steam:311250
+- name: Gryphon Knight Epic
+  ids:
+  - steam:358650
+- name: Edge of Space
+  ids:
+  - steam:238240
+- name: 'Stealth Inc. 2: A Game of Clones'
+  ids:
+  - steam:329380
+- name: Stealth Bastard Deluxe
+  ids:
+  - steam:209190
+- name: Lucius
+  ids:
+  - steam:218640
+- name: POSTAL 2
+  ids:
+  - steam:223470
+- name: Skullgirls
+  ids:
+  - unresolved:source:isthereanydeal:4651:skullgirls
+- name: Super 3-D Noah's Ark
+  ids:
+  - steam:371180
+- name: Lucius II
+  ids:
+  - steam:296830
+- name: Reign of Bullets
+  ids:
+  - steam:355350
+- name: Shooting Stars!
+  ids:
+  - steam:415350
+- name: POSTAL
+  ids:
+  - steam:232770
+- name: Realms of Arkania Trilogy Classic Bundle
+  ids:
+  - unresolved:source:isthereanydeal:4651:realms-of-arkania-trilogy-classic-bundle
+- name: 'Doorways: Prelude'
+  ids:
+  - steam:248470
+- name: Nihilumbra
+  ids:
+  - steam:252670
+- name: Lucius Demake
+  ids:
+  - steam:364230
+- name: Skulls of the Shogun
+  ids:
+  - steam:228960

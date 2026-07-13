@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Full Throttle: Alaskan Trucker Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15221/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15221/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15221/source.json
+games:
+- name: Alaskan Road Truckers
+  ids:
+  - steam:849100
+- name: 'Alaskan Road Truckers: Trucking Hell'
+  ids:
+  - steam:2709680
+- name: 'Alaskan Road Truckers: Mother Truckers'
+  ids:
+  - steam:2600800

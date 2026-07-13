@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Arcane Raise Series Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5287/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5287/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5287/source.json
+games:
+- name: Arcane RE-Raise
+  ids:
+  - unresolved:source:isthereanydeal:5287:arcane-re-raise
+- name: 'Female #1 + Starter Pack for Arcane (pre)Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5287:female-1-and-starter-pack-for-arcane-pre-raise
+- name: Arcane Raise
+  ids:
+  - steam:603750
+- name: Item Pack for Arcane RE-Raise
+  ids:
+  - unresolved:source:isthereanydeal:5287:item-pack-for-arcane-re-raise
+- name: Arcane Raise - Booster Pack
+  ids:
+  - steam:604090
+- name: 'Male #1 + Starter Pack for Arcane (pre)Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5287:male-1-and-starter-pack-for-arcane-pre-raise
+- name: 'Extra Character (Female #1) + Item Pack for Arcane RE-Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5287:extra-character-female-1-and-item-pack-for-arcane-re-raise
+- name: 'Male #1 + Booster Pack'
+  ids:
+  - steam:604600
+- name: 'Extra Character (Male #1) + Item Pack for Arcane RE-Raise'
+  ids:
+  - unresolved:source:isthereanydeal:5287:extra-character-male-1-and-item-pack-for-arcane-re-raise
+- name: Starter Pack for Arcane (pre)Raise
+  ids:
+  - unresolved:source:isthereanydeal:5287:starter-pack-for-arcane-pre-raise
+- name: 'Female #1 + Booster Pack'
+  ids:
+  - steam:604602
+- name: Arcane (pre)Raise
+  ids:
+  - unresolved:source:isthereanydeal:5287:arcane-pre-raise

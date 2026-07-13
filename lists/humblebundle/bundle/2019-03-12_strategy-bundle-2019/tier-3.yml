@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Strategy Bundle 2019 — 8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7167/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7167/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7167/source.json
+games:
+- name: Niche - a genetics survival game
+  ids:
+  - steam:440650
+- name: 'Ashes of the Singularity: Escalation'
+  ids:
+  - steam:507490
+- name: Throne of Lies ♔ The Online Game of Deceit
+  ids:
+  - unresolved:source:isthereanydeal:7167:throne-of-lies-the-online-game-of-deceit
+- name: Offworld Trading Company™
+  ids:
+  - steam:271240
+- name: Dungeons 3
+  ids:
+  - steam:493900
+- name: Offworld Trading Company - Jupiter's Forge
+  ids:
+  - unresolved:source:isthereanydeal:7167:offworld-trading-company-jupiters-forge
+- name: Stellaris
+  ids:
+  - steam:281990
+- name: 'Plague Inc: Evolved'
+  ids:
+  - steam:246620

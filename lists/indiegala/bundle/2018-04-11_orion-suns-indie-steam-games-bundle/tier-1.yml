@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Orion Suns Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6052/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6052/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6052/source.json
+games:
+- name: FYD
+  ids:
+  - unresolved:source:isthereanydeal:6052:fyd
+- name: Crystals of Niberium
+  ids:
+  - unresolved:source:isthereanydeal:6052:crystals-of-niberium
+- name: MoonDigger
+  ids:
+  - unresolved:source:isthereanydeal:6052:moondigger
+- name: WeakWood Throne
+  ids:
+  - steam:760990
+- name: Wild RTS
+  ids:
+  - unresolved:source:isthereanydeal:6052:wild-rts
+- name: 'Gift of Life: Key of Solomon'
+  ids:
+  - unresolved:source:isthereanydeal:6052:gift-of-life-key-of-solomon
+- name: The Orion Suns
+  ids:
+  - unresolved:source:isthereanydeal:6052:the-orion-suns
+- name: 'Mission: Escape from Island 2'
+  ids:
+  - unresolved:source:isthereanydeal:6052:mission-escape-from-island-2
+- name: TheLooppy
+  ids:
+  - unresolved:source:isthereanydeal:6052:thelooppy
+- name: AfterTime
+  ids:
+  - steam:2091520
+- name: Fast Rolling
+  ids:
+  - unresolved:source:isthereanydeal:6052:fast-rolling

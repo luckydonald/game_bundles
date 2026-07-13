@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Thriller — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6628/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6628/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6628/source.json
+games:
+- name: 'Fahrenheit: Indigo Prophecy Remastered'
+  ids:
+  - steam:312840
+- name: 'Layers of Fear: Masterpiece Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6628:layers-of-fear-masterpiece-edition

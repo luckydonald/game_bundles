@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Space Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6375/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6375/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6375/source.json
+games:
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+- name: 'Space Pilgrim Episode I: Alpha Centauri'
+  ids:
+  - steam:429470
+- name: Super Turbo Demon Busters!
+  ids:
+  - steam:262810
+- name: Star Vikings Forever - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6375:star-vikings-forever-soundtrack
+- name: Star Vikings Forever
+  ids:
+  - steam:488960
+- name: 'Space Stories: Darth Star'
+  ids:
+  - unresolved:source:isthereanydeal:6375:space-stories-darth-star
+- name: 'Space Pilgrim Episode IV: Sol'
+  ids:
+  - steam:446640
+- name: 'Viki Spotter: Space Mission'
+  ids:
+  - unresolved:source:isthereanydeal:6375:viki-spotter-space-mission
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250

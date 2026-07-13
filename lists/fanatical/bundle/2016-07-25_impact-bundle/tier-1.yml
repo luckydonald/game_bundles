@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Impact Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3799/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3799/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3799/source.json
+games:
+- name: Poöf vs The Cursed Kitty
+  ids:
+  - steam:243280
+- name: Californium
+  ids:
+  - steam:402060
+- name: Cubium Dreams
+  ids:
+  - unresolved:source:isthereanydeal:3799:cubium-dreams
+- name: Evertown
+  ids:
+  - steam:432500
+- name: Superstatic
+  ids:
+  - steam:375290
+- name: DAMAGE CONTROL
+  ids:
+  - steam:450020
+- name: Iron Impact
+  ids:
+  - unresolved:source:isthereanydeal:3799:iron-impact
+- name: Trinium Wars
+  ids:
+  - unresolved:source:isthereanydeal:3799:trinium-wars
+- name: Trouble In The Manor
+  ids:
+  - steam:338530
+- name: 'Robo''s World: The Zarnok Fortress'
+  ids:
+  - steam:436360

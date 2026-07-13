@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DOOM Slayers Collection — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9418/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9418/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9418/source.json
+games:
+- name: DOOM
+  ids:
+  - steam:379720
+- name: DOOM 3
+  ids:
+  - steam:208200
+- name: DOOM II
+  ids:
+  - unresolved:source:isthereanydeal:9418:doom-ii
+- name: Ultimate Doom
+  ids:
+  - unresolved:source:isthereanydeal:9418:ultimate-doom

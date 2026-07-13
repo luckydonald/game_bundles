@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Clash of the World Bundles: UK Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/715/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/715/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/715/source.json
+games:
+- name: Master Reboot
+  ids:
+  - steam:251850
+- name: Home Sheep Home 2
+  ids:
+  - unresolved:source:isthereanydeal:715:home-sheep-home-2
+- name: Gun Monkeys
+  ids:
+  - unresolved:source:isthereanydeal:715:gun-monkeys
+- name: Soulbringer
+  ids:
+  - steam:283310
+- name: Ultratron
+  ids:
+  - steam:219190
+- name: Jibs Arcade
+  ids:
+  - unresolved:source:isthereanydeal:715:jibs-arcade

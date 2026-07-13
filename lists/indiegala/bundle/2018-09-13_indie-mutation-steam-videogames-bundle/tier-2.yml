@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Mutation Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6454/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6454/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6454/source.json
+games:
+- name: EW/WE
+  ids:
+  - steam:895470
+- name: dead forest
+  ids:
+  - steam:588140
+- name: Doors Push or Pull
+  ids:
+  - steam:854390
+- name: 立方杀阵（Cubic Kill Array）
+  ids:
+  - steam:898090
+- name: Jelly Wants More
+  ids:
+  - unresolved:source:isthereanydeal:6454:jelly-wants-more
+- name: Safe House
+  ids:
+  - steam:636230
+- name: Hex & Hex Two
+  ids:
+  - unresolved:source:isthereanydeal:6454:hex-and-hex-two
+- name: MUTATION PHASE
+  ids:
+  - steam:871850
+- name: Hex Two
+  ids:
+  - steam:868130
+- name: GoFetch
+  ids:
+  - steam:911480
+- name: 'Glaive: Brick Breaker'
+  ids:
+  - steam:822140
+- name: Wrecking Towers
+  ids:
+  - unresolved:source:isthereanydeal:6454:wrecking-towers

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Simulators Live Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6493/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6493/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6493/source.json
+games:
+- name: HandyCopter
+  ids:
+  - unresolved:source:isthereanydeal:6493:handycopter
+- name: Helicopter Flight Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6493:helicopter-flight-simulator
+- name: Curling World Cup
+  ids:
+  - unresolved:source:isthereanydeal:6493:curling-world-cup
+- name: Road Patrol Truck
+  ids:
+  - unresolved:source:isthereanydeal:6493:road-patrol-truck
+- name: Frozen Soul
+  ids:
+  - unresolved:source:isthereanydeal:6493:frozen-soul
+- name: Extreme Drifters
+  ids:
+  - unresolved:source:isthereanydeal:6493:extreme-drifters
+- name: High Speed Trains
+  ids:
+  - unresolved:source:isthereanydeal:6493:high-speed-trains
+- name: Jurassic Safari Hunt
+  ids:
+  - unresolved:source:isthereanydeal:6493:jurassic-safari-hunt
+- name: Forest Harvester Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6493:forest-harvester-simulator
+- name: 'desTRUCKtors: Warfare Showdown'
+  ids:
+  - unresolved:source:isthereanydeal:6493:destrucktors-warfare-showdown
+- name: Demolition Engineer
+  ids:
+  - unresolved:source:isthereanydeal:6493:demolition-engineer
+- name: Space Launch Engineer
+  ids:
+  - unresolved:source:isthereanydeal:6493:space-launch-engineer

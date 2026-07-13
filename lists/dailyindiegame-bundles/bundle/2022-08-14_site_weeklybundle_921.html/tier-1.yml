@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 921 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11959/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11959/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11959/source.json
+games:
+- name: The Orphan A Tale of An Errant Ghost - Hidden Object Game
+  ids:
+  - steam:1176560
+- name: Azrael
+  ids:
+  - steam:1527460
+- name: Ortheo
+  ids:
+  - steam:1540700
+- name: Cut to the Core
+  ids:
+  - steam:1777000
+- name: Fire All Humans
+  ids:
+  - unresolved:source:isthereanydeal:11959:fire-all-humans
+- name: Fastest Fantasy Life Simulator
+  ids:
+  - steam:2075130
+- name: 'Rhythm Knights: Double Treble'
+  ids:
+  - steam:1976180
+- name: Bright Garden
+  ids:
+  - unresolved:source:isthereanydeal:11959:bright-garden
+- name: Neon Circle
+  ids:
+  - steam:2093290

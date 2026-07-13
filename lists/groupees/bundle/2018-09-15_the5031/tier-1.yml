@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Dangerous Deed — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6463/source.json
+games:
+- name: The Deed
+  ids:
+  - steam:420740
+- name: Dangerous Skies 80's edition
+  ids:
+  - steam:896220
+- name: Save Jesus
+  ids:
+  - steam:509220
+- name: BalanCity
+  ids:
+  - steam:462680
+- name: House of Snark 6-in-1 Bundle
+  ids:
+  - steam:486810

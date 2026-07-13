@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Explore & Expand Bundle — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9464/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9464/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9464/source.json
+games:
+- name: 'Halcyon 6: Lightspeed Edition'
+  ids:
+  - steam:651660
+- name: 'Sins of a Solar Empire: Trinity'
+  ids:
+  - steam:201290
+- name: 'Rain of Reflections: Chapter 1'
+  ids:
+  - unresolved:source:isthereanydeal:9464:rain-of-reflections-chapter-1
+- name: 'Galactic Civilizations III: Crusade Expansion'
+  ids:
+  - unresolved:source:isthereanydeal:9464:galactic-civilizations-iii-crusade-expansion
+- name: Galactic Civilizations III - Mega Events
+  ids:
+  - steam:389930
+- name: Galactic Civilizations III
+  ids:
+  - steam:226860
+- name: Starpoint Gemini Warlords
+  ids:
+  - steam:419480
+- name: 'Galactic Civilizations III: Retribution Expansion'
+  ids:
+  - steam:976210
+- name: Stellaris Galaxy Edition
+  ids:
+  - unresolved:source:isthereanydeal:9464:stellaris-galaxy-edition

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Steam 2023 3 Game Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12960/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12960/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12960/source.json
+games:
+- name: Prison Architect
+  ids:
+  - steam:233450
+- name: Super Meat Boy Forever
+  ids:
+  - steam:581660
+- name: Exit the Gungeon
+  ids:
+  - steam:1209490

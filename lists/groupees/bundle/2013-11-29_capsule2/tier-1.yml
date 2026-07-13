@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Capsule Computers Indie Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/427/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/427/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/427/source.json
+games:
+- name: SlideTapPop
+  ids:
+  - unresolved:source:isthereanydeal:427:slidetappop
+- name: 'Uprising44: The Silent Shadows'
+  ids:
+  - steam:280380
+- name: Non Flying Soldiers
+  ids:
+  - unresolved:source:isthereanydeal:427:non-flying-soldiers
+- name: Power of Defense
+  ids:
+  - steam:60700
+- name: Tommy Tronic
+  ids:
+  - steam:41660
+- name: Spaceforce Constellations
+  ids:
+  - steam:263800
+- name: Xotic
+  ids:
+  - steam:92600
+- name: Jelly Allstars
+  ids:
+  - unresolved:source:isthereanydeal:427:jelly-allstars

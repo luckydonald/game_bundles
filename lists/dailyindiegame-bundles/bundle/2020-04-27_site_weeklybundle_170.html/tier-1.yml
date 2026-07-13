@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 170 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8730/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8730/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8730/source.json
+games:
+- name: 'Cartoonway : Mini Cars'
+  ids:
+  - unresolved:source:isthereanydeal:8730:cartoonway-mini-cars
+- name: Fish's Trip
+  ids:
+  - steam:701960
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:8730:teddy-floppy-ear-kayaking
+- name: Beardy the Digger
+  ids:
+  - steam:1144630
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:8730:teddy-floppy-ear-the-race
+- name: Poly Towns
+  ids:
+  - steam:438730
+- name: Teddy Floppy Ear - Mountain Adventure
+  ids:
+  - unresolved:source:isthereanydeal:8730:teddy-floppy-ear-mountain-adventure
+- name: Bubble Rush
+  ids:
+  - steam:717910
+- name: 'VCB: Why City 4k'
+  ids:
+  - unresolved:source:isthereanydeal:8730:vcb-why-city-4k

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: (Sometimes) Thursday Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3218/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3218/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3218/source.json
+games:
+- name: The Archetype
+  ids:
+  - steam:391120
+- name: Experience
+  ids:
+  - unresolved:source:isthereanydeal:3218:experience
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+- name: Nordenfelt
+  ids:
+  - steam:428740
+- name: Devoured Time
+  ids:
+  - steam:356870
+- name: The Secret of Hildegards
+  ids:
+  - steam:283470
+- name: Jerry McPartlin - Rebel with a Cause
+  ids:
+  - unresolved:source:isthereanydeal:3218:jerry-mcpartlin-rebel-with-a-cause
+- name: Rock'n Roll Defense
+  ids:
+  - steam:438480

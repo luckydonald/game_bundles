@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 870 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11644/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11644/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11644/source.json
+games:
+- name: Hackerman
+  ids:
+  - unresolved:source:isthereanydeal:11644:hackerman
+- name: The President
+  ids:
+  - steam:819210
+- name: Choco Pixel D
+  ids:
+  - steam:1500310
+- name: AMID THE LINES
+  ids:
+  - steam:1611110
+- name: Maverta City
+  ids:
+  - steam:1807370
+- name: Cat and Fish
+  ids:
+  - steam:1872130
+- name: Abetot Family Estate
+  ids:
+  - steam:1951970
+- name: Tiny Robo Puzzles
+  ids:
+  - steam:2005150
+- name: 'Niflhel''s Fables: The Book of Gypsies'
+  ids:
+  - steam:1928650

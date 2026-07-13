@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Strategy Heroes Bundle 2 (2018) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5454/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5454/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5454/source.json
+games:
+- name: 'Disciples: Sacred Lands Gold'
+  ids:
+  - steam:281450
+- name: Ghost Master®
+  ids:
+  - steam:6200
+- name: Planetary Annihilation
+  ids:
+  - unresolved:source:isthereanydeal:5454:planetary-annihilation
+- name: Prophour23
+  ids:
+  - steam:317610
+- name: War of the Human Tanks
+  ids:
+  - steam:263400
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+- name: Worms
+  ids:
+  - steam:70640

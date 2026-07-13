@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute&#39;s Treasure Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5811/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5811/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5811/source.json
+games:
+- name: Mobile Astro
+  ids:
+  - steam:565110
+- name: Sigi - A Fart for Melusina
+  ids:
+  - steam:677280
+- name: Cyberia
+  ids:
+  - steam:624080
+- name: Project Mercury
+  ids:
+  - steam:702150
+- name: Stonekeep
+  ids:
+  - steam:613240

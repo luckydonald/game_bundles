@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: AI War Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2014/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2014/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2014/source.json
+games:
+- name: 'AI War: Destroyer of Worlds'
+  ids:
+  - steam:317150
+- name: 'AI War: Light of the Spire'
+  ids:
+  - steam:40407
+- name: 'AI War: The Zenith Remnant'
+  ids:
+  - steam:40403
+- name: 'AI War: Fleet Command'
+  ids:
+  - steam:40400
+- name: 'AI War: Vengeance Of The Machine'
+  ids:
+  - steam:238950
+- name: 'AI War: Children of Neinzul'
+  ids:
+  - steam:40406
+- name: 'AI War: Ancient Shadows'
+  ids:
+  - steam:40408

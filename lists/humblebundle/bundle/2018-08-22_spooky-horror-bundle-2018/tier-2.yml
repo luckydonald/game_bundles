@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Spooky Horror Bundle 2018 — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6396/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6396/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6396/source.json
+games:
+- name: Layers of Fear
+  ids:
+  - steam:1946700
+- name: How to Survive 2
+  ids:
+  - steam:360170
+- name: How To Survive
+  ids:
+  - steam:250400
+- name: White Noise 2
+  ids:
+  - steam:503350
+- name: Detention
+  ids:
+  - steam:555220
+- name: BioShock Remastered
+  ids:
+  - steam:409710
+- name: 'Yomawari: Night Alone'
+  ids:
+  - steam:477870

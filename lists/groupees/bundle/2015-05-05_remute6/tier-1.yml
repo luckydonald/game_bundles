@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Terrific Time Travel Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1849/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1849/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1849/source.json
+games:
+- name: Voyage to Farland
+  ids:
+  - steam:364790
+- name: Eradicator
+  ids:
+  - steam:329640
+- name: Gare Sapphire Mechs
+  ids:
+  - steam:359090
+- name: Bonsai Worlds
+  ids:
+  - unresolved:source:isthereanydeal:1849:bonsai-worlds
+- name: 'Thanatos: a Winterwitch Tale'
+  ids:
+  - unresolved:source:isthereanydeal:1849:thanatos-a-winterwitch-tale

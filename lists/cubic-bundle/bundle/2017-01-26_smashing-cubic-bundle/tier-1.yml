@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Smashing Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4680/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4680/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4680/source.json
+games:
+- name: Dynamite Alex
+  ids:
+  - steam:527810
+- name: HardCube
+  ids:
+  - unresolved:source:isthereanydeal:4680:hardcube
+- name: Endless room
+  ids:
+  - unresolved:source:isthereanydeal:4680:endless-room
+- name: Dynamic Very, Very, Hard game!!
+  ids:
+  - steam:546340

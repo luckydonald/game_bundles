@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Journey Gang Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7971/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7971/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7971/source.json
+games:
+- name: The Savior's Gang
+  ids:
+  - steam:938480
+- name: Hope for City
+  ids:
+  - steam:1142360
+- name: 'The Journey Down: Chapter One'
+  ids:
+  - steam:220090
+- name: 'The Journey Down: Chapter Two'
+  ids:
+  - steam:262850
+- name: 'The Journey Down: Chapter Three'
+  ids:
+  - steam:579760
+- name: Tropia
+  ids:
+  - steam:1047810

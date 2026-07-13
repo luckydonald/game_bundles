@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Board Games Bundle — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6713/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6713/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6713/source.json
+games:
+- name: 'Agricola: All Creatures Big and Small'
+  ids:
+  - steam:528180
+- name: Colt Express
+  ids:
+  - unresolved:source:isthereanydeal:6713:colt-express
+- name: Harald
+  ids:
+  - unresolved:source:isthereanydeal:6713:harald
+- name: 'Le Havre: The Inland Port'
+  ids:
+  - steam:511820
+- name: Abalone
+  ids:
+  - steam:279480
+- name: Pathfinder Adventures
+  ids:
+  - steam:480640
+- name: Fighting Fantasy Legends
+  ids:
+  - steam:496340
+- name: Twilight Struggle
+  ids:
+  - steam:406290
+- name: Fighting Fantasy Legends Portal
+  ids:
+  - unresolved:source:isthereanydeal:6713:fighting-fantasy-legends-portal
+- name: Splendor
+  ids:
+  - steam:376680
+- name: 'Pandemic: The Board Game'
+  ids:
+  - unresolved:source:isthereanydeal:6713:pandemic-the-board-game
+- name: Small World 2
+  ids:
+  - steam:235620
+- name: King and Assassins
+  ids:
+  - steam:603460

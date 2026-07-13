@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Blitz Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4963/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4963/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4963/source.json
+games:
+- name: Hostile Dimension
+  ids:
+  - steam:371410
+- name: The lost wizard
+  ids:
+  - steam:727110
+- name: Greenwood the Last Ritual
+  ids:
+  - steam:536410
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+- name: Duo
+  ids:
+  - steam:498980
+- name: Football Blitz
+  ids:
+  - unresolved:source:isthereanydeal:4963:football-blitz
+- name: Mankind Defender
+  ids:
+  - unresolved:source:isthereanydeal:4963:mankind-defender
+- name: Battle Quiz
+  ids:
+  - unresolved:source:isthereanydeal:4963:battle-quiz
+- name: ATV GP
+  ids:
+  - unresolved:source:isthereanydeal:4963:atv-gp
+- name: 'Campfire: One of Us Is the Killer'
+  ids:
+  - steam:533180

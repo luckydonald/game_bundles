@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Mini Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2446/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2446/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2446/source.json
+games:
+- name: 'MANOS: The Hands of Fate: Director''s Cut'
+  ids:
+  - steam:350780
+- name: Angry Arrows
+  ids:
+  - steam:390890
+- name: Luckslinger
+  ids:
+  - steam:358810
+- name: ProGamerManager
+  ids:
+  - unresolved:source:isthereanydeal:2446:progamermanager
+- name: Two Steps Back
+  ids:
+  - steam:370200

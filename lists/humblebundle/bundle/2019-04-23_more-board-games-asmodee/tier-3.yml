@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble More Board Games Bundle: Asmodee Digital — entire-13-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7330/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7330/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7330/source.json
+games:
+- name: 'Gloom: Digital Edition'
+  ids:
+  - steam:766040
+- name: Twilight Struggle
+  ids:
+  - steam:406290
+- name: Love Letter
+  ids:
+  - steam:926520
+- name: 'Ticket to Ride: First Journey'
+  ids:
+  - unresolved:source:isthereanydeal:7330:ticket-to-ride-first-journey
+- name: Mysterium - Hidden Signs
+  ids:
+  - steam:563300
+- name: Carcassonne - Inns & Cathedrals
+  ids:
+  - steam:622030
+- name: 'Mysterium: a Psychic Clue Game'
+  ids:
+  - steam:556180
+- name: 'Ascension: Deckbuilding Game'
+  ids:
+  - steam:320430
+- name: Mysterium - Secrets & Lies
+  ids:
+  - steam:563780
+- name: 'Pandemic: The Board Game'
+  ids:
+  - unresolved:source:isthereanydeal:7330:pandemic-the-board-game
+- name: Carcassonne - Tiles & Tactics
+  ids:
+  - steam:598810
+- name: Pathfinder Adventures - Obsidian Edition
+  ids:
+  - steam:480640
+- name: 'Scythe: Digital Edition'
+  ids:
+  - steam:718560

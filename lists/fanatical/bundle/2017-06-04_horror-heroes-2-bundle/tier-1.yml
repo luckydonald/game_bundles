@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Horror Heroes Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5178/source.json
+games:
+- name: 'C.A.S.E: Animatronics'
+  ids:
+  - unresolved:source:isthereanydeal:5178:c-as-e-animatronics
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+- name: Yet Another Zombie Defense
+  ids:
+  - steam:270550
+- name: Hektor - Soundtrack Edition
+  ids:
+  - unresolved:source:isthereanydeal:5178:hektor-soundtrack-edition
+- name: 'Corrosion: Cold Winter Waiting [Enhanced Edition]'
+  ids:
+  - steam:349140
+- name: DISTRAINT
+  ids:
+  - unresolved:source:isthereanydeal:5178:distraint
+- name: Nihilumbra
+  ids:
+  - steam:252670
+- name: SurvHive
+  ids:
+  - steam:499230

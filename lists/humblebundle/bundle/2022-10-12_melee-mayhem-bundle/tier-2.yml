@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Melee Mayhem Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12211/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12211/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12211/source.json
+games:
+- name: Mordhau
+  ids:
+  - steam:629760
+- name: MORTAL KOMBAT 11
+  ids:
+  - steam:976310
+- name: Chronicon
+  ids:
+  - steam:375480
+- name: River City Girls
+  ids:
+  - steam:1049320
+- name: Song of Iron
+  ids:
+  - steam:1258220
+- name: Nickelodeon All-Star Brawl
+  ids:
+  - steam:1414850
+- name: Chivalry 2
+  ids:
+  - steam:1824220

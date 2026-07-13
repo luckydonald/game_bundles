@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Majesco Throwback Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6398/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6398/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6398/source.json
+games:
+- name: Onion Force
+  ids:
+  - steam:434980
+- name: KRAUTSCAPE
+  ids:
+  - unresolved:source:isthereanydeal:6398:krautscape
+- name: The Lost Gardens
+  ids:
+  - steam:734700
+- name: Costume Quest 2
+  ids:
+  - steam:275180
+- name: A Boy and His Blob
+  ids:
+  - steam:281200
+- name: Double Dragon Neon
+  ids:
+  - steam:252350
+- name: TrickStyle
+  ids:
+  - steam:588490
+- name: Drake of the 99 Dragons
+  ids:
+  - steam:755630
+- name: Judge Dredd 95
+  ids:
+  - unresolved:source:isthereanydeal:6398:judge-dredd-95
+- name: Advent Rising
+  ids:
+  - steam:3800
+- name: 'Gladiator: Sword of Vengeance'
+  ids:
+  - steam:577580
+- name: BlowOut
+  ids:
+  - steam:719070

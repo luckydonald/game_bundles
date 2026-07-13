@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Hooked on Multiplayer Bundle 2019 — 3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7668/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7668/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7668/source.json
+games:
+- name: Think of the Children
+  ids:
+  - steam:573600
+- name: Death Squared
+  ids:
+  - steam:471810
+- name: INVERSUS Deluxe
+  ids:
+  - steam:432980

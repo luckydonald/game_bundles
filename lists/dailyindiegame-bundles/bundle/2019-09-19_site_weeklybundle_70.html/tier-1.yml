@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 70: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7925/source.json
+games:
+- name: Lab.Gen.
+  ids:
+  - steam:920800
+- name: Immortal Wanna
+  ids:
+  - steam:1132020
+- name: The Chills
+  ids:
+  - steam:1008140
+- name: Gangsta Sniper
+  ids:
+  - steam:951640
+- name: Pixel Robot Hunter
+  ids:
+  - steam:935660
+- name: Destruction Paper
+  ids:
+  - steam:890200
+- name: Jamping
+  ids:
+  - unresolved:source:isthereanydeal:7925:jamping
+- name: Blood Drift
+  ids:
+  - steam:798140
+- name: Skywalk
+  ids:
+  - steam:1075370

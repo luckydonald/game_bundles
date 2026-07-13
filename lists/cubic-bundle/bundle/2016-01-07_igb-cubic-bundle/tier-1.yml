@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: IGB Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2922/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2922/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2922/source.json
+games:
+- name: 'Foreign Legion: Buckets of Blood'
+  ids:
+  - steam:36000
+- name: Demon Horde Master
+  ids:
+  - unresolved:source:isthereanydeal:2922:demon-horde-master
+- name: Radial Impact
+  ids:
+  - steam:387890
+- name: Pirates Deck
+  ids:
+  - unresolved:source:isthereanydeal:2922:pirates-deck

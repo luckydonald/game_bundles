@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Weekly Bundle: Eye Candy 3 — BTA + $1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6325/source.json
+games:
+- name: Tengami
+  ids:
+  - steam:299680
+- name: Back to Bed
+  ids:
+  - steam:308040
+- name: Where is my Heart?
+  ids:
+  - steam:244950
+- name: Deep Under The Sky
+  ids:
+  - steam:315650
+- name: 7 Grand Steps
+  ids:
+  - steam:238930
+- name: 'Valdis Story: Abyssal City'
+  ids:
+  - steam:252030
+- name: 'The Dream Machine: Chapters 1-3'
+  ids:
+  - unresolved:source:isthereanydeal:6325:the-dream-machine-chapters-1-3
+- name: 'The Dream Machine: Chapter 4'
+  ids:
+  - steam:94304
+- name: 'The Dream Machine: Chapter 5'
+  ids:
+  - steam:330260

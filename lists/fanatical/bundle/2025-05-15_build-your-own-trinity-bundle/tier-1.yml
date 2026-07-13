@@ -1,0 +1,78 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Trinity Bundle (Spring 2025) — 3+ games $1.60 each, 6+ games
+  $1.50 each, 9+ games $1.30 each
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15113/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15113/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15113/source.json
+games:
+- name: Star Renegades
+  ids:
+  - steam:651670
+- name: 'Chivalry: Complete Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15113:chivalry-complete-pack
+- name: Lords & Villeins
+  ids:
+  - steam:1287530
+- name: Narita Boy
+  ids:
+  - steam:1069530
+- name: Mail Time
+  ids:
+  - steam:1607240
+- name: Northend Tower Defense
+  ids:
+  - steam:1669170
+- name: Steelrising - Bastille Edition
+  ids:
+  - steam:1283400
+- name: This is a Ghost
+  ids:
+  - steam:1985420
+- name: URBO
+  ids:
+  - steam:2141770
+- name: 'The end is nahual: If I may say so'
+  ids:
+  - steam:2161110
+- name: The Ouroboros King
+  ids:
+  - steam:2096510
+- name: The Dead Await
+  ids:
+  - steam:2393580
+- name: Pan'orama
+  ids:
+  - steam:1730250
+- name: The Lies We Tell Ourselves
+  ids:
+  - steam:2176460
+- name: Quadroids
+  ids:
+  - steam:2419690
+- name: Siegebreaker
+  ids:
+  - steam:2146430
+- name: Ingression
+  ids:
+  - steam:1966970
+- name: The Cursed Legacy
+  ids:
+  - steam:2824210
+- name: Teeny Tiny Trains
+  ids:
+  - steam:2825600
+- name: Hunt Me
+  ids:
+  - steam:3026770
+- name: Gamma Zero
+  ids:
+  - steam:3316750
+- name: edco Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15113:edco-quad-pack

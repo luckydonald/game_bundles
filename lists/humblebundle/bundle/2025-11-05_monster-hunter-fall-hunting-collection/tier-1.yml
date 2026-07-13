@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Monster Hunter Series Collection Bundle — 2-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15577/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15577/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15577/source.json
+games:
+- name: MONSTER HUNTER RISE
+  ids:
+  - steam:1446780
+- name: MONSTER HUNTER RISE Deluxe Kit
+  ids:
+  - steam:1748411

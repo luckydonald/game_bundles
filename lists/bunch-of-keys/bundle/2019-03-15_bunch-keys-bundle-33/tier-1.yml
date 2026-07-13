@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Bunch Keys Bundle #33: Gaming Mania — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7178/source.json
+games:
+- name: Estellium Legends
+  ids:
+  - steam:1013070
+- name: 'Disturbed: Beyond Aramor'
+  ids:
+  - steam:617620
+- name: Falnarion Tactics
+  ids:
+  - steam:974180
+- name: Wheelchair Simulator
+  ids:
+  - steam:871510
+- name: AcChen - Tile matching the Arcade way
+  ids:
+  - steam:747540
+- name: The Forgotten Void
+  ids:
+  - steam:600290
+- name: Hummingz - Retro Arcade action revised
+  ids:
+  - unresolved:source:isthereanydeal:7178:hummingz-retro-arcade-action-revised
+- name: Roulette Simulator 2
+  ids:
+  - steam:1002490
+- name: ISLAND 404
+  ids:
+  - steam:993330
+- name: Last Will
+  ids:
+  - steam:453720

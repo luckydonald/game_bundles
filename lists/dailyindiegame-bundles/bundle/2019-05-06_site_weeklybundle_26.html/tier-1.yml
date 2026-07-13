@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 26 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7368/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7368/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7368/source.json
+games:
+- name: Hacker Series
+  ids:
+  - steam:536510
+- name: Five Rooms
+  ids:
+  - unresolved:source:isthereanydeal:7368:five-rooms
+- name: airRevo VR
+  ids:
+  - steam:594150
+- name: Beer and Skittls VR
+  ids:
+  - steam:822700
+- name: Magic Tavern
+  ids:
+  - steam:560960
+- name: Crystal Reign
+  ids:
+  - steam:662780
+- name: Super president How to rule the country
+  ids:
+  - steam:995480
+- name: COLDTV
+  ids:
+  - steam:736100
+- name: 'V: Soundtrack'
+  ids:
+  - steam:683420

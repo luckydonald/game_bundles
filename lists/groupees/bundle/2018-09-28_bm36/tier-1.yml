@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 36 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6520/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6520/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6520/source.json
+games:
+- name: 'Shadow Council: The Puppeteers'
+  ids:
+  - unresolved:source:isthereanydeal:6520:shadow-council-the-puppeteers

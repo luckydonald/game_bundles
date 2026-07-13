@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Helpings 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6755/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6755/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6755/source.json
+games:
+- name: Super Strawberry Man
+  ids:
+  - steam:914900
+- name: Guilty Summer Kiss 2
+  ids:
+  - unresolved:source:isthereanydeal:6755:guilty-summer-kiss-2
+- name: 'Cartoonway : Mini Cars'
+  ids:
+  - unresolved:source:isthereanydeal:6755:cartoonway-mini-cars
+- name: 'Keyhole Spy: Frozen Hotties'
+  ids:
+  - unresolved:source:isthereanydeal:6755:keyhole-spy-frozen-hotties
+- name: 'Glass Painting: Winter Art'
+  ids:
+  - unresolved:source:isthereanydeal:6755:glass-painting-winter-art
+- name: Return of the Revenge of the Visual Novel
+  ids:
+  - unresolved:source:isthereanydeal:6755:return-of-the-revenge-of-the-visual-novel
+- name: 'Grab Sack #2'
+  ids:
+  - unresolved:source:isthereanydeal:6755:grab-sack-2
+- name: Jolly Holiday Adventure
+  ids:
+  - unresolved:source:isthereanydeal:6755:jolly-holiday-adventure
+- name: Radiant One
+  ids:
+  - steam:864550
+- name: 'Grab Sack #1'
+  ids:
+  - unresolved:source:isthereanydeal:6755:grab-sack-1
+- name: Mean Routine
+  ids:
+  - unresolved:source:isthereanydeal:6755:mean-routine

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 675: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10791/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10791/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10791/source.json
+games:
+- name: Mad Gun Range VR Simulator
+  ids:
+  - steam:1031200
+- name: 'Lemuria: Lost in Space - VR Edition'
+  ids:
+  - steam:679780
+- name: 'Fancy Skiing: Speed'
+  ids:
+  - steam:1081910
+- name: Starblazer
+  ids:
+  - unresolved:source:isthereanydeal:10791:starblazer
+- name: Murder Hornets
+  ids:
+  - unresolved:source:isthereanydeal:10791:murder-hornets
+- name: MOMO.EXE VR
+  ids:
+  - steam:1363600
+- name: The Surreal Imaginarium
+  ids:
+  - steam:1348980
+- name: Strike VR
+  ids:
+  - steam:1394210
+- name: Astrotour VR
+  ids:
+  - steam:1416850

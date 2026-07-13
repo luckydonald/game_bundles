@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Adventure Cubic Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5821/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5821/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5821/source.json
+games:
+- name: 'CYCOM: Cybernet Combat'
+  ids:
+  - unresolved:source:isthereanydeal:5821:cycom-cybernet-combat
+- name: Hurl VR
+  ids:
+  - steam:680350
+- name: War Truck Simulator (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5821:war-truck-simulator-restocked
+- name: Caves!
+  ids:
+  - unresolved:source:isthereanydeal:5821:caves
+- name: Frozen Drift Race (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5821:frozen-drift-race-restocked
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+- name: Surviving in the forest
+  ids:
+  - unresolved:source:isthereanydeal:5821:surviving-in-the-forest
+- name: KOLOBOK
+  ids:
+  - steam:757170
+- name: Goblins Keep Coming - Tower Defense
+  ids:
+  - steam:739850

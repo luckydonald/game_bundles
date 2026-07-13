@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Breakout Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3282/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3282/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3282/source.json
+games:
+- name: Freddi Fish and Luther's Maze Madness
+  ids:
+  - steam:284020
+- name: Dr. Daisy Pet Vet
+  ids:
+  - steam:12580
+- name: Moorhuhn (Crazy Chicken)
+  ids:
+  - unresolved:source:isthereanydeal:3282:moorhuhn-crazy-chicken
+- name: Prison Tycoon 3 Lockdown
+  ids:
+  - steam:12510
+- name: Ride! Carnival Tycoon
+  ids:
+  - steam:12560
+- name: Silent Service 2
+  ids:
+  - steam:329670
+- name: Prison Tycoon Alcatraz
+  ids:
+  - steam:354820
+- name: '18 Wheels of Steel: Extreme Trucker 2'
+  ids:
+  - steam:362780
+- name: FALCON GOLD
+  ids:
+  - steam:429520
+- name: 'Midnight Outlaw: 6 Hours to SunUp'
+  ids:
+  - steam:12600
+- name: 'Prison Tycoon 4: SuperMax'
+  ids:
+  - steam:33750
+- name: Elizabeth Find M.D. - Diagnosis Mystery - Season 2
+  ids:
+  - unresolved:source:isthereanydeal:3282:elizabeth-find-m-d-diagnosis-mystery-season-2

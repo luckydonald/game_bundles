@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Adventure Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6584/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6584/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6584/source.json
+games:
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+- name: Super Cloudbuilt
+  ids:
+  - unresolved:source:isthereanydeal:6584:super-cloudbuilt
+- name: 'Mount & Blade: Warband'
+  ids:
+  - steam:48700

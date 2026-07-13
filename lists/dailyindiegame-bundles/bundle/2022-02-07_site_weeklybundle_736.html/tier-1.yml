@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 736 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11034/source.json
+games:
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+- name: 'Lemuria: Lost in Space'
+  ids:
+  - steam:563250
+- name: The Botanist
+  ids:
+  - unresolved:source:isthereanydeal:11034:the-botanist
+- name: Dungeons of the Fallen
+  ids:
+  - steam:701610
+- name: 'The Detective Chapters: Part One'
+  ids:
+  - steam:981660
+- name: Prince Of Wallachia
+  ids:
+  - steam:1428030
+- name: Yoshimitsu Hatsumi
+  ids:
+  - steam:1686440
+- name: Bacteria Wars
+  ids:
+  - steam:1707890
+- name: The Dawning Clocks Of Time
+  ids:
+  - unresolved:source:isthereanydeal:11034:the-dawning-clocks-of-time

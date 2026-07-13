@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Greenlight Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3262/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3262/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3262/source.json
+games:
+- name: StudyX
+  ids:
+  - unresolved:source:isthereanydeal:3262:studyx
+- name: Graveyard Smash
+  ids:
+  - unresolved:source:isthereanydeal:3262:graveyard-smash
+- name: Microbits
+  ids:
+  - unresolved:source:isthereanydeal:3262:microbits
+- name: Super Blue Fighter
+  ids:
+  - steam:463180
+- name: Elems
+  ids:
+  - steam:528670
+- name: Farnham Fables
+  ids:
+  - steam:463110
+- name: 'Global Conflicts: World'
+  ids:
+  - unresolved:source:isthereanydeal:3262:global-conflicts-world
+- name: 'Go Mission: Space Travel'
+  ids:
+  - unresolved:source:isthereanydeal:3262:go-mission-space-travel

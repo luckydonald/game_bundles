@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 38 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2366/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2366/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2366/source.json
+games:
+- name: Tower of Elements
+  ids:
+  - unresolved:source:isthereanydeal:2366:tower-of-elements
+- name: Alter World
+  ids:
+  - steam:357280
+- name: ZombieRun
+  ids:
+  - steam:358840
+- name: Bard to the Future
+  ids:
+  - unresolved:source:isthereanydeal:2366:bard-to-the-future
+- name: Cyberpunk 3776
+  ids:
+  - steam:343170
+- name: Particula
+  ids:
+  - steam:343360

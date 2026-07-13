@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Devil May Cry: Devil Trigger Reloaded Collection 2026 — entire-4-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16203/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16203/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16203/source.json
+games:
+- name: Devil May Cry® 4 Special Edition
+  ids:
+  - steam:329050
+- name: Devil May Cry 5 + Vergil
+  ids:
+  - steam:601150
+- name: DMC - Devil May Cry
+  ids:
+  - steam:220440
+- name: Devil May Cry HD Collection
+  ids:
+  - steam:631510

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 587 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10446/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10446/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10446/source.json
+games:
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+- name: Trash Squad
+  ids:
+  - steam:676440
+- name: 'Lemuria: Lost in Space'
+  ids:
+  - steam:563250
+- name: Pax Romana
+  ids:
+  - steam:1034810
+- name: -KLAUS
+  ids:
+  - steam:729370
+- name: GODS Remastered
+  ids:
+  - unresolved:source:isthereanydeal:10446:gods-remastered
+- name: Ghost in the pool
+  ids:
+  - steam:919330
+- name: Hidden Shelter
+  ids:
+  - steam:1422820
+- name: shapez
+  ids:
+  - steam:1318690

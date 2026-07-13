@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 294 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9350/source.json
+games:
+- name: The magic storm
+  ids:
+  - steam:1292960
+- name: SafeHome
+  ids:
+  - steam:1169920
+- name: BorderCollie Game
+  ids:
+  - steam:1307250
+- name: Axiom Alternative
+  ids:
+  - unresolved:source:isthereanydeal:9350:axiom-alternative
+- name: Roundabout 3
+  ids:
+  - steam:1333020
+- name: RUN! GRANDPA! RUN!
+  ids:
+  - steam:1330570
+- name: Path Maker
+  ids:
+  - steam:1412250
+- name: Jump Again!
+  ids:
+  - steam:1430040
+- name: Mage World - The Wizard's Stone
+  ids:
+  - steam:1431380

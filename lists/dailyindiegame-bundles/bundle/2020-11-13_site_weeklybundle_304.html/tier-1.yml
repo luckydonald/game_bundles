@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 304 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9395/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9395/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9395/source.json
+games:
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:9395:airplane-sky-voyage
+- name: VaporFly
+  ids:
+  - steam:1119770
+- name: AirShock
+  ids:
+  - unresolved:source:isthereanydeal:9395:airshock
+- name: Skywriter
+  ids:
+  - steam:919040
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+- name: Lovely Heroines
+  ids:
+  - steam:1170290
+- name: One True Cuddle
+  ids:
+  - steam:1217310
+- name: What a Cluster Fight
+  ids:
+  - unresolved:source:isthereanydeal:9395:what-a-cluster-fight
+- name: The Hostage
+  ids:
+  - steam:1306020

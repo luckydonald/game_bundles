@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Summer GDQ: Games Done Quick Bundle (2016) — entire-8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3662/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3662/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3662/source.json
+games:
+- name: Dustforce DX
+  ids:
+  - steam:65300
+- name: Guacamelee! Gold Edition
+  ids:
+  - steam:214770
+- name: VVVVVV
+  ids:
+  - steam:70300
+- name: Escape Goat 2
+  ids:
+  - steam:255340
+- name: Freedom Planet
+  ids:
+  - steam:248310
+- name: Super Meat Boy
+  ids:
+  - steam:40800
+- name: 'Serious Sam: The Random Encounter'
+  ids:
+  - steam:201480
+- name: Serious Sam Double D
+  ids:
+  - steam:111600

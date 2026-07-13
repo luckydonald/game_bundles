@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Desura Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1639/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1639/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1639/source.json
+games:
+- name: The Great Story of a Mighty Hero
+  ids:
+  - unresolved:source:isthereanydeal:1639:the-great-story-of-a-mighty-hero
+- name: '2020: Divided Nation'
+  ids:
+  - unresolved:source:isthereanydeal:1639:2020-divided-nation
+- name: Chernobyl Underground
+  ids:
+  - unresolved:source:isthereanydeal:1639:chernobyl-underground
+- name: Combat Cats
+  ids:
+  - steam:350610
+- name: Slinki
+  ids:
+  - steam:354930
+- name: IN SPAAACE!
+  ids:
+  - unresolved:source:isthereanydeal:1639:in-spaaace

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Point Blank Bundle — 5-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15350/source.json
+games:
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+- name: EMPTY SHELL
+  ids:
+  - steam:2243110
+- name: 'SUPERHOT: MIND CONTROL DELETE'
+  ids:
+  - steam:690040
+- name: Rising Front
+  ids:
+  - steam:1560250
+- name: Wild Bastards
+  ids:
+  - steam:1660840

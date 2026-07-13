@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Award Winners Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8588/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8588/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8588/source.json
+games:
+- name: Diaries of a Spaceport Janitor
+  ids:
+  - steam:436500
+- name: SIMULACRA
+  ids:
+  - steam:712730
+- name: Yoku's Island Express
+  ids:
+  - steam:334940
+- name: Quadrilateral Cowboy
+  ids:
+  - steam:240440
+- name: Owlboy
+  ids:
+  - steam:115800
+- name: 'SINNER: Sacrifice for Redemption / 救赎之路'
+  ids:
+  - unresolved:source:isthereanydeal:8588:sinner-sacrifice-for-redemption-jiu-shu-zhi-lu
+- name: 'Yuppie Psycho: Executive Edition'
+  ids:
+  - steam:597760

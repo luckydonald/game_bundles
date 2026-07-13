@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Game Night! by Asmodee Digital Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11349/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11349/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11349/source.json
+games:
+- name: Love Letter
+  ids:
+  - steam:926520
+- name: Small World 2
+  ids:
+  - steam:235620
+- name: Small World - Grand Dames
+  ids:
+  - steam:259591
+- name: Splendor - The Strongholds
+  ids:
+  - steam:798250
+- name: Carcassonne - Inns & Cathedrals
+  ids:
+  - steam:622030
+- name: Ticket To Ride - France
+  ids:
+  - unresolved:source:isthereanydeal:11349:ticket-to-ride-france
+- name: Ticket to Ride
+  ids:
+  - steam:2477010
+- name: Splendor
+  ids:
+  - steam:376680
+- name: Carcassonne - Tiles & Tactics
+  ids:
+  - steam:598810
+- name: Splendor - The Cities
+  ids:
+  - steam:797510

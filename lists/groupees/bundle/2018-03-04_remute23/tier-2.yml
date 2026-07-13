@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Legend Of Remute Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5952/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5952/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5952/source.json
+games:
+- name: Zephyr
+  ids:
+  - steam:1423010
+- name: Geograph
+  ids:
+  - unresolved:source:isthereanydeal:5952:geograph
+- name: Icky
+  ids:
+  - steam:791160
+- name: Close the Window!
+  ids:
+  - unresolved:source:isthereanydeal:5952:close-the-window
+- name: MAZES OF OGGLAR
+  ids:
+  - unresolved:source:isthereanydeal:5952:mazes-of-ogglar
+- name: Shit 3
+  ids:
+  - unresolved:source:isthereanydeal:5952:shit-3
+- name: SOLITUNE
+  ids:
+  - steam:615670
+- name: Huespace (2011 Version)
+  ids:
+  - unresolved:source:isthereanydeal:5952:huespace-2011-version
+- name: Odanako! | オダナコ！
+  ids:
+  - unresolved:source:isthereanydeal:5952:odanako-odanako
+- name: Shotgun Legend
+  ids:
+  - steam:597230

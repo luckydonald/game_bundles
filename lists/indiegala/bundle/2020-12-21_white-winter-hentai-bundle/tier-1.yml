@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: White Winter Hentai Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9547/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9547/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9547/source.json
+games:
+- name: Flower FairY
+  ids:
+  - unresolved:source:isthereanydeal:9547:flower-fairy
+- name: Kamimachi Site - Dating story
+  ids:
+  - steam:989580
+- name: Super Naughty Maid 2
+  ids:
+  - steam:1097880
+- name: Sword Maiden of Azure Dragon
+  ids:
+  - unresolved:source:isthereanydeal:9547:sword-maiden-of-azure-dragon
+- name: KukkoroDays
+  ids:
+  - steam:1258340
+- name: Blood price
+  ids:
+  - steam:1300270

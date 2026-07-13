@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Feb 2017) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4592/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4592/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4592/source.json
+games:
+- name: XCOM 2
+  ids:
+  - steam:268500
+- name: 'Ryse: Son of Rome'
+  ids:
+  - steam:302510
+- name: Project Highrise
+  ids:
+  - steam:423580
+- name: ABZU
+  ids:
+  - steam:384190
+- name: SteamWorld Heist
+  ids:
+  - steam:322190
+- name: 'Okhlos: Omega'
+  ids:
+  - steam:400180
+- name: Husk
+  ids:
+  - steam:553960
+- name: Hollow Knight Sneak Peak
+  ids:
+  - unresolved:source:isthereanydeal:4592:hollow-knight-sneak-peak
+- name: Oh, Deer!
+  ids:
+  - unresolved:source:isthereanydeal:4592:oh-deer--1

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Superfly Indie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3/source.json
+games:
+- name: Zeno Clash
+  ids:
+  - steam:22200
+- name: Cargo Commander
+  ids:
+  - steam:220460
+- name: 'The Journey Down: Chapter One'
+  ids:
+  - steam:220090
+- name: Galaxy on Fire 2 ™ Full HD
+  ids:
+  - steam:212010
+- name: Afterfall Insanity Extended Edition
+  ids:
+  - unresolved:source:isthereanydeal:3:afterfall-insanity-extended-edition
+- name: Disciples III - Renaissance Steam Special Edition
+  ids:
+  - steam:33670
+- name: 'Kung Fu Strike: The Warrior''s Rise'
+  ids:
+  - steam:212030
+- name: Air Conflicts Pacific Carriers
+  ids:
+  - steam:214910
+- name: 'Weird Worlds: Return to Infinite Space'
+  ids:
+  - steam:226120
+- name: Dungeons - The Dark Lord
+  ids:
+  - steam:200550

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 15 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1476/source.json
+games:
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:1476:chernobyl-commando
+- name: 'Depth Hunter 2: Deep Dive'
+  ids:
+  - steam:248530
+- name: Actua Soccer 3
+  ids:
+  - unresolved:source:isthereanydeal:1476:actua-soccer-3
+- name: Realms of the Haunting
+  ids:
+  - steam:292390
+- name: Rhythm Destruction
+  ids:
+  - steam:301540
+- name: The Moon Sliver
+  ids:
+  - steam:329830

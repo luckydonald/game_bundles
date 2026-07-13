@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Sacred Mysteries Bundle (Feb 2020) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8357/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8357/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8357/source.json
+games:
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+- name: 'Twilight City: Love as a Cure'
+  ids:
+  - steam:428270
+- name: 'The Saint: Abyss of Despair'
+  ids:
+  - steam:560820
+- name: 'Weather Lord: Following the Princess Collector''s Edition'
+  ids:
+  - steam:456690
+- name: Pit Blocks 3D
+  ids:
+  - steam:792000
+- name: Tangled Up!
+  ids:
+  - steam:502380
+- name: 'Esoterica: Hollow Earth'
+  ids:
+  - unresolved:source:isthereanydeal:8357:esoterica-hollow-earth
+- name: Mystery Loss
+  ids:
+  - steam:689740
+- name: 'Mystery Castle: The Mirror''s Secret'
+  ids:
+  - steam:428250

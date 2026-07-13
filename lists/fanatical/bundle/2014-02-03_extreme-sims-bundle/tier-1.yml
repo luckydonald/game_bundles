@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Extreme Sims Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/541/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/541/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/541/source.json
+games:
+- name: Bridge It (plus)
+  ids:
+  - steam:248370
+- name: Skyscraper Simulator
+  ids:
+  - steam:252910
+- name: Lunar Flight
+  ids:
+  - steam:208600
+- name: Dogfight 1942
+  ids:
+  - steam:217790
+- name: Woodcutter Simulator 2013
+  ids:
+  - steam:267610
+- name: Agricultural Simulator Historical Farming
+  ids:
+  - steam:259890
+- name: Ship Simulator Extremes
+  ids:
+  - steam:48800
+- name: Airport Simulator 2014
+  ids:
+  - unresolved:source:isthereanydeal:541:airport-simulator-2014

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Jumbo Bundle 9 — Beat the Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5417/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5417/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5417/source.json
+games:
+- name: Infested Planet - Trickster's Arsenal
+  ids:
+  - steam:358020
+- name: Infested Planet
+  ids:
+  - steam:204530
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+- name: 'Warhammer: End Times - Vermintide Drachenfels'
+  ids:
+  - steam:453280
+- name: Marooners
+  ids:
+  - steam:423810
+- name: Samorost 3
+  ids:
+  - steam:421120
+- name: 'Warhammer: End Times - Vermintide'
+  ids:
+  - steam:235540
+- name: Caveblazers
+  ids:
+  - steam:452060
+- name: Verdun
+  ids:
+  - steam:242860

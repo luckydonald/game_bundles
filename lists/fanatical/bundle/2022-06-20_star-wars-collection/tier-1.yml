@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Star Wars Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11629/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11629/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11629/source.json
+games:
+- name: 'Star Wars: Jedi Knight: Jedi Academy'
+  ids:
+  - steam:6020
+- name: 'Star Wars: Knights of the Old Republic'
+  ids:
+  - steam:32370
+- name: 'Star Wars: The Force Unleashed: Ultimate Sith Edition'
+  ids:
+  - steam:32430
+- name: 'Star Wars®: Jedi Knight® II: Jedi Outcast™'
+  ids:
+  - steam:6030
+- name: STAR WARS™ Knights of the Old Republic™ II - The Sith Lords™
+  ids:
+  - steam:208580
+- name: 'Star Wars Jedi Knight: Mysteries of the Sith'
+  ids:
+  - steam:32390
+- name: Star Wars Starfighter™
+  ids:
+  - steam:32350
+- name: 'Star Wars Jedi Knight: Dark Forces II'
+  ids:
+  - steam:32380
+- name: Star Wars Republic Commando™
+  ids:
+  - steam:6000
+- name: 'Star Wars The Clone Wars: Republic Heroes'
+  ids:
+  - unresolved:source:isthereanydeal:11629:star-wars-the-clone-wars-republic-heroes
+- name: STAR WARS® THE FORCE UNLEASHED II
+  ids:
+  - steam:32500
+- name: 'Star Wars® Empire at War™: Gold Pack'
+  ids:
+  - steam:32470
+- name: STAR WARS™ Battlefront II (Classic, 2005)
+  ids:
+  - steam:6060
+- name: STAR WARS™ Dark Forces (Classic, 1995)
+  ids:
+  - unresolved:source:isthereanydeal:11629:star-wars-dark-forces-classic-1995

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 918 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11947/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11947/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11947/source.json
+games:
+- name: Fever Cabin
+  ids:
+  - steam:1226210
+- name: 'GUNPIG: Firepower For Hire'
+  ids:
+  - steam:1344980
+- name: 'Jack Hayes: The Lazarus Sign'
+  ids:
+  - steam:1295750
+- name: Thyra Adventure
+  ids:
+  - unresolved:source:isthereanydeal:11947:thyra-adventure
+- name: The Dawning Clocks Of Time
+  ids:
+  - unresolved:source:isthereanydeal:11947:the-dawning-clocks-of-time
+- name: amazin' George
+  ids:
+  - steam:1849870
+- name: amazin' George 2
+  ids:
+  - steam:1870210
+- name: EM
+  ids:
+  - steam:1851300
+- name: Trialtime Reborn - Full game
+  ids:
+  - steam:1840620

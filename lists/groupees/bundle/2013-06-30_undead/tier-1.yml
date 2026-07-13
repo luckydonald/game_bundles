@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of the Undead — Select Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/206/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/206/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/206/source.json
+games:
+- name: Night of the Living Dead Defense
+  ids:
+  - unresolved:source:isthereanydeal:206:night-of-the-living-dead-defense
+- name: Madballs BDI Evolution Skin Rollup
+  ids:
+  - steam:25762
+- name: Holy Avatar vs. Maidens of the Dead
+  ids:
+  - steam:261720
+- name: Dead Hungry Diner
+  ids:
+  - steam:211800
+- name: 'The Haunted: Hells Reach'
+  ids:
+  - steam:43190
+- name: Madballs Scorched Evolution Skin Rollup
+  ids:
+  - steam:25763
+- name: Zombusters
+  ids:
+  - steam:1272300
+- name: Madballs in Babo:Invasion
+  ids:
+  - steam:25700
+- name: 'Iron Grip: Marauders'
+  ids:
+  - unresolved:source:isthereanydeal:206:iron-grip-marauders
+- name: 'Zafehouse: Diaries'
+  ids:
+  - steam:249360
+- name: Zombies Ruined My Day
+  ids:
+  - steam:3191230
+- name: NecroVisioN Hardcore Edition
+  ids:
+  - unresolved:source:isthereanydeal:206:necrovision-hardcore-edition
+- name: Zombie Bowl-o-Rama
+  ids:
+  - steam:32160

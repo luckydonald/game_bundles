@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: The AttrAction Bundle — Tier 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3097/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3097/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3097/source.json
+games:
+- name: Wacky Wheels
+  ids:
+  - steam:358380
+- name: Math Rescue
+  ids:
+  - steam:358200
+- name: Death Rally
+  ids:
+  - steam:108700
+- name: Word Rescue
+  ids:
+  - steam:358340
+- name: 'Blake Stone: Planet Strike'
+  ids:
+  - steam:358310
+- name: 'Rise of the Triad: Dark War'
+  ids:
+  - steam:358410
+- name: Secret Agent
+  ids:
+  - steam:358350
+- name: Crystal Caves
+  ids:
+  - steam:358260
+- name: Mystic Towers
+  ids:
+  - steam:358220
+- name: Shadow Warrior Classic Redux
+  ids:
+  - steam:358400
+- name: Cosmo's Cosmic Adventure
+  ids:
+  - steam:358250
+- name: Realms of Chaos
+  ids:
+  - steam:358320
+- name: Paganitzu
+  ids:
+  - steam:358230
+- name: Hocus Pocus
+  ids:
+  - steam:358290
+- name: 'Terminal Velocity: Legacy'
+  ids:
+  - unresolved:source:isthereanydeal:3097:terminal-velocity-legacy

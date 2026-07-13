@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Protovision&#39;s C64 Mini/Maxi Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8969/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8969/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8969/source.json
+games:
+- name: Hockey Mania (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8969:hockey-mania-c64
+- name: Stroke World (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8969:stroke-world-c64
+- name: Bomb Mania
+  ids:
+  - unresolved:source:isthereanydeal:8969:bomb-mania
+- name: Tanks 3000
+  ids:
+  - unresolved:source:isthereanydeal:8969:tanks-3000

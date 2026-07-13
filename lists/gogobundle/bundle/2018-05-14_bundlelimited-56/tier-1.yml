@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #56 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6132/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6132/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6132/source.json
+games:
+- name: Formula X
+  ids:
+  - unresolved:source:isthereanydeal:6132:formula-x
+- name: Unearthing Colossal
+  ids:
+  - steam:428590
+- name: Masha Rescues Grandma
+  ids:
+  - unresolved:source:isthereanydeal:6132:masha-rescues-grandma
+- name: The Doorbreaker
+  ids:
+  - steam:699480
+- name: Abstract Arena - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6132:abstract-arena-original-soundtrack
+- name: Abstract Arena
+  ids:
+  - unresolved:source:isthereanydeal:6132:abstract-arena
+- name: Star Boss
+  ids:
+  - steam:519890
+- name: Mechatroniks Attack
+  ids:
+  - steam:546960
+- name: Noise
+  ids:
+  - steam:676760
+- name: Unearthing Colossal - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6132:unearthing-colossal-soundtrack
+- name: Distant Space 2
+  ids:
+  - steam:729460

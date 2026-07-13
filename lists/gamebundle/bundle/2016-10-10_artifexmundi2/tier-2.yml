@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi GameBundle 2 — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4176/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4176/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4176/source.json
+games:
+- name: 'Clockwork Tales: Of Glass and Ink'
+  ids:
+  - steam:284830
+- name: 'Time Mysteries 2: The Ancient Spectres'
+  ids:
+  - steam:313650
+- name: 'Time Mysteries: Inheritance - Remastered'
+  ids:
+  - steam:350010
+- name: 'Queen''s Quest: Tower of Darkness'
+  ids:
+  - steam:390200
+- name: 'The Secret Order 2: Masked Intent'
+  ids:
+  - steam:399890
+- name: 'Time Mysteries 3: The Final Enigma'
+  ids:
+  - steam:319320

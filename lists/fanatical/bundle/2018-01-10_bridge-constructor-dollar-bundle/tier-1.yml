@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Bridge Constructor Dollar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5793/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5793/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5793/source.json
+games:
+- name: Bridge Constructor Stunts
+  ids:
+  - steam:419080
+- name: "Bridge Constructor Trains \x96 Expansion Pack"
+  ids:
+  - steam:463810
+- name: Bridge Constructor
+  ids:
+  - steam:250460
+- name: Bridge Constructor Playground
+  ids:
+  - steam:279990
+- name: Bridge Constructor Medieval
+  ids:
+  - steam:319850

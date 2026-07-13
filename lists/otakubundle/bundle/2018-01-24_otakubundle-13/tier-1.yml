@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #13 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5836/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5836/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5836/source.json
+games:
+- name: Internal Light VR
+  ids:
+  - steam:765380
+- name: 'CYCOM: Cybernet Combat'
+  ids:
+  - unresolved:source:isthereanydeal:5836:cycom-cybernet-combat
+- name: Advanced Mechanized Spacecraft
+  ids:
+  - steam:763320
+- name: Verzaken!
+  ids:
+  - steam:739800
+- name: Flappy Arms
+  ids:
+  - steam:764110
+- name: Crystal Reign
+  ids:
+  - steam:662780
+- name: Rampage Ragdoll
+  ids:
+  - steam:775790
+- name: Cave Brawlers
+  ids:
+  - steam:731500
+- name: Noise
+  ids:
+  - steam:676760
+- name: Analemma
+  ids:
+  - steam:707920
