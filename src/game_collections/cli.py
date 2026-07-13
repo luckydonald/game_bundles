@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Annotated
 
@@ -25,6 +26,7 @@ from game_collections.schema import write_dailyindiegame_schema
 from game_collections.schema import write_greenmangaming_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.schema import write_isthereanydeal_schema
+from game_collections.schema import write_isthereanydeal_game_schema
 from game_collections.search import complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
     CrawledDigOffer,
@@ -64,7 +66,14 @@ from game_collections.sources.isthereanydeal.crawler import (
     crawl_itad_offers,
     write_itad_offer,
 )
+from game_collections.sources.isthereanydeal.game_alias_config import load_game_alias_config
 from game_collections.sources.isthereanydeal.provider_config import load_provider_config
+from game_collections.sources.isthereanydeal.resolver import (
+    ItadGameResolution,
+    resolve_game,
+    resolve_game_with_aliases,
+    write_itad_game_archive,
+)
 from game_collections.sources.isthereanydeal.shop_config import load_shop_config
 
 
@@ -132,6 +141,13 @@ def schema_command(
         Path,
         typer.Option("--isthereanydeal-output", help="Generated isthereanydeal.com archive JSON Schema path."),
     ] = Path("schemas/isthereanydeal-archive.schema.json"),
+    isthereanydeal_game_output: Annotated[
+        Path,
+        typer.Option(
+            "--isthereanydeal-game-output",
+            help="Generated isthereanydeal.com per-game archive JSON Schema path.",
+        ),
+    ] = Path("schemas/isthereanydeal-game-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
@@ -139,11 +155,13 @@ def schema_command(
     write_dailyindiegame_schema(dailyindiegame_output)
     write_greenmangaming_schema(greenmangaming_output)
     write_isthereanydeal_schema(isthereanydeal_output)
+    write_isthereanydeal_game_schema(isthereanydeal_game_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
     typer.echo(dailyindiegame_output)
     typer.echo(greenmangaming_output)
     typer.echo(isthereanydeal_output)
+    typer.echo(isthereanydeal_game_output)
 # end def schema_command
 
 
@@ -257,13 +275,40 @@ def complete_command(
             help="Selection mode: blank, missing, unresolved, or refetch_all.",
         ),
     ] = "blank",
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    game_alias_config_path: Annotated[Path, typer.Option("--game-alias-config")] = Path(
+        "config/isthereanydeal-game-aliases.yml"
+    ),
 ) -> None:
     """Complete storefront IDs in a draft YAML game list."""
     client = HumbleHttpClient()
+    itad_client: ItadHttpClient | None = None
     try:
         selected = selected_providers(providers, default="steam")
         selected_mode = completion_mode(mode)
         resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
+        itad_resolve = None
+        if "isthereanydeal" in selected:
+            itad_client = ItadHttpClient()
+            alias_groups = load_game_alias_config(game_alias_config_path)
+
+            def resolve_one(slug: str) -> ItadGameResolution:
+                assert itad_client is not None
+                resolution = resolve_game(
+                    slug,
+                    itad_client.fetch,
+                    itad_client.fetch_deals,
+                    itad_client.resolve_redirect,
+                    datetime.now(UTC),
+                )
+                write_itad_game_archive(resolution, archive_root)
+                return resolution
+            # end def resolve_one
+
+            def itad_resolve(slug: str) -> ItadGameResolution:
+                return resolve_game_with_aliases(slug, alias_groups, resolve_one)
+            # end def itad_resolve
+        # end if
         raw = yaml.safe_load(file.read_text(encoding="utf-8"))
         completed, unresolved = complete_game_list(
             raw,
@@ -271,6 +316,7 @@ def complete_command(
             resolver,
             _choose_search_candidate,
             selected_mode,
+            itad_resolve=itad_resolve,
         )
         file.write_text(
             yaml.safe_dump(completed, sort_keys=False, allow_unicode=True),
@@ -288,6 +334,9 @@ def complete_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        if itad_client is not None:
+            itad_client.close()
+        # end if
     # end try
 # end def complete_command
 

@@ -93,7 +93,7 @@ def test_crawl_discovers_and_normalizes_offer_from_list_and_detail() -> None:
     archive = report.offers[0].archive
     assert archive.provider_slug == "greenmangaming"
     assert archive.real_slug == "metroidvania-madness"
-    assert archive.tiers[0].items[0].ids == ["steam:1123050"]
+    assert archive.tiers[0].items[0].ids == ["steam:1123050", "isthereanydeal:grime"]
 # end def test_crawl_discovers_and_normalizes_offer_from_list_and_detail
 
 
@@ -114,7 +114,7 @@ def test_crawl_fully_parses_mature_bundles() -> None:
 
     assert report.errors == ()
     assert len(report.offers) == 1
-    assert report.offers[0].archive.tiers[0].items[0].ids == ["steam:1123050"]
+    assert report.offers[0].archive.tiers[0].items[0].ids == ["steam:1123050", "isthereanydeal:grime"]
 # end def test_crawl_fully_parses_mature_bundles
 
 

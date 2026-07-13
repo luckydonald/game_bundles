@@ -15,11 +15,18 @@ from game_collections.sources.humblebundle.resolver import (
     normalized_title,
     parse_store_identity,
 )
+from game_collections.sources.isthereanydeal.resolver import (
+    UNRESOLVED_PREFIX as ITAD_UNRESOLVED_PREFIX,
+    ItadGameResolution,
+    resolve_isthereanydeal_markers,
+)
 
 
-ProviderSelection = StoreName | Literal["all"]
+Provider = StoreName | Literal["isthereanydeal"]
+ProviderSelection = Provider | Literal["all"]
 CompletionMode = Literal["blank", "missing", "unresolved", "refetch_all"]
 SearchChooser = Callable[[str, StoreName, list[StoreCandidate]], str | None]
+ItadResolve = Callable[[str], ItadGameResolution]
 COMPLETION_MODES: tuple[CompletionMode, ...] = (
     "blank",
     "missing",
@@ -28,8 +35,13 @@ COMPLETION_MODES: tuple[CompletionMode, ...] = (
 )
 
 
-def selected_providers(values: str | list[str] | None, *, default: str) -> tuple[StoreName, ...]:
-    """Validate repeated/comma-separated providers and expand ``all``."""
+def selected_providers(values: str | list[str] | None, *, default: str) -> tuple[Provider, ...]:
+    """Validate repeated/comma-separated providers and expand ``all``.
+
+    ``"isthereanydeal"`` is a valid provider (the ITAD per-game detail-page
+    solver, see `resolve_isthereanydeal_markers`) but is never included by
+    ``"all"``, which stays storefronts-only.
+    """
     selections = [values] if isinstance(values, str) else (values or [default])
     requested = [part.strip() for value in selections for part in value.split(",")]
     if any(not value for value in requested):
@@ -38,12 +50,12 @@ def selected_providers(values: str | list[str] | None, *, default: str) -> tuple
     if "all" in requested:
         return ALLOWED_STORES
     # end if
-    invalid = [value for value in requested if value not in ALLOWED_STORES]
+    invalid = [value for value in requested if value not in ALLOWED_STORES and value != "isthereanydeal"]
     if invalid:
-        choices = ", ".join(("all", *ALLOWED_STORES))
+        choices = ", ".join(("all", *ALLOWED_STORES, "isthereanydeal"))
         raise ValueError(f"unknown provider {invalid[0]!r}; choose one of: {choices}")
     # end if
-    return tuple(dict.fromkeys(cast(list[StoreName], requested)))
+    return tuple(dict.fromkeys(cast(list[Provider], requested)))
 # end def selected_providers
 
 
@@ -114,12 +126,22 @@ def resolve_title(
 
 def complete_game_list(
     raw: object,
-    providers: tuple[StoreName, ...],
+    providers: tuple[Provider, ...],
     resolver: StorefrontResolver,
     choose: SearchChooser,
     mode: CompletionMode = "blank",
+    itad_resolve: ItadResolve | None = None,
 ) -> tuple[dict[str, Any], list[str]]:
-    """Fill missing game IDs in a draft list and return unresolved names."""
+    """Fill missing game IDs in a draft list and return unresolved names.
+
+    ``"isthereanydeal"`` in ``providers`` resolves
+    ``unresolved:source:isthereanydeal:*`` markers via `itad_resolve` (see
+    `sources.isthereanydeal.resolver.resolve_isthereanydeal_markers`)
+    instead of the title-search flow every other provider uses.
+    """
+    if "isthereanydeal" in providers and itad_resolve is None:
+        raise ValueError("provider 'isthereanydeal' requires itad_resolve")
+    # end if
     if not isinstance(raw, Mapping):
         raise ValueError("YAML list must contain an object")
     # end if
@@ -150,19 +172,32 @@ def complete_game_list(
         resolved_any = False
         blank_eligible = not any(_is_proper_id(value) for value in current)
         for provider in providers:
+            if provider == "isthereanydeal":
+                if not any(value.startswith(ITAD_UNRESOLVED_PREFIX) for value in current):
+                    continue
+                # end if
+                searched = True
+                assert itad_resolve is not None  # checked up front
+                current = resolve_isthereanydeal_markers(current, itad_resolve)
+                if any(value.startswith(ITAD_UNRESOLVED_PREFIX) for value in current):
+                    failed = True
+                # end if
+                continue
+            # end if
+            store_provider = cast(StoreName, provider)
             should_search = blank_eligible if mode == "blank" else _should_search(
-                current, provider, mode
+                current, store_provider, mode
             )
             if not should_search:
                 continue
             # end if
             searched = True
-            prefix = _store_unresolved_prefix(provider)
+            prefix = _store_unresolved_prefix(store_provider)
             current = [value for value in current if not value.startswith(prefix)]
             if mode == "refetch_all":
-                current = [value for value in current if not value.startswith(f"{provider}:")]
+                current = [value for value in current if not value.startswith(f"{store_provider}:")]
             # end if
-            found = resolve_title(name, (provider,), resolver, choose)
+            found = resolve_title(name, (store_provider,), resolver, choose)
             if found:
                 current.extend(found)
                 resolved_any = True
