@@ -12,6 +12,12 @@ import typer
 import yaml
 
 from game_collections.lists import ListLoadError, discover_game_lists
+from game_collections.migrate_tiers import (
+    TierMigrationError,
+    apply_migration_step,
+    plan_migration,
+    step_would_change,
+)
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
     SteamMatchMode,
@@ -120,6 +126,50 @@ def list_command(
         typer.echo(f"{game_list.id}\t{game_list.data.name}")
     # end for
 # end def list_command
+
+
+@app.command("migrate-tiers")
+def migrate_tiers_command(
+    path: Annotated[Path | None, typer.Option("--lists-root")] = None,
+    apply: Annotated[bool, typer.Option("--apply", help="Write changes; default is dry-run.")] = False,
+) -> None:
+    """Rename tier-shaped bundle lists to `bundle.yml`/`tier-N.yml` and set `tier`."""
+    lists_root = _lists_root(path)
+    repository_root = Path.cwd().resolve()
+    try:
+        steps = plan_migration(lists_root)
+    except (OSError, ValueError, TierMigrationError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+
+    changed = 0
+    for step in steps:
+        try:
+            if not step_would_change(step, lists_root):
+                continue
+            # end if
+            changed += 1
+            relative_old = step.old_path.relative_to(lists_root)
+            relative_new = step.new_path.relative_to(lists_root)
+            tier_note = f"tier={step.tier}" if step.tier is not None else "tier=(none)"
+            if apply:
+                apply_migration_step(step, lists_root, repository_root)
+                typer.echo(f"migrated: {relative_old} -> {relative_new} ({tier_note})")
+            else:
+                typer.echo(f"would migrate: {relative_old} -> {relative_new} ({tier_note})")
+            # end if
+        except (OSError, ValueError, ListLoadError, TierMigrationError) as error:
+            typer.echo(str(error), err=True)
+            raise typer.Exit(1) from error
+        # end try
+    # end for
+    if apply:
+        typer.echo(f"Migrated {changed} list(s).")
+    else:
+        typer.echo(f"Dry run only: {changed} list(s) would change. Pass --apply to write.")
+    # end if
+# end def migrate_tiers_command
 
 
 @app.command("schema")
