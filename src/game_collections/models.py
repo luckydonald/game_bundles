@@ -104,6 +104,7 @@ class GameList(StrictModel):
     schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     name: NonEmptyString
     tier: Annotated[int, Field(ge=1)] | None = None
+    pick_quota: Annotated[int, Field(ge=1)] | None = None
     references: list[Reference] = Field(default_factory=list)
     games: list[Game] = Field(min_length=1)
 
@@ -117,6 +118,10 @@ class GameList(StrictModel):
         identities = [identifier.compact() for game in self.games for identifier in game.qualified_ids]
         if len(identities) != len(set(identities)):
             raise ValueError("list contains duplicate qualified game IDs")
+        # end if
+
+        if self.pick_quota is not None and self.pick_quota > len(self.games):
+            raise ValueError(f"pick_quota {self.pick_quota} exceeds the list's {len(self.games)} game(s)")
         # end if
         return self
     # end def validate_games
