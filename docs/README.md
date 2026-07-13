@@ -2,7 +2,11 @@
 
 Game Collections is a Python resource for maintaining portable lists of games and synchronizing fully owned lists into launcher libraries. The initial launcher is Steam; the list format and synchronization contracts are designed for later GOG, Epic, or other integrations.
 
-The original use case is keeping bundles such as **The Orange Box** together in a Steam library.
+The original use case is keeping bundles such as **Humble Bundles** together in a Steam library.
+
+## Install
+
+Python 3.14 or newer and [uv](https://docs.astral.sh/uv/) are required.
 
 ## List format
 
@@ -24,14 +28,13 @@ games:
 
 Every file is validated by strict Pydantic models. The committed [JSON Schema](schemas/game-list.schema.json) is generated from those models and supplies IDE completion and diagnostics. See [`lists/README.md`](lists/README.md) for contribution details.
 
-## Setup
 
-Python 3.14 or newer and [uv](https://docs.astral.sh/uv/) are required.
+## Dev Setup
 
 ```console
 uv sync --extra test
 uv run game-collections validate
-uv run pytest
+uv run pytes
 ```
 
 Common commands:
@@ -180,7 +183,7 @@ Restoration requires Steam to be stopped and the user to type `RESTORE`.
 
 Steam-visible collection names beginning with `🗃️ ` are reserved for Game Collections and form its managed namespace. Each sync reconciles that namespace to the current `--mode`/`--tiers` selection: selected collections are created or updated, while stale, superseded, no-longer-matching, and orphaned managed collections are staged for deletion. The collection used by `--source collection` is always protected. Retained collections preserve manually added games, unrelated non-prefixed collections and opaque namespace values remain untouched, and dynamic managed collections, same-name collisions, and unsafe IDs fail closed. Every deletion uses the same inspectable candidates, backups, Steam-stopped check, typed confirmation, atomic replacement, verification, rollback, and restore path as an update.
 
-## Architecture
+# Architecture
 
 The core loads qualified IDs such as `steam:440` without launcher knowledge. Launcher adapters separately implement ownership evaluation, semantic planning, staging, and guarded application. Steam-specific models and IO remain under `game_collections.launchers.steam`; adding GOG or Epic should implement the launcher contracts without changing list parsing.
 
