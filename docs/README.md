@@ -47,11 +47,14 @@ uv run game-collections scrape dailyindiegame
 uv run game-collections scrape greenmangaming
 uv run game-collections eligible steam
 uv run game-collections sync steam
+uv run game-collections sync steam --log-skips
 uv run game-collections sync steam --apply
 uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestamp>
 ```
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
+
+`eligible steam` and `sync steam` print eligible lists and the planned-change count by default. Pass `--log-skips` to also print every skipped list with its missing or unsupported IDs.
 
 `eligible steam` and `sync steam` also accept `--source installed` to skip the Web API and `STEAM_WEB_API_KEY` entirely, approximating ownership from locally installed games (`steamapps/libraryfolders.vdf` + `appmanifest_*.acf`). This only sees what's currently installed, not everything the account owns, so owned-but-uninstalled games are reported as missing; there is no local file that exposes the full owned/licensed games list, and `STEAM_WEB_API_KEY` itself can never be read from local Steam files — it's an account secret from Valve's web dev portal.
 
