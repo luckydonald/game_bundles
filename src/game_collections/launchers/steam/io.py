@@ -6,17 +6,18 @@ import base64
 import hashlib
 import json
 import os
+import re
 import stat
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Self
+from typing import Self
 
 from pydantic import Field, model_validator
 
-from game_collections.launchers.base import SyncPlan
+from game_collections.launchers.base import PlannedCollectionChange, SyncPlan
 from game_collections.launchers.steam.discovery import account_id_from_steam_id, parse_login_users
 from game_collections.launchers.steam.models import (
     CloudStorageEntry,
@@ -35,6 +36,7 @@ MAX_STEAM_FILE_SIZE = 4 * 1024 * 1024
 NAMESPACE_NAME = "cloud-storage-namespace-1.json"
 MODIFIED_NAME = "cloud-storage-namespace-1.modified.json"
 MANIFEST_NAME = "manifest.json"
+STEAM_USER_COLLECTION_ID_PATTERN = re.compile(r"^uc-[A-Za-z0-9*+_-]+$")
 MANUAL_COLLECTION_HINT = (
     "To create it in Steam: open your Library, select all games (click the first, "
     "scroll to the bottom, shift-click the last), then click and hold any highlighted "
@@ -89,7 +91,7 @@ class StagingManifest(StrictModel):
     account_id: int
     created_at: str
     replacements: list[ReplacementRecord]
-    changes: list[dict[str, Any]]
+    changes: list[PlannedCollectionChange]
     status: str = "staged"
 
     @model_validator(mode="after")
@@ -196,15 +198,7 @@ class SteamFileGateway:
 
     def read_collection(self, name: str) -> SteamCollectionPayload:
         """Read a single named local Steam collection (case-insensitive) for use as an ownership source."""
-        snapshot = self.load_snapshot()
-        by_name: dict[str, SteamCollectionPayload] = {}
-        for key, entry in snapshot.namespace.root:
-            if not key.startswith("user-collections.") or entry.is_deleted:
-                continue
-            # end if
-            payload = SteamCollectionPayload.from_entry(entry)
-            by_name[payload.name.casefold()] = payload
-        # end for
+        by_name = {payload.name.casefold(): payload for payload in self.read_collections()}
         match = by_name.get(name.casefold())
         if match is None:
             available = ", ".join(sorted(payload.name for payload in by_name.values())) or "(none found locally)"
@@ -221,6 +215,19 @@ class SteamFileGateway:
         # end if
         return match
     # end def read_collection
+
+    def read_collections(self) -> tuple[SteamCollectionPayload, ...]:
+        """Read every active Steam collection through the validated gateway snapshot."""
+        snapshot = self.load_snapshot()
+        payloads: list[SteamCollectionPayload] = []
+        for key, entry in snapshot.namespace.root:
+            if not key.startswith("user-collections.") or entry.is_deleted:
+                continue
+            # end if
+            payloads.append(SteamCollectionPayload.from_entry(entry))
+        # end for
+        return tuple(payloads)
+    # end def read_collections
 
     def stage(self, plan: SyncPlan, output_root: Path) -> Path:
         """Write candidates and backups outside Steam without modifying Steam."""
@@ -268,7 +275,7 @@ class SteamFileGateway:
             account_id=self.account_id,
             created_at=datetime.now(UTC).isoformat(),
             replacements=replacements,
-            changes=[change.model_dump(mode="json") for change in plan.changes],
+            changes=plan.changes,
         )
         self._write_new_staged_file(
             staged_dir / MANIFEST_NAME,
@@ -438,10 +445,50 @@ class SteamFileGateway:
         # end if
         modified = list(snapshot.modified.root)
         timestamp = max(int(time.time()), max(entry.timestamp for _key, entry in entries) + 1)
+        targets = [change.target_id for change in plan.changes]
+        if len(targets) != len(set(targets)):
+            raise SteamIoError("Steam sync plan contains duplicate collection targets")
+        # end if
         for change in plan.changes:
-            collection_id = steam_collection_id(change.list_id)
+            collection_id = change.target_id
+            if not STEAM_USER_COLLECTION_ID_PATTERN.fullmatch(collection_id):
+                raise SteamIoError(f"Steam sync plan has an unsafe collection target: {collection_id!r}")
+            # end if
             key = f"user-collections.{collection_id}"
             existing = payloads.get(collection_id)
+            if change.action == "delete":
+                if existing is None:
+                    continue
+                # end if
+                if existing.name != change.name:
+                    raise SteamIoError(
+                        f"managed Steam collection changed before deletion: {change.name!r}"
+                    )
+                # end if
+                if existing.filterSpec is not None:
+                    raise SteamIoError(f"managed Steam collection became dynamic: {change.name!r}")
+                # end if
+                entry = CloudStorageEntry(
+                    key=key,
+                    timestamp=timestamp,
+                    is_deleted=True,
+                    conflictResolutionMethod="custom",
+                    strMethodId="union-collections",
+                )
+                timestamp += 1
+                index = next(index for index, pair in enumerate(entries) if pair[0] == key)
+                entries[index] = (key, entry)
+                entry_map[key] = entry
+                del payloads[collection_id]
+                names.pop(existing.name.casefold(), None)
+                if key not in modified:
+                    modified.append(key)
+                # end if
+                continue
+            # end if
+            if change.list_id is None or collection_id != steam_collection_id(change.list_id):
+                raise SteamIoError(f"Steam sync plan has an invalid collection target: {collection_id!r}")
+            # end if
             collision = names.get(change.name.casefold())
             if collision is not None and collision != collection_id:
                 raise SteamIoError(f"Steam collection name already exists: {change.name!r}")
@@ -473,6 +520,11 @@ class SteamFileGateway:
                 entries.append((key, entry))
             # end if
             entry_map[key] = entry
+            if existing is not None:
+                names.pop(existing.name.casefold(), None)
+            # end if
+            payloads[collection_id] = payload
+            names[payload.name.casefold()] = payload.id
             if key not in modified:
                 modified.append(key)
             # end if
@@ -702,6 +754,11 @@ class SteamFileGateway:
                     f"  backup: {record.backup_name}",
                 ]
             )
+        # end for
+        lines.extend(["", "Planned collection operations:"])
+        for change in manifest.changes:
+            identifier = change.list_id or change.target_id
+            lines.append(f"  {change.action}: {identifier} ({change.name})")
         # end for
         lines.extend(
             [
