@@ -684,3 +684,60 @@ Bronze/Silver/Gold header text is available as `tiers[i].note` (if non-null, oth
 
 ❯ Add `game-collections scrape isthereanydeal --tab=live` to the weekly crawl job.
 
+❯ /plan for the unresolved solver, add a "parser" for `unresolved:source:isthereanydeal:<bundle-id-which-we-can-ignore>:<game-slug>`, which loads `https://isthereanydeal.com/game/<game-slug>/info/`. Again, this has `var page = ["Game", {` metadata embedded. This should be archived as ususal at `/archives/isthereanydeal/game/<game-slug>/{source,metadata}.json`. You can read the Steam game ID directly, as it's `detail.appid` (type `int`).
+
+Also fix the `istheranydeal` bundle parser to add `isthereanydeal:<game-slug>` to the tier list game `ids` array, this will make it probably easier in the long run. Obviously the solver should add both steam and the new isthereanydeal id, too, and remove the `unresolved:**` in question.
+
+❯ Task Notification:
+> - Task `a964b4bf7eb1fe40c` <kbd>completed</kbd>
+> - Tool `toolu_01BpD38M7CyA8pgcUiTZytK8`
+> - > Agent "Explore isthereanydeal + solver code" finished
+> - [Query (`2564` chars, `2.51 KB`)](output/agents/006.a964b4bf7eb1fe40c/prompt.md)
+> - [Answer (`11560` chars, `11.3 KB`)](output/agents/006.a964b4bf7eb1fe40c/result.md)
+> - [Raw log (`308159` chars, `301 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/5277c033-a084-4c25-b5b6-197c6dd0a893/tasks/a964b4bf7eb1fe40c.output)
+> - `25` tools, `70959` tokens, `2.2496 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. New solver's CLI shape: how should it be invoked?
+>> 2. Should the bundle-parser fix (always adding isthereanydeal:<slug>) be backfilled onto the ~4500 already-archived isthereanydeal-sourced list files, or only apply going forward (new/refreshed crawls)?
+>> 3. When the game detail page has no Steam appid (detail.appid is null, e.g. Epic/GOG-only titles), what should the solver do?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **CLI shape** (1/3) <kbd>Single Select</kbd><br>
+>> New solver's CLI shape: how should it be invoked?
+> - [ ] 1\. New batch verb, whole lists/ tree
+>   - _New top-level command e.g. `game-collections resolve isthereanydeal` that walks lists_root, finds every unresolved:source:isthereanydeal:* marker across all files, and fixes them in place. Fits the ~4500-file backlog, mirrors scrape command's resumable/cached style._
+> - [ ] 2\. Extend `complete` command
+>   - _Add isthereanydeal as a --provider choice to the existing `complete FILE` verb, operating one draft file at a time like today. Simpler CLI surface, but awkward batch usage for thousands of existing files (would need external find+xargs)._
+> - [x] 3\. _Type something:_
+>   - > New batch command, `complete-all`. But then `--provider=isthereanydeal` does not sound too bad. Together with `--mode=unresolved` we should have what we need, right?
+>
+>> **Backfill scope** (2/3) <kbd>Single Select</kbd><br>
+>> Should the bundle-parser fix (always adding isthereanydeal:<slug>) be backfilled onto the ~4500 already-archived isthereanydeal-sourced list files, or only apply going forward (new/refreshed crawls)?
+> - [ ] 1\. Backfill existing files too
+>   - _Run the new solver once (or a small script) across existing lists after the parser fix, adding isthereanydeal:<slug> to already-written tier files as well as fixing unresolved:source:isthereanydeal:* entries. Larger diff but fully consistent immediately._
+> - [ ] 2\. Forward-only
+>   - _Only new/refreshed isthereanydeal crawls get isthereanydeal:<slug> ids from the parser fix. Existing already-archived tier files are untouched unless individually refreshed. Smaller, more focused change._
+> - [x] 3\. _Type something:_
+>   - > I would have gone with forward-only, or just delete and re-crawl all of those files. But what are the options for having it be backfilled?
+>
+>> **No-appid case** (3/3) <kbd>Single Select</kbd><br>
+>> When the game detail page has no Steam appid (detail.appid is null, e.g. Epic/GOG-only titles), what should the solver do?
+> - [ ] 1\. Leave unresolved:source:* marker, add isthereanydeal:<slug> only (Recommended)
+>   - _Add the isthereanydeal:<slug> id (since it's a valid id regardless), but keep the unresolved:source:isthereanydeal:... marker in place since no Steam id could be found. Entry stays flagged for other resolution paths._
+> - [ ] 2\. Leave entry entirely untouched
+>   - _Skip the entry completely if no appid is found - no isthereanydeal:<slug> id added either, no changes made._
+> - [x] 3\. _Type something:_
+>   - > Leave unresolved:source:* marker, add isthereanydeal:<slug> only (Recommended), but look into the data for those other stores. I checked, the `/games/{slug}/info/` web page makes a post request to `https://isthereanydeal.com/api/game/info/`, with (for `no-mans-sky`) `{gid: "018d937f-15f9-7056-8edf-2e8fa4b8f357"}`, which is `game.id` of the `var page = …` thingo. The result of both should be dumped to disk, btw.
+Anyway, in that ajax, there's `deals` with objects telling how much it costs in which shop - which contains the `deals[i].shop` id (see `config/isthereanydeal-shops.yml`), and `.url` which is currently of structure `https://itad.link/018d9386-a364-7191-a460-0483e895c695/`, but redirects to the shop immediatly. When dumping, add `url_resolved` with the url after the redirect. (here: `https://www.fanatical.com/en/game/no-man-s-sky`). The GOG one (`https://itad.link/018d9386-a364-7191-a460-0483e5a8dd70/`) correctly goes to `https://www.gog.com/en/game/no_mans_sky`. (btw, use fallout NV or MLP games for examples if they ever end up in documentations)
+>
+> </details>
+>
+
+❯ Re: _use Fallout New Vegas or MLP game slugs as the worked examples, not real-looking placeholders like `no-mans-sky` or `wildstar`. Use real placeholder, but of those games. The current MLP games are (itad): `my-little-pony-a-zephyr-heights-mystery`, `my-little-pony-a-maretime-bay-adventure`, `pinball-fx-my-little-pony-pinball`, `my-little-pony-pinball` (the two last ones are actually the same, one steam dlc, one epic store dlc, ooops, so much for always the same, lol. Add a config file to patch them together for our crawling purposes and all that)
+
