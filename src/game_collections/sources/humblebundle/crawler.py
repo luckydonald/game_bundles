@@ -21,7 +21,7 @@ from game_collections.sources.common import (
     load_cached_archive,
     render_game_list_yaml,
 )
-from game_collections.sources.humblebundle.models import HumbleArchive
+from game_collections.sources.humblebundle.models import HumbleArchive, HumbleTier
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
     parse_bundle_index,
@@ -263,7 +263,8 @@ def write_humble_offer(
     atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
     atomic_write(source_path, dump_json(offer.source))
     written.extend((metadata_path, source_path))
-    for index, tier in enumerate(archive.tiers):
+    tiers_with_games: list[tuple[HumbleTier, list[Game]]] = []
+    for tier in archive.tiers:
         games: list[Game] = []
         seen_ids: set[str] = set()
         for item in tier.items:
@@ -273,19 +274,26 @@ def write_humble_offer(
             games.append(Game(name=item.title, ids=item.resolution.ids))
             seen_ids.update(item.resolution.ids)
         # end for
-        if not games:
-            continue
+        if games:
+            tiers_with_games.append((tier, games))
         # end if
+    # end for
+    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
         name = archive.name if archive.kind == "choice" else f"{archive.name} — {tier.name}"
         if archive.kind == "choice":
             path = list_directory / f"{key}.yml"
+            list_tier = None
+        elif len(tiers_with_games) == 1:
+            path = list_directory / "bundle.yml"
+            list_tier = None
         else:
-            prefix = "entire-" if index == 0 else ""
-            path = list_directory / f"{prefix}{tier.item_count}-item-bundle.yml"
+            path = list_directory / f"tier-{rank}.yml"
+            list_tier = rank
         # end if
         game_list = GameList(
             schema=1,
             name=name,
+            tier=list_tier,
             references=[
                 Reference(name="Humble Bundle offer", url=archive.url),
                 Reference(
