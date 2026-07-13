@@ -8,7 +8,7 @@ from typing import Annotated, Literal, Self
 from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 
-LIST_ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9._/-]*[a-z0-9]$")
+LIST_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._/%&'()+/-]*[A-Za-z0-9]$")
 PROVIDER_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
 
 NonEmptyString = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
