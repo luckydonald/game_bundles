@@ -20,72 +20,120 @@ Tab/Shift+Tab or the mouse. The user wants natural arrow-key flow between the tw
 Confirmed with user: Up-from-tree always focuses the *first* filter widget (no
 last-focused tracking), and `Select` Up/Down are left alone.
 
+User feedback: no `_`-prefixed "private" classes/functions for this new code —
+put it in its own module instead of piling more names into `tui.py`.
+
 ## Approach
 
-Add a small mixin plus three thin widget subclasses in `tui.py`, and swap the
-plain `Input`/`Select`/`Checkbox` constructions in `_mount_picker` for them. Wire
-one new binding into the existing `_BundleTree`.
+New module `src/game_collections/apply/filter_widgets.py` holding a mixin plus
+three thin widget subclasses (all public names). `tui.py` imports them and
+swaps the plain `Input`/`Select`/`Checkbox` constructions in `_mount_picker`
+for them. One new binding is wired into the existing `_BundleTree`.
 
-### 1. `_FilterFieldBehavior` mixin (new, in `tui.py`)
+### 1. `filter_widgets.py` — new module
 
 ```python
-class _FilterFieldBehavior:
+"""Filter-row widgets that hand off Left/Right/Down navigation to their siblings and the tree."""
+
+from __future__ import annotations
+
+from textual.binding import Binding
+from textual.widgets import Checkbox, Input, Select, Tree
+
+
+class FilterFieldBehavior:
     """Shared left/right/down navigation for widgets living in the `#filters` row."""
 
-    def _focus_adjacent_filter(self, delta: int) -> None:
+    def focus_adjacent_filter(self, delta: int) -> None:
         siblings = list(self.screen.query_one("#filters").children)
         index = siblings.index(self)
         target = index + delta
         if 0 <= target < len(siblings):
             siblings[target].focus()
         # end if
-    # end def _focus_adjacent_filter
+    # end def focus_adjacent_filter
 
     def action_focus_prev_filter(self) -> None:
-        self._focus_adjacent_filter(-1)
+        self.focus_adjacent_filter(-1)
     # end def action_focus_prev_filter
 
     def action_focus_next_filter(self) -> None:
-        self._focus_adjacent_filter(1)
+        self.focus_adjacent_filter(1)
     # end def action_focus_next_filter
 
     def action_focus_tree(self) -> None:
         self.screen.query_one("#rows-tree", Tree).focus()
     # end def action_focus_tree
 
-# end class _FilterFieldBehavior
+# end class FilterFieldBehavior
+
+
+class FilterInput(FilterFieldBehavior, Input):
+    """Input that hands Left/Right at the text boundary to the neighboring filter, Down to the tree."""
+
+    BINDINGS = [Binding("down", "focus_tree", show=False)]
+
+    def action_cursor_left(self) -> None:
+        if self.cursor_position == 0:
+            self.action_focus_prev_filter()
+        else:
+            super().action_cursor_left()
+        # end if
+    # end def action_cursor_left
+
+    def action_cursor_right(self) -> None:
+        if self.cursor_position == len(self.value):
+            self.action_focus_next_filter()
+        else:
+            super().action_cursor_right()
+        # end if
+    # end def action_cursor_right
+
+# end class FilterInput
+
+
+class FilterSelect(FilterFieldBehavior, Select):
+    """Select with no native Left/Right meaning, so those always move to the neighboring filter."""
+
+    BINDINGS = [
+        Binding("left", "focus_prev_filter", show=False),
+        Binding("right", "focus_next_filter", show=False),
+    ]
+
+# end class FilterSelect
+
+
+class FilterCheckbox(FilterFieldBehavior, Checkbox):
+    """Checkbox with no native Left/Right/Down meaning, so all three navigate the filter row/tree."""
+
+    BINDINGS = [
+        Binding("left", "focus_prev_filter", show=False),
+        Binding("right", "focus_next_filter", show=False),
+        Binding("down", "focus_tree", show=False),
+    ]
+
+# end class FilterCheckbox
 ```
 
-### 2. Three subclasses, each combining the mixin with the stock widget
+Notes:
+- `FilterInput` overrides `action_cursor_left`/`action_cursor_right` — the exact
+  action names `Input`'s own bindings already point at — so its inherited
+  home/end/word-move/etc. bindings keep working unchanged; only boundary
+  behavior changes.
+- `FilterSelect`'s Up/Down stay bound (by `Select` itself) to open the dropdown
+  overlay; while that overlay is open, focus lives on the internal
+  `SelectOverlay`, not on this widget, so the new bindings simply don't fire
+  in that state — no extra guarding needed.
 
-- `_FilterInput(_FilterFieldBehavior, Input)`: override `action_cursor_left`/
-  `action_cursor_right` (the exact action names `Input`'s own bindings already
-  point at) to check `self.cursor_position` against `0` / `len(self.value)`; at
-  the boundary call `action_focus_prev_filter()`/`action_focus_next_filter()`
-  instead of `super().action_cursor_left()`/`super().action_cursor_right()`.
-  Add `BINDINGS = [Binding("down", "focus_tree", show=False)]` (Textual merges
-  a subclass's `BINDINGS` with the inherited ones, so `Input`'s own left/right/
-  home/end/etc. bindings keep working).
+### 2. Wire into `tui.py`
 
-- `_FilterSelect(_FilterFieldBehavior, Select)`: `Select` has no native
-  left/right meaning, so just bind them directly:
-  `BINDINGS = [Binding("left", "focus_prev_filter", show=False), Binding("right", "focus_next_filter", show=False)]`.
-  Leave Up/Down alone — they're already bound by `Select` itself to open the
-  dropdown (`show_overlay`), and while the overlay is open focus lives on the
-  internal `SelectOverlay`, not on this widget, so these bindings simply don't
-  fire in that state.
+- Import `FilterInput`, `FilterSelect`, `FilterCheckbox` from
+  `game_collections.apply.filter_widgets`.
+- In `_mount_picker`, swap the four `Input(...)` calls for `FilterInput(...)`,
+  the two `Select(...)` calls for `FilterSelect(...)`, and the `Checkbox(...)`
+  call for `FilterCheckbox(...)` — same ids/args, just the class changes.
 
-- `_FilterCheckbox(_FilterFieldBehavior, Checkbox)`: `Checkbox`/`ToggleButton`
-  has no native left/right/down meaning, so bind all three:
-  `BINDINGS = [Binding("left", "focus_prev_filter", show=False), Binding("right", "focus_next_filter", show=False), Binding("down", "focus_tree", show=False)]`.
-
-### 3. Wire into `_mount_picker`
-
-Swap the four `Input(...)` calls for `_FilterInput(...)`, the two `Select(...)`
-calls for `_FilterSelect(...)`, and the `Checkbox(...)` call for
-`_FilterCheckbox(...)` — same ids/args, just the class changes.
-
-### 4. Tree: Up at the top row escapes to the filters
+### 3. Tree: Up at the top row escapes to the filters
 
 In `_BundleTree` (`tui.py:88`), add:
 
@@ -106,8 +154,10 @@ to this action name.
 
 ## Files touched
 
-- `src/game_collections/apply/tui.py` — add the mixin + 3 subclasses, tree
-  override, and swap widget classes in `_mount_picker`.
+- `src/game_collections/apply/filter_widgets.py` — new module: mixin + 3
+  filter-row widget subclasses.
+- `src/game_collections/apply/tui.py` — import the new widgets, swap them into
+  `_mount_picker`, add the `action_cursor_up` override to `_BundleTree`.
 
 ## Verification
 

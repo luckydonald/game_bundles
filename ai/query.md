@@ -1244,3 +1244,6 @@ Down on those would move back to the tree view.
 >
 > </details>
 >
+
+❯ Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense.
+
