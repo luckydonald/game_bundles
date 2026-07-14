@@ -1245,6 +1245,8 @@ Down on those would move back to the tree view.
 > </details>
 >
 
+❯ /plan The tree view should gain proper checkboxes. Both visually, but more importantly regarding mouse clicks. Less importantly, it doesn't need to be part of the highlighted text. The keyboard navigation is already good and shall stay as is.
+
 ❯ Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense.
 
 ❯ Rebase/restructure onto the changes happened on `mane` in the meantime.
