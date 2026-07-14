@@ -3,6 +3,8 @@ from __future__ import annotations
 from game_collections.sources.storefronts import (
     is_known_store_url,
     match_store,
+    parse_store_identity,
+    product_url,
     qualified_ids_from_urls,
 )
 
@@ -16,6 +18,27 @@ def test_match_store_recognizes_both_epic_hosts() -> None:
 def test_match_store_unknown_host_returns_none() -> None:
     assert match_store("https://example.com/app/440") is None
 # end def test_match_store_unknown_host_returns_none
+
+
+def test_product_url_round_trips_through_parse_store_identity() -> None:
+    for provider, value in [
+        ("steam", "440"),
+        ("gog", "some-slug"),
+        ("epic", "some-slug"),
+        ("ubisoft", "some-slug"),
+        ("humble", "some-slug"),
+    ]:
+        url = product_url(provider, value)
+        assert url is not None
+        assert parse_store_identity(provider, url) == f"{provider}:{value}"
+    # end for
+# end def test_product_url_round_trips_through_parse_store_identity
+
+
+def test_product_url_unknown_provider_returns_none() -> None:
+    assert product_url("unresolved", "whatever") is None
+    assert product_url("isthereanydeal", "whatever") is None
+# end def test_product_url_unknown_provider_returns_none
 
 
 def test_qualified_ids_from_urls_resolves_known_stores_and_skips_unknown() -> None:

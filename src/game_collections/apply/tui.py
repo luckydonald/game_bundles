@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import os
+import subprocess
+import sys
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -9,14 +12,29 @@ from pathlib import Path
 from typing import Literal, cast
 
 from rich.markup import escape
+from rich.text import Text
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
 from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar, Select, Static, Tree
+from textual.widgets.tree import TreeNode
 
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.lists import LoadedGameList, discover_game_lists
+from game_collections.sources.storefronts import product_url
+
+
+def _open_url(url: str) -> None:
+    """Hand a URL (or a custom URI scheme like ``steam://...``) off to the OS's own handler."""
+    if sys.platform == "darwin":
+        subprocess.Popen(["open", url])
+    elif sys.platform.startswith("win"):
+        os.startfile(url)  # type: ignore[attr-defined]
+    else:
+        subprocess.Popen(["xdg-open", url])
+    # end if
+# end def _open_url
 
 
 def _row_label(bundle: BundleMetadata) -> str:
@@ -55,29 +73,33 @@ class _Filters:
 
 @dataclass(frozen=True, slots=True)
 class _NodeData:
-    """What a tree node represents: a whole source group, or one bundle leaf."""
+    """What a tree node represents: a source group, a bundle, one of its games, or a game's link."""
 
-    kind: Literal["source", "bundle"]
+    kind: Literal["source", "bundle", "game", "link"]
     source: str
     list_id: str | None = None
+    game_index: int | None = None
+    url: str | None = None
+    enabled: bool = True
 
 # end class _NodeData
 
 
 class _BundleTree(Tree[_NodeData]):
-    """A tree with Finder-like navigation and Enter-to-select instead of Enter-to-expand."""
+    """A tree with Finder-like navigation and Enter-to-select/open instead of Enter-to-expand."""
 
     BINDINGS = [
         ("left", "collapse_or_to_parent", "Collapse/parent"),
         ("right", "expand_or_first_child", "Expand"),
         ("+", "expand_cursor", "Expand"),
         ("-", "collapse_cursor", "Collapse"),
-        ("enter", "toggle_selection", "Select/deselect"),
+        ("enter", "toggle_selection", "Select/deselect/open"),
     ]
 
-    def __init__(self, on_toggle: Callable[[_NodeData], None]) -> None:
+    def __init__(self, on_toggle: Callable[[_NodeData], None], on_open: Callable[[_NodeData], None]) -> None:
         super().__init__("bundles", id="rows-tree")
         self._on_toggle = on_toggle
+        self._on_open = on_open
         self.show_root = False
         self.guide_depth = 2
     # end def __init__
@@ -122,8 +144,13 @@ class _BundleTree(Tree[_NodeData]):
 
     def action_toggle_selection(self) -> None:
         node = self.cursor_node
-        if node is not None and node.data is not None:
+        if node is None or node.data is None:
+            return
+        # end if
+        if node.data.kind in ("source", "bundle"):
             self._on_toggle(node.data)
+        elif node.data.kind == "link":
+            self._on_open(node.data)
         # end if
     # end def action_toggle_selection
 
@@ -227,7 +254,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             Checkbox("hide deselected", value=self._hide_unselected, id="filter-hide-unselected"),
             id="filters",
         )
-        rows = _BundleTree(self._toggle)
+        rows = _BundleTree(self._toggle, self._open)
         actions = Horizontal(
             Button("Save & Exit (ctrl+s)", id="save-button", variant="success"),
             Button("Cancel (esc)", id="cancel-button", variant="error"),
@@ -310,17 +337,71 @@ class ApplyPickerApp(App[ApplySelection | None]):
     def on_tree_node_expanded(self, event: Tree.NodeExpanded[_NodeData]) -> None:
         node = event.node
         data = node.data
-        if data is None or data.kind != "bundle" or node.children:
+        if data is None or node.children:
             return
         # end if
+        if data.kind == "bundle":
+            self._populate_games(node, data)
+        elif data.kind == "game":
+            self._populate_links(node, data)
+        # end if
+    # end def on_tree_node_expanded
+
+    def _populate_games(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
         game_list = self._game_lists_by_id.get(data.list_id or "")
         if game_list is None:
             return
         # end if
-        for game in game_list.data.games:
-            node.add_leaf(escape(game.name))
+        for index, game in enumerate(game_list.data.games):
+            node.add(
+                escape(game.name),
+                data=_NodeData(kind="game", source=data.source, list_id=data.list_id, game_index=index),
+                expand=False,
+                allow_expand=True,
+            )
         # end for
-    # end def on_tree_node_expanded
+    # end def _populate_games
+
+    def _populate_links(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
+        game_list = self._game_lists_by_id.get(data.list_id or "")
+        if game_list is None or data.game_index is None:
+            return
+        # end if
+        game = game_list.data.games[data.game_index]
+
+        steam_value: str | None = None
+        for identifier in game.qualified_ids:
+            url = product_url(identifier.provider, identifier.value)
+            if url is None:
+                continue
+            # end if
+            if identifier.provider == "steam":
+                steam_value = identifier.value
+            # end if
+            node.add_leaf(
+                Text(f"Store: {identifier.provider}"),
+                data=_NodeData(kind="link", source=data.source, url=url, enabled=True),
+            )
+        # end for
+
+        launch_enabled = steam_value is not None
+        launch_label = Text("Launch on Steam", style=None if launch_enabled else "dim")
+        node.add_leaf(
+            launch_label,
+            data=_NodeData(
+                kind="link",
+                source=data.source,
+                url=f"steam://rungameid/{steam_value}" if steam_value is not None else None,
+                enabled=launch_enabled,
+            ),
+        )
+    # end def _populate_links
+
+    def _open(self, data: _NodeData) -> None:
+        if data.enabled and data.url is not None:
+            _open_url(data.url)
+        # end if
+    # end def _open
 
     def _toggle(self, data: _NodeData) -> None:
         if data.kind == "bundle":

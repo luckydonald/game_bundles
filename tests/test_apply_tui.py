@@ -67,6 +67,69 @@ def _leaf_list_ids(app: ApplyPickerApp, source: str) -> list[str]:
 # end def _leaf_list_ids
 
 
+def test_expanding_a_game_shows_store_links_and_steam_launch(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: Some Bundle\ngames:\n"
+        "  - name: Game A\n    ids: [steam:440, gog:some-slug]\n"
+        "  - name: Game B\n    ids: [unresolved:source:isthereanydeal:1:x]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            bundle_node.expand()
+            await pilot.pause()
+            game_a, game_b = bundle_node.children
+            assert game_a.label.plain == "Game A"
+            assert game_a.allow_expand is True
+
+            game_a.expand()
+            await pilot.pause()
+            links = {leaf.label.plain: leaf.data for leaf in game_a.children}
+            assert links["Store: steam"].url == "https://store.steampowered.com/app/440"
+            assert links["Store: steam"].enabled is True
+            assert links["Store: gog"].url == "https://www.gog.com/game/some-slug"
+            assert links["Launch on Steam"].url == "steam://rungameid/440"
+            assert links["Launch on Steam"].enabled is True
+
+            game_b.expand()
+            await pilot.pause()
+            # game B only has an "unresolved" marker id: no store link, and Steam launch is disabled
+            assert [leaf.label.plain for leaf in game_b.children] == ["Launch on Steam"]
+            launch_b = game_b.children[0]
+            assert launch_b.data.enabled is False
+            assert launch_b.data.url is None
+            assert launch_b.label.style == "dim"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_expanding_a_game_shows_store_links_and_steam_launch
+
+
+def test_open_calls_os_opener_only_when_enabled(tmp_path: Path) -> None:
+    from unittest.mock import patch
+
+    from game_collections.apply.tui import _NodeData as NodeData
+
+    app = ApplyPickerApp(tmp_path / "lists", excluded=set())
+    with patch("game_collections.apply.tui._open_url") as mock_open_url:
+        app._open(NodeData(kind="link", source="x", url="https://example.com/game", enabled=True))
+        mock_open_url.assert_called_once_with("https://example.com/game")
+
+        mock_open_url.reset_mock()
+        app._open(NodeData(kind="link", source="x", url=None, enabled=False))
+        mock_open_url.assert_not_called()
+    # end with
+# end def test_open_calls_os_opener_only_when_enabled
+
+
 def test_labels_render_literal_brackets_as_checkboxes(tmp_path: Path) -> None:
     # rich.markup would otherwise silently eat "[x]"/"[ ]" (and any "[...]" in a bundle name)
     lists_root = tmp_path / "lists"
