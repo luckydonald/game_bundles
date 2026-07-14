@@ -1172,3 +1172,5 @@ Have a toggle where the filter hide the items, too (not only unselct)
 - launch on steam (grayed out if unavailable)
 Hitting enter shall open it, of cause.
 
+❯ Pressing enter to deselect a root category somtimes reopenes the last closed category (2x left arrow from a bundle)
+
