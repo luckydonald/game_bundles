@@ -1255,5 +1255,10 @@ Down on those would move back to the tree view.
 
 ❯ Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense.
 
+❯ Also for you: _Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense._
+The mane branch already did that.
+
+❯ Fix `_BundleTree`'s name.
+
 ❯ Rebase/restructure onto the changes happened on `mane` in the meantime.
 
