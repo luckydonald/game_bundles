@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
 
+from game_collections.completion import MissingHandling, evaluate_completion
 from game_collections.launchers.base import (
     CollectionEligibility,
     LauncherAdapter,
@@ -28,7 +29,6 @@ from game_collections.lists import LoadedGameList
 # are interchangeable without SteamAdapter knowing which one it got.
 OwnedAppIdsSource = Callable[[], set[int]]
 STEAM_COLLECTION_PREFIX = "🗃️ "
-SteamMatchMode = Literal["any", "all", "none"]
 SteamTierMode = Literal["all", "highest"]
 
 
@@ -39,15 +39,29 @@ class SteamOptions:
     steam_id: str
     steam_root: Path | None = None
     api_key: str | None = None
-    match_mode: SteamMatchMode = "all"
+    min_owned: int | None = None
+    max_owned: int | None = None
+    min_missing: int | None = None
+    max_missing: int | None = 0
+    unresolved_handling: MissingHandling = "ignore"
+    unconfigured_handling: MissingHandling = "ignore"
     tier_mode: SteamTierMode = "all"
     reconcile_managed: bool = False
     protected_collection_name: str | None = None
 
     def __post_init__(self) -> None:
-        if self.match_mode not in ("any", "all", "none"):
-            raise ValueError(f"invalid Steam match mode: {self.match_mode!r}")
-        # end if
+        for bound_name in ("min_owned", "max_owned", "min_missing", "max_missing"):
+            bound = getattr(self, bound_name)
+            if bound is not None and bound < 0:
+                raise ValueError(f"invalid Steam {bound_name!r} bound: {bound!r}")
+            # end if
+        # end for
+        for handling_name in ("unresolved_handling", "unconfigured_handling"):
+            handling = getattr(self, handling_name)
+            if handling not in ("hide", "ignore", "enforce"):
+                raise ValueError(f"invalid Steam {handling_name!r}: {handling!r}")
+            # end if
+        # end for
         if self.tier_mode not in ("all", "highest"):
             raise ValueError(f"invalid Steam tier mode: {self.tier_mode!r}")
         # end if
@@ -111,45 +125,22 @@ class SteamAdapter(LauncherAdapter):
         owned_app_ids = self.owned_app_ids_source()
         results: list[CollectionEligibility] = []
         for game_list in game_lists:
-            required: list[int] = []
-            unsupported: list[str] = []
-            owned_game_count = 0
-            for game in game_list.data.games:
-                steam_ids = [identifier for identifier in game.qualified_ids if identifier.provider == "steam"]
-                if not steam_ids:
-                    unsupported.append(game.name)
-                    continue
-                # end if
-                game_app_ids: list[int] = []
-                for identifier in steam_ids:
-                    try:
-                        app_id = int(identifier.value)
-                    except ValueError as error:
-                        raise ValueError(f"invalid Steam app ID {identifier.value!r} in {game_list.id}") from error
-                    # end try
-                    if app_id <= 0:
-                        raise ValueError(f"invalid Steam app ID {app_id} in {game_list.id}")
-                    # end if
-                    game_app_ids.append(app_id)
-                # end for
-                required.extend(game_app_ids)
-                if any(app_id in owned_app_ids for app_id in game_app_ids):
-                    owned_game_count += 1
-                # end if
-            # end for
-            missing = sorted(set(required) - owned_app_ids)
-            owned = sorted(set(required) & owned_app_ids)
+            completion = evaluate_completion(
+                game_list.data.games,
+                owned_app_ids,
+                unresolved_handling=self.options.unresolved_handling,
+                unconfigured_handling=self.options.unconfigured_handling,
+            )
             pick_quota = game_list.data.pick_quota
-            if self.options.match_mode == "none":
-                # No ownership gating at all: whatever reached `plan()` is eligible outright,
-                # so a manual picker selection - even of bundles you own nothing from - sticks.
-                eligible = True
-            elif pick_quota is not None:
-                eligible = owned_game_count >= pick_quota
-            elif self.options.match_mode == "any":
-                eligible = bool(owned)
+            if pick_quota is not None:
+                eligible = completion.owned_count >= pick_quota
             else:
-                eligible = bool(required) and not missing
+                eligible = (
+                    (self.options.min_owned is None or completion.owned_count >= self.options.min_owned)
+                    and (self.options.max_owned is None or completion.owned_count <= self.options.max_owned)
+                    and (self.options.min_missing is None or completion.missing_count >= self.options.min_missing)
+                    and (self.options.max_missing is None or completion.missing_count <= self.options.max_missing)
+                )
             # end if
             results.append(
                 CollectionEligibility(
@@ -157,9 +148,9 @@ class SteamAdapter(LauncherAdapter):
                     name=game_list.data.name,
                     tier=game_list.data.tier,
                     eligible=eligible,
-                    owned_ids=[f"steam:{app_id}" for app_id in owned],
-                    missing_ids=[f"steam:{app_id}" for app_id in missing],
-                    unsupported_ids=unsupported,
+                    owned_ids=completion.owned_ids,
+                    missing_ids=completion.missing_ids,
+                    unsupported_ids=completion.unsupported_ids,
                 )
             )
         # end for

@@ -98,13 +98,15 @@ def test_ownership_marks_bundle_fraction_and_greys_out_unowned_games(tmp_path: P
     )
 
     async def scenario() -> None:
-        # match_mode="none": this test is about the ownership fraction/dim labeling itself,
-        # not about "all"/"any" hiding a not-fully-owned bundle outright
-        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
+        # max_missing=None: this test is about the ownership fraction/dim labeling itself,
+        # not about a missing-count bound hiding a not-fully-owned bundle outright
+        app = ApplyPickerApp(lists_root, excluded=set(), max_missing=None, owned_app_ids=frozenset({440}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             bundle_node = _source_nodes(app)["humblebundle"].children[0]
-            assert "(1/3)" in bundle_node.label.plain
+            # (1/2): the unresolved game is ignored (default handling), so it's excluded from
+            # the total, unlike the old fraction which counted every game regardless
+            assert "(1/2)" in bundle_node.label.plain
 
             bundle_node.expand()
             await pilot.pause()
@@ -167,35 +169,67 @@ def _write_ownership_fixture(lists_root: Path) -> None:
 # end def _write_ownership_fixture
 
 
-def test_mode_all_hides_partial_ownership_mode_any_only_hides_zero_owned(tmp_path: Path) -> None:
+def test_default_max_missing_zero_hides_any_bundle_with_a_missing_game(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     _write_ownership_fixture(lists_root)
 
     async def scenario() -> None:
-        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="all", owned_app_ids=frozenset({440, 441}))
+        app = ApplyPickerApp(lists_root, excluded=set(), owned_app_ids=frozenset({440, 441}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            # "all" needs every game owned: only the fully-owned bundle qualifies -
-            # this used to be identical to "any" (a bug), hiding only 0-owned bundles
+            # default max_missing=0 needs every game owned: only the fully-owned bundle qualifies
             vendor = _source_nodes(app)["vendor"]
             assert [child.label.plain for child in vendor.children] == [
                 "[vendor/-] ????-??-??    2 items  single    Fully Owned  (2/2)",
             ]
             assert [child.data.check_state for child in vendor.children] == ["checked"]
 
-            app.query_one("#filter-mode", Select).value = "any"
+            app.query_one("#filter-max-missing", Input).value = "1"
             await pilot.pause()
             vendor = _source_nodes(app)["vendor"]
-            # "any" needs at least one game owned: partial- and fully-owned both qualify,
-            # only the 0-owned bundle is hidden
-            names = {"Partial Owned" if "Partial Owned" in c.label.plain else "Fully Owned" for c in vendor.children}
-            assert len(vendor.children) == 2
-            assert names == {"Partial Owned", "Fully Owned"}
+            # widening max-missing to 1 also admits the partial (1 missing) and zero-owned
+            # (1 missing, since it only has one game total) bundles
+            names = {
+                text
+                for c in vendor.children
+                for text in ("Partial Owned", "Fully Owned", "Zero Owned")
+                if text in c.label.plain
+            }
+            assert len(vendor.children) == 3
+            assert names == {"Partial Owned", "Fully Owned", "Zero Owned"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_mode_all_hides_partial_ownership_mode_any_only_hides_zero_owned
+# end def test_default_max_missing_zero_hides_any_bundle_with_a_missing_game
+
+
+def test_min_missing_finds_almost_complete_bundles(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    _write_ownership_fixture(lists_root)
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), max_missing=None, owned_app_ids=frozenset({440, 441}))
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-min-missing", Input).value = "1"
+            app.query_one("#filter-max-missing", Input).value = "1"
+            await pilot.pause()
+            vendor = _source_nodes(app)["vendor"]
+            # min/max-missing both 1: partial- and zero-owned qualify, fully-owned (0 missing) doesn't
+            names = {
+                text
+                for c in vendor.children
+                for text in ("Partial Owned", "Fully Owned", "Zero Owned")
+                if text in c.label.plain
+            }
+            assert len(vendor.children) == 2
+            assert names == {"Partial Owned", "Zero Owned"}
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_min_missing_finds_almost_complete_bundles
 
 
 def test_source_greys_out_only_when_fully_zero_owned(tmp_path: Path) -> None:
@@ -203,7 +237,7 @@ def test_source_greys_out_only_when_fully_zero_owned(tmp_path: Path) -> None:
     _write_ownership_fixture(lists_root)
 
     async def scenario() -> None:
-        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
+        app = ApplyPickerApp(lists_root, excluded=set(), max_missing=None, owned_app_ids=frozenset({440}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             # mixed source (one zero-owned, one partially-owned bundle): not greyed
@@ -222,7 +256,7 @@ def test_source_greys_out_when_every_visible_bundle_is_zero_owned(tmp_path: Path
     path.write_text("schema: 1\nname: Zero Owned\ngames:\n  - name: G\n    ids: [steam:999]\n", encoding="utf-8")
 
     async def scenario() -> None:
-        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
+        app = ApplyPickerApp(lists_root, excluded=set(), max_missing=None, owned_app_ids=frozenset({440}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert _source_nodes(app)["vendor"].label.style == "dim"
@@ -823,23 +857,47 @@ def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path)
 # end def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers
 
 
-def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
+def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
     async def scenario() -> None:
-        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set(), match_mode="all", tier_mode="highest")
+        app = ApplyPickerApp(
+            _make_lists_root(tmp_path), excluded=set(), min_missing=None, max_missing=0, tier_mode="highest"
+        )
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            assert app.match_mode == "all"
+            assert app.min_missing is None
+            assert app.max_missing == 0
             assert app.tier_mode == "highest"
-            app.query_one("#filter-mode", Select).value = "any"
+            app.query_one("#filter-min-missing", Input).value = "1"
+            app.query_one("#filter-max-missing", Input).value = "2"
             app.query_one("#filter-tiers", Select).value = "all"
             await pilot.pause()
-            assert app.match_mode == "any"
+            assert app.min_missing == 1
+            assert app.max_missing == 2
             assert app.tier_mode == "all"
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
+# end def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable
+
+
+def test_unresolved_and_unconfigured_handling_default_and_are_changeable(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert app.unresolved_handling == "ignore"
+            assert app.unconfigured_handling == "ignore"
+            app.query_one("#filter-unresolved-handling", Select).value = "enforce"
+            app.query_one("#filter-unconfigured-handling", Select).value = "hide"
+            await pilot.pause()
+            assert app.unresolved_handling == "enforce"
+            assert app.unconfigured_handling == "hide"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_unresolved_and_unconfigured_handling_default_and_are_changeable
 
 
 def test_min_items_filter_deselects_and_hides_smaller_bundles_by_default(tmp_path: Path) -> None:
