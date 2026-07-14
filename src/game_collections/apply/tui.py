@@ -294,11 +294,12 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
     def _rebuild_tree(self) -> None:
         tree = self._tree()
-        for node in tree.root.children:
-            if node.data is not None and node.is_expanded:
-                self._expanded_sources.add(node.data.source)
-            # end if
-        # end for
+        # Snapshot current expand state fresh each time - a plain `.add()` here would
+        # never forget a source once expanded, silently re-expanding it forever even
+        # after the user collapsed it.
+        self._expanded_sources = {
+            node.data.source for node in tree.root.children if node.data is not None and node.is_expanded
+        }
         tree.root.remove_children()
 
         shown_bundles = 0
