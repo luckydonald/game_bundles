@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import shutil
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from collections.abc import Callable
@@ -959,7 +960,37 @@ def apply_command(
     try:
         previous_selection = load_selection(selection_config)
         previously_excluded = excluded_list_ids(previous_selection)
-        picker = ApplyPickerApp(_lists_root(lists_root), previously_excluded, match_mode=mode, tier_mode=tiers)
+
+        # Best-effort: resolved once up front so the picker can mark bundles/games you
+        # don't own yet. Not required to open the picker or to cancel out of it - if Steam
+        # access isn't set up (yet), the picker just runs without ownership marks, and a
+        # real adapter is still required (and re-attempted) below once you actually save.
+        owned_app_ids: frozenset[int] | None = None
+        early_adapter: SteamAdapter | None = None
+        early_gateway: SteamFileGateway | None = None
+        try:
+            early_adapter, early_gateway = _steam_adapter(
+                steam_root,
+                steam_id,
+                api_key,
+                source,
+                collection,
+                match_mode=mode,
+                tier_mode=tiers,
+                reconcile_managed=True,
+            )
+            owned_app_ids = frozenset(early_adapter.owned_app_ids_source())
+        except (OSError, ValueError, RuntimeError, SteamIoError) as error:
+            typer.echo(f"warning: could not determine Steam ownership yet ({error}); no owned/total counts shown", err=True)
+        # end try
+
+        picker = ApplyPickerApp(
+            _lists_root(lists_root),
+            previously_excluded,
+            match_mode=mode,
+            tier_mode=tiers,
+            owned_app_ids=owned_app_ids,
+        )
         selection = picker.run()
         if selection is None:
             typer.echo("Cancelled. No selection was saved.")
@@ -971,16 +1002,24 @@ def apply_command(
         excluded = set(selection.excluded)
         game_lists = [game_list for game_list in picker.all_game_lists if game_list.id not in excluded]
 
-        adapter, gateway = _steam_adapter(
-            steam_root,
-            steam_id,
-            api_key,
-            source,
-            collection,
-            match_mode=picker.match_mode,
-            tier_mode=picker.tier_mode,
-            reconcile_managed=True,
-        )
+        if early_adapter is not None and early_gateway is not None and owned_app_ids is not None:
+            adapter = SteamAdapter(
+                replace(early_adapter.options, match_mode=picker.match_mode, tier_mode=picker.tier_mode),
+                owned_app_ids_source=lambda: owned_app_ids,
+                gateway=early_gateway,
+            )
+        else:
+            adapter, _gateway = _steam_adapter(
+                steam_root,
+                steam_id,
+                api_key,
+                source,
+                collection,
+                match_mode=picker.match_mode,
+                tier_mode=picker.tier_mode,
+                reconcile_managed=True,
+            )
+        # end if
         plan = adapter.plan(game_lists)
         _print_plan(plan, log_skips=log_skips)
         if not apply_changes:
