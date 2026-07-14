@@ -12,9 +12,9 @@ CheckState = Literal["checked", "unchecked", "mixed"]
 _META_KEY = "checkbox"
 
 _GLYPHS: dict[CheckState, str] = {
-    "unchecked": "☐",
-    "checked": "☑",
-    "mixed": "⊟",
+    "unchecked": "[ ]",
+    "checked": "[x]",
+    "mixed": "[-]",
 }
 
 

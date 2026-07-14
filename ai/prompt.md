@@ -1264,3 +1264,11 @@ The mane branch already did that.
 
 ❯ commit, then squash the ai auto commits according to LPLP style.
 
+❯ Fix (& commit):
+- I don't see `mode: any` vs `mode: all` in the dropdown changing the items in the list at all. Same with the tier filter. They should filter out the non-matching items from the checklist
+  - edit: oh, "hide filtered" exists, and is turned off by default.
+  - rename & refunction to "show filtered (as unchecked)". Toggling shows filtered items, all unchecked. A user can now check them. Toggling again hides filtered items (but only those, which are not user-turned-on! Those be marked red, and the first item is a also red text explaining that they are selected by the user but would actually need to be filtered). Like this is specifically if it was toggled in the "show filtered" mode.
+- the newly implemented checkbox accidentially toggles expanded state, _too_. The triangle and the label no longer toggle expand state.
+- Use the old-style `[ ]`/`[-]`/`[x]` instead of the ascii.
+- I still want the arrow to come first, then the checkbox.
+
