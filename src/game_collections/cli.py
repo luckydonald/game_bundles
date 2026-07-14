@@ -876,7 +876,7 @@ def sync_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
-    mode: Annotated[Literal["any", "all"], typer.Option("--mode", help="Match any or all Steam games in each list.")] = "all",
+    mode: Annotated[Literal["any", "all", "none"], typer.Option("--mode", help="Match any or all Steam games in each list, or none to skip ownership matching entirely and sync exactly what was selected.")] = "all",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
@@ -939,7 +939,7 @@ def apply_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
-    mode: Annotated[Literal["any", "all"], typer.Option("--mode", help="Match any or all Steam games in each list.")] = "all",
+    mode: Annotated[Literal["any", "all", "none"], typer.Option("--mode", help="Match any or all Steam games in each list, or none to skip ownership matching entirely and sync exactly what was selected.")] = "all",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:

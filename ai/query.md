@@ -1180,3 +1180,34 @@ Hitting enter shall open it, of cause.
 3. change "hide selected" to "hide filtered" and update code - filter hides (& deselects) non-matching entries.
 4. on start focus shall be in the tree view, and in there, if any, on the first item (category)
 
+❯ I am still missing `mode: off`; and `mode: all` should not show me `(0/4)` bundles. Also those `(0/x)` bundles, and recursively the bundle source (aka. root category) should be grayed out as well.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. What should "mode: off" actually do?
+>> 2. For the "all" mode zero-owned hide+grey behavior — should "any" mode get the same treatment?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **mode: off scope** (1/2) <kbd>Single Select</kbd><br>
+>> What should "mode: off" actually do?
+> - [ ] 1\. Picker display only (Recommended)
+>   - _"off" only controls the picker's own hide/grey-zero-owned behavior (this request). The real --mode sent to `sync`/`apply --apply` planning stays whatever "any"/"all" was last set to (off falls back to that for backend purposes), so SteamAdapter's matching logic and its Literal["any","all"] type don't change at all._
+> - [ ] 2\. Real third backend matching mode
+>   - _"off" becomes a genuine third value threaded through SteamOptions/SteamAdapter.evaluate() and the sync/eligible/apply CLI flags too — meaning "don't gate eligibility on ownership at all, sync whatever's checked." Bigger, riskier change across the adapter, CLI flags, and schema/tests, not just the picker._
+> - [x] 3\. _Type something:_
+>   - > A bit of both: The command line flags only set an initial value for this picker, but the actual selection of packs to include is now all up to the user and what they select in the tree. If they did `--mode=all` but now change to mode:none, and select random bundles they have no games for, we'll add those gameless bundles. Mode none is needed to be able to have a truely unfiltered view of all the available bundles.
+>
+>> **any mode scope** (2/2) <kbd>Single Select</kbd><br>
+>> For the "all" mode zero-owned hide+grey behavior — should "any" mode get the same treatment?
+> - [x] 1\. All and any both hide/grey 0-owned (Recommended)
+>   - _Under either "any" or "all", a bundle with 0 owned games can never become eligible, so hide/grey it in both cases — only "off" shows everything._
+> - [ ] 2\. Only "all" hides/greys, "any" shows everything
+>   - _Match your literal wording: only mode="all" hides/greys 0-owned bundles; mode="any" always shows every bundle regardless of ownership._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>

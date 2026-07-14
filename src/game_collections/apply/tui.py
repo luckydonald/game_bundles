@@ -11,7 +11,6 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Literal, cast
 
-from rich.markup import escape
 from rich.text import Text
 from textual import work
 from textual.app import App, ComposeResult
@@ -182,7 +181,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self,
         lists_root: Path,
         excluded: set[str],
-        match_mode: Literal["any", "all"] = "all",
+        match_mode: Literal["any", "all", "none"] = "all",
         tier_mode: Literal["all", "highest"] = "highest",
         owned_app_ids: frozenset[int] | None = None,
     ) -> None:
@@ -199,7 +198,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # nothing is marked as owned/unowned; every game/bundle renders as it did before.
         self._owned_app_ids = owned_app_ids
         self.all_game_lists: list[LoadedGameList] = []
-        self.match_mode: Literal["any", "all"] = match_mode
+        self.match_mode: Literal["any", "all", "none"] = match_mode
         self.tier_mode: Literal["all", "highest"] = tier_mode
     # end def __init__
 
@@ -249,7 +248,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             Input(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
             Input(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
             Select(
-                [("mode: all", "all"), ("mode: any", "any")],
+                [("mode: off", "none"), ("mode: any", "any"), ("mode: all", "all")],
                 value=self.match_mode,
                 allow_blank=False,
                 id="filter-mode",
@@ -292,7 +291,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return self.query_one("#rows-tree", _BundleTree)
     # end def _tree
 
-    def _source_label(self, source: str, bundles: list[BundleMetadata]) -> str:
+    def _source_label(self, source: str, bundles: list[BundleMetadata]) -> Text:
         total = len(bundles)
         checked_count = sum(1 for bundle in bundles if bundle.list_id in self._checked)
         if total == 0 or checked_count == 0:
@@ -302,7 +301,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
         else:
             glyph = "[-]"
         # end if
-        return escape(f"{glyph} {source} ({checked_count}/{total})")
+        text = Text(f"{glyph} {source} ({checked_count}/{total})")
+        # Grey the whole category when every bundle shown under it is known to be
+        # 0-owned - under "any"/"all" this can't actually happen (those bundles are
+        # hidden outright instead, see _bundle_hidden_by_ownership), so this only ever
+        # fires in "none" mode, where 0-owned bundles stay visible and selectable.
+        if bundles and all(self._bundle_zero_owned(bundle) is True for bundle in bundles):
+            text.style = "dim"
+        # end if
+        return text
     # end def _source_label
 
     def _game_owned(self, game: Game) -> bool:
@@ -342,15 +349,41 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return sum(1 for game in games if self._game_owned(game)), len(games)
     # end def _bundle_owned_fraction
 
-    def _bundle_label(self, bundle: BundleMetadata) -> str:
+    def _bundle_zero_owned(self, bundle: BundleMetadata) -> bool | None:
+        """``True``/``False`` if ownership is known, ``None`` if it isn't."""
+        fraction = self._bundle_owned_fraction(bundle)
+        if fraction is None:
+            return None
+        # end if
+        return fraction[0] == 0
+    # end def _bundle_zero_owned
+
+    def _bundle_hidden_by_ownership(self, bundle: BundleMetadata) -> bool:
+        """Under "any"/"all", a 0-owned bundle can never become eligible - hide it outright.
+
+        "none" mode skips ownership gating entirely, so nothing is hidden on this basis there.
+        """
+        if self.match_mode not in ("any", "all"):
+            return False
+        # end if
+        return self._bundle_zero_owned(bundle) is True
+    # end def _bundle_hidden_by_ownership
+
+    def _bundle_label(self, bundle: BundleMetadata) -> Text:
         glyph = "[x]" if bundle.list_id in self._checked else "[ ]"
         label = f"{glyph} {_row_label(bundle)}"
         fraction = self._bundle_owned_fraction(bundle)
+        zero_owned = False
         if fraction is not None:
             owned, total = fraction
             label += f"  ({owned}/{total})"
+            zero_owned = owned == 0
         # end if
-        return escape(label)
+        text = Text(label)
+        if zero_owned:
+            text.style = "dim"
+        # end if
+        return text
     # end def _bundle_label
 
     def _rebuild_tree(self) -> None:
@@ -371,6 +404,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             # filtered" only additionally controls whether those now-deselected, non-matching
             # bundles stay visible (greyed out) or disappear from the tree entirely.
             visible_bundles = matching_bundles if self._hide_filtered else source_bundles
+            visible_bundles = [bundle for bundle in visible_bundles if not self._bundle_hidden_by_ownership(bundle)]
             if not visible_bundles:
                 continue
             # end if
@@ -509,7 +543,13 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
     def on_select_changed(self, event: Select.Changed) -> None:
         if event.select.id == "filter-mode":
-            self.match_mode = cast(Literal["any", "all"], event.value)
+            new_match_mode = cast(Literal["any", "all", "none"], event.value)
+            # Select posts a Changed event for its own initial `value=` on mount too;
+            # only rebuild (mode now affects 0-owned hide/grey) on an actual change.
+            if new_match_mode != self.match_mode:
+                self.match_mode = new_match_mode
+                self._rebuild_tree()
+            # end if
         elif event.select.id == "filter-tiers":
             new_tier_mode = cast(Literal["all", "highest"], event.value)
             # Select posts a Changed event for its own initial `value=` on mount too;

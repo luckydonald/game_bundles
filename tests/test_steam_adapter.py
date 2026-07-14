@@ -131,6 +131,33 @@ def test_any_mode_requires_at_least_one_owned_steam_id() -> None:
 # end def test_any_mode_requires_at_least_one_owned_steam_id
 
 
+def test_none_mode_is_eligible_even_with_zero_owned_games() -> None:
+    game_list = _list("example/none-owned", [10, 20])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="none"),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+    assert result.missing_ids == ["steam:10", "steam:20"]
+# end def test_none_mode_is_eligible_even_with_zero_owned_games
+
+
+def test_none_mode_overrides_an_unmet_pick_quota() -> None:
+    game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", match_mode="none"),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+# end def test_none_mode_overrides_an_unmet_pick_quota
+
+
 def test_pick_quota_met_is_eligible_regardless_of_match_mode() -> None:
     game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
     adapter = SteamAdapter(
