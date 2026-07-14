@@ -1272,3 +1272,5 @@ The mane branch already did that.
 - Use the old-style `[ ]`/`[-]`/`[x]` instead of the ascii.
 - I still want the arrow to come first, then the checkbox.
 
+❯ The red explainer text shall be a sub-item of the checked (already red) item, visible if expanded.
+
