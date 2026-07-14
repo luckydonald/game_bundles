@@ -1251,6 +1251,8 @@ Down on those would move back to the tree view.
 
 ❯ So this basically is implementing a custom Tree subclass which adds the checkbox, too, yes?
 
+❯ Rebase first to the newest `mane`, and then adapt the plan to the updated code we're working on.
+
 ❯ Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense.
 
 ❯ Rebase/restructure onto the changes happened on `mane` in the meantime.

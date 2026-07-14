@@ -1,5 +1,17 @@
 # Proper checkboxes in the `apply steam` bundle tree
 
+## Step 0: rebase onto `mane`
+
+This worktree branch is currently based on an older `mane`. Local `mane` has since gained several
+unrelated `apply`/`tui` commits (select-all/none via `ctrl+a`, ownership-based dim/hide of 0-owned
+bundles and games, a `mode: off` match mode, and — notably — a new sibling module
+`apply/filter_widgets.py` with public `FilterInput`/`FilterSelect`/`FilterCheckbox` widgets plus a
+`_BundleTree.action_cursor_up` override for Left/Right/Down arrow-key handoff between the filter
+row and the tree). None of that touches checkbox rendering/click behavior, but `tui.py` has moved
+underneath us, so: rebase this branch onto `mane` first (`git rebase mane`), then re-read the
+rebased `src/game_collections/apply/tui.py` before implementing, since exact line numbers/context
+below are drawn from `mane`'s current version but may shift slightly after the rebase actually runs.
+
 ## Context
 
 `_BundleTree` (`src/game_collections/apply/tui.py`) renders `[x]`/`[ ]`/`[-]` glyphs as plain text
@@ -90,14 +102,20 @@ def is_checkbox_click(meta: dict[str, object]) -> bool:
    `None` means "no checkbox for this row" (game/link nodes keep exactly their current behavior).
 
 2. **Compute `check_state` where the tree is built**, replacing the glyph-embedding logic currently
-   in `_source_label`/`_bundle_label`. In `_rebuild_tree`:
-   - source node: `"unchecked"` if `checked_count == 0`, `"checked"` if `checked_count == total`,
-     else `"mixed"` (same thresholds as today's glyph choice) — pass as
-     `_NodeData(kind="source", source=source, check_state=source_state)`.
-   - bundle node: `"checked"` if `bundle.list_id in self._checked` else `"unchecked"`.
-   Rename `_source_label`/`_bundle_label` to just build the plain text (source name + counts /
-   `_row_label(bundle)`), with no glyph prefix — the glyph moves entirely into rendering (next
-   step).
+   in `_source_label`/`_bundle_label`. Both already return `rich.text.Text` (not escaped plain
+   strings) and already apply `text.style = "dim"` for all-zero-owned rows — keep that dim logic
+   completely as-is, only drop the leading `glyph = "[ ]"/"[x]"/"[-]"` computation and the
+   `f"{glyph} ..."` prefix from the text they build (e.g. `_source_label` becomes
+   `Text(f"{source} ({checked_count}/{total})")`, still followed by its existing
+   `if bundles and all(...): text.style = "dim"` check; `_bundle_label` drops its `glyph`/prefix
+   the same way, keeping its `(owned/total)` suffix and dim logic).
+   In `_rebuild_tree`, alongside the existing `checked_count`/`total` math already computed for
+   `_source_label(source, visible_bundles)`, derive `check_state` off the *same* `visible_bundles`
+   list (so it agrees with what's actually shown, matching current dim/grey logic which is also
+   computed post-filter/post-ownership): `"unchecked"` if `checked_count == 0`, `"checked"` if
+   `checked_count == total`, else `"mixed"` — pass as `_NodeData(kind="source", source=source,
+   check_state=source_state)`. For each bundle node: `"checked"` if `bundle.list_id in
+   self._checked` else `"unchecked"`, passed the same way.
 
 3. **Render the checkbox using the new module**, not as part of the label text. Override in
    `_BundleTree`:
