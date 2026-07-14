@@ -632,7 +632,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end for
 
         self.query_one("#status", Static).update(
-            f"{shown_bundles}/{len(self._bundles)} shown\n{selected_bundles}/{len(self._bundles)} selected"
+            f" {shown_bundles}/{len(self._bundles)} shown\n {selected_bundles}/{shown_bundles} selected"
         )
     # end def _rebuild_tree
 
