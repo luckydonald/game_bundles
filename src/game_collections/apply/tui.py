@@ -171,7 +171,11 @@ class ApplyPickerApp(App[ApplySelection | None]):
     #rows-tree { height: 1fr; min-height: 5; }
     #actions { height: auto; padding: 1; }
     """
-    BINDINGS = [("ctrl+s", "save", "Save & exit"), ("escape", "cancel", "Cancel")]
+    BINDINGS = [
+        ("ctrl+s", "save", "Save & exit"),
+        ("escape", "cancel", "Cancel"),
+        ("ctrl+a", "select_all_or_none", "Select all/none"),
+    ]
 
     def __init__(
         self,
@@ -432,6 +436,20 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end if
         self._rebuild_tree()
     # end def _toggle
+
+    def action_select_all_or_none(self) -> None:
+        """Select or deselect every bundle currently passing the item-count/date filters."""
+        selectable = [bundle.list_id for bundle in self._bundles if self._row_filters.matches(bundle)]
+        if not selectable:
+            return
+        # end if
+        if all(list_id in self._checked for list_id in selectable):
+            self._checked.difference_update(selectable)
+        else:
+            self._checked.update(selectable)
+        # end if
+        self._rebuild_tree()
+    # end def action_select_all_or_none
 
     def on_select_changed(self, event: Select.Changed) -> None:
         if event.select.id == "filter-mode":
