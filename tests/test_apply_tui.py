@@ -672,10 +672,13 @@ def test_checking_a_filtered_out_bundle_survives_as_a_red_override(tmp_path: Pat
             assert humble_node.data.list_id == humble_bundle_id
             assert humble_node.label.style == "bold red"
 
-            # the warning banner is the first item in the tree
-            tree = _tree(app)
-            assert tree.root.children[0].data is None
-            assert tree.root.children[0].label.style == "bold red"
+            # the explainer is a sub-item of the red bundle, revealed on expand
+            assert len(humble_node.children) == 0
+            humble_node.expand()
+            await pilot.pause()
+            explainer = humble_node.children[0]
+            assert explainer.data is None
+            assert explainer.label.style == "bold red"
         # end async with
     # end def scenario
 
