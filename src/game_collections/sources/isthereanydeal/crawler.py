@@ -20,10 +20,11 @@ from game_collections.sources.common import (
     load_cached_archive,
     render_game_list_yaml,
 )
-from game_collections.sources.isthereanydeal.models import ItadArchive, ItadDates, ItadListSummary, ItadTier
+from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadListSummary, ItadTier
 from game_collections.sources.isthereanydeal.parser import (
     ItadParseError,
     parse_bootstrap_page,
+    parse_bundle_detail_byob,
     parse_bundle_detail_json,
     parse_bundle_detail_page,
     parse_list_page,
@@ -334,6 +335,14 @@ def crawl_itad_offers(
                 # end if
                 tiers = parse_bundle_detail_page(html, summary.id, summary.counts.games)
             # end if
+            byob_tiers: list[ItadByobTier] = []
+            if summary.byob:
+                try:
+                    byob_tiers = parse_bundle_detail_byob(html, summary.id) or []
+                except ItadParseError as error:
+                    log(f"  {summary.id}: byob data failed to parse ({error}), leaving it unmodeled")
+                # end try
+            # end if
             slug = real_provider_slug(summary.url)
             archive = ItadArchive(
                 schema=1,
@@ -349,6 +358,7 @@ def crawl_itad_offers(
                     crawled=observed,
                 ),
                 tiers=tiers,
+                byob_tiers=byob_tiers,
             )
             offer = CrawledItadOffer(archive=archive, summary=summary)
             offers.append(offer)
@@ -433,6 +443,45 @@ def write_itad_offer(
 
     date_prefix = _bundle_date_prefix(offer.summary, archive.provider_slug, archive.dates.start or archive.dates.crawled)
     list_directory = lists_root / archive.provider_slug / "bundle" / f"{date_prefix}_{archive.real_slug}"
+
+    if archive.byob_tiers:
+        pool_games: list[Game] = []
+        seen_ids: set[str] = set()
+        for tier in archive.tiers:
+            for item in tier.items:
+                if any(value in seen_ids for value in item.ids):
+                    continue
+                # end if
+                pool_games.append(Game(name=item.title, ids=item.ids))
+                seen_ids.update(item.ids)
+            # end for
+        # end for
+        for rank, byob_tier in enumerate(archive.byob_tiers, start=1):
+            if len(archive.byob_tiers) == 1:
+                path = list_directory / "bundle.yml"
+                list_tier = None
+            else:
+                path = list_directory / f"tier-{rank}.yml"
+                list_tier = rank
+            # end if
+            game_list = GameList(
+                schema=1,
+                name=f"{archive.title} — pick {byob_tier.count}",
+                tier=list_tier,
+                pick_quota=byob_tier.count,
+                references=[
+                    Reference(name="isthereanydeal.com bundle", url=archive.url),
+                    Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                    Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+                ],
+                games=pool_games,
+            )
+            atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+            written.append(path)
+        # end for
+        return tuple(written)
+    # end if
+
     tiers_with_games: list[tuple[ItadTier, list[Game]]] = []
     for tier in archive.tiers:
         games: list[Game] = []

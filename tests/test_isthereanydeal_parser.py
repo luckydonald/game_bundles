@@ -7,6 +7,7 @@ import pytest
 from game_collections.sources.isthereanydeal.parser import (
     ItadParseError,
     parse_bootstrap_page,
+    parse_bundle_detail_byob,
     parse_bundle_detail_json,
     parse_bundle_detail_page,
     parse_list_page,
@@ -350,6 +351,43 @@ def test_parse_bundle_detail_json_byob_single_tier_no_price() -> None:
     assert ids["b"][0].startswith("unresolved:")
     assert ids["b"][1] == "isthereanydeal:b"
 # end def test_parse_bundle_detail_json_byob_single_tier_no_price
+
+
+def test_parse_bundle_detail_byob_returns_none_when_absent() -> None:
+    html = _detail_json_html({"tiers": [{"price": None, "addon": False, "note": None, "games": []}]})
+    assert parse_bundle_detail_byob(html, bundle_id=1) is None
+# end def test_parse_bundle_detail_byob_returns_none_when_absent
+
+
+def test_parse_bundle_detail_byob_parses_real_shape_ordered_ascending() -> None:
+    # Verified live against isthereanydeal.com bundle 16385 ("Build Your Own Best of Killer Bundle").
+    live_data = {
+        "tiers": [{"price": None, "addon": False, "note": None, "games": []}],
+        "byob": [
+            {"count": 20, "price": [95, "EUR"]},
+            {"count": 5, "price": [120, "EUR"]},
+            {"count": 10, "price": [100, "EUR"]},
+        ],
+    }
+    html = _detail_json_html(live_data)
+
+    byob_tiers = parse_bundle_detail_byob(html, bundle_id=16385)
+
+    assert byob_tiers is not None
+    assert [tier.count for tier in byob_tiers] == [5, 10, 20]
+    assert byob_tiers[0].price is not None
+    assert byob_tiers[0].price.value == 1.20
+    assert byob_tiers[0].price.currency == "EUR"
+# end def test_parse_bundle_detail_byob_parses_real_shape_ordered_ascending
+
+
+def test_parse_bundle_detail_byob_malformed_entry_raises() -> None:
+    html = _detail_json_html({"tiers": [{"price": None, "addon": False, "note": None, "games": []}], "byob": [{"price": [1, "EUR"]}]})
+
+    with pytest.raises(ItadParseError, match="malformed byob"):
+        parse_bundle_detail_byob(html, bundle_id=1)
+    # end with
+# end def test_parse_bundle_detail_byob_malformed_entry_raises
 
 
 def test_parse_bundle_detail_json_count_mismatch_raises() -> None:
