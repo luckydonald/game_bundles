@@ -8,3 +8,4 @@
 - [Steam collection ownership source](project_steam_collection_ownership_source.md) — `--source collection`/`--collection manual-all` added 2026-07-13, reads a user-curated local Steam collection
 - [Rebase todo script needs $1](feedback_rebase_todo_script_needs_arg1.md) — GIT_SEQUENCE_EDITOR heredoc must target "$1", not a literal empty path
 - [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
+- [No `_`-prefix, split modules](feedback_no_private_prefix_split_modules.md) — new code: no private-prefixed names, put new concerns in their own module
