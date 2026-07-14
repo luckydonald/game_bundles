@@ -86,7 +86,6 @@ class _NodeData:
     url: str | None = None
     enabled: bool = True
     check_state: CheckState | None = None
-    override: bool = False
 
 # end class _NodeData
 
@@ -346,7 +345,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._bundles = bundles
         self._game_lists_by_id = {game_list.id: game_list for game_list in game_lists}
         self._checked = {bundle.list_id for bundle in bundles if bundle.list_id not in self._excluded}
-        self._deselect_hidden_by_ownership()
+        self._deselect_filtered_out()
         self.query_one("#loading").remove()
         self._mount_picker()
     # end def _finish_loading
@@ -520,7 +519,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return True
     # end def _bundle_matches_all_filters
 
-    def _bundle_label(self, bundle: BundleMetadata, *, override: bool = False) -> Text:
+    def _bundle_label(self, bundle: BundleMetadata) -> Text:
         label = _row_label(bundle)
         fraction = self._bundle_owned_fraction(bundle)
         zero_owned = False
@@ -530,9 +529,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             zero_owned = owned == 0
         # end if
         text = Text(label)
-        if override:
-            text.style = "bold red"
-        elif zero_owned:
+        if zero_owned:
             text.style = "dim"
         # end if
         return text
@@ -552,25 +549,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
         shown_bundles = 0
         for source in self._sources():
             source_bundles = [bundle for bundle in self._bundles if bundle.source == source]
-            matching_ids = {
-                bundle.list_id
-                for bundle in source_bundles
-                if self._bundle_matches_all_filters(bundle, highest_tier_ids)
-            }
-            if self._show_filtered:
-                # Show everything - filtered-out bundles included, unchecked, so they can
-                # be reviewed and manually checked back in.
-                visible_bundles = source_bundles
-            else:
-                # Hide anything filtered out, *unless* the user checked it anyway (while
-                # "show filtered" was on, presumably) - that survives as a red override
-                # instead of silently vanishing along with its selection.
-                visible_bundles = [
-                    bundle
-                    for bundle in source_bundles
-                    if bundle.list_id in matching_ids or bundle.list_id in self._checked
-                ]
-            # end if
+            matching_bundles = [
+                bundle for bundle in source_bundles if self._bundle_matches_all_filters(bundle, highest_tier_ids)
+            ]
+            # "show filtered" off: the list feeding the tree is filtered, so what's filtered
+            # out simply isn't there. "show filtered" on: those bundles are added to the list
+            # too, unchecked (see _deselect_filtered_out). No separate tracking either way -
+            # if "show filtered" goes off again, whatever you'd checked among them just isn't
+            # there to be part of the result anymore (see _build_selection).
+            visible_bundles = source_bundles if self._show_filtered else matching_bundles
             if not visible_bundles:
                 continue
             # end if
@@ -579,20 +566,11 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 data=_NodeData(kind="source", source=source, check_state=self._source_check_state(visible_bundles)),
             )
             for bundle in visible_bundles:
-                is_override = (
-                    not self._show_filtered
-                    and bundle.list_id not in matching_ids
-                    and bundle.list_id in self._checked
-                )
                 bundle_check_state = "checked" if bundle.list_id in self._checked else "unchecked"
                 source_node.add(
-                    self._bundle_label(bundle, override=is_override),
+                    self._bundle_label(bundle),
                     data=_NodeData(
-                        kind="bundle",
-                        source=source,
-                        list_id=bundle.list_id,
-                        check_state=bundle_check_state,
-                        override=is_override,
+                        kind="bundle", source=source, list_id=bundle.list_id, check_state=bundle_check_state
                     ),
                     expand=False,
                     allow_expand=True,
@@ -635,15 +613,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _game_label
 
     def _populate_games(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
-        if data.override:
-            node.add_leaf(
-                Text(
-                    "selected but would be filtered out - stays checked until you deselect it"
-                    ' (or turn "show filtered" back on and uncheck it there)',
-                    style="bold red",
-                ),
-            )
-        # end if
         game_list = self._game_lists_by_id.get(data.list_id or "")
         if game_list is None:
             return
@@ -741,7 +710,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             # only rebuild (mode now affects 0-owned hide/grey) on an actual change.
             if new_match_mode != self.match_mode:
                 self.match_mode = new_match_mode
-                self._deselect_hidden_by_ownership()
+                self._deselect_filtered_out()
                 self._rebuild_tree()
             # end if
         elif event.select.id == "filter-tiers":
@@ -794,31 +763,19 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end if
     # end def on_checkbox_changed
 
-    def _deselect_hidden_by_ownership(self) -> None:
-        """0-owned bundles start deselected under "any"/"all" - matches them being hidden
-        outright, instead of immediately reappearing as a red "override" the moment mode
-        switches (every bundle starts checked, so without this every 0-owned bundle would
-        look user-overridden from the very first rebuild).
-        """
-        for bundle in self._bundles:
-            if self._bundle_hidden_by_ownership(bundle):
-                self._checked.discard(bundle.list_id)
-            # end if
-        # end for
-    # end def _deselect_hidden_by_ownership
-
     def _deselect_filtered_out(self) -> None:
-        """A filter always deselects the bundles it excludes, not just hides them.
-
-        One-way: widening the filter back doesn't re-select anything - only an explicit
-        `enter` on the tree (or ``ctrl+a``) brings a bundle back into the selection.
+        """A filter always deselects the bundles it excludes (item-count/date, `mode`'s
+        ownership gate, `tiers: highest`), not just hides them - no separate tracking of
+        why a bundle is deselected. One-way: widening a filter back doesn't re-select
+        anything - only an explicit `enter` on the tree (or ``ctrl+a``) does.
         """
+        highest_tier_ids = self._highest_tier_ids()
         for bundle in self._bundles:
-            if not self._row_filters.matches(bundle):
+            if not self._bundle_matches_all_filters(bundle, highest_tier_ids):
                 self._checked.discard(bundle.list_id)
             # end if
         # end for
-    # end def _deselect_filtered_out
+    # end def
 
     def on_input_changed(self, event: Input.Changed) -> None:
         raw = event.value.strip()
@@ -874,10 +831,14 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def on_button_pressed
 
     def _build_selection(self) -> ApplySelection:
+        # A checked-but-filtered-out bundle (possible if you checked it while "show
+        # filtered" was on, then turned it back off) never makes it into `selected`,
+        # authoritatively - no separate tracking needed to enforce that.
+        highest_tier_ids = self._highest_tier_ids()
         selected: list[str] = []
         excluded: list[str] = []
         for bundle in self._bundles:
-            if bundle.list_id in self._checked:
+            if bundle.list_id in self._checked and self._bundle_matches_all_filters(bundle, highest_tier_ids):
                 selected.append(bundle.list_id)
             else:
                 excluded.append(bundle.list_id)
