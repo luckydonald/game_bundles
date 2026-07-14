@@ -67,6 +67,23 @@ def _leaf_list_ids(app: ApplyPickerApp, source: str) -> list[str]:
 # end def _leaf_list_ids
 
 
+def test_tree_is_focused_with_cursor_on_first_category_at_start(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            assert app.focused is tree
+            assert tree.cursor_line == 0
+            assert tree.cursor_node is not None
+            assert tree.cursor_node.data.kind == "source"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_tree_is_focused_with_cursor_on_first_category_at_start
+
+
 def test_expanding_a_game_shows_store_links_and_steam_launch(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"

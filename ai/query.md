@@ -1174,3 +1174,9 @@ Hitting enter shall open it, of cause.
 
 ❯ Pressing enter to deselect a root category somtimes reopenes the last closed category (2x left arrow from a bundle)
 
+❯ Changes, to be commited seperately:
+1. when mode is not set to any or not set, you may have games not in your library. Those shall be marked with `(2/8)` at the bundles, and grayed out text for the game. Submenu stays accessible.
+2. There should be a select all/none toggle (`^a`?)
+3. change "hide selected" to "hide filtered" and update code - filter hides (& deselects) non-matching entries.
+4. on start focus shall be in the tree view, and in there, if any, on the first item (category)
+
