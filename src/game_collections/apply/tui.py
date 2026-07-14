@@ -99,13 +99,23 @@ class BundleTree(Tree[_NodeData]):
         ("right", "expand_or_first_child", "Expand"),
         ("+", "expand_cursor", "Expand"),
         ("-", "collapse_cursor", "Collapse"),
-        ("enter", "toggle_selection", "Select/deselect/open"),
+        ("shift+left", "collapse_cursor_recursive", "Collapse item+children"),
+        ("shift+right", "expand_cursor_recursive", "Expand item+children"),
+        ("ctrl+left", "collapse_all", "Collapse all"),
+        ("ctrl+right", "expand_all", "Expand all"),
+        ("enter", "toggle_selection", "Toggle selection/activate"),
     ]
 
-    def __init__(self, on_toggle: Callable[[_NodeData], None], on_open: Callable[[_NodeData], None]) -> None:
+    def __init__(
+        self,
+        on_toggle: Callable[[_NodeData], None],
+        on_open: Callable[[_NodeData], None],
+        populate_node: Callable[[TreeNode[_NodeData]], None],
+    ) -> None:
         super().__init__("bundles", id="rows-tree")
         self._on_toggle = on_toggle
         self._on_open = on_open
+        self._populate_node = populate_node
         self.show_root = False
         self.guide_depth = 2
     # end def __init__
@@ -156,6 +166,56 @@ class BundleTree(Tree[_NodeData]):
             node.collapse()
         # end if
     # end def action_collapse_cursor
+
+    def _expand_recursive(self, node: TreeNode[_NodeData]) -> None:
+        # Lazily-populated children (bundle -> games -> links) only exist once expanded,
+        # and Tree's own `expand_all()` recurses synchronously over `node.children` before
+        # our `NodeExpanded` handler (which populates them) ever runs - so a plain
+        # `expand_all()` would stop at whatever's already loaded. Populate-then-recurse
+        # ourselves instead.
+        self._populate_node(node)
+        if node.allow_expand:
+            node.expand()
+        # end if
+        for child in node.children:
+            self._expand_recursive(child)
+        # end for
+    # end def
+
+    def _collapse_recursive(self, node: TreeNode[_NodeData]) -> None:
+        if node.allow_expand:
+            node.collapse()
+        # end if
+        for child in node.children:
+            self._collapse_recursive(child)
+        # end for
+    # end def
+
+    def action_expand_cursor_recursive(self) -> None:
+        node = self.cursor_node
+        if node is not None:
+            self._expand_recursive(node)
+        # end if
+    # end def
+
+    def action_collapse_cursor_recursive(self) -> None:
+        node = self.cursor_node
+        if node is not None:
+            self._collapse_recursive(node)
+        # end if
+    # end def
+
+    def action_expand_all(self) -> None:
+        for child in self.root.children:
+            self._expand_recursive(child)
+        # end for
+    # end def
+
+    def action_collapse_all(self) -> None:
+        for child in self.root.children:
+            self._collapse_recursive(child)
+        # end for
+    # end def
 
     def action_toggle_selection(self) -> None:
         node = self.cursor_node
@@ -312,7 +372,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             FilterCheckbox("show filtered (as unchecked)", value=self._show_filtered, id="filter-show-filtered"),
             id="filters",
         )
-        rows = BundleTree(self._toggle, self._open)
+        rows = BundleTree(self._toggle, self._open, self._populate_node)
         actions = Horizontal(
             Button("Save & Exit (ctrl+s)", id="save-button", variant="success"),
             Button("Cancel (esc)", id="cancel-button", variant="error"),
@@ -548,7 +608,13 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _rebuild_tree
 
     def on_tree_node_expanded(self, event: Tree.NodeExpanded[_NodeData]) -> None:
-        node = event.node
+        self._populate_node(event.node)
+    # end def on_tree_node_expanded
+
+    def _populate_node(self, node: TreeNode[_NodeData]) -> None:
+        """Lazily fill in a node's children the first time it's expanded (bundle -> games,
+        game -> links); a no-op for anything already populated or without lazy children.
+        """
         data = node.data
         if data is None or node.children:
             return
@@ -558,7 +624,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         elif data.kind == "game":
             self._populate_links(node, data)
         # end if
-    # end def on_tree_node_expanded
+    # end def
 
     def _game_label(self, game: Game) -> Text:
         text = Text(game.name)
