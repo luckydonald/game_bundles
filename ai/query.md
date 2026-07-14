@@ -1128,3 +1128,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ With _7690/7690 shown_, the TUI one is super laggy, like a miinute per frame.
 
+❯ obviously the TUI one needs the command line flag filters (mode, tiers), and the bundle type selector should allow multi-selection (i.e. humble + fantastical)
+
