@@ -8,8 +8,9 @@ from pathlib import Path
 
 from textual import work
 from textual.app import App, ComposeResult
-from textual.containers import Horizontal, Vertical, VerticalScroll
-from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar, Select, Static
+from textual.containers import Horizontal, Vertical
+from textual.widgets import Button, Footer, Header, Input, ProgressBar, Select, SelectionList, Static
+from textual.widgets.selection_list import Selection
 
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
@@ -77,6 +78,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._excluded = set(excluded)
         self._row_filters = _Filters()
         self._bundles: list[BundleMetadata] = []
+        self._checked: set[str] = set()
         self.all_game_lists: list[LoadedGameList] = []
     # end def __init__
 
@@ -111,6 +113,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
     def _finish_loading(self, game_lists: list[LoadedGameList], bundles: list[BundleMetadata]) -> None:
         self.all_game_lists = game_lists
         self._bundles = bundles
+        self._checked = {bundle.list_id for bundle in bundles if bundle.list_id not in self._excluded}
         self.query_one("#loading").remove()
         self._mount_picker()
     # end def _finish_loading
@@ -128,17 +131,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             Input(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
             id="filters",
         )
-        rows = VerticalScroll(
-            *(
-                Checkbox(
-                    _row_label(bundle),
-                    value=bundle.list_id not in self._excluded,
-                    id=f"row-{index}",
-                )
-                for index, bundle in enumerate(self._bundles)
-            ),
-            id="rows",
-        )
+        rows = SelectionList(id="rows")
         actions = Horizontal(
             Button("Save & Exit (ctrl+s)", id="save-button", variant="success"),
             Button("Cancel (esc)", id="cancel-button", variant="error"),
@@ -153,21 +146,28 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return sorted({bundle.source for bundle in self._bundles})
     # end def _sources
 
-    def _checkbox(self, index: int) -> Checkbox:
-        return self.query_one(f"#row-{index}", Checkbox)
-    # end def _checkbox
+    def _rows(self) -> SelectionList[str]:
+        return self.query_one("#rows", SelectionList)
+    # end def _rows
 
     def _apply_filters(self) -> None:
-        visible = 0
-        for index, bundle in enumerate(self._bundles):
-            matches = self._row_filters.matches(bundle)
-            self._checkbox(index).display = matches
-            if matches:
-                visible += 1
-            # end if
-        # end for
-        self.query_one("#status", Static).update(f"{visible}/{len(self._bundles)} shown")
+        visible = [bundle for bundle in self._bundles if self._row_filters.matches(bundle)]
+        rows = self._rows()
+        rows.clear_options()
+        rows.add_options(
+            Selection(_row_label(bundle), bundle.list_id, bundle.list_id in self._checked) for bundle in visible
+        )
+        self.query_one("#status", Static).update(f"{len(visible)}/{len(self._bundles)} shown")
     # end def _apply_filters
+
+    def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
+        value = event.selection.value
+        if value in event.selection_list.selected:
+            self._checked.add(value)
+        else:
+            self._checked.discard(value)
+        # end if
+    # end def on_selection_list_selection_toggled
 
     def on_select_changed(self, event: Select.Changed) -> None:
         if event.select.id == "filter-source":
@@ -241,8 +241,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
     def _build_selection(self) -> ApplySelection:
         selected: list[str] = []
         excluded: list[str] = []
-        for index, bundle in enumerate(self._bundles):
-            if self._checkbox(index).value:
+        for bundle in self._bundles:
+            if bundle.list_id in self._checked:
                 selected.append(bundle.list_id)
             else:
                 excluded.append(bundle.list_id)
