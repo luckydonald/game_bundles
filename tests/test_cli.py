@@ -146,11 +146,14 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
         updated_at=datetime(2026, 7, 13, tzinfo=UTC),
     )
 
+    captured_owned_app_ids: list[object] = []
+
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest") -> None:
+        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest", owned_app_ids: object = None) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.match_mode = match_mode
             self.tier_mode = tier_mode
+            captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
 
         def run(self) -> ApplySelection:
@@ -183,6 +186,8 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
     assert "eligible: vendor/one (One)" in result.output
     assert "vendor/two" not in result.output
     assert selection_config.exists()
+    # valid Steam access (a real collection source here) resolves ownership up front for the picker
+    assert captured_owned_app_ids == [frozenset({440})]
 # end def test_apply_filters_excluded_list_before_planning
 
 
@@ -191,11 +196,14 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
     _write_list(lists_root / "vendor/one.yml", "One")
     selection_config = tmp_path / "config/apply-selection.yml"
 
+    captured_owned_app_ids: list[object] = []
+
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest") -> None:
+        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest", owned_app_ids: object = None) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.match_mode = match_mode
             self.tier_mode = tier_mode
+            captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
 
         def run(self) -> None:
@@ -212,5 +220,9 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
 
     assert result.exit_code == 0, result.output
     assert "Cancelled" in result.output
+    # no Steam access at all was given - the picker still opens (and can still be cancelled)
+    # without it, just without ownership marks
+    assert captured_owned_app_ids == [None]
+    assert "could not determine Steam ownership" in result.output
     assert not selection_config.exists()
 # end def test_apply_cancelled_selection_makes_no_changes
