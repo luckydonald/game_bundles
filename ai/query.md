@@ -1167,3 +1167,8 @@ Have a toggle where the filter hide the items, too (not only unselct)
 
 ❯ The loading bar is not centered (never was)
 
+❯ For each game I want a sub-menu:
+- each link to all available stores for that game
+- launch on steam (grayed out if unavailable)
+Hitting enter shall open it, of cause.
+

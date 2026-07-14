@@ -120,6 +120,30 @@ def parse_store_identity(provider: StoreName, value: str) -> str:
 # end def parse_store_identity
 
 
+_PRODUCT_PATH_MARKERS: dict[str, str] = {
+    "steam": "app",
+    "gog": "game",
+    "epic": "p",
+    "ubisoft": "game",
+    "humble": "store",
+}
+
+
+def product_url(provider: str, value: str) -> str | None:
+    """Build a storefront product page URL from a qualified ID's ``value``.
+
+    The inverse of :func:`parse_store_identity`'s URL branch. Returns ``None`` for any provider
+    that isn't one of the known, directly-linkable :data:`StoreName` stores - covers markers like
+    ``unresolved`` or ``isthereanydeal`` that aren't real storefronts and have no product page.
+    """
+    marker = _PRODUCT_PATH_MARKERS.get(provider)
+    if marker is None:
+        return None
+    # end if
+    return f"{STORE_ROOTS[provider]}{marker}/{value}"
+# end def product_url
+
+
 def match_store(url: str) -> StoreName | None:
     """Return the launcher-relevant `StoreName` whose official host(s) this URL belongs to."""
     host = (urlparse(url).hostname or "").casefold()
