@@ -219,4 +219,80 @@ def test_choice_page_normalizes_attribute_json_and_markdown() -> None:
     )
     assert archive.charities[0].name == "Example Charity"
     assert source["choice_content"] == content
+    assert archive.choice_pick_options == []
 # end def test_choice_page_normalizes_attribute_json_and_markdown
+
+
+def test_choice_page_builds_pick_options_from_tier_info_clamped_to_pool_size() -> None:
+    # Verified live against a real Humble Choice page's `tierInfo`: a tier's raw
+    # `choices` count (here premium=12) can exceed the month's actual game count
+    # (here 2 real games + 1 bonus), and gets clamped rather than rejected.
+    content = {
+        "gameone": {
+            "title": "Game One",
+            "delivery_methods": ["steam"],
+            "platforms": ["windows"],
+            "msrp": {"currency": "EUR", "amount": 10.0},
+            "youtube_links": [],
+            "genres": [],
+            "user_rating": {},
+            "recommendation_copy_dict": {"copy": "One."},
+        },
+        "gametwo": {
+            "title": "Game Two",
+            "delivery_methods": ["steam"],
+            "platforms": ["windows"],
+            "msrp": {"currency": "EUR", "amount": 10.0},
+            "youtube_links": [],
+            "genres": [],
+            "user_rating": {},
+            "recommendation_copy_dict": {"copy": "Two."},
+        },
+        "bonus": {
+            "title": "Bonus",
+            "delivery_methods": ["other-key"],
+            "platforms": [],
+            "msrp": {"currency": "USD", "amount": 4.99},
+            "youtube_links": [],
+            "genres": [],
+            "user_rating": {},
+            "recommendation_copy_dict": {"copy": "A bonus."},
+        },
+    }
+    product = {
+        "@type": "Product",
+        "name": "July 2026 Humble Choice",
+        "sku": "july_2026_choice",
+        "url": "https://www.humblebundle.com/membership",
+        "description": "Choice.",
+        "offers": {
+            "validFrom": "2026-07-07T17:00:00Z",
+            "validThrough": "2026-08-04T17:00:00Z",
+        },
+    }
+    marketing = {
+        "activeContentMachineName": "july_2026_choice",
+        "baseSubscriptionPrice|money": {"currency": "EUR", "amount": 12.99},
+        "tierInfo": {
+            "lite": {"uses_choices": True, "choices": 0},
+            "basic": {"uses_choices": True, "choices": 1},
+            "premium": {"uses_choices": True, "choices": 12},
+            "notreal": {"uses_choices": False, "choices": 5},
+        },
+    }
+    page = (
+        f'<script type="application/ld+json">{json.dumps(product)}</script>'
+        + _script("webpack-choice-marketing-data", marketing)
+        + f'<div data-content-choice-data="{html.escape(json.dumps(content), quote=True)}" '
+        'data-machine-name="gameone"></div>'
+        + '<div data-machine-name="gametwo"></div>'
+        + '<div data-machine-name="bonus"></div>'
+    )
+
+    archive, _source = parse_choice_page(page, CRAWLED)
+
+    assert [(option.tier_key, option.quota) for option in archive.choice_pick_options] == [
+        ("basic", 1),
+        ("premium", 2),
+    ]
+# end def test_choice_page_builds_pick_options_from_tier_info_clamped_to_pool_size
