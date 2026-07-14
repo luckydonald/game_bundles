@@ -127,6 +127,38 @@ def test_source_filter_allows_selecting_multiple_sources(tmp_path: Path) -> None
 # end def test_source_filter_allows_selecting_multiple_sources
 
 
+def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path) -> None:
+    lists_root = _make_lists_root(tmp_path)
+    _write_list(lists_root, "vendorx/bundle/2026-03-01_c/tier-1", item_count=2, tier=1, name="Tiered Tier 1")
+    _write_list(lists_root, "vendorx/bundle/2026-03-01_c/tier-2", item_count=4, tier=2, name="Tiered Tier 2")
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), tier_mode="all")
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert {
+                "vendorx/bundle/2026-03-01_c/tier-1",
+                "vendorx/bundle/2026-03-01_c/tier-2",
+            } <= set(_rows(app).selected)
+
+            app.query_one("#filter-tiers", Select).value = "highest"
+            await pilot.pause()
+            assert "vendorx/bundle/2026-03-01_c/tier-1" not in _rows(app).selected
+            assert "vendorx/bundle/2026-03-01_c/tier-2" in _rows(app).selected
+
+            app.query_one("#filter-tiers", Select).value = "all"
+            await pilot.pause()
+            assert {
+                "vendorx/bundle/2026-03-01_c/tier-1",
+                "vendorx/bundle/2026-03-01_c/tier-2",
+            } <= set(_rows(app).selected)
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers
+
+
 def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set(), match_mode="all", tier_mode="highest")

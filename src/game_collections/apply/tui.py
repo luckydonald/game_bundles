@@ -9,7 +9,7 @@ from typing import Literal, cast
 
 from textual import work
 from textual.app import App, ComposeResult
-from textual.containers import Horizontal, Vertical
+from textual.containers import Horizontal, Vertical, VerticalScroll
 from textual.widgets import Button, Footer, Header, Input, ProgressBar, Select, SelectionList, Static
 from textual.widgets.selection_list import Selection
 
@@ -63,10 +63,11 @@ class ApplyPickerApp(App[ApplySelection | None]):
     #loading { align: center middle; height: 1fr; }
     #loading Static { margin-bottom: 1; }
     #loading ProgressBar { width: 60; }
+    #body { height: 1fr; }
     #filters { height: auto; padding: 1; }
     #filters Input, #filters Select { width: 20; margin-right: 1; }
     #filter-source { width: 28; height: 8; margin-right: 1; }
-    #rows { height: 1fr; }
+    #rows { height: 1fr; min-height: 5; }
     #actions { height: auto; padding: 1; }
     """
     BINDINGS = [("ctrl+s", "save", "Save & exit"), ("escape", "cancel", "Cancel")]
@@ -156,7 +157,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
             Static(id="status"),
             id="actions",
         )
-        self.mount_all([filters, rows, actions, Footer()])
+        body = VerticalScroll(filters, rows, actions, id="body")
+        self.mount_all([body, Footer()])
         self.call_after_refresh(self._apply_filters)
     # end def _mount_picker
 
@@ -203,9 +205,47 @@ class ApplyPickerApp(App[ApplySelection | None]):
         if event.select.id == "filter-mode":
             self.match_mode = cast(Literal["any", "all"], event.value)
         elif event.select.id == "filter-tiers":
-            self.tier_mode = cast(Literal["all", "highest"], event.value)
+            new_tier_mode = cast(Literal["all", "highest"], event.value)
+            # Select posts a Changed event for its own initial `value=` on mount too;
+            # only recompute the selection on an actual, user-driven change.
+            if new_tier_mode != self.tier_mode:
+                self.tier_mode = new_tier_mode
+                self._apply_tier_mode_to_selection()
+                self._apply_filters()
+            # end if
         # end if
     # end def on_select_changed
+
+    def _apply_tier_mode_to_selection(self) -> None:
+        """Recompute checked state for sibling tier lists to match ``tier_mode``.
+
+        Mirrors ``SteamAdapter``'s own "highest tier per bundle directory" grouping
+        (see ``_selected_list_ids``) so the picker's checkmarks preview what `--tiers`
+        will actually keep, instead of silently disagreeing with it until plan time.
+        """
+        groups: dict[str, list[BundleMetadata]] = {}
+        for bundle in self._bundles:
+            if bundle.tier is None:
+                continue
+            # end if
+            parent = bundle.list_id.rpartition("/")[0]
+            groups.setdefault(parent, []).append(bundle)
+        # end for
+        for siblings in groups.values():
+            if self.tier_mode == "all":
+                self._checked.update(bundle.list_id for bundle in siblings)
+                continue
+            # end if
+            highest = max(siblings, key=lambda bundle: bundle.tier or 0)
+            for bundle in siblings:
+                if bundle.list_id == highest.list_id:
+                    self._checked.add(bundle.list_id)
+                else:
+                    self._checked.discard(bundle.list_id)
+                # end if
+            # end for
+        # end for
+    # end def _apply_tier_mode_to_selection
 
     def on_input_changed(self, event: Input.Changed) -> None:
         raw = event.value.strip()
