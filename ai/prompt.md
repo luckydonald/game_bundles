@@ -1130,3 +1130,27 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ obviously the TUI one needs the command line flag filters (mode, tiers), and the bundle type selector should allow multi-selection (i.e. humble + fantastical)
 
+❯ Setting mode or tiers does not change the selection. Also the main list needs a min-height of 5 rows or something, so the whole window becomes scrollable if not enough terminal height.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. What did you expect to happen when you change the mode/tiers dropdown in the picker?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Mode/tiers bug** (1/1) <kbd>Single Select</kbd><br>
+>> What did you expect to happen when you change the mode/tiers dropdown in the picker?
+> - [x] 1\. Checked rows should update live
+>   - _e.g. switching tiers to "highest" should auto-uncheck the lower-tier sibling in each bundle group right there in the picker, since that's what would end up excluded anyway._
+> - [ ] 2\. Final plan/sync should differ
+>   - _The dropdown itself doesn't need to change anything visible in the picker, but the eventual plan output / synced collections after Save & Exit should differ based on the chosen mode/tiers — and in your test it didn't._
+> - [ ] 3\. Something else / other symptom
+>   - _Describe what you actually saw (e.g. an error, the dropdown not responding at all, wrong value shown)._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
