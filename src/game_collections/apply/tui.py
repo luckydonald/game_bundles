@@ -557,6 +557,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
         highest_tier_ids = self._highest_tier_ids()
         shown_bundles = 0
+        selected_bundles = 0
         for source in self._sources():
             source_bundles = [bundle for bundle in self._bundles if bundle.source == source]
             matching_bundles = [
@@ -590,9 +591,14 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 source_node.expand()
             # end if
             shown_bundles += len(visible_bundles)
+            # Matches _build_selection's own criteria: what would actually end up "selected",
+            # not just what's currently checked (a checked-but-filtered-out bundle doesn't count).
+            selected_bundles += sum(1 for bundle in matching_bundles if bundle.list_id in self._checked)
         # end for
 
-        self.query_one("#status", Static).update(f"{shown_bundles}/{len(self._bundles)} shown")
+        self.query_one("#status", Static).update(
+            f"{shown_bundles}/{len(self._bundles)} shown\n{selected_bundles}/{len(self._bundles)} selected"
+        )
     # end def _rebuild_tree
 
     def on_tree_node_expanded(self, event: Tree.NodeExpanded[_NodeData]) -> None:
