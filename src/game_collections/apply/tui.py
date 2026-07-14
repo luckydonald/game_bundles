@@ -187,7 +187,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._bundles: list[BundleMetadata] = []
         self._checked: set[str] = set()
         self._expanded_sources: set[str] = set()
-        self._hide_unselected = False
+        self._hide_filtered = False
         self._game_lists_by_id: dict[str, LoadedGameList] = {}
         self.all_game_lists: list[LoadedGameList] = []
         self.match_mode: Literal["any", "all"] = match_mode
@@ -251,7 +251,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 allow_blank=False,
                 id="filter-tiers",
             ),
-            Checkbox("hide deselected", value=self._hide_unselected, id="filter-hide-unselected"),
+            Checkbox("hide filtered", value=self._hide_filtered, id="filter-hide-filtered"),
             id="filters",
         )
         rows = _BundleTree(self._toggle, self._open)
@@ -315,16 +315,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
         for source in self._sources():
             source_bundles = [bundle for bundle in self._bundles if bundle.source == source]
             matching_bundles = [bundle for bundle in source_bundles if self._row_filters.matches(bundle)]
-            visible_bundles = [
-                bundle
-                for bundle in matching_bundles
-                if not self._hide_unselected or bundle.list_id in self._checked
-            ]
+            # A filter always deselects what it excludes (see _deselect_filtered_out); "hide
+            # filtered" only additionally controls whether those now-deselected, non-matching
+            # bundles stay visible (greyed out) or disappear from the tree entirely.
+            visible_bundles = matching_bundles if self._hide_filtered else source_bundles
             if not visible_bundles:
                 continue
             # end if
             source_node = tree.root.add(
-                self._source_label(source, matching_bundles),
+                self._source_label(source, visible_bundles),
                 data=_NodeData(kind="source", source=source),
             )
             for bundle in visible_bundles:
@@ -481,11 +480,24 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _apply_tier_mode_to_selection
 
     def on_checkbox_changed(self, event: Checkbox.Changed) -> None:
-        if event.checkbox.id == "filter-hide-unselected":
-            self._hide_unselected = event.value
+        if event.checkbox.id == "filter-hide-filtered":
+            self._hide_filtered = event.value
             self._rebuild_tree()
         # end if
     # end def on_checkbox_changed
+
+    def _deselect_filtered_out(self) -> None:
+        """A filter always deselects the bundles it excludes, not just hides them.
+
+        One-way: widening the filter back doesn't re-select anything - only an explicit
+        `enter` on the tree (or ``ctrl+a``) brings a bundle back into the selection.
+        """
+        for bundle in self._bundles:
+            if not self._row_filters.matches(bundle):
+                self._checked.discard(bundle.list_id)
+            # end if
+        # end for
+    # end def _deselect_filtered_out
 
     def on_input_changed(self, event: Input.Changed) -> None:
         raw = event.value.strip()
@@ -528,6 +540,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         else:
             return
         # end if
+        self._deselect_filtered_out()
         self._rebuild_tree()
     # end def on_input_changed
 
