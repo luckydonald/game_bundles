@@ -715,7 +715,10 @@ def test_show_filtered_checkbox_reveals_filtered_out_bundles_unchecked(tmp_path:
 # end def test_show_filtered_checkbox_reveals_filtered_out_bundles_unchecked
 
 
-def test_checking_a_filtered_out_bundle_survives_as_a_red_override(tmp_path: Path) -> None:
+def test_checking_a_filtered_out_bundle_then_hiding_it_again_drops_it_with_no_tracking(tmp_path: Path) -> None:
+    # no special override/tracking state: toggling "show filtered" off just re-filters
+    # the list, full stop - whatever got checked while a bundle was visible doesn't
+    # keep it around once it's filtered out again
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
@@ -730,27 +733,21 @@ def test_checking_a_filtered_out_bundle_survives_as_a_red_override(tmp_path: Pat
             await pilot.pause()
             assert humble_bundle_id in app._checked
 
-            # toggle "show filtered" back off - the now-checked, still-non-matching bundle
-            # survives (in red) instead of silently vanishing along with a real hide
             app.query_one("#filter-show-filtered", Checkbox).value = False
             await pilot.pause()
-            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
-            humble_node = _source_nodes(app)["humblebundle"].children[0]
-            assert humble_node.data.list_id == humble_bundle_id
-            assert humble_node.label.style == "bold red"
+            assert set(_source_nodes(app)) == {"greenmangaming"}
 
-            # the explainer is a sub-item of the red bundle, revealed on expand
-            assert len(humble_node.children) == 0
-            humble_node.expand()
-            await pilot.pause()
-            explainer = humble_node.children[0]
-            assert explainer.data is None
-            assert explainer.label.style == "bold red"
+            # still technically "checked" internally, but that's irrelevant now: it's not
+            # part of the tree, and _build_selection excludes it from the saved result too
+            assert humble_bundle_id in app._checked
+            selection = app._build_selection()
+            assert humble_bundle_id not in selection.selected
+            assert humble_bundle_id in selection.excluded
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_checking_a_filtered_out_bundle_survives_as_a_red_override
+# end def test_checking_a_filtered_out_bundle_then_hiding_it_again_drops_it_with_no_tracking
 
 
 def test_manually_deselected_bundle_stays_visible_regardless_of_show_filtered(tmp_path: Path) -> None:
