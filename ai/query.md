@@ -1278,7 +1278,7 @@ The mane branch already did that.
 - `^←` / `^→` (ctrl+arrow keys) shall expend/collapse the whole tree (recursively)
 - shift + arrow keys shall expand/collaps the currenent item and recursively everything under it.
 - Remove the whole keep-in-red-when-it-would-be-filtered-out logic, it's breaking easily, and after a few toggles of stuff you got so many red entries.
-  - Easier flow: 
+  - Easier flow:
   - show off: The list feeding the tree is filtered, so what's filtered "does not exist".
   - show on: As is, the items are shown, added to the list as unchecked.
   - no special state tracking is done.
@@ -1351,4 +1351,8 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 > - `13` tools, `47607` tokens, `1.00335 s`
 
 ❯ add horizontal scrolbar (auto) to settings
+
+❯ The hide option does not seem to remove them from the tree view. Instead, enforce does?
+
+❯ Fix commit message of 773dbd7a19cc0ded53600449acc048dd72794a2e.
 
