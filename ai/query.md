@@ -1350,3 +1350,5 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 > - [Raw log (`218171` chars, `213 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/3a903f4c-3b2e-42cd-863c-9672ea1fdf8c/tasks/a52dd8eb5af8484d4.output)
 > - `13` tools, `47607` tokens, `1.00335 s`
 
+❯ add horizontal scrolbar (auto) to settings
+
