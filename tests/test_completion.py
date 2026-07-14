@@ -43,6 +43,7 @@ def test_unresolved_hide_excludes_from_everything() -> None:
     assert completion.missing_count == 1
     assert completion.unsupported_ids == []
     assert completion.missing_ids == ["steam:10"]
+    assert completion.hidden_count == 1
 # end def test_unresolved_hide_excludes_from_everything
 
 
@@ -83,10 +84,12 @@ def test_unconfigured_store_handling_hide_ignore_enforce() -> None:
 
     assert ignored.total == 0
     assert ignored.unsupported_ids == ["GogGame"]
+    assert ignored.hidden_count == 0
 
     assert enforced.total == 1
     assert enforced.missing_count == 1
     assert enforced.missing_ids == ["gog:some-slug"]
+    assert enforced.hidden_count == 0
 # end def test_unconfigured_store_handling_hide_ignore_enforce
 
 

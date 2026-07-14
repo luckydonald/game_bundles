@@ -132,7 +132,9 @@ class SteamAdapter(LauncherAdapter):
                 unconfigured_handling=self.options.unconfigured_handling,
             )
             pick_quota = game_list.data.pick_quota
-            if pick_quota is not None:
+            if completion.hidden_count:
+                eligible = False
+            elif pick_quota is not None:
                 eligible = completion.owned_count >= pick_quota
             else:
                 eligible = (

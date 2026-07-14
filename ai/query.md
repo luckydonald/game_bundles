@@ -1356,3 +1356,7 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 
 ❯ Fix commit message of 773dbd7a19cc0ded53600449acc048dd72794a2e.
 
+❯ I fixed the summary count, fix tests, please.
+
+› Both hide and ignore result in the same amout of available bundles, for both settings.
+
