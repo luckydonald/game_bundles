@@ -28,7 +28,7 @@ from game_collections.lists import LoadedGameList
 # are interchangeable without SteamAdapter knowing which one it got.
 OwnedAppIdsSource = Callable[[], set[int]]
 STEAM_COLLECTION_PREFIX = "🗃️ "
-SteamMatchMode = Literal["any", "all"]
+SteamMatchMode = Literal["any", "all", "none"]
 SteamTierMode = Literal["all", "highest"]
 
 
@@ -45,7 +45,7 @@ class SteamOptions:
     protected_collection_name: str | None = None
 
     def __post_init__(self) -> None:
-        if self.match_mode not in ("any", "all"):
+        if self.match_mode not in ("any", "all", "none"):
             raise ValueError(f"invalid Steam match mode: {self.match_mode!r}")
         # end if
         if self.tier_mode not in ("all", "highest"):
@@ -140,7 +140,11 @@ class SteamAdapter(LauncherAdapter):
             missing = sorted(set(required) - owned_app_ids)
             owned = sorted(set(required) & owned_app_ids)
             pick_quota = game_list.data.pick_quota
-            if pick_quota is not None:
+            if self.options.match_mode == "none":
+                # No ownership gating at all: whatever reached `plan()` is eligible outright,
+                # so a manual picker selection - even of bundles you own nothing from - sticks.
+                eligible = True
+            elif pick_quota is not None:
                 eligible = owned_game_count >= pick_quota
             elif self.options.match_mode == "any":
                 eligible = bool(owned)
