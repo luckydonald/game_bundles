@@ -60,7 +60,7 @@ uv run game-collections migrate-tiers
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
 
-`eligible steam` and `sync steam` print eligible lists and the planned-change count by default. Pass `--log-skips` to also print every skipped list with its missing or unsupported IDs.
+`eligible steam` and `sync steam` print eligible lists and the planned-change count by default. Pass `--log-skips` to also print every skipped list with its missing or unsupported IDs. `sync steam` prints one progress line per list file while collecting `lists/**/*.yml`; `apply steam` shows a progress bar in its picker window while doing the same.
 
 `sync steam` defaults to `--mode all --tiers highest`. `--mode all` requires every Steam ID in a list to be owned, while `--mode any` requires at least one and exports only the owned Steam IDs; games without Steam IDs do not affect either match mode. `--tiers highest` groups sibling lists by bundle directory using each list's `tier:` field (a single-tier bundle has no `tier:` field and is always included) and keeps only the numerically highest matching tier per directory. Use `--tiers all` to export every matching tier. Every bundle-writing scraper sets `tier:` itself; `game-collections migrate-tiers` (`--apply` to write, dry-run by default) brings already-generated `lists/**/*.yml` files onto this convention — a lone tier is renamed to `bundle.yml` with no `tier:` field, siblings become `tier-1.yml`, `tier-2.yml`, ... with the field set.
 
