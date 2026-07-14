@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -10,8 +11,7 @@ from typing import Literal, cast
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
-from textual.widgets import Button, Footer, Header, Input, ProgressBar, Select, SelectionList, Static
-from textual.widgets.selection_list import Selection
+from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar, Select, Static, Tree
 
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
@@ -28,16 +28,12 @@ def _row_label(bundle: BundleMetadata) -> str:
 
 @dataclass(frozen=True, slots=True)
 class _Filters:
-    sources: frozenset[str] | None = None
     min_items: int | None = None
     max_items: int | None = None
     date_after: str | None = None
     date_before: str | None = None
 
     def matches(self, bundle: BundleMetadata) -> bool:
-        if self.sources is not None and bundle.source not in self.sources:
-            return False
-        # end if
         if self.min_items is not None and bundle.item_count < self.min_items:
             return False
         # end if
@@ -56,6 +52,83 @@ class _Filters:
 # end class _Filters
 
 
+@dataclass(frozen=True, slots=True)
+class _NodeData:
+    """What a tree node represents: a whole source group, or one bundle leaf."""
+
+    kind: Literal["source", "bundle"]
+    source: str
+    list_id: str | None = None
+
+# end class _NodeData
+
+
+class _BundleTree(Tree[_NodeData]):
+    """A tree with Finder-like navigation and Enter-to-select instead of Enter-to-expand."""
+
+    BINDINGS = [
+        ("left", "collapse_or_to_parent", "Collapse/parent"),
+        ("right", "expand_or_first_child", "Expand"),
+        ("+", "expand_cursor", "Expand"),
+        ("-", "collapse_cursor", "Collapse"),
+        ("enter", "toggle_selection", "Select/deselect"),
+    ]
+
+    def __init__(self, on_toggle: Callable[[_NodeData], None]) -> None:
+        super().__init__("bundles", id="rows-tree")
+        self._on_toggle = on_toggle
+        self.show_root = False
+        self.guide_depth = 2
+    # end def __init__
+
+    def action_collapse_or_to_parent(self) -> None:
+        node = self.cursor_node
+        if node is None:
+            return
+        # end if
+        if node.children and node.is_expanded:
+            node.collapse()
+        elif node.parent is not None:
+            self.action_cursor_parent()
+        # end if
+    # end def action_collapse_or_to_parent
+
+    def action_expand_or_first_child(self) -> None:
+        node = self.cursor_node
+        if node is None or not node.children:
+            return
+        # end if
+        if not node.is_expanded:
+            node.expand()
+        else:
+            self.action_cursor_down()
+        # end if
+    # end def action_expand_or_first_child
+
+    def action_expand_cursor(self) -> None:
+        node = self.cursor_node
+        if node is not None and node.children:
+            node.expand()
+        # end if
+    # end def action_expand_cursor
+
+    def action_collapse_cursor(self) -> None:
+        node = self.cursor_node
+        if node is not None and node.children:
+            node.collapse()
+        # end if
+    # end def action_collapse_cursor
+
+    def action_toggle_selection(self) -> None:
+        node = self.cursor_node
+        if node is not None and node.data is not None:
+            self._on_toggle(node.data)
+        # end if
+    # end def action_toggle_selection
+
+# end class _BundleTree
+
+
 class ApplyPickerApp(App[ApplySelection | None]):
     """Filter and check/uncheck bundles, then save the selection to disk."""
 
@@ -66,8 +139,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
     #body { height: 1fr; }
     #filters { height: auto; padding: 1; }
     #filters Input, #filters Select { width: 20; margin-right: 1; }
-    #filter-source { width: 28; height: 8; margin-right: 1; }
-    #rows { height: 1fr; min-height: 5; }
+    #rows-tree { height: 1fr; min-height: 5; }
     #actions { height: auto; padding: 1; }
     """
     BINDINGS = [("ctrl+s", "save", "Save & exit"), ("escape", "cancel", "Cancel")]
@@ -85,6 +157,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._row_filters = _Filters()
         self._bundles: list[BundleMetadata] = []
         self._checked: set[str] = set()
+        self._expanded_sources: set[str] = set()
+        self._hide_unselected = False
         self.all_game_lists: list[LoadedGameList] = []
         self.match_mode: Literal["any", "all"] = match_mode
         self.tier_mode: Literal["all", "highest"] = tier_mode
@@ -128,10 +202,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
     def _mount_picker(self) -> None:
         filters = Horizontal(
-            SelectionList(
-                *(Selection(source, source, True) for source in self._sources()),
-                id="filter-source",
-            ),
             Input(placeholder="min items", id="filter-min-items"),
             Input(placeholder="max items", id="filter-max-items"),
             Input(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
@@ -148,9 +218,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 allow_blank=False,
                 id="filter-tiers",
             ),
+            Checkbox("hide deselected", value=self._hide_unselected, id="filter-hide-unselected"),
             id="filters",
         )
-        rows = SelectionList(id="rows")
+        rows = _BundleTree(self._toggle)
         actions = Horizontal(
             Button("Save & Exit (ctrl+s)", id="save-button", variant="success"),
             Button("Cancel (esc)", id="cancel-button", variant="error"),
@@ -159,47 +230,95 @@ class ApplyPickerApp(App[ApplySelection | None]):
         )
         body = VerticalScroll(filters, rows, actions, id="body")
         self.mount_all([body, Footer()])
-        self.call_after_refresh(self._apply_filters)
+        self.call_after_refresh(self._rebuild_tree)
     # end def _mount_picker
 
     def _sources(self) -> list[str]:
         return sorted({bundle.source for bundle in self._bundles})
     # end def _sources
 
-    def _rows(self) -> SelectionList[str]:
-        return self.query_one("#rows", SelectionList)
-    # end def _rows
+    def _tree(self) -> _BundleTree:
+        return self.query_one("#rows-tree", _BundleTree)
+    # end def _tree
 
-    def _apply_filters(self) -> None:
-        visible = [bundle for bundle in self._bundles if self._row_filters.matches(bundle)]
-        rows = self._rows()
-        rows.clear_options()
-        rows.add_options(
-            Selection(_row_label(bundle), bundle.list_id, bundle.list_id in self._checked) for bundle in visible
-        )
-        self.query_one("#status", Static).update(f"{len(visible)}/{len(self._bundles)} shown")
-    # end def _apply_filters
-
-    def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
-        if event.selection_list.id == "filter-source":
-            self._row_filters = _Filters(
-                sources=frozenset(event.selection_list.selected),
-                min_items=self._row_filters.min_items,
-                max_items=self._row_filters.max_items,
-                date_after=self._row_filters.date_after,
-                date_before=self._row_filters.date_before,
-            )
-            self._apply_filters()
-            return
-        # end if
-
-        value = event.selection.value
-        if value in event.selection_list.selected:
-            self._checked.add(value)
+    def _source_label(self, source: str, bundles: list[BundleMetadata]) -> str:
+        total = len(bundles)
+        checked_count = sum(1 for bundle in bundles if bundle.list_id in self._checked)
+        if total == 0 or checked_count == 0:
+            glyph = "[ ]"
+        elif checked_count == total:
+            glyph = "[x]"
         else:
-            self._checked.discard(value)
+            glyph = "[-]"
         # end if
-    # end def on_selection_list_selection_toggled
+        return f"{glyph} {source} ({checked_count}/{total})"
+    # end def _source_label
+
+    def _bundle_label(self, bundle: BundleMetadata) -> str:
+        glyph = "[x]" if bundle.list_id in self._checked else "[ ]"
+        return f"{glyph} {_row_label(bundle)}"
+    # end def _bundle_label
+
+    def _rebuild_tree(self) -> None:
+        tree = self._tree()
+        for node in tree.root.children:
+            if node.data is not None and node.is_expanded:
+                self._expanded_sources.add(node.data.source)
+            # end if
+        # end for
+        tree.root.remove_children()
+
+        shown_bundles = 0
+        for source in self._sources():
+            source_bundles = [bundle for bundle in self._bundles if bundle.source == source]
+            matching_bundles = [bundle for bundle in source_bundles if self._row_filters.matches(bundle)]
+            visible_bundles = [
+                bundle
+                for bundle in matching_bundles
+                if not self._hide_unselected or bundle.list_id in self._checked
+            ]
+            if not visible_bundles:
+                continue
+            # end if
+            source_node = tree.root.add(
+                self._source_label(source, matching_bundles),
+                data=_NodeData(kind="source", source=source),
+            )
+            for bundle in visible_bundles:
+                source_node.add_leaf(
+                    self._bundle_label(bundle),
+                    data=_NodeData(kind="bundle", source=source, list_id=bundle.list_id),
+                )
+            # end for
+            if source in self._expanded_sources:
+                source_node.expand()
+            # end if
+            shown_bundles += len(visible_bundles)
+        # end for
+
+        self.query_one("#status", Static).update(f"{shown_bundles}/{len(self._bundles)} shown")
+    # end def _rebuild_tree
+
+    def _toggle(self, data: _NodeData) -> None:
+        if data.kind == "bundle":
+            if data.list_id in self._checked:
+                self._checked.discard(data.list_id)
+            else:
+                self._checked.add(data.list_id)
+            # end if
+        else:
+            bundles = [bundle for bundle in self._bundles if bundle.source == data.source]
+            all_checked = bool(bundles) and all(bundle.list_id in self._checked for bundle in bundles)
+            for bundle in bundles:
+                if all_checked:
+                    self._checked.discard(bundle.list_id)
+                else:
+                    self._checked.add(bundle.list_id)
+                # end if
+            # end for
+        # end if
+        self._rebuild_tree()
+    # end def _toggle
 
     def on_select_changed(self, event: Select.Changed) -> None:
         if event.select.id == "filter-mode":
@@ -211,7 +330,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             if new_tier_mode != self.tier_mode:
                 self.tier_mode = new_tier_mode
                 self._apply_tier_mode_to_selection()
-                self._apply_filters()
+                self._rebuild_tree()
             # end if
         # end if
     # end def on_select_changed
@@ -247,6 +366,13 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end for
     # end def _apply_tier_mode_to_selection
 
+    def on_checkbox_changed(self, event: Checkbox.Changed) -> None:
+        if event.checkbox.id == "filter-hide-unselected":
+            self._hide_unselected = event.value
+            self._rebuild_tree()
+        # end if
+    # end def on_checkbox_changed
+
     def on_input_changed(self, event: Input.Changed) -> None:
         raw = event.value.strip()
 
@@ -259,7 +385,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
         if event.input.id == "filter-min-items":
             self._row_filters = _Filters(
-                sources=self._row_filters.sources,
                 min_items=as_int(raw),
                 max_items=self._row_filters.max_items,
                 date_after=self._row_filters.date_after,
@@ -267,7 +392,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-max-items":
             self._row_filters = _Filters(
-                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=as_int(raw),
                 date_after=self._row_filters.date_after,
@@ -275,7 +399,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-date-after":
             self._row_filters = _Filters(
-                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=self._row_filters.max_items,
                 date_after=raw or None,
@@ -283,7 +406,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-date-before":
             self._row_filters = _Filters(
-                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=self._row_filters.max_items,
                 date_after=self._row_filters.date_after,
@@ -292,7 +414,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         else:
             return
         # end if
-        self._apply_filters()
+        self._rebuild_tree()
     # end def on_input_changed
 
     def on_button_pressed(self, event: Button.Pressed) -> None:

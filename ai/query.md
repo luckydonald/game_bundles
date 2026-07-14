@@ -1154,3 +1154,10 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 > </details>
 >
 
+❯ Instead of a selector for the bundle type, have it a bit of a tree view there. You can select, deselect, extend and colapse such tree entry.
+so you can easily de-select all bundles of a certain type.
+-/+ & left/right arrow collapse/expand the list,
+enter selects/deselects.
+left on a sub-item jumps to the bundle type parent (lke macOS Finder)
+Have a toggle where the filter hide the items, too (not only unselct)
+
