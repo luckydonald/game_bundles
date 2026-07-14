@@ -345,6 +345,11 @@ def test_unresolved_hide_removes_the_game_row_from_the_tree(tmp_path: Path) -> N
             app.query_one("#filter-unresolved-handling", Select).value = "hide"
             app.query_one("#filter-unconfigured-handling", Select).value = "hide"
             await pilot.pause()
+            # A hidden game now makes the bundle unavailable, unlike ignore which leaves
+            # it selectable. Turn on filtered rows to inspect the still-hidden game rows.
+            assert _source_nodes(app) == {}
+            app.query_one("#filter-show-filtered", Checkbox).value = True
+            await pilot.pause()
             bundle_node = _source_nodes(app)["humblebundle"].children[0]
             bundle_node.expand()
             await pilot.pause()
@@ -519,14 +524,14 @@ def test_status_line_shows_shown_and_selected_counts(tmp_path: Path) -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             status = app.query_one("#status", Static).renderable
-            assert str(status) == "2/2 shown\n1/2 selected"
+            assert str(status) == " 2/2 shown\n 1/2 selected"
 
             app.query_one("#filter-min-items", Input).value = "5"
             await pilot.pause()
             status = app.query_one("#status", Static).renderable
             # min-items hides the 3-item bundle by default ("show filtered" off); the
             # remaining, excluded-from-the-start bundle is shown but still unselected
-            assert str(status) == "1/2 shown\n0/2 selected"
+            assert str(status) == " 1/2 shown\n 0/1 selected"
         # end async with
     # end def scenario
 
