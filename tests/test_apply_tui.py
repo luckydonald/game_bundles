@@ -506,7 +506,9 @@ def test_clicking_checkbox_glyph_toggles_bundle(tmp_path: Path) -> None:
 
             region = tree._get_label_region(bundle_node._line)
             assert region is not None
-            await pilot.click(tree, offset=(region.x, bundle_node._line))
+            # The label is [expand-arrow][checkbox][text]; skip past the arrow's own width.
+            icon_width = len(tree.ICON_NODE) if bundle_node.allow_expand else 0
+            await pilot.click(tree, offset=(region.x + icon_width, bundle_node._line))
             await pilot.pause()
 
             assert bundle_node.data.list_id not in app._checked
@@ -544,6 +546,54 @@ def test_clicking_elsewhere_on_row_does_not_toggle(tmp_path: Path) -> None:
 # end def test_clicking_elsewhere_on_row_does_not_toggle
 
 
+def test_clicking_the_expand_arrow_toggles_expand_exactly_once(tmp_path: Path) -> None:
+    # regression: Textual dispatches "_on_click" to every class in the MRO that defines
+    # it, so explicitly calling `super()._on_click(event)` from our own override fired
+    # Tree's own handler *again* - collapsing right back after expanding, silently, so
+    # a triangle click looked like it did nothing at all.
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            source_node = _source_nodes(app)["humblebundle"]
+            checked_before = set(app._checked)
+            assert source_node.is_expanded is False
+
+            region = tree._get_label_region(source_node._line)
+            assert region is not None
+            await pilot.click(tree, offset=(region.x, source_node._line))
+            await pilot.pause()
+
+            assert source_node.is_expanded is True
+            assert app._checked == checked_before
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_clicking_the_expand_arrow_toggles_expand_exactly_once
+
+
+def test_expand_arrow_renders_before_the_checkbox_glyph(tmp_path: Path) -> None:
+    from rich.style import Style
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            source_node = _source_nodes(app)["humblebundle"]
+
+            rendered = tree.render_label(source_node, Style(), Style())
+            plain = rendered.plain
+            assert plain.index(tree.ICON_NODE.strip()) < plain.index("[")
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_expand_arrow_renders_before_the_checkbox_glyph
+
+
 def test_filter_deselects_non_matching_bundles(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
@@ -570,46 +620,84 @@ def test_filter_deselects_non_matching_bundles(tmp_path: Path) -> None:
 # end def test_filter_deselects_non_matching_bundles
 
 
-def test_hide_filtered_checkbox_hides_only_filtered_out_bundles(tmp_path: Path) -> None:
+def test_show_filtered_checkbox_reveals_filtered_out_bundles_unchecked(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             app.query_one("#filter-min-items", Input).value = "5"
             await pilot.pause()
-            # filtered-out bundle stays visible (deselected) while "hide filtered" is off
+            # filtered-out bundle is hidden by default ("show filtered" starts off)
+            assert set(_source_nodes(app)) == {"greenmangaming"}
+            assert "humblebundle/bundle/2026-01-01_a/bundle" not in app._checked
+
+            app.query_one("#filter-show-filtered", Checkbox).value = True
+            await pilot.pause()
             assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
             assert _leaf_list_ids(app, "humblebundle") == ["humblebundle/bundle/2026-01-01_a/bundle"]
+            # shown, but still unchecked - "show filtered" doesn't select anything by itself
+            assert "humblebundle/bundle/2026-01-01_a/bundle" not in app._checked
 
-            app.query_one("#filter-hide-filtered", Checkbox).value = True
+            app.query_one("#filter-show-filtered", Checkbox).value = False
             await pilot.pause()
             assert set(_source_nodes(app)) == {"greenmangaming"}
-
-            app.query_one("#filter-hide-filtered", Checkbox).value = False
-            await pilot.pause()
-            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_hide_filtered_checkbox_hides_only_filtered_out_bundles
+# end def test_show_filtered_checkbox_reveals_filtered_out_bundles_unchecked
 
 
-def test_manually_deselected_bundle_stays_visible_regardless_of_hide_filtered(tmp_path: Path) -> None:
-    # "hide filtered" only hides bundles excluded by the active min/max/date filter,
-    # not bundles the user simply unchecked by hand via the tree
+def test_checking_a_filtered_out_bundle_survives_as_a_red_override(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-min-items", Input).value = "5"
+            await pilot.pause()
+            app.query_one("#filter-show-filtered", Checkbox).value = True
+            await pilot.pause()
+
+            humble_bundle_id = "humblebundle/bundle/2026-01-01_a/bundle"
+            app._toggle(_NodeData(kind="bundle", source="humblebundle", list_id=humble_bundle_id))
+            await pilot.pause()
+            assert humble_bundle_id in app._checked
+
+            # toggle "show filtered" back off - the now-checked, still-non-matching bundle
+            # survives (in red) instead of silently vanishing along with a real hide
+            app.query_one("#filter-show-filtered", Checkbox).value = False
+            await pilot.pause()
+            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
+            humble_node = _source_nodes(app)["humblebundle"].children[0]
+            assert humble_node.data.list_id == humble_bundle_id
+            assert humble_node.label.style == "bold red"
+
+            # the warning banner is the first item in the tree
+            tree = _tree(app)
+            assert tree.root.children[0].data is None
+            assert tree.root.children[0].label.style == "bold red"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_checking_a_filtered_out_bundle_survives_as_a_red_override
+
+
+def test_manually_deselected_bundle_stays_visible_regardless_of_show_filtered(tmp_path: Path) -> None:
+    # a bundle that isn't excluded by any active filter is always shown, whether the
+    # user unchecked it by hand or not - "show filtered" only concerns filtered bundles
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            app.query_one("#filter-hide-filtered", Checkbox).value = True
+            app.query_one("#filter-show-filtered", Checkbox).value = True
             await pilot.pause()
             assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_manually_deselected_bundle_stays_visible_regardless_of_hide_filtered
+# end def test_manually_deselected_bundle_stays_visible_regardless_of_show_filtered
 
 
 def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path) -> None:
@@ -663,7 +751,7 @@ def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
 # end def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
 
 
-def test_min_items_filter_deselects_smaller_bundles_but_stays_visible(tmp_path: Path) -> None:
+def test_min_items_filter_deselects_and_hides_smaller_bundles_by_default(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
@@ -671,14 +759,14 @@ def test_min_items_filter_deselects_smaller_bundles_but_stays_visible(tmp_path: 
             min_items = app.query_one("#filter-min-items", Input)
             min_items.value = "5"
             await pilot.pause()
-            # deselected by the filter (see test_filter_deselects_non_matching_bundles), but
-            # "hide filtered" defaults to off, so it stays visible rather than disappearing
-            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
+            # deselected by the filter (see test_filter_deselects_non_matching_bundles), and
+            # "show filtered" defaults to off, so it's hidden entirely rather than staying visible
+            assert set(_source_nodes(app)) == {"greenmangaming"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_min_items_filter_deselects_smaller_bundles_but_stays_visible
+# end def test_min_items_filter_deselects_and_hides_smaller_bundles_by_default
 
 
 def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> None:
