@@ -21,6 +21,7 @@ class GameListCompletion:
     owned_ids: list[str]
     missing_ids: list[str]
     unsupported_ids: list[str]
+    hidden_count: int
 
 # end class GameListCompletion
 
@@ -36,6 +37,7 @@ def evaluate_completion(
     required: list[int] = []
     unsupported_ids: list[str] = []
     enforced_ids: list[str] = []
+    hidden_count = 0
     steam_game_count = 0
     owned_game_count = 0
     for game in games:
@@ -64,6 +66,7 @@ def evaluate_completion(
         is_unresolved = all(identifier.provider == "unresolved" for identifier in game.qualified_ids)
         handling = unresolved_handling if is_unresolved else unconfigured_handling
         if handling == "hide":
+            hidden_count += 1
             continue
         elif handling == "ignore":
             unsupported_ids.append(game.name)
@@ -83,5 +86,6 @@ def evaluate_completion(
         owned_ids=owned_ids,
         missing_ids=missing_ids,
         unsupported_ids=unsupported_ids,
+        hidden_count=hidden_count,
     )
 # end def evaluate_completion
