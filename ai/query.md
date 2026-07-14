@@ -1106,3 +1106,23 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 
 ❯ Following lplp commit guide, squash ai autocommit.
 
+❯ while `sync`/`apply` is collecting the lists, print progress. In case of TUI `apply`, a proper progress bar.
+
+❯ Task Notification:
+> - Task `ab689674a0c7fc22a` <kbd>completed</kbd>
+> - Tool `toolu_01UwZvvBJibd9ug6VWU8eLQa`
+> - > Agent "Locate sync/apply list-collection code" finished
+> - [Query (`1048` chars, `1.03 KB`)](output/agents/012.ab689674a0c7fc22a/prompt.md)
+> - [Answer (`2406` chars, `2.37 KB`)](output/agents/012.ab689674a0c7fc22a/result.md)
+> - [Raw log (`133515` chars, `130 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/e337500d-870d-45fc-844e-b192432c2b08/tasks/ab689674a0c7fc22a.output)
+> - `7` tools, `33222` tokens, `0.551333 s`
+
+❯ Task Notification:
+> - Task `aab3f756a2314868e` <kbd>completed</kbd>
+> - Tool `toolu_01SSCiBYB7buW4iLmYEvmf8w`
+> - > Agent "Check progress print style in scrape commands" finished
+> - [Query (`625` chars, `625 B`)](output/agents/013.aab3f756a2314868e/prompt.md)
+> - [Answer (`1158` chars, `1.14 KB`)](output/agents/013.aab3f756a2314868e/result.md)
+> - [Raw log (`70859` chars, `69.3 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/e337500d-870d-45fc-844e-b192432c2b08/tasks/aab3f756a2314868e.output)
+> - `5` tools, `22144` tokens, `0.365983 s`
+
