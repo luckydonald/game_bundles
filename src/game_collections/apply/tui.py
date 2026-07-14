@@ -8,6 +8,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Literal, cast
 
+from rich.markup import escape
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
@@ -86,7 +87,7 @@ class _BundleTree(Tree[_NodeData]):
         if node is None:
             return
         # end if
-        if node.children and node.is_expanded:
+        if node.allow_expand and node.is_expanded:
             node.collapse()
         elif node.parent is not None:
             self.action_cursor_parent()
@@ -95,7 +96,7 @@ class _BundleTree(Tree[_NodeData]):
 
     def action_expand_or_first_child(self) -> None:
         node = self.cursor_node
-        if node is None or not node.children:
+        if node is None or not node.allow_expand:
             return
         # end if
         if not node.is_expanded:
@@ -107,14 +108,14 @@ class _BundleTree(Tree[_NodeData]):
 
     def action_expand_cursor(self) -> None:
         node = self.cursor_node
-        if node is not None and node.children:
+        if node is not None and node.allow_expand:
             node.expand()
         # end if
     # end def action_expand_cursor
 
     def action_collapse_cursor(self) -> None:
         node = self.cursor_node
-        if node is not None and node.children:
+        if node is not None and node.allow_expand:
             node.collapse()
         # end if
     # end def action_collapse_cursor
@@ -159,6 +160,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._checked: set[str] = set()
         self._expanded_sources: set[str] = set()
         self._hide_unselected = False
+        self._game_lists_by_id: dict[str, LoadedGameList] = {}
         self.all_game_lists: list[LoadedGameList] = []
         self.match_mode: Literal["any", "all"] = match_mode
         self.tier_mode: Literal["all", "highest"] = tier_mode
@@ -195,6 +197,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
     def _finish_loading(self, game_lists: list[LoadedGameList], bundles: list[BundleMetadata]) -> None:
         self.all_game_lists = game_lists
         self._bundles = bundles
+        self._game_lists_by_id = {game_list.id: game_list for game_list in game_lists}
         self._checked = {bundle.list_id for bundle in bundles if bundle.list_id not in self._excluded}
         self.query_one("#loading").remove()
         self._mount_picker()
@@ -251,12 +254,12 @@ class ApplyPickerApp(App[ApplySelection | None]):
         else:
             glyph = "[-]"
         # end if
-        return f"{glyph} {source} ({checked_count}/{total})"
+        return escape(f"{glyph} {source} ({checked_count}/{total})")
     # end def _source_label
 
     def _bundle_label(self, bundle: BundleMetadata) -> str:
         glyph = "[x]" if bundle.list_id in self._checked else "[ ]"
-        return f"{glyph} {_row_label(bundle)}"
+        return escape(f"{glyph} {_row_label(bundle)}")
     # end def _bundle_label
 
     def _rebuild_tree(self) -> None:
@@ -285,9 +288,11 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 data=_NodeData(kind="source", source=source),
             )
             for bundle in visible_bundles:
-                source_node.add_leaf(
+                source_node.add(
                     self._bundle_label(bundle),
                     data=_NodeData(kind="bundle", source=source, list_id=bundle.list_id),
+                    expand=False,
+                    allow_expand=True,
                 )
             # end for
             if source in self._expanded_sources:
@@ -298,6 +303,21 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
         self.query_one("#status", Static).update(f"{shown_bundles}/{len(self._bundles)} shown")
     # end def _rebuild_tree
+
+    def on_tree_node_expanded(self, event: Tree.NodeExpanded[_NodeData]) -> None:
+        node = event.node
+        data = node.data
+        if data is None or data.kind != "bundle" or node.children:
+            return
+        # end if
+        game_list = self._game_lists_by_id.get(data.list_id or "")
+        if game_list is None:
+            return
+        # end if
+        for game in game_list.data.games:
+            node.add_leaf(escape(game.name))
+        # end for
+    # end def on_tree_node_expanded
 
     def _toggle(self, data: _NodeData) -> None:
         if data.kind == "bundle":
