@@ -24,6 +24,7 @@ from game_collections.apply.config import ApplySelection
 from game_collections.apply.filter_widgets import FilterCheckbox, FilterInput, FilterSelect
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, render_checkbox
+from game_collections.completion import GameListCompletion, MissingHandling, evaluate_completion
 from game_collections.lists import LoadedGameList, discover_game_lists
 from game_collections.models import Game
 from game_collections.sources.storefronts import product_url
@@ -289,7 +290,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self,
         lists_root: Path,
         excluded: set[str],
-        match_mode: Literal["any", "all", "none"] = "all",
+        min_missing: int | None = None,
+        max_missing: int | None = 0,
+        unresolved_handling: MissingHandling = "ignore",
+        unconfigured_handling: MissingHandling = "ignore",
         tier_mode: Literal["all", "highest"] = "highest",
         owned_app_ids: frozenset[int] | None = None,
     ) -> None:
@@ -306,7 +310,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # nothing is marked as owned/unowned; every game/bundle renders as it did before.
         self._owned_app_ids = owned_app_ids
         self.all_game_lists: list[LoadedGameList] = []
-        self.match_mode: Literal["any", "all", "none"] = match_mode
+        self.min_missing: int | None = min_missing
+        self.max_missing: int | None = max_missing
+        self.unresolved_handling: MissingHandling = unresolved_handling
+        self.unconfigured_handling: MissingHandling = unconfigured_handling
         self.tier_mode: Literal["all", "highest"] = tier_mode
     # end def __init__
 
@@ -356,11 +363,31 @@ class ApplyPickerApp(App[ApplySelection | None]):
             FilterInput(placeholder="max items", id="filter-max-items"),
             FilterInput(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
             FilterInput(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
+            FilterInput(
+                placeholder="min missing",
+                value="" if self.min_missing is None else str(self.min_missing),
+                id="filter-min-missing",
+            ),
+            FilterInput(
+                placeholder="max missing",
+                value="" if self.max_missing is None else str(self.max_missing),
+                id="filter-max-missing",
+            ),
             FilterSelect(
-                [("mode: off", "none"), ("mode: any", "any"), ("mode: all", "all")],
-                value=self.match_mode,
+                [("unresolved: hide", "hide"), ("unresolved: ignore", "ignore"), ("unresolved: enforce", "enforce")],
+                value=self.unresolved_handling,
                 allow_blank=False,
-                id="filter-mode",
+                id="filter-unresolved-handling",
+            ),
+            FilterSelect(
+                [
+                    ("unconfigured: hide", "hide"),
+                    ("unconfigured: ignore", "ignore"),
+                    ("unconfigured: enforce", "enforce"),
+                ],
+                value=self.unconfigured_handling,
+                allow_blank=False,
+                id="filter-unconfigured-handling",
             ),
             FilterSelect(
                 [("tiers: highest", "highest"), ("tiers: all", "all")],
@@ -416,9 +443,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
         checked_count = sum(1 for bundle in bundles if bundle.list_id in self._checked)
         text = Text(f"{source} ({checked_count}/{total})")
         # Grey the whole category when every bundle shown under it is known to be
-        # 0-owned - under "any"/"all" this can't actually happen (those bundles are
-        # hidden outright instead, see _bundle_hidden_by_ownership), so this only ever
-        # fires in "none" mode, where 0-owned bundles stay visible and selectable.
+        # 0-owned - with a `min_missing`/`max_missing` bound in effect this can't
+        # actually happen (those bundles are hidden outright instead, see
+        # _bundle_hidden_by_missing_bounds), so this only fires with no bounds set,
+        # where 0-owned bundles stay visible and selectable.
         if bundles and all(self._bundle_zero_owned(bundle) is True for bundle in bundles):
             text.style = "dim"
         # end if
@@ -449,8 +477,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return False
     # end def _game_owned
 
-    def _bundle_owned_fraction(self, bundle: BundleMetadata) -> tuple[int, int] | None:
-        """``(owned, total)`` games in a bundle, or ``None`` if ownership is unknown."""
+    def _bundle_completion(self, bundle: BundleMetadata) -> GameListCompletion | None:
+        """Owned/missing counts for a bundle, or ``None`` if ownership is unknown."""
         if self._owned_app_ids is None:
             return None
         # end if
@@ -458,8 +486,21 @@ class ApplyPickerApp(App[ApplySelection | None]):
         if game_list is None:
             return None
         # end if
-        games = game_list.data.games
-        return sum(1 for game in games if self._game_owned(game)), len(games)
+        return evaluate_completion(
+            game_list.data.games,
+            self._owned_app_ids,
+            unresolved_handling=self.unresolved_handling,
+            unconfigured_handling=self.unconfigured_handling,
+        )
+    # end def _bundle_completion
+
+    def _bundle_owned_fraction(self, bundle: BundleMetadata) -> tuple[int, int] | None:
+        """``(owned, total)`` games in a bundle, or ``None`` if ownership is unknown."""
+        completion = self._bundle_completion(bundle)
+        if completion is None:
+            return None
+        # end if
+        return completion.owned_count, completion.total
     # end def _bundle_owned_fraction
 
     def _bundle_zero_owned(self, bundle: BundleMetadata) -> bool | None:
@@ -471,26 +512,20 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return fraction[0] == 0
     # end def _bundle_zero_owned
 
-    def _bundle_hidden_by_ownership(self, bundle: BundleMetadata) -> bool:
-        """Hide a bundle that could never become eligible under the current `mode`.
-
-        "any" needs at least one owned game, so hide only when 0 are owned. "all" needs
-        *every* game owned, so hide as soon as even one isn't - not just when 0 are (that
-        was a bug: "all" was hiding/greying exactly the same bundles as "any"). "none"
-        skips ownership gating entirely, so nothing is hidden on this basis there.
-        """
-        fraction = self._bundle_owned_fraction(bundle)
-        if fraction is None:
+    def _bundle_hidden_by_missing_bounds(self, bundle: BundleMetadata) -> bool:
+        """Hide a bundle that could never satisfy the current `min_missing`/`max_missing` bounds."""
+        completion = self._bundle_completion(bundle)
+        if completion is None:
             return False
         # end if
-        owned, total = fraction
-        if self.match_mode == "any":
-            return owned == 0
-        elif self.match_mode == "all":
-            return owned < total
+        if self.min_missing is not None and completion.missing_count < self.min_missing:
+            return True
+        # end if
+        if self.max_missing is not None and completion.missing_count > self.max_missing:
+            return True
         # end if
         return False
-    # end def _bundle_hidden_by_ownership
+    # end def _bundle_hidden_by_missing_bounds
 
     def _highest_tier_ids(self) -> set[str]:
         """``list_id``s that are the numerically-highest tier within their bundle directory."""
@@ -513,14 +548,14 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _bundle_matches_tier_filter
 
     def _bundle_matches_all_filters(self, bundle: BundleMetadata, highest_tier_ids: set[str]) -> bool:
-        """Item-count/date, ownership (`mode`), and tier (`tiers: highest`) combined.
+        """Item-count/date, ownership (`min_missing`/`max_missing`), and tier (`tiers: highest`) combined.
 
         This is the single "filtered out or not" concept the `show filtered` checkbox governs.
         """
         if not self._row_filters.matches(bundle):
             return False
         # end if
-        if self._bundle_hidden_by_ownership(bundle):
+        if self._bundle_hidden_by_missing_bounds(bundle):
             return False
         # end if
         if not self._bundle_matches_tier_filter(bundle, highest_tier_ids):
@@ -720,12 +755,19 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def action_select_all_or_none
 
     def on_select_changed(self, event: Select.Changed) -> None:
-        if event.select.id == "filter-mode":
-            new_match_mode = cast(Literal["any", "all", "none"], event.value)
+        if event.select.id == "filter-unresolved-handling":
+            new_handling = cast(MissingHandling, event.value)
             # Select posts a Changed event for its own initial `value=` on mount too;
-            # only rebuild (mode now affects 0-owned hide/grey) on an actual change.
-            if new_match_mode != self.match_mode:
-                self.match_mode = new_match_mode
+            # only rebuild (handling now affects owned/missing counts) on an actual change.
+            if new_handling != self.unresolved_handling:
+                self.unresolved_handling = new_handling
+                self._deselect_filtered_out()
+                self._rebuild_tree()
+            # end if
+        elif event.select.id == "filter-unconfigured-handling":
+            new_handling = cast(MissingHandling, event.value)
+            if new_handling != self.unconfigured_handling:
+                self.unconfigured_handling = new_handling
                 self._deselect_filtered_out()
                 self._rebuild_tree()
             # end if
@@ -831,6 +873,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
                 date_after=self._row_filters.date_after,
                 date_before=raw or None,
             )
+        elif event.input.id == "filter-min-missing":
+            self.min_missing = as_int(raw)
+        elif event.input.id == "filter-max-missing":
+            self.max_missing = as_int(raw)
         else:
             return
         # end if

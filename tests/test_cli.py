@@ -100,19 +100,22 @@ def test_sync_help_lists_matching_and_tier_choices() -> None:
     result = CliRunner().invoke(app, ["sync", "--help"])
 
     assert result.exit_code == 0
-    assert "--mode" in result.output
-    assert "any" in result.output
-    assert "all" in result.output
+    assert "--min-owned" in result.output
+    assert "--max-owned" in result.output
+    assert "--min-missing" in result.output
+    assert "--max-missing" in result.output
+    assert "--unresolved-handling" in result.output
+    assert "--unconfigured-handling" in result.output
     assert "--tiers" in result.output
     assert "highest" in result.output
 # end def test_sync_help_lists_matching_and_tier_choices
 
 
 def test_sync_rejects_invalid_matching_mode_before_steam_discovery() -> None:
-    result = CliRunner().invoke(app, ["sync", "--mode", "some"])
+    result = CliRunner().invoke(app, ["sync", "--min-owned", "not-a-number"])
 
     assert result.exit_code == 2
-    assert "Invalid value for '--mode'" in result.output
+    assert "Invalid value for '--min-owned'" in result.output
 # end def test_sync_rejects_invalid_matching_mode_before_steam_discovery
 
 
@@ -121,7 +124,8 @@ def test_apply_help_lists_options() -> None:
 
     assert result.exit_code == 0
     assert "--selection-config" in result.output
-    assert "--mode" in result.output
+    assert "--min-missing" in result.output
+    assert "--max-missing" in result.output
     assert "--tiers" in result.output
 # end def test_apply_help_lists_options
 
@@ -149,9 +153,20 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
     captured_owned_app_ids: list[object] = []
 
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest", owned_app_ids: object = None) -> None:
+        def __init__(
+            self,
+            lists_root: Path,
+            excluded: object,
+            min_missing: int | None = None,
+            max_missing: int | None = 0,
+            unresolved_handling: str = "ignore",
+            unconfigured_handling: str = "ignore",
+            tier_mode: str = "highest",
+            owned_app_ids: object = None,
+        ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
-            self.match_mode = match_mode
+            self.min_missing = min_missing
+            self.max_missing = max_missing
             self.tier_mode = tier_mode
             captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
@@ -199,9 +214,20 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
     captured_owned_app_ids: list[object] = []
 
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest", owned_app_ids: object = None) -> None:
+        def __init__(
+            self,
+            lists_root: Path,
+            excluded: object,
+            min_missing: int | None = None,
+            max_missing: int | None = 0,
+            unresolved_handling: str = "ignore",
+            unconfigured_handling: str = "ignore",
+            tier_mode: str = "highest",
+            owned_app_ids: object = None,
+        ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
-            self.match_mode = match_mode
+            self.min_missing = min_missing
+            self.max_missing = max_missing
             self.tier_mode = tier_mode
             captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
