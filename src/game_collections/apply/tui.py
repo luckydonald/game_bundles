@@ -263,8 +263,17 @@ class ApplyPickerApp(App[ApplySelection | None]):
         )
         body = VerticalScroll(filters, rows, actions, id="body")
         self.mount_all([body, Footer()])
-        self.call_after_refresh(self._rebuild_tree)
+        self.call_after_refresh(self._initial_tree_setup)
     # end def _mount_picker
+
+    def _initial_tree_setup(self) -> None:
+        self._rebuild_tree()
+        tree = self._tree()
+        tree.focus()
+        if tree.root.children:
+            tree.cursor_line = 0
+        # end if
+    # end def _initial_tree_setup
 
     def _sources(self) -> list[str]:
         return sorted({bundle.source for bundle in self._bundles})
