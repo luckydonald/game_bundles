@@ -6,7 +6,7 @@ This worktree branch is currently based on an older `mane`. Local `mane` has sin
 unrelated `apply`/`tui` commits (select-all/none via `ctrl+a`, ownership-based dim/hide of 0-owned
 bundles and games, a `mode: off` match mode, and — notably — a new sibling module
 `apply/filter_widgets.py` with public `FilterInput`/`FilterSelect`/`FilterCheckbox` widgets plus a
-`_BundleTree.action_cursor_up` override for Left/Right/Down arrow-key handoff between the filter
+`BundleTree.action_cursor_up` override for Left/Right/Down arrow-key handoff between the filter
 row and the tree). None of that touches checkbox rendering/click behavior, but `tui.py` has moved
 underneath us, so: rebase this branch onto `mane` first (`git rebase mane`), then re-read the
 rebased `src/game_collections/apply/tui.py` before implementing, since exact line numbers/context
@@ -14,14 +14,14 @@ below are drawn from `mane`'s current version but may shift slightly after the r
 
 ## Context
 
-`_BundleTree` (`src/game_collections/apply/tui.py`) renders `[x]`/`[ ]`/`[-]` glyphs as plain text
+`BundleTree` (`src/game_collections/apply/tui.py`) renders `[x]`/`[ ]`/`[-]` glyphs as plain text
 *prefixed onto* source/bundle node labels (`_source_label`, `_bundle_label`). The glyph is just
 part of the label string, so it's rendered with whatever style the rest of the label gets
 (including cursor/selection highlight), and there's no way to click *just* the checkbox — Textual's
 `Tree._on_click` only distinguishes "clicked the expand arrow" (`meta["toggle"]`) from "clicked
 anywhere else on the row" (selects the cursor line, and because `Tree.auto_expand` defaults to
 `True`, also silently expands/collapses). Checking/unchecking today only happens via the `enter`
-key (`_BundleTree.action_toggle_selection` → `self._on_toggle(node.data)`).
+key (`BundleTree.action_toggle_selection` → `self._on_toggle(node.data)`).
 
 ### How Textual resolves per-cell clicks (relevant prior art)
 
@@ -56,10 +56,10 @@ widget's own CSS-styled render, so for a `Tree` label we render our own Unicode 
 ## New module: `src/game_collections/apply/tree_checkbox.py`
 
 Textual dispatches `render_label`/`_on_click` by name on the `Tree` subclass itself, so those two
-method *overrides* have to live on `_BundleTree` in `tui.py` — there's no way around that. But the
+method *overrides* have to live on `BundleTree` in `tui.py` — there's no way around that. But the
 checkbox-specific logic itself (glyph-per-state mapping, the click meta-key contract) is a distinct,
 reusable concern, so it gets its own module with plain public names rather than being tucked in as
-private constants on `_BundleTree`:
+private constants on `BundleTree`:
 
 ```python
 """Checkbox-style glyph rendering and click detection for Tree labels."""
@@ -118,7 +118,7 @@ def is_checkbox_click(meta: dict[str, object]) -> bool:
    self._checked` else `"unchecked"`, passed the same way.
 
 3. **Render the checkbox using the new module**, not as part of the label text. Override in
-   `_BundleTree`:
+   `BundleTree`:
    ```python
    def render_label(self, node: TreeNode[_NodeData], base_style: Style, style: Style) -> Text:
        label = super().render_label(node, base_style, style)
@@ -155,6 +155,14 @@ def is_checkbox_click(meta: dict[str, object]) -> bool:
    untouched — this only intercepts mouse clicks on the new checkbox glyph.
 
 No changes needed to `action_toggle_selection`, `_toggle`, `_open`, or any keyboard binding.
+
+5. **Rename `BundleTree`** (dropping its underscore prefix, per the no-`_`-prefix convention `mane`
+   already applied to the new `FilterInput`/`FilterSelect`/`FilterCheckbox` widgets) at every
+   reference: the class definition itself, its instantiation in `_mount_picker`
+   (`BundleTree(self._toggle, self._open)`), and the `_tree()` helper's return-type annotation and
+   `query_one("#rows-tree", BundleTree)` call. `_NodeData` and the rest of the file's existing
+   underscore-prefixed names (`_Filters`, `_row_label`, `_open_url`, etc.) are untouched — this
+   rename is scoped to `BundleTree` only, since that's the class this change is already modifying.
 
 ## Verification
 
