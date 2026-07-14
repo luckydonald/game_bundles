@@ -147,8 +147,10 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
     )
 
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object) -> None:
+        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest") -> None:
             self.all_game_lists = discover_game_lists(lists_root)
+            self.match_mode = match_mode
+            self.tier_mode = tier_mode
         # end def __init__
 
         def run(self) -> ApplySelection:
@@ -190,8 +192,10 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
     selection_config = tmp_path / "config/apply-selection.yml"
 
     class _StubPickerApp:
-        def __init__(self, lists_root: Path, excluded: object) -> None:
+        def __init__(self, lists_root: Path, excluded: object, match_mode: str = "all", tier_mode: str = "highest") -> None:
             self.all_game_lists = discover_game_lists(lists_root)
+            self.match_mode = match_mode
+            self.tier_mode = tier_mode
         # end def __init__
 
         def run(self) -> None:

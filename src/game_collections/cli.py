@@ -959,7 +959,7 @@ def apply_command(
     try:
         previous_selection = load_selection(selection_config)
         previously_excluded = excluded_list_ids(previous_selection)
-        picker = ApplyPickerApp(_lists_root(lists_root), previously_excluded)
+        picker = ApplyPickerApp(_lists_root(lists_root), previously_excluded, match_mode=mode, tier_mode=tiers)
         selection = picker.run()
         if selection is None:
             typer.echo("Cancelled. No selection was saved.")
@@ -977,8 +977,8 @@ def apply_command(
             api_key,
             source,
             collection,
-            match_mode=mode,
-            tier_mode=tiers,
+            match_mode=picker.match_mode,
+            tier_mode=picker.tier_mode,
             reconcile_managed=True,
         )
         plan = adapter.plan(game_lists)
