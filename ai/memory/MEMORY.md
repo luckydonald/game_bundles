@@ -1,7 +1,7 @@
 # Memory
 - [Repo commit hooks](repo_commit_hooks.md) — pre-commit hook rejects Co-Authored-By/Claude-Session commit trailers; `allowCoAuthoredEtc: false` in `ai/tool-settings/settings.json` suppresses Claude Code's own footer.
 - [History-master replay guards](2026-07-20-history-master-replay-guards.md) — TODO: summarize this file.
-- [end comment bare form](feedback_end_comment_bare_form.md) — TODO: summarize this file.
+- [Bare `# end` comments](feedback_end_comment_bare_form.md) — `# end def`/`# end class` etc. must never repeat the function/class name
 - [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
 - [live validation runs fix bugs found](feedback_live_validation_runs_fix_bugs_found.md) — TODO: summarize this file.
 - [plan prose formatting](feedback_plan_prose_formatting.md) — TODO: summarize this file.
