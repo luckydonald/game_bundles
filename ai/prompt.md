@@ -1211,3 +1211,36 @@ Hitting enter shall open it, of cause.
 >
 > </details>
 >
+
+❯ /plan When I'm at the top most category, I want to be able to press up, to go to the filters and use the arrow keys there naturally. This means I can still use it inside input fields as expected, but moving past the last/first character would move to the prev/next field (currenlty they are all on the same row)
+Down on those would move back to the tree view.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Pressing Up from the top of the tree should focus which filter widget?
+>> 2. Select widgets (mode/tiers dropdowns) already use Down/Up to open their dropdown menu. Should Down still escape to the tree from a Select, overriding that?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Up target** (1/2) <kbd>Single Select</kbd><br>
+>> Pressing Up from the top of the tree should focus which filter widget?
+> - [x] 1\. First filter widget (Recommended)
+>   - _Always jumps to the leftmost field (min items). Simple, predictable, no hidden state to track._
+> - [ ] 2\. Last-focused filter widget
+>   - _Remembers whichever filter control had focus before you last left the row, and returns you there. More "natural" but needs extra focus-tracking state._
+> - [ ] 3\. _Type something._
+>
+>> **Select down** (2/2) <kbd>Single Select</kbd><br>
+>> Select widgets (mode/tiers dropdowns) already use Down/Up to open their dropdown menu. Should Down still escape to the tree from a Select, overriding that?
+> - [ ] 1\. Leave Select alone (Recommended)
+>   - _Down/Up on the two Select dropdowns keep opening the menu as Textual normally does; only Input and Checkbox escape to the tree on Down._
+> - [ ] 2\. Override on Select too
+>   - _Down always moves focus to the tree, even from a Select — you'd lose the ability to open its dropdown with Down (Enter/Space still open it)._
+> - [x] 3\. _Type something:_
+>   - > Down/Up is not affected, but left/right still would act as described. While the dropdown is open it would obviously be closed.
+>
+> </details>
+>
