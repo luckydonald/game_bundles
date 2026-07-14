@@ -472,14 +472,24 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _bundle_zero_owned
 
     def _bundle_hidden_by_ownership(self, bundle: BundleMetadata) -> bool:
-        """Under "any"/"all", a 0-owned bundle can never become eligible - hide it outright.
+        """Hide a bundle that could never become eligible under the current `mode`.
 
-        "none" mode skips ownership gating entirely, so nothing is hidden on this basis there.
+        "any" needs at least one owned game, so hide only when 0 are owned. "all" needs
+        *every* game owned, so hide as soon as even one isn't - not just when 0 are (that
+        was a bug: "all" was hiding/greying exactly the same bundles as "any"). "none"
+        skips ownership gating entirely, so nothing is hidden on this basis there.
         """
-        if self.match_mode not in ("any", "all"):
+        fraction = self._bundle_owned_fraction(bundle)
+        if fraction is None:
             return False
         # end if
-        return self._bundle_zero_owned(bundle) is True
+        owned, total = fraction
+        if self.match_mode == "any":
+            return owned == 0
+        elif self.match_mode == "all":
+            return owned < total
+        # end if
+        return False
     # end def _bundle_hidden_by_ownership
 
     def _highest_tier_ids(self) -> set[str]:

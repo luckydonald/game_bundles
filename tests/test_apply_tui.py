@@ -98,7 +98,9 @@ def test_ownership_marks_bundle_fraction_and_greys_out_unowned_games(tmp_path: P
     )
 
     async def scenario() -> None:
-        app = ApplyPickerApp(lists_root, excluded=set(), owned_app_ids=frozenset({440}))
+        # match_mode="none": this test is about the ownership fraction/dim labeling itself,
+        # not about "all"/"any" hiding a not-fully-owned bundle outright
+        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             bundle_node = _source_nodes(app)["humblebundle"].children[0]
@@ -157,42 +159,43 @@ def _write_ownership_fixture(lists_root: Path) -> None:
         "schema: 1\nname: Partial Owned\ngames:\n  - name: G1\n    ids: [steam:440]\n  - name: G2\n    ids: [steam:999]\n",
         encoding="utf-8",
     )
+    full = lists_root / "vendor/fully-owned.yml"
+    full.write_text(
+        "schema: 1\nname: Fully Owned\ngames:\n  - name: G1\n    ids: [steam:440]\n  - name: G2\n    ids: [steam:441]\n",
+        encoding="utf-8",
+    )
 # end def _write_ownership_fixture
 
 
-def test_mode_all_and_any_hide_zero_owned_bundles_but_mode_off_shows_them_greyed(tmp_path: Path) -> None:
+def test_mode_all_hides_partial_ownership_mode_any_only_hides_zero_owned(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     _write_ownership_fixture(lists_root)
 
     async def scenario() -> None:
-        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="all", owned_app_ids=frozenset({440}))
+        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="all", owned_app_ids=frozenset({440, 441}))
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
+            # "all" needs every game owned: only the fully-owned bundle qualifies -
+            # this used to be identical to "any" (a bug), hiding only 0-owned bundles
             vendor = _source_nodes(app)["vendor"]
             assert [child.label.plain for child in vendor.children] == [
-                "[vendor/-] ????-??-??    2 items  single    Partial Owned  (1/2)",
+                "[vendor/-] ????-??-??    2 items  single    Fully Owned  (2/2)",
             ]
             assert [child.data.check_state for child in vendor.children] == ["checked"]
 
             app.query_one("#filter-mode", Select).value = "any"
             await pilot.pause()
             vendor = _source_nodes(app)["vendor"]
-            assert len(vendor.children) == 1  # zero-owned bundle stays hidden under "any" too
-
-            app.query_one("#filter-mode", Select).value = "none"
-            await pilot.pause()
-            vendor = _source_nodes(app)["vendor"]
-            labels_and_styles = {child.label.plain: child.label.style for child in vendor.children}
-            assert len(labels_and_styles) == 2
-            zero_label = next(label for label in labels_and_styles if "Zero Owned" in label)
-            partial_label = next(label for label in labels_and_styles if "Partial Owned" in label)
-            assert labels_and_styles[zero_label] == "dim"
-            assert labels_and_styles[partial_label] == ""
+            # "any" needs at least one game owned: partial- and fully-owned both qualify,
+            # only the 0-owned bundle is hidden
+            names = {"Partial Owned" if "Partial Owned" in c.label.plain else "Fully Owned" for c in vendor.children}
+            assert len(vendor.children) == 2
+            assert names == {"Partial Owned", "Fully Owned"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_mode_all_and_any_hide_zero_owned_bundles_but_mode_off_shows_them_greyed
+# end def test_mode_all_hides_partial_ownership_mode_any_only_hides_zero_owned
 
 
 def test_source_greys_out_only_when_fully_zero_owned(tmp_path: Path) -> None:
