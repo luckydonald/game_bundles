@@ -195,6 +195,51 @@ def test_expanding_a_bundle_lazily_shows_its_games(tmp_path: Path) -> None:
 # end def test_expanding_a_bundle_lazily_shows_its_games
 
 
+def test_ctrl_a_toggles_select_all_or_none(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            all_ids = {
+                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "humblebundle/bundle/2026-01-01_a/bundle",
+            }
+            assert app._checked == all_ids
+
+            await pilot.press("ctrl+a")
+            await pilot.pause()
+            assert app._checked == set()
+
+            await pilot.press("ctrl+a")
+            await pilot.pause()
+            assert app._checked == all_ids
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_ctrl_a_toggles_select_all_or_none
+
+
+def test_ctrl_a_only_affects_bundles_passing_the_filter(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-min-items", Input).value = "5"
+            await pilot.pause()
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
+
+            await pilot.press("ctrl+a")
+            await pilot.pause()
+            # only the filtered-in bundle gets toggled off; the filtered-out one was already deselected
+            assert app._checked == set()
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_ctrl_a_only_affects_bundles_passing_the_filter
+
+
 def test_collapsed_source_stays_collapsed_after_an_unrelated_rebuild(tmp_path: Path) -> None:
     # regression: _expanded_sources used to only grow via .add(), so a source collapsed
     # again after being expanded once would spuriously re-expand on the next rebuild
