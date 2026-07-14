@@ -67,6 +67,54 @@ def _leaf_list_ids(app: ApplyPickerApp, source: str) -> list[str]:
 # end def _leaf_list_ids
 
 
+def test_labels_render_literal_brackets_as_checkboxes(tmp_path: Path) -> None:
+    # rich.markup would otherwise silently eat "[x]"/"[ ]" (and any "[...]" in a bundle name)
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root, "humblebundle/bundle/2026-01-01_a/bundle", item_count=1, tier=None, name="One [Deluxe]")
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            source_node = _source_nodes(app)["humblebundle"]
+            assert source_node.label.plain.startswith("[x] ")
+            bundle_node = source_node.children[0]
+            assert bundle_node.label.plain.startswith("[x] ")
+            assert "One [Deluxe]" in bundle_node.label.plain
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_labels_render_literal_brackets_as_checkboxes
+
+
+def test_expanding_a_bundle_lazily_shows_its_games(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: Some Bundle\ngames:\n  - name: Game A\n    ids: [steam:1]\n  - name: Game B\n    ids: [steam:2]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            assert len(bundle_node.children) == 0
+            assert bundle_node.allow_expand is True
+
+            bundle_node.expand()
+            await pilot.pause()
+            assert [leaf.label.plain for leaf in bundle_node.children] == ["Game A", "Game B"]
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_expanding_a_bundle_lazily_shows_its_games
+
+
 def test_bundles_pre_checked_and_grouped_by_source(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
