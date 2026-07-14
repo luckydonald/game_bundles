@@ -41,6 +41,49 @@ widget's own CSS-styled render, so for a `Tree` label we render our own Unicode 
 - checked: `☑` (U+2611 BALLOT BOX WITH CHECK)
 - mixed (source row, some but not all bundles checked): `⊟` (U+229F SQUARED MINUS)
 
+## New module: `src/game_collections/apply/tree_checkbox.py`
+
+Textual dispatches `render_label`/`_on_click` by name on the `Tree` subclass itself, so those two
+method *overrides* have to live on `_BundleTree` in `tui.py` — there's no way around that. But the
+checkbox-specific logic itself (glyph-per-state mapping, the click meta-key contract) is a distinct,
+reusable concern, so it gets its own module with plain public names rather than being tucked in as
+private constants on `_BundleTree`:
+
+```python
+"""Checkbox-style glyph rendering and click detection for Tree labels."""
+
+from typing import Literal
+
+from rich.style import Style
+from rich.text import Text
+
+CheckState = Literal["checked", "unchecked", "mixed"]
+
+_META_KEY = "checkbox"
+
+_GLYPHS: dict[CheckState, str] = {
+    "unchecked": "☐",
+    "checked": "☑",
+    "mixed": "⊟",
+}
+
+
+def render_checkbox_prefix(state: CheckState, base_style: Style) -> Text:
+    """Build the checkbox glyph as its own ``Text`` span, styled/metaed independently of the label.
+
+    Using ``base_style`` (never a cursor/hover-highlighted style) keeps the glyph out of the
+    row's selection highlight. The attached meta is what `is_checkbox_click` looks for.
+    """
+    return Text(f"{_GLYPHS[state]} ", style=base_style + Style.from_meta({_META_KEY: True}))
+# end def render_checkbox_prefix
+
+
+def is_checkbox_click(meta: dict[str, object]) -> bool:
+    """Whether a Tree click's ``event.style.meta`` landed on a checkbox glyph."""
+    return bool(meta.get(_META_KEY, False))
+# end def is_checkbox_click
+```
+
 ## Changes (`src/game_collections/apply/tui.py`)
 
 1. **Add `check_state` to `_NodeData`**: `check_state: Literal["checked", "unchecked", "mixed"] | None = None`.
@@ -56,30 +99,28 @@ widget's own CSS-styled render, so for a `Tree` label we render our own Unicode 
    `_row_label(bundle)`), with no glyph prefix — the glyph moves entirely into rendering (next
    step).
 
-3. **Render the checkbox as its own styled+metaed prefix**, not part of the label text. Override in
+3. **Render the checkbox using the new module**, not as part of the label text. Override in
    `_BundleTree`:
    ```python
-   _CHECKBOX_GLYPHS = {"checked": "☑", "unchecked": "☐", "mixed": "⊟"}
-
    def render_label(self, node: TreeNode[_NodeData], base_style: Style, style: Style) -> Text:
        label = super().render_label(node, base_style, style)
        data = node.data
        if data is None or data.check_state is None:
            return label
        # end if
-       glyph = self._CHECKBOX_GLYPHS[data.check_state]
-       checkbox = Text(f"{glyph} ", style=base_style + Style.from_meta({"checkbox": True}))
-       return Text.assemble(checkbox, label)
+       return Text.assemble(render_checkbox_prefix(data.check_state, base_style), label)
    # end def render_label
    ```
-   (needs `from rich.style import Style` added to imports). Using `base_style` (not `style`) is
-   what keeps the glyph out of the cursor/selection highlight.
+   (needs `from rich.style import Style` and
+   `from game_collections.apply.tree_checkbox import render_checkbox_prefix, is_checkbox_click`
+   added to imports). Using `base_style` (not `style`) is what keeps the glyph out of the
+   cursor/selection highlight.
 
 4. **Make the checkbox glyph its own click target**, independent of the rest of the row. Override:
    ```python
    async def _on_click(self, event: events.Click) -> None:
        meta = event.style.meta
-       if meta.get("checkbox", False) and "line" in meta:
+       if is_checkbox_click(meta) and "line" in meta:
            node = self.get_node_at_line(meta["line"])
            if node is not None and node.data is not None:
                self._on_toggle(node.data)
