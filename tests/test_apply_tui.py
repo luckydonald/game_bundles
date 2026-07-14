@@ -170,8 +170,9 @@ def test_mode_all_and_any_hide_zero_owned_bundles_but_mode_off_shows_them_greyed
             await _run_until_loaded(app, pilot)
             vendor = _source_nodes(app)["vendor"]
             assert [child.label.plain for child in vendor.children] == [
-                "[x] [vendor/-] ????-??-??    2 items  single    Partial Owned  (1/2)",
+                "[vendor/-] ????-??-??    2 items  single    Partial Owned  (1/2)",
             ]
+            assert [child.data.check_state for child in vendor.children] == ["checked"]
 
             app.query_one("#filter-mode", Select).value = "any"
             await pilot.pause()
@@ -292,8 +293,8 @@ def test_open_calls_os_opener_only_when_enabled(tmp_path: Path) -> None:
 # end def test_open_calls_os_opener_only_when_enabled
 
 
-def test_labels_render_literal_brackets_as_checkboxes(tmp_path: Path) -> None:
-    # rich.markup would otherwise silently eat "[x]"/"[ ]" (and any "[...]" in a bundle name)
+def test_labels_render_literal_brackets_and_carry_checked_state(tmp_path: Path) -> None:
+    # rich.markup would otherwise silently eat any literal "[...]" in a bundle name
     lists_root = tmp_path / "lists"
     _write_list(lists_root, "humblebundle/bundle/2026-01-01_a/bundle", item_count=1, tier=None, name="One [Deluxe]")
 
@@ -302,15 +303,15 @@ def test_labels_render_literal_brackets_as_checkboxes(tmp_path: Path) -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             source_node = _source_nodes(app)["humblebundle"]
-            assert source_node.label.plain.startswith("[x] ")
+            assert source_node.data.check_state == "checked"
             bundle_node = source_node.children[0]
-            assert bundle_node.label.plain.startswith("[x] ")
+            assert bundle_node.data.check_state == "checked"
             assert "One [Deluxe]" in bundle_node.label.plain
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_labels_render_literal_brackets_as_checkboxes
+# end def test_labels_render_literal_brackets_and_carry_checked_state
 
 
 def test_expanding_a_bundle_lazily_shows_its_games(tmp_path: Path) -> None:
@@ -489,6 +490,58 @@ def test_toggling_source_node_toggles_all_its_bundles(tmp_path: Path) -> None:
 
     asyncio.run(scenario())
 # end def test_toggling_source_node_toggles_all_its_bundles
+
+
+def test_clicking_checkbox_glyph_toggles_bundle(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            source_node = _source_nodes(app)["humblebundle"]
+            source_node.expand()
+            await pilot.pause()
+            bundle_node = source_node.children[0]
+            assert bundle_node.data.list_id in app._checked
+
+            region = tree._get_label_region(bundle_node._line)
+            assert region is not None
+            await pilot.click(tree, offset=(region.x, bundle_node._line))
+            await pilot.pause()
+
+            assert bundle_node.data.list_id not in app._checked
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_clicking_checkbox_glyph_toggles_bundle
+
+
+def test_clicking_elsewhere_on_row_does_not_toggle(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            source_node = _source_nodes(app)["humblebundle"]
+            source_node.expand()
+            await pilot.pause()
+            bundle_node = source_node.children[0]
+            checked_before = set(app._checked)
+
+            region = tree._get_label_region(bundle_node._line)
+            assert region is not None
+            # Click well past the checkbox glyph, into the rest of the label - this is
+            # "navigation as is" territory (cursor move/expand), never a checkbox toggle.
+            await pilot.click(tree, offset=(region.x + region.width - 1, bundle_node._line))
+            await pilot.pause()
+
+            assert app._checked == checked_before
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_clicking_elsewhere_on_row_does_not_toggle
 
 
 def test_filter_deselects_non_matching_bundles(tmp_path: Path) -> None:

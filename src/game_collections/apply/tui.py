@@ -11,8 +11,9 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Literal, cast
 
+from rich.style import Style
 from rich.text import Text
-from textual import work
+from textual import events, work
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
 from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar, Select, Static, Tree
@@ -21,6 +22,7 @@ from textual.widgets.tree import TreeNode
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.filter_widgets import FilterCheckbox, FilterInput, FilterSelect
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
+from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, render_checkbox_prefix
 from game_collections.lists import LoadedGameList, discover_game_lists
 from game_collections.models import Game
 from game_collections.sources.storefronts import product_url
@@ -82,11 +84,12 @@ class _NodeData:
     game_index: int | None = None
     url: str | None = None
     enabled: bool = True
+    check_state: CheckState | None = None
 
 # end class _NodeData
 
 
-class _BundleTree(Tree[_NodeData]):
+class BundleTree(Tree[_NodeData]):
     """A tree with Finder-like navigation and Enter-to-select/open instead of Enter-to-expand."""
 
     BINDINGS = [
@@ -164,7 +167,28 @@ class _BundleTree(Tree[_NodeData]):
         # end if
     # end def action_toggle_selection
 
-# end class _BundleTree
+    def render_label(self, node: TreeNode[_NodeData], base_style: Style, style: Style) -> Text:
+        label = super().render_label(node, base_style, style)
+        data = node.data
+        if data is None or data.check_state is None:
+            return label
+        # end if
+        return Text.assemble(render_checkbox_prefix(data.check_state, base_style), label)
+    # end def render_label
+
+    async def _on_click(self, event: events.Click) -> None:
+        meta = event.style.meta
+        if is_checkbox_click(meta) and "line" in meta:
+            node = self.get_node_at_line(meta["line"])
+            if node is not None and node.data is not None:
+                self._on_toggle(node.data)
+            # end if
+            return
+        # end if
+        await super()._on_click(event)
+    # end def _on_click
+
+# end class BundleTree
 
 
 class ApplyPickerApp(App[ApplySelection | None]):
@@ -272,7 +296,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             FilterCheckbox("hide filtered", value=self._hide_filtered, id="filter-hide-filtered"),
             id="filters",
         )
-        rows = _BundleTree(self._toggle, self._open)
+        rows = BundleTree(self._toggle, self._open)
         actions = Horizontal(
             Button("Save & Exit (ctrl+s)", id="save-button", variant="success"),
             Button("Cancel (esc)", id="cancel-button", variant="error"),
@@ -297,21 +321,25 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return sorted({bundle.source for bundle in self._bundles})
     # end def _sources
 
-    def _tree(self) -> _BundleTree:
-        return self.query_one("#rows-tree", _BundleTree)
+    def _tree(self) -> BundleTree:
+        return self.query_one("#rows-tree", BundleTree)
     # end def _tree
+
+    def _source_check_state(self, bundles: list[BundleMetadata]) -> CheckState:
+        total = len(bundles)
+        checked_count = sum(1 for bundle in bundles if bundle.list_id in self._checked)
+        if total == 0 or checked_count == 0:
+            return "unchecked"
+        elif checked_count == total:
+            return "checked"
+        # end if
+        return "mixed"
+    # end def _source_check_state
 
     def _source_label(self, source: str, bundles: list[BundleMetadata]) -> Text:
         total = len(bundles)
         checked_count = sum(1 for bundle in bundles if bundle.list_id in self._checked)
-        if total == 0 or checked_count == 0:
-            glyph = "[ ]"
-        elif checked_count == total:
-            glyph = "[x]"
-        else:
-            glyph = "[-]"
-        # end if
-        text = Text(f"{glyph} {source} ({checked_count}/{total})")
+        text = Text(f"{source} ({checked_count}/{total})")
         # Grey the whole category when every bundle shown under it is known to be
         # 0-owned - under "any"/"all" this can't actually happen (those bundles are
         # hidden outright instead, see _bundle_hidden_by_ownership), so this only ever
@@ -380,8 +408,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _bundle_hidden_by_ownership
 
     def _bundle_label(self, bundle: BundleMetadata) -> Text:
-        glyph = "[x]" if bundle.list_id in self._checked else "[ ]"
-        label = f"{glyph} {_row_label(bundle)}"
+        label = _row_label(bundle)
         fraction = self._bundle_owned_fraction(bundle)
         zero_owned = False
         if fraction is not None:
@@ -420,12 +447,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
             # end if
             source_node = tree.root.add(
                 self._source_label(source, visible_bundles),
-                data=_NodeData(kind="source", source=source),
+                data=_NodeData(kind="source", source=source, check_state=self._source_check_state(visible_bundles)),
             )
             for bundle in visible_bundles:
+                bundle_check_state = "checked" if bundle.list_id in self._checked else "unchecked"
                 source_node.add(
                     self._bundle_label(bundle),
-                    data=_NodeData(kind="bundle", source=source, list_id=bundle.list_id),
+                    data=_NodeData(
+                        kind="bundle", source=source, list_id=bundle.list_id, check_state=bundle_check_state
+                    ),
                     expand=False,
                     allow_expand=True,
                 )
