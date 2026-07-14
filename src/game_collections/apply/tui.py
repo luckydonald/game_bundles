@@ -86,6 +86,7 @@ class _NodeData:
     url: str | None = None
     enabled: bool = True
     check_state: CheckState | None = None
+    override: bool = False
 
 # end class _NodeData
 
@@ -488,7 +489,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
         tree.root.remove_children()
 
         highest_tier_ids = self._highest_tier_ids()
-        any_override = False
         shown_bundles = 0
         for source in self._sources():
             source_bundles = [bundle for bundle in self._bundles if bundle.source == source]
@@ -524,12 +524,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
                     and bundle.list_id not in matching_ids
                     and bundle.list_id in self._checked
                 )
-                any_override = any_override or is_override
                 bundle_check_state = "checked" if bundle.list_id in self._checked else "unchecked"
                 source_node.add(
                     self._bundle_label(bundle, override=is_override),
                     data=_NodeData(
-                        kind="bundle", source=source, list_id=bundle.list_id, check_state=bundle_check_state
+                        kind="bundle",
+                        source=source,
+                        list_id=bundle.list_id,
+                        check_state=bundle_check_state,
+                        override=is_override,
                     ),
                     expand=False,
                     allow_expand=True,
@@ -540,17 +543,6 @@ class ApplyPickerApp(App[ApplySelection | None]):
             # end if
             shown_bundles += len(visible_bundles)
         # end for
-
-        if any_override:
-            tree.root.add_leaf(
-                Text(
-                    "selected but would be filtered out - shown here in red until deselected"
-                    ' (or "show filtered" is turned back on)',
-                    style="bold red",
-                ),
-                before=0,
-            )
-        # end if
 
         self.query_one("#status", Static).update(f"{shown_bundles}/{len(self._bundles)} shown")
     # end def _rebuild_tree
@@ -577,6 +569,15 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _game_label
 
     def _populate_games(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
+        if data.override:
+            node.add_leaf(
+                Text(
+                    "selected but would be filtered out - stays checked until you deselect it"
+                    ' (or turn "show filtered" back on and uncheck it there)',
+                    style="bold red",
+                ),
+            )
+        # end if
         game_list = self._game_lists_by_id.get(data.list_id or "")
         if game_list is None:
             return
