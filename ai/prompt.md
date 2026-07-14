@@ -1274,3 +1274,15 @@ The mane branch already did that.
 
 ❯ The red explainer text shall be a sub-item of the checked (already red) item, visible if expanded.
 
+❯ changes:
+- `^←` / `^→` (ctrl+arrow keys) shall expend/collapse the whole tree (recursively)
+- shift + arrow keys shall expand/collaps the currenent item and recursively everything under it.
+- Remove the whole keep-in-red-when-it-would-be-filtered-out logic, it's breaking easily, and after a few toggles of stuff you got so many red entries.
+  - Easier flow: 
+  - show off: The list feeding the tree is filtered, so what's filtered "does not exist".
+  - show on: As is, the items are shown, added to the list as unchecked.
+  - no special state tracking is done.
+  - if show is off again, your selected "illegal" values will not appear in the result.
+- _mode: all_ and _mode: any_ still seem to be exactly the same selections. Both include games I don't own (which is not what "all" should be about.)
+- Under the _x/y shown_ text add _u/x selected_ (to make debugging easier, and because there's still space anyways)
+

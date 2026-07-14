@@ -574,6 +574,73 @@ def test_clicking_the_expand_arrow_toggles_expand_exactly_once(tmp_path: Path) -
 # end def test_clicking_the_expand_arrow_toggles_expand_exactly_once
 
 
+def test_ctrl_right_expands_whole_tree_recursively(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: One\ngames:\n  - name: G\n    ids: [steam:440]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            tree.focus()
+            tree.cursor_line = 0
+            await pilot.pause()
+            await pilot.press("ctrl+right")
+            await pilot.pause()
+
+            source_node = _source_nodes(app)["humblebundle"]
+            assert source_node.is_expanded is True
+            bundle_node = source_node.children[0]
+            assert bundle_node.is_expanded is True
+            game_node = bundle_node.children[0]
+            assert game_node.is_expanded is True
+            assert [child.label.plain for child in game_node.children] == ["Store: steam", "Launch on Steam"]
+
+            await pilot.press("ctrl+left")
+            await pilot.pause()
+            assert source_node.is_expanded is False
+            assert bundle_node.is_expanded is False
+            assert game_node.is_expanded is False
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_ctrl_right_expands_whole_tree_recursively
+
+
+def test_shift_right_expands_only_the_cursor_subtree(tmp_path: Path) -> None:
+    lists_root = _make_lists_root(tmp_path)
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            tree = _tree(app)
+            tree.focus()
+            tree.cursor_line = 0
+            await pilot.pause()
+            cursor_source = tree.cursor_node
+            await pilot.press("shift+right")
+            await pilot.pause()
+
+            assert cursor_source.is_expanded is True
+            assert cursor_source.children[0].is_expanded is True
+
+            other_sources = [node for node in tree.root.children if node is not cursor_source]
+            assert all(node.is_expanded is False for node in other_sources)
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_shift_right_expands_only_the_cursor_subtree
+
+
 def test_expand_arrow_renders_before_the_checkbox_glyph(tmp_path: Path) -> None:
     from rich.style import Style
 
