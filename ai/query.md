@@ -1249,6 +1249,8 @@ Down on those would move back to the tree view.
 
 ❯ This does not really address that I want to be able to click the checkbox for toggling, but the rest of the lable should be for navigation (open/collapse) as is. Actually, I want the checkbox to be not highlighted with the text but separate. Also, what kind of checkbox stylings exist in the ui lib?
 
+❯ So this basically is implementing a custom Tree subclass which adds the checkbox, too, yes?
+
 ❯ Do not use `_` prefixes. We don't do "private" classes/functions here. Instead separate stuff out in modules where it makes sense.
 
 ❯ Rebase/restructure onto the changes happened on `mane` in the meantime.
