@@ -1,5 +1,32 @@
 {
   "$defs": {
+    "ItadByobTier": {
+      "additionalProperties": false,
+      "description": "One purchasable \"pick N of the pool\" option on a Build Your Own bundle.\n\nVerified live against `liveData.byob` on real ITAD BYOB bundle detail\npages (e.g. bundle 16385, \"Build Your Own Best of Killer Bundle\"):\n`[{\"count\": 5, \"price\": [120, \"EUR\"]}, {\"count\": 10, \"price\": [100, \"EUR\"]}, ...]`,\nalways ascending by `count`. Distinct from `ItadTier`, which for a BYOB\nbundle only ever holds one synthetic tier covering the whole pool.",
+      "properties": {
+        "count": {
+          "minimum": 1,
+          "title": "Count",
+          "type": "integer"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ItadPrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "count"
+      ],
+      "title": "ItadByobTier",
+      "type": "object"
+    },
     "ItadDates": {
       "additionalProperties": false,
       "description": "Offer availability and observation timestamps.",
@@ -153,6 +180,13 @@
   "additionalProperties": false,
   "description": "Normalized metadata for one ITAD bundle offer.",
   "properties": {
+    "byob_tiers": {
+      "items": {
+        "$ref": "#/$defs/ItadByobTier"
+      },
+      "title": "Byob Tiers",
+      "type": "array"
+    },
     "dates": {
       "$ref": "#/$defs/ItadDates"
     },

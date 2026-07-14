@@ -15,6 +15,7 @@ from markdownify import markdownify
 from game_collections.sources.humblebundle.models import (
     HumbleArchive,
     HumbleCharity,
+    HumbleChoicePickOption,
     HumbleDates,
     HumbleItem,
     HumbleLink,
@@ -465,6 +466,36 @@ def _product_json_ld(parser: _EmbeddedDataParser) -> dict[str, Any]:
 # end def _product_json_ld
 
 
+def _choice_pick_options(tier_info: Any, game_count: int) -> list[HumbleChoicePickOption]:
+    """Build distinct pick-quota options from `marketing.tierInfo`, clamped to the pool size."""
+    if not isinstance(tier_info, dict) or game_count <= 0:
+        return []
+    # end if
+    quota_by_key: dict[str, int] = {}
+    for tier_key in sorted(tier_info):
+        entry = tier_info[tier_key]
+        if not isinstance(entry, dict) or not entry.get("uses_choices"):
+            continue
+        # end if
+        choices = entry.get("choices")
+        if not isinstance(choices, int) or choices <= 0:
+            continue
+        # end if
+        quota_by_key[tier_key] = min(choices, game_count)
+    # end for
+    seen_quotas: set[int] = set()
+    options: list[HumbleChoicePickOption] = []
+    for tier_key, quota in sorted(quota_by_key.items(), key=lambda pair: pair[1]):
+        if quota in seen_quotas:
+            continue
+        # end if
+        seen_quotas.add(quota)
+        options.append(HumbleChoicePickOption(tier_key=tier_key, quota=quota))
+    # end for
+    return options
+# end def _choice_pick_options
+
+
 def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
     """Normalize the active Humble Choice page."""
     parser = _embedded(html)
@@ -540,6 +571,8 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
     # end if
     price = _price(marketing.get("baseSubscriptionPrice|money"))
     tier_name = _required_string(product.get("name"), "Choice product name")
+    game_count = sum(1 for item in items if item.is_game)
+    pick_options = _choice_pick_options(marketing.get("tierInfo"), game_count)
     archive = HumbleArchive(
         schema=1,
         kind="choice",
@@ -567,6 +600,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
                 items=items,
             )
         ],
+        choice_pick_options=pick_options,
     )
     return archive, {
         "charity": charity,

@@ -11,7 +11,7 @@ from game_collections.sources.isthereanydeal.crawler import (
     crawl_itad_offers,
     write_itad_offer,
 )
-from game_collections.sources.isthereanydeal.models import ItadArchive, ItadDates, ItadItem, ItadPrice, ItadTier
+from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadItem, ItadPrice, ItadTier
 from game_collections.sources.isthereanydeal.parser import parse_list_page
 from game_collections.sources.isthereanydeal.provider_config import ItadProviderConfig, ItadProviderMapping
 
@@ -321,6 +321,72 @@ def test_write_itad_offer_numbers_multiple_tiers(tmp_path: Path) -> None:
     assert load_game_list(first_path, lists_root).data.tier == 1
     assert load_game_list(second_path, lists_root).data.tier == 2
 # end def test_write_itad_offer_numbers_multiple_tiers
+
+
+def test_write_itad_offer_byob_writes_one_list_per_pick_count(tmp_path: Path) -> None:
+    offer = _offer()
+    pool_tier = offer.archive.tiers[0].model_copy(
+        update={
+            "item_count": 2,
+            "items": [
+                *offer.archive.tiers[0].items,
+                ItadItem(slug="second-game", title="Second Game", ids=["steam:99999"]),
+            ],
+        }
+    )
+    archive = offer.archive.model_copy(
+        update={
+            "tiers": [pool_tier],
+            "byob_tiers": [
+                ItadByobTier(count=1, price=ItadPrice(raw="8,00 €", value=8.0, currency="€")),
+                ItadByobTier(count=2, price=None),
+            ],
+        }
+    )
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_itad_offer(
+        CrawledItadOffer(archive=archive, summary=offer.summary), lists_root, archive_root, tmp_path
+    )
+
+    bundle_root = "greenmangaming/bundle/2026-07-10_metroidvania-madness"
+    first_path = lists_root / bundle_root / "tier-1.yml"
+    second_path = lists_root / bundle_root / "tier-2.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
+    first = load_game_list(first_path, lists_root)
+    second = load_game_list(second_path, lists_root)
+    assert first.data.pick_quota == 1
+    assert first.data.tier == 1
+    assert second.data.pick_quota == 2
+    assert second.data.tier == 2
+    assert first.data.games == second.data.games == [
+        Game(name="GRIME", ids=["steam:1123050"]),
+        Game(name="Second Game", ids=["steam:99999"]),
+    ]
+# end def test_write_itad_offer_byob_writes_one_list_per_pick_count
+
+
+def test_write_itad_offer_byob_single_pick_count_uses_bundle_yml(tmp_path: Path) -> None:
+    offer = _offer()
+    archive = offer.archive.model_copy(update={"byob_tiers": [ItadByobTier(count=1, price=None)]})
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_itad_offer(
+        CrawledItadOffer(archive=archive, summary=offer.summary), lists_root, archive_root, tmp_path
+    )
+
+    path = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    assert {p for p in paths if p.suffix == ".yml"} == {path}
+    loaded = load_game_list(path, lists_root)
+    assert loaded.data.pick_quota == 1
+    assert loaded.data.tier is None
+# end def test_write_itad_offer_byob_single_pick_count_uses_bundle_yml
 
 
 def test_write_itad_offer_skips_list_when_already_covered(tmp_path: Path) -> None:

@@ -263,6 +263,44 @@ def write_humble_offer(
     atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
     atomic_write(source_path, dump_json(offer.source))
     written.extend((metadata_path, source_path))
+
+    if archive.kind == "choice" and archive.choice_pick_options:
+        pool_games: list[Game] = []
+        seen_pool_ids: set[str] = set()
+        for item in archive.tiers[0].items:
+            if not item.is_game or any(value in seen_pool_ids for value in item.resolution.ids):
+                continue
+            # end if
+            pool_games.append(Game(name=item.title, ids=item.resolution.ids))
+            seen_pool_ids.update(item.resolution.ids)
+        # end for
+        pick_directory = list_directory / key
+        for rank, option in enumerate(archive.choice_pick_options, start=1):
+            if len(archive.choice_pick_options) == 1:
+                path = pick_directory / "bundle.yml"
+                list_tier = None
+            else:
+                path = pick_directory / f"tier-{rank}.yml"
+                list_tier = rank
+            # end if
+            game_list = GameList(
+                schema=1,
+                name=f"{archive.name} — {option.tier_key.title()}",
+                tier=list_tier,
+                pick_quota=option.quota,
+                references=[
+                    Reference(name="Humble Bundle offer", url=archive.url),
+                    Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                    Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+                ],
+                games=pool_games,
+            )
+            atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+            written.append(path)
+        # end for
+        return tuple(written)
+    # end if
+
     tiers_with_games: list[tuple[HumbleTier, list[Game]]] = []
     for tier in archive.tiers:
         games: list[Game] = []
