@@ -7,13 +7,13 @@ import os
 import shutil
 from datetime import UTC, datetime
 from pathlib import Path
+from collections.abc import Callable
 from typing import Annotated, Literal
 
 import typer
 import yaml
 
 from game_collections.apply.config import DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
-from game_collections.apply.metadata import load_bundle_metadata
 from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists
 from game_collections.migrate_tiers import (
     TierMigrationError,
@@ -99,16 +99,25 @@ def _lists_root(path: Path | None) -> Path:
 # end def _lists_root
 
 
-def _discover_selected_game_lists(lists_root: Path, selection_config: Path) -> list[LoadedGameList]:
+def _discover_selected_game_lists(
+    lists_root: Path,
+    selection_config: Path,
+    on_progress: Callable[[int, int, Path], None] | None = None,
+) -> list[LoadedGameList]:
     """Discover lists, dropping any explicitly excluded by a saved selection config."""
     selection = load_selection(selection_config)
     excluded = excluded_list_ids(selection)
-    game_lists = discover_game_lists(lists_root)
+    game_lists = discover_game_lists(lists_root, on_progress=on_progress)
     if not excluded:
         return game_lists
     # end if
     return [game_list for game_list in game_lists if game_list.id not in excluded]
 # end def _discover_selected_game_lists
+
+
+def _echo_list_progress(index: int, total: int, path: Path) -> None:
+    typer.echo(f"Loading list {index}/{total}: {path.name}")
+# end def _echo_list_progress
 
 
 @app.command("validate")
@@ -886,7 +895,9 @@ def sync_command(
             tier_mode=tiers,
             reconcile_managed=True,
         )
-        plan = adapter.plan(_discover_selected_game_lists(_lists_root(lists_root), selection_config))
+        plan = adapter.plan(
+            _discover_selected_game_lists(_lists_root(lists_root), selection_config, on_progress=_echo_list_progress)
+        )
         _print_plan(plan, log_skips=log_skips)
         if not apply_changes:
             typer.echo("Dry run only. Use --apply to stage inspectable files.")
@@ -946,11 +957,9 @@ def apply_command(
         raise typer.Exit(1) from error
     # end try
     try:
-        all_game_lists = discover_game_lists(_lists_root(lists_root))
-        bundles = load_bundle_metadata(all_game_lists)
         previous_selection = load_selection(selection_config)
         previously_excluded = excluded_list_ids(previous_selection)
-        picker = ApplyPickerApp(bundles, previously_excluded)
+        picker = ApplyPickerApp(_lists_root(lists_root), previously_excluded)
         selection = picker.run()
         if selection is None:
             typer.echo("Cancelled. No selection was saved.")
@@ -960,7 +969,7 @@ def apply_command(
         typer.echo(f"Saved selection: {selection_config}")
 
         excluded = set(selection.excluded)
-        game_lists = [game_list for game_list in all_game_lists if game_list.id not in excluded]
+        game_lists = [game_list for game_list in picker.all_game_lists if game_list.id not in excluded]
 
         adapter, gateway = _steam_adapter(
             steam_root,
