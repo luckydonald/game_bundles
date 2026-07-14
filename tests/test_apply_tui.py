@@ -94,12 +94,12 @@ def test_previously_excluded_bundle_starts_unchecked(tmp_path: Path) -> None:
 
 
 def test_source_filter_hides_non_matching_rows(tmp_path: Path) -> None:
+    # source filter starts with every source selected (shown); deselecting one hides its rows
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            select = app.query_one("#filter-source", Select)
-            select.value = "humblebundle"
+            app.query_one("#filter-source", SelectionList).toggle("greenmangaming")
             await pilot.pause()
             assert _visible_values(app) == ["humblebundle/bundle/2026-01-01_a/bundle"]
         # end async with
@@ -107,6 +107,43 @@ def test_source_filter_hides_non_matching_rows(tmp_path: Path) -> None:
 
     asyncio.run(scenario())
 # end def test_source_filter_hides_non_matching_rows
+
+
+def test_source_filter_allows_selecting_multiple_sources(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            source_filter = app.query_one("#filter-source", SelectionList)
+            assert set(source_filter.selected) == {"greenmangaming", "humblebundle"}
+            assert set(_visible_values(app)) == {
+                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "humblebundle/bundle/2026-01-01_a/bundle",
+            }
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_source_filter_allows_selecting_multiple_sources
+
+
+def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set(), match_mode="all", tier_mode="highest")
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert app.match_mode == "all"
+            assert app.tier_mode == "highest"
+            app.query_one("#filter-mode", Select).value = "any"
+            app.query_one("#filter-tiers", Select).value = "all"
+            await pilot.pause()
+            assert app.match_mode == "any"
+            assert app.tier_mode == "all"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
 
 
 def test_min_items_filter_hides_smaller_bundles(tmp_path: Path) -> None:

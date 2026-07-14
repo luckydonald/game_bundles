@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Literal, cast
 
 from textual import work
 from textual.app import App, ComposeResult
@@ -17,11 +18,8 @@ from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.lists import LoadedGameList, discover_game_lists
 
 
-ALL_SOURCES = "(all)"
-
-
 def _row_label(bundle: BundleMetadata) -> str:
-    date = bundle.date or "?"
+    date = bundle.date or "????-??-??"
     kind = bundle.bundle_kind or "-"
     tier = f"tier {bundle.tier}" if bundle.tier is not None else "single"
     return f"[{bundle.source}/{kind}] {date}  {bundle.item_count:>3} items  {tier:<8}  {bundle.name}"
@@ -30,14 +28,14 @@ def _row_label(bundle: BundleMetadata) -> str:
 
 @dataclass(frozen=True, slots=True)
 class _Filters:
-    source: str = ALL_SOURCES
+    sources: frozenset[str] | None = None
     min_items: int | None = None
     max_items: int | None = None
     date_after: str | None = None
     date_before: str | None = None
 
     def matches(self, bundle: BundleMetadata) -> bool:
-        if self.source != ALL_SOURCES and bundle.source != self.source:
+        if self.sources is not None and bundle.source not in self.sources:
             return False
         # end if
         if self.min_items is not None and bundle.item_count < self.min_items:
@@ -67,12 +65,19 @@ class ApplyPickerApp(App[ApplySelection | None]):
     #loading ProgressBar { width: 60; }
     #filters { height: auto; padding: 1; }
     #filters Input, #filters Select { width: 20; margin-right: 1; }
+    #filter-source { width: 28; height: 8; margin-right: 1; }
     #rows { height: 1fr; }
     #actions { height: auto; padding: 1; }
     """
     BINDINGS = [("ctrl+s", "save", "Save & exit"), ("escape", "cancel", "Cancel")]
 
-    def __init__(self, lists_root: Path, excluded: set[str]) -> None:
+    def __init__(
+        self,
+        lists_root: Path,
+        excluded: set[str],
+        match_mode: Literal["any", "all"] = "all",
+        tier_mode: Literal["all", "highest"] = "highest",
+    ) -> None:
         super().__init__()
         self._lists_root = lists_root
         self._excluded = set(excluded)
@@ -80,6 +85,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._bundles: list[BundleMetadata] = []
         self._checked: set[str] = set()
         self.all_game_lists: list[LoadedGameList] = []
+        self.match_mode: Literal["any", "all"] = match_mode
+        self.tier_mode: Literal["all", "highest"] = tier_mode
     # end def __init__
 
     def compose(self) -> ComposeResult:
@@ -120,15 +127,26 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
     def _mount_picker(self) -> None:
         filters = Horizontal(
-            Select(
-                [(ALL_SOURCES, ALL_SOURCES)] + [(source, source) for source in self._sources()],
-                value=ALL_SOURCES,
+            SelectionList(
+                *(Selection(source, source, True) for source in self._sources()),
                 id="filter-source",
             ),
             Input(placeholder="min items", id="filter-min-items"),
             Input(placeholder="max items", id="filter-max-items"),
             Input(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
             Input(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
+            Select(
+                [("mode: all", "all"), ("mode: any", "any")],
+                value=self.match_mode,
+                allow_blank=False,
+                id="filter-mode",
+            ),
+            Select(
+                [("tiers: highest", "highest"), ("tiers: all", "all")],
+                value=self.tier_mode,
+                allow_blank=False,
+                id="filter-tiers",
+            ),
             id="filters",
         )
         rows = SelectionList(id="rows")
@@ -161,6 +179,18 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _apply_filters
 
     def on_selection_list_selection_toggled(self, event: SelectionList.SelectionToggled) -> None:
+        if event.selection_list.id == "filter-source":
+            self._row_filters = _Filters(
+                sources=frozenset(event.selection_list.selected),
+                min_items=self._row_filters.min_items,
+                max_items=self._row_filters.max_items,
+                date_after=self._row_filters.date_after,
+                date_before=self._row_filters.date_before,
+            )
+            self._apply_filters()
+            return
+        # end if
+
         value = event.selection.value
         if value in event.selection_list.selected:
             self._checked.add(value)
@@ -170,15 +200,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def on_selection_list_selection_toggled
 
     def on_select_changed(self, event: Select.Changed) -> None:
-        if event.select.id == "filter-source":
-            self._row_filters = _Filters(
-                source=str(event.value),
-                min_items=self._row_filters.min_items,
-                max_items=self._row_filters.max_items,
-                date_after=self._row_filters.date_after,
-                date_before=self._row_filters.date_before,
-            )
-            self._apply_filters()
+        if event.select.id == "filter-mode":
+            self.match_mode = cast(Literal["any", "all"], event.value)
+        elif event.select.id == "filter-tiers":
+            self.tier_mode = cast(Literal["all", "highest"], event.value)
         # end if
     # end def on_select_changed
 
@@ -194,7 +219,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
         if event.input.id == "filter-min-items":
             self._row_filters = _Filters(
-                source=self._row_filters.source,
+                sources=self._row_filters.sources,
                 min_items=as_int(raw),
                 max_items=self._row_filters.max_items,
                 date_after=self._row_filters.date_after,
@@ -202,7 +227,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-max-items":
             self._row_filters = _Filters(
-                source=self._row_filters.source,
+                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=as_int(raw),
                 date_after=self._row_filters.date_after,
@@ -210,7 +235,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-date-after":
             self._row_filters = _Filters(
-                source=self._row_filters.source,
+                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=self._row_filters.max_items,
                 date_after=raw or None,
@@ -218,7 +243,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
             )
         elif event.input.id == "filter-date-before":
             self._row_filters = _Filters(
-                source=self._row_filters.source,
+                sources=self._row_filters.sources,
                 min_items=self._row_filters.min_items,
                 max_items=self._row_filters.max_items,
                 date_after=self._row_filters.date_after,
