@@ -19,6 +19,7 @@ from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar
 from textual.widgets.tree import TreeNode
 
 from game_collections.apply.config import ApplySelection
+from game_collections.apply.filter_widgets import FilterCheckbox, FilterInput, FilterSelect
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.lists import LoadedGameList, discover_game_lists
 from game_collections.models import Game
@@ -103,6 +104,15 @@ class _BundleTree(Tree[_NodeData]):
         self.show_root = False
         self.guide_depth = 2
     # end def __init__
+
+    def action_cursor_up(self) -> None:
+        if self.cursor_line <= 0:
+            first_filter = self.screen.query_one("#filters").children[0]
+            first_filter.focus()
+        else:
+            Tree.action_cursor_up(self)
+        # end if
+    # end def action_cursor_up
 
     def action_collapse_or_to_parent(self) -> None:
         node = self.cursor_node
@@ -243,23 +253,23 @@ class ApplyPickerApp(App[ApplySelection | None]):
 
     def _mount_picker(self) -> None:
         filters = Horizontal(
-            Input(placeholder="min items", id="filter-min-items"),
-            Input(placeholder="max items", id="filter-max-items"),
-            Input(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
-            Input(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
-            Select(
+            FilterInput(placeholder="min items", id="filter-min-items"),
+            FilterInput(placeholder="max items", id="filter-max-items"),
+            FilterInput(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
+            FilterInput(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
+            FilterSelect(
                 [("mode: off", "none"), ("mode: any", "any"), ("mode: all", "all")],
                 value=self.match_mode,
                 allow_blank=False,
                 id="filter-mode",
             ),
-            Select(
+            FilterSelect(
                 [("tiers: highest", "highest"), ("tiers: all", "all")],
                 value=self.tier_mode,
                 allow_blank=False,
                 id="filter-tiers",
             ),
-            Checkbox("hide filtered", value=self._hide_filtered, id="filter-hide-filtered"),
+            FilterCheckbox("hide filtered", value=self._hide_filtered, id="filter-hide-filtered"),
             id="filters",
         )
         rows = _BundleTree(self._toggle, self._open)
