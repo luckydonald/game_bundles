@@ -1262,3 +1262,5 @@ The mane branch already did that.
 
 ❯ Rebase/restructure onto the changes happened on `mane` in the meantime.
 
+❯ commit, then squash the ai auto commits according to LPLP style.
+
