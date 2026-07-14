@@ -148,6 +148,87 @@ def test_unknown_ownership_does_not_mark_or_grey_anything(tmp_path: Path) -> Non
 # end def test_unknown_ownership_does_not_mark_or_grey_anything
 
 
+def _write_ownership_fixture(lists_root: Path) -> None:
+    zero = lists_root / "vendor/zero-owned.yml"
+    zero.parent.mkdir(parents=True, exist_ok=True)
+    zero.write_text("schema: 1\nname: Zero Owned\ngames:\n  - name: G\n    ids: [steam:999]\n", encoding="utf-8")
+    partial = lists_root / "vendor/partial-owned.yml"
+    partial.write_text(
+        "schema: 1\nname: Partial Owned\ngames:\n  - name: G1\n    ids: [steam:440]\n  - name: G2\n    ids: [steam:999]\n",
+        encoding="utf-8",
+    )
+# end def _write_ownership_fixture
+
+
+def test_mode_all_and_any_hide_zero_owned_bundles_but_mode_off_shows_them_greyed(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    _write_ownership_fixture(lists_root)
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="all", owned_app_ids=frozenset({440}))
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            vendor = _source_nodes(app)["vendor"]
+            assert [child.label.plain for child in vendor.children] == [
+                "[x] [vendor/-] ????-??-??    2 items  single    Partial Owned  (1/2)",
+            ]
+
+            app.query_one("#filter-mode", Select).value = "any"
+            await pilot.pause()
+            vendor = _source_nodes(app)["vendor"]
+            assert len(vendor.children) == 1  # zero-owned bundle stays hidden under "any" too
+
+            app.query_one("#filter-mode", Select).value = "none"
+            await pilot.pause()
+            vendor = _source_nodes(app)["vendor"]
+            labels_and_styles = {child.label.plain: child.label.style for child in vendor.children}
+            assert len(labels_and_styles) == 2
+            zero_label = next(label for label in labels_and_styles if "Zero Owned" in label)
+            partial_label = next(label for label in labels_and_styles if "Partial Owned" in label)
+            assert labels_and_styles[zero_label] == "dim"
+            assert labels_and_styles[partial_label] == ""
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_mode_all_and_any_hide_zero_owned_bundles_but_mode_off_shows_them_greyed
+
+
+def test_source_greys_out_only_when_fully_zero_owned(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    _write_ownership_fixture(lists_root)
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            # mixed source (one zero-owned, one partially-owned bundle): not greyed
+            assert _source_nodes(app)["vendor"].label.style == ""
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_source_greys_out_only_when_fully_zero_owned
+
+
+def test_source_greys_out_when_every_visible_bundle_is_zero_owned(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "vendor/zero-owned.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("schema: 1\nname: Zero Owned\ngames:\n  - name: G\n    ids: [steam:999]\n", encoding="utf-8")
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), match_mode="none", owned_app_ids=frozenset({440}))
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert _source_nodes(app)["vendor"].label.style == "dim"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_source_greys_out_when_every_visible_bundle_is_zero_owned
+
+
 def test_expanding_a_game_shows_store_links_and_steam_launch(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
