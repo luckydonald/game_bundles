@@ -1126,3 +1126,5 @@ Side note, the collection `all` seems to be used internally - but is not exposed
 > - [Raw log (`70859` chars, `69.3 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/e337500d-870d-45fc-844e-b192432c2b08/tasks/aab3f756a2314868e.output)
 > - `5` tools, `22144` tokens, `0.365983 s`
 
+❯ With _7690/7690 shown_, the TUI one is super laggy, like a miinute per frame.
+

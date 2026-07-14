@@ -8,7 +8,7 @@ import yaml
 
 pytest.importorskip("textual", reason="requires the optional `tui` extra: uv sync --extra tui")
 
-from textual.widgets import Checkbox, Input, Select
+from textual.widgets import Input, Select, SelectionList
 
 from game_collections.apply.tui import ApplyPickerApp
 
@@ -51,28 +51,41 @@ async def _run_until_loaded(app: ApplyPickerApp, pilot) -> None:
 # end def _run_until_loaded
 
 
-def test_mounts_one_checkbox_per_bundle_pre_checked(tmp_path: Path) -> None:
+def _rows(app: ApplyPickerApp) -> SelectionList[str]:
+    return app.query_one("#rows", SelectionList)
+# end def _rows
+
+
+def _visible_values(app: ApplyPickerApp) -> list[str]:
+    rows = _rows(app)
+    return [rows.get_option_at_index(index).value for index in range(rows.option_count)]
+# end def _visible_values
+
+
+def test_mounts_one_option_per_bundle_pre_checked(tmp_path: Path) -> None:
+    # discover_game_lists sorts by path, so greenmangaming sorts before humblebundle
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            assert app.query_one("#row-0", Checkbox).value is True
-            assert app.query_one("#row-1", Checkbox).value is True
+            rows = _rows(app)
+            assert set(rows.selected) == {
+                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "humblebundle/bundle/2026-01-01_a/bundle",
+            }
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_mounts_one_checkbox_per_bundle_pre_checked
+# end def test_mounts_one_option_per_bundle_pre_checked
 
 
 def test_previously_excluded_bundle_starts_unchecked(tmp_path: Path) -> None:
-    # discover_game_lists sorts by path, so greenmangaming (row-0) sorts before humblebundle (row-1)
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            assert app.query_one("#row-0", Checkbox).value is False
-            assert app.query_one("#row-1", Checkbox).value is True
+            assert set(_rows(app).selected) == {"humblebundle/bundle/2026-01-01_a/bundle"}
         # end async with
     # end def scenario
 
@@ -88,8 +101,7 @@ def test_source_filter_hides_non_matching_rows(tmp_path: Path) -> None:
             select = app.query_one("#filter-source", Select)
             select.value = "humblebundle"
             await pilot.pause()
-            assert app.query_one("#row-0", Checkbox).display is False
-            assert app.query_one("#row-1", Checkbox).display is True
+            assert _visible_values(app) == ["humblebundle/bundle/2026-01-01_a/bundle"]
         # end async with
     # end def scenario
 
@@ -105,8 +117,7 @@ def test_min_items_filter_hides_smaller_bundles(tmp_path: Path) -> None:
             min_items = app.query_one("#filter-min-items", Input)
             min_items.value = "5"
             await pilot.pause()
-            assert app.query_one("#row-0", Checkbox).display is True
-            assert app.query_one("#row-1", Checkbox).display is False
+            assert _visible_values(app) == ["greenmangaming/bundle/2026-02-01_b/tier-2"]
         # end async with
     # end def scenario
 
@@ -120,7 +131,8 @@ def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> No
     async def scenario() -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            app.query_one("#row-0", Checkbox).value = False
+            _rows(app).toggle("greenmangaming/bundle/2026-02-01_b/tier-2")
+            await pilot.pause()
             app.action_save()
         # end async with
     # end def scenario
