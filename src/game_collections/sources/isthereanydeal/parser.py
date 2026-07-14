@@ -11,7 +11,7 @@ from urllib.parse import parse_qs, urlparse
 
 from bs4 import BeautifulSoup, Tag
 
-from game_collections.sources.isthereanydeal.models import ItadItem, ItadListSummary, ItadPrice, ItadTier
+from game_collections.sources.isthereanydeal.models import ItadByobTier, ItadItem, ItadListSummary, ItadPrice, ItadTier
 from game_collections.sources.storefronts import StoreName, is_known_store_url, qualified_ids_from_urls
 
 
@@ -458,6 +458,66 @@ def parse_bundle_detail_json(
     # end if
     return tiers
 # end def parse_bundle_detail_json
+
+
+def parse_bundle_detail_byob(html: str, bundle_id: int) -> list[ItadByobTier] | None:
+    """Extract "pick N of the pool" purchase options from the embedded `var page` JSON.
+
+    Mirrors `parse_bundle_detail_json`'s own embedded-script extraction, but
+    reads `liveData.byob` instead of `liveData.tiers`. Returns `None` when the
+    embedded script isn't present, or when `byob` is absent/empty (a normal,
+    non-BYOB bundle) - not an error either way.
+    """
+    text = _find_page_script(html)
+    if text is None:
+        return None
+    # end if
+    match = _PAGE_SCRIPT_PATTERN.search(text)
+    if not match:
+        return None
+    # end if
+    bracket_start = text.index("[", match.end() - 1)
+    raw_array = _extract_balanced(text, bracket_start, "[", "]")
+    try:
+        data = json.loads(raw_array)
+    except json.JSONDecodeError as error:
+        raise ItadParseError(f"bundle {bundle_id} embedded page data is not valid JSON: {error}") from error
+    # end try
+    if not isinstance(data, list) or len(data) < 2 or data[0] != "Bundle" or not isinstance(data[1], dict):
+        raise ItadParseError(f"bundle {bundle_id} embedded page data has an unexpected shape")
+    # end if
+    live_data = data[1].get("liveData")
+    if not isinstance(live_data, dict):
+        raise ItadParseError(f"bundle {bundle_id} embedded page data is missing liveData")
+    # end if
+    byob_raw = live_data.get("byob")
+    if not byob_raw:
+        return None
+    # end if
+    if not isinstance(byob_raw, list):
+        raise ItadParseError(f"bundle {bundle_id} has a malformed byob entry: {byob_raw!r}")
+    # end if
+    byob_tiers: list[ItadByobTier] = []
+    for entry in byob_raw:
+        if not isinstance(entry, dict) or not isinstance(entry.get("count"), int):
+            raise ItadParseError(f"bundle {bundle_id} has a malformed byob entry: {entry!r}")
+        # end if
+        price_raw = entry.get("price")
+        price: ItadPrice | None = None
+        if isinstance(price_raw, list) and len(price_raw) == 2:
+            amount, currency = price_raw
+            if not isinstance(amount, (int, float)) or not isinstance(currency, str):
+                raise ItadParseError(f"bundle {bundle_id} byob price has an unexpected shape: {price_raw!r}")
+            # end if
+            value = amount / 100
+            price = ItadPrice(raw=f"{value:.2f} {currency}", value=value, currency=currency)
+        elif price_raw is not None:
+            raise ItadParseError(f"bundle {bundle_id} byob price has an unexpected shape: {price_raw!r}")
+        # end if
+        byob_tiers.append(ItadByobTier(count=entry["count"], price=price))
+    # end for
+    return sorted(byob_tiers, key=lambda tier: tier.count)
+# end def parse_bundle_detail_byob
 
 
 @dataclass(frozen=True, slots=True)

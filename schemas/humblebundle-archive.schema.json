@@ -51,6 +51,28 @@
       "title": "HumbleCharity",
       "type": "object"
     },
+    "HumbleChoicePickOption": {
+      "additionalProperties": false,
+      "description": "One subscription tier's pick quota for a Humble Choice month.\n\nVerified live against a real Choice page's `webpack-choice-marketing-data`\nembedded JSON: `tierInfo.<tier_key> = {\"uses_choices\": bool, \"choices\": int, ...}`\n(e.g. `basic.choices=3`, `premium.choices=12`). A tier's raw `choices` count can\nexceed the month's actual pool size (observed live: Premium advertised 12 picks\nin a month with only 9 games) - `quota` here is already clamped to the pool size,\nso it never exceeds it and a tier whose raw count meets/exceeds the pool just\nmeans \"every game,\" same as owning the whole thing. Tiers with `uses_choices`\nfalse or a non-positive `choices` count (also observed live) aren't real pick\noptions and are excluded entirely.",
+      "properties": {
+        "quota": {
+          "minimum": 1,
+          "title": "Quota",
+          "type": "integer"
+        },
+        "tier_key": {
+          "minLength": 1,
+          "title": "Tier Key",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tier_key",
+        "quota"
+      ],
+      "title": "HumbleChoicePickOption",
+      "type": "object"
+    },
     "HumbleDates": {
       "additionalProperties": false,
       "description": "Offer availability and observation timestamps.",
@@ -412,6 +434,13 @@
         "$ref": "#/$defs/HumbleCharity"
       },
       "title": "Charities",
+      "type": "array"
+    },
+    "choice_pick_options": {
+      "items": {
+        "$ref": "#/$defs/HumbleChoicePickOption"
+      },
+      "title": "Choice Pick Options",
       "type": "array"
     },
     "dates": {

@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from game_collections.lists import load_game_list
+from game_collections.models import Game
 from game_collections.sources.humblebundle.crawler import (
     CrawledHumbleOffer,
     crawl_humble_offers,
@@ -12,6 +13,7 @@ from game_collections.sources.humblebundle.crawler import (
 )
 from game_collections.sources.humblebundle.models import (
     HumbleArchive,
+    HumbleChoicePickOption,
     HumbleDates,
     HumbleItem,
     HumbleResolution,
@@ -156,6 +158,72 @@ def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
     assert load_game_list(first_path, lists_root).data.tier == 1
     assert load_game_list(second_path, lists_root).data.tier == 2
 # end def test_writer_numbers_multiple_tiers
+
+
+def test_writer_choice_with_pick_options_writes_one_list_per_option(tmp_path: Path) -> None:
+    offer = _offer("choice")
+
+    archive = offer.archive.model_copy(
+        update={"choice_pick_options": [HumbleChoicePickOption(tier_key="basic", quota=1)]}
+    )
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(
+        CrawledHumbleOffer(archive=archive, source={}), tmp_path / "lists", tmp_path / "archives", tmp_path
+    )
+
+    path = tmp_path / "lists/humblebundle/choice/2026-07/bundle.yml"
+    assert {p for p in paths if p.suffix == ".yml"} == {path}
+    loaded = load_game_list(path, tmp_path / "lists")
+    assert loaded.data.pick_quota == 1
+    assert loaded.data.tier is None
+    assert loaded.data.games == [Game(name="Sample Game", ids=["steam:42"])]
+# end def test_writer_choice_with_pick_options_writes_one_list_per_option
+
+
+def test_writer_choice_with_multiple_pick_options_numbers_tiers(tmp_path: Path) -> None:
+    offer = _offer("choice")
+
+    game_two = HumbleItem(
+        machine_name="samplegame2",
+        title="Sample Game Two",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(ids=["steam:43"]),
+    )
+    choice_tier = offer.archive.tiers[0].model_copy(
+        update={"item_count": 3, "items": [*offer.archive.tiers[0].items, game_two]}
+    )
+    archive = offer.archive.model_copy(
+        update={
+            "tiers": [choice_tier],
+            "choice_pick_options": [
+                HumbleChoicePickOption(tier_key="basic", quota=1),
+                HumbleChoicePickOption(tier_key="premium", quota=2),
+            ],
+        }
+    )
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(
+        CrawledHumbleOffer(archive=archive, source={}), tmp_path / "lists", tmp_path / "archives", tmp_path
+    )
+
+    lists_root = tmp_path / "lists"
+    bundle_root = "humblebundle/choice/2026-07"
+    first_path = lists_root / bundle_root / "tier-1.yml"
+    second_path = lists_root / bundle_root / "tier-2.yml"
+    assert {p for p in paths if p.suffix == ".yml"} == {first_path, second_path}
+    first = load_game_list(first_path, lists_root)
+    second = load_game_list(second_path, lists_root)
+    assert first.data.pick_quota == 1
+    assert first.data.tier == 1
+    assert second.data.pick_quota == 2
+    assert second.data.tier == 2
+# end def test_writer_choice_with_multiple_pick_options_numbers_tiers
 
 
 def test_writer_deduplicates_products_with_the_same_storefront_identity(tmp_path: Path) -> None:

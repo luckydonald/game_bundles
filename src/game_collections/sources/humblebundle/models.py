@@ -116,6 +116,26 @@ class HumbleDates(StrictModel):
 # end class HumbleDates
 
 
+class HumbleChoicePickOption(StrictModel):
+    """One subscription tier's pick quota for a Humble Choice month.
+
+    Verified live against a real Choice page's `webpack-choice-marketing-data`
+    embedded JSON: `tierInfo.<tier_key> = {"uses_choices": bool, "choices": int, ...}`
+    (e.g. `basic.choices=3`, `premium.choices=12`). A tier's raw `choices` count can
+    exceed the month's actual pool size (observed live: Premium advertised 12 picks
+    in a month with only 9 games) - `quota` here is already clamped to the pool size,
+    so it never exceeds it and a tier whose raw count meets/exceeds the pool just
+    means "every game," same as owning the whole thing. Tiers with `uses_choices`
+    false or a non-positive `choices` count (also observed live) aren't real pick
+    options and are excluded entirely.
+    """
+
+    tier_key: NonEmptyString
+    quota: int = Field(ge=1)
+
+# end class HumbleChoicePickOption
+
+
 class HumbleArchive(StrictModel):
     """Normalized metadata for one Choice month or game bundle."""
 
@@ -131,5 +151,6 @@ class HumbleArchive(StrictModel):
     charities: list[HumbleCharity] = Field(default_factory=list)
     key_expiration_text: NonEmptyString | None = None
     tiers: list[HumbleTier] = Field(min_length=1)
+    choice_pick_options: list[HumbleChoicePickOption] = Field(default_factory=list)
 
 # end class HumbleArchive

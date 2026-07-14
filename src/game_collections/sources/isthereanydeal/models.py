@@ -66,6 +66,22 @@ class ItadTier(StrictModel):
 # end class ItadTier
 
 
+class ItadByobTier(StrictModel):
+    """One purchasable "pick N of the pool" option on a Build Your Own bundle.
+
+    Verified live against `liveData.byob` on real ITAD BYOB bundle detail
+    pages (e.g. bundle 16385, "Build Your Own Best of Killer Bundle"):
+    `[{"count": 5, "price": [120, "EUR"]}, {"count": 10, "price": [100, "EUR"]}, ...]`,
+    always ascending by `count`. Distinct from `ItadTier`, which for a BYOB
+    bundle only ever holds one synthetic tier covering the whole pool.
+    """
+
+    count: int = Field(ge=1)
+    price: ItadPrice | None = None
+
+# end class ItadByobTier
+
+
 class ItadDates(StrictModel):
     """Offer availability and observation timestamps."""
 
@@ -98,6 +114,7 @@ class ItadArchive(StrictModel):
     url: HttpUrl
     dates: ItadDates
     tiers: list[ItadTier] = Field(min_length=1)
+    byob_tiers: list[ItadByobTier] = Field(default_factory=list)
 
 # end class ItadArchive
 
