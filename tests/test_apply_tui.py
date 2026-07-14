@@ -301,25 +301,72 @@ def test_toggling_source_node_toggles_all_its_bundles(tmp_path: Path) -> None:
 # end def test_toggling_source_node_toggles_all_its_bundles
 
 
-def test_hide_unselected_checkbox_hides_deselected_items(tmp_path: Path) -> None:
+def test_filter_deselects_non_matching_bundles(tmp_path: Path) -> None:
     async def scenario() -> None:
-        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
+            assert app._checked == {
+                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "humblebundle/bundle/2026-01-01_a/bundle",
+            }
 
-            app.query_one("#filter-hide-unselected", Checkbox).value = True
+            # min-items excludes the 3-item humblebundle bundle, leaving the 10-item one
+            app.query_one("#filter-min-items", Input).value = "5"
             await pilot.pause()
-            assert set(_source_nodes(app)) == {"humblebundle"}
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
 
-            app.query_one("#filter-hide-unselected", Checkbox).value = False
+            # widening the filter back doesn't resurrect the deselected bundle (one-way ratchet)
+            app.query_one("#filter-min-items", Input).value = ""
+            await pilot.pause()
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_filter_deselects_non_matching_bundles
+
+
+def test_hide_filtered_checkbox_hides_only_filtered_out_bundles(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-min-items", Input).value = "5"
+            await pilot.pause()
+            # filtered-out bundle stays visible (deselected) while "hide filtered" is off
+            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
+            assert _leaf_list_ids(app, "humblebundle") == ["humblebundle/bundle/2026-01-01_a/bundle"]
+
+            app.query_one("#filter-hide-filtered", Checkbox).value = True
+            await pilot.pause()
+            assert set(_source_nodes(app)) == {"greenmangaming"}
+
+            app.query_one("#filter-hide-filtered", Checkbox).value = False
             await pilot.pause()
             assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_hide_unselected_checkbox_hides_deselected_items
+# end def test_hide_filtered_checkbox_hides_only_filtered_out_bundles
+
+
+def test_manually_deselected_bundle_stays_visible_regardless_of_hide_filtered(tmp_path: Path) -> None:
+    # "hide filtered" only hides bundles excluded by the active min/max/date filter,
+    # not bundles the user simply unchecked by hand via the tree
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-hide-filtered", Checkbox).value = True
+            await pilot.pause()
+            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_manually_deselected_bundle_stays_visible_regardless_of_hide_filtered
 
 
 def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path) -> None:
@@ -373,7 +420,7 @@ def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
 # end def test_mode_and_tiers_selectors_default_to_constructor_args_and_are_changeable
 
 
-def test_min_items_filter_hides_smaller_bundles(tmp_path: Path) -> None:
+def test_min_items_filter_deselects_smaller_bundles_but_stays_visible(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
@@ -381,12 +428,14 @@ def test_min_items_filter_hides_smaller_bundles(tmp_path: Path) -> None:
             min_items = app.query_one("#filter-min-items", Input)
             min_items.value = "5"
             await pilot.pause()
-            assert set(_source_nodes(app)) == {"greenmangaming"}
+            # deselected by the filter (see test_filter_deselects_non_matching_bundles), but
+            # "hide filtered" defaults to off, so it stays visible rather than disappearing
+            assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_min_items_filter_hides_smaller_bundles
+# end def test_min_items_filter_deselects_smaller_bundles_but_stays_visible
 
 
 def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> None:
