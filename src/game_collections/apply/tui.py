@@ -23,7 +23,7 @@ from textual.widgets.tree import TreeNode
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.filter_widgets import FilterCheckbox, FilterInput, FilterSelect
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
-from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, render_checkbox_prefix
+from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, render_checkbox
 from game_collections.lists import LoadedGameList, discover_game_lists
 from game_collections.models import Game
 from game_collections.sources.storefronts import product_url
@@ -184,7 +184,7 @@ class BundleTree(Tree[_NodeData]):
         else:
             icon = ("", base_style)
         # end if
-        return Text.assemble(icon, render_checkbox_prefix(data.check_state, base_style), node_label)
+        return Text.assemble(icon, render_checkbox(data.check_state, base_style), Text(" "), node_label)
     # end def
 
     async def _on_click(self, event: events.Click) -> None:
