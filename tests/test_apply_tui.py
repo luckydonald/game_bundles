@@ -178,6 +178,33 @@ def test_expanding_a_bundle_lazily_shows_its_games(tmp_path: Path) -> None:
 # end def test_expanding_a_bundle_lazily_shows_its_games
 
 
+def test_collapsed_source_stays_collapsed_after_an_unrelated_rebuild(tmp_path: Path) -> None:
+    # regression: _expanded_sources used to only grow via .add(), so a source collapsed
+    # again after being expanded once would spuriously re-expand on the next rebuild
+    lists_root = _make_lists_root(tmp_path)
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            humble = _source_nodes(app)["humblebundle"]
+            humble.expand()
+            await pilot.pause()
+            humble.collapse()
+            await pilot.pause()
+            assert _source_nodes(app)["humblebundle"].is_expanded is False
+
+            # toggling an unrelated source triggers a full tree rebuild
+            app._toggle(_NodeData(kind="source", source="greenmangaming"))
+            await pilot.pause()
+            assert _source_nodes(app)["humblebundle"].is_expanded is False
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_collapsed_source_stays_collapsed_after_an_unrelated_rebuild
+
+
 def test_bundles_pre_checked_and_grouped_by_source(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
