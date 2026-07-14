@@ -275,7 +275,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
     #loading-label { width: auto; content-align: center middle; margin-bottom: 1; }
     #loading-progress { width: 60; }
     #body { height: 1fr; }
-    #filters { height: auto; padding: 1; }
+    #filters { height: auto; padding: 1; overflow-x: auto; overflow-y: hidden; width: 100%; }
     #filters Input, #filters Select { width: 20; margin-right: 1; }
     #rows-tree { height: 1fr; min-height: 5; }
     #actions { height: auto; padding: 1; }
