@@ -22,6 +22,7 @@ from textual.widgets.tree import TreeNode
 from game_collections.apply.config import ApplySelection
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.lists import LoadedGameList, discover_game_lists
+from game_collections.models import Game
 from game_collections.sources.storefronts import product_url
 
 
@@ -183,6 +184,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         excluded: set[str],
         match_mode: Literal["any", "all"] = "all",
         tier_mode: Literal["all", "highest"] = "highest",
+        owned_app_ids: frozenset[int] | None = None,
     ) -> None:
         super().__init__()
         self._lists_root = lists_root
@@ -193,6 +195,9 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._expanded_sources: set[str] = set()
         self._hide_filtered = False
         self._game_lists_by_id: dict[str, LoadedGameList] = {}
+        # None means ownership is unknown (no Steam adapter was queried) - in that case
+        # nothing is marked as owned/unowned; every game/bundle renders as it did before.
+        self._owned_app_ids = owned_app_ids
         self.all_game_lists: list[LoadedGameList] = []
         self.match_mode: Literal["any", "all"] = match_mode
         self.tier_mode: Literal["all", "highest"] = tier_mode
@@ -300,9 +305,52 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return escape(f"{glyph} {source} ({checked_count}/{total})")
     # end def _source_label
 
+    def _game_owned(self, game: Game) -> bool:
+        """Whether a game has at least one Steam ID present in ``owned_app_ids``.
+
+        Returns ``True`` (never grey it out) when ownership is unknown entirely.
+        """
+        if self._owned_app_ids is None:
+            return True
+        # end if
+        for identifier in game.qualified_ids:
+            if identifier.provider != "steam":
+                continue
+            # end if
+            try:
+                app_id = int(identifier.value)
+            except ValueError:
+                continue
+            # end try
+            if app_id in self._owned_app_ids:
+                return True
+            # end if
+        # end for
+        return False
+    # end def _game_owned
+
+    def _bundle_owned_fraction(self, bundle: BundleMetadata) -> tuple[int, int] | None:
+        """``(owned, total)`` games in a bundle, or ``None`` if ownership is unknown."""
+        if self._owned_app_ids is None:
+            return None
+        # end if
+        game_list = self._game_lists_by_id.get(bundle.list_id)
+        if game_list is None:
+            return None
+        # end if
+        games = game_list.data.games
+        return sum(1 for game in games if self._game_owned(game)), len(games)
+    # end def _bundle_owned_fraction
+
     def _bundle_label(self, bundle: BundleMetadata) -> str:
         glyph = "[x]" if bundle.list_id in self._checked else "[ ]"
-        return escape(f"{glyph} {_row_label(bundle)}")
+        label = f"{glyph} {_row_label(bundle)}"
+        fraction = self._bundle_owned_fraction(bundle)
+        if fraction is not None:
+            owned, total = fraction
+            label += f"  ({owned}/{total})"
+        # end if
+        return escape(label)
     # end def _bundle_label
 
     def _rebuild_tree(self) -> None:
@@ -360,6 +408,14 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end if
     # end def on_tree_node_expanded
 
+    def _game_label(self, game: Game) -> Text:
+        text = Text(game.name)
+        if not self._game_owned(game):
+            text.style = "dim"
+        # end if
+        return text
+    # end def _game_label
+
     def _populate_games(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
         game_list = self._game_lists_by_id.get(data.list_id or "")
         if game_list is None:
@@ -367,7 +423,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # end if
         for index, game in enumerate(game_list.data.games):
             node.add(
-                escape(game.name),
+                self._game_label(game),
                 data=_NodeData(kind="game", source=data.source, list_id=data.list_id, game_index=index),
                 expand=False,
                 allow_expand=True,

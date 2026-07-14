@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import re
 from pathlib import Path
 
 import pytest
@@ -82,6 +83,69 @@ def test_tree_is_focused_with_cursor_on_first_category_at_start(tmp_path: Path) 
 
     asyncio.run(scenario())
 # end def test_tree_is_focused_with_cursor_on_first_category_at_start
+
+
+def test_ownership_marks_bundle_fraction_and_greys_out_unowned_games(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: Some Bundle\ngames:\n"
+        "  - name: Owned Game\n    ids: [steam:440]\n"
+        "  - name: Missing Game\n    ids: [steam:999]\n"
+        "  - name: No Steam ID\n    ids: [unresolved:source:isthereanydeal:1:x]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), owned_app_ids=frozenset({440}))
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            assert "(1/3)" in bundle_node.label.plain
+
+            bundle_node.expand()
+            await pilot.pause()
+            owned, missing, no_steam = bundle_node.children
+            assert owned.label.plain == "Owned Game"
+            assert owned.label.style == ""
+            assert missing.label.plain == "Missing Game"
+            assert missing.label.style == "dim"
+            assert no_steam.label.plain == "No Steam ID"
+            assert no_steam.label.style == "dim"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_ownership_marks_bundle_fraction_and_greys_out_unowned_games
+
+
+def test_unknown_ownership_does_not_mark_or_grey_anything(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: Some Bundle\ngames:\n  - name: A Game\n    ids: [steam:440]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set())  # owned_app_ids defaults to None
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            assert re.search(r"\(\d+/\d+\)", bundle_node.label.plain) is None
+
+            bundle_node.expand()
+            await pilot.pause()
+            game_node = bundle_node.children[0]
+            assert game_node.label.plain == "A Game"
+            assert game_node.label.style == ""
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_unknown_ownership_does_not_mark_or_grey_anything
 
 
 def test_expanding_a_game_shows_store_links_and_steam_launch(tmp_path: Path) -> None:
