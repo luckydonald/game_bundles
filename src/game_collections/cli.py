@@ -22,9 +22,9 @@ from game_collections.migrate_tiers import (
     plan_migration,
     step_would_change,
 )
+from game_collections.completion import MissingHandling
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
-    SteamMatchMode,
     SteamOptions,
     SteamTierMode,
     owned_app_ids_from_api,
@@ -737,7 +737,12 @@ def _steam_adapter(
     api_key: str | None,
     source: str | None = None,
     collection: str | None = None,
-    match_mode: SteamMatchMode = "all",
+    min_owned: int | None = None,
+    max_owned: int | None = None,
+    min_missing: int | None = None,
+    max_missing: int | None = None,
+    unresolved_handling: MissingHandling = "ignore",
+    unconfigured_handling: MissingHandling = "ignore",
     tier_mode: SteamTierMode = "all",
     reconcile_managed: bool = False,
 ) -> tuple[SteamAdapter, SteamFileGateway]:
@@ -747,6 +752,14 @@ def _steam_adapter(
     # end if
     root = discover_steam_root(steam_root)
     gateway = SteamFileGateway.discover(root, steam_id)
+    bounds = dict(
+        min_owned=min_owned,
+        max_owned=max_owned,
+        min_missing=min_missing,
+        max_missing=max_missing,
+        unresolved_handling=unresolved_handling,
+        unconfigured_handling=unconfigured_handling,
+    )
     if resolved_source == "installed":
         typer.echo(
             "warning: --source installed only sees currently installed games; "
@@ -757,9 +770,9 @@ def _steam_adapter(
         options = SteamOptions(
             steam_id=gateway.steam_id,
             steam_root=root,
-            match_mode=match_mode,
             tier_mode=tier_mode,
             reconcile_managed=reconcile_managed,
+            **bounds,
         )
     elif resolved_source == "collection":
         collection_name = collection or "manual-all"
@@ -767,10 +780,10 @@ def _steam_adapter(
         options = SteamOptions(
             steam_id=gateway.steam_id,
             steam_root=root,
-            match_mode=match_mode,
             tier_mode=tier_mode,
             reconcile_managed=reconcile_managed,
             protected_collection_name=collection_name,
+            **bounds,
         )
     else:
         key = api_key or os.environ.get("STEAM_WEB_API_KEY")
@@ -781,9 +794,9 @@ def _steam_adapter(
             steam_id=gateway.steam_id,
             steam_root=root,
             api_key=key,
-            match_mode=match_mode,
             tier_mode=tier_mode,
             reconcile_managed=reconcile_managed,
+            **bounds,
         )
         owned_app_ids_source = owned_app_ids_from_api(SteamApiClient(key), options.steam_id)
     # end if
@@ -845,6 +858,12 @@ def eligible_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
+    min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
+    max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
+    min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
+    max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
+    unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
+    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
     """Report which lists are fully owned by the launcher account."""
@@ -853,7 +872,19 @@ def eligible_command(
         raise typer.Exit(2)
     # end if
     try:
-        adapter, _gateway = _steam_adapter(steam_root, steam_id, api_key, source, collection)
+        adapter, _gateway = _steam_adapter(
+            steam_root,
+            steam_id,
+            api_key,
+            source,
+            collection,
+            min_owned=min_owned,
+            max_owned=max_owned,
+            min_missing=min_missing,
+            max_missing=max_missing,
+            unresolved_handling=unresolved_handling,
+            unconfigured_handling=unconfigured_handling,
+        )
         game_lists = _discover_selected_game_lists(_lists_root(lists_root), selection_config)
         plan = adapter.plan(game_lists)
         _print_plan(plan, log_skips=log_skips)
@@ -876,7 +907,12 @@ def sync_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
-    mode: Annotated[Literal["any", "all", "none"], typer.Option("--mode", help="Match any or all Steam games in each list, or none to skip ownership matching entirely and sync exactly what was selected.")] = "all",
+    min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
+    max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
+    min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
+    max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
+    unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
+    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
@@ -892,7 +928,12 @@ def sync_command(
             api_key,
             source,
             collection,
-            match_mode=mode,
+            min_owned=min_owned,
+            max_owned=max_owned,
+            min_missing=min_missing,
+            max_missing=max_missing,
+            unresolved_handling=unresolved_handling,
+            unconfigured_handling=unconfigured_handling,
             tier_mode=tiers,
             reconcile_managed=True,
         )
@@ -939,7 +980,12 @@ def apply_command(
     source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
-    mode: Annotated[Literal["any", "all", "none"], typer.Option("--mode", help="Match any or all Steam games in each list, or none to skip ownership matching entirely and sync exactly what was selected.")] = "all",
+    min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
+    max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
+    min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
+    max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
+    unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
+    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
@@ -975,7 +1021,12 @@ def apply_command(
                 api_key,
                 source,
                 collection,
-                match_mode=mode,
+                min_owned=min_owned,
+                max_owned=max_owned,
+                min_missing=min_missing,
+                max_missing=max_missing,
+                unresolved_handling=unresolved_handling,
+                unconfigured_handling=unconfigured_handling,
                 tier_mode=tiers,
                 reconcile_managed=True,
             )
@@ -987,7 +1038,10 @@ def apply_command(
         picker = ApplyPickerApp(
             _lists_root(lists_root),
             previously_excluded,
-            match_mode=mode,
+            min_missing=min_missing,
+            max_missing=max_missing,
+            unresolved_handling=unresolved_handling,
+            unconfigured_handling=unconfigured_handling,
             tier_mode=tiers,
             owned_app_ids=owned_app_ids,
         )
@@ -1004,7 +1058,12 @@ def apply_command(
 
         if early_adapter is not None and early_gateway is not None and owned_app_ids is not None:
             adapter = SteamAdapter(
-                replace(early_adapter.options, match_mode=picker.match_mode, tier_mode=picker.tier_mode),
+                replace(
+                    early_adapter.options,
+                    min_missing=picker.min_missing,
+                    max_missing=picker.max_missing,
+                    tier_mode=picker.tier_mode,
+                ),
                 owned_app_ids_source=lambda: owned_app_ids,
                 gateway=early_gateway,
             )
@@ -1015,7 +1074,12 @@ def apply_command(
                 api_key,
                 source,
                 collection,
-                match_mode=picker.match_mode,
+                min_owned=min_owned,
+                max_owned=max_owned,
+                min_missing=picker.min_missing,
+                max_missing=picker.max_missing,
+                unresolved_handling=unresolved_handling,
+                unconfigured_handling=unconfigured_handling,
                 tier_mode=picker.tier_mode,
                 reconcile_managed=True,
             )

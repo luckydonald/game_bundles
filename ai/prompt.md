@@ -1286,3 +1286,67 @@ The mane branch already did that.
 - _mode: all_ and _mode: any_ still seem to be exactly the same selections. Both include games I don't own (which is not what "all" should be about.)
 - Under the _x/y shown_ text add _u/x selected_ (to make debugging easier, and because there's still space anyways)
 
+❯ /plan Basically `mode` is about completion. And thinking about it, having two numbers, min and max missing would generalize that concept.
+
+I.e.
+- `--mode=all` => `max-missing=0`
+- `--mode=any` => `min-missing=1`
+- `--mode=none` => `min-missing=0` (or better `null`, aka no filter)
+
+But having those separate as numeric filters, means we could search for bundles where we forgot one or two games to be put into steam:
+In other words, have 5 games added, but forgot to put in 3 or more items.
+=> min-size=8, max-missing=3
+
+Add ettings for how to treat different (currently only: non-steam) store items.
+- ignore unresolved items: hide/ignore/enforce
+- ignore unconfigured stores: hide/ignore/enforce
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Your mapping has `--mode=any` => `min-missing=1`, meaning "at least 1 game NOT owned" is required to match. But today `any` means the opposite: "at least 1 game owned" (a fully-unowned bundle is never eligible under `any`). A fixed missing-count also can't express "at least 1 owned" without knowing the bundle's total size. How should this resolve?
+>> 2. Default treatment for "unresolved" marker items and games from stores you haven't configured a URL-builder for - today both are silently excluded from owned/missing counting entirely (same as "unsupported"/no-steam-id games). Should the new hide/ignore/enforce settings preserve that as the default?
+>> 3. Where should these new controls live?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **any semantics** (1/3) <kbd>Single Select</kbd><br>
+>> Your mapping has `--mode=any` => `min-missing=1`, meaning "at least 1 game NOT owned" is required to match. But today `any` means the opposite: "at least 1 game owned" (a fully-unowned bundle is never eligible under `any`). A fixed missing-count also can't express "at least 1 owned" without knowing the bundle's total size. How should this resolve?
+> - [x] 1\. Add min-owned/max-owned too (Recommended)
+>   - _Keep min-missing/max-missing for the new "almost complete" use case (e.g. min-size=8 max-missing=3), and add a separate min-owned/max-owned pair to exactly express today's `any` (min-owned=1) and `all` (max-missing=0, equivalent to min-owned=total) without size-dependent hacks._
+> - [ ] 2\. Drop old any/all meaning, missing-count is the new primitive
+>   - _`mode` goes away entirely. Eligibility becomes purely `min-missing <= actual-missing <= max-missing` (both nullable). Accept that this can't precisely reproduce old `any`'s "at least one owned regardless of size" behavior - it becomes an absolute-count filter only._
+> - [ ] 3\. It was a slip, `any` should map to something else - let me restate it
+>   - _Pick this and describe in your own words what `--mode=any` should map to instead._
+> - [ ] 4\. _Type something._
+>
+>> **Default handling** (2/3) <kbd>Single Select</kbd><br>
+>> Default treatment for "unresolved" marker items and games from stores you haven't configured a URL-builder for - today both are silently excluded from owned/missing counting entirely (same as "unsupported"/no-steam-id games). Should the new hide/ignore/enforce settings preserve that as the default?
+> - [x] 1\. Yes, default "ignore" for both (Recommended)
+>   - _Matches current behavior exactly out of the box (excluded from missing-count math and from the picker's owned/total fraction); "hide" and "enforce" become new opt-in behaviors via CLI flags/picker dropdowns._
+> - [ ] 2\. Default "enforce" for unresolved specifically
+>   - _An `unresolved:` marker usually means "we know this game exists but haven't nailed down its store yet" - arguably it SHOULD count against you as missing by default, unlike a truly unsupported/no-ID game._
+> - [ ] 3\. _Type something._
+>
+>> **Surface** (3/3) <kbd>Single Select</kbd><br>
+>> Where should these new controls live?
+> - [x] 1\. CLI flags + picker dropdowns, mirroring mode/tiers (Recommended)
+>   - _`--min-missing`/`--max-missing` (and min/max-owned if added) plus `--unresolved-handling`/`--unconfigured-store-handling` on sync/eligible/apply, with matching dropdowns in the `apply steam` picker so they're changeable without leaving the picker, exactly like `mode`/`tiers` today._
+> - [ ] 2\. CLI flags only for now
+>   - _Add the flags to sync/eligible/apply but skip picker UI for this round - smaller, faster to ship, picker support could follow later once the backend semantics are settled._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `a52dd8eb5af8484d4` <kbd>completed</kbd>
+> - Tool `toolu_01B2MZwXruurCMEXKkVjAYyw`
+> - > Agent "Explore mode/eligibility/ownership code paths" finished
+> - [Query (`2647` chars, `2.58 KB`)](output/agents/014.a52dd8eb5af8484d4/prompt.md)
+> - [Answer (`6901` chars, `6.75 KB`)](output/agents/014.a52dd8eb5af8484d4/result.md)
+> - [Raw log (`218171` chars, `213 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/3a903f4c-3b2e-42cd-863c-9672ea1fdf8c/tasks/a52dd8eb5af8484d4.output)
+> - `13` tools, `47607` tokens, `1.00335 s`
+

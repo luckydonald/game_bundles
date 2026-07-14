@@ -90,10 +90,10 @@ def test_orange_box_is_eligible_when_complete() -> None:
 # end def test_orange_box_is_eligible_when_complete
 
 
-def test_all_mode_ignores_games_without_steam_ids() -> None:
+def test_max_missing_zero_ignores_games_without_steam_ids() -> None:
     game_list = _list("example/mixed", [10, 20], unsupported=True)
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="all"),
+        SteamOptions(steam_id="76561198044975919", max_missing=0),
         owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
     )
 
@@ -101,13 +101,13 @@ def test_all_mode_ignores_games_without_steam_ids() -> None:
 
     assert result.eligible is True
     assert result.unsupported_ids == ["Other Store Game"]
-# end def test_all_mode_ignores_games_without_steam_ids
+# end def test_max_missing_zero_ignores_games_without_steam_ids
 
 
-def test_any_mode_selects_partial_ownership_and_exports_only_owned_ids() -> None:
+def test_min_owned_one_selects_partial_ownership_and_exports_only_owned_ids() -> None:
     game_list = _list("example/partial", [10, 20, 30])
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        SteamOptions(steam_id="76561198044975919", min_owned=1, max_missing=None),
         owned_app_ids_source=_fake_source([20]),  # type: ignore[arg-type]
     )
 
@@ -116,25 +116,25 @@ def test_any_mode_selects_partial_ownership_and_exports_only_owned_ids() -> None
     assert plan.eligibility[0].eligible is True
     assert plan.eligibility[0].missing_ids == ["steam:10", "steam:30"]
     assert plan.changes[0].added_ids == ["steam:20"]
-# end def test_any_mode_selects_partial_ownership_and_exports_only_owned_ids
+# end def test_min_owned_one_selects_partial_ownership_and_exports_only_owned_ids
 
 
-def test_any_mode_requires_at_least_one_owned_steam_id() -> None:
+def test_min_owned_one_requires_at_least_one_owned_steam_id() -> None:
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        SteamOptions(steam_id="76561198044975919", min_owned=1, max_missing=None),
         owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate([_list("example/none", [10])])[0]
 
     assert result.eligible is False
-# end def test_any_mode_requires_at_least_one_owned_steam_id
+# end def test_min_owned_one_requires_at_least_one_owned_steam_id
 
 
-def test_none_mode_is_eligible_even_with_zero_owned_games() -> None:
+def test_no_bounds_is_eligible_even_with_zero_owned_games() -> None:
     game_list = _list("example/none-owned", [10, 20])
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="none"),
+        SteamOptions(steam_id="76561198044975919", max_missing=None),
         owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
     )
 
@@ -142,46 +142,48 @@ def test_none_mode_is_eligible_even_with_zero_owned_games() -> None:
 
     assert result.eligible is True
     assert result.missing_ids == ["steam:10", "steam:20"]
-# end def test_none_mode_is_eligible_even_with_zero_owned_games
+# end def test_no_bounds_is_eligible_even_with_zero_owned_games
 
 
-def test_none_mode_overrides_an_unmet_pick_quota() -> None:
+def test_pick_quota_still_applies_with_no_missing_bounds_set() -> None:
+    # `pick_quota`, when set, always takes priority over the min/max bounds - there's no
+    # "no bounds" special case that overrides an unmet quota.
     game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="none"),
+        SteamOptions(steam_id="76561198044975919", max_missing=None),
         owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate([game_list])[0]
 
-    assert result.eligible is True
-# end def test_none_mode_overrides_an_unmet_pick_quota
+    assert result.eligible is False
+# end def test_pick_quota_still_applies_with_no_missing_bounds_set
 
 
-def test_pick_quota_met_is_eligible_regardless_of_match_mode() -> None:
+def test_pick_quota_met_is_eligible_regardless_of_missing_bounds() -> None:
     game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="all"),
+        SteamOptions(steam_id="76561198044975919", max_missing=0),
         owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate([game_list])[0]
 
     assert result.eligible is True
-# end def test_pick_quota_met_is_eligible_regardless_of_match_mode
+# end def test_pick_quota_met_is_eligible_regardless_of_missing_bounds
 
 
-def test_pick_quota_not_met_is_ineligible_even_in_any_mode() -> None:
+def test_pick_quota_not_met_is_ineligible_even_with_min_owned_one() -> None:
     game_list = _list("example/byob", [10, 20, 30], pick_quota=2)
     adapter = SteamAdapter(
-        SteamOptions(steam_id="76561198044975919", match_mode="any"),
+        SteamOptions(steam_id="76561198044975919", min_owned=1, max_missing=None),
         owned_app_ids_source=_fake_source([10]),  # type: ignore[arg-type]
     )
 
     result = adapter.evaluate([game_list])[0]
 
     assert result.eligible is False
-# end def test_pick_quota_not_met_is_ineligible_even_in_any_mode
+# end def test_pick_quota_not_met_is_ineligible_even_with_min_owned_one
 
 
 def test_pick_quota_combines_with_highest_tier_selection() -> None:
