@@ -9,7 +9,7 @@ import yaml
 
 pytest.importorskip("textual", reason="requires the optional `tui` extra: uv sync --extra tui")
 
-from textual.widgets import Checkbox, Input, Select, Tree
+from textual.widgets import Checkbox, Input, Select, Static, Tree
 
 from game_collections.apply.tui import ApplyPickerApp, _NodeData
 
@@ -433,6 +433,27 @@ def test_bundles_pre_checked_and_grouped_by_source(tmp_path: Path) -> None:
 
     asyncio.run(scenario())
 # end def test_bundles_pre_checked_and_grouped_by_source
+
+
+def test_status_line_shows_shown_and_selected_counts(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            status = app.query_one("#status", Static).renderable
+            assert str(status) == "2/2 shown\n1/2 selected"
+
+            app.query_one("#filter-min-items", Input).value = "5"
+            await pilot.pause()
+            status = app.query_one("#status", Static).renderable
+            # min-items hides the 3-item bundle by default ("show filtered" off); the
+            # remaining, excluded-from-the-start bundle is shown but still unselected
+            assert str(status) == "1/2 shown\n0/2 selected"
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_status_line_shows_shown_and_selected_counts
 
 
 def test_previously_excluded_bundle_starts_unchecked(tmp_path: Path) -> None:
