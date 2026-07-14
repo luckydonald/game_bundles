@@ -313,6 +313,50 @@ def test_expanding_a_game_shows_store_links_and_steam_launch(tmp_path: Path) -> 
 # end def test_expanding_a_game_shows_store_links_and_steam_launch
 
 
+def test_unresolved_hide_removes_the_game_row_from_the_tree(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle/bundle/2026-01-01_a/bundle.yml"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "schema: 1\nname: Some Bundle\ngames:\n"
+        "  - name: Game A\n    ids: [steam:440]\n"
+        "  - name: Game B\n    ids: [unresolved:source:isthereanydeal:1:x]\n"
+        "  - name: Game C\n    ids: [gog:some-slug]\n",
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(
+            lists_root,
+            excluded=set(),
+            max_missing=None,
+            unresolved_handling="ignore",
+            unconfigured_handling="ignore",
+            owned_app_ids=frozenset({440}),
+        )
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            bundle_node.expand()
+            await pilot.pause()
+            # default "ignore" for both: every game row is still shown
+            assert [child.label.plain for child in bundle_node.children] == ["Game A", "Game B", "Game C"]
+
+            app.query_one("#filter-unresolved-handling", Select).value = "hide"
+            app.query_one("#filter-unconfigured-handling", Select).value = "hide"
+            await pilot.pause()
+            bundle_node = _source_nodes(app)["humblebundle"].children[0]
+            bundle_node.expand()
+            await pilot.pause()
+            # "hide" for both: only the real Steam game remains
+            assert [child.label.plain for child in bundle_node.children] == ["Game A"]
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_unresolved_hide_removes_the_game_row_from_the_tree
+
+
 def test_open_calls_os_opener_only_when_enabled(tmp_path: Path) -> None:
     from unittest.mock import patch
 

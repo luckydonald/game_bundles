@@ -663,12 +663,30 @@ class ApplyPickerApp(App[ApplySelection | None]):
         return text
     # end def _game_label
 
+    def _game_hidden(self, game: Game) -> bool:
+        """Whether `unresolved_handling`/`unconfigured_handling` drops this game entirely.
+
+        Mirrors ``evaluate_completion``'s own "hide" branch: a Steam game is never hidden
+        here, only the non-Steam ones this setting actually governs.
+        """
+        qualified_ids = game.qualified_ids
+        if any(identifier.provider == "steam" for identifier in qualified_ids):
+            return False
+        # end if
+        is_unresolved = all(identifier.provider == "unresolved" for identifier in qualified_ids)
+        handling = self.unresolved_handling if is_unresolved else self.unconfigured_handling
+        return handling == "hide"
+    # end def _game_hidden
+
     def _populate_games(self, node: TreeNode[_NodeData], data: _NodeData) -> None:
         game_list = self._game_lists_by_id.get(data.list_id or "")
         if game_list is None:
             return
         # end if
         for index, game in enumerate(game_list.data.games):
+            if self._game_hidden(game):
+                continue
+            # end if
             node.add(
                 self._game_label(game),
                 data=_NodeData(kind="game", source=data.source, list_id=data.list_id, game_index=index),
