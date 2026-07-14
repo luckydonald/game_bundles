@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -68,9 +69,24 @@ def load_game_list(path: Path, lists_root: Path) -> LoadedGameList:
 # end def load_game_list
 
 
-def discover_game_lists(lists_root: Path) -> list[LoadedGameList]:
-    """Discover all lists and reject logical or case-insensitive collisions."""
-    loaded = [load_game_list(path, lists_root) for path in sorted(lists_root.rglob("*.yml"))]
+def discover_game_lists(
+    lists_root: Path,
+    on_progress: Callable[[int, int, Path], None] | None = None,
+) -> list[LoadedGameList]:
+    """Discover all lists and reject logical or case-insensitive collisions.
+
+    ``on_progress``, if given, is called after each file loads with
+    ``(index, total, path)`` so callers can report progress on large trees.
+    """
+    paths = sorted(lists_root.rglob("*.yml"))
+    total = len(paths)
+    loaded: list[LoadedGameList] = []
+    for index, path in enumerate(paths, start=1):
+        loaded.append(load_game_list(path, lists_root))
+        if on_progress is not None:
+            on_progress(index, total, path)
+        # end if
+    # end for
     seen: dict[str, Path] = {}
     for game_list in loaded:
         folded = game_list.id.casefold()

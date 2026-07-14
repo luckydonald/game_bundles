@@ -9,6 +9,7 @@ from pytest import CaptureFixture, MonkeyPatch
 from game_collections.apply.config import ApplySelection
 from game_collections.cli import _print_plan, app
 from game_collections.launchers.base import CollectionEligibility, PlannedCollectionChange, SyncPlan
+from game_collections.lists import discover_game_lists
 from test_steam_io import STEAM_ID, build_fake_steam
 
 
@@ -146,8 +147,8 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
     )
 
     class _StubPickerApp:
-        def __init__(self, bundles: object, excluded: object) -> None:
-            pass
+        def __init__(self, lists_root: Path, excluded: object) -> None:
+            self.all_game_lists = discover_game_lists(lists_root)
         # end def __init__
 
         def run(self) -> ApplySelection:
@@ -189,8 +190,8 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
     selection_config = tmp_path / "config/apply-selection.yml"
 
     class _StubPickerApp:
-        def __init__(self, bundles: object, excluded: object) -> None:
-            pass
+        def __init__(self, lists_root: Path, excluded: object) -> None:
+            self.all_game_lists = discover_game_lists(lists_root)
         # end def __init__
 
         def run(self) -> None:
