@@ -134,9 +134,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
     """Filter and check/uncheck bundles, then save the selection to disk."""
 
     CSS = """
-    #loading { align: center middle; height: 1fr; }
-    #loading Static { margin-bottom: 1; }
-    #loading ProgressBar { width: 60; }
+    #loading { align: center middle; width: 1fr; height: 1fr; }
+    #loading-inner { width: auto; height: auto; }
+    #loading-label { width: auto; content-align: center middle; margin-bottom: 1; }
+    #loading-progress { width: 60; }
     #body { height: 1fr; }
     #filters { height: auto; padding: 1; }
     #filters Input, #filters Select { width: 20; margin-right: 1; }
@@ -169,8 +170,10 @@ class ApplyPickerApp(App[ApplySelection | None]):
     def compose(self) -> ComposeResult:
         yield Header()
         with Vertical(id="loading"):
-            yield Static("Loading lists...", id="loading-label")
-            yield ProgressBar(id="loading-progress", show_eta=False)
+            with Vertical(id="loading-inner"):
+                yield Static("Loading lists...", id="loading-label")
+                yield ProgressBar(id="loading-progress", show_eta=False)
+            # end with
         # end with
     # end def compose
 
