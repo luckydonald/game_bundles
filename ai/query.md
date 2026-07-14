@@ -1165,3 +1165,5 @@ Have a toggle where the filter hide the items, too (not only unselct)
 - it has no checkboxes
 - add the bundle games as sub-sub element, so sub-element of the actual bundle.
 
+❯ The loading bar is not centered (never was)
+
