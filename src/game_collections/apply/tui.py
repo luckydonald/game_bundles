@@ -518,6 +518,9 @@ class ApplyPickerApp(App[ApplySelection | None]):
         if completion is None:
             return False
         # end if
+        if completion.hidden_count:
+            return True
+        # end if
         if self.min_missing is not None and completion.missing_count < self.min_missing:
             return True
         # end if
