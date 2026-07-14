@@ -2,7 +2,7 @@
 - [Repo commit hooks](repo_commit_hooks.md) — pre-commit hook rejects Co-Authored-By/Claude-Session commit trailers; `allowCoAuthoredEtc: false` in `ai/settings/settings.json` suppresses Claude Code's own footer.
 - [bugsink MCP env symlink](project_bugsink_mcp_needs_env_symlink.md) — CONNECTION_CLOSED in a subproject/worktree usually means missing `ai/.env` symlink, not bad creds; needs a fresh session after fixing
 - [History-master replay guards](2026-07-20-history-master-replay-guards.md) — TODO: summarize this file.
-- [end comment bare form](feedback_end_comment_bare_form.md) — TODO: summarize this file.
+- [Bare `# end` comments](feedback_end_comment_bare_form.md) — `# end def`/`# end class` etc. must never repeat the function/class name
 - [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
 - [live validation runs fix bugs found](feedback_live_validation_runs_fix_bugs_found.md) — TODO: summarize this file.
 - [plan prose formatting](feedback_plan_prose_formatting.md) — TODO: summarize this file.
