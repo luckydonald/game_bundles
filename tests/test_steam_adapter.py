@@ -104,6 +104,26 @@ def test_max_missing_zero_ignores_games_without_steam_ids() -> None:
 # end def test_max_missing_zero_ignores_games_without_steam_ids
 
 
+def test_unverified_ownership_adds_every_listed_steam_id_without_gating() -> None:
+    game_list = _list("example/unverified", [10, 20], unsupported=True)
+    adapter = SteamAdapter(
+        SteamOptions(
+            steam_id="76561198044975919",
+            max_missing=0,
+            unconfigured_handling="hide",
+            unverified_ownership=True,
+        ),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan([game_list])
+
+    assert plan.eligibility[0].eligible is True
+    assert plan.eligibility[0].missing_ids == []
+    assert plan.changes[0].added_ids == ["steam:10", "steam:20"]
+# end def test_unverified_ownership_adds_every_listed_steam_id_without_gating
+
+
 def test_hide_makes_a_bundle_with_an_unconfigured_game_ineligible() -> None:
     game_list = _list("example/mixed", [10, 20], unsupported=True)
     adapter = SteamAdapter(
