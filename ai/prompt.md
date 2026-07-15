@@ -1510,3 +1510,5 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 > </details>
 >
 
+› installed is the last option, as it's the least accurate. The non-TUI variants should error out instead of making them
+
