@@ -1360,3 +1360,153 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 
 › Both hide and ignore result in the same amout of available bundles, for both settings.
 
+› if no mode is set (`warning: could not determine Steam ownership yet (provide --api-key or STEAM_WEB_API_KEY (or use --source installed/collection)); no owned/total counts shown`) it should show a dialogue to choose that. Provide `--source=none`, and `--source=auto` (default, does not include `none` but goes into said dialog)
+
+› Question answered.
+> <details><summary>
+>
+>> 1. Where should the new `auto`/`none` source modes be accepted?
+>> 2. If the user chooses `none`, what should Save do in the `apply` picker?
+>> 3. Which non-interactive sources should `--source auto` try before opening the chooser?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **CLI scope** (1/3) <kbd>Single Select</kbd><br>
+>> Where should the new `auto`/`none` source modes be accepted?
+> - [x] 1\. Apply only (Recommended)
+>   - _Keep `eligible` and `sync` ownership-required; only interactive `apply` gets a chooser._
+>   - > Actually, sync and apply shall be the same in that regard. none is like what the picker does currently without. Auto should be supported by sync without problems, as all "obtainable" automatic sources should already be implemented.
+> - [ ] 2\. All Steam verbs
+>   - _Expose the names everywhere, but reject `none` outside the picker._
+> - [ ] 3\. All with no-source
+>   - _Make every verb support ownership-free behavior, requiring new planning semantics._
+> - [ ] 4\. _Type something._
+>
+>> **None result** (2/3) <kbd>Single Select</kbd><br>
+>> If the user chooses `none`, what should Save do in the `apply` picker?
+> - [ ] 1\. Save selection only (Recommended)
+>   - _Persist the checked/excluded bundles, then exit without planning, staging, or touching Steam._
+> - [ ] 2\. Browse only
+>   - _Allow inspecting and cancelling, but block Save with a clear ownership-source requirement._
+> - [ ] 3\. Keep retry failure
+>   - _Preserve today's behavior: Save retries the missing source and exits with its error._
+> - [x] 4\. _Type something:_
+>   - > You save as ususal, and can write to steam (after a confirm dialog explaining the situation) if you still desire. You'll have a lot of non-relevant bundles, but unfiltered is unfiltered.
+>
+>> **Auto order** (3/3) <kbd>Single Select</kbd><br>
+>> Which non-interactive sources should `--source auto` try before opening the chooser?
+> - [ ] 1\. API then installed (Recommended)
+>   - _Use an available API key first, then local installed games; use a collection only when explicitly requested with `--collection`._
+> - [ ] 2\. API only
+>   - _Rename today's default behavior; any missing/invalid API setup opens the chooser._
+> - [x] 3\. API, installed, collection
+>   - _Also silently try the default `manual-all` collection before asking._
+>   - > What was "installed" again?
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. With `--source none`, what Steam IDs should a selected bundle’s collection contain?
+>> 2. When ownership is unavailable, which picker/CLI filters should still constrain the selected bundles?
+>> 3. For `sync steam --source none --apply`, how should the explicit risk acknowledgement work?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **None contents** (1/3) <kbd>Single Select</kbd><br>
+>> With `--source none`, what Steam IDs should a selected bundle’s collection contain?
+> - [x] 1\. All listed Steam IDs (Recommended)
+>   - _Treat every Steam ID in each selected list as addable, so unfiltered bundles produce populated collections._
+>   - > Yes. And obviously then you can then still filter and (de)select them.
+> - [ ] 2\. No game IDs
+>   - _Create/update empty collections only; this preserves selection names but has little launcher value._
+> - [ ] 3\. Block collection changes
+>   - _Allow selection/reporting only, but do not stage or replace Steam files._
+> - [ ] 4\. _Type something._
+>
+>> **None filters** (2/3) <kbd>Single Select</kbd><br>
+>> When ownership is unavailable, which picker/CLI filters should still constrain the selected bundles?
+> - [ ] 1\. Only non-ownership filters (Recommended)
+>   - _Ignore ownership bounds and unresolved/unconfigured handling; retain saved selection and `--tiers` behavior._
+> - [ ] 2\. Keep handling rules
+>   - _Ignore numeric ownership bounds but still let `hide` exclude affected bundles._
+> - [ ] 3\. No filters at all
+>   - _Ignore ownership, tier, and saved-selection filtering so every discovered list is included._
+> - [x] 4\. _Type something:_
+>   - > Explain ownership.
+>
+>> **Apply warning** (3/3) <kbd>Single Select</kbd><br>
+>> For `sync steam --source none --apply`, how should the explicit risk acknowledgement work?
+> - [ ] 1\. Extra typed confirmation (Recommended)
+>   - _Require a second exact confirmation explaining that all listed Steam IDs will be written without ownership verification._
+> - [x] 2\. Extra yes/no prompt
+>   - _Show the warning and require a separate normal confirmation before the usual replacement confirmation._
+> - [ ] 3\. Existing confirmation only
+>   - _Include the warning in current output but add no extra confirmation step._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. If `sync steam --source auto` cannot resolve any source, how should it enter the ownership-source dialog?
+>> 2. When the dialog selects API or collection, how should it obtain the required value?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Sync fallback** (1/2) <kbd>Single Select</kbd><br>
+>> If `sync steam --source auto` cannot resolve any source, how should it enter the ownership-source dialog?
+> - [x] 1\. Terminal chooser (Recommended)
+>   - _Prompt in the terminal for API, installed, collection, or none, matching the picker dialog’s choices._
+> - [ ] 2\. Fail with guidance
+>   - _Keep `sync` non-interactive; explain how to pass an explicit source or use `--source none`._
+> - [ ] 3\. Launch Textual picker
+>   - _Open the graphical chooser, requiring the optional TUI extra for `sync` too._
+> - [ ] 4\. _Type something._
+>
+>> **Chooser inputs** (2/2) <kbd>Single Select</kbd><br>
+>> When the dialog selects API or collection, how should it obtain the required value?
+> - [x] 1\. Prompt as needed (Recommended)
+>   - _Ask for a masked API key or a collection name (default `manual-all`) inside the chooser flow._
+> - [ ] 2\. CLI/env only
+>   - _Only offer choices whose required API key or collection argument was already supplied._
+> - [ ] 3\. Always manual-all
+>   - _Let collection choose only the default `manual-all`; API still requires a supplied key._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+› Question answered.
+> <details><summary>
+>
+>> 1. When `apply steam --source auto` cannot resolve ownership, where should the source chooser appear?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Apply chooser** (1/1) <kbd>Single Select</kbd><br>
+>> When `apply steam --source auto` cannot resolve ownership, where should the source chooser appear?
+> - [x] 1\. Textual modal (Recommended)
+>   - _Show API/installed/collection/none inside the graphical picker; `sync` uses the terminal chooser._
+> - [ ] 2\. Terminal prompt
+>   - _Resolve the source before opening the picker, using the same terminal interaction as `sync`._
+> - [ ] 3\. Filter-row control
+>   - _Open the picker first and put a source selector plus credentials fields in its filter bar._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
