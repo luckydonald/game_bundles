@@ -1515,3 +1515,5 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 › The non-TUI variants should error out instead of making them unnessesary tui-like. we already have tui.
 both tui&non-tui shall confirm none-mode.
 
+> › Implement the [Plan](./plans/018_steam-ownership-source-selection-and-none-mode.md).
+
