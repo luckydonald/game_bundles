@@ -48,6 +48,7 @@ class SteamOptions:
     tier_mode: SteamTierMode = "all"
     reconcile_managed: bool = False
     protected_collection_name: str | None = None
+    unverified_ownership: bool = False
 
     def __post_init__(self) -> None:
         for bound_name in ("min_owned", "max_owned", "min_missing", "max_missing"):
@@ -125,6 +126,24 @@ class SteamAdapter(LauncherAdapter):
         owned_app_ids = self.owned_app_ids_source()
         results: list[CollectionEligibility] = []
         for game_list in game_lists:
+            if self.options.unverified_ownership:
+                # `--source none` deliberately writes every known Steam ID from the selected
+                # list. This is not an ownership result, so it bypasses every ownership-based
+                # bound and non-Steam handling setting.
+                completion = evaluate_completion(game_list.data.games, set())
+                results.append(
+                    CollectionEligibility(
+                        list_id=game_list.id,
+                        name=game_list.data.name,
+                        tier=game_list.data.tier,
+                        eligible=True,
+                        owned_ids=completion.missing_ids,
+                        missing_ids=[],
+                        unsupported_ids=[],
+                    )
+                )
+                continue
+            # end if
             completion = evaluate_completion(
                 game_list.data.games,
                 owned_app_ids,

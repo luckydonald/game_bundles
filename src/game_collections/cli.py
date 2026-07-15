@@ -94,6 +94,11 @@ app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
 
+class SteamAutoSourceError(ValueError):
+    """Every automatic Steam ownership source failed."""
+
+# end class SteamAutoSourceError
+
 
 def _lists_root(path: Path | None) -> Path:
     return path or Path.cwd() / "lists"
@@ -735,7 +740,7 @@ def _steam_adapter(
     steam_root: Path | None,
     steam_id: str | None,
     api_key: str | None,
-    source: str | None = None,
+    source: str = "auto",
     collection: str | None = None,
     min_owned: int | None = None,
     max_owned: int | None = None,
@@ -746,9 +751,8 @@ def _steam_adapter(
     tier_mode: SteamTierMode = "all",
     reconcile_managed: bool = False,
 ) -> tuple[SteamAdapter, SteamFileGateway]:
-    resolved_source = source or ("collection" if collection is not None else "api")
-    if resolved_source not in ("api", "installed", "collection"):
-        raise ValueError(f"unknown ownership source: {resolved_source!r}; available: api, installed, collection")
+    if source not in ("api", "collection", "installed", "auto", "none"):
+        raise ValueError(f"unknown ownership source: {source!r}; available: auto, api, collection, installed, none")
     # end if
     root = discover_steam_root(steam_root)
     gateway = SteamFileGateway.discover(root, steam_id)
@@ -760,48 +764,88 @@ def _steam_adapter(
         unresolved_handling=unresolved_handling,
         unconfigured_handling=unconfigured_handling,
     )
-    if resolved_source == "installed":
-        typer.echo(
-            "warning: --source installed only sees currently installed games; "
-            "owned-but-uninstalled games will show as missing",
-            err=True,
-        )
-        owned_app_ids_source = owned_app_ids_from_installed(root)
-        options = SteamOptions(
-            steam_id=gateway.steam_id,
-            steam_root=root,
-            tier_mode=tier_mode,
-            reconcile_managed=reconcile_managed,
-            **bounds,
-        )
-    elif resolved_source == "collection":
-        collection_name = collection or "manual-all"
-        owned_app_ids_source = owned_app_ids_from_collection(gateway, collection_name)
-        options = SteamOptions(
-            steam_id=gateway.steam_id,
-            steam_root=root,
-            tier_mode=tier_mode,
-            reconcile_managed=reconcile_managed,
-            protected_collection_name=collection_name,
-            **bounds,
-        )
-    else:
-        key = api_key or os.environ.get("STEAM_WEB_API_KEY")
-        if not key:
-            raise ValueError("provide --api-key or STEAM_WEB_API_KEY (or use --source installed/collection)")
-        # end if
-        options = SteamOptions(
-            steam_id=gateway.steam_id,
-            steam_root=root,
-            api_key=key,
-            tier_mode=tier_mode,
-            reconcile_managed=reconcile_managed,
-            **bounds,
-        )
-        owned_app_ids_source = owned_app_ids_from_api(SteamApiClient(key), options.steam_id)
+    if collection is not None and source == "auto":
+        source = "collection"
     # end if
-    adapter = SteamAdapter(options, owned_app_ids_source=owned_app_ids_source, gateway=gateway)
-    return adapter, gateway
+
+    def adapter_for_source(resolved_source: Literal["api", "collection", "installed", "none"]) -> SteamAdapter:
+        if resolved_source == "none":
+            return SteamAdapter(
+                SteamOptions(
+                    steam_id=gateway.steam_id,
+                    steam_root=root,
+                    tier_mode=tier_mode,
+                    reconcile_managed=reconcile_managed,
+                    unverified_ownership=True,
+                    **bounds,
+                ),
+                owned_app_ids_source=lambda: set(),
+                gateway=gateway,
+            )
+        # end if
+        if resolved_source == "installed":
+            typer.echo(
+                "warning: --source installed only sees currently installed games; "
+                "owned-but-uninstalled games will show as missing",
+                err=True,
+            )
+            owned_app_ids_source = owned_app_ids_from_installed(root)
+            options = SteamOptions(
+                steam_id=gateway.steam_id,
+                steam_root=root,
+                tier_mode=tier_mode,
+                reconcile_managed=reconcile_managed,
+                **bounds,
+            )
+        elif resolved_source == "collection":
+            collection_name = collection or "manual-all"
+            owned_app_ids_source = owned_app_ids_from_collection(gateway, collection_name)
+            options = SteamOptions(
+                steam_id=gateway.steam_id,
+                steam_root=root,
+                tier_mode=tier_mode,
+                reconcile_managed=reconcile_managed,
+                protected_collection_name=collection_name,
+                **bounds,
+            )
+        else:
+            key = api_key or os.environ.get("STEAM_WEB_API_KEY")
+            if not key:
+                raise ValueError("provide --api-key or STEAM_WEB_API_KEY (or use --source collection/installed/none)")
+            # end if
+            options = SteamOptions(
+                steam_id=gateway.steam_id,
+                steam_root=root,
+                api_key=key,
+                tier_mode=tier_mode,
+                reconcile_managed=reconcile_managed,
+                **bounds,
+            )
+            owned_app_ids_source = owned_app_ids_from_api(SteamApiClient(key), options.steam_id)
+        # end if
+        return SteamAdapter(options, owned_app_ids_source=owned_app_ids_source, gateway=gateway)
+    # end def adapter_for_source
+
+    if source != "auto":
+        return adapter_for_source(source), gateway
+    # end if
+
+    failures: list[str] = []
+    for candidate in ("api", "collection", "installed"):
+        try:
+            adapter = adapter_for_source(candidate)
+            owned_app_ids = frozenset(adapter.owned_app_ids_source())
+        except (OSError, ValueError, RuntimeError, SteamIoError) as error:
+            failures.append(f"{candidate}: {error}")
+            continue
+        # end try
+        return (
+            SteamAdapter(adapter.options, owned_app_ids_source=lambda: set(owned_app_ids), gateway=gateway),
+            gateway,
+        )
+    # end for
+    raise SteamAutoSourceError("could not determine Steam ownership automatically:\n  " + "\n  ".join(failures))
+
 # end def _steam_adapter
 
 
@@ -848,6 +892,18 @@ def _print_plan(plan: object, *, log_skips: bool = False) -> None:
 # end def _print_plan
 
 
+def _confirm_unverified_ownership() -> None:
+    typer.echo(
+        "warning: --source none does not verify Steam ownership. Every Steam ID in the selected lists "
+        "will be added to its collection.",
+        err=True,
+    )
+    if not typer.confirm("Continue without Steam ownership verification?"):
+        raise typer.Abort()
+    # end if
+# end def _confirm_unverified_ownership
+
+
 @app.command("eligible")
 def eligible_command(
     launcher: Annotated[str, typer.Argument()] = "steam",
@@ -855,7 +911,7 @@ def eligible_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
+    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
@@ -885,6 +941,9 @@ def eligible_command(
             unresolved_handling=unresolved_handling,
             unconfigured_handling=unconfigured_handling,
         )
+        if adapter.options.unverified_ownership:
+            _confirm_unverified_ownership()
+        # end if
         game_lists = _discover_selected_game_lists(_lists_root(lists_root), selection_config)
         plan = adapter.plan(game_lists)
         _print_plan(plan, log_skips=log_skips)
@@ -904,7 +963,7 @@ def sync_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
+    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
@@ -937,6 +996,9 @@ def sync_command(
             tier_mode=tiers,
             reconcile_managed=True,
         )
+        if adapter.options.unverified_ownership:
+            _confirm_unverified_ownership()
+        # end if
         plan = adapter.plan(
             _discover_selected_game_lists(_lists_root(lists_root), selection_config, on_progress=_echo_list_progress)
         )
@@ -977,7 +1039,7 @@ def apply_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str | None, typer.Option("--source", help="api (Web API, needs a key), installed (local-only approximation), or collection (read a manually curated local Steam collection)")] = None,
+    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
@@ -1014,6 +1076,8 @@ def apply_command(
         owned_app_ids: frozenset[int] | None = None
         early_adapter: SteamAdapter | None = None
         early_gateway: SteamFileGateway | None = None
+        ownership_resolver: Callable[[Literal["api", "collection", "installed", "none"], str | None, str | None], frozenset[int] | None] | None = None
+        confirm_unverified_ownership = False
         try:
             early_adapter, early_gateway = _steam_adapter(
                 steam_root,
@@ -1030,9 +1094,45 @@ def apply_command(
                 tier_mode=tiers,
                 reconcile_managed=True,
             )
-            owned_app_ids = frozenset(early_adapter.owned_app_ids_source())
-        except (OSError, ValueError, RuntimeError, SteamIoError) as error:
-            typer.echo(f"warning: could not determine Steam ownership yet ({error}); no owned/total counts shown", err=True)
+            if early_adapter.options.unverified_ownership:
+                confirm_unverified_ownership = True
+            else:
+                owned_app_ids = frozenset(early_adapter.owned_app_ids_source())
+            # end if
+        except SteamAutoSourceError:
+            # `apply` is the interactive command, so it can offer a Textual fallback
+            # instead of making the user restart with a different command-line flag.
+            def resolve_ownership_choice(
+                chosen_source: Literal["api", "collection", "installed", "none"],
+                chosen_api_key: str | None,
+                chosen_collection: str | None,
+            ) -> frozenset[int] | None:
+                nonlocal early_adapter, early_gateway, owned_app_ids, confirm_unverified_ownership
+                early_adapter, early_gateway = _steam_adapter(
+                    steam_root,
+                    steam_id,
+                    chosen_api_key or api_key,
+                    chosen_source,
+                    chosen_collection,
+                    min_owned=min_owned,
+                    max_owned=max_owned,
+                    min_missing=min_missing,
+                    max_missing=max_missing,
+                    unresolved_handling=unresolved_handling,
+                    unconfigured_handling=unconfigured_handling,
+                    tier_mode=tiers,
+                    reconcile_managed=True,
+                )
+                if early_adapter.options.unverified_ownership:
+                    owned_app_ids = None
+                    confirm_unverified_ownership = True
+                    return None
+                # end if
+                owned_app_ids = frozenset(early_adapter.owned_app_ids_source())
+                return owned_app_ids
+            # end def resolve_ownership_choice
+
+            ownership_resolver = resolve_ownership_choice
         # end try
 
         picker = ApplyPickerApp(
@@ -1044,6 +1144,8 @@ def apply_command(
             unconfigured_handling=unconfigured_handling,
             tier_mode=tiers,
             owned_app_ids=owned_app_ids,
+            ownership_resolver=ownership_resolver,
+            confirm_unverified_ownership=confirm_unverified_ownership,
         )
         selection = picker.run()
         if selection is None:
@@ -1056,7 +1158,7 @@ def apply_command(
         excluded = set(selection.excluded)
         game_lists = [game_list for game_list in picker.all_game_lists if game_list.id not in excluded]
 
-        if early_adapter is not None and early_gateway is not None and owned_app_ids is not None:
+        if early_adapter is not None and early_gateway is not None:
             adapter = SteamAdapter(
                 replace(
                     early_adapter.options,
@@ -1064,7 +1166,7 @@ def apply_command(
                     max_missing=picker.max_missing,
                     tier_mode=picker.tier_mode,
                 ),
-                owned_app_ids_source=lambda: owned_app_ids,
+                owned_app_ids_source=lambda: owned_app_ids or set(),
                 gateway=early_gateway,
             )
         else:
@@ -1082,6 +1184,12 @@ def apply_command(
                 unconfigured_handling=unconfigured_handling,
                 tier_mode=picker.tier_mode,
                 reconcile_managed=True,
+            )
+        # end if
+        if adapter.options.unverified_ownership:
+            typer.echo(
+                "warning: using unverified ownership; every Steam ID in selected lists is addable.",
+                err=True,
             )
         # end if
         plan = adapter.plan(game_lists)
