@@ -16,6 +16,7 @@ from rich.text import Text
 from textual import events, work
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
+from textual.screen import ModalScreen
 from textual.widgets import Button, Checkbox, Footer, Header, Input, ProgressBar, Select, Static, Tree
 from textual.widgets._tree import TOGGLE_STYLE
 from textual.widgets.tree import TreeNode
@@ -89,6 +90,107 @@ class _NodeData:
     check_state: CheckState | None = None
 
 # end class _NodeData
+
+
+@dataclass(frozen=True, slots=True)
+class OwnershipSourceResolution:
+    """A successful ownership choice made in the picker fallback dialog."""
+
+    source: Literal["api", "collection", "installed", "none"]
+    owned_app_ids: frozenset[int] | None
+
+# end class OwnershipSourceResolution
+
+
+OwnershipResolver = Callable[[Literal["api", "collection", "installed", "none"], str | None, str | None], frozenset[int] | None]
+
+
+class OwnershipSourceScreen(ModalScreen[OwnershipSourceResolution | None]):
+    """Choose a Steam ownership source after automatic detection has failed."""
+
+    CSS = """
+    OwnershipSourceScreen { align: center middle; }
+    #ownership-source-dialog { width: 76; height: auto; border: round $primary; padding: 1 2; background: $surface; }
+    #ownership-source-dialog Input, #ownership-source-dialog Select { margin-top: 1; }
+    #ownership-source-error { color: $error; margin-top: 1; }
+    #ownership-source-actions { height: auto; margin-top: 1; }
+    """
+
+    def __init__(self, resolver: OwnershipResolver) -> None:
+        super().__init__()
+        self._resolver = resolver
+    # end def __init__
+
+    def compose(self) -> ComposeResult:
+        with Vertical(id="ownership-source-dialog"):
+            yield Static("Steam ownership could not be determined automatically. Choose a source:")
+            yield Select(
+                [("Web API", "api"), ("Steam collection", "collection"), ("Installed games (approximate)", "installed")],
+                value="api",
+                allow_blank=False,
+                id="ownership-source-select",
+            )
+            yield Input(placeholder="Steam Web API key", password=True, id="ownership-source-api-key")
+            yield Input(value="manual-all", placeholder="Steam collection name", id="ownership-source-collection")
+            yield Static("", id="ownership-source-error")
+            with Horizontal(id="ownership-source-actions"):
+                yield Button("Use source", id="ownership-source-use", variant="primary")
+                yield Button("Continue without ownership", id="ownership-source-none", variant="warning")
+                yield Button("Cancel", id="ownership-source-cancel")
+            # end with
+        # end with
+    # end def compose
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        if event.button.id == "ownership-source-cancel":
+            self.dismiss(None)
+            return
+        # end if
+        if event.button.id == "ownership-source-none":
+            self.dismiss(OwnershipSourceResolution(source="none", owned_app_ids=None))
+            return
+        # end if
+        source = cast(Literal["api", "collection", "installed"], self.query_one("#ownership-source-select", Select).value)
+        api_key = self.query_one("#ownership-source-api-key", Input).value.strip() or None
+        collection = self.query_one("#ownership-source-collection", Input).value.strip() or None
+        try:
+            owned_app_ids = self._resolver(source, api_key, collection)
+        except (OSError, ValueError, RuntimeError) as error:
+            self.query_one("#ownership-source-error", Static).update(str(error))
+            return
+        # end try
+        self.dismiss(OwnershipSourceResolution(source=source, owned_app_ids=owned_app_ids))
+    # end def on_button_pressed
+
+# end class OwnershipSourceScreen
+
+
+class UnverifiedOwnershipScreen(ModalScreen[bool]):
+    """Require an explicit acknowledgement before using every listed Steam ID."""
+
+    CSS = """
+    UnverifiedOwnershipScreen { align: center middle; }
+    #unverified-ownership-dialog { width: 76; height: auto; border: round $warning; padding: 1 2; background: $surface; }
+    #unverified-ownership-actions { height: auto; margin-top: 1; }
+    """
+
+    def compose(self) -> ComposeResult:
+        with Vertical(id="unverified-ownership-dialog"):
+            yield Static(
+                "Steam ownership will not be verified. Every Steam ID in every selected bundle can be written to Steam collections."
+            )
+            with Horizontal(id="unverified-ownership-actions"):
+                yield Button("Continue without verification", id="unverified-ownership-continue", variant="warning")
+                yield Button("Cancel", id="unverified-ownership-cancel")
+            # end with
+        # end with
+    # end def compose
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        self.dismiss(event.button.id == "unverified-ownership-continue")
+    # end def on_button_pressed
+
+# end class UnverifiedOwnershipScreen
 
 
 class BundleTree(Tree[_NodeData]):
@@ -296,6 +398,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
         unconfigured_handling: MissingHandling = "ignore",
         tier_mode: Literal["all", "highest"] = "highest",
         owned_app_ids: frozenset[int] | None = None,
+        ownership_resolver: OwnershipResolver | None = None,
+        confirm_unverified_ownership: bool = False,
     ) -> None:
         super().__init__()
         self._lists_root = lists_root
@@ -309,6 +413,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
         # None means ownership is unknown (no Steam adapter was queried) - in that case
         # nothing is marked as owned/unowned; every game/bundle renders as it did before.
         self._owned_app_ids = owned_app_ids
+        self._ownership_resolver = ownership_resolver
+        self._confirm_unverified_ownership = confirm_unverified_ownership
         self.all_game_lists: list[LoadedGameList] = []
         self.min_missing: int | None = min_missing
         self.max_missing: int | None = max_missing
@@ -417,7 +523,32 @@ class ApplyPickerApp(App[ApplySelection | None]):
         if tree.root.children:
             tree.cursor_line = 0
         # end if
+        if self._ownership_resolver is not None and self._owned_app_ids is None:
+            self.push_screen(OwnershipSourceScreen(self._ownership_resolver), self._ownership_source_resolved)
+        elif self._confirm_unverified_ownership:
+            self.push_screen(UnverifiedOwnershipScreen(), self._unverified_ownership_confirmed)
+        # end if
     # end def _initial_tree_setup
+
+    def _ownership_source_resolved(self, resolution: OwnershipSourceResolution | None) -> None:
+        if resolution is None:
+            self.exit(None)
+            return
+        # end if
+        if resolution.source == "none":
+            self.push_screen(UnverifiedOwnershipScreen(), self._unverified_ownership_confirmed)
+            return
+        # end if
+        self._owned_app_ids = resolution.owned_app_ids
+        self._deselect_filtered_out()
+        self._rebuild_tree()
+    # end def _ownership_source_resolved
+
+    def _unverified_ownership_confirmed(self, confirmed: bool) -> None:
+        if not confirmed:
+            self.exit(None)
+        # end if
+    # end def _unverified_ownership_confirmed
 
     def _sources(self) -> list[str]:
         return sorted({bundle.source for bundle in self._bundles})

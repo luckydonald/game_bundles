@@ -119,6 +119,66 @@ def test_sync_rejects_invalid_matching_mode_before_steam_discovery() -> None:
 # end def test_sync_rejects_invalid_matching_mode_before_steam_discovery
 
 
+def test_sync_none_requires_confirmation_and_adds_every_listed_steam_id(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root / "vendor/one.yml", "One")
+
+    result = CliRunner().invoke(
+        app,
+        [
+            "sync",
+            "--source",
+            "none",
+            "--steam-root",
+            str(steam_root),
+            "--steam-id",
+            STEAM_ID,
+            "--lists-root",
+            str(lists_root),
+            "--selection-config",
+            str(tmp_path / "missing-selection.yml"),
+        ],
+        input="y\n",
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "does not verify Steam ownership" in result.output
+    assert "eligible: vendor/one (One)" in result.output
+    assert "Planned collection changes: 1 (1 create/update, 0 delete)" in result.output
+# end def test_sync_none_requires_confirmation_and_adds_every_listed_steam_id
+
+
+def test_sync_auto_errors_after_every_automatic_source_fails(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    attempted: list[str] = []
+
+    def unavailable(name: str):
+        def source(*_args: object) -> object:
+            def read() -> set[int]:
+                attempted.append(name)
+                raise RuntimeError(f"{name} unavailable")
+            # end def read
+            return read
+        # end def source
+        return source
+    # end def unavailable
+
+    monkeypatch.setattr("game_collections.cli.owned_app_ids_from_api", unavailable("api"))
+    monkeypatch.setattr("game_collections.cli.owned_app_ids_from_collection", unavailable("collection"))
+    monkeypatch.setattr("game_collections.cli.owned_app_ids_from_installed", unavailable("installed"))
+
+    result = CliRunner().invoke(
+        app,
+        ["sync", "--steam-root", str(steam_root), "--steam-id", STEAM_ID, "--api-key", "test-key"],
+    )
+
+    assert result.exit_code == 1, result.output
+    assert attempted == ["api", "collection", "installed"]
+    assert "could not determine Steam ownership automatically" in result.output
+# end def test_sync_auto_errors_after_every_automatic_source_fails
+
+
 def test_apply_help_lists_options() -> None:
     result = CliRunner().invoke(app, ["apply", "--help"])
 
@@ -163,6 +223,8 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             unconfigured_handling: str = "ignore",
             tier_mode: str = "highest",
             owned_app_ids: object = None,
+            ownership_resolver: object = None,
+            confirm_unverified_ownership: bool = False,
         ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
@@ -224,6 +286,8 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             unconfigured_handling: str = "ignore",
             tier_mode: str = "highest",
             owned_app_ids: object = None,
+            ownership_resolver: object = None,
+            confirm_unverified_ownership: bool = False,
         ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
@@ -246,9 +310,6 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
 
     assert result.exit_code == 0, result.output
     assert "Cancelled" in result.output
-    # no Steam access at all was given - the picker still opens (and can still be cancelled)
-    # without it, just without ownership marks
-    assert captured_owned_app_ids == [None]
-    assert "could not determine Steam ownership" in result.output
+    assert len(captured_owned_app_ids) == 1
     assert not selection_config.exists()
 # end def test_apply_cancelled_selection_makes_no_changes
