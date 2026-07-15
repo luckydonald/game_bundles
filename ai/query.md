@@ -1512,3 +1512,6 @@ Add ettings for how to treat different (currently only: non-steam) store items.
 
 › installed is the last option, as it's the least accurate. The non-TUI variants should error out instead of making them
 
+› The non-TUI variants should error out instead of making them unnessesary tui-like. we already have tui.
+both tui&non-tui shall confirm none-mode.
+
