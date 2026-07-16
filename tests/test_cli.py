@@ -225,6 +225,7 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             owned_app_ids: object = None,
             ownership_resolver: object = None,
             confirm_unverified_ownership: bool = False,
+            initial_selection: ApplySelection | None = None,
         ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
@@ -268,6 +269,67 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
 # end def test_apply_filters_excluded_list_before_planning
 
 
+def test_apply_dry_run_reopens_the_saved_selection_action_menu(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root / "vendor/one.yml", "One")
+    selection_config = tmp_path / "config/apply-selection.yml"
+    fixed_selection = ApplySelection(
+        schema=1,
+        selected=["vendor/one"],
+        excluded=[],
+        updated_at=datetime(2026, 7, 16, tzinfo=UTC),
+    )
+    initial_selections: list[ApplySelection | None] = []
+
+    class _PickerResult:
+        def __init__(self, action: str) -> None:
+            self.selection = fixed_selection
+            self.action = action
+        # end def __init__
+    # end class _PickerResult
+
+    class _StubPickerApp:
+        def __init__(self, lists_root: Path, excluded: object, **kwargs: object) -> None:
+            self.all_game_lists = discover_game_lists(lists_root)
+            self.min_missing = None
+            self.max_missing = 0
+            self.tier_mode = "highest"
+            initial_selections.append(kwargs.get("initial_selection"))
+        # end def __init__
+
+        def run(self) -> _PickerResult:
+            return _PickerResult("dry-run" if len(initial_selections) == 1 else "close")
+        # end def run
+    # end class _StubPickerApp
+
+    monkeypatch.setattr("game_collections.apply.tui.ApplyPickerApp", _StubPickerApp)
+
+    result = CliRunner().invoke(
+        app,
+        [
+            "apply",
+            "--lists-root",
+            str(lists_root),
+            "--steam-root",
+            str(steam_root),
+            "--steam-id",
+            STEAM_ID,
+            "--source",
+            "collection",
+            "--collection",
+            "Favorites",
+            "--selection-config",
+            str(selection_config),
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "Dry run only. Returning to the picker action menu." in result.output
+    assert initial_selections == [None, fixed_selection]
+# end def test_apply_dry_run_reopens_the_saved_selection_action_menu
+
+
 def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
     lists_root = tmp_path / "lists"
     _write_list(lists_root / "vendor/one.yml", "One")
@@ -288,6 +350,7 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             owned_app_ids: object = None,
             ownership_resolver: object = None,
             confirm_unverified_ownership: bool = False,
+            initial_selection: ApplySelection | None = None,
         ) -> None:
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
