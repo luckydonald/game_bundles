@@ -14,7 +14,7 @@ from typing import Annotated, Literal
 import typer
 import yaml
 
-from game_collections.apply.config import DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
+from game_collections.apply.config import ApplySelection, DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
 from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists
 from game_collections.migrate_tiers import (
     TierMigrationError,
@@ -1033,7 +1033,7 @@ def sync_command(
 @app.command("apply")
 def apply_command(
     launcher: Annotated[str, typer.Argument()] = "steam",
-    apply_changes: Annotated[bool, typer.Option("--apply")] = False,
+    apply_changes: Annotated[bool, typer.Option("--apply", help="Deprecated for `apply`; choose Apply to Steam in the picker.")] = False,
     output_dir: Annotated[Path | None, typer.Option("--output-dir")] = None,
     lists_root: Annotated[Path | None, typer.Option("--lists-root")] = None,
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
@@ -1135,69 +1135,98 @@ def apply_command(
             ownership_resolver = resolve_ownership_choice
         # end try
 
-        picker = ApplyPickerApp(
-            _lists_root(lists_root),
-            previously_excluded,
-            min_missing=min_missing,
-            max_missing=max_missing,
-            unresolved_handling=unresolved_handling,
-            unconfigured_handling=unconfigured_handling,
-            tier_mode=tiers,
-            owned_app_ids=owned_app_ids,
-            ownership_resolver=ownership_resolver,
-            confirm_unverified_ownership=confirm_unverified_ownership,
-        )
-        selection = picker.run()
-        if selection is None:
-            typer.echo("Cancelled. No selection was saved.")
-            return
-        # end if
-        save_selection(selection, selection_config)
-        typer.echo(f"Saved selection: {selection_config}")
-
-        excluded = set(selection.excluded)
-        game_lists = [game_list for game_list in picker.all_game_lists if game_list.id not in excluded]
-
-        if early_adapter is not None and early_gateway is not None:
-            adapter = SteamAdapter(
-                replace(
-                    early_adapter.options,
-                    min_missing=picker.min_missing,
-                    max_missing=picker.max_missing,
-                    tier_mode=picker.tier_mode,
-                ),
-                owned_app_ids_source=lambda: owned_app_ids or set(),
-                gateway=early_gateway,
-            )
-        else:
-            adapter, _gateway = _steam_adapter(
-                steam_root,
-                steam_id,
-                api_key,
-                source,
-                collection,
-                min_owned=min_owned,
-                max_owned=max_owned,
-                min_missing=picker.min_missing,
-                max_missing=picker.max_missing,
+        resume_selection: ApplySelection | None = None
+        while True:
+            picker = ApplyPickerApp(
+                _lists_root(lists_root),
+                set(resume_selection.excluded) if resume_selection is not None else previously_excluded,
+                min_missing=min_missing,
+                max_missing=max_missing,
                 unresolved_handling=unresolved_handling,
                 unconfigured_handling=unconfigured_handling,
-                tier_mode=picker.tier_mode,
-                reconcile_managed=True,
+                tier_mode=tiers,
+                owned_app_ids=owned_app_ids,
+                ownership_resolver=ownership_resolver,
+                confirm_unverified_ownership=confirm_unverified_ownership,
+                initial_selection=resume_selection,
             )
-        # end if
-        if adapter.options.unverified_ownership:
-            typer.echo(
-                "warning: using unverified ownership; every Steam ID in selected lists is addable.",
-                err=True,
-            )
-        # end if
-        plan = adapter.plan(game_lists)
-        _print_plan(plan, log_skips=log_skips)
-        if not apply_changes:
-            typer.echo("Dry run only. Use --apply to stage inspectable files.")
-            return
-        # end if
+            picker_result = picker.run()
+            if picker_result is None:
+                typer.echo("Cancelled. No selection was saved.")
+                return
+            # end if
+            # Keep compatibility with test doubles and third-party wrappers built before
+            # the picker grew its final action dialog.
+            legacy_picker_result = isinstance(picker_result, ApplySelection)
+            if legacy_picker_result:
+                selection = picker_result
+                action: Literal["dry-run", "apply", "close"] = "apply" if apply_changes else "dry-run"
+            else:
+                selection = picker_result.selection
+                action = picker_result.action
+            # end if
+            save_selection(selection, selection_config)
+            typer.echo(f"Saved selection: {selection_config}")
+            if action == "close":
+                return
+            # end if
+
+            excluded = set(selection.excluded)
+            game_lists = [game_list for game_list in picker.all_game_lists if game_list.id not in excluded]
+
+            if early_adapter is not None and early_gateway is not None:
+                adapter = SteamAdapter(
+                    replace(
+                        early_adapter.options,
+                        min_missing=picker.min_missing,
+                        max_missing=picker.max_missing,
+                        tier_mode=picker.tier_mode,
+                    ),
+                    owned_app_ids_source=lambda: owned_app_ids or set(),
+                    gateway=early_gateway,
+                )
+            else:
+                adapter, _gateway = _steam_adapter(
+                    steam_root,
+                    steam_id,
+                    api_key,
+                    source,
+                    collection,
+                    min_owned=min_owned,
+                    max_owned=max_owned,
+                    min_missing=picker.min_missing,
+                    max_missing=picker.max_missing,
+                    unresolved_handling=unresolved_handling,
+                    unconfigured_handling=unconfigured_handling,
+                    tier_mode=picker.tier_mode,
+                    reconcile_managed=True,
+                )
+            # end if
+            if adapter.options.unverified_ownership:
+                typer.echo(
+                    "warning: using unverified ownership; every Steam ID in selected lists is addable.",
+                    err=True,
+                )
+            # end if
+            plan = adapter.plan(game_lists)
+            _print_plan(plan, log_skips=log_skips)
+            if action == "dry-run":
+                if legacy_picker_result:
+                    typer.echo("Dry run only. Use the picker action menu to apply.")
+                    return
+                # end if
+                typer.echo("Dry run only. Returning to the picker action menu.")
+                resume_selection = selection
+                previously_excluded = set(selection.excluded)
+                min_missing = picker.min_missing
+                max_missing = picker.max_missing
+                tiers = picker.tier_mode
+                ownership_resolver = None
+                confirm_unverified_ownership = False
+                continue
+            # end if
+            break
+        # end while
         staged = adapter.stage(plan, output_dir or default_staging_root())
         typer.echo(f"Staged candidates and backups: {staged}")
         typer.echo(f"Inspection report: {staged / 'README.txt'}")

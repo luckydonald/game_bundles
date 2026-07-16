@@ -102,6 +102,16 @@ class OwnershipSourceResolution:
 # end class OwnershipSourceResolution
 
 
+@dataclass(frozen=True, slots=True)
+class ApplyPickerResult:
+    """The saved selection and the action the user chose for it."""
+
+    selection: ApplySelection
+    action: Literal["dry-run", "apply", "close"]
+
+# end class ApplyPickerResult
+
+
 OwnershipResolver = Callable[[Literal["api", "collection", "installed", "none"], str | None, str | None], frozenset[int] | None]
 
 
@@ -191,6 +201,41 @@ class UnverifiedOwnershipScreen(ModalScreen[bool]):
     # end def on_button_pressed
 
 # end class UnverifiedOwnershipScreen
+
+
+class ApplyActionScreen(ModalScreen[Literal["dry-run", "apply", "close"] | None]):
+    """Choose what to do with the picker's current selection."""
+
+    CSS = """
+    ApplyActionScreen { align: center middle; }
+    #apply-action-dialog { width: 66; height: auto; border: round $primary; padding: 1 2; background: $surface; }
+    #apply-action-buttons { height: auto; margin-top: 1; }
+    """
+
+    def compose(self) -> ComposeResult:
+        with Vertical(id="apply-action-dialog"):
+            yield Static("Selection saved. What would you like to do?")
+            with Horizontal(id="apply-action-buttons"):
+                yield Button("Dry run", id="apply-action-dry-run")
+                yield Button("Apply to Steam", id="apply-action-apply", variant="warning")
+                yield Button("Close", id="apply-action-close")
+            # end with
+        # end with
+    # end def compose
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        action_by_button: dict[str, Literal["dry-run", "apply", "close"]] = {
+            "apply-action-dry-run": "dry-run",
+            "apply-action-apply": "apply",
+            "apply-action-close": "close",
+        }
+        action = action_by_button.get(event.button.id or "")
+        if action is not None:
+            self.dismiss(action)
+        # end if
+    # end def on_button_pressed
+
+# end class ApplyActionScreen
 
 
 class BundleTree(Tree[_NodeData]):
@@ -368,7 +413,7 @@ class BundleTree(Tree[_NodeData]):
 # end class BundleTree
 
 
-class ApplyPickerApp(App[ApplySelection | None]):
+class ApplyPickerApp(App[ApplyPickerResult | None]):
     """Filter and check/uncheck bundles, then save the selection to disk."""
 
     CSS = """
@@ -400,6 +445,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         owned_app_ids: frozenset[int] | None = None,
         ownership_resolver: OwnershipResolver | None = None,
         confirm_unverified_ownership: bool = False,
+        initial_selection: ApplySelection | None = None,
     ) -> None:
         super().__init__()
         self._lists_root = lists_root
@@ -415,6 +461,7 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._owned_app_ids = owned_app_ids
         self._ownership_resolver = ownership_resolver
         self._confirm_unverified_ownership = confirm_unverified_ownership
+        self._pending_selection = initial_selection
         self.all_game_lists: list[LoadedGameList] = []
         self.min_missing: int | None = min_missing
         self.max_missing: int | None = max_missing
@@ -527,6 +574,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
             self.push_screen(OwnershipSourceScreen(self._ownership_resolver), self._ownership_source_resolved)
         elif self._confirm_unverified_ownership:
             self.push_screen(UnverifiedOwnershipScreen(), self._unverified_ownership_confirmed)
+        else:
+            self._show_apply_action()
         # end if
     # end def _initial_tree_setup
 
@@ -542,13 +591,30 @@ class ApplyPickerApp(App[ApplySelection | None]):
         self._owned_app_ids = resolution.owned_app_ids
         self._deselect_filtered_out()
         self._rebuild_tree()
+        self._show_apply_action()
     # end def _ownership_source_resolved
 
     def _unverified_ownership_confirmed(self, confirmed: bool) -> None:
         if not confirmed:
             self.exit(None)
+            return
         # end if
+        self._show_apply_action()
     # end def _unverified_ownership_confirmed
+
+    def _show_apply_action(self) -> None:
+        if self._pending_selection is not None:
+            self.push_screen(ApplyActionScreen(), self._apply_action_selected)
+        # end if
+    # end def _show_apply_action
+
+    def _apply_action_selected(self, action: Literal["dry-run", "apply", "close"] | None) -> None:
+        if action is None or self._pending_selection is None:
+            self.exit(None)
+            return
+        # end if
+        self.exit(ApplyPickerResult(selection=self._pending_selection, action=action))
+    # end def _apply_action_selected
 
     def _sources(self) -> list[str]:
         return sorted({bundle.source for bundle in self._bundles})
@@ -1062,7 +1128,8 @@ class ApplyPickerApp(App[ApplySelection | None]):
     # end def _build_selection
 
     def action_save(self) -> None:
-        self.exit(result=self._build_selection())
+        self._pending_selection = self._build_selection()
+        self.push_screen(ApplyActionScreen(), self._apply_action_selected)
     # end def action_save
 
     def action_cancel(self) -> None:
