@@ -1517,3 +1517,5 @@ both tui&non-tui shall confirm none-mode.
 
 > › Implement the [Plan](./plans/018_steam-ownership-source-selection-and-none-mode.md).
 
+› The TUI one should ask at the end to do a dry run or apply (or close). After the dry run, the same menu opens again.
+
