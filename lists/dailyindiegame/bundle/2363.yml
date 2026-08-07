@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2363
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2363.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2363/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2363/source.json
+games:
+- name: Gabe Newell Simulator
+  ids:
+  - steam:407420
+- name: Dig & Decode
+  ids:
+  - steam:3603570
+- name: Finding Annie
+  ids:
+  - steam:3674140
+- name: Push It!
+  ids:
+  - steam:4809480
+- name: Stopping Move
+  ids:
+  - steam:4828640
+- name: Podnabu
+  ids:
+  - steam:2881770
+- name: COSMIC WARFRONT
+  ids:
+  - steam:4565780
+- name: Wasteland Outpost
+  ids:
+  - steam:4278330
+- name: The Bunker Notes
+  ids:
+  - steam:1811190
