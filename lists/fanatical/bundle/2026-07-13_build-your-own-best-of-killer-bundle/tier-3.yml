@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Best of Killer Bundle — pick 20
+tier: 3
+pick_quota: 20
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16385/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16385/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16385/source.json
+games:
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+  - isthereanydeal:sniper-elite-v2-remastered
+- name: Beyond Two Souls
+  ids:
+  - steam:960990
+  - isthereanydeal:beyond-two-souls
+- name: Heavy Rain
+  ids:
+  - steam:960910
+  - isthereanydeal:heavy-rain
+- name: Zombie Army Trilogy
+  ids:
+  - steam:301640
+  - isthereanydeal:zombie-army-trilogy
+- name: Sniper Elite 4 Deluxe Edition
+  ids:
+  - steam:312660
+  - isthereanydeal:sniper-elite-4-deluxe-edition
+- name: Dark Envoy
+  ids:
+  - steam:945770
+  - isthereanydeal:dark-envoy
+- name: 'Zombie Army 4: Dead War'
+  ids:
+  - steam:694280
+  - isthereanydeal:zombie-army-4-dead-war
+- name: Strange Brigade Deluxe Edition
+  ids:
+  - steam:312670
+  - isthereanydeal:strange-brigade-deluxe-edition
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16385:moonlighter-complete-edition
+  - isthereanydeal:moonlighter-complete-edition
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  - isthereanydeal:postal-4-no-regerts
+- name: 'Gori: Cuddly Carnage'
+  ids:
+  - steam:1299690
+  - isthereanydeal:gori-cuddly-carnage
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  - isthereanydeal:postal-brain-damaged
+- name: 'Evil Genius 2: World Domination Deluxe Edition'
+  ids:
+  - steam:700600
+  - isthereanydeal:evil-genius-2-world-domination-deluxe-edition
+- name: 'Bramble: The Mountain King'
+  ids:
+  - steam:1623940
+  - isthereanydeal:bramble-the-mountain-king
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16385:children-of-morta-complete-edition
+  - isthereanydeal:children-of-morta-complete-edition
+- name: Sniper Elite 5
+  ids:
+  - steam:1029690
+  - isthereanydeal:sniper-elite-5
+- name: Redout 2
+  ids:
+  - steam:1799930
+  - isthereanydeal:redout-2
+- name: The Chant
+  ids:
+  - steam:1577250
+  - isthereanydeal:the-chant
+- name: Choo-Choo Charles
+  ids:
+  - steam:1766740
+  - isthereanydeal:choo-choo-charles
+- name: Everholm
+  ids:
+  - steam:2312520
+  - isthereanydeal:everholm
+- name: Stray Path
+  ids:
+  - steam:2531940
+  - isthereanydeal:stray-path
+- name: Dawnsbury Days
+  ids:
+  - steam:2693730
+  - isthereanydeal:dawnsbury-days
+- name: Creatures of Ava
+  ids:
+  - steam:2304440
+  - isthereanydeal:creatures-of-ava
+- name: Chernobylite Premium Edition
+  ids:
+  - unresolved:source:isthereanydeal:16385:chernobylite-premium-edition
+  - isthereanydeal:chernobylite-premium-edition

@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Power Picks Bundle — pick 3
+tier: 1
+pick_quota: 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16441/source.json
+games:
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  - isthereanydeal:lethal-league-blaze
+- name: Juicy Realm
+  ids:
+  - steam:732370
+  - isthereanydeal:juicy-realm
+- name: biped
+  ids:
+  - steam:1071870
+  - isthereanydeal:biped
+- name: Raider Kid and the Ruby Chest
+  ids:
+  - steam:1085040
+  - isthereanydeal:raider-kid-and-the-ruby-chest
+- name: Final Vendetta
+  ids:
+  - steam:1891090
+  - isthereanydeal:final-vendetta
+- name: Last Time I Saw You
+  ids:
+  - steam:1909750
+  - isthereanydeal:last-time-i-saw-you
+- name: The Siege and the Sandfox
+  ids:
+  - steam:653060
+  - isthereanydeal:the-siege-and-the-sandfox
+- name: Afterimage Deluxe Edition
+  ids:
+  - steam:1701520
+  - isthereanydeal:afterimage-deluxe-edition
+- name: 'Double Dragon Gaiden: Rise Of The Dragons'
+  ids:
+  - steam:1967260
+  - isthereanydeal:double-dragon-gaiden-rise-of-the-dragons
+- name: Dino Path Trail
+  ids:
+  - steam:2481670
+  - isthereanydeal:dino-path-trail
+- name: The Gap
+  ids:
+  - steam:1458300
+  - isthereanydeal:the-gap
+- name: Charrua Soccer - Pro Edition
+  ids:
+  - steam:2283380
+  - isthereanydeal:charrua-soccer-pro-edition
+- name: Axyz
+  ids:
+  - steam:2850490
+  - isthereanydeal:axyz
+- name: Carnival Massacre
+  ids:
+  - steam:2304730
+  - isthereanydeal:carnival-massacre
+- name: Late Homework | 遅れた宿題
+  ids:
+  - steam:3215660
+  - isthereanydeal:late-homework-chireta-su-ti
+- name: Unemployment Simulator 2018
+  ids:
+  - steam:3252360
+  - isthereanydeal:unemployment-simulator-2018
+- name: Maze Mice
+  ids:
+  - steam:3385370
+  - isthereanydeal:maze-mice
+- name: Teslagrad Remastered & Teslagrad 2 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:16441:teslagrad-remastered-and-teslagrad-2-double-pack
+  - isthereanydeal:teslagrad-remastered-and-teslagrad-2-double-pack
+- name: Gladiator Command
+  ids:
+  - steam:3845450
+  - isthereanydeal:gladiator-command
+- name: Birds Watching
+  ids:
+  - steam:3979870
+  - isthereanydeal:birds-watching
+- name: '[Redacted] The Safehouse'
+  ids:
+  - steam:403620
+  - isthereanydeal:redacted-the-safehouse
+- name: Rock of Ages 1-3 Complete Bundle
+  ids:
+  - unresolved:source:isthereanydeal:16441:rock-of-ages-1-3-complete-bundle
+  - isthereanydeal:rock-of-ages-1-3-complete-bundle
+- name: Boomer Shooters Furious 4 Bundle
+  ids:
+  - unresolved:source:isthereanydeal:16441:boomer-shooters-furious-4-bundle
+  - isthereanydeal:boomer-shooters-furious-4-bundle

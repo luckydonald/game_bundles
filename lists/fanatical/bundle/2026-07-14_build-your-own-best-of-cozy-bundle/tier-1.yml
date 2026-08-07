@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Best of Cozy Bundle — pick 3
+tier: 1
+pick_quota: 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16388/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16388/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16388/source.json
+games:
+- name: Button City
+  ids:
+  - steam:1273750
+  - isthereanydeal:button-city
+- name: A Tale for Anna
+  ids:
+  - steam:1521930
+  - isthereanydeal:a-tale-for-anna
+- name: Paper Trail
+  ids:
+  - steam:1889740
+  - isthereanydeal:paper-trail
+- name: 'TOEM: A Photo Adventure'
+  ids:
+  - steam:1307580
+  - isthereanydeal:toem-a-photo-adventure
+- name: Henry Halfhead
+  ids:
+  - steam:2058140
+  - isthereanydeal:henry-halfhead
+- name: A Tiny Sticker Tale
+  ids:
+  - steam:2322180
+  - isthereanydeal:a-tiny-sticker-tale
+- name: Simpler Times
+  ids:
+  - steam:1812210
+  - isthereanydeal:simpler-times
+- name: Chillquarium
+  ids:
+  - steam:2276930
+  - isthereanydeal:chillquarium
+- name: Logic Town
+  ids:
+  - steam:2333240
+  - isthereanydeal:logic-town
+- name: Hidden Cats in Rome
+  ids:
+  - steam:2560530
+  - isthereanydeal:hidden-cats-in-rome
+- name: Hidden Cats in Spooky Town
+  ids:
+  - steam:2560460
+  - isthereanydeal:hidden-cats-in-spooky-town
+- name: Hidden Cats in Santa's Realm
+  ids:
+  - steam:1726750
+  - isthereanydeal:hidden-cats-in-santas-realm
+- name: Hidden in my Paradise
+  ids:
+  - steam:2834330
+  - isthereanydeal:hidden-in-my-paradise
+- name: My Little Life
+  ids:
+  - steam:2834600
+  - isthereanydeal:my-little-life
+- name: Love is...
+  ids:
+  - steam:3034130
+  - isthereanydeal:love-is
+- name: Find My Frogs
+  ids:
+  - steam:3130800
+  - isthereanydeal:find-my-frogs
+- name: Rekindled Trails
+  ids:
+  - steam:3378330
+  - isthereanydeal:rekindled-trails
+- name: Unboxathon
+  ids:
+  - steam:3565100
+  - isthereanydeal:unboxathon
+- name: Twinkleby
+  ids:
+  - steam:3362960
+  - isthereanydeal:twinkleby
+- name: My Little Cafe Nightmare
+  ids:
+  - steam:3726250
+  - isthereanydeal:my-little-cafe-nightmare
+- name: My Little Spider
+  ids:
+  - steam:3854330
+  - isthereanydeal:my-little-spider
+- name: Dogpile
+  ids:
+  - steam:3839300
+  - isthereanydeal:dogpile
