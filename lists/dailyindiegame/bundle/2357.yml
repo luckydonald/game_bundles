@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2357
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2357.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2357/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2357/source.json
+games:
+- name: Noob Squad
+  ids:
+  - steam:496550
+- name: Fidget Spinner
+  ids:
+  - steam:657630
+- name: ZAP Master
+  ids:
+  - steam:679860
+- name: Danger Gazers
+  ids:
+  - steam:1043150
+- name: Square & Circles
+  ids:
+  - steam:3791250
+- name: Warfront Vanguard
+  ids:
+  - steam:4590380
+- name: Martian Conquer
+  ids:
+  - steam:2248670
+- name: Puzzle
+  ids:
+  - steam:4520500
+- name: Puzzles Desert
+  ids:
+  - steam:4749170
