@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice August 2026 — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16450/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16450/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16450/source.json
+games:
+- name: Pile Up!
+  ids:
+  - steam:2094910
+  - isthereanydeal:pile-up
+- name: Dark Envoy
+  ids:
+  - steam:945770
+  - isthereanydeal:dark-envoy
+- name: Dead Cells
+  ids:
+  - steam:588650
+  - isthereanydeal:dead-cells
+- name: Dead Cells - The Bad Seed
+  ids:
+  - steam:1204130
+  - isthereanydeal:dead-cells-the-bad-seed
+- name: 'Like a Dragon: Infinite Wealth'
+  ids:
+  - steam:2072450
+  - isthereanydeal:like-a-dragon-infinite-wealth
+- name: Gatekeeper
+  ids:
+  - steam:2106670
+  - isthereanydeal:gatekeeper
+- name: Decktamer
+  ids:
+  - steam:2870340
+  - isthereanydeal:decktamer
+- name: 'Teenage Mutant Ninja Turtles: Shredder''s Revenge - Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16450:teenage-mutant-ninja-turtles-shredders-revenge-ultimate-edition
+  - isthereanydeal:teenage-mutant-ninja-turtles-shredders-revenge-ultimate-edition
+- name: Conquest Dark
+  ids:
+  - steam:3238670
+  - isthereanydeal:conquest-dark

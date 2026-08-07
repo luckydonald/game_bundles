@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Idlers & Desktop Companions Bundle — 6-item-bundle
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16429/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16429/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16429/source.json
+games:
+- name: 'Plantera 2: Golden Acorn'
+  ids:
+  - steam:1091920
+  - isthereanydeal:plantera-2-golden-acorn
+- name: My Little Life
+  ids:
+  - steam:2834600
+  - isthereanydeal:my-little-life
+- name: Ropuka's Idle Island
+  ids:
+  - steam:3416070
+  - isthereanydeal:ropukas-idle-island
+- name: How to Train Your Cock
+  ids:
+  - steam:3673060
+  - isthereanydeal:how-to-train-your-cock
+- name: Desktop Defender
+  ids:
+  - steam:3772810
+  - isthereanydeal:desktop-defender
+- name: Pupple Pop
+  ids:
+  - steam:4224500
+  - isthereanydeal:pupple-pop
