@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: HandyGames Starter Pack — Certified Handy
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16432/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16432/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16432/source.json
+games:
+- name: SCARF
+  ids:
+  - steam:645320
+  - isthereanydeal:scarf
+- name: 'Jagged Alliance: Rage!'
+  ids:
+  - steam:463170
+  - isthereanydeal:jagged-alliance-rage
+- name: Little Big Workshop
+  ids:
+  - steam:574720
+  - isthereanydeal:little-big-workshop
+- name: PERISH
+  ids:
+  - steam:1016360
+  - isthereanydeal:perish
+- name: Endling - Extinction is Forever
+  ids:
+  - steam:898890
+  - isthereanydeal:endling-extinction-is-forever
+- name: WE ARE FOOTBALL 2024
+  ids:
+  - steam:1951410
+  - isthereanydeal:we-are-football-2024
