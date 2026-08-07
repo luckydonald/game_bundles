@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dungeons & Dragons Classics Collection 2026 Bundle — 5-item-bundle
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16442/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16442/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16442/source.json
+games:
+- name: 'Forgotten Realms: The Archives - Collection Three'
+  ids:
+  - steam:1904530
+  - isthereanydeal:forgotten-realms-the-archives-collection-three
+- name: 'D&D Stronghold: Kingdom Simulator'
+  ids:
+  - steam:1904650
+  - isthereanydeal:d-and-d-stronghold-kingdom-simulator
+- name: 'Al-Qadim: The Genie''s Curse'
+  ids:
+  - steam:1904640
+  - isthereanydeal:al-qadim-the-genies-curse
+- name: DragonStrike
+  ids:
+  - steam:2350520
+  - isthereanydeal:dragonstrike
+- name: DeathKeep
+  ids:
+  - steam:2350540
+  - isthereanydeal:deathkeep

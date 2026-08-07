@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'No More Robots: The Unhinged Indie Anthology Bundle — 5-item-bundle'
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16453/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16453/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16453/source.json
+games:
+- name: Not Tonight
+  ids:
+  - steam:733790
+  - isthereanydeal:not-tonight
+- name: Not Tonight - One Love
+  ids:
+  - steam:1036480
+  - isthereanydeal:not-tonight-one-love
+- name: TombStar
+  ids:
+  - steam:1165470
+  - isthereanydeal:tombstar
+- name: Not Tonight 2
+  ids:
+  - steam:1600370
+  - isthereanydeal:not-tonight-2
+- name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
+  ids:
+  - steam:1931020
+  - isthereanydeal:slayers-x-terminal-aftermath-vengance-of-the-slayer
