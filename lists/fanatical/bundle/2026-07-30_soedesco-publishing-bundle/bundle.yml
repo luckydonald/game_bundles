@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: SOEDESCO Publishing Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16438/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16438/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16438/source.json
+games:
+- name: Truck Driver
+  ids:
+  - steam:768180
+  - isthereanydeal:truck-driver
+- name: HammerHelm
+  ids:
+  - steam:664000
+  - isthereanydeal:hammerhelm
+- name: Saint Kotar
+  ids:
+  - steam:1358530
+  - isthereanydeal:saint-kotar
+- name: Perennial Order
+  ids:
+  - steam:1411020
+  - isthereanydeal:perennial-order
+- name: Petit Island
+  ids:
+  - steam:1744970
+  - isthereanydeal:petit-island
+- name: Magical Bakery
+  ids:
+  - steam:2595940
+  - isthereanydeal:magical-bakery
