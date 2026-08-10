@@ -1,24 +1,33 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: In Your World VR Bundle — 3-item-bundle
+name: In Your World VR Bundle — Entire 7 Item Bundle
 tier: 1
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16454/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/in-your-world-vr-bundle
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16454/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-05_in-your-world-vr-bundle/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16454/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-05_in-your-world-vr-bundle/source.json
 games:
-- name: DOOM VFR
+- name: Into the Radius VR
   ids:
-  - steam:650000
-  - isthereanydeal:doom-vfr
+  - unresolved:source:humblebundle:intotheradiusvr
+- name: 'WRATH: Aeon of Ruin VR - Brutal Edition'
+  ids:
+  - unresolved:source:humblebundle:wrath_aeonofruinvr-brutaledition
+- name: 'Racket: Nx'
+  ids:
+  - unresolved:source:humblebundle:racket_nx
+- name: Sairento VR
+  ids:
+  - unresolved:source:humblebundle:sairentovr
 - name: Labyrinthine
   ids:
-  - steam:1302240
-  - isthereanydeal:labyrinthine
+  - unresolved:source:humblebundle:labyrinthine
+- name: DOOM VFR
+  ids:
+  - unresolved:source:humblebundle:doomvfr
 - name: The Utility Room
   ids:
-  - steam:2091960
-  - isthereanydeal:the-utility-room
+  - unresolved:source:humblebundle:theutilityroom
