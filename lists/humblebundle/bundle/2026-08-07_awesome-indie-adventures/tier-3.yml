@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Awesome Indie Adventures — 6 Item Bundle
+tier: 3
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/awesome-indie-adventures
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/source.json
+games:
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+- name: Beyond a Steel Sky Soundtrack
+  ids:
+  - unresolved:source:humblebundle:beyondasteelskysoundtrack
+- name: Kitaria Fables
+  ids:
+  - unresolved:source:humblebundle:kitariafables
+- name: Before Your Eyes
+  ids:
+  - unresolved:source:humblebundle:beforeyoureyes
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:humblebundle:moonlighter_completeedition

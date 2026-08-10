@@ -1,32 +1,57 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Dungeons & Dragons Classics Collection 2026 Bundle — 5-item-bundle
+name: 'Dungeons & Dragons: Classics Collection 2026 — Entire 17 Item Bundle'
 tier: 1
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16442/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/dungeons-dragons-classics-collection-2026
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16442/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-31_dungeons-dragons-classics-collection-2026/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16442/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-31_dungeons-dragons-classics-collection-2026/source.json
 games:
+- name: 'Forgotten Realms: Demon Stone'
+  ids:
+  - unresolved:source:humblebundle:forgottenrealms_demonstone
+- name: 'Dungeons & Dragons: Dragonshard'
+  ids:
+  - unresolved:source:humblebundle:dungeonsdragons_dragonshard
+- name: 'Forgotten Realms: The Archives - Collection One'
+  ids:
+  - unresolved:source:humblebundle:forgottenrealms_thearchives-collectionone
+- name: 'Forgotten Realms: The Archives - Collection Two'
+  ids:
+  - unresolved:source:humblebundle:forgottenrealms_thearchives-collectiontwo
+- name: 'Dungeons & Dragons: Krynn Series'
+  ids:
+  - unresolved:source:humblebundle:dungeonsdragons_krynnseries
+- name: 'Dungeons & Dragons: Dark Sun Series'
+  ids:
+  - unresolved:source:humblebundle:dungeonsdragons_darksunseries
+- name: 'Dungeons & Dragons: Ravenloft Series'
+  ids:
+  - unresolved:source:humblebundle:dungeonsdragons_ravenloftseries
+- name: Fantasy Empires
+  ids:
+  - unresolved:source:humblebundle:fantasyempires
+- name: 'Spelljammer: Pirates of Realmspace'
+  ids:
+  - unresolved:source:humblebundle:spelljammer_piratesofrealmspace
+- name: Silver Box Classics
+  ids:
+  - unresolved:source:humblebundle:silverboxclassics
 - name: 'Forgotten Realms: The Archives - Collection Three'
   ids:
   - steam:1904530
-  - isthereanydeal:forgotten-realms-the-archives-collection-three
-- name: 'D&D Stronghold: Kingdom Simulator'
-  ids:
-  - steam:1904650
-  - isthereanydeal:d-and-d-stronghold-kingdom-simulator
 - name: 'Al-Qadim: The Genie''s Curse'
   ids:
   - steam:1904640
-  - isthereanydeal:al-qadim-the-genies-curse
+- name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
+  ids:
+  - steam:1904650
 - name: DragonStrike
   ids:
   - steam:2350520
-  - isthereanydeal:dragonstrike
 - name: DeathKeep
   ids:
   - steam:2350540
-  - isthereanydeal:deathkeep

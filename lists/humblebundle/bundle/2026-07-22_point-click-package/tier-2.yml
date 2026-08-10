@@ -1,36 +1,30 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Point Click Package Bundle — 6-item-bundle
+name: Point Click Package — 7 Item Bundle
 tier: 2
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16421/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/point-click-package
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16421/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-22_point-click-package/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16421/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-22_point-click-package/source.json
 games:
-- name: When The Past Was Around
-  ids:
-  - steam:1164050
-  - isthereanydeal:when-the-past-was-around
-- name: 'STASIS: BONE TOTEM'
-  ids:
-  - steam:1426010
-  - isthereanydeal:stasis-bone-totem
-- name: Sunday Gold
-  ids:
-  - steam:1969440
-  - isthereanydeal:sunday-gold
-- name: Unavowed
-  ids:
-  - steam:336140
-  - isthereanydeal:unavowed
 - name: 'Syberia: The World Before Deluxe Edition'
   ids:
-  - unresolved:source:isthereanydeal:16421:syberia-the-world-before-deluxe-edition
-  - isthereanydeal:syberia-the-world-before-deluxe-edition
+  - unresolved:source:humblebundle:syberiatheworldbeforedeluxe
 - name: Lil' Guardsman
   ids:
   - steam:1924360
-  - isthereanydeal:lil-guardsman
+- name: Unavowed
+  ids:
+  - steam:336140
+- name: When the Past Was Around
+  ids:
+  - steam:1164050
+- name: Sunday Gold
+  ids:
+  - steam:1969440
+- name: 'STASIS: BONE TOTEM'
+  ids:
+  - steam:1426010
