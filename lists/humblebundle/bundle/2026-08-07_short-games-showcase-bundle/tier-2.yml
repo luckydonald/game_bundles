@@ -1,68 +1,33 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Short Games Showcase Bundle — entire-14-item-bundle
+name: Short Games Showcase Bundle — 7 Item Bundle
 tier: 2
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16462/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/short-games-showcase-bundle
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16462/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_short-games-showcase-bundle/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16462/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_short-games-showcase-bundle/source.json
 games:
-- name: Scanner Sombre
-  ids:
-  - steam:475190
-  - isthereanydeal:scanner-sombre
-- name: Old Man's Journey
-  ids:
-  - steam:581270
-  - isthereanydeal:old-mans-journey
-- name: A Juggler's Tale
-  ids:
-  - steam:1252830
-  - isthereanydeal:a-jugglers-tale
-- name: Teacup
-  ids:
-  - steam:1444300
-  - isthereanydeal:teacup
-- name: A Tiny Sticker Tale
-  ids:
-  - steam:2322180
-  - isthereanydeal:a-tiny-sticker-tale
 - name: Fill Up The Hole
   ids:
-  - steam:3343160
-  - isthereanydeal:fill-up-the-hole
+  - unresolved:source:humblebundle:fillupthehole
+- name: Old Man's Journey
+  ids:
+  - unresolved:source:humblebundle:oldmansjourney
+- name: Teacup
+  ids:
+  - unresolved:source:humblebundle:teacup
+- name: A Juggler's Tale
+  ids:
+  - unresolved:source:humblebundle:ajugglerstale
+- name: Scanner Sombre
+  ids:
+  - unresolved:source:humblebundle:scannersombre
 - name: Astro Prospector
   ids:
-  - steam:3503440
-  - isthereanydeal:astro-prospector
-- name: 'Monster Prom 2: Monster Camp'
+  - unresolved:source:humblebundle:astroprospector
+- name: A Tiny Sticker Tale
   ids:
-  - steam:1140270
-  - isthereanydeal:monster-prom-2-monster-camp
-- name: biped
-  ids:
-  - steam:1071870
-  - isthereanydeal:biped
-- name: Botany Manor
-  ids:
-  - steam:1425350
-  - isthereanydeal:botany-manor
-- name: Anomaly Agent
-  ids:
-  - steam:2378620
-  - isthereanydeal:anomaly-agent
-- name: NanoApostle
-  ids:
-  - steam:2400640
-  - isthereanydeal:nanoapostle
-- name: Knightica
-  ids:
-  - steam:3093400
-  - isthereanydeal:knightica
-- name: The Dark Queen of Mortholme
-  ids:
-  - steam:3587610
-  - isthereanydeal:the-dark-queen-of-mortholme
+  - unresolved:source:humblebundle:atinystickertale
