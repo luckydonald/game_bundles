@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: August 2026 Humble Choice — Premium
+tier: 2
+pick_quota: 8
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/choice/2026-08/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/choice/2026-08/source.json
+games:
+- name: 'Like a Dragon: Infinite Wealth'
+  ids:
+  - steam:2072450
+- name: Dead Cells + The Bad Seed DLC
+  ids:
+  - unresolved:source:humblebundle:deadcells
+- name: 'Teenage Mutant Ninja Turtles: Shredder''s Revenge - Ultimate Edition'
+  ids:
+  - unresolved:source:humblebundle:teenagemutantninjaturtles_shreddersrevenge
+- name: Decktamer
+  ids:
+  - steam:2870340
+- name: Conquest Dark
+  ids:
+  - steam:3238670
+- name: Gatekeeper
+  ids:
+  - steam:2106670
+- name: Pile Up!
+  ids:
+  - unresolved:source:humblebundle:pileup
+- name: Dark Envoy
+  ids:
+  - steam:945770
