@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Family Board Games Bundle — pick 3
+tier: 1
+pick_quota: 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16471/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16471/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16471/source.json
+games:
+- name: Hasbro's BATTLESHIP
+  ids:
+  - steam:893050
+  - isthereanydeal:hasbros-battleship
+- name: Ticket to Ride
+  ids:
+  - steam:2477010
+  - isthereanydeal:ticket-to-ride
+- name: THE GAME OF LIFE 2
+  ids:
+  - steam:1455630
+  - isthereanydeal:the-game-of-life-2
+- name: 'THE GAME OF LIFE 2: Season Pass'
+  ids:
+  - unresolved:source:isthereanydeal:16471:the-game-of-life-2-season-pass
+  - isthereanydeal:the-game-of-life-2-season-pass
+- name: Clue/Cluedo
+  ids:
+  - steam:2506480
+  - isthereanydeal:clue-cluedo
+- name: Clue/Cluedo - Tropical Pack
+  ids:
+  - steam:2556800
+  - isthereanydeal:clue-cluedo-tropical-pack
+- name: Ticket to Ride - Europe Expansion
+  ids:
+  - steam:2608220
+  - isthereanydeal:ticket-to-ride-europe-expansion
+- name: 'Clue/Cluedo: Classic Edition'
+  ids:
+  - steam:794800
+  - isthereanydeal:clue-cluedo-classic-edition
+- name: THE GAME OF LIFE
+  ids:
+  - steam:403120
+  - isthereanydeal:the-game-of-life--1
+- name: Ticket to Ride - Nordic Expansion
+  ids:
+  - steam:2856300
+  - isthereanydeal:ticket-to-ride-nordic-expansion
+- name: Ticket to Ride - USA 1910 Ticket Pack
+  ids:
+  - steam:2938560
+  - isthereanydeal:ticket-to-ride-usa-1910-ticket-pack
+- name: 'Clue/Cluedo: Whispering Pines Retreat Crime Scene Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:16471:clue-cluedo-whispering-pines-retreat-crime-scene-bundle
+  - isthereanydeal:clue-cluedo-whispering-pines-retreat-crime-scene-bundle
+- name: Exploding Kittens 2
+  ids:
+  - steam:2999030
+  - isthereanydeal:exploding-kittens-2
+- name: Ticket to Ride - India Expansion
+  ids:
+  - steam:2938570
+  - isthereanydeal:ticket-to-ride-india-expansion
+- name: Exploding Kittens® 2 - Beach Day
+  ids:
+  - unresolved:source:isthereanydeal:16471:exploding-kittens-2-beach-day
+  - isthereanydeal:exploding-kittens-2-beach-day
+- name: Exploding Kittens® 2 - Explosive Expansions Pass
+  ids:
+  - steam:3140320
+  - isthereanydeal:exploding-kittens-2-explosive-expansions-pass
+- name: Ticket to Ride® - Switzerland Expansion
+  ids:
+  - steam:3366230
+  - isthereanydeal:ticket-to-ride-switzerland-expansion
+- name: 'Ticket to Ride: San Francisco City Expansion'
+  ids:
+  - steam:3252260
+  - isthereanydeal:ticket-to-ride-san-francisco-city-expansion
+- name: 'Clue/Cluedo: 2016 Suspect Pack'
+  ids:
+  - steam:3465720
+  - isthereanydeal:clue-cluedo-2016-suspect-pack
+- name: 'Clue/Cluedo: Polar Research Station Crime Scene Bundle'
+  ids:
+  - steam:3252340
+  - isthereanydeal:clue-cluedo-polar-research-station-crime-scene-bundle
+- name: 'Ticket to Ride: Legendary Asia Expansion'
+  ids:
+  - steam:3102710
+  - isthereanydeal:ticket-to-ride-legendary-asia-expansion
+- name: 'Clue/Cluedo: Noir Crime Scene'
+  ids:
+  - steam:3659490
+  - isthereanydeal:clue-cluedo-noir-crime-scene
