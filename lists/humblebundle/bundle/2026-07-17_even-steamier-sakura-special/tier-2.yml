@@ -1,104 +1,81 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Even Steamier Sakura Special Bundle — 23-item-bundle
+name: Even Steamier Sakura Special — 23 Item Bundle
 tier: 2
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16405/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/even-steamier-sakura-special
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16405/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-17_even-steamier-sakura-special/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16405/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-17_even-steamier-sakura-special/source.json
 games:
-- name: Sakura MMO 3
-  ids:
-  - steam:1064130
-  - isthereanydeal:sakura-mmo-3
-- name: Sakura MMO 2
-  ids:
-  - steam:968950
-  - isthereanydeal:sakura-mmo-2
-- name: Sakura Dungeon
-  ids:
-  - steam:407330
-  - isthereanydeal:sakura-dungeon
-- name: Sakura Swim Club
-  ids:
-  - steam:402180
-  - isthereanydeal:sakura-swim-club
-- name: Sakura MMO
-  ids:
-  - steam:935070
-  - isthereanydeal:sakura-mmo
-- name: Sakura Succubus
-  ids:
-  - steam:1202310
-  - isthereanydeal:sakura-succubus
-- name: Sakura Knight 2
-  ids:
-  - steam:1296260
-  - isthereanydeal:sakura-knight-2
-- name: Sakura Succubus 2
-  ids:
-  - steam:1326000
-  - isthereanydeal:sakura-succubus-2
-- name: Sakura Knight 3
-  ids:
-  - steam:1351370
-  - isthereanydeal:sakura-knight-3
-- name: Sakura Succubus 3
-  ids:
-  - steam:1406020
-  - isthereanydeal:sakura-succubus-3
-- name: Sakura MMO Extra
-  ids:
-  - steam:1466680
-  - isthereanydeal:sakura-mmo-extra
-- name: Sakura Succubus 4
-  ids:
-  - steam:1466690
-  - isthereanydeal:sakura-succubus-4
-- name: Sakura Forest Girls
-  ids:
-  - steam:1524650
-  - isthereanydeal:sakura-forest-girls
-- name: Sakura Forest Girls 2
-  ids:
-  - steam:1630490
-  - isthereanydeal:sakura-forest-girls-2
-- name: Sakura Forest Girls 3
-  ids:
-  - steam:1665210
-  - isthereanydeal:sakura-forest-girls-3
-- name: Sakura Alien
-  ids:
-  - steam:1592640
-  - isthereanydeal:sakura-alien
-- name: Sakura Succubus 5
-  ids:
-  - steam:1795430
-  - isthereanydeal:sakura-succubus-5
-- name: Sakura Succubus 6
-  ids:
-  - steam:1961390
-  - isthereanydeal:sakura-succubus-6
-- name: Sakura Gym Girls
-  ids:
-  - steam:2017640
-  - isthereanydeal:sakura-gym-girls
-- name: Sakura Succubus 7
-  ids:
-  - steam:2021710
-  - isthereanydeal:sakura-succubus-7
-- name: Leveling up girls in another world
-  ids:
-  - steam:1295730
-  - isthereanydeal:leveling-up-girls-in-another-world
-- name: Sakura Bunny Girls
-  ids:
-  - steam:2375080
-  - isthereanydeal:sakura-bunny-girls
 - name: Sakura Succubus 8
   ids:
-  - steam:2487490
-  - isthereanydeal:sakura-succubus-8
+  - unresolved:source:humblebundle:sakurasuccubus8
+- name: Sakura Bunny Girls
+  ids:
+  - unresolved:source:humblebundle:sakurabunnygirls
+- name: Sakura Succubus 7
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus7
+- name: Leveling up girls in another world
+  ids:
+  - unresolved:source:humblebundle:levelingupgirlsinanotherworld
+- name: Sakura Gym Girls
+  ids:
+  - unresolved:source:humblebundle:sakuragymgirls
+- name: Sakura Dungeon
+  ids:
+  - unresolved:source:humblebundle:sakuradungeon
+- name: Sakura Succubus
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus
+- name: Sakura Swim Club
+  ids:
+  - unresolved:source:humblebundle:sakuraswimclub
+- name: Sakura Succubus 2
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus2
+- name: Sakura Succubus 6
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus6
+- name: Sakura Succubus 5
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus5
+- name: Sakura Succubus 4
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus4
+- name: Sakura Succubus 3
+  ids:
+  - unresolved:source:humblebundle:sakurasuccubus3
+- name: Sakura MMO
+  ids:
+  - unresolved:source:humblebundle:sakurammo
+- name: Sakura MMO Extra
+  ids:
+  - unresolved:source:humblebundle:sakurammoextra
+- name: Sakura MMO 2
+  ids:
+  - unresolved:source:humblebundle:sakurammo2
+- name: Sakura MMO 3
+  ids:
+  - unresolved:source:humblebundle:sakurammo3
+- name: Sakura Knight 3
+  ids:
+  - unresolved:source:humblebundle:sakuraknight3
+- name: Sakura Knight 2
+  ids:
+  - unresolved:source:humblebundle:sakuraknight2
+- name: Sakura Forest Girls
+  ids:
+  - unresolved:source:humblebundle:sakuraforestgirls
+- name: Sakura Forest Girls 2
+  ids:
+  - unresolved:source:humblebundle:sakuraforestgirls2
+- name: Sakura Forest Girls 3
+  ids:
+  - unresolved:source:humblebundle:sakuraforestgirls3
+- name: Sakura Alien
+  ids:
+  - unresolved:source:humblebundle:sakuraalien

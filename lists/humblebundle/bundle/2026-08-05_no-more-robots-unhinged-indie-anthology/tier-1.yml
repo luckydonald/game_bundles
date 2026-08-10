@@ -1,32 +1,45 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: 'No More Robots: The Unhinged Indie Anthology Bundle — 5-item-bundle'
+name: 'No More Robots: The Unhinged Indie Anthology — Entire 11 Item Bundle'
 tier: 1
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16453/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/no-more-robots-unhinged-indie-anthology
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16453/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-05_no-more-robots-unhinged-indie-anthology/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16453/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-08-05_no-more-robots-unhinged-indie-anthology/source.json
 games:
-- name: Not Tonight
+- name: Earth Must Die
   ids:
-  - steam:733790
-  - isthereanydeal:not-tonight
-- name: Not Tonight - One Love
+  - unresolved:source:humblebundle:earthmustdie
+- name: Starless Abyss
   ids:
-  - steam:1036480
-  - isthereanydeal:not-tonight-one-love
-- name: TombStar
+  - unresolved:source:humblebundle:starlessabyss
+- name: Let's Build a Zoo
   ids:
-  - steam:1165470
-  - isthereanydeal:tombstar
-- name: Not Tonight 2
+  - unresolved:source:humblebundle:letsbuildazoo
+- name: Spirittea
   ids:
-  - steam:1600370
-  - isthereanydeal:not-tonight-2
+  - unresolved:source:humblebundle:spirittea
+- name: Yes, Your Grace
+  ids:
+  - unresolved:source:humblebundle:yesyourgrace
+- name: Hypnospace Outlaw
+  ids:
+  - unresolved:source:humblebundle:hypnospaceoutlaw
 - name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
   ids:
-  - steam:1931020
-  - isthereanydeal:slayers-x-terminal-aftermath-vengance-of-the-slayer
+  - unresolved:source:humblebundle:slayersx_terminalaftermath_venganceoftheslayer
+- name: Not Tonight 2
+  ids:
+  - unresolved:source:humblebundle:nottonight2
+- name: Tombstar
+  ids:
+  - unresolved:source:humblebundle:tombstar
+- name: Not Tonight
+  ids:
+  - unresolved:source:humblebundle:nottonight
+- name: 'Not Tonight: One Love'
+  ids:
+  - unresolved:source:humblebundle:nottonight_onelove

@@ -1,36 +1,51 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Idlers & Desktop Companions Bundle — 6-item-bundle
+name: Idlers and Desktop Companions — Entire 13 Item Bundle
 tier: 1
 references:
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16429/
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/idlers-and-desktop-companions
 - name: Crawl metadata
-  path: ../../../../archives/isthereanydeal/bundle/16429/metadata.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-24_idlers-and-desktop-companions/metadata.json
 - name: Crawl source
-  path: ../../../../archives/isthereanydeal/bundle/16429/source.json
+  path: ../../../../archives/humblebundle/bundle/2026-07-24_idlers-and-desktop-companions/source.json
 games:
-- name: 'Plantera 2: Golden Acorn'
+- name: 'Spirit City: Lofi Sessions'
   ids:
-  - steam:1091920
-  - isthereanydeal:plantera-2-golden-acorn
-- name: My Little Life
+  - steam:2113850
+- name: Rusty's Retirement
   ids:
-  - steam:2834600
-  - isthereanydeal:my-little-life
+  - steam:2666510
+- name: Dark Hunting Ground
+  ids:
+  - steam:2494810
+- name: Military Incremental Complex
+  ids:
+  - steam:3469750
+- name: Berserk B.I.T.S
+  ids:
+  - steam:2348540
+- name: Kin and Quarry
+  ids:
+  - steam:3505770
+- name: Focus Grove
+  ids:
+  - steam:4030830
 - name: Ropuka's Idle Island
   ids:
   - steam:3416070
-  - isthereanydeal:ropukas-idle-island
-- name: How to Train Your Cock
-  ids:
-  - steam:3673060
-  - isthereanydeal:how-to-train-your-cock
 - name: Desktop Defender
   ids:
   - steam:3772810
-  - isthereanydeal:desktop-defender
+- name: My Little Life
+  ids:
+  - steam:2834600
 - name: Pupple Pop
   ids:
   - steam:4224500
-  - isthereanydeal:pupple-pop
+- name: 'Plantera 2: Golden Acorn'
+  ids:
+  - steam:1091920
+- name: How To Train Your Cock
+  ids:
+  - steam:3673060
