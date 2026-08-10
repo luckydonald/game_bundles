@@ -37,14 +37,14 @@ jobs:
           git fetch origin "${BRANCH_NAME}" || true
           if git show-ref --verify --quiet "refs/remotes/origin/${BRANCH_NAME}"; then
             git checkout -B "${BRANCH_NAME}" "origin/${BRANCH_NAME}"
-            if git rebase origin/main; then
-              echo "Rebased ${BRANCH_NAME} onto origin/main."
+            if git rebase origin/mane; then
+              echo "Rebased ${BRANCH_NAME} onto origin/mane."
             else
-              echo "::warning::Rebase of ${BRANCH_NAME} onto origin/main failed, aborting rebase. Continuing on the branch as-is; a human will resolve this on the open PR."
+              echo "::warning::Rebase of ${BRANCH_NAME} onto origin/mane failed, aborting rebase. Continuing on the branch as-is; a human will resolve this on the open PR."
               git rebase --abort
             fi
           else
-            git checkout -B "${BRANCH_NAME}" origin/main
+            git checkout -B "${BRANCH_NAME}" origin/mane
           fi
 
       - name: Run Humble Bundle crawler
@@ -111,7 +111,7 @@ jobs:
               echo "Unresolved store IDs left for manual \`game-collections complete\` follow-up: ${UNRESOLVED_COUNT}."
             } > /tmp/pr-body.md
             gh pr create \
-              --base main \
+              --base mane \
               --head "${BRANCH_NAME}" \
               --title "[humblebundle] weekly scrape" \
               --body-file /tmp/pr-body.md
