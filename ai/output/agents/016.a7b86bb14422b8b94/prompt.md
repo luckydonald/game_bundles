@@ -1,0 +1,10 @@
+In the repo /home/user/git/luckydonald/game_collections, investigate the isthereanydeal source pipeline under src/game_collections/sources/isthereanydeal/ and how it interacts with src/game_collections/models.py's Game model (name + ids: list[str]).
+
+I need to understand:
+1. How does the crawler discover bundles and per-bundle items? Does it already parse "Contents of this package" / sub-items for grouped products (e.g. a game that itself bundles multiple sub-games, like "Frostpunk: Game of the Year edition" containing "Frostpunk" + "On the Edge" DLC)? Look for any handling of package contents, sub-items, "contains", "dlc", "package" in the crawler/parser.
+2. How does it resolve storefront IDs per bundle item (it says "resolves storefront IDs directly from each bundle's own detail page" per CLAUDE.md) — where's that code, and does it already support one bundle "item" resolving to multiple storefront IDs (e.g. multiple steam appids for one named item)?
+3. How does it decide, for a given bundle, which provider-specific lists/<provider>/... directories to write into, and how does it "skip bundles an existing dedicated scraper already covers" (the humblebundle vs isthereanydeal overlap mentioned in CLAUDE.md)? Find that skip-logic code (probably checking existing archives/lists for overlapping source).
+4. How does the `complete --provider isthereanydeal` per-game detail-page solver work for `unresolved:source:isthereanydeal:...` markers — where's that code (config/isthereanydeal-shops.yml, isthereanydeal-providers.yml, isthereanydeal-game-aliases.yml usage)?
+5. Are there existing tests/fixtures demonstrating current behavior, especially around bundles with multi-item packages?
+
+Report file paths and line numbers for the key logic, and a concise summary (under 600 words) of exactly how a bundle item becomes a Game entry today, how the "skip if dedicated scraper already covers it" logic works, and where "grouped vs flat, prefer more detailed" logic would need to be added.

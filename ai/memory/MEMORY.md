@@ -10,3 +10,4 @@
 - [Full-range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — "clean up since origin/mane" means the whole range, not just current task's commits
 - [No `_`-prefix, split modules](feedback_no_private_prefix_split_modules.md) — new code: no private-prefixed names, put new concerns in their own module
 - [Bare `# end` comments](feedback_end_comment_bare_form.md) — `# end def`/`# end class` etc. must never repeat the function/class name
+- [History-master replay guards](2026-07-20-history-master-replay-guards.md) — TODO: summarize this file.
