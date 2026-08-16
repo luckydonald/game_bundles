@@ -1,0 +1,10 @@
+In the repo /home/user/git/luckydonald/game_collections, investigate how Game entries (src/game_collections/models.py: Game has `name: str` and `ids: list[str]` of qualified `provider:value` identifiers) are used for Steam ownership matching and sync.
+
+I need to understand:
+1. In src/game_collections/launchers/steam/ and any eligibility/sync code (search for "eligible", "sync", "ownership"), when a Game has MULTIPLE ids (e.g. two steam appids), is the Game considered "owned"/"eligible" if the user owns ANY of the listed ids, or must they own ALL of them? Find the exact matching logic and file:line.
+2. Is there already any concept in the codebase of a Game "containing" or "requiring" multiple separate owned items simultaneously (i.e. AND semantics) vs alternative equivalent ids (OR semantics, e.g. same game on different storefronts)? Search comments/docs in lists/README.md and README.md for how multiple `ids:` per game are currently documented/intended to be used.
+3. How does src/game_collections/lists.py discover and load lists, and how does src/game_collections/models.py's GameList validate uniqueness of games/ids? (Already partly known: no duplicate qualified ids across games in a list — but check across different lists/files too.)
+4. Look at src/game_collections/search.py and complete command in cli.py — when completing `ids:` for a draft game, can a single named game already receive multiple ids of the SAME provider (e.g. two steam appids for one Game name), or is that disallowed/deduped somewhere?
+5. Check src/game_collections/migrate_tiers.py and apply/metadata.py for how they interpret a Game's ids when computing pick_quota/eligibility, in case multi-id semantics affect quota counting.
+
+Report file paths and line numbers, and a concise summary (under 500 words) clarifying: today, does owning any one id in a Game's ids list count as owning the whole Game entry (for sync/eligibility purposes), and is there any existing notion of "this Game bundles several separate items that must each be tracked individually"?
