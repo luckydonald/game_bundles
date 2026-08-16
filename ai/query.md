@@ -1519,3 +1519,5 @@ both tui&non-tui shall confirm none-mode.
 
 › The TUI one should ask at the end to do a dry run or apply (or close). After the dry run, the same menu opens again.
 
+❯ The current implementation does not allow for items of the bundles to themselves be multiple products.
+
