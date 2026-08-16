@@ -1,45 +1,32 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Awesome Indie Adventures — Entire 12 Item Bundle
+name: Awesome Indie Adventures Bundle — 5-item-bundle
 tier: 1
 references:
-- name: Humble Bundle offer
-  url: https://www.humblebundle.com/games/awesome-indie-adventures
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16461/
 - name: Crawl metadata
-  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/metadata.json
+  path: ../../../../archives/isthereanydeal/bundle/16461/metadata.json
 - name: Crawl source
-  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/source.json
+  path: ../../../../archives/isthereanydeal/bundle/16461/source.json
 games:
-- name: The Pathless
-  ids:
-  - steam:1492680
-- name: Post Trauma
-  ids:
-  - steam:1750030
-- name: BIOMORPH
-  ids:
-  - steam:1430220
-- name: WaveTale
-  ids:
-  - steam:1823930
-- name: Baladins
-  ids:
-  - steam:1866320
-- name: Jenny LeClue - Detectivu
-  ids:
-  - steam:319870
 - name: Beyond a Steel Sky
   ids:
   - steam:1146310
-- name: Beyond a Steel Sky Soundtrack
-  ids:
-  - unresolved:source:humblebundle:beyondasteelskysoundtrack
-- name: Kitaria Fables
-  ids:
-  - unresolved:source:humblebundle:kitariafables
-- name: Before Your Eyes
-  ids:
-  - unresolved:source:humblebundle:beforeyoureyes
+  - isthereanydeal:beyond-a-steel-sky
 - name: 'Moonlighter: Complete Edition'
   ids:
-  - unresolved:source:humblebundle:moonlighter_completeedition
+  - unresolved:source:isthereanydeal:16461:moonlighter-complete-edition
+  - isthereanydeal:moonlighter-complete-edition
+- name: Kitaria Fables
+  ids:
+  - steam:1356280
+  - isthereanydeal:kitaria-fables
+- name: Beyond a Steel Sky Soundtrack
+  ids:
+  - steam:1368370
+  - isthereanydeal:beyond-a-steel-sky-soundtrack
+- name: Before Your Eyes
+  ids:
+  - steam:1082430
+  - isthereanydeal:before-your-eyes
