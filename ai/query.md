@@ -1608,3 +1608,118 @@ both tui&non-tui shall confirm none-mode.
 
 ❯ I mean I wouldn't mind the steam bundles to be _also_ understood as a bundle, and hence be collectable as all the other bundles, but for now scraping there is probably just something other scraper attempt if found to match the current bundle item, as in our case. Still I think having a way to scrape steam bundles standalone would be neat addition.
 
+❯ Note that the bundles on steam can have different url formats, e.g. https://store.steampowered.com/sub/1000794/, https://store.steampowered.com/bundle/30301/Melvor_Idle_Expanded_Edition/, and those often also exist on itad, like https://isthereanydeal.com/game/contraband-police/info/ has 53 bundles it's contained in.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. How should I get the real package-contents data source for ITAD package pages (e.g. Frostpunk GOTY) before I write the parser?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **ITAD data source** (1/1) <kbd>Single Select</kbd><br>
+>> How should I get the real package-contents data source for ITAD package pages (e.g. Frostpunk GOTY) before I write the parser?
+> - [ ] 1\. You inspect it and share the endpoint
+>   - _You open the Frostpunk GOTY page in a browser, check the Network tab for the XHR/fetch call that loads "Contents of this package," and paste me the request URL (and ideally a sample response). Fastest, no guessing._
+> - [ ] 2\. Use a real browser session (patchright)
+>   - _Reuse the dailyindiegame source's approach — a real (non-headless) patchright browser session to render the page and capture what it actually loads, similar to how dailyindiegame's Cloudflare challenge is handled. Slower to build, but self-contained and repeatable for future crawls too._
+> - [ ] 3\. Register/use ITAD's official API key
+>   - _Sign up for an ITAD API key and switch the isthereanydeal source (or just this package-contents lookup) to use api.isthereanydeal.com directly instead of scraping HTML. Requires you to obtain and configure a key; larger scope change to the source's fetch strategy._
+> - [ ] 4\. Pause Phase 2, do Phase 3 first
+>   - _Skip ITAD package-content parsing for now and implement Phase 3's splittable-title case (Humble's own "A + B" compound-title splitting, which needs no ITAD dependency) plus Phase 1's already-done groundwork, and revisit Phase 2 once the data source is confirmed._
+> - [x] 5\. _Type something:_
+>   - > use browser debugging to figure out the api endpoints.
+>
+> </details>
+>
+
+❯ You may use `claude-in-chrome` mcp to inspect the actual page.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Given package-contents needs a real browser render (not plain HTTP), how should the isthereanydeal crawler fetch it?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fetch strategy** (1/1) <kbd>Single Select</kbd><br>
+>> Given package-contents needs a real browser render (not plain HTTP), how should the isthereanydeal crawler fetch it?
+> - [ ] 1\. patchright, gated to package-type items only (Recommended)
+>   - _Add a patchright browser session (reusing dailyindiegame's pattern) used ONLY when a bundle item's own detail page needs checking for package contents — keep the existing plain-HTTP path for everything else in both sources' crawls, so bulk crawl speed/cost is unaffected._
+> - [ ] 2\. patchright for all isthereanydeal per-item fetches
+>   - _Switch every isthereanydeal per-item detail-page fetch (not just package checks) to the browser session, simplifying the code path at the cost of a slower/heavier crawl overall._
+> - [x] 3\. _Type something:_
+>   - > check on the api first.
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. How do you want to proceed on the ITAD package-contents fetch?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Next step** (1/1) <kbd>Single Select</kbd><br>
+>> How do you want to proceed on the ITAD package-contents fetch?
+> - [ ] 1\. I'll check DevTools and share the payload
+>   - _You'll open the page, inspect the POST /api/game/packages/ request payload in Network tab, and paste it back so the crawler can call the API directly (cheapest, no browser dependency)._
+> - [ ] 2\. Proceed with patchright/DOM scraping now
+>   - _Stop chasing the API shape and implement the gated-patchright approach from the earlier answer: render the item's own /game/<slug>/info/ page and scrape the "Contents of this package" section's DOM, same pattern as dailyindiegame._
+> - [x] 3\. _Type something:_
+>   - > `https://isthereanydeal.com/api/game/info/` with `{"gid":"018d937f-39eb-72cd-9c57-75299936acc7"}` contains for example the _Digital Artbook_ as expected.
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. My scripted fetch to POST /api/game/info/ with body {"gid":"..."} still returns 400 (missing header/cookie/session context, most likely) even though yours worked in DevTools. Can you share the request's full header list (names only is fine, not cookie values) so I can match it exactly?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Request headers** (1/1) <kbd>Single Select</kbd><br>
+>> My scripted fetch to POST /api/game/info/ with body {"gid":"..."} still returns 400 (missing header/cookie/session context, most likely) even though yours worked in DevTools. Can you share the request's full header list (names only is fine, not cookie values) so I can match it exactly?
+> - [ ] 1\. I'll paste the header names from DevTools
+>   - _You'll copy the Request Headers list (names, e.g. Accept, Referer, Cookie, X-*) from DevTools Network tab for that POST request and share it so I can replicate the exact contract._
+> - [ ] 2\. Skip it — assume a session/cookie is required
+>   - _Don't chase headers further; assume the endpoint needs a prior GET (to receive a session cookie) before the POST works anonymously, and design the crawler's fetch flow around that two-step pattern (GET the game page first, reuse cookies for the POST) without further live verification right now._
+> - [x] 3\. _Type something:_
+>   - > Shouldn't you see them in the log when accessing `https://isthereanydeal.com/game/frostpunk-game-of-the-year-edition/info/`?
+>
+> </details>
+>
+
+❯ We send a `sess2` cookie, and a `itad-sessiontoken` header. Also the cookies `country` and `visitor`, but I guess those are not as important.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Settle on the ITAD package-contents fetch strategy and move to implementation?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Proceed** (1/1) <kbd>Single Select</kbd><br>
+>> Settle on the ITAD package-contents fetch strategy and move to implementation?
+> - [ ] 1\. Yes, use patchright DOM-scraping (Recommended)
+>   - _Stop reverse-engineering the /api/game/info/ session/CSRF flow. Implement Phase 2 using a real patchright browser session (gated to only when checking an item for package contents), scraping the rendered "Contents of this package" section's <a href> list — already validated to work correctly against the live Frostpunk GOTY page._
+> - [ ] 2\. Keep trying the API a bit longer
+>   - _You have DevTools open already — if you want to paste the Set-Cookie response headers or confirm whether sess2 is httpOnly, I can take one more focused pass before falling back._
+> - [x] 3\. _Type something:_
+>   - > I mean we manage to get that first page rendered just fine. Also I believe we did in the past figure out accessing the api of that... Did you try accessing with a legit browser-ssl and UA imitating python request?
+>
+> </details>
+>
+
