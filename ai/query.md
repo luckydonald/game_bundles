@@ -1606,3 +1606,5 @@ both tui&non-tui shall confirm none-mode.
 > - [Raw log (`240763` chars, `235 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/6d50ec44-d123-4c16-ba29-c977c5fc36f2/tasks/ac7f9c0d7e820a156.output)
 > - `16` tools, `49259` tokens, `2.5178 s`
 
+❯ I mean I wouldn't mind the steam bundles to be _also_ understood as a bundle, and hence be collectable as all the other bundles, but for now scraping there is probably just something other scraper attempt if found to match the current bundle item, as in our case. Still I think having a way to scrape steam bundles standalone would be neat addition.
+
