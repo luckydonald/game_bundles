@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Handsome Husbandos Bundle — 6-item-bundle
+tier: 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16476/source.json
+games:
+- name: Fashioning Little Miss Lonesome
+  ids:
+  - steam:640990
+  - isthereanydeal:fashioning-little-miss-lonesome
+- name: MAMIYA
+  ids:
+  - steam:1394930
+  - isthereanydeal:mamiya
+- name: Bakumatsu Renka SHINSENGUMI
+  ids:
+  - steam:1451160
+  - isthereanydeal:bakumatsu-renka-shinsengumi
+- name: A Date with Death Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16476:a-date-with-death-deluxe-edition
+  - isthereanydeal:a-date-with-death-deluxe-edition
+- name: OZMAFIA!!
+  ids:
+  - steam:303290
+  - isthereanydeal:ozmafia
+- name: DesperaDrops
+  ids:
+  - steam:3291080
+  - isthereanydeal:desperadrops

@@ -1,54 +1,40 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Short Games Showcase Bundle — Entire 14 Item Bundle
+name: Short Games Showcase Bundle — 7-item-bundle
 tier: 1
 references:
-- name: Humble Bundle offer
-  url: https://www.humblebundle.com/games/short-games-showcase-bundle
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16462/
 - name: Crawl metadata
-  path: ../../../../archives/humblebundle/bundle/2026-08-07_short-games-showcase-bundle/metadata.json
+  path: ../../../../archives/isthereanydeal/bundle/16462/metadata.json
 - name: Crawl source
-  path: ../../../../archives/humblebundle/bundle/2026-08-07_short-games-showcase-bundle/source.json
+  path: ../../../../archives/isthereanydeal/bundle/16462/source.json
 games:
-- name: Botany Manor
-  ids:
-  - unresolved:source:humblebundle:botanymanor
-- name: Biped
-  ids:
-  - unresolved:source:humblebundle:biped
-- name: 'Monster Prom 2: Monster Camp'
-  ids:
-  - unresolved:source:humblebundle:monsterprom2_monstercamp
-- name: Anomoly Agent
-  ids:
-  - unresolved:source:humblebundle:anomalyagent
-- name: NanoApostle
-  ids:
-  - unresolved:source:humblebundle:nanoapostle
-- name: Knightica
-  ids:
-  - unresolved:source:humblebundle:Knightica
-- name: The Dark Queen of Mortholme
-  ids:
-  - unresolved:source:humblebundle:thedarkqueenofmortholme
-- name: Fill Up The Hole
-  ids:
-  - unresolved:source:humblebundle:fillupthehole
-- name: Old Man's Journey
-  ids:
-  - unresolved:source:humblebundle:oldmansjourney
-- name: Teacup
-  ids:
-  - unresolved:source:humblebundle:teacup
-- name: A Juggler's Tale
-  ids:
-  - unresolved:source:humblebundle:ajugglerstale
 - name: Scanner Sombre
   ids:
-  - unresolved:source:humblebundle:scannersombre
-- name: Astro Prospector
+  - steam:475190
+  - isthereanydeal:scanner-sombre
+- name: Old Man's Journey
   ids:
-  - unresolved:source:humblebundle:astroprospector
+  - steam:581270
+  - isthereanydeal:old-mans-journey
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+  - isthereanydeal:a-jugglers-tale
+- name: Teacup
+  ids:
+  - steam:1444300
+  - isthereanydeal:teacup
 - name: A Tiny Sticker Tale
   ids:
-  - unresolved:source:humblebundle:atinystickertale
+  - steam:2322180
+  - isthereanydeal:a-tiny-sticker-tale
+- name: Fill Up The Hole
+  ids:
+  - steam:3343160
+  - isthereanydeal:fill-up-the-hole
+- name: Astro Prospector
+  ids:
+  - steam:3503440
+  - isthereanydeal:astro-prospector
