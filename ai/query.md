@@ -1521,3 +1521,88 @@ both tui&non-tui shall confirm none-mode.
 
 ❯ The current implementation does not allow for items of the bundles to themselves be multiple products.
 
+❯ /plan The current implemetation does not allow for items of the bundles to themself be multiple products. Somethimes they have fitting bundle pages on steam, i.e. the current https://www.humblebundle.com/games/built-differently-builder-games got "Frostpunk: Game of the Year edition", which can be mapped to steam's same-named bundle: https://store.steampowered.com/bundle/12261/Frostpunk_Game_of_the_Year_Edition#. Other contain a game and a DLC, e.g. on https://www.humblebundle.com/membership/august-2026, there's "Dead Cells + The Bad Seed DLC", resolving to two items, "Dead Cells" https://store.steampowered.com/app/588650/Dead_Cells/ and "The Bad Seed DLC" aka. "Dead Cells: The Bad Seed" https://store.steampowered.com/app/1204130/Dead_Cells_The_Bad_Seed#. There may be others. We need to support this multi-game in a game concept, while still ideally getting the same results as isthereanydeal and similar. IsThereAnyDeal seems to know about those, the Frostpunk GotY page (https://isthereanydeal.com/game/frostpunk-game-of-the-year-edition/info/) containing a _Contents of this package_ section, which itself leads to both a detail page of it's own (e.g. _On the Edge_: https://isthereanydeal.com/game/frostpunk-on-the-edge/info/ and https://itad.link/018d9386-68bd-71a4-abba-2eff3699929c/ which resolves to https://store.steampowered.com/app/1147010/Frostpunk_On_The_Edge/). However, for the Deadcells example it lists both items independently (https://isthereanydeal.com/bundles/16450/). They should be understood as the same, however that grouped version being "more detailed" than the flat version, and hence preferable to store over the flat one. But game-list wise they'd be the same. Similar the GotY should eventually resolve to all it's contained items instead of (only) the steam bundle, to make the matching of library games work as before, and as it would with the previous flat list. Also scrapes should keep the more detailed version if there's a similar scrape already (i.e. the crawler for `isthereanydeal` vs the direct `humblebundle` scraper).
+
+❯ Task Notification:
+> - Task `a7e134397967298aa` <kbd>completed</kbd>
+> - Tool `toolu_011rKwmBmMeHmZvf3j9NTgPs`
+> - > Agent "Explore humblebundle source pipeline" finished
+> - [Query (`1633` chars, `1.6 KB`)](output/agents/015.a7e134397967298aa/prompt.md)
+> - [Answer (`4485` chars, `4.41 KB`)](output/agents/015.a7e134397967298aa/result.md)
+> - [Raw log (`251767` chars, `246 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/6d50ec44-d123-4c16-ba29-c977c5fc36f2/tasks/a7e134397967298aa.output)
+> - `12` tools, `53218` tokens, `1.02567 s`
+
+❯ Task Notification:
+> - Task `a7b86bb14422b8b94` <kbd>completed</kbd>
+> - Tool `toolu_01VuLzKMiurWYd2Qb3dHpsxF`
+> - > Agent "Explore isthereanydeal source pipeline" finished
+> - [Query (`2000` chars, `1.96 KB`)](output/agents/016.a7b86bb14422b8b94/prompt.md)
+> - [Answer (`6937` chars, `6.8 KB`)](output/agents/016.a7b86bb14422b8b94/result.md)
+> - [Raw log (`296937` chars, `290 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/6d50ec44-d123-4c16-ba29-c977c5fc36f2/tasks/a7b86bb14422b8b94.output)
+> - `15` tools, `63200` tokens, `1.37273 s`
+
+❯ Task Notification:
+> - Task `a3442dddc254942b0` <kbd>completed</kbd>
+> - Tool `toolu_0126FDy3YzdwJvUYwxHiDwru`
+> - > Agent "Explore models, lists, ownership-matching" finished
+> - [Query (`2050` chars, `2.01 KB`)](output/agents/017.a3442dddc254942b0/prompt.md)
+> - [Answer (`4206` chars, `4.12 KB`)](output/agents/017.a3442dddc254942b0/result.md)
+> - [Raw log (`254568` chars, `249 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/6d50ec44-d123-4c16-ba29-c977c5fc36f2/tasks/a3442dddc254942b0.output)
+> - `19` tools, `43502` tokens, `1.47378 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Where should compound-title/package decomposition actually happen?
+>> 2. Should the public game-list schema (Game/GameList in models.py) change at all, or should a package expand purely into N flat Game entries with no new fields?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Decomposition path** (1/2) <kbd>Single Select</kbd><br>
+>> Where should compound-title/package decomposition actually happen?
+> - [ ] 1\. ITAD-only (Recommended)
+>   - _Only extend the isthereanydeal pipeline to detect package contents (via each item's own /game/<slug>/info/ page) and expand into multiple Game entries. Rework the existing skip-logic so ITAD's more-detailed expansion overrides a Humble-authored list when Humble only got a flat/unresolved entry for the same offer. No changes to humblebundle's own resolver._
+> - [x] 2\. ITAD + Humble compound-title detection
+>   - _Do the above, AND also teach humblebundle/resolver.py to detect compound titles itself (split on "+"/"DLC"/"edition" patterns) and query ITAD directly as a resolution fallback during the Humble crawl itself, rather than relying solely on the separate ITAD crawl + skip-logic rework to backfill it later._
+> - [ ] 3\. _Type something._
+>
+>> **Schema change** (2/2) <kbd>Single Select</kbd><br>
+>> Should the public game-list schema (Game/GameList in models.py) change at all, or should a package expand purely into N flat Game entries with no new fields?
+> - [ ] 1\. No public schema change (Recommended)
+>   - _Game/GameList stay exactly as-is. A package (e.g. Frostpunk GOTY) is written as multiple ordinary flat Game entries, same as if it had always been listed that way (matches your note that 'game-list wise they'd be the same'). Package-membership bookkeeping (for detail-comparison/dedup purposes only) lives in the isthereanydeal archive models, not the public schema._
+>   - ```
+>     games:
+>       - name: Frostpunk
+>         ids: [steam:323190]
+>       - name: Frostpunk: On The Edge
+>         ids: [steam:1147010]
+>     ```
+> - [x] 2\. Add a grouping field to Game
+>   - _Add an optional field on Game (e.g. group/origin) so multiple Game entries that came from one source offer/package are linked in the public schema itself, for display or future logic beyond ownership matching._
+>   - ```text
+>     games:
+>       - name: Frostpunk
+>         ids: [steam:323190]
+>         group: frostpunk-goty
+>       - name: Frostpunk: On The Edge
+>         ids: [steam:1147010]
+>         group: frostpunk-goty
+>     ```
+> - [ ] 3\. _Notes: Add notes on this design._
+>
+> </details>
+>
+
+❯ it should keep the "original" group name around (too).
+
+❯ Task Notification:
+> - Task `ac7f9c0d7e820a156` <kbd>completed</kbd>
+> - Tool `toolu_01DgUzEg8xnZSE6xy4rNLzni`
+> - > Agent "Design multi-item package/bundle decomposition" finished
+> - [Query (`12055` chars, `11.8 KB`)](output/agents/018.ac7f9c0d7e820a156/prompt.md)
+> - [Answer (`20112` chars, `19.7 KB`)](output/agents/018.ac7f9c0d7e820a156/result.md)
+> - [Raw log (`240763` chars, `235 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/6d50ec44-d123-4c16-ba29-c977c5fc36f2/tasks/ac7f9c0d7e820a156.output)
+> - `16` tools, `49259` tokens, `2.5178 s`
+
