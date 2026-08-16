@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: New Signal Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16475/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16475/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16475/source.json
+games:
+- name: No Signal
+  ids:
+  - steam:2840590
+  - isthereanydeal:no-signal
+- name: Wakamarina Valley, New Zealand
+  ids:
+  - steam:1291330
+  - isthereanydeal:wakamarina-valley-new-zealand
+- name: 7 Days
+  ids:
+  - steam:3247640
+  - isthereanydeal:7-days
+- name: Unknot!
+  ids:
+  - steam:3544020
+  - isthereanydeal:unknot
+- name: The Stairwell
+  ids:
+  - steam:3578120
+  - isthereanydeal:the-stairwell
+- name: Odd Dorable
+  ids:
+  - steam:3690890
+  - isthereanydeal:odd-dorable
