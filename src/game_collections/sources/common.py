@@ -69,6 +69,28 @@ def load_cached_archive(
 # end def load_cached_archive
 
 
+def merge_game_list(existing: GameList | None, fresh: GameList) -> GameList:
+    """Combine a freshly-crawled list with any already-committed list at the same path.
+
+    Keeps every existing `Game` entry as-is (preserving manual `ids:`/`group`
+    edits a re-crawl would otherwise clobber), appends only games from
+    `fresh` that aren't already present by name, and otherwise takes
+    bundle-level metadata (`name`/`tier`/`pick_quota`/`references`) from
+    `fresh` since that reflects the source of truth, not manual curation.
+    Games are matched by `name.casefold()`, the same uniqueness key
+    `GameList` itself enforces.
+    """
+    if existing is None:
+        return fresh
+    # end if
+    existing_by_name = {game.name.casefold(): game for game in existing.games}
+    fresh_names = {game.name.casefold() for game in fresh.games}
+    merged_games = [existing_by_name.get(game.name.casefold(), game) for game in fresh.games]
+    merged_games.extend(game for game in existing.games if game.name.casefold() not in fresh_names)
+    return fresh.model_copy(update={"games": merged_games})
+# end def merge_game_list
+
+
 def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path) -> str:
     """Render one game list with a relative IDE schema reference comment."""
     schema_path = os.path.relpath(repository_root / "schemas/game-list.schema.json", path.parent)
