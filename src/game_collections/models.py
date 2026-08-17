@@ -117,6 +117,10 @@ class GameList(StrictModel):
     pick_quota: Annotated[int, Field(ge=1)] | None = None
     references: list[Reference] = Field(default_factory=list)
     games: list[Game] = Field(min_length=1)
+    # Games an authoritative re-crawl no longer lists, quarantined here instead of
+    # deleted so they can be recovered if they reappear. Excluded from ownership,
+    # eligibility, and sync consideration wherever `games` is read for that purpose.
+    invalid: list[Game] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def validate_games(self) -> Self:

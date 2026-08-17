@@ -253,6 +253,35 @@ def test_pick_quota_exceeding_game_count_is_rejected(tmp_path: Path) -> None:
 # end def test_pick_quota_exceeding_game_count_is_rejected
 
 
+def test_invalid_field_is_optional_and_defaults_to_empty(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text("schema: 1\nname: Bundle\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.invalid == []
+# end def test_invalid_field_is_optional_and_defaults_to_empty
+
+
+def test_invalid_field_round_trips_when_set(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(
+        "schema: 1\nname: Bundle\n"
+        "games:\n  - name: One\n    ids: [steam:440]\n"
+        "invalid:\n  - name: Two\n    ids: [steam:441]\n",
+        encoding="utf-8",
+    )
+
+    loaded = load_game_list(path, lists_root)
+
+    assert [game.name for game in loaded.data.invalid] == ["Two"]
+# end def test_invalid_field_round_trips_when_set
+
+
 def test_symlinked_lists_are_rejected(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()

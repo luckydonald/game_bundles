@@ -115,6 +115,13 @@
       "title": "Games",
       "type": "array"
     },
+    "invalid": {
+      "items": {
+        "$ref": "#/$defs/Game"
+      },
+      "title": "Invalid",
+      "type": "array"
+    },
     "name": {
       "minLength": 1,
       "title": "Name",

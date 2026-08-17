@@ -178,6 +178,37 @@ def test_writer_re_crawl_appends_new_game_without_disturbing_existing(tmp_path: 
 # end def test_writer_re_crawl_appends_new_game_without_disturbing_existing
 
 
+def test_writer_re_crawl_quarantines_a_game_no_longer_on_humble(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    schema = tmp_path / "schemas/game-list.schema.json"
+    schema.parent.mkdir()
+    schema.write_text("{}\n", encoding="utf-8")
+
+    another_game = HumbleItem(
+        machine_name="anothergame",
+        title="Another Game",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(ids=["steam:99"]),
+    )
+    expanded_offer = _offer()
+    expanded_offer.archive.tiers[0].items.append(another_game)
+    expanded_offer.archive.tiers[0].item_count = 3
+    write_humble_offer(expanded_offer, lists_root, archive_root, tmp_path)
+
+    # Humble is authoritative: a re-crawl that no longer lists a game must
+    # quarantine it into `invalid`, not delete it or leave it in `games`.
+    paths = write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
+    list_path = next(path for path in paths if path.suffix == ".yml")
+
+    reloaded = load_game_list(list_path, lists_root)
+    assert [game.name for game in reloaded.data.games] == ["Sample Game"]
+    assert [game.name for game in reloaded.data.invalid] == ["Another Game"]
+# end def test_writer_re_crawl_quarantines_a_game_no_longer_on_humble
+
+
 def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
     offer = _offer()
     game_two = HumbleItem(
