@@ -136,3 +136,46 @@ def test_merge_game_list_takes_bundle_metadata_from_fresh() -> None:
 
     assert merged.name == "New Name"
 # end def test_merge_game_list_takes_bundle_metadata_from_fresh
+
+
+def test_merge_game_list_appends_references_instead_of_overwriting() -> None:
+    itad_reference = Reference(name="isthereanydeal.com bundle", url="https://isthereanydeal.com/bundle/x/")
+    humble_reference = Reference(name="Humble Bundle offer", url="https://www.humblebundle.com/games/x")
+    existing = GameList(
+        schema=1,
+        name="Bundle",
+        references=[itad_reference],
+        games=[Game(name="One", ids=["steam:1"])],
+    )
+    fresh = GameList(
+        schema=1,
+        name="Bundle",
+        references=[humble_reference],
+        games=[Game(name="One", ids=["steam:1"])],
+    )
+
+    merged = merge_game_list(existing, fresh)
+
+    assert merged.references == [itad_reference, humble_reference]
+# end def test_merge_game_list_appends_references_instead_of_overwriting
+
+
+def test_merge_game_list_does_not_duplicate_identical_references() -> None:
+    reference = Reference(name="Humble Bundle offer", url="https://www.humblebundle.com/games/x")
+    existing = GameList(
+        schema=1,
+        name="Bundle",
+        references=[reference],
+        games=[Game(name="One", ids=["steam:1"])],
+    )
+    fresh = GameList(
+        schema=1,
+        name="Bundle",
+        references=[reference],
+        games=[Game(name="One", ids=["steam:1"])],
+    )
+
+    merged = merge_game_list(existing, fresh)
+
+    assert merged.references == [reference]
+# end def test_merge_game_list_does_not_duplicate_identical_references
