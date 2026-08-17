@@ -210,6 +210,49 @@ def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent(tmp_p
 # end def test_repeat_stage_preserves_manual_apps_and_is_semantically_idempotent
 
 
+def test_stage_allows_create_reusing_name_freed_by_delete_in_same_plan(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    created = gateway.stage(orange_box_plan(), tmp_path / "Desktop")
+    gateway.apply(created, lambda _prompt: "REPLACE")
+
+    # Simulate a list moving to a different path (e.g. a tier rename): the old collection ID
+    # is deleted while a new collection ID is created reusing the exact same display name.
+    plan = SyncPlan(
+        launcher="steam",
+        account=STEAM_ID,
+        eligibility=[],
+        changes=[
+            PlannedCollectionChange(
+                list_id="valve/the-orange-box-renamed",
+                target_id=steam_collection_id("valve/the-orange-box-renamed"),
+                name="🗃️ The Orange Box",
+                action="create-or-update",
+                added_ids=["steam:220"],
+            ),
+            PlannedCollectionChange(
+                list_id="valve/the-orange-box",
+                target_id=steam_collection_id("valve/the-orange-box"),
+                name="🗃️ The Orange Box",
+                action="delete",
+            ),
+        ],
+    )
+
+    staged = gateway.stage(plan, tmp_path / "Desktop")
+
+    namespace = parse_json_strict(
+        (staged / f"candidate-{NAMESPACE_NAME}").read_bytes(),
+        CloudStorageNamespaceFile,
+    )
+    old_key = f"user-collections.{steam_collection_id('valve/the-orange-box')}"
+    new_key = f"user-collections.{steam_collection_id('valve/the-orange-box-renamed')}"
+    assert dict(namespace.root)[old_key].is_deleted is True
+    new_payload = SteamCollectionPayload.from_entry(dict(namespace.root)[new_key])
+    assert new_payload.name == "🗃️ The Orange Box"
+# end def test_stage_allows_create_reusing_name_freed_by_delete_in_same_plan
+
+
 def test_delete_stages_tombstone_and_restores_previous_collection(tmp_path: Path) -> None:
     steam_root = build_fake_steam(tmp_path)
     cloud = steam_root / "userdata" / ACCOUNT_ID / "config/cloudstorage"
