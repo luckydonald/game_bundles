@@ -44,7 +44,7 @@ class SteamOptions:
     min_missing: int | None = None
     max_missing: int | None = 0
     unresolved_handling: MissingHandling = "ignore"
-    unconfigured_handling: MissingHandling = "ignore"
+    unsupported_store_handling: MissingHandling = "ignore"
     tier_mode: SteamTierMode = "all"
     reconcile_managed: bool = False
     protected_collection_name: str | None = None
@@ -57,7 +57,7 @@ class SteamOptions:
                 raise ValueError(f"invalid Steam {bound_name!r} bound: {bound!r}")
             # end if
         # end for
-        for handling_name in ("unresolved_handling", "unconfigured_handling"):
+        for handling_name in ("unresolved_handling", "unsupported_store_handling"):
             handling = getattr(self, handling_name)
             if handling not in ("hide", "ignore", "enforce"):
                 raise ValueError(f"invalid Steam {handling_name!r}: {handling!r}")
@@ -148,7 +148,7 @@ class SteamAdapter(LauncherAdapter):
                 game_list.data.games,
                 owned_app_ids,
                 unresolved_handling=self.options.unresolved_handling,
-                unconfigured_handling=self.options.unconfigured_handling,
+                unsupported_store_handling=self.options.unsupported_store_handling,
             )
             pick_quota = game_list.data.pick_quota
             if completion.hidden_count:

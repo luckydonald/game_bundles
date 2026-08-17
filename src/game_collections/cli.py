@@ -747,7 +747,7 @@ def _steam_adapter(
     min_missing: int | None = None,
     max_missing: int | None = None,
     unresolved_handling: MissingHandling = "ignore",
-    unconfigured_handling: MissingHandling = "ignore",
+    unsupported_store_handling: MissingHandling = "ignore",
     tier_mode: SteamTierMode = "all",
     reconcile_managed: bool = False,
 ) -> tuple[SteamAdapter, SteamFileGateway]:
@@ -762,7 +762,7 @@ def _steam_adapter(
         min_missing=min_missing,
         max_missing=max_missing,
         unresolved_handling=unresolved_handling,
-        unconfigured_handling=unconfigured_handling,
+        unsupported_store_handling=unsupported_store_handling,
     )
     if collection is not None and source == "auto":
         source = "collection"
@@ -919,7 +919,7 @@ def eligible_command(
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
-    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
+    unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
     """Report which lists are fully owned by the launcher account."""
@@ -939,7 +939,7 @@ def eligible_command(
             min_missing=min_missing,
             max_missing=max_missing,
             unresolved_handling=unresolved_handling,
-            unconfigured_handling=unconfigured_handling,
+            unsupported_store_handling=unsupported_store_handling,
         )
         if adapter.options.unverified_ownership:
             _confirm_unverified_ownership()
@@ -971,7 +971,7 @@ def sync_command(
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
-    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
+    unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
@@ -992,7 +992,7 @@ def sync_command(
             min_missing=min_missing,
             max_missing=max_missing,
             unresolved_handling=unresolved_handling,
-            unconfigured_handling=unconfigured_handling,
+            unsupported_store_handling=unsupported_store_handling,
             tier_mode=tiers,
             reconcile_managed=True,
         )
@@ -1047,7 +1047,7 @@ def apply_command(
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
-    unconfigured_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unconfigured-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
+    unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
@@ -1090,7 +1090,7 @@ def apply_command(
                 min_missing=min_missing,
                 max_missing=max_missing,
                 unresolved_handling=unresolved_handling,
-                unconfigured_handling=unconfigured_handling,
+                unsupported_store_handling=unsupported_store_handling,
                 tier_mode=tiers,
                 reconcile_managed=True,
             )
@@ -1119,7 +1119,7 @@ def apply_command(
                     min_missing=min_missing,
                     max_missing=max_missing,
                     unresolved_handling=unresolved_handling,
-                    unconfigured_handling=unconfigured_handling,
+                    unsupported_store_handling=unsupported_store_handling,
                     tier_mode=tiers,
                     reconcile_managed=True,
                 )
@@ -1143,7 +1143,7 @@ def apply_command(
                 min_missing=min_missing,
                 max_missing=max_missing,
                 unresolved_handling=unresolved_handling,
-                unconfigured_handling=unconfigured_handling,
+                unsupported_store_handling=unsupported_store_handling,
                 tier_mode=tiers,
                 owned_app_ids=owned_app_ids,
                 ownership_resolver=ownership_resolver,
@@ -1197,7 +1197,7 @@ def apply_command(
                     min_missing=picker.min_missing,
                     max_missing=picker.max_missing,
                     unresolved_handling=unresolved_handling,
-                    unconfigured_handling=unconfigured_handling,
+                    unsupported_store_handling=unsupported_store_handling,
                     tier_mode=picker.tier_mode,
                     reconcile_managed=True,
                 )

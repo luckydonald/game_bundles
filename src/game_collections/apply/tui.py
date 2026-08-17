@@ -440,7 +440,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         min_missing: int | None = None,
         max_missing: int | None = 0,
         unresolved_handling: MissingHandling = "ignore",
-        unconfigured_handling: MissingHandling = "ignore",
+        unsupported_store_handling: MissingHandling = "ignore",
         tier_mode: Literal["all", "highest"] = "highest",
         owned_app_ids: frozenset[int] | None = None,
         ownership_resolver: OwnershipResolver | None = None,
@@ -466,7 +466,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         self.min_missing: int | None = min_missing
         self.max_missing: int | None = max_missing
         self.unresolved_handling: MissingHandling = unresolved_handling
-        self.unconfigured_handling: MissingHandling = unconfigured_handling
+        self.unsupported_store_handling: MissingHandling = unsupported_store_handling
         self.tier_mode: Literal["all", "highest"] = tier_mode
     # end def __init__
 
@@ -534,13 +534,13 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             ),
             FilterSelect(
                 [
-                    ("unconfigured: hide", "hide"),
-                    ("unconfigured: ignore", "ignore"),
-                    ("unconfigured: enforce", "enforce"),
+                    ("unsupported store: hide", "hide"),
+                    ("unsupported store: ignore", "ignore"),
+                    ("unsupported store: enforce", "enforce"),
                 ],
-                value=self.unconfigured_handling,
+                value=self.unsupported_store_handling,
                 allow_blank=False,
-                id="filter-unconfigured-handling",
+                id="filter-unsupported-store-handling",
             ),
             FilterSelect(
                 [("tiers: highest", "highest"), ("tiers: all", "all")],
@@ -687,7 +687,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             game_list.data.games,
             self._owned_app_ids,
             unresolved_handling=self.unresolved_handling,
-            unconfigured_handling=self.unconfigured_handling,
+            unsupported_store_handling=self.unsupported_store_handling,
         )
     # end def _bundle_completion
 
@@ -864,7 +864,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
     # end def _game_label
 
     def _game_hidden(self, game: Game) -> bool:
-        """Whether `unresolved_handling`/`unconfigured_handling` drops this game entirely.
+        """Whether `unresolved_handling`/`unsupported_store_handling` drops this game entirely.
 
         Mirrors ``evaluate_completion``'s own "hide" branch: a Steam game is never hidden
         here, only the non-Steam ones this setting actually governs.
@@ -874,7 +874,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             return False
         # end if
         is_unresolved = all(identifier.provider == "unresolved" for identifier in qualified_ids)
-        handling = self.unresolved_handling if is_unresolved else self.unconfigured_handling
+        handling = self.unresolved_handling if is_unresolved else self.unsupported_store_handling
         return handling == "hide"
     # end def _game_hidden
 
@@ -982,10 +982,10 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 self._deselect_filtered_out()
                 self._rebuild_tree()
             # end if
-        elif event.select.id == "filter-unconfigured-handling":
+        elif event.select.id == "filter-unsupported-store-handling":
             new_handling = cast(MissingHandling, event.value)
-            if new_handling != self.unconfigured_handling:
-                self.unconfigured_handling = new_handling
+            if new_handling != self.unsupported_store_handling:
+                self.unsupported_store_handling = new_handling
                 self._deselect_filtered_out()
                 self._rebuild_tree()
             # end if

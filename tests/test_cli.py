@@ -105,7 +105,7 @@ def test_sync_help_lists_matching_and_tier_choices() -> None:
     assert "--min-missing" in result.output
     assert "--max-missing" in result.output
     assert "--unresolved-handling" in result.output
-    assert "--unconfigured-handling" in result.output
+    assert "--unsupported-store-h" in result.output  # truncated by rich's help table at this column width
     assert "--tiers" in result.output
     assert "highest" in result.output
 # end def test_sync_help_lists_matching_and_tier_choices
@@ -220,7 +220,7 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             min_missing: int | None = None,
             max_missing: int | None = 0,
             unresolved_handling: str = "ignore",
-            unconfigured_handling: str = "ignore",
+            unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
             owned_app_ids: object = None,
             ownership_resolver: object = None,
@@ -345,7 +345,7 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             min_missing: int | None = None,
             max_missing: int | None = 0,
             unresolved_handling: str = "ignore",
-            unconfigured_handling: str = "ignore",
+            unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
             owned_app_ids: object = None,
             ownership_resolver: object = None,
