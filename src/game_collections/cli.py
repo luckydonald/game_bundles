@@ -1030,6 +1030,18 @@ def sync_command(
 # end def sync_command
 
 
+def _resolve_filter[T](cli_value: T | None, config_value: T | None, default: T) -> T:
+    """Precedence for an `apply` filter: explicit CLI flag, then a saved selection's value, then the hardcoded default."""
+    if cli_value is not None:
+        return cli_value
+    # end if
+    if config_value is not None:
+        return config_value
+    # end if
+    return default
+# end def _resolve_filter
+
+
 @app.command("apply")
 def apply_command(
     launcher: Annotated[str, typer.Argument()] = "steam",
@@ -1044,11 +1056,11 @@ def apply_command(
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
-    min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
-    max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
-    unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
-    unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
-    tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
+    min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing. Falls back to a saved selection's value, then unset (no lower bound), if not passed.")] = None,
+    max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing. Falls back to a saved selection's value, then 0, if not passed.")] = None,
+    unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"] | None, typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership. Falls back to a saved selection's value, then `ignore`, if not passed.")] = None,
+    unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"] | None, typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership. Falls back to a saved selection's value, then `ignore`, if not passed.")] = None,
+    tiers: Annotated[Literal["all", "highest"] | None, typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier. Falls back to a saved selection's value, then `highest`, if not passed.")] = None,
     selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
 ) -> None:
     """Interactively pick which bundles to sync, then continue like `sync`."""
@@ -1068,6 +1080,22 @@ def apply_command(
     try:
         previous_selection = load_selection(selection_config)
         previously_excluded = excluded_list_ids(previous_selection)
+
+        # Filter-related flags default to `None` (not passed) so a saved selection's own
+        # values can fill the gap; only the final hardcoded default below applies when
+        # neither an explicit flag nor a saved selection provides one.
+        min_missing = _resolve_filter(min_missing, previous_selection.min_missing if previous_selection is not None else None, None)
+        max_missing = _resolve_filter(max_missing, previous_selection.max_missing if previous_selection is not None else None, 0)
+        unresolved_handling = _resolve_filter(unresolved_handling, previous_selection.unresolved_handling if previous_selection is not None else None, "ignore")
+        unsupported_store_handling = _resolve_filter(unsupported_store_handling, previous_selection.unsupported_store_handling if previous_selection is not None else None, "ignore")
+        tiers = _resolve_filter(tiers, previous_selection.tier_mode if previous_selection is not None else None, "highest")
+        # No CLI flags exist for these (picker-only filters); they only ever come from a
+        # saved selection, else the hardcoded default.
+        min_items = previous_selection.min_items if previous_selection is not None else None
+        max_items = previous_selection.max_items if previous_selection is not None else None
+        date_after = previous_selection.date_after if previous_selection is not None else None
+        date_before = previous_selection.date_before if previous_selection is not None else None
+        show_filtered = previous_selection.show_filtered if previous_selection is not None else False
 
         # Best-effort: resolved once up front so the picker can mark bundles/games you
         # don't own yet. Not required to open the picker or to cancel out of it - if Steam
@@ -1145,6 +1173,11 @@ def apply_command(
                 unresolved_handling=unresolved_handling,
                 unsupported_store_handling=unsupported_store_handling,
                 tier_mode=tiers,
+                min_items=min_items,
+                max_items=max_items,
+                date_after=date_after,
+                date_before=date_before,
+                show_filtered=show_filtered,
                 owned_app_ids=owned_app_ids,
                 ownership_resolver=ownership_resolver,
                 confirm_unverified_ownership=confirm_unverified_ownership,
@@ -1220,7 +1253,14 @@ def apply_command(
                 previously_excluded = set(selection.excluded)
                 min_missing = picker.min_missing
                 max_missing = picker.max_missing
+                unresolved_handling = picker.unresolved_handling
+                unsupported_store_handling = picker.unsupported_store_handling
                 tiers = picker.tier_mode
+                min_items = picker.row_filters.min_items
+                max_items = picker.row_filters.max_items
+                date_after = picker.row_filters.date_after
+                date_before = picker.row_filters.date_before
+                show_filtered = picker.show_filtered
                 ownership_resolver = None
                 confirm_unverified_ownership = False
                 continue

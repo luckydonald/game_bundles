@@ -10,6 +10,7 @@ from typing import Literal
 import yaml
 from pydantic import Field, ValidationError
 
+from game_collections.completion import MissingHandling
 from game_collections.models import StrictModel
 from game_collections.sources.common import atomic_write
 
@@ -30,6 +31,16 @@ class ApplySelection(StrictModel):
     selected: list[str] = Field(default_factory=list)
     excluded: list[str] = Field(default_factory=list)
     updated_at: datetime
+    min_items: int | None = None
+    max_items: int | None = None
+    date_after: str | None = None
+    date_before: str | None = None
+    min_missing: int | None = None
+    max_missing: int | None = 0
+    unresolved_handling: MissingHandling = "ignore"
+    unsupported_store_handling: MissingHandling = "ignore"
+    tier_mode: Literal["all", "highest"] = "highest"
+    show_filtered: bool = False
 
 # end class ApplySelection
 
