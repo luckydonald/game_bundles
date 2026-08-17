@@ -5,3 +5,10 @@
 - [x] Rename "Unconfigured Handling" (`apply`, `sync`) to something better named, which is easier to understand.
 - [x] Analyze the difference between `isthereanydeal` crawling (current commits, i.e. `9f39eff31fe5ac1dfeb44d1b56d941deb42d4810`) with a humble bundle crawl (`1a12511d471dd97d49e5c9e07f7ec725ec12f91b`), and why they are diffenrent.
   - [x] Check that the `humblebundle` crawler supports merging with existing results. Again, prefer enhancing - not overwriting.
+- [ ] The order of `tier-1` to `tier-3` is reversed between `humblebundle` and `isthereanydeal`, which causes full file conflicts.
+  - The full bundle is the highest tier.
+  - I believe `humblebundle` has it wrong.
+- [ ] `references` should be appended to, not overwritten.
+- [ ] HumbleBundle shall still be authoritative with its games, so not on humble = remove from bundle.
+      - hehe, that rhymes!
+- [ ] Validate by running both scrapers and comparing the list's output, if there are remaining issues to tackle.
