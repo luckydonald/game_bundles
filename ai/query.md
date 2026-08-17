@@ -1816,3 +1816,41 @@ both tui&non-tui shall confirm none-mode.
 ❯ Conversation compacted <kbd>manual</kbd>:
 > - [Result (`44205` chars, `43.3 KB`)](output/compact/001.a88cfd32-6e91-4619-b8d3-22b0872edf9c/result.md)
 
+❯ /plan fix new items of `ai/todo.md`.
+
+❯ Task Notification:
+> - Task `a924a6513c362643a` <kbd>completed</kbd>
+> - Tool `toolu_0172mZXBWbezHk4aFiyfLfaA`
+> - > Agent "Find references field handling in merge and write paths" finished
+> - [Query (`1628` chars, `1.59 KB`)](output/agents/021.a924a6513c362643a/prompt.md)
+> - [Answer (`3376` chars, `3.32 KB`)](output/agents/021.a924a6513c362643a/result.md)
+> - [Raw log (`109008` chars, `107 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/a924a6513c362643a.output)
+> - `16` tools, `24547` tokens, `0.820583 s`
+
+❯ Task Notification:
+> - Task `ace808fd01fe4f190` <kbd>completed</kbd>
+> - Tool `toolu_013WS8im71EQbURHDxsDLYmw`
+> - > Agent "Find humble authoritative removal and merge_game_list removal semantics" finished
+> - [Query (`2148` chars, `2.11 KB`)](output/agents/022.ace808fd01fe4f190/prompt.md)
+> - [Answer (`4769` chars, `4.68 KB`)](output/agents/022.ace808fd01fe4f190/result.md)
+> - [Raw log (`145546` chars, `142 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/ace808fd01fe4f190.output)
+> - `9` tools, `33934` tokens, `0.725883 s`
+
+❯ Task Notification:
+> - Task `af7e09a7ac10dfb66` <kbd>completed</kbd>
+> - Tool `toolu_01ALqdyBooYt13rbbeaExmss`
+> - > Agent "Find tier numbering logic in both crawlers" finished
+> - [Query (`1536` chars, `1.5 KB`)](output/agents/023.af7e09a7ac10dfb66/prompt.md)
+> - [Answer (`2873` chars, `2.82 KB`)](output/agents/023.af7e09a7ac10dfb66/result.md)
+> - [Raw log (`246481` chars, `241 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/af7e09a7ac10dfb66.output)
+> - `19` tools, `50235` tokens, `1.38882 s`
+
+❯ Task Notification:
+> - Task `aeb923f09e2865e53` <kbd>completed</kbd>
+> - Tool `toolu_01WvRe6bkPb5ZABiLMVQgj5M`
+> - > Agent "Verify humblebundle tier order construction end-to-end" finished
+> - [Query (`3673` chars, `3.6 KB`)](output/agents/024.aeb923f09e2865e53/prompt.md)
+> - [Answer (`3396` chars, `3.34 KB`)](output/agents/024.aeb923f09e2865e53/result.md)
+> - [Raw log (`182049` chars, `178 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/aeb923f09e2865e53.output)
+> - `20` tools, `37350` tokens, `1.59027 s`
+
