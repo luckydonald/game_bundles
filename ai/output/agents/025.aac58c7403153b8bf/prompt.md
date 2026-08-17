@@ -1,0 +1,9 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to know what game-name-matching/normalization logic already exists, before designing a new "is this the same game" comparison for a merge function.
+
+1. Read `src/game_collections/search.py` in full — it does ranked cross-storefront search matching by name. Find any name-normalization function it uses (lowercasing, stripping punctuation/dashes/colons, removing "the"/edition suffixes, fuzzy matching library like rapidfuzz/thefuzz/difflib, etc). Quote the exact function(s) and their signatures.
+2. Read `src/game_collections/sources/storefronts.py` for the same — does it do its own name normalization/matching when resolving a scraped title to a storefront listing?
+3. Check `src/game_collections/models.py` for how `GameList.games` uniqueness is validated (the `name.casefold()` key) — is casefold the ONLY normalization used anywhere in the models layer, or is there a richer normalize helper already?
+4. Check `src/game_collections/sources/common.py` for `merge_game_list` (already exists, matches by `name.casefold()` only) and check if there's any existing "same game" comparison helper anywhere else in the codebase (grep for "normalize", "fuzzy", "similar", "match_name", "slugify" across `src/`).
+5. Check `pyproject.toml` for any fuzzy-matching dependency already installed (e.g. `rapidfuzz`, `thefuzz`, `python-Levenshtein`).
+
+Report under 350 words: what normalization/matching utilities already exist and where (file:line, function signature), whether any could be reused/extended for a new "same game" comparison cascade (ids match > exact name > normalized name > ???), and whether a fuzzy-matching library is already a dependency. Code-referenced.

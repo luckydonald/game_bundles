@@ -217,6 +217,53 @@ def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
 # end def test_writer_numbers_multiple_tiers
 
 
+def test_writer_sorts_tiers_ascending_by_item_count_regardless_of_source_order(tmp_path: Path) -> None:
+    """Humble's own `tier_order` lists the full/entire tier first (descending);
+    the writer must still number tier-1.yml as the smallest tier and the
+    highest-numbered file as the full bundle."""
+    offer = _offer()
+    game_two = HumbleItem(
+        machine_name="samplegame2",
+        title="Sample Game Two",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(ids=["steam:43"]),
+    )
+    full_tier = offer.archive.tiers[0].model_copy(
+        update={
+            "identifier": "all2",
+            "name": "Entire 3 Item Bundle",
+            "item_count": 3,
+            "items": [*offer.archive.tiers[0].items, game_two],
+        }
+    )
+    smallest_tier = offer.archive.tiers[0]
+    # Source order is descending (full tier first), matching real Humble `tier_order` data.
+    archive = offer.archive.model_copy(update={"tiers": [full_tier, smallest_tier]})
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(
+        CrawledHumbleOffer(archive=archive, source={}),
+        tmp_path / "lists",
+        tmp_path / "archives",
+        tmp_path,
+    )
+
+    bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
+    lists_root = tmp_path / "lists"
+    first_path = lists_root / bundle_root / "tier-1.yml"
+    second_path = lists_root / bundle_root / "tier-2.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
+    assert [game.name for game in load_game_list(first_path, lists_root).data.games] == ["Sample Game"]
+    assert [game.name for game in load_game_list(second_path, lists_root).data.games] == [
+        "Sample Game",
+        "Sample Game Two",
+    ]
+# end def test_writer_sorts_tiers_ascending_by_item_count_regardless_of_source_order
+
+
 def test_writer_choice_with_pick_options_writes_one_list_per_option(tmp_path: Path) -> None:
     offer = _offer("choice")
 
