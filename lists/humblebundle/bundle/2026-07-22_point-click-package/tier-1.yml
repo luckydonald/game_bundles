@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Point Click Package — Entire 10 Item Bundle
+name: Point Click Package — 4 Item Bundle
 tier: 1
 references:
 - name: Humble Bundle offer
@@ -10,6 +10,16 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-22_point-click-package/source.json
 games:
+- name: When the Past Was Around
+  ids:
+  - unresolved:source:humblebundle:whenthepastwasaround
+- name: Sunday Gold
+  ids:
+  - unresolved:source:humblebundle:sundaygold
+- name: 'STASIS: BONE TOTEM'
+  ids:
+  - unresolved:source:humblebundle:stasis_bonetotem
+invalid:
 - name: Syberia Remastered
   ids:
   - steam:3660220
@@ -28,12 +38,3 @@ games:
 - name: Unavowed
   ids:
   - unresolved:source:humblebundle:unavowed
-- name: When the Past Was Around
-  ids:
-  - unresolved:source:humblebundle:whenthepastwasaround
-- name: Sunday Gold
-  ids:
-  - unresolved:source:humblebundle:sundaygold
-- name: 'STASIS: BONE TOTEM'
-  ids:
-  - unresolved:source:humblebundle:stasis_bonetotem

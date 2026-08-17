@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: 'No More Robots: The Unhinged Indie Anthology — Entire 11 Item Bundle'
+name: 'No More Robots: The Unhinged Indie Anthology — 5 Item Bundle'
 tier: 1
 references:
 - name: Humble Bundle offer
@@ -10,6 +10,22 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-05_no-more-robots-unhinged-indie-anthology/source.json
 games:
+- name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
+  ids:
+  - unresolved:source:humblebundle:slayersx_terminalaftermath_venganceoftheslayer
+- name: Not Tonight 2
+  ids:
+  - unresolved:source:humblebundle:nottonight2
+- name: Tombstar
+  ids:
+  - unresolved:source:humblebundle:tombstar
+- name: Not Tonight
+  ids:
+  - unresolved:source:humblebundle:nottonight
+- name: 'Not Tonight: One Love'
+  ids:
+  - unresolved:source:humblebundle:nottonight_onelove
+invalid:
 - name: Earth Must Die
   ids:
   - unresolved:source:humblebundle:earthmustdie
@@ -28,18 +44,3 @@ games:
 - name: Hypnospace Outlaw
   ids:
   - unresolved:source:humblebundle:hypnospaceoutlaw
-- name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
-  ids:
-  - unresolved:source:humblebundle:slayersx_terminalaftermath_venganceoftheslayer
-- name: Not Tonight 2
-  ids:
-  - unresolved:source:humblebundle:nottonight2
-- name: Tombstar
-  ids:
-  - unresolved:source:humblebundle:tombstar
-- name: Not Tonight
-  ids:
-  - unresolved:source:humblebundle:nottonight
-- name: 'Not Tonight: One Love'
-  ids:
-  - unresolved:source:humblebundle:nottonight_onelove
