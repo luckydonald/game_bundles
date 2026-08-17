@@ -1854,3 +1854,115 @@ both tui&non-tui shall confirm none-mode.
 > - [Raw log (`182049` chars, `178 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/aeb923f09e2865e53.output)
 > - `20` tools, `37350` tokens, `1.59027 s`
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Item 12 ("not on Humble = remove from bundle") conflicts with the existing merge_game_list design, which never removes games and has no way to tell a manually-added/edited game from a scraped one. How should removal work?
+>> 2. Item 14 asks to run both scrapers and compare output to find remaining issues. This means live network crawls that write into tracked lists/archives files. Should I actually run them as part of this task?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Removal policy** (1/2) <kbd>Single Select</kbd><br>
+>> Item 12 ("not on Humble = remove from bundle") conflicts with the existing merge_game_list design, which never removes games and has no way to tell a manually-added/edited game from a scraped one. How should removal work?
+> - [ ] 1\. Remove unconditionally (Recommended)
+>   - _Add an `authoritative` mode to merge_game_list: for humblebundle's merge, drop any existing game absent from the fresh crawl, no exceptions. Simple, matches the todo literally, but a manual addition or a resolver's `ids:` fix on a game Humble later drops would be silently deleted on the next re-crawl._
+> - [ ] 2\. Add a manual-protection marker first
+>   - _Introduce a `manual: bool` (or similar provenance) field on Game before wiring up removal, so hand-added/edited entries survive a re-crawl even when Humble drops the game. More upfront model/schema work (new field, schema regen, migration of existing lists) but avoids silent data loss._
+> - [x] 3\. _Type something:_
+>   - > There are no hand-edited items, only possibly items from another crawler (`isthereanydeal`).
+>
+>> **Live scrape run** (2/2) <kbd>Single Select</kbd><br>
+>> Item 14 asks to run both scrapers and compare output to find remaining issues. This means live network crawls that write into tracked lists/archives files. Should I actually run them as part of this task?
+> - [ ] 1\. Yes, run and compare (Recommended)
+>   - _After implementing items 8/11/12, run `scrape humblebundle` and `scrape isthereanydeal` for one or two overlapping bundles, diff the resulting lists, and fix anything else that surfaces. I'll confirm with you before running anything that writes/commits._
+> - [ ] 2\. No, leave it to you
+>   - _I'll implement and unit-test items 8/11/12 only. You run the live scrapers yourself afterward and report back if anything else needs fixing._
+> - [x] 3\. _Type something:_
+>   - > Yes you should. With the last todo update commit (currently before this question's commit, `ac2ba8b5eaeeaa7269deca417c238683433302b8`) you should add a `--git` flag to use as step before.
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. For item 12's removal safety: since there are no hand-edited items, only the risk of Humble's crawl wiping out games an isthereanydeal (ITAD) crawl already put into a lists/humblebundle/... file, does this design work? Detect provenance from `existing.references`: if the existing file already carries Humble's own "Humble Bundle offer" reference (i.e. Humble has crawled this file before), treat Humble as authoritative and remove absent games on this merge. If the existing file only has an ITAD reference (i.e. this is Humble's first time claiming a file ITAD wrote first), skip removal for this one merge (keep the union), and let authoritative removal kick in on the *next* re-crawl once the file carries a Humble reference.
+>> 2. For item 14's `--git` flag: what should it actually do as "a step before" running a live scrape, so I implement the right thing?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Removal provenance** (1/2) <kbd>Single Select</kbd><br>
+>> For item 12's removal safety: since there are no hand-edited items, only the risk of Humble's crawl wiping out games an isthereanydeal (ITAD) crawl already put into a lists/humblebundle/... file, does this design work? Detect provenance from `existing.references`: if the existing file already carries Humble's own "Humble Bundle offer" reference (i.e. Humble has crawled this file before), treat Humble as authoritative and remove absent games on this merge. If the existing file only has an ITAD reference (i.e. this is Humble's first time claiming a file ITAD wrote first), skip removal for this one merge (keep the union), and let authoritative removal kick in on the *next* re-crawl once the file carries a Humble reference.
+> - [ ] 1\. Yes, that design (Recommended)
+>   - _Add an `authoritative: bool` param to merge_game_list; humblebundle's crawler decides it per-file by checking for its own prior reference marker before merging._
+> - [ ] 2\. Simpler: always authoritative for humble
+>   - _Skip the provenance check entirely — humble's crawler always removes absent games on every merge, even the very first time it touches a file ITAD wrote. Simpler code, but the first Humble crawl of an ITAD-seeded bundle could drop games ITAD found that Humble's own resolver doesn't produce._
+> - [x] 3\. _Type something:_
+>   - > While I like the idea, Simpler: always authoritative for humble. However, maybe keep a "invalid" section where items not matching could be moved to? Btw. I'd also talk about how we compare them for "being the same game". My thought right now would be the following checks: **(1)** (steam) ids: simple and authorative when present. **(2)** Name of the game (if it matches, go for it). **(3)** Name, but lower case and removing filler stuff (i.e. dashes, colons, spaces, …) - so almost like a _normalized_ version of the name. **(4)** do we have any other good comparison metrics? ; what is the current comparison like?
+>
+>> **--git flag behavior** (2/2) <kbd>Single Select</kbd><br>
+>> For item 14's `--git` flag: what should it actually do as "a step before" running a live scrape, so I implement the right thing?
+> - [ ] 1\. Auto-commit pending changes first (Recommended)
+>   - _Before the scrape starts, if the git working tree has uncommitted changes, commit them (via the existing pending-commit.md + tag_backup.py flow) so the scrape starts from a clean baseline — making the scrape's own diff easy to review/revert afterward. Refuses to run if commit fails._
+> - [ ] 2\. Just verify clean, don't commit
+>   - _Before the scrape starts, abort with an error if the git working tree isn't already clean — forces you to commit manually first, the flag only gates/checks rather than acting._
+> - [x] 3\. _Type something:_
+>   - > The auto-commit `pending-commit.md` flow is something the AI agent can do, not the script with the `--git` flag. Probably autostash would make sense there. Force restore it after commit.
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `aac58c7403153b8bf` <kbd>completed</kbd>
+> - Tool `toolu_019p6WTSaMYtVbgpdowK44ZD`
+> - > Agent "Find existing game name matching/normalization utilities" finished
+> - [Query (`1729` chars, `1.69 KB`)](output/agents/025.aac58c7403153b8bf/prompt.md)
+> - [Answer (`2738` chars, `2.69 KB`)](output/agents/025.aac58c7403153b8bf/result.md)
+> - [Raw log (`129486` chars, `127 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/43e8901a-66ee-45b2-9ade-1ee4796cca36/tasks/aac58c7403153b8bf.output)
+> - `8` tools, `30694` tokens, `0.475 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Where should removed-but-not-matched games go for the "invalid" section (item 12)? merge_game_list currently returns one GameList that maps 1:1 to one tier-N.yml/bundle.yml file.
+>> 2. For the "same game" matching cascade in merge_game_list (ids > exact name > normalized name), should I add a 4th fuzzy-similarity tier (e.g. via a new rapidfuzz dependency) for near-miss titles, or stop at 3 tiers and route anything that doesn't clear tier 3 straight to "invalid"?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Invalid storage** (1/2) <kbd>Single Select</kbd><br>
+>> Where should removed-but-not-matched games go for the "invalid" section (item 12)? merge_game_list currently returns one GameList that maps 1:1 to one tier-N.yml/bundle.yml file.
+> - [x] 1\. New field on GameList (Recommended)
+>   - _Add `invalid: list[Game] = []` to the GameList model, written into the same tier-N.yml/bundle.yml file, right alongside `games:`. Requires a schema regen (schemas/game-list.schema.json) and a lists/README.md note that `invalid` entries are excluded from ownership/eligibility checks, but keeps everything about one bundle tier in one file._
+> - [ ] 2\. Separate archive-only file
+>   - _Write removed games to a plain JSON/YAML file under archives/humblebundle/bundle/<date>-<slug>/ (like the existing metadata.json/source.json crawl artifacts), outside the public list schema. No schema change needed, but it's not visible next to lists/ the way the todo's "section" wording suggests, and nothing currently reads archive-side files back for merging._
+> - [ ] 3\. _Type something._
+>
+>> **Fuzzy tier?** (2/2) <kbd>Single Select</kbd><br>
+>> For the "same game" matching cascade in merge_game_list (ids > exact name > normalized name), should I add a 4th fuzzy-similarity tier (e.g. via a new rapidfuzz dependency) for near-miss titles, or stop at 3 tiers and route anything that doesn't clear tier 3 straight to "invalid"?
+> - [ ] 1\. Stop at 3 tiers (Recommended)
+>   - _ids overlap > exact name (casefold) > storefronts.normalized_title() reuse. No new dependency. Anything not caught by these becomes a genuinely new/removed game (added or moved to invalid)._
+> - [x] 2\. Add a 4th fuzzy tier
+>   - _Pull in rapidfuzz (new dependency) for a similarity-threshold tier below normalized-name, to catch things like "Foo: Deluxe Edition" vs "Foo". More matches caught automatically, but a new dependency plus a similarity-threshold constant that needs tuning/testing._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Rewrite the plan's .md to not introduce linebreaks in prose anywhere but only at sentence symbols: End of sentence (preferred), and if it's getting really really long otherwise, after a comma/dash/etc. too (not preferable). Avoid splitting after random words in the middle of a sentence. However, it's still alright to have multiple sentences in a line, linebreaks are not mandatory after a sentence. Basically, keep it around the typical 140 lenght, with sentences. That's a soft limit, a bit more or less doesn't really hurt.
+
+❯ Canges:
+- The `--git` **is** an autocommit, with autostash-before-and-restore-after-crawl.
+- The _`--git` flag_ is step 4,  _live validation run_ is a new item 5.
+- For step 5, it's alright to have it write files (and the script to `--git` commit).
+- mention the lplp skill to follow for each of those steps via @ + ai/skills/commit-with-lplp-style/SKILL.md
+
+❯ The `--git` does not need to follow the commit skill directly, rather follow what the github crawl jobs did. The stash restore must succeed to restore before-crawl, so if normal unstash does not work, the old commited version of that file + the stash diff should work. Restoring toched files to pre-crawl + local changes is totally fine.
+
+❯ Add upgrading the crawl pipline files to run with `--git` as a new step at the end.
+

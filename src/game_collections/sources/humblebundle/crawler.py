@@ -332,6 +332,11 @@ def write_humble_offer(
             tiers_with_games.append((tier, games))
         # end if
     # end for
+    # Humble's own `tier_order` lists the full/entire tier first (descending item
+    # count); re-sort ascending so `tier-1.yml` is the smallest tier and the
+    # highest-numbered file is always the full bundle, matching isthereanydeal's
+    # convention and avoiding cross-source file conflicts.
+    tiers_with_games.sort(key=lambda pair: pair[0].item_count)
     for rank, (tier, games) in enumerate(tiers_with_games, start=1):
         name = archive.name if archive.kind == "choice" else f"{archive.name} — {tier.name}"
         if archive.kind == "choice":
