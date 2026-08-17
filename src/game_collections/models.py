@@ -51,11 +51,21 @@ class QualifiedGameId(StrictModel):
 # end class QualifiedGameId
 
 
+class GameGroup(StrictModel):
+    """Provenance link for Games split out of one compound source offer."""
+
+    id: NonEmptyString
+    name: NonEmptyString
+
+# end class GameGroup
+
+
 class Game(StrictModel):
     """A named game with one or more storefront identities."""
 
     name: NonEmptyString
     ids: list[NonEmptyString] = Field(min_length=1)
+    group: GameGroup | None = None
 
     @model_validator(mode="after")
     def validate_ids(self) -> Self:
@@ -119,6 +129,19 @@ class GameList(StrictModel):
         if len(identities) != len(set(identities)):
             raise ValueError("list contains duplicate qualified game IDs")
         # end if
+
+        group_names: dict[str, str] = {}
+        for game in self.games:
+            if game.group is None:
+                continue
+            # end if
+            existing_name = group_names.get(game.group.id)
+            if existing_name is None:
+                group_names[game.group.id] = game.group.name
+            elif existing_name != game.group.name:
+                raise ValueError(f"games in group {game.group.id!r} have inconsistent group names")
+            # end if
+        # end for
 
         if self.pick_quota is not None and self.pick_quota > len(self.games):
             raise ValueError(f"pick_quota {self.pick_quota} exceeds the list's {len(self.games)} game(s)")
