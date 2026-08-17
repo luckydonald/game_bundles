@@ -274,6 +274,82 @@ def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
 # end def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises
 
 
+def test_git_commit_message_manual_style_has_no_ci_wording() -> None:
+    from game_collections.cli import _git_commit_message
+
+    message = _git_commit_message("humblebundle", "manual", "Archived offers", "scrape humblebundle --git", "None unresolved.")
+
+    assert message.startswith("[crawl|humblebundle] manual scrape:\n")
+    assert "scheduled CI" not in message
+    assert "Manual `scrape humblebundle --git` run." in message
+    assert "None unresolved." in message
+# end def test_git_commit_message_manual_style_has_no_ci_wording
+
+
+def test_git_commit_message_auto_style_includes_ci_wording_and_run_id(monkeypatch: MonkeyPatch) -> None:
+    from game_collections.cli import _git_commit_message
+
+    monkeypatch.setenv("GITHUB_RUN_ID", "12345")
+
+    message = _git_commit_message("humblebundle", "auto", "Archived offers", "scrape humblebundle --git", "None unresolved.")
+
+    assert message.startswith("[crawl|humblebundle] automated weekly scrape:\n")
+    assert "via scheduled CI" in message
+    assert "(run 12345)" in message
+# end def test_git_commit_message_auto_style_includes_ci_wording_and_run_id
+
+
+def test_git_commit_message_auto_style_omits_run_note_outside_ci(monkeypatch: MonkeyPatch) -> None:
+    from game_collections.cli import _git_commit_message
+
+    monkeypatch.delenv("GITHUB_RUN_ID", raising=False)
+
+    message = _git_commit_message("humblebundle", "auto", "Archived offers", "scrape humblebundle --git", "None unresolved.")
+
+    assert "(run" not in message
+# end def test_git_commit_message_auto_style_omits_run_note_outside_ci
+
+
+def test_scrape_humblebundle_git_style_rejects_invalid_value() -> None:
+    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--git-style", "bogus"])
+
+    assert result.exit_code == 2
+    assert "--git-style must be 'auto' or 'manual'" in result.output
+# end def test_scrape_humblebundle_git_style_rejects_invalid_value
+
+
+def test_scrape_humblebundle_git_style_defaults_to_manual_wording(monkeypatch: MonkeyPatch) -> None:
+    from game_collections.sources.humblebundle.crawler import HumbleCrawlReport
+    from game_collections.sources.humblebundle.resolver import HumbleResolutionMap
+
+    captured_messages: list[str] = []
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: "deadbeef")
+    monkeypatch.setattr("game_collections.cli.git_ops.autostash", lambda root: True)
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.commit_changed_paths",
+        lambda root, paths, message: captured_messages.append(message) or True,
+    )
+    monkeypatch.setattr("game_collections.cli.git_ops.restore_autostash", lambda root, head: None)
+    monkeypatch.setattr(
+        "game_collections.cli.HumbleHttpClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
+    )
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+    monkeypatch.setattr(
+        "game_collections.cli.crawl_humble_offers",
+        lambda *args, **kwargs: HumbleCrawlReport(offers=(), errors=()),
+    )
+
+    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+
+    assert result.exit_code == 0, result.output
+    assert captured_messages == ["[crawl|humblebundle] manual scrape:\nManual `game-collections scrape humblebundle --git` run.\n\nNone unresolved.\n"]
+# end def test_scrape_humblebundle_git_style_defaults_to_manual_wording
+
+
 def test_apply_help_lists_options() -> None:
     result = CliRunner().invoke(app, ["apply", "--help"])
 

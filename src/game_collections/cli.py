@@ -425,6 +425,20 @@ def complete_command(
 # end def complete_command
 
 
+def _git_commit_message(source: str, style: str, summary: str, invocation: str, unresolved_line: str) -> str:
+    """Build a `--git` commit message; `style` picks CI-flavored vs. plainly manual wording."""
+    if style == "auto":
+        run_note = f" (run {os.environ['GITHUB_RUN_ID']})" if os.environ.get("GITHUB_RUN_ID") else ""
+        body = f"workflow: {summary} via scheduled CI.\n\nAutomated `{invocation}` run from the weekly GitHub Actions workflow{run_note}."
+        kind = "automated weekly"
+    else:
+        body = f"Manual `{invocation}` run."
+        kind = "manual"
+    # end if
+    return f"[crawl|{source}] {kind} scrape:\n{body}\n\n{unresolved_line}\n"
+# end def _git_commit_message
+
+
 @scrape_app.command("humblebundle")
 def scrape_humblebundle_command(
     urls: Annotated[
@@ -451,8 +465,19 @@ def scrape_humblebundle_command(
             help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
         ),
     ] = False,
+    git_style: Annotated[
+        str,
+        typer.Option(
+            "--git-style",
+            help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
+        ),
+    ] = "manual",
 ) -> None:
     """Archive current Humble Choice and active Games bundles."""
+    if git_style not in {"auto", "manual"}:
+        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
+        raise typer.Exit(2)
+    # end if
     repository_root = Path.cwd().resolve()
     pre_crawl_head = git_ops.head(repository_root) if git else None
     stashed = git_ops.autostash(repository_root) if git else False
@@ -520,10 +545,12 @@ def scrape_humblebundle_command(
                 if unresolved
                 else "None unresolved."
             )
-            message = (
-                "[crawl|humblebundle] automated scrape:\n"
-                "Archived Humble Bundle offers via `game-collections scrape humblebundle --git`.\n\n"
-                f"{unresolved_line}\n"
+            message = _git_commit_message(
+                "humblebundle",
+                git_style,
+                "Archived this week's Humble Bundle offers",
+                "game-collections scrape humblebundle --git",
+                unresolved_line,
             )
             git_ops.commit_changed_paths(
                 repository_root, ["lists", "archives", str(resolution_map)], message
@@ -725,8 +752,19 @@ def scrape_isthereanydeal_command(
             help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
         ),
     ] = False,
+    git_style: Annotated[
+        str,
+        typer.Option(
+            "--git-style",
+            help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
+        ),
+    ] = "manual",
 ) -> None:
     """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
+    if git_style not in {"auto", "manual"}:
+        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
+        raise typer.Exit(2)
+    # end if
     repository_root = Path.cwd().resolve()
     pre_crawl_head = git_ops.head(repository_root) if git else None
     stashed = git_ops.autostash(repository_root) if git else False
@@ -787,10 +825,12 @@ def scrape_isthereanydeal_command(
                 if unresolved_count
                 else "None unresolved."
             )
-            message = (
-                "[crawl|isthereanydeal] automated scrape:\n"
-                "Archived isthereanydeal.com bundles via `game-collections scrape isthereanydeal --git`.\n\n"
-                f"{unresolved_line}\n"
+            message = _git_commit_message(
+                "isthereanydeal",
+                git_style,
+                "Archived this week's isthereanydeal.com bundles",
+                "game-collections scrape isthereanydeal --git",
+                unresolved_line,
             )
             git_ops.commit_changed_paths(repository_root, ["lists", "archives/isthereanydeal"], message)
             if stashed and pre_crawl_head is not None:
