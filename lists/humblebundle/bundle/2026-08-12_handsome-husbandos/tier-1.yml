@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Handsome Husbandos — Entire 10 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/handsome-husbandos
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_handsome-husbandos/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_handsome-husbandos/source.json
+games:
+- name: Nightshade/百花百狼
+  ids:
+  - steam:512180
+- name: Steam Prison
+  ids:
+  - steam:977460
+- name: 'Our Life: Beginnings & Always: DLC Pack'
+  ids:
+  - unresolved:source:humblebundle:ourlife_beginningsandalways_dlcpack
+- name: OZMAFIA!!
+  ids:
+  - steam:303290
+- name: DesperaDrops
+  ids:
+  - steam:3291080
+- name: Fashioning Little Miss Lonesome
+  ids:
+  - steam:640990
+- name: A Date with Death Deluxe DLC Pack
+  ids:
+  - unresolved:source:humblebundle:adatewithdeathdeluxedlcpack
+- name: MAMIYA
+  ids:
+  - steam:1394930
+- name: Bakumatsu Renka SHINSENGUMI
+  ids:
+  - steam:1451160

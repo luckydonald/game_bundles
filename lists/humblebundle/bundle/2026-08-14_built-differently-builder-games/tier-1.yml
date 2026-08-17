@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Built Differently: Builder Games — Entire 10 Item Bundle'
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/built-differently-builder-games
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/source.json
+games:
+- name: 'Frostpunk: Game of the Year edition'
+  ids:
+  - unresolved:source:humblebundle:frostpunk_gameoftheyear
+- name: Diplomacy is Not an Option
+  ids:
+  - steam:1272320
+- name: TerraTech Prospector Edition
+  ids:
+  - unresolved:source:humblebundle:terratechprospectoredition
+- name: Drill Core
+  ids:
+  - steam:2821800
+- name: Per Aspera Deluxe Edition
+  ids:
+  - unresolved:source:humblebundle:peraspera_deluxe
+- name: SteamWorld Build
+  ids:
+  - steam:2134770
+- name: Endzone 2 Deluxe Edition
+  ids:
+  - unresolved:source:humblebundle:endzone2deluxe
+- name: 'I Am Future: Cozy Apocalypse Survival'
+  ids:
+  - steam:1658040
+- name: Gourdlets
+  ids:
+  - steam:2013730
+- name: URBO
+  ids:
+  - steam:2141770
