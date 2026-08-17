@@ -331,7 +331,7 @@ def test_unresolved_hide_removes_the_game_row_from_the_tree(tmp_path: Path) -> N
             excluded=set(),
             max_missing=None,
             unresolved_handling="ignore",
-            unconfigured_handling="ignore",
+            unsupported_store_handling="ignore",
             owned_app_ids=frozenset({440}),
         )
         async with app.run_test() as pilot:
@@ -343,7 +343,7 @@ def test_unresolved_hide_removes_the_game_row_from_the_tree(tmp_path: Path) -> N
             assert [child.label.plain for child in bundle_node.children] == ["Game A", "Game B", "Game C"]
 
             app.query_one("#filter-unresolved-handling", Select).value = "hide"
-            app.query_one("#filter-unconfigured-handling", Select).value = "hide"
+            app.query_one("#filter-unsupported-store-handling", Select).value = "hide"
             await pilot.pause()
             # A hidden game now makes the bundle unavailable, unlike ignore which leaves
             # it selectable. Turn on filtered rows to inspect the still-hidden game rows.
@@ -930,23 +930,23 @@ def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable
 # end def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable
 
 
-def test_unresolved_and_unconfigured_handling_default_and_are_changeable(tmp_path: Path) -> None:
+def test_unresolved_and_unsupported_store_handling_default_and_are_changeable(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert app.unresolved_handling == "ignore"
-            assert app.unconfigured_handling == "ignore"
+            assert app.unsupported_store_handling == "ignore"
             app.query_one("#filter-unresolved-handling", Select).value = "enforce"
-            app.query_one("#filter-unconfigured-handling", Select).value = "hide"
+            app.query_one("#filter-unsupported-store-handling", Select).value = "hide"
             await pilot.pause()
             assert app.unresolved_handling == "enforce"
-            assert app.unconfigured_handling == "hide"
+            assert app.unsupported_store_handling == "hide"
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
-# end def test_unresolved_and_unconfigured_handling_default_and_are_changeable
+# end def test_unresolved_and_unsupported_store_handling_default_and_are_changeable
 
 
 def test_min_items_filter_deselects_and_hides_smaller_bundles_by_default(tmp_path: Path) -> None:
