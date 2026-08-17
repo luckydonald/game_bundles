@@ -1,3 +1,5 @@
+Each of those tasks shall be a commit of its own, following the LPLP commit style.
+
 - [x] The current humble monthly contains _Game 2/8: Dead Cells + The Bad Seed DLC_, which are actually two games.
 - [x] The TUI apply picker should show a "diff" (steam collections to remove, steam collections to add, steam collections kept)
 - [x] Standardize `Entire 14 Item Bundle` between `humblebundle` crawler and `isthereanydeal` (which does `entire-14-item-bundle`). Probably just dash-snake-case to title-space-case.
@@ -11,4 +13,8 @@
 - [ ] `references` should be appended to, not overwritten.
 - [ ] HumbleBundle shall still be authoritative with its games, so not on humble = remove from bundle.
       - hehe, that rhymes!
+- [ ] Add a `--git` flag, which is alias for `--git-add` and `--git-commit`; doing exactly that.
+  - It shall be using a similar commit message as the GitHub actions.
+  - Have `--git=auto` and `--git=manual` (default when just `--git`), which provide slightly different texts for each usecase.
+- [ ] Adapt the git workflows to use `--git=auto`, but keep the manual commit code in case we missed any files (unlikely). And rephrase their text for that.
 - [ ] Validate by running both scrapers and comparing the list's output, if there are remaining issues to tackle.
