@@ -318,8 +318,55 @@ def test_parse_bundle_detail_json_humble_tier_naming_without_note() -> None:
     html = _detail_json_html(live_data)
     tiers = parse_bundle_detail_json(html, bundle_id=1, expected_game_count=1, provider_slug="humblebundle")
     assert tiers is not None
-    assert tiers[0].name == "entire-1-item-bundle"
+    assert tiers[0].name == "Entire 1 Item Bundle"
 # end def test_parse_bundle_detail_json_humble_tier_naming_without_note
+
+
+def test_parse_bundle_detail_json_humble_tier_naming_non_entire_tier() -> None:
+    # a tier whose item_count is less than the bundle's full game count is
+    # named without the "Entire " prefix, matching the dedicated Humble
+    # scraper's own convention for a non-full tier.
+    live_data = {
+        "tiers": [
+            {
+                "price": [500, "EUR"],
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "phogs",
+                        "title": "PHOGS!",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1/"}],
+                        "keys": [61],
+                    }
+                ],
+            },
+            {
+                "price": [1059, "EUR"],
+                "addon": False,
+                "note": None,
+                "games": [
+                    {
+                        "slug": "phogs",
+                        "title": "PHOGS!",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/1/"}],
+                        "keys": [61],
+                    },
+                    {
+                        "slug": "bo",
+                        "title": "Bo",
+                        "reviews": [{"source": "Steam", "url": "https://store.steampowered.com/app/2/"}],
+                        "keys": [62],
+                    },
+                ],
+            },
+        ]
+    }
+    html = _detail_json_html(live_data)
+    tiers = parse_bundle_detail_json(html, bundle_id=1, expected_game_count=2, provider_slug="humblebundle")
+    assert tiers is not None
+    assert [tier.name for tier in tiers] == ["1 Item Bundle", "Entire 2 Item Bundle"]
+# end def test_parse_bundle_detail_json_humble_tier_naming_non_entire_tier
 
 
 def test_parse_bundle_detail_json_byob_single_tier_no_price() -> None:
