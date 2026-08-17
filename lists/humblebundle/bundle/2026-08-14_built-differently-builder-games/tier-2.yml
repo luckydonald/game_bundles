@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Built Differently: Builder Games — 6 Item Bundle'
+tier: 2
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/built-differently-builder-games
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/source.json
+games:
+- name: Per Aspera Deluxe Edition
+  ids:
+  - unresolved:source:humblebundle:peraspera_deluxe
+- name: SteamWorld Build
+  ids:
+  - steam:2134770
+- name: Endzone 2 Deluxe Edition
+  ids:
+  - unresolved:source:humblebundle:endzone2deluxe
+- name: 'I Am Future: Cozy Apocalypse Survival'
+  ids:
+  - steam:1658040
+- name: Gourdlets
+  ids:
+  - steam:2013730
+- name: URBO
+  ids:
+  - steam:2141770
