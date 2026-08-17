@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 from typing import TypeVar
 
@@ -91,6 +92,40 @@ def _merged_references(existing: GameList, fresh: GameList) -> list[Reference]:
 # dataset; a starting point, adjustable if a live crawl shows false matches.
 FUZZY_MATCH_THRESHOLD = 90.0
 
+_ORDINAL_WORDS = {
+    "one": "1", "first": "1", "i": "1",
+    "two": "2", "second": "2", "ii": "2",
+    "three": "3", "third": "3", "iii": "3",
+    "four": "4", "fourth": "4", "iv": "4",
+    "five": "5", "fifth": "5", "v": "5",
+    "six": "6", "sixth": "6", "vi": "6",
+    "seven": "7", "seventh": "7", "vii": "7",
+    "eight": "8", "eighth": "8", "viii": "8",
+    "nine": "9", "ninth": "9", "ix": "9",
+    "ten": "10", "tenth": "10", "x": "10",
+}
+
+
+def _number_tokens(value: str) -> set[str]:
+    """Extract digit/cardinal-word/ordinal-word/roman-numeral tokens, normalized to a bare digit.
+
+    A live crawl found `fuzz.WRatio` scoring "...Collection One" vs
+    "...Collection Three" at ~94 - well above `FUZZY_MATCH_THRESHOLD` - since
+    they differ by only one word out of many. Two titles whose only
+    difference is which numbered installment/collection they name must never
+    fuzzy-match, however similar the rest of the text is.
+    """
+    tokens: set[str] = set()
+    for word in re.findall(r"[a-z0-9]+", value.lower()):
+        if word.isdigit():
+            tokens.add(word)
+        elif word in _ORDINAL_WORDS:
+            tokens.add(_ORDINAL_WORDS[word])
+        # end if
+    # end for
+    return tokens
+# end def _number_tokens
+
 
 def _find_match(fresh_game: Game, candidates: list[Game]) -> Game | None:
     """Find the candidate representing the same game as `fresh_game`, if any.
@@ -116,9 +151,13 @@ def _find_match(fresh_game: Game, candidates: list[Game]) -> Game | None:
             return candidate
         # end if
     # end for
+    fresh_numbers = _number_tokens(fresh_game.name)
     best_candidate: Game | None = None
     best_score = FUZZY_MATCH_THRESHOLD
     for candidate in candidates:
+        if fresh_numbers != _number_tokens(candidate.name):
+            continue
+        # end if
         score = fuzz.WRatio(fresh_game.name, candidate.name)
         if score >= best_score:
             best_candidate = candidate

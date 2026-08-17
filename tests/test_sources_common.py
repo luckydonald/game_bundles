@@ -216,6 +216,29 @@ def test_merge_game_list_authoritative_matches_by_fuzzy_similarity() -> None:
 # end def test_merge_game_list_authoritative_matches_by_fuzzy_similarity
 
 
+def test_merge_game_list_authoritative_never_fuzzy_matches_different_numbered_installments() -> None:
+    """A live crawl found `fuzz.WRatio("...Collection One", "...Collection Three")` scoring
+    ~94 - above the fuzzy threshold - which wrongly merged two different entries in a
+    numbered series and produced a duplicate game name in the output."""
+    existing = _list(
+        Game(name="Forgotten Realms: The Archives - Collection Three", ids=["steam:1904530"])
+    )
+    fresh = _list(
+        Game(
+            name="Forgotten Realms: The Archives - Collection One",
+            ids=["unresolved:source:humblebundle:collection-one"],
+        )
+    )
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [(game.name, game.ids) for game in merged.games] == [
+        ("Forgotten Realms: The Archives - Collection One", ["unresolved:source:humblebundle:collection-one"])
+    ]
+    assert [game.name for game in merged.invalid] == ["Forgotten Realms: The Archives - Collection Three"]
+# end def test_merge_game_list_authoritative_never_fuzzy_matches_different_numbered_installments
+
+
 def test_merge_game_list_authoritative_treats_unrelated_titles_as_new_and_quarantines_old() -> None:
     existing = _list(Game(name="Completely Different Game", ids=["gog:cdg"]))
     fresh = _list(Game(name="Totally Unrelated Title", ids=["steam:1"]))
