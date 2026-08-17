@@ -80,12 +80,13 @@ def test_load_cached_archive_returns_none_on_invalid_json(tmp_path: Path) -> Non
 # end def test_load_cached_archive_returns_none_on_invalid_json
 
 
-def _list(*games: Game, name: str = "Bundle") -> GameList:
+def _list(*games: Game, name: str = "Bundle", invalid: list[Game] | None = None) -> GameList:
     return GameList(
         schema=1,
         name=name,
         references=[Reference(name="ref", url="https://example.com")],
         games=list(games),
+        invalid=invalid or [],
     )
 # end def _list
 
@@ -158,6 +159,94 @@ def test_merge_game_list_appends_references_instead_of_overwriting() -> None:
 
     assert merged.references == [itad_reference, humble_reference]
 # end def test_merge_game_list_appends_references_instead_of_overwriting
+
+
+def test_merge_game_list_authoritative_quarantines_games_absent_from_fresh() -> None:
+    existing = _list(Game(name="One", ids=["steam:1"]), Game(name="Two", ids=["steam:2"]))
+    fresh = _list(Game(name="One", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [game.name for game in merged.games] == ["One"]
+    assert [game.name for game in merged.invalid] == ["Two"]
+# end def test_merge_game_list_authoritative_quarantines_games_absent_from_fresh
+
+
+def test_merge_game_list_authoritative_matches_by_id_despite_renamed_title() -> None:
+    existing = _list(Game(name="Old Title", ids=["steam:1", "gog:old-title"]))
+    fresh = _list(Game(name="New Title", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [(game.name, game.ids) for game in merged.games] == [("Old Title", ["steam:1", "gog:old-title"])]
+    assert merged.invalid == []
+# end def test_merge_game_list_authoritative_matches_by_id_despite_renamed_title
+
+
+def test_merge_game_list_authoritative_matches_by_exact_name_without_shared_ids() -> None:
+    existing = _list(Game(name="Same Name", ids=["gog:same-name"]))
+    fresh = _list(Game(name="Same Name", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [(game.name, game.ids) for game in merged.games] == [("Same Name", ["gog:same-name"])]
+    assert merged.invalid == []
+# end def test_merge_game_list_authoritative_matches_by_exact_name_without_shared_ids
+
+
+def test_merge_game_list_authoritative_matches_by_normalized_name() -> None:
+    existing = _list(Game(name="Foo: The Game", ids=["gog:foo"]))
+    fresh = _list(Game(name="foo the game", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [(game.name, game.ids) for game in merged.games] == [("Foo: The Game", ["gog:foo"])]
+    assert merged.invalid == []
+# end def test_merge_game_list_authoritative_matches_by_normalized_name
+
+
+def test_merge_game_list_authoritative_matches_by_fuzzy_similarity() -> None:
+    existing = _list(Game(name="Foo", ids=["gog:foo"]))
+    fresh = _list(Game(name="Foo: Deluxe Edition", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [(game.name, game.ids) for game in merged.games] == [("Foo", ["gog:foo"])]
+    assert merged.invalid == []
+# end def test_merge_game_list_authoritative_matches_by_fuzzy_similarity
+
+
+def test_merge_game_list_authoritative_treats_unrelated_titles_as_new_and_quarantines_old() -> None:
+    existing = _list(Game(name="Completely Different Game", ids=["gog:cdg"]))
+    fresh = _list(Game(name="Totally Unrelated Title", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [game.name for game in merged.games] == ["Totally Unrelated Title"]
+    assert [game.name for game in merged.invalid] == ["Completely Different Game"]
+# end def test_merge_game_list_authoritative_treats_unrelated_titles_as_new_and_quarantines_old
+
+
+def test_merge_game_list_authoritative_restores_a_previously_invalid_game_that_reappears() -> None:
+    existing = _list(Game(name="One", ids=["steam:1"]), invalid=[Game(name="Two", ids=["steam:2"])])
+    fresh = _list(Game(name="One", ids=["steam:1"]), Game(name="Two", ids=["steam:2"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    assert [game.name for game in merged.games] == ["One", "Two"]
+    assert merged.invalid == []
+# end def test_merge_game_list_authoritative_restores_a_previously_invalid_game_that_reappears
+
+
+def test_merge_game_list_non_authoritative_never_removes_or_quarantines() -> None:
+    existing = _list(Game(name="One", ids=["steam:1"]), Game(name="Two", ids=["steam:2"]))
+    fresh = _list(Game(name="One", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh, authoritative=False)
+
+    assert {game.name for game in merged.games} == {"One", "Two"}
+    assert merged.invalid == []
+# end def test_merge_game_list_non_authoritative_never_removes_or_quarantines
 
 
 def test_merge_game_list_does_not_duplicate_identical_references() -> None:

@@ -249,13 +249,16 @@ def _archive_paths(archive_root: Path, archive: HumbleArchive) -> tuple[Path, Pa
 def _write_merged_game_list(game_list: GameList, path: Path, lists_root: Path, repository_root: Path) -> None:
     """Merge with any already-committed list at `path` (see `merge_game_list`) before writing.
 
-    A re-crawl must not clobber manual `ids:`/`group` fixes on an already-written
-    list - only add genuinely new games. An existing file that fails to load is
-    a real problem (hand-edited into an invalid state, or a stale schema) and
-    should fail loudly rather than being silently discarded and overwritten.
+    Humble is authoritative for its own bundles: a game no longer present in
+    the fresh crawl is quarantined into `invalid` (never hard-deleted, and
+    restored if a later crawl lists it again), while a game still present
+    keeps its existing `ids:`/`group` state rather than being replaced. An
+    existing file that fails to load is a real problem (hand-edited into an
+    invalid state, or a stale schema) and should fail loudly rather than being
+    silently discarded and overwritten.
     """
     existing = load_game_list(path, lists_root).data if path.exists() else None
-    merged = merge_game_list(existing, game_list)
+    merged = merge_game_list(existing, game_list, authoritative=True)
     atomic_write(path, render_game_list_yaml(merged, path, repository_root))
 # end def _write_merged_game_list
 
