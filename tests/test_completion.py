@@ -72,12 +72,12 @@ def test_unresolved_enforce_counts_as_missing() -> None:
 # end def test_unresolved_enforce_counts_as_missing
 
 
-def test_unconfigured_store_handling_hide_ignore_enforce() -> None:
+def test_unsupported_store_handling_hide_ignore_enforce() -> None:
     games = [_game("GogGame", ["gog:some-slug"])]
 
-    hidden = evaluate_completion(games, set(), unconfigured_handling="hide")
-    ignored = evaluate_completion(games, set(), unconfigured_handling="ignore")
-    enforced = evaluate_completion(games, set(), unconfigured_handling="enforce")
+    hidden = evaluate_completion(games, set(), unsupported_store_handling="hide")
+    ignored = evaluate_completion(games, set(), unsupported_store_handling="ignore")
+    enforced = evaluate_completion(games, set(), unsupported_store_handling="enforce")
 
     assert hidden.total == 0
     assert hidden.unsupported_ids == []
@@ -90,19 +90,19 @@ def test_unconfigured_store_handling_hide_ignore_enforce() -> None:
     assert enforced.missing_count == 1
     assert enforced.missing_ids == ["gog:some-slug"]
     assert enforced.hidden_count == 0
-# end def test_unconfigured_store_handling_hide_ignore_enforce
+# end def test_unsupported_store_handling_hide_ignore_enforce
 
 
-def test_unresolved_and_unconfigured_handling_are_independent() -> None:
+def test_unresolved_and_unsupported_store_handling_are_independent() -> None:
     games = [
         _game("Unresolved", ["unresolved:source:isthereanydeal:1:x"]),
         _game("Gog", ["gog:some-slug"]),
     ]
 
-    completion = evaluate_completion(games, set(), unresolved_handling="enforce", unconfigured_handling="hide")
+    completion = evaluate_completion(games, set(), unresolved_handling="enforce", unsupported_store_handling="hide")
 
     assert completion.total == 1
     assert completion.missing_count == 1
     assert completion.missing_ids == ["unresolved:source:isthereanydeal:1:x"]
     assert completion.unsupported_ids == []
-# end def test_unresolved_and_unconfigured_handling_are_independent
+# end def test_unresolved_and_unsupported_store_handling_are_independent

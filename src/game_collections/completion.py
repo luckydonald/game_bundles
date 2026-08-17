@@ -31,9 +31,9 @@ def evaluate_completion(
     owned_app_ids: set[int],
     *,
     unresolved_handling: MissingHandling = "ignore",
-    unconfigured_handling: MissingHandling = "ignore",
+    unsupported_store_handling: MissingHandling = "ignore",
 ) -> GameListCompletion:
-    """Count owned/missing games, applying `unresolved_handling`/`unconfigured_handling`."""
+    """Count owned/missing games, applying `unresolved_handling`/`unsupported_store_handling`."""
     required: list[int] = []
     unsupported_ids: list[str] = []
     enforced_ids: list[str] = []
@@ -64,7 +64,7 @@ def evaluate_completion(
         # end if
 
         is_unresolved = all(identifier.provider == "unresolved" for identifier in game.qualified_ids)
-        handling = unresolved_handling if is_unresolved else unconfigured_handling
+        handling = unresolved_handling if is_unresolved else unsupported_store_handling
         if handling == "hide":
             hidden_count += 1
             continue
