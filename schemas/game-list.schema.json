@@ -4,6 +4,17 @@
       "additionalProperties": false,
       "description": "A named game with one or more storefront identities.",
       "properties": {
+        "group": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GameGroup"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "ids": {
           "items": {
             "minLength": 1,
@@ -24,6 +35,28 @@
         "ids"
       ],
       "title": "Game",
+      "type": "object"
+    },
+    "GameGroup": {
+      "additionalProperties": false,
+      "description": "Provenance link for Games split out of one compound source offer.",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "GameGroup",
       "type": "object"
     },
     "Reference": {

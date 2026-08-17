@@ -114,6 +114,75 @@ def test_duplicate_qualified_ids_are_rejected(tmp_path: Path) -> None:
 # end def test_duplicate_qualified_ids_are_rejected
 
 
+def test_game_group_round_trips_when_set(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "package.yml"
+    path.write_text(
+        yaml.safe_dump(
+            {
+                "schema": 1,
+                "name": "Package",
+                "games": [
+                    {
+                        "name": "Frostpunk",
+                        "ids": ["steam:323190"],
+                        "group": {"id": "frostpunk-goty", "name": "Frostpunk: Game of the Year Edition"},
+                    },
+                    {
+                        "name": "Frostpunk: On The Edge",
+                        "ids": ["steam:1147010"],
+                        "group": {"id": "frostpunk-goty", "name": "Frostpunk: Game of the Year Edition"},
+                    },
+                ],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    loaded = load_game_list(path, lists_root)
+
+    assert loaded.data.games[0].group is not None
+    assert loaded.data.games[0].group.id == "frostpunk-goty"
+    assert loaded.data.games[0].group.name == "Frostpunk: Game of the Year Edition"
+    assert loaded.data.games[1].group == loaded.data.games[0].group
+# end def test_game_group_round_trips_when_set
+
+
+def test_inconsistent_group_names_are_rejected(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "invalid.yml"
+    path.write_text(
+        yaml.safe_dump(
+            {
+                "schema": 1,
+                "name": "Invalid",
+                "games": [
+                    {
+                        "name": "One",
+                        "ids": ["steam:1"],
+                        "group": {"id": "shared", "name": "First Name"},
+                    },
+                    {
+                        "name": "Two",
+                        "ids": ["steam:2"],
+                        "group": {"id": "shared", "name": "Second Name"},
+                    },
+                ],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ListLoadError, match="inconsistent group names"):
+        load_game_list(path, lists_root)
+    # end with
+# end def test_inconsistent_group_names_are_rejected
+
+
 def test_tier_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
