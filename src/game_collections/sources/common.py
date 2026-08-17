@@ -10,7 +10,7 @@ from typing import TypeVar
 import yaml
 from pydantic import BaseModel, ValidationError
 
-from game_collections.models import GameList
+from game_collections.models import GameList, Reference
 
 
 ArchiveT = TypeVar("ArchiveT", bound=BaseModel)
@@ -69,16 +69,31 @@ def load_cached_archive(
 # end def load_cached_archive
 
 
+def _merged_references(existing: GameList, fresh: GameList) -> list[Reference]:
+    """Append `fresh`'s references onto `existing`'s, never dropping either side.
+
+    A re-crawl (or a different source claiming a file another source already
+    wrote to) must not lose a previously recorded reference - e.g. an
+    isthereanydeal mirror URL a later Humble crawl doesn't itself produce.
+    `Reference` has plain field-wise equality, so `in` is enough to dedupe
+    exact repeats without any new equality/hash code.
+    """
+    merged = list(existing.references)
+    merged.extend(reference for reference in fresh.references if reference not in merged)
+    return merged
+# end def _merged_references
+
+
 def merge_game_list(existing: GameList | None, fresh: GameList) -> GameList:
     """Combine a freshly-crawled list with any already-committed list at the same path.
 
     Keeps every existing `Game` entry as-is (preserving manual `ids:`/`group`
     edits a re-crawl would otherwise clobber), appends only games from
-    `fresh` that aren't already present by name, and otherwise takes
-    bundle-level metadata (`name`/`tier`/`pick_quota`/`references`) from
-    `fresh` since that reflects the source of truth, not manual curation.
-    Games are matched by `name.casefold()`, the same uniqueness key
-    `GameList` itself enforces.
+    `fresh` that aren't already present by name, appends (never overwrites)
+    `references`, and otherwise takes bundle-level metadata (`name`/`tier`/
+    `pick_quota`) from `fresh` since that reflects the source of truth, not
+    manual curation. Games are matched by `name.casefold()`, the same
+    uniqueness key `GameList` itself enforces.
     """
     if existing is None:
         return fresh
@@ -87,7 +102,9 @@ def merge_game_list(existing: GameList | None, fresh: GameList) -> GameList:
     fresh_names = {game.name.casefold() for game in fresh.games}
     merged_games = [existing_by_name.get(game.name.casefold(), game) for game in fresh.games]
     merged_games.extend(game for game in existing.games if game.name.casefold() not in fresh_names)
-    return fresh.model_copy(update={"games": merged_games})
+    return fresh.model_copy(
+        update={"games": merged_games, "references": _merged_references(existing, fresh)}
+    )
 # end def merge_game_list
 
 
