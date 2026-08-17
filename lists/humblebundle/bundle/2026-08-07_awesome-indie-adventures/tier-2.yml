@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Awesome Indie Adventures Bundle — 8-item-bundle
+name: Awesome Indie Adventures — 9 Item Bundle
 tier: 2
 references:
 - name: isthereanydeal.com bundle
@@ -9,36 +9,42 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16461/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16461/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/awesome-indie-adventures
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-07_awesome-indie-adventures/source.json
 games:
-- name: Beyond a Steel Sky
-  ids:
-  - steam:1146310
-  - isthereanydeal:beyond-a-steel-sky
-- name: 'Moonlighter: Complete Edition'
-  ids:
-  - unresolved:source:isthereanydeal:16461:moonlighter-complete-edition
-  - isthereanydeal:moonlighter-complete-edition
-- name: Kitaria Fables
-  ids:
-  - steam:1356280
-  - isthereanydeal:kitaria-fables
-- name: Beyond a Steel Sky Soundtrack
-  ids:
-  - steam:1368370
-  - isthereanydeal:beyond-a-steel-sky-soundtrack
-- name: Before Your Eyes
-  ids:
-  - steam:1082430
-  - isthereanydeal:before-your-eyes
-- name: Jenny LeClue - Detectivu
-  ids:
-  - steam:319870
-  - isthereanydeal:jenny-leclue-detectivu
-- name: Baladins
-  ids:
-  - steam:1866320
-  - isthereanydeal:baladins
 - name: Wavetale
   ids:
   - steam:1823930
   - isthereanydeal:wavetale
+- name: Baladins
+  ids:
+  - steam:1866320
+  - isthereanydeal:baladins
+- name: Jenny LeClue - Detectivu
+  ids:
+  - steam:319870
+  - isthereanydeal:jenny-leclue-detectivu
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+  - isthereanydeal:beyond-a-steel-sky
+- name: Beyond a Steel Sky Soundtrack
+  ids:
+  - steam:1368370
+  - isthereanydeal:beyond-a-steel-sky-soundtrack
+- name: Kitaria Fables
+  ids:
+  - steam:1356280
+  - isthereanydeal:kitaria-fables
+- name: Before Your Eyes
+  ids:
+  - steam:1082430
+  - isthereanydeal:before-your-eyes
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16461:moonlighter-complete-edition
+  - isthereanydeal:moonlighter-complete-edition

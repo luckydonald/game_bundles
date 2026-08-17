@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: 'Built Differently: Builder Games Bundle — 6 Item Bundle'
+name: 'Built Differently: Builder Games — 6 Item Bundle'
 tier: 2
 references:
 - name: isthereanydeal.com bundle
@@ -9,19 +9,13 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16484/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16484/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/built-differently-builder-games
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-14_built-differently-builder-games/source.json
 games:
-- name: URBO
-  ids:
-  - steam:2141770
-  - isthereanydeal:urbo
-- name: Gourdlets
-  ids:
-  - steam:2013730
-  - isthereanydeal:gourdlets
-- name: 'I Am Future: Cozy Apocalypse Survival'
-  ids:
-  - steam:1658040
-  - isthereanydeal:i-am-future-cozy-apocalypse-survival
 - name: Per Aspera Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:16484:per-aspera-deluxe-edition
@@ -34,3 +28,15 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16484:endzone-2-deluxe-edition
   - isthereanydeal:endzone-2-deluxe-edition
+- name: 'I Am Future: Cozy Apocalypse Survival'
+  ids:
+  - steam:1658040
+  - isthereanydeal:i-am-future-cozy-apocalypse-survival
+- name: Gourdlets
+  ids:
+  - steam:2013730
+  - isthereanydeal:gourdlets
+- name: URBO
+  ids:
+  - steam:2141770
+  - isthereanydeal:urbo

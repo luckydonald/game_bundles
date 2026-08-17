@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Twin Sails Interactive 2026 — Entire 29 Item Bundle
+name: Twin Sails Interactive 2026 — 25 Item Bundle
 tier: 1
 references:
 - name: Humble Bundle offer
@@ -10,18 +10,6 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-22_twin-sails-interactive-2026/source.json
 games:
-- name: Gloomhaven
-  ids:
-  - unresolved:source:humblebundle:gloomhaven
-- name: 'Gloomhaven - Solo Scenarios: Mercenary Challenges'
-  ids:
-  - unresolved:source:humblebundle:gloomhaven-soloscenarios_mercenarychallenges
-- name: Ember Knights
-  ids:
-  - unresolved:source:humblebundle:emberknights
-- name: 'Bloomtown: A Different Story'
-  ids:
-  - unresolved:source:humblebundle:bloomtown_adifferentstory
 - name: 'Wantless : Solace at Worlds End'
   ids:
   - unresolved:source:humblebundle:wantless_solaceatworldsend
@@ -91,3 +79,16 @@ games:
 - name: Isle of Skye
   ids:
   - steam:873980
+invalid:
+- name: Gloomhaven
+  ids:
+  - unresolved:source:humblebundle:gloomhaven
+- name: 'Gloomhaven - Solo Scenarios: Mercenary Challenges'
+  ids:
+  - unresolved:source:humblebundle:gloomhaven-soloscenarios_mercenarychallenges
+- name: Ember Knights
+  ids:
+  - unresolved:source:humblebundle:emberknights
+- name: 'Bloomtown: A Different Story'
+  ids:
+  - unresolved:source:humblebundle:bloomtown_adifferentstory

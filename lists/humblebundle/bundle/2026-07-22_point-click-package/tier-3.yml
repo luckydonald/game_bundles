@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Point Click Package — 4 Item Bundle
+name: Point Click Package — Entire 10 Item Bundle
 tier: 3
 references:
 - name: Humble Bundle offer
@@ -10,6 +10,24 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-22_point-click-package/source.json
 games:
+- name: Syberia Remastered
+  ids:
+  - steam:3660220
+- name: Amerzone - The Explorer's Legacy - Digital Deluxe Edition
+  ids:
+  - unresolved:source:humblebundle:amerzone_theexplorerslegacy
+- name: 'Agatha Christie: Death on the Nile'
+  ids:
+  - steam:3150480
+- name: 'Syberia: The World Before Deluxe Edition'
+  ids:
+  - unresolved:source:humblebundle:syberiatheworldbeforedeluxe
+- name: Lil' Guardsman
+  ids:
+  - steam:1924360
+- name: Unavowed
+  ids:
+  - unresolved:source:humblebundle:unavowed
 - name: When the Past Was Around
   ids:
   - unresolved:source:humblebundle:whenthepastwasaround
