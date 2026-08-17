@@ -85,7 +85,8 @@ jobs:
           fi
 
           {
-            echo "[humblebundle] weekly scrape: workflow: Archived this week's Humble Bundle offers via scheduled CI."
+            echo "[crawl|humblebundle] automated weekly scrape:"
+            echo "workflow: Archived this week's Humble Bundle offers via scheduled CI."
             echo ""
             echo "Automated \`game-collections scrape humblebundle --non-interactive\` run from the weekly GitHub Actions workflow (run ${GITHUB_RUN_ID})."
             echo "${unresolved_line}"
