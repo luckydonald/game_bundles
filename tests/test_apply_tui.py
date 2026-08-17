@@ -991,6 +991,76 @@ def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> No
 # end def test_unchecking_and_saving_produces_expected_selection
 
 
+def test_build_selection_includes_live_filter_state(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-min-items", Input).value = "2"
+            app.query_one("#filter-max-items", Input).value = "20"
+            app.query_one("#filter-date-after", Input).value = "2026-01-01"
+            app.query_one("#filter-date-before", Input).value = "2026-12-31"
+            app.query_one("#filter-min-missing", Input).value = "1"
+            app.query_one("#filter-max-missing", Input).value = "3"
+            app.query_one("#filter-unresolved-handling", Select).value = "hide"
+            app.query_one("#filter-unsupported-store-handling", Select).value = "enforce"
+            app.query_one("#filter-tiers", Select).value = "all"
+            app.query_one("#filter-show-filtered", Checkbox).value = True
+            await pilot.pause()
+
+            selection = app._build_selection()
+            assert selection.min_items == 2
+            assert selection.max_items == 20
+            assert selection.date_after == "2026-01-01"
+            assert selection.date_before == "2026-12-31"
+            assert selection.min_missing == 1
+            assert selection.max_missing == 3
+            assert selection.unresolved_handling == "hide"
+            assert selection.unsupported_store_handling == "enforce"
+            assert selection.tier_mode == "all"
+            assert selection.show_filtered is True
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_build_selection_includes_live_filter_state
+
+
+def test_constructor_seeds_filter_widgets_for_restore(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(
+            _make_lists_root(tmp_path),
+            excluded=set(),
+            min_missing=1,
+            max_missing=3,
+            unresolved_handling="hide",
+            unsupported_store_handling="enforce",
+            tier_mode="all",
+            min_items=2,
+            max_items=20,
+            date_after="2026-01-01",
+            date_before="2026-12-31",
+            show_filtered=True,
+        )
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert app.query_one("#filter-min-items", Input).value == "2"
+            assert app.query_one("#filter-max-items", Input).value == "20"
+            assert app.query_one("#filter-date-after", Input).value == "2026-01-01"
+            assert app.query_one("#filter-date-before", Input).value == "2026-12-31"
+            assert app.query_one("#filter-min-missing", Input).value == "1"
+            assert app.query_one("#filter-max-missing", Input).value == "3"
+            assert app.query_one("#filter-unresolved-handling", Select).value == "hide"
+            assert app.query_one("#filter-unsupported-store-handling", Select).value == "enforce"
+            assert app.query_one("#filter-tiers", Select).value == "all"
+            assert app.query_one("#filter-show-filtered", Checkbox).value is True
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_constructor_seeds_filter_widgets_for_restore
+
+
 def test_enter_key_toggles_cursor_node(tmp_path: Path) -> None:
     # end-to-end check that the Enter binding really reaches _toggle, not just direct calls
     async def scenario() -> None:

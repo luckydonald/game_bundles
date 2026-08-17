@@ -2,11 +2,12 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 from pathlib import Path
+from types import SimpleNamespace
 
 from typer.testing import CliRunner
 from pytest import CaptureFixture, MonkeyPatch
 
-from game_collections.apply.config import ApplySelection
+from game_collections.apply.config import ApplySelection, save_selection
 from game_collections.cli import _print_plan, app
 from game_collections.launchers.base import CollectionEligibility, PlannedCollectionChange, SyncPlan
 from game_collections.lists import discover_game_lists
@@ -222,6 +223,11 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             unresolved_handling: str = "ignore",
             unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
+            min_items: int | None = None,
+            max_items: int | None = None,
+            date_after: str | None = None,
+            date_before: str | None = None,
+            show_filtered: bool = False,
             owned_app_ids: object = None,
             ownership_resolver: object = None,
             confirm_unverified_ownership: bool = False,
@@ -269,6 +275,99 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
 # end def test_apply_filters_excluded_list_before_planning
 
 
+def test_apply_filter_flags_fall_back_to_saved_selection_then_default(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    lists_root = tmp_path / "lists"
+    _write_list(lists_root / "vendor/one.yml", "One")
+    selection_config = tmp_path / "config/apply-selection.yml"
+    save_selection(
+        ApplySelection(
+            schema=1,
+            selected=["vendor/one"],
+            excluded=[],
+            updated_at=datetime(2026, 7, 13, tzinfo=UTC),
+            min_items=2,
+            max_missing=5,
+            unresolved_handling="hide",
+            unsupported_store_handling="enforce",
+            tier_mode="all",
+            show_filtered=True,
+        ),
+        selection_config,
+    )
+
+    captured_kwargs: list[dict[str, object]] = []
+
+    class _StubPickerApp:
+        def __init__(self, lists_root: Path, excluded: object, **kwargs: object) -> None:
+            self.all_game_lists = discover_game_lists(lists_root)
+            self.min_missing = kwargs.get("min_missing")
+            self.max_missing = kwargs.get("max_missing")
+            self.tier_mode = kwargs.get("tier_mode")
+            captured_kwargs.append(kwargs)
+        # end def __init__
+
+        def run(self) -> None:
+            return None
+        # end def run
+    # end class _StubPickerApp
+
+    monkeypatch.setattr("game_collections.apply.tui.ApplyPickerApp", _StubPickerApp)
+
+    # No filter flags passed: everything should come from the saved selection.
+    result = CliRunner().invoke(
+        app,
+        [
+            "apply",
+            "--lists-root",
+            str(lists_root),
+            "--steam-root",
+            str(steam_root),
+            "--steam-id",
+            STEAM_ID,
+            "--source",
+            "collection",
+            "--collection",
+            "Favorites",
+            "--selection-config",
+            str(selection_config),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+    assert captured_kwargs[-1]["min_items"] == 2
+    assert captured_kwargs[-1]["max_missing"] == 5
+    assert captured_kwargs[-1]["unresolved_handling"] == "hide"
+    assert captured_kwargs[-1]["unsupported_store_handling"] == "enforce"
+    assert captured_kwargs[-1]["tier_mode"] == "all"
+    assert captured_kwargs[-1]["show_filtered"] is True
+
+    # An explicit CLI flag overrides the saved selection's value for that field only.
+    result = CliRunner().invoke(
+        app,
+        [
+            "apply",
+            "--lists-root",
+            str(lists_root),
+            "--steam-root",
+            str(steam_root),
+            "--steam-id",
+            STEAM_ID,
+            "--source",
+            "collection",
+            "--collection",
+            "Favorites",
+            "--selection-config",
+            str(selection_config),
+            "--max-missing",
+            "9",
+        ],
+    )
+    assert result.exit_code == 0, result.output
+    assert captured_kwargs[-1]["max_missing"] == 9
+    assert captured_kwargs[-1]["unresolved_handling"] == "hide"
+# end def test_apply_filter_flags_fall_back_to_saved_selection_then_default
+
+
 def test_apply_dry_run_reopens_the_saved_selection_action_menu(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
     steam_root = build_fake_steam(tmp_path)
     lists_root = tmp_path / "lists"
@@ -294,7 +393,11 @@ def test_apply_dry_run_reopens_the_saved_selection_action_menu(tmp_path: Path, m
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = None
             self.max_missing = 0
+            self.unresolved_handling = "ignore"
+            self.unsupported_store_handling = "ignore"
             self.tier_mode = "highest"
+            self.row_filters = SimpleNamespace(min_items=None, max_items=None, date_after=None, date_before=None)
+            self.show_filtered = False
             initial_selections.append(kwargs.get("initial_selection"))
         # end def __init__
 
@@ -347,6 +450,11 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             unresolved_handling: str = "ignore",
             unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
+            min_items: int | None = None,
+            max_items: int | None = None,
+            date_after: str | None = None,
+            date_before: str | None = None,
+            show_filtered: bool = False,
             owned_app_ids: object = None,
             ownership_resolver: object = None,
             confirm_unverified_ownership: bool = False,

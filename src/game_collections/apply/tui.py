@@ -442,6 +442,11 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         unresolved_handling: MissingHandling = "ignore",
         unsupported_store_handling: MissingHandling = "ignore",
         tier_mode: Literal["all", "highest"] = "highest",
+        min_items: int | None = None,
+        max_items: int | None = None,
+        date_after: str | None = None,
+        date_before: str | None = None,
+        show_filtered: bool = False,
         owned_app_ids: frozenset[int] | None = None,
         ownership_resolver: OwnershipResolver | None = None,
         confirm_unverified_ownership: bool = False,
@@ -450,11 +455,11 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         super().__init__()
         self._lists_root = lists_root
         self._excluded = set(excluded)
-        self._row_filters = _Filters()
+        self.row_filters = _Filters(min_items=min_items, max_items=max_items, date_after=date_after, date_before=date_before)
         self._bundles: list[BundleMetadata] = []
         self._checked: set[str] = set()
         self._expanded_sources: set[str] = set()
-        self._show_filtered = False
+        self.show_filtered = show_filtered
         self._game_lists_by_id: dict[str, LoadedGameList] = {}
         # None means ownership is unknown (no Steam adapter was queried) - in that case
         # nothing is marked as owned/unowned; every game/bundle renders as it did before.
@@ -512,10 +517,26 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
 
     def _mount_picker(self) -> None:
         filters = Horizontal(
-            FilterInput(placeholder="min items", id="filter-min-items"),
-            FilterInput(placeholder="max items", id="filter-max-items"),
-            FilterInput(placeholder="date after (YYYY-MM-DD)", id="filter-date-after"),
-            FilterInput(placeholder="date before (YYYY-MM-DD)", id="filter-date-before"),
+            FilterInput(
+                placeholder="min items",
+                value="" if self.row_filters.min_items is None else str(self.row_filters.min_items),
+                id="filter-min-items",
+            ),
+            FilterInput(
+                placeholder="max items",
+                value="" if self.row_filters.max_items is None else str(self.row_filters.max_items),
+                id="filter-max-items",
+            ),
+            FilterInput(
+                placeholder="date after (YYYY-MM-DD)",
+                value=self.row_filters.date_after or "",
+                id="filter-date-after",
+            ),
+            FilterInput(
+                placeholder="date before (YYYY-MM-DD)",
+                value=self.row_filters.date_before or "",
+                id="filter-date-before",
+            ),
             FilterInput(
                 placeholder="min missing",
                 value="" if self.min_missing is None else str(self.min_missing),
@@ -548,7 +569,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 allow_blank=False,
                 id="filter-tiers",
             ),
-            FilterCheckbox("show filtered (as unchecked)", value=self._show_filtered, id="filter-show-filtered"),
+            FilterCheckbox("show filtered (as unchecked)", value=self.show_filtered, id="filter-show-filtered"),
             id="filters",
         )
         rows = BundleTree(self._toggle, self._open, self._populate_node)
@@ -752,7 +773,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
 
         This is the single "filtered out or not" concept the `show filtered` checkbox governs.
         """
-        if not self._row_filters.matches(bundle):
+        if not self.row_filters.matches(bundle):
             return False
         # end if
         if self._bundle_hidden_by_missing_bounds(bundle):
@@ -803,7 +824,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             # too, unchecked (see _deselect_filtered_out). No separate tracking either way -
             # if "show filtered" goes off again, whatever you'd checked among them just isn't
             # there to be part of the result anymore (see _build_selection).
-            visible_bundles = source_bundles if self._show_filtered else matching_bundles
+            visible_bundles = source_bundles if self.show_filtered else matching_bundles
             if not visible_bundles:
                 continue
             # end if
@@ -960,7 +981,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
 
     def action_select_all_or_none(self) -> None:
         """Select or deselect every bundle currently passing the item-count/date filters."""
-        selectable = [bundle.list_id for bundle in self._bundles if self._row_filters.matches(bundle)]
+        selectable = [bundle.list_id for bundle in self._bundles if self.row_filters.matches(bundle)]
         if not selectable:
             return
         # end if
@@ -1034,7 +1055,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
 
     def on_checkbox_changed(self, event: Checkbox.Changed) -> None:
         if event.checkbox.id == "filter-show-filtered":
-            self._show_filtered = event.value
+            self.show_filtered = event.value
             self._rebuild_tree()
         # end if
     # end def on_checkbox_changed
@@ -1064,31 +1085,31 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         # end def as_int
 
         if event.input.id == "filter-min-items":
-            self._row_filters = _Filters(
+            self.row_filters = _Filters(
                 min_items=as_int(raw),
-                max_items=self._row_filters.max_items,
-                date_after=self._row_filters.date_after,
-                date_before=self._row_filters.date_before,
+                max_items=self.row_filters.max_items,
+                date_after=self.row_filters.date_after,
+                date_before=self.row_filters.date_before,
             )
         elif event.input.id == "filter-max-items":
-            self._row_filters = _Filters(
-                min_items=self._row_filters.min_items,
+            self.row_filters = _Filters(
+                min_items=self.row_filters.min_items,
                 max_items=as_int(raw),
-                date_after=self._row_filters.date_after,
-                date_before=self._row_filters.date_before,
+                date_after=self.row_filters.date_after,
+                date_before=self.row_filters.date_before,
             )
         elif event.input.id == "filter-date-after":
-            self._row_filters = _Filters(
-                min_items=self._row_filters.min_items,
-                max_items=self._row_filters.max_items,
+            self.row_filters = _Filters(
+                min_items=self.row_filters.min_items,
+                max_items=self.row_filters.max_items,
                 date_after=raw or None,
-                date_before=self._row_filters.date_before,
+                date_before=self.row_filters.date_before,
             )
         elif event.input.id == "filter-date-before":
-            self._row_filters = _Filters(
-                min_items=self._row_filters.min_items,
-                max_items=self._row_filters.max_items,
-                date_after=self._row_filters.date_after,
+            self.row_filters = _Filters(
+                min_items=self.row_filters.min_items,
+                max_items=self.row_filters.max_items,
+                date_after=self.row_filters.date_after,
                 date_before=raw or None,
             )
         elif event.input.id == "filter-min-missing":
@@ -1124,7 +1145,22 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 excluded.append(bundle.list_id)
             # end if
         # end for
-        return ApplySelection(schema=1, selected=selected, excluded=excluded, updated_at=datetime.now(UTC))
+        return ApplySelection(
+            schema=1,
+            selected=selected,
+            excluded=excluded,
+            updated_at=datetime.now(UTC),
+            min_items=self.row_filters.min_items,
+            max_items=self.row_filters.max_items,
+            date_after=self.row_filters.date_after,
+            date_before=self.row_filters.date_before,
+            min_missing=self.min_missing,
+            max_missing=self.max_missing,
+            unresolved_handling=self.unresolved_handling,
+            unsupported_store_handling=self.unsupported_store_handling,
+            tier_mode=self.tier_mode,
+            show_filtered=self.show_filtered,
+        )
     # end def _build_selection
 
     def action_save(self) -> None:
