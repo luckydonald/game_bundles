@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import Annotated, Any, Literal, Self
 
-from pydantic import Field, RootModel, StrictBool, StrictInt, StrictStr, StringConstraints, model_validator
+from pydantic import AliasChoices, Field, RootModel, StrictBool, StrictInt, StrictStr, StringConstraints, model_validator
 
 from game_collections.models import StrictModel
 
@@ -23,8 +23,10 @@ class LoginUserRecord(StrictModel):
     RememberPassword: VdfBoolean
     WantsOfflineMode: VdfBoolean
     SkipOfflineModeWarning: VdfBoolean
-    AllowAutoLogin: VdfBoolean
-    MostRecent: VdfBoolean
+    # Steam renamed this key from "AllowAutoLogin" to "AutoLogin" in a client update; accept either on read.
+    AutoLogin: Annotated[VdfBoolean, Field(validation_alias=AliasChoices("AutoLogin", "AllowAutoLogin"))]
+    # Steam stopped writing "MostRecent" in the same update; treat it as absent rather than a format error.
+    MostRecent: VdfBoolean | None = None
     Timestamp: Annotated[str, StringConstraints(pattern=r"^[0-9]+$")]
 
 # end class LoginUserRecord
@@ -35,16 +37,27 @@ class LoginUsersFile(RootModel[dict[SteamId64, LoginUserRecord]]):
 
     @model_validator(mode="after")
     def validate_recent_account(self) -> Self:
-        recent = [steam_id for steam_id, user in self.root.items() if user.MostRecent == "1"]
-        if len(recent) != 1:
-            raise ValueError(f"expected exactly one MostRecent Steam account, found {len(recent)}")
+        if not self.root:
+            raise ValueError("expected at least one Steam account, found none")
+        # end if
+        if any(user.MostRecent is not None for user in self.root.values()):
+            recent = [steam_id for steam_id, user in self.root.items() if user.MostRecent == "1"]
+            if len(recent) != 1:
+                raise ValueError(f"expected exactly one MostRecent Steam account, found {len(recent)}")
+            # end if
         # end if
         return self
     # end def validate_recent_account
 
     @property
     def most_recent_steam_id(self) -> str:
-        return next(steam_id for steam_id, user in self.root.items() if user.MostRecent == "1")
+        # Prefer the explicit "MostRecent" flag when present (older Steam clients); Steam's newer
+        # loginusers.vdf omits it entirely, so fall back to whichever account logged in last.
+        explicit = [steam_id for steam_id, user in self.root.items() if user.MostRecent == "1"]
+        if explicit:
+            return explicit[0]
+        # end if
+        return max(self.root.items(), key=lambda item: int(item[1].Timestamp))[0]
     # end def most_recent_steam_id
 
 # end class LoginUsersFile
