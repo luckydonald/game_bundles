@@ -47,54 +47,43 @@ jobs:
             git checkout -B "${BRANCH_NAME}" origin/mane
           fi
 
+      - name: Configure automation git identity
+        run: |
+          git config user.name "Lucky Lucy (automation)"
+          git config user.email "3._.code@luckydonald.de"
+
+      - name: Record pre-crawl HEAD
+        id: pre_crawl
+        run: echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Run Humble Bundle crawler
         id: crawl
         run: |
           set +e
-          uv run game-collections scrape humblebundle --non-interactive | tee /tmp/scrape-output.txt
+          uv run game-collections scrape humblebundle --non-interactive --git | tee /tmp/scrape-output.txt
           rc=${PIPESTATUS[0]}
           set -e
           echo "exit_code=${rc}" >> "$GITHUB_OUTPUT"
           unresolved=$(grep -c 'unresolved:store:steam:' /tmp/scrape-output.txt || true)
           echo "unresolved_count=${unresolved:-0}" >> "$GITHUB_OUTPUT"
           if [ "${rc}" -ne 0 ]; then
-            echo "::warning::game-collections scrape humblebundle exited with code ${rc} (unresolved games and/or crawl errors). Committing whatever it produced anyway; a human resolves the rest via 'game-collections complete'."
+            echo "::warning::game-collections scrape humblebundle exited with code ${rc} (unresolved games and/or crawl errors). --git still committed whatever it produced; a human resolves the rest via 'game-collections complete'."
           fi
 
       - name: Check for changes
         id: changes
+        env:
+          PRE_CRAWL_HEAD: ${{ steps.pre_crawl.outputs.head }}
         run: |
-          if [ -z "$(git status --porcelain -- lists/ archives/ config/humblebundle-store-ids.yml)" ]; then
+          if [ "$(git rev-parse HEAD)" = "${PRE_CRAWL_HEAD}" ]; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit results
+      - name: Push
         if: steps.changes.outputs.has_changes == 'true'
-        env:
-          UNRESOLVED_COUNT: ${{ steps.crawl.outputs.unresolved_count }}
-        run: |
-          git config user.name "Lucky Lucy (automation)"
-          git config user.email "3._.code@luckydonald.de"
-
-          if [ "${UNRESOLVED_COUNT}" -gt 0 ]; then
-            unresolved_line="${UNRESOLVED_COUNT} unresolved store IDs left as \`unresolved:store:steam:<slug>\` for manual \`game-collections complete\` follow-up."
-          else
-            unresolved_line="None unresolved."
-          fi
-
-          {
-            echo "[crawl|humblebundle] automated weekly scrape:"
-            echo "workflow: Archived this week's Humble Bundle offers via scheduled CI."
-            echo ""
-            echo "Automated \`game-collections scrape humblebundle --non-interactive\` run from the weekly GitHub Actions workflow (run ${GITHUB_RUN_ID})."
-            echo "${unresolved_line}"
-          } > ai/git/pending-commit.md
-
-          git add lists/ archives/ config/humblebundle-store-ids.yml
-          git commit -F ai/git/pending-commit.md
-          git push --force-with-lease origin "${BRANCH_NAME}"
+        run: git push --force-with-lease origin "${BRANCH_NAME}"
 
       - name: Open or update pull request
         if: steps.changes.outputs.has_changes == 'true'
