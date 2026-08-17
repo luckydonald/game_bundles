@@ -180,6 +180,100 @@ def test_sync_auto_errors_after_every_automatic_source_fails(tmp_path: Path, mon
 # end def test_sync_auto_errors_after_every_automatic_source_fails
 
 
+def test_scrape_humblebundle_help_lists_git_flag() -> None:
+    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--help"])
+
+    assert result.exit_code == 0
+    assert "--git" in result.output
+# end def test_scrape_humblebundle_help_lists_git_flag
+
+
+def test_scrape_isthereanydeal_help_lists_git_flag() -> None:
+    result = CliRunner().invoke(app, ["scrape", "isthereanydeal", "--help"])
+
+    assert result.exit_code == 0
+    assert "--git" in result.output
+# end def test_scrape_isthereanydeal_help_lists_git_flag
+
+
+def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    from game_collections.sources.humblebundle.crawler import HumbleCrawlReport
+    from game_collections.sources.humblebundle.resolver import HumbleResolutionMap
+
+    calls: list[str] = []
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: calls.append("head") or "deadbeef")
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.autostash", lambda root: calls.append("autostash") or True
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.commit_changed_paths",
+        lambda root, paths, message: calls.append("commit") or True,
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.restore_autostash", lambda root, head: calls.append("restore")
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.HumbleHttpClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
+    )
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+    monkeypatch.setattr(
+        "game_collections.cli.crawl_humble_offers",
+        lambda *args, **kwargs: calls.append("scrape") or HumbleCrawlReport(offers=(), errors=()),
+    )
+
+    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+
+    assert result.exit_code == 0, result.output
+    assert calls == ["head", "autostash", "scrape", "commit", "restore"]
+# end def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores
+
+
+def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    from game_collections.sources.humblebundle.resolver import HumbleResolutionMap
+
+    calls: list[str] = []
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: calls.append("head") or "deadbeef")
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.autostash", lambda root: calls.append("autostash") or True
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.commit_changed_paths",
+        lambda root, paths, message: calls.append("commit") or True,
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.restore_autostash", lambda root, head: calls.append("restore")
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.HumbleHttpClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
+    )
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+
+    def raising_crawl(*args: object, **kwargs: object) -> object:
+        calls.append("scrape")
+        raise RuntimeError("network exploded")
+    # end def raising_crawl
+
+    monkeypatch.setattr("game_collections.cli.crawl_humble_offers", raising_crawl)
+
+    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+
+    assert result.exit_code == 1, result.output
+    assert calls == ["head", "autostash", "scrape", "commit", "restore"]
+# end def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises
+
+
 def test_apply_help_lists_options() -> None:
     result = CliRunner().invoke(app, ["apply", "--help"])
 
