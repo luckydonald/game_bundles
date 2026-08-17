@@ -60,7 +60,7 @@ jobs:
         id: crawl
         run: |
           set +e
-          uv run game-collections scrape isthereanydeal --tab=live --git | tee /tmp/scrape-output.txt
+          uv run game-collections scrape isthereanydeal --tab=live --git --git-style auto | tee /tmp/scrape-output.txt
           rc=${PIPESTATUS[0]}
           set -e
           echo "exit_code=${rc}" >> "$GITHUB_OUTPUT"
@@ -68,6 +68,22 @@ jobs:
           echo "unresolved_count=${unresolved:-0}" >> "$GITHUB_OUTPUT"
           if [ "${rc}" -ne 0 ]; then
             echo "::warning::game-collections scrape isthereanydeal exited with code ${rc} (unresolved games and/or crawl errors). --git still committed whatever it produced; a human resolves the rest via 'game-collections complete'."
+          fi
+
+      - name: Commit any files --git missed
+        # Safety net: --git only stages the fixed lists/archives paths it knows
+        # about. This checks the whole working tree (deliberately `git add -A`,
+        # unlike normal usage) so that if the crawler ever starts writing
+        # somewhere new before this workflow is updated to match, that output is
+        # still committed instead of silently dropped. Unlikely to ever fire.
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            {
+              echo "[crawl|isthereanydeal] safety-net commit:"
+              echo "workflow: Committed files --git's fixed path list missed during this week's scheduled scrape."
+            } > ai/git/pending-commit.md
+            git add -A
+            git commit -F ai/git/pending-commit.md
           fi
 
       - name: Check for changes
