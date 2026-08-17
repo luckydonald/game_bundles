@@ -83,13 +83,22 @@ redeclaring it.
 `previously_excluded`; filter values always come from CLI flags/Typer
 defaults. Give `ApplyPickerApp.__init__` (`tui.py`) new optional params for
 the filter fields it doesn't already accept (`min_items`, `max_items`,
-`date_after`, `date_before`, `show_filtered`), and when an `initial_selection`
-is supplied, use its filter values as the fallback wherever the CLI flag was
-left at its Typer default. **Open design question to confirm with the user
-before implementing:** Typer doesn't distinguish "flag omitted" from "flag
-explicitly set to its default value," so CLI-flags-always-win precedence
-can't be fully clean — flag this tradeoff explicitly in the PR/commit
-message rather than silently picking a lossy heuristic.
+`date_after`, `date_before`, `show_filtered`).
+
+**Precedence, per user decision:** change every filter-related Typer option
+in `cli.py` (`--min-missing`, `--max-missing`, `--unresolved-handling`,
+`--unsupported-store-handling`, `--tiers`, plus any new ones for item/date
+bounds and show-filtered) to default to `None` at the Typer/CLI layer —
+i.e. "not passed" is now representable, distinct from a real value. The
+resolution order becomes, per field: **explicit CLI flag (if not `None`)
+→ value from the loaded `ApplySelection` (if `previous_selection` exists and
+has it set) → hardcoded documented default** (`max_missing=0`,
+`*_handling="ignore"`, `tier_mode="highest"`, `show_filtered=False`, bounds
+unset). Resolve this in `cli.py`'s `apply` command right after loading
+`previous_selection`, before constructing `ApplyPickerApp`, so `tui.py`
+itself always receives fully-resolved values (no three-way logic inside the
+TUI). Document the new default-`None` CLI behavior in `docs/README.md`
+alongside the existing filter-flag prose.
 
 **Tests:** `tests/test_apply_config.py` (round-trip incl. old-style YAML
 missing the new keys), `tests/test_apply_tui.py` (`_build_selection()`

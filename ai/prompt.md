@@ -1790,3 +1790,26 @@ both tui&non-tui shall confirm none-mode.
 > - [Raw log (`232109` chars, `227 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/220d4473-eea2-4366-b9bb-ac6d404ff8dc/tasks/a0170818dfe40d598.output)
 > - `20` tools, `43624` tokens, `2.59853 s`
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. For Item 2 (persisting apply TUI filters), Typer can't distinguish "flag omitted" from "flag explicitly set to its default value." How should saved filters interact with CLI flags on reopen?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Filter precedence** (1/1) <kbd>Single Select</kbd><br>
+>> For Item 2 (persisting apply TUI filters), Typer can't distinguish "flag omitted" from "flag explicitly set to its default value." How should saved filters interact with CLI flags on reopen?
+> - [ ] 1\. Saved config always wins (Recommended)
+>   - _If config/apply-selection.yml has filter values, use them, ignoring CLI flag defaults entirely. Simplest, no ambiguity — explicit --flag values would need a separate override mechanism if ever needed later._
+> - [ ] 2\. CLI flags always win
+>   - _CLI flags (even at their Typer default) always override saved filters. Saved filters only apply on a totally fresh run with zero CLI filter flags given — hard to detect reliably._
+> - [ ] 3\. No restore-on-load for now
+>   - _Only implement the save side (write filters into apply-selection.yml). Skip restoring them into the TUI on next open — reduces scope/risk, can be added later once the precedence question is settled._
+> - [x] 4\. _Type something:_
+>   - > Can't I set the flags to True/False/None, with None the "automatic" (documented) default later set in code? So the final filter is "copy from typer (flags), or copy from config file, or use default"
+>
+> </details>
+>
+
