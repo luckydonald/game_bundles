@@ -85,7 +85,8 @@ jobs:
           fi
 
           {
-            echo "[isthereanydeal] weekly scrape: workflow: Archived this week's isthereanydeal.com bundles via scheduled CI."
+            echo "[crawl|isthereanydeal] automated weekly scrape:"
+            echo "workflow: Archived this week's isthereanydeal.com bundles via scheduled CI."
             echo ""
             echo "Automated \`game-collections scrape isthereanydeal --tab=live\` run from the weekly GitHub Actions workflow (run ${GITHUB_RUN_ID})."
             echo "${unresolved_line}"
