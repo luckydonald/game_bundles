@@ -1723,3 +1723,5 @@ both tui&non-tui shall confirm none-mode.
 > </details>
 >
 
+❯ Fix @ai/errors/1.txt
+

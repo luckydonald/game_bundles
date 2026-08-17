@@ -1,0 +1,8 @@
+uv run game-collections apply
+unsupported loginusers.vdf: 3 validation errors for LoginUsersFile
+76561198044975919.AllowAutoLogin
+  Field required [type=missing, input_value={'AccountName': 'ispammai...imestamp': '1786919296'}, input_type=DuplicateRejectingDict]
+76561198044975919.MostRecent
+  Field required [type=missing, input_value={'AccountName': 'ispammai...imestamp': '1786919296'}, input_type=DuplicateRejectingDict]
+76561198044975919.AutoLogin
+  Extra inputs are not permitted [type=extra_forbidden, input_value='1', input_type=str]
