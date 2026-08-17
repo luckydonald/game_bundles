@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Idlers and Desktop Companions — Entire 13 Item Bundle
+name: Idlers and Desktop Companions — 6 Item Bundle
 tier: 1
 references:
 - name: Humble Bundle offer
@@ -10,6 +10,25 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-24_idlers-and-desktop-companions/source.json
 games:
+- name: Ropuka's Idle Island
+  ids:
+  - steam:3416070
+- name: Desktop Defender
+  ids:
+  - steam:3772810
+- name: My Little Life
+  ids:
+  - steam:2834600
+- name: Pupple Pop
+  ids:
+  - steam:4224500
+- name: 'Plantera 2: Golden Acorn'
+  ids:
+  - steam:1091920
+- name: How To Train Your Cock
+  ids:
+  - steam:3673060
+invalid:
 - name: 'Spirit City: Lofi Sessions'
   ids:
   - steam:2113850
@@ -31,21 +50,3 @@ games:
 - name: Focus Grove
   ids:
   - steam:4030830
-- name: Ropuka's Idle Island
-  ids:
-  - steam:3416070
-- name: Desktop Defender
-  ids:
-  - steam:3772810
-- name: My Little Life
-  ids:
-  - steam:2834600
-- name: Pupple Pop
-  ids:
-  - steam:4224500
-- name: 'Plantera 2: Golden Acorn'
-  ids:
-  - steam:1091920
-- name: How To Train Your Cock
-  ids:
-  - steam:3673060

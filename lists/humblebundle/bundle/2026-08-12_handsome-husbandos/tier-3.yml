@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Handsome Husbandos Bundle — entire-14-item-bundle
+name: Handsome Husbandos — Entire 10 Item Bundle
 tier: 3
 references:
 - name: isthereanydeal.com bundle
@@ -9,23 +9,24 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16476/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16476/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/handsome-husbandos
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_handsome-husbandos/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_handsome-husbandos/source.json
 games:
-- name: Fashioning Little Miss Lonesome
+- name: Nightshade／百花百狼
   ids:
-  - steam:640990
-  - isthereanydeal:fashioning-little-miss-lonesome
-- name: MAMIYA
+  - steam:512180
+  - isthereanydeal:nightshade-bai-hua-bai-lang
+- name: Steam Prison
   ids:
-  - steam:1394930
-  - isthereanydeal:mamiya
-- name: Bakumatsu Renka SHINSENGUMI
+  - steam:977460
+  - isthereanydeal:steam-prison
+- name: 'Our Life: Beginnings & Always: DLC Pack'
   ids:
-  - steam:1451160
-  - isthereanydeal:bakumatsu-renka-shinsengumi
-- name: A Date with Death Deluxe Edition
-  ids:
-  - unresolved:source:isthereanydeal:16476:a-date-with-death-deluxe-edition
-  - isthereanydeal:a-date-with-death-deluxe-edition
+  - unresolved:source:humblebundle:ourlife_beginningsandalways_dlcpack
 - name: OZMAFIA!!
   ids:
   - steam:303290
@@ -34,14 +35,26 @@ games:
   ids:
   - steam:3291080
   - isthereanydeal:desperadrops
-- name: Steam Prison
+- name: Fashioning Little Miss Lonesome
   ids:
-  - steam:977460
-  - isthereanydeal:steam-prison
-- name: Nightshade／百花百狼
+  - steam:640990
+  - isthereanydeal:fashioning-little-miss-lonesome
+- name: A Date with Death Deluxe DLC Pack
   ids:
-  - steam:512180
-  - isthereanydeal:nightshade-bai-hua-bai-lang
+  - unresolved:source:humblebundle:adatewithdeathdeluxedlcpack
+- name: MAMIYA
+  ids:
+  - steam:1394930
+  - isthereanydeal:mamiya
+- name: Bakumatsu Renka SHINSENGUMI
+  ids:
+  - steam:1451160
+  - isthereanydeal:bakumatsu-renka-shinsengumi
+invalid:
+- name: A Date with Death Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16476:a-date-with-death-deluxe-edition
+  - isthereanydeal:a-date-with-death-deluxe-edition
 - name: '​Our Life: Beginnings & Always - Step 2 Expansion'
   ids:
   - steam:1464061

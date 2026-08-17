@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: 'Dungeons & Dragons: Classics Collection 2026 — Entire 17 Item Bundle'
+name: 'Dungeons & Dragons: Classics Collection 2026 — 7 Item Bundle'
 tier: 1
 references:
 - name: Humble Bundle offer
@@ -10,6 +10,22 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-31_dungeons-dragons-classics-collection-2026/source.json
 games:
+- name: 'Forgotten Realms: The Archives - Collection Three'
+  ids:
+  - steam:1904530
+- name: 'Al-Qadim: The Genie''s Curse'
+  ids:
+  - steam:1904640
+- name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
+  ids:
+  - steam:1904650
+- name: DragonStrike
+  ids:
+  - steam:2350520
+- name: DeathKeep
+  ids:
+  - steam:2350540
+invalid:
 - name: 'Forgotten Realms: Demon Stone'
   ids:
   - unresolved:source:humblebundle:forgottenrealms_demonstone
@@ -40,18 +56,3 @@ games:
 - name: Silver Box Classics
   ids:
   - steam:2344020
-- name: 'Forgotten Realms: The Archives - Collection Three'
-  ids:
-  - steam:1904530
-- name: 'Al-Qadim: The Genie''s Curse'
-  ids:
-  - steam:1904640
-- name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
-  ids:
-  - steam:1904650
-- name: DragonStrike
-  ids:
-  - steam:2350520
-- name: DeathKeep
-  ids:
-  - steam:2350540

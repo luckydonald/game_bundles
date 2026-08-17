@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Indie's Support for Venezuela Bundle — entire-14-item-bundle
+name: Indie's Support for Venezuela Bundle — Entire 14 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16477/
@@ -8,55 +8,37 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16477/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16477/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/indies-support-for-venezuela-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_indies-support-for-venezuela-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-12_indies-support-for-venezuela-bundle/source.json
 games:
-- name: 'Bug Fables: The Everlasting Sapling'
-  ids:
-  - steam:1082710
-  - isthereanydeal:bug-fables-the-everlasting-sapling
-- name: Arco
-  ids:
-  - steam:2366970
-  - isthereanydeal:arco
 - name: 'VA-11 Hall-A: Cyberpunk Bartender Action'
   ids:
   - steam:447530
   - isthereanydeal:va-11-hall-a-cyberpunk-bartender-action
-- name: Calico
-  ids:
-  - steam:1112890
-  - isthereanydeal:calico
-- name: Neon City Riders
-  ids:
-  - steam:1102650
-  - isthereanydeal:neon-city-riders
-- name: Lonesome Village
-  ids:
-  - steam:1418360
-  - isthereanydeal:lonesome-village
-- name: 9 Years of Shadows
-  ids:
-  - steam:1402120
-  - isthereanydeal:9-years-of-shadows
-- name: 'The end is nahual: If I may say so'
-  ids:
-  - steam:2161110
-  - isthereanydeal:the-end-is-nahual-if-i-may-say-so
 - name: 'TOEM: A Photo Adventure'
   ids:
   - steam:1307580
   - isthereanydeal:toem-a-photo-adventure
-- name: Princess Pomu and the 5 Moons
+- name: Arco
   ids:
-  - steam:2642520
-  - isthereanydeal:princess-pomu-and-the-5-moons
-- name: RKGK / Rakugaki
+  - steam:2366970
+  - isthereanydeal:arco
+- name: 'Bug Fables: The Everlasting Sapling'
   ids:
-  - steam:2146570
-  - isthereanydeal:rkgk-rakugaki
-- name: OYASUMII
+  - steam:1082710
+  - isthereanydeal:bug-fables-the-everlasting-sapling
+- name: 9 Years of Shadows
   ids:
-  - steam:3033520
-  - isthereanydeal:oyasumii
+  - steam:1402120
+  - isthereanydeal:9-years-of-shadows
+- name: Calico
+  ids:
+  - steam:1112890
+  - isthereanydeal:calico
 - name: The Last Cat in the Universe
   ids:
   - steam:4197890
@@ -65,3 +47,27 @@ games:
   ids:
   - steam:4530730
   - isthereanydeal:the-last-cat-in-the-universe-supporter-pack
+- name: Princess Pomu and the 5 Moons
+  ids:
+  - steam:2642520
+  - isthereanydeal:princess-pomu-and-the-5-moons
+- name: 'The end is nahual: If I may say so'
+  ids:
+  - steam:2161110
+  - isthereanydeal:the-end-is-nahual-if-i-may-say-so
+- name: Lonesome Village
+  ids:
+  - steam:1418360
+  - isthereanydeal:lonesome-village
+- name: RKGK / Rakugaki
+  ids:
+  - steam:2146570
+  - isthereanydeal:rkgk-rakugaki
+- name: OYASUMII
+  ids:
+  - steam:3033520
+  - isthereanydeal:oyasumii
+- name: Neon City Riders
+  ids:
+  - steam:1102650
+  - isthereanydeal:neon-city-riders
