@@ -1813,3 +1813,6 @@ both tui&non-tui shall confirm none-mode.
 > </details>
 >
 
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`44205` chars, `43.3 KB`)](output/compact/001.a88cfd32-6e91-4619-b8d3-22b0872edf9c/result.md)
+
