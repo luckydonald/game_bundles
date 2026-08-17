@@ -21,6 +21,16 @@ To complete one:
      - Add `--purge-missing` if you want to remove items not tracked in the todo list. Still incompleted ones should be duplicated to the `sync_todo` MCP first.
      - Add `--purge-complete` to clean up completed tasks.
 
+## Todos added manually
+- [x] The current humble monthly contains _Game 2/8: Dead Cells + The Bad Seed DLC_, which are actually two games.
+- [x] The TUI apply picker should show a "diff" (steam collections to remove, steam collections to add, steam collections kept)
+- [ ] Standardize `Entire 14 Item Bundle` between `humblebundle` crawler and `isthereanydeal` (which does `entire-14-item-bundle`). Probably just dash-snake-case to title-space-case.
+- [ ] The `apply` should save the filter settings when it saves the lists, also to `config/apply-selection.yml`
+- [ ] Rename "Unconfigured Handling" (`apply`, `sync`) to something better named, which is easier to understand.
+- [ ] Analyze the difference between `isthereanydeal` crawling (current commits, i.e. `9f39eff31fe5ac1dfeb44d1b56d941deb42d4810`) with a humble bundle crawl (`1a12511d471dd97d49e5c9e07f7ec725ec12f91b`), and why they are diffenrent.
+  - [ ] Check that the `humblebundle` crawler supports merging with existing results. Again, prefer enhancing - not overwriting.
+
+
 ## Todos synced from CalDAV
 
 - [x] allow `/code-style` and suffix like `/code-style .md .py` or `/code-style md` in the query-autocommit hook to not be displayed — `todo:2eaeb8ce-67be-4878-a8df-3fb3311a4be8` _(done)_
