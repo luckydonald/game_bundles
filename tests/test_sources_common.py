@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from game_collections.sources.common import dump_json, load_cached_archive
+from game_collections.models import Game, GameList, Reference
+from game_collections.sources.common import dump_json, load_cached_archive, merge_game_list
 from game_collections.sources.dailyindiegame.models import DigArchive, DigDates, DigItem, DigPrice
 from datetime import UTC, datetime
 
@@ -77,3 +78,61 @@ def test_load_cached_archive_returns_none_on_invalid_json(tmp_path: Path) -> Non
 
     assert load_cached_archive(DigArchive, metadata_path, source_path) is None
 # end def test_load_cached_archive_returns_none_on_invalid_json
+
+
+def _list(*games: Game, name: str = "Bundle") -> GameList:
+    return GameList(
+        schema=1,
+        name=name,
+        references=[Reference(name="ref", url="https://example.com")],
+        games=list(games),
+    )
+# end def _list
+
+
+def test_merge_game_list_with_no_existing_file_returns_fresh_unchanged() -> None:
+    fresh = _list(Game(name="One", ids=["steam:1"]))
+    assert merge_game_list(None, fresh) is fresh
+# end def test_merge_game_list_with_no_existing_file_returns_fresh_unchanged
+
+
+def test_merge_game_list_preserves_manually_edited_ids() -> None:
+    existing = _list(Game(name="One", ids=["steam:1", "gog:one"]))
+    fresh = _list(Game(name="One", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh)
+
+    assert [game.ids for game in merged.games] == [["steam:1", "gog:one"]]
+# end def test_merge_game_list_preserves_manually_edited_ids
+
+
+def test_merge_game_list_appends_new_games_without_disturbing_existing() -> None:
+    existing = _list(Game(name="One", ids=["steam:1", "gog:one"]))
+    fresh = _list(Game(name="One", ids=["steam:1"]), Game(name="Two", ids=["steam:2"]))
+
+    merged = merge_game_list(existing, fresh)
+
+    assert [game.name for game in merged.games] == ["One", "Two"]
+    assert merged.games[0].ids == ["steam:1", "gog:one"]
+    assert merged.games[1].ids == ["steam:2"]
+# end def test_merge_game_list_appends_new_games_without_disturbing_existing
+
+
+def test_merge_game_list_never_removes_a_game_absent_from_the_fresh_crawl() -> None:
+    existing = _list(Game(name="One", ids=["steam:1"]), Game(name="Two", ids=["steam:2"]))
+    fresh = _list(Game(name="One", ids=["steam:1"]))
+
+    merged = merge_game_list(existing, fresh)
+
+    assert {game.name for game in merged.games} == {"One", "Two"}
+# end def test_merge_game_list_never_removes_a_game_absent_from_the_fresh_crawl
+
+
+def test_merge_game_list_takes_bundle_metadata_from_fresh() -> None:
+    existing = _list(Game(name="One", ids=["steam:1"]), name="Old Name")
+    fresh = _list(Game(name="One", ids=["steam:1"]), name="New Name")
+
+    merged = merge_game_list(existing, fresh)
+
+    assert merged.name == "New Name"
+# end def test_merge_game_list_takes_bundle_metadata_from_fresh

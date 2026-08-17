@@ -6,6 +6,7 @@ from pathlib import Path
 
 from game_collections.lists import load_game_list
 from game_collections.models import Game
+from game_collections.sources.common import render_game_list_yaml
 from game_collections.sources.humblebundle.crawler import (
     CrawledHumbleOffer,
     crawl_humble_offers,
@@ -119,6 +120,62 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     ]
     assert source_path.read_text(encoding="utf-8").startswith('{\n  "alpha": 1,')
 # end def test_writer_creates_archive_and_games_only_bundle_list
+
+
+def test_writer_re_crawl_preserves_manually_edited_ids(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    schema = tmp_path / "schemas/game-list.schema.json"
+    schema.parent.mkdir()
+    schema.write_text("{}\n", encoding="utf-8")
+
+    paths = write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
+    list_path = next(path for path in paths if path.suffix == ".yml")
+
+    # Simulate a manual fix: someone added a second storefront ID by hand.
+    loaded = load_game_list(list_path, lists_root)
+    manually_fixed = loaded.data.model_copy(
+        update={"games": [Game(name="Sample Game", ids=["steam:42", "gog:sample-game"])]}
+    )
+    list_path.write_text(render_game_list_yaml(manually_fixed, list_path, tmp_path), encoding="utf-8")
+
+    # Re-crawling the same, unchanged offer must not clobber the manual edit.
+    write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
+
+    reloaded = load_game_list(list_path, lists_root)
+    assert [(game.name, game.ids) for game in reloaded.data.games] == [
+        ("Sample Game", ["steam:42", "gog:sample-game"])
+    ]
+# end def test_writer_re_crawl_preserves_manually_edited_ids
+
+
+def test_writer_re_crawl_appends_new_game_without_disturbing_existing(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    schema = tmp_path / "schemas/game-list.schema.json"
+    schema.parent.mkdir()
+    schema.write_text("{}\n", encoding="utf-8")
+
+    write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
+
+    another_game = HumbleItem(
+        machine_name="anothergame",
+        title="Another Game",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(ids=["steam:99"]),
+    )
+    expanded_offer = _offer()
+    expanded_offer.archive.tiers[0].items.append(another_game)
+    expanded_offer.archive.tiers[0].item_count = 3
+
+    paths = write_humble_offer(expanded_offer, lists_root, archive_root, tmp_path)
+    list_path = next(path for path in paths if path.suffix == ".yml")
+
+    reloaded = load_game_list(list_path, lists_root)
+    assert [game.name for game in reloaded.data.games] == ["Sample Game", "Another Game"]
+# end def test_writer_re_crawl_appends_new_game_without_disturbing_existing
 
 
 def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
