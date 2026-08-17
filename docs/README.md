@@ -97,6 +97,8 @@ Completion defaults to `--mode blank`, which searches games with no proper ID (a
 
 `game-collections scrape humblebundle` discovers the current Humble Choice and every active Games bundle. Books and Software are ignored. Repeat `--url` to crawl only specific Choice or Games pages.
 
+Pass `--git` to autostash any pending changes, run the scrape, commit its own output (`lists/`, `archives/`, `config/humblebundle-store-ids.yml`) with a message in the same style the scheduled CI workflow uses, then restore the stash. `--git-style` picks the commit message wording: `manual` (default, for a human running this locally) or `auto` (CI-flavored, includes the GitHub Actions run ID when `GITHUB_RUN_ID` is set). `--git` never pushes or opens a PR - that stays a separate, explicit step.
+
 Humble embeds its catalog data in the public HTML. The importer converts descriptions to Markdown, resolves real games against the advertised storefronts, and writes:
 
 - launcher-neutral tier lists below `lists/humblebundle/`;
@@ -154,6 +156,8 @@ The normalized archive uses `schemas/greenmangaming-archive.schema.json`. All co
 ## isthereanydeal.com imports
 
 `game-collections scrape isthereanydeal` discovers bundles via [isthereanydeal.com/bundles](https://isthereanydeal.com/bundles/), an aggregator that indexes bundles from many selling platforms (Humble Bundle, Fanatical, GreenManGaming, IndieGala, AllYouPlay, and others) rather than selling anything itself. Unlike Humble/GreenManGaming, its own bundle detail page usually links straight to a storefront (most often Steam) per game, so games are resolved directly from that page's links — no title-search resolver needed. `--tab` selects which discovery tab(s) to crawl (`live` by default; `expired`/`pending` are opt-in).
+
+`--git`/`--git-style` behave the same as for `scrape humblebundle` above (see there), committing `lists/` and `archives/isthereanydeal`.
 
 Discovery uses a small, plain anonymous session: a GET of `/bundles/` sets a session cookie and embeds a matching CSRF-style token in the page, which is then sent as the `itad-sessiontoken` header on the paginated `POST /bundles/api/list/` discovery calls — an ordinary anonymous bootstrap, not any kind of login. Each discovered bundle's list-API summary is validated through a strict model and stored verbatim (as JSON, not passed through unchecked) in its archive; the embedded ITAD-internal tier/game preview in that same response is intentionally not modeled, since the bundle's own detail page gives the same information with real storefront IDs instead of ITAD's internal ones.
 
