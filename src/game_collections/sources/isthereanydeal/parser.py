@@ -245,12 +245,13 @@ def _tier_name(header_text: str, index: int) -> str:
 def _humble_tier_name(item_count: int, expected_game_count: int) -> str:
     """Match the dedicated Humble scraper's own tier-naming convention.
 
-    See `humblebundle/crawler.py`'s `write_humble_offer`: the tier whose
-    `item_count` equals the bundle's total game count is the full/"entire"
-    one, every other tier is named by its own item count.
+    See `humblebundle/crawler.py`'s `write_humble_offer`/`parser.py`'s `parse_choice_month`:
+    the tier whose `item_count` equals the bundle's total game count is the
+    full/"entire" one, every other tier is named by its own item count. Same
+    title-space-case format as the dedicated scraper, not a dash-slug form.
     """
-    prefix = "entire-" if item_count == expected_game_count else ""
-    return f"{prefix}{item_count}-item-bundle"
+    prefix = "Entire " if item_count == expected_game_count else ""
+    return f"{prefix}{item_count} Item Bundle"
 # end def _humble_tier_name
 
 
