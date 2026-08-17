@@ -1725,3 +1725,68 @@ both tui&non-tui shall confirm none-mode.
 
 ❯ Fix @ai/errors/1.txt
 
+❯ /plan @ai/todo.md
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The todo list has 4 remaining unchecked items. Which one should I plan for?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Todo item** (1/1) <kbd>Single Select</kbd><br>
+>> The todo list has 4 remaining unchecked items. Which one should I plan for?
+> - [ ] 1\. Standardize bundle name format
+>   - _Item 3: Standardize `Entire 14 Item Bundle` naming between humblebundle crawler (title-space-case) and isthereanydeal (dash-snake-case)._
+> - [ ] 2\. Persist filter settings in apply
+>   - _Item 4: The `apply` TUI should save filter settings alongside the selection lists into config/apply-selection.yml._
+> - [ ] 3\. Rename 'Unconfigured Handling'
+>   - _Item 5: Rename the 'Unconfigured Handling' option (in apply/sync) to a clearer name._
+> - [ ] 4\. Analyze isthereanydeal vs humble crawl diff
+>   - _Item 6/7: Compare isthereanydeal crawling vs humblebundle crawl at given commits, explain differences, and check humblebundle crawler supports merging with existing results instead of overwriting._
+> - [x] 5\. _Type something:_
+>   - > all remaining.
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `a9c63bbcaf88ba5e7` <kbd>completed</kbd>
+> - Tool `toolu_016EYHh5tYUL9Y9PT83dPBaP`
+> - > Agent "Explore apply TUI filter settings and unconfigured handling naming" finished
+> - [Query (`1834` chars, `1.79 KB`)](output/agents/019.a9c63bbcaf88ba5e7/prompt.md)
+> - [Answer (`4161` chars, `4.11 KB`)](output/agents/019.a9c63bbcaf88ba5e7/result.md)
+> - [Raw log (`143387` chars, `140 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/220d4473-eea2-4366-b9bb-ac6d404ff8dc/tasks/a9c63bbcaf88ba5e7.output)
+> - `11` tools, `31132` tokens, `0.605467 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Still waiting on 2 of 3 exploration agents (naming standardization, crawl diff/merge). I'll continue as soon as they finish. Anything you'd like to add or adjust while I wait?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Status update** (1/1) <kbd>Single Select</kbd><br>
+>> Still waiting on 2 of 3 exploration agents (naming standardization, crawl diff/merge). I'll continue as soon as they finish. Anything you'd like to add or adjust while I wait?
+> - [x] 1\. Continue waiting
+>   - _No changes, just keep waiting for the agents to finish._
+> - [ ] 2\. Add scope
+>   - _I want to add or adjust something about one of the four todo items._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `a0170818dfe40d598` <kbd>completed</kbd>
+> - Tool `toolu_011XdSkjq7yHgY9gKRQKkX2X`
+> - > Agent "Design implementation plan for 4 todo items" finished
+> - [Query (`9110` chars, `8.93 KB`)](output/agents/020.a0170818dfe40d598/prompt.md)
+> - [Answer (`23063` chars, `22.6 KB`)](output/agents/020.a0170818dfe40d598/result.md)
+> - [Raw log (`232109` chars, `227 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/220d4473-eea2-4366-b9bb-ac6d404ff8dc/tasks/a0170818dfe40d598.output)
+> - `20` tools, `43624` tokens, `2.59853 s`
+
