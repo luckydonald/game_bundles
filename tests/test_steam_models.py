@@ -86,6 +86,39 @@ def test_filter_format_version_drift_fails_closed() -> None:
 # end def test_filter_format_version_drift_fails_closed
 
 
+def test_login_users_new_format_without_most_recent() -> None:
+    # Newer Steam clients rename "AllowAutoLogin" to "AutoLogin" and stop writing "MostRecent";
+    # the most recent account is then inferred from the highest Timestamp instead.
+    data = b'''"users"
+{
+    "76561198044975919"
+    {
+        "AccountName"       "older"
+        "PersonaName"       "Older"
+        "RememberPassword"  "1"
+        "WantsOfflineMode"  "0"
+        "SkipOfflineModeWarning"    "0"
+        "AutoLogin" "1"
+        "Timestamp" "1700000000"
+    }
+    "76561198000000001"
+    {
+        "AccountName"       "newer"
+        "PersonaName"       "Newer"
+        "RememberPassword"  "1"
+        "WantsOfflineMode"  "0"
+        "SkipOfflineModeWarning"    "0"
+        "AutoLogin" "1"
+        "Timestamp" "1800000000"
+    }
+}
+'''
+
+    users = parse_login_users(data)
+    assert users.most_recent_steam_id == "76561198000000001"
+# end def test_login_users_new_format_without_most_recent
+
+
 def test_duplicate_vdf_keys_fail_closed() -> None:
     data = b'''"users"
 {
