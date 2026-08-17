@@ -449,7 +449,11 @@ class SteamFileGateway:
         if len(targets) != len(set(targets)):
             raise SteamIoError("Steam sync plan contains duplicate collection targets")
         # end if
-        for change in plan.changes:
+        # Deletions are processed before creates/updates so a collection name can be reused
+        # by a differently-targeted collection within the same plan (e.g. a list renamed onto
+        # a new tier path) without tripping the name-collision check below.
+        ordered_changes = sorted(plan.changes, key=lambda change: change.action != "delete")
+        for change in ordered_changes:
             collection_id = change.target_id
             if not STEAM_USER_COLLECTION_ID_PATTERN.fullmatch(collection_id):
                 raise SteamIoError(f"Steam sync plan has an unsafe collection target: {collection_id!r}")
