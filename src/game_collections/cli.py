@@ -23,6 +23,7 @@ from game_collections.migrate_tiers import (
     step_would_change,
 )
 from game_collections.completion import MissingHandling
+from game_collections import git_ops
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
     SteamOptions,
@@ -443,9 +444,18 @@ def scrape_humblebundle_command(
         bool,
         typer.Option("--refresh", help="Re-resolve every offer, ignoring already-archived output."),
     ] = False,
+    git: Annotated[
+        bool,
+        typer.Option(
+            "--git",
+            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
+        ),
+    ] = False,
 ) -> None:
     """Archive current Humble Choice and active Games bundles."""
     repository_root = Path.cwd().resolve()
+    pre_crawl_head = git_ops.head(repository_root) if git else None
+    stashed = git_ops.autostash(repository_root) if git else False
     client = HumbleHttpClient()
     choose = (
         (lambda _item, _provider, _candidates: None)
@@ -467,6 +477,7 @@ def scrape_humblebundle_command(
         write_resolution_map(resolution_map, mapping)
     # end def on_offer
 
+    unresolved: list[str] = []
     try:
         mapping = load_resolution_map(resolution_map)
         resolver = StorefrontResolver(client.fetch, choose)
@@ -502,6 +513,25 @@ def scrape_humblebundle_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        if git:
+            unresolved_line = (
+                f"{len(unresolved)} unresolved store IDs left as `unresolved:store:steam:<slug>` "
+                "for manual `game-collections complete` follow-up."
+                if unresolved
+                else "None unresolved."
+            )
+            message = (
+                "[crawl|humblebundle] automated scrape:\n"
+                "Archived Humble Bundle offers via `game-collections scrape humblebundle --git`.\n\n"
+                f"{unresolved_line}\n"
+            )
+            git_ops.commit_changed_paths(
+                repository_root, ["lists", "archives", str(resolution_map)], message
+            )
+            if stashed and pre_crawl_head is not None:
+                git_ops.restore_autostash(repository_root, pre_crawl_head)
+            # end if
+        # end if
     # end try
 # end def scrape_humblebundle_command
 
@@ -688,11 +718,29 @@ def scrape_isthereanydeal_command(
         bool,
         typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
     ] = False,
+    git: Annotated[
+        bool,
+        typer.Option(
+            "--git",
+            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
+        ),
+    ] = False,
 ) -> None:
     """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
     repository_root = Path.cwd().resolve()
+    pre_crawl_head = git_ops.head(repository_root) if git else None
+    stashed = git_ops.autostash(repository_root) if git else False
     client = ItadHttpClient()
     written_count = 0
+    unresolved_count = 0
+
+    def counting_log(message: str) -> None:
+        nonlocal unresolved_count
+        if "unresolved:source:isthereanydeal:" in message:
+            unresolved_count += 1
+        # end if
+        typer.echo(message)
+    # end def counting_log
 
     def on_offer(offer: CrawledItadOffer) -> None:
         nonlocal written_count
@@ -701,7 +749,7 @@ def scrape_isthereanydeal_command(
             lists_root=lists_root,
             archive_root=archive_root,
             repository_root=repository_root,
-            log=typer.echo,
+            log=counting_log,
         )
         written_count += len(paths)
         typer.echo(f"Archived {offer.archive.title}: {len(paths)} file(s)")
@@ -716,7 +764,7 @@ def scrape_isthereanydeal_command(
             provider_config,
             tabs=tabs or ("live",),
             archive_root=None if refresh else archive_root,
-            log=typer.echo,
+            log=counting_log,
             on_offer=on_offer,
             shop_names=shop_names,
         )
@@ -732,6 +780,23 @@ def scrape_isthereanydeal_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        if git:
+            unresolved_line = (
+                f"{unresolved_count} unresolved storefront IDs left as "
+                "`unresolved:source:isthereanydeal:<slug>` for manual `game-collections complete` follow-up."
+                if unresolved_count
+                else "None unresolved."
+            )
+            message = (
+                "[crawl|isthereanydeal] automated scrape:\n"
+                "Archived isthereanydeal.com bundles via `game-collections scrape isthereanydeal --git`.\n\n"
+                f"{unresolved_line}\n"
+            )
+            git_ops.commit_changed_paths(repository_root, ["lists", "archives/isthereanydeal"], message)
+            if stashed and pre_crawl_head is not None:
+                git_ops.restore_autostash(repository_root, pre_crawl_head)
+            # end if
+        # end if
     # end try
 # end def scrape_isthereanydeal_command
 
