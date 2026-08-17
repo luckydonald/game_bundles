@@ -1,0 +1,8 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to understand how the `references` field (a list of Reference{name,url} objects on GameList, defined in src/game_collections/models.py) is populated/written across the codebase.
+
+1. Read `merge_game_list()` in src/game_collections/sources/common.py — currently it takes ALL bundle-level metadata (name/tier/pick_quota/references) from the "fresh" crawl, overwriting whatever `references` existed in the previously-committed file. Find its exact current implementation.
+2. Find every place that constructs/writes a GameList's `references` field across sources: humblebundle/crawler.py, isthereanydeal/crawler.py, greenmangaming crawler, dailyindiegame crawler. For each, note whether references is a single URL, a list, and whether re-running the crawler could produce a DIFFERENT references list than a previous run (e.g. different URL, or an isthereanydeal crawl adding a mirror reference to an already-existing humblebundle-authored list, or vice versa).
+3. Check if there's any existing helper for de-duplicating or merging lists of Reference objects, or any Reference equality/hashability behavior in models.py.
+4. Check `lists/README.md` for any documented convention about what `references` should contain (e.g. "one entry per source" or "append new source mirrors").
+
+Report (under 350 words): exact current merge_game_list references behavior with code, which write paths could cause references to differ between runs/sources such that overwriting would lose information, and what Reference model looks like (fields, equality). Code-referenced (file:line).
