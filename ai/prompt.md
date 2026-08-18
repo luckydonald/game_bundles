@@ -2053,3 +2053,12 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ Be specific in such type validators, in this case to allow only the additional expected `""` empty string. The file restore from the old commit should be best case limited to those files which would _otherwise_ create patch apply conflicts, so the goal is to first always restore working changes cleanly and then secondary to keep as much of the crawl commit available as possible. So the atempt is the files commited with the crawl with keeping the local changes on top of that, otherwise "just" the local changes for the before-version of that file shall remane in the working directory. Note, this restored stuff shall (as already speced) not be commited, it's the local uncommited (and possibly untracked) changes, they must be restored. A full fledged backup of the folder or anything would be overkill and quite frankly not needed with the assumptions above.
 
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`45711` chars, `44.7 KB`)](output/compact/002.00110058-cda6-4c9b-abd7-8963fd56227b/result.md)
+
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`54085` chars, `53 KB`)](output/compact/003.6767311f-1080-4333-81db-503826bf279b/result.md)
+
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`24104` chars, `23.6 KB`)](output/compact/004.6767311f-1080-4333-81db-503826bf279b/result.md)
+
