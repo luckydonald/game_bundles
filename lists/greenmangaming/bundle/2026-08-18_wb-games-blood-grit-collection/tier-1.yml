@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'WB Games: Blood & Grit Collection — Survive'
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16489/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16489/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16489/source.json
+games:
+- name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16489:middle-earth-shadow-of-mordor-game-of-the-year-edition
+  - isthereanydeal:middle-earth-shadow-of-mordor-game-of-the-year-edition
+- name: Mad Max
+  ids:
+  - steam:234140
+  - isthereanydeal:mad-max
+- name: Mortal Kombat XL
+  ids:
+  - unresolved:source:isthereanydeal:16489:mortal-kombat-xl
+  - isthereanydeal:mortal-kombat-xl
