@@ -12,7 +12,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
   - I believe `humblebundle` has it wrong.
 - [x] `references` should be appended to, not overwritten.
 - [x] HumbleBundle shall still be authoritative with its games, so not on humble = remove from bundle.
-      - hehe, that rhymes!
+  - hehe, that rhymes!
 - [x] Add a `--git` flag, which is alias for `--git-add` and `--git-commit`; doing exactly that.
   - It shall be using a similar commit message as the GitHub actions.
   - Have `--git=auto` and `--git=manual` (default when just `--git`), which provide slightly different texts for each usecase.

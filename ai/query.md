@@ -1980,3 +1980,24 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ /plan fix the bug in `test_unchecking_and_saving_produces_expected_selection`, then remove that memory.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The commit landed fine (4ee4de73). The skill's cleanup step wants an interactive rebase to fold 6 preceding `ai: updated prompt`/`ai: save plan` auto-commits into it, but the auto-mode classifier is blocking the `git rebase -i` call outright. How do you want to proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Rebase blocked** (1/1) <kbd>Single Select</kbd><br>
+>> The commit landed fine (4ee4de73). The skill's cleanup step wants an interactive rebase to fold 6 preceding `ai: updated prompt`/`ai: save plan` auto-commits into it, but the auto-mode classifier is blocking the `git rebase -i` call outright. How do you want to proceed?
+> - [ ] 1\. Skip the fold
+>   - _Leave history as-is (commit is already made and correct); don't fold the auto-commits._
+> - [ ] 2\. You run it
+>   - _I'll give you the exact command to run yourself via `!` so it bypasses the classifier._
+> - [x] 3\. _Type something:_
+>   - > Let me instruct you to rebase so the auto classifier is happy.
+>
+> </details>
+>
+
