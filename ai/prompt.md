@@ -2026,3 +2026,30 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ Fix the two errors in @ai/errors/2.txt
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The leftover `pre-scrape autostash` stash from the failed run is still sitting in your repo. I verified its tracked-file content is already fully merged into your working tree (no conflicts), so dropping the stash would just discard now-redundant backup data. Should I drop it to finish cleaning up?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Stash cleanup** (1/1) <kbd>Single Select</kbd><br>
+>> The leftover `pre-scrape autostash` stash from the failed run is still sitting in your repo. I verified its tracked-file content is already fully merged into your working tree (no conflicts), so dropping the stash would just discard now-redundant backup data. Should I drop it to finish cleaning up?
+> - [ ] 1\. Yes, drop the stash
+>   - _git stash drop — safe since the content is already merged into the working tree (verified no unmerged paths)_
+> - [ ] 2\. No, leave it
+>   - _Keep the stash around; you'll clean it up yourself later_
+> - [x] 3\. _Type something:_
+>   - > Apply it cleanly. The idea here is, if I restore all the impacted files to before the `--git` commit, the stash apply should work without problems.
+>
+> </details>
+>
+
+❯ /plan Can't you make a type which has like a validator/ingestion for that already built-in in the (pydantic) type? Also, the stashs should **not** be dropped on issues. Again, the stash is created on a commit before the crawl run, hence it is garanteed to apply successfully if we reset those files to that preceding commit.
+
+❯ Be specific in such type validators, in this case to allow only the additional expected `""` empty string. The file restore from the old commit should be best case limited to those files which would _otherwise_ create patch apply conflicts, so the goal is to first always restore working changes cleanly and then secondary to keep as much of the crawl commit available as possible. So the atempt is the files commited with the crawl with keeping the local changes on top of that, otherwise "just" the local changes for the before-version of that file shall remane in the working directory. Note, this restored stuff shall (as already speced) not be commited, it's the local uncommited (and possibly untracked) changes, they must be restored. A full fledged backup of the folder or anything would be overkill and quite frankly not needed with the assumptions above.
+
