@@ -456,7 +456,9 @@ def scrape_humblebundle_command(
     ] = False,
     refresh: Annotated[
         bool,
-        typer.Option("--refresh", help="Re-resolve every offer, ignoring already-archived output."),
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-resolve every offer, ignoring already-archived output."
+        ),
     ] = False,
     git: Annotated[
         bool,
@@ -573,7 +575,9 @@ def scrape_dailyindiegame_command(
     archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
     refresh: Annotated[
         bool,
-        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
+        ),
     ] = False,
 ) -> None:
     """Archive currently listed DailyIndieGame Steam bundles."""
@@ -664,7 +668,9 @@ def scrape_greenmangaming_command(
     ] = False,
     refresh: Annotated[
         bool,
-        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
+        ),
     ] = False,
 ) -> None:
     """Archive currently listed Green Man Gaming video-games bundles."""
@@ -743,7 +749,9 @@ def scrape_isthereanydeal_command(
     shop_config_path: Annotated[Path, typer.Option("--shop-config")] = Path("config/isthereanydeal-shops.yml"),
     refresh: Annotated[
         bool,
-        typer.Option("--refresh", help="Re-fetch every bundle, ignoring already-archived output."),
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
+        ),
     ] = False,
     git: Annotated[
         bool,
