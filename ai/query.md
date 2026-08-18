@@ -2001,3 +2001,28 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ Add a `--no-cache` to the crawl, i.e. for humblebundle, and others if they have similar code.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The existing `--refresh` flag already does this (ignores the resume-from-disk archive cache, forces everything to be redone). How should `--no-cache` relate to it?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **--no-cache vs --refresh** (1/1) <kbd>Single Select</kbd><br>
+>> The existing `--refresh` flag already does this (ignores the resume-from-disk archive cache, forces everything to be redone). How should `--no-cache` relate to it?
+> - [ ] 1\. Add --no-cache as an alias for --refresh
+>   - _Same option, two flag names both set the same underlying refresh behavior; help text still calls it --refresh/--no-cache._
+> - [ ] 2\. Rename --refresh to --no-cache
+>   - _Replace the flag entirely across all scrape commands (breaking change to CLI/docs, but only one name to maintain)._
+> - [ ] 3\. Add --no-cache as a distinct new flag
+>   - _Keep --refresh as-is and add a separate --no-cache option with its own (please clarify) semantics._
+> - [x] 4\. _Type something:_
+>   - > Alias to `--refresh` is good. I'm asking because of the `if cached is not None` of `src/game_collections/sources/humblebundle/crawler.py:196`.
+>
+> </details>
+>
+
