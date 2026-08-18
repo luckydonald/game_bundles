@@ -1,0 +1,62 @@
+(.venv) user@fedora-3:~/git/luckydonald/game_collections$ game-collections scrape humblebundle --no-cache
+error: https://www.humblebundle.com/games/rage-inducing-difficult-games: 1 validation error for HumbleCharity
+url
+  Input should be a valid URL, input is empty [type=url_parsing, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/url_parsing
+Wrote 60 file(s) for 14 offer(s); 100 unresolved game(s).
+1
+Traceback (most recent call last):
+  File "/home/user/git/luckydonald/game_collections/src/game_collections/cli.py", line 536, in scrape_humblebundle_command
+    raise typer.Exit(1)
+typer._click.exceptions.Exit: 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/git/luckydonald/game_collections/src/game_collections/cli.py", line 540, in scrape_humblebundle_command
+    raise typer.Exit(1) from error
+typer._click.exceptions.Exit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/git/luckydonald/game_collections/.venv/bin/game-collections", line 10, in <module>
+    sys.exit(app())
+             ~~~^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/_click/core.py", line 807, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/core.py", line 1193, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/core.py", line 183, in _main
+    rv = self.invoke(ctx)
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/core.py", line 1115, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/core.py", line 1115, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/_click/core.py", line 746, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/_click/core.py", line 489, in invoke
+    return callback(*args, **kwargs)
+  File "/home/user/git/luckydonald/game_collections/.venv/lib64/python3.14/site-packages/typer/main.py", line 1515, in wrapper
+    return callback(**use_params)
+  File "/home/user/git/luckydonald/game_collections/src/game_collections/cli.py", line 561, in scrape_humblebundle_command
+    git_ops.restore_autostash(repository_root, pre_crawl_head)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/git/luckydonald/game_collections/src/game_collections/git_ops.py", line 103, in restore_autostash
+    raise GitAutocommitError(
+    ...<2 lines>...
+    )
+game_collections.git_ops.GitAutocommitError: Could not automatically restore the pre-scrape stash. Resolve manually via `git stash list` / `git stash show -p`, then `git stash drop`.
