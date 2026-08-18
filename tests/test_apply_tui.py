@@ -976,14 +976,17 @@ def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> No
             app._toggle(_NodeData(kind="bundle", source="greenmangaming", list_id="greenmangaming/bundle/2026-02-01_b/tier-2"))
             await pilot.pause()
             app.action_save()
+            await pilot.pause()
+            await pilot.click("#apply-action-close")
+            await pilot.pause()
         # end async with
     # end def scenario
 
     asyncio.run(scenario())
 
     assert app.return_value is not None
-    assert app.return_value.selected == ["humblebundle/bundle/2026-01-01_a/bundle"]
-    assert app.return_value.excluded == ["greenmangaming/bundle/2026-02-01_b/tier-2"]
+    assert app.return_value.selection.selected == ["humblebundle/bundle/2026-01-01_a/bundle"]
+    assert app.return_value.selection.excluded == ["greenmangaming/bundle/2026-02-01_b/tier-2"]
     assert [game_list.id for game_list in app.all_game_lists] == [
         "greenmangaming/bundle/2026-02-01_b/tier-2",
         "humblebundle/bundle/2026-01-01_a/bundle",

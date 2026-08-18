@@ -1966,3 +1966,17 @@ both tui&non-tui shall confirm none-mode.
 
 ❯ Add upgrading the crawl pipline files to run with `--git` as a new step at the end.
 
+❯ Fix the test.
+
+❯ document what you learned and discovered.
+
+❯ <task-notification>
+<fork-source>
+This session began as a fork (copy) of another session that is still running: a session whose self-reported name is 'rename-unconfigured-handling'. The conversation up to 2026-08-18T00:31:51.757Z is shared history with it; the two sessions have since diverged, and neither sees the other's new activity. To coordinate with it — hand results back, ask what it has done since, avoid duplicating its work — find it in the ListAgents listing under that name (it may have been renamed since) and message it with SendMessage.
+</fork-source>
+</task-notification>
+
+❯ document what you learned and discovered.
+
+❯ /plan fix the bug in `test_unchecking_and_saving_produces_expected_selection`, then remove that memory.
+
