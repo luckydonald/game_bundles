@@ -2111,3 +2111,13 @@ This session began as a fork (copy) of another session that is still running: a 
 - If we need the headless browser, the steam search shall be happening first, as it's cheaper.
 - Try if the SSL handshake matters, because it's Akamai CDN? There was a patched SSL for python mimicing Google Chrome.
 
+❯ Is there a python module to run the challange?
+
+❯ Try a recent fork of `cloudscraper`?
+
+❯ Try e.g. `https://github.com/CloudWaddie/cloudscraper.git`
+
+❯ You litterally did install pip packages earlier, so go ahead install the git one, too.
+
+❯ Please go ahead with the test using that.
+
