@@ -110,6 +110,28 @@ def test_restore_autostash_falls_back_to_pre_crawl_content_on_conflict(tmp_path:
 # end def test_restore_autostash_falls_back_to_pre_crawl_content_on_conflict
 
 
+def test_restore_autostash_drops_stash_when_only_untracked_files_collide(tmp_path: Path) -> None:
+    repository_root = _init_repo(tmp_path)
+    pre_crawl_head = git_ops.head(repository_root)
+    # An untracked file present before the scrape, stashed along with everything else.
+    (repository_root / "new-untracked.txt").write_text("pre-scrape\n", encoding="utf-8")
+    assert git_ops.autostash(repository_root) is True
+
+    (repository_root / "lists" / "keep.txt").write_text("scraped\n", encoding="utf-8")
+    git_ops.commit_changed_paths(repository_root, ["lists"], "scrape output")
+    # The scrape itself (or something else) recreated the same untracked path,
+    # so restoring the stash's copy of it would collide - the tracked-file
+    # merge still succeeds and nothing was actually lost.
+    (repository_root / "new-untracked.txt").write_text("recreated\n", encoding="utf-8")
+
+    git_ops.restore_autostash(repository_root, pre_crawl_head)
+
+    assert _git(repository_root, "stash", "list").stdout.strip() == ""
+    status = _git(repository_root, "status", "--porcelain").stdout
+    assert "UU" not in status
+# end def test_restore_autostash_drops_stash_when_only_untracked_files_collide
+
+
 def test_restore_autostash_raises_when_nothing_was_stashed(tmp_path: Path) -> None:
     repository_root = _init_repo(tmp_path)
     pre_crawl_head = git_ops.head(repository_root)
