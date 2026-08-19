@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Hamble's Summer Island Getaway Bundle — Entire 8 Item Bundle
+tier: 2
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/hambles-summer-island-getaway-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-19_hambles-summer-island-getaway-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-19_hambles-summer-island-getaway-bundle/source.json
+games:
+- name: Primordialis
+  ids:
+  - steam:3011360
+- name: Caribbean Legend
+  ids:
+  - steam:2230980
+- name: Forgotten Seas
+  ids:
+  - steam:2168260
+- name: 'ISLANDERS: New Shores'
+  ids:
+  - steam:2368930
+- name: Just a To the Moon Series Beach Episode
+  ids:
+  - steam:2159210
+- name: The South Island
+  ids:
+  - unresolved:source:humblebundle:thesouthisland
+- name: ISLANDERS
+  ids:
+  - steam:1046030
+- name: Flooded
+  ids:
+  - steam:1795470

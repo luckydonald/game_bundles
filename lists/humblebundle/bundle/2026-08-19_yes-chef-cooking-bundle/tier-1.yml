@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Yes Chef! - Cooking Bundle — 7 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/yes-chef-cooking-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-19_yes-chef-cooking-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-19_yes-chef-cooking-bundle/source.json
+games:
+- name: 'Brewmaster: Beer Brewing Simulator'
+  ids:
+  - steam:1569200
+- name: 'Tailside: Cozy Cafe Sim'
+  ids:
+  - steam:2922570
+- name: Which Sausage, Mate?
+  ids:
+  - steam:4429700
+- name: Burger Bots Inc.
+  ids:
+  - steam:3795760
+- name: Cannibal Cuisine
+  ids:
+  - steam:1136020
+- name: Bakery Simulator
+  ids:
+  - steam:1031120
+- name: Recipe for Disaster
+  ids:
+  - steam:1492360
