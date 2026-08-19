@@ -16,6 +16,7 @@ class GitAutocommitError(RuntimeError):
 
 
 _UNMERGED_STATUS = re.compile(r"^(?:DD|AU|UD|UA|DU|AA|UU) ")
+_UNTRACKED_COLLISION = "could not restore untracked files from stash"
 
 
 def _run(repository_root: Path, *args: str) -> subprocess.CompletedProcess[str]:
@@ -90,12 +91,22 @@ def restore_autostash(repository_root: Path, pre_crawl_head: str) -> None:
         return
     # end if
     conflicting = _unmerged_paths(repository_root)
+    if not conflicting and _UNTRACKED_COLLISION in pop.stderr:
+        # All tracked changes already merged cleanly; git only bailed because
+        # untracked files from the stash collide with untracked files already
+        # sitting in the working tree (unrelated to this stash). Nothing was
+        # lost, so the stash is redundant now.
+        _run(repository_root, "stash", "drop")
+        return
+    # end if
     if conflicting:
         _run(repository_root, "checkout", pre_crawl_head, "--", *conflicting)
         apply_result = subprocess.run(
             ["git", "stash", "apply"], cwd=repository_root, text=True, capture_output=True
         )
-        if apply_result.returncode == 0:
+        if apply_result.returncode == 0 or (
+            not _unmerged_paths(repository_root) and _UNTRACKED_COLLISION in apply_result.stderr
+        ):
             _run(repository_root, "stash", "drop")
             return
         # end if
