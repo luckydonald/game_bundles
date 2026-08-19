@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Idol Days Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16394/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16394/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16394/source.json
+games:
+- name: School Idol QT Cool
+  ids:
+  - unresolved:source:isthereanydeal:16394:school-idol-qt-cool
+  - isthereanydeal:school-idol-qt-cool
+- name: KiraKira Stars Idol Project AI
+  ids:
+  - steam:1202770
+  - isthereanydeal:kirakira-stars-idol-project-ai
+- name: Kirakira Stars Idol Project Nagisa
+  ids:
+  - steam:1281510
+  - isthereanydeal:kirakira-stars-idol-project-nagisa
+- name: Kirakira stars idol project Reika
+  ids:
+  - steam:1396050
+  - isthereanydeal:kirakira-stars-idol-project-reika
+- name: Bitch Idol Collapse Story - My Revenge Is tough
+  ids:
+  - unresolved:source:isthereanydeal:16394:bitch-idol-collapse-story-my-revenge-is-tough
+  - isthereanydeal:bitch-idol-collapse-story-my-revenge-is-tough
+- name: Suddenly transformed into a girl（Suddenly Feminized?! School Survival）
+  ids:
+  - unresolved:source:isthereanydeal:16394:suddenly-transformed-into-a-girl-suddenly-feminized-school-survival
+  - isthereanydeal:suddenly-transformed-into-a-girl-suddenly-feminized-school-survival
+- name: IdolDays
+  ids:
+  - steam:1576130
+  - isthereanydeal:idoldays
