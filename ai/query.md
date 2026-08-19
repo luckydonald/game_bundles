@@ -2103,3 +2103,11 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ rewrite the plan, it seems to have failed?
+
+❯ it claims `No plan found` here. Can you just start writing that to an new plan file?
+
+❯ Alright, 
+- If we need the headless browser, the steam search shall be happening first, as it's cheaper.
+- Try if the SSL handshake matters, because it's Akamai CDN? There was a patched SSL for python mimicing Google Chrome.
+
