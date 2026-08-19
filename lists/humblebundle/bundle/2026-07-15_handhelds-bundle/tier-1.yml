@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Handhelds Bundle — 2 Item Bundle
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16395/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16395/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16395/source.json
+games:
+- name: AMID EVIL
+  ids:
+  - steam:673130
+  - isthereanydeal:amid-evil
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16395:children-of-morta-complete-edition
+  - isthereanydeal:children-of-morta-complete-edition
