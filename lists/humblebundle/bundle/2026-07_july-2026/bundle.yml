@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice July 2026 — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16368/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16368/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16368/source.json
+games:
+- name: TUNIC
+  ids:
+  - steam:553420
+- name: Sea of Stars
+  ids:
+  - steam:1244090
+- name: 'Police Simulator: Patrol Officers'
+  ids:
+  - steam:997010
+- name: Neon White
+  ids:
+  - steam:1533420
+- name: Our Adventurer Guild
+  ids:
+  - steam:2026000
+- name: Dicefolk
+  ids:
+  - steam:1996430
+- name: Sledders
+  ids:
+  - steam:2486740
+- name: Drop Duchy - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:16368:drop-duchy-complete-edition
