@@ -2062,3 +2062,44 @@ This session began as a fork (copy) of another session that is still running: a 
 ❯ Conversation compacted <kbd>manual</kbd>:
 > - [Result (`24104` chars, `23.6 KB`)](output/compact/004.6767311f-1080-4333-81db-503826bf279b/result.md)
 
+❯ /plan When resolving `humblebundle` scraped games on steam, e.g. `Primordialis` or `GRIME - Deluxe Edition`, prefer looking into `steamdb.info` first, which is usually better in finding the exact product result.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. SteamDB blocks plain HTTP fetch (curl -A Chrome UA -> 403; confirmed live) — it needs a real, non-headless browser session (same Cloudflare situation as the DailyIndieGame source, which uses a headed patchright Chromium). The Humble/GMG resolvers currently only need plain httpx. How should steamdb lookups be wired in?
+>> 2. Should steamdb.info search run *before* the existing store.steampowered.com search (as first choice, falling back to steampowered.com if steamdb has no unique match), or *replace* it entirely for the steam provider?
+>> 3. Green Man Gaming's resolver reuses Humble's StorefrontResolver/STORE_SEARCH_URLS machinery for its own steam-provider lookups. Should this steamdb-first change apply there too?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fetch mechanism** (1/3) <kbd>Single Select</kbd><br>
+>> SteamDB blocks plain HTTP fetch (curl -A Chrome UA -> 403; confirmed live) — it needs a real, non-headless browser session (same Cloudflare situation as the DailyIndieGame source, which uses a headed patchright Chromium). The Humble/GMG resolvers currently only need plain httpx. How should steamdb lookups be wired in?
+> - [ ] 1\. Headed browser, always available (Recommended)
+>   - _Add a DailyIndigame-style headed patchright browser client used only for the steam-provider search step. Works in scrape humblebundle too, but can't run in GitHub Actions headless CI (same limitation noted for DailyIndieGame) — unresolved steam items would just fall through to the existing steampowered.com search or stay unresolved there._
+> - [ ] 2\. Manual/local-only opt-in
+>   - _Keep the scheduled Humble CI scrape untouched (steampowered.com search only). Add steamdb as an extra step only in a manual/local resolve path (e.g. a CLI flag or the `complete` command), so nobody needs a browser dependency unless they explicitly ask for it._
+> - [x] 3\. _Type something:_
+>   - > Check out @~/git/github.com/SteamDatabase/BrowserExtension
+>
+>> **Search order** (2/3) <kbd>Single Select</kbd><br>
+>> Should steamdb.info search run *before* the existing store.steampowered.com search (as first choice, falling back to steampowered.com if steamdb has no unique match), or *replace* it entirely for the steam provider?
+> - [x] 1\. Try steamdb first, fall back to steampowered.com (Recommended)
+>   - _Matches your phrasing ("prefer... first"). If steamdb gives a unique exact-title match, use it; otherwise fall back to the current steampowered.com search behavior so nothing regresses._
+> - [ ] 2\. Replace steampowered.com search entirely for steam
+>   - _Steam provider search always goes through steamdb.info; store.steampowered.com search is dropped from the steam path._
+> - [ ] 3\. _Type something._
+>
+>> **GMG scope** (3/3) <kbd>Single Select</kbd><br>
+>> Green Man Gaming's resolver reuses Humble's StorefrontResolver/STORE_SEARCH_URLS machinery for its own steam-provider lookups. Should this steamdb-first change apply there too?
+> - [x] 1\. Yes, both sources (Recommended)
+>   - _Change the shared STORE_SEARCH_URLS/resolver machinery so both scrape humblebundle and scrape greenmangaming benefit._
+> - [ ] 2\. Humble only
+>   - _Scope the change to humblebundle's resolver.py only; leave greenmangaming's steam resolution as-is for now._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
