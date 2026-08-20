@@ -2148,3 +2148,5 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ I still see two `ai: updated prompt`...
 
+❯ why is `yuri` in luck not being in `apply`? (you may run, it defaults to dry run)
+
