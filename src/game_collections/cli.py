@@ -74,6 +74,7 @@ from game_collections.sources.humblebundle.resolver import (
     StorefrontResolver,
     load_resolution_map,
 )
+from game_collections.sources.humblebundle.steamdb import SteamDbBrowserClient, SteamDbCrawlError
 from game_collections.sources.isthereanydeal.crawler import (
     CrawledItadOffer,
     ItadHttpClient,
@@ -296,6 +297,48 @@ def _choose_search_candidate(
 # end def _choose_search_candidate
 
 
+class _LazySteamDbFetcher:
+    """Launches `SteamDbBrowserClient` only on first use, and only once per run.
+
+    steamdb.info search is a fallback (see `StorefrontResolver._search_steam`),
+    only reached when steampowered.com's own search doesn't already resolve a
+    title unambiguously, so most runs should never pay the headed-browser
+    launch cost. Once launch fails once (missing `patchright`, no display,
+    ...), every later call fails fast instead of retrying.
+    """
+
+    def __init__(self) -> None:
+        self._client: SteamDbBrowserClient | None = None
+        self._unavailable = False
+    # end def __init__
+
+    def fetch(self, url: str) -> str:
+        """Fetch through the browser, launching it lazily on first call."""
+        if self._unavailable:
+            raise SteamDbCrawlError("steamdb.info browser previously failed to launch")
+        # end if
+        if self._client is None:
+            try:
+                self._client = SteamDbBrowserClient()
+            except Exception as error:  # noqa: BLE001 - any launch failure disables the fallback
+                self._unavailable = True
+                typer.echo(f"steamdb.info fallback unavailable, using steampowered.com only: {error}", err=True)
+                raise SteamDbCrawlError(str(error)) from error
+            # end try
+        # end if
+        return self._client.fetch(url)
+    # end def fetch
+
+    def close(self) -> None:
+        """Close the underlying browser client, if one was ever launched."""
+        if self._client is not None:
+            self._client.close()
+        # end if
+    # end def close
+
+# end class _LazySteamDbFetcher
+
+
 def _print_search_results(
     title: str,
     providers: tuple[StoreName, ...],
@@ -484,6 +527,7 @@ def scrape_humblebundle_command(
     pre_crawl_head = git_ops.head(repository_root) if git else None
     stashed = git_ops.autostash(repository_root) if git else False
     client = HumbleHttpClient()
+    steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
         (lambda _item, _provider, _candidates: None)
         if non_interactive
@@ -507,7 +551,7 @@ def scrape_humblebundle_command(
     unresolved: list[str] = []
     try:
         mapping = load_resolution_map(resolution_map)
-        resolver = StorefrontResolver(client.fetch, choose)
+        resolver = StorefrontResolver(client.fetch, choose, steamdb_fetch=steamdb_fetcher.fetch)
         report = crawl_humble_offers(
             client.fetch,
             resolver,
@@ -540,6 +584,7 @@ def scrape_humblebundle_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        steamdb_fetcher.close()
         if git:
             unresolved_line = (
                 f"{len(unresolved)} unresolved store IDs left as `unresolved:store:steam:<slug>` "
@@ -676,6 +721,7 @@ def scrape_greenmangaming_command(
     """Archive currently listed Green Man Gaming video-games bundles."""
     repository_root = Path.cwd().resolve()
     client = GmgHttpClient()
+    steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
         (lambda _item, _provider, _candidates: None)
         if non_interactive
@@ -698,7 +744,7 @@ def scrape_greenmangaming_command(
 
     try:
         mapping = load_gmg_resolution_map(resolution_map)
-        resolver = GmgStorefrontResolver(client.fetch, choose)
+        resolver = GmgStorefrontResolver(client.fetch, choose, steamdb_fetch=steamdb_fetcher.fetch)
         report = crawl_gmg_offers(
             client.fetch,
             resolver,
@@ -731,6 +777,7 @@ def scrape_greenmangaming_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        steamdb_fetcher.close()
     # end try
 # end def scrape_greenmangaming_command
 

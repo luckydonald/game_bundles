@@ -221,7 +221,7 @@ def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
     monkeypatch.setattr(
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
-    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
     monkeypatch.setattr(
         "game_collections.cli.crawl_humble_offers",
         lambda *args, **kwargs: calls.append("scrape") or HumbleCrawlReport(offers=(), errors=()),
@@ -258,7 +258,7 @@ def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
     monkeypatch.setattr(
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
-    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
 
     def raising_crawl(*args: object, **kwargs: object) -> object:
         calls.append("scrape")
@@ -337,7 +337,7 @@ def test_scrape_humblebundle_git_style_defaults_to_manual_wording(monkeypatch: M
     monkeypatch.setattr(
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
-    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose: object())
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
     monkeypatch.setattr(
         "game_collections.cli.crawl_humble_offers",
         lambda *args, **kwargs: HumbleCrawlReport(offers=(), errors=()),
