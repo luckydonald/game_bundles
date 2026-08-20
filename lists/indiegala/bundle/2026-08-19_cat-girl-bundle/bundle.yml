@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cat Girl Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16495/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16495/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16495/source.json
+games:
+- name: Tenkiame
+  ids:
+  - unresolved:source:isthereanydeal:16495:tenkiame
+  - isthereanydeal:tenkiame
+- name: NekoMiko
+  ids:
+  - steam:969700
+  - isthereanydeal:nekomiko
+- name: TroubleDays
+  ids:
+  - steam:1171270
+  - isthereanydeal:troubledays
+- name: Demon Lord Jill -REVIVAL
+  ids:
+  - steam:1667720
+  - isthereanydeal:demon-lord-jill-revival
+- name: The Monster PIMP
+  ids:
+  - steam:1789130
+  - isthereanydeal:the-monster-pimp
+- name: Mon-Musu Quest
+  ids:
+  - steam:1855760
+  - isthereanydeal:mon-musu-quest
+- name: My Cat Girl Lover
+  ids:
+  - steam:2018640
+  - isthereanydeal:my-cat-girl-lover
