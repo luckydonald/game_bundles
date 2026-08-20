@@ -13,6 +13,7 @@ from pydantic import Field, StringConstraints, model_validator
 
 from game_collections.models import QualifiedGameId, StrictModel
 from game_collections.sources.humblebundle.models import HumbleArchive, HumbleItem, HumbleResolution
+from game_collections.sources.humblebundle.steamdb import STEAMDB_SEARCH_URL, parse_steamdb_results
 from game_collections.sources.storefronts import (
     STORE_ROOTS,
     StoreName,
@@ -22,6 +23,7 @@ from game_collections.sources.storefronts import (
 
 
 __all__ = [
+    "STEAMDB_SEARCH_URL",
     "STORE_ROOTS",
     "STORE_SEARCH_URLS",
     "HumbleResolutionMap",
@@ -30,6 +32,7 @@ __all__ = [
     "StorefrontResolver",
     "load_resolution_map",
     "normalized_title",
+    "parse_steamdb_results",
     "parse_store_candidates",
     "parse_store_identity",
     "render_resolution_map",
@@ -194,9 +197,10 @@ _NO_LOG: LogFn = lambda _message: None  # noqa: E731
 class StorefrontResolver:
     """Resolve item identities using official store searches and reviewed choices."""
 
-    def __init__(self, fetch: Fetcher, choose: CandidateChooser) -> None:
+    def __init__(self, fetch: Fetcher, choose: CandidateChooser, steamdb_fetch: Fetcher | None = None) -> None:
         self._fetch = fetch
         self._choose = choose
+        self._steamdb_fetch = steamdb_fetch
     # end def __init__
 
     def search(self, provider: StoreName, title: str) -> list[StoreCandidate]:
@@ -204,6 +208,41 @@ class StorefrontResolver:
         url = STORE_SEARCH_URLS[provider].format(query=quote_plus(title))
         return parse_store_candidates(provider, self._fetch(url))
     # end def search
+
+    def _search_steam(self, title: str) -> list[StoreCandidate]:
+        """Search steampowered.com first; fall back to steamdb.info if not a unique match.
+
+        steamdb.info's own search is often better at finding the exact
+        product, but it sits behind a Cloudflare managed challenge that needs
+        a real headed browser session (see `humblebundle.steamdb`), so it is
+        only tried when the cheap steampowered.com search alone doesn't
+        already resolve unambiguously.
+        """
+        candidates = self.search("steam", title)
+        exact = [
+            candidate for candidate in candidates if normalized_title(candidate.title) == normalized_title(title)
+        ]
+        if len(exact) == 1 or self._steamdb_fetch is None:
+            return candidates
+        # end if
+        try:
+            url = STEAMDB_SEARCH_URL.format(query=quote_plus(title))
+            results = parse_steamdb_results(self._steamdb_fetch(url))
+        except (OSError, RuntimeError):
+            return candidates
+        # end try
+        if not results:
+            return candidates
+        # end if
+        return [
+            StoreCandidate(
+                title=result_title,
+                url=f"https://store.steampowered.com/app/{appid}/",
+                qualified_id=f"steam:{appid}",
+            )
+            for appid, result_title in results
+        ]
+    # end def _search_steam
 
     def resolve_item(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[str]:
         """Resolve one game, updating the durable mapping in memory."""
@@ -217,7 +256,11 @@ class StorefrontResolver:
         for store_value in stores:
             typed_provider = cast(StoreName, store_value)
             try:
-                candidates = self.search(typed_provider, item.title)
+                candidates = (
+                    self._search_steam(item.title)
+                    if typed_provider == "steam"
+                    else self.search(typed_provider, item.title)
+                )
             except (OSError, RuntimeError):
                 candidates = []
             # end try
