@@ -156,6 +156,11 @@ def _required_string(value: object, label: str) -> str:
 # end def _required_string
 
 
+def _optional_url(value: object) -> str | None:
+    return value if isinstance(value, str) and value.strip() else None
+# end def _optional_url
+
+
 def _markdown(value: object) -> str:
     if not isinstance(value, str) or not value.strip():
         return ""
@@ -237,8 +242,7 @@ def _links(value: object, name_key: str, url_key: str) -> list[HumbleLink]:
         if not isinstance(raw, dict) or not isinstance(raw.get(name_key), str):
             continue
         # end if
-        url = raw.get(url_key) if isinstance(raw.get(url_key), str) else None
-        links.append(HumbleLink(name=raw[name_key], url=url))
+        links.append(HumbleLink(name=raw[name_key], url=_optional_url(raw.get(url_key))))
     # end for
     return links
 # end def _links
@@ -421,9 +425,9 @@ def parse_bundle_page(
             charities.append(
                 HumbleCharity(
                     name=name,
-                    url=info.get("url") if isinstance(info.get("url"), str) else None,
+                    url=_optional_url(info.get("url")),
                     description=_markdown(info.get("description") or charity.get("description_text")),
-                    logo_url=info.get("logo_url") if isinstance(info.get("logo_url"), str) else None,
+                    logo_url=_optional_url(info.get("logo_url")),
                 )
             )
         # end for
@@ -541,7 +545,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
                 is_game=bool(redeem_on) and "Coupon" not in tags,
                 retail_price=_price(raw.get("msrp")),
                 youtube_urls=[f"https://www.youtube.com/watch?v={video}" for video in youtube_values],
-                cover_art_url=raw.get("image") if isinstance(raw.get("image"), str) else None,
+                cover_art_url=_optional_url(raw.get("image")),
                 redeem_on=redeem_on,
                 platforms=[str(item).title() for item in raw.get("platforms", [])]
                 if isinstance(raw.get("platforms"), list)
@@ -565,7 +569,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
             HumbleCharity(
                 name=charity["charity_name"],
                 description=_markdown(charity.get("charity_description")),
-                logo_url=charity.get("charity_logo") if isinstance(charity.get("charity_logo"), str) else None,
+                logo_url=_optional_url(charity.get("charity_logo")),
             )
         )
     # end if
