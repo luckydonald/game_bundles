@@ -2121,3 +2121,30 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ Please go ahead with the test using that.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. What should "squash" target here?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Squash scope** (1/1) <kbd>Single Select</kbd><br>
+>> What should "squash" target here?
+> - [ ] 1\. Fold detached HEAD's 2 ai: commits
+>   - _Fold `ai: updated prompt` (0ed71043b) and `ai: sync codex memory` (8d08e038b) back into their parent commit 45b00d699, then reattach as `mane` (leaving mane's separate 24-commit line alone unless you want it reconciled too)._
+> - [ ] 2\. Reconcile mane first, then clean up
+>   - _Something bigger is going on: mane advanced 24 commits on a different line while this HEAD detached at 0ed71043b. Investigate how they relate before touching anything._
+> - [ ] 3\. Something else
+>   - _Tell me exactly what you want squashed._
+> - [x] 4\. _Type something:_
+>   - > I think that was a hook firing mid rebase operation? I checked out mane again, squash the ai commits there which are not on origin yet.
+>
+> </details>
+>
+
+❯ The archive refresh shall stay separate.
+
+❯ I still see two `ai: updated prompt`...
+
