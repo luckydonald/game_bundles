@@ -113,6 +113,64 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
 # end def test_blank_selection_persists_unresolved_fallback
 
 
+def test_unique_steampowered_match_skips_steamdb_fallback() -> None:
+    steampowered_page = '<a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>'
+    steamdb_called = False
+
+    def steamdb_fetch(_url: str) -> str:
+        nonlocal steamdb_called
+        steamdb_called = True
+        return ""
+    # end def steamdb_fetch
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+        steamdb_fetch=steamdb_fetch,
+    )
+
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+
+    assert ids == ["steam:42"]
+    assert steamdb_called is False
+# end def test_unique_steampowered_match_skips_steamdb_fallback
+
+
+def test_ambiguous_steampowered_match_falls_back_to_steamdb() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/1/other/">Other Game</a>
+    <a href="https://store.steampowered.com/app/2/other/">Other Game</a>
+    """
+    steamdb_page = '<a href="/app/3011360/">Sample Game</a>'
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+        steamdb_fetch=lambda _url: steamdb_page,
+    )
+
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+
+    assert ids == ["steam:3011360"]
+# end def test_ambiguous_steampowered_match_falls_back_to_steamdb
+
+
+def test_no_steamdb_fetch_behaves_like_steampowered_only() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/1/other/">Other Game</a>
+    <a href="https://store.steampowered.com/app/2/other/">Other Game</a>
+    """
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+    )
+
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+
+    assert ids == ["unresolved:source:greenmangaming:346"]
+# end def test_no_steamdb_fetch_behaves_like_steampowered_only
+
+
 def test_unrecognized_drm_skips_search_and_is_unresolved() -> None:
     item = GmgItem(product_id="9", title="Mystery Game", drm="Standalone Installer", redeem_on=[])
     resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates: None)

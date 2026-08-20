@@ -162,6 +162,96 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
 # end def test_blank_selection_persists_unresolved_fallback
 
 
+def test_unique_steampowered_match_skips_steamdb_fallback() -> None:
+    steampowered_page = '<a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>'
+    steamdb_called = False
+
+    def steamdb_fetch(_url: str) -> str:
+        nonlocal steamdb_called
+        steamdb_called = True
+        return ""
+    # end def steamdb_fetch
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+        steamdb_fetch=steamdb_fetch,
+    )
+
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+
+    assert ids == ["steam:42"]
+    assert steamdb_called is False
+# end def test_unique_steampowered_match_skips_steamdb_fallback
+
+
+def test_ambiguous_steampowered_match_falls_back_to_steamdb() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/1/other/">Other Game</a>
+    <a href="https://store.steampowered.com/app/2/other/">Other Game</a>
+    """
+    steamdb_page = '<a href="/app/3011360/">Primordialis</a>'
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+        steamdb_fetch=lambda _url: steamdb_page,
+    )
+
+    ids = resolver.resolve_item(
+        HumbleItem(
+            machine_name="primordialis",
+            title="Primordialis",
+            item_type="game",
+            is_game=True,
+            redeem_on=["steam"],
+            resolution=HumbleResolution(),
+        ),
+        HumbleResolutionMap(schema=1, games={}),
+    )
+
+    assert ids == ["steam:3011360"]
+# end def test_ambiguous_steampowered_match_falls_back_to_steamdb
+
+
+def test_no_steamdb_fetch_behaves_like_steampowered_only() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/1/other/">Other Game</a>
+    <a href="https://store.steampowered.com/app/2/other/">Other Game</a>
+    """
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+    )
+
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+
+    assert ids == ["unresolved:source:humblebundle:sample_game"]
+# end def test_no_steamdb_fetch_behaves_like_steampowered_only
+
+
+def test_steamdb_fetch_error_falls_back_to_steampowered_candidates() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>
+    <a href="https://store.steampowered.com/app/43/sample/">Sample Game</a>
+    """
+
+    def failing_steamdb_fetch(_url: str) -> str:
+        raise OSError("network unavailable")
+    # end def failing_steamdb_fetch
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, candidates: candidates[1].url,
+        steamdb_fetch=failing_steamdb_fetch,
+    )
+
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+
+    assert ids == ["steam:43"]
+# end def test_steamdb_fetch_error_falls_back_to_steampowered_candidates
+
+
 def test_resolution_map_round_trip_is_sorted(tmp_path: Path) -> None:
     mapping = HumbleResolutionMap(
         schema=1,
