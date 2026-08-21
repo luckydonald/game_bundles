@@ -930,6 +930,30 @@ def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable
 # end def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable
 
 
+def test_missing_pct_bounds_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
+    async def scenario() -> None:
+        app = ApplyPickerApp(
+            _make_lists_root(tmp_path), excluded=set(), min_missing_pct=None, max_missing_pct=None
+        )
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            assert app.min_missing_pct is None
+            assert app.max_missing_pct is None
+            app.query_one("#filter-min-missing-pct", Input).value = "10"
+            app.query_one("#filter-max-missing-pct", Input).value = "30"
+            await pilot.pause()
+            assert app.min_missing_pct == 10.0
+            assert app.max_missing_pct == 30.0
+            selection = app._build_selection()
+            assert selection.min_missing_pct == 10.0
+            assert selection.max_missing_pct == 30.0
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_missing_pct_bounds_default_to_constructor_args_and_are_changeable
+
+
 def test_unresolved_and_unsupported_store_handling_default_and_are_changeable(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())

@@ -71,6 +71,8 @@ def test_filter_fields_round_trip(tmp_path: Path) -> None:
         date_before="2026-12-31",
         min_missing=1,
         max_missing=3,
+        min_missing_pct=10.0,
+        max_missing_pct=30.0,
         unresolved_handling="hide",
         unsupported_store_handling="enforce",
         tier_mode="all",
@@ -87,6 +89,8 @@ def test_filter_fields_round_trip(tmp_path: Path) -> None:
     assert loaded.date_before == "2026-12-31"
     assert loaded.min_missing == 1
     assert loaded.max_missing == 3
+    assert loaded.min_missing_pct == 10.0
+    assert loaded.max_missing_pct == 30.0
     assert loaded.unresolved_handling == "hide"
     assert loaded.unsupported_store_handling == "enforce"
     assert loaded.tier_mode == "all"

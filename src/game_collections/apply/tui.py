@@ -439,6 +439,8 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         excluded: set[str],
         min_missing: int | None = None,
         max_missing: int | None = 0,
+        min_missing_pct: float | None = None,
+        max_missing_pct: float | None = None,
         unresolved_handling: MissingHandling = "ignore",
         unsupported_store_handling: MissingHandling = "ignore",
         tier_mode: Literal["all", "highest"] = "highest",
@@ -470,6 +472,8 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         self.all_game_lists: list[LoadedGameList] = []
         self.min_missing: int | None = min_missing
         self.max_missing: int | None = max_missing
+        self.min_missing_pct: float | None = min_missing_pct
+        self.max_missing_pct: float | None = max_missing_pct
         self.unresolved_handling: MissingHandling = unresolved_handling
         self.unsupported_store_handling: MissingHandling = unsupported_store_handling
         self.tier_mode: Literal["all", "highest"] = tier_mode
@@ -546,6 +550,16 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 placeholder="max missing",
                 value="" if self.max_missing is None else str(self.max_missing),
                 id="filter-max-missing",
+            ),
+            FilterInput(
+                placeholder="min missing %",
+                value="" if self.min_missing_pct is None else str(self.min_missing_pct),
+                id="filter-min-missing-pct",
+            ),
+            FilterInput(
+                placeholder="max missing %",
+                value="" if self.max_missing_pct is None else str(self.max_missing_pct),
+                id="filter-max-missing-pct",
             ),
             FilterSelect(
                 [("unresolved: hide", "hide"), ("unresolved: ignore", "ignore"), ("unresolved: enforce", "enforce")],
@@ -743,6 +757,15 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             return True
         # end if
         if self.max_missing is not None and completion.missing_count > self.max_missing:
+            return True
+        # end if
+        # `None` when `completion.total == 0` (nothing to divide) - percentage bounds are
+        # then vacuously satisfied, same as the adapter's own eligibility check.
+        missing_pct = (completion.missing_count / completion.total * 100) if completion.total else None
+        if missing_pct is not None and self.min_missing_pct is not None and missing_pct < self.min_missing_pct:
+            return True
+        # end if
+        if missing_pct is not None and self.max_missing_pct is not None and missing_pct > self.max_missing_pct:
             return True
         # end if
         return False
@@ -1084,6 +1107,13 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 return None
         # end def as_int
 
+        def as_float(value: str) -> float | None:
+            try:
+                return float(value) if value else None
+            except ValueError:
+                return None
+        # end def as_float
+
         if event.input.id == "filter-min-items":
             self.row_filters = _Filters(
                 min_items=as_int(raw),
@@ -1116,6 +1146,10 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             self.min_missing = as_int(raw)
         elif event.input.id == "filter-max-missing":
             self.max_missing = as_int(raw)
+        elif event.input.id == "filter-min-missing-pct":
+            self.min_missing_pct = as_float(raw)
+        elif event.input.id == "filter-max-missing-pct":
+            self.max_missing_pct = as_float(raw)
         else:
             return
         # end if
@@ -1156,6 +1190,8 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             date_before=self.row_filters.date_before,
             min_missing=self.min_missing,
             max_missing=self.max_missing,
+            min_missing_pct=self.min_missing_pct,
+            max_missing_pct=self.max_missing_pct,
             unresolved_handling=self.unresolved_handling,
             unsupported_store_handling=self.unsupported_store_handling,
             tier_mode=self.tier_mode,
