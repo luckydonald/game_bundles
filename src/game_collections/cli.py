@@ -906,6 +906,10 @@ def _steam_adapter(
     max_owned: int | None = None,
     min_missing: int | None = None,
     max_missing: int | None = None,
+    min_owned_pct: float | None = None,
+    max_owned_pct: float | None = None,
+    min_missing_pct: float | None = None,
+    max_missing_pct: float | None = None,
     unresolved_handling: MissingHandling = "ignore",
     unsupported_store_handling: MissingHandling = "ignore",
     tier_mode: SteamTierMode = "all",
@@ -921,6 +925,10 @@ def _steam_adapter(
         max_owned=max_owned,
         min_missing=min_missing,
         max_missing=max_missing,
+        min_owned_pct=min_owned_pct,
+        max_owned_pct=max_owned_pct,
+        min_missing_pct=min_missing_pct,
+        max_missing_pct=max_missing_pct,
         unresolved_handling=unresolved_handling,
         unsupported_store_handling=unsupported_store_handling,
     )
@@ -1078,6 +1086,10 @@ def eligible_command(
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
+    min_owned_pct: Annotated[float | None, typer.Option("--min-owned-pct", help="Only eligible if at least this percent (0-100) of the list's games are owned.")] = None,
+    max_owned_pct: Annotated[float | None, typer.Option("--max-owned-pct", help="Only eligible if at most this percent (0-100) of the list's games are owned.")] = None,
+    min_missing_pct: Annotated[float | None, typer.Option("--min-missing-pct", help="Only eligible if at least this percent (0-100) of the list's games are missing.")] = None,
+    max_missing_pct: Annotated[float | None, typer.Option("--max-missing-pct", help="Only eligible if at most this percent (0-100) of the list's games are missing.")] = None,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
     unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
@@ -1098,6 +1110,10 @@ def eligible_command(
             max_owned=max_owned,
             min_missing=min_missing,
             max_missing=max_missing,
+            min_owned_pct=min_owned_pct,
+            max_owned_pct=max_owned_pct,
+            min_missing_pct=min_missing_pct,
+            max_missing_pct=max_missing_pct,
             unresolved_handling=unresolved_handling,
             unsupported_store_handling=unsupported_store_handling,
         )
@@ -1130,6 +1146,10 @@ def sync_command(
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing.")] = 0,
+    min_owned_pct: Annotated[float | None, typer.Option("--min-owned-pct", help="Only eligible if at least this percent (0-100) of the list's games are owned.")] = None,
+    max_owned_pct: Annotated[float | None, typer.Option("--max-owned-pct", help="Only eligible if at most this percent (0-100) of the list's games are owned.")] = None,
+    min_missing_pct: Annotated[float | None, typer.Option("--min-missing-pct", help="Only eligible if at least this percent (0-100) of the list's games are missing.")] = None,
+    max_missing_pct: Annotated[float | None, typer.Option("--max-missing-pct", help="Only eligible if at most this percent (0-100) of the list's games are missing.")] = None,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership.")] = "ignore",
     unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
@@ -1151,6 +1171,10 @@ def sync_command(
             max_owned=max_owned,
             min_missing=min_missing,
             max_missing=max_missing,
+            min_owned_pct=min_owned_pct,
+            max_owned_pct=max_owned_pct,
+            min_missing_pct=min_missing_pct,
+            max_missing_pct=max_missing_pct,
             unresolved_handling=unresolved_handling,
             unsupported_store_handling=unsupported_store_handling,
             tier_mode=tiers,
@@ -1218,6 +1242,10 @@ def apply_command(
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
     min_missing: Annotated[int | None, typer.Option("--min-missing", help="Only eligible if at least this many games are missing. Falls back to a saved selection's value, then unset (no lower bound), if not passed.")] = None,
     max_missing: Annotated[int | None, typer.Option("--max-missing", help="Only eligible if at most this many games are missing. Falls back to a saved selection's value, then 0, if not passed.")] = None,
+    min_owned_pct: Annotated[float | None, typer.Option("--min-owned-pct", help="Only eligible if at least this percent (0-100) of the list's games are owned.")] = None,
+    max_owned_pct: Annotated[float | None, typer.Option("--max-owned-pct", help="Only eligible if at most this percent (0-100) of the list's games are owned.")] = None,
+    min_missing_pct: Annotated[float | None, typer.Option("--min-missing-pct", help="Only eligible if at least this percent (0-100) of the list's games are missing. Falls back to a saved selection's value, then unset (no lower bound), if not passed.")] = None,
+    max_missing_pct: Annotated[float | None, typer.Option("--max-missing-pct", help="Only eligible if at most this percent (0-100) of the list's games are missing. Falls back to a saved selection's value, then unset (no upper bound), if not passed.")] = None,
     unresolved_handling: Annotated[Literal["hide", "ignore", "enforce"] | None, typer.Option("--unresolved-handling", help="How `unresolved:` marker games count toward ownership. Falls back to a saved selection's value, then `ignore`, if not passed.")] = None,
     unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"] | None, typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership. Falls back to a saved selection's value, then `ignore`, if not passed.")] = None,
     tiers: Annotated[Literal["all", "highest"] | None, typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier. Falls back to a saved selection's value, then `highest`, if not passed.")] = None,
@@ -1246,6 +1274,8 @@ def apply_command(
         # neither an explicit flag nor a saved selection provides one.
         min_missing = _resolve_filter(min_missing, previous_selection.min_missing if previous_selection is not None else None, None)
         max_missing = _resolve_filter(max_missing, previous_selection.max_missing if previous_selection is not None else None, 0)
+        min_missing_pct = _resolve_filter(min_missing_pct, previous_selection.min_missing_pct if previous_selection is not None else None, None)
+        max_missing_pct = _resolve_filter(max_missing_pct, previous_selection.max_missing_pct if previous_selection is not None else None, None)
         unresolved_handling = _resolve_filter(unresolved_handling, previous_selection.unresolved_handling if previous_selection is not None else None, "ignore")
         unsupported_store_handling = _resolve_filter(unsupported_store_handling, previous_selection.unsupported_store_handling if previous_selection is not None else None, "ignore")
         tiers = _resolve_filter(tiers, previous_selection.tier_mode if previous_selection is not None else None, "highest")
@@ -1277,6 +1307,10 @@ def apply_command(
                 max_owned=max_owned,
                 min_missing=min_missing,
                 max_missing=max_missing,
+                min_owned_pct=min_owned_pct,
+                max_owned_pct=max_owned_pct,
+                min_missing_pct=min_missing_pct,
+                max_missing_pct=max_missing_pct,
                 unresolved_handling=unresolved_handling,
                 unsupported_store_handling=unsupported_store_handling,
                 tier_mode=tiers,
@@ -1306,6 +1340,10 @@ def apply_command(
                     max_owned=max_owned,
                     min_missing=min_missing,
                     max_missing=max_missing,
+                    min_owned_pct=min_owned_pct,
+                    max_owned_pct=max_owned_pct,
+                    min_missing_pct=min_missing_pct,
+                    max_missing_pct=max_missing_pct,
                     unresolved_handling=unresolved_handling,
                     unsupported_store_handling=unsupported_store_handling,
                     tier_mode=tiers,
@@ -1330,6 +1368,8 @@ def apply_command(
                 set(resume_selection.excluded) if resume_selection is not None else previously_excluded,
                 min_missing=min_missing,
                 max_missing=max_missing,
+                min_missing_pct=min_missing_pct,
+                max_missing_pct=max_missing_pct,
                 unresolved_handling=unresolved_handling,
                 unsupported_store_handling=unsupported_store_handling,
                 tier_mode=tiers,
@@ -1373,6 +1413,8 @@ def apply_command(
                         early_adapter.options,
                         min_missing=picker.min_missing,
                         max_missing=picker.max_missing,
+                        min_missing_pct=picker.min_missing_pct,
+                        max_missing_pct=picker.max_missing_pct,
                         tier_mode=picker.tier_mode,
                     ),
                     owned_app_ids_source=lambda: owned_app_ids or set(),
@@ -1389,6 +1431,10 @@ def apply_command(
                     max_owned=max_owned,
                     min_missing=picker.min_missing,
                     max_missing=picker.max_missing,
+                    min_owned_pct=min_owned_pct,
+                    max_owned_pct=max_owned_pct,
+                    min_missing_pct=picker.min_missing_pct,
+                    max_missing_pct=picker.max_missing_pct,
                     unresolved_handling=unresolved_handling,
                     unsupported_store_handling=unsupported_store_handling,
                     tier_mode=picker.tier_mode,
@@ -1413,6 +1459,8 @@ def apply_command(
                 previously_excluded = set(selection.excluded)
                 min_missing = picker.min_missing
                 max_missing = picker.max_missing
+                min_missing_pct = picker.min_missing_pct
+                max_missing_pct = picker.max_missing_pct
                 unresolved_handling = picker.unresolved_handling
                 unsupported_store_handling = picker.unsupported_store_handling
                 tiers = picker.tier_mode

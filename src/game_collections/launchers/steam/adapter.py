@@ -43,6 +43,10 @@ class SteamOptions:
     max_owned: int | None = None
     min_missing: int | None = None
     max_missing: int | None = 0
+    min_owned_pct: float | None = None
+    max_owned_pct: float | None = None
+    min_missing_pct: float | None = None
+    max_missing_pct: float | None = None
     unresolved_handling: MissingHandling = "ignore"
     unsupported_store_handling: MissingHandling = "ignore"
     tier_mode: SteamTierMode = "all"
@@ -55,6 +59,12 @@ class SteamOptions:
             bound = getattr(self, bound_name)
             if bound is not None and bound < 0:
                 raise ValueError(f"invalid Steam {bound_name!r} bound: {bound!r}")
+            # end if
+        # end for
+        for pct_bound_name in ("min_owned_pct", "max_owned_pct", "min_missing_pct", "max_missing_pct"):
+            pct_bound = getattr(self, pct_bound_name)
+            if pct_bound is not None and not (0 <= pct_bound <= 100):
+                raise ValueError(f"invalid Steam {pct_bound_name!r} bound: {pct_bound!r}")
             # end if
         # end for
         for handling_name in ("unresolved_handling", "unsupported_store_handling"):
@@ -156,11 +166,20 @@ class SteamAdapter(LauncherAdapter):
             elif pick_quota is not None:
                 eligible = completion.owned_count >= pick_quota
             else:
+                # `None` when `completion.total == 0` (nothing to divide) - percentage bounds
+                # are then vacuously satisfied below, same as an absolute bound would be with
+                # a count of 0.
+                owned_pct = (completion.owned_count / completion.total * 100) if completion.total else None
+                missing_pct = (completion.missing_count / completion.total * 100) if completion.total else None
                 eligible = (
                     (self.options.min_owned is None or completion.owned_count >= self.options.min_owned)
                     and (self.options.max_owned is None or completion.owned_count <= self.options.max_owned)
                     and (self.options.min_missing is None or completion.missing_count >= self.options.min_missing)
                     and (self.options.max_missing is None or completion.missing_count <= self.options.max_missing)
+                    and (self.options.min_owned_pct is None or owned_pct is None or owned_pct >= self.options.min_owned_pct)
+                    and (self.options.max_owned_pct is None or owned_pct is None or owned_pct <= self.options.max_owned_pct)
+                    and (self.options.min_missing_pct is None or missing_pct is None or missing_pct >= self.options.min_missing_pct)
+                    and (self.options.max_missing_pct is None or missing_pct is None or missing_pct <= self.options.max_missing_pct)
                 )
             # end if
             results.append(

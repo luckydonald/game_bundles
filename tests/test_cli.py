@@ -390,6 +390,8 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             excluded: object,
             min_missing: int | None = None,
             max_missing: int | None = 0,
+            min_missing_pct: float | None = None,
+            max_missing_pct: float | None = None,
             unresolved_handling: str = "ignore",
             unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
@@ -406,6 +408,8 @@ def test_apply_filters_excluded_list_before_planning(tmp_path: Path, monkeypatch
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
             self.max_missing = max_missing
+            self.min_missing_pct = min_missing_pct
+            self.max_missing_pct = max_missing_pct
             self.tier_mode = tier_mode
             captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
@@ -458,6 +462,7 @@ def test_apply_filter_flags_fall_back_to_saved_selection_then_default(tmp_path: 
             updated_at=datetime(2026, 7, 13, tzinfo=UTC),
             min_items=2,
             max_missing=5,
+            max_missing_pct=40.0,
             unresolved_handling="hide",
             unsupported_store_handling="enforce",
             tier_mode="all",
@@ -473,6 +478,8 @@ def test_apply_filter_flags_fall_back_to_saved_selection_then_default(tmp_path: 
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = kwargs.get("min_missing")
             self.max_missing = kwargs.get("max_missing")
+            self.min_missing_pct = kwargs.get("min_missing_pct")
+            self.max_missing_pct = kwargs.get("max_missing_pct")
             self.tier_mode = kwargs.get("tier_mode")
             captured_kwargs.append(kwargs)
         # end def __init__
@@ -506,6 +513,7 @@ def test_apply_filter_flags_fall_back_to_saved_selection_then_default(tmp_path: 
     assert result.exit_code == 0, result.output
     assert captured_kwargs[-1]["min_items"] == 2
     assert captured_kwargs[-1]["max_missing"] == 5
+    assert captured_kwargs[-1]["max_missing_pct"] == 40.0
     assert captured_kwargs[-1]["unresolved_handling"] == "hide"
     assert captured_kwargs[-1]["unsupported_store_handling"] == "enforce"
     assert captured_kwargs[-1]["tier_mode"] == "all"
@@ -530,10 +538,13 @@ def test_apply_filter_flags_fall_back_to_saved_selection_then_default(tmp_path: 
             str(selection_config),
             "--max-missing",
             "9",
+            "--max-missing-pct",
+            "60",
         ],
     )
     assert result.exit_code == 0, result.output
     assert captured_kwargs[-1]["max_missing"] == 9
+    assert captured_kwargs[-1]["max_missing_pct"] == 60.0
     assert captured_kwargs[-1]["unresolved_handling"] == "hide"
 # end def test_apply_filter_flags_fall_back_to_saved_selection_then_default
 
@@ -563,6 +574,8 @@ def test_apply_dry_run_reopens_the_saved_selection_action_menu(tmp_path: Path, m
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = None
             self.max_missing = 0
+            self.min_missing_pct = None
+            self.max_missing_pct = None
             self.unresolved_handling = "ignore"
             self.unsupported_store_handling = "ignore"
             self.tier_mode = "highest"
@@ -617,6 +630,8 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             excluded: object,
             min_missing: int | None = None,
             max_missing: int | None = 0,
+            min_missing_pct: float | None = None,
+            max_missing_pct: float | None = None,
             unresolved_handling: str = "ignore",
             unsupported_store_handling: str = "ignore",
             tier_mode: str = "highest",
@@ -633,6 +648,8 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
             self.all_game_lists = discover_game_lists(lists_root)
             self.min_missing = min_missing
             self.max_missing = max_missing
+            self.min_missing_pct = min_missing_pct
+            self.max_missing_pct = max_missing_pct
             self.tier_mode = tier_mode
             captured_owned_app_ids.append(owned_app_ids)
         # end def __init__
