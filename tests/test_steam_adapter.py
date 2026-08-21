@@ -104,6 +104,92 @@ def test_max_missing_zero_ignores_games_without_steam_ids() -> None:
 # end def test_max_missing_zero_ignores_games_without_steam_ids
 
 
+def test_max_missing_pct_accepts_large_list_missing_small_share() -> None:
+    game_list = _list("example/eight", [1, 2, 3, 4, 5, 6, 7, 8])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=None, max_missing_pct=30),
+        owned_app_ids_source=_fake_source([1, 2, 3, 4, 5, 6]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+    assert result.missing_ids == ["steam:7", "steam:8"]
+# end def test_max_missing_pct_accepts_large_list_missing_small_share
+
+
+def test_max_missing_pct_rejects_small_list_missing_large_share() -> None:
+    game_list = _list("example/three", [1, 2, 3])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=None, max_missing_pct=30),
+        owned_app_ids_source=_fake_source([1]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is False
+# end def test_max_missing_pct_rejects_small_list_missing_large_share
+
+
+def test_max_missing_pct_still_requires_absolute_bound_to_pass_too() -> None:
+    game_list = _list("example/eight-strict", [1, 2, 3, 4, 5, 6, 7, 8])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=1, max_missing_pct=30),
+        owned_app_ids_source=_fake_source([1, 2, 3, 4, 5, 6]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is False
+# end def test_max_missing_pct_still_requires_absolute_bound_to_pass_too
+
+
+def test_missing_pct_bound_does_not_block_a_list_with_zero_total_games() -> None:
+    game_list = _list("example/unsupported-only", [], unsupported=True)
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=None, max_missing_pct=0),
+        owned_app_ids_source=_fake_source([]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+# end def test_missing_pct_bound_does_not_block_a_list_with_zero_total_games
+
+
+def test_min_owned_pct_selects_partial_ownership() -> None:
+    game_list = _list("example/four", [1, 2, 3, 4])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=None, min_owned_pct=50),
+        owned_app_ids_source=_fake_source([1, 2]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is True
+# end def test_min_owned_pct_selects_partial_ownership
+
+
+def test_min_owned_pct_rejects_below_threshold() -> None:
+    game_list = _list("example/four-low", [1, 2, 3, 4])
+    adapter = SteamAdapter(
+        SteamOptions(steam_id="76561198044975919", max_missing=None, min_owned_pct=50),
+        owned_app_ids_source=_fake_source([1]),  # type: ignore[arg-type]
+    )
+
+    result = adapter.evaluate([game_list])[0]
+
+    assert result.eligible is False
+# end def test_min_owned_pct_rejects_below_threshold
+
+
+def test_invalid_missing_pct_bound_rejected() -> None:
+    with pytest.raises(ValueError):
+        SteamOptions(steam_id="76561198044975919", max_missing_pct=101)
+    # end with
+# end def test_invalid_missing_pct_bound_rejected
+
+
 def test_unverified_ownership_adds_every_listed_steam_id_without_gating() -> None:
     game_list = _list("example/unverified", [10, 20], unsupported=True)
     adapter = SteamAdapter(

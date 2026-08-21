@@ -37,6 +37,8 @@ class ApplySelection(StrictModel):
     date_before: str | None = None
     min_missing: int | None = None
     max_missing: int | None = 0
+    min_missing_pct: float | None = None
+    max_missing_pct: float | None = None
     unresolved_handling: MissingHandling = "ignore"
     unsupported_store_handling: MissingHandling = "ignore"
     tier_mode: Literal["all", "highest"] = "highest"

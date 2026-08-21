@@ -2150,3 +2150,34 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ why is `yuri` in luck not being in `apply`? (you may run, it defaults to dry run)
 
+❯ /plan have a percentage variant of the ownership bars, too. Because e.g. 2/8 missing is a lot different than 2/3 missing.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Scope: the TUI apply picker only exposes "min missing"/"max missing" bars (no owned bars there); CLI also has separate --min-owned/--max-owned flags used by sync/eligible/apply. Should the percentage variant cover just missing (matches what's visible in the picker), or both missing and owned (for symmetry with all 4 existing CLI bounds)?
+>> 2. When both an absolute bound and its percentage sibling are set (e.g. --max-missing 2 and --max-missing-pct 25), how should they combine?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Pct scope** (1/2) <kbd>Single Select</kbd><br>
+>> Scope: the TUI apply picker only exposes "min missing"/"max missing" bars (no owned bars there); CLI also has separate --min-owned/--max-owned flags used by sync/eligible/apply. Should the percentage variant cover just missing (matches what's visible in the picker), or both missing and owned (for symmetry with all 4 existing CLI bounds)?
+> - [ ] 1\. Missing only
+>   - _Add --min-missing-pct/--max-missing-pct (+ picker bars, + persisted in apply-selection.yml), matching what the picker UI actually shows today._
+> - [x] 2\. Missing + owned
+>   - _Also add --min-owned-pct/--max-owned-pct at the CLI/adapter level (sync/eligible/apply), even though owned bounds aren't in the picker UI or persisted config today._
+> - [ ] 3\. _Type something._
+>
+>> **Combine rule** (2/2) <kbd>Single Select</kbd><br>
+>> When both an absolute bound and its percentage sibling are set (e.g. --max-missing 2 and --max-missing-pct 25), how should they combine?
+> - [ ] 1\. AND (Recommended)
+>   - _Both bounds must be satisfied — consistent with how min/max already combine with each other._
+> - [ ] 2\. Pct overrides absolute
+>   - _If the pct variant is set, ignore the absolute one for that direction._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
