@@ -2181,3 +2181,5 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ For the steam check, if it's just the `.pipe` still being there, allow a user to still do it if they choose so (question + flaggs).
+
