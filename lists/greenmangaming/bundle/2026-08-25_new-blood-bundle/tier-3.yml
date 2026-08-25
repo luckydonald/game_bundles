@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: New Blood Bundle — New Bloodiest
+tier: 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16511/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16511/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16511/source.json
+games:
+- name: Dusk
+  ids:
+  - steam:519860
+  - isthereanydeal:dusk
+- name: AMID EVIL
+  ids:
+  - steam:673130
+  - isthereanydeal:amid-evil
+- name: 'FAITH: The Unholy Trinity'
+  ids:
+  - steam:1179080
+  - isthereanydeal:faith-the-unholy-trinity
+- name: AMID EVIL - The Black Labyrinth
+  ids:
+  - steam:1852860
+  - isthereanydeal:amid-evil-the-black-labyrinth
+- name: Fallen Aces
+  ids:
+  - steam:1411910
+  - isthereanydeal:fallen-aces
+- name: Blood West
+  ids:
+  - steam:1587130
+  - isthereanydeal:blood-west
+- name: 'Blood West: Dead Man''s Promise'
+  ids:
+  - steam:3158590
+  - isthereanydeal:blood-west-dead-mans-promise
+- name: ULTRAKILL
+  ids:
+  - steam:1229490
+  - isthereanydeal:ultrakill
+- name: Gloomwood
+  ids:
+  - steam:1150760
+  - isthereanydeal:gloomwood
