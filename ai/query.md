@@ -2183,3 +2183,38 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ For the steam check, if it's just the `.pipe` still being there, allow a user to still do it if they choose so (question + flaggs).
 
+❯ Fix the steamdb search not using the global search, which would also find bundles. And allow the custom link option for unresolved items - and if needed the data model - to parse   bundle urls like https://store.steampowered.com/bundle/46228/Forgive_Me_Father_2_Deluxe_Edition/
+
+❯ /plan Fix the steamdb search not using the global search, which would also find bundles. And allow the custom link option for unresolved items - and if needed the data model - to parse   bundle urls like https://store.steampowered.com/bundle/46228/Forgive_Me_Father_2_Deluxe_Edition/
+
+❯ Task Notification:
+> - Task `ae281f7faf28fb6b0` <kbd>completed</kbd>
+> - Tool `toolu_01RwAPcR3gFDin9EhQcN8BKa`
+> - > Agent "Explore steamdb search and resolver code" finished
+> - [Query (`2241` chars, `2.2 KB`)](output/agents/026.ae281f7faf28fb6b0/prompt.md)
+> - [Answer (`8926` chars, `8.74 KB`)](output/agents/026.ae281f7faf28fb6b0/result.md)
+> - [Raw log (`236979` chars, `232 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/ae281f7faf28fb6b0.output)
+> - `10` tools, `49888` tokens, `0.910433 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The three behaviors you described (global SteamDB search including bundles, bundle-URL custom-link parsing, and the underlying bundle ID convention) are already fully implemented and test-covered in your uncommitted working tree. There's no new code to plan. How would you like to proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Next step** (1/1) <kbd>Single Select</kbd><br>
+>> The three behaviors you described (global SteamDB search including bundles, bundle-URL custom-link parsing, and the underlying bundle ID convention) are already fully implemented and test-covered in your uncommitted working tree. There's no new code to plan. How would you like to proceed?
+> - [x] 1\. Verify & commit as-is (Recommended)
+>   - _Exit plan mode, run the full test suite to confirm everything passes, then commit these existing uncommitted changes per the project's commit workflow._
+> - [ ] 2\. Just verify, don't commit
+>   - _Exit plan mode and run the test suite only; leave the changes uncommitted for you to review/commit yourself._
+> - [ ] 3\. Something else is still missing
+>   - _Tell me what additional behavior you actually need beyond what's already in the diff — I'll re-scope the plan._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
