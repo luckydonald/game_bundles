@@ -82,11 +82,19 @@ def parse_store_identity(provider: StoreName, value: str) -> str:
         if host not in STORE_HOSTS["steam"]:
             raise ValueError("Steam URLs must use store.steampowered.com")
         # end if
-        match = re.search(r"/app/(\d+)(?:/|$)", path)
-        if not match:
-            raise ValueError("Steam URL does not contain an AppID")
+        app_match = re.search(r"/app/(\d+)(?:/|$)", path)
+        if app_match:
+            return f"steam:{int(app_match.group(1))}"
         # end if
-        return f"steam:{int(match.group(1))}"
+        # A bundle (e.g. a "Deluxe Edition" only sold as a bundle of the base
+        # app + DLC) has no single AppID; kept as its own `bundle/<id>` value
+        # rather than a plain int so ownership matching (which needs a real
+        # AppID) can tell it apart - see `completion.evaluate_completion`.
+        bundle_match = re.search(r"/bundle/(\d+)(?:/|$)", path)
+        if bundle_match:
+            return f"steam:bundle/{int(bundle_match.group(1))}"
+        # end if
+        raise ValueError("Steam URL does not contain an AppID or bundle ID")
     # end if
     if provider == "gog":
         if host not in STORE_HOSTS["gog"]:
@@ -136,6 +144,9 @@ def product_url(provider: str, value: str) -> str | None:
     that isn't one of the known, directly-linkable :data:`StoreName` stores - covers markers like
     ``unresolved`` or ``isthereanydeal`` that aren't real storefronts and have no product page.
     """
+    if provider == "steam" and value.startswith("bundle/"):
+        return f"{STORE_ROOTS['steam']}{value}"
+    # end if
     marker = _PRODUCT_PATH_MARKERS.get(provider)
     if marker is None:
         return None
