@@ -35,6 +35,19 @@ def test_product_url_round_trips_through_parse_store_identity() -> None:
 # end def test_product_url_round_trips_through_parse_store_identity
 
 
+def test_parse_store_identity_accepts_steam_bundle_url() -> None:
+    url = "https://store.steampowered.com/bundle/46228/Forgive_Me_Father_2_Deluxe_Edition/"
+    assert parse_store_identity("steam", url) == "steam:bundle/46228"
+# end def test_parse_store_identity_accepts_steam_bundle_url
+
+
+def test_product_url_round_trips_steam_bundle_identity() -> None:
+    url = product_url("steam", "bundle/46228")
+    assert url == "https://store.steampowered.com/bundle/46228"
+    assert parse_store_identity("steam", url) == "steam:bundle/46228"
+# end def test_product_url_round_trips_steam_bundle_identity
+
+
 def test_product_url_unknown_provider_returns_none() -> None:
     assert product_url("unresolved", "whatever") is None
     assert product_url("isthereanydeal", "whatever") is None
