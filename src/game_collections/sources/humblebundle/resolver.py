@@ -237,10 +237,12 @@ class StorefrontResolver:
         return [
             StoreCandidate(
                 title=result_title,
-                url=f"https://store.steampowered.com/app/{appid}/",
-                qualified_id=f"steam:{appid}",
+                # `result_id` is a bare appid ("1123050") for an App row, or
+                # "bundle/<id>" for a Bundle row (see `parse_steamdb_results`).
+                url=f"https://store.steampowered.com/{result_id if '/' in result_id else f'app/{result_id}'}/",
+                qualified_id=f"steam:{result_id}",
             )
-            for appid, result_title in results
+            for result_id, result_title in results
         ]
     # end def _search_steam
 

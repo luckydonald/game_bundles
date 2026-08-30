@@ -93,6 +93,27 @@ def test_unsupported_store_handling_hide_ignore_enforce() -> None:
 # end def test_unsupported_store_handling_hide_ignore_enforce
 
 
+def test_steam_bundle_only_id_is_treated_as_unsupported_not_a_crash() -> None:
+    games = [_game("BundleOnly", ["steam:bundle/46228"])]
+
+    ignored = evaluate_completion(games, set(), unsupported_store_handling="ignore")
+
+    assert ignored.total == 0
+    assert ignored.unsupported_ids == ["BundleOnly"]
+# end def test_steam_bundle_only_id_is_treated_as_unsupported_not_a_crash
+
+
+def test_steam_bundle_id_alongside_a_real_appid_only_counts_the_appid() -> None:
+    games = [_game("Mixed", ["steam:bundle/46228", "steam:440"])]
+
+    completion = evaluate_completion(games, {440})
+
+    assert completion.total == 1
+    assert completion.owned_count == 1
+    assert completion.owned_ids == ["steam:440"]
+# end def test_steam_bundle_id_alongside_a_real_appid_only_counts_the_appid
+
+
 def test_unresolved_and_unsupported_store_handling_are_independent() -> None:
     games = [
         _game("Unresolved", ["unresolved:source:isthereanydeal:1:x"]),

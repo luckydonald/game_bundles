@@ -214,6 +214,35 @@ def test_ambiguous_steampowered_match_falls_back_to_steamdb() -> None:
 # end def test_ambiguous_steampowered_match_falls_back_to_steamdb
 
 
+def test_steamdb_fallback_can_resolve_to_a_bundle() -> None:
+    steampowered_page = """
+    <a href="https://store.steampowered.com/app/1/other/">Other Game</a>
+    <a href="https://store.steampowered.com/app/2/other/">Other Game</a>
+    """
+    steamdb_page = '<a href="/bundle/46228/">Forgive Me Father 2 Deluxe Edition</a>'
+
+    resolver = StorefrontResolver(
+        lambda _url: steampowered_page,
+        lambda _item, _provider, _candidates: None,
+        steamdb_fetch=lambda _url: steamdb_page,
+    )
+
+    ids = resolver.resolve_item(
+        HumbleItem(
+            machine_name="forgive_me_father_2_deluxe",
+            title="Forgive Me Father 2 Deluxe Edition",
+            item_type="game",
+            is_game=True,
+            redeem_on=["steam"],
+            resolution=HumbleResolution(),
+        ),
+        HumbleResolutionMap(schema=1, games={}),
+    )
+
+    assert ids == ["steam:bundle/46228"]
+# end def test_steamdb_fallback_can_resolve_to_a_bundle
+
+
 def test_no_steamdb_fetch_behaves_like_steampowered_only() -> None:
     steampowered_page = """
     <a href="https://store.steampowered.com/app/1/other/">Other Game</a>

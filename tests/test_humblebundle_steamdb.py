@@ -62,5 +62,17 @@ def test_parse_steamdb_results_dedupes_by_appid() -> None:
 
 
 def test_steamdb_search_url_formats_query() -> None:
-    assert STEAMDB_SEARCH_URL.format(query="GRIME") == "https://steamdb.info/search/?a=app&q=GRIME"
+    assert STEAMDB_SEARCH_URL.format(query="GRIME") == "https://steamdb.info/search/?q=GRIME"
 # end def test_steamdb_search_url_formats_query
+
+
+def test_parse_steamdb_results_includes_bundle_rows() -> None:
+    page = """
+    <a href="/bundle/46228/">46228</a>
+    <a href="/bundle/46228/">Forgive Me Father 2 Deluxe Edition</a>
+    """
+
+    results = parse_steamdb_results(page)
+
+    assert results == [("bundle/46228", "Forgive Me Father 2 Deluxe Edition")]
+# end def test_parse_steamdb_results_includes_bundle_rows

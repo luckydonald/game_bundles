@@ -26,12 +26,17 @@ __all__ = [
 ]
 
 
-STEAMDB_SEARCH_URL = "https://steamdb.info/search/?a=app&q={query}"
+# `a=app` restricted the search to the Apps tab only, so a title whose closest
+# Steam match is a bundle (e.g. a "Deluxe Edition" sold only as a bundle of the
+# base app + DLC) never showed up. Dropping the `a` parameter runs steamdb's
+# unfiltered "Everything" search instead, which also returns Bundle rows.
+STEAMDB_SEARCH_URL = "https://steamdb.info/search/?q={query}"
 
-# Matches a search result row's own permalink (e.g. "/app/1123050/"), not the
-# absolute https://store.steampowered.com/app/<id>/... "store page" link that
-# sits alongside it for apps that still have a live listing.
-_APP_LINK_HREF = re.compile(r"^/app/(\d+)/$")
+# Matches a search result row's own permalink - either an app
+# ("/app/1123050/") or a bundle ("/bundle/46228/") - not the absolute
+# https://store.steampowered.com/app/<id>/... "store page" link that sits
+# alongside it for apps that still have a live listing.
+_RESULT_LINK_HREF = re.compile(r"^/(app|bundle)/(\d+)/$")
 
 
 class SteamDbCrawlError(RuntimeError):
@@ -126,7 +131,7 @@ class _SteamDbLinkParser(HTMLParser):
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self._appid: str | None = None
+        self._id: str | None = None
         self._parts: list[str] = []
         self.links: list[tuple[str, str]] = []
     # end def __init__
@@ -136,29 +141,34 @@ class _SteamDbLinkParser(HTMLParser):
             return
         # end if
         href = dict(attrs).get("href") or ""
-        match = _APP_LINK_HREF.match(href)
+        match = _RESULT_LINK_HREF.match(href)
         if match is None:
             return
         # end if
-        self._appid = match.group(1)
+        kind, raw_id = match.groups()
+        # A bundle's id is kept distinguishable from a plain app id (`46228`
+        # vs `bundle/46228`) so callers can build the right store URL/qualified
+        # id (`steam:bundle/46228`, see `parse_store_identity`) without a
+        # separate return field.
+        self._id = raw_id if kind == "app" else f"{kind}/{raw_id}"
         self._parts = []
     # end def handle_starttag
 
     def handle_data(self, data: str) -> None:
-        if self._appid is not None:
+        if self._id is not None:
             self._parts.append(data)
         # end if
     # end def handle_data
 
     def handle_endtag(self, tag: str) -> None:
-        if tag != "a" or self._appid is None:
+        if tag != "a" or self._id is None:
             return
         # end if
         text = "".join(self._parts).strip()
         if text:
-            self.links.append((self._appid, text))
+            self.links.append((self._id, text))
         # end if
-        self._appid = None
+        self._id = None
         self._parts = []
     # end def handle_endtag
 
@@ -166,24 +176,27 @@ class _SteamDbLinkParser(HTMLParser):
 
 
 def parse_steamdb_results(html: str) -> list[tuple[str, str]]:
-    """Extract ranked (appid, title) pairs from a steamdb.info search results page.
+    """Extract ranked (id, title) pairs from a steamdb.info search results page.
 
-    Returns raw pairs rather than `resolver.StoreCandidate` to avoid a circular
-    import (`resolver.py` imports this module, not the other way around); the
-    caller builds `StoreCandidate(title=title, url=f"https://store.steampowered.com/app/{appid}/", qualified_id=f"steam:{appid}")`.
+    `id` is a plain numeric appid (``"1123050"``) for an App row, or
+    ``"bundle/<id>"`` for a Bundle row. Returns raw pairs rather than
+    `resolver.StoreCandidate` to avoid a circular import (`resolver.py`
+    imports this module, not the other way around); the caller builds the
+    matching `StoreCandidate` itself (see `StorefrontResolver._search_steam`).
     """
     parser = _SteamDbLinkParser()
     parser.feed(html)
     results: list[tuple[str, str]] = []
     seen: set[str] = set()
-    for appid, title in parser.links:
-        if title == appid or appid in seen:
+    for result_id, title in parser.links:
+        numeric_id = result_id.rsplit("/", 1)[-1]
+        if title == numeric_id or result_id in seen:
             # The ID-column link's own text is just the numeric id; skip it
             # so only the name-column link produces a result.
             continue
         # end if
-        seen.add(appid)
-        results.append((appid, title))
+        seen.add(result_id)
+        results.append((result_id, title))
         if len(results) == 10:
             break
         # end if
