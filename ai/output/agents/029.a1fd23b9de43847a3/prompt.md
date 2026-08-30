@@ -1,0 +1,12 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to understand the interactive CLI resolution flow used when scraping/completing game lists and the user is prompted to pick/confirm a storefront match for a game title.
+
+Context: When `scrape humblebundle` (or `complete`) can't auto-resolve a title to a Steam/storefront ID, it presents the user with an interactive prompt of candidate matches, with options like "Other…" (type your own) probably shown last. I want to add a new option "Multiple…" that should appear right above "Other…", for cases where one Humble Bundle "offer" actually represents multiple separate games (e.g., DLC bundles containing several DLC items) — selecting it should let the user type a name to resolve on its own via the normal search flow, defaulting to the title that was just being searched.
+
+Please investigate and report (concise, code-path focused):
+1. In src/game_collections/sources/humblebundle/resolver.py and src/game_collections/search.py, find the code that builds the interactive prompt (likely using `questionary` or similar) presenting candidate matches to the user, including where "Other…"/free-text option is defined. Show the relevant function(s) in full with file path + line numbers.
+2. How does the free-text "Other…" flow work end to end — what happens after the user types a custom name? Does it re-run search.py's ranked search? Show that code path.
+3. Is this same prompting code shared/reused by `complete` command (cli.py) and other sources (greenmangaming, isthereanydeal per-game solver)? Show where it's imported/called from.
+4. What's the return type / result structure of this resolution function — how does the caller (crawler.py or complete flow) receive "resolved to X" vs "still unresolved" vs "user typed custom name"? Are there already any special sentinel choices similar to "Other…" that branch into a different codepath (look for enums, string literals like "Other…", "Skip", "None of these", etc.)?
+5. Is there anywhere already a notion of "one offer maps to multiple output games" (e.g., a loop that can append more than one resolved game per input title)? Grep for patterns like "for offer" / "results.append" in resolver.py and crawler.py to see how one Humble offer currently becomes one entry in the games: list.
+
+Report file paths, relevant line numbers/snippets, and function signatures. Keep total response under 500 lines, focus on facts not recommendations.
