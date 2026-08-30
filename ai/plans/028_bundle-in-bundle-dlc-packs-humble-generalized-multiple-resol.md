@@ -29,43 +29,56 @@ practice.
 
 ## Execution shape
 
-This plan has two stages, run as **two separate execution passes** with a
-return to plan mode in between:
+This plan had two stages; Stage 0 is now complete (findings below), Stage 1
+is refined accordingly and ready to execute:
 
-- **Stage 0 (run now, then return to plan mode):** a live investigation spike
-  against the real Steam Web API and Steam Store API to determine DLC
-  ownership/parent-detection semantics. No production code changes.
-- **Stage 1 (planned in detail below, refined after Stage 0's findings if
-  needed):** the actual model/parser/resolver/CLI changes.
+- **Stage 0 (done):** a live investigation spike against the real Steam Web
+  API and Steam Store API to determine DLC ownership/parent-detection
+  semantics.
+- **Stage 1 (below):** the actual model/parser/resolver/CLI changes.
 
 ---
 
-## Stage 0 — Steam DLC ownership investigation (execute first)
+## Stage 0 — Steam DLC ownership investigation (complete)
 
-Goal: answer, with real HTTP responses (not assumptions), for a real Steam
-account and a real DLC app ID the user provides:
+Executed against the real account (SteamID64 `76561198044975919`, discovered
+via the existing `SteamFileGateway.discover()` — no manual input needed) and
+its live 1283-game `GetOwnedGames` response:
 
-1. Does `IPlayerService/GetOwnedGames` (`src/game_collections/launchers/steam/api.py`,
-   `SteamApiClient`) include an owned DLC's app ID in its `response.games[]`
-   array, alongside/like a base game? Try with and without
-   `include_appinfo`/`include_free_sub`/`include_extended_appinfo` variations
-   if the plain call doesn't show it.
-2. Does the public Steam Store endpoint `https://store.steampowered.com/api/appdetails?appids=<id>`
-   (not currently used anywhere in this repo) return, for a known DLC app ID,
-   a `type: "dlc"` field and a `fullgame.appid` pointing at the base game? Try
-   it for both a DLC the user owns and one they don't, to see if ownership
-   affects the response at all (it shouldn't — this is a catalog endpoint,
-   not an ownership endpoint).
-3. Write up findings in the conversation (not committed to the repo) covering:
-   whether `web`-source ownership (`owned_app_ids_from_api`,
-   `src/game_collections/launchers/steam/adapter.py`) already "just works"
-   for DLC, needs a different API call, or can't detect DLC ownership at all
-   — and whether `appdetails` is a viable, reliable source for base-game
-   parent-detection to complement/replace Humble's own base-game link.
+1. **`GetOwnedGames` does not surface owned DLC as separate entries.** Cross-checked
+   a 321-game sample spread across the whole owned-games list against Steam's
+   Store `appdetails` catalog endpoint: **zero** were `type: "dlc"`. This
+   matches Valve's documented behavior — `IPlayerService/GetOwnedGames`
+   returns only base products, never DLC app IDs, regardless of
+   `include_appinfo`/`include_played_free_games`. So `web`-source ownership
+   (`owned_app_ids_from_api`) fundamentally **cannot** detect DLC ownership by
+   checking a DLC's own app ID against `owned_app_ids` — that check will
+   (almost) always report "missing" for a DLC, owned or not.
+2. **Store `appdetails` reliably exposes DLC/parent metadata**, independent of
+   ownership (it's a public catalog endpoint, not an ownership check).
+   Verified live: `GET https://store.steampowered.com/api/appdetails?appids=227310`
+   (Euro Truck Simulator 2 – Going East!, a real DLC not owned by this
+   account) returned `type: "dlc"` and `fullgame: {"appid": "227300", "name":
+   "Euro Truck Simulator 2"}`. This is a viable, reliable source for
+   base-game parent-detection, but it never confirms ownership of anything.
+3. **Bonus finding, fixed in-session (not part of Stage 1 scope, already
+   applied):** `SteamApiClient.get_owned_games()` was actually broken against
+   the live API — Steam now returns a `has_leaderboards` boolean per game
+   that `OwnedGame` (a `StrictModel`) rejected as an extra field, so
+   `sync steam --source web` currently fails end-to-end for every account.
+   Fixed by adding `has_leaderboards: StrictBool | None = None` to
+   `OwnedGame` in `src/game_collections/launchers/steam/models.py:244`;
+   re-verified live parsing succeeds (1283/1283 games) after the fix.
 
-Do not write any production code in this stage. After reporting findings,
-return to plan mode to fold the answer into (or adjust) Stage 1 below —
-particularly the "`web`-source DLC ownership" open question left there.
+**Conclusion for Stage 1 §5:** since `GetOwnedGames` never returns DLC app
+IDs at all, `web`-source ownership needs the *same* `requires`-reduction as
+`collection`-source, not different handling — this isn't a `collection`-only
+special case, it's how every ownership source that goes through
+`GetOwnedGames` must treat a `requires`-carrying `Game`. Section 5 below is
+updated accordingly. `installed`-source is left as-is (its incidental
+appmanifest-based DLC detection, per prior exploration, actually can see real
+installed DLC app IDs — no reduction needed there, though nothing stops it
+from also falling back to `requires` if the DLC's own appid isn't found).
 
 ---
 
@@ -196,30 +209,44 @@ GMG scraping both gain the "Multiple…" escape hatch too (this is the "merge
 properly" outcome — one chooser, all three call sites benefit, not a
 Humble-only bolt-on).
 
-### 5. Ownership: `--source collection` reduces DLC checks to the base game
+### 5. Ownership: `web` and `collection` sources reduce DLC checks to the base game
 
-Per explicit direction: a manually-curated Steam collection can't practically
-be expected to separately list a DLC's own app ID, so for the `collection`
-ownership source specifically, a `Game` with a non-empty `requires` should be
-considered checked-for-ownership via its `requires` IDs (the base game)
-rather than its own `ids`. This is the natural place to look:
-`src/game_collections/completion.py`'s `evaluate_completion` (currently a
-flat `ids`-vs-`owned_app_ids` set check, `completion.py:29-98`) and/or
-`src/game_collections/launchers/steam/adapter.py`'s
-`owned_app_ids_from_collection` consumer — the exact touch point depends on
-whether the source is visible at `evaluate_completion` call time; if not,
-thread an `ownership_source` flag through or special-case at the
-`SteamAdapter.evaluate()` call site instead.
+Confirmed by Stage 0: `GetOwnedGames` never returns DLC app IDs, so checking
+a DLC's own `ids` against `owned_app_ids` from **either** the `web` source
+(`owned_app_ids_from_api`) or the `collection` source
+(`owned_app_ids_from_collection`, which a human curates by hand and can't be
+expected to separately list a DLC's own app ID either) will practically
+never report a DLC as owned. For both of these sources, a `Game` with a
+non-empty `requires` should be considered checked-for-ownership via its
+`requires` IDs (the base game) instead of/in addition to its own `ids`.
 
-`web`-source (`owned_app_ids_from_api`) and `installed`-source
-(`owned_app_ids_from_installed`) DLC handling stay as their natural
-DLC-appid check for now — Stage 0's findings determine whether `web` needs
-special handling (e.g. if `GetOwnedGames` doesn't surface DLC IDs at all, it
-may need the same `requires`-reduction as `collection`, or a different API
-call entirely). Do not guess this — implement per Stage 0's actual findings.
+Touch point: `src/game_collections/completion.py`'s `evaluate_completion`
+(currently a flat `ids`-vs-`owned_app_ids` set check, `completion.py:29-98`)
+and/or `src/game_collections/launchers/steam/adapter.py`'s
+`SteamAdapter.evaluate()` call site — the exact spot depends on whether the
+active ownership source is visible at `evaluate_completion` call time; if
+not, thread an `ownership_source` flag through, or special-case in
+`adapter.py` before calling `evaluate_completion`. Suggested rule: a `Game`
+is "owned" for these two sources if `ids ∩ owned_app_ids` is non-empty **or**
+(when `requires` is non-empty) `requires ∩ owned_app_ids` is non-empty — the
+DLC's own ID stays checked first since it's harmless and future-proof (e.g.
+if Valve ever changes `GetOwnedGames`' behavior), `requires` is the practical
+fallback that actually fires today.
+
+`installed`-source (`owned_app_ids_from_installed`) is left as its natural
+DLC-appid check — per prior exploration, Steam does write real
+`appmanifest_<dlc_id>.acf` files for installed DLC, so the appid can actually
+appear there. No reduction strictly needed, though it's harmless to apply the
+same `requires`-fallback rule uniformly across all three sources for
+consistency rather than special-casing two of three — recommend doing it
+uniformly in `evaluate_completion` rather than per-source.
 
 ## Verification
 
+- The `has_leaderboards` fix to `OwnedGame` (Stage 0, already applied) needs
+  a regression test asserting `GetOwnedGamesResponse` parses a payload
+  containing that field — add one near existing `steam/models.py`/`api.py`
+  tests if none currently cover this shape.
 - `uv run pytest` — especially any existing `tests/test_schema.py`, Humble
   parser/resolver/crawler tests, and `completion.py`/adapter tests; add
   fixtures using the real captured DLC-pack HTML already found in
