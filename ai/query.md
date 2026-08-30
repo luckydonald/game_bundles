@@ -2220,3 +2220,71 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ /plan For the bundle-in-bundle issue (e.g. a DLC bundle, i.e. in case of https://www.humblebundle.com/games/love-letter-to-lovecraft the _Dagon: By H.P Lovecraft DLC Pack_, it contains 3 DLCs listed in the description of that bundle. Notice the `<span class="extra-info fine-print">DLC</span>` on it. Also it requires the (free!) base game to be installed, which is linked, and we could add that as a requirement, as well as the DLCs. We by the way need to figure out how to handle the DLCs anyways, as at least with the _Manual All_ collection, this will not be available to inspect. So a DLC always also needs to store the game it is for, and I guess that is what should be checked & added to the collection. Check if the steam key api whatever is better in detecting if we own such a DLC. So back to the crawl of that, this should best case be able to be auto detected, but the prompt to the user must have an option of "Multiple…", too, above "Other…", where you can type a name which it would try to resolve on it's own as usual first. Default input for that is the title we just attempted to search.
 
+❯ Task Notification:
+> - Task `a07aef7aa917002b1` <kbd>completed</kbd>
+> - Tool `toolu_01HNq6BmTGHh6akgiP9hW3UA`
+> - > Agent "Explore Steam DLC/ownership detection" finished
+> - [Query (`2446` chars, `2.39 KB`)](output/agents/027.a07aef7aa917002b1/prompt.md)
+> - [Answer (`7384` chars, `7.24 KB`)](output/agents/027.a07aef7aa917002b1/result.md)
+> - [Raw log (`185333` chars, `181 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/a07aef7aa917002b1.output)
+> - `15` tools, `40424` tokens, `0.872133 s`
+
+❯ Task Notification:
+> - Task `abad2c0b0fda2f827` <kbd>completed</kbd>
+> - Tool `toolu_01HQsy5tBQ4YKSdXKcn8XBQb`
+> - > Agent "Explore Humble bundle crawler/parser for DLC handling" finished
+> - [Query (`2498` chars, `2.45 KB`)](output/agents/028.abad2c0b0fda2f827/prompt.md)
+> - [Answer (`9113` chars, `8.93 KB`)](output/agents/028.abad2c0b0fda2f827/result.md)
+> - [Raw log (`223652` chars, `219 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/abad2c0b0fda2f827.output)
+> - `15` tools, `47053` tokens, `1.27498 s`
+
+❯ Task Notification:
+> - Task `a1fd23b9de43847a3` <kbd>completed</kbd>
+> - Tool `toolu_01CXaF6DNRN5E9iTGMVWUqSZ`
+> - > Agent "Explore interactive resolution prompt flow" finished
+> - [Query (`2455` chars, `2.42 KB`)](output/agents/029.a1fd23b9de43847a3/prompt.md)
+> - [Answer (`9334` chars, `9.18 KB`)](output/agents/029.a1fd23b9de43847a3/result.md)
+> - [Raw log (`170823` chars, `167 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/a1fd23b9de43847a3.output)
+> - `13` tools, `36123` tokens, `1.3412 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Should this change also make `requires` (the DLC's base-game dependency) affect ownership/apply logic (e.g. completion.py's evaluate_completion, and the Steam apply flow adding the base game alongside a DLC into a managed collection), or should this pass stop at modeling + auto-detection + the resolver/prompt UI, leaving ownership-consumption as a deliberate follow-up?
+>> 2. Steam DLC-ownership detection ('is the steam API better at this') needs a live check against real API responses before any code decision — guessing Steam Web API/Store API DLC semantics would violate this repo's verify-before-parsing practice. Should that live-verification spike be part of this plan's execution, or purely a documented open question for you to check separately?
+>> 3. The interactive 'Other…'/candidate chooser prompt exists as duplicated code for Humble (_choose_store_candidate) and Green Man Gaming (_choose_gmg_store_candidate) in cli.py. Should the new 'Multiple…' option be added to both, or only to the Humble path since the DLC-in-bundle pattern you described is Humble-specific?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Requires scope** (1/3) <kbd>Single Select</kbd><br>
+>> Should this change also make `requires` (the DLC's base-game dependency) affect ownership/apply logic (e.g. completion.py's evaluate_completion, and the Steam apply flow adding the base game alongside a DLC into a managed collection), or should this pass stop at modeling + auto-detection + the resolver/prompt UI, leaving ownership-consumption as a deliberate follow-up?
+> - [ ] 1\. Model + resolve only (Recommended)
+>   - _Add `requires` to the Game model, populate it from Humble's DLC-pack base-game link, wire the 'Multiple…' prompt. Leave completion.py/apply consumption of `requires` for a later pass once the model is in use and real data exists to design against._
+> - [ ] 2\. Include ownership/apply consumption now
+>   - _Also change completion.py's evaluate_completion and the Steam apply flow in this same pass so a DLC's `requires` base game is checked/added alongside it._
+> - [x] 3\. _Type something:_
+>   - > Well, if we check the collection only, we have to reduce DLCs to the base game. For api, i don't know yet, we need to check what we can ... uh, check.
+>
+>> **DLC ownership check** (2/3) <kbd>Single Select</kbd><br>
+>> Steam DLC-ownership detection ('is the steam API better at this') needs a live check against real API responses before any code decision — guessing Steam Web API/Store API DLC semantics would violate this repo's verify-before-parsing practice. Should that live-verification spike be part of this plan's execution, or purely a documented open question for you to check separately?
+> - [ ] 1\. Include as an investigation step (Recommended)
+>   - _Plan includes a step to make a couple of real GetOwnedGames / Store appdetails calls (against a real account/appid you provide) to confirm whether DLC appids surface as ownable/ownable-detectable, before deciding if adapter.py needs DLC-aware logic._
+> - [ ] 2\. Leave fully out of scope
+>   - _Plan only covers Humble crawl/resolve/model changes; Steam ownership-detection-for-DLC is left as a separate follow-up task, not touched now._
+> - [x] 3\. _Type something:_
+>   - > It's an investigation step of the plan, but at the same time needs to be done to complete the plan, so I guess that would be the first execution iteration and then back to planning mode.
+>
+>> **Multiple… scope** (3/3) <kbd>Single Select</kbd><br>
+>> The interactive 'Other…'/candidate chooser prompt exists as duplicated code for Humble (_choose_store_candidate) and Green Man Gaming (_choose_gmg_store_candidate) in cli.py. Should the new 'Multiple…' option be added to both, or only to the Humble path since the DLC-in-bundle pattern you described is Humble-specific?
+> - [ ] 1\. Humble only (Recommended)
+>   - _Only _choose_store_candidate (and the search.py-driven _choose_search_candidate wrapper used by `complete`) gets the 'Multiple…' option. GMG's chooser is untouched._
+> - [ ] 2\. Both Humble and GMG
+>   - _Add the same 'Multiple…' option to _choose_gmg_store_candidate too, for consistency, even though GMG doesn't currently show the DLC-pack pattern._
+> - [x] 3\. _Type something:_
+>   - > Can we merge them in a proper way?
+>
+> </details>
+>
+
