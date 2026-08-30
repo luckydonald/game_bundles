@@ -42,20 +42,27 @@ def evaluate_completion(
     owned_game_count = 0
     for game in games:
         steam_ids = [identifier for identifier in game.qualified_ids if identifier.provider == "steam"]
-        if steam_ids:
+        game_app_ids: list[int] = []
+        for identifier in steam_ids:
+            if identifier.value.startswith("bundle/"):
+                # A Steam bundle (e.g. a "Deluxe Edition" only sold as a bundle
+                # of the base app + DLC, see `parse_store_identity`) has no
+                # single AppID the Web API's owned-games list can match
+                # against, so it can't drive ownership on its own.
+                continue
+            # end if
+            try:
+                app_id = int(identifier.value)
+            except ValueError as error:
+                raise ValueError(f"invalid Steam app ID {identifier.value!r} in {game.name!r}") from error
+            # end try
+            if app_id <= 0:
+                raise ValueError(f"invalid Steam app ID {app_id} in {game.name!r}")
+            # end if
+            game_app_ids.append(app_id)
+        # end for
+        if game_app_ids:
             steam_game_count += 1
-            game_app_ids: list[int] = []
-            for identifier in steam_ids:
-                try:
-                    app_id = int(identifier.value)
-                except ValueError as error:
-                    raise ValueError(f"invalid Steam app ID {identifier.value!r} in {game.name!r}") from error
-                # end try
-                if app_id <= 0:
-                    raise ValueError(f"invalid Steam app ID {app_id} in {game.name!r}")
-                # end if
-                game_app_ids.append(app_id)
-            # end for
             required.extend(game_app_ids)
             if any(app_id in owned_app_ids for app_id in game_app_ids):
                 owned_game_count += 1
