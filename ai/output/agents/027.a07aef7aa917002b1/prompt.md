@@ -1,0 +1,12 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to understand how Steam ownership is currently detected across the three ownership sources (`web`, `installed`, `collection`), and whether there's any existing handling of Steam DLC app IDs specifically (as opposed to base game app IDs).
+
+Context: The project models a game list where each game has `ids:` (e.g. `steam:12345`). We're considering adding DLC support: a game entry could be a DLC that requires a base game to be owned/installed. We need to know whether the existing ownership detection sources (Steam Web API, local installed manifests, manual "collection") can already detect ownership of a DLC appid specifically, or whether DLC appids behave specially in each of them.
+
+Please investigate and report (concise, code-path focused):
+1. src/game_collections/launchers/steam/local_ownership.py: how does `--source installed` detect ownership from `libraryfolders.vdf`/`appmanifest_*.acf`? Do appmanifest files distinguish DLC from base games? Is there any existing DLC-aware code (grep "dlc" case-insensitive across launchers/steam/)?
+2. src/game_collections/launchers/steam/ (find the web API ownership source, likely in another file — search discovery.py, models.py, and any "web" or "ownership" named file) — how does the Steam Web API-based ownership check work (which endpoint/response field), and does the Steam Web API's owned-games response include DLC appids alongside base games, or does it only return "games" (base products)? Look for comments or model fields hinting at this.
+3. src/game_collections/launchers/steam/models.py: are there any existing fields/models related to "dlc", "parent app", "requires app", or similar strict models for app metadata?
+4. Is there any Steam Store API / SteamDB usage already in the codebase (e.g. sources/humblebundle/steamdb.py) that fetches app details including whether an app is a DLC and what its "fullgame"/parent appid is? Show relevant code.
+5. src/game_collections/apply/metadata.py and src/game_collections/launchers/base.py: how is "ownership-matched" currently computed/consumed for the sync/apply steam commands — is it a simple appid-in-owned-set check? Would a DLC appid just work the same way as a base game appid today, or is there special-casing anywhere?
+
+Report file paths, relevant line numbers/snippets, and model field lists. Keep total response under 500 lines, focus on facts not recommendations.

@@ -1,0 +1,12 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to understand how the Humble Bundle crawler/parser (src/game_collections/sources/humblebundle/) works, specifically around bundle offer descriptions.
+
+Context: On humblebundle.com bundle pages (e.g. love-letter-to-lovecraft), some bundle items are actually "bundle-in-bundle" DLC packs — e.g. "Dagon: By H.P. Lovecraft DLC Pack" contains 3 separate DLCs listed within that offer's description, and the HTML marks such items with `<span class="extra-info fine-print">DLC</span>`. The DLC pack also requires a free base game that is linked from the description.
+
+Please investigate and report (concise, code-path focused):
+1. In crawler.py and parser.py, how is a bundle's list of "offers"/games extracted from the HTML? Where would the raw offer HTML/description live — is the full description HTML captured anywhere in the archive/raw data, or is it stripped down before parsing? Look for how `fine-print`, `extra-info`, or similar classes are already handled/searched for (grep for "fine-print", "extra-info", "DLC", "dlc" across the sources/humblebundle directory and also sources/greenmangaming and sources/isthereanydeal for comparison).
+2. What does models.py (in sources/humblebundle) define as the raw/archived offer representation — is there a field for description HTML or sub-items already? Show the relevant Pydantic models with field names and types.
+3. How does resolver.py currently resolve an offer name to a storefront ID (steam appid etc)? Is resolution done per named offer/title, or is there any concept already of "this offer bundles multiple things"?
+4. Is there any existing modeling in the wider models.py (src/game_collections/models.py, the launcher-neutral list contract) for a game requiring another game/base-game, or for DLC vs base-game relationship? Grep for "dlc", "requires", "base_game", "requirement" across src/game_collections.
+5. Look at one real archived bundle's raw JSON/HTML (find a file under archives/humblebundle/bundle/*/  that has raw offer HTML, e.g. look at 2026-08-21_love-letter-to-lovecraft or a similar recent bundle) and show a snippet of the raw captured HTML for a single offer, particularly one that might contain a DLC pack with nested items, so we can see how the DLC markup and nested item list actually look in captured data.
+
+Report file paths, relevant line numbers/snippets, and model field lists. Keep total response under 500 lines, focus on facts not recommendations.
