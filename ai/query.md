@@ -2347,3 +2347,5 @@ Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want 
 Also I'd like the game detection mechanism to be automatic per default, and check if the defined sources are available and if so, automatically use them.
 Lastly, the default should also ask the user in the UI version if they want to paste a new version of the "owned game data" (that json), and if so, it'd open the steam client just there, and then wait for user input. Obviously cancelable. The less-ui version would use a normal input I guess, which should still be good enough to paste stuff in (only do the prompts there if (a) forced by a flag (b) in an interactive session. The default (enter) must be to not update it so it's quickly skipped though on multiple runs. Also the force flag shall also be usable to not ask at all. The file should be written to the config dir, after paste. And obviously loaded from there. Include a timestamp of last update to also display that when asking.
 
+❯ Add that you should commit after each phase and before and after each test + fix runs.
+
