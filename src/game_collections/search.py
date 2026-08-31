@@ -9,6 +9,7 @@ from typing import Any, Literal, cast
 from game_collections.models import GameList, QualifiedGameId
 from game_collections.sources.humblebundle.resolver import (
     ALLOWED_STORES,
+    ResolvedGame,
     StoreCandidate,
     StoreName,
     StorefrontResolver,
@@ -20,12 +21,13 @@ from game_collections.sources.isthereanydeal.resolver import (
     ItadGameResolution,
     resolve_isthereanydeal_markers,
 )
+from game_collections.sources.prompting import ChosenCandidate, ChosenNames
 
 
 Provider = StoreName | Literal["isthereanydeal"]
 ProviderSelection = Provider | Literal["all"]
 CompletionMode = Literal["blank", "missing", "unresolved", "refetch_all"]
-SearchChooser = Callable[[str, StoreName, list[StoreCandidate]], str | None]
+SearchChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
 ItadResolve = Callable[[str], ItadGameResolution]
 COMPLETION_MODES: tuple[CompletionMode, ...] = (
     "blank",
@@ -100,8 +102,14 @@ def resolve_title(
     providers: tuple[StoreName, ...],
     resolver: StorefrontResolver,
     choose: SearchChooser,
-) -> list[str]:
-    """Resolve a title once per provider, accepting unique exact matches."""
+) -> list[ResolvedGame]:
+    """Resolve a title once per provider, accepting unique exact matches.
+
+    Returns more than one `ResolvedGame` only when `choose` returns
+    `ChosenNames` for some provider ("Multiple…"), splitting the title into
+    several sub-titles that are each re-resolved from scratch across every
+    requested provider.
+    """
     ids: list[str] = []
     for provider in providers:
         candidates = resolver.search(provider, title)
@@ -118,9 +126,16 @@ def resolve_title(
         if selected is None:
             continue
         # end if
+        if isinstance(selected, ChosenNames):
+            results: list[ResolvedGame] = []
+            for sub_title in selected.names:
+                results.extend(resolve_title(sub_title, providers, resolver, choose))
+            # end for
+            return results
+        # end if
         ids.append(parse_store_identity(provider, selected))
     # end for
-    return list(dict.fromkeys(ids))
+    return [ResolvedGame(name=title, ids=list(dict.fromkeys(ids)))]
 # end def resolve_title
 
 
@@ -151,6 +166,7 @@ def complete_game_list(
         raise ValueError("draft list must contain a non-empty games list")
     # end if
     unresolved: list[str] = []
+    games_out: list[dict[str, Any]] = []
     for index, game in enumerate(games, start=1):
         if not isinstance(game, dict):
             raise ValueError(f"game {index} must contain an object")
@@ -170,6 +186,7 @@ def complete_game_list(
         searched = False
         failed = False
         resolved_any = False
+        split: list[ResolvedGame] | None = None
         blank_eligible = not any(_is_proper_id(value) for value in current)
         for provider in providers:
             if provider == "isthereanydeal":
@@ -197,7 +214,21 @@ def complete_game_list(
             if mode == "refetch_all":
                 current = [value for value in current if not value.startswith(f"{store_provider}:")]
             # end if
-            found = resolve_title(name, (store_provider,), resolver, choose)
+            results = resolve_title(name, (store_provider,), resolver, choose)
+            if len(results) > 1:
+                # The user declared "Multiple…" for this store: this title is
+                # actually several separate games. Re-resolve every requested
+                # store from scratch, per split sub-title, and stop treating
+                # this as one game entry.
+                store_providers = tuple(cast(StoreName, p) for p in providers if p != "isthereanydeal")
+                split = [
+                    entry
+                    for sub_title in (r.name for r in results)
+                    for entry in resolve_title(sub_title, store_providers, resolver, choose)
+                ]
+                break
+            # end if
+            found = results[0].ids
             if found:
                 current.extend(found)
                 resolved_any = True
@@ -207,6 +238,18 @@ def complete_game_list(
             current.append(f"{prefix}{marker_name}")
             failed = True
         # end for
+        if split is not None:
+            group_id = f"multiple:{'-'.join(name.casefold().split())}"
+            for entry in split:
+                slug = "-".join(entry.name.casefold().split())
+                ids = list(dict.fromkeys(entry.ids)) or [f"unresolved:source:complete:{slug}"]
+                games_out.append({"name": entry.name, "ids": ids, "group": {"id": group_id, "name": name}})
+                if ids[0].startswith("unresolved:"):
+                    unresolved.append(entry.name)
+                # end if
+            # end for
+            continue
+        # end if
         if resolved_any:
             current = [value for value in current if not value.startswith("unresolved:source:")]
         # end if
@@ -214,7 +257,9 @@ def complete_game_list(
         if searched and failed:
             unresolved.append(name)
         # end if
+        games_out.append(game)
     # end for
+    completed["games"] = games_out
     GameList.model_validate(completed)
     return completed, unresolved
 # end def complete_game_list

@@ -96,7 +96,7 @@ def test_ambiguous_match_uses_selected_url() -> None:
         lambda _item, _provider, candidates: candidates[1].url,
     )
 
-    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:43"]
 # end def test_ambiguous_match_uses_selected_url
@@ -106,7 +106,7 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
     resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates: None)
     mapping = GmgResolutionMap(schema=1, games={})
 
-    ids = resolver.resolve_item(_item(), mapping)
+    ids = resolver.resolve_item(_item(), mapping)[0].ids
 
     assert ids == ["unresolved:source:greenmangaming:346"]
     assert mapping.games == {"346": ids}
@@ -129,7 +129,7 @@ def test_unique_steampowered_match_skips_steamdb_fallback() -> None:
         steamdb_fetch=steamdb_fetch,
     )
 
-    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:42"]
     assert steamdb_called is False
@@ -149,7 +149,7 @@ def test_ambiguous_steampowered_match_falls_back_to_steamdb() -> None:
         steamdb_fetch=lambda _url: steamdb_page,
     )
 
-    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:3011360"]
 # end def test_ambiguous_steampowered_match_falls_back_to_steamdb
@@ -165,7 +165,7 @@ def test_no_steamdb_fetch_behaves_like_steampowered_only() -> None:
         lambda _item, _provider, _candidates: None,
     )
 
-    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), GmgResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["unresolved:source:greenmangaming:346"]
 # end def test_no_steamdb_fetch_behaves_like_steampowered_only
@@ -175,7 +175,7 @@ def test_unrecognized_drm_skips_search_and_is_unresolved() -> None:
     item = GmgItem(product_id="9", title="Mystery Game", drm="Standalone Installer", redeem_on=[])
     resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates: None)
 
-    ids = resolver.resolve_item(item, GmgResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(item, GmgResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["unresolved:source:greenmangaming:9"]
 # end def test_unrecognized_drm_skips_search_and_is_unresolved

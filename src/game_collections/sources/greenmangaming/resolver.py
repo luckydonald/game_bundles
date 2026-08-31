@@ -9,14 +9,15 @@ from typing import Literal, Self, cast
 import yaml
 from pydantic import Field, model_validator
 
-from game_collections.models import QualifiedGameId, StrictModel
-from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgResolution
+from game_collections.models import NonEmptyString, QualifiedGameId, StrictModel
+from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgResolution, GmgResolvedGame
 from game_collections.sources.humblebundle.resolver import (
     STORE_SEARCH_URLS,
     StoreCandidate,
     parse_store_candidates,
 )
 from game_collections.sources.humblebundle.steamdb import STEAMDB_SEARCH_URL, parse_steamdb_results
+from game_collections.sources.prompting import ChosenCandidate, ChosenNames
 from game_collections.sources.storefronts import (
     STORE_ROOTS,
     StoreName,
@@ -29,6 +30,7 @@ __all__ = [
     "STEAMDB_SEARCH_URL",
     "STORE_ROOTS",
     "STORE_SEARCH_URLS",
+    "ResolvedGame",
     "StoreCandidate",
     "StoreName",
     "normalized_title",
@@ -103,10 +105,19 @@ def render_resolution_map(mapping: GmgResolutionMap) -> str:
 # end def render_resolution_map
 
 
-CandidateChooser = Callable[[GmgItem, StoreName, list[StoreCandidate]], str | None]
+CandidateChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
 Fetcher = Callable[[str], str]
 LogFn = Callable[[str], None]
 _NO_LOG: LogFn = lambda _message: None  # noqa: E731
+
+
+class ResolvedGame(StrictModel):
+    """One resolved game produced from an item - usually one, several when split."""
+
+    name: NonEmptyString
+    ids: list[NonEmptyString] = Field(default_factory=list)
+
+# end class ResolvedGame
 
 
 class StorefrontResolver:
@@ -163,46 +174,65 @@ class StorefrontResolver:
         ]
     # end def _search_steam
 
-    def resolve_item(self, item: GmgItem, mapping: GmgResolutionMap) -> list[str]:
-        """Resolve one game, updating the durable mapping in memory."""
-        existing = mapping.games.get(item.product_id)
+    def _resolve_title(
+        self,
+        title: str,
+        stores: list[str],
+        cache_key: str,
+        mapping: GmgResolutionMap,
+    ) -> list[ResolvedGame]:
+        """Resolve one title across `stores`, caching the plain (unsplit) result under `cache_key`.
+
+        See `humblebundle.resolver.StorefrontResolver._resolve_title` (this
+        mirrors it): more than one `ResolvedGame` comes back only when the
+        user declares "Multiple…" for some store, splitting the title into
+        sub-titles that are each re-resolved from scratch.
+        """
+        existing = mapping.games.get(cache_key)
         if existing is not None:
-            return list(existing)
+            return [ResolvedGame(name=title, ids=list(existing))]
         # end if
         ids: list[str] = []
-        unresolved_stores: list[str] = []
-        for store_value in item.redeem_on:
+        for store_value in stores:
             typed_provider = cast(StoreName, store_value)
             try:
                 candidates = (
-                    self._search_steam(item.title)
-                    if typed_provider == "steam"
-                    else self.search(typed_provider, item.title)
+                    self._search_steam(title) if typed_provider == "steam" else self.search(typed_provider, title)
                 )
             except (OSError, RuntimeError):
                 candidates = []
             # end try
             exact = [
-                candidate
-                for candidate in candidates
-                if normalized_title(candidate.title) == normalized_title(item.title)
+                candidate for candidate in candidates if normalized_title(candidate.title) == normalized_title(title)
             ]
             if len(exact) == 1:
                 ids.append(exact[0].qualified_id)
                 continue
             # end if
-            selected = self._choose(item, typed_provider, candidates)
+            selected = self._choose(title, typed_provider, candidates)
             if selected is None:
-                unresolved_stores.append(typed_provider)
                 continue
+            # end if
+            if isinstance(selected, ChosenNames):
+                results: list[ResolvedGame] = []
+                for index, sub_title in enumerate(selected.names, start=1):
+                    results.extend(self._resolve_title(sub_title, stores, f"{cache_key}::{index}", mapping))
+                # end for
+                return results
             # end if
             ids.append(parse_store_identity(typed_provider, selected))
         # end for
         if not ids:
-            ids.append(f"unresolved:source:greenmangaming:{item.product_id}")
+            ids.append(f"unresolved:source:greenmangaming:{cache_key}")
         # end if
-        mapping.games[item.product_id] = list(dict.fromkeys(ids))
-        return mapping.games[item.product_id]
+        deduped = list(dict.fromkeys(ids))
+        mapping.games[cache_key] = deduped
+        return [ResolvedGame(name=title, ids=deduped)]
+    # end def _resolve_title
+
+    def resolve_item(self, item: GmgItem, mapping: GmgResolutionMap) -> list[ResolvedGame]:
+        """Resolve one game, updating the durable mapping in memory."""
+        return self._resolve_title(item.title, item.redeem_on, item.product_id, mapping)
     # end def resolve_item
 
     def resolve_archive(
@@ -222,37 +252,33 @@ class StorefrontResolver:
                 # end if
             # end for
         # end for
-        resolved: dict[str, list[str]] = {}
-        unresolved_by_id: dict[str, list[str]] = {}
+        resolutions: dict[str, GmgResolution] = {}
         total = len(distinct)
         for index, item in enumerate(distinct, start=1):
             log(f"  Game {index}/{total}: {item.title}")
-            ids = self.resolve_item(item, mapping)
-            resolved[item.product_id] = ids
-            unresolved_by_id[item.product_id] = [
-                store
-                for store in item.redeem_on
-                if not any(identifier.startswith(f"{store}:") for identifier in ids)
+            results = self.resolve_item(item, mapping)
+            all_ids = [identifier for entry in results for identifier in entry.ids]
+            unresolved_stores = [
+                store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)
             ]
+            if len(results) > 1:
+                resolutions[item.product_id] = GmgResolution(
+                    splits=[GmgResolvedGame(name=entry.name, ids=entry.ids) for entry in results],
+                    unresolved_stores=unresolved_stores,
+                )
+            else:
+                resolutions[item.product_id] = GmgResolution(ids=all_ids, unresolved_stores=unresolved_stores)
+            # end if
         # end for
         tiers = []
         for tier in archive.tiers:
             items = []
             for item in tier.items:
-                if item.product_id not in resolved:
+                if item.product_id not in resolutions:
                     items.append(item)
                     continue
                 # end if
-                items.append(
-                    item.model_copy(
-                        update={
-                            "resolution": GmgResolution(
-                                ids=resolved[item.product_id],
-                                unresolved_stores=unresolved_by_id[item.product_id],
-                            )
-                        }
-                    )
-                )
+                items.append(item.model_copy(update={"resolution": resolutions[item.product_id]}))
             # end for
             tiers.append(tier.model_copy(update={"items": items}))
         # end for

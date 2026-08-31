@@ -8,6 +8,7 @@ from game_collections.search import complete_game_list, selected_providers
 from game_collections.sources.humblebundle.resolver import StoreCandidate, StorefrontResolver
 from game_collections.sources.isthereanydeal.models import ItadDates, ItadGameArchive
 from game_collections.sources.isthereanydeal.resolver import ItadGameResolution
+from game_collections.sources.prompting import ChosenNames
 
 
 def test_selected_providers_defaults_to_every_supported_store() -> None:
@@ -107,6 +108,40 @@ def test_complete_game_list_uses_manual_candidate_selection() -> None:
     assert selected[0].qualified_id == "steam:10"
     assert completed["games"][0]["ids"] == ["steam:10"]
 # end def test_complete_game_list_uses_manual_candidate_selection
+
+
+def test_complete_game_list_splits_a_title_declared_multiple_into_grouped_games() -> None:
+    def fetch(url: str) -> str:
+        if "Combo+Pack" in url:
+            return ""
+        if "Game+A" in url:
+            return '<a href="https://store.steampowered.com/app/10/game-a/">Game A</a>'
+        # end if
+        return '<a href="https://store.steampowered.com/app/20/game-b/">Game B</a>'
+    # end def fetch
+
+    def choose(title: str, _provider: str, _candidates: list[StoreCandidate]) -> object:
+        if title == "Combo Pack":
+            return ChosenNames(names=["Game A", "Game B"])
+        # end if
+        return None
+    # end def choose
+
+    completed, unresolved = complete_game_list(
+        {"schema": 1, "name": "Draft", "games": [{"name": "Combo Pack"}]},
+        ("steam",),
+        StorefrontResolver(fetch, lambda *_args: None),
+        choose,  # type: ignore[arg-type]
+    )
+
+    assert unresolved == []
+    names = [game["name"] for game in completed["games"]]
+    assert names == ["Game A", "Game B"]
+    assert completed["games"][0]["ids"] == ["steam:10"]
+    assert completed["games"][1]["ids"] == ["steam:20"]
+    assert completed["games"][0]["group"] == completed["games"][1]["group"]
+    assert completed["games"][0]["group"]["name"] == "Combo Pack"
+# end def test_complete_game_list_splits_a_title_declared_multiple_into_grouped_games
 
 
 def test_blank_skips_a_game_with_any_proper_id() -> None:

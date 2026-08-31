@@ -8,7 +8,7 @@ from collections.abc import Callable
 from typing import Literal
 from urllib.parse import unquote, urlparse
 
-from game_collections.models import QualifiedGameId
+from game_collections.models import NonEmptyString, QualifiedGameId, StrictModel
 
 
 StoreName = Literal["steam", "gog", "epic", "ubisoft", "humble"]
@@ -31,6 +31,16 @@ STORE_HOSTS: dict[StoreName, frozenset[str]] = {
     "ubisoft": frozenset({"store.ubisoft.com", "www.ubisoft.com"}),
     "humble": frozenset({"humblebundle.com", "www.humblebundle.com"}),
 }
+
+
+class StoreCandidate(StrictModel):
+    """One result returned by an official storefront search."""
+
+    title: NonEmptyString
+    url: NonEmptyString
+    qualified_id: NonEmptyString
+
+# end class StoreCandidate
 
 
 def normalized_title(value: str) -> str:

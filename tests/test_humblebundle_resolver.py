@@ -22,6 +22,7 @@ from game_collections.sources.humblebundle.resolver import (
     parse_store_identity,
     render_resolution_map,
 )
+from game_collections.sources.prompting import ChosenNames
 
 
 def _item(machine_name: str = "sample_game") -> HumbleItem:
@@ -145,7 +146,7 @@ def test_ambiguous_match_uses_selected_url() -> None:
         lambda _item, _provider, candidates: candidates[1].url,
     )
 
-    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:43"]
 # end def test_ambiguous_match_uses_selected_url
@@ -155,7 +156,7 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
     resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates: None)
     mapping = HumbleResolutionMap(schema=1, games={})
 
-    ids = resolver.resolve_item(_item(), mapping)
+    ids = resolver.resolve_item(_item(), mapping)[0].ids
 
     assert ids == ["unresolved:source:humblebundle:sample_game"]
     assert mapping.games == {"sample_game": ids}
@@ -178,7 +179,7 @@ def test_unique_steampowered_match_skips_steamdb_fallback() -> None:
         steamdb_fetch=steamdb_fetch,
     )
 
-    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:42"]
     assert steamdb_called is False
@@ -208,7 +209,7 @@ def test_ambiguous_steampowered_match_falls_back_to_steamdb() -> None:
             resolution=HumbleResolution(),
         ),
         HumbleResolutionMap(schema=1, games={}),
-    )
+    )[0].ids
 
     assert ids == ["steam:3011360"]
 # end def test_ambiguous_steampowered_match_falls_back_to_steamdb
@@ -237,7 +238,7 @@ def test_steamdb_fallback_can_resolve_to_a_bundle() -> None:
             resolution=HumbleResolution(),
         ),
         HumbleResolutionMap(schema=1, games={}),
-    )
+    )[0].ids
 
     assert ids == ["steam:bundle/46228"]
 # end def test_steamdb_fallback_can_resolve_to_a_bundle
@@ -253,7 +254,7 @@ def test_no_steamdb_fetch_behaves_like_steampowered_only() -> None:
         lambda _item, _provider, _candidates: None,
     )
 
-    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["unresolved:source:humblebundle:sample_game"]
 # end def test_no_steamdb_fetch_behaves_like_steampowered_only
@@ -275,10 +276,75 @@ def test_steamdb_fetch_error_falls_back_to_steampowered_candidates() -> None:
         steamdb_fetch=failing_steamdb_fetch,
     )
 
-    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))[0].ids
 
     assert ids == ["steam:43"]
 # end def test_steamdb_fetch_error_falls_back_to_steampowered_candidates
+
+
+def test_resolve_item_splits_a_dlc_pack_and_attaches_requires() -> None:
+    page = '<a href="https://store.steampowered.com/app/99/dlc-one/">DLC One</a>'
+    item = HumbleItem(
+        machine_name="some_dlc_pack",
+        title="Some DLC Pack",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        tags=["Dlc"],
+        base_game_url="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/",
+        bundled_dlc_names=["DLC One"],
+        resolution=HumbleResolution(),
+    )
+    resolver = StorefrontResolver(lambda _url: page, lambda _title, _provider, _candidates: None)
+
+    results = resolver.resolve_item(item, HumbleResolutionMap(schema=1, games={}))
+
+    assert len(results) == 1
+    assert results[0].name == "DLC One"
+    assert results[0].ids == ["steam:99"]
+    assert results[0].requires == ["steam:1129190"]
+# end def test_resolve_item_splits_a_dlc_pack_and_attaches_requires
+
+
+def test_choosing_multiple_splits_a_title_into_separate_resolved_games() -> None:
+    page = ""
+
+    def choose(title: str, _provider: object, _candidates: object) -> ChosenNames | None:
+        if title == "Combo Pack":
+            return ChosenNames(names=["Game A", "Game B"])
+        # end if
+        return None
+    # end def choose
+
+    def fetch(url: str) -> str:
+        if "Game+A" in url:
+            return '<a href="https://store.steampowered.com/app/10/game-a/">Game A</a>'
+        # end if
+        if "Game+B" in url:
+            return '<a href="https://store.steampowered.com/app/20/game-b/">Game B</a>'
+        # end if
+        return page
+    # end def fetch
+
+    resolver = StorefrontResolver(fetch, choose)
+    mapping = HumbleResolutionMap(schema=1, games={})
+
+    item = HumbleItem(
+        machine_name="combo_pack",
+        title="Combo Pack",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        resolution=HumbleResolution(),
+    )
+    results = resolver.resolve_item(item, mapping)
+
+    assert [entry.name for entry in results] == ["Game A", "Game B"]
+    assert results[0].ids == ["steam:10"]
+    assert results[1].ids == ["steam:20"]
+    # Each split sub-title is cached under its own compound key so a re-run doesn't re-prompt.
+    assert mapping.games == {"combo_pack::1": ["steam:10"], "combo_pack::2": ["steam:20"]}
+# end def test_choosing_multiple_splits_a_title_into_separate_resolved_games
 
 
 def test_resolution_map_round_trip_is_sorted(tmp_path: Path) -> None:
