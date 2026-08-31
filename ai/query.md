@@ -2288,3 +2288,28 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ Can you pick up the steamID from steam? The env app is set up, see @.env.example 
+Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want that one to leak.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. I need a real Steam DLC app ID you own to test GetOwnedGames/appdetails against. Do you have one in mind (or a game name I can look up the DLC app ID for), or should I try to find a candidate myself from your owned-games list plus store lookups?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Test DLC app ID** (1/1) <kbd>Single Select</kbd><br>
+>> I need a real Steam DLC app ID you own to test GetOwnedGames/appdetails against. Do you have one in mind (or a game name I can look up the DLC app ID for), or should I try to find a candidate myself from your owned-games list plus store lookups?
+> - [ ] 1\. I'll give you an app ID
+>   - _You'll reply with a specific Steam DLC app ID (and ideally its base game) to use for the test._
+> - [x] 2\. Figure it out from my library (Recommended)
+>   - _Fetch your full GetOwnedGames response now, then cross-check a handful of candidates against the Store appdetails endpoint to find one that's actually a DLC, without you needing to look anything up._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Also update the model.
+
