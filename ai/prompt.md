@@ -2380,3 +2380,14 @@ Which is just random bullet point in the description of _Whisper Mountain Outbre
 > - [Raw log (`18237` chars, `17.9 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/a43cbaff4d0834d54.output)
 > - `1` tools, `13516` tokens, `0.11645 s`
 
+❯ Task Notification:
+> - Task `a602694570e031055` <kbd>completed</kbd>
+> - Tool ``
+> - > Agent "Explore Humble DLC pack detection code" finished
+> - [Query (`2041` chars, `2 KB`)](output/agents/032.a602694570e031055/prompt.md)
+> - [Answer (`3596` chars, `3.53 KB`)](output/agents/032.a602694570e031055/result.md)
+> - [Raw log (`337094` chars, `329 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/13f8f999-004f-4a89-8cd5-721611816769/tasks/a602694570e031055.output)
+> - `36` tools, `63929` tokens, `3.42882 s`
+
+❯ Is the `.title()` casing of the tag not bad programming? Rather use original casing? `dlc` is als much better to read than weirdly capitalized `Dlc`.
+
