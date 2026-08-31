@@ -15,7 +15,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 
 from game_collections.lists import load_game_list
-from game_collections.models import Game, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
@@ -23,7 +23,7 @@ from game_collections.sources.common import (
     merge_game_list,
     render_game_list_yaml,
 )
-from game_collections.sources.humblebundle.models import HumbleArchive, HumbleTier
+from game_collections.sources.humblebundle.models import HumbleArchive, HumbleItem, HumbleTier
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
     parse_bundle_index,
@@ -246,6 +246,28 @@ def _archive_paths(archive_root: Path, archive: HumbleArchive) -> tuple[Path, Pa
 # end def _archive_paths
 
 
+def _item_all_ids(item: HumbleItem) -> list[str]:
+    """Every qualified ID an item resolved to, whether or not it split into several games."""
+    if item.resolution.splits:
+        return [identifier for split in item.resolution.splits for identifier in split.ids]
+    # end if
+    return list(item.resolution.ids)
+# end def _item_all_ids
+
+
+def _games_for_item(item: HumbleItem) -> list[Game]:
+    """Build one Game per item, or several when it resolved as a "DLC pack" split."""
+    if item.resolution.splits:
+        group = GameGroup(id=item.machine_name, name=item.title)
+        return [
+            Game(name=split.name, ids=split.ids, requires=item.resolution.requires, group=group)
+            for split in item.resolution.splits
+        ]
+    # end if
+    return [Game(name=item.title, ids=item.resolution.ids, requires=item.resolution.requires)]
+# end def _games_for_item
+
+
 def _write_merged_game_list(game_list: GameList, path: Path, lists_root: Path, repository_root: Path) -> None:
     """Merge with any already-committed list at `path` (see `merge_game_list`) before writing.
 
@@ -287,11 +309,12 @@ def write_humble_offer(
         pool_games: list[Game] = []
         seen_pool_ids: set[str] = set()
         for item in archive.tiers[0].items:
-            if not item.is_game or any(value in seen_pool_ids for value in item.resolution.ids):
+            item_ids = _item_all_ids(item)
+            if not item.is_game or any(value in seen_pool_ids for value in item_ids):
                 continue
             # end if
-            pool_games.append(Game(name=item.title, ids=item.resolution.ids))
-            seen_pool_ids.update(item.resolution.ids)
+            pool_games.extend(_games_for_item(item))
+            seen_pool_ids.update(item_ids)
         # end for
         pick_directory = list_directory / key
         for rank, option in enumerate(archive.choice_pick_options, start=1):
@@ -325,11 +348,12 @@ def write_humble_offer(
         games: list[Game] = []
         seen_ids: set[str] = set()
         for item in tier.items:
-            if not item.is_game or any(value in seen_ids for value in item.resolution.ids):
+            item_ids = _item_all_ids(item)
+            if not item.is_game or any(value in seen_ids for value in item_ids):
                 continue
             # end if
-            games.append(Game(name=item.title, ids=item.resolution.ids))
-            seen_ids.update(item.resolution.ids)
+            games.extend(_games_for_item(item))
+            seen_ids.update(item_ids)
         # end for
         if games:
             tiers_with_games.append((tier, games))

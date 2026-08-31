@@ -30,11 +30,28 @@ class HumbleLink(StrictModel):
 # end class HumbleLink
 
 
+class HumbleResolvedGame(StrictModel):
+    """One game split out of a compound "DLC pack" item."""
+
+    name: NonEmptyString
+    ids: list[NonEmptyString] = Field(default_factory=list)
+
+# end class HumbleResolvedGame
+
+
 class HumbleResolution(StrictModel):
-    """Storefront identity resolution for one archived item."""
+    """Storefront identity resolution for one archived item.
+
+    `ids`/`requires` describe the item as a single game (the common case).
+    When an item is a "DLC pack" bundling several separate DLCs, `splits`
+    holds one resolved entry per DLC instead, and `ids` is left empty;
+    `requires` (the shared base game) still applies to every split.
+    """
 
     ids: list[NonEmptyString] = Field(default_factory=list)
     unresolved_stores: list[NonEmptyString] = Field(default_factory=list)
+    requires: list[NonEmptyString] = Field(default_factory=list)
+    splits: list[HumbleResolvedGame] = Field(default_factory=list)
 
 # end class HumbleResolution
 

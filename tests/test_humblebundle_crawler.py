@@ -18,6 +18,7 @@ from game_collections.sources.humblebundle.models import (
     HumbleDates,
     HumbleItem,
     HumbleResolution,
+    HumbleResolvedGame,
     HumbleTier,
 )
 from game_collections.sources.humblebundle.resolver import HumbleResolutionMap, StorefrontResolver
@@ -120,6 +121,58 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     ]
     assert source_path.read_text(encoding="utf-8").startswith('{\n  "alpha": 1,')
 # end def test_writer_creates_archive_and_games_only_bundle_list
+
+
+def test_writer_splits_a_dlc_pack_item_into_grouped_games(tmp_path: Path) -> None:
+    dlc_pack = HumbleItem(
+        machine_name="some_dlc_pack",
+        title="Some DLC Pack",
+        item_type="game",
+        is_game=True,
+        redeem_on=["steam"],
+        tags=["Dlc"],
+        base_game_url="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/",
+        bundled_dlc_names=["DLC One", "DLC Two"],
+        resolution=HumbleResolution(
+            splits=[
+                HumbleResolvedGame(name="DLC One", ids=["steam:11"]),
+                HumbleResolvedGame(name="DLC Two", ids=["steam:12"]),
+            ],
+            requires=["steam:1129190"],
+        ),
+    )
+    archive = HumbleArchive(
+        schema=1,
+        kind="bundle",
+        machine_name="sample_bundle",
+        url="https://www.humblebundle.com/games/sample-bundle",
+        name="Sample Bundle",
+        headline="Play games.",
+        description="Bundle.",
+        dates=HumbleDates(
+            start=datetime(2026, 7, 1, 18, tzinfo=UTC),
+            end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+            crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        ),
+        tiers=[
+            HumbleTier(identifier="all", name="Entire 1 Item Bundle", item_count=1, items=[dlc_pack]),
+        ],
+    )
+    offer = CrawledHumbleOffer(archive=archive, source={})
+
+    paths = write_humble_offer(offer, tmp_path / "lists", tmp_path / "archives", tmp_path)
+
+    list_path = tmp_path / "lists/humblebundle/bundle/2026-07-01_sample-bundle/bundle.yml"
+    assert list_path in paths
+    loaded = load_game_list(list_path, tmp_path / "lists")
+    games = loaded.data.games
+    assert [game.name for game in games] == ["DLC One", "DLC Two"]
+    assert [game.ids for game in games] == [["steam:11"], ["steam:12"]]
+    assert all(game.requires == ["steam:1129190"] for game in games)
+    assert games[0].group is not None and games[1].group is not None
+    assert games[0].group.id == games[1].group.id == "some_dlc_pack"
+    assert games[0].group.name == games[1].group.name == "Some DLC Pack"
+# end def test_writer_splits_a_dlc_pack_item_into_grouped_games
 
 
 def test_writer_re_crawl_preserves_manually_edited_ids(tmp_path: Path) -> None:

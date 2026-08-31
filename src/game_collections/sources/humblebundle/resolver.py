@@ -12,10 +12,17 @@ import yaml
 from pydantic import Field, StringConstraints, model_validator
 
 from game_collections.models import QualifiedGameId, StrictModel
-from game_collections.sources.humblebundle.models import HumbleArchive, HumbleItem, HumbleResolution
+from game_collections.sources.humblebundle.models import (
+    HumbleArchive,
+    HumbleItem,
+    HumbleResolution,
+    HumbleResolvedGame,
+)
 from game_collections.sources.humblebundle.steamdb import STEAMDB_SEARCH_URL, parse_steamdb_results
+from game_collections.sources.prompting import ChosenCandidate, ChosenNames
 from game_collections.sources.storefronts import (
     STORE_ROOTS,
+    StoreCandidate,
     StoreName,
     normalized_title,
     parse_store_identity,
@@ -26,7 +33,9 @@ __all__ = [
     "STEAMDB_SEARCH_URL",
     "STORE_ROOTS",
     "STORE_SEARCH_URLS",
+    "ChosenNames",
     "HumbleResolutionMap",
+    "ResolvedGame",
     "StoreCandidate",
     "StoreName",
     "StorefrontResolver",
@@ -48,16 +57,6 @@ STORE_SEARCH_URLS: dict[StoreName, str] = {
     "ubisoft": "https://store.ubisoft.com/search?q={query}",
     "humble": "https://www.humblebundle.com/store/search?search={query}",
 }
-
-
-class StoreCandidate(StrictModel):
-    """One result returned by an official storefront search."""
-
-    title: NonEmptyString
-    url: NonEmptyString
-    qualified_id: NonEmptyString
-
-# end class StoreCandidate
 
 
 class HumbleResolutionMap(StrictModel):
@@ -188,10 +187,20 @@ def render_resolution_map(mapping: HumbleResolutionMap) -> str:
 # end def render_resolution_map
 
 
-CandidateChooser = Callable[[HumbleItem, StoreName, list[StoreCandidate]], str | None]
+CandidateChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
 Fetcher = Callable[[str], str]
 LogFn = Callable[[str], None]
 _NO_LOG: LogFn = lambda _message: None  # noqa: E731
+
+
+class ResolvedGame(StrictModel):
+    """One resolved game produced from an item - usually one, several when split."""
+
+    name: NonEmptyString
+    ids: list[NonEmptyString] = Field(default_factory=list)
+    requires: list[NonEmptyString] = Field(default_factory=list)
+
+# end class ResolvedGame
 
 
 class StorefrontResolver:
@@ -246,47 +255,85 @@ class StorefrontResolver:
         ]
     # end def _search_steam
 
-    def resolve_item(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[str]:
-        """Resolve one game, updating the durable mapping in memory."""
-        existing = mapping.games.get(item.machine_name)
+    def _resolve_title(
+        self,
+        title: str,
+        stores: list[str],
+        cache_key: str,
+        mapping: HumbleResolutionMap,
+    ) -> list[ResolvedGame]:
+        """Resolve one title across `stores`, caching the plain (unsplit) result under `cache_key`.
+
+        Returns more than one `ResolvedGame` only when the user declares
+        "Multiple…" for some store, at which point the title splits into
+        several sub-titles that are each re-resolved from scratch (across
+        every store, not just the remaining ones) via this same method,
+        cached under their own compound key so re-runs don't re-prompt.
+        """
+        existing = mapping.games.get(cache_key)
         if existing is not None:
-            return list(existing)
+            return [ResolvedGame(name=title, ids=list(existing))]
         # end if
         ids: list[str] = []
-        unresolved_stores: list[str] = []
-        stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
         for store_value in stores:
             typed_provider = cast(StoreName, store_value)
             try:
                 candidates = (
-                    self._search_steam(item.title)
-                    if typed_provider == "steam"
-                    else self.search(typed_provider, item.title)
+                    self._search_steam(title) if typed_provider == "steam" else self.search(typed_provider, title)
                 )
             except (OSError, RuntimeError):
                 candidates = []
             # end try
             exact = [
-                candidate
-                for candidate in candidates
-                if normalized_title(candidate.title) == normalized_title(item.title)
+                candidate for candidate in candidates if normalized_title(candidate.title) == normalized_title(title)
             ]
             if len(exact) == 1:
                 ids.append(exact[0].qualified_id)
                 continue
             # end if
-            selected = self._choose(item, typed_provider, candidates)
+            selected = self._choose(title, typed_provider, candidates)
             if selected is None:
-                unresolved_stores.append(typed_provider)
                 continue
+            # end if
+            if isinstance(selected, ChosenNames):
+                results: list[ResolvedGame] = []
+                for index, sub_title in enumerate(selected.names, start=1):
+                    results.extend(self._resolve_title(sub_title, stores, f"{cache_key}::{index}", mapping))
+                # end for
+                return results
             # end if
             ids.append(parse_store_identity(typed_provider, selected))
         # end for
         if not ids:
-            ids.append(f"unresolved:source:humblebundle:{item.machine_name}")
+            ids.append(f"unresolved:source:humblebundle:{cache_key}")
         # end if
-        mapping.games[item.machine_name] = list(dict.fromkeys(ids))
-        return mapping.games[item.machine_name]
+        deduped = list(dict.fromkeys(ids))
+        mapping.games[cache_key] = deduped
+        return [ResolvedGame(name=title, ids=deduped)]
+    # end def _resolve_title
+
+    def resolve_item(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[ResolvedGame]:
+        """Resolve one item, possibly splitting a "DLC pack" into several games."""
+        stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
+        requires: list[str] = []
+        if item.base_game_url is not None:
+            try:
+                requires = [parse_store_identity("steam", str(item.base_game_url))]
+            except ValueError:
+                requires = []
+            # end try
+        # end if
+        if item.bundled_dlc_names:
+            results: list[ResolvedGame] = []
+            for index, dlc_name in enumerate(item.bundled_dlc_names, start=1):
+                for resolved in self._resolve_title(dlc_name, stores, f"{item.machine_name}::{index}", mapping):
+                    results.append(resolved.model_copy(update={"requires": requires}))
+                # end for
+            # end for
+            return results
+        # end if
+        resolved = self._resolve_title(item.title, stores, item.machine_name, mapping)
+        return [entry.model_copy(update={"requires": requires}) for entry in resolved]
     # end def resolve_item
 
     def resolve_archive(
@@ -306,37 +353,39 @@ class StorefrontResolver:
                 # end if
             # end for
         # end for
-        resolved: dict[str, list[str]] = {}
-        unresolved_by_name: dict[str, list[str]] = {}
+        resolutions: dict[str, HumbleResolution] = {}
         total = len(distinct)
         for index, item in enumerate(distinct, start=1):
             log(f"  Game {index}/{total}: {item.title}")
-            ids = self.resolve_item(item, mapping)
-            resolved[item.machine_name] = ids
-            unresolved_by_name[item.machine_name] = [
-                store
-                for store in item.redeem_on
-                if not any(identifier.startswith(f"{store}:") for identifier in ids)
+            results = self.resolve_item(item, mapping)
+            all_ids = [identifier for entry in results for identifier in entry.ids]
+            unresolved_stores = [
+                store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)
             ]
+            requires = results[0].requires if results else []
+            if item.bundled_dlc_names:
+                resolutions[item.machine_name] = HumbleResolution(
+                    splits=[HumbleResolvedGame(name=entry.name, ids=entry.ids) for entry in results],
+                    unresolved_stores=unresolved_stores,
+                    requires=requires,
+                )
+            else:
+                resolutions[item.machine_name] = HumbleResolution(
+                    ids=all_ids,
+                    unresolved_stores=unresolved_stores,
+                    requires=requires,
+                )
+            # end if
         # end for
         tiers = []
         for tier in archive.tiers:
             items = []
             for item in tier.items:
-                if item.machine_name not in resolved:
+                if item.machine_name not in resolutions:
                     items.append(item)
                     continue
                 # end if
-                items.append(
-                    item.model_copy(
-                        update={
-                            "resolution": HumbleResolution(
-                                ids=resolved[item.machine_name],
-                                unresolved_stores=unresolved_by_name[item.machine_name],
-                            )
-                        }
-                    )
-                )
+                items.append(item.model_copy(update={"resolution": resolutions[item.machine_name]}))
             # end for
             tiers.append(tier.model_copy(update={"items": items}))
         # end for
