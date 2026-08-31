@@ -311,6 +311,51 @@ same `requires`-fallback rule uniformly across all three sources for
 consistency rather than special-casing two of three — recommend doing it
 uniformly in `evaluate_completion` rather than per-source.
 
+### 6. New `dynamicstore` ownership source (exact DLC ownership, opt-in)
+
+Per Stage 0's superseding finding: add a fourth `--source` choice,
+`dynamicstore`, to `sync steam`/`apply steam` (`cli.py`, alongside the
+existing `web`/`installed`/`collection` choices) that reads a **locally
+user-exported** JSON dump of `https://store.steampowered.com/dynamicstore/userdata`
+instead of calling any live API — no cookie handling or browser automation
+in this repo, per the user's explicit choice.
+
+- New CLI option, e.g. `--dynamicstore-dump PATH`, defaulting to a
+  conventional gitignored path, e.g. `config/steam-dynamicstore-dump.json` —
+  mirroring the existing `config/apply-selection.yml` convention (already
+  gitignored at `.gitignore:974`, already hard-linked into the user's private
+  `config-git/` repo per `config-git/README.md` for their own history/backup;
+  the user can do the same for this dump if they want it versioned privately).
+- New strict Pydantic model for the dump (new file, e.g.
+  `src/game_collections/launchers/steam/dynamicstore.py`, following the
+  existing `StrictModel`/`extra=forbid` convention used throughout
+  `launchers/steam/models.py` and every `sources/*/models.py` — this repo
+  treats unmodeled external fields as errors deliberately, per
+  `OwnedGamesPayload`/`GetOwnedGamesResponse` and the `has_leaderboards`
+  lesson from Stage 0). The real dump has ~29 top-level keys (observed:
+  `rgWishlist`, `rgOwnedPackages`, `rgOwnedApps`, `rgFollowedApps`,
+  `rgMasterSubApps`, `rgPackagesInCart`, `rgAppsInCart`,
+  `rgRecommendedTags`, `rgIgnoredApps`, `rgIgnoredPackages`,
+  `rgHardwareUsed`, `rgCurators`, `rgCuratorsIgnored`, `rgCurations`,
+  `bShowFilteredUserReviewScores`, `rgCreatorsFollowed`,
+  `rgCreatorsIgnored`, `rgExcludedTags`, `rgExcludedContentDescriptorIDs`,
+  `rgAutoGrantApps`, `rgRecommendedApps`, `rgPreferredPlatforms`,
+  `rgPrimaryLanguage`, `rgSecondaryLanguages`, `bAllowAppImpressions`,
+  `nCartLineItemCount`, `nRemainingCartDiscount`, `nTotalCartDiscount`); only
+  `rgOwnedApps: list[int]` is actually consumed, but every other key needs a
+  best-effort type in the strict model so validation still catches real
+  format drift rather than silently ignoring it.
+- New ownership-source function, e.g. `owned_app_ids_from_dynamicstore(path:
+  Path) -> set[int]` (`launchers/steam/adapter.py`, alongside
+  `owned_app_ids_from_api`/`_from_installed`/`_from_collection`) that loads
+  and validates the file, returning `set(payload.rgOwnedApps)` directly —
+  **no** `requires` reduction needed for this source, since real DLC app IDs
+  are genuinely present (unlike `web`/`collection`).
+- `web` (`STEAM_WEB_API_KEY`) stays exactly as-is, unchanged, remaining the
+  default/no-manual-step option (e.g. for CI or a first run) — `dynamicstore`
+  is additive, the more accurate option once the user maintains the export,
+  not a replacement.
+
 ## Verification
 
 - The `has_leaderboards` fix to `OwnedGame` (Stage 0, already applied) needs
