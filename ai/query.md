@@ -2317,3 +2317,25 @@ Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want 
 
 ❯ Please consult @ai/references/https/www.reddit.com/r/Steam/comments/1cdsdx2/steam_web_api_get_owned_dlc_info/_.md and check with [my dump](ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json).
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. `dynamicstore/userdata`'s `rgOwnedApps` includes DLC app IDs (confirmed: your Fallout 4 DLC 540810 is in there, unlike `GetOwnedGames`), but it needs an authenticated browser session (Steam login cookies), not the `STEAM_WEB_API_KEY` this repo already uses. How should the tool get that data?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **DLC data source** (1/1) <kbd>Single Select</kbd><br>
+>> `dynamicstore/userdata`'s `rgOwnedApps` includes DLC app IDs (confirmed: your Fallout 4 DLC 540810 is in there, unlike `GetOwnedGames`), but it needs an authenticated browser session (Steam login cookies), not the `STEAM_WEB_API_KEY` this repo already uses. How should the tool get that data?
+> - [x] 1\. You export the dump manually (Recommended)
+>   - _Like the dump you just gave me: you periodically save the JSON from https://store.steampowered.com/dynamicstore/userdata (logged in, browser or `curl` with your cookie) to a known local path (e.g. `ai/references/...` or a config path), and the tool reads that file when checking DLC ownership. No credentials stored in the repo/config; simple, but ownership data can go stale between exports._
+> - [ ] 2\. Tool stores a session cookie
+>   - _You provide a Steam session cookie value (e.g. `steamLoginSecure`) via env var/config, similar to `STEAM_WEB_API_KEY`, and the tool fetches `dynamicstore/userdata` live on each run. Always fresh, but a session cookie is a more sensitive, shorter-lived credential than an API key, and needs periodic refreshing by hand anyway when it expires._
+> - [ ] 3\. Real browser session (patchright)
+>   - _Similar in spirit to the dailyindiegame crawler's Cloudflare-bypass browser, but for an actual persistent login: the tool opens a real (non-headless) browser window against a persistent profile directory the first time, you log in once, and it's reused on later runs to fetch `dynamicstore/userdata`. Heaviest option; touches real Steam login flow (2FA etc.), which this repo's Steam safety invariants treat carefully._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
