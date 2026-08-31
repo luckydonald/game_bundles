@@ -18,21 +18,30 @@ Root cause, confirmed by reading `src/game_collections/sources/humblebundle/pars
 
 ## Fix
 
-Gate the DLC-pack extraction on the Humble-provided "Dlc" tag, matching the already-documented contract, instead of running it unconditionally and hoping it "finds nothing":
+Gate the DLC-pack extraction on the Humble-provided "dlc" tag, matching the already-documented contract, instead of running it unconditionally and hoping it "finds nothing":
 
 **`src/game_collections/sources/humblebundle/parser.py`** (`_bundle_item`, around line 369):
 - Change the unconditional call:
   ```python
   base_game_url, bundled_dlc_names = _parse_dlc_pack_details(raw.get("description_text") or "")
   ```
-  to only run when `"Dlc" in tags` (tags is already computed just above at lines 319-322), otherwise `(None, [])`.
+  to only run when `"dlc" in tags` (tags is already computed just above at lines 319-322), otherwise `(None, [])`.
 - Update `_parse_dlc_pack_details`'s docstring (lines 180-185) to drop the now-false "safe to run on every item" claim and instead note it must only be called for items already tagged as a DLC pack.
+
+**Also drop the `.title()` casing of tags while touching this code**, since it's an unnecessary transformation of the source data with no benefit:
+- `_bundle_item` line 321: `tags.append(badge["badge"].title())` → `tags.append(badge["badge"])`, keeping Humble's own lowercase value (`"dlc"`, `"coupon"`, `"coming_soon"`) instead of manufacturing `"Dlc"`/`"Coupon"`/`"Coming_Soon"`.
+- `_bundle_item` line 366: `"Coupon" not in tags` → `"coupon" not in tags`.
+- Choice-page path (`parser.py` lines 601/613, `parse_choice_page`): `tags = ["Coupon"] if ...` → `tags = ["coupon"] if ...`; `"Coupon" not in tags` → `"coupon" not in tags`.
+- No `HumbleItem`/list-format model change needed — `tags` is a plain `list[NonEmptyString]`, and no checked-in `lists/humblebundle/**/*.yml` currently sets a `tags:` field (confirmed via grep), so there's no public-format migration.
 
 No change needed in `resolver.py` — once `bundled_dlc_names` is only ever populated for genuine DLC-pack items, `resolve_item`'s existing `if item.bundled_dlc_names:` check becomes correct automatically.
 
 ## Tests
 
-- `tests/test_humblebundle_parser.py`: existing tests (`test_bundle_page_wires_dlc_pack_details_onto_the_item`, `test_parse_dlc_pack_details_extracts_base_game_and_dlc_list`, `test_parse_dlc_pack_details_returns_none_for_plain_description`) already use `cta_badge: {"badge": "dlc"}` for the positive case, so they keep passing unchanged.
+- `tests/test_humblebundle_parser.py`: existing tests already exercising the positive case (`test_bundle_page_wires_dlc_pack_details_onto_the_item`, `test_parse_dlc_pack_details_extracts_base_game_and_dlc_list`, `test_parse_dlc_pack_details_returns_none_for_plain_description`) keep passing unchanged in behavior, but two assertions must be updated for the casing change:
+  - line 145: `assert archive.tiers[0].items[1].tags == ["Coupon"]` → `== ["coupon"]`.
+  - line 242: `assert item.tags == ["Dlc"]` → `== ["dlc"]`.
+- `tests/test_humblebundle_resolver.py` line 293: `tags=["Dlc"]` → `tags=["dlc"]`.
 - Add a new regression test: a bundle item **without** a `"dlc"` `cta_badge` (a normal game) whose `description_text` contains both a `store.steampowered.com/app/...` link and an early `<ul><li>...</li></ul>` feature-bullet list — assert the resulting `HumbleItem.base_game_url is None` and `HumbleItem.bundled_dlc_names == []`, i.e. the parser no longer runs on it at all. This directly reproduces and guards against the "Whisper Mountain Outbreak" scenario.
 
 ## Verification
