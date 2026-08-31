@@ -80,6 +80,76 @@ appmanifest-based DLC detection, per prior exploration, actually can see real
 installed DLC app IDs — no reduction needed there, though nothing stops it
 from also falling back to `requires` if the DLC's own appid isn't found).
 
+**Follow-up verification (same conclusion, now with a concrete known-owned
+DLC, not just a sample):** using the account's real Fallout 4 ownership
+(base game app ID `377160`, owned) and its "High Resolution Texture Pack"
+DLC (app ID `540810`, also owned) as a live test case:
+- `GetOwnedGames`, even called with `appids_filter` explicitly restricted to
+  `[540810, 377160]`, returned **only** `377160` (Fallout 4) — `540810` is
+  silently dropped despite being owned. No parameter combination surfaces it;
+  this is conclusive, not a sampling artifact.
+- `appdetails?appids=377160` (the **base game's own** page) returns a public
+  `dlc` field: `[3868650, 598110, 540810, 404090, 435881, 480631, 480630,
+  490650, 435880, 435870]` — the complete, authoritative list of every DLC
+  app ID for that game, straight from Valve's catalog, no ownership check
+  involved. This is a better source for "all DLCs of a game" than parsing
+  Humble's own description HTML: it's exhaustive and independent of whatever
+  a bundle page happens to mention.
+- There is no public per-account "list all DLC I own" or "do I own DLC X"
+  endpoint. The closest official mechanism, `ISteamUser/CheckAppOwnership`,
+  requires a **publisher** API key scoped to that specific app — not usable
+  by a hobbyist client against arbitrary third-party games. So `requires`
+  (base-game) fallback isn't just the pragmatic choice, it's the *only*
+  ownership signal available through the Web API for a DLC, short of the
+  `installed`-source's incidental local appmanifest check.
+- Bonus use for `appdetails`'s `dlc` list: once a Humble DLC-pack item's
+  `base_game_url` resolves to a base-game app ID, that same `appdetails`
+  call can cross-check/validate the parsed `bundled_dlc_names` count against
+  the base game's real DLC count as a sanity check — optional, not required
+  for Stage 1's core functionality.
+
+**Superseding finding: a real, precise DLC-ownership source does exist.**
+Per a Reddit lead the user supplied (`r/Steam` thread on this exact
+question) plus a real dump the user exported and provided
+(`ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json`):
+the logged-in store endpoint `https://store.steampowered.com/dynamicstore/userdata`
+returns `rgOwnedApps` — a flat list of **every** owned app ID, DLC included,
+unlike the public `GetOwnedGames` Web API. Verified against the user's real
+dump: `rgOwnedApps` has 2322 entries (vs. 1283 from `GetOwnedGames`), and
+both `377160` (Fallout 4) and `540810` (its "High Resolution Texture Pack"
+DLC, confirmed owned by the user) are present. This is exactly what Steam's
+own store frontend uses to render "in library" badges — DLC included.
+
+The catch: this endpoint requires an authenticated **browser session**
+(Steam login cookies), not the `STEAM_WEB_API_KEY` the repo already uses —
+it's not part of the public Web API at all. Per explicit direction, this
+plan does **not** attempt live cookie-based fetching or a scripted Steam
+login flow (this repo's Steam safety invariants treat login-adjacent flows
+carefully, and a session cookie is a more sensitive, shorter-lived credential
+than an API key). Instead: the user periodically exports this JSON
+themselves (logged into steampowered.com, browser or `curl` with their
+cookie) to a local file, the same way they just did for this investigation,
+and the tool reads that file as an ownership source. This mirrors the
+existing `config/apply-selection.yml` convention (gitignored path,
+`config/README.md` and the private `config-git/` repo the user hard-links
+`config/apply-selection.yml` into for their own history) — the dump should
+live at a similar gitignored `config/` path.
+
+**Revised conclusion for Stage 1 §5:** add a **fourth ownership source**,
+`dynamicstore`, alongside `web`/`installed`/`collection` — reads the
+user-exported dump and returns `set(rgOwnedApps)` directly, no `requires`
+reduction needed since DLC app IDs are genuinely present. This is the best
+available source (most complete, includes DLC natively) when the user keeps
+it exported, but it's additive, not a replacement: `--source web` (the
+`STEAM_WEB_API_KEY` path) stays exactly as it is today, unchanged, for
+users/automation (e.g. CI) without a manual dump — it just keeps the
+`requires`-based base-game fallback designed above for DLC, since it
+genuinely can't see DLC on its own. Same for `collection`. `dynamicstore` is
+simply the precise option when the user has it; nothing about `web` is
+removed or deprioritized by default (CLI default `--source` stays as it is
+today) — the user picks `dynamicstore` explicitly when they want the more
+accurate answer.
+
 ---
 
 ## Stage 1 — Model, crawl, resolve, and prompt changes
@@ -241,8 +311,59 @@ same `requires`-fallback rule uniformly across all three sources for
 consistency rather than special-casing two of three — recommend doing it
 uniformly in `evaluate_completion` rather than per-source.
 
+### 6. New `dynamicstore` ownership source (exact DLC ownership, opt-in)
+
+Per Stage 0's superseding finding: add a fourth `--source` choice,
+`dynamicstore`, to `sync steam`/`apply steam` (`cli.py`, alongside the
+existing `web`/`installed`/`collection` choices) that reads a **locally
+user-exported** JSON dump of `https://store.steampowered.com/dynamicstore/userdata`
+instead of calling any live API — no cookie handling or browser automation
+in this repo, per the user's explicit choice.
+
+- New CLI option, e.g. `--dynamicstore-dump PATH`, defaulting to a
+  conventional gitignored path, e.g. `config/steam-dynamicstore-dump.json` —
+  mirroring the existing `config/apply-selection.yml` convention (already
+  gitignored at `.gitignore:974`, already hard-linked into the user's private
+  `config-git/` repo per `config-git/README.md` for their own history/backup;
+  the user can do the same for this dump if they want it versioned privately).
+- New strict Pydantic model for the dump (new file, e.g.
+  `src/game_collections/launchers/steam/dynamicstore.py`, following the
+  existing `StrictModel`/`extra=forbid` convention used throughout
+  `launchers/steam/models.py` and every `sources/*/models.py` — this repo
+  treats unmodeled external fields as errors deliberately, per
+  `OwnedGamesPayload`/`GetOwnedGamesResponse` and the `has_leaderboards`
+  lesson from Stage 0). The real dump has ~29 top-level keys (observed:
+  `rgWishlist`, `rgOwnedPackages`, `rgOwnedApps`, `rgFollowedApps`,
+  `rgMasterSubApps`, `rgPackagesInCart`, `rgAppsInCart`,
+  `rgRecommendedTags`, `rgIgnoredApps`, `rgIgnoredPackages`,
+  `rgHardwareUsed`, `rgCurators`, `rgCuratorsIgnored`, `rgCurations`,
+  `bShowFilteredUserReviewScores`, `rgCreatorsFollowed`,
+  `rgCreatorsIgnored`, `rgExcludedTags`, `rgExcludedContentDescriptorIDs`,
+  `rgAutoGrantApps`, `rgRecommendedApps`, `rgPreferredPlatforms`,
+  `rgPrimaryLanguage`, `rgSecondaryLanguages`, `bAllowAppImpressions`,
+  `nCartLineItemCount`, `nRemainingCartDiscount`, `nTotalCartDiscount`); only
+  `rgOwnedApps: list[int]` is actually consumed, but every other key needs a
+  best-effort type in the strict model so validation still catches real
+  format drift rather than silently ignoring it.
+- New ownership-source function, e.g. `owned_app_ids_from_dynamicstore(path:
+  Path) -> set[int]` (`launchers/steam/adapter.py`, alongside
+  `owned_app_ids_from_api`/`_from_installed`/`_from_collection`) that loads
+  and validates the file, returning `set(payload.rgOwnedApps)` directly —
+  **no** `requires` reduction needed for this source, since real DLC app IDs
+  are genuinely present (unlike `web`/`collection`).
+- `web` (`STEAM_WEB_API_KEY`) stays exactly as-is, unchanged, remaining the
+  default/no-manual-step option (e.g. for CI or a first run) — `dynamicstore`
+  is additive, the more accurate option once the user maintains the export,
+  not a replacement.
+
 ## Verification
 
+- Validate the new `dynamicstore` dump model against the user's real
+  reference file at
+  `ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json`
+  (2322 `rgOwnedApps` entries) and confirm `owned_app_ids_from_dynamicstore`
+  returns a set containing both `377160` (Fallout 4) and `540810` (its
+  owned "High Resolution Texture Pack" DLC).
 - The `has_leaderboards` fix to `OwnedGame` (Stage 0, already applied) needs
   a regression test asserting `GetOwnedGamesResponse` parses a payload
   containing that field — add one near existing `steam/models.py`/`api.py`
