@@ -61,6 +61,10 @@ class HumbleItem(StrictModel):
     region_locked: bool | None = None
     excluded_countries: list[NonEmptyString] = Field(default_factory=list)
     resolution: HumbleResolution = Field(default_factory=HumbleResolution)
+    # Populated for "DLC pack" items (see `cta_badge`/`tags` == "Dlc") whose description
+    # links a free base game and lists the individual DLCs bundled together.
+    base_game_url: HttpUrl | None = None
+    bundled_dlc_names: list[NonEmptyString] = Field(default_factory=list)
 
 # end class HumbleItem
 

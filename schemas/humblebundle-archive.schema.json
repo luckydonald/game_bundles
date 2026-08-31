@@ -119,6 +119,29 @@
       "additionalProperties": false,
       "description": "One product advertised within a Humble tier.",
       "properties": {
+        "base_game_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Base Game Url"
+        },
+        "bundled_dlc_names": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Bundled Dlc Names",
+          "type": "array"
+        },
         "cover_art_url": {
           "anyOf": [
             {
