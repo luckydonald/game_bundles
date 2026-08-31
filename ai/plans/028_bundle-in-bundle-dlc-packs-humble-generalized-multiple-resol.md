@@ -358,6 +358,12 @@ in this repo, per the user's explicit choice.
 
 ## Verification
 
+- Validate the new `dynamicstore` dump model against the user's real
+  reference file at
+  `ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json`
+  (2322 `rgOwnedApps` entries) and confirm `owned_app_ids_from_dynamicstore`
+  returns a set containing both `377160` (Fallout 4) and `540810` (its
+  owned "High Resolution Texture Pack" DLC).
 - The `has_leaderboards` fix to `OwnedGame` (Stage 0, already applied) needs
   a regression test asserting `GetOwnedGamesResponse` parses a payload
   containing that field — add one near existing `steam/models.py`/`api.py`
