@@ -108,6 +108,42 @@ DLC (app ID `540810`, also owned) as a live test case:
   the base game's real DLC count as a sanity check — optional, not required
   for Stage 1's core functionality.
 
+**Superseding finding: a real, precise DLC-ownership source does exist.**
+Per a Reddit lead the user supplied (`r/Steam` thread on this exact
+question) plus a real dump the user exported and provided
+(`ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json`):
+the logged-in store endpoint `https://store.steampowered.com/dynamicstore/userdata`
+returns `rgOwnedApps` — a flat list of **every** owned app ID, DLC included,
+unlike the public `GetOwnedGames` Web API. Verified against the user's real
+dump: `rgOwnedApps` has 2322 entries (vs. 1283 from `GetOwnedGames`), and
+both `377160` (Fallout 4) and `540810` (its "High Resolution Texture Pack"
+DLC, confirmed owned by the user) are present. This is exactly what Steam's
+own store frontend uses to render "in library" badges — DLC included.
+
+The catch: this endpoint requires an authenticated **browser session**
+(Steam login cookies), not the `STEAM_WEB_API_KEY` the repo already uses —
+it's not part of the public Web API at all. Per explicit direction, this
+plan does **not** attempt live cookie-based fetching or a scripted Steam
+login flow (this repo's Steam safety invariants treat login-adjacent flows
+carefully, and a session cookie is a more sensitive, shorter-lived credential
+than an API key). Instead: the user periodically exports this JSON
+themselves (logged into steampowered.com, browser or `curl` with their
+cookie) to a local file, the same way they just did for this investigation,
+and the tool reads that file as an ownership source. This mirrors the
+existing `config/apply-selection.yml` convention (gitignored path,
+`config/README.md` and the private `config-git/` repo the user hard-links
+`config/apply-selection.yml` into for their own history) — the dump should
+live at a similar gitignored `config/` path.
+
+**Revised conclusion for Stage 1 §5:** add a **fourth ownership source**,
+`dynamicstore`, alongside `web`/`installed`/`collection` — reads the
+user-exported dump and returns `set(rgOwnedApps)` directly, no `requires`
+reduction needed since DLC app IDs are genuinely present. Keep the
+`requires`-based fallback for `web`/`collection` as designed above, since
+those sources still can't see DLC on their own when no dump has been
+exported — `dynamicstore` is the precise, best-effort-fresh source when the
+user maintains it; `requires`-reduction is the always-available fallback.
+
 ---
 
 ## Stage 1 — Model, crawl, resolve, and prompt changes
