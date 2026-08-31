@@ -15,6 +15,7 @@ from game_collections.launchers.base import (
     SyncPlan,
 )
 from game_collections.launchers.steam.api import SteamApiClient
+from game_collections.launchers.steam.dynamicstore import load_dynamicstore_dump
 from game_collections.launchers.steam.io import (
     STEAM_USER_COLLECTION_ID_PATTERN,
     SteamFileGateway,
@@ -107,6 +108,23 @@ def owned_app_ids_from_collection(gateway: SteamFileGateway, collection_name: st
     # end def source
     return source
 # end def owned_app_ids_from_collection
+
+
+def owned_app_ids_from_dynamicstore(path: Path) -> OwnedAppIdsSource:
+    """Wrap a manually exported `dynamicstore/userdata` dump as an :data:`OwnedAppIdsSource`.
+
+    Unlike `owned_app_ids_from_api`/`owned_app_ids_from_collection`, this
+    source's `rgOwnedApps` genuinely includes owned DLC AppIDs (see
+    `launchers.steam.dynamicstore`), so no `requires`-fallback is needed for
+    it in `completion.evaluate_completion`. Raises `FileNotFoundError` when
+    the dump hasn't been exported yet, which the `auto` source-selection loop
+    in the CLI already treats as "skip this source, try the next one."
+    """
+    def source() -> set[int]:
+        return set(load_dynamicstore_dump(path).data.rgOwnedApps)
+    # end def source
+    return source
+# end def owned_app_ids_from_dynamicstore
 
 
 class SteamAdapter(LauncherAdapter):
