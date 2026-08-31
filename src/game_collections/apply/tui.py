@@ -2,9 +2,6 @@
 
 from __future__ import annotations
 
-import os
-import subprocess
-import sys
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -28,19 +25,8 @@ from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, 
 from game_collections.completion import GameListCompletion, MissingHandling, evaluate_completion
 from game_collections.lists import LoadedGameList, discover_game_lists
 from game_collections.models import Game
+from game_collections.os_open import open_url as _open_url
 from game_collections.sources.storefronts import product_url
-
-
-def _open_url(url: str) -> None:
-    """Hand a URL (or a custom URI scheme like ``steam://...``) off to the OS's own handler."""
-    if sys.platform == "darwin":
-        subprocess.Popen(["open", url])
-    elif sys.platform.startswith("win"):
-        os.startfile(url)  # type: ignore[attr-defined]
-    else:
-        subprocess.Popen(["xdg-open", url])
-    # end if
-# end def _open_url
 
 
 def _row_label(bundle: BundleMetadata) -> str:
