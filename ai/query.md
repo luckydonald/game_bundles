@@ -2349,3 +2349,6 @@ Lastly, the default should also ask the user in the UI version if they want to p
 
 ❯ Add that you should commit after each phase and before and after each test + fix runs.
 
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`43101` chars, `42.3 KB`)](output/compact/004.f6ec2242-3158-4246-9b24-d05f95855cb4/result.md)
+
