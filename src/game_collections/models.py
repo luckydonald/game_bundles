@@ -96,6 +96,12 @@ class Game(StrictModel):
         return tuple(QualifiedGameId.parse(raw) for raw in self.ids)
     # end def qualified_ids
 
+    @property
+    def qualified_ids_required(self) -> tuple[QualifiedGameId, ...]:
+        """Return parsed required-game identities without storing a second representation."""
+        return tuple(QualifiedGameId.parse(raw) for raw in self.requires)
+    # end def qualified_ids_required
+
 # end class Game
 
 

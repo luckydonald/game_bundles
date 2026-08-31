@@ -4,8 +4,8 @@ from game_collections.completion import evaluate_completion
 from game_collections.models import Game
 
 
-def _game(name: str, ids: list[str]) -> Game:
-    return Game(name=name, ids=ids)
+def _game(name: str, ids: list[str], requires: list[str] | None = None) -> Game:
+    return Game(name=name, ids=ids, requires=requires or [])
 # end def _game
 
 
@@ -32,6 +32,34 @@ def test_game_owned_via_any_of_its_multiple_steam_ids() -> None:
     assert completion.owned_count == 1
     assert completion.missing_count == 0
 # end def test_game_owned_via_any_of_its_multiple_steam_ids
+
+
+def test_dlc_owned_via_required_base_game_when_own_appid_is_not_returned() -> None:
+    # Real Web API behavior (Stage 0 of the "bundle-in-bundle DLC packs" plan):
+    # GetOwnedGames never returns a DLC's own AppID, even when owned, so a DLC
+    # must be recognized as owned via its `requires` base game instead.
+    games = [_game("Base Game", ["steam:377160"]), _game("Some DLC", ["steam:540810"], requires=["steam:377160"])]
+
+    completion = evaluate_completion(games, {377160})
+
+    assert completion.total == 2
+    assert completion.owned_count == 2
+    assert completion.missing_count == 0
+    assert completion.owned_ids == ["steam:377160", "steam:540810"]
+    assert completion.missing_ids == []
+# end def test_dlc_owned_via_required_base_game_when_own_appid_is_not_returned
+
+
+def test_dlc_missing_when_neither_its_own_nor_the_required_base_game_is_owned() -> None:
+    games = [_game("Some DLC", ["steam:540810"], requires=["steam:377160"])]
+
+    completion = evaluate_completion(games, set())
+
+    assert completion.total == 1
+    assert completion.owned_count == 0
+    assert completion.missing_count == 1
+    assert completion.missing_ids == ["steam:540810"]
+# end def test_dlc_missing_when_neither_its_own_nor_the_required_base_game_is_owned
 
 
 def test_unresolved_hide_excludes_from_everything() -> None:
