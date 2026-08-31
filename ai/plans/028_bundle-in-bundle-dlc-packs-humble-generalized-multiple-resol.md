@@ -138,11 +138,17 @@ live at a similar gitignored `config/` path.
 **Revised conclusion for Stage 1 §5:** add a **fourth ownership source**,
 `dynamicstore`, alongside `web`/`installed`/`collection` — reads the
 user-exported dump and returns `set(rgOwnedApps)` directly, no `requires`
-reduction needed since DLC app IDs are genuinely present. Keep the
-`requires`-based fallback for `web`/`collection` as designed above, since
-those sources still can't see DLC on their own when no dump has been
-exported — `dynamicstore` is the precise, best-effort-fresh source when the
-user maintains it; `requires`-reduction is the always-available fallback.
+reduction needed since DLC app IDs are genuinely present. This is the best
+available source (most complete, includes DLC natively) when the user keeps
+it exported, but it's additive, not a replacement: `--source web` (the
+`STEAM_WEB_API_KEY` path) stays exactly as it is today, unchanged, for
+users/automation (e.g. CI) without a manual dump — it just keeps the
+`requires`-based base-game fallback designed above for DLC, since it
+genuinely can't see DLC on its own. Same for `collection`. `dynamicstore` is
+simply the precise option when the user has it; nothing about `web` is
+removed or deprioritized by default (CLI default `--source` stays as it is
+today) — the user picks `dynamicstore` explicitly when they want the more
+accurate answer.
 
 ---
 
