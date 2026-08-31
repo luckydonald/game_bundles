@@ -66,6 +66,9 @@ class Game(StrictModel):
     name: NonEmptyString
     ids: list[NonEmptyString] = Field(min_length=1)
     group: GameGroup | None = None
+    # Qualified IDs of other games that must be owned/present for this entry to make sense,
+    # e.g. the free base game a DLC entry needs. Purely data, no launcher-specific behavior.
+    requires: list[NonEmptyString] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def validate_ids(self) -> Self:
@@ -75,6 +78,15 @@ class Game(StrictModel):
             raise ValueError("game contains duplicate qualified IDs")
         # end if
         self.ids = compact
+
+        if self.requires:
+            required_parsed = [QualifiedGameId.parse(raw) for raw in self.requires]
+            required_compact = [identifier.compact() for identifier in required_parsed]
+            if len(required_compact) != len(set(required_compact)):
+                raise ValueError("game contains duplicate qualified required IDs")
+            # end if
+            self.requires = required_compact
+        # end if
         return self
     # end def validate_ids
 
