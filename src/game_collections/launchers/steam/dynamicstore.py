@@ -11,6 +11,7 @@ the resulting local file.
 
 from __future__ import annotations
 
+import json
 from datetime import datetime
 from pathlib import Path
 from typing import Self
@@ -19,6 +20,10 @@ from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator, m
 
 from game_collections.launchers.steam.models import parse_json_strict
 from game_collections.models import StrictModel
+from game_collections.sources.common import atomic_write
+
+
+DYNAMICSTORE_URL = "https://store.steampowered.com/dynamicstore/userdata"
 
 
 class DynamicStoreCurator(StrictModel):
@@ -112,3 +117,52 @@ def load_dynamicstore_dump(path: Path) -> DynamicStoreDumpFile:
     """Load and strictly validate a locally exported dynamicstore dump."""
     return parse_json_strict(path.read_bytes(), DynamicStoreDumpFile)
 # end def load_dynamicstore_dump
+
+
+def save_dynamicstore_dump(path: Path, raw_json: str, fetched_at: datetime) -> DynamicStoreDumpFile:
+    """Validate a freshly pasted dump and atomically persist it with `fetched_at`."""
+    try:
+        payload = json.loads(raw_json)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"invalid dynamicstore dump JSON: {error}") from error
+    # end try
+    envelope = DynamicStoreDumpFile(
+        fetched_at=fetched_at,
+        data=SteamDynamicStoreUserData.model_validate(payload),
+    )
+    atomic_write(path, envelope.model_dump_json(indent=2) + "\n")
+    return envelope
+# end def save_dynamicstore_dump
+
+
+def should_prompt_for_refresh(*, force: bool | None, interactive: bool) -> bool:
+    """Decide whether to prompt for a fresh dump paste.
+
+    `force=True` always prompts (even outside a detected interactive
+    session); `force=False` never prompts (silent skip, for CI/automation);
+    `force=None` (the default) prompts only when `interactive` is true.
+    """
+    if force is not None:
+        return force
+    # end if
+    return interactive
+# end def should_prompt_for_refresh
+
+
+def describe_dump_age(dump: DynamicStoreDumpFile | None, now: datetime) -> str:
+    """Render a human "Last updated: ..." line, or a not-yet-exported notice."""
+    if dump is None:
+        return "No dynamicstore dump has been exported yet."
+    # end if
+    age = now.astimezone(dump.fetched_at.tzinfo) - dump.fetched_at
+    days = age.days
+    if days <= 0:
+        relative = "today"
+    elif days == 1:
+        relative = "1 day ago"
+    else:
+        relative = f"{days} days ago"
+    # end if
+    timestamp = dump.fetched_at.strftime("%Y-%m-%d %H:%M %Z")
+    return f"Last updated: {timestamp} ({relative})"
+# end def describe_dump_age

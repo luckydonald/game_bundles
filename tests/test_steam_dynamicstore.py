@@ -10,7 +10,10 @@ from game_collections.launchers.steam.adapter import owned_app_ids_from_dynamics
 from game_collections.launchers.steam.dynamicstore import (
     DynamicStoreDumpFile,
     SteamDynamicStoreUserData,
+    describe_dump_age,
     load_dynamicstore_dump,
+    save_dynamicstore_dump,
+    should_prompt_for_refresh,
 )
 
 
@@ -78,3 +81,54 @@ def test_owned_app_ids_from_dynamicstore_missing_file_raises_oserror(tmp_path: P
         source()
     # end with
 # end def test_owned_app_ids_from_dynamicstore_missing_file_raises_oserror
+
+
+@pytest.mark.parametrize(
+    ("force", "interactive", "expected"),
+    [
+        (None, True, True),
+        (None, False, False),
+        (True, False, True),
+        (False, True, False),
+    ],
+)
+def test_should_prompt_for_refresh(force: bool | None, interactive: bool, expected: bool) -> None:
+    assert should_prompt_for_refresh(force=force, interactive=interactive) is expected
+# end def test_should_prompt_for_refresh
+
+
+def test_describe_dump_age_reports_no_dump_yet() -> None:
+    assert describe_dump_age(None, datetime(2026, 8, 30, tzinfo=UTC)) == "No dynamicstore dump has been exported yet."
+# end def test_describe_dump_age_reports_no_dump_yet
+
+
+def test_describe_dump_age_reports_relative_days() -> None:
+    envelope = DynamicStoreDumpFile(
+        fetched_at=datetime(2026, 8, 14, 14, 32, tzinfo=UTC),
+        data=SteamDynamicStoreUserData.model_validate(_minimal_payload([])),
+    )
+
+    description = describe_dump_age(envelope, datetime(2026, 8, 30, 14, 32, tzinfo=UTC))
+
+    assert description == "Last updated: 2026-08-14 14:32 UTC (16 days ago)"
+# end def test_describe_dump_age_reports_relative_days
+
+
+def test_save_dynamicstore_dump_validates_and_writes(tmp_path: Path) -> None:
+    path = tmp_path / "dump.json"
+    raw = json.dumps(_minimal_payload([377160, 540810]))
+
+    envelope = save_dynamicstore_dump(path, raw, datetime(2026, 8, 30, tzinfo=UTC))
+
+    assert envelope.data.rgOwnedApps == [377160, 540810]
+    reloaded = load_dynamicstore_dump(path)
+    assert reloaded.data.rgOwnedApps == [377160, 540810]
+    assert reloaded.fetched_at == datetime(2026, 8, 30, tzinfo=UTC)
+# end def test_save_dynamicstore_dump_validates_and_writes
+
+
+def test_save_dynamicstore_dump_rejects_invalid_json(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="invalid dynamicstore dump JSON"):
+        save_dynamicstore_dump(tmp_path / "dump.json", "not json", datetime(2026, 8, 30, tzinfo=UTC))
+    # end with
+# end def test_save_dynamicstore_dump_rejects_invalid_json

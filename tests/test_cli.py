@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from datetime import UTC, datetime
 from pathlib import Path
 from types import SimpleNamespace
@@ -8,7 +9,7 @@ from typer.testing import CliRunner
 from pytest import CaptureFixture, MonkeyPatch
 
 from game_collections.apply.config import ApplySelection, save_selection
-from game_collections.cli import _print_plan, app
+from game_collections.cli import _maybe_refresh_dynamicstore_dump, _print_plan, app
 from game_collections.launchers.base import CollectionEligibility, PlannedCollectionChange, SyncPlan
 from game_collections.lists import discover_game_lists
 from test_steam_io import STEAM_ID, build_fake_steam
@@ -105,8 +106,8 @@ def test_sync_help_lists_matching_and_tier_choices() -> None:
     assert "--max-owned" in result.output
     assert "--min-missing" in result.output
     assert "--max-missing" in result.output
-    assert "--unresolved-handling" in result.output
-    assert "--unsupported-store-h" in result.output  # truncated by rich's help table at this column width
+    assert "--unresolved-han" in result.output  # truncated by rich's help table at this column width
+    assert "--unsupported-st" in result.output  # truncated by rich's help table at this column width
     assert "--tiers" in result.output
     assert "highest" in result.output
 # end def test_sync_help_lists_matching_and_tier_choices
@@ -354,11 +355,103 @@ def test_apply_help_lists_options() -> None:
     result = CliRunner().invoke(app, ["apply", "--help"])
 
     assert result.exit_code == 0
-    assert "--selection-config" in result.output
+    assert "--selection-conf" in result.output  # truncated by rich's help table at this column width
     assert "--min-missing" in result.output
     assert "--max-missing" in result.output
     assert "--tiers" in result.output
 # end def test_apply_help_lists_options
+
+
+def test_refresh_dynamicstore_dump_skips_by_default_when_not_interactive(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    monkeypatch.setattr("sys.stdin.isatty", lambda: False)
+    prompted = False
+
+    def fake_confirm(*_args: object, **_kwargs: object) -> bool:
+        nonlocal prompted
+        prompted = True
+        return True
+    # end def fake_confirm
+
+    monkeypatch.setattr("game_collections.cli.typer.confirm", fake_confirm)
+
+    _maybe_refresh_dynamicstore_dump(tmp_path / "dump.json", None)
+
+    assert prompted is False
+    assert not (tmp_path / "dump.json").exists()
+# end def test_refresh_dynamicstore_dump_skips_by_default_when_not_interactive
+
+
+def test_refresh_dynamicstore_dump_no_refresh_flag_never_prompts_even_if_interactive(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    monkeypatch.setattr("sys.stdin.isatty", lambda: True)
+    prompted = False
+
+    def fake_confirm(*_args: object, **_kwargs: object) -> bool:
+        nonlocal prompted
+        prompted = True
+        return True
+    # end def fake_confirm
+
+    monkeypatch.setattr("game_collections.cli.typer.confirm", fake_confirm)
+
+    _maybe_refresh_dynamicstore_dump(tmp_path / "dump.json", False)
+
+    assert prompted is False
+# end def test_refresh_dynamicstore_dump_no_refresh_flag_never_prompts_even_if_interactive
+
+
+def test_refresh_dynamicstore_dump_force_flag_prompts_even_when_not_interactive(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    monkeypatch.setattr("sys.stdin.isatty", lambda: False)
+    prompted = False
+
+    def fake_confirm(*_args: object, **_kwargs: object) -> bool:
+        nonlocal prompted
+        prompted = True
+        return False
+    # end def fake_confirm
+
+    monkeypatch.setattr("game_collections.cli.typer.confirm", fake_confirm)
+
+    _maybe_refresh_dynamicstore_dump(tmp_path / "dump.json", True)
+
+    assert prompted is True
+# end def test_refresh_dynamicstore_dump_force_flag_prompts_even_when_not_interactive
+
+
+def test_refresh_dynamicstore_dump_confirmed_paste_writes_the_file(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    import io
+
+    monkeypatch.setattr("game_collections.cli.typer.confirm", lambda *_a, **_k: True)
+    opened_urls: list[str] = []
+    monkeypatch.setattr("game_collections.cli.open_url", opened_urls.append)
+    payload = json.dumps(
+        {
+            "rgOwnedApps": [377160, 540810],
+            "bShowFilteredUserReviewScores": True,
+            "rgPrimaryLanguage": 0,
+            "bAllowAppImpressions": 0,
+            "nCartLineItemCount": 0,
+            "nRemainingCartDiscount": 0,
+            "nTotalCartDiscount": 0,
+        }
+    )
+    fake_stdin = io.StringIO(payload)
+    monkeypatch.setattr(fake_stdin, "isatty", lambda: True)
+    monkeypatch.setattr("sys.stdin", fake_stdin)
+
+    path = tmp_path / "dump.json"
+    _maybe_refresh_dynamicstore_dump(path, None)
+
+    assert opened_urls == ["steam://openurl/https://store.steampowered.com/dynamicstore/userdata"]
+    assert path.exists()
+# end def test_refresh_dynamicstore_dump_confirmed_paste_writes_the_file
 
 
 def _write_list(path: Path, name: str) -> None:
