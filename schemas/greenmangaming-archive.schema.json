@@ -170,7 +170,7 @@
     },
     "GmgResolution": {
       "additionalProperties": false,
-      "description": "Storefront identity resolution for one archived item.",
+      "description": "Storefront identity resolution for one archived item.\n\n`ids` describes the item as a single game (the common case). When the\nuser declares via \"Multiple\u2026\" that one item is actually several separate\ngames, `splits` holds one resolved entry per game instead, and `ids` is\nleft empty.",
       "properties": {
         "ids": {
           "items": {
@@ -178,6 +178,13 @@
             "type": "string"
           },
           "title": "Ids",
+          "type": "array"
+        },
+        "splits": {
+          "items": {
+            "$ref": "#/$defs/GmgResolvedGame"
+          },
+          "title": "Splits",
           "type": "array"
         },
         "unresolved_stores": {
@@ -190,6 +197,30 @@
         }
       },
       "title": "GmgResolution",
+      "type": "object"
+    },
+    "GmgResolvedGame": {
+      "additionalProperties": false,
+      "description": "One game split out of a compound item via the \"Multiple\u2026\" resolution prompt.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Ids",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "GmgResolvedGame",
       "type": "object"
     },
     "GmgTier": {

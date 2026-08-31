@@ -21,11 +21,27 @@ class GmgPrice(StrictModel):
 # end class GmgPrice
 
 
+class GmgResolvedGame(StrictModel):
+    """One game split out of a compound item via the "Multiple…" resolution prompt."""
+
+    name: NonEmptyString
+    ids: list[NonEmptyString] = Field(default_factory=list)
+
+# end class GmgResolvedGame
+
+
 class GmgResolution(StrictModel):
-    """Storefront identity resolution for one archived item."""
+    """Storefront identity resolution for one archived item.
+
+    `ids` describes the item as a single game (the common case). When the
+    user declares via "Multiple…" that one item is actually several separate
+    games, `splits` holds one resolved entry per game instead, and `ids` is
+    left empty.
+    """
 
     ids: list[NonEmptyString] = Field(default_factory=list)
     unresolved_stores: list[NonEmptyString] = Field(default_factory=list)
+    splits: list[GmgResolvedGame] = Field(default_factory=list)
 
 # end class GmgResolution
 
