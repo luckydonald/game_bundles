@@ -28,6 +28,14 @@
           "minLength": 1,
           "title": "Name",
           "type": "string"
+        },
+        "requires": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
         }
       },
       "required": [
