@@ -373,7 +373,7 @@
     },
     "HumbleResolution": {
       "additionalProperties": false,
-      "description": "Storefront identity resolution for one archived item.",
+      "description": "Storefront identity resolution for one archived item.\n\n`ids`/`requires` describe the item as a single game (the common case).\nWhen an item is a \"DLC pack\" bundling several separate DLCs, `splits`\nholds one resolved entry per DLC instead, and `ids` is left empty;\n`requires` (the shared base game) still applies to every split.",
       "properties": {
         "ids": {
           "items": {
@@ -381,6 +381,21 @@
             "type": "string"
           },
           "title": "Ids",
+          "type": "array"
+        },
+        "requires": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Requires",
+          "type": "array"
+        },
+        "splits": {
+          "items": {
+            "$ref": "#/$defs/HumbleResolvedGame"
+          },
+          "title": "Splits",
           "type": "array"
         },
         "unresolved_stores": {
@@ -393,6 +408,30 @@
         }
       },
       "title": "HumbleResolution",
+      "type": "object"
+    },
+    "HumbleResolvedGame": {
+      "additionalProperties": false,
+      "description": "One game split out of a compound \"DLC pack\" item.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Ids",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "HumbleResolvedGame",
       "type": "object"
     },
     "HumbleTier": {

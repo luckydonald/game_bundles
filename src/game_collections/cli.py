@@ -55,7 +55,6 @@ from game_collections.sources.greenmangaming.crawler import (
     write_gmg_offer,
 )
 from game_collections.sources.greenmangaming.crawler import write_resolution_map as write_gmg_resolution_map
-from game_collections.sources.greenmangaming.models import GmgItem
 from game_collections.sources.greenmangaming.resolver import (
     StorefrontResolver as GmgStorefrontResolver,
     load_resolution_map as load_gmg_resolution_map,
@@ -67,7 +66,6 @@ from game_collections.sources.humblebundle.crawler import (
     write_humble_offer,
     write_resolution_map,
 )
-from game_collections.sources.humblebundle.models import HumbleItem
 from game_collections.sources.humblebundle.resolver import (
     StoreCandidate,
     StoreName,
@@ -90,6 +88,7 @@ from game_collections.sources.isthereanydeal.resolver import (
     write_itad_game_archive,
 )
 from game_collections.sources.isthereanydeal.shop_config import load_shop_config
+from game_collections.sources.prompting import choose_store_candidate
 
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
@@ -250,51 +249,6 @@ def schema_command(
 # end def schema_command
 
 
-def _choose_store_candidate(
-    item: HumbleItem,
-    provider: StoreName,
-    candidates: list[StoreCandidate],
-) -> str | None:
-    typer.echo(f"Resolve {item.title!r} on {provider}:")
-    for index, candidate in enumerate(candidates, start=1):
-        typer.echo(f"  {index}. {candidate.title} — {candidate.qualified_id}")
-        typer.echo(f"     {candidate.url}")
-    # end for
-    other = len(candidates) + 1
-    typer.echo(f"  {other}. Other…")
-    while True:
-        selection = typer.prompt("Select a result", default=str(other))
-        if selection.isdecimal() and 1 <= int(selection) <= len(candidates):
-            return candidates[int(selection) - 1].qualified_id
-        # end if
-        if selection == str(other):
-            manual = typer.prompt(
-                "Paste the store URL or direct ID; leave blank for unresolved",
-                default="",
-                show_default=False,
-            )
-            return manual or None
-        # end if
-        typer.echo(f"Enter a number from 1 to {other}.", err=True)
-    # end while
-# end def _choose_store_candidate
-
-
-def _choose_search_candidate(
-    title: str,
-    provider: StoreName,
-    candidates: list[StoreCandidate],
-) -> str | None:
-    """Prompt for one storefront result while completing a draft list."""
-    item = HumbleItem(
-        machine_name="search",
-        title=title,
-        item_type="game",
-        is_game=True,
-        redeem_on=[provider],
-    )
-    return _choose_store_candidate(item, provider, candidates)
-# end def _choose_search_candidate
 
 
 class _LazySteamDbFetcher:
@@ -372,7 +326,7 @@ def search_command(
     client = HumbleHttpClient()
     try:
         providers = selected_providers(provider, default="all")
-        resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
+        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates: None)
         _print_search_results(name, providers, resolver)
     except (OSError, ValueError, RuntimeError) as error:
         typer.echo(str(error), err=True)
@@ -413,7 +367,7 @@ def complete_command(
     try:
         selected = selected_providers(providers, default="steam")
         selected_mode = completion_mode(mode)
-        resolver = StorefrontResolver(client.fetch, lambda _item, _provider, _candidates: None)
+        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates: None)
         itad_resolve = None
         if "isthereanydeal" in selected:
             itad_client = ItadHttpClient()
@@ -441,7 +395,7 @@ def complete_command(
             raw,
             selected,
             resolver,
-            _choose_search_candidate,
+            choose_store_candidate,
             selected_mode,
             itad_resolve=itad_resolve,
         )
@@ -529,9 +483,9 @@ def scrape_humblebundle_command(
     client = HumbleHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
-        (lambda _item, _provider, _candidates: None)
+        (lambda _title, _provider, _candidates: None)
         if non_interactive
-        else _choose_store_candidate
+        else choose_store_candidate
     )
     written_count = 0
 
@@ -666,36 +620,6 @@ def scrape_dailyindiegame_command(
 # end def scrape_dailyindiegame_command
 
 
-def _choose_gmg_store_candidate(
-    item: GmgItem,
-    provider: StoreName,
-    candidates: list[StoreCandidate],
-) -> str | None:
-    typer.echo(f"Resolve {item.title!r} on {provider}:")
-    for index, candidate in enumerate(candidates, start=1):
-        typer.echo(f"  {index}. {candidate.title} — {candidate.qualified_id}")
-        typer.echo(f"     {candidate.url}")
-    # end for
-    other = len(candidates) + 1
-    typer.echo(f"  {other}. Other…")
-    while True:
-        selection = typer.prompt("Select a result", default=str(other))
-        if selection.isdecimal() and 1 <= int(selection) <= len(candidates):
-            return candidates[int(selection) - 1].qualified_id
-        # end if
-        if selection == str(other):
-            manual = typer.prompt(
-                "Paste the store URL or direct ID; leave blank for unresolved",
-                default="",
-                show_default=False,
-            )
-            return manual or None
-        # end if
-        typer.echo(f"Enter a number from 1 to {other}.", err=True)
-    # end while
-# end def _choose_gmg_store_candidate
-
-
 @scrape_app.command("greenmangaming")
 def scrape_greenmangaming_command(
     urls: Annotated[
@@ -723,9 +647,9 @@ def scrape_greenmangaming_command(
     client = GmgHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
-        (lambda _item, _provider, _candidates: None)
+        (lambda _title, _provider, _candidates: None)
         if non_interactive
-        else _choose_gmg_store_candidate
+        else choose_store_candidate
     )
     written_count = 0
 

@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from game_collections.models import Game, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
@@ -230,6 +230,25 @@ def crawl_gmg_offers(
 # end def crawl_gmg_offers
 
 
+def _item_all_ids(item: GmgItem) -> list[str]:
+    """Every qualified ID an item resolved to, whether or not it split into several games."""
+    if item.resolution.splits:
+        return [identifier for split in item.resolution.splits for identifier in split.ids]
+    # end if
+    return list(item.resolution.ids)
+# end def _item_all_ids
+
+
+def _games_for_item(item: GmgItem) -> list[Game]:
+    """Build one Game per item, or several when "Multiple…" split it during resolution."""
+    if item.resolution.splits:
+        group = GameGroup(id=item.product_id, name=item.title)
+        return [Game(name=split.name, ids=split.ids, group=group) for split in item.resolution.splits]
+    # end if
+    return [Game(name=item.title, ids=item.resolution.ids)]
+# end def _games_for_item
+
+
 def write_gmg_offer(
     offer: CrawledGmgOffer,
     lists_root: Path,
@@ -249,11 +268,12 @@ def write_gmg_offer(
         games: list[Game] = []
         seen_ids: set[str] = set()
         for item in tier.items:
-            if any(value in seen_ids for value in item.resolution.ids):
+            item_ids = _item_all_ids(item)
+            if any(value in seen_ids for value in item_ids):
                 continue
             # end if
-            games.append(Game(name=item.title, ids=item.resolution.ids))
-            seen_ids.update(item.resolution.ids)
+            games.extend(_games_for_item(item))
+            seen_ids.update(item_ids)
         # end for
         if games:
             tiers_with_games.append((tier, games))
