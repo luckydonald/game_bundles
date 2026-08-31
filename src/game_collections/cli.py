@@ -30,6 +30,7 @@ from game_collections.launchers.steam.adapter import (
     SteamTierMode,
     owned_app_ids_from_api,
     owned_app_ids_from_collection,
+    owned_app_ids_from_dynamicstore,
     owned_app_ids_from_installed,
 )
 from game_collections.launchers.steam.api import SteamApiClient
@@ -826,6 +827,7 @@ def _steam_adapter(
     api_key: str | None,
     source: str = "auto",
     collection: str | None = None,
+    dynamicstore_dump: Path | None = None,
     min_owned: int | None = None,
     max_owned: int | None = None,
     min_missing: int | None = None,
@@ -839,9 +841,12 @@ def _steam_adapter(
     tier_mode: SteamTierMode = "all",
     reconcile_managed: bool = False,
 ) -> tuple[SteamAdapter, SteamFileGateway]:
-    if source not in ("api", "collection", "installed", "auto", "none"):
-        raise ValueError(f"unknown ownership source: {source!r}; available: auto, api, collection, installed, none")
+    if source not in ("api", "collection", "installed", "dynamicstore", "auto", "none"):
+        raise ValueError(
+            f"unknown ownership source: {source!r}; available: auto, api, collection, installed, dynamicstore, none"
+        )
     # end if
+    dump_path = dynamicstore_dump or Path("config/steam-dynamicstore-dump.json")
     root = discover_steam_root(steam_root)
     gateway = SteamFileGateway.discover(root, steam_id)
     bounds = dict(
@@ -859,8 +864,13 @@ def _steam_adapter(
     if collection is not None and source == "auto":
         source = "collection"
     # end if
+    if dynamicstore_dump is not None and source == "auto":
+        source = "dynamicstore"
+    # end if
 
-    def adapter_for_source(resolved_source: Literal["api", "collection", "installed", "none"]) -> SteamAdapter:
+    def adapter_for_source(
+        resolved_source: Literal["api", "collection", "installed", "dynamicstore", "none"],
+    ) -> SteamAdapter:
         if resolved_source == "none":
             return SteamAdapter(
                 SteamOptions(
@@ -900,6 +910,15 @@ def _steam_adapter(
                 protected_collection_name=collection_name,
                 **bounds,
             )
+        elif resolved_source == "dynamicstore":
+            owned_app_ids_source = owned_app_ids_from_dynamicstore(dump_path)
+            options = SteamOptions(
+                steam_id=gateway.steam_id,
+                steam_root=root,
+                tier_mode=tier_mode,
+                reconcile_managed=reconcile_managed,
+                **bounds,
+            )
         else:
             key = api_key or os.environ.get("STEAM_WEB_API_KEY")
             if not key:
@@ -923,7 +942,7 @@ def _steam_adapter(
     # end if
 
     failures: list[str] = []
-    for candidate in ("api", "collection", "installed"):
+    for candidate in ("dynamicstore", "api", "collection", "installed"):
         try:
             adapter = adapter_for_source(candidate)
             owned_app_ids = frozenset(adapter.owned_app_ids_source())
@@ -1003,8 +1022,9 @@ def eligible_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
+    source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1030,6 +1050,7 @@ def eligible_command(
             api_key,
             source,
             collection,
+            dynamicstore_dump,
             min_owned=min_owned,
             max_owned=max_owned,
             min_missing=min_missing,
@@ -1063,8 +1084,9 @@ def sync_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
+    source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1091,6 +1113,7 @@ def sync_command(
             api_key,
             source,
             collection,
+            dynamicstore_dump,
             min_owned=min_owned,
             max_owned=max_owned,
             min_missing=min_missing,
@@ -1159,8 +1182,9 @@ def apply_command(
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
     api_key: Annotated[str | None, typer.Option("--api-key", hide_input=True)] = None,
-    source: Annotated[str, typer.Option("--source", help="auto (API, collection, then installed), api, collection, installed, or none (unverified every-ID mode)")] = "auto",
+    source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
+    dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1227,6 +1251,7 @@ def apply_command(
                 api_key,
                 source,
                 collection,
+                dynamicstore_dump,
                 min_owned=min_owned,
                 max_owned=max_owned,
                 min_missing=min_missing,
@@ -1260,6 +1285,7 @@ def apply_command(
                     chosen_api_key or api_key,
                     chosen_source,
                     chosen_collection,
+                    dynamicstore_dump,
                     min_owned=min_owned,
                     max_owned=max_owned,
                     min_missing=min_missing,
@@ -1351,6 +1377,7 @@ def apply_command(
                     api_key,
                     source,
                     collection,
+                    dynamicstore_dump,
                     min_owned=min_owned,
                     max_owned=max_owned,
                     min_missing=picker.min_missing,
