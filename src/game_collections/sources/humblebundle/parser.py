@@ -127,6 +127,71 @@ def _embedded(html: str) -> _EmbeddedDataParser:
 # end def _embedded
 
 
+class _DlcPackDetailsParser(HTMLParser):
+    """Extract a DLC pack item's base-game link and bundled-DLC names from its raw description HTML."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.base_game_url: str | None = None
+        self.dlc_names: list[str] = []
+        self._in_first_ul = False
+        self._first_ul_done = False
+        self._in_li = False
+        self._li_parts: list[str] = []
+    # end def __init__
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "a" and self.base_game_url is None:
+            href = dict(attrs).get("href")
+            if href and "store.steampowered.com/app/" in href:
+                self.base_game_url = href
+            # end if
+        elif tag == "ul" and not self._first_ul_done:
+            self._in_first_ul = True
+        elif tag == "li" and self._in_first_ul:
+            self._in_li = True
+            self._li_parts = []
+        # end if
+    # end def handle_starttag
+
+    def handle_data(self, data: str) -> None:
+        if self._in_li:
+            self._li_parts.append(data)
+        # end if
+    # end def handle_data
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "li" and self._in_li:
+            text = "".join(self._li_parts).strip()
+            if text:
+                self.dlc_names.append(text)
+            # end if
+            self._in_li = False
+            self._li_parts = []
+        elif tag == "ul" and self._in_first_ul:
+            self._in_first_ul = False
+            self._first_ul_done = True
+        # end if
+    # end def handle_endtag
+
+# end class _DlcPackDetailsParser
+
+
+def _parse_dlc_pack_details(html: str) -> tuple[str | None, list[str]]:
+    """Extract a DLC pack item's base-game URL and bundled-DLC names from its raw description HTML.
+
+    Safe to run on every item's description, not just ones already tagged "Dlc" - it's
+    cheap and simply finds nothing on a normal item's description.
+    """
+    if not html.strip():
+        return None, []
+    # end if
+    parser = _DlcPackDetailsParser()
+    parser.feed(html)
+    return parser.base_game_url, parser.dlc_names
+# end def _parse_dlc_pack_details
+
+
 def _json_object(raw: str, label: str) -> dict[str, Any]:
     try:
         value: Any = json.loads(raw)
@@ -301,6 +366,7 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
     is_game = item_type == "game" and "Coupon" not in tags
     rating = raw.get("user_ratings") if isinstance(raw.get("user_ratings"), dict) else {}
     excluded = raw.get("exclusive_countries")
+    base_game_url, bundled_dlc_names = _parse_dlc_pack_details(raw.get("description_text") or "")
     return HumbleItem(
         machine_name=machine_name,
         title=_required_string(raw.get("human_name"), f"item {machine_name} title"),
@@ -320,6 +386,8 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
         region_locked=raw.get("is_region_locked") if isinstance(raw.get("is_region_locked"), bool) else None,
         excluded_countries=[str(item) for item in excluded] if isinstance(excluded, list) else [],
         resolution=HumbleResolution(),
+        base_game_url=base_game_url,
+        bundled_dlc_names=bundled_dlc_names,
     )
 # end def _bundle_item
 
