@@ -290,7 +290,7 @@ def test_resolve_item_splits_a_dlc_pack_and_attaches_requires() -> None:
         item_type="game",
         is_game=True,
         redeem_on=["steam"],
-        tags=["Dlc"],
+        tags=["dlc"],
         base_game_url="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/",
         bundled_dlc_names=["DLC One"],
         resolution=HumbleResolution(),
