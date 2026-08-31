@@ -242,6 +242,7 @@ class OwnedGame(StrictModel):
     playtime_forever: StrictInt | None = Field(default=None, ge=0)
     img_icon_url: StrictStr | None = None
     has_community_visible_stats: StrictBool | None = None
+    has_leaderboards: StrictBool | None = None
     playtime_windows_forever: StrictInt | None = Field(default=None, ge=0)
     playtime_mac_forever: StrictInt | None = Field(default=None, ge=0)
     playtime_linux_forever: StrictInt | None = Field(default=None, ge=0)

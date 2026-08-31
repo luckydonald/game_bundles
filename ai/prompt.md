@@ -2288,3 +2288,69 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
+❯ Can you pick up the steamID from steam? The env app is set up, see @.env.example 
+Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want that one to leak.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. I need a real Steam DLC app ID you own to test GetOwnedGames/appdetails against. Do you have one in mind (or a game name I can look up the DLC app ID for), or should I try to find a candidate myself from your owned-games list plus store lookups?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Test DLC app ID** (1/1) <kbd>Single Select</kbd><br>
+>> I need a real Steam DLC app ID you own to test GetOwnedGames/appdetails against. Do you have one in mind (or a game name I can look up the DLC app ID for), or should I try to find a candidate myself from your owned-games list plus store lookups?
+> - [ ] 1\. I'll give you an app ID
+>   - _You'll reply with a specific Steam DLC app ID (and ideally its base game) to use for the test._
+> - [x] 2\. Figure it out from my library (Recommended)
+>   - _Fetch your full GetOwnedGames response now, then cross-check a handful of candidates against the Store appdetails endpoint to find one that's actually a DLC, without you needing to look anything up._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Also update the model.
+
+❯ For the plan of Stage 0: Given the fact that DLCs are attached to games anyway, can I check for an already owned game, if I got that DLC in my library? Or list all DLCs I own, or list all DLCs of a game I own? For testing you can use the "Fallout 4 - High Resolution Texture Pack", https://store.steampowered.com/app/540810/Fallout_4__High_Resolution_Texture_Pack/ which I own.
+
+❯ Please consult @ai/references/https/www.reddit.com/r/Steam/comments/1cdsdx2/steam_web_api_get_owned_dlc_info/_.md and check with [my dump](ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json).
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. `dynamicstore/userdata`'s `rgOwnedApps` includes DLC app IDs (confirmed: your Fallout 4 DLC 540810 is in there, unlike `GetOwnedGames`), but it needs an authenticated browser session (Steam login cookies), not the `STEAM_WEB_API_KEY` this repo already uses. How should the tool get that data?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **DLC data source** (1/1) <kbd>Single Select</kbd><br>
+>> `dynamicstore/userdata`'s `rgOwnedApps` includes DLC app IDs (confirmed: your Fallout 4 DLC 540810 is in there, unlike `GetOwnedGames`), but it needs an authenticated browser session (Steam login cookies), not the `STEAM_WEB_API_KEY` this repo already uses. How should the tool get that data?
+> - [x] 1\. You export the dump manually (Recommended)
+>   - _Like the dump you just gave me: you periodically save the JSON from https://store.steampowered.com/dynamicstore/userdata (logged in, browser or `curl` with your cookie) to a known local path (e.g. `ai/references/...` or a config path), and the tool reads that file when checking DLC ownership. No credentials stored in the repo/config; simple, but ownership data can go stale between exports._
+> - [ ] 2\. Tool stores a session cookie
+>   - _You provide a Steam session cookie value (e.g. `steamLoginSecure`) via env var/config, similar to `STEAM_WEB_API_KEY`, and the tool fetches `dynamicstore/userdata` live on each run. Always fresh, but a session cookie is a more sensitive, shorter-lived credential than an API key, and needs periodic refreshing by hand anyway when it expires._
+> - [ ] 3\. Real browser session (patchright)
+>   - _Similar in spirit to the dailyindiegame crawler's Cloudflare-bypass browser, but for an actual persistent login: the tool opens a real (non-headless) browser window against a persistent profile directory the first time, you log in once, and it's reused on later runs to fetch `dynamicstore/userdata`. Heaviest option; touches real Steam login flow (2FA etc.), which this repo's Steam safety invariants treat carefully._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+❯ Again, the steam key api shall be kept, but this one is the best possible source.
+
+❯ @ai/skills/code-style/references/md.md
+
+❯ Can I open the steam client to a specific webpage? In that case I could open it to that URL, and copy + paste would be super easy.
+Also I'd like the game detection mechanism to be automatic per default, and check if the defined sources are available and if so, automatically use them.
+Lastly, the default should also ask the user in the UI version if they want to paste a new version of the "owned game data" (that json), and if so, it'd open the steam client just there, and then wait for user input. Obviously cancelable. The less-ui version would use a normal input I guess, which should still be good enough to paste stuff in (only do the prompts there if (a) forced by a flag (b) in an interactive session. The default (enter) must be to not update it so it's quickly skipped though on multiple runs. Also the force flag shall also be usable to not ask at all. The file should be written to the config dir, after paste. And obviously loaded from there. Include a timestamp of last update to also display that when asking.
+
+❯ Add that you should commit after each phase and before and after each test + fix runs.
+
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`43101` chars, `42.3 KB`)](output/compact/004.f6ec2242-3158-4246-9b24-d05f95855cb4/result.md)
+
+❯ commit first, then test, then commit.
+
