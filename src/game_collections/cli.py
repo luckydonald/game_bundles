@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import shutil
+import sys
 from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
@@ -24,6 +25,7 @@ from game_collections.migrate_tiers import (
 )
 from game_collections.completion import MissingHandling
 from game_collections import git_ops
+from game_collections.os_open import open_url
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
     SteamOptions,
@@ -35,6 +37,13 @@ from game_collections.launchers.steam.adapter import (
 )
 from game_collections.launchers.steam.api import SteamApiClient
 from game_collections.launchers.steam.discovery import discover_steam_root
+from game_collections.launchers.steam.dynamicstore import (
+    DYNAMICSTORE_URL,
+    describe_dump_age,
+    load_dynamicstore_dump,
+    save_dynamicstore_dump,
+    should_prompt_for_refresh,
+)
 from game_collections.launchers.steam.io import SteamFileGateway, SteamIoError, default_staging_root
 from game_collections.schema import write_schema
 from game_collections.schema import write_dailyindiegame_schema
@@ -821,6 +830,46 @@ def scrape_isthereanydeal_command(
 # end def scrape_isthereanydeal_command
 
 
+def _maybe_refresh_dynamicstore_dump(dynamicstore_dump: Path | None, force: bool | None) -> None:
+    """Offer to paste a fresh dynamicstore dump (see `dynamicstore.should_prompt_for_refresh`).
+
+    Only prompts in an interactive session unless `force` overrides that;
+    the default answer (bare Enter) is always "skip" so repeated runs stay
+    fast. `Ctrl-C` during the paste wait cancels cleanly, leaving any
+    existing dump untouched.
+    """
+    path = dynamicstore_dump or Path("config/steam-dynamicstore-dump.json")
+    interactive = sys.stdin.isatty()
+    if not should_prompt_for_refresh(force=force, interactive=interactive):
+        return
+    # end if
+    try:
+        existing = load_dynamicstore_dump(path)
+    except (OSError, ValueError):
+        existing = None
+    # end try
+    typer.echo(describe_dump_age(existing, datetime.now(UTC)))
+    if not typer.confirm("Paste a fresh dynamicstore/userdata dump now?", default=False):
+        return
+    # end if
+    try:
+        open_url(f"steam://openurl/{DYNAMICSTORE_URL}")
+        typer.echo("Opened Steam to the dump page. Paste the full JSON body, then press Ctrl-D:")
+        raw = sys.stdin.read()
+    except KeyboardInterrupt:
+        typer.echo("\ncancelled: dump left unchanged", err=True)
+        return
+    # end try
+    try:
+        save_dynamicstore_dump(path, raw, datetime.now(UTC))
+    except ValueError as error:
+        typer.echo(f"dump not saved: {error}", err=True)
+        return
+    # end try
+    typer.echo(f"Saved {path}.")
+# end def _maybe_refresh_dynamicstore_dump
+
+
 def _steam_adapter(
     steam_root: Path | None,
     steam_id: str | None,
@@ -1025,6 +1074,7 @@ def eligible_command(
     source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
+    refresh_dynamicstore: Annotated[bool | None, typer.Option("--refresh-dynamicstore/--no-refresh-dynamicstore", help="Force/suppress the interactive prompt to paste a fresh dynamicstore dump; default only prompts in an interactive session.")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1043,6 +1093,7 @@ def eligible_command(
         typer.echo(f"launcher is not implemented: {launcher}", err=True)
         raise typer.Exit(2)
     # end if
+    _maybe_refresh_dynamicstore_dump(dynamicstore_dump, refresh_dynamicstore)
     try:
         adapter, _gateway = _steam_adapter(
             steam_root,
@@ -1087,6 +1138,7 @@ def sync_command(
     source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
+    refresh_dynamicstore: Annotated[bool | None, typer.Option("--refresh-dynamicstore/--no-refresh-dynamicstore", help="Force/suppress the interactive prompt to paste a fresh dynamicstore dump; default only prompts in an interactive session.")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1106,6 +1158,7 @@ def sync_command(
         typer.echo(f"launcher is not implemented: {launcher}", err=True)
         raise typer.Exit(2)
     # end if
+    _maybe_refresh_dynamicstore_dump(dynamicstore_dump, refresh_dynamicstore)
     try:
         adapter, gateway = _steam_adapter(
             steam_root,
@@ -1185,6 +1238,7 @@ def apply_command(
     source: Annotated[str, typer.Option("--source", help="auto (dynamicstore, API, collection, then installed), api, collection, installed, dynamicstore, or none (unverified every-ID mode)")] = "auto",
     collection: Annotated[str | None, typer.Option("--collection", help="name of a local Steam collection to use as the ownership source; implies --source collection; defaults to 'manual-all'")] = None,
     dynamicstore_dump: Annotated[Path | None, typer.Option("--dynamicstore-dump", help="path to a manually exported dynamicstore/userdata dump; implies --source dynamicstore; defaults to config/steam-dynamicstore-dump.json")] = None,
+    refresh_dynamicstore: Annotated[bool | None, typer.Option("--refresh-dynamicstore/--no-refresh-dynamicstore", help="Force/suppress the interactive prompt to paste a fresh dynamicstore dump; default only prompts in an interactive session.")] = None,
     log_skips: Annotated[bool, typer.Option("--log-skips", help="Print skipped lists and their missing or unsupported IDs.")] = False,
     min_owned: Annotated[int | None, typer.Option("--min-owned", help="Only eligible if at least this many games are owned.")] = None,
     max_owned: Annotated[int | None, typer.Option("--max-owned", help="Only eligible if at most this many games are owned.")] = None,
@@ -1213,6 +1267,10 @@ def apply_command(
         )
         raise typer.Exit(1) from error
     # end try
+    # A full Textual modal for this belongs in the picker app itself; asking here (before
+    # the TUI takes over the terminal) keeps the same interactive-default/paste/cancel
+    # behavior as `sync`/`eligible` without needing a second prompting mechanism.
+    _maybe_refresh_dynamicstore_dump(dynamicstore_dump, refresh_dynamicstore)
     try:
         previous_selection = load_selection(selection_config)
         previously_excluded = excluded_list_ids(previous_selection)
