@@ -15,6 +15,8 @@ This plan had two stages; Stage 0 is now complete (findings below), Stage 1 is r
 - **Stage 0 (done):** a live investigation spike against the real Steam Web API and Steam Store API to determine DLC ownership/parent-detection semantics.
 - **Stage 1 (below):** the actual model/parser/resolver/CLI changes.
 
+**Commit discipline during Stage 1 execution:** commit after each numbered phase (§1 through §7) lands and passes its own check, not just once at the very end — per the `commit-with-lplp-style` skill active for this repo, each completed phase is its own task/commit. Additionally, commit before running `uv run pytest` (or any manual verification) and again after fixing whatever it turns up, so a bad fix attempt is always cheap to diff against or roll back from, and so the "what broke, what fixed it" history stays legible per-phase rather than getting squashed into one large diff.
+
 ---
 
 ## Stage 0 — Steam DLC ownership investigation (complete)
