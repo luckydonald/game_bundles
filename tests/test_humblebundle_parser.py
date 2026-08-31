@@ -5,6 +5,7 @@ import json
 from datetime import UTC, datetime
 
 from game_collections.sources.humblebundle.parser import (
+    _parse_dlc_pack_details,
     parse_bundle_index,
     parse_bundle_page,
     parse_choice_page,
@@ -145,6 +146,104 @@ def test_bundle_page_normalizes_metadata_and_cumulative_tiers() -> None:
     assert archive.tiers[0].items[1].is_game is False
     assert source["listing"] == listing
 # end def test_bundle_page_normalizes_metadata_and_cumulative_tiers
+
+
+def test_parse_dlc_pack_details_extracts_base_game_and_dlc_list() -> None:
+    # Real description_text from the "handsome-husbandos" bundle's
+    # `ourlife_beginningsandalways_dlcpack` item (archives/humblebundle/bundle/
+    # 2026-08-12_handsome-husbandos/source.json).
+    description = (
+        "<strong>This DLC Pack contains 6 DLCs for&nbsp;<em>Our Life: Beginnings &amp; Always!"
+        "&nbsp; </em>Be sure to download the game for FREE "
+        '<a href="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/">here</a>.'
+        "<em><br><br></em></strong>\n<ul>\n"
+        "<li>Our Life: Beginnings &amp; Always: Cove Wedding Story</li>\n"
+        "<li>Our Life: Beginnings &amp; Always: Baxter's Story</li>\n"
+        "<li>Our Life: Beginnings &amp; Always: Derek's Story</li>\n"
+        "<li>Our Life: Beginnings &amp; Always: Step 3 Expansion</li>\n"
+        "<li>Our Life: Beginnings &amp; Always: Step 2 Expansion</li>\n"
+        "<li>Our Life: Beginnings &amp; Always: Step 1 Expansion</li>\n</ul>\n"
+        "<br>A nostalgic visual novel...<br><br>"
+        '<ul>\n<li>4 different periods of life to experience</li>\n</ul>'
+    )
+
+    base_game_url, dlc_names = _parse_dlc_pack_details(description)
+
+    assert base_game_url == "https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/"
+    assert dlc_names == [
+        "Our Life: Beginnings & Always: Cove Wedding Story",
+        "Our Life: Beginnings & Always: Baxter's Story",
+        "Our Life: Beginnings & Always: Derek's Story",
+        "Our Life: Beginnings & Always: Step 3 Expansion",
+        "Our Life: Beginnings & Always: Step 2 Expansion",
+        "Our Life: Beginnings & Always: Step 1 Expansion",
+    ]
+# end def test_parse_dlc_pack_details_extracts_base_game_and_dlc_list
+
+
+def test_parse_dlc_pack_details_returns_none_for_plain_description() -> None:
+    base_game_url, dlc_names = _parse_dlc_pack_details("<p>A <strong>great</strong> game.</p>")
+
+    assert base_game_url is None
+    assert dlc_names == []
+# end def test_parse_dlc_pack_details_returns_none_for_plain_description
+
+
+def test_bundle_page_wires_dlc_pack_details_onto_the_item() -> None:
+    dlc_pack = {
+        "machine_name": "adatewithdeathdeluxedlcpack",
+        "human_name": "A Date with Death: Deluxe DLC Pack",
+        "item_content_type": "game",
+        "msrp_price|money": {"currency": "USD", "amount": 9.99},
+        "description_text": (
+            "<p><strong>This DLC pack contains 3 DLCs for&nbsp;<em>A Date with Death! </em>"
+            "Be sure to download the game for FREE "
+            '<em><a href="https://store.steampowered.com/app/2415010/A_Date_with_Death/">here</a>.'
+            "</em></strong></p>"
+        ),
+        "developers": [],
+        "publishers": [],
+        "platforms_and_oses": {"game": {"steam": ["windows"]}},
+        "availability_icons": {"delivery_icons": ["hb-steam"]},
+        "resolved_paths": {},
+        "exclusive_countries": [],
+        "is_region_locked": False,
+        "user_ratings": {},
+        "cta_badge": {"badge": "dlc"},
+    }
+    payload = {
+        "bundleData": {
+            "machine_name": "sample_bundle",
+            "page_url": "games/sample",
+            "basic_data": {
+                "human_name": "Sample Bundle",
+                "short_marketing_blurb": "Play games. Help people.",
+                "detailed_marketing_blurb": "<p>A bundle description.</p>",
+                "end_time|datetime": "2026-07-22T18:00:00",
+            },
+            "tier_order": ["all"],
+            "tier_display_data": {
+                "all": {"header": "Pay €5.00 or more!", "tier_item_machine_names": ["adatewithdeathdeluxedlcpack"]},
+            },
+            "tier_pricing_data": {"all": {"price|money": {"currency": "EUR", "amount": 5.0}}},
+            "tier_item_data": {"adatewithdeathdeluxedlcpack": dlc_pack},
+            "charity_data": {"charity_items": {}},
+        }
+    }
+    listing: dict[str, object] = {}
+
+    archive, _source = parse_bundle_page(
+        _script("webpack-bundle-page-data", payload),
+        listing,
+        CRAWLED,
+    )
+
+    item = archive.tiers[0].items[0]
+    assert item.tags == ["Dlc"]
+    assert item.base_game_url is not None
+    assert str(item.base_game_url) == "https://store.steampowered.com/app/2415010/A_Date_with_Death/"
+    assert item.bundled_dlc_names == []
+# end def test_bundle_page_wires_dlc_pack_details_onto_the_item
 
 
 def test_choice_page_normalizes_attribute_json_and_markdown() -> None:
