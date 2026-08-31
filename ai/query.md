@@ -2315,3 +2315,5 @@ Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want 
 
 ❯ For the plan of Stage 0: Given the fact that DLCs are attached to games anyway, can I check for an already owned game, if I got that DLC in my library? Or list all DLCs I own, or list all DLCs of a game I own? For testing you can use the "Fallout 4 - High Resolution Texture Pack", https://store.steampowered.com/app/540810/Fallout_4__High_Resolution_Texture_Pack/ which I own.
 
+❯ Please consult @ai/references/https/www.reddit.com/r/Steam/comments/1cdsdx2/steam_web_api_get_owned_dlc_info/_.md and check with [my dump](ai/references/https/store.steampowered.com/dynamicstore/userdata/_.json).
+
