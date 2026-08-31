@@ -142,7 +142,7 @@ def test_bundle_page_normalizes_metadata_and_cumulative_tiers() -> None:
     }
     assert archive.tiers[0].items[0].description == "A **great** game."
     assert archive.tiers[0].items[0].platforms == ["Linux", "Windows"]
-    assert archive.tiers[0].items[1].tags == ["Coupon"]
+    assert archive.tiers[0].items[1].tags == ["coupon"]
     assert archive.tiers[0].items[1].is_game is False
     assert source["listing"] == listing
 # end def test_bundle_page_normalizes_metadata_and_cumulative_tiers
@@ -239,11 +239,69 @@ def test_bundle_page_wires_dlc_pack_details_onto_the_item() -> None:
     )
 
     item = archive.tiers[0].items[0]
-    assert item.tags == ["Dlc"]
+    assert item.tags == ["dlc"]
     assert item.base_game_url is not None
     assert str(item.base_game_url) == "https://store.steampowered.com/app/2415010/A_Date_with_Death/"
     assert item.bundled_dlc_names == []
 # end def test_bundle_page_wires_dlc_pack_details_onto_the_item
+
+
+def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item() -> None:
+    # A normal game whose Steam-style description happens to contain both a
+    # store.steampowered.com link and an early feature-bullet <ul> - it must not be
+    # mistaken for a "DLC pack" item just because it is cta_badge-less.
+    game = {
+        "machine_name": "whispermountainoutbreak",
+        "human_name": "Whisper Mountain Outbreak",
+        "item_content_type": "game",
+        "msrp_price|money": {"currency": "USD", "amount": 19.99},
+        "description_text": (
+            "<p>Wishlist it on "
+            '<a href="https://store.steampowered.com/app/1234567/Whisper_Mountain_Outbreak/">Steam</a>.</p>'
+            "<ul>\n<li>Survive and fight the horde</li>\n<li>Explore a vast open world</li>\n</ul>"
+        ),
+        "developers": [],
+        "publishers": [],
+        "platforms_and_oses": {"game": {"steam": ["windows"]}},
+        "availability_icons": {"delivery_icons": ["hb-steam"]},
+        "resolved_paths": {},
+        "exclusive_countries": [],
+        "is_region_locked": False,
+        "user_ratings": {},
+        "cta_badge": None,
+    }
+    payload = {
+        "bundleData": {
+            "machine_name": "sample_bundle",
+            "page_url": "games/sample",
+            "basic_data": {
+                "human_name": "Sample Bundle",
+                "short_marketing_blurb": "Play games. Help people.",
+                "detailed_marketing_blurb": "<p>A bundle description.</p>",
+                "end_time|datetime": "2026-07-22T18:00:00",
+            },
+            "tier_order": ["all"],
+            "tier_display_data": {
+                "all": {"header": "Pay €5.00 or more!", "tier_item_machine_names": ["whispermountainoutbreak"]},
+            },
+            "tier_pricing_data": {"all": {"price|money": {"currency": "EUR", "amount": 5.0}}},
+            "tier_item_data": {"whispermountainoutbreak": game},
+            "charity_data": {"charity_items": {}},
+        }
+    }
+    listing: dict[str, object] = {}
+
+    archive, _source = parse_bundle_page(
+        _script("webpack-bundle-page-data", payload),
+        listing,
+        CRAWLED,
+    )
+
+    item = archive.tiers[0].items[0]
+    assert item.tags == []
+    assert item.base_game_url is None
+    assert item.bundled_dlc_names == []
+# end def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item
 
 
 def test_choice_page_normalizes_attribute_json_and_markdown() -> None:

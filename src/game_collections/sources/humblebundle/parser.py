@@ -180,8 +180,9 @@ class _DlcPackDetailsParser(HTMLParser):
 def _parse_dlc_pack_details(html: str) -> tuple[str | None, list[str]]:
     """Extract a DLC pack item's base-game URL and bundled-DLC names from its raw description HTML.
 
-    Safe to run on every item's description, not just ones already tagged "Dlc" - it's
-    cheap and simply finds nothing on a normal item's description.
+    Only call this for items already tagged as a DLC pack (`cta_badge.badge == "dlc"`) - a
+    normal game's description commonly contains both a Steam link and an early feature-bullet
+    list, which this would misidentify as a base-game link and bundled-DLC names.
     """
     if not html.strip():
         return None, []
@@ -318,7 +319,7 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
     badge = raw.get("cta_badge")
     tags: list[str] = []
     if isinstance(badge, dict) and isinstance(badge.get("badge"), str):
-        tags.append(badge["badge"].title())
+        tags.append(badge["badge"])
     # end if
     description = _markdown(raw.get("description_text"))
     platforms_and_oses = raw.get("platforms_and_oses")
@@ -363,10 +364,12 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
     youtube = raw.get("youtube_link")
     youtube_urls = [f"https://www.youtube.com/watch?v={youtube}"] if isinstance(youtube, str) else []
     item_type = raw.get("item_content_type") if isinstance(raw.get("item_content_type"), str) else None
-    is_game = item_type == "game" and "Coupon" not in tags
+    is_game = item_type == "game" and "coupon" not in tags
     rating = raw.get("user_ratings") if isinstance(raw.get("user_ratings"), dict) else {}
     excluded = raw.get("exclusive_countries")
-    base_game_url, bundled_dlc_names = _parse_dlc_pack_details(raw.get("description_text") or "")
+    base_game_url, bundled_dlc_names = (
+        _parse_dlc_pack_details(raw.get("description_text") or "") if "dlc" in tags else (None, [])
+    )
     return HumbleItem(
         machine_name=machine_name,
         title=_required_string(raw.get("human_name"), f"item {machine_name} title"),
@@ -598,7 +601,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
             }
         )
         title = _required_string(raw.get("title"), f"Choice item {machine_name} title")
-        tags = ["Coupon"] if "coupon" in machine_name.casefold() or "coupon" in title.casefold() else []
+        tags = ["coupon"] if "coupon" in machine_name.casefold() or "coupon" in title.casefold() else []
         description = _markdown(
             raw.get("recommendation_copy_dict", {}).get("copy")
             if isinstance(raw.get("recommendation_copy_dict"), dict)
@@ -610,7 +613,7 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
                 machine_name=machine_name,
                 title=title,
                 item_type="game" if redeem_on else "bonus",
-                is_game=bool(redeem_on) and "Coupon" not in tags,
+                is_game=bool(redeem_on) and "coupon" not in tags,
                 retail_price=_price(raw.get("msrp")),
                 youtube_urls=[f"https://www.youtube.com/watch?v={video}" for video in youtube_values],
                 cover_art_url=_optional_url(raw.get("image")),
