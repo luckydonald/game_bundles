@@ -80,6 +80,34 @@ appmanifest-based DLC detection, per prior exploration, actually can see real
 installed DLC app IDs — no reduction needed there, though nothing stops it
 from also falling back to `requires` if the DLC's own appid isn't found).
 
+**Follow-up verification (same conclusion, now with a concrete known-owned
+DLC, not just a sample):** using the account's real Fallout 4 ownership
+(base game app ID `377160`, owned) and its "High Resolution Texture Pack"
+DLC (app ID `540810`, also owned) as a live test case:
+- `GetOwnedGames`, even called with `appids_filter` explicitly restricted to
+  `[540810, 377160]`, returned **only** `377160` (Fallout 4) — `540810` is
+  silently dropped despite being owned. No parameter combination surfaces it;
+  this is conclusive, not a sampling artifact.
+- `appdetails?appids=377160` (the **base game's own** page) returns a public
+  `dlc` field: `[3868650, 598110, 540810, 404090, 435881, 480631, 480630,
+  490650, 435880, 435870]` — the complete, authoritative list of every DLC
+  app ID for that game, straight from Valve's catalog, no ownership check
+  involved. This is a better source for "all DLCs of a game" than parsing
+  Humble's own description HTML: it's exhaustive and independent of whatever
+  a bundle page happens to mention.
+- There is no public per-account "list all DLC I own" or "do I own DLC X"
+  endpoint. The closest official mechanism, `ISteamUser/CheckAppOwnership`,
+  requires a **publisher** API key scoped to that specific app — not usable
+  by a hobbyist client against arbitrary third-party games. So `requires`
+  (base-game) fallback isn't just the pragmatic choice, it's the *only*
+  ownership signal available through the Web API for a DLC, short of the
+  `installed`-source's incidental local appmanifest check.
+- Bonus use for `appdetails`'s `dlc` list: once a Humble DLC-pack item's
+  `base_game_url` resolves to a base-game app ID, that same `appdetails`
+  call can cross-check/validate the parsed `bundled_dlc_names` count against
+  the base game's real DLC count as a sanity check — optional, not required
+  for Stage 1's core functionality.
+
 ---
 
 ## Stage 1 — Model, crawl, resolve, and prompt changes
