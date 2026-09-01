@@ -2407,3 +2407,12 @@ The steamdb lists _Apps in this package_, which are:
 - Steelrising - Discus Chain
 Which matches the Humble bundle description, and hence should also be parsable from there. (add a test for that)
 
+❯ Task Notification:
+> - Task `a4894deb486e9b30a` <kbd>completed</kbd>
+> - Tool `toolu_011ZmPeMnJA5XJUxh9zEEEQ7`
+> - > Agent "Explore humblebundle resolver and DLC pack parsing" finished
+> - [Query (`3511` chars, `3.44 KB`)](output/agents/033.a4894deb486e9b30a/prompt.md)
+> - [Answer (`17872` chars, `17.5 KB`)](output/agents/033.a4894deb486e9b30a/result.md)
+> - [Raw log (`354996` chars, `347 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/a4894deb486e9b30a.output)
+> - `18` tools, `70645` tokens, `1.78947 s`
+
