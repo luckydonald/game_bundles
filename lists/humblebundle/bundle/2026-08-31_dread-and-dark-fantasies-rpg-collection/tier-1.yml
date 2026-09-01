@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Dread and Dark Fantasies RPG Collection — 2 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/dread-and-dark-fantasies-rpg-collection
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-31_dread-and-dark-fantasies-rpg-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-31_dread-and-dark-fantasies-rpg-collection/source.json
+games:
+- name: Steelrising - Bastille Edition
+  ids:
+  - steam:2021370
+  requires: []
+- name: The Axis Unseen
+  ids:
+  - steam:1807810
+  requires: []
