@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: PAX West 2026 Bundle — 6 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/pax-west-2026-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-28_pax-west-2026-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-28_pax-west-2026-bundle/source.json
+games:
+- name: Order Automatica
+  ids:
+  - steam:2105840
+  requires: []
+- name: The Lacerator
+  ids:
+  - steam:2339330
+  requires: []
+- name: GODBREAKERS
+  ids:
+  - steam:2687400
+  requires: []
+- name: Parking Garage Rally Circuit
+  ids:
+  - steam:2737300
+  requires: []
+- name: Neckbreak
+  ids:
+  - steam:992730
+  requires: []

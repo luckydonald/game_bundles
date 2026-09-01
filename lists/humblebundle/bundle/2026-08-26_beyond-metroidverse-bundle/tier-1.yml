@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Beyond the Metroidverse Bundle — 2 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/beyond-metroidverse-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-26_beyond-metroidverse-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-26_beyond-metroidverse-bundle/source.json
+games:
+- name: Salt and Sanctuary
+  ids:
+  - steam:283640
+  requires: []
+- name: Salt and Sacrifice
+  ids:
+  - steam:1437400
+  requires: []
