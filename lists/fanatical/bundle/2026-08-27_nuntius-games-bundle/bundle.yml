@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Nuntius Games Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16520/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16520/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16520/source.json
+games:
+- name: Damned 2
+  ids:
+  - steam:2221390
+  - isthereanydeal:damned-2
+  requires: []
+- name: CODE Bunny
+  ids:
+  - steam:3303780
+  - isthereanydeal:code-bunny
+  requires: []
+- name: 'Bloodrush: Undying Wish'
+  ids:
+  - steam:2471390
+  - isthereanydeal:bloodrush-undying-wish
+  requires: []
+- name: 'Alien Strike: Blasting the Intruders'
+  ids:
+  - steam:2876150
+  - isthereanydeal:alien-strike-blasting-the-intruders
+  requires: []
+- name: Ghetto Zombies - Graffiti Squad
+  ids:
+  - steam:3047820
+  - isthereanydeal:ghetto-zombies-graffiti-squad
+  requires: []
+- name: Arashi Gaiden
+  ids:
+  - steam:3040170
+  - isthereanydeal:arashi-gaiden
+  requires: []
+- name: Islets Defense
+  ids:
+  - steam:3235170
+  - isthereanydeal:islets-defense
+  requires: []
+- name: Pimbolas
+  ids:
+  - steam:3621200
+  - isthereanydeal:pimbolas
+  requires: []
+- name: DOCTOR VISCERA
+  ids:
+  - steam:3708660
+  - isthereanydeal:doctor-viscera
+  requires: []
