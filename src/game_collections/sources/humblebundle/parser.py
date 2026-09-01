@@ -177,6 +177,85 @@ class _DlcPackDetailsParser(HTMLParser):
 # end class _DlcPackDetailsParser
 
 
+class _EditionBundleParagraphsParser(HTMLParser):
+    """Collect the plain text of the first two `<p>` elements in a description."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.paragraphs: list[str] = []
+        self._in_p = False
+        self._parts: list[str] = []
+    # end def __init__
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "p" and len(self.paragraphs) < 2:
+            self._in_p = True
+            self._parts = []
+        # end if
+    # end def handle_starttag
+
+    def handle_data(self, data: str) -> None:
+        if self._in_p:
+            self._parts.append(data)
+        # end if
+    # end def handle_data
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "p" and self._in_p:
+            self.paragraphs.append("".join(self._parts).strip())
+            self._in_p = False
+            self._parts = []
+        # end if
+    # end def handle_endtag
+
+# end class _EditionBundleParagraphsParser
+
+
+_EDITION_TITLE_PATTERN = re.compile(r"^(?P<base>.+) - (?P<edition>.+ edition)$", re.IGNORECASE)
+
+
+def _parse_edition_bundle_components(title: str, html: str) -> list[str]:
+    """Extract an "Edition" item's base game and bundled-DLC titles from its description HTML.
+
+    Only recognizes the narrow, exact "Includes: Base game + <DLC> + <DLC>." shape observed on a
+    real bundle page (a Steam "Edition" purchase option bundling a base app + its DLCs, with no
+    single Steam page for the edition itself and no `cta_badge` to gate on unlike a DLC pack) - any
+    other shape returns an empty list rather than guessing, so it falls through to the normal
+    single-title resolution flow (backstopped by the steamdb Sub-package fallback).
+    """
+    title_match = _EDITION_TITLE_PATTERN.match(title.strip())
+    if title_match is None:
+        return []
+    # end if
+    base_title = title_match.group("base").strip()
+    edition_name = title_match.group("edition").strip()
+    parser = _EditionBundleParagraphsParser()
+    parser.feed(html)
+    if len(parser.paragraphs) < 2:
+        return []
+    # end if
+    heading, includes = parser.paragraphs[0], parser.paragraphs[1]
+    if heading.rstrip(":").strip().casefold() != edition_name.casefold():
+        return []
+    # end if
+    if not includes.casefold().startswith("includes:") or not includes.endswith("."):
+        return []
+    # end if
+    pieces = [piece.strip() for piece in includes[len("includes:") : -1].split(" + ")]
+    components: list[str] = []
+    for piece in pieces:
+        if piece.casefold() == "base game":
+            components.append(base_title)
+        elif piece.casefold().endswith(" dlc"):
+            components.append(f"{base_title} - {piece[: -len(' dlc')].strip()}")
+        else:
+            return []
+        # end if
+    # end for
+    return components
+# end def _parse_edition_bundle_components
+
+
 def _parse_dlc_pack_details(html: str) -> tuple[str | None, list[str]]:
     """Extract a DLC pack item's base-game URL and bundled-DLC names from its raw description HTML.
 
@@ -367,12 +446,16 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
     is_game = item_type == "game" and "coupon" not in tags
     rating = raw.get("user_ratings") if isinstance(raw.get("user_ratings"), dict) else {}
     excluded = raw.get("exclusive_countries")
+    title = _required_string(raw.get("human_name"), f"item {machine_name} title")
     base_game_url, bundled_dlc_names = (
         _parse_dlc_pack_details(raw.get("description_text") or "") if "dlc" in tags else (None, [])
     )
+    edition_component_titles = (
+        _parse_edition_bundle_components(title, raw.get("description_text") or "") if "dlc" not in tags else []
+    )
     return HumbleItem(
         machine_name=machine_name,
-        title=_required_string(raw.get("human_name"), f"item {machine_name} title"),
+        title=title,
         item_type=item_type,
         is_game=is_game,
         retail_price=_price(raw.get("msrp_price|money")),
@@ -391,6 +474,7 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
         resolution=HumbleResolution(),
         base_game_url=base_game_url,
         bundled_dlc_names=bundled_dlc_names,
+        edition_component_titles=edition_component_titles,
     )
 # end def _bundle_item
 

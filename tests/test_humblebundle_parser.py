@@ -6,6 +6,7 @@ from datetime import UTC, datetime
 
 from game_collections.sources.humblebundle.parser import (
     _parse_dlc_pack_details,
+    _parse_edition_bundle_components,
     parse_bundle_index,
     parse_bundle_page,
     parse_choice_page,
@@ -302,6 +303,146 @@ def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item() -> None:
     assert item.base_game_url is None
     assert item.bundled_dlc_names == []
 # end def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item
+
+
+# Real description_text from the live "dread-and-dark-fantasies-rpg-collection" bundle's
+# `steelrising_bastilleedition` item (cta_badge is None - it's a normal game, not a Humble-badged
+# "DLC pack" - fetched directly from the bundle's own webpack-bundle-page-data JSON).
+STEELRISING_EDITION_DESCRIPTION = (
+    "<p><strong>Bastille Edition:</strong></p>\n"
+    "<p>Includes: Base game + Discus Chain DLC + Cagliostro's Secrets DLC.</p>\n"
+    "<p>The city burns and bleeds as it suffers the madness of King Louis XVI...</p>"
+)
+
+
+def test_parse_edition_bundle_components_extracts_base_and_dlc_titles() -> None:
+    components = _parse_edition_bundle_components("Steelrising - Bastille Edition", STEELRISING_EDITION_DESCRIPTION)
+
+    assert components == [
+        "Steelrising",
+        "Steelrising - Discus Chain",
+        "Steelrising - Cagliostro's Secrets",
+    ]
+# end def test_parse_edition_bundle_components_extracts_base_and_dlc_titles
+
+
+def test_parse_edition_bundle_components_returns_empty_for_plain_description() -> None:
+    components = _parse_edition_bundle_components(
+        "Steelrising - Bastille Edition", "<p>A <strong>great</strong> game.</p>"
+    )
+
+    assert components == []
+# end def test_parse_edition_bundle_components_returns_empty_for_plain_description
+
+
+def test_bundle_page_wires_edition_bundle_components_onto_the_item() -> None:
+    edition = {
+        "machine_name": "steelrising_bastilleedition",
+        "human_name": "Steelrising - Bastille Edition",
+        "item_content_type": "game",
+        "msrp_price|money": {"currency": "USD", "amount": 49.99},
+        "description_text": STEELRISING_EDITION_DESCRIPTION,
+        "developers": [],
+        "publishers": [],
+        "platforms_and_oses": {"game": {"steam": ["windows"]}},
+        "availability_icons": {"delivery_icons": ["hb-steam"]},
+        "resolved_paths": {},
+        "exclusive_countries": [],
+        "is_region_locked": False,
+        "user_ratings": {},
+        "cta_badge": None,
+    }
+    payload = {
+        "bundleData": {
+            "machine_name": "sample_bundle",
+            "page_url": "games/sample",
+            "basic_data": {
+                "human_name": "Sample Bundle",
+                "short_marketing_blurb": "Play games. Help people.",
+                "detailed_marketing_blurb": "<p>A bundle description.</p>",
+                "end_time|datetime": "2026-07-22T18:00:00",
+            },
+            "tier_order": ["all"],
+            "tier_display_data": {
+                "all": {"header": "Pay €5.00 or more!", "tier_item_machine_names": ["steelrising_bastilleedition"]},
+            },
+            "tier_pricing_data": {"all": {"price|money": {"currency": "EUR", "amount": 5.0}}},
+            "tier_item_data": {"steelrising_bastilleedition": edition},
+            "charity_data": {"charity_items": {}},
+        }
+    }
+    listing: dict[str, object] = {}
+
+    archive, _source = parse_bundle_page(
+        _script("webpack-bundle-page-data", payload),
+        listing,
+        CRAWLED,
+    )
+
+    item = archive.tiers[0].items[0]
+    assert item.tags == []
+    assert item.base_game_url is None
+    assert item.bundled_dlc_names == []
+    assert item.edition_component_titles == [
+        "Steelrising",
+        "Steelrising - Discus Chain",
+        "Steelrising - Cagliostro's Secrets",
+    ]
+# end def test_bundle_page_wires_edition_bundle_components_onto_the_item
+
+
+def test_bundle_page_ignores_edition_bundle_shape_on_an_unrelated_includes_sentence() -> None:
+    # A normal hyphenated-title game whose description happens to contain an unrelated
+    # "Includes: ..." sentence must not be mistaken for an "Edition bundle" item.
+    game = {
+        "machine_name": "foobar_gameoftheyear",
+        "human_name": "Foobar - Game of the Year Edition",
+        "item_content_type": "game",
+        "msrp_price|money": {"currency": "USD", "amount": 19.99},
+        "description_text": (
+            "<p><strong>Game of the Year Edition:</strong></p>\n"
+            "<p>Includes: the base game and a digital soundtrack.</p>"
+        ),
+        "developers": [],
+        "publishers": [],
+        "platforms_and_oses": {"game": {"steam": ["windows"]}},
+        "availability_icons": {"delivery_icons": ["hb-steam"]},
+        "resolved_paths": {},
+        "exclusive_countries": [],
+        "is_region_locked": False,
+        "user_ratings": {},
+        "cta_badge": None,
+    }
+    payload = {
+        "bundleData": {
+            "machine_name": "sample_bundle",
+            "page_url": "games/sample",
+            "basic_data": {
+                "human_name": "Sample Bundle",
+                "short_marketing_blurb": "Play games. Help people.",
+                "detailed_marketing_blurb": "<p>A bundle description.</p>",
+                "end_time|datetime": "2026-07-22T18:00:00",
+            },
+            "tier_order": ["all"],
+            "tier_display_data": {
+                "all": {"header": "Pay €5.00 or more!", "tier_item_machine_names": ["foobar_gameoftheyear"]},
+            },
+            "tier_pricing_data": {"all": {"price|money": {"currency": "EUR", "amount": 5.0}}},
+            "tier_item_data": {"foobar_gameoftheyear": game},
+            "charity_data": {"charity_items": {}},
+        }
+    }
+    listing: dict[str, object] = {}
+
+    archive, _source = parse_bundle_page(
+        _script("webpack-bundle-page-data", payload),
+        listing,
+        CRAWLED,
+    )
+
+    item = archive.tiers[0].items[0]
+    assert item.edition_component_titles == []
+# end def test_bundle_page_ignores_edition_bundle_shape_on_an_unrelated_includes_sentence
 
 
 def test_choice_page_normalizes_attribute_json_and_markdown() -> None:

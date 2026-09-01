@@ -254,8 +254,8 @@ Real captured HTML (`steamdb_search.html` for the "Steelrising Bastille Edition"
 should be trimmed down to right-sized fixtures (same style as the existing `_script(...)`-built
 fixtures — keep only the relevant `<tr>` markup, not the full page) rather than committed verbatim:
 
-- `tests/test_humblebundle_steamdb.py` (check the exact existing filename holding steamdb parser
-  tests first): unit tests for `_RESULT_LINK_HREF`/`parse_steamdb_results` recognizing a trimmed
+- `tests/test_humblebundle_steamdb.py` (confirmed as the existing filename holding steamdb parser
+  tests): unit tests for `_RESULT_LINK_HREF`/`parse_steamdb_results` recognizing a trimmed
   real Sub row (asserting the pair `("sub/729916", "Steelrising - Bastille Edition")`), and
   `parse_steamdb_sub_apps` against a trimmed real "Apps in this package" table, asserting it
   yields `[(2021370, "Steelrising - Discus Chain"), (2004261, "Steelrising - Cagliostro's
