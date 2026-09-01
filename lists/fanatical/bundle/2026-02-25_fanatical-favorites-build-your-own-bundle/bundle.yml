@@ -9,67 +9,97 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15911/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15911/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16463/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Martha is Dead
   ids:
   - steam:515960
+  requires: []
 - name: Indoorlands
   ids:
   - steam:1378890
+  requires: []
 - name: Desecrators
   ids:
   - steam:1311570
+  requires: []
 - name: Isonzo
   ids:
   - steam:1556790
+  requires: []
 - name: Deadlink
   ids:
   - steam:1676130
+  - isthereanydeal:deadlink
+  requires: []
 - name: Sniper Ghost Warrior Contracts 2 Complete Edition
   ids:
   - unresolved:source:isthereanydeal:15911:sniper-ghost-warrior-contracts-2-complete-edition
+  requires: []
 - name: Spirits of the Hellements
   ids:
   - steam:1742610
+  requires: []
 - name: Outward Definitive Edition
   ids:
   - steam:794260
+  requires: []
 - name: Steelrising - Bastille Edition
   ids:
   - steam:1283400
+  requires: []
 - name: The Siege and the Sandfox
   ids:
   - steam:653060
+  requires: []
 - name: 'Amnesia: The Bunker'
   ids:
   - steam:1944430
+  requires: []
 - name: The Cook Serve Series Bundle
   ids:
   - unresolved:source:isthereanydeal:15911:the-cook-serve-series-bundle
+  requires: []
 - name: Botany Manor
   ids:
   - steam:1425350
+  requires: []
 - name: 'Kona II: Brume'
   ids:
   - steam:1229020
+  requires: []
 - name: Is this Game Trying to Kill Me?
   ids:
   - steam:2658470
+  requires: []
 - name: DRIFT CE
   ids:
   - steam:520950
+  requires: []
 - name: Retrowave Bundle
   ids:
   - unresolved:source:isthereanydeal:15911:retrowave-bundle
+  requires: []
 - name: 'Tavern Master: Complete'
   ids:
   - unresolved:source:isthereanydeal:15911:tavern-master-complete
+  requires: []
 - name: Forewarned double-pack
   ids:
   - unresolved:source:isthereanydeal:15911:forewarned-double-pack
+  requires: []
 - name: Monument Valley Double-Pack
   ids:
   - unresolved:source:isthereanydeal:15911:monument-valley-double-pack
+  requires: []
 - name: RATSHAKER + Supporter Pack DLC
   ids:
   - unresolved:source:isthereanydeal:15911:ratshaker-and-supporter-pack-dlc
+  requires: []

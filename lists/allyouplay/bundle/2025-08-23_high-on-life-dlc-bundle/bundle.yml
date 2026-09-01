@@ -8,7 +8,10 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15363/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15363/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: 'High On Life: DLC Bundle'
   ids:
   - unresolved:source:isthereanydeal:15363:high-on-life-dlc-bundle
+  requires: []

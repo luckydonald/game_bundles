@@ -8,28 +8,36 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16475/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16475/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: No Signal
   ids:
   - steam:2840590
   - isthereanydeal:no-signal
+  requires: []
 - name: Wakamarina Valley, New Zealand
   ids:
   - steam:1291330
   - isthereanydeal:wakamarina-valley-new-zealand
+  requires: []
 - name: 7 Days
   ids:
   - steam:3247640
   - isthereanydeal:7-days
+  requires: []
 - name: Unknot!
   ids:
   - steam:3544020
   - isthereanydeal:unknot
+  requires: []
 - name: The Stairwell
   ids:
   - steam:3578120
   - isthereanydeal:the-stairwell
+  requires: []
 - name: Odd Dorable
   ids:
   - steam:3690890
   - isthereanydeal:odd-dorable
+  requires: []

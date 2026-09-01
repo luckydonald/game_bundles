@@ -9,20 +9,26 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16472/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16472/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: 'Warhammer: Vermintide 2'
   ids:
   - steam:552500
   - isthereanydeal:warhammer-vermintide-2
+  requires: []
 - name: 'Warhammer: End Times - Vermintide Collector''s Edition'
   ids:
   - steam:235540
   - isthereanydeal:warhammer-end-times-vermintide-collectors-edition
+  requires: []
 - name: 'Necromunda: Hired Gun'
   ids:
   - steam:1222370
   - isthereanydeal:necromunda-hired-gun
+  requires: []
 - name: 'Warhammer Age of Sigmar: Realms of Ruin'
   ids:
   - steam:1844380
   - isthereanydeal:warhammer-age-of-sigmar-realms-of-ruin
+  requires: []

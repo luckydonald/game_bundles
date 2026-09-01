@@ -8,28 +8,36 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16438/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16438/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Truck Driver
   ids:
   - steam:768180
   - isthereanydeal:truck-driver
+  requires: []
 - name: HammerHelm
   ids:
   - steam:664000
   - isthereanydeal:hammerhelm
+  requires: []
 - name: Saint Kotar
   ids:
   - steam:1358530
   - isthereanydeal:saint-kotar
+  requires: []
 - name: Perennial Order
   ids:
   - steam:1411020
   - isthereanydeal:perennial-order
+  requires: []
 - name: Petit Island
   ids:
   - steam:1744970
   - isthereanydeal:petit-island
+  requires: []
 - name: Magical Bakery
   ids:
   - steam:2595940
   - isthereanydeal:magical-bakery
+  requires: []
