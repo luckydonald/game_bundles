@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Love Letter to Lovecraft Bundle — 3 Item Bundle
+name: Love Letter to Lovecraft — 3 Item Bundle
 tier: 1
 references:
 - name: isthereanydeal.com bundle
@@ -9,16 +9,25 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16506/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16506/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/love-letter-to-lovecraft
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-08-21_love-letter-to-lovecraft/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-08-21_love-letter-to-lovecraft/source.json
 games:
-- name: 'Sundered: Eldritch Edition'
-  ids:
-  - steam:535480
-  - isthereanydeal:sundered-eldritch-edition
-- name: Forgive me Father
-  ids:
-  - steam:1590910
-  - isthereanydeal:forgive-me-father
 - name: Whisper Mountain Outbreak
   ids:
   - steam:1953230
   - isthereanydeal:whisper-mountain-outbreak
+  requires: []
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+  - isthereanydeal:forgive-me-father
+  requires: []
+- name: 'Sundered: Eldritch Edition'
+  ids:
+  - steam:535480
+  - isthereanydeal:sundered-eldritch-edition
+  requires: []
