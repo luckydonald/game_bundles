@@ -2391,3 +2391,19 @@ Which is just random bullet point in the description of _Whisper Mountain Outbre
 
 ❯ Is the `.title()` casing of the tag not bad programming? Rather use original casing? `dlc` is als much better to read than weirdly capitalized `Dlc`.
 
+❯ /plan New fun DLC-ish extra case:
+https://www.humblebundle.com/games/dread-and-dark-fantasies-rpg-collection
+> Resolve 'Steelrising - Bastille Edition' on steam:
+>  1. Multiple…
+>  2. Other…
+
+So, checking the store page to "Steelrising", we find indeed a _Buy  Steelrising - Bastille Edition_ button:
+https://store.steampowered.com/app/1283400/Steelrising/
+Also, steamdb lists is as a package, at https://steamdb.info/sub/729916/
+Where the `/sub/` value seems to be the same as the steam page's _Add to Cart_'s `javascript:addToCart(729916);`.
+The steamdb lists _Apps in this package_, which are:
+- Steelrising
+- Steelrising - Cagliostro's Secrets
+- Steelrising - Discus Chain
+Which matches the Humble bundle description, and hence should also be parsable from there. (add a test for that)
+
