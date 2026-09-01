@@ -164,53 +164,104 @@ Per `completion.py`'s existing precedent (`steam:bundle/<id>` can't drive owners
 real per-app members (base + every DLC), the same "independently-resolved splits, no `requires`"
 shape as Part 1, discovered from the *Steam side* this time instead of the *Humble side*.
 
-### ⚠ Needs a verified HTML shape before implementation
+### Verified live (headed `patchright` session, `SteamDbBrowserClient`)
 
-I could not fetch steamdb.info's real search-results or sub-detail-page HTML myself — it's
-Cloudflare-gated and 403s to `curl`/`WebFetch`; only the project's own headed `patchright` session
-(`SteamDbBrowserClient` in `steamdb.py`) gets through it. Per this project's established practice
-of verifying real external shapes before writing a parser (see the extensive live-verified
-comments already in `steamdb.py`), **do not write the Sub-row/Sub-page parser from a guess**.
+Fetched both pages for real and confirmed the exact markup:
 
-**Before implementing this part**, once out of plan mode:
-1. Use `SteamDbBrowserClient` (or an equivalent one-off headed-browser fetch) to capture the real
-   rendered HTML of a steamdb.info search results page containing a Sub row (e.g. searching
-   "Steelrising Bastille Edition"), and of `https://steamdb.info/sub/729916/` itself (its "Apps in
-   this package" table).
-2. From that real HTML, confirm: the Sub row's result-link `href` shape (expected `/sub/<id>/`,
-   to confirm/extend `_RESULT_LINK_HREF`), and the "Apps in this package" table's structure (row
-   tags/classes, how each row links to `/app/<id>/` plus its visible title, and whether DLC rows
-   are distinguishable from the base app row the same way `_SteamDbLinkParser`'s docstring notes
-   non-Game rows carry a sibling `<i class="stype">`).
-3. Only then write `parse_steamdb_sub_apps(html: str) -> list[tuple[str, str]]` (id, title pairs,
-   mirroring `parse_steamdb_results`'s return shape) and extend `_RESULT_LINK_HREF`/
-   `_SteamDbLinkParser` to also yield `sub/<id>` rows from search results.
+**Search results** for `Steelrising Bastille Edition` return exactly one row — a `package` (Sub)
+row, no competing `app`/`bundle` rows:
 
-### Once the shape is confirmed, the wiring is:
+```html
+<tbody><tr class="package" data-subid="729916">
+<td class="dt-type-numeric"><a href="/sub/729916/">729916</a></td>
+<td class="applogo dt-type-numeric" data-sort="-1">
+<a href="/sub/729916/"><img src="..." ...></a>
+</td>
+<td>
+<a href="/sub/729916/"><mark>Steelrising</mark> - <mark>Bastille</mark> <mark>Edition</mark></a>
+<i class="stype">Package</i>
+</td>
+...
+</tr></tbody>
+```
 
-- `steamdb.py`: extend `_RESULT_LINK_HREF` to also match `/sub/(\d+)/`, tagging those results as
-  `sub/<id>` (mirroring the existing `bundle/<id>` convention) in `parse_steamdb_results`. Add
-  `parse_steamdb_sub_apps` per the confirmed real markup.
+Same three-`<a href="/sub/729916/">`-per-row shape as today's `app`/`bundle` rows (id-column,
+image-only applogo-column, name-column with `<mark>` highlight spans nested inside). The existing
+`_SteamDbLinkParser` already handles this correctly once `_RESULT_LINK_HREF` recognizes the
+`/sub/` prefix: it collects `handle_data` regardless of nested tags (so the `<mark>`-wrapped
+"Steelrising - Bastille Edition" reconstructs correctly), and the empty-text applogo link is
+already dropped by the existing `if text:` check in `handle_endtag`.
+
+**The sub detail page** (`https://steamdb.info/sub/729916/`) has an "Apps in this package" table
+under `<div class="tab-pane" id="apps">` — a **different, simpler** shape than search results:
+name is plain text, not a link:
+
+```html
+<table class="table table-bordered table-hover table-sortable table-responsive-flex">
+<thead>...</thead>
+<tbody>
+<tr class="app" data-appid="2021370">
+<td><a href="/app/2021370/">2021370</a></td>
+<td>DLC</td>
+<td>Steelrising - Discus Chain</td>
+<td>...</td><td>...</td><td>...</td>
+</tr><tr class="app" data-appid="2004261">
+<td><a href="/app/2004261/">2004261</a></td>
+<td>DLC</td>
+<td>Steelrising - Cagliostro's Secrets</td>
+...
+</tr><tr class="app" data-appid="1283400">
+<td><a href="/app/1283400/">1283400</a></td>
+<td>Game</td>
+<td>Steelrising</td>
+...
+</tr></tbody>
+</table>
+```
+
+Confirms the exact 3-app split (base game + 2 DLC) from a canonical, Humble-independent source.
+Each row is `<tr class="app" data-appid="N">` with the AppID (redundant with the attribute), Type
+("Game"/"DLC", not needed), and plain-text Name as its first three `<td>`s, in that fixed order.
+
+### Implementation
+
+- `steamdb.py`:
+  - Extend `_RESULT_LINK_HREF` to `^/(app|bundle|sub)/(\d+)/$`, tagging Sub search results as
+    `sub/<id>` in `parse_steamdb_results` (mirroring the existing `bundle/<id>` convention) — no
+    other change needed there, the existing link-collection logic already handles this row shape.
+  - Add a new small `HTMLParser`, `_SteamDbSubAppsParser`, plus
+    `parse_steamdb_sub_apps(html: str) -> list[tuple[int, str]]`: track `<tr class="app"
+    data-appid="...">` start tags to capture the appid, then collect the **third** `<td>`'s text
+    content within that row as the name (skip the first two `<td>`s — id link and Type). Return
+    `(appid, name)` pairs in document order.
 - `resolver.py`'s `_search_steam`/`_resolve_title`: when steamdb's fallback search's exact-title
   match is a `sub/<id>` result (rather than an `app`/`bundle` one), instead of accepting it as a
   single `qualified_id`, fetch that sub's own page (via the same injected fetch function already
-  used for steamdb pages) and parse it with `parse_steamdb_sub_apps`, producing one
-  `ResolvedGame` per app in the package (`requires=[]`, same reasoning as Part 1's edition
-  components — owning the sub grants every listed app at once, nothing is a precondition of
+  used for steamdb pages, i.e. `https://steamdb.info/sub/<id>/`) and parse it with
+  `parse_steamdb_sub_apps`, producing one `ResolvedGame` per app in the package — `name` from the
+  parsed row, `ids=[f"steam:{appid}"]`, `requires=[]` (same reasoning as Part 1's edition
+  components: owning the sub grants every listed app at once, nothing is a precondition of
   another).
 - This becomes a second, independent way to reach the same "several `steam:<appid>` splits, no
   requires" outcome as Part 1 — useful as a fallback for editions whose Humble description text
   doesn't match Part 1's narrow "Includes: Base game + X DLC + Y DLC." shape, since steamdb's Sub
   page is a canonical, Humble-independent source of the same information.
 
-### Tests (once shape confirmed)
+### Tests
 
-- `tests/test_humblebundle_steamdb.py` (or wherever existing steamdb parser tests live): unit
-  tests for `_RESULT_LINK_HREF`/`parse_steamdb_results` recognizing a real captured Sub row, and
-  `parse_steamdb_sub_apps` against the real captured sub-page HTML for `sub/729916`, asserting it
-  yields the base app + the two DLC apps.
+Real captured HTML (`steamdb_search.html` for the "Steelrising Bastille Edition" query,
+`steamdb_sub.html` for `sub/729916`) is available in the scratchpad from this investigation and
+should be trimmed down to right-sized fixtures (same style as the existing `_script(...)`-built
+fixtures — keep only the relevant `<tr>` markup, not the full page) rather than committed verbatim:
+
+- `tests/test_humblebundle_steamdb.py` (check the exact existing filename holding steamdb parser
+  tests first): unit tests for `_RESULT_LINK_HREF`/`parse_steamdb_results` recognizing a trimmed
+  real Sub row (asserting the pair `("sub/729916", "Steelrising - Bastille Edition")`), and
+  `parse_steamdb_sub_apps` against a trimmed real "Apps in this package" table, asserting it
+  yields `[(2021370, "Steelrising - Discus Chain"), (2004261, "Steelrising - Cagliostro's
+  Secrets"), (1283400, "Steelrising")]` (order as they appear in the table).
 - `tests/test_humblebundle_resolver.py`: a resolver-level test with a fake steamdb fetch
-  returning the captured search-results HTML (containing the Sub row) and the captured sub-page
+  returning the trimmed search-results HTML (containing the Sub row) and the trimmed sub-page
   HTML, asserting `_resolve_title("Steelrising - Bastille Edition", ...)` returns 3 splits with
   `requires == []`, without any interactive prompt.
 
