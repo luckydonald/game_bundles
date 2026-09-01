@@ -9,36 +9,54 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-08-28_pax-west-2026-bundle/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-28_pax-west-2026-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16523/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16523/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16523/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Cornucopia
   ids:
   - steam:1681600
+  - isthereanydeal:cornucopia
   requires: []
 - name: Dark Deity 2
   ids:
   - steam:2446600
+  - isthereanydeal:dark-deity-2
   requires: []
 - name: Quilts and Cats of Calico Special Edition
   ids:
   - steam:bundle/36141
+  - unresolved:source:isthereanydeal:16523:quilts-and-cats-of-calico-special-edition
+  - isthereanydeal:quilts-and-cats-of-calico-special-edition
   requires: []
 - name: Order Automatica
   ids:
   - steam:2105840
+  - unresolved:source:isthereanydeal:16523:order-automatica
+  - isthereanydeal:order-automatica
   requires: []
 - name: The Lacerator
   ids:
   - steam:2339330
+  - isthereanydeal:the-lacerator
   requires: []
 - name: GODBREAKERS
   ids:
   - steam:2687400
+  - isthereanydeal:godbreakers
   requires: []
 - name: Parking Garage Rally Circuit
   ids:
   - steam:2737300
+  - isthereanydeal:parking-garage-rally-circuit
   requires: []
 - name: Neckbreak
   ids:
   - steam:992730
+  - isthereanydeal:neckbreak
   requires: []

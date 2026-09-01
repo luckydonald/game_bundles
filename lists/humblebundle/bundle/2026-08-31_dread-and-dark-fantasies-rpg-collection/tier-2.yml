@@ -9,24 +9,37 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-08-31_dread-and-dark-fantasies-rpg-collection/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-31_dread-and-dark-fantasies-rpg-collection/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16525/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16525/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16525/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Darksiders Genesis
   ids:
   - steam:710920
+  - isthereanydeal:darksiders-genesis
   requires: []
 - name: Dread Delusion
   ids:
   - steam:1574240
+  - isthereanydeal:dread-delusion
   requires: []
 - name: Ashen
   ids:
   - steam:649950
+  - isthereanydeal:ashen
   requires: []
 - name: Steelrising - Bastille Edition
   ids:
   - steam:2021370
+  - isthereanydeal:steelrising-bastille-edition
   requires: []
 - name: The Axis Unseen
   ids:
   - steam:1807810
+  - isthereanydeal:the-axis-unseen
   requires: []

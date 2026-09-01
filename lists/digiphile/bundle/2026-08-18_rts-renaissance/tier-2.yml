@@ -9,12 +9,16 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16491/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16491/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: From Glory To Goo
   ids:
   - steam:2607060
   - isthereanydeal:from-glory-to-goo
+  requires: []
 - name: '9-Bit Armies: A Bit Too Far'
   ids:
   - steam:1439750
   - isthereanydeal:9-bit-armies-a-bit-too-far
+  requires: []

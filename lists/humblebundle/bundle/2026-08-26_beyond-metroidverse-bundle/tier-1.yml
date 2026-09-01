@@ -9,12 +9,22 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-08-26_beyond-metroidverse-bundle/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-26_beyond-metroidverse-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16515/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16515/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16515/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Salt and Sanctuary
   ids:
   - steam:283640
+  - isthereanydeal:salt-and-sanctuary
   requires: []
 - name: Salt and Sacrifice
   ids:
   - steam:1437400
+  - isthereanydeal:salt-and-sacrifice
   requires: []

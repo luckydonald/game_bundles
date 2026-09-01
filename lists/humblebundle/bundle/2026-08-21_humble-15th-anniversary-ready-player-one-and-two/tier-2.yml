@@ -9,32 +9,48 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-08-21_humble-15th-anniversary-ready-player-one-and-two/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-21_humble-15th-anniversary-ready-player-one-and-two/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16507/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16507/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16507/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: MIMESIS
   ids:
   - steam:2827200
+  - isthereanydeal:mimesis
   requires: []
 - name: Killing Floor 3
   ids:
   - steam:1430190
+  - isthereanydeal:killing-floor-3
   requires: []
 - name: Streets of Rage 4
   ids:
   - steam:985890
+  - isthereanydeal:streets-of-rage-4
   requires: []
 - name: We Were Here Forever
   ids:
   - steam:1341290
+  - isthereanydeal:we-were-here-forever
   requires: []
 - name: Vellum
   ids:
   - steam:917950
+  - isthereanydeal:vellum
   requires: []
 - name: 'Friends vs Friends: Deluxe Edition'
   ids:
   - steam:bundle/32502
+  - unresolved:source:isthereanydeal:16507:friends-vs-friends-deluxe-edition
+  - isthereanydeal:friends-vs-friends-deluxe-edition
   requires: []
 - name: Storebound
   ids:
   - steam:3417410
+  - isthereanydeal:storebound
   requires: []
