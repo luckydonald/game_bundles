@@ -9,20 +9,26 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16511/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16511/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Dusk
   ids:
   - steam:519860
   - isthereanydeal:dusk
+  requires: []
 - name: AMID EVIL
   ids:
   - steam:673130
   - isthereanydeal:amid-evil
+  requires: []
 - name: 'FAITH: The Unholy Trinity'
   ids:
   - steam:1179080
   - isthereanydeal:faith-the-unholy-trinity
+  requires: []
 - name: AMID EVIL - The Black Labyrinth
   ids:
   - steam:1852860
   - isthereanydeal:amid-evil-the-black-labyrinth
+  requires: []

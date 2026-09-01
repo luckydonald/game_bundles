@@ -9,52 +9,76 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16033/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16033/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16479/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16479/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16479/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Heartworm
   ids:
   - steam:1257030
+  requires: []
 - name: 'Metal: Hellsinger'
   ids:
   - steam:1061910
+  requires: []
 - name: '[ECHOSTASIS]'
   ids:
   - steam:1558000
+  requires: []
 - name: Valley Peaks
   ids:
   - steam:2107550
+  requires: []
 - name: Let's Build a Zoo + Dinosaur Island
   ids:
   - unresolved:source:isthereanydeal:16033:lets-build-a-zoo-and-dinosaur-island
+  requires: []
 - name: Cryptmaster
   ids:
   - steam:1885110
+  requires: []
 - name: Rue Valley
   ids:
   - steam:2126190
+  requires: []
 - name: Badlands Crew
   ids:
   - steam:2078230
+  requires: []
 - name: Holy Shoot
   ids:
   - steam:2881660
+  requires: []
 - name: Into the Restless Ruins
   ids:
   - steam:2877770
+  requires: []
 - name: 'ILA: A Frosty Glide'
   ids:
   - steam:1560160
+  requires: []
 - name: Dark Hunting Ground
   ids:
   - steam:2494810
+  requires: []
 - name: Paper Animal Adventure
   ids:
   - steam:1982120
+  requires: []
 - name: 'Hacked: The Streamer'
   ids:
   - steam:2425130
+  requires: []
 - name: Mama's Sleeping Angels
   ids:
   - steam:2918310
+  requires: []
 - name: The Executive - Movie Industry Tycoon
   ids:
   - steam:2315430
+  requires: []

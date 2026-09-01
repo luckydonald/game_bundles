@@ -8,32 +8,41 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16420/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16420/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Moxina
   ids:
   - steam:1622600
   - isthereanydeal:moxina
+  requires: []
 - name: Untangle
   ids:
   - steam:1686850
   - isthereanydeal:untangle
+  requires: []
 - name: After the first station
   ids:
   - steam:1790760
   - isthereanydeal:after-the-first-station
+  requires: []
 - name: Ouija Rumours
   ids:
   - steam:1865220
   - isthereanydeal:ouija-rumours
+  requires: []
 - name: 'Foster: Child Ghost | 养小鬼'
   ids:
   - steam:2072890
   - isthereanydeal:foster-child-ghost-yang-xiao-gui
+  requires: []
 - name: Manacle | 猪仔
   ids:
   - steam:2302680
   - isthereanydeal:manacle-zhu-zi
+  requires: []
 - name: 'River God: Enshrouded Current'
   ids:
   - steam:2987120
   - isthereanydeal:river-god-enshrouded-current
+  requires: []

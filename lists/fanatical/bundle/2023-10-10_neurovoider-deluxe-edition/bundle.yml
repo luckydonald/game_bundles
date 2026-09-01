@@ -8,10 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/13529/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/13529/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: NeuroVoider
   ids:
   - steam:400450
+  requires: []
 - name: NeuroVoider - Deluxe Upgrade
   ids:
   - steam:521010
+  requires: []
