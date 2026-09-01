@@ -175,7 +175,7 @@ def _month_range(start: str, end: str) -> list[str]:
 # end def _month_range
 
 
-def _non_interactive_choose(*_args: object) -> None:
+def _non_interactive_choose(*_args: object, **_kwargs: object) -> None:
     return None
 # end def _non_interactive_choose
 

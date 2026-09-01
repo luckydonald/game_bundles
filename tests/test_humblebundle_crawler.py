@@ -519,7 +519,7 @@ def test_crawl_explicit_choice_is_resolved_without_listing() -> None:
         return page if "humblebundle.com" in url else store
     # end def fetch
 
-    resolver = StorefrontResolver(fetch, lambda _item, _provider, _candidates: None)
+    resolver = StorefrontResolver(fetch, lambda _item, _provider, _candidates, **_kwargs: None)
     report = crawl_humble_offers(
         fetch,
         resolver,
@@ -585,7 +585,7 @@ def test_crawl_skips_resolution_for_a_cached_offer(tmp_path: Path) -> None:
         raise AssertionError(f"storefront search should be skipped for a cached offer: {url}")
     # end def unreachable_fetch
 
-    resolver = StorefrontResolver(unreachable_fetch, lambda _item, _provider, _candidates: None)
+    resolver = StorefrontResolver(unreachable_fetch, lambda _item, _provider, _candidates, **_kwargs: None)
     report = crawl_humble_offers(
         fetch,
         resolver,
@@ -606,7 +606,7 @@ def test_crawl_logs_progress_and_invokes_on_offer_per_offer() -> None:
         return _bundle_page_payload()
     # end def fetch
 
-    resolver = StorefrontResolver(fetch, lambda _item, _provider, _candidates: None)
+    resolver = StorefrontResolver(fetch, lambda _item, _provider, _candidates, **_kwargs: None)
     messages: list[str] = []
     offers: list[CrawledHumbleOffer] = []
     report = crawl_humble_offers(

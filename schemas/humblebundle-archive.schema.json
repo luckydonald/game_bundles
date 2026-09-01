@@ -169,6 +169,14 @@
           "title": "Developers",
           "type": "array"
         },
+        "edition_component_titles": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Edition Component Titles",
+          "type": "array"
+        },
         "excluded_countries": {
           "items": {
             "minLength": 1,
