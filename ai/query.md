@@ -2544,3 +2544,38 @@ could help here.
 > - [Raw log (`163531` chars, `160 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/ad0d30c27710bce7a.output)
 > - `12` tools, `34118` tokens, `1.57523 s`
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. What should `complete --all` iterate over?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **--all scope** (1/1) <kbd>Single Select</kbd><br>
+>> What should `complete --all` iterate over?
+> - [x] 1\. Every list under lists/
+>   - _Drop the FILE argument requirement; walk lists_root (default ./lists, or --lists-root) like validate/list do, and run complete_game_list on each discovered list in place. Mainly useful for bulk-refreshing/mode=unresolved|missing|refetch_all sweeps across already-published lists, since draft files with blank ids live outside lists/ per lists/README.md and wouldn't pass GameList validation yet._
+>   - ```
+>     game-collections complete --all
+>     game-collections complete --all --mode unresolved
+>     game-collections complete --all --lists-root ./lists --provider steam,isthereanydeal
+>     ```
+> - [ ] 2\. A given directory of draft files
+>   - _FILE becomes a directory (or --all takes a path); glob *.yml under it and complete each in place using raw YAML (bypassing GameList.model_validate on input, same as single-file complete does today), so drafts with blank/empty ids outside lists/ can be bulk-completed._
+>   - ```
+>     game-collections complete drafts/ --all
+>     game-collections complete --all --root drafts/
+>     ```
+> - [ ] 3\. Both — same command, either root works
+>   - _complete --all always walks whatever root you give it (lists/ by default, or any directory of drafts via --lists-root/positional), using the same raw-YAML-per-file loop either way — no GameList.model_validate gate on which files qualify. Most flexible, slightly more surface area to implement/test._
+>   - ```text
+>     game-collections complete --all
+>     game-collections complete --all --lists-root drafts/
+>     ```
+> - [ ] 4\. _Notes: Add notes on this design._
+>
+> </details>
+>
+
