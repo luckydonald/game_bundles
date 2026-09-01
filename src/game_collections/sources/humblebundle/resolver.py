@@ -18,8 +18,18 @@ from game_collections.sources.humblebundle.models import (
     HumbleResolution,
     HumbleResolvedGame,
 )
-from game_collections.sources.humblebundle.steamdb import STEAMDB_SEARCH_URL, parse_steamdb_results
-from game_collections.sources.prompting import ChosenCandidate, ChosenNames
+from game_collections.sources.humblebundle.steamdb import (
+    STEAMDB_SEARCH_URL,
+    STEAMDB_SUB_URL,
+    parse_steamdb_results,
+    parse_steamdb_sub_apps,
+)
+from game_collections.sources.prompting import (
+    ChosenCandidate,
+    EnterMultiple,
+)
+from game_collections.sources.prompting import announce_exact_match as _default_announce_exact_match
+from game_collections.sources.prompting import collect_one_name as _default_collect_one_name
 from game_collections.sources.storefronts import (
     STORE_ROOTS,
     StoreCandidate,
@@ -31,9 +41,10 @@ from game_collections.sources.storefronts import (
 
 __all__ = [
     "STEAMDB_SEARCH_URL",
+    "STEAMDB_SUB_URL",
     "STORE_ROOTS",
     "STORE_SEARCH_URLS",
-    "ChosenNames",
+    "EnterMultiple",
     "HumbleResolutionMap",
     "ResolvedGame",
     "StoreCandidate",
@@ -42,6 +53,7 @@ __all__ = [
     "load_resolution_map",
     "normalized_title",
     "parse_steamdb_results",
+    "parse_steamdb_sub_apps",
     "parse_store_candidates",
     "parse_store_identity",
     "render_resolution_map",
@@ -188,6 +200,8 @@ def render_resolution_map(mapping: HumbleResolutionMap) -> str:
 
 
 CandidateChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
+NameCollector = Callable[[int], str | None]
+AnnounceFn = Callable[[str, str], None]
 Fetcher = Callable[[str], str]
 LogFn = Callable[[str], None]
 _NO_LOG: LogFn = lambda _message: None  # noqa: E731
@@ -206,10 +220,19 @@ class ResolvedGame(StrictModel):
 class StorefrontResolver:
     """Resolve item identities using official store searches and reviewed choices."""
 
-    def __init__(self, fetch: Fetcher, choose: CandidateChooser, steamdb_fetch: Fetcher | None = None) -> None:
+    def __init__(
+        self,
+        fetch: Fetcher,
+        choose: CandidateChooser,
+        steamdb_fetch: Fetcher | None = None,
+        collect_name: NameCollector = _default_collect_one_name,
+        announce_exact_match: AnnounceFn = _default_announce_exact_match,
+    ) -> None:
         self._fetch = fetch
         self._choose = choose
         self._steamdb_fetch = steamdb_fetch
+        self._collect_name = collect_name
+        self._announce_exact_match = announce_exact_match
     # end def __init__
 
     def search(self, provider: StoreName, title: str) -> list[StoreCandidate]:
@@ -255,20 +278,45 @@ class StorefrontResolver:
         ]
     # end def _search_steam
 
+    def _resolve_steam_sub(self, sub_id: str) -> list[tuple[int, str]] | None:
+        """Fetch a Steam package's own steamdb.info page and parse its member apps.
+
+        Returns `None` (never an empty list) if there's no steamdb fetcher, the fetch fails, or
+        the page has no recognizable app rows - callers fall back to normal single-title handling.
+        """
+        if self._steamdb_fetch is None:
+            return None
+        # end if
+        try:
+            apps = parse_steamdb_sub_apps(self._steamdb_fetch(STEAMDB_SUB_URL.format(sub_id=sub_id)))
+        except (OSError, RuntimeError):
+            return None
+        # end try
+        return apps or None
+    # end def _resolve_steam_sub
+
     def _resolve_title(
         self,
         title: str,
         stores: list[str],
         cache_key: str,
         mapping: HumbleResolutionMap,
+        allow_multiple: bool = True,
     ) -> list[ResolvedGame]:
         """Resolve one title across `stores`, caching the plain (unsplit) result under `cache_key`.
 
-        Returns more than one `ResolvedGame` only when the user declares
-        "Multiple…" for some store, at which point the title splits into
-        several sub-titles that are each re-resolved from scratch (across
-        every store, not just the remaining ones) via this same method,
-        cached under their own compound key so re-runs don't re-prompt.
+        Returns more than one `ResolvedGame` when the user declares "Multiple…" for some store -
+        names are then collected and resolved one at a time, immediately, via `_collect_name`
+        (each re-resolved from scratch across every store, `allow_multiple=False` so a name
+        collected this way can't itself be split again, cached under its own compound key so
+        re-runs don't re-prompt; a unique exact match found this way is announced via
+        `_announce_exact_match` for transparency, since it would otherwise happen silently) - or
+        when a unique exact match turns out to be a Steam package/"Sub" (e.g. an "Edition"
+        bundling a base app + its DLCs into one purchase, with no single matching app page) - that
+        Sub is expanded into one entry per app it contains instead of being kept as an inert
+        `steam:sub/<id>` (which, like a Steam retail bundle, can't drive ownership matching on its
+        own), each cached under its own compound key with the appid already known, no re-search
+        needed. `allow_multiple=False` also omits the "Multiple…" row itself from the menu.
         """
         existing = mapping.games.get(cache_key)
         if existing is not None:
@@ -288,21 +336,58 @@ class StorefrontResolver:
                 candidate for candidate in candidates if normalized_title(candidate.title) == normalized_title(title)
             ]
             if len(exact) == 1:
-                ids.append(exact[0].qualified_id)
+                match = exact[0]
+                sub_id = (
+                    match.qualified_id.removeprefix("steam:sub/")
+                    if typed_provider == "steam" and match.qualified_id.startswith("steam:sub/")
+                    else None
+                )
+                sub_apps = self._resolve_steam_sub(sub_id) if sub_id is not None else None
+                if sub_apps is not None:
+                    results: list[ResolvedGame] = []
+                    for index, (appid, name) in enumerate(sub_apps, start=1):
+                        split_ids = [f"steam:{appid}"]
+                        mapping.games[f"{cache_key}::{index}"] = split_ids
+                        results.append(ResolvedGame(name=name, ids=split_ids))
+                    # end for
+                    return results
+                # end if
+                if not allow_multiple:
+                    self._announce_exact_match(match.qualified_id, match.url)
+                # end if
+                ids.append(match.qualified_id)
                 continue
             # end if
-            selected = self._choose(title, typed_provider, candidates)
-            if selected is None:
-                continue
-            # end if
-            if isinstance(selected, ChosenNames):
-                results: list[ResolvedGame] = []
-                for index, sub_title in enumerate(selected.names, start=1):
-                    results.extend(self._resolve_title(sub_title, stores, f"{cache_key}::{index}", mapping))
-                # end for
-                return results
-            # end if
-            ids.append(parse_store_identity(typed_provider, selected))
+            store_resolved = False
+            while not store_resolved:
+                selected = self._choose(
+                    title, typed_provider, candidates, allow_multiple=allow_multiple, interleaved=True
+                )
+                if selected is None:
+                    store_resolved = True
+                    continue
+                # end if
+                if isinstance(selected, EnterMultiple):
+                    multiple_results: list[ResolvedGame] = []
+                    count = 0
+                    while True:
+                        name = self._collect_name(count)
+                        if name is None:
+                            break
+                        # end if
+                        count += 1
+                        multiple_results.extend(
+                            self._resolve_title(name, stores, f"{cache_key}::{count}", mapping, allow_multiple=False)
+                        )
+                    # end while
+                    if not multiple_results:
+                        continue
+                    # end if
+                    return multiple_results
+                # end if
+                ids.append(parse_store_identity(typed_provider, selected))
+                store_resolved = True
+            # end while
         # end for
         if not ids:
             ids.append(f"unresolved:source:humblebundle:{cache_key}")
@@ -313,7 +398,8 @@ class StorefrontResolver:
     # end def _resolve_title
 
     def resolve_item(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[ResolvedGame]:
-        """Resolve one item, possibly splitting a "DLC pack" into several games."""
+        """Resolve one item, possibly splitting into several games (a "DLC pack"/"Edition bundle",
+        a user-declared "Multiple…", or an auto-expanded Steam Sub - see `_resolve_title`)."""
         stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
         requires: list[str] = []
         if item.base_game_url is not None:
@@ -323,10 +409,13 @@ class StorefrontResolver:
                 requires = []
             # end try
         # end if
-        if item.bundled_dlc_names:
+        component_titles = item.bundled_dlc_names or item.edition_component_titles
+        if component_titles:
             results: list[ResolvedGame] = []
-            for index, dlc_name in enumerate(item.bundled_dlc_names, start=1):
-                for resolved in self._resolve_title(dlc_name, stores, f"{item.machine_name}::{index}", mapping):
+            for index, component_title in enumerate(component_titles, start=1):
+                for resolved in self._resolve_title(
+                    component_title, stores, f"{item.machine_name}::{index}", mapping
+                ):
                     results.append(resolved.model_copy(update={"requires": requires}))
                 # end for
             # end for
@@ -363,7 +452,13 @@ class StorefrontResolver:
                 store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)
             ]
             requires = results[0].requires if results else []
-            if item.bundled_dlc_names:
+            # `results` holds more than one entry not just for a parser-driven split
+            # (`bundled_dlc_names`/`edition_component_titles`), but also whenever resolution
+            # itself discovered several distinct games from a single title - the user declaring
+            # "Multiple…" interactively, or a Steam Sub auto-expanding into its member apps (see
+            # `_resolve_title`) - each case needs its own `Game` entry, not one entry sharing all
+            # their ids.
+            if item.bundled_dlc_names or item.edition_component_titles or len(results) > 1:
                 resolutions[item.machine_name] = HumbleResolution(
                     splits=[HumbleResolvedGame(name=entry.name, ids=entry.ids) for entry in results],
                     unresolved_stores=unresolved_stores,

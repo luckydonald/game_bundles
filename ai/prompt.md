@@ -2500,3 +2500,5 @@ So it would be like this:
 
 ❯ Now do the missing part 2 investigation.
 
+❯ Is the plan up to date?
+

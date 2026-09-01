@@ -82,6 +82,11 @@ class HumbleItem(StrictModel):
     # links a free base game and lists the individual DLCs bundled together.
     base_game_url: HttpUrl | None = None
     bundled_dlc_names: list[NonEmptyString] = Field(default_factory=list)
+    # Populated for "Edition" items whose title ends "- <Edition> Edition" and whose description
+    # states "Includes: Base game + <DLC> + <DLC>." (no `cta_badge`, unlike a "DLC pack" - Steam
+    # only sells the base game + DLCs together via this edition, with no single matching app page).
+    # Each component (including the base game itself) is resolved independently, with no `requires`.
+    edition_component_titles: list[NonEmptyString] = Field(default_factory=list)
 
 # end class HumbleItem
 
