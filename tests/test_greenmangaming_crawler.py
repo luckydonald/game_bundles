@@ -74,6 +74,7 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
     loaded = load_game_list(list_path, lists_root)
     assert loaded.data.tier is None
     assert loaded.data.name == "METROIDVANIA MADNESS — Bronze"
+    assert loaded.data.crawlers == ["greenmangaming"]
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Afterimage", ["steam:1235140"])]
     assert [reference.name for reference in loaded.data.references] == [
         "Green Man Gaming bundle",
