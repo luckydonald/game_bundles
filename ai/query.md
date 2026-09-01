@@ -2533,3 +2533,5 @@ could help here.
 > - [Raw log (`76976` chars, `75.2 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/a52d3c05be1377c4c.output)
 > - `7` tools, `22225` tokens, `0.53245 s`
 
+❯ /plan Add `uv run game-collections complete --all`.
+
