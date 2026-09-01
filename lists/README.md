@@ -22,6 +22,8 @@ Names are required for reviewability. Qualified IDs are authoritative and use `<
 
 Optional `references` appear before `games`. Each named reference contains a local/repository `path`, an HTTP(S) `url`, or both. Paths may be relative to the list file (such as `../../../archives/.../metadata.json`) or repository-root-relative with an optional leading slash (such as `/archives/.../source.json`). The generated JSON Schema marks these values as file paths for IDE support.
 
+An optional `crawlers` list names which crawler module(s) (e.g. `humblebundle`, `isthereanydeal`) have contributed to or verified this list. A dedicated scraper sets its own slug when it first writes a list; isthereanydeal adds its own slug the first time it cross-checks a bundle a dedicated scraper already covers, backfilling any storefront IDs it resolved without disturbing that scraper's own tier/pick structure (see `src/game_collections/sources/README.md`). Hand-authored lists normally omit this field.
+
 An optional `invalid` list, shaped exactly like `games`, may follow it. It holds games an authoritative re-crawl (currently only `scrape humblebundle`) no longer lists - quarantined there instead of being deleted, and moved back into `games` automatically if a later crawl lists them again. `invalid` entries are never treated as owned, eligible, or synced; nothing reads them except the next merge. Hand-authored lists normally omit this field entirely.
 
 Validate all lists with:

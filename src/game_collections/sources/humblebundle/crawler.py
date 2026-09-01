@@ -335,6 +335,7 @@ def write_humble_offer(
                     Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
                     Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
                 ],
+                crawlers=["humblebundle"],
                 games=pool_games,
             )
             _write_merged_game_list(game_list, path, lists_root, repository_root)
@@ -391,6 +392,7 @@ def write_humble_offer(
                     path=os.path.relpath(source_path, path.parent),
                 ),
             ],
+            crawlers=["humblebundle"],
             games=games,
         )
         _write_merged_game_list(game_list, path, lists_root, repository_root)

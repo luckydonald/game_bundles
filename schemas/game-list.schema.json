@@ -115,6 +115,14 @@
   "additionalProperties": false,
   "description": "The complete contents of one ``lists/**/*.yml`` file.",
   "properties": {
+    "crawlers": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Crawlers",
+      "type": "array"
+    },
     "games": {
       "items": {
         "$ref": "#/$defs/Game"

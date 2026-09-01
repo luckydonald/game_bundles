@@ -285,6 +285,7 @@ def test_write_itad_offer_creates_archive_and_list(tmp_path: Path) -> None:
 
     loaded = load_game_list(list_path, lists_root)
     assert loaded.data.tier is None
+    assert loaded.data.crawlers == ["isthereanydeal"]
     assert loaded.data.games == [Game(name="GRIME", ids=["steam:1123050"])]
     source = json.loads(source_path.read_text(encoding="utf-8"))
     assert source["title"] == "Metroidvania Madness"
@@ -406,6 +407,81 @@ def test_write_itad_offer_skips_list_when_already_covered(tmp_path: Path) -> Non
     assert set(paths) == {metadata_path, source_path}
     assert any("Skipped metroidvania-madness" in message for message in messages)
 # end def test_write_itad_offer_skips_list_when_already_covered
+
+
+def test_write_itad_offer_backfills_ids_into_already_covered_list(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    existing = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    existing.parent.mkdir(parents=True)
+    existing.write_text(
+        "schema: 1\nname: existing\ncrawlers: [greenmangaming]\ngames:\n  - name: GRIME\n    ids: [gog:123]\n",
+        encoding="utf-8",
+    )
+
+    messages: list[str] = []
+    paths = write_itad_offer(_offer(), lists_root, archive_root, tmp_path, log=messages.append)
+
+    metadata_path = archive_root / "isthereanydeal/bundle/1/metadata.json"
+    source_path = archive_root / "isthereanydeal/bundle/1/source.json"
+    assert set(paths) == {metadata_path, source_path}
+    assert any("Backfilled 1 id(s)" in message for message in messages)
+
+    updated = load_game_list(existing, lists_root)
+    assert updated.data.crawlers == ["greenmangaming", "isthereanydeal"]
+    assert updated.data.games == [Game(name="GRIME", ids=["gog:123", "steam:1123050"])]
+    assert any(reference.name == "isthereanydeal.com bundle" for reference in updated.data.references)
+# end def test_write_itad_offer_backfills_ids_into_already_covered_list
+
+
+def test_write_itad_offer_does_not_duplicate_or_override_an_existing_provider_id(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    existing = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    existing.parent.mkdir(parents=True)
+    existing.write_text(
+        "schema: 1\nname: existing\ncrawlers: [greenmangaming]\ngames:\n  - name: GRIME\n    ids: [steam:999]\n",
+        encoding="utf-8",
+    )
+
+    messages: list[str] = []
+    write_itad_offer(_offer(), lists_root, archive_root, tmp_path, log=messages.append)
+
+    assert any("Cross-checked" in message for message in messages)
+    updated = load_game_list(existing, lists_root)
+    assert updated.data.games == [Game(name="GRIME", ids=["steam:999"])]
+    assert updated.data.crawlers == ["greenmangaming", "isthereanydeal"]
+# end def test_write_itad_offer_does_not_duplicate_or_override_an_existing_provider_id
+
+
+def test_write_itad_offer_skips_second_pass_once_marked(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    existing = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    existing.parent.mkdir(parents=True)
+    existing.write_text(
+        "schema: 1\nname: existing\ncrawlers: [greenmangaming]\ngames:\n  - name: GRIME\n    ids: [gog:123]\n",
+        encoding="utf-8",
+    )
+
+    write_itad_offer(_offer(), lists_root, archive_root, tmp_path)
+    before = existing.read_text(encoding="utf-8")
+
+    messages: list[str] = []
+    write_itad_offer(_offer(), lists_root, archive_root, tmp_path, log=messages.append)
+
+    assert any("Skipped metroidvania-madness" in message for message in messages)
+    assert existing.read_text(encoding="utf-8") == before
+# end def test_write_itad_offer_skips_second_pass_once_marked
 
 
 def test_write_itad_offer_skips_humble_choice_by_month_not_slug(tmp_path: Path) -> None:

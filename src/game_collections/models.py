@@ -134,6 +134,10 @@ class GameList(StrictModel):
     tier: Annotated[int, Field(ge=1)] | None = None
     pick_quota: Annotated[int, Field(ge=1)] | None = None
     references: list[Reference] = Field(default_factory=list)
+    # Crawler module slugs (e.g. "humblebundle", "isthereanydeal") that have
+    # contributed to or verified this list. Lets a later crawler tell an
+    # already-covered bundle from one it has actually cross-checked.
+    crawlers: list[NonEmptyString] = Field(default_factory=list)
     games: list[Game] = Field(min_length=1)
     # Games an authoritative re-crawl no longer lists, quarantined here instead of
     # deleted so they can be recovered if they reappear. Excluded from ownership,
