@@ -493,7 +493,7 @@ def scrape_humblebundle_command(
     client = HumbleHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
-        (lambda _title, _provider, _candidates: None)
+        (lambda _title, _provider, _candidates, **_kwargs: None)
         if non_interactive
         else choose_store_candidate
     )

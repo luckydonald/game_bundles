@@ -23,20 +23,28 @@ __all__ = [
     "SteamDbBrowserClient",
     "SteamDbCrawlError",
     "parse_steamdb_results",
+    "parse_steamdb_sub_apps",
 ]
 
 
 # `a=app` restricted the search to the Apps tab only, so a title whose closest
 # Steam match is a bundle (e.g. a "Deluxe Edition" sold only as a bundle of the
 # base app + DLC) never showed up. Dropping the `a` parameter runs steamdb's
-# unfiltered "Everything" search instead, which also returns Bundle rows.
+# unfiltered "Everything" search instead, which also returns Bundle and Sub rows.
 STEAMDB_SEARCH_URL = "https://steamdb.info/search/?q={query}"
 
-# Matches a search result row's own permalink - either an app
-# ("/app/1123050/") or a bundle ("/bundle/46228/") - not the absolute
-# https://store.steampowered.com/app/<id>/... "store page" link that sits
-# alongside it for apps that still have a live listing.
-_RESULT_LINK_HREF = re.compile(r"^/(app|bundle)/(\d+)/$")
+# A steamdb.info package/"Sub" page for one Steam purchase option - e.g. an
+# "Edition" bundling a base app + its DLCs into one purchase with no single
+# matching app page. Confirmed live for sub/729916 ("Steelrising - Bastille
+# Edition"): its "Apps in this package" table is a distinct shape from search
+# result rows, see `parse_steamdb_sub_apps`.
+STEAMDB_SUB_URL = "https://steamdb.info/sub/{sub_id}/"
+
+# Matches a search result row's own permalink - an app ("/app/1123050/"), a
+# bundle ("/bundle/46228/"), or a package/"Sub" ("/sub/729916/") - not the
+# absolute https://store.steampowered.com/app/<id>/... "store page" link that
+# sits alongside it for apps that still have a live listing.
+_RESULT_LINK_HREF = re.compile(r"^/(app|bundle|sub)/(\d+)/$")
 
 
 class SteamDbCrawlError(RuntimeError):
@@ -146,10 +154,10 @@ class _SteamDbLinkParser(HTMLParser):
             return
         # end if
         kind, raw_id = match.groups()
-        # A bundle's id is kept distinguishable from a plain app id (`46228`
-        # vs `bundle/46228`) so callers can build the right store URL/qualified
-        # id (`steam:bundle/46228`, see `parse_store_identity`) without a
-        # separate return field.
+        # A bundle's or sub's id is kept distinguishable from a plain app id
+        # (`46228` vs `bundle/46228`/`sub/729916`) so callers can build the
+        # right store URL/qualified id (`steam:bundle/46228`, see
+        # `parse_store_identity`) without a separate return field.
         self._id = raw_id if kind == "app" else f"{kind}/{raw_id}"
         self._parts = []
     # end def handle_starttag
@@ -203,3 +211,67 @@ def parse_steamdb_results(html: str) -> list[tuple[str, str]]:
     # end for
     return results
 # end def parse_steamdb_results
+
+
+class _SteamDbSubAppsParser(HTMLParser):
+    """Collect each app row's AppID and name from a sub page's "Apps in this package" table.
+
+    Confirmed live for sub/729916: each row is `<tr class="app" data-appid="N">` whose first
+    three `<td>`s are the AppID link, the Type ("Game"/"DLC"), and the plain-text Name (unlike a
+    search result row, the name here is *not* wrapped in its own `<a>`) - a different, simpler
+    shape than `_SteamDbLinkParser`'s search-result rows.
+    """
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.apps: list[tuple[int, str]] = []
+        self._appid: int | None = None
+        self._cell_index = -1
+        self._in_td = False
+        self._parts: list[str] = []
+    # end def __init__
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = dict(attrs)
+        if tag == "tr":
+            self._appid = None
+            self._cell_index = -1
+            raw_appid = values.get("data-appid")
+            if values.get("class") == "app" and raw_appid is not None and raw_appid.isdecimal():
+                self._appid = int(raw_appid)
+            # end if
+        elif tag == "td" and self._appid is not None:
+            self._cell_index += 1
+            self._in_td = self._cell_index == 2
+            self._parts = []
+        # end if
+    # end def handle_starttag
+
+    def handle_data(self, data: str) -> None:
+        if self._in_td:
+            self._parts.append(data)
+        # end if
+    # end def handle_data
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "td" and self._in_td:
+            name = "".join(self._parts).strip()
+            if self._appid is not None and name:
+                self.apps.append((self._appid, name))
+            # end if
+            self._in_td = False
+            self._appid = None
+        elif tag == "tr":
+            self._appid = None
+        # end if
+    # end def handle_endtag
+
+# end class _SteamDbSubAppsParser
+
+
+def parse_steamdb_sub_apps(html: str) -> list[tuple[int, str]]:
+    """Extract (appid, name) pairs from a steamdb.info Sub (package) page's app table."""
+    parser = _SteamDbSubAppsParser()
+    parser.feed(html)
+    return parser.apps
+# end def parse_steamdb_sub_apps
