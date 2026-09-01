@@ -2416,3 +2416,85 @@ Which matches the Humble bundle description, and hence should also be parsable f
 > - [Raw log (`354996` chars, `347 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/a4894deb486e9b30a.output)
 > - `18` tools, `70645` tokens, `1.78947 s`
 
+❯ Also check why the steamdb did not just find the _Edition_ directly? Yes, it should go by the text first, but also as a fallback look into the steamdb. There it should have discovered the edition immediatly in the search results (https://steamdb.info/sub/729916/) and also provided a list of 3 items.
+Another bug is in the flow, when selecting multiple, I am expecting to be asked in like a loop unless I return an empty selection (a choice _That's all._ under _Other…_ could help (?)), but it's weird and does something weird instead @ai/errors/3.txt
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. For the steamdb fallback: steamdb.info's search only recognizes /app/ and /bundle/ result rows (src/game_collections/sources/humblebundle/steamdb.py:39) — a /sub/<id>/ package row (like sub/729916 for Steelrising) is silently dropped, which is why the prompt showed zero candidates for 'Steelrising - Bastille Edition'. Also, per src/game_collections/completion.py:36-41, a bare 'steam:bundle/<id>' (and a hypothetical 'steam:sub/<id>') can't drive ownership matching on its own — only real appids can. So a useful fix means: recognize Sub rows, then fetch that sub's own page and parse its 'Apps in this package' table into real per-app splits (base + each DLC), auto-resolving without a prompt. I can't fetch steamdb.info's real HTML myself right now (Cloudflare blocks curl/WebFetch; only the project's headed-patchright browser gets through it), so I don't have a verified shape for that 'Apps in this package' table to write an exact parser against. How should we proceed?
+>> 2. For the interactive resolve prompt's 'Multiple…' flow (src/game_collections/sources/prompting.py): today, choosing 'Multiple…' only lets you type search NAMES in a loop (blank line ends it) — each name gets independently re-searched from scratch. There's no way to directly paste known URLs/IDs for several separate games in one go; 'Other…' only accepts exactly one URL/ID. What UX change do you want here?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **steamdb sub fallback** (1/2) <kbd>Single Select</kbd><br>
+>> For the steamdb fallback: steamdb.info's search only recognizes /app/ and /bundle/ result rows (src/game_collections/sources/humblebundle/steamdb.py:39) — a /sub/<id>/ package row (like sub/729916 for Steelrising) is silently dropped, which is why the prompt showed zero candidates for 'Steelrising - Bastille Edition'. Also, per src/game_collections/completion.py:36-41, a bare 'steam:bundle/<id>' (and a hypothetical 'steam:sub/<id>') can't drive ownership matching on its own — only real appids can. So a useful fix means: recognize Sub rows, then fetch that sub's own page and parse its 'Apps in this package' table into real per-app splits (base + each DLC), auto-resolving without a prompt. I can't fetch steamdb.info's real HTML myself right now (Cloudflare blocks curl/WebFetch; only the project's headed-patchright browser gets through it), so I don't have a verified shape for that 'Apps in this package' table to write an exact parser against. How should we proceed?
+> - [ ] 1\. Scope to Humble-text parsing only for now
+>   - _Implement just the parser.py 'Includes: Base game + X DLC + Y DLC.' detection (my original plan) for this Steelrising case. File the steamdb Sub-row + sub-page-table expansion as a separate follow-up once its real HTML shape can be verified live._
+> - [ ] 2\. I'll get you the real sub-page HTML now
+>   - _You paste (or save to a file) the rendered HTML of https://steamdb.info/sub/729916/'s 'Apps in this package' section, so I can write the sub-row recognition + table parser precisely in this same plan, verified against real markup._
+> - [ ] 3\. Have me capture it via the browser session
+>   - _As part of implementation (not now, in plan mode), run the existing SteamDbBrowserClient headed session once to fetch and inspect the real sub page HTML before writing the parser, then include both fixes in one plan._
+> - [x] 4\. _Type something:_
+>   - > I'll change to auto mode after you made the updates to the outstanding updates to the plan, so you can explore properly (capture it with browser session), then we'll resume the planning.
+>
+>> **Multiple/Other UX** (2/2) <kbd>Single Select</kbd><br>
+>> For the interactive resolve prompt's 'Multiple…' flow (src/game_collections/sources/prompting.py): today, choosing 'Multiple…' only lets you type search NAMES in a loop (blank line ends it) — each name gets independently re-searched from scratch. There's no way to directly paste known URLs/IDs for several separate games in one go; 'Other…' only accepts exactly one URL/ID. What UX change do you want here?
+> - [ ] 1\. Add a looping ID variant under Other…
+>   - _Turn 'Other…' into a loop too: paste one URL/ID, get asked for another, and a blank entry (or an explicit 'That's all.' choice) ends it — mirroring the existing Multiple… name-loop, but for direct IDs instead of re-searched names._
+> - [ ] 2\. Let Multiple… accept either a name or a URL per entry
+>   - _Keep the single 'Multiple…' loop, but for each entry accept either a free-text name (re-searched, current behavior) or a pasted URL/ID (used directly, no re-search) — detected by shape._
+> - [ ] 3\. Leave this flow alone for now
+>   - _Don't change prompting.py in this plan — just fix the steamdb/text-parsing issues above. Revisit the interactive UX separately._
+> - [x] 4\. _Type something:_
+>   - > Multiple should do the search and then open the usual _here's what we found please choose_ option for that search of the first multiple. 
+Then it would not offer the _Multiple…_ option as it already is in that mode, but instead a _Skip this (unresolved)_. 
+So it would be like this:
+1. > Resolve 'Steelrising - Bastille Edition' on steam:
+   > 1. Multiple…
+   > 2. Other…
+   > Select a result [2]: 
+   - `1`
+2. > Name of one separate game (0 so far) (blank to finish):
+   - `Foobar Delux`
+3. (if not found)
+   > Resolve 'Steelrising - Bastille Edition' on steam:
+   > 1. Some Result Bundle — steam:bundle/66803
+   >    https://store.steampowered.com/bundle/66803/
+   > 2. Some Game  — steam:1299370
+   >    https://store.steampowered.com/app/1299370/
+   > 3. Other…
+   - `2`
+4. > Name of one separate game (1 so far) (blank to finish):
+   - `Foobar - The game`
+5. > Exact match found — steam:3394080
+   >   https://store.steampowered.com/bundle/3394080/
+6. > Name of one separate game (2 so far) (blank to finish):
+   > _Blank Enter_
+7. _Store those, continue on.
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. In your step 3 example, the nested per-name resolve prompt showed only 3 rows total: 2 candidates + "3. Other…" — no separate "Skip this (unresolved)" row appeared, even though you also wrote "it would... instead [offer] a Skip this (unresolved)" in place of Multiple…. Which did you mean?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Skip-this row** (1/1) <kbd>Single Select</kbd><br>
+>> In your step 3 example, the nested per-name resolve prompt showed only 3 rows total: 2 candidates + "3. Other…" — no separate "Skip this (unresolved)" row appeared, even though you also wrote "it would... instead [offer] a Skip this (unresolved)" in place of Multiple…. Which did you mean?
+> - [x] 1\. "Skip this (unresolved)" is just Other… + blank
+>   - _No new menu row. When nested inside a Multiple… loop, the menu is just [candidates…, Other…] (Multiple… dropped since you're already in that mode); leaving the Other… URL prompt blank is what "skip/unresolved" means — matches your 3-row example exactly, existing blank-means-unresolved behavior kept as-is._
+> - [ ] 2\. "Skip this (unresolved)" is its own new menu row
+>   - _Nested menu becomes [candidates…, Skip this (unresolved), Other…] — a new explicit numbered choice distinct from Other…, so skipping doesn't require going through the URL-paste prompt first. Your example was just missing it for brevity._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
