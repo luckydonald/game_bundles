@@ -2535,3 +2535,12 @@ could help here.
 
 ❯ /plan Add `uv run game-collections complete --all`.
 
+❯ Task Notification:
+> - Task `ad0d30c27710bce7a` <kbd>completed</kbd>
+> - Tool `toolu_01XWda45aKS8xf3qbs9pZgf7`
+> - > Agent "Explore complete command and list discovery" finished
+> - [Query (`2101` chars, `2.06 KB`)](output/agents/036.ad0d30c27710bce7a/prompt.md)
+> - [Answer (`18960` chars, `18.6 KB`)](output/agents/036.ad0d30c27710bce7a/result.md)
+> - [Raw log (`163531` chars, `160 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/ad0d30c27710bce7a.output)
+> - `12` tools, `34118` tokens, `1.57523 s`
+
