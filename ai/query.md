@@ -2502,3 +2502,34 @@ So it would be like this:
 
 ❯ Is the plan up to date?
 
+❯ /plan For skipping bundles while crawling, it should inspect if it has already crawled this package, and if not see if it can be improved:
+```shell
+$ uv run game-collections scrape isthereanydeal --git
+Discovering live bundles: offset 0
+Discovering live bundles: offset 30
+Bundle 1/35: Dread and Dark Fantasies RPG Collection (Humble Bundle)
+  bundle 16525 'torchlight-series': shop 61 (Steam) has no matching resolved id (resolved: ['isthereanydeal'])
+  Skipped dread-and-dark-fantasies-rpg-collection: already covered by lists/humblebundle/bundle/2026-08-31_dread-and-dark-fantasies-rpg-collection
+Archived Dread and Dark Fantasies RPG Collection: 2 file(s)
+```
+Now, this was crawled by `humblebundle` crawler, but not by `isthereanydeal`. Maybe a crawler field (`list[ Literal['humblebundle', 'isthereanydeal', …] ]`)
+could help here.
+
+❯ Task Notification:
+> - Task `aa0aae8f46c60bfaa` <kbd>completed</kbd>
+> - Tool `toolu_01EyD35NKHp8uRu9WkbBTKgQ`
+> - > Agent "Explore isthereanydeal skip-bundle logic" finished
+> - [Query (`2100` chars, `2.06 KB`)](output/agents/034.aa0aae8f46c60bfaa/prompt.md)
+> - [Answer (`4852` chars, `4.75 KB`)](output/agents/034.aa0aae8f46c60bfaa/result.md)
+> - [Raw log (`122638` chars, `120 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/aa0aae8f46c60bfaa.output)
+> - `13` tools, `29557` tokens, `0.957567 s`
+
+❯ Task Notification:
+> - Task `a52d3c05be1377c4c` <kbd>completed</kbd>
+> - Tool `toolu_016PmobkFsSHFyJPLgzZYScZ`
+> - > Agent "Find all GameList() construction sites" finished
+> - [Query (`988` chars, `988 B`)](output/agents/035.a52d3c05be1377c4c/prompt.md)
+> - [Answer (`2993` chars, `2.94 KB`)](output/agents/035.a52d3c05be1377c4c/result.md)
+> - [Raw log (`76976` chars, `75.2 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/017425b5-c2e4-48a5-b2eb-9d1a86f56637/tasks/a52d3c05be1377c4c.output)
+> - `7` tools, `22225` tokens, `0.53245 s`
+
