@@ -105,6 +105,7 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     assert loaded.id == f"{bundle_root}/bundle"
     assert loaded.data.name == "Sample Bundle — Entire 2 Item Bundle"
     assert loaded.data.tier is None
+    assert loaded.data.crawlers == ["humblebundle"]
     assert [reference.name for reference in loaded.data.references] == [
         "Humble Bundle offer",
         "Crawl metadata",
@@ -366,6 +367,7 @@ def test_writer_choice_with_pick_options_writes_one_list_per_option(tmp_path: Pa
     loaded = load_game_list(path, tmp_path / "lists")
     assert loaded.data.pick_quota == 1
     assert loaded.data.tier is None
+    assert loaded.data.crawlers == ["humblebundle"]
     assert loaded.data.games == [Game(name="Sample Game", ids=["steam:42"])]
 # end def test_writer_choice_with_pick_options_writes_one_list_per_option
 

@@ -12,12 +12,17 @@ from pathlib import Path
 from typing import Any
 
 import httpx
+import yaml
+from pydantic import ValidationError
 
 from game_collections.models import Game, GameList, Reference
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
+    find_matching_game,
     load_cached_archive,
+    merge_crawlers,
+    merge_references,
     render_game_list_yaml,
 )
 from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadListSummary, ItadTier
@@ -419,6 +424,119 @@ def _existing_list_match(lists_root: Path, provider_slug: str, real_slug: str) -
 # end def _existing_list_match
 
 
+def _flatten_itad_games(archive: ItadArchive) -> list[Game]:
+    """Flatten every tier's items into one game pool for the whole bundle, deduped by id.
+
+    Shared by the byob pool-building branch below and by `_backfill_existing_lists`,
+    which needs the full-bundle roster (not one tier's subset) to match names
+    against an already-covered list's games regardless of which tier they're in.
+    """
+    games: list[Game] = []
+    seen_ids: set[str] = set()
+    for tier in archive.tiers:
+        for item in tier.items:
+            if any(value in seen_ids for value in item.ids):
+                continue
+            # end if
+            games.append(Game(name=item.title, ids=item.ids))
+            seen_ids.update(item.ids)
+        # end for
+    # end for
+    return games
+# end def _flatten_itad_games
+
+
+def _backfill_existing_lists(
+    archive: ItadArchive,
+    existing: Path,
+    metadata_path: Path,
+    source_path: Path,
+    repository_root: Path,
+    log: LogFn,
+) -> None:
+    """Cross-check an already-covered bundle instead of skipping it outright.
+
+    A dedicated scraper's list "covering" this bundle only means a matching
+    filename exists - it says nothing about whether isthereanydeal has ever
+    actually looked at that list's games. The first time through, add any
+    storefront IDs ITAD resolved for a provider the existing game doesn't
+    already have, record isthereanydeal as a contributing crawler, and only
+    then treat the bundle as fully done on every later run.
+    """
+    list_paths = sorted(existing.glob("*.yml")) if existing.is_dir() else [existing]
+    loaded: list[tuple[Path, GameList]] = []
+    for path in list_paths:
+        try:
+            loaded.append((path, GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8")))))
+        except (OSError, ValueError, ValidationError):
+            continue
+        # end try
+    # end for
+    if not loaded or all("isthereanydeal" in game_list.crawlers for _, game_list in loaded):
+        log(f"  Skipped {archive.real_slug}: already covered by {existing}")
+        return
+    # end if
+
+    itad_pool = _flatten_itad_games(archive)
+    itad_references = [
+        Reference(name="isthereanydeal.com bundle", url=archive.url),
+    ]
+    for path, game_list in loaded:
+        if "isthereanydeal" in game_list.crawlers:
+            continue
+        # end if
+        added_ids = 0
+        updated_games: list[Game] = []
+        for game in game_list.games:
+            match = find_matching_game(game, itad_pool)
+            if match is None:
+                updated_games.append(game)
+                continue
+            # end if
+            existing_providers = {identifier.provider for identifier in game.qualified_ids}
+            new_ids = list(game.ids)
+            for identifier in match.qualified_ids:
+                if identifier.provider != "unresolved" and identifier.provider in existing_providers:
+                    continue
+                # end if
+                compact = identifier.compact()
+                if compact in new_ids:
+                    continue
+                # end if
+                new_ids.append(compact)
+                added_ids += 1
+            # end for
+            updated_games.append(game if new_ids == game.ids else game.model_copy(update={"ids": new_ids}))
+        # end for
+
+        fresh_stub = GameList(
+            schema=1,
+            name=game_list.name,
+            references=[
+                *itad_references,
+                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+            ],
+            crawlers=["isthereanydeal"],
+            games=game_list.games,
+        )
+        updated_list = game_list.model_copy(
+            update={
+                "games": updated_games,
+                "references": merge_references(game_list, fresh_stub),
+                "crawlers": merge_crawlers(game_list, fresh_stub),
+            }
+        )
+        atomic_write(path, render_game_list_yaml(updated_list, path, repository_root))
+        if added_ids:
+            log(f"  Backfilled {added_ids} id(s) into {path} from isthereanydeal")
+        else:
+            log(f"  Cross-checked {path} against isthereanydeal (no new ids)")
+        # end if
+    # end for
+# end def _backfill_existing_lists
+
+
 def write_itad_offer(
     offer: CrawledItadOffer,
     lists_root: Path,
@@ -437,7 +555,7 @@ def write_itad_offer(
         lists_root, archive.provider_slug, archive.real_slug
     )
     if existing is not None:
-        log(f"  Skipped {archive.real_slug}: already covered by {existing}")
+        _backfill_existing_lists(archive, existing, metadata_path, source_path, repository_root, log)
         return tuple(written)
     # end if
 
@@ -445,17 +563,7 @@ def write_itad_offer(
     list_directory = lists_root / archive.provider_slug / "bundle" / f"{date_prefix}_{archive.real_slug}"
 
     if archive.byob_tiers:
-        pool_games: list[Game] = []
-        seen_ids: set[str] = set()
-        for tier in archive.tiers:
-            for item in tier.items:
-                if any(value in seen_ids for value in item.ids):
-                    continue
-                # end if
-                pool_games.append(Game(name=item.title, ids=item.ids))
-                seen_ids.update(item.ids)
-            # end for
-        # end for
+        pool_games = _flatten_itad_games(archive)
         for rank, byob_tier in enumerate(archive.byob_tiers, start=1):
             if len(archive.byob_tiers) == 1:
                 path = list_directory / "bundle.yml"
@@ -474,6 +582,7 @@ def write_itad_offer(
                     Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
                     Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
                 ],
+                crawlers=["isthereanydeal"],
                 games=pool_games,
             )
             atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
@@ -514,6 +623,7 @@ def write_itad_offer(
                 Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
                 Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
             ],
+            crawlers=["isthereanydeal"],
             games=games,
         )
         atomic_write(path, render_game_list_yaml(game_list, path, repository_root))

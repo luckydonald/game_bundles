@@ -1,0 +1,11 @@
+In the repo /home/user/git/luckydonald/game_collections, I need to understand how `game-collections scrape isthereanydeal` decides to skip a bundle because "already covered by" another source's list (e.g. humblebundle).
+
+Specifically investigate:
+1. Where in `src/game_collections/sources/isthereanydeal/` the "Skipped X: already covered by lists/..." message is produced (grep for "already covered by" or "Skipped").
+2. What logic determines "already covered" — is it just checking if a matching lists/humblebundle/... file/directory exists on disk? Show the exact function and its file:line.
+3. What data model represents a scraped bundle/list entry — is there a YAML frontmatter or model field that could hold something like a `crawlers: list[str]` or `sources: list[str]` marking which crawlers have already processed/verified this bundle (e.g. `humblebundle`, `isthereanydeal`)? Look at `src/game_collections/models.py`, `src/game_collections/sources/common.py`, and the isthereanydeal bundle-writing code.
+4. What is the current YAML schema/model for a game list entry that gets written to `lists/<provider>/bundle/...` — especially any `references` field mentioned in CLAUDE.md, and how `references` is populated by different crawlers (humblebundle vs isthereanydeal) for the same bundle.
+5. How does the isthereanydeal crawler currently detect resolved ids per shop (grep "has no matching resolved id" and surrounding logic) — this is relevant context for why it wants to improve/re-resolve when it notices a shop id is missing even though the bundle was "skipped".
+6. Are there existing archive files under `archives/humblebundle/...` and `archives/isthereanydeal/...` for the same bundle (e.g. dread-and-dark-fantasies-rpg-collection) that could show whether there's already a natural way to know which crawlers have touched a bundle?
+
+Report file paths and line numbers for all relevant code, the current skip-check logic verbatim, and the model/schema fields (with their names and types) that store list provenance. Keep the report focused and factual, under 500 words plus code excerpts.

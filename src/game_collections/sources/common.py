@@ -72,7 +72,7 @@ def load_cached_archive(
 # end def load_cached_archive
 
 
-def _merged_references(existing: GameList, fresh: GameList) -> list[Reference]:
+def merge_references(existing: GameList, fresh: GameList) -> list[Reference]:
     """Append `fresh`'s references onto `existing`'s, never dropping either side.
 
     A re-crawl (or a different source claiming a file another source already
@@ -84,7 +84,20 @@ def _merged_references(existing: GameList, fresh: GameList) -> list[Reference]:
     merged = list(existing.references)
     merged.extend(reference for reference in fresh.references if reference not in merged)
     return merged
-# end def _merged_references
+# end def merge_references
+
+
+def merge_crawlers(existing: GameList, fresh: GameList) -> list[str]:
+    """Union `existing.crawlers` and `fresh.crawlers`, preserving `existing`'s order.
+
+    Mirrors `merge_references`: a dedicated scraper's own re-crawl must not
+    drop a `crawlers` entry a different crawler (e.g. isthereanydeal's
+    backfill pass) previously recorded on this same list.
+    """
+    merged = list(existing.crawlers)
+    merged.extend(crawler for crawler in fresh.crawlers if crawler not in merged)
+    return merged
+# end def merge_crawlers
 
 
 # WRatio score (0-100) above which two differently-worded titles are treated as
@@ -127,7 +140,7 @@ def _number_tokens(value: str) -> set[str]:
 # end def _number_tokens
 
 
-def _find_match(fresh_game: Game, candidates: list[Game]) -> Game | None:
+def find_matching_game(fresh_game: Game, candidates: list[Game]) -> Game | None:
     """Find the candidate representing the same game as `fresh_game`, if any.
 
     Tries progressively looser tiers - id overlap, exact name, normalized name,
@@ -165,7 +178,7 @@ def _find_match(fresh_game: Game, candidates: list[Game]) -> Game | None:
         # end if
     # end for
     return best_candidate
-# end def _find_match
+# end def find_matching_game
 
 
 def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative: bool = False) -> GameList:
@@ -181,7 +194,7 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
     from `fresh` that aren't already present by `name.casefold()` are appended.
 
     With `authoritative=True`, `fresh` is treated as the complete, current
-    roster for this list: each `fresh` game is matched (via `_find_match`'s
+    roster for this list: each `fresh` game is matched (via `find_matching_game`'s
     id/name/normalized-name/fuzzy cascade) against existing `games` plus any
     already-`invalid` games, preserving the matched candidate's `ids`/`group`;
     any existing/invalid game left unmatched is quarantined into the returned
@@ -191,19 +204,20 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
     if existing is None:
         return fresh
     # end if
-    references = _merged_references(existing, fresh)
+    references = merge_references(existing, fresh)
+    crawlers = merge_crawlers(existing, fresh)
     if not authoritative:
         existing_by_name = {game.name.casefold(): game for game in existing.games}
         fresh_names = {game.name.casefold() for game in fresh.games}
         merged_games = [existing_by_name.get(game.name.casefold(), game) for game in fresh.games]
         merged_games.extend(game for game in existing.games if game.name.casefold() not in fresh_names)
-        return fresh.model_copy(update={"games": merged_games, "references": references})
+        return fresh.model_copy(update={"games": merged_games, "references": references, "crawlers": crawlers})
     # end if
 
     candidates = [*existing.games, *existing.invalid]
     merged_games: list[Game] = []
     for fresh_game in fresh.games:
-        match = _find_match(fresh_game, candidates)
+        match = find_matching_game(fresh_game, candidates)
         if match is None:
             merged_games.append(fresh_game)
         else:
@@ -211,7 +225,9 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
             merged_games.append(match)
         # end if
     # end for
-    return fresh.model_copy(update={"games": merged_games, "invalid": candidates, "references": references})
+    return fresh.model_copy(
+        update={"games": merged_games, "invalid": candidates, "references": references, "crawlers": crawlers}
+    )
 # end def merge_game_list
 
 
@@ -221,6 +237,9 @@ def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path
     value = game_list.model_dump(by_alias=True, mode="json", exclude_none=True)
     if not value.get("invalid"):
         value.pop("invalid", None)
+    # end if
+    if not value.get("crawlers"):
+        value.pop("crawlers", None)
     # end if
     return (
         f"# yaml-language-server: $schema={schema_path}\n"

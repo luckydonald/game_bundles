@@ -73,6 +73,7 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
 
     loaded = load_game_list(list_path, lists_root)
     assert loaded.data.name == "DIG Bundle 2351 - ADULT"
+    assert loaded.data.crawlers == ["dailyindiegame"]
     assert [(game.name, game.ids) for game in loaded.data.games] == [
         ("The Office: Dirty Affairs", ["steam:4543360"])
     ]

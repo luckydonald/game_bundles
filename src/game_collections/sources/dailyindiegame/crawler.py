@@ -282,6 +282,7 @@ def write_dig_offer(
             Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
             Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
         ],
+        crawlers=["dailyindiegame"],
         games=games,
     )
     atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
