@@ -9,56 +9,77 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-08-19_yes-chef-cooking-bundle/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-19_yes-chef-cooking-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16497/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16497/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16497/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Pizza Possum
   ids:
   - steam:1951230
+  - isthereanydeal:pizza-possum
   requires: []
 - name: Food Truck Simulator
   ids:
   - steam:1160920
+  - isthereanydeal:food-truck-simulator
   requires: []
 - name: Bento Blocks
   ids:
   - steam:3311670
+  - isthereanydeal:bento-blocks
   requires: []
 - name: Magical Delicacy
   ids:
   - steam:2231190
+  - isthereanydeal:magical-delicacy
   requires: []
 - name: Don't Let it Starve
   ids:
   - steam:3930510
+  - isthereanydeal:don-t-let-it-starve
   requires: []
 - name: UMAMI
   ids:
   - steam:3669360
+  - isthereanydeal:umami
   requires: []
 - name: 'Brewmaster: Beer Brewing Simulator'
   ids:
   - steam:1569200
+  - isthereanydeal:brewmaster-beer-brewing-simulator
   requires: []
 - name: 'Tailside: Cozy Cafe Sim'
   ids:
   - steam:2922570
+  - isthereanydeal:tailside-cozy-cafe-sim
   requires: []
 - name: Which Sausage, Mate?
   ids:
   - steam:4429700
+  - isthereanydeal:which-sausage-mate
   requires: []
 - name: Burger Bots Inc.
   ids:
   - steam:3795760
+  - isthereanydeal:burger-bots-inc
   requires: []
 - name: Cannibal Cuisine
   ids:
   - steam:1136020
+  - isthereanydeal:cannibal-cuisine
   requires: []
 - name: Bakery Simulator
   ids:
   - steam:1031120
+  - isthereanydeal:bakery-simulator
   requires: []
 - name: Recipe for Disaster
   ids:
   - steam:1492360
+  - isthereanydeal:recipe-for-disaster
   requires: []

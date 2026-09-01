@@ -8,13 +8,18 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/14804/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/14804/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: 'Monsters'' Den: Book of Dread'
   ids:
   - steam:502230
+  requires: []
 - name: 'Monsters'' Den: Godfall'
   ids:
   - steam:469720
+  requires: []
 - name: Monsters' Den Chronicles
   ids:
   - steam:1121720
+  requires: []
