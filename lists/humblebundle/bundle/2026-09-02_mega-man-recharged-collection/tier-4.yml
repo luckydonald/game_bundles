@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'Mega Man: Recharged Collection — Entire 9 Item Bundle'
+tier: 4
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/mega-man-recharged-collection
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_mega-man-recharged-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_mega-man-recharged-collection/source.json
+crawlers:
+- humblebundle
+games:
+- name: Mega Man Legacy Collection
+  ids:
+  - steam:363440
+  requires: []
+- name: Mega Man X Legacy Collection
+  ids:
+  - steam:743890
+  requires: []
+- name: Mega Man Legacy Collection 2
+  ids:
+  - steam:495050
+  requires: []
+- name: Mega Man X Legacy Collection 2
+  ids:
+  - steam:743900
+  requires: []
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020
+  requires: []
+- name: Mega Man 11
+  ids:
+  - steam:742300
+  requires: []
+- name: Mega Man Battle Network Legacy Collection Vol.2
+  ids:
+  - steam:1798020
+  requires: []
+- name: Mega Man Battle Network Legacy Collection Vol.1
+  ids:
+  - steam:1798010
+  requires: []
+- name: MEGA MAN X DiVE Offline
+  ids:
+  - steam:2183650
+  requires: []
