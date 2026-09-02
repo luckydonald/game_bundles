@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: September 2026 Humble Choice — Premium
+tier: 2
+pick_quota: 8
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/choice/2026-09/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/choice/2026-09/source.json
+crawlers:
+- humblebundle
+games:
+- name: Frostpunk 2
+  ids:
+  - steam:1601580
+  requires: []
+- name: SONIC X SHADOW GENERATIONS
+  ids:
+  - steam:2513280
+  requires: []
+- name: Voidtrain
+  ids:
+  - steam:1159690
+  requires: []
+- name: Ballionaire
+  ids:
+  - steam:2667120
+  requires: []
+- name: GUNTOUCHABLES
+  ids:
+  - steam:2543510
+  requires: []
+- name: Urban Jungle
+  ids:
+  - steam:2744010
+  requires: []
+- name: Pocket Mirror ~ GoldenerTraum
+  ids:
+  - steam:1899060
+  requires: []
+- name: Keylocker | Turn Based Cyberpunk Action
+  ids:
+  - steam:1325040
+  requires: []
