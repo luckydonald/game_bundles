@@ -302,7 +302,11 @@ def _required_string(value: object, label: str) -> str:
 
 
 def _optional_url(value: object) -> str | None:
-    return value if isinstance(value, str) and value.strip() else None
+    if not isinstance(value, str):
+        return None
+    # end if
+    stripped = value.strip()
+    return stripped or None
 # end def _optional_url
 
 

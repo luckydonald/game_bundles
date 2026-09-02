@@ -2579,3 +2579,5 @@ could help here.
 > </details>
 >
 
+❯  uv run game-collections scrape humblebundle --git
+
