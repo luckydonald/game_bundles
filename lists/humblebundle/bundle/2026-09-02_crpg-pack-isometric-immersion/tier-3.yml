@@ -1,0 +1,138 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'CRPG Pack: Isometric Immersion — Entire 11 Item Bundle'
+tier: 3
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/crpg-pack-isometric-immersion
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Warhammer 40,000: Rogue Trader'
+  ids:
+  - steam:2186680
+  requires: []
+- name: 'Warhammer 40,000: Rogue Trader - Season Pass'
+  ids:
+  - steam:2687230
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
+  ids:
+  - steam:1184370
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Commander Pack'
+  ids:
+  - steam:1694800
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - A Dance of Masks'
+  ids:
+  - steam:2564580
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Love Beyond Death'
+  ids:
+  - steam:1816821
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - The Last Sarkorians'
+  ids:
+  - steam:2266770
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - The Lord of Nothing'
+  ids:
+  - steam:2564570
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous – The Treasure of the Midnight Isles'
+  ids:
+  - steam:2064590
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Through the Ashes'
+  ids:
+  - steam:1889981
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Inevitable Excess'
+  ids:
+  - steam:1889980
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous -  A Visitor from Distant Lands'
+  ids:
+  - steam:1882540
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Paint of War'
+  ids:
+  - steam:1849470
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Faces of War'
+  ids:
+  - steam:1816820
+  group:
+    id: pathfinder_wrathoftherighteous_gameoftheyearedition
+    name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  requires: []
+- name: 'SKALD: Against the Black Priory - Deluxe Bundle'
+  ids:
+  - steam:bundle/40001
+  requires: []
+- name: 'Black Geyser: Couriers of Darkness'
+  ids:
+  - steam:1374930
+  requires: []
+- name: 'Black Geyser: Couriers of Darkness - Tales of the Moon Cult'
+  ids:
+  - steam:3909990
+  requires: []
+- name: 'Torment: Tides of Numenera'
+  ids:
+  - steam:272270
+  requires: []
+- name: Gamedec - Definitive Edition
+  ids:
+  - steam:917720
+  requires: []
+- name: Disco Elysium
+  ids:
+  - steam:632470
+  requires: []
+- name: UnderRail
+  ids:
+  - steam:250520
+  requires: []
+- name: Balrum
+  ids:
+  - steam:424250
+  requires: []
