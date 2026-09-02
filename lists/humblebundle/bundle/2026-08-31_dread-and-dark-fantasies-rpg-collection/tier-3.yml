@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../schemas/game-list.schema.json
 schema: 1
-name: Dread and Dark Fantasies RPG Collection — Entire 8 Item Bundle
+name: Dread and Dark Fantasies RPG Collection — Entire 10 Item Bundle
 tier: 3
 references:
 - name: Humble Bundle offer
@@ -30,6 +30,14 @@ games:
   - steam:200710
   - steam:1030210
   requires: []
+- name: Torchlight II
+  ids:
+  - steam:200710
+  requires: []
+- name: Torchlight
+  ids:
+  - steam:41500
+  requires: []
 - name: Kristala
   ids:
   - steam:1206410
@@ -54,6 +62,20 @@ games:
   ids:
   - steam:2021370
   - isthereanydeal:steelrising-bastille-edition
+  requires: []
+- name: Steelrising - Discus Chain
+  ids:
+  - steam:2021370
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
+  requires: []
+- name: Steelrising - Cagliostro's Secrets
+  ids:
+  - steam:2004261
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
   requires: []
 - name: The Axis Unseen
   ids:

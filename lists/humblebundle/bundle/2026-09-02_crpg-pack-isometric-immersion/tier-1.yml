@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'CRPG Pack: Isometric Immersion — 5 Item Bundle'
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/crpg-pack-isometric-immersion
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Torment: Tides of Numenera'
+  ids:
+  - steam:272270
+  requires: []
+- name: Gamedec - Definitive Edition
+  ids:
+  - steam:917720
+  requires: []
+- name: Disco Elysium
+  ids:
+  - steam:632470
+  requires: []
+- name: UnderRail
+  ids:
+  - steam:250520
+  requires: []
+- name: Balrum
+  ids:
+  - steam:424250
+  requires: []
