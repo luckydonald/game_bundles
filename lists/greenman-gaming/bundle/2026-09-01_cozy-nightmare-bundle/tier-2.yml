@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Cozy Nightmare Bundle — Dark Secrets
+tier: 2
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16527/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16527/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16527/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Hello Neighbor
+  ids:
+  - steam:521890
+  - isthereanydeal:hello-neighbor
+  requires: []
+- name: Graveyard Keeper
+  ids:
+  - steam:599140
+  - isthereanydeal:graveyard-keeper
+  requires: []
+- name: Cultist Simulator
+  ids:
+  - steam:718670
+  - isthereanydeal:cultist-simulator
+  requires: []
+- name: Hello Neighbor 2
+  ids:
+  - steam:1321680
+  - isthereanydeal:hello-neighbor-2
+  requires: []

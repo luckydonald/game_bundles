@@ -9,26 +9,38 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-09-02_crpg-pack-isometric-immersion/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16529/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16529/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16529/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: 'Torment: Tides of Numenera'
   ids:
   - steam:272270
+  - isthereanydeal:torment-tides-of-numenera
   requires: []
 - name: Gamedec - Definitive Edition
   ids:
   - steam:917720
+  - isthereanydeal:gamedec-definitive-edition
   requires: []
 - name: Disco Elysium
   ids:
   - steam:632470
+  - isthereanydeal:disco-elysium-the-final-cut
   requires: []
 - name: UnderRail
   ids:
   - steam:250520
+  - isthereanydeal:underrail
   requires: []
 - name: Balrum
   ids:
   - steam:424250
+  - isthereanydeal:balrum
   requires: []
