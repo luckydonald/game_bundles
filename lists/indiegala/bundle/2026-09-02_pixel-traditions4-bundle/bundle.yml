@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Traditions Bundle 4 — Price Increase after first 24 hours
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16528/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16528/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16528/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Variety Pack 1'
+  ids:
+  - steam:1176158
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-variety-pack-1
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Fast Food'
+  ids:
+  - steam:1176159
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-fast-food
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Variety Pack 2'
+  ids:
+  - steam:1176181
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-variety-pack-2
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Variety Pack 3'
+  ids:
+  - steam:1176155
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-variety-pack-3
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: German Castles'
+  ids:
+  - steam:1176187
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-german-castles
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Pacific Theater'
+  ids:
+  - steam:1176189
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-pacific-theater
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Candy'
+  ids:
+  - steam:1176204
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-candy
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Native American'
+  ids:
+  - unresolved:source:isthereanydeal:16528:pixel-puzzles-traditional-jigsaws-pack-native-american
+  - isthereanydeal:pixel-puzzles-traditional-jigsaws-pack-native-american
+  requires: []
