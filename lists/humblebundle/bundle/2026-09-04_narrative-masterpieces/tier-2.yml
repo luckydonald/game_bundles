@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Narrative Masterpieces — 6 Item Bundle
+tier: 2
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/narrative-masterpieces
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/source.json
+crawlers:
+- humblebundle
+games:
+- name: The Pale Beyond
+  ids:
+  - steam:1266030
+  requires: []
+- name: SUNLESS SKIES
+  ids:
+  - steam:596970
+  requires: []
+- name: Eliza
+  ids:
+  - steam:716500
+  requires: []
+- name: Along the Edge
+  ids:
+  - steam:504390
+  requires: []
+- name: We. The Revolution
+  ids:
+  - steam:736850
+  requires: []
+- name: 'Crowns and Pawns: Kingdom of Deceit'
+  ids:
+  - steam:1125910
+  requires: []
