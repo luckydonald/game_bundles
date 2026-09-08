@@ -2581,3 +2581,63 @@ could help here.
 
 ❯  uv run game-collections scrape humblebundle --git
 
+❯ /plan @ai/errors/4.txt
+
+❯ Task Notification:
+> - Task `a906177bce55b5917` <kbd>completed</kbd>
+> - Tool `toolu_01BGAB9AGWUwG4FWXxv2mwyS`
+> - > Agent "Find duplicate qualified game ID validation logic" finished
+> - [Query (`913` chars, `913 B`)](output/agents/037.a906177bce55b5917/prompt.md)
+> - [Answer (`6755` chars, `6.61 KB`)](output/agents/037.a906177bce55b5917/result.md)
+> - [Raw log (`147659` chars, `144 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/dd2ecf4f-579e-4064-9d5d-a2efbd9ac031/tasks/a906177bce55b5917.output)
+> - `11` tools, `30006` tokens, `1.26462 s`
+
+❯ Task Notification:
+> - Task `a0cc02d6c724d1b89` <kbd>completed</kbd>
+> - Tool `toolu_01JfUtKY74oNdZk1NBzr9nDo`
+> - > Agent "Investigate humble bundle causing duplicate game entries" finished
+> - [Query (`2373` chars, `2.32 KB`)](output/agents/038.a0cc02d6c724d1b89/prompt.md)
+> - [Answer (`8559` chars, `8.39 KB`)](output/agents/038.a0cc02d6c724d1b89/result.md)
+> - [Raw log (`349862` chars, `342 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/dd2ecf4f-579e-4064-9d5d-a2efbd9ac031/tasks/a0cc02d6c724d1b89.output)
+> - `31` tools, `63180` tokens, `3.8064 s`
+
+❯ Task Notification:
+> - Task `aa2bb407ba9a0d634` <kbd>completed</kbd>
+> - Tool `toolu_01F4ZsJDCArRfK5w3rjx8r8J`
+> - > Agent "Design fix for humblebundle merge duplicate-ID bug" finished
+> - [Query (`12146` chars, `11.9 KB`)](output/agents/039.aa2bb407ba9a0d634/prompt.md)
+> - [Answer (`13556` chars, `13.3 KB`)](output/agents/039.aa2bb407ba9a0d634/result.md)
+> - [Raw log (`272364` chars, `266 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/dd2ecf4f-579e-4064-9d5d-a2efbd9ac031/tasks/aa2bb407ba9a0d634.output)
+> - `15` tools, `55745` tokens, `2.74205 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Should the merge-logic hardening also add a CI `game-collections validate` step after scrapes, and if so, should a validation failure hard-fail the workflow (blocking the auto-commit/PR)?
+>> 2. The corrupted 'Steelrising - Bastille Edition' entry also carries the isthereanydeal id. After repair it becomes the base 'Steelrising' game (grouped, steam:1283400). Where should `isthereanydeal:steelrising-bastille-edition` go?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **CI validate gap** (1/2) <kbd>Single Select</kbd><br>
+>> Should the merge-logic hardening also add a CI `game-collections validate` step after scrapes, and if so, should a validation failure hard-fail the workflow (blocking the auto-commit/PR)?
+> - [ ] 1\. Yes, add it and hard-fail (Recommended)
+>   - _Add `uv run game-collections validate` after the crawl step in the weekly scrape workflows; if it fails, fail the job so corrupt data never reaches a committed/pushed branch unnoticed._
+> - [x] 2\. Yes, add it but only warn
+>   - _Run validate post-scrape but don't block the commit/PR — matches the workflow's existing 'still commit whatever it produced' style for other non-fatal issues (e.g. unresolved counts)._
+> - [ ] 3\. Skip CI changes for now
+>   - _Only fix the data + merge-logic bug this session; leave CI workflow changes for a separate task._
+> - [ ] 4\. _Type something._
+>
+>> **ITAD id placement** (2/2) <kbd>Single Select</kbd><br>
+>> The corrupted 'Steelrising - Bastille Edition' entry also carries the isthereanydeal id. After repair it becomes the base 'Steelrising' game (grouped, steam:1283400). Where should `isthereanydeal:steelrising-bastille-edition` go?
+> - [x] 1\. Keep it on the base 'Steelrising' entry (Recommended)
+>   - _No exact repo precedent for grouped split members carrying an itad id, but this mirrors the shape of the later 2026-09-19 crawl and keeps it attached to the entry that best represents 'the edition' as ITAD resolved it._
+> - [ ] 2\. Drop it entirely
+>   - _Leave the base game with only its steam id, since it's genuinely ambiguous which split member 'is' the itad-resolved edition._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+

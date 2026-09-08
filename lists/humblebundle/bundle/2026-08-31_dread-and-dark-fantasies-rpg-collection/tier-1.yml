@@ -19,10 +19,13 @@ crawlers:
 - isthereanydeal
 - humblebundle
 games:
-- name: Steelrising - Bastille Edition
+- name: Steelrising
   ids:
-  - steam:2021370
+  - steam:1283400
   - isthereanydeal:steelrising-bastille-edition
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
   requires: []
 - name: Steelrising - Discus Chain
   ids:
