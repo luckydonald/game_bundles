@@ -12,7 +12,7 @@ import yaml
 from pydantic import BaseModel, ValidationError
 from rapidfuzz import fuzz
 
-from game_collections.models import Game, GameList, Reference
+from game_collections.models import Game, GameList, Reference, duplicate_qualified_ids
 from game_collections.sources.storefronts import normalized_title
 
 
@@ -199,7 +199,13 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
     already-`invalid` games, preserving the matched candidate's `ids`/`group`;
     any existing/invalid game left unmatched is quarantined into the returned
     list's `invalid` field instead of being deleted, so it can be recovered if
-    it reappears in a later crawl.
+    it reappears in a later crawl. If accepting a matched candidate would
+    reintroduce a qualified ID that belongs to a *different* fresh game in this
+    same pass (e.g. a stale, pre-split candidate whose IDs cover several games
+    that a split-aware resolver now reports as separate fresh entries), the
+    match is rejected instead: the fresh game keeps its own IDs, and the stale
+    candidate remains in the pool to be quarantined into `invalid` like any
+    other unmatched game.
     """
     if existing is None:
         return fresh
@@ -215,16 +221,27 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
     # end if
 
     candidates = [*existing.games, *existing.invalid]
+    # `fresh` is already a validated GameList, so no id appears on two of its own
+    # games - every id belongs to exactly one fresh game.
+    total_fresh_ids = {identifier for game in fresh.games for identifier in game.ids}
     merged_games: list[Game] = []
     for fresh_game in fresh.games:
         match = find_matching_game(fresh_game, candidates)
-        if match is None:
-            merged_games.append(fresh_game)
-        else:
+        # A stale candidate's ids can cover several games that a split-aware resolver
+        # now reports as separate fresh entries (e.g. one pre-split "Edition"/"Bundle"
+        # candidate whose ids are now split across multiple fresh games - the real bug
+        # this guards against). Preserving such a match would reintroduce one of those
+        # ids on two different merged games, so reject it whenever the candidate's ids
+        # overlap any *other* fresh game's own ids.
+        other_fresh_ids = total_fresh_ids - set(fresh_game.ids)
+        if match is not None and other_fresh_ids.isdisjoint(match.ids):
             candidates.remove(match)
             merged_games.append(match)
+        else:
+            merged_games.append(fresh_game)
         # end if
     # end for
+    assert not duplicate_qualified_ids(merged_games), "merge_game_list produced duplicate qualified game IDs"
     return fresh.model_copy(
         update={"games": merged_games, "invalid": candidates, "references": references, "crawlers": crawlers}
     )

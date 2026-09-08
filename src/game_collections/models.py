@@ -126,6 +126,21 @@ class Reference(StrictModel):
 # end class Reference
 
 
+def duplicate_qualified_ids(games: list[Game]) -> list[str]:
+    """Return compact qualified IDs that appear on more than one game, if any."""
+    identities = [identifier.compact() for game in games for identifier in game.qualified_ids]
+    seen: set[str] = set()
+    duplicates: list[str] = []
+    for identity in identities:
+        if identity in seen and identity not in duplicates:
+            duplicates.append(identity)
+        # end if
+        seen.add(identity)
+    # end for
+    return duplicates
+# end def duplicate_qualified_ids
+
+
 class GameList(StrictModel):
     """The complete contents of one ``lists/**/*.yml`` file."""
 
@@ -151,8 +166,7 @@ class GameList(StrictModel):
             raise ValueError("list contains duplicate game names")
         # end if
 
-        identities = [identifier.compact() for game in self.games for identifier in game.qualified_ids]
-        if len(identities) != len(set(identities)):
+        if duplicate_qualified_ids(self.games):
             raise ValueError("list contains duplicate qualified game IDs")
         # end if
 

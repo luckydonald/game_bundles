@@ -24,19 +24,17 @@ games:
   - steam:560130
   - isthereanydeal:pillars-of-eternity-ii-deadfire
   requires: []
-- name: Torchlight 1-3 Bundle
+- name: Torchlight
   ids:
   - steam:41500
-  - steam:200710
-  - steam:1030210
   requires: []
 - name: Torchlight II
   ids:
   - steam:200710
   requires: []
-- name: Torchlight
+- name: Torchlight III
   ids:
-  - steam:41500
+  - steam:1030210
   requires: []
 - name: Kristala
   ids:
@@ -58,10 +56,13 @@ games:
   - steam:649950
   - isthereanydeal:ashen
   requires: []
-- name: Steelrising - Bastille Edition
+- name: Steelrising
   ids:
-  - steam:2021370
+  - steam:1283400
   - isthereanydeal:steelrising-bastille-edition
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
   requires: []
 - name: Steelrising - Discus Chain
   ids:
