@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Narrative Masterpieces — 3 Item Bundle
+tier: 1
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/narrative-masterpieces
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/source.json
+crawlers:
+- humblebundle
+games:
+- name: Along the Edge
+  ids:
+  - steam:504390
+  requires: []
+- name: We. The Revolution
+  ids:
+  - steam:736850
+  requires: []
+- name: 'Crowns and Pawns: Kingdom of Deceit'
+  ids:
+  - steam:1125910
+  requires: []
