@@ -70,6 +70,16 @@ jobs:
             echo "::warning::game-collections scrape isthereanydeal exited with code ${rc} (unresolved games and/or crawl errors). --git still committed whatever it produced; a human resolves the rest via 'game-collections complete'."
           fi
 
+      - name: Validate game lists
+        run: |
+          set +e
+          uv run game-collections validate
+          rc=$?
+          set -e
+          if [ "${rc}" -ne 0 ]; then
+            echo "::warning::game-collections validate failed after the scrape. --git still committed whatever it produced; a human should inspect the PR before merging."
+          fi
+
       - name: Commit any files --git missed
         # Safety net: --git only stages the fixed lists/archives paths it knows
         # about. This checks the whole working tree (deliberately `git add -A`,
