@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from game_collections.models import Game, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference
 from game_collections.sources.common import dump_json, load_cached_archive, merge_game_list
 from game_collections.sources.dailyindiegame.models import DigArchive, DigDates, DigItem, DigPrice
 from datetime import UTC, datetime
@@ -259,6 +259,52 @@ def test_merge_game_list_authoritative_restores_a_previously_invalid_game_that_r
     assert [game.name for game in merged.games] == ["One", "Two"]
     assert merged.invalid == []
 # end def test_merge_game_list_authoritative_restores_a_previously_invalid_game_that_reappears
+
+
+def test_merge_game_list_authoritative_rejects_a_match_whose_ids_cover_multiple_fresh_games() -> None:
+    """Regression for a real corrupted commit: a stale "Torchlight 1-3 Bundle" candidate's
+    ids (steam:1/2/3) were each individually id-overlap-matched by resolver output that now
+    reports the same three games as separate fresh entries ("Torchlight", "Torchlight II",
+    "Torchlight III") - accepting any one of those matches would duplicate an id the other
+    fresh siblings also carry, so every such match must be rejected and the stale candidate
+    quarantined instead."""
+    existing = _list(Game(name="Torchlight 1-3 Bundle", ids=["steam:1", "steam:2", "steam:3"]))
+    fresh = _list(
+        Game(name="Torchlight", ids=["steam:1"]),
+        Game(name="Torchlight II", ids=["steam:2"]),
+        Game(name="Torchlight III", ids=["steam:3"]),
+    )
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    identities = [identifier for game in merged.games for identifier in game.ids]
+    assert len(identities) == len(set(identities))
+    assert [(game.name, game.ids) for game in merged.games] == [
+        ("Torchlight", ["steam:1"]),
+        ("Torchlight II", ["steam:2"]),
+        ("Torchlight III", ["steam:3"]),
+    ]
+    assert [game.name for game in merged.invalid] == ["Torchlight 1-3 Bundle"]
+# end def test_merge_game_list_authoritative_rejects_a_match_whose_ids_cover_multiple_fresh_games
+
+
+def test_merge_game_list_authoritative_rejects_a_fuzzy_match_that_would_duplicate_a_sibling_fresh_games_id() -> None:
+    """Regression for the Steelrising split bug: a stale, ungrouped "Edition" candidate's
+    name fuzzy-matched the base game of a freshly split group, but the candidate's single
+    id belonged, in truth, to a *different* sibling in that same split - accepting the
+    fuzzy match would duplicate that id across two games in the merged list."""
+    existing = _list(Game(name="Foo - Bar Edition", ids=["steam:1"]))
+    fresh = _list(
+        Game(name="Foo", ids=["steam:2"], group=GameGroup(id="foo_baredition", name="Foo - Bar Edition")),
+        Game(name="Foo - DLC", ids=["steam:1"], group=GameGroup(id="foo_baredition", name="Foo - Bar Edition")),
+    )
+
+    merged = merge_game_list(existing, fresh, authoritative=True)
+
+    identities = [identifier for game in merged.games for identifier in game.ids]
+    assert len(identities) == len(set(identities))
+    assert ("Foo", ["steam:2"]) in [(game.name, game.ids) for game in merged.games]
+# end def test_merge_game_list_authoritative_rejects_a_fuzzy_match_that_would_duplicate_a_sibling_fresh_games_id
 
 
 def test_merge_game_list_non_authoritative_never_removes_or_quarantines() -> None:
