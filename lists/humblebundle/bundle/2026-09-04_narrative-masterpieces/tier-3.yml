@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Narrative Masterpieces — Entire 12 Item Bundle
+tier: 3
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/narrative-masterpieces
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/source.json
+crawlers:
+- humblebundle
+games:
+- name: IMMORTALITY
+  ids:
+  - steam:1350200
+  requires: []
+- name: Wednesdays
+  ids:
+  - steam:2747770
+  requires: []
+- name: 'Tavern Talk 2: Dreamwalker'
+  ids:
+  - steam:3500880
+  requires: []
+- name: 'Tavern Talk 2: Dreamwalker - Drowsy Druid (Decoration Pack)'
+  ids:
+  - steam:4464060
+  requires: []
+- name: 'Tavern Talk 2: Dreamwalker - Wondrous Wizard (Decoration Pack)'
+  ids:
+  - steam:4464070
+  requires: []
+- name: The Wreck
+  ids:
+  - steam:1687960
+  requires: []
+- name: The Pale Beyond
+  ids:
+  - steam:1266030
+  requires: []
+- name: SUNLESS SKIES
+  ids:
+  - steam:596970
+  requires: []
+- name: Eliza
+  ids:
+  - steam:716500
+  requires: []
+- name: Along the Edge
+  ids:
+  - steam:504390
+  requires: []
+- name: We. The Revolution
+  ids:
+  - steam:736850
+  requires: []
+- name: 'Crowns and Pawns: Kingdom of Deceit'
+  ids:
+  - steam:1125910
+  requires: []
