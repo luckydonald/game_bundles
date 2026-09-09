@@ -2777,3 +2777,5 @@ could help here.
 > - [Raw log (`336678` chars, `329 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/f1349561-6afd-4e58-90d5-57954a70e3d5/tasks/a56eb246a0ab86027.output)
 > - `13` tools, `65070` tokens, `5.67208 s`
 
+❯ If it's about install/uninstall then the path should be `src/game_collections/install/shell_completion.py` etc.
+
