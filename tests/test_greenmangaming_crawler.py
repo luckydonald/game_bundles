@@ -169,7 +169,7 @@ STORE_PAGE = '<a href="https://store.steampowered.com/app/1235140/afterimage/">A
 
 
 def _resolver(page: str = STORE_PAGE) -> StorefrontResolver:
-    return StorefrontResolver(lambda _url: page, lambda _item, _provider, _candidates: None)
+    return StorefrontResolver(lambda _url: page, lambda _item, _provider, _candidates, **_kwargs: None)
 # end def _resolver
 
 

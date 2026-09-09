@@ -199,8 +199,8 @@ def render_resolution_map(mapping: HumbleResolutionMap) -> str:
 # end def render_resolution_map
 
 
-CandidateChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
-NameCollector = Callable[[int], str | None]
+CandidateChooser = Callable[..., ChosenCandidate]
+NameCollector = Callable[[int, set[str] | None], str | None]
 AnnounceFn = Callable[[str, str], None]
 Fetcher = Callable[[str], str]
 LogFn = Callable[[str], None]
@@ -302,6 +302,7 @@ class StorefrontResolver:
         cache_key: str,
         mapping: HumbleResolutionMap,
         allow_multiple: bool = True,
+        known_names: set[str] | None = None,
     ) -> list[ResolvedGame]:
         """Resolve one title across `stores`, caching the plain (unsplit) result under `cache_key`.
 
@@ -317,9 +318,21 @@ class StorefrontResolver:
         `steam:sub/<id>` (which, like a Steam retail bundle, can't drive ownership matching on its
         own), each cached under its own compound key with the appid already known, no re-search
         needed. `allow_multiple=False` also omits the "Multiple…" row itself from the menu.
+
+        `known_names`, when given, is a live set of casefolded names already destined for the
+        current bundle - seeded by `resolve_archive` from every distinct item's title. `title`
+        itself is removed from it for the duration of this call and added back before any "kept
+        as one entry" return, so a "Multiple…" prompt that defaults to `title` doesn't reject its
+        own default while a duplicate typed against any *other* name is still caught immediately.
         """
+        if known_names is not None:
+            known_names.discard(title.casefold())
+        # end if
         existing = mapping.games.get(cache_key)
         if existing is not None:
+            if known_names is not None:
+                known_names.add(title.casefold())
+            # end if
             return [ResolvedGame(name=title, ids=list(existing))]
         # end if
         ids: list[str] = []
@@ -349,6 +362,9 @@ class StorefrontResolver:
                         split_ids = [f"steam:{appid}"]
                         mapping.games[f"{cache_key}::{index}"] = split_ids
                         results.append(ResolvedGame(name=name, ids=split_ids))
+                        if known_names is not None:
+                            known_names.add(name.casefold())
+                        # end if
                     # end for
                     return results
                 # end if
@@ -361,7 +377,12 @@ class StorefrontResolver:
             store_resolved = False
             while not store_resolved:
                 selected = self._choose(
-                    title, typed_provider, candidates, allow_multiple=allow_multiple, interleaved=True
+                    title,
+                    typed_provider,
+                    candidates,
+                    allow_multiple=allow_multiple,
+                    interleaved=True,
+                    known_names=known_names,
                 )
                 if selected is None:
                     store_resolved = True
@@ -371,13 +392,16 @@ class StorefrontResolver:
                     multiple_results: list[ResolvedGame] = []
                     count = 0
                     while True:
-                        name = self._collect_name(count)
+                        name = self._collect_name(count, known_names)
                         if name is None:
                             break
                         # end if
                         count += 1
                         multiple_results.extend(
-                            self._resolve_title(name, stores, f"{cache_key}::{count}", mapping, allow_multiple=False)
+                            self._resolve_title(
+                                name, stores, f"{cache_key}::{count}", mapping, allow_multiple=False,
+                                known_names=known_names,
+                            )
                         )
                     # end while
                     if not multiple_results:
@@ -394,10 +418,15 @@ class StorefrontResolver:
         # end if
         deduped = list(dict.fromkeys(ids))
         mapping.games[cache_key] = deduped
+        if known_names is not None:
+            known_names.add(title.casefold())
+        # end if
         return [ResolvedGame(name=title, ids=deduped)]
     # end def _resolve_title
 
-    def resolve_item(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[ResolvedGame]:
+    def resolve_item(
+        self, item: HumbleItem, mapping: HumbleResolutionMap, known_names: set[str] | None = None
+    ) -> list[ResolvedGame]:
         """Resolve one item, possibly splitting into several games (a "DLC pack"/"Edition bundle",
         a user-declared "Multiple…", or an auto-expanded Steam Sub - see `_resolve_title`)."""
         stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
@@ -414,14 +443,14 @@ class StorefrontResolver:
             results: list[ResolvedGame] = []
             for index, component_title in enumerate(component_titles, start=1):
                 for resolved in self._resolve_title(
-                    component_title, stores, f"{item.machine_name}::{index}", mapping
+                    component_title, stores, f"{item.machine_name}::{index}", mapping, known_names=known_names
                 ):
                     results.append(resolved.model_copy(update={"requires": requires}))
                 # end for
             # end for
             return results
         # end if
-        resolved = self._resolve_title(item.title, stores, item.machine_name, mapping)
+        resolved = self._resolve_title(item.title, stores, item.machine_name, mapping, known_names=known_names)
         return [entry.model_copy(update={"requires": requires}) for entry in resolved]
     # end def resolve_item
 
@@ -442,11 +471,12 @@ class StorefrontResolver:
                 # end if
             # end for
         # end for
+        known_names = {item.title.casefold() for item in distinct}
         resolutions: dict[str, HumbleResolution] = {}
         total = len(distinct)
         for index, item in enumerate(distinct, start=1):
             log(f"  Game {index}/{total}: {item.title}")
-            results = self.resolve_item(item, mapping)
+            results = self.resolve_item(item, mapping, known_names)
             all_ids = [identifier for entry in results for identifier in entry.ids]
             unresolved_stores = [
                 store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)
