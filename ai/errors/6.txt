@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/home/user/.local/bin/game-collections", line 10, in <module>
+    sys.exit(app())
+             ~~~^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/_click/core.py", line 801, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/core.py", line 1116, in invoke
+    super().invoke(ctx)
+    ~~~~~~~~~~~~~~^^^^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/_click/core.py", line 740, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/home/user/.local/share/uv/tools/game-collections/lib64/python3.14/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/home/user/git/luckydonald/game_collections/src/game_collections/cli.py", line 134, in scrape_callback
+    ctx.obj = git_ops.begin_scrape_git_session(repository_root, git, git_style)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'game_collections.git_ops' has no attribute 'begin_scrape_git_session'
