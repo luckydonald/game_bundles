@@ -132,6 +132,22 @@ def test_restore_autostash_drops_stash_when_only_untracked_files_collide(tmp_pat
 # end def test_restore_autostash_drops_stash_when_only_untracked_files_collide
 
 
+def test_repository_root_returns_toplevel_from_nested_cwd(tmp_path: Path) -> None:
+    repository_root = _init_repo(tmp_path)
+    nested = repository_root / "lists"
+    assert git_ops.repository_root(nested) == repository_root.resolve()
+# end def test_repository_root_returns_toplevel_from_nested_cwd
+
+
+def test_repository_root_raises_outside_a_repository(tmp_path: Path) -> None:
+    outside = tmp_path / "not-a-repo"
+    outside.mkdir()
+    with pytest.raises(git_ops.GitAutocommitError):
+        git_ops.repository_root(outside)
+    # end with
+# end def test_repository_root_raises_outside_a_repository
+
+
 def test_restore_autostash_raises_when_nothing_was_stashed(tmp_path: Path) -> None:
     repository_root = _init_repo(tmp_path)
     pre_crawl_head = git_ops.head(repository_root)

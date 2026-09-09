@@ -25,6 +25,7 @@ from game_collections.migrate_tiers import (
 )
 from game_collections.completion import MissingHandling
 from game_collections import git_ops
+from game_collections.install import shell_completion, tool_install
 from game_collections.os_open import open_url
 from game_collections.launchers.steam.adapter import (
     SteamAdapter,
@@ -51,7 +52,7 @@ from game_collections.schema import write_greenmangaming_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.schema import write_isthereanydeal_schema
 from game_collections.schema import write_isthereanydeal_game_schema
-from game_collections.search import complete_game_list, completion_mode, selected_providers
+from game_collections.search import CompletionMode, Provider, complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
     CrawledDigOffer,
     DigBrowserClient,
@@ -259,6 +260,90 @@ def schema_command(
 # end def schema_command
 
 
+@app.command("install")
+def install_command(
+    source: Annotated[
+        str | None,
+        typer.Option("--source", help="Force 'pypi' or 'editable' instead of auto-detecting by version."),
+    ] = None,
+    shell: Annotated[
+        str | None,
+        typer.Option("--shell", help="Override detected shell ('bash' or 'zsh')."),
+    ] = None,
+    skip_completion: Annotated[
+        bool,
+        typer.Option("--skip-completion", help="Install the tool only; skip shell completion setup."),
+    ] = False,
+) -> None:
+    """Install a real `game-collections` binary via `uv tool install` and wire up
+    bash/zsh completion, including `uv run game-collections` completion."""
+    if source is not None and source not in ("pypi", "editable"):
+        typer.echo("--source must be 'pypi' or 'editable'", err=True)
+        raise typer.Exit(2)
+    # end if
+    if shell is not None and shell not in ("bash", "zsh"):
+        typer.echo("--shell must be 'bash' or 'zsh'", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        repository_root = git_ops.repository_root(Path.cwd())
+        chosen_source = source or tool_install.choose_install_source(repository_root)
+        result = tool_install.install_uv_tool(repository_root, chosen_source)
+        typer.echo((result.stdout or f"installed ({chosen_source})").strip())
+        if skip_completion:
+            return
+        # end if
+        detected_shell = shell or shell_completion.detect_shell(os.environ.get("SHELL"))
+        if detected_shell is None:
+            typer.echo("Unrecognized shell; skipping completion setup (supported: bash, zsh).", err=True)
+            return
+        # end if
+        target = shell_completion.shell_target(detected_shell, Path.home())
+        completion_path = shell_completion.write_completion_script(target)
+        rc_path = shell_completion.install_rc_hook(target)
+        typer.echo(f"{detected_shell} completion written to {completion_path}, hooked from {rc_path}")
+        typer.echo("Restart your shell (or `source` the file above) for completion to take effect.")
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def install_command
+
+
+@app.command("uninstall")
+@app.command("deinstall")
+def uninstall_command(
+    shell: Annotated[
+        str | None,
+        typer.Option("--shell", help="Override detected shell ('bash' or 'zsh')."),
+    ] = None,
+) -> None:
+    """Remove game-collections' generated completion wiring, then optionally
+    `uv tool uninstall game-collections` after an explicit confirmation."""
+    if shell is not None and shell not in ("bash", "zsh"):
+        typer.echo("--shell must be 'bash' or 'zsh'", err=True)
+        raise typer.Exit(2)
+    # end if
+    try:
+        detected_shell = shell or shell_completion.detect_shell(os.environ.get("SHELL"))
+        if detected_shell is None:
+            typer.echo("Unrecognized shell; no completion wiring to remove.", err=True)
+        else:
+            for path in shell_completion.remove_completion(detected_shell, Path.home()):
+                typer.echo(f"removed {path}")
+            # end for
+        # end if
+        if typer.confirm("Also run `uv tool uninstall game-collections`?", default=False):
+            result = tool_install.uninstall_uv_tool()
+            typer.echo((result.stdout or "uninstalled game-collections").strip())
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+# end def uninstall_command
+
+
 
 
 class _LazySteamDbFetcher:
@@ -347,9 +432,48 @@ def search_command(
 # end def search_command
 
 
+def _complete_one_target(
+    target: Path,
+    selected: tuple[Provider, ...],
+    resolver: StorefrontResolver,
+    selected_mode: CompletionMode,
+    itad_resolve: Callable[[str], ItadGameResolution] | None,
+) -> list[str]:
+    """Complete one draft YAML game list in place; return its unresolved names."""
+    raw = yaml.safe_load(target.read_text(encoding="utf-8"))
+    completed, unresolved = complete_game_list(
+        raw,
+        selected,
+        resolver,
+        choose_store_candidate,
+        selected_mode,
+        itad_resolve=itad_resolve,
+    )
+    target.write_text(
+        yaml.safe_dump(completed, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    typer.echo(f"Updated {target}.")
+    for title in unresolved:
+        typer.echo(f"unresolved: {title}", err=True)
+    # end for
+    return unresolved
+# end def _complete_one_target
+
+
 @app.command("complete")
 def complete_command(
-    file: Annotated[Path, typer.Argument(help="Draft YAML game list to complete in place.")],
+    file: Annotated[
+        Path | None, typer.Argument(help="Draft YAML game list to complete in place.")
+    ] = None,
+    all_lists: Annotated[
+        bool,
+        typer.Option("--all", help="Complete every list under lists_root instead of one FILE."),
+    ] = False,
+    lists_root_path: Annotated[
+        Path | None,
+        typer.Option("--lists-root", help="Lists root to sweep with --all; defaults to ./lists."),
+    ] = None,
     providers: Annotated[
         list[str] | None,
         typer.Option(
@@ -371,7 +495,16 @@ def complete_command(
         "config/isthereanydeal-game-aliases.yml"
     ),
 ) -> None:
-    """Complete storefront IDs in a draft YAML game list."""
+    """Complete storefront IDs in a draft YAML game list, or every list with --all."""
+    if file is None and not all_lists:
+        typer.echo("error: provide FILE or --all", err=True)
+        raise typer.Exit(1)
+    # end if
+    if file is not None and all_lists:
+        typer.echo("error: FILE and --all are mutually exclusive", err=True)
+        raise typer.Exit(1)
+    # end if
+
     client = HumbleHttpClient()
     itad_client: ItadHttpClient | None = None
     try:
@@ -400,25 +533,43 @@ def complete_command(
                 return resolve_game_with_aliases(slug, alias_groups, resolve_one)
             # end def itad_resolve
         # end if
-        raw = yaml.safe_load(file.read_text(encoding="utf-8"))
-        completed, unresolved = complete_game_list(
-            raw,
-            selected,
-            resolver,
-            choose_store_candidate,
-            selected_mode,
-            itad_resolve=itad_resolve,
-        )
-        file.write_text(
-            yaml.safe_dump(completed, sort_keys=False, allow_unicode=True),
-            encoding="utf-8",
-        )
-        typer.echo(f"Updated {file}.")
-        for title in unresolved:
-            typer.echo(f"unresolved: {title}", err=True)
-        # end for
-        if unresolved:
-            raise typer.Exit(1)
+
+        if all_lists:
+            try:
+                loaded = discover_game_lists(_lists_root(lists_root_path))
+            except (OSError, ValueError, ListLoadError) as error:
+                typer.echo(str(error), err=True)
+                raise typer.Exit(1) from error
+            # end try
+            targets = [item.path for item in loaded]
+
+            total_unresolved = 0
+            total_errors = 0
+            for index, target in enumerate(targets, start=1):
+                typer.echo(f"List {index}/{len(targets)}: {target}")
+                try:
+                    unresolved = _complete_one_target(
+                        target, selected, resolver, selected_mode, itad_resolve
+                    )
+                    total_unresolved += len(unresolved)
+                except (OSError, ValueError, RuntimeError, yaml.YAMLError) as error:
+                    typer.echo(f"error: {target}: {error}", err=True)
+                    total_errors += 1
+                # end try
+            # end for
+            typer.echo(
+                f"Completed {len(targets)} list(s); "
+                f"{total_unresolved} unresolved name(s), {total_errors} error(s)."
+            )
+            if total_unresolved or total_errors:
+                raise typer.Exit(1)
+            # end if
+        else:
+            assert file is not None
+            unresolved = _complete_one_target(file, selected, resolver, selected_mode, itad_resolve)
+            if unresolved:
+                raise typer.Exit(1)
+            # end if
         # end if
     except (OSError, ValueError, RuntimeError, yaml.YAMLError) as error:
         typer.echo(str(error), err=True)

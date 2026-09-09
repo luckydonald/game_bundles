@@ -36,6 +36,23 @@ def head(repository_root: Path) -> str:
 # end def head
 
 
+def repository_root(start: Path) -> Path:
+    """Return the top-level directory of the git repository containing `start`."""
+    result = subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"],
+        cwd=start,
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        raise GitAutocommitError(
+            f"not inside a git repository ({start}): {(result.stderr or result.stdout).strip()}"
+        )
+    # end if
+    return Path(result.stdout.strip())
+# end def repository_root
+
+
 def autostash(repository_root: Path) -> bool:
     """Stash pending changes, including untracked files, before a scrape.
 

@@ -197,6 +197,63 @@ def test_scrape_isthereanydeal_help_lists_git_flag() -> None:
 # end def test_scrape_isthereanydeal_help_lists_git_flag
 
 
+def test_complete_requires_file_or_all() -> None:
+    result = CliRunner().invoke(app, ["complete"])
+
+    assert result.exit_code == 1
+    assert "provide FILE or --all" in result.output
+# end def test_complete_requires_file_or_all
+
+
+def test_complete_rejects_file_and_all_together(tmp_path: Path) -> None:
+    draft = tmp_path / "draft.yml"
+    draft.write_text("schema: 1\nname: Draft\ngames: []\n", encoding="utf-8")
+
+    result = CliRunner().invoke(app, ["complete", str(draft), "--all"])
+
+    assert result.exit_code == 1
+    assert "mutually exclusive" in result.output
+# end def test_complete_rejects_file_and_all_together
+
+
+def test_complete_all_sweeps_every_list_under_lists_root(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    lists_root = tmp_path / "lists"
+    (lists_root / "one").mkdir(parents=True)
+    (lists_root / "two").mkdir(parents=True)
+    (lists_root / "one" / "game.yml").write_text(
+        "schema: 1\nname: One\ngames:\n  - name: Alpha\n    ids: [steam:1]\n",
+        encoding="utf-8",
+    )
+    (lists_root / "two" / "game.yml").write_text(
+        "schema: 1\nname: Two\ngames:\n  - name: Beta\n    ids: [steam:2]\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(
+        "game_collections.cli.HumbleHttpClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
+
+    calls: list[Path] = []
+
+    def fake_complete_game_list(raw, providers, resolver, choose, mode, *, itad_resolve=None):
+        calls.append(raw["name"])
+        return raw, []
+    # end def fake_complete_game_list
+
+    monkeypatch.setattr("game_collections.cli.complete_game_list", fake_complete_game_list)
+
+    result = CliRunner().invoke(app, ["complete", "--all", "--lists-root", str(lists_root)])
+
+    assert result.exit_code == 0, result.output
+    assert sorted(calls) == ["One", "Two"]
+    assert "List 1/2" in result.output
+    assert "List 2/2" in result.output
+    assert "Completed 2 list(s); 0 unresolved name(s), 0 error(s)." in result.output
+# end def test_complete_all_sweeps_every_list_under_lists_root
+
+
 def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
     tmp_path: Path, monkeypatch: MonkeyPatch
 ) -> None:
@@ -764,3 +821,139 @@ def test_apply_cancelled_selection_makes_no_changes(tmp_path: Path, monkeypatch:
     assert len(captured_owned_app_ids) == 1
     assert not selection_config.exists()
 # end def test_apply_cancelled_selection_makes_no_changes
+
+
+def test_install_command_calls_uv_tool_install_and_writes_completion(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    home = tmp_path / "home"
+    home.mkdir()
+    monkeypatch.setattr(Path, "home", lambda: home)
+    monkeypatch.setattr("game_collections.cli.git_ops.repository_root", lambda start: tmp_path)
+    monkeypatch.setattr("game_collections.cli.tool_install.choose_install_source", lambda root: "editable")
+    install_calls: list[tuple[Path, str]] = []
+    monkeypatch.setattr(
+        "game_collections.cli.tool_install.install_uv_tool",
+        lambda root, source: install_calls.append((root, source))
+        or SimpleNamespace(stdout="installed", stderr=""),
+    )
+
+    result = CliRunner().invoke(app, ["install", "--shell", "bash"])
+
+    assert result.exit_code == 0, result.output
+    assert install_calls == [(tmp_path, "editable")]
+    assert (home / ".config" / "game-collections" / "completion.bash").is_file()
+    assert "completion written to" in result.output
+# end def test_install_command_calls_uv_tool_install_and_writes_completion
+
+
+def test_install_command_skip_completion_flag_skips_shell_setup(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    home = tmp_path / "home"
+    home.mkdir()
+    monkeypatch.setattr(Path, "home", lambda: home)
+    monkeypatch.setattr("game_collections.cli.git_ops.repository_root", lambda start: tmp_path)
+    monkeypatch.setattr("game_collections.cli.tool_install.choose_install_source", lambda root: "editable")
+    monkeypatch.setattr(
+        "game_collections.cli.tool_install.install_uv_tool",
+        lambda root, source: SimpleNamespace(stdout="installed", stderr=""),
+    )
+
+    result = CliRunner().invoke(app, ["install", "--skip-completion"])
+
+    assert result.exit_code == 0, result.output
+    assert not (home / ".config" / "game-collections").exists()
+# end def test_install_command_skip_completion_flag_skips_shell_setup
+
+
+def test_install_command_rejects_invalid_shell_option() -> None:
+    result = CliRunner().invoke(app, ["install", "--shell", "bogus"])
+
+    assert result.exit_code == 2
+    assert "--shell must be 'bash' or 'zsh'" in result.output
+# end def test_install_command_rejects_invalid_shell_option
+
+
+def test_install_command_wraps_git_repository_root_error(monkeypatch: MonkeyPatch) -> None:
+    from game_collections.git_ops import GitAutocommitError
+
+    def raise_not_a_repo(start: Path) -> Path:
+        raise GitAutocommitError("not inside a git repository")
+    # end def raise_not_a_repo
+
+    monkeypatch.setattr("game_collections.cli.git_ops.repository_root", raise_not_a_repo)
+
+    result = CliRunner().invoke(app, ["install"])
+
+    assert result.exit_code == 1
+    assert "not inside a git repository" in result.output
+# end def test_install_command_wraps_git_repository_root_error
+
+
+def test_install_command_wraps_uv_tool_install_error(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    from game_collections.install.tool_install import InstallError
+
+    monkeypatch.setattr("game_collections.cli.git_ops.repository_root", lambda start: tmp_path)
+    monkeypatch.setattr("game_collections.cli.tool_install.choose_install_source", lambda root: "editable")
+
+    def raise_install_error(root: Path, source: str) -> None:
+        raise InstallError("`uv tool install` failed")
+    # end def raise_install_error
+
+    monkeypatch.setattr("game_collections.cli.tool_install.install_uv_tool", raise_install_error)
+
+    result = CliRunner().invoke(app, ["install"])
+
+    assert result.exit_code == 1
+    assert "uv tool install" in result.output
+# end def test_install_command_wraps_uv_tool_install_error
+
+
+def test_uninstall_command_removes_completion_and_declines_uv_uninstall_by_default(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    home = tmp_path / "home"
+    home.mkdir()
+    monkeypatch.setattr(Path, "home", lambda: home)
+    uninstall_calls: list[str] = []
+    monkeypatch.setattr(
+        "game_collections.cli.tool_install.uninstall_uv_tool",
+        lambda: uninstall_calls.append("uninstalled"),
+    )
+
+    result = CliRunner().invoke(app, ["uninstall", "--shell", "bash"], input="n\n")
+
+    assert result.exit_code == 0, result.output
+    assert uninstall_calls == []
+# end def test_uninstall_command_removes_completion_and_declines_uv_uninstall_by_default
+
+
+def test_uninstall_command_runs_uv_tool_uninstall_when_confirmed(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    home = tmp_path / "home"
+    home.mkdir()
+    monkeypatch.setattr(Path, "home", lambda: home)
+    uninstall_calls: list[str] = []
+    monkeypatch.setattr(
+        "game_collections.cli.tool_install.uninstall_uv_tool",
+        lambda: uninstall_calls.append("uninstalled") or SimpleNamespace(stdout="uninstalled", stderr=""),
+    )
+
+    result = CliRunner().invoke(app, ["uninstall", "--shell", "bash"], input="y\n")
+
+    assert result.exit_code == 0, result.output
+    assert uninstall_calls == ["uninstalled"]
+# end def test_uninstall_command_runs_uv_tool_uninstall_when_confirmed
+
+
+def test_deinstall_alias_behaves_identically_to_uninstall(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    home = tmp_path / "home"
+    home.mkdir()
+    monkeypatch.setattr(Path, "home", lambda: home)
+
+    result = CliRunner().invoke(app, ["deinstall", "--shell", "bash"], input="n\n")
+
+    assert result.exit_code == 0, result.output
+# end def test_deinstall_alias_behaves_identically_to_uninstall
