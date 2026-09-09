@@ -132,6 +132,18 @@ def test_parse_bundle_page_rejects_mismatched_tier_item_count() -> None:
 # end def test_parse_bundle_page_rejects_mismatched_tier_item_count
 
 
+def test_parse_bundle_page_decodes_html_entities() -> None:
+    entity_page = BUNDLE_PAGE.replace(
+        "<h1 class=\"d-none d-xl-block\">METROIDVANIA MADNESS</h1>",
+        "<h1 class=\"d-none d-xl-block\">Rock &amp; Roll&#x27;s Madness</h1>",
+    ).replace(">Afterimage<", ">Tom &amp; Jerry&#x27;s Chase<")
+    archive, _source = parse_bundle_page(entity_page, "metroidvania-madness", datetime(2026, 7, 12, tzinfo=UTC))
+
+    assert archive.name == "Rock & Roll's Madness"
+    assert archive.tiers[0].items[0].title == "Tom & Jerry's Chase"
+# end def test_parse_bundle_page_decodes_html_entities
+
+
 def test_parse_bundle_page_requires_title() -> None:
     with pytest.raises(GmgParseError):
         parse_bundle_page("<h1></h1>", "metroidvania-madness", datetime(2026, 7, 12, tzinfo=UTC))
@@ -149,6 +161,15 @@ def test_parse_product_fragment_extracts_drm_and_metadata() -> None:
     assert fields["redeem_on"] == ["steam"]
     assert "coyote mother" in fields["description"]
 # end def test_parse_product_fragment_extracts_drm_and_metadata
+
+
+def test_parse_product_fragment_decodes_html_entities() -> None:
+    entity_fragment = PRODUCT_FRAGMENT.replace("<dd>Thunderful Publishing</dd>", "<dd>Thunderful &amp; Friends&#x27; Publishing</dd>")
+
+    fields = parse_product_fragment(entity_fragment, "346")
+
+    assert fields["publisher"] == "Thunderful & Friends' Publishing"
+# end def test_parse_product_fragment_decodes_html_entities
 
 
 def test_parse_product_fragment_requires_drm() -> None:

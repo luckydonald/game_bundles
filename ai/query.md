@@ -2823,3 +2823,9 @@ could help here.
 > </details>
 >
 
+❯ When scraping greenmangaming, there's html/xml entities still in the titles of bundles & games.
+I've seen `&#x27;`, `&amp;` etc.
+
+❯ /plan When scraping greenmangaming, there's html/xml entities still in the titles of bundles & games.
+I've seen `&#x27;`, `&amp;` etc.
+
