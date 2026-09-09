@@ -9,10 +9,14 @@ references:
   path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/metadata.json
 - name: Crawl source
   path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/source.json
+crawlers:
+- greenmangaming
 games:
 - name: Afterimage
   ids:
   - steam:1701520
+  requires: []
 - name: Vomitoreum
   ids:
   - steam:1549750
+  requires: []

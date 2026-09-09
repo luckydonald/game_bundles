@@ -9,10 +9,14 @@ references:
   path: ../../../../archives/greenmangaming/bundle/lego-at-the-movies/metadata.json
 - name: Crawl source
   path: ../../../../archives/greenmangaming/bundle/lego-at-the-movies/source.json
+crawlers:
+- greenmangaming
 games:
 - name: The LEGO Movie 2 Videogame
   ids:
   - steam:881320
+  requires: []
 - name: The LEGO NINJAGO Movie Video Game
   ids:
   - steam:640590
+  requires: []
