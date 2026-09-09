@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2409 - ADULT DISCOUNT
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2409.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2409/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2409/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Cute BAR
+  ids:
+  - steam:1844300
+  requires: []
+- name: Teacher Lady
+  ids:
+  - steam:1245090
+  requires: []
+- name: Southern Princesses
+  ids:
+  - steam:2098950
+  requires: []
+- name: Sweety Sweets
+  ids:
+  - steam:2506400
+  requires: []
+- name: Girls Rest
+  ids:
+  - steam:2506460
+  requires: []
+- name: Cool Lady
+  ids:
+  - steam:2507890
+  requires: []
+- name: Hentai Elarin
+  ids:
+  - steam:3851430
+  requires: []
+- name: Hentai Furry Foxy
+  ids:
+  - steam:3819110
+  requires: []
+- name: Comixxx Duality
+  ids:
+  - steam:1805220
+  requires: []

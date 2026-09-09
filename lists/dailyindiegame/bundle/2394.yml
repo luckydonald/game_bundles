@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2394 - SUNDAY
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2394.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2394/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2394/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Chilling Silence
+  ids:
+  - steam:3922050
+  requires: []
+- name: Greed Champions
+  ids:
+  - steam:4320740
+  requires: []
+- name: 'Sweetie Candy Maze: Lime'
+  ids:
+  - steam:4504010
+  requires: []
+- name: Wasteland with Robots
+  ids:
+  - steam:4298510
+  requires: []
+- name: Way to Hell 2 New era
+  ids:
+  - steam:4508270
+  requires: []
+- name: 'Lovely Anime Puzzle: Autumn'
+  ids:
+  - steam:4519190
+  requires: []
+- name: Saylor Assassin Puzzle
+  ids:
+  - steam:4508850
+  requires: []
+- name: Assassin of Monsters 2 Spacenator
+  ids:
+  - steam:4497170
+  requires: []
+- name: OMEGA SPACE
+  ids:
+  - steam:2907520
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2408 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2408.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2408/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2408/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Proxy Air Force
+  ids:
+  - steam:1303000
+  requires: []
+- name: 'Axizon Labs: Zombies'
+  ids:
+  - steam:1280310
+  requires: []
+- name: IDIOT
+  ids:
+  - steam:1410740
+  requires: []
+- name: Super Drag Race 2
+  ids:
+  - steam:4186730
+  requires: []
+- name: The Cat
+  ids:
+  - steam:2694530
+  requires: []
+- name: TITAN HUNTER
+  ids:
+  - steam:955700
+  requires: []
+- name: Invention 4
+  ids:
+  - steam:2517130
+  requires: []
+- name: Medved Hellraiser 2
+  ids:
+  - steam:2468940
+  requires: []
+- name: Adventure Galaxy
+  ids:
+  - steam:1176090
+  requires: []
