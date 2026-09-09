@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: INDIE ADVENTURES — Adventurer
+tier: 1
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/indie-adventures/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/indie-adventures/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/indie-adventures/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+  requires: []

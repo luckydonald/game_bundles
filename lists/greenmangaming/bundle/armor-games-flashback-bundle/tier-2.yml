@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: ARMOR GAMES FLASHBACK BUNDLE — Diehard
+tier: 2
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/armor-games-flashback-bundle/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/armor-games-flashback-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/armor-games-flashback-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Sushi Cat Legacy Collection
+  ids:
+  - steam:3620940
+  requires: []
+- name: Chaos Faction Legacy Collection
+  ids:
+  - steam:3038340
+  requires: []
+- name: The Last Stand Legacy Collection
+  ids:
+  - steam:1615100
+  requires: []
+- name: Crush the Castle Legacy Collection
+  ids:
+  - steam:1838970
+  requires: []
+- name: 'Shift: Legacy Collection'
+  ids:
+  - steam:2764830
+  requires: []
+- name: Deep Sleep Trilogy
+  ids:
+  - steam:1146510
+  requires: []
+- name: Don&#x27;t Escape Trilogy
+  ids:
+  - steam:1070550
+  requires: []
+- name: Swords &amp; Souls Legacy
+  ids:
+  - steam:3189440
+  requires: []
+- name: Warfare Legacy Collection
+  ids:
+  - steam:2745870
+  requires: []
+- name: The Elephant Collection
+  ids:
+  - steam:2274110
+  requires: []
+- name: Decision Legacy Collection
+  ids:
+  - steam:3015510
+  requires: []
+- name: Sonny Legacy Collection
+  ids:
+  - steam:2757720
+  requires: []

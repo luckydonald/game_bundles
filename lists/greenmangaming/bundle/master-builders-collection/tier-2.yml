@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: MASTER BUILDERS COLLECTION — Stone
+tier: 2
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/master-builders-collection/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/master-builders-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/master-builders-collection/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Flooded
+  ids:
+  - steam:1795470
+  requires: []
+- name: Settlement Survival
+  ids:
+  - steam:1509510
+  requires: []
+- name: SteamWorld Build
+  ids:
+  - steam:2134770
+  requires: []
