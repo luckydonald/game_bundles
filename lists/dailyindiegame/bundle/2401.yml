@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2401 - SUNDAY
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2401.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2401/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2401/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 'Sokocat: Castaway'
+  ids:
+  - steam:4301570
+  requires: []
+- name: Emoji Wars
+  ids:
+  - steam:4429210
+  requires: []
+- name: SpaceShips
+  ids:
+  - steam:1605950
+  requires: []
+- name: 'Wickless: the void'
+  ids:
+  - steam:1836180
+  requires: []
+- name: Big Theft Valkeala 3 Revenge
+  ids:
+  - steam:4483140
+  requires: []
+- name: Super Clown Puzzles
+  ids:
+  - steam:4486980
+  requires: []
+- name: Sad Virus Darkland
+  ids:
+  - steam:4563400
+  requires: []
+- name: Dice of Fate 2
+  ids:
+  - steam:4452770
+  requires: []
+- name: Forest Curse
+  ids:
+  - steam:4450740
+  requires: []

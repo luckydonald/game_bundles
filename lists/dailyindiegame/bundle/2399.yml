@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: FRIDAY BARGAIN 2399
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2399.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2399/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2399/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Endless Faith
+  ids:
+  - steam:2782910
+  requires: []
+- name: Ashentia Hauntings 2
+  ids:
+  - steam:4783420
+  requires: []
+- name: Mei Paranormies
+  ids:
+  - steam:4235720
+  requires: []
+- name: Zereoton Hauntings 3
+  ids:
+  - steam:4937420
+  requires: []
+- name: Silent Tweets
+  ids:
+  - steam:809320
+  requires: []
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: 'City of Despair: Shadows Over Tokyo'
+  ids:
+  - steam:2283720
+  requires: []
+- name: Me And Dungeons
+  ids:
+  - steam:874330
+  requires: []
+- name: Moto Roller
+  ids:
+  - steam:1830740
+  requires: []

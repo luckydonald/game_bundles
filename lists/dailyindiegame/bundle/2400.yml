@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: SATURDAY ADULT 2400
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2400.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2400/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2400/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: My Burning Heart
+  ids:
+  - steam:921900
+  requires: []
+- name: Sex Game - Gay Affair - Episode 3
+  ids:
+  - steam:3956510
+  requires: []
+- name: Sex Game - Gay Affair - Episode 2
+  ids:
+  - steam:3932750
+  requires: []
+- name: Sex Game - Gay Affair - Episode 1
+  ids:
+  - steam:3913190
+  requires: []
+- name: Sex Game - Gay Affair - Episode 4
+  ids:
+  - steam:4047800
+  requires: []
+- name: Fast Hands
+  ids:
+  - steam:3718880
+  requires: []
+- name: Eli Girls
+  ids:
+  - steam:1027600
+  requires: []
+- name: Obscene Mansion
+  ids:
+  - steam:2181060
+  requires: []
+- name: Gentle Officer
+  ids:
+  - steam:3048650
+  requires: []

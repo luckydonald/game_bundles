@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2391 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2391.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2391/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2391/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: The Test of Insanity
+  ids:
+  - steam:3083960
+  requires: []
+- name: 'Maniac: Hunt or Be Hunted'
+  ids:
+  - steam:3738570
+  requires: []
+- name: Dream Shark - Pt. 1
+  ids:
+  - steam:3196360
+  requires: []
+- name: WALLS
+  ids:
+  - steam:3687020
+  requires: []
+- name: Paper cut
+  ids:
+  - steam:3811980
+  requires: []
+- name: This Picture
+  ids:
+  - steam:1148120
+  requires: []
+- name: HopHeaders
+  ids:
+  - steam:1652940
+  requires: []
+- name: Downroll
+  ids:
+  - steam:1837870
+  requires: []
+- name: Spleef Game
+  ids:
+  - steam:2547240
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2410
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2410.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2410/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2410/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Resurrection of mind
+  ids:
+  - steam:1825510
+  requires: []
+- name: DREADHOLM
+  ids:
+  - steam:4596260
+  requires: []
+- name: Wind of shuriken
+  ids:
+  - steam:1565030
+  requires: []
+- name: The Last Cowboy
+  ids:
+  - steam:1087100
+  requires: []
+- name: FishDrop
+  ids:
+  - steam:5045480
+  requires: []
+- name: KingLike
+  ids:
+  - steam:5044420
+  requires: []
+- name: Oh Boy More Cheese
+  ids:
+  - steam:1212720
+  requires: []
+- name: Santas Christmas Escape VR
+  ids:
+  - steam:2782060
+  requires: []
+- name: 'Windows Separate Worlds: Chapter 1'
+  ids:
+  - steam:3570570
+  requires: []
