@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2403 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2403.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2403/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2403/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Last Defenders
+  ids:
+  - steam:1750690
+  requires: []
+- name: Find Her in Dungeon (3D Quest)
+  ids:
+  - steam:1800780
+  requires: []
+- name: Mega Solitaire Collection
+  ids:
+  - steam:1575910
+  requires: []
+- name: Blast Ensemble
+  ids:
+  - steam:1617920
+  requires: []
+- name: Terrain Defender
+  ids:
+  - steam:1724580
+  requires: []
+- name: 'Yabgits: Haunted Cemetery'
+  ids:
+  - steam:1512320
+  requires: []
+- name: Death Moon
+  ids:
+  - steam:1630270
+  requires: []
+- name: Gummy Jump
+  ids:
+  - steam:2078820
+  requires: []
+- name: Desstroke
+  ids:
+  - steam:2057820
+  requires: []

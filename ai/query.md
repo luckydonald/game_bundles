@@ -2854,3 +2854,10 @@ I've seen `&#x27;`, `&amp;` etc.
 
 ❯ /plan Fix @ai/errors/6.txt for `game-collections scrape --git greenmangaming`.
 
+❯ The following command doesn't seem to write anything to the log file:
+```shell
+game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
+```
+
+❯ Even with `sys.stdout.reconfigure(line_buffering=True)` it doesn't seem to work:
+

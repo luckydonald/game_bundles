@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2404 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2404.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2404/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2404/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Reaper Rules
+  ids:
+  - steam:3144440
+  requires: []
+- name: Dark Honor
+  ids:
+  - steam:3331610
+  requires: []
+- name: taCam
+  ids:
+  - steam:3250210
+  requires: []
+- name: Gorf the Frog
+  ids:
+  - steam:3268180
+  requires: []
+- name: black idea
+  ids:
+  - steam:2225060
+  requires: []
+- name: Wild West Simulator
+  ids:
+  - steam:3507020
+  requires: []
+- name: Cube Defender 2000
+  ids:
+  - steam:733040
+  requires: []
+- name: Bloodwatch
+  ids:
+  - steam:2088120
+  requires: []
+- name: Stapel
+  ids:
+  - steam:1863990
+  requires: []

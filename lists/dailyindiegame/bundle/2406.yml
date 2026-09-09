@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2406
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2406.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2406/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2406/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: ATC Flight Operator
+  ids:
+  - steam:3439100
+  requires: []
+- name: FJN Blackjack Cup
+  ids:
+  - steam:3556680
+  requires: []
+- name: FJN Roulette Cup
+  ids:
+  - steam:4353190
+  requires: []
+- name: The Political Simulator
+  ids:
+  - steam:4942350
+  requires: []
+- name: Trophy Truck Racing Tour
+  ids:
+  - steam:3283950
+  requires: []
+- name: The Royal Rebel Casino
+  ids:
+  - steam:3508030
+  requires: []
+- name: Shapemonger
+  ids:
+  - steam:4608500
+  requires: []
+- name: Be King
+  ids:
+  - steam:2471950
+  requires: []
+- name: Knights and Castles
+  ids:
+  - steam:1734500
+  requires: []

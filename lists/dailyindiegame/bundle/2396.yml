@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2396 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2396.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2396/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2396/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Everyday Life Fragments
+  ids:
+  - steam:3525460
+  requires: []
+- name: Color Ball
+  ids:
+  - steam:1810720
+  requires: []
+- name: Captain Jackson
+  ids:
+  - steam:1730150
+  requires: []
+- name: War-Gene
+  ids:
+  - steam:1522220
+  requires: []
+- name: Thirty Two HardMod
+  ids:
+  - steam:1641790
+  requires: []
+- name: Everyone Moves With You
+  ids:
+  - steam:2009220
+  requires: []
+- name: Dice Keeper
+  ids:
+  - steam:1047020
+  requires: []
+- name: In Shape
+  ids:
+  - steam:1781330
+  requires: []
+- name: أنتم السابقون
+  ids:
+  - steam:3666640
+  requires: []
