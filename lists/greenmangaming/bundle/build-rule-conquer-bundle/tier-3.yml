@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: BUILD, RULE, CONQUER — Empires
+tier: 3
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/build-rule-conquer-bundle/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/build-rule-conquer-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/build-rule-conquer-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Empires of the Undergrowth
+  ids:
+  - steam:463530
+  requires: []
+- name: Mechabellum
+  ids:
+  - steam:669330
+  requires: []
+- name: 'Warhammer 40,000: Chaos Gate - Daemonhunters'
+  ids:
+  - steam:1611910
+  requires: []
+- name: Knights of the Crusades
+  ids:
+  - steam:3440120
+  requires: []
+- name: Railway Empire
+  ids:
+  - steam:503940
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Mexico
+  ids:
+  - steam:820930
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - the Great Lakes
+  ids:
+  - steam:873880
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Crossing the Andes
+  ids:
+  - steam:884140
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Great Britain & Ireland
+  ids:
+  - steam:884141
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - France
+  ids:
+  - steam:884142
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Germany
+  ids:
+  - steam:884143
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Northern Europe
+  ids:
+  - steam:1161420
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: Railway Empire - Down Under
+  ids:
+  - steam:1161421
+  group:
+    id: '110'
+    name: 'Railway Empire: Complete Collection'
+  requires: []
+- name: 'Pharaoh: A New Era'
+  ids:
+  - steam:1351080
+  requires: []

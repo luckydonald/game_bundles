@@ -9,22 +9,30 @@ references:
   path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/metadata.json
 - name: Crawl source
   path: ../../../../archives/greenmangaming/bundle/metroidvania-madness/source.json
+crawlers:
+- greenmangaming
 games:
 - name: Afterimage
   ids:
   - steam:1701520
+  requires: []
 - name: Vomitoreum
   ids:
   - steam:1549750
+  requires: []
 - name: GRIME
   ids:
   - steam:1123050
+  requires: []
 - name: Islets
   ids:
   - steam:1669420
+  requires: []
 - name: 'Laika: Aged Through Blood'
   ids:
   - unresolved:source:greenmangaming:346
+  requires: []
 - name: 'Bō: Path of the Teal Lotus'
   ids:
   - steam:1614440
+  requires: []

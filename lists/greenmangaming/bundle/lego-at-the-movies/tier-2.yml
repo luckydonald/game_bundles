@@ -9,28 +9,38 @@ references:
   path: ../../../../archives/greenmangaming/bundle/lego-at-the-movies/metadata.json
 - name: Crawl source
   path: ../../../../archives/greenmangaming/bundle/lego-at-the-movies/source.json
+crawlers:
+- greenmangaming
 games:
 - name: The LEGO Movie 2 Videogame
   ids:
   - steam:881320
+  requires: []
 - name: The LEGO NINJAGO Movie Video Game
   ids:
   - steam:640590
+  requires: []
 - name: The LEGO Movie Videogame
   ids:
   - steam:267530
+  requires: []
 - name: LEGO The Incredibles
   ids:
   - steam:818320
+  requires: []
 - name: LEGO Jurassic World
   ids:
   - steam:352400
+  requires: []
 - name: LEGO Jurassic World DLC Pack
   ids:
   - unresolved:source:greenmangaming:337
+  requires: []
 - name: 'LEGO Jurassic World: Jurassic Park Trilogy DLC Pack 1'
   ids:
   - steam:367871
+  requires: []
 - name: 'LEGO Jurassic World: Jurassic Park Trilogy DLC Pack 2'
   ids:
   - steam:367872
+  requires: []
