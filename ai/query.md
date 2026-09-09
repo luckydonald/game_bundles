@@ -2107,7 +2107,7 @@ This session began as a fork (copy) of another session that is still running: a 
 
 ❯ it claims `No plan found` here. Can you just start writing that to an new plan file?
 
-❯ Alright, 
+❯ Alright,
 - If we need the headless browser, the steam search shall be happening first, as it's cheaper.
 - Try if the SSL handshake matters, because it's Akamai CDN? There was a patched SSL for python mimicing Google Chrome.
 
@@ -2288,7 +2288,7 @@ This session began as a fork (copy) of another session that is still running: a 
 > </details>
 >
 
-❯ Can you pick up the steamID from steam? The env app is set up, see @.env.example 
+❯ Can you pick up the steamID from steam? The env app is set up, see @.env.example
 Obviously don't directly read or output my `STEAM_WEB_API_KEY`, as I don't want that one to leak.
 
 ❯ Question answered.
@@ -2449,13 +2449,13 @@ Another bug is in the flow, when selecting multiple, I am expecting to be asked 
 > - [ ] 3\. Leave this flow alone for now
 >   - _Don't change prompting.py in this plan — just fix the steamdb/text-parsing issues above. Revisit the interactive UX separately._
 > - [x] 4\. _Type something:_
->   - > Multiple should do the search and then open the usual _here's what we found please choose_ option for that search of the first multiple. 
-Then it would not offer the _Multiple…_ option as it already is in that mode, but instead a _Skip this (unresolved)_. 
+>   - > Multiple should do the search and then open the usual _here's what we found please choose_ option for that search of the first multiple.
+Then it would not offer the _Multiple…_ option as it already is in that mode, but instead a _Skip this (unresolved)_.
 So it would be like this:
 1. > Resolve 'Steelrising - Bastille Edition' on steam:
    > 1. Multiple…
    > 2. Other…
-   > Select a result [2]: 
+   > Select a result [2]:
    - `1`
 2. > Name of one separate game (0 so far) (blank to finish):
    - `Foobar Delux`
@@ -2637,6 +2637,42 @@ could help here.
 > - [ ] 2\. Drop it entirely
 >   - _Leave the base game with only its steam id, since it's genuinely ambiguous which split member 'is' the itad-resolved edition._
 > - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ The automode shall be project local
+
+❯ /plan Fix @ai/errors/5.txt
+
+❯ Task Notification:
+> - Task `ac5e1315a9d4cfaa0` <kbd>completed</kbd>
+> - Tool `toolu_01P3GTKZvHsWHCXCJQa1hrvV`
+> - > Agent "Investigate game-collections CLI packaging and completion setup" finished
+> - [Query (`1766` chars, `1.72 KB`)](output/agents/040.ac5e1315a9d4cfaa0/prompt.md)
+> - [Answer (`4990` chars, `4.89 KB`)](output/agents/040.ac5e1315a9d4cfaa0/result.md)
+> - [Raw log (`177500` chars, `174 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/f1349561-6afd-4e58-90d5-57954a70e3d5/tasks/ac5e1315a9d4cfaa0.output)
+> - `7` tools, `33022` tokens, `0.6536 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. This isn't a code bug — Typer's --install-completion registers bash completion for the literal command word `game-collections`, but you only run it via `uv run game-collections` (venv's .venv/bin isn't on PATH). Which fix do you want?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fix approach** (1/1) <kbd>Single Select</kbd><br>
+>> This isn't a code bug — Typer's --install-completion registers bash completion for the literal command word `game-collections`, but you only run it via `uv run game-collections` (venv's .venv/bin isn't on PATH). Which fix do you want?
+> - [ ] 1\. Document: activate venv
+>   - _Add a README note telling users to `source .venv/bin/activate` (or add .venv/bin to PATH) before running --install-completion, so the bare `game-collections` command and its registered completion both resolve directly. Simplest, no new code._
+> - [ ] 2\. Wrapper function + completion
+>   - _Add a documented bash function `game-collections() { uv run game-collections "$@"; }` (e.g. in README or a snippet to source) so users keep typing `uv run`-free commands, then --install-completion's registration on the word `game-collections` matches the wrapper too._
+> - [ ] 3\. Just document the limitation
+>   - _Add a short README note explaining that shell completion requires the venv's bin directory on PATH (or the venv activated), and that `uv run game-collections <TAB>` will not get real subcommand completion — no wrapper/script provided._
+> - [x] 4\. _Type something:_
+>   - > Isn't there a way to uv install as tool?
 >
 > </details>
 >
