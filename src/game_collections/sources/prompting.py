@@ -45,10 +45,31 @@ def announce_exact_match(qualified_id: str, url: str) -> None:
 # end def announce_exact_match
 
 
-def collect_one_name(count: int) -> str | None:
-    """Prompt for one more separate-game name; a blank answer ends the collection."""
-    name = typer.prompt(f"Name of one separate game ({count} so far) (blank to finish)", default="", show_default=False)
-    return name or None
+def collect_one_name(count: int, known_names: set[str] | None = None) -> str | None:
+    """Prompt for one more separate-game name; a blank answer ends the collection.
+
+    `known_names`, when given, is a live set of casefolded names already destined for the
+    current bundle/list. A name that collides with one of them is rejected with an error and
+    re-prompted immediately, instead of only failing much later when the whole list is validated
+    (see `game_collections.models.GameList.validate_games`). An accepted name is added to
+    `known_names` before it's returned.
+    """
+    while True:
+        name = typer.prompt(
+            f"Name of one separate game ({count} so far) (blank to finish)", default="", show_default=False
+        )
+        if not name:
+            return None
+        # end if
+        if known_names is not None and name.casefold() in known_names:
+            typer.echo(f"{name!r} is already used by another game in this list — enter a different name.", err=True)
+            continue
+        # end if
+        if known_names is not None:
+            known_names.add(name.casefold())
+        # end if
+        return name
+    # end while
 # end def collect_one_name
 
 
@@ -59,6 +80,7 @@ def choose_store_candidate(
     *,
     allow_multiple: bool = True,
     interleaved: bool = False,
+    known_names: set[str] | None = None,
 ) -> ChosenCandidate:
     """Prompt for one storefront result, or declare several separate games via "Multiple…".
 
@@ -70,6 +92,14 @@ def choose_store_candidate(
     to collect one name per separate game (the first prompt defaults to `title`, the title just
     searched, so accepting the default alone still records at least one name; a blank answer on
     any later prompt ends the list) and returning them all at once as `ChosenNames`.
+
+    `known_names`, when given, is a live set of casefolded names already destined for the current
+    bundle/list (the caller is expected to have removed `title` itself from it beforehand, since
+    accepting the default just keeps this entry under its own name). A typed name that collides
+    with `known_names`, or with another name already collected in this same "Multiple…" session,
+    is rejected with an error and re-prompted rather than silently producing a duplicate that
+    would only be caught much later by `game_collections.models.GameList.validate_games`. Every
+    accepted name is added to `known_names` immediately.
     """
     typer.echo(f"Resolve {title!r} on {provider}:")
     for index, candidate in enumerate(candidates, start=1):
@@ -98,7 +128,17 @@ def choose_store_candidate(
                 if not name:
                     break
                 # end if
+                if known_names is not None and name.casefold() in known_names:
+                    typer.echo(
+                        f"{name!r} is already used by another game in this list — enter a different name.",
+                        err=True,
+                    )
+                    continue
+                # end if
                 names.append(name)
+                if known_names is not None:
+                    known_names.add(name.casefold())
+                # end if
             # end while
             if not names:
                 continue

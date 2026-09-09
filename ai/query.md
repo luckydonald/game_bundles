@@ -2779,3 +2779,47 @@ could help here.
 
 ❯ If it's about install/uninstall then the path should be `src/game_collections/install/shell_completion.py` etc.
 
+❯ /plan make the `--git` a flag of `scrape` itself, so it's inherited for all scrapers.
+
+❯ /plan fix @ai/errors/5.txt
+
+❯ Task Notification:
+> - Task `a258f3792932c6783` <kbd>completed</kbd>
+> - Tool `toolu_018wkXoaQUMSxkYwhWhdG9hu`
+> - > Agent "Find interactive resolve/Multiple flow and duplicate validation" finished
+> - [Query (`3282` chars, `3.23 KB`)](output/agents/043.a258f3792932c6783/prompt.md)
+> - [Answer (`7270` chars, `7.15 KB`)](output/agents/043.a258f3792932c6783/result.md)
+> - [Raw log (`271552` chars, `266 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/42369d22-1e16-4b1f-a39f-7b548277e3e9/tasks/a258f3792932c6783.output)
+> - `10` tools, `45989` tokens, `2.13888 s`
+
+❯ Task Notification:
+> - Task `a328082833eb26d10` <kbd>completed</kbd>
+> - Tool `toolu_011ZgehzXxo91LpvHRJeBM5b`
+> - > Agent "Read search.py Multiple flow and models.py validator" finished
+> - [Query (`957` chars, `963 B`)](output/agents/044.a328082833eb26d10/prompt.md)
+> - [Answer (`16079` chars, `15.7 KB`)](output/agents/044.a328082833eb26d10/result.md)
+> - [Raw log (`292647` chars, `287 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/42369d22-1e16-4b1f-a39f-7b548277e3e9/tasks/a328082833eb26d10.output)
+> - `4` tools, `55030` tokens, `0.97185 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The log shows two related failures: (1) duplicate game names entered via "Multiple…" splitting only surface as a hard validation error at the very end, discarding a whole bundle's interactive work; (2) the resolution map (cache of interactive answers) is only written to disk after the final GameList write succeeds, so a late failure can lose already-answered prompts if no later bundle happens to re-save it. How much of this should the fix cover?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Fix scope** (1/1) <kbd>Single Select</kbd><br>
+>> The log shows two related failures: (1) duplicate game names entered via "Multiple…" splitting only surface as a hard validation error at the very end, discarding a whole bundle's interactive work; (2) the resolution map (cache of interactive answers) is only written to disk after the final GameList write succeeds, so a late failure can lose already-answered prompts if no later bundle happens to re-save it. How much of this should the fix cover?
+> - [x] 1\. Full fix (Recommended)
+>   - _Persist the resolution map immediately after resolving each bundle (before the final GameList write), AND reject duplicate names live at prompt time — both self-duplicates within one "Multiple…" split and duplicates against any other item already known in the bundle/list. Touches prompting.py, both resolvers (greenmangaming, humblebundle), search.py's complete flow, and cli.py wiring._
+> - [ ] 2\. Persistence fix only
+>   - _Just reorder cli.py so the resolution map is always saved right after interactive resolution finishes, before attempting the final GameList write. Cheap, low risk, but duplicate names can still occur and will still fail at the end (just no longer losing the answers on retry, since they're now cached)._
+> - [ ] 3\. Persistence + self-duplicate check only
+>   - _Persistence fix, plus a cheap local check that rejects re-entering the exact same name twice within one "Multiple…" session (catches the BioShock-style self-duplicate). Skips the heavier cross-item check (the Destiny "Edge of Fate" case), which needs threading a known-names set through every resolver._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
