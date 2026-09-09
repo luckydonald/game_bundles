@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2390
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2390.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2390/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2390/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: FROGGY REVENGE
+  ids:
+  - steam:4971970
+  requires: []
+- name: Gravitron
+  ids:
+  - steam:4848110
+  requires: []
+- name: Catetris
+  ids:
+  - steam:4943170
+  requires: []
+- name: Not a bug
+  ids:
+  - steam:4876190
+  requires: []
+- name: Meow Survivors
+  ids:
+  - steam:4316330
+  requires: []
+- name: Anvillage
+  ids:
+  - steam:2026300
+  requires: []
+- name: 'Chronime Puzzle: Dogs'
+  ids:
+  - steam:4997980
+  requires: []
+- name: 'Sweetie Candy Maze: Crimson Strawberry'
+  ids:
+  - steam:4978360
+  requires: []
+- name: Craftoon
+  ids:
+  - steam:4862790
+  requires: []

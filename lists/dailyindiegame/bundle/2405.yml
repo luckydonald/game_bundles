@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: THURSDAY BARGAIN 2405
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2405.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2405/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2405/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Cubic Juice
+  ids:
+  - steam:1245360
+  requires: []
+- name: OnlyRun
+  ids:
+  - steam:2520180
+  requires: []
+- name: Getting Out Alive
+  ids:
+  - steam:2560220
+  requires: []
+- name: Software House Simulator
+  ids:
+  - steam:1293400
+  requires: []
+- name: Knife Quest
+  ids:
+  - steam:1303760
+  requires: []
+- name: Dungeons of Clay
+  ids:
+  - steam:1332940
+  requires: []
+- name: Coffee Mania
+  ids:
+  - steam:2875450
+  requires: []
+- name: Car Soccer World Cup
+  ids:
+  - steam:1111200
+  requires: []
+- name: Give Me More Pills
+  ids:
+  - steam:1752610
+  requires: []

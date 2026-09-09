@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2397
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2397.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2397/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2397/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: American Election Simulator
+  ids:
+  - steam:3149960
+  requires: []
+- name: 2024 U.S. Election Simulator
+  ids:
+  - steam:2542440
+  requires: []
+- name: 2026 U.S. Election Simulator
+  ids:
+  - steam:4808720
+  requires: []
+- name: Zombie Outbreak 1943
+  ids:
+  - steam:3927150
+  requires: []
+- name: Zombie Outbreak 1942
+  ids:
+  - steam:3696080
+  requires: []
+- name: Pyramid of Wisdom
+  ids:
+  - steam:4517450
+  requires: []
+- name: Moot District
+  ids:
+  - steam:992040
+  requires: []
+- name: Frostford
+  ids:
+  - steam:1213890
+  requires: []
+- name: Battlement
+  ids:
+  - steam:3726010
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Bundle 2411 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2411.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2411/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2411/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Cherry blossom
+  ids:
+  - steam:4038390
+  requires: []
+- name: Sheptun
+  ids:
+  - steam:1234900
+  requires: []
+- name: Martian Potato
+  ids:
+  - steam:1317850
+  requires: []
+- name: Project Medved
+  ids:
+  - steam:1904590
+  requires: []
+- name: Great Ball of Fire
+  ids:
+  - steam:1061970
+  requires: []
+- name: Labyrinth of anxiety
+  ids:
+  - steam:4449050
+  requires: []
+- name: Protect the Grimoire
+  ids:
+  - steam:4429260
+  requires: []
+- name: Super Nova
+  ids:
+  - steam:4256450
+  requires: []
+- name: mole mine rocks 0.15
+  ids:
+  - steam:3024940
+  requires: []
