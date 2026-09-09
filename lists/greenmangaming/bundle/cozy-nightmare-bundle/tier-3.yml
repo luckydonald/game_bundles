@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: COZY NIGHTMARE BUNDLE — Forbidden Knowledge
+tier: 3
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/cozy-nightmare-bundle/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/cozy-nightmare-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/cozy-nightmare-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Graveyard Keeper
+  ids:
+  - steam:599140
+  requires: []
+- name: Hello Neighbor
+  ids:
+  - steam:521890
+  requires: []
+- name: Hello Neighbor 2
+  ids:
+  - steam:1321680
+  requires: []
+- name: Cultist Simulator
+  ids:
+  - steam:718670
+  requires: []
+- name: Potion Craft Alchemist Simulator
+  ids:
+  - steam:1210320
+  requires: []
+- name: Book of Hours
+  ids:
+  - steam:1028310
+  requires: []
