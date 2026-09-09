@@ -2829,3 +2829,28 @@ I've seen `&#x27;`, `&amp;` etc.
 ❯ /plan When scraping greenmangaming, there's html/xml entities still in the titles of bundles & games.
 I've seen `&#x27;`, `&amp;` etc.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. How do you want to handle the 3 leftover pre-scrape autostash entries sitting in git stash?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Stash cleanup** (1/1) <kbd>Single Select</kbd><br>
+>> How do you want to handle the 3 leftover pre-scrape autostash entries sitting in git stash?
+> - [ ] 1\. Show me the details first
+>   - _I'll dump full diffs/stats for each stash so you can decide per-stash rather than me guessing._
+> - [ ] 2\. Restore all 3 now
+>   - _Pop them one at a time onto the current working tree (which itself already has uncommitted changes), stopping if any conflict._
+> - [ ] 3\. Leave them alone for now
+>   - _Don't touch the stash stack; just wanted this flagged._
+> - [x] 4\. _Type something:_
+>   - > Figure out what they do/did, and if we should commit them, if it is already implemented, and so on. Tell me if they are no longer needed, and if they still make sense, commit them with the LPLP commit & rebase style.
+>
+> </details>
+>
+
+❯ /plan Fix @ai/errors/6.txt for `game-collections scrape --git greenmangaming`.
+
