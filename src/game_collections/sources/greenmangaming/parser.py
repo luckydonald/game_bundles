@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import html
 import json
 import re
 from datetime import UTC, datetime
@@ -54,7 +55,7 @@ class GmgParseError(ValueError):
 
 
 def _strip_tags(value: str) -> str:
-    return " ".join(re.sub(r"<[^>]+>", " ", value).split())
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", value)).split())
 # end def _strip_tags
 
 
