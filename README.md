@@ -31,6 +31,12 @@ uv run game-collections validate
 uv run pytest
 ```
 
+Run `uv run game-collections install` once to get a real `game-collections` binary on
+your `PATH` (via `uv tool install`, editable against this checkout unless a newer
+release exists on PyPI) plus working bash/zsh tab completion for both
+`game-collections ...` and `uv run game-collections ...`. `game-collections uninstall`
+(alias `deinstall`) removes the completion wiring and optionally the installed tool.
+
 Common commands:
 
 ```console
