@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: BETTER TOGETHER CO-OP FUN — Ready Up
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/better-together-co-op-fun/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/better-together-co-op-fun/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/better-together-co-op-fun/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Lynked: Banner of the Spark'
+  ids:
+  - steam:3159570
+  requires: []
+- name: Moving Out 2
+  ids:
+  - steam:1641700
+  requires: []
+- name: PlateUp!
+  ids:
+  - steam:1599600
+  requires: []
+- name: Cat Quest II
+  ids:
+  - steam:914710
+  requires: []
+- name: Manic Mechanics
+  ids:
+  - steam:2569820
+  requires: []
+- name: Filthy Animals | Heist Simulator
+  ids:
+  - steam:1195420
+  requires: []
