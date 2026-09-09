@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: THE GEARBOX COLLECTION — Epic
+tier: 2
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/the-gearbox-collection/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/the-gearbox-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/the-gearbox-collection/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Tribes of Midgard
+  ids:
+  - steam:858820
+  requires: []
+- name: Borderlands Game of the Year Enhanced
+  ids:
+  - steam:729040
+  requires: []
+- name: Blanc
+  ids:
+  - steam:1982340
+  requires: []
+- name: Tiny Tina&#x27;s Wonderlands Chaotic Great Edition
+  ids:
+  - steam:bundle/38150
+  requires: []
+- name: Risk of Rain Returns
+  ids:
+  - steam:1337520
+  requires: []
