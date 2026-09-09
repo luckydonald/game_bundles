@@ -429,7 +429,7 @@ def _combo_pack_fixtures() -> tuple[CandidateChooser, Fetcher, NameCollector]:
 
     names = iter(["Game A", "Game B"])
 
-    def collect_name(_count: int) -> str | None:
+    def collect_name(_count: int, _known_names: set[str] | None = None) -> str | None:
         return next(names, None)
     # end def collect_name
 
@@ -501,7 +501,7 @@ def test_choosing_multiple_never_offers_multiple_again_for_a_collected_name() ->
 
     names = iter(["Ambiguous Game"])
 
-    def collect_name(_count: int) -> str | None:
+    def collect_name(_count: int, _known_names: set[str] | None = None) -> str | None:
         return next(names, None)
     # end def collect_name
 

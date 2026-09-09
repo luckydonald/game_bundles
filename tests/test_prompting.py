@@ -80,6 +80,34 @@ def test_choose_store_candidate_non_interleaved_collects_names_upfront(
 # end def test_choose_store_candidate_non_interleaved_collects_names_upfront
 
 
+def test_choose_store_candidate_rejects_name_already_known(
+    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    # "Game A" collides with a name already destined for the bundle; retry with "Game B".
+    _responses(monkeypatch, ["2", "Game A", "Game B", ""])
+    known_names = {"game a"}
+
+    selected = choose_store_candidate("Sample Game", "steam", [_candidate(42)], known_names=known_names)
+
+    assert selected == ChosenNames(names=["Game B"])
+    assert "already used by another game" in capsys.readouterr().err
+    assert known_names == {"game a", "game b"}
+# end def test_choose_store_candidate_rejects_name_already_known
+
+
+def test_choose_store_candidate_rejects_duplicate_within_same_split(
+    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    # Typing "Game A" twice in the same "Multiple…" session is rejected on the second attempt.
+    _responses(monkeypatch, ["2", "Game A", "Game A", "Game B", ""])
+
+    selected = choose_store_candidate("Sample Game", "steam", [_candidate(42)], known_names=set())
+
+    assert selected == ChosenNames(names=["Game A", "Game B"])
+    assert "already used by another game" in capsys.readouterr().err
+# end def test_choose_store_candidate_rejects_duplicate_within_same_split
+
+
 def test_announce_exact_match_prints_id_and_url(capsys: pytest.CaptureFixture[str]) -> None:
     announce_exact_match("steam:42", "https://store.steampowered.com/app/42/")
 
@@ -111,3 +139,17 @@ def test_collect_one_name_returns_none_for_blank(monkeypatch: pytest.MonkeyPatch
 
     assert collect_one_name(0) is None
 # end def test_collect_one_name_returns_none_for_blank
+
+
+def test_collect_one_name_rejects_name_already_known(
+    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    _responses(monkeypatch, ["Torchlight 2", "Torchlight 3"])
+    known_names = {"torchlight 2"}
+
+    name = collect_one_name(0, known_names)
+
+    assert name == "Torchlight 3"
+    assert "already used by another game" in capsys.readouterr().err
+    assert known_names == {"torchlight 2", "torchlight 3"}
+# end def test_collect_one_name_rejects_name_already_known

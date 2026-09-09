@@ -181,20 +181,12 @@ def test_sync_auto_errors_after_every_automatic_source_fails(tmp_path: Path, mon
 # end def test_sync_auto_errors_after_every_automatic_source_fails
 
 
-def test_scrape_humblebundle_help_lists_git_flag() -> None:
-    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--help"])
+def test_scrape_help_lists_git_flag() -> None:
+    result = CliRunner().invoke(app, ["scrape", "--help"])
 
     assert result.exit_code == 0
     assert "--git" in result.output
-# end def test_scrape_humblebundle_help_lists_git_flag
-
-
-def test_scrape_isthereanydeal_help_lists_git_flag() -> None:
-    result = CliRunner().invoke(app, ["scrape", "isthereanydeal", "--help"])
-
-    assert result.exit_code == 0
-    assert "--git" in result.output
-# end def test_scrape_isthereanydeal_help_lists_git_flag
+# end def test_scrape_help_lists_git_flag
 
 
 def test_complete_requires_file_or_all() -> None:
@@ -285,7 +277,7 @@ def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
         lambda *args, **kwargs: calls.append("scrape") or HumbleCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
@@ -325,11 +317,128 @@ def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
 
     monkeypatch.setattr("game_collections.cli.crawl_humble_offers", raising_crawl)
 
-    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 1, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
 # end def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises
+
+
+def test_scrape_greenmangaming_git_flag_stashes_scrapes_commits_then_restores(
+    monkeypatch: MonkeyPatch,
+) -> None:
+    from game_collections.sources.greenmangaming.crawler import GmgCrawlReport
+    from game_collections.sources.greenmangaming.resolver import GmgResolutionMap
+
+    calls: list[str] = []
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: calls.append("head") or "deadbeef")
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.autostash", lambda root: calls.append("autostash") or True
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.commit_changed_paths",
+        lambda root, paths, message: calls.append("commit") or True,
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.restore_autostash", lambda root, head: calls.append("restore")
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.GmgHttpClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.load_gmg_resolution_map", lambda path: GmgResolutionMap(schema=1, games={})
+    )
+    monkeypatch.setattr("game_collections.cli.GmgStorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr(
+        "game_collections.cli.crawl_gmg_offers",
+        lambda *args, **kwargs: calls.append("scrape") or GmgCrawlReport(offers=(), errors=()),
+    )
+
+    result = CliRunner().invoke(app, ["scrape", "--git", "greenmangaming", "--non-interactive"])
+
+    assert result.exit_code == 0, result.output
+    assert calls == ["head", "autostash", "scrape", "commit", "restore"]
+# end def test_scrape_greenmangaming_git_flag_stashes_scrapes_commits_then_restores
+
+
+def test_scrape_greenmangaming_persists_resolution_map_before_a_failed_offer_write(
+    monkeypatch: MonkeyPatch,
+) -> None:
+    """A late failure writing the final GameList (e.g. a duplicate game name slipping through)
+    must not lose already-resolved interactive answers - see `ai/errors/5.txt`, where the
+    resolution map was only saved by accident because a later bundle in the same run happened
+    to succeed afterward. The map write must happen unconditionally, before the risky write."""
+    from game_collections.sources.greenmangaming.crawler import GmgCrawlReport
+    from game_collections.sources.greenmangaming.resolver import GmgResolutionMap
+
+    calls: list[str] = []
+    monkeypatch.setattr(
+        "game_collections.cli.GmgHttpClient", lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: "")
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.load_gmg_resolution_map",
+        lambda path: GmgResolutionMap(schema=1, games={"1": ["steam:1"]}),
+    )
+    monkeypatch.setattr("game_collections.cli.GmgStorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr(
+        "game_collections.cli.write_gmg_resolution_map", lambda path, mapping: calls.append("write_map")
+    )
+
+    def fake_write_gmg_offer(offer: object, **_kwargs: object) -> list[Path]:
+        calls.append("write_offer")
+        raise ValueError("list contains duplicate game names")
+    # end def fake_write_gmg_offer
+
+    monkeypatch.setattr("game_collections.cli.write_gmg_offer", fake_write_gmg_offer)
+
+    fake_offer = SimpleNamespace(archive=SimpleNamespace(name="Sample Bundle"), source={})
+
+    def fake_crawl_gmg_offers(fetch: object, resolver: object, mapping: object, urls: object, **kwargs: object) -> object:
+        kwargs["on_offer"](fake_offer)
+        return GmgCrawlReport(offers=(), errors=())
+    # end def fake_crawl_gmg_offers
+
+    monkeypatch.setattr("game_collections.cli.crawl_gmg_offers", fake_crawl_gmg_offers)
+
+    result = CliRunner().invoke(app, ["scrape", "greenmangaming", "--non-interactive"])
+
+    assert result.exit_code == 1
+    assert calls == ["write_map", "write_offer"]
+# end def test_scrape_greenmangaming_persists_resolution_map_before_a_failed_offer_write
+
+
+def test_scrape_dailyindiegame_git_flag_stashes_scrapes_commits_then_restores(
+    monkeypatch: MonkeyPatch,
+) -> None:
+    from game_collections.sources.dailyindiegame.crawler import DigCrawlReport
+
+    calls: list[str] = []
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: calls.append("head") or "deadbeef")
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.autostash", lambda root: calls.append("autostash") or True
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.commit_changed_paths",
+        lambda root, paths, message: calls.append("commit") or True,
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.restore_autostash", lambda root, head: calls.append("restore")
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.DigBrowserClient",
+        lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
+    )
+    monkeypatch.setattr(
+        "game_collections.cli.crawl_dig_offers",
+        lambda *args, **kwargs: calls.append("scrape") or DigCrawlReport(offers=(), errors=()),
+    )
+
+    result = CliRunner().invoke(app, ["scrape", "--git", "dailyindiegame"])
+
+    assert result.exit_code == 0, result.output
+    assert calls == ["head", "autostash", "scrape", "commit", "restore"]
+# end def test_scrape_dailyindiegame_git_flag_stashes_scrapes_commits_then_restores
 
 
 def test_git_commit_message_manual_style_has_no_ci_wording() -> None:
@@ -369,7 +478,7 @@ def test_git_commit_message_auto_style_omits_run_note_outside_ci(monkeypatch: Mo
 
 
 def test_scrape_humblebundle_git_style_rejects_invalid_value() -> None:
-    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--git-style", "bogus"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--git-style", "bogus", "humblebundle"])
 
     assert result.exit_code == 2
     assert "--git-style must be 'auto' or 'manual'" in result.output
@@ -401,10 +510,10 @@ def test_scrape_humblebundle_git_style_defaults_to_manual_wording(monkeypatch: M
         lambda *args, **kwargs: HumbleCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "humblebundle", "--git", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
-    assert captured_messages == ["[crawl|humblebundle] manual scrape:\nManual `game-collections scrape humblebundle --git` run.\n\nNone unresolved.\n"]
+    assert captured_messages == ["[crawl|humblebundle] manual scrape:\nManual `game-collections scrape --git humblebundle` run.\n\nNone unresolved.\n"]
 # end def test_scrape_humblebundle_git_style_defaults_to_manual_wording
 
 

@@ -105,7 +105,7 @@ def render_resolution_map(mapping: GmgResolutionMap) -> str:
 # end def render_resolution_map
 
 
-CandidateChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
+CandidateChooser = Callable[..., ChosenCandidate]
 Fetcher = Callable[[str], str]
 LogFn = Callable[[str], None]
 _NO_LOG: LogFn = lambda _message: None  # noqa: E731
@@ -180,6 +180,7 @@ class StorefrontResolver:
         stores: list[str],
         cache_key: str,
         mapping: GmgResolutionMap,
+        known_names: set[str] | None = None,
     ) -> list[ResolvedGame]:
         """Resolve one title across `stores`, caching the plain (unsplit) result under `cache_key`.
 
@@ -187,9 +188,23 @@ class StorefrontResolver:
         mirrors it): more than one `ResolvedGame` comes back only when the
         user declares "Multiple…" for some store, splitting the title into
         sub-titles that are each re-resolved from scratch.
+
+        `known_names`, when given, is a live set of casefolded names already destined for the
+        current bundle - seeded by `resolve_archive` from every distinct item's title. `title`
+        itself is removed from it for the duration of this call (it's about to be either kept as
+        one entry or replaced by a split), and added back before any "kept as one entry" return,
+        so a "Multiple…" prompt that defaults to `title` doesn't immediately reject its own
+        default, while a duplicate typed against any *other* name is still caught immediately -
+        see `prompting.choose_store_candidate`.
         """
+        if known_names is not None:
+            known_names.discard(title.casefold())
+        # end if
         existing = mapping.games.get(cache_key)
         if existing is not None:
+            if known_names is not None:
+                known_names.add(title.casefold())
+            # end if
             return [ResolvedGame(name=title, ids=list(existing))]
         # end if
         ids: list[str] = []
@@ -209,14 +224,16 @@ class StorefrontResolver:
                 ids.append(exact[0].qualified_id)
                 continue
             # end if
-            selected = self._choose(title, typed_provider, candidates)
+            selected = self._choose(title, typed_provider, candidates, known_names=known_names)
             if selected is None:
                 continue
             # end if
             if isinstance(selected, ChosenNames):
                 results: list[ResolvedGame] = []
                 for index, sub_title in enumerate(selected.names, start=1):
-                    results.extend(self._resolve_title(sub_title, stores, f"{cache_key}::{index}", mapping))
+                    results.extend(
+                        self._resolve_title(sub_title, stores, f"{cache_key}::{index}", mapping, known_names)
+                    )
                 # end for
                 return results
             # end if
@@ -227,12 +244,17 @@ class StorefrontResolver:
         # end if
         deduped = list(dict.fromkeys(ids))
         mapping.games[cache_key] = deduped
+        if known_names is not None:
+            known_names.add(title.casefold())
+        # end if
         return [ResolvedGame(name=title, ids=deduped)]
     # end def _resolve_title
 
-    def resolve_item(self, item: GmgItem, mapping: GmgResolutionMap) -> list[ResolvedGame]:
+    def resolve_item(
+        self, item: GmgItem, mapping: GmgResolutionMap, known_names: set[str] | None = None
+    ) -> list[ResolvedGame]:
         """Resolve one game, updating the durable mapping in memory."""
-        return self._resolve_title(item.title, item.redeem_on, item.product_id, mapping)
+        return self._resolve_title(item.title, item.redeem_on, item.product_id, mapping, known_names)
     # end def resolve_item
 
     def resolve_archive(
@@ -252,11 +274,12 @@ class StorefrontResolver:
                 # end if
             # end for
         # end for
+        known_names = {item.title.casefold() for item in distinct}
         resolutions: dict[str, GmgResolution] = {}
         total = len(distinct)
         for index, item in enumerate(distinct, start=1):
             log(f"  Game {index}/{total}: {item.title}")
-            results = self.resolve_item(item, mapping)
+            results = self.resolve_item(item, mapping, known_names)
             all_ids = [identifier for entry in results for identifier in entry.ids]
             unresolved_stores = [
                 store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)

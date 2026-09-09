@@ -27,7 +27,7 @@ from game_collections.sources.prompting import ChosenCandidate, ChosenNames
 Provider = StoreName | Literal["isthereanydeal"]
 ProviderSelection = Provider | Literal["all"]
 CompletionMode = Literal["blank", "missing", "unresolved", "refetch_all"]
-SearchChooser = Callable[[str, StoreName, list[StoreCandidate]], ChosenCandidate]
+SearchChooser = Callable[..., ChosenCandidate]
 ItadResolve = Callable[[str], ItadGameResolution]
 COMPLETION_MODES: tuple[CompletionMode, ...] = (
     "blank",
@@ -102,6 +102,7 @@ def resolve_title(
     providers: tuple[StoreName, ...],
     resolver: StorefrontResolver,
     choose: SearchChooser,
+    known_names: set[str] | None = None,
 ) -> list[ResolvedGame]:
     """Resolve a title once per provider, accepting unique exact matches.
 
@@ -109,7 +110,16 @@ def resolve_title(
     `ChosenNames` for some provider ("Multiple…"), splitting the title into
     several sub-titles that are each re-resolved from scratch across every
     requested provider.
+
+    `known_names`, when given, is a live set of casefolded names already destined for the current
+    draft list. `title` itself is removed from it for the duration of this call and added back
+    before the "kept as one entry" return, so a "Multiple…" prompt that defaults to `title`
+    doesn't reject its own default while a duplicate typed against any *other* name is still
+    caught immediately - see `prompting.choose_store_candidate`.
     """
+    if known_names is not None:
+        known_names.discard(title.casefold())
+    # end if
     ids: list[str] = []
     for provider in providers:
         candidates = resolver.search(provider, title)
@@ -122,19 +132,22 @@ def resolve_title(
             ids.append(exact[0].qualified_id)
             continue
         # end if
-        selected = choose(title, provider, candidates)
+        selected = choose(title, provider, candidates, known_names=known_names)
         if selected is None:
             continue
         # end if
         if isinstance(selected, ChosenNames):
             results: list[ResolvedGame] = []
             for sub_title in selected.names:
-                results.extend(resolve_title(sub_title, providers, resolver, choose))
+                results.extend(resolve_title(sub_title, providers, resolver, choose, known_names))
             # end for
             return results
         # end if
         ids.append(parse_store_identity(provider, selected))
     # end for
+    if known_names is not None:
+        known_names.add(title.casefold())
+    # end if
     return [ResolvedGame(name=title, ids=list(dict.fromkeys(ids)))]
 # end def resolve_title
 
@@ -167,6 +180,14 @@ def complete_game_list(
     # end if
     unresolved: list[str] = []
     games_out: list[dict[str, Any]] = []
+    # Seeded with every draft game's name up front so a "Multiple…" split anywhere below is
+    # checked against the whole list immediately, not just names collected in its own split - see
+    # `resolve_title`'s `known_names` handling and `prompting.choose_store_candidate`.
+    known_names = {
+        game["name"].casefold()
+        for game in games
+        if isinstance(game, dict) and isinstance(game.get("name"), str) and game["name"].strip()
+    }
     for index, game in enumerate(games, start=1):
         if not isinstance(game, dict):
             raise ValueError(f"game {index} must contain an object")
@@ -214,7 +235,7 @@ def complete_game_list(
             if mode == "refetch_all":
                 current = [value for value in current if not value.startswith(f"{store_provider}:")]
             # end if
-            results = resolve_title(name, (store_provider,), resolver, choose)
+            results = resolve_title(name, (store_provider,), resolver, choose, known_names)
             if len(results) > 1:
                 # The user declared "Multiple…" for this store: this title is
                 # actually several separate games. Re-resolve every requested
@@ -224,7 +245,7 @@ def complete_game_list(
                 split = [
                     entry
                     for sub_title in (r.name for r in results)
-                    for entry in resolve_title(sub_title, store_providers, resolver, choose)
+                    for entry in resolve_title(sub_title, store_providers, resolver, choose, known_names)
                 ]
                 break
             # end if

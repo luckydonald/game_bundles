@@ -52,8 +52,8 @@ def test_complete_game_list_fills_missing_ids_and_preserves_existing_ids() -> No
     completed, unresolved = complete_game_list(
         raw,
         ("steam", "gog"),
-        StorefrontResolver(fetch, lambda _item, _provider, _candidates: None),
-        lambda _title, _provider, _candidates: None,
+        StorefrontResolver(fetch, lambda _item, _provider, _candidates, **_kwargs: None),
+        lambda _title, _provider, _candidates, **_kwargs: None,
     )
 
     assert unresolved == []
@@ -67,13 +67,13 @@ def test_complete_game_list_fills_missing_ids_and_preserves_existing_ids() -> No
 
 def test_complete_game_list_keeps_unresolved_game_as_draft() -> None:
     raw = {"schema": 1, "name": "Draft", "games": [{"name": "Unknown", "ids": []}]}
-    resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates: None)
+    resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates, **_kwargs: None)
 
     completed, unresolved = complete_game_list(
         raw,
         ("steam",),
         resolver,
-        lambda _title, _provider, _candidates: None,
+        lambda _title, _provider, _candidates, **_kwargs: None,
     )
 
     assert unresolved == ["Unknown"]
@@ -92,6 +92,7 @@ def test_complete_game_list_uses_manual_candidate_selection() -> None:
         _title: str,
         _provider: str,
         results: list[StoreCandidate],
+        **_kwargs: object,
     ) -> str | None:
         selected.extend(results)
         return results[0].url
@@ -120,7 +121,7 @@ def test_complete_game_list_splits_a_title_declared_multiple_into_grouped_games(
         return '<a href="https://store.steampowered.com/app/20/game-b/">Game B</a>'
     # end def fetch
 
-    def choose(title: str, _provider: str, _candidates: list[StoreCandidate]) -> object:
+    def choose(title: str, _provider: str, _candidates: list[StoreCandidate], **_kwargs: object) -> object:
         if title == "Combo Pack":
             return ChosenNames(names=["Game A", "Game B"])
         # end if

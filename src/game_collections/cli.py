@@ -106,6 +106,35 @@ app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
 
+
+@scrape_app.callback()
+def scrape_callback(
+    ctx: typer.Context,
+    git: Annotated[
+        bool,
+        typer.Option(
+            "--git",
+            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
+        ),
+    ] = False,
+    git_style: Annotated[
+        str,
+        typer.Option(
+            "--git-style",
+            help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
+        ),
+    ] = "manual",
+) -> None:
+    """Shared options for every `scrape` subcommand."""
+    if git_style not in {"auto", "manual"}:
+        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
+        raise typer.Exit(2)
+    # end if
+    repository_root = Path.cwd().resolve()
+    ctx.obj = git_ops.begin_scrape_git_session(repository_root, git, git_style)
+# end def scrape_callback
+
+
 class SteamAutoSourceError(ValueError):
     """Every automatic Steam ownership source failed."""
 
@@ -421,7 +450,7 @@ def search_command(
     client = HumbleHttpClient()
     try:
         providers = selected_providers(provider, default="all")
-        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates: None)
+        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates, **_kwargs: None)
         _print_search_results(name, providers, resolver)
     except (OSError, ValueError, RuntimeError) as error:
         typer.echo(str(error), err=True)
@@ -510,7 +539,7 @@ def complete_command(
     try:
         selected = selected_providers(providers, default="steam")
         selected_mode = completion_mode(mode)
-        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates: None)
+        resolver = StorefrontResolver(client.fetch, lambda _title, _provider, _candidates, **_kwargs: None)
         itad_resolve = None
         if "isthereanydeal" in selected:
             itad_client = ItadHttpClient()
@@ -599,6 +628,7 @@ def _git_commit_message(source: str, style: str, summary: str, invocation: str, 
 
 @scrape_app.command("humblebundle")
 def scrape_humblebundle_command(
+    ctx: typer.Context,
     urls: Annotated[
         list[str] | None,
         typer.Option("--url", help="Crawl only this Choice or Games URL; repeatable."),
@@ -618,29 +648,10 @@ def scrape_humblebundle_command(
             "--refresh", "--no-cache", help="Re-resolve every offer, ignoring already-archived output."
         ),
     ] = False,
-    git: Annotated[
-        bool,
-        typer.Option(
-            "--git",
-            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
-        ),
-    ] = False,
-    git_style: Annotated[
-        str,
-        typer.Option(
-            "--git-style",
-            help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
-        ),
-    ] = "manual",
 ) -> None:
     """Archive current Humble Choice and active Games bundles."""
-    if git_style not in {"auto", "manual"}:
-        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
-        raise typer.Exit(2)
-    # end if
-    repository_root = Path.cwd().resolve()
-    pre_crawl_head = git_ops.head(repository_root) if git else None
-    stashed = git_ops.autostash(repository_root) if git else False
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
     client = HumbleHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
@@ -652,6 +663,10 @@ def scrape_humblebundle_command(
 
     def on_offer(offer: CrawledHumbleOffer) -> None:
         nonlocal written_count
+        # Persist every interactively-resolved answer before attempting the final GameList
+        # write below - resolution is already fully done by this point, so a downstream
+        # validation failure (e.g. a duplicate game name) must not risk losing it.
+        write_resolution_map(resolution_map, mapping)
         paths = write_humble_offer(
             offer,
             lists_root=lists_root,
@@ -660,7 +675,6 @@ def scrape_humblebundle_command(
         )
         written_count += len(paths)
         typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
-        write_resolution_map(resolution_map, mapping)
     # end def on_offer
 
     unresolved: list[str] = []
@@ -700,33 +714,29 @@ def scrape_humblebundle_command(
     finally:
         client.close()
         steamdb_fetcher.close()
-        if git:
-            unresolved_line = (
-                f"{len(unresolved)} unresolved store IDs left as `unresolved:store:steam:<slug>` "
-                "for manual `game-collections complete` follow-up."
-                if unresolved
-                else "None unresolved."
-            )
-            message = _git_commit_message(
-                "humblebundle",
-                git_style,
-                "Archived this week's Humble Bundle offers",
-                "game-collections scrape humblebundle --git",
-                unresolved_line,
-            )
-            git_ops.commit_changed_paths(
-                repository_root, ["lists", "archives", str(resolution_map)], message
-            )
-            if stashed and pre_crawl_head is not None:
-                git_ops.restore_autostash(repository_root, pre_crawl_head)
-            # end if
-        # end if
+        unresolved_line = (
+            f"{len(unresolved)} unresolved store IDs left as `unresolved:store:steam:<slug>` "
+            "for manual `game-collections complete` follow-up."
+            if unresolved
+            else "None unresolved."
+        )
+        message = _git_commit_message(
+            "humblebundle",
+            git_session.style,
+            "Archived this week's Humble Bundle offers",
+            "game-collections scrape --git humblebundle",
+            unresolved_line,
+        )
+        git_ops.finish_scrape_git_session(
+            git_session, ["lists", "archives", str(resolution_map)], message
+        )
     # end try
 # end def scrape_humblebundle_command
 
 
 @scrape_app.command("dailyindiegame")
 def scrape_dailyindiegame_command(
+    ctx: typer.Context,
     urls: Annotated[
         list[str] | None,
         typer.Option("--url", help="Crawl only this weekly bundle URL; repeatable."),
@@ -741,7 +751,8 @@ def scrape_dailyindiegame_command(
     ] = False,
 ) -> None:
     """Archive currently listed DailyIndieGame Steam bundles."""
-    repository_root = Path.cwd().resolve()
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
     client = DigBrowserClient()
     written_count = 0
 
@@ -777,12 +788,21 @@ def scrape_dailyindiegame_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
+        message = _git_commit_message(
+            "dailyindiegame",
+            git_session.style,
+            "Archived this week's DailyIndieGame bundles",
+            "game-collections scrape --git dailyindiegame",
+            "No storefront resolution needed for this source.",
+        )
+        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/dailyindiegame"], message)
     # end try
 # end def scrape_dailyindiegame_command
 
 
 @scrape_app.command("greenmangaming")
 def scrape_greenmangaming_command(
+    ctx: typer.Context,
     urls: Annotated[
         list[str] | None,
         typer.Option("--url", help="Crawl only this bundle detail URL; repeatable."),
@@ -804,11 +824,12 @@ def scrape_greenmangaming_command(
     ] = False,
 ) -> None:
     """Archive currently listed Green Man Gaming video-games bundles."""
-    repository_root = Path.cwd().resolve()
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
     client = GmgHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
-        (lambda _title, _provider, _candidates: None)
+        (lambda _title, _provider, _candidates, **_kwargs: None)
         if non_interactive
         else choose_store_candidate
     )
@@ -816,6 +837,10 @@ def scrape_greenmangaming_command(
 
     def on_offer(offer: CrawledGmgOffer) -> None:
         nonlocal written_count
+        # Persist every interactively-resolved answer before attempting the final GameList
+        # write below - resolution is already fully done by this point, so a downstream
+        # validation failure (e.g. a duplicate game name) must not risk losing it.
+        write_gmg_resolution_map(resolution_map, mapping)
         paths = write_gmg_offer(
             offer,
             lists_root=lists_root,
@@ -824,9 +849,9 @@ def scrape_greenmangaming_command(
         )
         written_count += len(paths)
         typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
-        write_gmg_resolution_map(resolution_map, mapping)
     # end def on_offer
 
+    unresolved: list[str] = []
     try:
         mapping = load_gmg_resolution_map(resolution_map)
         resolver = GmgStorefrontResolver(client.fetch, choose, steamdb_fetch=steamdb_fetcher.fetch)
@@ -863,12 +888,29 @@ def scrape_greenmangaming_command(
     finally:
         client.close()
         steamdb_fetcher.close()
+        unresolved_line = (
+            f"{len(unresolved)} unresolved store IDs left as `unresolved:store:steam:<slug>` "
+            "for manual `game-collections complete` follow-up."
+            if unresolved
+            else "None unresolved."
+        )
+        message = _git_commit_message(
+            "greenmangaming",
+            git_session.style,
+            "Archived this week's Green Man Gaming bundles",
+            "game-collections scrape --git greenmangaming",
+            unresolved_line,
+        )
+        git_ops.finish_scrape_git_session(
+            git_session, ["lists", "archives/greenmangaming", str(resolution_map)], message
+        )
     # end try
 # end def scrape_greenmangaming_command
 
 
 @scrape_app.command("isthereanydeal")
 def scrape_isthereanydeal_command(
+    ctx: typer.Context,
     tabs: Annotated[
         list[str] | None,
         typer.Option("--tab", help="Discovery tab(s) to crawl: live, expired, pending. Repeatable."),
@@ -885,29 +927,10 @@ def scrape_isthereanydeal_command(
             "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
         ),
     ] = False,
-    git: Annotated[
-        bool,
-        typer.Option(
-            "--git",
-            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
-        ),
-    ] = False,
-    git_style: Annotated[
-        str,
-        typer.Option(
-            "--git-style",
-            help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
-        ),
-    ] = "manual",
 ) -> None:
     """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
-    if git_style not in {"auto", "manual"}:
-        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
-        raise typer.Exit(2)
-    # end if
-    repository_root = Path.cwd().resolve()
-    pre_crawl_head = git_ops.head(repository_root) if git else None
-    stashed = git_ops.autostash(repository_root) if git else False
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
     client = ItadHttpClient()
     written_count = 0
     unresolved_count = 0
@@ -958,25 +981,20 @@ def scrape_isthereanydeal_command(
         raise typer.Exit(1) from error
     finally:
         client.close()
-        if git:
-            unresolved_line = (
-                f"{unresolved_count} unresolved storefront IDs left as "
-                "`unresolved:source:isthereanydeal:<slug>` for manual `game-collections complete` follow-up."
-                if unresolved_count
-                else "None unresolved."
-            )
-            message = _git_commit_message(
-                "isthereanydeal",
-                git_style,
-                "Archived this week's isthereanydeal.com bundles",
-                "game-collections scrape isthereanydeal --git",
-                unresolved_line,
-            )
-            git_ops.commit_changed_paths(repository_root, ["lists", "archives/isthereanydeal"], message)
-            if stashed and pre_crawl_head is not None:
-                git_ops.restore_autostash(repository_root, pre_crawl_head)
-            # end if
-        # end if
+        unresolved_line = (
+            f"{unresolved_count} unresolved storefront IDs left as "
+            "`unresolved:source:isthereanydeal:<slug>` for manual `game-collections complete` follow-up."
+            if unresolved_count
+            else "None unresolved."
+        )
+        message = _git_commit_message(
+            "isthereanydeal",
+            git_session.style,
+            "Archived this week's isthereanydeal.com bundles",
+            "game-collections scrape --git isthereanydeal",
+            unresolved_line,
+        )
+        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/isthereanydeal"], message)
     # end try
 # end def scrape_isthereanydeal_command
 
