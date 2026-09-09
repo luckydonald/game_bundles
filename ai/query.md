@@ -2677,3 +2677,103 @@ could help here.
 > </details>
 >
 
+❯ Can we register our completion to `uv run game-collections …`, too? And if we add to bash completion, can we have the `uv tool install --editable <resolved-repo-root>` (if checkout) or `uv tool install <future pypi name>` in the bashrc or a similar `bashrc.d` (I don't know what's common here; support macOS non-bash shell (i forgot which) too).
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Where should the new shell-completion + auto-install logic live?
+>> 2. For the 'install if missing' step, how should it find this repo's path (needed for `uv tool install --editable <path>`), since your shell rc runs at shell startup regardless of your current directory?
+>> 3. Once a future PyPI release exists, should the snippet prefer installing from PyPI over the local editable checkout?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Snippet location** (1/3) <kbd>Single Select</kbd><br>
+>> Where should the new shell-completion + auto-install logic live?
+> - [ ] 1\. Repo-provided snippet only (Recommended)
+>   - _Ship a bash+zsh completion/install snippet inside this repo (e.g. scripts/shell/). README documents the one line to add to your own rc file / rc.d directory. We never touch files outside the repo._
+> - [ ] 2\. Also auto-append to your dotfiles
+>   - _In addition to the repo snippet, I directly edit your ~/.home/bashrc.dot (or a new file in whatever bashrc.d-style directory your dotfiles framework uses) to source it. This touches files outside the repo and outside version control that Claude doesn't otherwise manage._
+> - [x] 3\. _Type something:_
+>   - > Have an `install` command (which also adds the autocomplete); and a `uninstall` aka. `deinstall` one, too.
+>
+>> **Repo path source** (2/3) <kbd>Single Select</kbd><br>
+>> For the 'install if missing' step, how should it find this repo's path (needed for `uv tool install --editable <path>`), since your shell rc runs at shell startup regardless of your current directory?
+> - [ ] 1\. Env var, hardcoded default
+>   - _Snippet reads $GAME_COLLECTIONS_REPO_DIR, falling back to a hardcoded default of /home/user/git/luckydonald/game_collections if unset. Simple, but bakes in a machine-specific absolute path (only really valid on this machine, in README/comments)._
+> - [ ] 2\. Env var only, no hardcoded fallback
+>   - _Snippet requires $GAME_COLLECTIONS_REPO_DIR to be set (documented in README); if unset, the auto-install step is skipped with a one-line warning. Keeps the shipped snippet fully machine-agnostic._
+> - [x] 3\. _Type something:_
+>   - > Store hardcoded path when registering, by using git root of current shell & cwd
+>
+>> **PyPI vs editable** (3/3) <kbd>Single Select</kbd><br>
+>> Once a future PyPI release exists, should the snippet prefer installing from PyPI over the local editable checkout?
+> - [ ] 1\. Editable checkout always (Recommended for now)
+>   - _Since this project isn't published to PyPI yet, always use `uv tool install --editable <repo>`. Leave a TODO comment for switching to a PyPI name later — avoids inventing a name that doesn't exist yet._
+> - [ ] 2\. Try PyPI name first, fall back to editable
+>   - _Attempt `uv tool install <placeholder-pypi-name>` first, falling back to `--editable <repo>` on failure. Requires picking/inventing a placeholder name now even though nothing is published._
+> - [x] 3\. _Type something:_
+>   - > Use which one is newer, git or pypi.
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Should `game-collections install` automatically edit your shell rc file (e.g. append a `source ...` line to ~/.bashrc / your bashrc.d / ~/.zshrc) to load the completion script, or just (re)generate the completion script file and print the line for you to add yourself?
+>> 2. How should `install` decide git checkout vs PyPI is "newer"?
+>> 3. Should `game-collections uninstall`/`deinstall` also remove the completion script file and any rc-file line install added (full symmetric cleanup), not just `uv tool uninstall`?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Rc file editing** (1/3) <kbd>Single Select</kbd><br>
+>> Should `game-collections install` automatically edit your shell rc file (e.g. append a `source ...` line to ~/.bashrc / your bashrc.d / ~/.zshrc) to load the completion script, or just (re)generate the completion script file and print the line for you to add yourself?
+> - [ ] 1\. Print instructions only (Recommended)
+>   - _install writes the completion script to a stable path (e.g. ~/.local/share/game-collections/completion.bash) and prints the exact `source` line to add — never touches your rc files directly. Safer, no risk of duplicate/broken rc edits._
+> - [x] 2\. Auto-append to detected rc file
+>   - _install detects your shell (bash/zsh) and its rc file, and appends the source line itself (idempotently — skip if already present). More convenient but modifies a file outside repo control automatically each time you run install._
+> - [ ] 3\. _Type something._
+>
+>> **Version comparison** (2/3) <kbd>Single Select</kbd><br>
+>> How should `install` decide git checkout vs PyPI is "newer"?
+> - [x] 1\. Semver compare (Recommended)
+>   - _Parse the version from the git checkout's pyproject.toml and the latest version PyPI reports (via PyPI's JSON API), compare with standard semantic-version rules, pick whichever is higher. Simple, deterministic, uses the `packaging` library._
+> - [ ] 2\. Compare by release/publish date
+>   - _Compare the git checkout's latest commit date against PyPI's latest release upload date, pick whichever is newer. More moving parts (needs commit date + PyPI upload timestamp), less standard for Python tooling._
+> - [ ] 3\. _Type something._
+>
+>> **Uninstall scope** (3/3) <kbd>Single Select</kbd><br>
+>> Should `game-collections uninstall`/`deinstall` also remove the completion script file and any rc-file line install added (full symmetric cleanup), not just `uv tool uninstall`?
+> - [ ] 1\. Yes, full cleanup (Recommended)
+>   - _uninstall runs `uv tool uninstall game-collections`, deletes the generated completion script file, and (if install auto-edited an rc file) removes that line too._
+> - [ ] 2\. Just the uv tool
+>   - _uninstall only runs `uv tool uninstall game-collections` and leaves the completion script / any rc edits in place for the user to clean up manually._
+> - [x] 3\. _Type something:_
+>   - > Just our rc file & auto complete changes.; however ask if we should also remove the tool itself.
+>
+> </details>
+>
+
+❯ Task Notification:
+> - Task `a071732cec7ef6660` <kbd>completed</kbd>
+> - Tool `toolu_01KCihmz5WwtXZ3K1HqfZXmW`
+> - > Agent "Research CLI patterns and deps for install/uninstall command" finished
+> - [Query (`2907` chars, `2.84 KB`)](output/agents/041.a071732cec7ef6660/prompt.md)
+> - [Answer (`9415` chars, `9.24 KB`)](output/agents/041.a071732cec7ef6660/result.md)
+> - [Raw log (`265128` chars, `259 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/f1349561-6afd-4e58-90d5-57954a70e3d5/tasks/a071732cec7ef6660.output)
+> - `11` tools, `40218` tokens, `1.08642 s`
+
+❯ Task Notification:
+> - Task `a56eb246a0ab86027` <kbd>completed</kbd>
+> - Tool `toolu_014xkzgLf4uPA7bwhzA8uqdx`
+> - > Agent "Design install/uninstall CLI commands with completion" finished
+> - [Query (`9956` chars, `9.78 KB`)](output/agents/042.a56eb246a0ab86027/prompt.md)
+> - [Answer (`31323` chars, `30.6 KB`)](output/agents/042.a56eb246a0ab86027/result.md)
+> - [Raw log (`336678` chars, `329 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/f1349561-6afd-4e58-90d5-57954a70e3d5/tasks/a56eb246a0ab86027.output)
+> - `13` tools, `65070` tokens, `5.67208 s`
+
