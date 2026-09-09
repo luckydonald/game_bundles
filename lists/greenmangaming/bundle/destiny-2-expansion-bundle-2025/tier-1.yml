@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'DESTINY 2: EXPANSION BUNDLE 2025 — Ghost'
+tier: 1
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/destiny-2-expansion-bundle-2025/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/destiny-2-expansion-bundle-2025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/destiny-2-expansion-bundle-2025/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Destiny 2: The Final Shape'
+  ids:
+  - steam:2336880
+  requires: []
+- name: 'Destiny 2: Shadowkeep Pack'
+  ids:
+  - steam:1090200
+  requires: []
+- name: 'Destiny 2: Beyond Light Pack'
+  ids:
+  - steam:1314563
+  requires: []
