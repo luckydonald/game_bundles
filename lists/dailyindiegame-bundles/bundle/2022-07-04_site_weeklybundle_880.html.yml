@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 880: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11718/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11718/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11718/source.json
+games:
+- name: 'Puss in Boots: Fear Not Hooman'
+  ids:
+  - steam:1034820
+  requires: []
+- name: The Last Shot
+  ids:
+  - steam:1295000
+  requires: []
+- name: PowerUp Elevation
+  ids:
+  - steam:879390
+  requires: []
+- name: Cube Defender
+  ids:
+  - steam:733040
+  requires: []
+- name: Curse in our heads
+  ids:
+  - steam:871300
+  requires: []
+- name: Gun Skaters
+  ids:
+  - steam:1062130
+  requires: []
+- name: Poly Party
+  ids:
+  - steam:1291110
+  requires: []
+- name: Urizen Frosty Plus
+  ids:
+  - unresolved:source:isthereanydeal:11718:urizen-frosty-plus
+  requires: []
+- name: Hepta Beats
+  ids:
+  - steam:1157670
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 947 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12071/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12071/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12071/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+  requires: []
+- name: Super Space Serpent SE
+  ids:
+  - unresolved:source:isthereanydeal:12071:super-space-serpent-se
+  requires: []
+- name: AMazing TD
+  ids:
+  - steam:1140030
+  requires: []
+- name: MCAS Simulation
+  ids:
+  - steam:1191930
+  requires: []
+- name: SSTR
+  ids:
+  - unresolved:source:isthereanydeal:12071:sstr
+  requires: []
+- name: Epocria
+  ids:
+  - steam:1313340
+  requires: []
+- name: Crime District
+  ids:
+  - steam:1593660
+  requires: []
+- name: RecMaster Pro - Screen Recorder
+  ids:
+  - steam:1923640
+  requires: []
+- name: Via Mortis
+  ids:
+  - steam:1987550
+  requires: []

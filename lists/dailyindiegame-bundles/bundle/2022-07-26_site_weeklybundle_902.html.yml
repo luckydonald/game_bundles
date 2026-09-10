@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 902: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11817/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11817/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11817/source.json
+games:
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+  requires: []
+- name: Destiny Hunter
+  ids:
+  - steam:1028830
+  requires: []
+- name: Vertigo FPS
+  ids:
+  - steam:833940
+  requires: []
+- name: Forgotten
+  ids:
+  - steam:1097270
+  requires: []
+- name: Wilma's Dreams
+  ids:
+  - steam:1586980
+  requires: []
+- name: Bacteria Wars
+  ids:
+  - steam:1707890
+  requires: []
+- name: Us Against Aliens
+  ids:
+  - steam:1779650
+  requires: []
+- name: Augmented Future
+  ids:
+  - unresolved:source:isthereanydeal:11817:augmented-future
+  requires: []
+- name: ME_iON
+  ids:
+  - steam:1963590
+  requires: []

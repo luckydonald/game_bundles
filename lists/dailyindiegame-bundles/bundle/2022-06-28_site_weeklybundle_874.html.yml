@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 874: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11663/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11663/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11663/source.json
+games:
+- name: Colorcers
+  ids:
+  - unresolved:source:isthereanydeal:11663:colorcers
+  requires: []
+- name: Snakest
+  ids:
+  - steam:940350
+  requires: []
+- name: Jamping
+  ids:
+  - unresolved:source:isthereanydeal:11663:jamping
+  requires: []
+- name: Magic Adventures
+  ids:
+  - steam:1681400
+  requires: []
+- name: HEDE Game Engine
+  ids:
+  - steam:1313330
+  requires: []
+- name: Berries Challenge
+  ids:
+  - steam:1391990
+  requires: []
+- name: Candy land
+  ids:
+  - unresolved:source:isthereanydeal:11663:candy-land
+  requires: []
+- name: Mini ship wars
+  ids:
+  - unresolved:source:isthereanydeal:11663:mini-ship-wars
+  requires: []
+- name: Twenty One
+  ids:
+  - steam:938520
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 951: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12079/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12079/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12079/source.json
+games:
+- name: The first thrust of God
+  ids:
+  - steam:773650
+  requires: []
+- name: Chishiki Runner
+  ids:
+  - unresolved:source:isthereanydeal:12079:chishiki-runner
+  requires: []
+- name: Sphere Game
+  ids:
+  - steam:1376590
+  requires: []
+- name: PARSE ALLY
+  ids:
+  - unresolved:source:isthereanydeal:12079:parse-ally
+  requires: []
+- name: Alien Invasion 3d
+  ids:
+  - steam:818640
+  requires: []
+- name: In a search of a new home
+  ids:
+  - steam:1284510
+  requires: []
+- name: Ayu - The Dream Soul
+  ids:
+  - unresolved:source:isthereanydeal:12079:ayu-the-dream-soul
+  requires: []
+- name: Space Ship Infinity
+  ids:
+  - steam:1482050
+  requires: []
+- name: Crazy Car
+  ids:
+  - steam:652230
+  requires: []

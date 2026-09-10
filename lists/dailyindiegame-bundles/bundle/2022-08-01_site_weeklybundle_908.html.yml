@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 908: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11879/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11879/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11879/source.json
+games:
+- name: Crafting Tycoon v0.8
+  ids:
+  - steam:757440
+  requires: []
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:11879:a-d-m-angels-demons-and-men
+  requires: []
+- name: Unveloped
+  ids:
+  - steam:776740
+  requires: []
+- name: XYLITH - Hostile Planet
+  ids:
+  - steam:1210640
+  requires: []
+- name: Software House Simulator
+  ids:
+  - steam:1293400
+  requires: []
+- name: travelsolar
+  ids:
+  - steam:1411880
+  requires: []
+- name: Vortex Escape
+  ids:
+  - unresolved:source:isthereanydeal:11879:vortex-escape
+  requires: []
+- name: Reach the Summit
+  ids:
+  - steam:1512790
+  requires: []
+- name: FALCO AXE
+  ids:
+  - steam:1561870
+  requires: []

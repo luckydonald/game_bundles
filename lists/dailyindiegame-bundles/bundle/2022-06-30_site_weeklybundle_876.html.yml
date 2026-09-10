@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 876: Mix — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11703/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11703/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11703/source.json
+games:
+- name: Gorky 17
+  ids:
+  - steam:253920
+  requires: []
+- name: Johnny Rocket
+  ids:
+  - steam:942300
+  requires: []
+- name: Lawnmower Game
+  ids:
+  - steam:658600
+  requires: []
+- name: The Rex
+  ids:
+  - unresolved:source:isthereanydeal:11703:the-rex
+  requires: []
+- name: Post War Dreams
+  ids:
+  - steam:616490
+  requires: []
+- name: Underwater Life
+  ids:
+  - steam:1595630
+  requires: []
+- name: 'Lawnmower Game: Next Generation'
+  ids:
+  - steam:1346980
+  requires: []
+- name: How does it work!?
+  ids:
+  - steam:1553690
+  requires: []
+- name: Cube Space
+  ids:
+  - steam:1590260
+  requires: []

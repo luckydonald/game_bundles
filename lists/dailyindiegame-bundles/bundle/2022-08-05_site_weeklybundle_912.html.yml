@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 912: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11919/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11919/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11919/source.json
+games:
+- name: Trash Squad
+  ids:
+  - steam:676440
+  requires: []
+- name: BAPTISM
+  ids:
+  - steam:747160
+  requires: []
+- name: Blackjack Math
+  ids:
+  - steam:1341220
+  requires: []
+- name: Speed Swing
+  ids:
+  - steam:1314930
+  requires: []
+- name: My Diggy Dog 2
+  ids:
+  - steam:1216300
+  requires: []
+- name: BlackJack Math Cross Numbers
+  ids:
+  - steam:1520610
+  requires: []
+- name: Yoshimitsu Hatsumi
+  ids:
+  - steam:1686440
+  requires: []
+- name: WWII Tanks Battle Battlefield
+  ids:
+  - steam:1826290
+  requires: []
+- name: PineconeGame
+  ids:
+  - unresolved:source:isthereanydeal:11919:pineconegame
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 911 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11915/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11915/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11915/source.json
+games:
+- name: Equalizer
+  ids:
+  - steam:666250
+  requires: []
+- name: HIKE
+  ids:
+  - unresolved:source:isthereanydeal:11915:hike
+  requires: []
+- name: Face It - A game to fight inner demons
+  ids:
+  - steam:364050
+  requires: []
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+  requires: []
+- name: Byte Family
+  ids:
+  - steam:542880
+  requires: []
+- name: Final Slam 2
+  ids:
+  - steam:291330
+  requires: []
+- name: Mini Kart Racing
+  ids:
+  - steam:1673520
+  requires: []
+- name: Mystery Swords
+  ids:
+  - steam:1760670
+  requires: []
+- name: 3D PUZZLE - Wood House
+  ids:
+  - steam:1912700
+  requires: []

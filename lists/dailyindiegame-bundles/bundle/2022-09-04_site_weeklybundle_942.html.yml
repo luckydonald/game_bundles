@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 942 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12058/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12058/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12058/source.json
+games:
+- name: War Tanks
+  ids:
+  - steam:2018320
+  requires: []
+- name: Emiko's Pledge
+  ids:
+  - steam:1870170
+  requires: []
+- name: Emiko's Pledge 2
+  ids:
+  - steam:1931640
+  requires: []
+- name: Canterz Paranormies
+  ids:
+  - steam:1998470
+  requires: []
+- name: River Raid 3D
+  ids:
+  - steam:2018190
+  requires: []
+- name: Battle of Tanks
+  ids:
+  - steam:2057720
+  requires: []
+- name: The Packages
+  ids:
+  - steam:2105140
+  requires: []
+- name: Pure Love
+  ids:
+  - unresolved:source:isthereanydeal:12058:pure-love
+  requires: []
+- name: Morning Kiss
+  ids:
+  - unresolved:source:isthereanydeal:12058:morning-kiss
+  requires: []

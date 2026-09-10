@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 893 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11776/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11776/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11776/source.json
+games:
+- name: The Risers
+  ids:
+  - steam:857770
+  requires: []
+- name: What A Trash Game!
+  ids:
+  - unresolved:source:isthereanydeal:11776:what-a-trash-game
+  requires: []
+- name: Castle Commander
+  ids:
+  - steam:1188670
+  requires: []
+- name: HoloSprint
+  ids:
+  - steam:1119670
+  requires: []
+- name: Flying Fish
+  ids:
+  - steam:1346790
+  requires: []
+- name: Galactic Refugees
+  ids:
+  - steam:1606460
+  requires: []
+- name: Demon's Residence
+  ids:
+  - unresolved:source:isthereanydeal:11776:demons-residence
+  requires: []
+- name: LawnMower City
+  ids:
+  - steam:1831930
+  requires: []
+- name: 'I''m a cowboy: Western Shooter'
+  ids:
+  - steam:1712120
+  requires: []
