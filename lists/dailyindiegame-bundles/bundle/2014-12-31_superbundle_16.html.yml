@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 16 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1514/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1514/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1514/source.json
+games:
+- name: Reversion - The Meeting (2nd Chapter)
+  ids:
+  - steam:281060
+  requires: []
+- name: 'Nikopol : Secrets of the Immortals'
+  ids:
+  - steam:11370
+  requires: []
+- name: Truffle Saga
+  ids:
+  - steam:302260
+  requires: []
+- name: Post Apocalyptic Mayhem
+  ids:
+  - steam:91900
+  requires: []
+- name: Airship Dragoon
+  ids:
+  - steam:308380
+  requires: []
+- name: Stonerid
+  ids:
+  - steam:315920
+  requires: []

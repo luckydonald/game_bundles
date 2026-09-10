@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2394/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2394/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2394/source.json
+games:
+- name: 'Pahelika: Revelations HD'
+  ids:
+  - steam:333650
+  requires: []
+- name: Tiamat X
+  ids:
+  - steam:343340
+  requires: []
+- name: Truffle Saga
+  ids:
+  - steam:302260
+  requires: []
+- name: Commando Jack
+  ids:
+  - steam:299260
+  requires: []
+- name: 'Pahelika: Secret Legends'
+  ids:
+  - steam:336020
+  requires: []
+- name: Zombie Zoeds
+  ids:
+  - unresolved:source:isthereanydeal:2394:zombie-zoeds
+  requires: []

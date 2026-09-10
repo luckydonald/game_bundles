@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Greenlight Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2149/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2149/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2149/source.json
+games:
+- name: Tower of Elements
+  ids:
+  - unresolved:source:isthereanydeal:2149:tower-of-elements
+  requires: []
+- name: Project Druid - 2D Labyrinth Explorer
+  ids:
+  - steam:388160
+  requires: []
+- name: Raywin
+  ids:
+  - steam:386110
+  requires: []
+- name: Flesh Eaters
+  ids:
+  - steam:383580
+  requires: []
+- name: Star Fields
+  ids:
+  - steam:499420
+  requires: []
+- name: Stellar 2D
+  ids:
+  - steam:391070
+  requires: []

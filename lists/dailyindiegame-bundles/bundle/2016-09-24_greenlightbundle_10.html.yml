@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Greenlight Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4118/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4118/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4118/source.json
+games:
+- name: Final Quest II
+  ids:
+  - steam:540020
+  requires: []
+- name: Kombine
+  ids:
+  - steam:539750
+  requires: []
+- name: Super Mega RPuG
+  ids:
+  - unresolved:source:isthereanydeal:4118:super-mega-rpug
+  requires: []
+- name: The Land of Dasthir
+  ids:
+  - steam:545700
+  requires: []
+- name: Colossal Blueprint
+  ids:
+  - unresolved:source:isthereanydeal:4118:colossal-blueprint
+  requires: []
+- name: gates of the road
+  ids:
+  - unresolved:source:isthereanydeal:4118:gates-of-the-road
+  requires: []
+- name: Midnight Carnival
+  ids:
+  - steam:546980
+  requires: []
+- name: Our Wonderful World
+  ids:
+  - steam:562600
+  requires: []

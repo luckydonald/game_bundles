@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Hacker Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1498/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1498/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1498/source.json
+games:
+- name: Hacker Evolution Duality
+  ids:
+  - steam:70120
+  requires: []
+- name: 'Hacker Evolution Duality: Hacker Bootcamp'
+  ids:
+  - steam:261070
+  requires: []
+- name: 'Hacker Evolution Duality: Inception Part 2'
+  ids:
+  - steam:211994
+  requires: []
+- name: 'Hacker Evolution: Hardcore Package Part 1'
+  ids:
+  - unresolved:source:isthereanydeal:1498:hacker-evolution-hardcore-package-part-1
+  requires: []
+- name: 'Hacker Evolution Duality: Hardcore Package Part 1'
+  ids:
+  - steam:241950
+  requires: []
+- name: 'Hacker Evolution: Untold'
+  ids:
+  - steam:70110
+  requires: []
+- name: Hacker Evolution Hardcore Music Pack
+  ids:
+  - unresolved:source:isthereanydeal:1498:hacker-evolution-hardcore-music-pack
+  requires: []
+- name: 'Hardcore Package Part 1 / for Hacker Evolution: Untold'
+  ids:
+  - steam:259240
+  requires: []
+- name: Hacker Evolution Untold Hardcore Music Pack
+  ids:
+  - unresolved:source:isthereanydeal:1498:hacker-evolution-untold-hardcore-music-pack
+  requires: []
+- name: 'Hacker Evolution Duality: Hardcore Music Pack'
+  ids:
+  - unresolved:source:isthereanydeal:1498:hacker-evolution-duality-hardcore-music-pack
+  requires: []
+- name: 'Hacker Evolution Duality: Inception Part 1'
+  ids:
+  - steam:211990
+  requires: []
+- name: 'Hacker Evolution: Hardcore Package Part 2'
+  ids:
+  - unresolved:source:isthereanydeal:1498:hacker-evolution-hardcore-package-part-2
+  requires: []
+- name: Hardcore Package Part 1 / for Hacker Evolution
+  ids:
+  - steam:259230
+  requires: []
+- name: 'Hardcore Package Part 2 / for Hacker Evolution: Untold'
+  ids:
+  - steam:279830
+  requires: []
+- name: 'Hacker Evolution Duality: Inception Part 3'
+  ids:
+  - steam:211992
+  requires: []
+- name: Hardcore Package Part 2
+  ids:
+  - steam:279820
+  requires: []
+- name: Hacker Evolution
+  ids:
+  - steam:70100
+  requires: []

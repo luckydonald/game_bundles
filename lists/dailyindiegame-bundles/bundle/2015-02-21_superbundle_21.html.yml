@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 21 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1651/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1651/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1651/source.json
+games:
+- name: 'Data Hacker: Corruption'
+  ids:
+  - steam:329000
+  requires: []
+- name: Data Hacker - Initiation
+  ids:
+  - steam:311860
+  requires: []
+- name: Obulis
+  ids:
+  - unresolved:source:isthereanydeal:1651:obulis
+  requires: []
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+  requires: []
+- name: Great Permutator
+  ids:
+  - steam:319270
+  requires: []
+- name: Manhunter
+  ids:
+  - unresolved:source:isthereanydeal:1651:manhunter
+  requires: []

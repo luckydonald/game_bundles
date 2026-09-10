@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 45 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2637/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2637/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2637/source.json
+games:
+- name: 'Nightmares from the Deep 3: Davy Jones'
+  ids:
+  - unresolved:source:isthereanydeal:2637:nightmares-from-the-deep-3-davy-jones
+  requires: []
+- name: 'Time Mysteries 2: The Ancient Spectres'
+  ids:
+  - steam:313650
+  requires: []
+- name: Melissa K. and the Heart of Gold Collector's Edition
+  ids:
+  - steam:321150
+  requires: []
+- name: 'Time Mysteries 3: The Final Enigma'
+  ids:
+  - steam:319320
+  requires: []
+- name: 'Grim Legends: The Forsaken Bride'
+  ids:
+  - steam:284850
+  requires: []
+- name: 'Enigmatis 2: The Mists of Ravenwood'
+  ids:
+  - steam:284770
+  requires: []

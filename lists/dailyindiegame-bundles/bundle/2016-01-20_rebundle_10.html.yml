@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2957/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2957/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2957/source.json
+games:
+- name: Alum
+  ids:
+  - steam:338420
+  requires: []
+- name: Turbo Pug
+  ids:
+  - steam:418070
+  requires: []
+- name: Pillar
+  ids:
+  - steam:371900
+  requires: []
+- name: TRIP
+  ids:
+  - unresolved:source:isthereanydeal:2957:trip
+  requires: []
+- name: Wooden Floor
+  ids:
+  - steam:348790
+  requires: []
+- name: Epic Showdown
+  ids:
+  - steam:406930
+  requires: []

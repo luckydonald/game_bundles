@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Artifex Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3078/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3078/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3078/source.json
+games:
+- name: 'Dark Arcana: The Carnival'
+  ids:
+  - steam:284730
+  requires: []
+- name: 'Left in the Dark: No One on Board'
+  ids:
+  - steam:284890
+  requires: []
+- name: '9 Clues: The Secret Of Serpent Creek'
+  ids:
+  - steam:284870
+  requires: []
+- name: 'Mind Snares: Alice''s Journey'
+  ids:
+  - steam:363330
+  requires: []
+- name: 'Nightmares from the Deep 2: The Siren`s Call'
+  ids:
+  - unresolved:source:isthereanydeal:3078:nightmares-from-the-deep-2-the-sirens-call
+  requires: []
+- name: 'Nightmares From the Deep: The Cursed Heart'
+  ids:
+  - unresolved:source:isthereanydeal:3078:nightmares-from-the-deep-the-cursed-heart
+  requires: []
