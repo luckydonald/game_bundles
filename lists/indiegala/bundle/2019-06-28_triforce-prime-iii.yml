@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Triforce Special Bundle III — Select 1 to 3 Titles for $7.99 to $23.43
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7585/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7585/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7585/source.json
+games:
+- name: Dying Light
+  ids:
+  - steam:239140
+  requires: []
+- name: Northgard
+  ids:
+  - steam:466560
+  requires: []
+- name: Furi
+  ids:
+  - steam:423230
+  requires: []

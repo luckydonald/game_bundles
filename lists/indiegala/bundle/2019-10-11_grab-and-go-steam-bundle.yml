@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Grab and Go Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8001/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8001/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8001/source.json
+games:
+- name: 'WayOut 2: Hex'
+  ids:
+  - steam:585950
+  requires: []
+- name: The Deed
+  ids:
+  - steam:420740
+  requires: []
+- name: WayOut
+  ids:
+  - steam:551110
+  requires: []
+- name: 'Space Pilgrim Episode II: Epsilon Indi'
+  ids:
+  - steam:431710
+  requires: []
+- name: Latte Stand Tycoon
+  ids:
+  - steam:1002830
+  requires: []
+- name: Fugue in Void
+  ids:
+  - steam:883220
+  requires: []
+- name: Mini Thief
+  ids:
+  - steam:481870
+  requires: []
+- name: Paradox Soul
+  ids:
+  - steam:610570
+  requires: []
+- name: Puzzle Chambers
+  ids:
+  - steam:740410
+  requires: []
+- name: Royale Storm Bowling
+  ids:
+  - steam:1023610
+  requires: []
+- name: Rencounter
+  ids:
+  - steam:431810
+  requires: []
+- name: 'The Outpost Nine: Episode 1'
+  ids:
+  - steam:882040
+  requires: []

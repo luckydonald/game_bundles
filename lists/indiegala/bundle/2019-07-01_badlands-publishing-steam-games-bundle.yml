@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Badland Publishing Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7591/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7591/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7591/source.json
+games:
+- name: Leopoldo Manquiseil
+  ids:
+  - steam:956200
+  requires: []
+- name: Demon's Crystals
+  ids:
+  - steam:454610
+  requires: []
+- name: BOOR
+  ids:
+  - steam:450170
+  requires: []
+- name: Castles
+  ids:
+  - steam:384010
+  requires: []
+- name: Nightmare Boy
+  ids:
+  - steam:597860
+  requires: []
+- name: Awe
+  ids:
+  - steam:371450
+  requires: []
+- name: Zenith
+  ids:
+  - steam:438420
+  requires: []
+- name: Anima Gate of Memories
+  ids:
+  - steam:380750
+  requires: []
+- name: 'Mars: Chaos Menace'
+  ids:
+  - steam:956150
+  requires: []

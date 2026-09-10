@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Journey Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7876/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7876/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7876/source.json
+games:
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Book Series - Alice in Wonderland
+  ids:
+  - unresolved:source:isthereanydeal:7876:book-series-alice-in-wonderland
+  requires: []
+- name: BAD END
+  ids:
+  - steam:415850
+  requires: []
+- name: Akihabara - Feel the Rhythm
+  ids:
+  - steam:565660
+  requires: []
+- name: Vanguard Princess Lilith
+  ids:
+  - steam:329150
+  requires: []
+- name: On Earth As It Is In Heaven - A Kinetic Novel
+  ids:
+  - steam:662260
+  requires: []
+- name: When Our Journey Ends - A Visual Novel
+  ids:
+  - steam:563520
+  requires: []
+- name: Vanguard Princess Hilda Rize
+  ids:
+  - steam:311500
+  requires: []
+- name: Banzai Escape
+  ids:
+  - steam:440340
+  requires: []
+- name: You, With Me - A Kinetic Novel
+  ids:
+  - steam:588050
+  requires: []

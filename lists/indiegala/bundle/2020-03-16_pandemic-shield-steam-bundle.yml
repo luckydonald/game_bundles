@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pandemic Shield Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8499/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8499/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8499/source.json
+games:
+- name: Empire
+  ids:
+  - steam:889520
+  requires: []
+- name: 'Shieldwall Chronicles: Swords of the North'
+  ids:
+  - steam:951260
+  requires: []
+- name: 'Wacky Spores: The Chase'
+  ids:
+  - steam:582530
+  requires: []
+- name: Empty Soul - S&S Edition
+  ids:
+  - steam:464670
+  requires: []
+- name: Demon's Rise - Lords of Chaos
+  ids:
+  - steam:844420
+  requires: []
+- name: Demon's Rise - War for the Deep
+  ids:
+  - steam:843900
+  requires: []

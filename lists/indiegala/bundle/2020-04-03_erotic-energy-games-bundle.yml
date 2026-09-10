@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Erotic Energy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8630/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8630/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8630/source.json
+games:
+- name: Nowhere Girl
+  ids:
+  - steam:954150
+  requires: []
+- name: Hentai Hexa Mosaic
+  ids:
+  - unresolved:source:isthereanydeal:8630:hentai-hexa-mosaic
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bewitched Tales Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8478/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8478/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8478/source.json
+games:
+- name: Sanctus Mortem
+  ids:
+  - unresolved:source:isthereanydeal:8478:sanctus-mortem
+  requires: []
+- name: 'Everpath: A pixel art roguelite'
+  ids:
+  - steam:1004560
+  requires: []
+- name: 'Tale of Enki: Pilgrimage'
+  ids:
+  - steam:684590
+  requires: []
+- name: Nusakana
+  ids:
+  - steam:401290
+  requires: []
+- name: Knight Bewitched
+  ids:
+  - steam:815150
+  requires: []
+- name: Mysterious Realms RPG
+  ids:
+  - steam:752800
+  requires: []

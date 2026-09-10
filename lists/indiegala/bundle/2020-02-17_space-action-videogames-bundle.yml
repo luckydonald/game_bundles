@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Space Action Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8408/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8408/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8408/source.json
+games:
+- name: Galaxy Champions TV
+  ids:
+  - steam:842750
+  requires: []
+- name: Space Grunts
+  ids:
+  - steam:371430
+  requires: []
+- name: Moss Destruction
+  ids:
+  - steam:876220
+  requires: []
+- name: 'Gunslugs 3: Rogue Tactics'
+  ids:
+  - steam:1012360
+  requires: []
+- name: Vikings Wars
+  ids:
+  - steam:1216930
+  requires: []
+- name: Dark Zone
+  ids:
+  - steam:1220910
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Strategy Hazards Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7866/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7866/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7866/source.json
+games:
+- name: 'AXYOS: Battlecards'
+  ids:
+  - steam:730450
+  requires: []
+- name: The Great Art Race
+  ids:
+  - steam:33580
+  requires: []
+- name: Pizza Connection 2
+  ids:
+  - steam:599000
+  requires: []
+- name: 'Highrise Heroes: Word Challenge'
+  ids:
+  - steam:415670
+  requires: []
+- name: God of Failure
+  ids:
+  - steam:709190
+  requires: []
+- name: Cefore
+  ids:
+  - steam:625730
+  requires: []
+- name: Defending Camelot
+  ids:
+  - unresolved:source:isthereanydeal:7866:defending-camelot
+  requires: []
+- name: Moot District
+  ids:
+  - steam:992040
+  requires: []
+- name: Pizza Connection
+  ids:
+  - steam:598990
+  requires: []

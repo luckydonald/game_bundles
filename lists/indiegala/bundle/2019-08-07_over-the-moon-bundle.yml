@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Over The Moon Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7727/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7727/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7727/source.json
+games:
+- name: To the Moon
+  ids:
+  - steam:206440
+  requires: []
+- name: Kerbal Space Program
+  ids:
+  - steam:220200
+  requires: []
+- name: Alien Shooter 2 Reloaded
+  ids:
+  - steam:33120
+  requires: []
+- name: Horizon Shift
+  ids:
+  - steam:326120
+  requires: []
