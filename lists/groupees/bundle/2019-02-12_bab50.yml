@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 50 — Select 2 to 10 titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7014/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7014/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7014/source.json
+games:
+- name: Pull Ball
+  ids:
+  - steam:1006920
+  requires: []
+- name: FreeHolder
+  ids:
+  - steam:463800
+  requires: []
+- name: Type Defense
+  ids:
+  - steam:904440
+  requires: []
+- name: Click and Manage Tycoon
+  ids:
+  - steam:919690
+  requires: []
+- name: Zack Y
+  ids:
+  - steam:937620
+  requires: []
+- name: Round Ways
+  ids:
+  - steam:876960
+  requires: []
+- name: 'Pegasus-5: Gone Astray'
+  ids:
+  - steam:794030
+  requires: []
+- name: House of Snark 6-in-1 Bundle
+  ids:
+  - steam:486810
+  requires: []

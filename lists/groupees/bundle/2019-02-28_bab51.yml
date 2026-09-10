@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 51 — Select 2 to 10 titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7093/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7093/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7093/source.json
+games:
+- name: The Chills
+  ids:
+  - steam:1008140
+  requires: []
+- name: 'Catacombs 1: Demon War'
+  ids:
+  - steam:654250
+  requires: []
+- name: Dungeon Quest
+  ids:
+  - unresolved:source:isthereanydeal:7093:dungeon-quest
+  requires: []
+- name: The Evil Party
+  ids:
+  - steam:773230
+  requires: []
+- name: STALINGRAD ABATIS
+  ids:
+  - steam:938640
+  requires: []
+- name: 'Freedom March: Rebel Leader'
+  ids:
+  - unresolved:source:isthereanydeal:7093:freedom-march-rebel-leader
+  requires: []
+- name: Amanda's Sticker Book
+  ids:
+  - steam:985640
+  requires: []
+- name: 25 Cadre of Death
+  ids:
+  - steam:904860
+  requires: []
+- name: The Mummy Pharaoh
+  ids:
+  - steam:948120
+  requires: []

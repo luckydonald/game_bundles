@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 61 — Select 2 to 10 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7684/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7684/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7684/source.json
+games:
+- name: Boon Boon
+  ids:
+  - steam:1092750
+  requires: []
+- name: 'The Far Kingdoms: Winter Solitaire'
+  ids:
+  - steam:1034250
+  requires: []
+- name: World Of Walking Cities
+  ids:
+  - unresolved:source:isthereanydeal:7684:world-of-walking-cities
+  requires: []
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7684:grab-bag-game
+  requires: []
+- name: Fort
+  ids:
+  - steam:905020
+  requires: []
+- name: Eternal Space Battles
+  ids:
+  - steam:926820
+  requires: []
+- name: 'Angels of Fasaria: Version 2.0'
+  ids:
+  - steam:335900
+  requires: []
+- name: 'Be hate Free: Interactive'
+  ids:
+  - unresolved:source:isthereanydeal:7684:be-hate-free-interactive
+  requires: []
+- name: Gravity Wars
+  ids:
+  - steam:877150
+  requires: []
+- name: '999'
+  ids:
+  - steam:876840
+  requires: []

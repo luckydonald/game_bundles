@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Build a Bundle 48 — Select 2 To 10 Games: $1 up to $3'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6870/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6870/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6870/source.json
+games:
+- name: 'Longest Monday: Unveiling'
+  ids:
+  - unresolved:source:isthereanydeal:6870:longest-monday-unveiling
+  requires: []
+- name: 'Fairyland: Fairylines'
+  ids:
+  - unresolved:source:isthereanydeal:6870:fairyland-fairylines
+  requires: []
+- name: TRAGO
+  ids:
+  - steam:869080
+  requires: []
+- name: Indiana Boy Steam Edition
+  ids:
+  - steam:990950
+  requires: []
+- name: Industry Giant 2
+  ids:
+  - steam:271360
+  requires: []
+- name: Smile'N'Slide
+  ids:
+  - steam:860680
+  requires: []
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:6870:grab-bag-game
+  requires: []
+- name: ANTIFECTOR
+  ids:
+  - unresolved:source:isthereanydeal:6870:antifector
+  requires: []
+- name: Stalker Crab Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6870:stalker-crab-simulator
+  requires: []
+- name: Insert Paper
+  ids:
+  - steam:661490
+  requires: []

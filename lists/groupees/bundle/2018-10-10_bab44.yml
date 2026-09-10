@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 44 — Select 2 to 10 titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6563/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6563/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6563/source.json
+games:
+- name: Rio Rex
+  ids:
+  - steam:868830
+  requires: []
+- name: Jelly Wants More
+  ids:
+  - unresolved:source:isthereanydeal:6563:jelly-wants-more
+  requires: []
+- name: Dojini
+  ids:
+  - unresolved:source:isthereanydeal:6563:dojini
+  requires: []
+- name: 'Catgirl Magic: Furry Duel'
+  ids:
+  - unresolved:source:isthereanydeal:6563:catgirl-magic-furry-duel
+  requires: []
+- name: Sniper Fodder
+  ids:
+  - steam:880840
+  requires: []
+- name: Fading Visage
+  ids:
+  - unresolved:source:isthereanydeal:6563:fading-visage
+  requires: []
+- name: Emergency Robot Simulator
+  ids:
+  - unresolved:source:isthereanydeal:6563:emergency-robot-simulator
+  requires: []
+- name: 'Bot Tales: The Crashed'
+  ids:
+  - unresolved:source:isthereanydeal:6563:bot-tales-the-crashed
+  requires: []
+- name: Retro Sphere
+  ids:
+  - unresolved:source:isthereanydeal:6563:retro-sphere
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 63 — Select 2 to 9 Titles for $1.00 up to $4.50
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7894/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7894/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7894/source.json
+games:
+- name: Match Point
+  ids:
+  - steam:764890
+  requires: []
+- name: UBERMOSH
+  ids:
+  - steam:357070
+  requires: []
+- name: TTV3
+  ids:
+  - steam:1114530
+  requires: []
+- name: Mini Golf
+  ids:
+  - unresolved:source:isthereanydeal:7894:mini-golf
+  requires: []
+- name: Splotches
+  ids:
+  - steam:373640
+  requires: []
+- name: UBERMOSH:SANTICIDE
+  ids:
+  - steam:898450
+  requires: []
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7894:grab-bag-game
+  requires: []
+- name: Endless Combat
+  ids:
+  - steam:690350
+  requires: []
+- name: 'The Trials of Olympus II: Wrath of the Gods'
+  ids:
+  - steam:1008610
+  requires: []

@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lock, Stock and Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7706/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7706/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7706/source.json
+games:
+- name: EBOLA
+  ids:
+  - steam:1094660
+  requires: []
+- name: Flynn and Freckles
+  ids:
+  - steam:822130
+  requires: []
+- name: Witch Thief
+  ids:
+  - steam:675480
+  requires: []
+- name: 'Slime-san: Blackbird''s Kraken'
+  ids:
+  - steam:649820
+  requires: []

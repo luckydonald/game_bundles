@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 49 — Select 2 to 10 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6949/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6949/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6949/source.json
+games:
+- name: Corrupt The Priest
+  ids:
+  - unresolved:source:isthereanydeal:6949:corrupt-the-priest
+  requires: []
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+  requires: []
+- name: 'Mystery Village: Shards of the Past'
+  ids:
+  - unresolved:source:isthereanydeal:6949:mystery-village-shards-of-the-past
+  requires: []
+- name: Road Legends
+  ids:
+  - unresolved:source:isthereanydeal:6949:road-legends
+  requires: []
+- name: 'Death Trader: Cold War'
+  ids:
+  - unresolved:source:isthereanydeal:6949:death-trader-cold-war
+  requires: []
+- name: War of Criminals
+  ids:
+  - unresolved:source:isthereanydeal:6949:war-of-criminals
+  requires: []
+- name: Bomb Labyrinth
+  ids:
+  - unresolved:source:isthereanydeal:6949:bomb-labyrinth
+  requires: []
+- name: Mervin and the Wicked Station
+  ids:
+  - unresolved:source:isthereanydeal:6949:mervin-and-the-wicked-station
+  requires: []
+- name: Music Producer
+  ids:
+  - unresolved:source:isthereanydeal:6949:music-producer
+  requires: []
