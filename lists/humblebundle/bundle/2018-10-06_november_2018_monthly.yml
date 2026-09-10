@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Nov 2018) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6553/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6553/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6553/source.json
+games:
+- name: 'Hitman™: The Complete First Season'
+  ids:
+  - unresolved:source:isthereanydeal:6553:hitman-the-complete-first-season
+  requires: []
+- name: 'Resident Evil: Revelations'
+  ids:
+  - steam:222480
+  requires: []
+- name: Dead Island - Definitive Edition
+  ids:
+  - steam:383150
+  requires: []
+- name: Sniper Elite
+  ids:
+  - steam:3700
+  requires: []
+- name: vApe Escape
+  ids:
+  - steam:1035890
+  requires: []
+- name: Hard Reset Redux
+  ids:
+  - steam:407810
+  requires: []
+- name: Sniper Elite V2
+  ids:
+  - steam:63380
+  requires: []
+- name: Hollow Knight
+  ids:
+  - steam:367520
+  requires: []
+- name: 7 Days to Die
+  ids:
+  - steam:251570
+  requires: []
+- name: The Dwarves
+  ids:
+  - steam:403970
+  requires: []

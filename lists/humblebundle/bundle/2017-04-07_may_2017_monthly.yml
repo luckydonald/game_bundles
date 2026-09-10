@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (May 2017) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4984/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4984/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4984/source.json
+games:
+- name: Undertale
+  ids:
+  - steam:391540
+  requires: []
+- name: DiRT Rally
+  ids:
+  - unresolved:source:isthereanydeal:4984:dirt-rally
+  requires: []
+- name: A2Be - A Science Fiction Narrative
+  ids:
+  - unresolved:source:isthereanydeal:4984:a2be-a-science-fiction-narrative
+  requires: []
+- name: INSIDE
+  ids:
+  - steam:304430
+  requires: []
+- name: Super Rude Bear Resurrection
+  ids:
+  - steam:384250
+  requires: []
+- name: This Is the Police
+  ids:
+  - steam:443810
+  requires: []
+- name: Metrico+
+  ids:
+  - steam:373990
+  requires: []
+- name: The Turing Test
+  ids:
+  - steam:499520
+  requires: []
+- name: GoNNER
+  ids:
+  - steam:437570
+  requires: []

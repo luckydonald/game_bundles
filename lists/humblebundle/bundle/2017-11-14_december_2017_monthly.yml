@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Dec 2017) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5622/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5622/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5622/source.json
+games:
+- name: Z1 Battle Royale
+  ids:
+  - steam:433850
+  requires: []
+- name: Rivals of Aether
+  ids:
+  - steam:383980
+  requires: []
+- name: Crescent Bay
+  ids:
+  - unresolved:source:isthereanydeal:5622:crescent-bay
+  requires: []
+- name: 'Passpartout: The Starving Artist'
+  ids:
+  - steam:582550
+  requires: []
+- name: Way of the Passive Fist (Sneak Peek)
+  ids:
+  - unresolved:source:isthereanydeal:5622:way-of-the-passive-fist-sneak-peek
+  requires: []
+- name: THOR.N
+  ids:
+  - unresolved:source:isthereanydeal:5622:thor-n
+  requires: []
+- name: Nex Machina
+  ids:
+  - steam:404540
+  requires: []
+- name: 'BlazBlue: Chronophantasma Extend'
+  ids:
+  - steam:388750
+  requires: []
+- name: The Sexy Brutale
+  ids:
+  - steam:552590
+  requires: []
+- name: 'STRAFE: Gold Edition'
+  ids:
+  - steam:442780
+  requires: []

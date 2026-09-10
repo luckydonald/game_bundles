@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Aug 2018) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6293/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6293/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6293/source.json
+games:
+- name: A Hat in Time
+  ids:
+  - steam:253230
+  requires: []
+- name: Forged Battalion
+  ids:
+  - steam:686260
+  requires: []
+- name: The Surge
+  ids:
+  - steam:378540
+  requires: []
+- name: Kôna
+  ids:
+  - steam:365160
+  requires: []
+- name: The Escapists 2
+  ids:
+  - steam:641990
+  requires: []
+- name: Woten
+  ids:
+  - unresolved:source:isthereanydeal:6293:woten
+  requires: []
+- name: Sudden Strike 4
+  ids:
+  - steam:373930
+  requires: []
+- name: Conan Exiles
+  ids:
+  - steam:440900
+  requires: []
+- name: Pathologic Classic HD
+  ids:
+  - steam:384110
+  requires: []
