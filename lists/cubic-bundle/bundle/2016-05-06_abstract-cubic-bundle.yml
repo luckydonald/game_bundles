@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Abstract Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3388/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3388/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3388/source.json
+games:
+- name: Hoven the Sages Spinel
+  ids:
+  - steam:398960
+  requires: []
+- name: Locked-in syndrome
+  ids:
+  - unresolved:source:isthereanydeal:3388:locked-in-syndrome
+  requires: []
+- name: Abandoned
+  ids:
+  - unresolved:source:isthereanydeal:3388:abandoned
+  requires: []
+- name: Sharf
+  ids:
+  - unresolved:source:isthereanydeal:3388:sharf
+  requires: []
+- name: BeatBlasters III
+  ids:
+  - steam:246800
+  requires: []
+- name: Battle Cars
+  ids:
+  - unresolved:source:isthereanydeal:3388:battle-cars
+  requires: []
+- name: Hook
+  ids:
+  - steam:367580
+  requires: []

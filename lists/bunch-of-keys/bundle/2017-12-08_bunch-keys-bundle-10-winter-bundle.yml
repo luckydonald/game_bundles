@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Bunch Keys Bundle #10: Winter Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5703/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5703/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5703/source.json
+games:
+- name: Ablepsia
+  ids:
+  - steam:713680
+  requires: []
+- name: Obscure - Challenge Your Mind
+  ids:
+  - unresolved:source:isthereanydeal:5703:obscure-challenge-your-mind
+  requires: []
+- name: Heavy Destinies
+  ids:
+  - steam:726570
+  requires: []
+- name: Timbertales
+  ids:
+  - steam:673480
+  requires: []
+- name: Keyboard Killers
+  ids:
+  - steam:699240
+  requires: []
+- name: Galactic Lords
+  ids:
+  - steam:716230
+  requires: []
+- name: 'Case #9'
+  ids:
+  - unresolved:source:isthereanydeal:5703:case-9
+  requires: []
+- name: The Doorbreaker
+  ids:
+  - steam:699480
+  requires: []
+- name: Jumps
+  ids:
+  - steam:544310
+  requires: []
+- name: Mistwood Heroes
+  ids:
+  - steam:573210
+  requires: []
+- name: Jellyfish
+  ids:
+  - steam:700440
+  requires: []
+- name: FlatFatCat
+  ids:
+  - steam:690130
+  requires: []
+- name: PARSE
+  ids:
+  - steam:697530
+  requires: []
+- name: Flower Design
+  ids:
+  - steam:546070
+  requires: []

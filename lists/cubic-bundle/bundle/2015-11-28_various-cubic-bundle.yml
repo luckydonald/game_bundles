@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Various Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2782/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2782/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2782/source.json
+games:
+- name: Neocolonialism
+  ids:
+  - steam:333540
+  requires: []
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Star Sky - ブルームーン
+  ids:
+  - unresolved:source:isthereanydeal:2782:star-sky-burumun
+  requires: []
+- name: Stigmat
+  ids:
+  - unresolved:source:isthereanydeal:2782:stigmat
+  requires: []
+- name: Snake Blocks
+  ids:
+  - steam:339320
+  requires: []
+- name: Fitz the Fox
+  ids:
+  - steam:372830
+  requires: []
+- name: The Apotheosis Project
+  ids:
+  - steam:364350
+  requires: []
