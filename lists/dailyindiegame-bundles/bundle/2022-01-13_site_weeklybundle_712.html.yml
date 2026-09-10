@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 712: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10975/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10975/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10975/source.json
+games:
+- name: Cube jumper
+  ids:
+  - steam:3021970
+  requires: []
+- name: Monster Shooter™
+  ids:
+  - steam:2843970
+  requires: []
+- name: Pixel Robot Hunter
+  ids:
+  - steam:935660
+  requires: []
+- name: Chessmates
+  ids:
+  - steam:1265110
+  requires: []
+- name: Little Bunny
+  ids:
+  - steam:1285870
+  requires: []
+- name: Cemetery War
+  ids:
+  - steam:1306860
+  requires: []
+- name: Factory of Sweets
+  ids:
+  - unresolved:source:isthereanydeal:10975:factory-of-sweets
+  requires: []
+- name: Best Miner
+  ids:
+  - unresolved:source:isthereanydeal:10975:best-miner
+  requires: []
+- name: DuckMan
+  ids:
+  - unresolved:source:isthereanydeal:10975:duckman
+  requires: []

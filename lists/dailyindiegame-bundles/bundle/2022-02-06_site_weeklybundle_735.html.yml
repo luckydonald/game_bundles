@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 735: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11032/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11032/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11032/source.json
+games:
+- name: Trash Squad
+  ids:
+  - steam:676440
+  requires: []
+- name: Peekaboo
+  ids:
+  - steam:1048100
+  requires: []
+- name: Animal Fight Club
+  ids:
+  - steam:1022780
+  requires: []
+- name: Easy Red
+  ids:
+  - steam:741670
+  requires: []
+- name: GODS Remastered
+  ids:
+  - unresolved:source:isthereanydeal:11032:gods-remastered
+  requires: []
+- name: 'Green: An Orc''s Life'
+  ids:
+  - steam:1208810
+  requires: []
+- name: My Diggy Dog 2
+  ids:
+  - steam:1216300
+  requires: []
+- name: I accidentally restarted the USSR
+  ids:
+  - steam:1338640
+  requires: []
+- name: Wolflord Online
+  ids:
+  - unresolved:source:isthereanydeal:11032:wolflord-online
+  requires: []
