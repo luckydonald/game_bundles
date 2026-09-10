@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: XP Pack Summer 2021 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10291/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10291/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10291/source.json
+games:
+- name: Last Inua
+  ids:
+  - steam:331980
+  requires: []
+- name: Close to the Sun
+  ids:
+  - steam:968870
+  requires: []
+- name: The Town Of Light
+  ids:
+  - steam:433100
+  requires: []

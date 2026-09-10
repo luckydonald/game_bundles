@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Good Shepherd Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7758/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7758/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7758/source.json
+games:
+- name: Diluvion Fleet Edition
+  ids:
+  - steam:446790
+  requires: []
+- name: Oh...Sir! The Insult Simulator
+  ids:
+  - steam:512250
+  requires: []
+- name: Hard West
+  ids:
+  - steam:307670
+  requires: []
+- name: Zombie Night Terror - Special Edition
+  ids:
+  - steam:416680
+  requires: []
+- name: Pathologic Classic HD
+  ids:
+  - steam:384110
+  requires: []
+- name: Crush Your Enemies
+  ids:
+  - steam:406850
+  requires: []
+- name: Xeodrifter™
+  ids:
+  - steam:319140
+  requires: []
+- name: 'Magnetic: Cage Closed'
+  ids:
+  - steam:344410
+  requires: []

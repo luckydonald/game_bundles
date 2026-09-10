@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Telltale Batman Shadows Edition Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9328/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9328/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9328/source.json
+games:
+- name: 'Batman: The Enemy Within - The Telltale Series'
+  ids:
+  - steam:675260
+  requires: []
+- name: Batman - The Telltale Series
+  ids:
+  - steam:498240
+  requires: []
+- name: Batman - The Enemy Within Shadows Mode
+  ids:
+  - steam:1181990
+  requires: []

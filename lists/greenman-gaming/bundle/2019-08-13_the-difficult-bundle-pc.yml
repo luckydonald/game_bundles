@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Difficult Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7750/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7750/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7750/source.json
+games:
+- name: The Story Goes On
+  ids:
+  - steam:369560
+  requires: []
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+  requires: []
+- name: Reframed
+  ids:
+  - steam:815860
+  requires: []
+- name: Pathologic Classic HD
+  ids:
+  - steam:384110
+  requires: []
+- name: Nihilumbra
+  ids:
+  - steam:252670
+  requires: []
