@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Nov 2022) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12351/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12351/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12351/source.json
+games:
+- name: 'Raji: An Ancient Epic'
+  ids:
+  - steam:730390
+  requires: []
+- name: Hell Let Loose
+  ids:
+  - steam:686810
+  requires: []
+- name: Eldest Souls
+  ids:
+  - steam:1108590
+  requires: []
+- name: UnMetal
+  ids:
+  - steam:1203710
+  requires: []
+- name: 'Morbid: The Seven Acolytes'
+  ids:
+  - steam:1140890
+  requires: []
+- name: Roboquest
+  ids:
+  - steam:692890
+  requires: []
+- name: 'Kingdoms of Amalur: Re-Reckoning'
+  ids:
+  - steam:1041720
+  requires: []
+- name: 'Kingdoms of Amalur: Re-Reckoning Soundtrack'
+  ids:
+  - steam:1278250
+  requires: []
+- name: 'Shadow Tactics: Blades of the Shogun - Aiko''s Choice'
+  ids:
+  - steam:1579380
+  requires: []
+- name: 'Kingdoms of Amalur: Re-Reckoning - Fatesworn'
+  ids:
+  - steam:1278260
+  requires: []
