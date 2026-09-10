@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Insta-play Heroes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5925/source.json
+games:
+- name: ReignMaker
+  ids:
+  - steam:286200
+  requires: []
+- name: The Divine Paradox
+  ids:
+  - unresolved:source:isthereanydeal:5925:the-divine-paradox
+  requires: []
+- name: Dungeon of Elements
+  ids:
+  - steam:302310
+  requires: []
+- name: Defend Your Life!
+  ids:
+  - steam:357780
+  requires: []
+- name: The lost joystick
+  ids:
+  - unresolved:source:isthereanydeal:5925:the-lost-joystick
+  requires: []
+- name: Plantera
+  ids:
+  - steam:421040
+  requires: []
+- name: Taimumari
+  ids:
+  - unresolved:source:isthereanydeal:5925:taimumari
+  requires: []
+- name: Hyperdrive Massacre
+  ids:
+  - steam:402390
+  requires: []
+- name: TREBUCHET
+  ids:
+  - steam:336680
+  requires: []
+- name: Spaceship Looter
+  ids:
+  - steam:600630
+  requires: []
