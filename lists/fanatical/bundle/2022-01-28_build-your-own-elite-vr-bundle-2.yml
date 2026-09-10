@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Elite VR Bundle 2 — Select 3 for $4.99, 5 for $7.99, 7 for $9.99,
+  10 for $13.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11011/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11011/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11011/source.json
+games:
+- name: Cosmic Trip
+  ids:
+  - steam:427240
+  requires: []
+- name: Battlewake
+  ids:
+  - steam:814400
+  requires: []
+- name: Kittypocalypse
+  ids:
+  - steam:451010
+  requires: []
+- name: Dick Wilde 2
+  ids:
+  - steam:975430
+  requires: []
+- name: The Walking Dead Onslaught
+  ids:
+  - steam:1082680
+  requires: []
+- name: Dick Wilde
+  ids:
+  - steam:585500
+  requires: []
+- name: A-Tech Cybernetic VR
+  ids:
+  - steam:578210
+  requires: []
+- name: The Morrigan
+  ids:
+  - steam:985260
+  requires: []
+- name: Sprint Vector
+  ids:
+  - steam:590690
+  requires: []
+- name: Zero Caliber VR
+  ids:
+  - steam:877200
+  requires: []
+- name: Raw Data
+  ids:
+  - steam:436320
+  requires: []
+- name: CATLATERAL DAMAGE
+  ids:
+  - steam:329860
+  requires: []
+- name: Detached
+  ids:
+  - steam:436230
+  requires: []
+- name: House Flipper VR
+  ids:
+  - steam:1194700
+  requires: []
+- name: Paper Beast
+  ids:
+  - steam:1232570
+  requires: []
+- name: Stargaze
+  ids:
+  - steam:1344820
+  requires: []

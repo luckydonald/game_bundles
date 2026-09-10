@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Must Play Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11109/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11109/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11109/source.json
+games:
+- name: Smile For Me
+  ids:
+  - steam:1018850
+  requires: []
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+  requires: []
+- name: N++ (NPLUSPLUS)
+  ids:
+  - steam:230270
+  requires: []
+- name: Automachef
+  ids:
+  - steam:984800
+  requires: []
+- name: Going Under
+  ids:
+  - steam:1154810
+  requires: []
+- name: Virgo Versus the Zodiac
+  ids:
+  - steam:920320
+  requires: []

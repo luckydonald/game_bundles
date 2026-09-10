@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Train Valley Deluxe Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11679/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11679/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11679/source.json
+games:
+- name: Train Valley
+  ids:
+  - steam:353640
+  requires: []
+- name: Train Valley - Germany
+  ids:
+  - steam:459120
+  requires: []

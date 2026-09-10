@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cute Creatures&#39; Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11680/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11680/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11680/source.json
+games:
+- name: Animal Up!
+  ids:
+  - steam:1127730
+  requires: []
+- name: Meow'n'Dash
+  ids:
+  - steam:1684830
+  requires: []

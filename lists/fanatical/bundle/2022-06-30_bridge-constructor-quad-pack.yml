@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bridge Constructor Quad Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11686/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11686/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11686/source.json
+games:
+- name: Bridge Constructor Stunts
+  ids:
+  - steam:419080
+  requires: []
+- name: "Bridge Constructor Trains \x96 Expansion Pack"
+  ids:
+  - steam:463810
+  requires: []
+- name: Bridge Constructor
+  ids:
+  - steam:250460
+  requires: []
+- name: Bridge Constructor Medieval
+  ids:
+  - steam:319850
+  requires: []
