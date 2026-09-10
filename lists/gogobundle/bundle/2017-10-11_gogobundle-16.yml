@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #16 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5535/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5535/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5535/source.json
+games:
+- name: Narborion Saga
+  ids:
+  - steam:581340
+  requires: []
+- name: Alien Shooter TD
+  ids:
+  - steam:541230
+  requires: []
+- name: Zeus Quest Remastered
+  ids:
+  - unresolved:source:isthereanydeal:5535:zeus-quest-remastered
+  requires: []
+- name: Cubotrox
+  ids:
+  - steam:526800
+  requires: []
+- name: Masha Rescues Grandma
+  ids:
+  - unresolved:source:isthereanydeal:5535:masha-rescues-grandma
+  requires: []
+- name: Six Sides of the World - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5535:six-sides-of-the-world-soundtrack
+  requires: []
+- name: 'Captain Lycop : Invasion of the Heters'
+  ids:
+  - steam:525070
+  requires: []
+- name: 'CO-OP : DECRYPTED'
+  ids:
+  - steam:315130
+  requires: []
+- name: Six Sides of the World
+  ids:
+  - steam:384480
+  requires: []

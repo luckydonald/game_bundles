@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #44 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6043/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6043/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6043/source.json
+games:
+- name: NeoBalls
+  ids:
+  - unresolved:source:isthereanydeal:6043:neoballs
+  requires: []
+- name: Investigator
+  ids:
+  - steam:482300
+  requires: []
+- name: LSD
+  ids:
+  - steam:718370
+  requires: []
+- name: 'Deserted: The Story Of Peter'
+  ids:
+  - unresolved:source:isthereanydeal:6043:deserted-the-story-of-peter
+  requires: []
+- name: Impossible Geometry
+  ids:
+  - unresolved:source:isthereanydeal:6043:impossible-geometry
+  requires: []
+- name: Gold Rush In The Oort Cloud
+  ids:
+  - steam:661530
+  requires: []
+- name: symeCu8e
+  ids:
+  - unresolved:source:isthereanydeal:6043:symecu8e
+  requires: []
+- name: 'Keatz: The Lonely Bird'
+  ids:
+  - steam:707320
+  requires: []
+- name: Benjamin Johnson EP.1
+  ids:
+  - unresolved:source:isthereanydeal:6043:benjamin-johnson-ep-1
+  requires: []
+- name: Shiny Gauntlet
+  ids:
+  - steam:454700
+  requires: []

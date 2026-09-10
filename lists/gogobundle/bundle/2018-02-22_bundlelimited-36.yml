@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #36 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5918/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5918/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5918/source.json
+games:
+- name: Dice 1000 online
+  ids:
+  - steam:708930
+  requires: []
+- name: 'Origin Of Destiny - Donation #2'
+  ids:
+  - unresolved:source:isthereanydeal:5918:origin-of-destiny-donation-2
+  requires: []
+- name: 'Origin Of Destiny - Donation #1'
+  ids:
+  - unresolved:source:isthereanydeal:5918:origin-of-destiny-donation-1
+  requires: []
+- name: Chaos and the White Robot
+  ids:
+  - steam:698950
+  requires: []
+- name: 'Fairyland: Manuscript'
+  ids:
+  - unresolved:source:isthereanydeal:5918:fairyland-manuscript
+  requires: []
+- name: Jellyfish
+  ids:
+  - steam:700440
+  requires: []
+- name: Died Of Fear
+  ids:
+  - steam:663920
+  requires: []
+- name: CRASHBOT
+  ids:
+  - unresolved:source:isthereanydeal:5918:crashbot
+  requires: []
+- name: TARGET
+  ids:
+  - unresolved:source:isthereanydeal:5918:target
+  requires: []
+- name: Flower Design
+  ids:
+  - steam:546070
+  requires: []
+- name: Izanami's Dream Battle
+  ids:
+  - steam:547730
+  requires: []

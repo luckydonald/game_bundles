@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #28 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5780/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5780/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5780/source.json
+games:
+- name: Reading Simulator
+  ids:
+  - steam:769690
+  requires: []
+- name: Close the Window!
+  ids:
+  - unresolved:source:isthereanydeal:5780:close-the-window
+  requires: []
+- name: 'POSTAL 2: Paradise Lost'
+  ids:
+  - steam:360960
+  requires: []
+- name: POSTAL 2
+  ids:
+  - steam:223470
+  requires: []
+- name: The lost wizard
+  ids:
+  - steam:727110
+  requires: []
+- name: An Alien with a Magnet
+  ids:
+  - steam:390620
+  requires: []
+- name: Zhulik.exe
+  ids:
+  - steam:768300
+  requires: []
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  requires: []
+- name: Action Rush
+  ids:
+  - steam:758920
+  requires: []
+- name: POSTAL
+  ids:
+  - steam:232770
+  requires: []
+- name: FPS - Fun Puzzle Shooter
+  ids:
+  - steam:697850
+  requires: []

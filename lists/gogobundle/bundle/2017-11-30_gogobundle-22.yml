@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #22 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5675/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5675/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5675/source.json
+games:
+- name: Mahluk:Dark demon
+  ids:
+  - steam:503480
+  requires: []
+- name: WireNet
+  ids:
+  - steam:687510
+  requires: []
+- name: Karma. Incarnation 1
+  ids:
+  - steam:394700
+  requires: []
+- name: Equalizer
+  ids:
+  - steam:666250
+  requires: []
+- name: Last Horizon
+  ids:
+  - steam:394220
+  requires: []
+- name: Plantera
+  ids:
+  - steam:421040
+  requires: []
+- name: Last Horizon OST
+  ids:
+  - unresolved:source:isthereanydeal:5675:last-horizon-ost
+  requires: []
+- name: 3D Tower
+  ids:
+  - unresolved:source:isthereanydeal:5675:3d-tower
+  requires: []
+- name: Plantera - Original Soundtrack
+  ids:
+  - steam:445890
+  requires: []
+- name: Cubic
+  ids:
+  - unresolved:source:isthereanydeal:5675:cubic
+  requires: []

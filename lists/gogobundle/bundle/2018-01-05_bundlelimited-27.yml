@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Limited Bundle #27 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5784/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5784/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5784/source.json
+games:
+- name: Alien Bubble Destroyer
+  ids:
+  - unresolved:source:isthereanydeal:5784:alien-bubble-destroyer
+  requires: []
+- name: The first thrust of God
+  ids:
+  - steam:773650
+  requires: []
+- name: 'Story of the Survivor : Prisoner'
+  ids:
+  - steam:676210
+  requires: []
+- name: Urizen Shadows of the Cold Deluxe Frosty Edition
+  ids:
+  - unresolved:source:isthereanydeal:5784:urizen-shadows-of-the-cold-deluxe-frosty-edition
+  requires: []
+- name: Hardcore Survival
+  ids:
+  - unresolved:source:isthereanydeal:5784:hardcore-survival
+  requires: []
+- name: Cave Runner
+  ids:
+  - steam:763400
+  requires: []
+- name: The first thrust of God - All Aircrafts
+  ids:
+  - steam:773690
+  requires: []
+- name: CrazyCar - Images and Music
+  ids:
+  - steam:764950
+  requires: []
+- name: Escape from here
+  ids:
+  - unresolved:source:isthereanydeal:5784:escape-from-here
+  requires: []
+- name: Crazy Car
+  ids:
+  - steam:652230
+  requires: []

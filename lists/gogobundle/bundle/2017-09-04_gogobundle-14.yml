@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #14 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5431/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5431/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5431/source.json
+games:
+- name: Johnny Graves—The Unchosen One
+  ids:
+  - steam:476030
+  requires: []
+- name: Bunnyrama
+  ids:
+  - steam:567210
+  requires: []
+- name: Crazy Buggy Racing
+  ids:
+  - steam:610780
+  requires: []
+- name: Dwarflings
+  ids:
+  - steam:562330
+  requires: []
+- name: 'Visitors: Marine Invasion'
+  ids:
+  - steam:661240
+  requires: []
+- name: Tank Assault X
+  ids:
+  - steam:585970
+  requires: []
+- name: Mystery Mine
+  ids:
+  - unresolved:source:isthereanydeal:5431:mystery-mine
+  requires: []
+- name: 'City Siege: Faction Island'
+  ids:
+  - steam:578590
+  requires: []
+- name: Dots eXtreme
+  ids:
+  - steam:521130
+  requires: []

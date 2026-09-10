@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #17 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5567/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5567/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5567/source.json
+games:
+- name: NeoBoom2
+  ids:
+  - unresolved:source:isthereanydeal:5567:neoboom2
+  requires: []
+- name: Rest House
+  ids:
+  - steam:582290
+  requires: []
+- name: Abstract Arena - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5567:abstract-arena-original-soundtrack
+  requires: []
+- name: Abstract Arena
+  ids:
+  - unresolved:source:isthereanydeal:5567:abstract-arena
+  requires: []
+- name: Q.U.I.R.K.
+  ids:
+  - unresolved:source:isthereanydeal:5567:q-u-i-r-k
+  requires: []
+- name: Elly The Jelly
+  ids:
+  - steam:681670
+  requires: []
+- name: Space of Darkness
+  ids:
+  - steam:666310
+  requires: []
+- name: Unknown Pharaoh
+  ids:
+  - steam:576100
+  requires: []
+- name: NeoBoom
+  ids:
+  - unresolved:source:isthereanydeal:5567:neoboom
+  requires: []

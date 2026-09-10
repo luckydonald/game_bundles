@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #30 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5810/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5810/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5810/source.json
+games:
+- name: Dodge!
+  ids:
+  - steam:350630
+  requires: []
+- name: NeoBalls
+  ids:
+  - unresolved:source:isthereanydeal:5810:neoballs
+  requires: []
+- name: Brave Path
+  ids:
+  - steam:669310
+  requires: []
+- name: Art of Guile
+  ids:
+  - steam:600250
+  requires: []
+- name: Thundering Skies
+  ids:
+  - steam:725660
+  requires: []
+- name: Fable Rush OST
+  ids:
+  - unresolved:source:isthereanydeal:5810:fable-rush-ost
+  requires: []
+- name: Aozora Meikyuu
+  ids:
+  - steam:427980
+  requires: []
+- name: Burn, Clown, Burn!
+  ids:
+  - steam:740150
+  requires: []
+- name: Only One
+  ids:
+  - steam:2495290
+  requires: []
+- name: Fable Rush
+  ids:
+  - unresolved:source:isthereanydeal:5810:fable-rush
+  requires: []

@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #54 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6096/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6096/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6096/source.json
+games:
+- name: Neon Sun
+  ids:
+  - steam:797090
+  requires: []
+- name: Hitori
+  ids:
+  - unresolved:source:isthereanydeal:6096:hitori
+  requires: []
+- name: Click&Fight
+  ids:
+  - steam:769200
+  requires: []
+- name: Haters, kill them all!
+  ids:
+  - steam:801780
+  requires: []
+- name: Nice Way
+  ids:
+  - unresolved:source:isthereanydeal:6096:nice-way
+  requires: []
+- name: Fairy of the treasures - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6096:fairy-of-the-treasures-soundtrack
+  requires: []
+- name: My Car
+  ids:
+  - steam:839930
+  requires: []
+- name: 'Ricochet Kills: Noir'
+  ids:
+  - steam:596630
+  requires: []
+- name: Obscurity
+  ids:
+  - steam:844350
+  requires: []
+- name: Touch My Spinner
+  ids:
+  - steam:702220
+  requires: []
+- name: Squares
+  ids:
+  - steam:3088680
+  requires: []
+- name: Fairy of the treasures
+  ids:
+  - steam:770400
+  requires: []
+- name: Kingdom Defense
+  ids:
+  - steam:756260
+  requires: []
+- name: Haters, kill them all! - Ost
+  ids:
+  - unresolved:source:isthereanydeal:6096:haters-kill-them-all-ost
+  requires: []

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #37 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5942/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5942/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5942/source.json
+games:
+- name: Amazon Rush
+  ids:
+  - unresolved:source:isthereanydeal:5942:amazon-rush
+  requires: []
+- name: XBall Champion
+  ids:
+  - steam:794570
+  requires: []
+- name: Zombie Lane Survival
+  ids:
+  - steam:794530
+  requires: []
+- name: War Truck Simulator (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5942:war-truck-simulator-restocked
+  requires: []
+- name: Control Craft 2
+  ids:
+  - steam:439930
+  requires: []
+- name: Frozen Drift Race (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5942:frozen-drift-race-restocked
+  requires: []
+- name: Mankind Defender (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5942:mankind-defender-restocked
+  requires: []
+- name: Fallen Mage (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5942:fallen-mage-restocked
+  requires: []
+- name: Cooking Witch
+  ids:
+  - steam:514580
+  requires: []
+- name: Control Craft 3
+  ids:
+  - steam:490910
+  requires: []
+- name: Goblins Keep Coming - Tower Defense
+  ids:
+  - steam:739850
+  requires: []
