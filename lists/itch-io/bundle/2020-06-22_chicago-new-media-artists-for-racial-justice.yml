@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Chicago New Media Artists For Racial Justice Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8924/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8924/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8924/source.json
+games:
+- name: Sausage Sports Club
+  ids:
+  - steam:574120
+  requires: []
+- name: biorhythm
+  ids:
+  - steam:1033340
+  requires: []
+- name: Dead End
+  ids:
+  - unresolved:source:isthereanydeal:8924:dead-end
+  requires: []
+- name: Octodad
+  ids:
+  - unresolved:source:isthereanydeal:8924:octodad
+  requires: []
+- name: Codemancer
+  ids:
+  - steam:1103400
+  requires: []
+- name: TumbleSeed
+  ids:
+  - steam:457890
+  requires: []
+- name: 'Real Winners: Victoryball'
+  ids:
+  - steam:839010
+  requires: []
+- name: 'Octodad: Dadliest Catch'
+  ids:
+  - steam:224480
+  requires: []
+- name: Plant Daddy
+  ids:
+  - unresolved:source:isthereanydeal:8924:plant-daddy
+  requires: []
+- name: Home Movie
+  ids:
+  - unresolved:source:isthereanydeal:8924:home-movie
+  requires: []
+- name: Antbassador
+  ids:
+  - steam:2392040
+  requires: []
+- name: Consent Game
+  ids:
+  - unresolved:source:isthereanydeal:8924:consent-game
+  requires: []
+- name: Generative Body
+  ids:
+  - unresolved:source:isthereanydeal:8924:generative-body
+  requires: []
+- name: What It is Like to be a Goldfish
+  ids:
+  - unresolved:source:isthereanydeal:8924:what-it-is-like-to-be-a-goldfish
+  requires: []
+- name: Spidren
+  ids:
+  - unresolved:source:isthereanydeal:8924:spidren
+  requires: []
+- name: Sandin Image Processor Wrongle
+  ids:
+  - unresolved:source:isthereanydeal:8924:sandin-image-processor-wrongle
+  requires: []

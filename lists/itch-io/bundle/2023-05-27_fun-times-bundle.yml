@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fun Times Bundle! — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13222/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13222/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13222/source.json
+games:
+- name: 'Drop it: Block Paradise!'
+  ids:
+  - steam:2265520
+  requires: []
+- name: Surfasaurus
+  ids:
+  - steam:584860
+  requires: []
+- name: It's Dangerous to Go...But Let's Go Anyway!
+  ids:
+  - unresolved:source:isthereanydeal:13222:its-dangerous-to-go-but-lets-go-anyway
+  requires: []
+- name: Dictionary Glory
+  ids:
+  - unresolved:source:isthereanydeal:13222:dictionary-glory
+  requires: []
+- name: Groceries And JumpScares
+  ids:
+  - unresolved:source:isthereanydeal:13222:groceries-and-jumpscares
+  requires: []
+- name: Guess it
+  ids:
+  - unresolved:source:isthereanydeal:13222:guess-it
+  requires: []
+- name: Time Girl 1998
+  ids:
+  - unresolved:source:isthereanydeal:13222:time-girl-1998
+  requires: []
+- name: Show of Hands
+  ids:
+  - unresolved:source:isthereanydeal:13222:show-of-hands
+  requires: []
+- name: PirrratesAndCannons [v. 0.4] - The Combat Conquest
+  ids:
+  - unresolved:source:isthereanydeal:13222:pirrratesandcannons-v-0-4-the-combat-conquest
+  requires: []

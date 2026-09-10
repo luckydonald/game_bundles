@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Visual Novel Romance Collection for Black Trans Lives Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8971/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8971/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8971/source.json
+games:
+- name: Arcade Spirits
+  ids:
+  - steam:910630
+  requires: []
+- name: Heaven Will Be Mine
+  ids:
+  - steam:836450
+  requires: []
+- name: We Know the Devil
+  ids:
+  - steam:435300
+  requires: []
+- name: Dream Hard
+  ids:
+  - unresolved:source:isthereanydeal:8971:dream-hard
+  requires: []
+- name: Later Daters
+  ids:
+  - unresolved:source:isthereanydeal:8971:later-daters
+  requires: []
+- name: Errant Kingdom
+  ids:
+  - steam:1148730
+  requires: []
+- name: When The Night Comes
+  ids:
+  - steam:1400870
+  requires: []
+- name: Love Shore
+  ids:
+  - steam:1410330
+  requires: []
+- name: 'Yearning: A Gay Story'
+  ids:
+  - steam:1690530
+  requires: []

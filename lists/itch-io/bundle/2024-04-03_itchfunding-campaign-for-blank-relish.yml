@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Itch Funding for Blank Relish Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13970/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13970/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13970/source.json
+games:
+- name: Slaying Grove
+  ids:
+  - unresolved:source:isthereanydeal:13970:slaying-grove
+  requires: []
+- name: Blank Relish
+  ids:
+  - unresolved:source:isthereanydeal:13970:blank-relish
+  requires: []
+- name: Fiend Exile
+  ids:
+  - unresolved:source:isthereanydeal:13970:fiend-exile
+  requires: []
+- name: 'Blank Relish: Remastered'
+  ids:
+  - unresolved:source:isthereanydeal:13970:blank-relish-remastered
+  requires: []
+- name: Vesperal Times
+  ids:
+  - unresolved:source:isthereanydeal:13970:vesperal-times
+  requires: []
+- name: Child of Luminescence
+  ids:
+  - unresolved:source:isthereanydeal:13970:child-of-luminescence
+  requires: []

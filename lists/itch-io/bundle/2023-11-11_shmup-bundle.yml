@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: SHMUP Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13613/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13613/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13613/source.json
+games:
+- name: Super Space Serpent SE
+  ids:
+  - unresolved:source:isthereanydeal:13613:super-space-serpent-se
+  requires: []
+- name: Evorales
+  ids:
+  - steam:1682840
+  requires: []
+- name: Polyfury
+  ids:
+  - steam:1804980
+  requires: []
+- name: MF-01 Aerostrike
+  ids:
+  - steam:2303500
+  requires: []
+- name: Invasion 360
+  ids:
+  - unresolved:source:isthereanydeal:13613:invasion-360
+  requires: []
+- name: Undercroft Warriors
+  ids:
+  - steam:2547140
+  requires: []
+- name: BLADESKY
+  ids:
+  - unresolved:source:isthereanydeal:13613:bladesky
+  requires: []
+- name: Space Tappers
+  ids:
+  - unresolved:source:isthereanydeal:13613:space-tappers
+  requires: []
+- name: TERRENUS PARADISUM
+  ids:
+  - unresolved:source:isthereanydeal:13613:terrenus-paradisum
+  requires: []
+- name: 'Blue Rider: NEON'
+  ids:
+  - unresolved:source:isthereanydeal:13613:blue-rider-neon
+  requires: []
