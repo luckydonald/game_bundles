@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fully Loaded 5 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6397/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6397/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6397/source.json
+games:
+- name: Swipe Fruit Smash
+  ids:
+  - steam:874200
+  requires: []
+- name: Voxel Baller
+  ids:
+  - steam:790810
+  requires: []
+- name: Deep Blue 3D Maze in Space
+  ids:
+  - steam:484830
+  requires: []
+- name: Tadpole Treble
+  ids:
+  - steam:354400
+  requires: []
+- name: Spirits of Xanadu
+  ids:
+  - steam:312230
+  requires: []
+- name: Access Denied
+  ids:
+  - steam:562570
+  requires: []
+- name: Shelter
+  ids:
+  - unresolved:source:isthereanydeal:6397:shelter
+  requires: []
+- name: The Purring Quest
+  ids:
+  - steam:409100
+  requires: []
+- name: The Mind of Marlo
+  ids:
+  - steam:722870
+  requires: []
+- name: Instant Death
+  ids:
+  - steam:779360
+  requires: []

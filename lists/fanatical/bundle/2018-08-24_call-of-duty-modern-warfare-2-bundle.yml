@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Call of Duty: Modern Warfare 2 Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6405/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6405/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6405/source.json
+games:
+- name: 'Call of Duty: Modern Warfare 2 Resurgence Pack'
+  ids:
+  - steam:10196
+  requires: []
+- name: 'Call of Duty®: Modern Warfare® 2 Stimulus Package'
+  ids:
+  - steam:10195
+  requires: []
+- name: 'Call of Duty: Modern Warfare 2 (2009)'
+  ids:
+  - steam:10180
+  requires: []

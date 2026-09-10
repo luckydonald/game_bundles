@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Call of Duty: Modern Warfare 3 Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6406/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6406/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6406/source.json
+games:
+- name: 'Call of Duty®: Modern Warfare® 3 (2011) Collection 1'
+  ids:
+  - steam:42695
+  requires: []
+- name: 'Call of Duty®: Modern Warfare® 3 (2011) Collection 2'
+  ids:
+  - steam:42696
+  requires: []
+- name: 'Call of Duty®: Modern Warfare® 3 (2011) Collection 3: Chaos Pack'
+  ids:
+  - steam:42697
+  requires: []
+- name: 'Call of Duty®: Modern Warfare® 3 (2011) Collection 4: Final Assault'
+  ids:
+  - steam:42698
+  requires: []
+- name: 'Call of Duty®: Modern Warfare® III'
+  ids:
+  - steam:3595270
+  requires: []

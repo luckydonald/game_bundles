@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars X Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6163/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6163/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6163/source.json
+games:
+- name: The Way
+  ids:
+  - steam:311010
+  requires: []
+- name: Chroma Squad
+  ids:
+  - steam:251130
+  requires: []
+- name: Replica
+  ids:
+  - steam:496890
+  requires: []
+- name: Mad Games Tycoon
+  ids:
+  - steam:341000
+  requires: []
+- name: DEADLIGHT
+  ids:
+  - steam:211400
+  requires: []
+- name: Skullgirls
+  ids:
+  - unresolved:source:isthereanydeal:6163:skullgirls
+  requires: []
+- name: Wick
+  ids:
+  - steam:418300
+  requires: []
+- name: 'Infectonator : Survivors'
+  ids:
+  - steam:269310
+  requires: []
+- name: 'The Uncertain: Last Quiet Day'
+  ids:
+  - steam:406970
+  requires: []
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+  requires: []

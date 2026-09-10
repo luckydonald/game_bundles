@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Heroes Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5461/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5461/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5461/source.json
+games:
+- name: Megabyte Punch
+  ids:
+  - steam:248550
+  requires: []
+- name: Velocibox
+  ids:
+  - steam:317710
+  requires: []
+- name: The Silent Age
+  ids:
+  - steam:352520
+  requires: []
+- name: TransPlan
+  ids:
+  - steam:374410
+  requires: []
+- name: Heroes of Legionwood
+  ids:
+  - steam:278590
+  requires: []
+- name: Retro/Grade
+  ids:
+  - steam:222660
+  requires: []
+- name: QbQbQb
+  ids:
+  - steam:329320
+  requires: []

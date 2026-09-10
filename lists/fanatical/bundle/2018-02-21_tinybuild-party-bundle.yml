@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: tinyBuild Party Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5915/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5915/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5915/source.json
+games:
+- name: Fearless Fantasy
+  ids:
+  - steam:282100
+  requires: []
+- name: Community Inc
+  ids:
+  - steam:631540
+  requires: []
+- name: Mr Shifty
+  ids:
+  - steam:489140
+  requires: []
+- name: Punch Club Deluxe Edition
+  ids:
+  - steam:394310
+  requires: []
+- name: Diaries of a Spaceport Janitor
+  ids:
+  - steam:436500
+  requires: []
+- name: Party Hard Tycoon
+  ids:
+  - steam:513330
+  requires: []
+- name: Lovely Planet
+  ids:
+  - steam:298600
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: Phantom Trigger
+  ids:
+  - steam:445870
+  requires: []
+- name: Party Hard
+  ids:
+  - steam:356570
+  requires: []
+- name: No Time To Explain Remastered
+  ids:
+  - steam:368730
+  requires: []
+- name: The Final Station
+  ids:
+  - steam:435530
+  requires: []

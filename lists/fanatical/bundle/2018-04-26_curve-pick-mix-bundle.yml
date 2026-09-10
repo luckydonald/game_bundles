@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Curve Pick & Mix Bundle — Select 1 Title for $1.00, 5 Titles for $2.99, 10 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6082/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6082/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6082/source.json
+games:
+- name: 'Stealth Inc. 2: A Game of Clones'
+  ids:
+  - steam:329380
+  requires: []
+- name: Explodemon!
+  ids:
+  - steam:281820
+  requires: []
+- name: The Little Acre
+  ids:
+  - steam:423590
+  requires: []
+- name: Stealth Bastard Deluxe
+  ids:
+  - steam:209190
+  requires: []
+- name: Pumped BMX +
+  ids:
+  - steam:392070
+  requires: []
+- name: 'Stealth Bastard Deluxe: The Teleporter Chambers'
+  ids:
+  - steam:209202
+  requires: []
+- name: '383270'
+  ids:
+  - unresolved:source:isthereanydeal:6082:383270
+  requires: []
+- name: Manual Samuel
+  ids:
+  - steam:504130
+  requires: []
+- name: Serial Cleaner
+  ids:
+  - steam:522210
+  requires: []
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+  requires: []
+- name: Porcunipine
+  ids:
+  - steam:352620
+  requires: []
+- name: Velocity Ultra Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:6082:velocity-ultra-deluxe
+  requires: []
+- name: Jump Stars
+  ids:
+  - steam:486990
+  requires: []
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+  requires: []
+- name: Qora
+  ids:
+  - steam:304460
+  requires: []

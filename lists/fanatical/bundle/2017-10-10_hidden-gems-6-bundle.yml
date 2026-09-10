@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5531/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5531/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5531/source.json
+games:
+- name: Evolvation
+  ids:
+  - steam:510840
+  requires: []
+- name: Little Lords of Twilight®
+  ids:
+  - unresolved:source:isthereanydeal:5531:little-lords-of-twilight
+  requires: []
+- name: UnnyWorld - Founder's Pack
+  ids:
+  - unresolved:source:isthereanydeal:5531:unnyworld-founders-pack
+  requires: []
+- name: The Last Time
+  ids:
+  - steam:468050
+  requires: []
+- name: Airship Asunder
+  ids:
+  - unresolved:source:isthereanydeal:5531:airship-asunder
+  requires: []
+- name: Displaced
+  ids:
+  - steam:615970
+  requires: []
+- name: Race Online
+  ids:
+  - unresolved:source:isthereanydeal:5531:race-online
+  requires: []
+- name: The Onion Knights - Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:5531:the-onion-knights-definitive-edition
+  requires: []
+- name: Murder In Tehran's Alleys 1933
+  ids:
+  - steam:630170
+  requires: []
+- name: Murder In Tehran's Alleys 2016
+  ids:
+  - steam:639730
+  requires: []

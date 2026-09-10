@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fantasy Heroes Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5627/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5627/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5627/source.json
+games:
+- name: Enclave
+  ids:
+  - steam:253980
+  requires: []
+- name: 'King''s Bounty: Dark Side'
+  ids:
+  - steam:289520
+  requires: []
+- name: Septerra Core
+  ids:
+  - steam:253940
+  requires: []
+- name: 'Two Worlds II: Velvet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:5627:two-worlds-ii-velvet-edition
+  requires: []
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+  requires: []
+- name: 'Konung III: Ties of the Dynasty'
+  ids:
+  - steam:289380
+  requires: []

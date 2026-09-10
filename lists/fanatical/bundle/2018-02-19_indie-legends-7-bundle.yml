@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Legends Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5907/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5907/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5907/source.json
+games:
+- name: Replica
+  ids:
+  - steam:496890
+  requires: []
+- name: Mad Games Tycoon
+  ids:
+  - steam:341000
+  requires: []
+- name: Kingdom Rush Frontiers
+  ids:
+  - steam:458710
+  requires: []
+- name: DEADLIGHT
+  ids:
+  - steam:211400
+  requires: []
+- name: 'Bad Dream: Coma'
+  ids:
+  - steam:538070
+  requires: []
+- name: GoNNER
+  ids:
+  - steam:437570
+  requires: []
+- name: The Count Lucanor
+  ids:
+  - steam:440880
+  requires: []
+- name: Barony
+  ids:
+  - steam:371970
+  requires: []

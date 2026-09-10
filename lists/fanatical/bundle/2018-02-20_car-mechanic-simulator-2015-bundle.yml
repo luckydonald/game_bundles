@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Car Mechanic Simulator 2015 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5909/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5909/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5909/source.json
+games:
+- name: Car Mechanic Simulator 2015 - PickUp & SUV
+  ids:
+  - steam:361841
+  requires: []
+- name: Car Mechanic Simulator 2015 - TraderPack
+  ids:
+  - steam:361842
+  requires: []
+- name: Car Mechanic Simulator 2015 - Performance
+  ids:
+  - steam:361843
+  requires: []
+- name: Car Mechanic Simulator 2015 - Visual Tuning
+  ids:
+  - steam:372870
+  requires: []
+- name: Car Mechanic Simulator 2015
+  ids:
+  - steam:320300
+  requires: []
+- name: Car Mechanic Simulator 2015 - Total Modifications
+  ids:
+  - steam:361840
+  requires: []
+- name: Car Mechanic Simulator 2015 - Car Stripping
+  ids:
+  - steam:623150
+  requires: []

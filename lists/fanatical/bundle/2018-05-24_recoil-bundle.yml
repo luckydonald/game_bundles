@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Recoil Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6169/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6169/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6169/source.json
+games:
+- name: 'Xenoraid: The First Space War'
+  ids:
+  - steam:460220
+  requires: []
+- name: Sparkle 2
+  ids:
+  - steam:370550
+  requires: []
+- name: Sparkle Unleashed
+  ids:
+  - steam:550450
+  requires: []
+- name: King Oddball
+  ids:
+  - steam:525450
+  requires: []
+- name: Spellspire
+  ids:
+  - steam:626580
+  requires: []
+- name: Baseball Riot
+  ids:
+  - steam:567660
+  requires: []
+- name: Crimsonland
+  ids:
+  - steam:262830
+  requires: []
+- name: Neon Chrome
+  ids:
+  - steam:428750
+  requires: []
+- name: Tennis in the Face
+  ids:
+  - steam:394290
+  requires: []
+- name: 'Azkend 2: The World Beneath'
+  ids:
+  - steam:550440
+  requires: []
+- name: Time Recoil
+  ids:
+  - steam:625910
+  requires: []
+- name: JYDGE
+  ids:
+  - unresolved:source:isthereanydeal:6169:jydge
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Retro Heroes Bundle (May 2018) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6184/source.json
+games:
+- name: Trap Them - Sniper Edition
+  ids:
+  - steam:407150
+  requires: []
+- name: Secret Agent
+  ids:
+  - steam:358350
+  requires: []
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:6184:wizardry-6-and-7
+  requires: []
+- name: Cosmo's Cosmic Adventure
+  ids:
+  - steam:358250
+  requires: []
+- name: 'The Original Strife: Veteran Edition'
+  ids:
+  - steam:317040
+  requires: []
+- name: Z.A.R.
+  ids:
+  - unresolved:source:isthereanydeal:6184:z-a-r
+  requires: []
+- name: 'Wings : Remastered Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6184:wings-remastered-edition
+  requires: []

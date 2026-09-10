@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6290/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6290/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6290/source.json
+games:
+- name: 'Entwined: Strings of Deception'
+  ids:
+  - steam:645420
+  requires: []
+- name: Where Angels Cry - Tears Of The Fallen (Collectors Edition)
+  ids:
+  - steam:413470
+  requires: []
+- name: 'Beyond the Invisible: Evening'
+  ids:
+  - steam:650880
+  requires: []
+- name: The Rosebud Condominium
+  ids:
+  - steam:663120
+  requires: []
+- name: Tearstone
+  ids:
+  - steam:645440
+  requires: []
+- name: 'Vengeance: Lost Love'
+  ids:
+  - steam:665510
+  requires: []
+- name: 'Ominous Tales: The Forsaken Isle'
+  ids:
+  - steam:645410
+  requires: []
