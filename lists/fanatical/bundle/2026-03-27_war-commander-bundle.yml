@@ -4,6 +4,8 @@ name: War Commander Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer 40,000: Battlesector'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Headquarters World War II
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Panzer Corps 2
   ids:
   - steam:1072040
   requires: []
   tiers:
+  - 2
   - 3
 - name: Distant Worlds 2
   ids:
   - steam:1531540
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Terminator: Dark Fate - Defiance'
   ids:
   - steam:1839950
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Battlesector - Necrons'
   ids:

@@ -4,6 +4,8 @@ name: Nemesis Bundle 5
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Infectonator : Survivors'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Still Not Dead
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Holy Potatoes! A Weapon Shop?!
   ids:
@@ -41,54 +46,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Way
   ids:
   - steam:311010
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Warlock of Firetop Mountain
   ids:
   - steam:324740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Wick
   ids:
   - steam:418300
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Fall of the Dungeon Guardians - Enhanced Edition
   ids:
   - steam:409450
   requires: []
   tiers:
+  - 2
   - 3
 - name: Holy Potatoes! We're in Space?!
   ids:
   - steam:505730
   requires: []
   tiers:
+  - 2
   - 3
 - name: Mytheon
   ids:
   - steam:413030
   requires: []
   tiers:
+  - 2
   - 3
 - name: Space Hulk Ascension Edition
   ids:
   - unresolved:source:isthereanydeal:5838:space-hulk-ascension-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Gloria Victis
   ids:

@@ -4,6 +4,8 @@ name: The Labor Day GameBundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.25
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A-Gents
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Melting Hearts: Our Love Will Grow 2'
   ids:
   - steam:459020
   requires: []
   tiers:
+  - 2
   - 3
 - name: Nordenfelt
   ids:
   - steam:428740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Adventure in the tower
   ids:
   - unresolved:source:isthereanydeal:4002:adventure-in-the-tower
   requires: []
   tiers:
+  - 2
   - 3
 - name: Absence
   ids:
   - steam:440470
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Orphan Dreams
   ids:

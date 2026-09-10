@@ -4,6 +4,8 @@ name: Paradox Interactive StrataGems Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Knights of Pen & Paper 2
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ice Lakes
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Prison Architect
   ids:
   - steam:233450
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tyranny
   ids:
   - steam:362960
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Crusader Kings II: Dynasty Starter Pack'
   ids:
   - unresolved:source:isthereanydeal:10607:crusader-kings-ii-dynasty-starter-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Prison Architect - Psych Ward: Warden''s Edition'
   ids:
   - steam:1143650
   requires: []
   tiers:
+  - 2
   - 3
 - name: Prison Architect - Island Bound
   ids:
   - steam:1244781
   requires: []
   tiers:
+  - 2
   - 3
 - name: Empire of Sin
   ids:

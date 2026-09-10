@@ -4,6 +4,8 @@ name: Planet Coaster "Free Game+" collection bundle
 tiers:
 - rank: 1
   name: Free Base Game
+- rank: 2
+  name: Premium Upgrade (7 DLC)
 - rank: 4
   name: Tier 4
 references:
@@ -20,48 +22,56 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Planet Coaster - World's Fair Pack
   ids:
   - steam:953660
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Adventure Pack
   ids:
   - steam:768830
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Studios Pack
   ids:
   - steam:821090
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Vintage Pack
   ids:
   - steam:891230
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Classic Rides Collection
   ids:
   - steam:1061350
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Spooky Pack
   ids:
   - steam:710490
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - Magnificent Rides Collection
   ids:
   - steam:995780
   requires: []
   tiers:
+  - 2
   - 4
 - name: Planet Coaster - The Munsters® Munster Koach Construction Kit
   ids:

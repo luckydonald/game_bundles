@@ -4,6 +4,8 @@ name: COZY NIGHTMARE BUNDLE
 tiers:
 - rank: 1
   name: Buried Lore
+- rank: 2
+  name: Dark Secrets
 - rank: 3
   name: Forbidden Knowledge
 references:
@@ -22,6 +24,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hello Neighbor
   ids:
@@ -29,18 +32,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hello Neighbor 2
   ids:
   - steam:1321680
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cultist Simulator
   ids:
   - steam:718670
   requires: []
   tiers:
+  - 2
   - 3
 - name: Potion Craft Alchemist Simulator
   ids:

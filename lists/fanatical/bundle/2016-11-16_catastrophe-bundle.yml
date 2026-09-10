@@ -4,6 +4,8 @@ name: CATastrophe Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shooting Stars!
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Samudai
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Pix the Cat
   ids:
@@ -41,42 +46,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hot Tin Roof
   ids:
   - steam:253390
   requires: []
   tiers:
+  - 2
   - 3
 - name: MouseCraft
   ids:
   - steam:252750
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beyond Eyes
   ids:
   - unresolved:source:isthereanydeal:4351:beyond-eyes
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Nyan Cat: Lost In Space'
   ids:
   - steam:415420
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Purring Quest
   ids:
   - steam:409100
   requires: []
   tiers:
+  - 2
   - 3
 - name: Fort Meow
   ids:
   - steam:352070
   requires: []
   tiers:
+  - 2
   - 3
 - name: Kittypocalypse - Ungoggled
   ids:

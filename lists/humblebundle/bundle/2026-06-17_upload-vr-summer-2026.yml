@@ -4,6 +4,8 @@ name: Upload VR Summer 2026
 tiers:
 - rank: 1
   name: 2 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
 - rank: 3
   name: Entire 9 Item Bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Zero Caliber VR
   ids:
@@ -27,6 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: Tactical Assault VR
+  ids:
+  - steam:2314160
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Ancient Dungeon
+  ids:
+  - steam:1125240
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Arizona Sunshine Remake
+  ids:
+  - steam:2897700
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: VTOL VR
   ids:
@@ -49,24 +74,6 @@ games:
 - name: 'Thief VR: Legacy of Shadow'
   ids:
   - steam:2800080
-  requires: []
-  tiers:
-  - 3
-- name: Tactical Assault VR
-  ids:
-  - steam:2314160
-  requires: []
-  tiers:
-  - 3
-- name: Ancient Dungeon
-  ids:
-  - steam:1125240
-  requires: []
-  tiers:
-  - 3
-- name: Arizona Sunshine Remake
-  ids:
-  - steam:2897700
   requires: []
   tiers:
   - 3

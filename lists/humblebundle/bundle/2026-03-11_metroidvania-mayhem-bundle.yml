@@ -4,6 +4,8 @@ name: Metroidvania Mayhem Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Aeterna Noctis
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Fist: Forged in Shadow Torch'
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Lost Ruins
   ids:
   - steam:1306630
   requires: []
   tiers:
+  - 2
   - 3
 - name: Ultros Deluxe Edition
   ids:
   - steam:2386310
   requires: []
   tiers:
+  - 2
   - 3
 - name: Kingdom Shell
   ids:

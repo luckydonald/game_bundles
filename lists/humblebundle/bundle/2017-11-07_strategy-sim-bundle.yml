@@ -4,6 +4,8 @@ name: Humble Strategy Simulator Bundle
 tiers:
 - rank: 1
   name: Pay What You Want ($1 for Steam Keys)
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SimplePlanes
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Rebuild 3: Gangs of Deadsville'
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Train Simulator 2017
   ids:
   - unresolved:source:isthereanydeal:5605:train-simulator-2017
   requires: []
   tiers:
+  - 2
   - 3
 - name: Mad Games Tycoon
   ids:
   - steam:341000
   requires: []
   tiers:
+  - 2
   - 3
 - name: Platform Clutter Scenery Pack
   ids:
   - steam:256524
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Plague Inc: Evolved'
   ids:
   - steam:246620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Town Scenery Pack
   ids:
   - steam:256525
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Cities: Skylines Deluxe Edition'
   ids:

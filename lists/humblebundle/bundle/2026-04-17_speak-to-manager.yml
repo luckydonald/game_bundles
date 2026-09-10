@@ -4,6 +4,8 @@ name: Speak to the Manager Bundle
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Rise of Industry: 2130'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gladiator Guild Manager
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sweet Transit
   ids:
@@ -41,12 +46,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Endzone - A World Apart | Complete Edition
   ids:
   - unresolved:source:isthereanydeal:16068:endzone-a-world-apart-complete-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Good Company
   ids:

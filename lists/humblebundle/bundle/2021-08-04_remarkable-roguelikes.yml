@@ -4,6 +4,8 @@ name: Remarkable Roguelikes Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dungreed
   ids:
   - steam:753420
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'SYNTHETIK: Legion Rising'
   ids:
   - steam:528230
   requires: []
   tiers:
+  - 2
   - 3
 - name: Curious Expedition
   ids:
   - steam:358130
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hero Siege Complete
   ids:

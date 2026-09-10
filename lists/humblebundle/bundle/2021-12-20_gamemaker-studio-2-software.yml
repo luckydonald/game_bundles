@@ -4,6 +4,8 @@ name: GameMaker Studio 2 Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Super Raft Boat
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameMaker Studio 2 Creator
   ids:
   - unresolved:source:isthereanydeal:10851:gamemaker-studio-2-creator
   requires: []
   tiers:
+  - 2
   - 3
 - name: Last Horizon
   ids:
   - steam:394220
   requires: []
   tiers:
+  - 2
   - 3
 - name: Space Gladiators
   ids:
   - steam:1144910
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cattails | Become a Cat!
   ids:

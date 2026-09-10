@@ -4,6 +4,8 @@ name: Indie Gamer Steam Bundle 2023
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'The Deed: Dynasty'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Lamia's Plan
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Valkyrie: Journey To Midgard'
   ids:
@@ -41,24 +46,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:
   - steam:431710
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Space Pilgrim Episode IV: Sol'
   ids:
   - steam:446640
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Space Pilgrim Episode III: Delta Pavonis'
   ids:
   - steam:439250
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'WayOut 2: Hex'
   ids:

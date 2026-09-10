@@ -4,6 +4,8 @@ name: Humble Unleash Destruction Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Battlestar Galactica Deadlock
   ids:
   - unresolved:source:isthereanydeal:10241:battlestar-galactica-deadlock
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Distant Worlds: Universe'
   ids:
   - steam:261470
   requires: []
   tiers:
+  - 2
   - 3
 - name: Field of Glory II
   ids:

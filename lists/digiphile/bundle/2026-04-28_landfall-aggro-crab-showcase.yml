@@ -4,6 +4,8 @@ name: Landfall x Aggro Crab Showcase
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 5
   name: Charity
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Going Under
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Subway Midnight
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Totally Accurate Battle Simulator
   ids:
   - steam:508440
   requires: []
   tiers:
+  - 2
   - 5
 - name: Content Warning
   ids:
   - steam:2881650
   requires: []
   tiers:
+  - 2
   - 5
 - name: PEAK
   ids:
   - steam:3527290
   requires: []
   tiers:
+  - 2
   - 5
 - name: HASTE
   ids:

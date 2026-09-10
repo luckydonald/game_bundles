@@ -4,6 +4,8 @@ name: Rising Storm Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-14-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm'
   ids:
   - steam:35450
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Rising Storm 2: Vietnam'
   ids:
   - steam:418460
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Rising Storm 2: Vietnam - Pulling Rank Cosmetic'
   ids:
   - steam:737270
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Rising Storm 2: Vietnam - Uncle Ho''s Heroes Cosmetic'
   ids:

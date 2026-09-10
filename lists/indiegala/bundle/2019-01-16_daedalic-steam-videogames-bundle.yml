@@ -4,6 +4,8 @@ name: Daedalic Entertainment Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A New Beginning - Final Cut
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Caravan
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Franz Kafka Videogame
   ids:
   - steam:392280
   requires: []
   tiers:
+  - 2
   - 3
 - name: Blackguards
   ids:
   - steam:249650
   requires: []
   tiers:
+  - 2
   - 3
 - name: Deponia
   ids:
   - steam:214340
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Dark Eye: Chains of Satinav'
   ids:
   - steam:203830
   requires: []
   tiers:
+  - 2
   - 3
 - name: Crazy Machines 3
   ids:

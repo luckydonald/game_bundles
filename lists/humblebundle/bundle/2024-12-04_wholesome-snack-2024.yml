@@ -4,6 +4,8 @@ name: Wholesome Snack Bundle 2024
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Rusty's Retirement
   ids:
@@ -27,12 +30,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Spirit City: Lofi Sessions'
   ids:
   - steam:2113850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Little Kitty, Big City
   ids:

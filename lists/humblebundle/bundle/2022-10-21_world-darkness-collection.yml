@@ -4,6 +4,8 @@ name: World of Darkness Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Vampire: The Masquerade - Shadows of New York'
   ids:
   - steam:1279630
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Vampire: The Masquerade — Night Road'
   ids:
   - steam:1290270
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Werewolf: The Apocalypse - Heart of the Forest'
   ids:
   - steam:1342620
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Vampire: The Masquerade — Out for Blood'
   ids:

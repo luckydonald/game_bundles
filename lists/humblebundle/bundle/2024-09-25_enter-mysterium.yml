@@ -4,6 +4,8 @@ name: Enter The Mysterium Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 5
   name: entire-13-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: 'The Manhole: Masterpiece Edition'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Spelunx and the Caves of Mr. Seudo
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: 'Uru: Complete Chronicles'
   ids:
   - steam:63650
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Myst V: End of Ages'
   ids:
   - steam:208110
   requires: []
   tiers:
+  - 2
   - 5
 - name: Riven (1997)
   ids:
   - steam:63610
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Myst IV: Revelation'
   ids:

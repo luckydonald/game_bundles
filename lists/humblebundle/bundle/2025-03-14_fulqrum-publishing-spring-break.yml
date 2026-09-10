@@ -4,6 +4,8 @@ name: 'Fulqrum Publishing: Spring Break Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Through the Woods
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'WRATH: Aeon of Ruin'
   ids:
   - steam:1000410
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Fell Seal: Arbiter''s Mark'
   ids:
   - steam:699170
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dread Templar
   ids:
   - steam:1334730
   requires: []
   tiers:
+  - 2
   - 3
 - name: Viscerafest
   ids:

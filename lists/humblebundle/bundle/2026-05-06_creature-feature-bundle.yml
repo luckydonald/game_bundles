@@ -4,6 +4,8 @@ name: Creature Feature Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Prison Boss VR
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Budget Cuts Ultimate
   ids:
   - steam:2221980
   requires: []
   tiers:
+  - 2
   - 3
 - name: Thrasher
   ids:
   - steam:2702300
   requires: []
   tiers:
+  - 2
   - 3
 - name: Crossings
   ids:
   - steam:2782960
   requires: []
   tiers:
+  - 2
   - 3
 - name: Deadly Delivery
   ids:
   - steam:3743090
   requires: []
   tiers:
+  - 2
   - 3
 - name: Maestro
   ids:

@@ -4,6 +4,8 @@ name: Talisman Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Talisman - Character Pack #2 - Courtesan'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Talisman - Character Pack #1 - Exorcist'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Talisman - Complete Runestone Deck
   ids:
@@ -41,36 +46,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Talisman - Character Pack #6 - Gambler'
   ids:
   - steam:267771
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Talisman - Character Pack #4 - Genie'
   ids:
   - steam:258816
   requires: []
   tiers:
+  - 2
   - 4
 - name: Talisman - The Highland Expansion
   ids:
   - steam:267780
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Talisman - Character Pack #3 - Devil''s Minion'
   ids:
   - steam:258815
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Talisman - Character Pack #5 - Martyr'
   ids:
   - steam:267770
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Talisman - Character Pack #10 - Shaman'
   ids:

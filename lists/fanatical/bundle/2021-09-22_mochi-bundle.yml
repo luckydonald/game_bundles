@@ -4,6 +4,8 @@ name: Mochi Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AIdol
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Nusakana
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Letter - Horror Visual Novel
   ids:
   - steam:460430
   requires: []
   tiers:
+  - 2
   - 3
 - name: Panty Party
   ids:
   - steam:562410
   requires: []
   tiers:
+  - 2
   - 3
 - name: GIGA WRECKER
   ids:
   - steam:454410
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Harvest Moon: Light of Hope Special Edition - Doc''s & Melanie''s Special
     Episodes'

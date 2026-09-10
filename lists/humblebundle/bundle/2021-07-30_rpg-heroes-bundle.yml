@@ -4,6 +4,8 @@ name: RPG Heroes Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tower of Time
   ids:
   - steam:617480
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Swords & Souls: Neverseen'
   ids:
   - steam:679900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dreadlands
   ids:

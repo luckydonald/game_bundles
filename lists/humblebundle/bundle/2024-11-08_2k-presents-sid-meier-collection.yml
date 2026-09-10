@@ -4,6 +4,8 @@ name: '2k Presents: The Sid Meier Collection Bundle'
 tiers:
 - rank: 1
   name: 5-item-bundle
+- rank: 2
+  name: 10-item-bundle
 - rank: 4
   name: entire-20-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Sid Meier's Ace Patrol
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Sid Meier's Starships
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Sid Meier''s Civilization® III: Complete'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Sid Meier''s Ace Patrol: Pacific Skies'
   ids:
@@ -48,36 +54,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Sid Meier's Pirates!
   ids:
   - steam:3920
   requires: []
   tiers:
+  - 2
   - 4
 - name: Sid Meier's Civilization® VI
   ids:
   - steam:289070
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Sid Meier''s Civilization V: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-v-the-complete-edition
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Sid Meier''s Civilization®: Beyond Earth™ - The Collection'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-beyond-earth-the-collection
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Sid Meier''s Civilization IV: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-iv-the-complete-edition
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Sid Meier''s Civilization® VI: Nubia Civilization & Scenario Pack'
   ids:

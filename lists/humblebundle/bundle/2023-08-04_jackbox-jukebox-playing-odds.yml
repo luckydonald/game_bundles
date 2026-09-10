@@ -4,6 +4,8 @@ name: 'Jackbox Jukebox: Playing The Odds Bundle'
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 2-item-bundle
 - rank: 5
   name: entire-8-item-bundle
 references:
@@ -20,12 +22,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Quiplash
   ids:
   - steam:351510
   requires: []
   tiers:
+  - 2
   - 5
 - name: The Jackbox Party Pack
   ids:

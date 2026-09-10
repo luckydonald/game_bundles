@@ -4,6 +4,8 @@ name: Return of the Immersive Sim
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 5
   name: Extra items
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Blood West
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Shadows of Doubt
   ids:
   - steam:986130
   requires: []
   tiers:
+  - 2
   - 5
 - name: System Shock
   ids:
   - steam:482400
   requires: []
   tiers:
+  - 2
   - 5
 - name: Fallen Aces
   ids:
   - steam:1411910
   requires: []
   tiers:
+  - 2
   - 5
 - name: Peripeteia
   ids:

@@ -4,6 +4,8 @@ name: The Game Creators Classic Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru Death Valley Pack
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru Mega Pack 1
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru - Medical Pack
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru - Walled Garden Pack
   ids:
@@ -55,54 +62,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru Mega Pack 2
   ids:
   - steam:321141
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit Classic
   ids:
   - unresolved:source:isthereanydeal:13870:appgamekit-classic
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit Sound Library
   ids:
   - unresolved:source:isthereanydeal:13870:appgamekit-sound-library
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru - Cemetery Pack
   ids:
   - steam:1306830
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru - Camping Pack
   ids:
   - steam:1338070
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru - Trees, Plants & Rocks Pack
   ids:
   - steam:1361591
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru - Furniture Pack
   ids:
   - steam:1436740
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru - Retro 80s Pack
   ids:
   - steam:1343490
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit - Visual Editor
   ids:

@@ -4,6 +4,8 @@ name: Brutal Beat 'Em Ups Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Battletoads
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: River City Girls Zero
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: River City Girls
   ids:
   - steam:1049320
   requires: []
   tiers:
+  - 2
   - 3
 - name: Bud Spencer & Terence Hill - Slaps And Beans 2
   ids:
   - steam:2142330
   requires: []
   tiers:
+  - 2
   - 3
 - name: River City Girls 2
   ids:

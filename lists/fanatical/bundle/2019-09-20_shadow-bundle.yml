@@ -4,6 +4,8 @@ name: Shadow Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Tales from Candlekeep: Tomb of Annihilation'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Infinite Air with Mark McMorris
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'LEGRAND LEGACY: Tale of the Fatebounds'
   ids:
   - steam:556740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Equilinox
   ids:
   - steam:853550
   requires: []
   tiers:
+  - 2
   - 3
 - name: Shadwen
   ids:
   - steam:425210
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Hex
   ids:
   - steam:510420
   requires: []
   tiers:
+  - 2
   - 3
 - name: Eador. Imperium
   ids:
   - steam:477730
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Life is Feudal: Forest Village'
   ids:

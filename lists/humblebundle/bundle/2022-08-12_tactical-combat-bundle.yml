@@ -4,6 +4,8 @@ name: Tactical Combat Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-20-item-bundle
 references:
@@ -20,36 +22,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sniper Elite V2 Remastered
   ids:
   - steam:728740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Call to Arms - Basic Edition
   ids:
   - unresolved:source:isthereanydeal:11951:call-to-arms-basic-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Brigador: Up-Armored Deluxe'
   ids:
   - unresolved:source:isthereanydeal:11951:brigador-up-armored-deluxe
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Intruder
   ids:
   - steam:2556740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Perfect Heist 2
   ids:
   - steam:1521580
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sniper Elite 4 - Target Führer
   ids:

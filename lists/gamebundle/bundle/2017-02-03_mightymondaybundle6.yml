@@ -4,6 +4,8 @@ name: The Mighty Monday GameBundle 6
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.40
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Chopper: Lethal darkness'
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Defense of Egypt: Cleopatra Mission'
   ids:
   - steam:534010
   requires: []
   tiers:
+  - 2
   - 3
 - name: Platformica
   ids:
   - unresolved:source:isthereanydeal:4718:platformica
   requires: []
   tiers:
+  - 2
   - 3
 - name: Haven
   ids:
   - steam:983970
   requires: []
   tiers:
+  - 2
   - 3
 - name: CHEXS
   ids:

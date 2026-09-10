@@ -4,6 +4,8 @@ name: Humble UK Games Collective Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,30 +22,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Master Reboot
   ids:
   - steam:251850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Lumino City
   ids:
   - steam:205020
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Ship: Murder Party'
   ids:
   - steam:2400
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Sanctus Reach'
   ids:
   - unresolved:source:isthereanydeal:10151:warhammer-40000-sanctus-reach
   requires: []
   tiers:
+  - 2
   - 3
 - name: Old School RuneScape 1-Month Membership
   ids:

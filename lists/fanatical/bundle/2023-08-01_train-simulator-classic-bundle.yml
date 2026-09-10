@@ -4,6 +4,8 @@ name: Train Simulator Classic Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: North Somerset Railway Route Add-On'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: London to Brighton Route Add-On'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: Union Pacific Heritage SD70ACes Loco Add-On'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: Isle of Wight Route Add-On'
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Train Simulator Classic
   ids:
@@ -55,42 +62,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: South Wales Coastal: Bristol - Swansea Route Add-On'
   ids:
   - steam:1429752
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: DB BR 204 Loco Add-On'
   ids:
   - steam:1098161
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Midland Main Line London-Bedford Route Add-On'
   ids:
   - steam:277760
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Soldier Summit Route Add-On'
   ids:
   - steam:277775
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Liverpool-Manchester Route Add-On'
   ids:
   - steam:258653
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Norddeutsche-Bahn: Kiel - Lübeck Route Add-On'
   ids:
   - steam:1109209
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: South London Network Route Add-On'
   ids:

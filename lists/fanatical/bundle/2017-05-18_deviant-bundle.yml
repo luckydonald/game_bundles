@@ -4,6 +4,8 @@ name: Deviant Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: PONCHO
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: '- Ratz Instagib'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Deadly Premonition: The Director''s Cut'
   ids:
@@ -41,42 +46,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Lumini
   ids:
   - steam:360840
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Fist Slash: Of Ultimate Fury'
   ids:
   - steam:409070
   requires: []
   tiers:
+  - 2
   - 3
 - name: Kromaia
   ids:
   - steam:285980
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Land of Eyas
   ids:
   - steam:299800
   requires: []
   tiers:
+  - 2
   - 3
 - name: I Want To Be Human
   ids:
   - unresolved:source:isthereanydeal:5110:i-want-to-be-human
   requires: []
   tiers:
+  - 2
   - 3
 - name: One Upon Light
   ids:
   - unresolved:source:isthereanydeal:5110:one-upon-light
   requires: []
   tiers:
+  - 2
   - 3
 - name: Conga Master
   ids:

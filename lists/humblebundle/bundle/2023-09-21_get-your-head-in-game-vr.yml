@@ -4,6 +4,8 @@ name: Get Your Head in the Game VR Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Zero Caliber VR
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: STRIDE
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: After the Fall - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:13491:after-the-fall-deluxe-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Propagation: Paradise Hotel'
   ids:
   - steam:1824960
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'I Expect You To Die 2: The Spy and the Liar'
   ids:
   - steam:1499120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Demeo
   ids:

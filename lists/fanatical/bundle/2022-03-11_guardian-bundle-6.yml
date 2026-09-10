@@ -4,6 +4,8 @@ name: Guardian Bundle 6
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Nation Red
   ids:
@@ -27,42 +30,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Copy Kitty
   ids:
   - steam:349250
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Monsters'' Den: Godfall'
   ids:
   - steam:469720
   requires: []
   tiers:
+  - 2
   - 3
 - name: Versus Squad
   ids:
   - steam:471330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tangledeep
   ids:
   - steam:628770
   requires: []
   tiers:
+  - 2
   - 3
 - name: Glyph
   ids:
   - steam:1569150
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jetboard Joust
   ids:
   - steam:1181600
   requires: []
   tiers:
+  - 2
   - 3
 - name: Unrailed!
   ids:

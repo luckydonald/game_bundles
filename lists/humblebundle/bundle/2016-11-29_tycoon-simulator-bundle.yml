@@ -4,6 +4,8 @@ name: Humble Tycoon Simulator Bundle
 tiers:
 - rank: 1
   name: Pay what you want!
+- rank: 2
+  name: Pay more than the average to also unlock!
 - rank: 3
   name: Pay $12 or more to also unlock!
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Out of the Park Baseball 17
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: RollerCoaster Tycoon Deluxe
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Car Mechanic Simulator 2015
   ids:
   - steam:320300
   requires: []
   tiers:
+  - 2
   - 3
 - name: Big Pharma
   ids:
   - steam:344850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Democracy 3 Collector's Edition
   ids:
   - unresolved:source:isthereanydeal:4419:democracy-3-collectors-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: YouTubers Life
   ids:

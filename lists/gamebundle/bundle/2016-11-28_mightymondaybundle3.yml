@@ -4,6 +4,8 @@ name: The Mighty Monday GameBundle 3
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.20
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Nightork Adventures - Beyond the Moons of Shadalee
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ballistick
   ids:
   - steam:518620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rescue Team 5
   ids:
   - steam:416320
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jane Angel Templar Mystery
   ids:

@@ -4,6 +4,8 @@ name: Love Letter to Lovecraft
 tiers:
 - rank: 1
   name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
 - rank: 3
   name: Entire 9 Item Bundle
 references:
@@ -30,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Forgive me Father
   ids:
@@ -38,6 +41,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Sundered: Eldritch Edition'
   ids:
@@ -46,6 +50,47 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: Dagon - The Eldritch Box
+  ids:
+  - steam:1722010
+  - isthereanydeal:dagon-the-eldritch-box
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Dagon - The Little Glass Bottle
+  ids:
+  - steam:1751590
+  - isthereanydeal:dagon-the-little-glass-bottle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Dagon - The Railway Horror
+  ids:
+  - steam:2291520
+  - isthereanydeal:dagon-the-railway-horror
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Abandon Ship
+  ids:
+  - steam:551860
+  - isthereanydeal:abandon-ship
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Call of Cthulhu
+  ids:
+  - steam:399810
+  - isthereanydeal:call-of-cthulhu
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: 'Remnant: From the Ashes'
   ids:
@@ -65,41 +110,6 @@ games:
   ids:
   - steam:2581410
   - isthereanydeal:stygian-outer-gods
-  requires: []
-  tiers:
-  - 3
-- name: Dagon - The Eldritch Box
-  ids:
-  - steam:1722010
-  - isthereanydeal:dagon-the-eldritch-box
-  requires: []
-  tiers:
-  - 3
-- name: Dagon - The Little Glass Bottle
-  ids:
-  - steam:1751590
-  - isthereanydeal:dagon-the-little-glass-bottle
-  requires: []
-  tiers:
-  - 3
-- name: Dagon - The Railway Horror
-  ids:
-  - steam:2291520
-  - isthereanydeal:dagon-the-railway-horror
-  requires: []
-  tiers:
-  - 3
-- name: Abandon Ship
-  ids:
-  - steam:551860
-  - isthereanydeal:abandon-ship
-  requires: []
-  tiers:
-  - 3
-- name: Call of Cthulhu
-  ids:
-  - steam:399810
-  - isthereanydeal:call-of-cthulhu
   requires: []
   tiers:
   - 3

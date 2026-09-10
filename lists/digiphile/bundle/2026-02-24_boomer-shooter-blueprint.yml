@@ -4,6 +4,8 @@ name: Boomer Shooter Blueprint
 tiers:
 - rank: 1
   name: 1 Items
+- rank: 2
+  name: 3 Items
 - rank: 9
   name: Add-on to any tier (3)
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 9
 - name: INCISION
   ids:
   - steam:1734680
   requires: []
   tiers:
+  - 2
   - 9
 - name: 'Warhammer 40,000: Boltgun'
   ids:
   - steam:2005010
   requires: []
   tiers:
+  - 2
   - 9
 - name: Beyond Citadel
   ids:

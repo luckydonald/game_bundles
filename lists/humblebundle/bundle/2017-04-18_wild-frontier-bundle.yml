@@ -4,6 +4,8 @@ name: Humble Wild Frontier Bundle
 tiers:
 - rank: 1
   name: Pay what you want!
+- rank: 2
+  name: Pay more than the average
 - rank: 3
   name: Pay $13 or more to also unlock!
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: FRONTIERS
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ice Lakes
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Renowned Explorers: International Society'
   ids:
   - steam:296970
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hard West
   ids:
   - steam:307670
   requires: []
   tiers:
+  - 2
   - 3
 - name: SPINTIRES
   ids:
   - unresolved:source:isthereanydeal:5015:spintires
   requires: []
   tiers:
+  - 2
   - 3
 - name: Slime Rancher
   ids:

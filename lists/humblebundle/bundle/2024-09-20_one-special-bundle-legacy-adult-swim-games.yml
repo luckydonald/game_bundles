@@ -4,6 +4,8 @@ name: 'One Special Bundle: The Legacy of Adult Swim Games'
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Duck Game
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Battle Chef Brigade Deluxe
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Pool Panic
   ids:
@@ -41,12 +46,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Rain World
   ids:
   - steam:312520
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Death''s Gambit: Afterlife'
   ids:

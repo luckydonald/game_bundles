@@ -4,6 +4,8 @@ name: Ultimate Pixeljam Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Last Horizon
   ids:
   - steam:394220
   requires: []
   tiers:
+  - 2
   - 3
 - name: Planeteri
   ids:
   - unresolved:source:isthereanydeal:4102:planeteri
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Glorkian Warrior: The Trials Of Glork'
   ids:
   - steam:341120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dino Run DX
   ids:

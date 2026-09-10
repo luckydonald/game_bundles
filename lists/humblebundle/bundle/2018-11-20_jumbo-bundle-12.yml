@@ -4,6 +4,8 @@ name: Humble Jumbo Bundle 12
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Pinstripe
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Super House of Dead Ninjas
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Super House of Dead Ninjas: True Ninja Pack'
   ids:
@@ -41,24 +46,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Construction Simulator 2015
   ids:
   - steam:289950
   requires: []
   tiers:
+  - 2
   - 3
 - name: Project Highrise
   ids:
   - steam:423580
   requires: []
   tiers:
+  - 2
   - 3
 - name: Battle Chef Brigade Deluxe
   ids:
   - steam:452570
   requires: []
   tiers:
+  - 2
   - 3
 - name: DiRT 4
   ids:

@@ -4,6 +4,8 @@ name: XCom Complete Bundle
 tiers:
 - rank: 1
   name: 5-item-bundle
+- rank: 2
+  name: 9-item-bundle
 - rank: 3
   name: entire-17-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'X-COM: Terror From the Deep'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'X-COM: Apocalypse'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'X-Com: Interceptor'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'X-Com: UFO Defense'
   ids:
@@ -48,30 +54,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'XCOM: Enemy Unknown'
   ids:
   - steam:200510
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Bureau: XCOM Declassified'
   ids:
   - steam:65930
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'XCOM: Enemy Within'
   ids:
   - steam:225340
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'XCOM: Enemy Unknown - Slingshot Pack'
   ids:
   - steam:209812
   requires: []
   tiers:
+  - 2
   - 3
 - name: XCOM 2
   ids:

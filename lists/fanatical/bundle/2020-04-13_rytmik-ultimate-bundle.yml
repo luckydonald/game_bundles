@@ -4,6 +4,8 @@ name: Rytmik Ultimate Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,30 +22,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Rytmik Cloud Expansion 2
   ids:
   - unresolved:source:isthereanydeal:8668:rytmik-cloud-expansion-2
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rytmik Ultimate - Rock Expansion
   ids:
   - steam:525970
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rytmik Cloud Expansion
   ids:
   - steam:697380
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rytmik Ultimate - Voice & Acoustic Expansion
   ids:
   - steam:525971
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rytmik Live
   ids:

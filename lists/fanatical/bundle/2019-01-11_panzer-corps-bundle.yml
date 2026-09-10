@@ -4,6 +4,8 @@ name: Panzer Corps Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Panzer Corps: Grand Campaign ''39'
   ids:
@@ -27,36 +30,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Panzer Corps Grand Campaign '42
   ids:
   - steam:279962
   requires: []
   tiers:
+  - 2
   - 4
 - name: Panzer Corps Grand Campaign '42-'43
   ids:
   - steam:279963
   requires: []
   tiers:
+  - 2
   - 4
 - name: Panzer Corps Grand Campaign '40
   ids:
   - steam:279960
   requires: []
   tiers:
+  - 2
   - 4
 - name: Panzer Corps Grand Campaign '41
   ids:
   - steam:279961
   requires: []
   tiers:
+  - 2
   - 4
 - name: Panzer Corps Grand Campaign '43
   ids:
   - steam:279964
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Panzer Corps: Afrika Korps'
   ids:

@@ -4,6 +4,8 @@ name: Amazing Adventures Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,30 +22,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Unavowed
   ids:
   - steam:336140
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Dreamfall Chapters: The Final Cut'
   ids:
   - steam:237850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Quern - Undying Thoughts
   ids:
   - steam:512790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Draugen
   ids:
   - steam:770390
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beyond a Steel Sky
   ids:

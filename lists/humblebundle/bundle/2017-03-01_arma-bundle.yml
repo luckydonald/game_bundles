@@ -4,6 +4,8 @@ name: Humble ARMA Bundle
 tiers:
 - rank: 1
   name: Pay 1$ or more
+- rank: 2
+  name: Beat the average
 - rank: 3
   name: Pay 15$ or More!
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: ArmA Gold Edition
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Arma Tactics
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: ArmA 2 Operation Arrowhead
   ids:
   - steam:33930
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Arma 2: Private Military Company'
   ids:
   - steam:65720
   requires: []
   tiers:
+  - 2
   - 3
 - name: ArmA 2 British Armed Forces
   ids:
   - steam:65700
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'ArmA 2: Army of the Czech Republic'
   ids:
   - steam:33934
   requires: []
   tiers:
+  - 2
   - 3
 - name: ArmA 2
   ids:
   - steam:33900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Arma 3
   ids:

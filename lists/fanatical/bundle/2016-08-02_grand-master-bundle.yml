@@ -4,6 +4,8 @@ name: Grand Master Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Alea Jacta Est
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Alea Jacta Est: Parthian Wars'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: "Pride of Nations Spanish\x96American War 1898"
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Pride of Nations: The Scramble for Africa'
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Alea Jacta Est Cantabrian Wars
   ids:
@@ -55,6 +62,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Pride of Nations: American Civil War 1862'
   ids:
@@ -62,6 +70,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Alea Jacta Est: Birth of Rome'
   ids:
@@ -69,6 +78,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Pride of Nations
   ids:
@@ -76,6 +86,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Alea Jacta Est Spartacus
   ids:
@@ -83,30 +94,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Civil War II
   ids:
   - steam:306630
   requires: []
   tiers:
+  - 2
   - 3
 - name: Revolution Under Siege Gold
   ids:
   - steam:374380
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Civil War II: The Bloody Road South'
   ids:
   - steam:311330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rise of Prussia Gold
   ids:
   - steam:292760
   requires: []
   tiers:
+  - 2
   - 3
 - name: To End All Wars - Breaking the Deadlock
   ids:
