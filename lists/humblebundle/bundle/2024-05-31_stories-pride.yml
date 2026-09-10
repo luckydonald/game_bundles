@@ -2,6 +2,8 @@
 schema: 1
 name: Stories of Pride Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:755470
   requires: []
   tiers:
+  - 1
   - 4
 - name: Heaven Will Be Mine
   ids:
   - steam:836450
   requires: []
   tiers:
+  - 1
   - 4
 - name: No Longer Home
   ids:
   - steam:651490
   requires: []
   tiers:
+  - 1
   - 4
 - name: Arcadia Fallen
   ids:

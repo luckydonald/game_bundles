@@ -2,6 +2,8 @@
 schema: 1
 name: Tower Defense 2 Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:816340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Legion TD 2 - Multiplayer Tower Defense
   ids:
   - steam:469600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tower Escape
   ids:
   - steam:2009860
   requires: []
   tiers:
+  - 1
   - 2
 - name: Border Pioneer
   ids:
   - steam:2346410
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dungeon Defenders: Awakened'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Holiday Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:4510:wishmaster
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Construct
   ids:
   - steam:525190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nanoborg
   ids:
   - unresolved:source:isthereanydeal:4510:nanoborg
   requires: []
   tiers:
+  - 1
   - 2
 - name: HellAngel
   ids:
   - unresolved:source:isthereanydeal:4510:hellangel
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sleight
   ids:

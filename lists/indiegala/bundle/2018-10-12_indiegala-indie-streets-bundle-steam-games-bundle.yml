@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Streets Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - steam:924280
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Smash Halloween Pumpkins: The Challenge'
   ids:
   - steam:886010
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Street Level: Windows Edition'
   ids:
   - steam:861670
   requires: []
   tiers:
+  - 1
   - 2
 - name: FAN'CIE VEER! (Fish Are Nasty, Cake Is Excellent Vektor Evading Emblazed Rapture)
   ids:

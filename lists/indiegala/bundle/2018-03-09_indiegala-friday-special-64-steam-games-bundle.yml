@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #64'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5965:temple-escape
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Samurai Rampage
   ids:
   - steam:675030
   requires: []
   tiers:
+  - 1
   - 2
 - name: Click&Fight
   ids:
   - steam:769200
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dark Train: Soundtrack'
   ids:

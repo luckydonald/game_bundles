@@ -2,6 +2,8 @@
 schema: 1
 name: LEGO AT THE MOVIES
 tiers:
+- rank: 1
+  name: Starter Brick
 - rank: 3
   name: Grand Architect
 references:
@@ -19,12 +21,14 @@ games:
   - steam:881320
   requires: []
   tiers:
+  - 1
   - 3
 - name: The LEGO NINJAGO Movie Video Game
   ids:
   - steam:640590
   requires: []
   tiers:
+  - 1
   - 3
 - name: The LEGO Movie Videogame
   ids:

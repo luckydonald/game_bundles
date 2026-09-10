@@ -2,6 +2,8 @@
 schema: 1
 name: 'Metro Mania: Planes, Trains, and Automobiles! Bundle'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:397340
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Juno: New Origins'
   ids:
   - steam:870200
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Slaverian Trucker
   ids:
   - steam:1822450
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Loco World - Cozy Train Automation
   ids:
   - steam:3109280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Railroads Online
   ids:

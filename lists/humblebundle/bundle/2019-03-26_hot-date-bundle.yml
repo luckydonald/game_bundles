@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Hot Date Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-11-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:451760
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Creature Romances: Kokonoe Kokoro'
   ids:
   - steam:356450
   requires: []
   tiers:
+  - 1
   - 4
 - name: Just Deserts
   ids:
   - steam:488660
   requires: []
   tiers:
+  - 1
   - 4
 - name: Ladykiller in a Bind
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Dice & Destiny Bundle Encore
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:291650
   requires: []
   tiers:
+  - 1
   - 3
 - name: Roadwarden
   ids:
   - steam:1155970
   requires: []
   tiers:
+  - 1
   - 3
 - name: Disco Elysium - The Final Cut
   ids:
   - steam:632470
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Pillars of Eternity II: Deadfire Obsidian Edition'
   ids:

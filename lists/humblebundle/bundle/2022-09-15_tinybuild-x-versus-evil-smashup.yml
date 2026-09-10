@@ -2,6 +2,8 @@
 schema: 1
 name: tinyBuild x Versus Evil Smashup Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:521890
   requires: []
   tiers:
+  - 1
   - 3
 - name: Guts and Glory
   ids:
   - steam:537340
   requires: []
   tiers:
+  - 1
   - 3
 - name: Let Them Come
   ids:
   - steam:505630
   requires: []
   tiers:
+  - 1
   - 3
 - name: HitchHiker - A Mystery Game
   ids:

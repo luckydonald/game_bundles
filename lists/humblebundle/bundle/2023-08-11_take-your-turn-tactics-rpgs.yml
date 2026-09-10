@@ -2,6 +2,8 @@
 schema: 1
 name: 'Take Your Turn: Tactics & RPGs Bundle'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:13400:banner-saga-trilogy-deluxe-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jupiter Hell
   ids:
   - steam:811320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jack Move
   ids:
   - steam:1099640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Coromon
   ids:
   - steam:1218210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Panzer Corps 2
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Eclectic Delights Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,36 +19,42 @@ games:
   - steam:63800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fibrillation
   ids:
   - unresolved:source:isthereanydeal:222:fibrillation
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Shadows on the Vatican - Act 1: Greed'
   ids:
   - unresolved:source:isthereanydeal:222:shadows-on-the-vatican-act-1-greed
   requires: []
   tiers:
+  - 1
   - 2
 - name: War of the Human Tanks
   ids:
   - steam:263400
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Delve Deeper: Treasures and Tunnels'
   ids:
   - steam:63802
   requires: []
   tiers:
+  - 1
   - 2
 - name: eversion
   ids:
   - steam:33680
   requires: []
   tiers:
+  - 1
   - 2
 - name: StayDead
   ids:

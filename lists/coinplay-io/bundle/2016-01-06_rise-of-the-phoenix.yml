@@ -2,6 +2,8 @@
 schema: 1
 name: Rise Of The Phoenix Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:244690
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Heroes & Legends: Conquerors of Kolhar'
   ids:
   - steam:306950
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lost Civilization
   ids:
   - steam:264580
   requires: []
   tiers:
+  - 1
   - 3
 - name: Supreme League of Patriots (Season Pass)
   ids:

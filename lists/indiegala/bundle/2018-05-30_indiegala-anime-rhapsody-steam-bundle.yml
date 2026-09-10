@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Rhapsody Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1653180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Border of her Heart - HD
   ids:
   - steam:812750
   requires: []
   tiers:
+  - 1
   - 2
 - name: One Night Stand
   ids:
   - steam:549860
   requires: []
   tiers:
+  - 1
   - 2
 - name: Border of her Heart
   ids:
   - steam:795680
   requires: []
   tiers:
+  - 1
   - 2
 - name: Yozora Rhapsody
   ids:

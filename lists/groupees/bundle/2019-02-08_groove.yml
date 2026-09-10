@@ -2,6 +2,8 @@
 schema: 1
 name: Get into the Groove Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:7005:piano-play-3d
   requires: []
   tiers:
+  - 1
   - 2
 - name: Piano Cat
   ids:
   - unresolved:source:isthereanydeal:7005:piano-cat
   requires: []
   tiers:
+  - 1
   - 2
 - name: Drum Simulator
   ids:
   - unresolved:source:isthereanydeal:7005:drum-simulator
   requires: []
   tiers:
+  - 1
   - 2
 - name: Groove Studio
   ids:

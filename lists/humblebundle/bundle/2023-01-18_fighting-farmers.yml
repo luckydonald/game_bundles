@@ -2,6 +2,8 @@
 schema: 1
 name: Fighting Farmers Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:943260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Forager
   ids:
   - steam:751780
   requires: []
   tiers:
+  - 1
   - 2
 - name: Serin Fate
   ids:
   - steam:1070860
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kitaria Fables
   ids:
   - steam:1356280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Re:Legend
   ids:

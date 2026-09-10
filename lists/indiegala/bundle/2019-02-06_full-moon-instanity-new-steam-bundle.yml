@@ -2,6 +2,8 @@
 schema: 1
 name: Full Moon Insanity Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:771010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Slash or Die
   ids:
   - steam:480480
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Stories of Bethem: Full Moon Edition'
   ids:

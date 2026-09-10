@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXXV Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:6808:r-u-m-a
   requires: []
   tiers:
+  - 1
   - 2
 - name: airRevo VR
   ids:
   - steam:594150
   requires: []
   tiers:
+  - 1
   - 2
 - name: iOMoon
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Train Simulator Classic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,36 +19,42 @@ games:
   - steam:678001
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: North Somerset Railway Route Add-On'
   ids:
   - steam:325993
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: London to Brighton Route Add-On'
   ids:
   - steam:208280
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: Union Pacific Heritage SD70ACes Loco Add-On'
   ids:
   - steam:222596
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: Isle of Wight Route Add-On'
   ids:
   - steam:24021
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Simulator Classic
   ids:
   - unresolved:source:isthereanydeal:13379:train-simulator-classic
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: South Wales Coastal: Bristol - Swansea Route Add-On'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Call of Casual Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:820500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rescue Team 4
   ids:
   - steam:715090
   requires: []
   tiers:
+  - 1
   - 2
 - name: SEGFAULT
   ids:
   - steam:715290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rescue Team 7
   ids:

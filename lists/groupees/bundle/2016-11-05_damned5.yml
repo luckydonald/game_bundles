@@ -2,6 +2,8 @@
 schema: 1
 name: Bundle of the Damned 5
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:4307:cubium-dreams
   requires: []
   tiers:
+  - 1
   - 2
 - name: Trouble In The Manor
   ids:
   - steam:338530
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Shadowland
   ids:

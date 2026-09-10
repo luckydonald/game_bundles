@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Mogul Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:299780
   requires: []
   tiers:
+  - 1
   - 2
 - name: Erusal
   ids:
   - steam:509230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cubicle Quest
   ids:
   - steam:349500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lovely Weather We're Having
   ids:

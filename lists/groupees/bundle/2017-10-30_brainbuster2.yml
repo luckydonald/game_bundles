@@ -2,6 +2,8 @@
 schema: 1
 name: Brainbuster Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:539460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Void
   ids:
   - steam:503710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dwarflings
   ids:
   - steam:562330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Attempt[42]
   ids:

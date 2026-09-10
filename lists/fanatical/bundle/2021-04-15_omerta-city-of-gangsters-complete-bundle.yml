@@ -2,6 +2,8 @@
 schema: 1
 name: 'Omerta: City of Gangsters Complete Bundle'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,6 +19,7 @@ games:
   - steam:208520
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Omerta: City of Gangsters The Con Artist'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: IGN Fan Fest Bundle (Fall 2025)
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:285920
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Predator: Hunting Grounds'
   ids:
   - steam:1556200
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Invincible Presents: Atom Eve'
   ids:
   - steam:2060870
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'SpongeBob SquarePants: The Cosmic Shake'
   ids:

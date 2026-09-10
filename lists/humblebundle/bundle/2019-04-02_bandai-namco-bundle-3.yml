@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Bandai Namco Bundle 3
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:245280
   requires: []
   tiers:
+  - 1
   - 4
 - name: PAC-MAN Championship Edition DX+
   ids:
   - steam:236450
   requires: []
   tiers:
+  - 1
   - 4
 - name: Impact Winter
   ids:
   - unresolved:source:isthereanydeal:7259:impact-winter
   requires: []
   tiers:
+  - 1
   - 4
 - name: Project CARS
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: The Summer GameBundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,24 +19,28 @@ games:
   - steam:345440
   requires: []
   tiers:
+  - 1
   - 2
 - name: Collider
   ids:
   - steam:371880
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
   ids:
   - steam:427930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Story of a Cube
   ids:
   - steam:440750
   requires: []
   tiers:
+  - 1
   - 2
 - name: No Pineapple Left Behind
   ids:

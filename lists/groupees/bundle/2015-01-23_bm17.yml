@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 17
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:333430
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'UFO: Aftermath'
   ids:
   - steam:292160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Last Inua
   ids:
   - steam:331980
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Tex Murphy: Martian Memorandum'
   ids:
   - steam:302340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chaos Ride
   ids:
   - unresolved:source:isthereanydeal:1578:chaos-ride
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Millennium 5: Battle of the Millennium'
   ids:

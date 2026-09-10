@@ -2,6 +2,8 @@
 schema: 1
 name: Flaming Indie Steam Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:676180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Battle Simulator
   ids:
   - steam:879670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Outrunner 2
   ids:
   - unresolved:source:isthereanydeal:6319:outrunner-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Flamebound
   ids:

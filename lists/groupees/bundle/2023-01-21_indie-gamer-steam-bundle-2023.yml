@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Gamer Steam Bundle 2023
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:420740
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'The Deed: Dynasty'
   ids:
   - steam:460960
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lamia's Plan
   ids:
   - steam:1670890
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Valkyrie: Journey To Midgard'
   ids:
   - steam:1724470
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:

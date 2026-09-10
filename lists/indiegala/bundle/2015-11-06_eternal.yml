@@ -2,6 +2,8 @@
 schema: 1
 name: Eternal Rage
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:2715:sherlock-holmes-consulting-detective
   requires: []
   tiers:
+  - 1
   - 2
 - name: Radium
   ids:
   - steam:355410
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Scourge: Outbreak'
   ids:

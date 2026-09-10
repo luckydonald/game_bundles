@@ -2,6 +2,8 @@
 schema: 1
 name: Retro Bundle 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:1621:rammheart
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mighty Retro Zero
   ids:
   - unresolved:source:isthereanydeal:1621:mighty-retro-zero
   requires: []
   tiers:
+  - 1
   - 2
 - name: Organ Biker
   ids:
   - unresolved:source:isthereanydeal:1621:organ-biker
   requires: []
   tiers:
+  - 1
   - 2
 - name: Biology Battle
   ids:
   - unresolved:source:isthereanydeal:1621:biology-battle
   requires: []
   tiers:
+  - 1
   - 2
 - name: MacVenture Series Collection
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: The Software Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3396:pixel-proof
   requires: []
   tiers:
+  - 1
   - 3
 - name: Circuit Craft
   ids:
   - unresolved:source:isthereanydeal:3396:circuit-craft
   requires: []
   tiers:
+  - 1
   - 3
 - name: Jessie The A.I. Robotic Companion
   ids:
   - unresolved:source:isthereanydeal:3396:jessie-the-a-i-robotic-companion
   requires: []
   tiers:
+  - 1
   - 3
 - name: RaySupreme 3D
   ids:

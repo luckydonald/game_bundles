@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Stardock Bundle 2019
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:204880
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Galactic Civilizations I: Ultimate Edition'
   ids:
   - steam:214150
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Galactic Civilizations II: Ultimate Edition'
   ids:
   - steam:202200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Galactic Civilizations III - Mega Events
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Software Bundle: Streaming 2019'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:240720
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Darwin Project: Hunter Pack'
   ids:
   - unresolved:source:isthereanydeal:7467:darwin-project-hunter-pack
   requires: []
   tiers:
+  - 1
   - 3
 - name: XSplit VCAM
   ids:
   - unresolved:source:isthereanydeal:7467:xsplit-vcam
   requires: []
   tiers:
+  - 1
   - 3
 - name: FaceRig
   ids:

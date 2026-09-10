@@ -2,6 +2,8 @@
 schema: 1
 name: Just 1337 Complete
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:422250
   requires: []
   tiers:
+  - 1
   - 2
 - name: Asteroid Bounty Hunter
   ids:
   - steam:444220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Neon Space
   ids:
   - steam:468490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Spin Rush
   ids:

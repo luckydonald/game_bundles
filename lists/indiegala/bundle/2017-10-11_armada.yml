@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Armada Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:711450
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Theodore Adventures
   ids:
   - steam:656940
   requires: []
   tiers:
+  - 1
   - 2
 - name: L.S.S
   ids:
   - steam:701760
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Seven Years War (1756-1763)
   ids:

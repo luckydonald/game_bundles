@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Houses Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:368680
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Count Lucanor
   ids:
   - steam:440880
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hiveswap Friendsim
   ids:

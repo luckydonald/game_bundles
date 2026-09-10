@@ -2,6 +2,8 @@
 schema: 1
 name: Twilight Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:369290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Back to Bed
   ids:
   - steam:308040
   requires: []
   tiers:
+  - 1
   - 2
 - name: Breezeblox
   ids:
   - steam:370080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chronology
   ids:
   - steam:269330
   requires: []
   tiers:
+  - 1
   - 2
 - name: BalanCity
   ids:
   - steam:462680
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bomb The Monsters
   ids:
   - steam:355020
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Construct: Escape the System'
   ids:

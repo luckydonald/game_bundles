@@ -2,6 +2,8 @@
 schema: 1
 name: 'Kingdom: 10th Anniversary Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:15528:kingdom-new-lands-royal-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Kingdom Eighties
   ids:
   - steam:1956040
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kingdom: Two Crowns'
   ids:

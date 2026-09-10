@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Indie Bundle 16
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: BTA + $2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:295790
   requires: []
   tiers:
+  - 1
   - 3
 - name: Retro City Rampage™ DX
   ids:
   - steam:204630
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Never Alone: Foxtales'
   ids:
   - steam:355740
   requires: []
   tiers:
+  - 1
   - 3
 - name: Outlast
   ids:
   - steam:238320
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Trine 3: The Artifacts of Power'
   ids:

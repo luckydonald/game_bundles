@@ -2,6 +2,8 @@
 schema: 1
 name: 'Best of Humble Bundle: Beamdog & Owlcat - RPG Masters Bundle'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 5
   name: entire-12-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:321800
   requires: []
   tiers:
+  - 1
   - 5
 - name: 'Planescape: Torment: Enhanced Edition'
   ids:
   - steam:466300
   requires: []
   tiers:
+  - 1
   - 5
 - name: MythForce
   ids:
   - steam:363860
   requires: []
   tiers:
+  - 1
   - 5
 - name: 'Baldur''s Gate II: Enhanced Edition'
   ids:

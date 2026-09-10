@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 32
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:581310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Riskers Soundtrack
   ids:
   - steam:732120
   requires: []
   tiers:
+  - 1
   - 2
 - name: System Shock® 2 (1999)
   ids:
   - unresolved:source:isthereanydeal:5820:system-shock-2-1999
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'SCALPERS: Turtle & the moonshine gang'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Surf'n'Kerf
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:294230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Merchants of Kaidan
   ids:
   - steam:294020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sparkle 2 Evo
   ids:
   - steam:253650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sinless + OST
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Guardian Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:359840
   requires: []
   tiers:
+  - 1
   - 3
 - name: Comedy Night
   ids:
   - steam:665360
   requires: []
   tiers:
+  - 1
   - 3
 - name: Papo & Yo
   ids:
   - steam:227080
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'INSOMNIA: The Ark'
   ids:

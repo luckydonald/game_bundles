@@ -2,6 +2,8 @@
 schema: 1
 name: Chills & Thrills Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:244690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lost Civilization
   ids:
   - steam:264580
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Last Door: Collectors Edition'
   ids:

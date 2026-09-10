@@ -2,6 +2,8 @@
 schema: 1
 name: 'Mega Man: Recharged Collection'
 tiers:
+- rank: 1
+  name: 3 Item Bundle
 - rank: 4
   name: Entire 9 Item Bundle
 references:
@@ -21,6 +23,30 @@ crawlers:
 - humblebundle
 - isthereanydeal
 games:
+- name: Mega Man Battle Network Legacy Collection Vol.2
+  ids:
+  - steam:1798020
+  - isthereanydeal:mega-man-battle-network-legacy-collection-vol-2
+  requires: []
+  tiers:
+  - 1
+  - 4
+- name: Mega Man Battle Network Legacy Collection Vol.1
+  ids:
+  - steam:1798010
+  - isthereanydeal:mega-man-battle-network-legacy-collection-vol-1
+  requires: []
+  tiers:
+  - 1
+  - 4
+- name: MEGA MAN X DiVE Offline
+  ids:
+  - steam:2183650
+  - isthereanydeal:mega-man-x-dive-offline
+  requires: []
+  tiers:
+  - 1
+  - 4
 - name: Mega Man Legacy Collection
   ids:
   - steam:363440
@@ -60,27 +86,6 @@ games:
   ids:
   - steam:742300
   - isthereanydeal:mega-man-11
-  requires: []
-  tiers:
-  - 4
-- name: Mega Man Battle Network Legacy Collection Vol.2
-  ids:
-  - steam:1798020
-  - isthereanydeal:mega-man-battle-network-legacy-collection-vol-2
-  requires: []
-  tiers:
-  - 4
-- name: Mega Man Battle Network Legacy Collection Vol.1
-  ids:
-  - steam:1798010
-  - isthereanydeal:mega-man-battle-network-legacy-collection-vol-1
-  requires: []
-  tiers:
-  - 4
-- name: MEGA MAN X DiVE Offline
-  ids:
-  - steam:2183650
-  - isthereanydeal:mega-man-x-dive-offline
   requires: []
   tiers:
   - 4

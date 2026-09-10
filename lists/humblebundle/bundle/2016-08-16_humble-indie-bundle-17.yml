@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Indie Bundle 17
 tiers:
+- rank: 1
+  name: Pay What You Want
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:300580
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lethal League
   ids:
   - steam:261180
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Beginner's Guide
   ids:
   - steam:303210
   requires: []
   tiers:
+  - 1
   - 3
 - name: Regency Solitaire
   ids:

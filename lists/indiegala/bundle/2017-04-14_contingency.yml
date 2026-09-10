@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Contingency Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5004:paintball-extreme
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fight or Die
   ids:
   - unresolved:source:isthereanydeal:5004:fight-or-die
   requires: []
   tiers:
+  - 1
   - 2
 - name: Magazime Editor
   ids:
   - unresolved:source:isthereanydeal:5004:magazime-editor
   requires: []
   tiers:
+  - 1
   - 2
 - name: Moccasin
   ids:

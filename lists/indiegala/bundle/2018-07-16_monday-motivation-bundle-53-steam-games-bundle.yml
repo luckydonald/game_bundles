@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #53'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:867540
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vintage Hero
   ids:
   - steam:667240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Life's Playground
   ids:
   - steam:873320
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Flatwaters: The Curse of Echita'
   ids:

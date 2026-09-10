@@ -2,6 +2,8 @@
 schema: 1
 name: Premium Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:321870
   requires: []
   tiers:
+  - 1
   - 2
 - name: Agent Awesome
   ids:
   - steam:345220
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Broadsword : Age of Chivalry'
   ids:
   - unresolved:source:isthereanydeal:2729:broadsword-age-of-chivalry
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Pixel Puzzles 2: Birds'
   ids:
   - steam:344230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bloop Reloaded
   ids:
   - unresolved:source:isthereanydeal:2729:bloop-reloaded
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Pixel Puzzles 2: Anime'
   ids:
   - steam:350810
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gas Guzzlers Extreme
   ids:

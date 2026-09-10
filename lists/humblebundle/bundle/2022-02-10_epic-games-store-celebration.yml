@@ -2,6 +2,8 @@
 schema: 1
 name: Epic Games Store Celebration Bundle
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:598730
   requires: []
   tiers:
+  - 1
   - 3
 - name: WHAT THE GOLF?
   ids:

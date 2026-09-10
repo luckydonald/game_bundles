@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #53'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5972:blockgame
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Coma
   ids:
   - unresolved:source:isthereanydeal:5972:the-coma
   requires: []
   tiers:
+  - 1
   - 2
 - name: PUTIN 20!8
   ids:
   - unresolved:source:isthereanydeal:5972:putin-20-8
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'JASEM: Just Another Shooter with Electronic Music'
   ids:

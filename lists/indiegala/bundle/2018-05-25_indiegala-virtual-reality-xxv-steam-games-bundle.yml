@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXV Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6180:r-u-m-a
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chunky Orbits
   ids:
   - steam:535190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Quickshot
   ids:
   - steam:814020
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Double Play: 2-Player VR Baseball'
   ids:

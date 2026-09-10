@@ -2,6 +2,8 @@
 schema: 1
 name: Bento Spirit Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:911220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tokyo Xanadu eX+
   ids:
   - steam:587260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Neverinth
   ids:
   - steam:966430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zengeon
   ids:
   - steam:1000080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nigate Tale
   ids:
   - steam:1048350
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Spirit Hunter: Death Mark'
   ids:

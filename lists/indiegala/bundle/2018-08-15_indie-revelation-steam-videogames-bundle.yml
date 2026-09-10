@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Revelation Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:896220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Replica
   ids:
   - steam:496890
   requires: []
   tiers:
+  - 1
   - 2
 - name: MIND MAZE
   ids:
   - steam:645460
   requires: []
   tiers:
+  - 1
   - 2
 - name: We Are The Dwarves
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'CRPG Pack: Isometric Immersion'
 tiers:
+- rank: 1
+  name: 5 Item Bundle
 - rank: 3
   name: Entire 11 Item Bundle
 references:
@@ -14,6 +16,41 @@ references:
 crawlers:
 - humblebundle
 games:
+- name: 'Torment: Tides of Numenera'
+  ids:
+  - steam:272270
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Gamedec - Definitive Edition
+  ids:
+  - steam:917720
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Disco Elysium
+  ids:
+  - unresolved:source:humblebundle:discoelysium
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: UnderRail
+  ids:
+  - steam:250520
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Balrum
+  ids:
+  - steam:424250
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:
   - steam:2186680
@@ -149,36 +186,6 @@ games:
 - name: 'Black Geyser: Couriers of Darkness - Tales of the Moon Cult'
   ids:
   - steam:3909990
-  requires: []
-  tiers:
-  - 3
-- name: 'Torment: Tides of Numenera'
-  ids:
-  - steam:272270
-  requires: []
-  tiers:
-  - 3
-- name: Gamedec - Definitive Edition
-  ids:
-  - steam:917720
-  requires: []
-  tiers:
-  - 3
-- name: Disco Elysium
-  ids:
-  - unresolved:source:humblebundle:discoelysium
-  requires: []
-  tiers:
-  - 3
-- name: UnderRail
-  ids:
-  - steam:250520
-  requires: []
-  tiers:
-  - 3
-- name: Balrum
-  ids:
-  - steam:424250
   requires: []
   tiers:
   - 3

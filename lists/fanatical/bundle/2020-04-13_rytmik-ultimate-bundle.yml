@@ -2,6 +2,8 @@
 schema: 1
 name: Rytmik Ultimate Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,6 +19,7 @@ games:
   - steam:375840
   requires: []
   tiers:
+  - 1
   - 3
 - name: Rytmik Cloud Expansion 2
   ids:

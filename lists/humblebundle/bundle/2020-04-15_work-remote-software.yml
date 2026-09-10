@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Software Bundle: Work Remote'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-18-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:352220
   requires: []
   tiers:
+  - 1
   - 3
 - name: Parallels Access 1-Year Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:parallels-access-1-year-subscription
   requires: []
   tiers:
+  - 1
   - 3
 - name: Evernote Premium 3-Month Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:evernote-premium-3-month-subscription
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer 40,000: Space Wolf - Fall of Kanak'
   ids:

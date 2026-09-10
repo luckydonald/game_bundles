@@ -2,6 +2,8 @@
 schema: 1
 name: Hanako Anime Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:269010
   requires: []
   tiers:
+  - 1
   - 3
 - name: Date Warp
   ids:
   - steam:301380
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sword Daughter
   ids:
   - steam:342450
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Magical Diary: Horse Hall'
   ids:

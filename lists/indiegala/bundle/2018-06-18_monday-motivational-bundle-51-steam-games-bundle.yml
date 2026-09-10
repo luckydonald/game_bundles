@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #51'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:717960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kawaii Rainbow Portal
   ids:
   - steam:823920
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mad Frost
   ids:
   - steam:839030
   requires: []
   tiers:
+  - 1
   - 2
 - name: Project Maze
   ids:

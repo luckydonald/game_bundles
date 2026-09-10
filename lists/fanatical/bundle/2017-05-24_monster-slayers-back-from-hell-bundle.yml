@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monster Slayers: Back From Hell Bundle'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,18 +19,21 @@ games:
   - steam:250580
   requires: []
   tiers:
+  - 1
   - 4
 - name: Vertical Drop Heroes HD
   ids:
   - steam:311480
   requires: []
   tiers:
+  - 1
   - 4
 - name: Reverse Crawl
   ids:
   - steam:400660
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Sun & Moon
   ids:

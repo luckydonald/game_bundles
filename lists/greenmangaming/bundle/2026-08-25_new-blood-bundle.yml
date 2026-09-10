@@ -2,6 +2,8 @@
 schema: 1
 name: New Blood Bundle
 tiers:
+- rank: 1
+  name: New Blood
 - rank: 3
   name: New Bloodiest
 references:
@@ -20,6 +22,7 @@ games:
   - isthereanydeal:dusk
   requires: []
   tiers:
+  - 1
   - 3
 - name: AMID EVIL
   ids:
@@ -27,6 +30,7 @@ games:
   - isthereanydeal:amid-evil
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'FAITH: The Unholy Trinity'
   ids:
@@ -34,6 +38,7 @@ games:
   - isthereanydeal:faith-the-unholy-trinity
   requires: []
   tiers:
+  - 1
   - 3
 - name: AMID EVIL - The Black Labyrinth
   ids:
@@ -41,6 +46,7 @@ games:
   - isthereanydeal:amid-evil-the-black-labyrinth
   requires: []
   tiers:
+  - 1
   - 3
 - name: Fallen Aces
   ids:

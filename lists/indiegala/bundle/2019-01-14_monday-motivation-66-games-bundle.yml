@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #66'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:816830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Olea's Descent
   ids:
   - unresolved:source:isthereanydeal:6909:oleas-descent
   requires: []
   tiers:
+  - 1
   - 2
 - name: Taco Tom 2
   ids:

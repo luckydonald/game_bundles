@@ -2,6 +2,8 @@
 schema: 1
 name: Black Dungeon Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,30 +19,35 @@ games:
   - steam:420850
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mr. Nibbles Forever
   ids:
   - steam:448050
   requires: []
   tiers:
+  - 1
   - 3
 - name: Super Ubie Island REMIX
   ids:
   - steam:405860
   requires: []
   tiers:
+  - 1
   - 3
 - name: Curvatron
   ids:
   - steam:404700
   requires: []
   tiers:
+  - 1
   - 3
 - name: Overture
   ids:
   - steam:343100
   requires: []
   tiers:
+  - 1
   - 3
 - name: This Book Is A Dungeon
   ids:

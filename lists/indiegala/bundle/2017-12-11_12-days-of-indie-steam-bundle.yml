@@ -2,6 +2,8 @@
 schema: 1
 name: 12 Days of Indie Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:602120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Over 9000 Zombies!
   ids:
   - steam:273500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombo Buster Rising
   ids:
   - steam:518730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Miner Meltdown
   ids:

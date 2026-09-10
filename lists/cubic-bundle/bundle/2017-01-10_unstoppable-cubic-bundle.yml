@@ -2,6 +2,8 @@
 schema: 1
 name: Unstoppable Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:4604:undead-vs-plants
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hover Hazard
   ids:
   - steam:545470
   requires: []
   tiers:
+  - 1
   - 2
 - name: One way to exit
   ids:
   - unresolved:source:isthereanydeal:4604:one-way-to-exit
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Return Home Remastered
   ids:
   - steam:502910
   requires: []
   tiers:
+  - 1
   - 2
 - name: Puzzle Cube
   ids:

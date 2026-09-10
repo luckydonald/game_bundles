@@ -2,6 +2,8 @@
 schema: 1
 name: FUNgeon Crawlers Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1154810
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hellslave
   ids:
   - steam:1608450
   requires: []
   tiers:
+  - 1
   - 3
 - name: Devil Spire
   ids:
   - steam:1861290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Siralim Ultimate
   ids:

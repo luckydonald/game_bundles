@@ -2,6 +2,8 @@
 schema: 1
 name: Panzer Corps Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:6899:panzer-corps
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Panzer Corps: Grand Campaign ''39'
   ids:
   - steam:276550
   requires: []
   tiers:
+  - 1
   - 4
 - name: Panzer Corps Grand Campaign '42
   ids:

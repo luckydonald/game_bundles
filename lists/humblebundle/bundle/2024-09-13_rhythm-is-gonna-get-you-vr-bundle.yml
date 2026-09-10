@@ -2,6 +2,8 @@
 schema: 1
 name: Rhythm is Gonna Get You VR Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:356400
   requires: []
   tiers:
+  - 1
   - 3
 - name: Spin Rhythm XD
   ids:
   - steam:1058830
   requires: []
   tiers:
+  - 1
   - 3
 - name: PowerBeatsVR - VR Fitness
   ids:

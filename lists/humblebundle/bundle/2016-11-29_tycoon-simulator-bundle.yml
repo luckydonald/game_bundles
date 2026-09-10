@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Tycoon Simulator Bundle
 tiers:
+- rank: 1
+  name: Pay what you want!
 - rank: 3
   name: Pay $12 or more to also unlock!
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4419:train-simulator-2016
   requires: []
   tiers:
+  - 1
   - 3
 - name: Out of the Park Baseball 17
   ids:
   - unresolved:source:isthereanydeal:4419:out-of-the-park-baseball-17
   requires: []
   tiers:
+  - 1
   - 3
 - name: RollerCoaster Tycoon Deluxe
   ids:
   - steam:285310
   requires: []
   tiers:
+  - 1
   - 3
 - name: Car Mechanic Simulator 2015
   ids:

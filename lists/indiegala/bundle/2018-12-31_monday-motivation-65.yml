@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #65'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:868910
   requires: []
   tiers:
+  - 1
   - 2
 - name: OK/NORMAL
   ids:
   - steam:862580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon League
   ids:

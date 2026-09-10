@@ -2,6 +2,8 @@
 schema: 1
 name: Hot Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:339160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tank Universal
   ids:
   - steam:19200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Martial Arts Capoeira
   ids:
   - steam:307410
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'GooCubelets: The Algoorithm'
   ids:
   - unresolved:source:isthereanydeal:3581:goocubelets-the-algoorithm
   requires: []
   tiers:
+  - 1
   - 2
 - name: Obulis
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Trading Cards Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:288060
   requires: []
   tiers:
+  - 1
   - 2
 - name: Love
   ids:
   - steam:269270
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Ring Runner: Flight of the Sages'
   ids:
   - steam:258010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Not The Robots
   ids:
   - steam:257120
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Virus Named TOM
   ids:
   - steam:207650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Canyon Capers - Rio Fever
   ids:

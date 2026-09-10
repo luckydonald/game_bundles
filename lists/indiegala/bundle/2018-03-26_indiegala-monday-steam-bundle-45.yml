@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #45'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:788930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lost in Space
   ids:
   - steam:1731940
   requires: []
   tiers:
+  - 1
   - 2
 - name: I'm Lost
   ids:
   - steam:737530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Domino Dungeon
   ids:

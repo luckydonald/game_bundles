@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Games Bundle 14
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:11293:nightmare
   requires: []
   tiers:
+  - 1
   - 3
 - name: Demon Lord Jill -REVIVAL
   ids:
   - steam:1667720
   requires: []
   tiers:
+  - 1
   - 3
 - name: Magical Girl Noble Rose
   ids:
   - steam:1607170
   requires: []
   tiers:
+  - 1
   - 3
 - name: KiraKira Stars Idol Project AI
   ids:

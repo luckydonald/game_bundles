@@ -2,6 +2,8 @@
 schema: 1
 name: Karma Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:513620
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ball of Wonder
   ids:
   - steam:508760
   requires: []
   tiers:
+  - 1
   - 2
 - name: SweatShop
   ids:
   - steam:496680
   requires: []
   tiers:
+  - 1
   - 2
 - name: Remnants of a Beautiful Day
   ids:
   - unresolved:source:isthereanydeal:4869:remnants-of-a-beautiful-day
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sandstorm
   ids:

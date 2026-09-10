@@ -2,6 +2,8 @@
 schema: 1
 name: Melting Blood Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:497710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Twinship
   ids:
   - steam:1029920
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Thin Silence
   ids:

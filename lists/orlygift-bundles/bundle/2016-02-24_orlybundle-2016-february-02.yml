@@ -2,6 +2,8 @@
 schema: 1
 name: 'February Bundle #2'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:307070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Botology
   ids:
   - steam:363610
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hare In The Hat
   ids:
   - steam:359810
   requires: []
   tiers:
+  - 1
   - 2
 - name: Big Fish Legend
   ids:

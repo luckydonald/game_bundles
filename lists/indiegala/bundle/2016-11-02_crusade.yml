@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Crusade
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:530920
   requires: []
   tiers:
+  - 1
   - 2
 - name: StoneBack | Prehistory
   ids:
   - unresolved:source:isthereanydeal:4288:stoneback-prehistory
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mind Dead
   ids:
   - steam:442190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Die for the Empire
   ids:

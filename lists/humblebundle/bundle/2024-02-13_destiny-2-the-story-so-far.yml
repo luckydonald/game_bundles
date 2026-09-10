@@ -2,6 +2,8 @@
 schema: 1
 name: 'Destiny 2: The Story So Far Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:13841:destiny-2-shadowkeep
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Destiny 2: Forsaken Pack'
   ids:
   - steam:1090150
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Destiny 2: Beyond Light'
   ids:

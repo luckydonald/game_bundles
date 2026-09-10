@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #68'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:356890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Primitive Race
   ids:
   - unresolved:source:isthereanydeal:6201:primitive-race
   requires: []
   tiers:
+  - 1
   - 2
 - name: Starting The Game
   ids:
   - unresolved:source:isthereanydeal:6201:starting-the-game
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vidar
   ids:

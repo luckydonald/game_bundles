@@ -2,6 +2,8 @@
 schema: 1
 name: Remute X
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:242530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vector Strain
   ids:
   - steam:419090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deranged Rabbits
   ids:
   - unresolved:source:isthereanydeal:2939:deranged-rabbits
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Car Washer: Summer of the Ninja'
   ids:
   - steam:369360
   requires: []
   tiers:
+  - 1
   - 2
 - name: LowcoBall
   ids:
   - unresolved:source:isthereanydeal:2939:lowcoball
   requires: []
   tiers:
+  - 1
   - 2
 - name: World War II GI
   ids:

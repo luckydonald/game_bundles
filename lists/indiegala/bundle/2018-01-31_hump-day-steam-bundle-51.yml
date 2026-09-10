@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #51'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:248650
   requires: []
   tiers:
+  - 1
   - 2
 - name: DARTHY
   ids:
   - steam:404850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zasa - An AI Story
   ids:
   - steam:447240
   requires: []
   tiers:
+  - 1
   - 2
 - name: ARAYA
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Cursed Kingdom Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:997480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Summer Rush
   ids:
   - steam:1075480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Luxor Solitaire
   ids:
   - steam:1034270
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Far Kingdoms: Awakening Solitaire'
   ids:

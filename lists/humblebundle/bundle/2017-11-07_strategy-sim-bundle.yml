@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Strategy Simulator Bundle
 tiers:
+- rank: 1
+  name: Pay What You Want ($1 for Steam Keys)
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5605:out-of-the-park-baseball-18
   requires: []
   tiers:
+  - 1
   - 3
 - name: SimplePlanes
   ids:
   - steam:397340
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Rebuild 3: Gangs of Deadsville'
   ids:
   - steam:257170
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Simulator 2017
   ids:

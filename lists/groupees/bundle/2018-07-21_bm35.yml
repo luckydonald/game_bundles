@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 35
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,6 +19,7 @@ games:
   - steam:628650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Padak
   ids:

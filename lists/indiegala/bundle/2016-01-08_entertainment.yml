@@ -2,6 +2,8 @@
 schema: 1
 name: The Entertainment Jam Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Premium
 references:
@@ -17,18 +19,21 @@ games:
   - steam:301190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sparkle 2 Evo
   ids:
   - steam:253650
   requires: []
   tiers:
+  - 1
   - 2
 - name: 16 bit trader
   ids:
   - unresolved:source:isthereanydeal:2925:16-bit-trader
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Frederic: Evil Strikes Back'
   ids:

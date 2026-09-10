@@ -2,6 +2,8 @@
 schema: 1
 name: Nemesis Bundle 8
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6313:black-and-white-bushido
   requires: []
   tiers:
+  - 1
   - 3
 - name: Awe
   ids:
   - steam:371450
   requires: []
   tiers:
+  - 1
   - 3
 - name: A.R.E.S. Extinction Agenda EX
   ids:
   - steam:315340
   requires: []
   tiers:
+  - 1
   - 3
 - name: Super Mutant Alien Assault
   ids:

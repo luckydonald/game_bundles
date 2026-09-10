@@ -2,6 +2,8 @@
 schema: 1
 name: IGN Gamescom Bundle 2025
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1580520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pyrene
   ids:
   - steam:2468100
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Expanse - A Telltale Series
   ids:
   - steam:1708010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bomb Rush Cyberfunk
   ids:

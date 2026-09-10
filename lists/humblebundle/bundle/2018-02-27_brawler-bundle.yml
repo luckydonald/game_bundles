@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Brawler Bundle
 tiers:
+- rank: 1
+  name: Pay What You Want
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:348550
   requires: []
   tiers:
+  - 1
   - 3
 - name: Skullgirls
   ids:
   - unresolved:source:isthereanydeal:5945:skullgirls
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'BlazBlue: Continuum Shift Extend'
   ids:
   - steam:294810
   requires: []
   tiers:
+  - 1
   - 3
 - name: Street Fighter™ X Tekken™
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #67'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:340830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Grand Pigeon's Duty
   ids:
   - steam:449530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hillbilly Apocalypse
   ids:

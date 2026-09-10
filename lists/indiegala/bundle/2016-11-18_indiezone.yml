@@ -2,6 +2,8 @@
 schema: 1
 name: The Indie Zone Bundle
 tiers:
+- rank: 1
+  name: Pay $1 or more for Steam keys
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:518620
   requires: []
   tiers:
+  - 1
   - 2
 - name: Black Sand Drift
   ids:
   - steam:507380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Iron Commando - Koutetsu no Senshi
   ids:
   - steam:418640
   requires: []
   tiers:
+  - 1
   - 2
 - name: O3DX
   ids:

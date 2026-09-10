@@ -2,6 +2,8 @@
 schema: 1
 name: May Multiplayer Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:466560
   requires: []
   tiers:
+  - 1
   - 2
 - name: Generation Zero®
   ids:
   - steam:704270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Midnight Ghost Hunt
   ids:
   - steam:915810
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gloria Victis
   ids:

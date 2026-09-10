@@ -2,6 +2,8 @@
 schema: 1
 name: Summer Sale Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:3124230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cavern Escape Extremely Hard game!!!
   ids:
   - steam:546400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jumping Tank
   ids:
   - unresolved:source:isthereanydeal:5177:jumping-tank
   requires: []
   tiers:
+  - 1
   - 2
 - name: Etaria | Survival Adventure
   ids:
   - unresolved:source:isthereanydeal:5177:etaria-survival-adventure
   requires: []
   tiers:
+  - 1
   - 2
 - name: Socxel | Pixel Soccer
   ids:

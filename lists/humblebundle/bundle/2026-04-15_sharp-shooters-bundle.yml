@@ -2,6 +2,8 @@
 schema: 1
 name: Sharp Shooters Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1129310
   requires: []
   tiers:
+  - 1
   - 2
 - name: OUTRIDERS
   ids:
   - steam:680420
   requires: []
   tiers:
+  - 1
   - 2
 - name: Way of the Hunter
   ids:
   - steam:1288320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Holy Shoot
   ids:
   - steam:2881660
   requires: []
   tiers:
+  - 1
   - 2
 - name: EARTH DEFENSE FORCE 5
   ids:

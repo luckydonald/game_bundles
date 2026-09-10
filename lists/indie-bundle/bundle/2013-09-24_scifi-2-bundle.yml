@@ -2,6 +2,8 @@
 schema: 1
 name: SciFi Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:323:alien-blitz-snorms
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'ASA: A Space Adventure'
   ids:
   - unresolved:source:isthereanydeal:323:asa-a-space-adventure
   requires: []
   tiers:
+  - 1
   - 2
 - name: Compromised
   ids:
   - unresolved:source:isthereanydeal:323:compromised
   requires: []
   tiers:
+  - 1
   - 2
 - name: Broken Earth (Beta)
   ids:

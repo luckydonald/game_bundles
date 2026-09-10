@@ -2,6 +2,8 @@
 schema: 1
 name: 8 Floor Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:415830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Solitaire Christmas Match 2 Cards
   ids:
   - steam:428510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chronicles of Witches & Warlocks
   ids:
   - unresolved:source:isthereanydeal:3550:chronicles-of-witches-and-warlocks
   requires: []
   tiers:
+  - 1
   - 2
 - name: Portal of Evil Stolen Runes Collector's Edition
   ids:

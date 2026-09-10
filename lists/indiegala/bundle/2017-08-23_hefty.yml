@@ -2,6 +2,8 @@
 schema: 1
 name: The Hefty Indie Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5411:western-fps
   requires: []
   tiers:
+  - 1
   - 2
 - name: ArmyCraft
   ids:
   - unresolved:source:isthereanydeal:5411:armycraft
   requires: []
   tiers:
+  - 1
   - 2
 - name: Starving
   ids:
   - unresolved:source:isthereanydeal:5411:starving
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hexagon Defense
   ids:

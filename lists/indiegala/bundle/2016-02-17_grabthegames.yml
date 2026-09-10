@@ -2,6 +2,8 @@
 schema: 1
 name: Grab The Games Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3066:fiends-of-imprisonment
   requires: []
   tiers:
+  - 1
   - 2
 - name: They Came from The Moon
   ids:
   - unresolved:source:isthereanydeal:3066:they-came-from-the-moon
   requires: []
   tiers:
+  - 1
   - 2
 - name: Why So Evil
   ids:
   - unresolved:source:isthereanydeal:3066:why-so-evil
   requires: []
   tiers:
+  - 1
   - 2
 - name: Goo Cubelets
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Bedlam Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:292620
   requires: []
   tiers:
+  - 1
   - 2
 - name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
   ids:
   - unresolved:source:isthereanydeal:2019:n-p-p-d-rush-the-milk-of-ultra-violet
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Pixel Puzzles: UndeadZ'
   ids:
   - steam:285010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bedlam
   ids:

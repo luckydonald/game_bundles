@@ -2,6 +2,8 @@
 schema: 1
 name: Jonny's Jams
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:2059:groupees-the-visual-novel
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gun Rocket
   ids:
   - steam:391420
   requires: []
   tiers:
+  - 1
   - 2
 - name: Yury
   ids:
   - steam:321950
   requires: []
   tiers:
+  - 1
   - 2
 - name: Proto Raider
   ids:
   - steam:386050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jamsouls
   ids:

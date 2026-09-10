@@ -2,6 +2,8 @@
 schema: 1
 name: FaceRig Bundle (Oct 2019)
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:5919:facerig
   requires: []
   tiers:
+  - 1
   - 3
 - name: FaceRig Halloween Avatars 2014
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Chicken Brigade Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:296210
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Steel & Steam: Episode 1'
   ids:
   - unresolved:source:isthereanydeal:1080:steel-and-steam-episode-1
   requires: []
   tiers:
+  - 1
   - 2
 - name: RC Cars
   ids:
   - steam:289460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Abalone
   ids:
   - steam:279480
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Steel Storm: Burning Retribution - Complete Edition'
   ids:

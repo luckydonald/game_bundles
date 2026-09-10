@@ -2,6 +2,8 @@
 schema: 1
 name: Ex_Machina Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:329000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Data Hacker - Initiation
   ids:
   - steam:311860
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Elements: Soul of Fire'
   ids:
   - unresolved:source:isthereanydeal:3038:elements-soul-of-fire
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'AI: Rampage'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 38
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,6 +19,7 @@ games:
   - steam:713430
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Torn Tales: Rebound Edition'
   ids:

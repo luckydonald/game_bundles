@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #46'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:803260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Steam Simulator 2018
   ids:
   - unresolved:source:isthereanydeal:6045:steam-simulator-2018
   requires: []
   tiers:
+  - 1
   - 2
 - name: Plant This
   ids:
   - unresolved:source:isthereanydeal:6045:plant-this
   requires: []
   tiers:
+  - 1
   - 2
 - name: Influence
   ids:

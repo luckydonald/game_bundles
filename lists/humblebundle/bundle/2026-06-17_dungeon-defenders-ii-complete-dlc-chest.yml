@@ -2,6 +2,8 @@
 schema: 1
 name: 'Dungeon Defenders II: Complete DLC Chest Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:544832
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeon Defenders II - Adventurer's Arsenal Pack
   ids:
   - steam:2950500
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeon Defenders II - Bundle of the Beast
   ids:

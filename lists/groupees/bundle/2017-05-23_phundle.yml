@@ -2,6 +2,8 @@
 schema: 1
 name: Phime Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:370170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dash Fleet
   ids:
   - steam:586160
   requires: []
   tiers:
+  - 1
   - 2
 - name: interLOGIC
   ids:
   - steam:563150
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Showing Tonight: Mindhunters Incident'
   ids:

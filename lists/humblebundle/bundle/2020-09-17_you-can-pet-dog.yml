@@ -2,6 +2,8 @@
 schema: 1
 name: Humble You Can Pet The Dog Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:218680
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bulb Boy
   ids:
   - steam:390290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dog Sled Saga
   ids:
   - steam:286240
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bulb Boy - Soundtrack Remastered
   ids:
   - steam:497010
   requires: []
   tiers:
+  - 1
   - 3
 - name: Beyond Eyes
   ids:
   - unresolved:source:isthereanydeal:9169:beyond-eyes
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shenmue I & II
   ids:

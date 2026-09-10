@@ -2,6 +2,8 @@
 schema: 1
 name: Infinity Quest Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:346630
   requires: []
   tiers:
+  - 1
   - 2
 - name: Half Past Impossible
   ids:
   - unresolved:source:isthereanydeal:7905:half-past-impossible
   requires: []
   tiers:
+  - 1
   - 2
 - name: Twickles
   ids:
   - steam:695110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Earth Muncher
   ids:

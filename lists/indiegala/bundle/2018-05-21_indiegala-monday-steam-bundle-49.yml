@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #49'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:764470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blitz Breaker
   ids:
   - steam:416110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cube Zone
   ids:
   - steam:834380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Strangers of the Power
   ids:

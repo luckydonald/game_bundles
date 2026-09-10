@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Gamemaker Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 3
   name: entire-14-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:359580
   requires: []
   tiers:
+  - 1
   - 3
 - name: INK
   ids:
   - steam:385710
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shep Hard
   ids:
   - unresolved:source:isthereanydeal:4008:shep-hard
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Angry Chicken: Egg Madness!'
   ids:
   - unresolved:source:isthereanydeal:4008:angry-chicken-egg-madness
   requires: []
   tiers:
+  - 1
   - 3
 - name: Cook, Serve, Delicious!
   ids:
   - steam:247020
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'GameMaker: Studio Professional'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-professional
   requires: []
   tiers:
+  - 1
   - 3
 - name: Home
   ids:

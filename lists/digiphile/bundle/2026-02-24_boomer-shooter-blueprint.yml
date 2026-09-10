@@ -2,6 +2,8 @@
 schema: 1
 name: Boomer Shooter Blueprint
 tiers:
+- rank: 1
+  name: 1 Items
 - rank: 9
   name: Add-on to any tier (3)
 references:
@@ -17,6 +19,7 @@ games:
   - steam:1684930
   requires: []
   tiers:
+  - 1
   - 9
 - name: INCISION
   ids:

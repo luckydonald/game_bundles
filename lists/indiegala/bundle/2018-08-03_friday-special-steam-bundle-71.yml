@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #71'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6361:lost-in-space-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Battle Bruise
   ids:
   - steam:618510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vogue, The Explorer
   ids:
   - steam:875550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bustories
   ids:

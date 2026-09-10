@@ -2,6 +2,8 @@
 schema: 1
 name: Starlight Children&#39;s Foundation Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 3
   name: entire-29-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:6020
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Star Wars: Knights of the Old Republic'
   ids:
   - steam:32370
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aliens vs Predator™ Swarm Map Pack
   ids:
   - steam:10695
   requires: []
   tiers:
+  - 1
   - 3
 - name: Full Throttle Remastered
   ids:
   - steam:228360
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Aliens vs Predator: Bug Hunt Pack'
   ids:
   - unresolved:source:isthereanydeal:12072:aliens-vs-predator-bug-hunt-pack
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aliens vs Predator™
   ids:
   - steam:10680
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'LEGO® STAR WARS™: The Force Awakens'
   ids:

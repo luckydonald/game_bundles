@@ -2,6 +2,8 @@
 schema: 1
 name: Fruitbat Factory Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,18 +19,21 @@ games:
   - steam:425360
   requires: []
   tiers:
+  - 1
   - 4
 - name: 100% Orange Juice - Acceleration Pack
   ids:
   - steam:537330
   requires: []
   tiers:
+  - 1
   - 4
 - name: 100% Orange Juice
   ids:
   - steam:282800
   requires: []
   tiers:
+  - 1
   - 4
 - name: 100% Orange Juice - Mixed Booster Pack
   ids:

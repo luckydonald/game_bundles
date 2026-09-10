@@ -2,6 +2,8 @@
 schema: 1
 name: Ballistic Finale Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:444880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zolg
   ids:
   - steam:555710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Orbital
   ids:
   - unresolved:source:isthereanydeal:4566:orbital
   requires: []
   tiers:
+  - 1
   - 2
 - name: Voxel Warfare Online
   ids:

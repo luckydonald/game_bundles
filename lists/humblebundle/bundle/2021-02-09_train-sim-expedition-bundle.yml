@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Train Sim Expedition Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 3
   name: entire-19-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:222580
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: Amtrak Acela Express EMU Add-On'
   ids:
   - steam:65231
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: Class 67 Diamond Jubilee Loco Add-On'
   ids:
   - steam:208284
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Simulator 2012
   ids:
   - unresolved:source:isthereanydeal:9724:train-simulator-2012
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: BR Class 421 ''4CIG'' Loco Add-On'
   ids:
   - steam:65228
   requires: []
   tiers:
+  - 1
   - 3
 - name: Thompson Class B1 Add-On
   ids:
   - steam:208289
   requires: []
   tiers:
+  - 1
   - 3
 - name: DB BR 474.3 EMU Add-On
   ids:

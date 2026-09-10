@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Strategy Bundle 2019
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:440650
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
   requires: []
   tiers:
+  - 1
   - 4
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:7167:throne-of-lies-the-online-game-of-deceit
   requires: []
   tiers:
+  - 1
   - 4
 - name: Offworld Trading Company™
   ids:

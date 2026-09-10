@@ -2,6 +2,8 @@
 schema: 1
 name: Stomp & Chomp Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:591460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Terror of Hemasaurus
   ids:
   - steam:1016180
   requires: []
   tiers:
+  - 1
   - 2
 - name: I Wani Hug that Gator!
   ids:
   - steam:1895350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prehistoric Kingdom
   ids:

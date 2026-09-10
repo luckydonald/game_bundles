@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXXI Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6518:thescreamer-vr
   requires: []
   tiers:
+  - 1
   - 2
 - name: Funny Wings VR
   ids:
   - steam:788350
   requires: []
   tiers:
+  - 1
   - 2
 - name: HVRGUN
   ids:
   - steam:582050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rabbit Valley Legend (兔子山谷传说)
   ids:

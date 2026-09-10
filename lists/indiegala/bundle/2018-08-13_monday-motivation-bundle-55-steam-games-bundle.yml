@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #55'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:803080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Riverhill Trials
   ids:
   - steam:810460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Seat of War
   ids:
   - steam:887520
   requires: []
   tiers:
+  - 1
   - 2
 - name: AEGIS 2186
   ids:

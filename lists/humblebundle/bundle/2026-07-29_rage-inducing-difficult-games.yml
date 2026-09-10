@@ -2,6 +2,8 @@
 schema: 1
 name: Rage 🤬️ Inducing Difficult Games
 tiers:
+- rank: 1
+  name: 4 Item Bundle
 - rank: 2
   name: 10 Item Bundle
 references:
@@ -18,6 +20,7 @@ games:
   - isthereanydeal:getting-over-it-with-bennett-foddy
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Pogostuck: Rage With Your Friends'
   ids:
@@ -25,6 +28,7 @@ games:
   - isthereanydeal:pogostuck-rage-with-your-friends
   requires: []
   tiers:
+  - 1
   - 2
 - name: Never Give Up
   ids:
@@ -32,6 +36,7 @@ games:
   - isthereanydeal:never-give-up--1
   requires: []
   tiers:
+  - 1
   - 2
 - name: Splodey
   ids:
@@ -39,6 +44,7 @@ games:
   - isthereanydeal:splodey
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ghostrunner
   ids:

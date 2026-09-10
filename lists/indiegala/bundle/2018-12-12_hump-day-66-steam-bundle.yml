@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #66'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:412620
   requires: []
   tiers:
+  - 1
   - 2
 - name: OutDrive
   ids:
   - steam:441870
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pool Nation & Bumper Pack Bundle
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Capture, Edit, Create! Video & Gameplay Tools: Movavi Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-12-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1403840
   requires: []
   tiers:
+  - 1
   - 2
 - name: Movavi Picverse - Photo Editing Software
   ids:
   - steam:1403800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Movavi Video Editor Plus 2022
   ids:

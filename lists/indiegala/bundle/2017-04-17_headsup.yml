@@ -2,6 +2,8 @@
 schema: 1
 name: The Heads Up Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:46450
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deadly 30
   ids:
   - steam:264730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Solar Shifter EX
   ids:
   - steam:363940
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Trulon: The Shadow Engine'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Stories from Latin America Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1402120
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Bunny Graveyard
   ids:
   - steam:1892420
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dreamcore
   ids:
   - steam:2453060
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Arranger: A Role-Puzzling Adventure'
   ids:
   - steam:2596420
   requires: []
   tiers:
+  - 1
   - 3
 - name: Keylocker | Turn Based Cyberpunk Action
   ids:

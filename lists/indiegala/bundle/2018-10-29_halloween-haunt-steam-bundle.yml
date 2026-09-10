@@ -2,6 +2,8 @@
 schema: 1
 name: Halloween Haunt Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:671980
   requires: []
   tiers:
+  - 1
   - 2
 - name: Curse
   ids:
   - steam:510570
   requires: []
   tiers:
+  - 1
   - 2
 - name: Irony Of Nightmare
   ids:
   - steam:740290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Frosty Nights
   ids:

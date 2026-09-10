@@ -2,6 +2,8 @@
 schema: 1
 name: Best of February Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:500940
   requires: []
   tiers:
+  - 1
   - 2
 - name: Firebird DRM-Free version.
   ids:
   - unresolved:source:isthereanydeal:13894:firebird-drm-free-version
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ultraviolet
   ids:
   - unresolved:source:isthereanydeal:13894:ultraviolet
   requires: []
   tiers:
+  - 1
   - 2
 - name: Saga of Song
   ids:
   - unresolved:source:isthereanydeal:13894:saga-of-song
   requires: []
   tiers:
+  - 1
   - 2
 - name: Eureka! - High Temperature
   ids:
   - unresolved:source:isthereanydeal:13894:eureka-high-temperature
   requires: []
   tiers:
+  - 1
   - 2
 - name: crash course
   ids:

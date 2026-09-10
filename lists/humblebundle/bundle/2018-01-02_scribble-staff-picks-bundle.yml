@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Staff Picks Bundle: Scribble'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:373770
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tempest: Pirate Action RPG'
   ids:
   - steam:418180
   requires: []
   tiers:
+  - 1
   - 3
 - name: Punch Club
   ids:
   - steam:394310
   requires: []
   tiers:
+  - 1
   - 3
 - name: BioShock Infinite
   ids:

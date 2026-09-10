@@ -2,6 +2,8 @@
 schema: 1
 name: Indie League Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:431710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Puzzle Chambers
   ids:
   - steam:740410
   requires: []
   tiers:
+  - 1
   - 2
 - name: Defend your Crypt
   ids:
   - steam:457450
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Squareboy vs Bullies: Arena Edition'
   ids:

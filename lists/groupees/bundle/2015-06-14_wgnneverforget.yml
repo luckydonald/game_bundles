@@ -2,6 +2,8 @@
 schema: 1
 name: WGN's Never Forget, Never Surrender
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - unresolved:source:isthereanydeal:2121:journey-of-the-light
   requires: []
   tiers:
+  - 1
   - 2
 - name: Roses and Gems
   ids:
   - steam:406690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Meadowland
   ids:
   - steam:320120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Voxelized
   ids:
   - unresolved:source:isthereanydeal:2121:voxelized
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bliss
   ids:
   - steam:315450
   requires: []
   tiers:
+  - 1
   - 2
 - name: NSE CIRCUIT BUNDLE
   ids:

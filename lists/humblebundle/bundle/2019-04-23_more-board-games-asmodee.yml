@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble More Board Games Bundle: Asmodee Digital'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:766040
   requires: []
   tiers:
+  - 1
   - 3
 - name: Twilight Struggle
   ids:
   - steam:406290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Love Letter
   ids:
   - steam:926520
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Ticket to Ride: First Journey'
   ids:
   - unresolved:source:isthereanydeal:7330:ticket-to-ride-first-journey
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mysterium - Hidden Signs
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Nemesis Bundle 5
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:300580
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Infectonator : Survivors'
   ids:
   - steam:269310
   requires: []
   tiers:
+  - 1
   - 3
 - name: Still Not Dead
   ids:
   - steam:337290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Holy Potatoes! A Weapon Shop?!
   ids:
   - steam:363600
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Way
   ids:

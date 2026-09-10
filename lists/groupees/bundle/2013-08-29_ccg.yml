@@ -2,6 +2,8 @@
 schema: 1
 name: Capsule Computers Groupee
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - steam:291390
   requires: []
   tiers:
+  - 1
   - 2
 - name: Transcripted
   ids:
   - steam:215450
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition: An Erica Reed Thriller Episode 2 The Wise Monkey'
   ids:
   - unresolved:source:isthereanydeal:87:cognition-an-erica-reed-thriller-episode-2-the-wise-monkey
   requires: []
   tiers:
+  - 1
   - 2
 - name: Turba
   ids:
   - steam:58400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Astro Drop
   ids:
   - unresolved:source:isthereanydeal:87:astro-drop
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition: An Erica Reed Thriller Episode 1 The Hangman'
   ids:
   - unresolved:source:isthereanydeal:87:cognition-an-erica-reed-thriller-episode-1-the-hangman
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Sanctum TD
   ids:
   - steam:235250
   requires: []
   tiers:
+  - 1
   - 2
 - name: SpaceChem
   ids:

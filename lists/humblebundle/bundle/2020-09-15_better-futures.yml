@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Better Futures Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-14-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:41500
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Agent A: A puzzle in disguise'
   ids:
   - steam:801480
   requires: []
   tiers:
+  - 1
   - 3
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:9157:throne-of-lies-the-online-game-of-deceit
   requires: []
   tiers:
+  - 1
   - 3
 - name: Road Redemption
   ids:

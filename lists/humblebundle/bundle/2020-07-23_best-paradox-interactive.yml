@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Best of Paradox Interactive Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:203630
   requires: []
   tiers:
+  - 1
   - 4
 - name: Europa Universalis IV
   ids:
   - steam:236850
   requires: []
   tiers:
+  - 1
   - 4
 - name: Age of Wonders III
   ids:
   - steam:226840
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Necropolis: Brutal Edition'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Holiday Helpings 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:689100
   requires: []
   tiers:
+  - 1
   - 2
 - name: Undertaker's
   ids:
   - steam:653050
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:

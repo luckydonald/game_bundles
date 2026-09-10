@@ -2,6 +2,8 @@
 schema: 1
 name: Crescent Moon Games Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:413740
   requires: []
   tiers:
+  - 1
   - 2
 - name: Neon Shadow
   ids:
   - steam:296890
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Deer God
   ids:

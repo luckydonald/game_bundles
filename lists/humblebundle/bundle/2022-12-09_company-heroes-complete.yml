@@ -2,6 +2,8 @@
 schema: 1
 name: Company of Heroes Total Command Collection Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-74-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:9340
   requires: []
   tiers:
+  - 1
   - 3
 - name: Company of Heroes
   ids:
   - steam:228200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Company of Heroes 2
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Dangerous Worlds Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:496300
   requires: []
   tiers:
+  - 1
   - 3
 - name: Among Us
   ids:
   - steam:945360
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kingdom: Two Crowns'
   ids:

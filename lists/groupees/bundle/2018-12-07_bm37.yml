@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 37
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6741:sky-hawk
   requires: []
   tiers:
+  - 1
   - 2
 - name: Driftpunk Racer
   ids:
   - unresolved:source:isthereanydeal:6741:driftpunk-racer
   requires: []
   tiers:
+  - 1
   - 2
 - name: CryptoFarm
   ids:
   - unresolved:source:isthereanydeal:6741:cryptofarm
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Girl
   ids:

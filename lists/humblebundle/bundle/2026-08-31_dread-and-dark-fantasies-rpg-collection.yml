@@ -2,6 +2,8 @@
 schema: 1
 name: Dread and Dark Fantasies RPG Collection
 tiers:
+- rank: 1
+  name: 2 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -21,6 +23,45 @@ crawlers:
 - isthereanydeal
 - humblebundle
 games:
+- name: Steelrising
+  ids:
+  - steam:1283400
+  - isthereanydeal:steelrising-bastille-edition
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Steelrising - Discus Chain
+  ids:
+  - steam:2021370
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Steelrising - Cagliostro's Secrets
+  ids:
+  - steam:2004261
+  group:
+    id: steelrising_bastilleedition
+    name: Steelrising - Bastille Edition
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: The Axis Unseen
+  ids:
+  - steam:1807810
+  - isthereanydeal:the-axis-unseen
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Pillars of Eternity II: Deadfire'
   ids:
   - steam:560130
@@ -71,41 +112,6 @@ games:
   ids:
   - steam:649950
   - isthereanydeal:ashen
-  requires: []
-  tiers:
-  - 3
-- name: Steelrising
-  ids:
-  - steam:1283400
-  - isthereanydeal:steelrising-bastille-edition
-  group:
-    id: steelrising_bastilleedition
-    name: Steelrising - Bastille Edition
-  requires: []
-  tiers:
-  - 3
-- name: Steelrising - Discus Chain
-  ids:
-  - steam:2021370
-  group:
-    id: steelrising_bastilleedition
-    name: Steelrising - Bastille Edition
-  requires: []
-  tiers:
-  - 3
-- name: Steelrising - Cagliostro's Secrets
-  ids:
-  - steam:2004261
-  group:
-    id: steelrising_bastilleedition
-    name: Steelrising - Bastille Edition
-  requires: []
-  tiers:
-  - 3
-- name: The Axis Unseen
-  ids:
-  - steam:1807810
-  - isthereanydeal:the-axis-unseen
   requires: []
   tiers:
   - 3

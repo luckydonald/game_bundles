@@ -2,6 +2,8 @@
 schema: 1
 name: Midsummer Indie Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:856350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Geometry Rush
   ids:
   - steam:861710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dead Noir the Heart
   ids:
   - steam:718920
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Bad Gravedigger
   ids:

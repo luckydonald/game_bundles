@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Curve Digital Supply-Drop Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:383270
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Flame in the Flood
   ids:
   - steam:318600
   requires: []
   tiers:
+  - 1
   - 3
 - name: Manual Samuel
   ids:

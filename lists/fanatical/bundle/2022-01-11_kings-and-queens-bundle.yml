@@ -2,6 +2,8 @@
 schema: 1
 name: Kings & Queens Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,30 +19,35 @@ games:
   - steam:748970
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Zen Chess: Mate in Four'
   ids:
   - steam:1043000
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Zen Chess: Mate in Three'
   ids:
   - steam:1042990
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Zen Chess: Mate in Two'
   ids:
   - steam:1042980
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Zen Chess: Champion''s Moves'
   ids:
   - steam:1108540
   requires: []
   tiers:
+  - 1
   - 3
 - name: Knight Swap
   ids:

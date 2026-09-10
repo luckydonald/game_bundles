@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Jumbo Bundle 9
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:358020
   requires: []
   tiers:
+  - 1
   - 3
 - name: Infested Planet
   ids:
   - steam:204530
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Human: Fall Flat'
   ids:
   - steam:477160
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Flame in the Flood
   ids:
   - steam:318600
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer: End Times - Vermintide Drachenfels'
   ids:

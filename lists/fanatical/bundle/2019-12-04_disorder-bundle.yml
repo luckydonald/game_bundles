@@ -2,6 +2,8 @@
 schema: 1
 name: Disorder Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:537520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dex
   ids:
   - steam:269650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Yet Another Zombie Defense HD
   ids:
   - steam:674750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Next Hero
   ids:
   - steam:756490
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Morphies Law: Remorphed'
   ids:

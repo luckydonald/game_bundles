@@ -2,6 +2,8 @@
 schema: 1
 name: Digital Disorder Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:2213:chernobyl-commando
   requires: []
   tiers:
+  - 1
   - 2
 - name: Eurofighter Typhoon
   ids:
   - steam:283350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Desert Thunder
   ids:
   - steam:283330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Motorama
   ids:

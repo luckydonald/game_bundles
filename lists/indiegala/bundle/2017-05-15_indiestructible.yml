@@ -2,6 +2,8 @@
 schema: 1
 name: Indiestructible Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:617710
   requires: []
   tiers:
+  - 1
   - 2
 - name: On The Path Remastered
   ids:
   - unresolved:source:isthereanydeal:5101:on-the-path-remastered
   requires: []
   tiers:
+  - 1
   - 2
 - name: Game Tycoon 2
   ids:
   - steam:404640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Astervoid 2000 Soundtrack
   ids:
