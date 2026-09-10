@@ -6,6 +6,8 @@ tiers:
   name: 4-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 8-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Duck Game
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Battle Chef Brigade Deluxe
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Pool Panic
   ids:
@@ -47,6 +52,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Rain World
   ids:
@@ -54,24 +60,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Death''s Gambit: Afterlife'
   ids:
   - steam:356650
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Death''s Gambit: Afterlife - Ashes of Vados'
   ids:
   - steam:1866620
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Rain World: Downpour'
   ids:
   - steam:1933390
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Samurai Jack: Battle Through Time'
   ids:

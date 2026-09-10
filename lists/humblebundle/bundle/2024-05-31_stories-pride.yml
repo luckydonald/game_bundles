@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 7-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Heaven Will Be Mine
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: No Longer Home
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Arcadia Fallen
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Coffee Talk Episode 2: Hibiscus & Butterfly'
   ids:
@@ -53,18 +59,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Monster Prom 2: Monster Camp'
   ids:
   - steam:1140270
   requires: []
   tiers:
+  - 3
   - 4
 - name: Lakeburg Legacies
   ids:
   - steam:1584940
   requires: []
   tiers:
+  - 3
   - 4
 - name: Wylde Flowers
   ids:

@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 3-item-bundle
+- rank: 3
+  name: 5-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Blade of Darkness
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Mortal Shell
   ids:
@@ -37,18 +41,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Aeterna Noctis
   ids:
   - steam:1517970
   requires: []
   tiers:
+  - 3
   - 4
 - name: Dread Delusion
   ids:
   - steam:1574240
   requires: []
   tiers:
+  - 3
   - 4
 - name: Sands of Aura
   ids:

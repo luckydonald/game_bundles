@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 4-item-bundle
+- rank: 3
+  name: Beat The Average
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Tales of Berseria
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: TEKKEN 7
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Katamari Damacy REROLL
   ids:
@@ -44,24 +49,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: RAD
   ids:
   - steam:722560
   requires: []
   tiers:
+  - 3
   - 4
 - name: Little Nightmares Complete Edition
   ids:
   - steam:424840
   requires: []
   tiers:
+  - 3
   - 4
 - name: Tales of Zestiria
   ids:
   - steam:351970
   requires: []
   tiers:
+  - 3
   - 4
 - name: Code Vein
   ids:

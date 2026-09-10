@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 3-item-bundle
+- rank: 3
+  name: Beat The Average
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Kerbal Space Program
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Totally Accurate Battle Simulator
   ids:
@@ -37,18 +41,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Main Assembly
   ids:
   - steam:1078920
   requires: []
   tiers:
+  - 3
   - 4
 - name: Besiege
   ids:
   - steam:346010
   requires: []
   tiers:
+  - 3
   - 4
 - name: Space Haven
   ids:

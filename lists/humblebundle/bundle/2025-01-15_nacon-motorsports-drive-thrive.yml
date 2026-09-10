@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 8-item-bundle
 - rank: 4
   name: entire-11-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: V-Rally 4
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: FIA European Truck Racing Championship
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: WRC 7 FIA World Rally Championship
   ids:
@@ -44,6 +49,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: TT Isle of Man Ride on the Edge
   ids:
@@ -51,24 +57,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: WRC 8 FIA World Rally Championship
   ids:
   - steam:1004750
   requires: []
   tiers:
+  - 3
   - 4
 - name: TT Isle of Man Ride on the Edge 2
   ids:
   - steam:1082180
   requires: []
   tiers:
+  - 3
   - 4
 - name: Monster Truck Championship
   ids:
   - steam:1209360
   requires: []
   tiers:
+  - 3
   - 4
 - name: WRC Generations - The FIA WRC Official Game
   ids:

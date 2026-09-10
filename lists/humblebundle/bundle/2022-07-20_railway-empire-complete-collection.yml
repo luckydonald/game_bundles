@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 4-item-bundle
+- rank: 3
+  name: Beat The Average
 - rank: 4
   name: entire-10-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Railway Empire France
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Railway Empire - Great Britain & Ireland
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Railway Empire: Down Under'
   ids:
@@ -44,24 +49,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Railway Empire - Crossing the Andes
   ids:
   - steam:884140
   requires: []
   tiers:
+  - 3
   - 4
 - name: Railway Empire - Mexico
   ids:
   - steam:820930
   requires: []
   tiers:
+  - 3
   - 4
 - name: Railway Empire - The Great Lakes
   ids:
   - steam:873880
   requires: []
   tiers:
+  - 3
   - 4
 - name: Railway Empire - Germany
   ids:

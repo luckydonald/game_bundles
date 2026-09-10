@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 4
   name: Tier 4
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Fast and Curious
   ids:
@@ -30,12 +33,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Cyber-Chicken
   ids:
   - steam:339710
   requires: []
   tiers:
+  - 3
   - 4
 - name: Cyber Chicken - OST
   ids:

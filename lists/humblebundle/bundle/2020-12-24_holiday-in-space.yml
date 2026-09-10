@@ -6,6 +6,8 @@ tiers:
   name: 2-item-bundle
 - rank: 2
   name: Beat The Average
+- rank: 3
+  name: 6-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Tacoma
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Rover Mechanic Simulator
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Siege of Centauri
   ids:
@@ -45,6 +50,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Deep Sky Derelicts
   ids:
@@ -52,12 +58,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: AVICII Invector
   ids:
   - steam:986800
   requires: []
   tiers:
+  - 3
   - 4
 - name: Moons of Madness
   ids:

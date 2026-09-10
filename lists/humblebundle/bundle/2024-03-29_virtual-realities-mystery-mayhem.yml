@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 3-item-bundle
+- rank: 3
+  name: 6-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Arizona Sunshine - Deluxe Edition
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Broken Edge
   ids:
@@ -37,24 +41,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: After the Fall
   ids:
   - steam:751630
   requires: []
   tiers:
+  - 3
   - 4
 - name: No More Rainbows
   ids:
   - steam:1634100
   requires: []
   tiers:
+  - 3
   - 4
 - name: A Fisherman's Tale 2
   ids:
   - steam:2096570
   requires: []
   tiers:
+  - 3
   - 4
 - name: Firmament
   ids:

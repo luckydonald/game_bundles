@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 4
   name: Tier 4
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Jagged Alliance 2 Classic
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Deus Ex: Game of the Year Edition'
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Dungeon Rats
   ids:
@@ -47,6 +52,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Learn Japanese To Survive! Hiragana Battle
   ids:
@@ -54,6 +60,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Star Wars: Knights of the Old Republic'
   ids:
@@ -61,6 +68,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: The Age of Decadence
   ids:
@@ -68,6 +76,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Halcyon 6: Lightspeed Edition'
   ids:
@@ -75,12 +84,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
   ids:
   - steam:238010
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Kingdom Come: Deliverance'
   ids:
