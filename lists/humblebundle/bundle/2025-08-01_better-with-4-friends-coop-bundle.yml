@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Better with 4 Friends: Co-op Bundle — entire-8-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15317/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15317/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15317/source.json
+games:
+- name: Moving Out
+  ids:
+  - steam:996770
+  requires: []
+- name: Unrailed!
+  ids:
+  - steam:1016920
+  requires: []
+- name: Portal Knights
+  ids:
+  - steam:374040
+  requires: []
+- name: Rivals of Aether
+  ids:
+  - steam:383980
+  requires: []
+- name: TowerFall Ascension
+  ids:
+  - steam:251470
+  requires: []
+- name: Embr
+  ids:
+  - steam:1062830
+  requires: []
+- name: Fling to the Finish
+  ids:
+  - steam:1054430
+  requires: []
+- name: SpiderHeck
+  ids:
+  - steam:1329500
+  requires: []
