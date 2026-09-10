@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Future Games Show: Summer Showcase Discovery Bundle Encore — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14736/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14736/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14736/source.json
+games:
+- name: Gloomwood
+  ids:
+  - steam:1150760
+  requires: []
+- name: Lost in Play
+  ids:
+  - steam:1328840
+  requires: []
+- name: Deliver Us Mars
+  ids:
+  - steam:1345890
+  requires: []
+- name: American Arcadia
+  ids:
+  - steam:1249040
+  requires: []
+- name: The Entropy Centre
+  ids:
+  - steam:1730590
+  requires: []
+- name: Ship of Fools
+  ids:
+  - steam:1286580
+  requires: []
+- name: En Garde!
+  ids:
+  - steam:1654660
+  requires: []

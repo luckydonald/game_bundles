@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'New Year, New You: Communication & Meditation Bundle — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14808/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14808/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14808/source.json
+games:
+- name: Epistory - Typing Chronicles
+  ids:
+  - steam:398850
+  requires: []
+- name: Nanotale - Typing Chronicles
+  ids:
+  - steam:944920
+  requires: []
+- name: 'PLAYNE : The Meditation Game'
+  ids:
+  - steam:865540
+  requires: []
+- name: 'The Textorcist: The Story of Ray Bibbia'
+  ids:
+  - steam:940680
+  requires: []
+- name: Terra Alia
+  ids:
+  - steam:1183580
+  requires: []
+- name: 'Influent: Definitive Edition [23 Languages]'
+  ids:
+  - unresolved:source:isthereanydeal:14808:influent-definitive-edition-23-languages
+  requires: []
+- name: You Can Kana - Learn Japanese Hiragana & Katakana
+  ids:
+  - steam:1031900
+  requires: []

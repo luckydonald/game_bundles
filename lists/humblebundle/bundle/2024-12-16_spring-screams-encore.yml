@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Spring Screams Bundle Encore — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14740/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14740/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14740/source.json
+games:
+- name: The Quarry
+  ids:
+  - steam:1577120
+  requires: []
+- name: DEVOUR
+  ids:
+  - steam:1274570
+  requires: []
+- name: FOREWARNED
+  ids:
+  - steam:1562420
+  requires: []
+- name: Escape the Backrooms
+  ids:
+  - steam:1943950
+  requires: []
+- name: 'Amnesia: The Bunker'
+  ids:
+  - steam:1944430
+  requires: []
+- name: My Friendly Neighborhood
+  ids:
+  - steam:1574260
+  requires: []
+- name: Killer Frequency
+  ids:
+  - steam:1903620
+  requires: []

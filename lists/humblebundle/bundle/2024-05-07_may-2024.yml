@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (May 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14033/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14033/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14033/source.json
+games:
+- name: King Of The Castle
+  ids:
+  - steam:1839880
+  requires: []
+- name: 'Yakuza: Like a Dragon'
+  ids:
+  - steam:1235140
+  requires: []
+- name: Steelrising
+  ids:
+  - steam:1283400
+  requires: []
+- name: Loddlenaut
+  ids:
+  - steam:1644940
+  requires: []
+- name: Bravery and Greed
+  ids:
+  - steam:943370
+  requires: []
+- name: Amanda the Adventurer
+  ids:
+  - steam:2166060
+  requires: []
+- name: Hi-Fi RUSH
+  ids:
+  - steam:1817230
+  requires: []
+- name: Mediterranea Inferno
+  ids:
+  - steam:2103680
+  requires: []
