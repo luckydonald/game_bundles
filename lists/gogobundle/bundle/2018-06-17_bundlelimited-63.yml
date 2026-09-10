@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #63 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6246/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6246/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6246/source.json
+games:
+- name: CHEXS
+  ids:
+  - steam:511810
+  requires: []
+- name: Achievement Clicker 2020
+  ids:
+  - unresolved:source:isthereanydeal:6246:achievement-clicker-2020
+  requires: []
+- name: Achievement Clicker 2020 OST
+  ids:
+  - unresolved:source:isthereanydeal:6246:achievement-clicker-2020-ost
+  requires: []
+- name: Small person
+  ids:
+  - steam:859460
+  requires: []
+- name: PlatONIR - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:6246:platonir-deluxe-edition
+  requires: []
+- name: FACE
+  ids:
+  - unresolved:source:isthereanydeal:6246:face
+  requires: []
+- name: Award. Room of fear
+  ids:
+  - steam:733670
+  requires: []
+- name: Through Blocks
+  ids:
+  - steam:698610
+  requires: []
+- name: World of Feudal
+  ids:
+  - unresolved:source:isthereanydeal:6246:world-of-feudal
+  requires: []
+- name: PlatONIR
+  ids:
+  - unresolved:source:isthereanydeal:6246:platonir
+  requires: []
+- name: 'Fairyland: Chronicle'
+  ids:
+  - unresolved:source:isthereanydeal:6246:fairyland-chronicle
+  requires: []
+- name: The Castle Disaster
+  ids:
+  - unresolved:source:isthereanydeal:6246:the-castle-disaster
+  requires: []

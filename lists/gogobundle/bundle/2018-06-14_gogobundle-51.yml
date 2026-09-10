@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #51 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6238/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6238/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6238/source.json
+games:
+- name: Among the Dead
+  ids:
+  - steam:774451
+  requires: []
+- name: Girls and Quiz
+  ids:
+  - steam:664420
+  requires: []
+- name: Motorcycle, tricycle, ATV hill racing
+  ids:
+  - unresolved:source:isthereanydeal:6238:motorcycle-tricycle-atv-hill-racing
+  requires: []
+- name: My Personal Angel
+  ids:
+  - steam:664570
+  requires: []
+- name: Christmas Tale - Visual Novel
+  ids:
+  - steam:765400
+  requires: []
+- name: The Girl on the Train
+  ids:
+  - unresolved:source:isthereanydeal:6238:the-girl-on-the-train
+  requires: []
+- name: Girls and Quiz - Deluxe Edition
+  ids:
+  - steam:667200
+  requires: []
+- name: Among the Dead - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:6238:among-the-dead-deluxe-edition
+  requires: []
+- name: Christmas Tale - Deluxe Edition
+  ids:
+  - steam:768500
+  requires: []
+- name: Sweet Volley High
+  ids:
+  - steam:523730
+  requires: []
+- name: AnyWay! - Scary blue moon rays DLC.
+  ids:
+  - steam:867990
+  requires: []
+- name: Say Goodbye - Deluxe Edition
+  ids:
+  - steam:567960
+  requires: []
+- name: AnyWay! - Abby character pack!
+  ids:
+  - steam:872500
+  requires: []
+- name: '!Anyway!'
+  ids:
+  - steam:866510
+  requires: []
