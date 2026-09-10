@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 3D Realms Dollar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13517/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13517/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13517/source.json
+games:
+- name: Wacky Wheels
+  ids:
+  - steam:358380
+  requires: []
+- name: Major Stryker
+  ids:
+  - steam:358300
+  requires: []
+- name: Math Rescue
+  ids:
+  - steam:358200
+  requires: []
+- name: Mystic Towers
+  ids:
+  - steam:358220
+  requires: []
+- name: Word Rescue
+  ids:
+  - steam:358340
+  requires: []
+- name: Realms of Chaos
+  ids:
+  - steam:358320
+  requires: []
+- name: Paganitzu
+  ids:
+  - steam:358230
+  requires: []
+- name: Hocus Pocus
+  ids:
+  - steam:358290
+  requires: []

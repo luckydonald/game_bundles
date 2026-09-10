@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Fall Bundle (2023) — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13528/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13528/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13528/source.json
+games:
+- name: Drink More Glurp
+  ids:
+  - steam:1056690
+  requires: []
+- name: GemCraft - Frostborn Wrath
+  ids:
+  - steam:1106530
+  requires: []
+- name: 'Stygian: Reign of the Old Ones'
+  ids:
+  - steam:779290
+  requires: []
+- name: Storm Boy
+  ids:
+  - steam:964990
+  requires: []
+- name: Epistory - Typing Chronicles
+  ids:
+  - steam:398850
+  requires: []
+- name: Re-Legion
+  ids:
+  - steam:782140
+  requires: []
+- name: Through the Woods
+  ids:
+  - steam:368430
+  requires: []
+- name: S.W.I.N.E. HD Remaster
+  ids:
+  - unresolved:source:isthereanydeal:13528:s-w-i-n-e-hd-remaster
+  requires: []
+- name: Infinite Beyond The Mind
+  ids:
+  - steam:1207710
+  requires: []
+- name: Chenso Club
+  ids:
+  - steam:1454730
+  requires: []
+- name: Catie in MeowmeowLand
+  ids:
+  - steam:1417890
+  requires: []
+- name: Toy Tinker Simulator
+  ids:
+  - steam:1510580
+  requires: []
+- name: A Tale for Anna
+  ids:
+  - steam:1521930
+  requires: []
+- name: Looking for Aliens
+  ids:
+  - steam:1733500
+  requires: []
+- name: Scarlet Tower
+  ids:
+  - steam:2181720
+  requires: []
+- name: 'DUSK ''82: ULTIMATE EDITION'
+  ids:
+  - steam:1465510
+  requires: []
+- name: Floating Farmer - Logic Puzzle
+  ids:
+  - steam:1716390
+  requires: []
+- name: Little Inner Monsters - Card Game
+  ids:
+  - steam:1813190
+  requires: []
+- name: Paws of Coal
+  ids:
+  - steam:2368860
+  requires: []

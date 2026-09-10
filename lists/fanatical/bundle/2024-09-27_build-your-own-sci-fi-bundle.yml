@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Sci-Fi Bundle — Select 3 for 7.99, 5 for 12.99, 7 for 17.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14484/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14484/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14484/source.json
+games:
+- name: 'Encased: a sci-fi post-apocalyptic RPG'
+  ids:
+  - steam:921800
+  requires: []
+- name: Star Singularity
+  ids:
+  - steam:808800
+  requires: []
+- name: Super Pilot
+  ids:
+  - steam:648050
+  requires: []
+- name: Subdivision Infinity DX
+  ids:
+  - steam:908790
+  requires: []
+- name: Powerslide
+  ids:
+  - steam:675970
+  requires: []
+- name: Mission Critical
+  ids:
+  - steam:1006460
+  requires: []
+- name: 'ΔV: Rings of Saturn'
+  ids:
+  - steam:846030
+  requires: []
+- name: 'Rain of Reflections: Set Free'
+  ids:
+  - steam:695050
+  requires: []
+- name: Murders in Space
+  ids:
+  - steam:1255420
+  requires: []
+- name: Wetlands
+  ids:
+  - steam:1367160
+  requires: []
+- name: Planet's Edge
+  ids:
+  - steam:1367170
+  requires: []
+- name: SPRAWL
+  ids:
+  - steam:1549690
+  requires: []
+- name: Deflector
+  ids:
+  - steam:1736550
+  requires: []
+- name: Beat Invaders
+  ids:
+  - steam:1863080
+  requires: []
+- name: CARNAGE OFFERING
+  ids:
+  - steam:1756180
+  requires: []
+- name: Eigengrau
+  ids:
+  - steam:1624320
+  requires: []
+- name: Pact of Joy
+  ids:
+  - steam:2017950
+  requires: []
+- name: The Last Oricru - Final Cut
+  ids:
+  - steam:1663640
+  requires: []
+- name: 'Defend Earth: Xenos Survivors'
+  ids:
+  - steam:2155280
+  requires: []
+- name: CARNAGE OFFERING Tower Defense
+  ids:
+  - steam:2298300
+  requires: []

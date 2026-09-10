@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Prestige Collection (Thriller Edition) — Select 2 for 14.99,
+  3 for 21.99, 5 for 34.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14563/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14563/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14563/source.json
+games:
+- name: Them & Us
+  ids:
+  - steam:915600
+  requires: []
+- name: Praey for the Gods
+  ids:
+  - steam:494430
+  requires: []
+- name: 'FAITH: The Unholy Trinity'
+  ids:
+  - steam:1179080
+  requires: []
+- name: GRAVEN
+  ids:
+  - steam:1371690
+  requires: []
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  requires: []
+- name: 'Bramble: The Mountain King'
+  ids:
+  - steam:1623940
+  requires: []
+- name: DEATH STRANDING DIRECTOR'S CUT
+  ids:
+  - steam:1850570
+  requires: []
+- name: Hard West 2
+  ids:
+  - steam:1282410
+  requires: []
+- name: Remnant Records
+  ids:
+  - steam:1916310
+  requires: []
+- name: 'Amnesia: The Bunker'
+  ids:
+  - steam:1944430
+  requires: []
+- name: 'Laika: Aged Through Blood'
+  ids:
+  - steam:1796220
+  requires: []
+- name: Showgunners
+  ids:
+  - steam:1155330
+  requires: []
+- name: Intravenous 2
+  ids:
+  - steam:2608270
+  requires: []
+- name: Hands of Necromancy II
+  ids:
+  - steam:2706450
+  requires: []
+- name: Chernobylite Complete Edition
+  ids:
+  - steam:1016800
+  requires: []
+- name: Dome Keeper Deluxe Edition - SPECIAL FANATICAL
+  ids:
+  - unresolved:source:isthereanydeal:14563:dome-keeper-deluxe-edition-special-fanatical
+  requires: []

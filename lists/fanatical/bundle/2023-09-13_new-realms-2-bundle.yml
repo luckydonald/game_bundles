@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: New Realms 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13470/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13470/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13470/source.json
+games:
+- name: Lumberhill
+  ids:
+  - steam:976900
+  requires: []
+- name: Super Catboy
+  ids:
+  - steam:1376910
+  requires: []
+- name: The Tarnishing of Juxtia
+  ids:
+  - steam:1428710
+  requires: []
+- name: Iron Lung
+  ids:
+  - steam:1846170
+  requires: []
+- name: Dreams in the Witch House
+  ids:
+  - steam:1902850
+  requires: []
+- name: Chop Goblins
+  ids:
+  - steam:1935660
+  requires: []
+- name: Garden in!
+  ids:
+  - steam:1953860
+  requires: []

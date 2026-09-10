@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own VR Odyssey Bundle — Select 3 Titles for $9.90, 5 for $14.99,
+  7 for $19.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13283/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13283/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13283/source.json
+games:
+- name: The Walking Dead Onslaught
+  ids:
+  - steam:1082680
+  requires: []
+- name: Boiling Steel
+  ids:
+  - steam:1016860
+  requires: []
+- name: Audio Trip
+  ids:
+  - steam:826540
+  requires: []
+- name: 'Creed: Rise to Glory™'
+  ids:
+  - steam:804490
+  requires: []
+- name: Panoptic
+  ids:
+  - steam:541930
+  requires: []
+- name: Tabletop Playground
+  ids:
+  - steam:838410
+  requires: []
+- name: Operation Armstrong
+  ids:
+  - steam:1145490
+  requires: []
+- name: The Last Day Defense VR
+  ids:
+  - steam:1273520
+  requires: []
+- name: Tower Tag
+  ids:
+  - steam:1187330
+  requires: []
+- name: Grapple Tournament
+  ids:
+  - steam:1384320
+  requires: []
+- name: 'Warplanes: WW1 Fighters'
+  ids:
+  - steam:1546500
+  requires: []
+- name: Rocket Skates VR
+  ids:
+  - steam:1535200
+  requires: []
+- name: 'Table of Tales: The Crooked Crown'
+  ids:
+  - steam:1030310
+  requires: []
+- name: Virtuoso
+  ids:
+  - steam:1213710
+  requires: []
+- name: Winds & Leaves
+  ids:
+  - steam:1783750
+  requires: []
+- name: 'Warplanes: Battles over Pacific'
+  ids:
+  - steam:1930920
+  requires: []
+- name: 'Shadowgate VR: The Mines of Mythrok'
+  ids:
+  - steam:1822970
+  requires: []
+- name: Federation77
+  ids:
+  - steam:1620410
+  requires: []
+- name: A Knight in the Attic
+  ids:
+  - steam:1318700
+  requires: []

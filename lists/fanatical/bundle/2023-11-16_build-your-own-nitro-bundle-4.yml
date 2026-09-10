@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Nitro Bundle 4 — Select 2 for $2.99, 5 for $6.99, 8 for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13626/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13626/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13626/source.json
+games:
+- name: Crashday Redline Edition
+  ids:
+  - steam:508980
+  requires: []
+- name: V-Rally 4
+  ids:
+  - steam:658700
+  requires: []
+- name: Road Redemption
+  ids:
+  - steam:300380
+  requires: []
+- name: Antigraviator
+  ids:
+  - steam:621020
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: OVERPASS™
+  ids:
+  - steam:970840
+  requires: []
+- name: Crumple Zone
+  ids:
+  - steam:785760
+  requires: []
+- name: Garfield Kart - Furious Racing
+  ids:
+  - steam:1085510
+  requires: []
+- name: Tracks - The Train Set Game
+  ids:
+  - steam:657240
+  requires: []
+- name: ClusterTruck
+  ids:
+  - steam:397950
+  requires: []
+- name: Qvadriga
+  ids:
+  - steam:297760
+  requires: []
+- name: Nippon Marathon
+  ids:
+  - steam:746940
+  requires: []
+- name: Super Indie Karts
+  ids:
+  - steam:323670
+  requires: []
+- name: TT Isle of Man Ride on the Edge 2
+  ids:
+  - steam:1082180
+  requires: []
+- name: Pro Cycling Manager 2020
+  ids:
+  - steam:1178400
+  requires: []
+- name: Gear.Club Unlimited 2 - Ultimate Edition
+  ids:
+  - steam:1557860
+  requires: []

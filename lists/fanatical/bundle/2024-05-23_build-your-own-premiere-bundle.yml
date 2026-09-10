@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Premiere Bundle (Showcase Edition) — 2 for 9.99, 3 for 13.49,
+  6 for 24.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14077/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14077/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14077/source.json
+games:
+- name: Seers Isle
+  ids:
+  - steam:738650
+  requires: []
+- name: Himno - The Silent Melody
+  ids:
+  - steam:1079230
+  requires: []
+- name: HARDCORE MECHA
+  ids:
+  - steam:746580
+  requires: []
+- name: The Eternal Cylinder
+  ids:
+  - steam:865680
+  requires: []
+- name: The Chrono Jotter
+  ids:
+  - steam:1398740
+  requires: []
+- name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
+  ids:
+  - steam:1931020
+  requires: []
+- name: 'Vlad Circus: Descend Into Madness'
+  ids:
+  - steam:1702430
+  requires: []
+- name: Noob - The Factionless
+  ids:
+  - steam:1623880
+  requires: []
+- name: Chicken Journey
+  ids:
+  - steam:1837650
+  requires: []
+- name: The Cub
+  ids:
+  - steam:1941410
+  requires: []
+- name: 'Boti: Byteland Overclocked'
+  ids:
+  - steam:2161050
+  requires: []
+- name: Right and Down and Dice
+  ids:
+  - steam:2228010
+  requires: []
+- name: Terror At Oakheart
+  ids:
+  - steam:2530430
+  requires: []
+- name: Savant - Ascent REMIX
+  ids:
+  - steam:2279330
+  requires: []

@@ -1,0 +1,123 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Leap Year Bundle — Select 1 for $1.00, 5 for $2.99, 10 for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13839/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13839/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13839/source.json
+games:
+- name: OTTTD
+  ids:
+  - steam:312630
+  requires: []
+- name: One More Line
+  ids:
+  - steam:356890
+  requires: []
+- name: Death Squared
+  ids:
+  - steam:471810
+  requires: []
+- name: Sigi - A Fart for Melusina
+  ids:
+  - steam:677280
+  requires: []
+- name: Monster Slayers - Advanced Classes Unlocker
+  ids:
+  - steam:621840
+  requires: []
+- name: Alwa's Awakening
+  ids:
+  - steam:549260
+  requires: []
+- name: 'Slain: Back from Hell'
+  ids:
+  - steam:369070
+  requires: []
+- name: 'POSTAL 2: Paradise Lost'
+  ids:
+  - steam:360960
+  requires: []
+- name: Unity of Command - Black Turn
+  ids:
+  - steam:258420
+  requires: []
+- name: POSTAL 2
+  ids:
+  - steam:223470
+  requires: []
+- name: Monster Slayers
+  ids:
+  - steam:496620
+  requires: []
+- name: BLACKHOLE
+  ids:
+  - steam:322680
+  requires: []
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  requires: []
+- name: Valfaris
+  ids:
+  - steam:600130
+  requires: []
+- name: Unity of Command - Red Turn
+  ids:
+  - steam:218100
+  requires: []
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+  requires: []
+- name: 'Unity of Command: Stalingrad Campaign'
+  ids:
+  - steam:218090
+  requires: []
+- name: Monster Slayers - Fire & Steel Expansion
+  ids:
+  - steam:634030
+  requires: []
+- name: 'Deep Sky Derelicts: Definitive Edition'
+  ids:
+  - unresolved:source:isthereanydeal:13839:deep-sky-derelicts-definitive-edition
+  requires: []
+- name: Sir Lovelot
+  ids:
+  - steam:1055170
+  requires: []
+- name: 'Towaga: Among Shadows'
+  ids:
+  - unresolved:source:isthereanydeal:13839:towaga-among-shadows
+  requires: []
+- name: Velocity Noodle
+  ids:
+  - steam:1488650
+  requires: []
+- name: From Space
+  ids:
+  - steam:1502190
+  requires: []
+- name: Donut Dodo
+  ids:
+  - steam:1779560
+  requires: []
+- name: UNDETECTED
+  ids:
+  - steam:1715350
+  requires: []
+- name: RESTLESS SOUL
+  ids:
+  - steam:1748230
+  requires: []
+- name: 'A Tale of Paper: Refolded'
+  ids:
+  - steam:1454640
+  requires: []
+- name: Spellbound Survivors
+  ids:
+  - steam:2602450
+  requires: []

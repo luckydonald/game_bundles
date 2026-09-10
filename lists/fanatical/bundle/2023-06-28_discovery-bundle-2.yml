@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Discovery Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13307/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13307/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13307/source.json
+games:
+- name: The Chronicles of Nyanya
+  ids:
+  - steam:704200
+  requires: []
+- name: Landlord's Super
+  ids:
+  - steam:1127840
+  requires: []
+- name: Bots Are Stupid
+  ids:
+  - steam:1578160
+  requires: []
+- name: Onde
+  ids:
+  - steam:1676910
+  requires: []
+- name: Sea Horizon
+  ids:
+  - steam:1611420
+  requires: []
+- name: Hand of Doom
+  ids:
+  - steam:1924400
+  requires: []
+- name: Suffer The Night
+  ids:
+  - steam:2176850
+  requires: []
