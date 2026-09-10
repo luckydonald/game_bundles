@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Pick & Mix Bundle — Select 5 Titles for $1.99, 10 Titles for $2.99,
+  15 Titles for $3.79
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7715/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7715/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7715/source.json
+games:
+- name: Fate Tectonics
+  ids:
+  - steam:379530
+  requires: []
+- name: Learn Japanese To Survive! Hiragana Battle
+  ids:
+  - steam:438270
+  requires: []
+- name: 'The Mysterious Cities of Gold: Secret Paths'
+  ids:
+  - steam:261940
+  requires: []
+- name: EarthWorms
+  ids:
+  - steam:320330
+  requires: []
+- name: Escape Doodland
+  ids:
+  - steam:670930
+  requires: []
+- name: Plazma Being
+  ids:
+  - steam:346630
+  requires: []
+- name: Californium
+  ids:
+  - steam:402060
+  requires: []
+- name: Out There Somewhere
+  ids:
+  - steam:263980
+  requires: []
+- name: Clinically Dead
+  ids:
+  - steam:927840
+  requires: []
+- name: Splatter - Zombie Apocalypse
+  ids:
+  - unresolved:source:isthereanydeal:7715:splatter-zombie-apocalypse
+  requires: []
+- name: Mech Rage
+  ids:
+  - steam:934600
+  requires: []
+- name: Valnir Rok Survival RPG
+  ids:
+  - steam:658980
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []
+- name: E-sport Manager
+  ids:
+  - unresolved:source:isthereanydeal:7715:e-sport-manager
+  requires: []
+- name: 'Bad Dream: Coma'
+  ids:
+  - steam:538070
+  requires: []
+- name: Particle Mace
+  ids:
+  - steam:295690
+  requires: []
+- name: Deployment
+  ids:
+  - steam:755980
+  requires: []
+- name: Earth Overclocked
+  ids:
+  - steam:387060
+  requires: []
+- name: SkyDrift
+  ids:
+  - steam:91100
+  requires: []
+- name: Revolution Ace
+  ids:
+  - steam:274560
+  requires: []

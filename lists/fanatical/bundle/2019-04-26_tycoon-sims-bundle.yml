@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tycoon Sims Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7336/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7336/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7336/source.json
+games:
+- name: Shoppe Keep 2
+  ids:
+  - steam:684580
+  requires: []
+- name: 'Resort Boss: Golf'
+  ids:
+  - steam:869060
+  requires: []
+- name: Willowbrooke Post
+  ids:
+  - unresolved:source:isthereanydeal:7336:willowbrooke-post
+  requires: []
+- name: Shoppe Keep
+  ids:
+  - steam:381120
+  requires: []
+- name: Craft Keep VR
+  ids:
+  - steam:546350
+  requires: []

@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Very Positive Pick & Mix Bundle — Select 3 Titles for $1.49, 6 Titles for $2.79,
+  9 Titles for $3.59
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7470/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7470/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7470/source.json
+games:
+- name: 'The Lion''s Song: Season Pass'
+  ids:
+  - unresolved:source:isthereanydeal:7470:the-lions-song-season-pass
+  requires: []
+- name: 'Fahrenheit: Indigo Prophecy Remastered'
+  ids:
+  - steam:312840
+  requires: []
+- name: Learn Japanese To Survive! Hiragana Battle
+  ids:
+  - steam:438270
+  requires: []
+- name: Homeworld Remastered Collection
+  ids:
+  - steam:244160
+  requires: []
+- name: 'Geometry Wars 3: Dimensions Evolved'
+  ids:
+  - steam:310790
+  requires: []
+- name: The Invisible Hours
+  ids:
+  - steam:582560
+  requires: []
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+  requires: []
+- name: Dex
+  ids:
+  - steam:269650
+  requires: []
+- name: Never Alone Arctic Collection
+  ids:
+  - steam:295790
+  requires: []
+- name: Glass Masquerade
+  ids:
+  - steam:511470
+  requires: []
+- name: Downfall
+  ids:
+  - steam:2712470
+  requires: []
+- name: The Sexy Brutale
+  ids:
+  - steam:552590
+  requires: []
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+  requires: []
+- name: BARRIER X
+  ids:
+  - steam:463150
+  requires: []
+- name: Monstrum
+  ids:
+  - steam:296710
+  requires: []

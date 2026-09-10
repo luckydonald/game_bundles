@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Blitzkrieg Complete Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8029/source.json
+games:
+- name: Blitzkrieg Anthology
+  ids:
+  - steam:313480
+  requires: []
+- name: Blitzkrieg 3
+  ids:
+  - steam:235380
+  requires: []
+- name: Blitzkrieg 3 - Digital Deluxe Edition Upgrade
+  ids:
+  - steam:366650
+  requires: []
+- name: Blitzkrieg 2 Anthology
+  ids:
+  - steam:313500
+  requires: []

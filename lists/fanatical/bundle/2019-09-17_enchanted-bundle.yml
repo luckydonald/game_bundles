@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Enchanted Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7914/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7914/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7914/source.json
+games:
+- name: Syberia 3 - An Automaton with a plan
+  ids:
+  - steam:673500
+  requires: []
+- name: Fort Boyard
+  ids:
+  - steam:1058330
+  requires: []
+- name: Garfield Kart
+  ids:
+  - steam:362930
+  requires: []
+- name: Return to Mysterious Island
+  ids:
+  - steam:277110
+  requires: []
+- name: Syberia 3
+  ids:
+  - steam:464340
+  requires: []
+- name: Yesterday Origins
+  ids:
+  - steam:465280
+  requires: []
+- name: Toki
+  ids:
+  - steam:1058320
+  requires: []
+- name: Curse - The Eye of Isis
+  ids:
+  - steam:302210
+  requires: []
+- name: Agatha Christie - The ABC Murders
+  ids:
+  - steam:374900
+  requires: []
+- name: Moto Racer 4
+  ids:
+  - steam:417430
+  requires: []

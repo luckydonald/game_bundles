@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Learn Japanese to Survive Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7899/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7899/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7899/source.json
+games:
+- name: Learn Japanese To Survive! Hiragana Battle
+  ids:
+  - steam:438270
+  requires: []
+- name: Learn Japanese To Survive - Hiragana Battle - Study Guide
+  ids:
+  - steam:572210
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat - Art Book
+  ids:
+  - steam:893983
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat
+  ids:
+  - steam:759440
+  requires: []
+- name: Learn Japanese To Survive! Katakana War - Manga + Art Book
+  ids:
+  - steam:575500
+  requires: []
+- name: Learn Japanese To Survive! Katakana War - Study Guide
+  ids:
+  - steam:575501
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:7899:learn-japanese-to-survive-kanji-combat-original-soundtrack
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat - Flash Cards
+  ids:
+  - steam:893981
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat - Study Guide
+  ids:
+  - steam:893980
+  requires: []
+- name: Learn Japanese To Survive! Kanji Combat - Wallpaper Pack
+  ids:
+  - steam:893984
+  requires: []
+- name: Learn Japanese To Survive! Katakana War
+  ids:
+  - steam:554600
+  requires: []

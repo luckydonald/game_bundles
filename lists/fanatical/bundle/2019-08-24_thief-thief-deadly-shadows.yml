@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Thief + Thief Deadly Shadows Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7822/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7822/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7822/source.json
+games:
+- name: THIEF
+  ids:
+  - steam:239160
+  requires: []
+- name: 'Thief: Deadly Shadows'
+  ids:
+  - steam:6980
+  requires: []

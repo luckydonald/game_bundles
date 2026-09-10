@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DotEmu Classics Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7346/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7346/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7346/source.json
+games:
+- name: 'Raptor: Call of The Shadows - 2015 Edition'
+  ids:
+  - steam:336060
+  requires: []
+- name: Raiden Legacy - Steam Edition
+  ids:
+  - steam:407600
+  requires: []
+- name: Pang Adventures
+  ids:
+  - steam:415150
+  requires: []
+- name: Karateka
+  ids:
+  - steam:217270
+  requires: []
+- name: Sanitarium
+  ids:
+  - steam:284050
+  requires: []
+- name: Double Dragon Trilogy
+  ids:
+  - steam:314150
+  requires: []
+- name: The Last Express Gold Edition
+  ids:
+  - steam:252710
+  requires: []
+- name: Twinsen's Little Big Adventure 2 Classic
+  ids:
+  - steam:398000
+  requires: []
+- name: Twinsen's Little Big Adventure Classic
+  ids:
+  - steam:397330
+  requires: []

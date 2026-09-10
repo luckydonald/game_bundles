@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Space Strategy Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7494/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7494/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7494/source.json
+games:
+- name: Last Days of Old Earth
+  ids:
+  - steam:376450
+  requires: []
+- name: 'Distant Worlds: Universe'
+  ids:
+  - steam:261470
+  requires: []
+- name: 'Pandora : First Contact'
+  ids:
+  - steam:287580
+  requires: []

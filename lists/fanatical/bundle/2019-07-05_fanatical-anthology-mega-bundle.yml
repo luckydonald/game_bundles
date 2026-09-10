@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Anthology Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7602/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7602/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7602/source.json
+games:
+- name: Inquisitor
+  ids:
+  - steam:241620
+  requires: []
+- name: Lovely Planet
+  ids:
+  - steam:298600
+  requires: []
+- name: GT Legends
+  ids:
+  - steam:44690
+  requires: []
+- name: 'Numen: Contest of Heroes'
+  ids:
+  - steam:60800
+  requires: []
+- name: Etherlords Bundle
+  ids:
+  - unresolved:source:isthereanydeal:7602:etherlords-bundle
+  requires: []
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:7602:wizardry-6-and-7
+  requires: []
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+  requires: []
+- name: Mini Motor Racing EVO
+  ids:
+  - unresolved:source:isthereanydeal:7602:mini-motor-racing-evo
+  requires: []
+- name: Vangers
+  ids:
+  - steam:264080
+  requires: []
+- name: 'The Original Strife: Veteran Edition'
+  ids:
+  - steam:317040
+  requires: []
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:7602:race-a-bit
+  requires: []
+- name: Little Racers STREET
+  ids:
+  - steam:262690
+  requires: []
+- name: 'Table Top Racing: World Tour'
+  ids:
+  - unresolved:source:isthereanydeal:7602:table-top-racing-world-tour
+  requires: []
+- name: Drift Streets Japan
+  ids:
+  - steam:412880
+  requires: []
+- name: Insane 2
+  ids:
+  - steam:35320
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []
+- name: Blood Knights
+  ids:
+  - steam:258220
+  requires: []
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:7602:system-shock-2-1999
+  requires: []
