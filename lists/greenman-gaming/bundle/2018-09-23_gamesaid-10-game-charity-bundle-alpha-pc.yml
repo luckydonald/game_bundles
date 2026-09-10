@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: GamesAid 10 Game Charity Alpha Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6494/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6494/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6494/source.json
+games:
+- name: War Tech Fighters
+  ids:
+  - steam:630030
+  requires: []
+- name: 'Teleglitch: Die More Edition'
+  ids:
+  - steam:234390
+  requires: []
+- name: Biozone
+  ids:
+  - steam:19080
+  requires: []
+- name: 'METAL GEAR SOLID V: THE PHANTOM PAIN'
+  ids:
+  - steam:287700
+  requires: []
+- name: Mount & Blade
+  ids:
+  - steam:22100
+  requires: []
+- name: Dead Age
+  ids:
+  - steam:363930
+  requires: []
+- name: F.E.A.R. 3
+  ids:
+  - unresolved:source:isthereanydeal:6494:f-e-a-r-3
+  requires: []
+- name: Beyond Eyes
+  ids:
+  - unresolved:source:isthereanydeal:6494:beyond-eyes
+  requires: []
+- name: 'Castlevania: Lords of Shadow 2 Digital Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:6494:castlevania-lords-of-shadow-2-digital-bundle
+  requires: []
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+  requires: []

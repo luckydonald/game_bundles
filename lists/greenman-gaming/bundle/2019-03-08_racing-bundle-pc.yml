@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Racing Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7147/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7147/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7147/source.json
+games:
+- name: Switch Galaxy Ultra
+  ids:
+  - steam:359060
+  requires: []
+- name: Toybox Turbos
+  ids:
+  - unresolved:source:isthereanydeal:7147:toybox-turbos
+  requires: []
+- name: F1 2015
+  ids:
+  - unresolved:source:isthereanydeal:7147:f1-2015
+  requires: []
+- name: Space Ribbon
+  ids:
+  - steam:501220
+  requires: []
+- name: Nash Racing
+  ids:
+  - steam:581200
+  requires: []
+- name: 'Table Top Racing: World Tour'
+  ids:
+  - unresolved:source:isthereanydeal:7147:table-top-racing-world-tour
+  requires: []
+- name: A.I.M Racing
+  ids:
+  - unresolved:source:isthereanydeal:7147:a-i-m-racing
+  requires: []

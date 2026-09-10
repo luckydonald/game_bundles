@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #59 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6158/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6158/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6158/source.json
+games:
+- name: Rapid
+  ids:
+  - unresolved:source:isthereanydeal:6158:rapid
+  requires: []
+- name: Depopulation
+  ids:
+  - steam:718210
+  requires: []
+- name: Amazon Rush
+  ids:
+  - unresolved:source:isthereanydeal:6158:amazon-rush
+  requires: []
+- name: Witches, Heroes and Magic
+  ids:
+  - steam:378510
+  requires: []
+- name: Control Craft 2
+  ids:
+  - steam:439930
+  requires: []
+- name: Chaos and the White Robot
+  ids:
+  - steam:698950
+  requires: []
+- name: Zhulik.exe
+  ids:
+  - steam:768300
+  requires: []
+- name: 'Fairyland: Manuscript'
+  ids:
+  - unresolved:source:isthereanydeal:6158:fairyland-manuscript
+  requires: []
+- name: Teria
+  ids:
+  - steam:557970
+  requires: []
+- name: Santa's vacation
+  ids:
+  - steam:741770
+  requires: []
+- name: SALVATOR
+  ids:
+  - steam:795920
+  requires: []
+- name: Control Craft 3
+  ids:
+  - steam:490910
+  requires: []

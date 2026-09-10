@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fright Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7107/source.json
+games:
+- name: Killing Floor
+  ids:
+  - steam:1250
+  requires: []
+- name: Uncanny Valley
+  ids:
+  - steam:359580
+  requires: []
+- name: 'Daily Chthonicle: Editor''s Edition'
+  ids:
+  - steam:490980
+  requires: []
+- name: 'The Last Door: Collectors Edition'
+  ids:
+  - steam:284390
+  requires: []
+- name: 'Teleglitch: Die More Edition'
+  ids:
+  - steam:234390
+  requires: []
+- name: 'Goosebumps: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:7107:goosebumps-the-game
+  requires: []
+- name: Three Dead Zed
+  ids:
+  - steam:291390
+  requires: []
+- name: Paranautical Activity
+  ids:
+  - steam:250580
+  requires: []
+- name: Dead Age
+  ids:
+  - steam:363930
+  requires: []
+- name: F.E.A.R. 3
+  ids:
+  - unresolved:source:isthereanydeal:7107:f-e-a-r-3
+  requires: []
+- name: The Bunker
+  ids:
+  - steam:481110
+  requires: []
+- name: Corporate Lifestyle Simulator
+  ids:
+  - unresolved:source:isthereanydeal:7107:corporate-lifestyle-simulator
+  requires: []

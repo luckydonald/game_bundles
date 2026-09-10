@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pocket Change Indies Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6214/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6214/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6214/source.json
+games:
+- name: The Pasture
+  ids:
+  - steam:567680
+  requires: []
+- name: Lost Civilization
+  ids:
+  - steam:264580
+  requires: []
+- name: Centauri Sector
+  ids:
+  - steam:355810
+  requires: []
+- name: Russian SuperHero Dead Ivan
+  ids:
+  - steam:527770
+  requires: []
+- name: Farnham Fables
+  ids:
+  - steam:463110
+  requires: []
+- name: Gunslugs 2
+  ids:
+  - steam:340750
+  requires: []
+- name: Heroes of Loot
+  ids:
+  - steam:359280
+  requires: []
+- name: 'Chronicles of a Dark Lord: Episode 1 Tides of Fate Complete'
+  ids:
+  - unresolved:source:isthereanydeal:6214:chronicles-of-a-dark-lord-episode-1-tides-of-fate-complete
+  requires: []
+- name: SweatShop
+  ids:
+  - steam:496680
+  requires: []
+- name: Hidden Mysteries - Civil War
+  ids:
+  - steam:385390
+  requires: []
