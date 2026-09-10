@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Iconic Board Game Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11569/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11569/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11569/source.json
+games:
+- name: Hasbro's BATTLESHIP
+  ids:
+  - steam:893050
+  requires: []
+- name: THE GAME OF LIFE 2
+  ids:
+  - steam:1455630
+  requires: []
+- name: JUMANJI - The Curse Returns
+  ids:
+  - unresolved:source:isthereanydeal:11569:jumanji-the-curse-returns
+  requires: []
+- name: Clue The Classic Mystery Game
+  ids:
+  - unresolved:source:isthereanydeal:11569:clue-the-classic-mystery-game
+  requires: []

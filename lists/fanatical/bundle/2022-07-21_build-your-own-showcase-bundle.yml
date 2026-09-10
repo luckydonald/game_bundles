@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Showcase Bundle — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11792/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11792/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11792/source.json
+games:
+- name: Aces of the Luftwaffe - Squadron
+  ids:
+  - steam:859350
+  requires: []
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020
+  requires: []
+- name: Main Assembly
+  ids:
+  - steam:1078920
+  requires: []
+- name: Maize
+  ids:
+  - steam:284240
+  requires: []
+- name: Giana Sisters 2D
+  ids:
+  - steam:350770
+  requires: []
+- name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
+  ids:
+  - steam:246960
+  requires: []
+- name: 'The Metronomicon: Slay The Dance Floor'
+  ids:
+  - steam:416790
+  requires: []
+- name: Etherborn
+  ids:
+  - steam:812160
+  requires: []
+- name: 'Jagged Alliance: Rage!'
+  ids:
+  - steam:463170
+  requires: []
+- name: 'Glass Masquerade 2: Illusions'
+  ids:
+  - steam:935880
+  requires: []
+- name: 'Rogue Heroes: Ruins of Tasos'
+  ids:
+  - steam:787810
+  requires: []
+- name: 'Giana Sisters: Twisted Dreams'
+  ids:
+  - steam:223220
+  requires: []
+- name: Unto The End
+  ids:
+  - steam:600080
+  requires: []
+- name: Dark Nights with Poe and Munro
+  ids:
+  - steam:1098170
+  requires: []
+- name: 'I am not a Monster: First Contact'
+  ids:
+  - steam:826600
+  requires: []
+- name: Going Under
+  ids:
+  - steam:1154810
+  requires: []
+- name: The Magister
+  ids:
+  - steam:1304770
+  requires: []
+- name: They Always Run
+  ids:
+  - steam:1585440
+  requires: []

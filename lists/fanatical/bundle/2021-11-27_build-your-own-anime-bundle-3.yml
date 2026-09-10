@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Anime Bundle 3 — 2 for $5.99, 3 for $8.49, 6 for $14.99, 10 for
+  $22.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10749/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10749/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10749/source.json
+games:
+- name: Little Dragons Café
+  ids:
+  - steam:915710
+  requires: []
+- name: 仙劍奇俠傳六 (Chinese Paladin：Sword and Fairy 6)
+  ids:
+  - unresolved:source:isthereanydeal:10749:xian-jian-qi-xia-chuan-liu-chinese-paladin-sword-and-fairy-6
+  requires: []
+- name: The Letter - Horror Visual Novel
+  ids:
+  - steam:460430
+  requires: []
+- name: Cosmic Star Heroine
+  ids:
+  - steam:256460
+  requires: []
+- name: 'Valthirian Arc: Hero School Story'
+  ids:
+  - steam:785850
+  requires: []
+- name: Panty Party
+  ids:
+  - steam:562410
+  requires: []
+- name: EARTH'S DAWN
+  ids:
+  - steam:494600
+  requires: []
+- name: Legends of Ethernal
+  ids:
+  - steam:908480
+  requires: []
+- name: 'Spirit Hunter: Death Mark'
+  ids:
+  - steam:980830
+  requires: []
+- name: 'Harvest Moon: Light of Hope Special Edition'
+  ids:
+  - steam:585900
+  requires: []
+- name: 'Kotodama: The 7 Mysteries of Fujisawa'
+  ids:
+  - steam:997060
+  requires: []
+- name: Tokyo Xanadu eX+
+  ids:
+  - steam:587260
+  requires: []
+- name: Assault Suit Leynos
+  ids:
+  - steam:441350
+  requires: []
+- name: Synergia
+  ids:
+  - steam:1047010
+  requires: []
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090
+  requires: []
+- name: 'The eXceed Collection: Aural Brutality Edition'
+  ids:
+  - unresolved:source:isthereanydeal:10749:the-exceed-collection-aural-brutality-edition
+  requires: []
+- name: 'Spirit Hunter: NG'
+  ids:
+  - steam:1100430
+  requires: []
+- name: Ghost Parade
+  ids:
+  - steam:1093360
+  requires: []
+- name: 'Ara Fell: Enhanced Edition'
+  ids:
+  - steam:440540
+  requires: []
+- name: 'Xuan-Yuan Sword: The Gate of Firmament'
+  ids:
+  - steam:427030
+  requires: []
+- name: Beat Souls
+  ids:
+  - steam:1596370
+  requires: []
+- name: Within the blade
+  ids:
+  - steam:622870
+  requires: []

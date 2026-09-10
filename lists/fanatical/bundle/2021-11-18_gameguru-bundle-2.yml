@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: GameGuru Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10707/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10707/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10707/source.json
+games:
+- name: GameGuru - Melee Weapons Pack
+  ids:
+  - steam:822010
+  requires: []
+- name: GameGuru
+  ids:
+  - steam:266310
+  requires: []
+- name: GameGuru - Abandoned Apartment Pack
+  ids:
+  - steam:989810
+  requires: []
+- name: GameGuru - Enhanced Weapons Pack
+  ids:
+  - steam:907510
+  requires: []
+- name: GameGuru Death Valley Pack
+  ids:
+  - steam:365540
+  requires: []
+- name: GameGuru - Cold War Pack
+  ids:
+  - steam:996910
+  requires: []
+- name: GameGuru - Medical Pack
+  ids:
+  - steam:964530
+  requires: []
+- name: GameGuru - Walled Garden Pack
+  ids:
+  - steam:1154060
+  requires: []
+- name: GameGuru - Cemetery Pack
+  ids:
+  - steam:1306830
+  requires: []
+- name: GameGuru - Tool Shed Pack
+  ids:
+  - steam:1315570
+  requires: []
+- name: GameGuru - Camping Pack
+  ids:
+  - steam:1338070
+  requires: []
+- name: GameGuru - Retro 80's Pack
+  ids:
+  - steam:1343490
+  requires: []

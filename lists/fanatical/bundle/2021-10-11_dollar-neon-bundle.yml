@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Neon Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10562/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10562/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10562/source.json
+games:
+- name: Spin Rush
+  ids:
+  - steam:528660
+  requires: []
+- name: Slash It Ultimate
+  ids:
+  - steam:656600
+  requires: []
+- name: Poly Island
+  ids:
+  - steam:739360
+  requires: []
+- name: Upside Down
+  ids:
+  - steam:586960
+  requires: []
+- name: Hungry Flame
+  ids:
+  - steam:586970
+  requires: []
+- name: Cybercube
+  ids:
+  - steam:656880
+  requires: []
+- name: Neon Space 2
+  ids:
+  - steam:505210
+  requires: []
+- name: Cube Runner
+  ids:
+  - steam:567280
+  requires: []
+- name: Slash It 2
+  ids:
+  - steam:583760
+  requires: []
+- name: Duke of Alpha Centauri
+  ids:
+  - steam:567580
+  requires: []
+- name: Slash It
+  ids:
+  - steam:567290
+  requires: []
+- name: Neon Space
+  ids:
+  - steam:468490
+  requires: []
+- name: Charlie's Adventure
+  ids:
+  - steam:556870
+  requires: []

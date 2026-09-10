@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'BioShock: The Collection Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11526/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11526/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11526/source.json
+games:
+- name: BioShock 2
+  ids:
+  - steam:8850
+  requires: []
+- name: 'Bioshock Infinite: Columbia''s Finest'
+  ids:
+  - steam:2028850
+  requires: []
+- name: BioShock Infinite - Season Pass
+  ids:
+  - steam:214933
+  requires: []
+- name: BioShock Infinite
+  ids:
+  - steam:8870
+  requires: []
+- name: BioShock
+  ids:
+  - steam:7670
+  requires: []
+- name: 'Bioshock 2: Minerva''s Den'
+  ids:
+  - steam:244610
+  requires: []

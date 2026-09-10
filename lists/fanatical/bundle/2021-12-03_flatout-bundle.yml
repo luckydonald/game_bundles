@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: FlatOut Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10780/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10780/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10780/source.json
+games:
+- name: Flat Out 2
+  ids:
+  - unresolved:source:isthereanydeal:10780:flat-out-2
+  requires: []
+- name: FlatOut
+  ids:
+  - steam:6220
+  requires: []
+- name: 'Flatout 3: Chaos & Destruction'
+  ids:
+  - steam:201510
+  requires: []
+- name: 'FlatOut: Ultimate Carnage Collector''s Edition'
+  ids:
+  - steam:12360
+  requires: []

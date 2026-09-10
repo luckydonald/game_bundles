@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Party Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10864/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10864/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10864/source.json
+games:
+- name: Galaxy Champions TV
+  ids:
+  - steam:842750
+  requires: []
+- name: Divekick
+  ids:
+  - steam:244730
+  requires: []
+- name: 12 orbits
+  ids:
+  - steam:529950
+  requires: []
+- name: Headsnatchers
+  ids:
+  - steam:797410
+  requires: []
+- name: Regular Human Basketball
+  ids:
+  - steam:661940
+  requires: []
+- name: Heavy Burger
+  ids:
+  - unresolved:source:isthereanydeal:10864:heavy-burger
+  requires: []
+- name: Muddledash
+  ids:
+  - steam:769840
+  requires: []
+- name: 'River City Ransom: Underground'
+  ids:
+  - steam:422810
+  requires: []
+- name: Lethal League
+  ids:
+  - steam:261180
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: Capsule Force
+  ids:
+  - steam:364060
+  requires: []
+- name: Extreme Exorcism
+  ids:
+  - steam:334100
+  requires: []
+- name: Party Hard
+  ids:
+  - steam:356570
+  requires: []
+- name: Party Hard 2
+  ids:
+  - steam:572430
+  requires: []
+- name: STARWHAL
+  ids:
+  - steam:263020
+  requires: []
+- name: Bleep Bloop
+  ids:
+  - steam:1010230
+  requires: []
+- name: VIDEOBALL
+  ids:
+  - steam:277390
+  requires: []
+- name: Perfect Heist
+  ids:
+  - steam:787040
+  requires: []
+- name: Ultra Foodmess
+  ids:
+  - steam:1221640
+  requires: []
+- name: What The Fork
+  ids:
+  - unresolved:source:isthereanydeal:10864:what-the-fork
+  requires: []

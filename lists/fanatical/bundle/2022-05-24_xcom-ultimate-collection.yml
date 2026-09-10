@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'XCOM: Ultimate Collection Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11525/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11525/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11525/source.json
+games:
+- name: XCOM 2
+  ids:
+  - steam:268500
+  requires: []
+- name: 'XCOM: Enemy Unknown'
+  ids:
+  - steam:200510
+  requires: []
+- name: 'XCOM: Enemy Unknown - Elite Soldier Pack'
+  ids:
+  - steam:209811
+  requires: []
+- name: 'XCOM 2: War of the Chosen - Tactical Legacy Pack'
+  ids:
+  - steam:785300
+  requires: []
+- name: 'XCOM: Enemy Within'
+  ids:
+  - steam:225340
+  requires: []
+- name: XCOM 2 - Alien Hunters
+  ids:
+  - steam:433090
+  requires: []
+- name: 'XCOM 2: War of the Chosen'
+  ids:
+  - steam:593380
+  requires: []
+- name: XCOM 2 - Resistance Warrior Pack
+  ids:
+  - steam:399620
+  requires: []
+- name: XCOM 2 Anarchy's Children
+  ids:
+  - steam:433080
+  requires: []
+- name: XCOM 2 - Shen's Last Gift
+  ids:
+  - steam:433091
+  requires: []
+- name: 'XCOM: Enemy Unknown - Slingshot Pack'
+  ids:
+  - steam:209812
+  requires: []
+- name: 'XCOM®: Chimera Squad'
+  ids:
+  - steam:882100
+  requires: []
