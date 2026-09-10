@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Itch.io Bundle 9 — Select 4 to 10 Titles for $1.00 up to $2.50
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7867/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7867/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7867/source.json
+games:
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+  requires: []
+- name: 'Doodle God: Fantasy World of Magic'
+  ids:
+  - unresolved:source:isthereanydeal:7867:doodle-god-fantasy-world-of-magic
+  requires: []
+- name: Lantern of Worlds
+  ids:
+  - steam:712070
+  requires: []
+- name: Adelantado Trilogy. Book Two
+  ids:
+  - steam:573670
+  requires: []
+- name: Northern Tale
+  ids:
+  - steam:417410
+  requires: []
+- name: The Surprising Adventures of Munchausen
+  ids:
+  - steam:696710
+  requires: []
+- name: Fall of the New Age
+  ids:
+  - unresolved:source:isthereanydeal:7867:fall-of-the-new-age
+  requires: []
+- name: 'Solitaire Mystery: Stolen Power'
+  ids:
+  - steam:679820
+  requires: []
+- name: The Wisbey Mystery
+  ids:
+  - steam:575960
+  requires: []
+- name: Mahjong Secrets
+  ids:
+  - steam:947400
+  requires: []

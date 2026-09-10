@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Big Itch.io Bundle 1 — Select 3 to 16 titles; $0.99 up to $4.01
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6775/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6775/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6775/source.json
+games:
+- name: 'Showing Tonight: Mindhunters Incident'
+  ids:
+  - steam:416370
+  requires: []
+- name: Exorcist
+  ids:
+  - steam:1983330
+  requires: []
+- name: Little Kite
+  ids:
+  - steam:610120
+  requires: []
+- name: 'Christmas Adventure: Candy Storm'
+  ids:
+  - steam:456430
+  requires: []
+- name: Roads of Rome
+  ids:
+  - steam:410770
+  requires: []
+- name: Desert Stormfront
+  ids:
+  - unresolved:source:isthereanydeal:6775:desert-stormfront
+  requires: []
+- name: Ghost Sweeper
+  ids:
+  - steam:496990
+  requires: []
+- name: Christmas Griddlers
+  ids:
+  - steam:1545360
+  requires: []
+- name: All My Gods
+  ids:
+  - steam:404270
+  requires: []
+- name: Demetrios - The BIG Cynical Adventure
+  ids:
+  - steam:451570
+  requires: []
+- name: Rescue Quest Gold
+  ids:
+  - steam:618370
+  requires: []
+- name: Gingerbread Story
+  ids:
+  - unresolved:source:isthereanydeal:6775:gingerbread-story
+  requires: []
+- name: The Best Of MagiCats
+  ids:
+  - unresolved:source:isthereanydeal:6775:the-best-of-magicats
+  requires: []
+- name: Age of Japan
+  ids:
+  - unresolved:source:isthereanydeal:6775:age-of-japan
+  requires: []
+- name: 'Holiday Jigsaw: Christmas'
+  ids:
+  - steam:1859110
+  requires: []
+- name: Dashing Dinos
+  ids:
+  - unresolved:source:isthereanydeal:6775:dashing-dinos
+  requires: []
+- name: Sig.Null
+  ids:
+  - steam:501930
+  requires: []
+- name: Family Vacation 2 - Road Trip
+  ids:
+  - unresolved:source:isthereanydeal:6775:family-vacation-2-road-trip
+  requires: []

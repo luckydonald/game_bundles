@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 6er Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6684/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6684/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6684/source.json
+games:
+- name: Dungeon Gambit Boy
+  ids:
+  - steam:776720
+  requires: []
+- name: 'Star Trek™: 25th Anniversary'
+  ids:
+  - steam:359650
+  requires: []
+- name: WRC 5 FIA World Rally Championship
+  ids:
+  - steam:354160
+  requires: []

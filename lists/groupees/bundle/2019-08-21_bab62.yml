@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 62 — Select 2 to 10 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7802/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7802/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7802/source.json
+games:
+- name: CENTRALIA
+  ids:
+  - steam:1122110
+  requires: []
+- name: 'MeatPossible: Chapter 1.5'
+  ids:
+  - steam:922810
+  requires: []
+- name: Jaxon The Thief
+  ids:
+  - steam:1113650
+  requires: []
+- name: Commando Dog
+  ids:
+  - steam:1103650
+  requires: []
+- name: Affliction
+  ids:
+  - steam:617590
+  requires: []
+- name: Grab Bag Game
+  ids:
+  - unresolved:source:isthereanydeal:7802:grab-bag-game
+  requires: []
+- name: Poly Towns
+  ids:
+  - steam:438730
+  requires: []
+- name: 'A New World: Kingdoms'
+  ids:
+  - steam:628650
+  requires: []
+- name: 'Epic Adventures: La Jangada'
+  ids:
+  - steam:1008320
+  requires: []
+- name: Heart and Axe
+  ids:
+  - steam:1014840
+  requires: []

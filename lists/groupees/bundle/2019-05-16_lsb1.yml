@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lock, Stock and Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7396/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7396/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7396/source.json
+games:
+- name: Virus Expansion
+  ids:
+  - unresolved:source:isthereanydeal:7396:virus-expansion
+  requires: []
+- name: Magical Eyes - Red is for Anguish
+  ids:
+  - steam:366780
+  requires: []
+- name: MidBoss
+  ids:
+  - steam:561740
+  requires: []
+- name: Phantasmata
+  ids:
+  - steam:1048790
+  requires: []
+- name: 'War of Power: The Last Fight'
+  ids:
+  - steam:1032090
+  requires: []

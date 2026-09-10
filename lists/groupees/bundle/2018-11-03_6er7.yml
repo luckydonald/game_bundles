@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 6er Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6650/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6650/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6650/source.json
+games:
+- name: 'Keyhole Spy: Student Girls'
+  ids:
+  - unresolved:source:isthereanydeal:6650:keyhole-spy-student-girls
+  requires: []
+- name: 'Honor Cry: Aftermath'
+  ids:
+  - steam:867540
+  requires: []
+- name: Echoes Of Aetheria
+  ids:
+  - steam:354740
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Darkening Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6346/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6346/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6346/source.json
+games:
+- name: 'Keep in Mind: Remastered'
+  ids:
+  - steam:643200
+  requires: []
+- name: Kukui
+  ids:
+  - unresolved:source:isthereanydeal:6346:kukui
+  requires: []
+- name: Helltown
+  ids:
+  - steam:710070
+  requires: []
+- name: Firewood Soundtrack
+  ids:
+  - steam:693910
+  requires: []
+- name: LEGIE
+  ids:
+  - steam:426050
+  requires: []
+- name: 'Keep in Mind: Remastered - Soundtrack'
+  ids:
+  - steam:804590
+  requires: []
+- name: Firewood
+  ids:
+  - steam:615180
+  requires: []

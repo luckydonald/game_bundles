@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a itch.io Bundle 6 — Select 1 to 12 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7584/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7584/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7584/source.json
+games:
+- name: Tropical Stormfront
+  ids:
+  - unresolved:source:isthereanydeal:7584:tropical-stormfront
+  requires: []
+- name: Badminton Warrior
+  ids:
+  - steam:956360
+  requires: []
+- name: Lightfish
+  ids:
+  - steam:116120
+  requires: []
+- name: 'Escape Mission: Impassable'
+  ids:
+  - unresolved:source:isthereanydeal:7584:escape-mission-impassable
+  requires: []
+- name: Tower Bombarde
+  ids:
+  - steam:669740
+  requires: []
+- name: 'Doodle God: 8-bit Mania'
+  ids:
+  - steam:538060
+  requires: []
+- name: Varenje
+  ids:
+  - steam:460060
+  requires: []
+- name: 'The Great Unknown: Houdini''s Castle'
+  ids:
+  - unresolved:source:isthereanydeal:7584:the-great-unknown-houdinis-castle
+  requires: []
+- name: 'Captain Lycop : Invasion of the Heters'
+  ids:
+  - steam:525070
+  requires: []
+- name: Stellar Interface
+  ids:
+  - steam:517330
+  requires: []
+- name: Exorcist 2
+  ids:
+  - unresolved:source:isthereanydeal:7584:exorcist-2
+  requires: []
+- name: '999'
+  ids:
+  - steam:876840
+  requires: []
