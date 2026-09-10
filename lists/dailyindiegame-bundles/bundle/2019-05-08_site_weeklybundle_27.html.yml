@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 27: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7373/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7373/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7373/source.json
+games:
+- name: Lab.Gen.
+  ids:
+  - steam:920800
+  requires: []
+- name: Fish's Trip
+  ids:
+  - steam:701960
+  requires: []
+- name: Trippy Jump
+  ids:
+  - steam:855700
+  requires: []
+- name: Endless Horde
+  ids:
+  - steam:618610
+  requires: []
+- name: Terror
+  ids:
+  - steam:900340
+  requires: []
+- name: The Sunset 2096
+  ids:
+  - steam:690820
+  requires: []
+- name: Conjuntalia
+  ids:
+  - steam:619340
+  requires: []
+- name: Telekinetic
+  ids:
+  - steam:992000
+  requires: []
+- name: 'Battle Arena: Euro Wars'
+  ids:
+  - unresolved:source:isthereanydeal:7373:battle-arena-euro-wars
+  requires: []

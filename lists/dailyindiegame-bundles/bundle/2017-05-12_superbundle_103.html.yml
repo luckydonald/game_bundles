@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 103 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5087/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5087/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5087/source.json
+games:
+- name: King Lucas
+  ids:
+  - steam:391600
+  requires: []
+- name: Langoth
+  ids:
+  - steam:581100
+  requires: []
+- name: The Cat! Porfirio's Adventure
+  ids:
+  - steam:492270
+  requires: []
+- name: The Life Of Greather
+  ids:
+  - steam:503830
+  requires: []
+- name: Save the Ninja Clan
+  ids:
+  - steam:566670
+  requires: []
+- name: Lone Leader
+  ids:
+  - steam:518800
+  requires: []

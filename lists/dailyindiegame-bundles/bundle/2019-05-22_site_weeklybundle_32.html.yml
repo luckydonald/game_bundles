@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 32 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7423/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7423/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7423/source.json
+games:
+- name: 'Cartoonway : Mini Cars'
+  ids:
+  - unresolved:source:isthereanydeal:7423:cartoonway-mini-cars
+  requires: []
+- name: Recursive Dragon
+  ids:
+  - unresolved:source:isthereanydeal:7423:recursive-dragon
+  requires: []
+- name: Master of Mutations
+  ids:
+  - unresolved:source:isthereanydeal:7423:master-of-mutations
+  requires: []
+- name: Build Bridges
+  ids:
+  - unresolved:source:isthereanydeal:7423:build-bridges
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:7423:magic-chess
+  requires: []
+- name: Magic League
+  ids:
+  - unresolved:source:isthereanydeal:7423:magic-league
+  requires: []
+- name: Achievement Machine
+  ids:
+  - unresolved:source:isthereanydeal:7423:achievement-machine
+  requires: []
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:7423:frozen-mystery
+  requires: []
+- name: 'Duckles: the Jigsaw Witch'
+  ids:
+  - steam:512700
+  requires: []

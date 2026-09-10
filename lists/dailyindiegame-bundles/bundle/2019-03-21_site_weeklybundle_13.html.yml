@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7211/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7211/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7211/source.json
+games:
+- name: Project Maze
+  ids:
+  - steam:659220
+  requires: []
+- name: Zack Y
+  ids:
+  - steam:937620
+  requires: []
+- name: Trippy Jump
+  ids:
+  - steam:855700
+  requires: []
+- name: The Christmas Gifts
+  ids:
+  - steam:897420
+  requires: []
+- name: The Sunset 2096
+  ids:
+  - steam:690820
+  requires: []
+- name: Pursuer
+  ids:
+  - steam:1013660
+  requires: []
+- name: Mall Mayhem
+  ids:
+  - steam:629400
+  requires: []
+- name: Fight For Love
+  ids:
+  - steam:989250
+  requires: []
+- name: Grab the Bottle
+  ids:
+  - steam:546410
+  requires: []

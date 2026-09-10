@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 104 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5151/source.json
+games:
+- name: Island Defense
+  ids:
+  - steam:375850
+  requires: []
+- name: Inevitable Path
+  ids:
+  - unresolved:source:isthereanydeal:5151:inevitable-path
+  requires: []
+- name: The guard of dungeon
+  ids:
+  - steam:601640
+  requires: []
+- name: '1914: Prelude to Chaos'
+  ids:
+  - steam:627950
+  requires: []
+- name: johns.game
+  ids:
+  - unresolved:source:isthereanydeal:5151:johns-game
+  requires: []
+- name: Steampunk Syndicate
+  ids:
+  - steam:585360
+  requires: []

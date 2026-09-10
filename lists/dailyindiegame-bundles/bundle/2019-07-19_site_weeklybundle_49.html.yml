@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 49 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7657/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7657/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7657/source.json
+games:
+- name: 'MEMORISE : CREATION'
+  ids:
+  - unresolved:source:isthereanydeal:7657:memorise-creation
+  requires: []
+- name: 'Cyborg Invasion Shooter 3: Savior Of The World'
+  ids:
+  - steam:1023150
+  requires: []
+- name: Quest For Wartorn Brotherhood
+  ids:
+  - steam:1076830
+  requires: []
+- name: 'Lawnmower Game 4: The Final Cut'
+  ids:
+  - steam:1064090
+  requires: []
+- name: Nightmare Simulator
+  ids:
+  - steam:809790
+  requires: []
+- name: 'Deep Race: Space'
+  ids:
+  - steam:1059160
+  requires: []
+- name: Time To Walk Alone
+  ids:
+  - steam:664030
+  requires: []
+- name: Пацанский цитатник / Russian Test
+  ids:
+  - steam:1088880
+  requires: []
+- name: Elon Must - Road to Respect
+  ids:
+  - unresolved:source:isthereanydeal:7657:elon-must-road-to-respect
+  requires: []

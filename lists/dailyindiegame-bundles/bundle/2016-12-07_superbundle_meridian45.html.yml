@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Meridian4 Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4461/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4461/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4461/source.json
+games:
+- name: 'Space Trader: Merchant Marine'
+  ids:
+  - steam:11240
+  requires: []
+- name: Obulis
+  ids:
+  - unresolved:source:isthereanydeal:4461:obulis
+  requires: []
+- name: RIP Trilogy
+  ids:
+  - steam:2540
+  requires: []
+- name: Larva Mortus
+  ids:
+  - steam:11340
+  requires: []
+- name: Starion Tactics
+  ids:
+  - steam:312960
+  requires: []
+- name: Gunnheim
+  ids:
+  - steam:371510
+  requires: []

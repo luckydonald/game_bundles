@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 33: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7434/source.json
+games:
+- name: 'Mermaid Adventures: The Frozen Time'
+  ids:
+  - steam:798610
+  requires: []
+- name: Freedom Fighter
+  ids:
+  - steam:514360
+  requires: []
+- name: A Girls Fabric Face
+  ids:
+  - steam:603810
+  requires: []
+- name: 'Codename: Ghost Hunt'
+  ids:
+  - steam:844030
+  requires: []
+- name: Naughty study for exams with a ghost
+  ids:
+  - steam:833670
+  requires: []
+- name: The Christmas Gifts
+  ids:
+  - steam:897420
+  requires: []
+- name: Supesu
+  ids:
+  - steam:879280
+  requires: []
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:7434:a-d-m-angels-demons-and-men
+  requires: []
+- name: Tupã
+  ids:
+  - steam:664630
+  requires: []
