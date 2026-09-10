@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Explorer — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6633/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6633/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6633/source.json
+games:
+- name: 'Pathfinder: Kingmaker - Explorer Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6633:pathfinder-kingmaker-explorer-edition
+  requires: []
+- name: Conan Exiles
+  ids:
+  - steam:440900
+  requires: []

@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Slitherine Pick & Mix Bundle — Select 1 Title for $4.99, 3 Titles for $9.99,
+  5 Titles for $12.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7229/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7229/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7229/source.json
+games:
+- name: Panzer Corps
+  ids:
+  - unresolved:source:isthereanydeal:7229:panzer-corps
+  requires: []
+- name: Battle Academy
+  ids:
+  - steam:287070
+  requires: []
+- name: 'Ravenmark: Scourge of Estellion'
+  ids:
+  - steam:365480
+  requires: []
+- name: 'Sovereignty: Crown of Kings'
+  ids:
+  - unresolved:source:isthereanydeal:7229:sovereignty-crown-of-kings
+  requires: []
+- name: Last Days of Old Earth
+  ids:
+  - steam:376450
+  requires: []
+- name: Alea Jacta Est
+  ids:
+  - steam:313660
+  requires: []
+- name: Thirty Years' War
+  ids:
+  - unresolved:source:isthereanydeal:7229:thirty-years-war
+  requires: []
+- name: 'Battle Academy 2: Eastern Front'
+  ids:
+  - steam:306640
+  requires: []
+- name: Advanced Tactics Gold
+  ids:
+  - steam:310390
+  requires: []
+- name: 'Star Hammer: The Vanguard Prophecy'
+  ids:
+  - steam:337680
+  requires: []
+- name: Civil War II
+  ids:
+  - steam:306630
+  requires: []
+- name: Revolution Under Siege Gold
+  ids:
+  - steam:374380
+  requires: []
+- name: 'Pike and Shot: Campaigns'
+  ids:
+  - steam:377520
+  requires: []
+- name: Vietnam '65
+  ids:
+  - steam:336080
+  requires: []
+- name: Qvadriga
+  ids:
+  - steam:297760
+  requires: []
+- name: Rise of Prussia Gold
+  ids:
+  - steam:292760
+  requires: []
+- name: 'Pandora : First Contact'
+  ids:
+  - steam:287580
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Anthology Awesome Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7242/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7242/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7242/source.json
+games:
+- name: Hammerfight
+  ids:
+  - steam:41100
+  requires: []
+- name: Kingdom Rush
+  ids:
+  - steam:246420
+  requires: []
+- name: Oknytt
+  ids:
+  - steam:286320
+  requires: []
+- name: Lovely Planet
+  ids:
+  - steam:298600
+  requires: []
+- name: Pumped BMX +
+  ids:
+  - steam:392070
+  requires: []
+- name: 'The Original Strife: Veteran Edition'
+  ids:
+  - steam:317040
+  requires: []
+- name: Crimsonland
+  ids:
+  - steam:262830
+  requires: []
+- name: War of the Human Tanks
+  ids:
+  - steam:263400
+  requires: []
+- name: 'Viscera Cleanup Detail: Santa''s Rampage'
+  ids:
+  - steam:265210
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []
+- name: Deep Dungeons of Doom
+  ids:
+  - steam:325090
+  requires: []
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:7242:system-shock-2-1999
+  requires: []

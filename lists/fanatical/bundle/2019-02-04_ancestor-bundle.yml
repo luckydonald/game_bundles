@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Ancestor Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6981/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6981/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6981/source.json
+games:
+- name: 'System Shock: Enhanced Edition'
+  ids:
+  - steam:410710
+  requires: []
+- name: I Have No Mouth, and I Must Scream
+  ids:
+  - steam:245390
+  requires: []
+- name: Shadow Man
+  ids:
+  - unresolved:source:isthereanydeal:6981:shadow-man
+  requires: []
+- name: 'The Original Strife: Veteran Edition'
+  ids:
+  - steam:317040
+  requires: []
+- name: Spirits of Xanadu
+  ids:
+  - steam:312230
+  requires: []
+- name: Metal Fatigue
+  ids:
+  - steam:888040
+  requires: []
+- name: System Shock® 2 (1999)
+  ids:
+  - unresolved:source:isthereanydeal:6981:system-shock-2-1999
+  requires: []
