@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #18 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5608/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5608/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5608/source.json
+games:
+- name: ROTII
+  ids:
+  - steam:603220
+  requires: []
+- name: Far Space Halloween edition
+  ids:
+  - unresolved:source:isthereanydeal:5608:far-space-halloween-edition
+  requires: []
+- name: Doodle God Blitz - The Rise of Egypt
+  ids:
+  - unresolved:source:isthereanydeal:5608:doodle-god-blitz-the-rise-of-egypt
+  requires: []
+- name: GEARGUNS - Tank offensive
+  ids:
+  - unresolved:source:isthereanydeal:5608:gearguns-tank-offensive
+  requires: []
+- name: The Quest for Achievements II
+  ids:
+  - unresolved:source:isthereanydeal:5608:the-quest-for-achievements-ii
+  requires: []
+- name: Steel punk Ball
+  ids:
+  - steam:679510
+  requires: []
+- name: Doodle God Blitz - Greatest Inventions
+  ids:
+  - unresolved:source:isthereanydeal:5608:doodle-god-blitz-greatest-inventions
+  requires: []
+- name: DeepFear
+  ids:
+  - unresolved:source:isthereanydeal:5608:deepfear
+  requires: []
+- name: Xbird
+  ids:
+  - unresolved:source:isthereanydeal:5608:xbird
+  requires: []
+- name: Far Space
+  ids:
+  - unresolved:source:isthereanydeal:5608:far-space
+  requires: []

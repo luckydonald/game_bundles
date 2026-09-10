@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #41 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6003/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6003/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6003/source.json
+games:
+- name: PHEER
+  ids:
+  - unresolved:source:isthereanydeal:6003:pheer
+  requires: []
+- name: If you know what I mean
+  ids:
+  - unresolved:source:isthereanydeal:6003:if-you-know-what-i-mean
+  requires: []
+- name: Reach Me
+  ids:
+  - steam:727480
+  requires: []
+- name: Spellbind
+  ids:
+  - steam:353600
+  requires: []
+- name: Psychoballs
+  ids:
+  - steam:801840
+  requires: []
+- name: Abstractism
+  ids:
+  - unresolved:source:isthereanydeal:6003:abstractism
+  requires: []
+- name: Zombie Murder Hell Arrives
+  ids:
+  - steam:810720
+  requires: []
+- name: Zeus vs Monsters - Math Game for kids
+  ids:
+  - steam:444430
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []
+- name: Captain Backwater
+  ids:
+  - steam:695830
+  requires: []
+- name: Zombie Murder
+  ids:
+  - steam:810680
+  requires: []

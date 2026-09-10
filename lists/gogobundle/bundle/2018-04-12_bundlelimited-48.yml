@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #48 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6054/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6054/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6054/source.json
+games:
+- name: Little Adventurer III
+  ids:
+  - steam:785030
+  requires: []
+- name: Monsters Attack
+  ids:
+  - unresolved:source:isthereanydeal:6054:monsters-attack
+  requires: []
+- name: Tower Defense Sudden Attack
+  ids:
+  - steam:821910
+  requires: []
+- name: Genius Calculator
+  ids:
+  - steam:812860
+  requires: []
+- name: Easy Red
+  ids:
+  - steam:741670
+  requires: []
+- name: Little Adventurer II
+  ids:
+  - steam:708630
+  requires: []
+- name: Burst Into
+  ids:
+  - steam:829080
+  requires: []
+- name: Color Circle
+  ids:
+  - steam:800330
+  requires: []
+- name: Cubic Color
+  ids:
+  - steam:800320
+  requires: []
+- name: Burst Into Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6054:burst-into-soundtrack
+  requires: []
+- name: outline
+  ids:
+  - steam:812850
+  requires: []
+- name: Turtle Lu
+  ids:
+  - steam:810740
+  requires: []

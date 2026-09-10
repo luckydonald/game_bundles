@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #35 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5904/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5904/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5904/source.json
+games:
+- name: SaveHer!
+  ids:
+  - unresolved:source:isthereanydeal:5904:saveher
+  requires: []
+- name: Defend the planet
+  ids:
+  - unresolved:source:isthereanydeal:5904:defend-the-planet
+  requires: []
+- name: Heavy Destinies
+  ids:
+  - steam:726570
+  requires: []
+- name: SoulFrost
+  ids:
+  - steam:675220
+  requires: []
+- name: Injured By Space
+  ids:
+  - unresolved:source:isthereanydeal:5904:injured-by-space
+  requires: []
+- name: 'Mission: Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:5904:mission-wolf
+  requires: []
+- name: Abstract Arena - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5904:abstract-arena-original-soundtrack
+  requires: []
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+  requires: []
+- name: Abstract Arena
+  ids:
+  - unresolved:source:isthereanydeal:5904:abstract-arena
+  requires: []
+- name: Virus Z
+  ids:
+  - steam:666290
+  requires: []
+- name: SoulFrost Original+Arranged SoundTrack
+  ids:
+  - unresolved:source:isthereanydeal:5904:soulfrost-original-and-arranged-soundtrack
+  requires: []
+- name: Robo-orders
+  ids:
+  - unresolved:source:isthereanydeal:5904:robo-orders
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #27 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5774/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5774/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5774/source.json
+games:
+- name: Evil Come
+  ids:
+  - unresolved:source:isthereanydeal:5774:evil-come
+  requires: []
+- name: Disco Time 80s VR
+  ids:
+  - steam:649880
+  requires: []
+- name: Box Life
+  ids:
+  - steam:314370
+  requires: []
+- name: Super Trench Attack 2
+  ids:
+  - steam:385360
+  requires: []
+- name: Infernales
+  ids:
+  - steam:705060
+  requires: []
+- name: 'Symploke: Legend of Gustavo Bueno (Chapter 2)'
+  ids:
+  - steam:678920
+  requires: []
+- name: Finger Ninja
+  ids:
+  - unresolved:source:isthereanydeal:5774:finger-ninja
+  requires: []
+- name: The Ultimate Heist
+  ids:
+  - steam:758400
+  requires: []
+- name: Cubit
+  ids:
+  - unresolved:source:isthereanydeal:5774:cubit
+  requires: []

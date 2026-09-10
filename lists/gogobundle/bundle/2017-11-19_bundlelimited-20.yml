@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #20 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5640/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5640/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5640/source.json
+games:
+- name: dead_file.exe
+  ids:
+  - unresolved:source:isthereanydeal:5640:dead_file-exe
+  requires: []
+- name: No Way Out
+  ids:
+  - steam:572010
+  requires: []
+- name: Potatoman Seeks The Troof OST
+  ids:
+  - steam:335170
+  requires: []
+- name: Caves!
+  ids:
+  - unresolved:source:isthereanydeal:5640:caves
+  requires: []
+- name: SQR 2
+  ids:
+  - unresolved:source:isthereanydeal:5640:sqr-2
+  requires: []
+- name: Burst
+  ids:
+  - unresolved:source:isthereanydeal:5640:burst
+  requires: []
+- name: 'Duckles: the Jigsaw Witch'
+  ids:
+  - steam:512700
+  requires: []
+- name: dead_file.mp3
+  ids:
+  - unresolved:source:isthereanydeal:5640:dead_file-mp3
+  requires: []
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500
+  requires: []
+- name: Strange Things
+  ids:
+  - unresolved:source:isthereanydeal:5640:strange-things
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #15 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5505/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5505/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5505/source.json
+games:
+- name: Gem Monster
+  ids:
+  - steam:565200
+  requires: []
+- name: TangramsVR
+  ids:
+  - steam:700940
+  requires: []
+- name: Sig.Null
+  ids:
+  - steam:501930
+  requires: []
+- name: Life Beetle
+  ids:
+  - unresolved:source:isthereanydeal:5505:life-beetle
+  requires: []
+- name: Smithy
+  ids:
+  - steam:485500
+  requires: []
+- name: A Bastard's Tale
+  ids:
+  - steam:371550
+  requires: []
+- name: Shuttle Siege
+  ids:
+  - steam:519020
+  requires: []
+- name: Jump Like A Pirate
+  ids:
+  - unresolved:source:isthereanydeal:5505:jump-like-a-pirate
+  requires: []
+- name: Janken Cards
+  ids:
+  - steam:527210
+  requires: []

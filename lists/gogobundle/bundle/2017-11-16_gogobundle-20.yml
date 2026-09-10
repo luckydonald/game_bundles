@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #20 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5635/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5635/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5635/source.json
+games:
+- name: Snowball
+  ids:
+  - steam:546550
+  requires: []
+- name: Fruit Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:5635:fruit-sudoku
+  requires: []
+- name: Hidden Object - Sweet Home
+  ids:
+  - steam:726070
+  requires: []
+- name: Retro Space Shooter
+  ids:
+  - steam:1006090
+  requires: []
+- name: Bumper
+  ids:
+  - steam:509850
+  requires: []
+- name: Bumper Halloween
+  ids:
+  - steam:548070
+  requires: []
+- name: Oh No! Bugs!
+  ids:
+  - steam:513980
+  requires: []
+- name: Gamma Bros
+  ids:
+  - steam:436470
+  requires: []
+- name: Guide The Ball
+  ids:
+  - unresolved:source:isthereanydeal:5635:guide-the-ball
+  requires: []

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #57 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6139/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6139/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6139/source.json
+games:
+- name: One Against The Galaxy
+  ids:
+  - unresolved:source:isthereanydeal:6139:one-against-the-galaxy
+  requires: []
+- name: Color Cingdom
+  ids:
+  - unresolved:source:isthereanydeal:6139:color-cingdom
+  requires: []
+- name: Simple Golfing
+  ids:
+  - unresolved:source:isthereanydeal:6139:simple-golfing
+  requires: []
+- name: LittleBigSoko
+  ids:
+  - unresolved:source:isthereanydeal:6139:littlebigsoko
+  requires: []
+- name: Dino Dawn
+  ids:
+  - steam:854160
+  requires: []
+- name: Falling words
+  ids:
+  - steam:856490
+  requires: []
+- name: Circularity
+  ids:
+  - steam:709380
+  requires: []
+- name: Ranger vs. Space Mutants
+  ids:
+  - unresolved:source:isthereanydeal:6139:ranger-vs-space-mutants
+  requires: []
+- name: 'Strike Squadron: Caracará'
+  ids:
+  - steam:507340
+  requires: []
+- name: Bird Watcher
+  ids:
+  - steam:772990
+  requires: []
+- name: Stickman Destruction
+  ids:
+  - unresolved:source:isthereanydeal:6139:stickman-destruction
+  requires: []
