@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Anthology Racing Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6440/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6440/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6440/source.json
+games:
+- name: GT Legends
+  ids:
+  - steam:44690
+  requires: []
+- name: Zero Gear
+  ids:
+  - steam:18820
+  requires: []
+- name: Riff Racer - Race Your Music!
+  ids:
+  - unresolved:source:isthereanydeal:6440:riff-racer-race-your-music
+  requires: []
+- name: Mini Motor Racing EVO
+  ids:
+  - unresolved:source:isthereanydeal:6440:mini-motor-racing-evo
+  requires: []
+- name: 'Race: The WTCC Game + Caterham Expansion'
+  ids:
+  - unresolved:source:isthereanydeal:6440:race-the-wtcc-game-and-caterham-expansion
+  requires: []
+- name: Vangers
+  ids:
+  - steam:264080
+  requires: []
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:6440:race-a-bit
+  requires: []
+- name: Little Racers STREET
+  ids:
+  - steam:262690
+  requires: []
+- name: 'Table Top Racing: World Tour'
+  ids:
+  - unresolved:source:isthereanydeal:6440:table-top-racing-world-tour
+  requires: []
+- name: Drift Streets Japan
+  ids:
+  - steam:412880
+  requires: []
+- name: Insane 2
+  ids:
+  - steam:35320
+  requires: []
+- name: BARRIER X
+  ids:
+  - steam:463150
+  requires: []
+- name: GTR Evolution Expansion Pack for RACE 07
+  ids:
+  - steam:8660
+  requires: []
+- name: Mashed Drive to Survive
+  ids:
+  - steam:281280
+  requires: []

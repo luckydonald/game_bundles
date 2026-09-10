@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Spotlight Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5806/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5806/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5806/source.json
+games:
+- name: Stash - Fanatical Edition
+  ids:
+  - unresolved:source:isthereanydeal:5806:stash-fanatical-edition
+  requires: []
+- name: Ninja Pizza Girl
+  ids:
+  - steam:319470
+  requires: []
+- name: THOTH
+  ids:
+  - steam:510620
+  requires: []
+- name: 'Mercury: Cascade into Madness'
+  ids:
+  - steam:661120
+  requires: []
+- name: Talent Not Included
+  ids:
+  - steam:485260
+  requires: []
+- name: 'A Tale of Caos: Overture'
+  ids:
+  - steam:500320
+  requires: []
+- name: Heroine Anthem Zero -Sacrifice-
+  ids:
+  - steam:537990
+  requires: []
+- name: Infinity Saga
+  ids:
+  - steam:448750
+  requires: []
+- name: Explosionade DX
+  ids:
+  - steam:373620
+  requires: []
+- name: Weapon of Choice DX
+  ids:
+  - steam:373600
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Spotlight Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6412/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6412/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6412/source.json
+games:
+- name: Illusoria
+  ids:
+  - steam:614140
+  requires: []
+- name: Dead By Murder
+  ids:
+  - steam:714300
+  requires: []
+- name: 'Eldevin : Deluxe Pack'
+  ids:
+  - steam:315050
+  requires: []
+- name: 'Eldevin: Premium Rhinotaur Pack'
+  ids:
+  - steam:337400
+  requires: []
+- name: Puzzle Puppers
+  ids:
+  - steam:578430
+  requires: []
+- name: Round Ways
+  ids:
+  - steam:876960
+  requires: []
+- name: Wunderwaffe
+  ids:
+  - steam:903160
+  requires: []
+- name: Still Not Dead
+  ids:
+  - steam:337290
+  requires: []
+- name: Haven Moon
+  ids:
+  - steam:493720
+  requires: []
+- name: 'Lethis: Daring Discoverers'
+  ids:
+  - steam:580570
+  requires: []

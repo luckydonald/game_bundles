@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5753/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5753/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5753/source.json
+games:
+- name: 'Last Dream: World Unknown'
+  ids:
+  - steam:448170
+  requires: []
+- name: Rogue Wizards
+  ids:
+  - steam:392260
+  requires: []
+- name: 'Dragon Fantasy: The Black Tome of Ice'
+  ids:
+  - steam:328000
+  requires: []
+- name: Last Dream
+  ids:
+  - steam:266230
+  requires: []
+- name: 'Dragon Fantasy: The Volumes of Westeria'
+  ids:
+  - steam:327980
+  requires: []
+- name: 'Eschalon: Book III'
+  ids:
+  - steam:257870
+  requires: []
+- name: 'Eschalon: Book II'
+  ids:
+  - steam:25620
+  requires: []
+- name: Spaceship Looter
+  ids:
+  - steam:600630
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Simulator Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6116/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6116/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6116/source.json
+games:
+- name: Giant Machines 2017
+  ids:
+  - steam:402750
+  requires: []
+- name: Funfair Ride Simulator 3
+  ids:
+  - steam:497720
+  requires: []
+- name: Revhead
+  ids:
+  - steam:589760
+  requires: []
+- name: Robot Squad Simulator 2017
+  ids:
+  - steam:405760
+  requires: []
+- name: Car Mechanic Simulator 2015
+  ids:
+  - steam:320300
+  requires: []
+- name: Demolish & Build 2017
+  ids:
+  - steam:470740
+  requires: []
+- name: Train Mechanic Simulator 2017
+  ids:
+  - steam:538810
+  requires: []
