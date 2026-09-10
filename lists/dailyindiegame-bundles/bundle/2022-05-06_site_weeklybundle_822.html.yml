@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 822 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11470/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11470/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11470/source.json
+games:
+- name: THIEF
+  ids:
+  - steam:239160
+  requires: []
+- name: Abyss
+  ids:
+  - unresolved:source:isthereanydeal:11470:abyss
+  requires: []
+- name: The Lost Island
+  ids:
+  - steam:3446020
+  requires: []
+- name: Wordle 2
+  ids:
+  - steam:1386730
+  requires: []
+- name: Wordle 3
+  ids:
+  - steam:1428820
+  requires: []
+- name: Wordle 4
+  ids:
+  - steam:1477020
+  requires: []
+- name: Within Skerry
+  ids:
+  - steam:1871510
+  requires: []
+- name: Obsessive revenge
+  ids:
+  - steam:1897430
+  requires: []
+- name: ME_iON
+  ids:
+  - steam:1963590
+  requires: []

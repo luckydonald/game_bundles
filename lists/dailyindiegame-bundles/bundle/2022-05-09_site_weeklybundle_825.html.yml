@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 825: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11480/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11480/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11480/source.json
+games:
+- name: RRRR3
+  ids:
+  - steam:1146880
+  requires: []
+- name: Vortex
+  ids:
+  - steam:383530
+  requires: []
+- name: Combiner Card Game
+  ids:
+  - unresolved:source:isthereanydeal:11480:combiner-card-game
+  requires: []
+- name: MinSweeper
+  ids:
+  - steam:726030
+  requires: []
+- name: Kick the Ball!
+  ids:
+  - unresolved:source:isthereanydeal:11480:kick-the-ball
+  requires: []
+- name: Shooting Star
+  ids:
+  - steam:1180700
+  requires: []
+- name: Kyo's Routine
+  ids:
+  - steam:1264140
+  requires: []
+- name: Booobjz
+  ids:
+  - steam:1190820
+  requires: []
+- name: P0
+  ids:
+  - steam:1405740
+  requires: []

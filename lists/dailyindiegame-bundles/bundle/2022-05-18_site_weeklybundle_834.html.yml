@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 834 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11506/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11506/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11506/source.json
+games:
+- name: VoidSpace
+  ids:
+  - steam:1150500
+  requires: []
+- name: Fishing Maniacs (TD)
+  ids:
+  - unresolved:source:isthereanydeal:11506:fishing-maniacs-td
+  requires: []
+- name: Reprogram
+  ids:
+  - steam:710670
+  requires: []
+- name: Eggys Games Flash Collection
+  ids:
+  - steam:1002520
+  requires: []
+- name: Die In The Dark
+  ids:
+  - steam:847860
+  requires: []
+- name: Gang District
+  ids:
+  - steam:1196170
+  requires: []
+- name: Ninja Turdle
+  ids:
+  - steam:1082460
+  requires: []
+- name: STOP and MOVE
+  ids:
+  - steam:1519850
+  requires: []
+- name: RollingCar
+  ids:
+  - unresolved:source:isthereanydeal:11506:rollingcar
+  requires: []

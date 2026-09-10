@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 788: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11280/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11280/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11280/source.json
+games:
+- name: Welcome to Princeland
+  ids:
+  - steam:914290
+  requires: []
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250
+  requires: []
+- name: Work Trip
+  ids:
+  - unresolved:source:isthereanydeal:11280:work-trip
+  requires: []
+- name: Discord Rich Me!
+  ids:
+  - unresolved:source:isthereanydeal:11280:discord-rich-me
+  requires: []
+- name: Burst Squad
+  ids:
+  - steam:1510380
+  requires: []
+- name: 'Among Ass 2: Butt Warfare'
+  ids:
+  - steam:1574800
+  requires: []
+- name: 'Detective Story: Reporter'
+  ids:
+  - steam:1660590
+  requires: []
+- name: Hunter Girls
+  ids:
+  - steam:1683900
+  requires: []
+- name: 'RPG: Squad battle'
+  ids:
+  - steam:1675020
+  requires: []

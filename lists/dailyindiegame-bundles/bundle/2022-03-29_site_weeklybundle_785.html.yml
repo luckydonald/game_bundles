@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 785: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11226/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11226/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11226/source.json
+games:
+- name: Pew Pew Rocket
+  ids:
+  - unresolved:source:isthereanydeal:11226:pew-pew-rocket
+  requires: []
+- name: The Doorbreaker
+  ids:
+  - steam:699480
+  requires: []
+- name: Buried Chambers
+  ids:
+  - unresolved:source:isthereanydeal:11226:buried-chambers
+  requires: []
+- name: Never Going Home
+  ids:
+  - unresolved:source:isthereanydeal:11226:never-going-home
+  requires: []
+- name: Zball VI
+  ids:
+  - unresolved:source:isthereanydeal:11226:zball-vi
+  requires: []
+- name: Athena Trivia
+  ids:
+  - steam:1225660
+  requires: []
+- name: Athena Trivia - All Answers
+  ids:
+  - steam:1650940
+  requires: []
+- name: Awesome Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:11226:awesome-puzzle
+  requires: []
+- name: Three Hundred Bucks
+  ids:
+  - unresolved:source:isthereanydeal:11226:three-hundred-bucks
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 766: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11149/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11149/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11149/source.json
+games:
+- name: Piano Bar
+  ids:
+  - unresolved:source:isthereanydeal:11149:piano-bar
+  requires: []
+- name: Sex City
+  ids:
+  - steam:1140410
+  requires: []
+- name: Girl Rugby Dash
+  ids:
+  - unresolved:source:isthereanydeal:11149:girl-rugby-dash
+  requires: []
+- name: Cyberprank Girls 2077
+  ids:
+  - unresolved:source:isthereanydeal:11149:cyberprank-girls-2077
+  requires: []
+- name: Sex Apocalypse
+  ids:
+  - steam:1351970
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 2
+  ids:
+  - steam:1482000
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 2 ArtBook
+  ids:
+  - steam:1536330
+  requires: []
+- name: LineArt Mosaic Puzzle - Erotica
+  ids:
+  - steam:1590670
+  requires: []
+- name: Erotic Jigsaw Puzzle - ArtBook
+  ids:
+  - steam:1610970
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 789: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11292/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11292/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11292/source.json
+games:
+- name: Cocktail for Beauty
+  ids:
+  - steam:1141180
+  requires: []
+- name: Borderus
+  ids:
+  - steam:1262100
+  requires: []
+- name: Stay home and play with waifu!
+  ids:
+  - steam:1298260
+  requires: []
+- name: ANIME WORLD
+  ids:
+  - unresolved:source:isthereanydeal:11292:anime-world
+  requires: []
+- name: Endless Love
+  ids:
+  - unresolved:source:isthereanydeal:11292:endless-love
+  requires: []
+- name: Erotic Jigsaw Puzzle Summer
+  ids:
+  - steam:1678790
+  requires: []
+- name: Hentai Brick Breaker
+  ids:
+  - steam:1664660
+  requires: []
+- name: Adult Puzzles - Pole Dancer
+  ids:
+  - steam:1796590
+  requires: []
+- name: Anime Jigsaw Girls - Office
+  ids:
+  - steam:1810600
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 800 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11369/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11369/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11369/source.json
+games:
+- name: Hacker Series
+  ids:
+  - steam:536510
+  requires: []
+- name: Dragon Chase
+  ids:
+  - steam:1011240
+  requires: []
+- name: 'Codename: Ghost Hunt'
+  ids:
+  - steam:844030
+  requires: []
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+  requires: []
+- name: Cecil Run
+  ids:
+  - unresolved:source:isthereanydeal:11369:cecil-run
+  requires: []
+- name: Euler Wars
+  ids:
+  - steam:1246320
+  requires: []
+- name: Fire Guild
+  ids:
+  - unresolved:source:isthereanydeal:11369:fire-guild
+  requires: []
+- name: DriftZ
+  ids:
+  - steam:1322180
+  requires: []
+- name: Snake In The Cube
+  ids:
+  - steam:1358510
+  requires: []
