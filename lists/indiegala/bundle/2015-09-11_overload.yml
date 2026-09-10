@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Overload Bundle — Tier 2
-tier: 2
+name: Overload Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2442/
@@ -13,30 +15,60 @@ games:
 - name: Hamlet
   ids:
   - steam:673580
+  requires: []
+  tiers:
+  - 2
 - name: Rats - Time is running out!
   ids:
   - unresolved:source:isthereanydeal:2442:rats-time-is-running-out
+  requires: []
+  tiers:
+  - 2
 - name: Moonlight Minions
   ids:
   - steam:311170
+  requires: []
+  tiers:
+  - 2
 - name: The Protocol
   ids:
   - unresolved:source:isthereanydeal:2442:the-protocol
+  requires: []
+  tiers:
+  - 2
 - name: Quantum Flux
   ids:
   - steam:396610
+  requires: []
+  tiers:
+  - 2
 - name: Bernie Needs Love
   ids:
   - steam:373120
+  requires: []
+  tiers:
+  - 2
 - name: Spectraball
   ids:
   - steam:18300
+  requires: []
+  tiers:
+  - 2
 - name: Way of Gold and Steel
   ids:
   - steam:373730
+  requires: []
+  tiers:
+  - 2
 - name: Seeders
   ids:
   - steam:363670
+  requires: []
+  tiers:
+  - 2
 - name: Earth Overclocked
   ids:
   - steam:387060
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fruitbat Factory Bundle (2017) — Tier 4
-tier: 4
+name: Fruitbat Factory Bundle (2017)
+tiers:
+- rank: 4
+  name: Tier 4
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5470/
@@ -13,51 +15,102 @@ games:
 - name: 100% Orange Juice - Sham & Sherry Character Pack
   ids:
   - steam:425360
+  requires: []
+  tiers:
+  - 4
 - name: RE:HT - War of the Human Tanks Remix Album
   ids:
   - steam:578560
+  requires: []
+  tiers:
+  - 4
 - name: Sound of the Human Tanks
   ids:
   - steam:271010
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Acceleration Pack
   ids:
   - steam:537330
+  requires: []
+  tiers:
+  - 4
 - name: War of the Human Tanks
   ids:
   - steam:263400
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice
   ids:
   - steam:282800
+  requires: []
+  tiers:
+  - 4
 - name: Neko Navy
   ids:
   - steam:592270
+  requires: []
+  tiers:
+  - 4
 - name: QP Shooting - Dangerous!!
   ids:
   - steam:316600
+  requires: []
+  tiers:
+  - 4
 - name: War of the Human Tanks - Limited Operations
   ids:
   - steam:301930
+  requires: []
+  tiers:
+  - 4
 - name: 200% Mixed Juice!
   ids:
   - steam:335190
+  requires: []
+  tiers:
+  - 4
 - name: ManaCollect
   ids:
   - steam:335200
+  requires: []
+  tiers:
+  - 4
 - name: Enigma
   ids:
   - steam:494100
+  requires: []
+  tiers:
+  - 4
 - name: Magical Eyes - Red is for Anguish
   ids:
   - steam:366780
+  requires: []
+  tiers:
+  - 4
 - name: Miniature Garden
   ids:
   - steam:494170
+  requires: []
+  tiers:
+  - 4
 - name: Sora
   ids:
   - steam:390730
+  requires: []
+  tiers:
+  - 4
 - name: Lionheart
   ids:
   - unresolved:source:isthereanydeal:5470:lionheart
+  requires: []
+  tiers:
+  - 4
 - name: SeaBed
   ids:
   - steam:583090
+  requires: []
+  tiers:
+  - 4

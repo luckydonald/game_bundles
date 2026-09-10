@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Gamepedia Online Multiplayer Bundle — entire-12-item-bundle
-tier: 3
+name: Gamepedia Online Multiplayer Bundle
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3064/
@@ -13,36 +15,72 @@ games:
 - name: Dirty Bomb - The Ultimate Starter Pack
   ids:
   - unresolved:source:isthereanydeal:3064:dirty-bomb-the-ultimate-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Heroes & Generals (Early Access) — Weekend Warrior Pack
   ids:
   - unresolved:source:isthereanydeal:3064:heroes-and-generals-early-access-weekend-warrior-pack
+  requires: []
+  tiers:
+  - 3
 - name: WildStar - Jumpstart Pack
   ids:
   - unresolved:source:isthereanydeal:3064:wildstar-jumpstart-pack
+  requires: []
+  tiers:
+  - 3
 - name: Awesomenauts - the 2D moba
   ids:
   - unresolved:source:isthereanydeal:3064:awesomenauts-the-2d-moba
+  requires: []
+  tiers:
+  - 3
 - name: Robocraft (Early Access) - Twin Robot Pack
   ids:
   - unresolved:source:isthereanydeal:3064:robocraft-early-access-twin-robot-pack
+  requires: []
+  tiers:
+  - 3
 - name: Vertiginous Golf 4 Pack
   ids:
   - unresolved:source:isthereanydeal:3064:vertiginous-golf-4-pack
+  requires: []
+  tiers:
+  - 3
 - name: War of the Vikings
   ids:
   - unresolved:source:isthereanydeal:3064:war-of-the-vikings
+  requires: []
+  tiers:
+  - 3
 - name: SMITE - Freya + Pixel Buster Skin
   ids:
   - unresolved:source:isthereanydeal:3064:smite-freya-and-pixel-buster-skin
+  requires: []
+  tiers:
+  - 3
 - name: Neverwinter - Humble Pirate Pack
   ids:
   - unresolved:source:isthereanydeal:3064:neverwinter-humble-pirate-pack
+  requires: []
+  tiers:
+  - 3
 - name: Dirty Bomb - Humble Bundle Loadout Cards and Case
   ids:
   - unresolved:source:isthereanydeal:3064:dirty-bomb-humble-bundle-loadout-cards-and-case
+  requires: []
+  tiers:
+  - 3
 - name: Path of Exile - Arctic Crown + Cobra Pet
   ids:
   - unresolved:source:isthereanydeal:3064:path-of-exile-arctic-crown-and-cobra-pet
+  requires: []
+  tiers:
+  - 3
 - name: 'Life is Feudal: Your Own'
   ids:
   - steam:290080
+  requires: []
+  tiers:
+  - 3

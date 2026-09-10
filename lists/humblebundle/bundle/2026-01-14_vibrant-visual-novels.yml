@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Vibrant Visual Novels Bundle — entire-11-item-bundle
-tier: 2
+name: Vibrant Visual Novels Bundle
+tiers:
+- rank: 2
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15783/
@@ -13,33 +15,66 @@ games:
 - name: Eden
   ids:
   - steam:315810
+  requires: []
+  tiers:
+  - 2
 - name: Go! Go! Nippon! Complete Collection
   ids:
   - unresolved:source:isthereanydeal:15783:go-go-nippon-complete-collection
+  requires: []
+  tiers:
+  - 2
 - name: If My Heart Had Wings
   ids:
   - steam:326480
+  requires: []
+  tiers:
+  - 2
 - name: Gal*Gun Returns
   ids:
   - steam:1425730
+  requires: []
+  tiers:
+  - 2
 - name: 'Endless Monday: Dreams and Deadlines'
   ids:
   - steam:2262610
+  requires: []
+  tiers:
+  - 2
 - name: A Sky Full of Stars
   ids:
   - steam:745960
+  requires: []
+  tiers:
+  - 2
 - name: 'If My Heart Had Wings -Flight Diary- - New Wings: Akari'
   ids:
   - steam:1038710
+  requires: []
+  tiers:
+  - 2
 - name: If My Heart Had Wings -Flight Diary
   ids:
   - steam:923810
+  requires: []
+  tiers:
+  - 2
 - name: The Expression Amrilato
   ids:
   - steam:1044490
+  requires: []
+  tiers:
+  - 2
 - name: NEEDY STREAMER OVERLOAD
   ids:
   - steam:1451940
+  requires: []
+  tiers:
+  - 2
 - name: 'Sucker for Love: Date to Die For'
   ids:
   - steam:2240790
+  requires: []
+  tiers:
+  - 2

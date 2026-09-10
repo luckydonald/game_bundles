@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Conquest Bundle — Tier 2
-tier: 2
+name: Indie Conquest Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6038/
@@ -13,30 +15,60 @@ games:
 - name: Trials of the Gauntlet
   ids:
   - steam:764410
+  requires: []
+  tiers:
+  - 2
 - name: ToaZZle
   ids:
   - steam:817470
+  requires: []
+  tiers:
+  - 2
 - name: MRS SNAKE
   ids:
   - steam:811910
+  requires: []
+  tiers:
+  - 2
 - name: Power War:The First Men
   ids:
   - steam:684400
+  requires: []
+  tiers:
+  - 2
 - name: Pichon
   ids:
   - steam:497190
+  requires: []
+  tiers:
+  - 2
 - name: Simple Story - Alex
   ids:
   - steam:814200
+  requires: []
+  tiers:
+  - 2
 - name: Planar Conquest
   ids:
   - steam:449300
+  requires: []
+  tiers:
+  - 2
 - name: Robin of Loxley the Legend of Sherwood
   ids:
   - steam:692090
+  requires: []
+  tiers:
+  - 2
 - name: 'Sea Of Fatness: Save Humanity Together'
   ids:
   - steam:721740
+  requires: []
+  tiers:
+  - 2
 - name: E.Z
   ids:
   - steam:795040
+  requires: []
+  tiers:
+  - 2

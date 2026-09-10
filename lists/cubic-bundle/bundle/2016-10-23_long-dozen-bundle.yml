@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Long Dozen Bundle — Tier 2
-tier: 2
+name: Long Dozen Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4237/
@@ -13,39 +15,78 @@ games:
 - name: The Rebel
   ids:
   - steam:452650
+  requires: []
+  tiers:
+  - 2
 - name: 'Go Mission: Space Travel'
   ids:
   - unresolved:source:isthereanydeal:4237:go-mission-space-travel
+  requires: []
+  tiers:
+  - 2
 - name: Bibou
   ids:
   - unresolved:source:isthereanydeal:4237:bibou
+  requires: []
+  tiers:
+  - 2
 - name: Kabitis
   ids:
   - unresolved:source:isthereanydeal:4237:kabitis
+  requires: []
+  tiers:
+  - 2
 - name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
   ids:
   - steam:358080
+  requires: []
+  tiers:
+  - 2
 - name: Totem
   ids:
   - unresolved:source:isthereanydeal:4237:totem
+  requires: []
+  tiers:
+  - 2
 - name: Ping Ping
   ids:
   - unresolved:source:isthereanydeal:4237:ping-ping
+  requires: []
+  tiers:
+  - 2
 - name: See No Evil
   ids:
   - steam:313830
+  requires: []
+  tiers:
+  - 2
 - name: Dear RED - Extended
   ids:
   - steam:453850
+  requires: []
+  tiers:
+  - 2
 - name: The First Spark
   ids:
   - unresolved:source:isthereanydeal:4237:the-first-spark
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: The Void'
   ids:
   - unresolved:source:isthereanydeal:4237:goocubelets-the-void
+  requires: []
+  tiers:
+  - 2
 - name: Star Project
   ids:
   - unresolved:source:isthereanydeal:4237:star-project
+  requires: []
+  tiers:
+  - 2
 - name: Overhell
   ids:
   - unresolved:source:isthereanydeal:4237:overhell
+  requires: []
+  tiers:
+  - 2

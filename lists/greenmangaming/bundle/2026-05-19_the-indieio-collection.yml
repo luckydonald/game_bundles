@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The indie.io Collection — Reverie
-tier: 3
+name: The indie.io Collection
+tiers:
+- rank: 3
+  name: Reverie
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16175/
@@ -13,33 +15,66 @@ games:
 - name: To The Rescue!
   ids:
   - steam:946720
+  requires: []
+  tiers:
+  - 3
 - name: Blood And Zombies
   ids:
   - steam:1739880
+  requires: []
+  tiers:
+  - 3
 - name: 'Symphony of War: The Nephilim Saga'
   ids:
   - steam:1488200
+  requires: []
+  tiers:
+  - 3
 - name: Dust Fleet
   ids:
   - steam:406160
+  requires: []
+  tiers:
+  - 3
 - name: One More Island
   ids:
   - steam:1454160
+  requires: []
+  tiers:
+  - 3
 - name: Troublemaker
   ids:
   - steam:1498740
+  requires: []
+  tiers:
+  - 3
 - name: Everwarder
   ids:
   - steam:2307170
+  requires: []
+  tiers:
+  - 3
 - name: Dream Tactics
   ids:
   - steam:1897650
+  requires: []
+  tiers:
+  - 3
 - name: Echoes of the Plum Grove
   ids:
   - steam:1536090
+  requires: []
+  tiers:
+  - 3
 - name: Immortal Hunters
   ids:
   - steam:2336760
+  requires: []
+  tiers:
+  - 3
 - name: 'GI Joe: Wrath of Cobra'
   ids:
   - steam:2516170
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #63 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #63'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5898/
@@ -13,33 +15,66 @@ games:
 - name: 'Last Anime boy: Saving loli'
   ids:
   - steam:750210
+  requires: []
+  tiers:
+  - 2
 - name: Radar Warfare
   ids:
   - steam:724130
+  requires: []
+  tiers:
+  - 2
 - name: Loops of Zen
   ids:
   - steam:563710
+  requires: []
+  tiers:
+  - 2
 - name: Bouncing Duck Simulator
   ids:
   - steam:696560
+  requires: []
+  tiers:
+  - 2
 - name: CUBOTS - The Origins
   ids:
   - steam:636400
+  requires: []
+  tiers:
+  - 2
 - name: MouseCraft
   ids:
   - steam:252750
+  requires: []
+  tiers:
+  - 2
 - name: 'Vzerthos: Heir of Thunder'
   ids:
   - steam:536450
+  requires: []
+  tiers:
+  - 2
 - name: Criminal Bundle
   ids:
   - steam:777040
+  requires: []
+  tiers:
+  - 2
 - name: Shooty Squad
   ids:
   - steam:681060
+  requires: []
+  tiers:
+  - 2
 - name: Bike Rush
   ids:
   - steam:641910
+  requires: []
+  tiers:
+  - 2
 - name: Vesta
   ids:
   - steam:646370
+  requires: []
+  tiers:
+  - 2

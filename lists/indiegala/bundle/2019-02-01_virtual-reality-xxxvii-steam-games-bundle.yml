@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XXXVII Bundle — Tier 2
-tier: 2
+name: Virtual Reality XXXVII Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6972/
@@ -13,24 +15,48 @@ games:
 - name: Frantic Freighter
   ids:
   - steam:503150
+  requires: []
+  tiers:
+  - 2
 - name: Vehicle VR
   ids:
   - steam:648810
+  requires: []
+  tiers:
+  - 2
 - name: The Secret of Puffin Cove
   ids:
   - unresolved:source:isthereanydeal:6972:the-secret-of-puffin-cove
+  requires: []
+  tiers:
+  - 2
 - name: Fat Foods
   ids:
   - steam:779580
+  requires: []
+  tiers:
+  - 2
 - name: Rascals
   ids:
   - unresolved:source:isthereanydeal:6972:rascals
+  requires: []
+  tiers:
+  - 2
 - name: VR Shooter Guns
   ids:
   - steam:489160
+  requires: []
+  tiers:
+  - 2
 - name: Light and Dance VR - Music, Action, Relaxation
   ids:
   - steam:576720
+  requires: []
+  tiers:
+  - 2
 - name: 'Ahros: One warrior chronicle'
   ids:
   - steam:518110
+  requires: []
+  tiers:
+  - 2

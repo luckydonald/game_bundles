@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: DeckBuilder Bonanza Bundle — entire-6-item-bundle
-tier: 3
+name: DeckBuilder Bonanza Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14932/
@@ -13,18 +15,36 @@ games:
 - name: 'Ash of Gods: The Way'
   ids:
   - steam:1293460
+  requires: []
+  tiers:
+  - 3
 - name: 'Death Roads: Tournament'
   ids:
   - steam:1619570
+  requires: []
+  tiers:
+  - 3
 - name: Hadean Tactics
   ids:
   - steam:1260590
+  requires: []
+  tiers:
+  - 3
 - name: Backpack Hero
   ids:
   - steam:1970580
+  requires: []
+  tiers:
+  - 3
 - name: HELLCARD
   ids:
   - steam:1201540
+  requires: []
+  tiers:
+  - 3
 - name: 'Fights in Tight Spaces: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:14932:fights-in-tight-spaces-complete-edition
+  requires: []
+  tiers:
+  - 3

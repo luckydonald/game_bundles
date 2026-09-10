@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Steamulating Bundle — Tier 2
-tier: 2
+name: Steamulating Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3447/
@@ -13,36 +15,72 @@ games:
 - name: Oknytt
   ids:
   - steam:286320
+  requires: []
+  tiers:
+  - 2
 - name: Akane the Kunoichi
   ids:
   - steam:291130
+  requires: []
+  tiers:
+  - 2
 - name: Death Goat
   ids:
   - unresolved:source:isthereanydeal:3447:death-goat
+  requires: []
+  tiers:
+  - 2
 - name: Our Love Will Grow
   ids:
   - steam:423770
+  requires: []
+  tiers:
+  - 2
 - name: Galacide
   ids:
   - steam:356790
+  requires: []
+  tiers:
+  - 2
 - name: Blade Symphony
   ids:
   - steam:225600
+  requires: []
+  tiers:
+  - 2
 - name: The Dwarf Run
   ids:
   - steam:395420
+  requires: []
+  tiers:
+  - 2
 - name: Jackal
   ids:
   - steam:3124230
+  requires: []
+  tiers:
+  - 2
 - name: The Last Photon
   ids:
   - unresolved:source:isthereanydeal:3447:the-last-photon
+  requires: []
+  tiers:
+  - 2
 - name: Olympia Rising
   ids:
   - steam:295910
+  requires: []
+  tiers:
+  - 2
 - name: Hero of the Kingdom II
   ids:
   - steam:346560
+  requires: []
+  tiers:
+  - 2
 - name: 'Q.U.B.E: Director''s Cut'
   ids:
   - unresolved:source:isthereanydeal:3447:q-u-b-e-directors-cut
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dangerous Worlds Bundle — entire-6-item-bundle
-tier: 3
+name: Dangerous Worlds Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10797/
@@ -13,18 +15,36 @@ games:
 - name: 'Kingdom: New Lands'
   ids:
   - steam:496300
+  requires: []
+  tiers:
+  - 3
 - name: Among Us
   ids:
   - steam:945360
+  requires: []
+  tiers:
+  - 3
 - name: 'Kingdom: Two Crowns'
   ids:
   - steam:701160
+  requires: []
+  tiers:
+  - 3
 - name: Generation Zero®
   ids:
   - steam:704270
+  requires: []
+  tiers:
+  - 3
 - name: LEMNIS GATE
   ids:
   - unresolved:source:isthereanydeal:10797:lemnis-gate
+  requires: []
+  tiers:
+  - 3
 - name: 'State of Decay 2: Juggernaut Edition'
   ids:
   - steam:495420
+  requires: []
+  tiers:
+  - 3

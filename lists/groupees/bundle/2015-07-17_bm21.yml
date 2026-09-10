@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 21 — Tier 2
-tier: 2
+name: Be Mine 21
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2240/
@@ -13,21 +15,42 @@ games:
 - name: FragFest
   ids:
   - unresolved:source:isthereanydeal:2240:fragfest
+  requires: []
+  tiers:
+  - 2
 - name: Sector
   ids:
   - steam:366960
+  requires: []
+  tiers:
+  - 2
 - name: Simple Rockets
   ids:
   - unresolved:source:isthereanydeal:2240:simple-rockets
+  requires: []
+  tiers:
+  - 2
 - name: 'Kingdom Wars 2: Battles'
   ids:
   - unresolved:source:isthereanydeal:2240:kingdom-wars-2-battles
+  requires: []
+  tiers:
+  - 2
 - name: Clandestinity of Elsie
   ids:
   - steam:379320
+  requires: []
+  tiers:
+  - 2
 - name: 'Moebius: Empire Rising'
   ids:
   - steam:264520
+  requires: []
+  tiers:
+  - 2
 - name: Cosmochoria
   ids:
   - steam:293240
+  requires: []
+  tiers:
+  - 2

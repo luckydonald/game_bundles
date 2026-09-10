@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Ripper Bundle 2 — Tier 2
-tier: 2
+name: Ripper Bundle 2
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13373/
@@ -13,21 +15,42 @@ games:
 - name: Cossacks 3
   ids:
   - steam:333420
+  requires: []
+  tiers:
+  - 2
 - name: 'Life is Feudal: Forest Village'
   ids:
   - steam:496460
+  requires: []
+  tiers:
+  - 2
 - name: Moonlighter
   ids:
   - steam:606150
+  requires: []
+  tiers:
+  - 2
 - name: Even the Ocean
   ids:
   - steam:265470
+  requires: []
+  tiers:
+  - 2
 - name: 'Life is Feudal: Your Own'
   ids:
   - steam:290080
+  requires: []
+  tiers:
+  - 2
 - name: Luck be a Landlord
   ids:
   - steam:1404850
+  requires: []
+  tiers:
+  - 2
 - name: Coromon
   ids:
   - steam:1218210
+  requires: []
+  tiers:
+  - 2

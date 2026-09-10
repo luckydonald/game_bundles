@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Rush — Tier 2
-tier: 2
+name: Indie Rush
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4495/
@@ -13,36 +15,72 @@ games:
 - name: The Adventures of Tree
   ids:
   - steam:354860
+  requires: []
+  tiers:
+  - 2
 - name: The Magical Silence
   ids:
   - unresolved:source:isthereanydeal:4495:the-magical-silence
+  requires: []
+  tiers:
+  - 2
 - name: The Last Error
   ids:
   - unresolved:source:isthereanydeal:4495:the-last-error
+  requires: []
+  tiers:
+  - 2
 - name: GET THE GEMS
   ids:
   - steam:500940
+  requires: []
+  tiers:
+  - 2
 - name: Mimic Arena
   ids:
   - steam:432620
+  requires: []
+  tiers:
+  - 2
 - name: Orczz
   ids:
   - steam:502200
+  requires: []
+  tiers:
+  - 2
 - name: Adrenaline adventure
   ids:
   - unresolved:source:isthereanydeal:4495:adrenaline-adventure
+  requires: []
+  tiers:
+  - 2
 - name: 'Sarab: The Dark Tower'
   ids:
   - unresolved:source:isthereanydeal:4495:sarab-the-dark-tower
+  requires: []
+  tiers:
+  - 2
 - name: Primitive Road
   ids:
   - steam:552270
+  requires: []
+  tiers:
+  - 2
 - name: Magic Tavern
   ids:
   - steam:560960
+  requires: []
+  tiers:
+  - 2
 - name: Runestone Keeper
   ids:
   - steam:339400
+  requires: []
+  tiers:
+  - 2
 - name: Timber! The Logging Experts
   ids:
   - steam:553100
+  requires: []
+  tiers:
+  - 2

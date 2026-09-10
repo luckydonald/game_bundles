@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Reverberation Bundle — Tier 2
-tier: 2
+name: Reverberation Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3268/
@@ -13,36 +15,72 @@ games:
 - name: Project Root
   ids:
   - steam:284970
+  requires: []
+  tiers:
+  - 2
 - name: 'Shadowgate: MacVenture Series'
   ids:
   - steam:343800
+  requires: []
+  tiers:
+  - 2
 - name: 'Sherlock Holmes Consulting Detective: The Case of the Mystified Murderess'
   ids:
   - steam:376790
+  requires: []
+  tiers:
+  - 2
 - name: Guncraft
   ids:
   - steam:241720
+  requires: []
+  tiers:
+  - 2
 - name: 'Orc Attack: Flatulent Rebellion'
   ids:
   - steam:268520
+  requires: []
+  tiers:
+  - 2
 - name: Edge of Space
   ids:
   - steam:238240
+  requires: []
+  tiers:
+  - 2
 - name: Shadowgate
   ids:
   - steam:294440
+  requires: []
+  tiers:
+  - 2
 - name: Trash TV
   ids:
   - steam:343840
+  requires: []
+  tiers:
+  - 2
 - name: 'Sherlock Holmes Consulting Detective: The Case of the Tin Soldier'
   ids:
   - steam:376780
+  requires: []
+  tiers:
+  - 2
 - name: Fenix Rage
   ids:
   - steam:294460
+  requires: []
+  tiers:
+  - 2
 - name: Sherlock Holmes Consulting Detective
   ids:
   - unresolved:source:isthereanydeal:3268:sherlock-holmes-consulting-detective
+  requires: []
+  tiers:
+  - 2
 - name: 'The Uninvited: MacVenture Series'
   ids:
   - steam:343810
+  requires: []
+  tiers:
+  - 2

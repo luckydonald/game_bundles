@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Myst & More Bundle — entire-11-item-bundle
-tier: 3
+name: Myst & More Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11014/
@@ -13,33 +15,66 @@ games:
 - name: Cosmic Osmo and the Worlds Beyond the Mackerel
   ids:
   - steam:63620
+  requires: []
+  tiers:
+  - 3
 - name: Spelunx and the Caves of Mr. Seudo
   ids:
   - steam:63640
+  requires: []
+  tiers:
+  - 3
 - name: 'Myst: Masterpiece Edition'
   ids:
   - steam:63660
+  requires: []
+  tiers:
+  - 3
 - name: 'The Manhole: Masterpiece Edition'
   ids:
   - steam:63630
+  requires: []
+  tiers:
+  - 3
 - name: 'Uru: Complete Chronicles'
   ids:
   - steam:63650
+  requires: []
+  tiers:
+  - 3
 - name: 'Myst V: End of Ages'
   ids:
   - steam:208110
+  requires: []
+  tiers:
+  - 3
 - name: Riven (1997)
   ids:
   - steam:63610
+  requires: []
+  tiers:
+  - 3
 - name: Obduction
   ids:
   - steam:306760
+  requires: []
+  tiers:
+  - 3
 - name: 'realMyst: Masterpiece Edition'
   ids:
   - steam:244430
+  requires: []
+  tiers:
+  - 3
 - name: 'Myst IV: Revelation'
   ids:
   - steam:925940
+  requires: []
+  tiers:
+  - 3
 - name: 'Myst III: Exile'
   ids:
   - steam:925930
+  requires: []
+  tiers:
+  - 3

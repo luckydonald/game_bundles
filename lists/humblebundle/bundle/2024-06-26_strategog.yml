@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Strate-GOG Bundle — entire-6-item-bundle
-tier: 3
+name: Strate-GOG Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14162/
@@ -13,18 +15,36 @@ games:
 - name: SpellForce 3 Reforced
   ids:
   - steam:311290
+  requires: []
+  tiers:
+  - 3
 - name: Hard West 2
   ids:
   - steam:1282410
+  requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval'
   ids:
   - steam:1368870
+  requires: []
+  tiers:
+  - 3
 - name: Showgunners
   ids:
   - steam:1155330
+  requires: []
+  tiers:
+  - 3
 - name: Railgrade
   ids:
   - steam:1355090
+  requires: []
+  tiers:
+  - 3
 - name: 'Expeditions: Rome'
   ids:
   - steam:987840
+  requires: []
+  tiers:
+  - 3

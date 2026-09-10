@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Catch My Drift: Offroad & Rally Racing Bundle — entire-8-item-bundle'
-tier: 3
+name: 'Catch My Drift: Offroad & Rally Racing Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13985/
@@ -13,24 +15,48 @@ games:
 - name: MudRunner
   ids:
   - steam:675010
+  requires: []
+  tiers:
+  - 3
 - name: WRC 9 FIA World Rally Championship
   ids:
   - steam:1267540
+  requires: []
+  tiers:
+  - 3
 - name: Circuit Superstars
   ids:
   - steam:1097130
+  requires: []
+  tiers:
+  - 3
 - name: Inertial Drift
   ids:
   - steam:1184480
+  requires: []
+  tiers:
+  - 3
 - name: Inertial Drift - Twilight Rivals
   ids:
   - steam:2075290
+  requires: []
+  tiers:
+  - 3
 - name: art of rally
   ids:
   - steam:550320
+  requires: []
+  tiers:
+  - 3
 - name: WRC 10 FIA World Rally Championship
   ids:
   - steam:1462810
+  requires: []
+  tiers:
+  - 3
 - name: TRAIL OUT
   ids:
   - steam:1664220
+  requires: []
+  tiers:
+  - 3

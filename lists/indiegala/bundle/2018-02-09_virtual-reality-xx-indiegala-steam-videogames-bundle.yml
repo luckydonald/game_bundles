@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XX Bundle — Tier 2
-tier: 2
+name: Virtual Reality XX Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5879/
@@ -13,30 +15,60 @@ games:
 - name: StickDodgeVR
   ids:
   - steam:667930
+  requires: []
+  tiers:
+  - 2
 - name: Wrath of Loki VR Adventure
   ids:
   - steam:650860
+  requires: []
+  tiers:
+  - 2
 - name: Top Secret
   ids:
   - steam:613980
+  requires: []
+  tiers:
+  - 2
 - name: Temple Raid VR
   ids:
   - steam:697910
+  requires: []
+  tiers:
+  - 2
 - name: 'Quar: Battle for Gate 18'
   ids:
   - steam:436940
+  requires: []
+  tiers:
+  - 2
 - name: Across
   ids:
   - steam:547740
+  requires: []
+  tiers:
+  - 2
 - name: 3D Mahjong worlds
   ids:
   - steam:686620
+  requires: []
+  tiers:
+  - 2
 - name: Trainscape
   ids:
   - steam:565910
+  requires: []
+  tiers:
+  - 2
 - name: Hangry Bunnies From Mars
   ids:
   - steam:672910
+  requires: []
+  tiers:
+  - 2
 - name: The Dream Collector
   ids:
   - steam:750850
+  requires: []
+  tiers:
+  - 2

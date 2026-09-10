@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Outright Games Summer Break Bundle — entire-10-item-bundle
-tier: 3
+name: Outright Games Summer Break Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11769/
@@ -13,30 +15,60 @@ games:
 - name: Crayola Scoot
   ids:
   - unresolved:source:isthereanydeal:11769:crayola-scoot
+  requires: []
+  tiers:
+  - 3
 - name: Ben 10
   ids:
   - steam:703180
+  requires: []
+  tiers:
+  - 3
 - name: 'Adventure Time: Pirates of the Enchiridion'
   ids:
   - steam:728240
+  requires: []
+  tiers:
+  - 3
 - name: DreamWorks Dragons Dawn of New Riders
   ids:
   - steam:896960
+  requires: []
+  tiers:
+  - 3
 - name: 'TRANSFORMERS: BATTLEGROUNDS'
   ids:
   - unresolved:source:isthereanydeal:11769:transformers-battlegrounds
+  requires: []
+  tiers:
+  - 3
 - name: 'JUMANJI: The Video Game'
   ids:
   - steam:896950
+  requires: []
+  tiers:
+  - 3
 - name: 'Paw Patrol: On A Roll'
   ids:
   - steam:758730
+  requires: []
+  tiers:
+  - 3
 - name: 'Ben 10: Power Trip'
   ids:
   - steam:1063040
+  requires: []
+  tiers:
+  - 3
 - name: PAW Patrol Mighty Pups Save Adventure Bay
   ids:
   - steam:1374990
+  requires: []
+  tiers:
+  - 3
 - name: My Friend Peppa Pig
   ids:
   - steam:1635590
+  requires: []
+  tiers:
+  - 3

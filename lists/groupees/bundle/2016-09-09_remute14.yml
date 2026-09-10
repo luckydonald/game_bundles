@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute's Futuristic Space Dream Bundle — Tier 2
-tier: 2
+name: Remute's Futuristic Space Dream Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4020/
@@ -13,39 +15,78 @@ games:
 - name: Evol Ether
   ids:
   - unresolved:source:isthereanydeal:4020:evol-ether
+  requires: []
+  tiers:
+  - 2
 - name: Among Thorns
   ids:
   - unresolved:source:isthereanydeal:4020:among-thorns
+  requires: []
+  tiers:
+  - 2
 - name: IACTURA
   ids:
   - steam:512770
+  requires: []
+  tiers:
+  - 2
 - name: Megapolis
   ids:
   - steam:485080
+  requires: []
+  tiers:
+  - 2
 - name: Bibou
   ids:
   - unresolved:source:isthereanydeal:4020:bibou
+  requires: []
+  tiers:
+  - 2
 - name: Worldsmith
   ids:
   - unresolved:source:isthereanydeal:4020:worldsmith
+  requires: []
+  tiers:
+  - 2
 - name: _rampant
   ids:
   - unresolved:source:isthereanydeal:4020:_rampant
+  requires: []
+  tiers:
+  - 2
 - name: Void
   ids:
   - steam:503710
+  requires: []
+  tiers:
+  - 2
 - name: Evol Sim
   ids:
   - unresolved:source:isthereanydeal:4020:evol-sim
+  requires: []
+  tiers:
+  - 2
 - name: RŌA
   ids:
   - steam:851880
+  requires: []
+  tiers:
+  - 2
 - name: Ramblings
   ids:
   - unresolved:source:isthereanydeal:4020:ramblings
+  requires: []
+  tiers:
+  - 2
 - name: EggK47
   ids:
   - steam:533850
+  requires: []
+  tiers:
+  - 2
 - name: Highway to the Moon
   ids:
   - steam:488330
+  requires: []
+  tiers:
+  - 2

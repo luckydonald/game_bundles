@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'We Will Always Be Here: Pride Month 2026 — entire-11-item-bundle'
-tier: 2
+name: 'We Will Always Be Here: Pride Month 2026'
+tiers:
+- rank: 2
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16234/
@@ -13,33 +15,66 @@ games:
 - name: Pesterquest
   ids:
   - steam:1144030
+  requires: []
+  tiers:
+  - 2
 - name: We Know the Devil
   ids:
   - steam:435300
+  requires: []
+  tiers:
+  - 2
 - name: Dustborn
   ids:
   - steam:721180
+  requires: []
+  tiers:
+  - 2
 - name: BAD END THEATER
   ids:
   - steam:1764390
+  requires: []
+  tiers:
+  - 2
 - name: Thirsty Suitors
   ids:
   - steam:1617220
+  requires: []
+  tiers:
+  - 2
 - name: Death of a Wish
   ids:
   - steam:2302080
+  requires: []
+  tiers:
+  - 2
 - name: 'Harmony: The Fall of Reverie'
   ids:
   - steam:1966420
+  requires: []
+  tiers:
+  - 2
 - name: Tavern Talk
   ids:
   - steam:2076140
+  requires: []
+  tiers:
+  - 2
 - name: 'CraftCraft: Fantasy Merchant Simulator'
   ids:
   - steam:2226430
+  requires: []
+  tiers:
+  - 2
 - name: Vampire Therapist
   ids:
   - steam:2481020
+  requires: []
+  tiers:
+  - 2
 - name: The August Before
   ids:
   - steam:2736840
+  requires: []
+  tiers:
+  - 2

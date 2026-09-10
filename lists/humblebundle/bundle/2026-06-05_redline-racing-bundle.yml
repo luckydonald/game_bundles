@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Redline Racing Bundle — Tier 2
-tier: 2
+name: Redline Racing Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16243/
@@ -13,21 +15,42 @@ games:
 - name: MudRunner
   ids:
   - steam:675010
+  requires: []
+  tiers:
+  - 2
 - name: Descenders
   ids:
   - steam:681280
+  requires: []
+  tiers:
+  - 2
 - name: Parking Garage Rally Circuit
   ids:
   - steam:2737300
+  requires: []
+  tiers:
+  - 2
 - name: art of rally
   ids:
   - steam:550320
+  requires: []
+  tiers:
+  - 2
 - name: Assetto Corsa Competizione
   ids:
   - steam:805550
+  requires: []
+  tiers:
+  - 2
 - name: TRAIL OUT
   ids:
   - steam:1664220
+  requires: []
+  tiers:
+  - 2
 - name: DRIFT CE
   ids:
   - steam:520950
+  requires: []
+  tiers:
+  - 2

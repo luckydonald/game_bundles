@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Love Letter to Lovecraft — Entire 9 Item Bundle
-tier: 3
+name: Love Letter to Lovecraft
+tiers:
+- rank: 3
+  name: Entire 9 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16506/
@@ -24,53 +26,75 @@ games:
   - steam:617290
   - isthereanydeal:remnant-from-the-ashes
   requires: []
+  tiers:
+  - 3
 - name: Forgive Me Father 2 Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:16506:forgive-me-father-2-deluxe-edition
   - isthereanydeal:forgive-me-father-2-deluxe-edition
   requires: []
+  tiers:
+  - 3
 - name: 'Stygian: Outer Gods'
   ids:
   - steam:2581410
   - isthereanydeal:stygian-outer-gods
   requires: []
+  tiers:
+  - 3
 - name: Dagon - The Eldritch Box
   ids:
   - steam:1722010
   - isthereanydeal:dagon-the-eldritch-box
   requires: []
+  tiers:
+  - 3
 - name: Dagon - The Little Glass Bottle
   ids:
   - steam:1751590
   - isthereanydeal:dagon-the-little-glass-bottle
   requires: []
+  tiers:
+  - 3
 - name: Dagon - The Railway Horror
   ids:
   - steam:2291520
   - isthereanydeal:dagon-the-railway-horror
   requires: []
+  tiers:
+  - 3
 - name: Abandon Ship
   ids:
   - steam:551860
   - isthereanydeal:abandon-ship
   requires: []
+  tiers:
+  - 3
 - name: Call of Cthulhu
   ids:
   - steam:399810
   - isthereanydeal:call-of-cthulhu
   requires: []
+  tiers:
+  - 3
 - name: Whisper Mountain Outbreak
   ids:
   - steam:1953230
   - isthereanydeal:whisper-mountain-outbreak
   requires: []
+  tiers:
+  - 3
 - name: Forgive me Father
   ids:
   - steam:1590910
   - isthereanydeal:forgive-me-father
   requires: []
+  tiers:
+  - 3
 - name: 'Sundered: Eldritch Edition'
   ids:
   - steam:535480
   - isthereanydeal:sundered-eldritch-edition
   requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Metroidvania Mayhem Bundle — entire-9-item-bundle
-tier: 3
+name: Metroidvania Mayhem Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15950/
@@ -13,27 +15,54 @@ games:
 - name: Rabi-Ribi
   ids:
   - steam:400910
+  requires: []
+  tiers:
+  - 3
 - name: Aeterna Noctis
   ids:
   - steam:1517970
+  requires: []
+  tiers:
+  - 3
 - name: 'Fist: Forged in Shadow Torch'
   ids:
   - steam:1330470
+  requires: []
+  tiers:
+  - 3
 - name: Lost Ruins
   ids:
   - steam:1306630
+  requires: []
+  tiers:
+  - 3
 - name: Ultros Deluxe Edition
   ids:
   - steam:2386310
+  requires: []
+  tiers:
+  - 3
 - name: Kingdom Shell
   ids:
   - steam:1154090
+  requires: []
+  tiers:
+  - 3
 - name: 'Gestalt: Steam & Cinder'
   ids:
   - steam:1231990
+  requires: []
+  tiers:
+  - 3
 - name: 'The Devil Within: Satgat'
   ids:
   - steam:1802880
+  requires: []
+  tiers:
+  - 3
 - name: Primal Planet
   ids:
   - steam:2350270
+  requires: []
+  tiers:
+  - 3

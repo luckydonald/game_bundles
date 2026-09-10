@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Staff Picks Bundle: Glen — entire-9-item-bundle'
-tier: 3
+name: 'Humble Staff Picks Bundle: Glen'
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3267/
@@ -13,27 +15,54 @@ games:
 - name: Brothers - A Tale of Two Sons
   ids:
   - steam:225080
+  requires: []
+  tiers:
+  - 3
 - name: 'Ultimate General: Gettysburg'
   ids:
   - steam:306660
+  requires: []
+  tiers:
+  - 3
 - name: 'Chivalry: Medieval Warfare'
   ids:
   - steam:219640
+  requires: []
+  tiers:
+  - 3
 - name: 'Fahrenheit: Indigo Prophecy Remastered'
   ids:
   - steam:312840
+  requires: []
+  tiers:
+  - 3
 - name: Knight Squad
   ids:
   - steam:294000
+  requires: []
+  tiers:
+  - 3
 - name: GRAV
   ids:
   - steam:332500
+  requires: []
+  tiers:
+  - 3
 - name: Tropico 5
   ids:
   - steam:245620
+  requires: []
+  tiers:
+  - 3
 - name: Victor Vran
   ids:
   - steam:345180
+  requires: []
+  tiers:
+  - 3
 - name: Homeworld Remastered Collection
   ids:
   - steam:244160
+  requires: []
+  tiers:
+  - 3

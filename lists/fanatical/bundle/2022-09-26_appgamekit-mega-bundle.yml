@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: AppGameKit Mega Bundle — Tier 3
-tier: 3
+name: AppGameKit Mega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12128/
@@ -13,42 +15,84 @@ games:
 - name: AppGameKit VR
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-vr
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Classic
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-classic
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Sound Library
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-sound-library
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Visual Editor
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-visual-editor
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - 3D Asset Pack
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-3d-asset-pack
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Giant Asset Pack 1
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-giant-asset-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Giant Asset Pack 2
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-giant-asset-pack-2
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Shader Pack
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-shader-pack
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Classic - GameGuru Loader
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-classic-gameguru-loader
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Games Pack 1
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-games-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Games Pack 2
   ids:
   - unresolved:source:isthereanydeal:12128:appgamekit-games-pack-2
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Studio
   ids:
   - steam:1024640
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Studio - MEGA Media Pack
   ids:
   - steam:1107700
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Studio - Particle Editor
   ids:
   - steam:1033070
+  requires: []
+  tiers:
+  - 3

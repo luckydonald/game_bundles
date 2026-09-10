@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Flashback Classics Bundle — entire-8-item-bundle
-tier: 3
+name: Flashback Classics Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14220/
@@ -13,24 +15,48 @@ games:
 - name: VVVVVV
   ids:
   - steam:70300
+  requires: []
+  tiers:
+  - 3
 - name: Super Meat Boy
   ids:
   - steam:40800
+  requires: []
+  tiers:
+  - 3
 - name: Super Fancy Pants Adventure
   ids:
   - steam:668210
+  requires: []
+  tiers:
+  - 3
 - name: Worms W.M.D
   ids:
   - steam:327030
+  requires: []
+  tiers:
+  - 3
 - name: The Last Stand Legacy Collection
   ids:
   - steam:1615100
+  requires: []
+  tiers:
+  - 3
 - name: Epic Battle Fantasy Collection
   ids:
   - steam:1469620
+  requires: []
+  tiers:
+  - 3
 - name: 'Submachine: Legacy'
   ids:
   - steam:1564790
+  requires: []
+  tiers:
+  - 3
 - name: Strike Force Heroes
   ids:
   - steam:1981820
+  requires: []
+  tiers:
+  - 3

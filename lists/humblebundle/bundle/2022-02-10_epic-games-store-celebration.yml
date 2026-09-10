@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Epic Games Store Celebration Bundle — entire-7-item-bundle
-tier: 3
+name: Epic Games Store Celebration Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11042/
@@ -13,21 +15,42 @@ games:
 - name: 'Shakedown: Hawaii'
   ids:
   - steam:598730
+  requires: []
+  tiers:
+  - 3
 - name: WHAT THE GOLF?
   ids:
   - steam:785790
+  requires: []
+  tiers:
+  - 3
 - name: The Last Campfire
   ids:
   - steam:990630
+  requires: []
+  tiers:
+  - 3
 - name: SCARF
   ids:
   - steam:645320
+  requires: []
+  tiers:
+  - 3
 - name: Mortal Shell
   ids:
   - steam:1110910
+  requires: []
+  tiers:
+  - 3
 - name: Saint's Row The Third Remastered
   ids:
   - steam:978300
+  requires: []
+  tiers:
+  - 3
 - name: 'Kingdoms of Amalur: Re-Reckoning'
   ids:
   - steam:1041720
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Cyberpunk Playground Bundle — entire-7-item-bundle
-tier: 3
+name: Cyberpunk Playground Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13336/
@@ -13,21 +15,42 @@ games:
 - name: Cloudpunk
   ids:
   - steam:746850
+  requires: []
+  tiers:
+  - 3
 - name: Voltage High Society
   ids:
   - steam:2063480
+  requires: []
+  tiers:
+  - 3
 - name: Ghostrunner
   ids:
   - steam:1139900
+  requires: []
+  tiers:
+  - 3
 - name: Severed Steel
   ids:
   - steam:1227690
+  requires: []
+  tiers:
+  - 3
 - name: 'ANNO: Mutationem'
   ids:
   - steam:1368030
+  requires: []
+  tiers:
+  - 3
 - name: 'Observer: System Redux'
   ids:
   - steam:1386900
+  requires: []
+  tiers:
+  - 3
 - name: Gungrave G.O.R.E
   ids:
   - steam:1630110
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #47 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #47'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6075/
@@ -13,36 +15,72 @@ games:
 - name: Go All Out!
   ids:
   - steam:759260
+  requires: []
+  tiers:
+  - 2
 - name: Unfinished Battle
   ids:
   - steam:799180
+  requires: []
+  tiers:
+  - 2
 - name: The Binding Of YOU
   ids:
   - unresolved:source:isthereanydeal:6075:the-binding-of-you
+  requires: []
+  tiers:
+  - 2
 - name: Tiny Force Deluxe
   ids:
   - steam:688620
+  requires: []
+  tiers:
+  - 2
 - name: Forgotten Places - Lost Circus
   ids:
   - steam:818440
+  requires: []
+  tiers:
+  - 2
 - name: Nogard
   ids:
   - steam:725140
+  requires: []
+  tiers:
+  - 2
 - name: PAPA'S TIME MACHINE
   ids:
   - steam:670320
+  requires: []
+  tiers:
+  - 2
 - name: Inside Me
   ids:
   - steam:404860
+  requires: []
+  tiers:
+  - 2
 - name: T-Kara Puzzles
   ids:
   - steam:423220
+  requires: []
+  tiers:
+  - 2
 - name: NYAN DESTROYER
   ids:
   - steam:773130
+  requires: []
+  tiers:
+  - 2
 - name: Never Not Shooting
   ids:
   - unresolved:source:isthereanydeal:6075:never-not-shooting
+  requires: []
+  tiers:
+  - 2
 - name: Sinister Zombies
   ids:
   - unresolved:source:isthereanydeal:6075:sinister-zombies
+  requires: []
+  tiers:
+  - 2

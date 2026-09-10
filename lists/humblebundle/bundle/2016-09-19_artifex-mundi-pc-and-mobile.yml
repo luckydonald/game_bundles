@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Artifex Mundi PC & Mobile Bundle — entire-10-item-bundle
-tier: 3
+name: Artifex Mundi PC & Mobile Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4099/
@@ -13,30 +15,60 @@ games:
 - name: 'Dark Heritage: Guardians of Hope'
   ids:
   - steam:394280
+  requires: []
+  tiers:
+  - 3
 - name: 'The Secret Order 2: Masked Intent'
   ids:
   - steam:399890
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire Legends: The True Story of Kisilova'
   ids:
   - steam:414660
+  requires: []
+  tiers:
+  - 3
 - name: 'Eventide: Slavic Fable'
   ids:
   - steam:406870
+  requires: []
+  tiers:
+  - 3
 - name: 'Grim Legends 2: Song of the Dark Swan'
   ids:
   - steam:279800
+  requires: []
+  tiers:
+  - 3
 - name: 'The Secret Order 3: Ancient Times'
   ids:
   - steam:437420
+  requires: []
+  tiers:
+  - 3
 - name: 'Grim Legends: The Forsaken Bride'
   ids:
   - steam:284850
+  requires: []
+  tiers:
+  - 3
 - name: 'Crime Secrets: Crimson Lily'
   ids:
   - steam:465170
+  requires: []
+  tiers:
+  - 3
 - name: 'Grim Legends 3: The Dark City'
   ids:
   - steam:458470
+  requires: []
+  tiers:
+  - 3
 - name: 'Mythic Wonders: The Philosopher''s Stone'
   ids:
   - steam:458480
+  requires: []
+  tiers:
+  - 3

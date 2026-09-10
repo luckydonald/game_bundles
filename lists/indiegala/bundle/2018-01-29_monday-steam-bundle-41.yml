@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #41 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #41'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5845/
@@ -13,36 +15,72 @@ games:
 - name: ШП - ShP
   ids:
   - steam:727640
+  requires: []
+  tiers:
+  - 2
 - name: Snake Eyes Dungeon
   ids:
   - steam:740240
+  requires: []
+  tiers:
+  - 2
 - name: Lost in the tomb
   ids:
   - steam:732070
+  requires: []
+  tiers:
+  - 2
 - name: Fantasy Defense
   ids:
   - steam:769940
+  requires: []
+  tiers:
+  - 2
 - name: Glitchbuster
   ids:
   - steam:661360
+  requires: []
+  tiers:
+  - 2
 - name: Cyborg Invasion Shooter
   ids:
   - steam:723830
+  requires: []
+  tiers:
+  - 2
 - name: Edgar
   ids:
   - steam:455640
+  requires: []
+  tiers:
+  - 2
 - name: Scary House
   ids:
   - unresolved:source:isthereanydeal:5845:scary-house
+  requires: []
+  tiers:
+  - 2
 - name: DOG GONE GOLFING
   ids:
   - steam:665590
+  requires: []
+  tiers:
+  - 2
 - name: Pixplode
   ids:
   - steam:631770
+  requires: []
+  tiers:
+  - 2
 - name: 'Nash Racing 2: Muscle cars'
   ids:
   - steam:713580
+  requires: []
+  tiers:
+  - 2
 - name: 'Silver Bullet: Prometheus'
   ids:
   - steam:446250
+  requires: []
+  tiers:
+  - 2

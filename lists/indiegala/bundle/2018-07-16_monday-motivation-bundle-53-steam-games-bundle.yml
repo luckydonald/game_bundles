@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #53 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #53'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6309/
@@ -13,33 +15,66 @@ games:
 - name: 'Honor Cry: Aftermath'
   ids:
   - steam:867540
+  requires: []
+  tiers:
+  - 2
 - name: Vintage Hero
   ids:
   - steam:667240
+  requires: []
+  tiers:
+  - 2
 - name: Life's Playground
   ids:
   - steam:873320
+  requires: []
+  tiers:
+  - 2
 - name: 'Flatwaters: The Curse of Echita'
   ids:
   - steam:779870
+  requires: []
+  tiers:
+  - 2
 - name: Egony
   ids:
   - unresolved:source:isthereanydeal:6309:egony
+  requires: []
+  tiers:
+  - 2
 - name: World Destroyers
   ids:
   - steam:550200
+  requires: []
+  tiers:
+  - 2
 - name: Stereo Aereo
   ids:
   - steam:535890
+  requires: []
+  tiers:
+  - 2
 - name: 'Soul Reaper: Unreap Commander'
   ids:
   - unresolved:source:isthereanydeal:6309:soul-reaper-unreap-commander
+  requires: []
+  tiers:
+  - 2
 - name: Fesnia
   ids:
   - unresolved:source:isthereanydeal:6309:fesnia
+  requires: []
+  tiers:
+  - 2
 - name: The Entity
   ids:
   - steam:857370
+  requires: []
+  tiers:
+  - 2
 - name: World of Islands
   ids:
   - steam:810340
+  requires: []
+  tiers:
+  - 2

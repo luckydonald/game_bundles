@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Ticket to Ride: World Tour Collection — First Class'
-tier: 3
+name: 'Ticket to Ride: World Tour Collection'
+tiers:
+- rank: 3
+  name: First Class
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15843/
@@ -13,33 +15,66 @@ games:
 - name: Ticket to Ride
   ids:
   - steam:2477010
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - USA 1910 Ticket Pack
   ids:
   - steam:2938560
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride® - Winter Wonderland bundle
   ids:
   - unresolved:source:isthereanydeal:15843:ticket-to-ride-winter-wonderland-bundle
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: San Francisco City Expansion'
   ids:
   - steam:3252260
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - Nordic Expansion
   ids:
   - steam:2856300
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride® - Switzerland Expansion
   ids:
   - steam:3366230
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: Europe Expansion + Europa 1912 Ticket Pack'
   ids:
   - steam:2608220
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - India Expansion
   ids:
   - steam:2938570
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: Legendary Asia Expansion'
   ids:
   - steam:3102710
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride®: Japan Expansion'
   ids:
   - steam:3517340
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride®: Heart of Africa Expansion'
   ids:
   - steam:3842170
+  requires: []
+  tiers:
+  - 3

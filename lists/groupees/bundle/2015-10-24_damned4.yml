@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bundle of the Damned 4 — Tier 2
-tier: 2
+name: Bundle of the Damned 4
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2643/
@@ -13,18 +15,36 @@ games:
 - name: Bacon Rebellion
   ids:
   - steam:415780
+  requires: []
+  tiers:
+  - 2
 - name: HUSH
   ids:
   - unresolved:source:isthereanydeal:2643:hush
+  requires: []
+  tiers:
+  - 2
 - name: Goodnight Butcher
   ids:
   - steam:426040
+  requires: []
+  tiers:
+  - 2
 - name: The Land Of Lamia
   ids:
   - steam:385310
+  requires: []
+  tiers:
+  - 2
 - name: Hatred
   ids:
   - steam:341940
+  requires: []
+  tiers:
+  - 2
 - name: Demented
   ids:
   - steam:418000
+  requires: []
+  tiers:
+  - 2

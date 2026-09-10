@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Hooligans — Tier 2
-tier: 2
+name: Indie Hooligans
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5442/
@@ -13,39 +15,78 @@ games:
 - name: Exorcist
   ids:
   - steam:1983330
+  requires: []
+  tiers:
+  - 2
 - name: Ezy
   ids:
   - unresolved:source:isthereanydeal:5442:ezy
+  requires: []
+  tiers:
+  - 2
 - name: Hooligan Vasja - Christmas Edition
   ids:
   - unresolved:source:isthereanydeal:5442:hooligan-vasja-christmas-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'Catacombs 1: Demon War'
   ids:
   - steam:654250
+  requires: []
+  tiers:
+  - 2
 - name: Brave Path
   ids:
   - steam:669310
+  requires: []
+  tiers:
+  - 2
 - name: Sudoku
   ids:
   - unresolved:source:isthereanydeal:5442:sudoku
+  requires: []
+  tiers:
+  - 2
 - name: The Brave Mouse
   ids:
   - unresolved:source:isthereanydeal:5442:the-brave-mouse
+  requires: []
+  tiers:
+  - 2
 - name: Hover Havoc
   ids:
   - steam:504500
+  requires: []
+  tiers:
+  - 2
 - name: Distorted Reality
   ids:
   - steam:681780
+  requires: []
+  tiers:
+  - 2
 - name: Slug
   ids:
   - unresolved:source:isthereanydeal:5442:slug
+  requires: []
+  tiers:
+  - 2
 - name: Watergate Xtreme
   ids:
   - steam:666320
+  requires: []
+  tiers:
+  - 2
 - name: German fortress 3D
   ids:
   - steam:664350
+  requires: []
+  tiers:
+  - 2
 - name: Hooligan Vasja - Halloween Edition
   ids:
   - unresolved:source:isthereanydeal:5442:hooligan-vasja-halloween-edition
+  requires: []
+  tiers:
+  - 2

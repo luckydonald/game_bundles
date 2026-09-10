@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: '2K Classic Trilogies: Mafia X BioShock Bundle — entire-6-item-bundle'
-tier: 2
+name: '2K Classic Trilogies: Mafia X BioShock Bundle'
+tiers:
+- rank: 2
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15209/
@@ -13,18 +15,36 @@ games:
 - name: BioShock Infinite
   ids:
   - steam:8870
+  requires: []
+  tiers:
+  - 2
 - name: BioShock 2 Remastered
   ids:
   - steam:409720
+  requires: []
+  tiers:
+  - 2
 - name: BioShock Remastered
   ids:
   - steam:409710
+  requires: []
+  tiers:
+  - 2
 - name: 'Mafia III: Definitive Edition'
   ids:
   - steam:360430
+  requires: []
+  tiers:
+  - 2
 - name: 'Mafia II: Definitive Edition'
   ids:
   - steam:1030830
+  requires: []
+  tiers:
+  - 2
 - name: 'Mafia: Definitive Edition'
   ids:
   - steam:1030840
+  requires: []
+  tiers:
+  - 2

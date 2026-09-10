@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Labor Day GameBundle — Beat The Average + $0.25
-tier: 3
+name: The Labor Day GameBundle
+tiers:
+- rank: 3
+  name: Beat The Average + $0.25
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4002/
@@ -13,30 +15,60 @@ games:
 - name: Scapeland
   ids:
   - steam:444440
+  requires: []
+  tiers:
+  - 3
 - name: A-Gents
   ids:
   - steam:460910
+  requires: []
+  tiers:
+  - 3
 - name: 'Melting Hearts: Our Love Will Grow 2'
   ids:
   - steam:459020
+  requires: []
+  tiers:
+  - 3
 - name: Nordenfelt
   ids:
   - steam:428740
+  requires: []
+  tiers:
+  - 3
 - name: Adventure in the tower
   ids:
   - unresolved:source:isthereanydeal:4002:adventure-in-the-tower
+  requires: []
+  tiers:
+  - 3
 - name: Absence
   ids:
   - steam:440470
+  requires: []
+  tiers:
+  - 3
 - name: The Orphan Dreams
   ids:
   - steam:456440
+  requires: []
+  tiers:
+  - 3
 - name: Benji Challenges
   ids:
   - steam:393770
+  requires: []
+  tiers:
+  - 3
 - name: 'Bathory: The Bloody Countess'
   ids:
   - steam:486170
+  requires: []
+  tiers:
+  - 3
 - name: JumpJet Rex - Galactic Edition
   ids:
   - steam:329460
+  requires: []
+  tiers:
+  - 3

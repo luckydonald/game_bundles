@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Raving Aces Bundle — Tier 2
-tier: 2
+name: Raving Aces Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3778/
@@ -13,30 +15,60 @@ games:
 - name: Annie Amber
   ids:
   - steam:464440
+  requires: []
+  tiers:
+  - 2
 - name: Beasts Battle
   ids:
   - steam:487030
+  requires: []
+  tiers:
+  - 2
 - name: Starsphere
   ids:
   - steam:408750
+  requires: []
+  tiers:
+  - 2
 - name: Never Alone (Kisima Ingitchuna)
   ids:
   - steam:295790
+  requires: []
+  tiers:
+  - 2
 - name: 'Raiden IV: OverKill'
   ids:
   - unresolved:source:isthereanydeal:3778:raiden-iv-overkill
+  requires: []
+  tiers:
+  - 2
 - name: Guilty Gear X2 Reload
   ids:
   - steam:314030
+  requires: []
+  tiers:
+  - 2
 - name: Blockstorm
   ids:
   - steam:263060
+  requires: []
+  tiers:
+  - 2
 - name: Between Me And The Night
   ids:
   - steam:285070
+  requires: []
+  tiers:
+  - 2
 - name: Dark Fear
   ids:
   - steam:454160
+  requires: []
+  tiers:
+  - 2
 - name: Tyler
   ids:
   - steam:390460
+  requires: []
+  tiers:
+  - 2

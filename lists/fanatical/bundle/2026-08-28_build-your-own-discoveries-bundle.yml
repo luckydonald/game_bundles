@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Discoveries Bundle — pick 7
-tier: 3
-pick_quota: 7
+name: Build Your Own Discoveries Bundle
+tiers:
+- rank: 3
+  name: pick 7
+  pick_quota: 7
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16522/
@@ -18,58 +20,82 @@ games:
   - steam:1454010
   - isthereanydeal:diary-of-lucie
   requires: []
+  tiers:
+  - 3
 - name: Smilemo
   ids:
   - steam:1933700
   - isthereanydeal:smilemo
   requires: []
+  tiers:
+  - 3
 - name: 'Rocco''s Island: Ring to End the Pain'
   ids:
   - steam:1394480
   - isthereanydeal:roccos-island-ring-to-end-the-pain
   requires: []
+  tiers:
+  - 3
 - name: Blue Wednesday
   ids:
   - steam:2129160
   - isthereanydeal:blue-wednesday
   requires: []
+  tiers:
+  - 3
 - name: Cats Are Money
   ids:
   - steam:3488840
   - isthereanydeal:cats-are-money
   requires: []
+  tiers:
+  - 3
 - name: The Deadseat
   ids:
   - steam:3667230
   - isthereanydeal:the-deadseat
   requires: []
+  tiers:
+  - 3
 - name: Shooty Shooty Robot Invasion
   ids:
   - steam:3763820
   - isthereanydeal:shooty-shooty-robot-invasion
   requires: []
+  tiers:
+  - 3
 - name: LUCKROT
   ids:
   - steam:3823650
   - isthereanydeal:luckrot
   requires: []
+  tiers:
+  - 3
 - name: Coincidences?
   ids:
   - steam:3848750
   - isthereanydeal:coincidences
   requires: []
+  tiers:
+  - 3
 - name: Marble's Marbles
   ids:
   - steam:4137920
   - isthereanydeal:marbles-marbles
   requires: []
+  tiers:
+  - 3
 - name: BACK*SPACE
   ids:
   - steam:4530880
   - isthereanydeal:back-space
   requires: []
+  tiers:
+  - 3
 - name: Soy Boy Double Pack
   ids:
   - unresolved:source:isthereanydeal:16522:soy-boy-double-pack
   - isthereanydeal:soy-boy-double-pack
   requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Dungeons & Dragons: Classics Collection Bundle — entire-13-item-bundle'
-tier: 2
+name: 'Dungeons & Dragons: Classics Collection Bundle'
+tiers:
+- rank: 2
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15284/
@@ -13,39 +15,78 @@ games:
 - name: 'Forgotten Realms: The Archives - Collection Three'
   ids:
   - steam:1904530
+  requires: []
+  tiers:
+  - 2
 - name: 'D&D Stronghold: Kingdom Simulator'
   ids:
   - steam:1904650
+  requires: []
+  tiers:
+  - 2
 - name: 'Al-Qadim: The Genie''s Curse'
   ids:
   - steam:1904640
+  requires: []
+  tiers:
+  - 2
 - name: DragonStrike
   ids:
   - steam:2350520
+  requires: []
+  tiers:
+  - 2
 - name: DeathKeep
   ids:
   - steam:2350540
+  requires: []
+  tiers:
+  - 2
 - name: 'Dungeons & Dragons: Krynn Series'
   ids:
   - steam:1904610
+  requires: []
+  tiers:
+  - 2
 - name: 'Dungeons & Dragons: Ravenloft Series'
   ids:
   - steam:1904560
+  requires: []
+  tiers:
+  - 2
 - name: Forgotten Realms - The Archives - Collection One
   ids:
   - steam:1882240
+  requires: []
+  tiers:
+  - 2
 - name: 'Dungeons & Dragons: Dark Sun Series'
   ids:
   - steam:1904580
+  requires: []
+  tiers:
+  - 2
 - name: 'Forgotten Realms: The Archives - Collection Two'
   ids:
   - steam:1882280
+  requires: []
+  tiers:
+  - 2
 - name: Silver Box Classics
   ids:
   - steam:2344020
+  requires: []
+  tiers:
+  - 2
 - name: Fantasy Empires
   ids:
   - steam:2350530
+  requires: []
+  tiers:
+  - 2
 - name: 'Spelljammer: Pirates of Realmspace'
   ids:
   - steam:2350550
+  requires: []
+  tiers:
+  - 2

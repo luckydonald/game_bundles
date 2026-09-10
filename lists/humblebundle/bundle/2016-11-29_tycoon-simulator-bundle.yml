@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Tycoon Simulator Bundle — Pay $12 or more to also unlock!
-tier: 3
+name: Humble Tycoon Simulator Bundle
+tiers:
+- rank: 3
+  name: Pay $12 or more to also unlock!
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4419/
@@ -13,21 +15,42 @@ games:
 - name: Train Simulator 2016
   ids:
   - unresolved:source:isthereanydeal:4419:train-simulator-2016
+  requires: []
+  tiers:
+  - 3
 - name: Out of the Park Baseball 17
   ids:
   - unresolved:source:isthereanydeal:4419:out-of-the-park-baseball-17
+  requires: []
+  tiers:
+  - 3
 - name: RollerCoaster Tycoon Deluxe
   ids:
   - steam:285310
+  requires: []
+  tiers:
+  - 3
 - name: Car Mechanic Simulator 2015
   ids:
   - steam:320300
+  requires: []
+  tiers:
+  - 3
 - name: Big Pharma
   ids:
   - steam:344850
+  requires: []
+  tiers:
+  - 3
 - name: Democracy 3 Collector's Edition
   ids:
   - unresolved:source:isthereanydeal:4419:democracy-3-collectors-edition
+  requires: []
+  tiers:
+  - 3
 - name: YouTubers Life
   ids:
   - steam:428690
+  requires: []
+  tiers:
+  - 3

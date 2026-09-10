@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Retro Mix Bundle — Tier 2
-tier: 2
+name: Retro Mix Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3156/
@@ -13,36 +15,72 @@ games:
 - name: Starlord
   ids:
   - steam:410540
+  requires: []
+  tiers:
+  - 2
 - name: Silent Service
   ids:
   - steam:329660
+  requires: []
+  tiers:
+  - 2
 - name: Pajama Sam's Sock Works
   ids:
   - steam:292840
+  requires: []
+  tiers:
+  - 2
 - name: Tycoon City New York
   ids:
   - steam:9730
+  requires: []
+  tiers:
+  - 2
 - name: Sid Meier's Pirates! Gold Plus (Classic)
   ids:
   - steam:327380
+  requires: []
+  tiers:
+  - 2
 - name: World War II GI
   ids:
   - steam:376750
+  requires: []
+  tiers:
+  - 2
 - name: "Wars and Warriors \x96 Joan of Arc"
   ids:
   - steam:294590
+  requires: []
+  tiers:
+  - 2
 - name: Sid Meier's Covert Action (Classic)
   ids:
   - steam:327390
+  requires: []
+  tiers:
+  - 2
 - name: FALCON A.T.
   ids:
   - unresolved:source:isthereanydeal:3156:falcon-a-t
+  requires: []
+  tiers:
+  - 2
 - name: 'Tank: M1A1 Abrams Battle Simulation'
   ids:
   - steam:410550
+  requires: []
+  tiers:
+  - 2
 - name: FALCON
   ids:
   - steam:374080
+  requires: []
+  tiers:
+  - 2
 - name: 'Deadlock II: Shrine Wars'
   ids:
   - steam:328450
+  requires: []
+  tiers:
+  - 2

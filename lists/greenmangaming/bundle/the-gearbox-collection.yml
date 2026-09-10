@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: THE GEARBOX COLLECTION — Legendary
-tier: 3
+name: THE GEARBOX COLLECTION
+tiers:
+- rank: 3
+  name: Legendary
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/the-gearbox-collection/
@@ -16,27 +18,41 @@ games:
   ids:
   - steam:858820
   requires: []
+  tiers:
+  - 3
 - name: Borderlands Game of the Year Enhanced
   ids:
   - steam:729040
   requires: []
+  tiers:
+  - 3
 - name: Blanc
   ids:
   - steam:1982340
   requires: []
+  tiers:
+  - 3
 - name: Tiny Tina's Wonderlands Chaotic Great Edition
   ids:
   - steam:bundle/38150
   requires: []
+  tiers:
+  - 3
 - name: Risk of Rain Returns
   ids:
   - steam:1337520
   requires: []
+  tiers:
+  - 3
 - name: Homeworld 3
   ids:
   - steam:1840080
   requires: []
+  tiers:
+  - 3
 - name: Borderlands 3 Ultimate Edition
   ids:
   - steam:bundle/30424
   requires: []
+  tiers:
+  - 3

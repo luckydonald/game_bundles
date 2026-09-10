@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Likes & Lites Bundle — entire-9-item-bundle
-tier: 2
+name: Indie Likes & Lites Bundle
+tiers:
+- rank: 2
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15386/
@@ -13,27 +15,54 @@ games:
 - name: 'Rogue Heroes: Ruins of Tasos'
   ids:
   - steam:787810
+  requires: []
+  tiers:
+  - 2
 - name: Luck be a Landlord
   ids:
   - steam:1404850
+  requires: []
+  tiers:
+  - 2
 - name: The Ouroboros King
   ids:
   - steam:2096510
+  requires: []
+  tiers:
+  - 2
 - name: Rack and Slay
   ids:
   - steam:2311990
+  requires: []
+  tiers:
+  - 2
 - name: 'Meteorfall: Krumit''s Tale'
   ids:
   - steam:1073320
+  requires: []
+  tiers:
+  - 2
 - name: Going Under
   ids:
   - steam:1154810
+  requires: []
+  tiers:
+  - 2
 - name: Shovel Knight Pocket Dungeon
   ids:
   - steam:1184760
+  requires: []
+  tiers:
+  - 2
 - name: Let's! Revolution!
   ids:
   - steam:2111090
+  requires: []
+  tiers:
+  - 2
 - name: Crop Rotation
   ids:
   - steam:2348090
+  requires: []
+  tiers:
+  - 2

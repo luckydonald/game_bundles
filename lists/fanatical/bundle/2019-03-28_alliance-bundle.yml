@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Alliance Bundle — Tier 2
-tier: 2
+name: Alliance Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7236/
@@ -13,33 +15,66 @@ games:
 - name: Rebel Galaxy
   ids:
   - steam:290300
+  requires: []
+  tiers:
+  - 2
 - name: Grey Goo Definitive Edition
   ids:
   - unresolved:source:isthereanydeal:7236:grey-goo-definitive-edition
+  requires: []
+  tiers:
+  - 2
 - name: Chaos Reborn
   ids:
   - steam:319050
+  requires: []
+  tiers:
+  - 2
 - name: RiME
   ids:
   - steam:493200
+  requires: []
+  tiers:
+  - 2
 - name: Brawlout
   ids:
   - steam:263720
+  requires: []
+  tiers:
+  - 2
 - name: Heliborne
   ids:
   - unresolved:source:isthereanydeal:7236:heliborne
+  requires: []
+  tiers:
+  - 2
 - name: 'River City Ransom: Underground'
   ids:
   - steam:422810
+  requires: []
+  tiers:
+  - 2
 - name: 'Ash of Gods: Redemption'
   ids:
   - steam:691690
+  requires: []
+  tiers:
+  - 2
 - name: 'Hover: Revolt of Gamers'
   ids:
   - steam:280180
+  requires: []
+  tiers:
+  - 2
 - name: Immortal Redneck
   ids:
   - steam:595140
+  requires: []
+  tiers:
+  - 2
 - name: The Town Of Light
   ids:
   - steam:433100
+  requires: []
+  tiers:
+  - 2

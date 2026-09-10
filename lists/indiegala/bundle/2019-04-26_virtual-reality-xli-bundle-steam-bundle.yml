@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XLI Bundle — Tier 2
-tier: 2
+name: Virtual Reality XLI Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7337/
@@ -13,30 +15,60 @@ games:
 - name: BREACH IT
   ids:
   - steam:591790
+  requires: []
+  tiers:
+  - 2
 - name: BAD BILLY 2D VR
   ids:
   - steam:1026210
+  requires: []
+  tiers:
+  - 2
 - name: 'Submerged: VR Escape the Room'
   ids:
   - steam:919160
+  requires: []
+  tiers:
+  - 2
 - name: Fine China
   ids:
   - steam:529040
+  requires: []
+  tiers:
+  - 2
 - name: Wall Walker
   ids:
   - steam:819670
+  requires: []
+  tiers:
+  - 2
 - name: Mystery House -fivestones
   ids:
   - steam:917770
+  requires: []
+  tiers:
+  - 2
 - name: Welcome Above
   ids:
   - steam:912660
+  requires: []
+  tiers:
+  - 2
 - name: 'The Woods: VR Escape the Room'
   ids:
   - steam:1025740
+  requires: []
+  tiers:
+  - 2
 - name: Bleeding Hunt VR Chap. 1
   ids:
   - steam:1011270
+  requires: []
+  tiers:
+  - 2
 - name: Magic Gun
   ids:
   - steam:1028250
+  requires: []
+  tiers:
+  - 2

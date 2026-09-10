@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Day of the Devs Bundle (2019) — entire-7-item-bundle
-tier: 3
+name: Humble Day of the Devs Bundle (2019)
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8065/
@@ -13,21 +15,42 @@ games:
 - name: ART SQOOL
   ids:
   - unresolved:source:isthereanydeal:8065:art-sqool
+  requires: []
+  tiers:
+  - 3
 - name: 'Frog Detective 1: The Haunted Island'
   ids:
   - steam:963000
+  requires: []
+  tiers:
+  - 3
 - name: Flipping Death
   ids:
   - steam:626660
+  requires: []
+  tiers:
+  - 3
 - name: Battle Chef Brigade Deluxe
   ids:
   - steam:452570
+  requires: []
+  tiers:
+  - 3
 - name: 'ToeJam & Earl: Back in the Groove! Soundtrack'
   ids:
   - unresolved:source:isthereanydeal:8065:toejam-and-earl-back-in-the-groove-soundtrack
+  requires: []
+  tiers:
+  - 3
 - name: Minit
   ids:
   - steam:609490
+  requires: []
+  tiers:
+  - 3
 - name: 'ToeJam & Earl: Back in the Groove!'
   ids:
   - steam:516110
+  requires: []
+  tiers:
+  - 3

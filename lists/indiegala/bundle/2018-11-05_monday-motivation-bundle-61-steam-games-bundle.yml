@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #61 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #61'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6654/
@@ -13,27 +15,54 @@ games:
 - name: 'Zen Chess: Mate in One'
   ids:
   - steam:748970
+  requires: []
+  tiers:
+  - 2
 - name: Cubrick
   ids:
   - steam:620340
+  requires: []
+  tiers:
+  - 2
 - name: Take Care of the Paperwork
   ids:
   - steam:882290
+  requires: []
+  tiers:
+  - 2
 - name: Unleashed
   ids:
   - steam:838690
+  requires: []
+  tiers:
+  - 2
 - name: Vitamin Girl
   ids:
   - steam:718910
+  requires: []
+  tiers:
+  - 2
 - name: Weirdest Thing
   ids:
   - unresolved:source:isthereanydeal:6654:weirdest-thing
+  requires: []
+  tiers:
+  - 2
 - name: Qybe
   ids:
   - steam:868500
+  requires: []
+  tiers:
+  - 2
 - name: A Fine Mess
   ids:
   - steam:793220
+  requires: []
+  tiers:
+  - 2
 - name: Finding Light
   ids:
   - unresolved:source:isthereanydeal:6654:finding-light
+  requires: []
+  tiers:
+  - 2

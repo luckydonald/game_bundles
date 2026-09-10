@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Laush Game Bundle — Tier 2
-tier: 2
+name: Laush Game Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6310/
@@ -13,36 +15,72 @@ games:
 - name: Round Mars - OST
   ids:
   - unresolved:source:isthereanydeal:6310:round-mars-ost
+  requires: []
+  tiers:
+  - 2
 - name: Round Mars
   ids:
   - steam:823340
+  requires: []
+  tiers:
+  - 2
 - name: What do you hear?? Yanny vs Laurel
   ids:
   - steam:868550
+  requires: []
+  tiers:
+  - 2
 - name: Dangerous Level
   ids:
   - steam:779800
+  requires: []
+  tiers:
+  - 2
 - name: WannaMine - OST
   ids:
   - unresolved:source:isthereanydeal:6310:wannamine-ost
+  requires: []
+  tiers:
+  - 2
 - name: Virus Petya
   ids:
   - steam:796130
+  requires: []
+  tiers:
+  - 2
 - name: Putin takes taxes
   ids:
   - steam:798960
+  requires: []
+  tiers:
+  - 2
 - name: Putin takes taxes - OST
   ids:
   - unresolved:source:isthereanydeal:6310:putin-takes-taxes-ost
+  requires: []
+  tiers:
+  - 2
 - name: Virus Petya - OST
   ids:
   - unresolved:source:isthereanydeal:6310:virus-petya-ost
+  requires: []
+  tiers:
+  - 2
 - name: WannaMine
   ids:
   - steam:801500
+  requires: []
+  tiers:
+  - 2
 - name: Crazzers - OST
   ids:
   - unresolved:source:isthereanydeal:6310:crazzers-ost
+  requires: []
+  tiers:
+  - 2
 - name: Crazzers
   ids:
   - steam:816380
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Explore & Expand Bundle — entire-9-item-bundle
-tier: 3
+name: Humble Explore & Expand Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9464/
@@ -13,27 +15,54 @@ games:
 - name: 'Halcyon 6: Lightspeed Edition'
   ids:
   - steam:651660
+  requires: []
+  tiers:
+  - 3
 - name: 'Sins of a Solar Empire: Trinity'
   ids:
   - steam:201290
+  requires: []
+  tiers:
+  - 3
 - name: 'Rain of Reflections: Chapter 1'
   ids:
   - unresolved:source:isthereanydeal:9464:rain-of-reflections-chapter-1
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Crusade Expansion'
   ids:
   - unresolved:source:isthereanydeal:9464:galactic-civilizations-iii-crusade-expansion
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Civilizations III - Mega Events
   ids:
   - steam:389930
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Civilizations III
   ids:
   - steam:226860
+  requires: []
+  tiers:
+  - 3
 - name: Starpoint Gemini Warlords
   ids:
   - steam:419480
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Retribution Expansion'
   ids:
   - steam:976210
+  requires: []
+  tiers:
+  - 3
 - name: Stellaris Galaxy Edition
   ids:
   - unresolved:source:isthereanydeal:9464:stellaris-galaxy-edition
+  requires: []
+  tiers:
+  - 3

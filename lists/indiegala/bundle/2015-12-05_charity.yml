@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Hacker Evolution Charity Bundle — Tier 2
-tier: 2
+name: The Hacker Evolution Charity Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2829/
@@ -13,42 +15,84 @@ games:
 - name: Hacker Evolution Duality
   ids:
   - steam:70120
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution Duality: Hacker Bootcamp'
   ids:
   - steam:261070
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution Duality: Inception Part 2'
   ids:
   - steam:211994
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution: Hardcore Package Part 1'
   ids:
   - unresolved:source:isthereanydeal:2829:hacker-evolution-hardcore-package-part-1
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution Duality: Hardcore Package Part 1'
   ids:
   - steam:241950
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution: Untold'
   ids:
   - steam:70110
+  requires: []
+  tiers:
+  - 2
 - name: 'Hardcore Package Part 1 / for Hacker Evolution: Untold'
   ids:
   - steam:259240
+  requires: []
+  tiers:
+  - 2
 - name: Crystals of Time
   ids:
   - steam:306410
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution Duality: Inception Part 1'
   ids:
   - steam:211990
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution: Hardcore Package Part 2'
   ids:
   - unresolved:source:isthereanydeal:2829:hacker-evolution-hardcore-package-part-2
+  requires: []
+  tiers:
+  - 2
 - name: 'Hardcore Package Part 2 / for Hacker Evolution: Untold'
   ids:
   - steam:279830
+  requires: []
+  tiers:
+  - 2
 - name: 'Hacker Evolution Duality: Inception Part 3'
   ids:
   - steam:211992
+  requires: []
+  tiers:
+  - 2
 - name: Hacker Evolution
   ids:
   - steam:70100
+  requires: []
+  tiers:
+  - 2
 - name: Hacker Evolution Source Code
   ids:
   - steam:364750
+  requires: []
+  tiers:
+  - 2

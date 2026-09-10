@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute XX Kiss LTD — Tier 2
-tier: 2
+name: Remute XX Kiss LTD
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7474/
@@ -13,21 +15,42 @@ games:
 - name: "Blob From Space \x96"
   ids:
   - steam:315070
+  requires: []
+  tiers:
+  - 2
 - name: 'Ohr: אור'
   ids:
   - steam:376480
+  requires: []
+  tiers:
+  - 2
 - name: The Artifact
   ids:
   - steam:532920
+  requires: []
+  tiers:
+  - 2
 - name: Chernobyl Commando
   ids:
   - unresolved:source:isthereanydeal:7474:chernobyl-commando
+  requires: []
+  tiers:
+  - 2
 - name: Defend The Highlands
   ids:
   - steam:374830
+  requires: []
+  tiers:
+  - 2
 - name: Pitstop Challenge
   ids:
   - unresolved:source:isthereanydeal:7474:pitstop-challenge
+  requires: []
+  tiers:
+  - 2
 - name: StarSmashers
   ids:
   - steam:504450
+  requires: []
+  tiers:
+  - 2

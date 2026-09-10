@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nemesis Bundle 6 — Tier 3
-tier: 3
+name: Nemesis Bundle 6
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5941/
@@ -13,45 +15,90 @@ games:
 - name: 'Super Mega Baseball: Extra Innings'
   ids:
   - steam:314070
+  requires: []
+  tiers:
+  - 3
 - name: Slice Dice & Rice
   ids:
   - steam:598450
+  requires: []
+  tiers:
+  - 3
 - name: Kathy Rain
   ids:
   - steam:370910
+  requires: []
+  tiers:
+  - 3
 - name: 'TASTEE: Lethal Tactics'
   ids:
   - unresolved:source:isthereanydeal:5941:tastee-lethal-tactics
+  requires: []
+  tiers:
+  - 3
 - name: Panzer Corps
   ids:
   - unresolved:source:isthereanydeal:5941:panzer-corps
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Rushers
   ids:
   - steam:429620
+  requires: []
+  tiers:
+  - 3
 - name: Killing Room
   ids:
   - steam:407560
+  requires: []
+  tiers:
+  - 3
 - name: 'The Metronomicon: Slay The Dance Floor'
   ids:
   - steam:416790
+  requires: []
+  tiers:
+  - 3
 - name: Phoning Home
   ids:
   - steam:431650
+  requires: []
+  tiers:
+  - 3
 - name: Seraph
   ids:
   - steam:425670
+  requires: []
+  tiers:
+  - 3
 - name: 'Table Top Racing: World Tour'
   ids:
   - unresolved:source:isthereanydeal:5941:table-top-racing-world-tour
+  requires: []
+  tiers:
+  - 3
 - name: Juanito Arcade Mayhem
   ids:
   - steam:617440
+  requires: []
+  tiers:
+  - 3
 - name: Beholder - Blissful Sleep
   ids:
   - steam:616950
+  requires: []
+  tiers:
+  - 3
 - name: Antihero
   ids:
   - steam:505640
+  requires: []
+  tiers:
+  - 3
 - name: Beholder
   ids:
   - steam:475550
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Fall GameBundle — Beat The Average + $0.25
-tier: 3
+name: The Fall GameBundle
+tiers:
+- rank: 3
+  name: Beat The Average + $0.25
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4098/
@@ -13,30 +15,60 @@ games:
 - name: Militia
   ids:
   - steam:421260
+  requires: []
+  tiers:
+  - 3
 - name: ONE DAY for Ched
   ids:
   - steam:321030
+  requires: []
+  tiers:
+  - 3
 - name: CONTASION 2
   ids:
   - steam:428940
+  requires: []
+  tiers:
+  - 3
 - name: Rover The Dragonslayer
   ids:
   - unresolved:source:isthereanydeal:4098:rover-the-dragonslayer
+  requires: []
+  tiers:
+  - 3
 - name: Envy the Dead
   ids:
   - steam:453960
+  requires: []
+  tiers:
+  - 3
 - name: 'Sky To Fly: Faster Than Wind'
   ids:
   - steam:403850
+  requires: []
+  tiers:
+  - 3
 - name: BattleStorm
   ids:
   - unresolved:source:isthereanydeal:4098:battlestorm
+  requires: []
+  tiers:
+  - 3
 - name: The Fleets of Sol
   ids:
   - unresolved:source:isthereanydeal:4098:the-fleets-of-sol
+  requires: []
+  tiers:
+  - 3
 - name: Onion Force
   ids:
   - steam:434980
+  requires: []
+  tiers:
+  - 3
 - name: AstroKill
   ids:
   - steam:376880
+  requires: []
+  tiers:
+  - 3

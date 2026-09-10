@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Extravaganza Bundle — Tier 2
-tier: 2
+name: Indie Extravaganza Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5107/
@@ -13,39 +15,78 @@ games:
 - name: Cat Goes Platform
   ids:
   - unresolved:source:isthereanydeal:5107:cat-goes-platform
+  requires: []
+  tiers:
+  - 2
 - name: Santa's Special Delivery
   ids:
   - steam:564420
+  requires: []
+  tiers:
+  - 2
 - name: 'Strike Squadron: Caracará'
   ids:
   - steam:507340
+  requires: []
+  tiers:
+  - 2
 - name: Deus Ex Machina - The Best Game You Never Played in Your Life - pdf
   ids:
   - unresolved:source:isthereanydeal:5107:deus-ex-machina-the-best-game-you-never-played-in-your-life-pdf
+  requires: []
+  tiers:
+  - 2
 - name: Box Maze - Complete Edition
   ids:
   - unresolved:source:isthereanydeal:5107:box-maze-complete-edition
+  requires: []
+  tiers:
+  - 2
 - name: Deus Ex Machina - The Soundtrack
   ids:
   - unresolved:source:isthereanydeal:5107:deus-ex-machina-the-soundtrack
+  requires: []
+  tiers:
+  - 2
 - name: Trench Run
   ids:
   - steam:262100
+  requires: []
+  tiers:
+  - 2
 - name: Extravaganza Rising
   ids:
   - steam:501030
+  requires: []
+  tiers:
+  - 2
 - name: Psycho on the loose
   ids:
   - steam:568860
+  requires: []
+  tiers:
+  - 2
 - name: The Quest for Achievements
   ids:
   - unresolved:source:isthereanydeal:5107:the-quest-for-achievements
+  requires: []
+  tiers:
+  - 2
 - name: moto RKD dash sp
   ids:
   - steam:470590
+  requires: []
+  tiers:
+  - 2
 - name: DEUS EX MACHINA GAME OF THE YEAR 30th ANNIVERSARY, COLLECTOR'S EDITION
   ids:
   - steam:508910
+  requires: []
+  tiers:
+  - 2
 - name: Fields XY
   ids:
   - steam:552900
+  requires: []
+  tiers:
+  - 2

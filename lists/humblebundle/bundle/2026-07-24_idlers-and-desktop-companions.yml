@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Idlers and Desktop Companions — Entire 13 Item Bundle
-tier: 2
+name: Idlers and Desktop Companions
+tiers:
+- rank: 2
+  name: Entire 13 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/idlers-and-desktop-companions
@@ -13,39 +15,78 @@ games:
 - name: 'Spirit City: Lofi Sessions'
   ids:
   - steam:2113850
+  requires: []
+  tiers:
+  - 2
 - name: Rusty's Retirement
   ids:
   - steam:2666510
+  requires: []
+  tiers:
+  - 2
 - name: Dark Hunting Ground
   ids:
   - steam:2494810
+  requires: []
+  tiers:
+  - 2
 - name: Military Incremental Complex
   ids:
   - steam:3469750
+  requires: []
+  tiers:
+  - 2
 - name: Berserk B.I.T.S
   ids:
   - steam:2348540
+  requires: []
+  tiers:
+  - 2
 - name: Kin and Quarry
   ids:
   - steam:3505770
+  requires: []
+  tiers:
+  - 2
 - name: Focus Grove
   ids:
   - steam:4030830
+  requires: []
+  tiers:
+  - 2
 - name: Ropuka's Idle Island
   ids:
   - steam:3416070
+  requires: []
+  tiers:
+  - 2
 - name: Desktop Defender
   ids:
   - steam:3772810
+  requires: []
+  tiers:
+  - 2
 - name: My Little Life
   ids:
   - steam:2834600
+  requires: []
+  tiers:
+  - 2
 - name: Pupple Pop
   ids:
   - steam:4224500
+  requires: []
+  tiers:
+  - 2
 - name: 'Plantera 2: Golden Acorn'
   ids:
   - steam:1091920
+  requires: []
+  tiers:
+  - 2
 - name: How To Train Your Cock
   ids:
   - steam:3673060
+  requires: []
+  tiers:
+  - 2

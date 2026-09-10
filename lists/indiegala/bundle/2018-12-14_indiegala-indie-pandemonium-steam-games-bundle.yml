@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Pandemonium Bundle — Tier 2
-tier: 2
+name: Indie Pandemonium Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6772/
@@ -13,24 +15,48 @@ games:
 - name: Hexa Turn
   ids:
   - steam:794940
+  requires: []
+  tiers:
+  - 2
 - name: Trash Squad
   ids:
   - steam:676440
+  requires: []
+  tiers:
+  - 2
 - name: TRAGO
   ids:
   - steam:869080
+  requires: []
+  tiers:
+  - 2
 - name: Dungeon Rushers
   ids:
   - steam:429620
+  requires: []
+  tiers:
+  - 2
 - name: Karma. Incarnation 1
   ids:
   - steam:394700
+  requires: []
+  tiers:
+  - 2
 - name: 'Tyr : Chains of Valhalla'
   ids:
   - steam:609720
+  requires: []
+  tiers:
+  - 2
 - name: Steel Empire
   ids:
   - steam:563260
+  requires: []
+  tiers:
+  - 2
 - name: Juanito Arcade Mayhem
   ids:
   - steam:617440
+  requires: []
+  tiers:
+  - 2

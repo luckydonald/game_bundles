@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Blender Games Bundle 3 — Tier 2
-tier: 2
+name: Blender Games Bundle 3
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7861/
@@ -13,81 +15,162 @@ games:
 - name: Bitcoin Collector
   ids:
   - steam:704190
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Frozen
   ids:
   - steam:828910
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Untouchable
   ids:
   - steam:776540
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE ABC
   ids:
   - steam:928610
+  requires: []
+  tiers:
+  - 2
 - name: 'aMAZE: Halloween'
   ids:
   - steam:949030
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE 3D
   ids:
   - steam:667300
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Dark Times
   ids:
   - steam:692200
+  requires: []
+  tiers:
+  - 2
 - name: 'Chocolate makes you happy: New Year'
   ids:
   - steam:983280
+  requires: []
+  tiers:
+  - 2
 - name: 'Chocolate makes you happy: Halloween'
   ids:
   - steam:941790
+  requires: []
+  tiers:
+  - 2
 - name: 'aMAZE Classic: Inverted'
   ids:
   - steam:874010
+  requires: []
+  tiers:
+  - 2
 - name: Data mining 2
   ids:
   - steam:960820
+  requires: []
+  tiers:
+  - 2
 - name: Data mining 3
   ids:
   - steam:978450
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Classic
   ids:
   - steam:853860
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy 6
   ids:
   - steam:864570
+  requires: []
+  tiers:
+  - 2
 - name: Data mining 0
   ids:
   - steam:1059260
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Double
   ids:
   - steam:736840
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy 3
   ids:
   - steam:790860
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy 2
   ids:
   - steam:764560
+  requires: []
+  tiers:
+  - 2
 - name: GraFi
   ids:
   - steam:1067650
+  requires: []
+  tiers:
+  - 2
 - name: Cowboy's Adventure
   ids:
   - steam:666960
+  requires: []
+  tiers:
+  - 2
 - name: BAFF
   ids:
   - steam:1081760
+  requires: []
+  tiers:
+  - 2
 - name: Data mining
   ids:
   - steam:907590
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy 4
   ids:
   - steam:815950
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy 7
   ids:
   - steam:892880
+  requires: []
+  tiers:
+  - 2
 - name: Chocolate makes you happy
   ids:
   - steam:749340
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE Gears
   ids:
   - steam:806850
+  requires: []
+  tiers:
+  - 2
 - name: aMAZE ZER0
   ids:
   - steam:679660
+  requires: []
+  tiers:
+  - 2

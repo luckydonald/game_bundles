@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #67 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #67'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6961/
@@ -13,24 +15,48 @@ games:
 - name: Qipa World-Hello Big Adventure
   ids:
   - steam:975710
+  requires: []
+  tiers:
+  - 2
 - name: Witchball
   ids:
   - steam:768580
+  requires: []
+  tiers:
+  - 2
 - name: Achaem
   ids:
   - steam:871330
+  requires: []
+  tiers:
+  - 2
 - name: RPG Tycoon
   ids:
   - steam:314240
+  requires: []
+  tiers:
+  - 2
 - name: .projekt
   ids:
   - steam:759000
+  requires: []
+  tiers:
+  - 2
 - name: Falnarion Tactics
   ids:
   - steam:974180
+  requires: []
+  tiers:
+  - 2
 - name: Heavy Memories
   ids:
   - steam:980690
+  requires: []
+  tiers:
+  - 2
 - name: '999'
   ids:
   - steam:876840
+  requires: []
+  tiers:
+  - 2

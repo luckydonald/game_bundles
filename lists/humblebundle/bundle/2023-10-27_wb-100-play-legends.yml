@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'WB 100: Play The Legends Bundle — entire-12-item-bundle'
-tier: 3
+name: 'WB 100: Play The Legends Bundle'
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13576/
@@ -13,36 +15,72 @@ games:
 - name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
   ids:
   - unresolved:source:isthereanydeal:13576:middle-earth-shadow-of-mordor-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Batman: Arkham Asylum Game of the Year Edition'
   ids:
   - steam:35140
+  requires: []
+  tiers:
+  - 3
 - name: Mad Max
   ids:
   - steam:234140
+  requires: []
+  tiers:
+  - 3
 - name: Mortal Kombat XL
   ids:
   - unresolved:source:isthereanydeal:13576:mortal-kombat-xl
+  requires: []
+  tiers:
+  - 3
 - name: Batman Arkham City Game of the Year Edition
   ids:
   - steam:200260
+  requires: []
+  tiers:
+  - 3
 - name: 'Batman™: Arkham Knight Premium Edition'
   ids:
   - unresolved:source:isthereanydeal:13576:batman-arkham-knight-premium-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Batman: Arkham Origins'
   ids:
   - steam:209000
+  requires: []
+  tiers:
+  - 3
 - name: Injustice 2 Legendary Edition
   ids:
   - unresolved:source:isthereanydeal:13576:injustice-2-legendary-edition
+  requires: []
+  tiers:
+  - 3
 - name: Mortal Kombat 11 Ultimate
   ids:
   - unresolved:source:isthereanydeal:13576:mortal-kombat-11-ultimate
+  requires: []
+  tiers:
+  - 3
 - name: 'Middle-earth™: Shadow of War™ Definitive Edition'
   ids:
   - unresolved:source:isthereanydeal:13576:middle-earth-shadow-of-war-definitive-edition
+  requires: []
+  tiers:
+  - 3
 - name: Back 4 Blood
   ids:
   - steam:924970
+  requires: []
+  tiers:
+  - 3
 - name: Gotham Knights
   ids:
   - steam:1496790
+  requires: []
+  tiers:
+  - 3

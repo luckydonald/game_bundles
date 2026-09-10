@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #51 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #51'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5849/
@@ -13,30 +15,60 @@ games:
 - name: 'Draw a Stickman: EPIC'
   ids:
   - steam:248650
+  requires: []
+  tiers:
+  - 2
 - name: DARTHY
   ids:
   - steam:404850
+  requires: []
+  tiers:
+  - 2
 - name: Zasa - An AI Story
   ids:
   - steam:447240
+  requires: []
+  tiers:
+  - 2
 - name: ARAYA
   ids:
   - steam:466740
+  requires: []
+  tiers:
+  - 2
 - name: Roots of Insanity
   ids:
   - steam:598440
+  requires: []
+  tiers:
+  - 2
 - name: 'Draw a Stickman: EPIC 2'
   ids:
   - steam:403180
+  requires: []
+  tiers:
+  - 2
 - name: Somewhere on Zibylon
   ids:
   - steam:631920
+  requires: []
+  tiers:
+  - 2
 - name: Age Of Gladiators
   ids:
   - steam:442500
+  requires: []
+  tiers:
+  - 2
 - name: 'Age of Gladiators II: Death League'
   ids:
   - steam:639300
+  requires: []
+  tiers:
+  - 2
 - name: Firewood
   ids:
   - steam:615180
+  requires: []
+  tiers:
+  - 2

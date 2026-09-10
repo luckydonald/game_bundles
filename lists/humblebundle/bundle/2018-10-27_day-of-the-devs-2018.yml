@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Day of the Devs Bundle (2018) — entire-7-item-bundle
-tier: 3
+name: Humble Day of the Devs Bundle (2018)
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6616/
@@ -13,21 +15,42 @@ games:
 - name: Full Throttle Remastered
   ids:
   - steam:228360
+  requires: []
+  tiers:
+  - 3
 - name: Burly Men at Sea
   ids:
   - steam:403290
+  requires: []
+  tiers:
+  - 3
 - name: RiME
   ids:
   - steam:493200
+  requires: []
+  tiers:
+  - 3
 - name: Yooka-Laylee
   ids:
   - steam:360830
+  requires: []
+  tiers:
+  - 3
 - name: 'Hotline Miami 2: Wrong Number'
   ids:
   - steam:274170
+  requires: []
+  tiers:
+  - 3
 - name: Hyper Light Drifter
   ids:
   - steam:257850
+  requires: []
+  tiers:
+  - 3
 - name: Minit
   ids:
   - steam:609490
+  requires: []
+  tiers:
+  - 3

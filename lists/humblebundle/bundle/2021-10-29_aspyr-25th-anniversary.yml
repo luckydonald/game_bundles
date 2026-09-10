@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Aspyr 25th Anniversary Bundle — entire-8-item-bundle
-tier: 3
+name: Aspyr 25th Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10627/
@@ -13,24 +15,48 @@ games:
 - name: 'Fahrenheit: Indigo Prophecy Remastered'
   ids:
   - steam:312840
+  requires: []
+  tiers:
+  - 3
 - name: Lightmatter
   ids:
   - steam:994140
+  requires: []
+  tiers:
+  - 3
 - name: 'Layers of Fear: Masterpiece Edition'
   ids:
   - unresolved:source:isthereanydeal:10627:layers-of-fear-masterpiece-edition
+  requires: []
+  tiers:
+  - 3
 - name: Morkredd
   ids:
   - steam:1331910
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: The Handsome Collection'
   ids:
   - unresolved:source:isthereanydeal:10627:borderlands-the-handsome-collection
+  requires: []
+  tiers:
+  - 3
 - name: BioShock Infinite - Season Pass
   ids:
   - steam:214933
+  requires: []
+  tiers:
+  - 3
 - name: BioShock Infinite
   ids:
   - steam:8870
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization®: Beyond Earth™ - The Collection'
   ids:
   - unresolved:source:isthereanydeal:10627:sid-meiers-civilization-beyond-earth-the-collection
+  requires: []
+  tiers:
+  - 3

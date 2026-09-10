@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Back to Basics — Tier 2
-tier: 2
+name: Back to Basics
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2816/
@@ -13,42 +15,84 @@ games:
 - name: Sirius
   ids:
   - unresolved:source:isthereanydeal:2816:sirius
+  requires: []
+  tiers:
+  - 2
 - name: Escape Machines
   ids:
   - steam:363490
+  requires: []
+  tiers:
+  - 2
 - name: New kind of adventure
   ids:
   - steam:375510
+  requires: []
+  tiers:
+  - 2
 - name: Stellar 2D
   ids:
   - steam:391070
+  requires: []
+  tiers:
+  - 2
 - name: Tower of Elements
   ids:
   - unresolved:source:isthereanydeal:2816:tower-of-elements
+  requires: []
+  tiers:
+  - 2
 - name: Clergy Splode
   ids:
   - steam:403900
+  requires: []
+  tiers:
+  - 2
 - name: Turbo Pug
   ids:
   - steam:418070
+  requires: []
+  tiers:
+  - 2
 - name: Lup
   ids:
   - steam:412600
+  requires: []
+  tiers:
+  - 2
 - name: 'Terra Incognita ~ Chapter One: The Descendant'
   ids:
   - steam:347560
+  requires: []
+  tiers:
+  - 2
 - name: Eaten Alive
   ids:
   - steam:403560
+  requires: []
+  tiers:
+  - 2
 - name: Flesh Eaters
   ids:
   - steam:383580
+  requires: []
+  tiers:
+  - 2
 - name: Tin Boy
   ids:
   - unresolved:source:isthereanydeal:2816:tin-boy
+  requires: []
+  tiers:
+  - 2
 - name: Ampersand
   ids:
   - steam:410210
+  requires: []
+  tiers:
+  - 2
 - name: 'Star Chronicles: Delta Quadrant'
   ids:
   - steam:383330
+  requires: []
+  tiers:
+  - 2

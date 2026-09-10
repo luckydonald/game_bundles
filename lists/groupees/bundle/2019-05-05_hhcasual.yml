@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The HH-Games Casual Bundle — Tier 2
-tier: 2
+name: The HH-Games Casual Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7366/
@@ -13,21 +15,42 @@ games:
 - name: Mini Golf
   ids:
   - unresolved:source:isthereanydeal:7366:mini-golf
+  requires: []
+  tiers:
+  - 2
 - name: 'The Enthralling Realms: An Alchemist''s Tale'
   ids:
   - steam:1016850
+  requires: []
+  tiers:
+  - 2
 - name: 'The Far Kingdoms: Age Of Solitaire'
   ids:
   - steam:997480
+  requires: []
+  tiers:
+  - 2
 - name: 'Greed: Forbidden Experiments'
   ids:
   - steam:1007730
+  requires: []
+  tiers:
+  - 2
 - name: 'Epic Adventures: La Jangada'
   ids:
   - steam:1008320
+  requires: []
+  tiers:
+  - 2
 - name: 'Magic Farm 2: Fairy Lands (Premium Edition)'
   ids:
   - steam:1054750
+  requires: []
+  tiers:
+  - 2
 - name: The Chronicles of Jonah and the Whale
   ids:
   - steam:1004500
+  requires: []
+  tiers:
+  - 2

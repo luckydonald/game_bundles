@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Eroge Bundle 12 — Tier 3
-tier: 3
+name: Eroge Bundle 12
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13010/
@@ -13,33 +15,66 @@ games:
 - name: Hero Zex
   ids:
   - steam:1684780
+  requires: []
+  tiers:
+  - 3
 - name: Grayscale Memories
   ids:
   - steam:1645780
+  requires: []
+  tiers:
+  - 3
 - name: NinNinDays2
   ids:
   - steam:1698030
+  requires: []
+  tiers:
+  - 3
 - name: Meria and The Island of Orcs
   ids:
   - unresolved:source:isthereanydeal:13010:meria-and-the-island-of-orcs
+  requires: []
+  tiers:
+  - 3
 - name: Selobus Fantasy
   ids:
   - steam:1747300
+  requires: []
+  tiers:
+  - 3
 - name: Playing with My Brother' Wife
   ids:
   - steam:2013440
+  requires: []
+  tiers:
+  - 3
 - name: Atelier Agnes
   ids:
   - steam:1684480
+  requires: []
+  tiers:
+  - 3
 - name: Wizard Girl Anzu
   ids:
   - steam:1751070
+  requires: []
+  tiers:
+  - 3
 - name: Duel Princess
   ids:
   - unresolved:source:isthereanydeal:13010:duel-princess
+  requires: []
+  tiers:
+  - 3
 - name: Got reincarnated into a world of RPG full of NPCs…
   ids:
   - steam:1809250
+  requires: []
+  tiers:
+  - 3
 - name: Runaway Princess
   ids:
   - steam:1786750
+  requires: []
+  tiers:
+  - 3

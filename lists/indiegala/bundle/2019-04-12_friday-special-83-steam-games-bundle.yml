@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #83 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #83'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7300/
@@ -13,24 +15,48 @@ games:
 - name: Ink Plane
   ids:
   - steam:922150
+  requires: []
+  tiers:
+  - 2
 - name: 'Super Ledgehop: Double Laser'
   ids:
   - steam:787070
+  requires: []
+  tiers:
+  - 2
 - name: Thugs Law
   ids:
   - steam:1018960
+  requires: []
+  tiers:
+  - 2
 - name: Frog Hop
   ids:
   - steam:568490
+  requires: []
+  tiers:
+  - 2
 - name: The Red Solstice
   ids:
   - steam:265590
+  requires: []
+  tiers:
+  - 2
 - name: BattleRush 2
   ids:
   - steam:871990
+  requires: []
+  tiers:
+  - 2
 - name: Chime Sharp
   ids:
   - steam:326520
+  requires: []
+  tiers:
+  - 2
 - name: 'ChemCaper: Act I - Petticles in Peril'
   ids:
   - unresolved:source:isthereanydeal:7300:chemcaper-act-i-petticles-in-peril
+  requires: []
+  tiers:
+  - 2

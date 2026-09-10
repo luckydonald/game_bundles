@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Digitized Tabletop Bundle — entire-20-item-bundle
-tier: 4
+name: Digitized Tabletop Bundle
+tiers:
+- rank: 4
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10784/
@@ -13,60 +15,120 @@ games:
 - name: Solitairica
   ids:
   - steam:463980
+  requires: []
+  tiers:
+  - 4
 - name: WARTILE
   ids:
   - steam:404200
+  requires: []
+  tiers:
+  - 4
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:10784:talisman-digital-edition
+  requires: []
+  tiers:
+  - 4
 - name: Talisman - The City Expansion
   ids:
   - steam:267784
+  requires: []
+  tiers:
+  - 4
 - name: Talisman - The Sacred Pool Expansion
   ids:
   - steam:267781
+  requires: []
+  tiers:
+  - 4
 - name: Talisman - The Frostmarch Expansion
   ids:
   - steam:267772
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Mixed Booster Pack
   ids:
   - steam:338360
+  requires: []
+  tiers:
+  - 4
 - name: 'Meteorfall: Krumit''s Tale'
   ids:
   - steam:1073320
+  requires: []
+  tiers:
+  - 4
 - name: "100% Orange Juice \x96 Syura & Nanako Character Pack"
   ids:
   - steam:327340
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Saki & Kyousuke Character Pack
   ids:
   - steam:334080
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Acceleration Pack
   ids:
   - steam:537330
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Krila & Kae Character Pack
   ids:
   - steam:376200
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Core Voice Pack 2
   ids:
   - unresolved:source:isthereanydeal:10784:100-orange-juice-core-voice-pack-2
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Starter Character Voice Pack
   ids:
   - unresolved:source:isthereanydeal:10784:100-orange-juice-starter-character-voice-pack
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Alte & Kyoko Character Pack
   ids:
   - steam:388790
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice
   ids:
   - steam:282800
+  requires: []
+  tiers:
+  - 4
 - name: 100% Orange Juice - Core Voice Pack 1
   ids:
   - unresolved:source:isthereanydeal:10784:100-orange-juice-core-voice-pack-1
+  requires: []
+  tiers:
+  - 4
 - name: Trials of Fire
   ids:
   - steam:1038370
+  requires: []
+  tiers:
+  - 4
 - name: DungeonTop
   ids:
   - steam:1146230
+  requires: []
+  tiers:
+  - 4
 - name: The Amazing American Circus
   ids:
   - steam:1433860
+  requires: []
+  tiers:
+  - 4

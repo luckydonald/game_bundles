@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Microids Mystery Menagerie Bundle — entire-18-item-bundle
-tier: 5
+name: Microids Mystery Menagerie Bundle
+tiers:
+- rank: 5
+  name: entire-18-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14552/
@@ -13,54 +15,108 @@ games:
 - name: Post Mortem
   ids:
   - steam:46550
+  requires: []
+  tiers:
+  - 5
 - name: Still Life 2
   ids:
   - steam:46490
+  requires: []
+  tiers:
+  - 5
 - name: Sinking Island
   ids:
   - steam:333430
+  requires: []
+  tiers:
+  - 5
 - name: Nostradamus - The Last Prophecy
   ids:
   - steam:287720
+  requires: []
+  tiers:
+  - 5
 - name: Still Life
   ids:
   - steam:46480
+  requires: []
+  tiers:
+  - 5
 - name: Syberia
   ids:
   - steam:46500
+  requires: []
+  tiers:
+  - 5
 - name: Syberia 3 - An Automaton with a plan
   ids:
   - steam:673500
+  requires: []
+  tiers:
+  - 5
 - name: Syberia 3
   ids:
   - steam:464340
+  requires: []
+  tiers:
+  - 5
 - name: Yesterday Origins
   ids:
   - steam:465280
+  requires: []
+  tiers:
+  - 5
 - name: Agatha Christie - The ABC Murders
   ids:
   - steam:374900
+  requires: []
+  tiers:
+  - 5
 - name: Syberia II
   ids:
   - steam:46510
+  requires: []
+  tiers:
+  - 5
 - name: Murder Mystery Machine
   ids:
   - steam:930280
+  requires: []
+  tiers:
+  - 5
 - name: 'Blacksad : Under the Skin'
   ids:
   - steam:1003890
+  requires: []
+  tiers:
+  - 5
 - name: Alfred Hitchcock - Vertigo
   ids:
   - steam:1449320
+  requires: []
+  tiers:
+  - 5
 - name: 'Agatha Christie - Hercule Poirot: The First Cases'
   ids:
   - steam:1573720
+  requires: []
+  tiers:
+  - 5
 - name: 'Syberia: The World Before'
   ids:
   - steam:1410640
+  requires: []
+  tiers:
+  - 5
 - name: 'Agatha Christie - Hercule Poirot: The London Case'
   ids:
   - steam:2223740
+  requires: []
+  tiers:
+  - 5
 - name: 'Agatha Christie: Murder on the Orient Express'
   ids:
   - steam:1904790
+  requires: []
+  tiers:
+  - 5

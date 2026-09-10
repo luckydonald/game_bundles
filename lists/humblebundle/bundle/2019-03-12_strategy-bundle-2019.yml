@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Strategy Bundle 2019 — entire-9-item-bundle
-tier: 4
+name: Humble Strategy Bundle 2019
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7167/
@@ -13,27 +15,54 @@ games:
 - name: Niche - a genetics survival game
   ids:
   - steam:440650
+  requires: []
+  tiers:
+  - 4
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
+  requires: []
+  tiers:
+  - 4
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:7167:throne-of-lies-the-online-game-of-deceit
+  requires: []
+  tiers:
+  - 4
 - name: Offworld Trading Company™
   ids:
   - steam:271240
+  requires: []
+  tiers:
+  - 4
 - name: Dungeons 3
   ids:
   - steam:493900
+  requires: []
+  tiers:
+  - 4
 - name: Offworld Trading Company - Jupiter's Forge
   ids:
   - unresolved:source:isthereanydeal:7167:offworld-trading-company-jupiters-forge
+  requires: []
+  tiers:
+  - 4
 - name: Stellaris
   ids:
   - steam:281990
+  requires: []
+  tiers:
+  - 4
 - name: 'Plague Inc: Evolved'
   ids:
   - steam:246620
+  requires: []
+  tiers:
+  - 4
 - name: Sid Meier's Civilization® VI
   ids:
   - steam:289070
+  requires: []
+  tiers:
+  - 4

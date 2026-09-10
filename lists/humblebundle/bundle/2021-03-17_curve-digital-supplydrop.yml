@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Curve Digital Supply-Drop Bundle — entire-11-item-bundle
-tier: 3
+name: Humble Curve Digital Supply-Drop Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9848/
@@ -13,33 +15,66 @@ games:
 - name: Hue
   ids:
   - steam:383270
+  requires: []
+  tiers:
+  - 3
 - name: The Flame in the Flood
   ids:
   - steam:318600
+  requires: []
+  tiers:
+  - 3
 - name: Manual Samuel
   ids:
   - steam:504130
+  requires: []
+  tiers:
+  - 3
 - name: When Ski Lifts Go Wrong
   ids:
   - steam:638000
+  requires: []
+  tiers:
+  - 3
 - name: Table Manners
   ids:
   - steam:1019450
+  requires: []
+  tiers:
+  - 3
 - name: American Fugitive
   ids:
   - steam:934780
+  requires: []
+  tiers:
+  - 3
 - name: Bomber Crew
   ids:
   - steam:537800
+  requires: []
+  tiers:
+  - 3
 - name: For The King
   ids:
   - steam:527230
+  requires: []
+  tiers:
+  - 3
 - name: Autonauts
   ids:
   - steam:979120
+  requires: []
+  tiers:
+  - 3
 - name: 'Narcos: Rise of the Cartels'
   ids:
   - unresolved:source:isthereanydeal:9848:narcos-rise-of-the-cartels
+  requires: []
+  tiers:
+  - 3
 - name: Space Crew
   ids:
   - unresolved:source:isthereanydeal:9848:space-crew
+  requires: []
+  tiers:
+  - 3

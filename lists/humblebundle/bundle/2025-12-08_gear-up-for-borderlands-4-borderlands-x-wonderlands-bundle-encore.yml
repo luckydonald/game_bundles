@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Gear Up for Borderlands 4: Borderlands X Wonderlands Encore — entire-11-item-bundle'
-tier: 4
+name: 'Gear Up for Borderlands 4: Borderlands X Wonderlands Encore'
+tiers:
+- rank: 4
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15662/
@@ -13,33 +15,66 @@ games:
 - name: Borderlands 2
   ids:
   - steam:49520
+  requires: []
+  tiers:
+  - 4
 - name: 'Borderlands: The Pre-Sequel'
   ids:
   - steam:261640
+  requires: []
+  tiers:
+  - 4
 - name: 'Borderlands: Game of the Year Enhanced'
   ids:
   - steam:729040
+  requires: []
+  tiers:
+  - 4
 - name: Borderlands 3
   ids:
   - steam:397540
+  requires: []
+  tiers:
+  - 4
 - name: Tales from the Borderlands
   ids:
   - steam:330830
+  requires: []
+  tiers:
+  - 4
 - name: Borderlands 2 VR
   ids:
   - steam:991260
+  requires: []
+  tiers:
+  - 4
 - name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
   ids:
   - unresolved:source:isthereanydeal:15662:tiny-tinas-wonderlands-chaotic-great-edition
+  requires: []
+  tiers:
+  - 4
 - name: New Tales from the Borderlands
   ids:
   - steam:1454970
+  requires: []
+  tiers:
+  - 4
 - name: Borderlands 4
   ids:
   - unresolved:source:isthereanydeal:15662:borderlands-4
+  requires: []
+  tiers:
+  - 4
 - name: Borderlands 4 Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:15662:borderlands-4-deluxe-edition
+  requires: []
+  tiers:
+  - 4
 - name: Borderlands 4 Super Deluxe Edition
   ids:
   - steam:1285190
+  requires: []
+  tiers:
+  - 4

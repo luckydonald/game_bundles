@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Awesome Indies from Humble Games Bundle — entire-10-item-bundle
-tier: 3
+name: Awesome Indies from Humble Games Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13505/
@@ -13,30 +15,60 @@ games:
 - name: Fae Tactics
   ids:
   - steam:995980
+  requires: []
+  tiers:
+  - 3
 - name: Ikenfell
   ids:
   - steam:854940
+  requires: []
+  tiers:
+  - 3
 - name: Ring of Pain
   ids:
   - steam:998740
+  requires: []
+  tiers:
+  - 3
 - name: 'Flynn: Son of Crimson'
   ids:
   - steam:737520
+  requires: []
+  tiers:
+  - 3
 - name: Unsighted
   ids:
   - steam:1062110
+  requires: []
+  tiers:
+  - 3
 - name: Void Bastards
   ids:
   - steam:857980
+  requires: []
+  tiers:
+  - 3
 - name: Archvale
   ids:
   - steam:1296360
+  requires: []
+  tiers:
+  - 3
 - name: The Wild At Heart
   ids:
   - steam:1093290
+  requires: []
+  tiers:
+  - 3
 - name: Dodgeball Academia
   ids:
   - steam:1422420
+  requires: []
+  tiers:
+  - 3
 - name: Moonscars
   ids:
   - steam:1374970
+  requires: []
+  tiers:
+  - 3

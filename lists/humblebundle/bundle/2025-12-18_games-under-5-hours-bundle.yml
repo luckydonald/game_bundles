@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Games Under 5 Hours to Finish Bundle — 10 Item Bundle
-tier: 2
+name: Games Under 5 Hours to Finish Bundle
+tiers:
+- rank: 2
+  name: 10 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15697/
@@ -13,30 +15,60 @@ games:
 - name: Arietta of Spirits
   ids:
   - steam:1140170
+  requires: []
+  tiers:
+  - 2
 - name: Harmony's Odyssey
   ids:
   - steam:1531490
+  requires: []
+  tiers:
+  - 2
 - name: The Forest Quartet
   ids:
   - steam:1620720
+  requires: []
+  tiers:
+  - 2
 - name: Tobla - Divine Path
   ids:
   - steam:2717750
+  requires: []
+  tiers:
+  - 2
 - name: Gravity Circuit
   ids:
   - steam:858710
+  requires: []
+  tiers:
+  - 2
 - name: Moduwar
   ids:
   - steam:923100
+  requires: []
+  tiers:
+  - 2
 - name: Mindcop
   ids:
   - steam:1517180
+  requires: []
+  tiers:
+  - 2
 - name: Monaco 2
   ids:
   - steam:1063030
+  requires: []
+  tiers:
+  - 2
 - name: 'Monument Valley: Panoramic Edition'
   ids:
   - steam:1927720
+  requires: []
+  tiers:
+  - 2
 - name: 'Monument Valley 2: Panoramic Edition'
   ids:
   - steam:1927740
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Extra life — Tier 3
-tier: 3
+name: Extra life
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2704/
@@ -13,27 +15,54 @@ games:
 - name: Overlord™
   ids:
   - steam:11450
+  requires: []
+  tiers:
+  - 3
 - name: 'Jazzpunk: Director''s Cut'
   ids:
   - steam:250260
+  requires: []
+  tiers:
+  - 3
 - name: How To Survive
   ids:
   - steam:250400
+  requires: []
+  tiers:
+  - 3
 - name: 'How To Survive: Third Person Standalone'
   ids:
   - steam:360150
+  requires: []
+  tiers:
+  - 3
 - name: 'Shadowgate: MacVenture Series'
   ids:
   - steam:343800
+  requires: []
+  tiers:
+  - 3
 - name: Overlord II
   ids:
   - steam:12810
+  requires: []
+  tiers:
+  - 3
 - name: Shadowgate
   ids:
   - steam:294440
+  requires: []
+  tiers:
+  - 3
 - name: it came from space and ate our brains
   ids:
   - steam:342620
+  requires: []
+  tiers:
+  - 3
 - name: Secret Ponchos
   ids:
   - steam:265750
+  requires: []
+  tiers:
+  - 3

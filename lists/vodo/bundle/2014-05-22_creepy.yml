@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Really Creepy Bundle — Beat The Average
-tier: 2
+name: The Really Creepy Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/816/
@@ -13,12 +15,24 @@ games:
 - name: Oknytt
   ids:
   - steam:286320
+  requires: []
+  tiers:
+  - 2
 - name: Finding Teddy
   ids:
   - steam:259600
+  requires: []
+  tiers:
+  - 2
 - name: The Path
   ids:
   - steam:27000
+  requires: []
+  tiers:
+  - 2
 - name: Sang-Froid - Tales of Werewolves
   ids:
   - steam:227220
+  requires: []
+  tiers:
+  - 2

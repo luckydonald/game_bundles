@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble New Couch Classics Bundle — entire-8-item-bundle
-tier: 3
+name: Humble New Couch Classics Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9959/
@@ -13,24 +15,48 @@ games:
 - name: 'Door Kickers: Action Squad'
   ids:
   - steam:686200
+  requires: []
+  tiers:
+  - 3
 - name: Ultimate Chicken Horse
   ids:
   - steam:386940
+  requires: []
+  tiers:
+  - 3
 - name: 20XX
   ids:
   - steam:322110
+  requires: []
+  tiers:
+  - 3
 - name: Nine Parchments
   ids:
   - steam:471550
+  requires: []
+  tiers:
+  - 3
 - name: Nine Parchments Soundtrack
   ids:
   - steam:1224240
+  requires: []
+  tiers:
+  - 3
 - name: Lethal League Blaze
   ids:
   - steam:553310
+  requires: []
+  tiers:
+  - 3
 - name: Wargroove
   ids:
   - steam:607050
+  requires: []
+  tiers:
+  - 3
 - name: biped
   ids:
   - steam:1071870
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Handheld PC Power Bundle — entire-15-item-bundle
-tier: 2
+name: Handheld PC Power Bundle
+tiers:
+- rank: 2
+  name: entire-15-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11487/
@@ -13,45 +15,90 @@ games:
 - name: Orcs Must Die! 2 - Family Ties Booster Pack
   ids:
   - steam:201805
+  requires: []
+  tiers:
+  - 2
 - name: Parkasaurus
   ids:
   - steam:591460
+  requires: []
+  tiers:
+  - 2
 - name: Orcs Must Die 2 - Are We There Yeti?
   ids:
   - steam:201802
+  requires: []
+  tiers:
+  - 2
 - name: Orcs Must Die! 2
   ids:
   - steam:201790
+  requires: []
+  tiers:
+  - 2
 - name: Orcs Must Die! 2 - Fire and Water Booster Pack
   ids:
   - steam:201804
+  requires: []
+  tiers:
+  - 2
 - name: Exanima
   ids:
   - steam:362490
+  requires: []
+  tiers:
+  - 2
 - name: Paint the Town Red
   ids:
   - steam:337320
+  requires: []
+  tiers:
+  - 2
 - name: 'Mutant Year Zero: Road to Eden - Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:11487:mutant-year-zero-road-to-eden-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: Neon Abyss
   ids:
   - steam:788100
+  requires: []
+  tiers:
+  - 2
 - name: 'MechWarrior 5: Mercenaries'
   ids:
   - steam:784080
+  requires: []
+  tiers:
+  - 2
 - name: 'Neon Abyss: Loveable Rogues Pack'
   ids:
   - steam:1262000
+  requires: []
+  tiers:
+  - 2
 - name: Neon Abyss Soundtrack
   ids:
   - steam:1396440
+  requires: []
+  tiers:
+  - 2
 - name: Neon Abyss - Alter Ego
   ids:
   - steam:1518790
+  requires: []
+  tiers:
+  - 2
 - name: Orcs Must Die! 3
   ids:
   - steam:1522820
+  requires: []
+  tiers:
+  - 2
 - name: Neon Abyss - Chrono Trap
   ids:
   - steam:1851340
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Premium Bundle — Tier 2
-tier: 2
+name: Premium Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2729/
@@ -13,24 +15,48 @@ games:
 - name: Silence of the Sleep
   ids:
   - steam:321870
+  requires: []
+  tiers:
+  - 2
 - name: Agent Awesome
   ids:
   - steam:345220
+  requires: []
+  tiers:
+  - 2
 - name: 'Broadsword : Age of Chivalry'
   ids:
   - unresolved:source:isthereanydeal:2729:broadsword-age-of-chivalry
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Puzzles 2: Birds'
   ids:
   - steam:344230
+  requires: []
+  tiers:
+  - 2
 - name: Bloop Reloaded
   ids:
   - unresolved:source:isthereanydeal:2729:bloop-reloaded
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Puzzles 2: Anime'
   ids:
   - steam:350810
+  requires: []
+  tiers:
+  - 2
 - name: Gas Guzzlers Extreme
   ids:
   - steam:243800
+  requires: []
+  tiers:
+  - 2
 - name: Starpoint Gemini 2
   ids:
   - steam:236150
+  requires: []
+  tiers:
+  - 2

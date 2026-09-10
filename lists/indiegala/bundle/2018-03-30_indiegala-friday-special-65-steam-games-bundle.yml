@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #65 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #65'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6018/
@@ -13,33 +15,66 @@ games:
 - name: 'PLATI NALOG: Favorite Russian Game'
   ids:
   - steam:806100
+  requires: []
+  tiers:
+  - 2
 - name: BOX align
   ids:
   - steam:768590
+  requires: []
+  tiers:
+  - 2
 - name: Lunch Truck Tycoon
   ids:
   - steam:375180
+  requires: []
+  tiers:
+  - 2
 - name: A Dream For Aaron
   ids:
   - steam:709140
+  requires: []
+  tiers:
+  - 2
 - name: Creekside Creep Invasion
   ids:
   - steam:551060
+  requires: []
+  tiers:
+  - 2
 - name: 'BELPAESE: Homecoming'
   ids:
   - steam:710820
+  requires: []
+  tiers:
+  - 2
 - name: Clash Force
   ids:
   - steam:703620
+  requires: []
+  tiers:
+  - 2
 - name: Bottom of the 9th
   ids:
   - steam:705020
+  requires: []
+  tiers:
+  - 2
 - name: Pembrey
   ids:
   - steam:708450
+  requires: []
+  tiers:
+  - 2
 - name: Market Tycoon
   ids:
   - steam:563360
+  requires: []
+  tiers:
+  - 2
 - name: Adventures of Hendri
   ids:
   - steam:792800
+  requires: []
+  tiers:
+  - 2

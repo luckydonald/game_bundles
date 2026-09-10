@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Just 1337 Complete — Tier 2
-tier: 2
+name: Just 1337 Complete
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4900/
@@ -13,63 +15,126 @@ games:
 - name: ShipLord
   ids:
   - steam:422250
+  requires: []
+  tiers:
+  - 2
 - name: Asteroid Bounty Hunter
   ids:
   - steam:444220
+  requires: []
+  tiers:
+  - 2
 - name: Neon Space
   ids:
   - steam:468490
+  requires: []
+  tiers:
+  - 2
 - name: Spin Rush
   ids:
   - steam:528660
+  requires: []
+  tiers:
+  - 2
 - name: Slash it 2 - Electronic Music Pack
   ids:
   - steam:586490
+  requires: []
+  tiers:
+  - 2
 - name: Slash it 2 - Russian Edition Pack
   ids:
   - steam:588790
+  requires: []
+  tiers:
+  - 2
 - name: Survive in Space
   ids:
   - steam:467950
+  requires: []
+  tiers:
+  - 2
 - name: Upside Down
   ids:
   - steam:586960
+  requires: []
+  tiers:
+  - 2
 - name: Slash it 2 - Chinese Edition Pack
   ids:
   - steam:588830
+  requires: []
+  tiers:
+  - 2
 - name: Hungry Flame
   ids:
   - steam:586970
+  requires: []
+  tiers:
+  - 2
 - name: Neon Space 2
   ids:
   - steam:505210
+  requires: []
+  tiers:
+  - 2
 - name: Slash It 2 - A Himitsu Exclusive Edition
   ids:
   - steam:590470
+  requires: []
+  tiers:
+  - 2
 - name: Slash it 2 - German Edition Pack
   ids:
   - steam:588840
+  requires: []
+  tiers:
+  - 2
 - name: Cube Runner
   ids:
   - steam:567280
+  requires: []
+  tiers:
+  - 2
 - name: Neon Prism
   ids:
   - steam:556280
+  requires: []
+  tiers:
+  - 2
 - name: Slash It 2
   ids:
   - steam:583760
+  requires: []
+  tiers:
+  - 2
 - name: Slash It 2 - JanjiMusic Exclusive Edition
   ids:
   - steam:590490
+  requires: []
+  tiers:
+  - 2
 - name: Fly and destroy
   ids:
   - steam:508180
+  requires: []
+  tiers:
+  - 2
 - name: Duke of Alpha Centauri
   ids:
   - steam:567580
+  requires: []
+  tiers:
+  - 2
 - name: Slash It
   ids:
   - steam:567290
+  requires: []
+  tiers:
+  - 2
 - name: Charlie's Adventure
   ids:
   - steam:556870
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine Endgame — Tier 2
-tier: 2
+name: Be Mine Endgame
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7621/
@@ -13,27 +15,54 @@ games:
 - name: 'Mysteries of Neverville: The Runestone of Light'
   ids:
   - steam:994870
+  requires: []
+  tiers:
+  - 2
 - name: 'Chess: King of Crowns Chess Online'
   ids:
   - unresolved:source:isthereanydeal:7621:chess-king-of-crowns-chess-online
+  requires: []
+  tiers:
+  - 2
 - name: Charlie II - Expansion Pack
   ids:
   - unresolved:source:isthereanydeal:7621:charlie-ii-expansion-pack
+  requires: []
+  tiers:
+  - 2
 - name: Enigma
   ids:
   - steam:494100
+  requires: []
+  tiers:
+  - 2
 - name: Hate Free Heroes RPG 2.0
   ids:
   - unresolved:source:isthereanydeal:7621:hate-free-heroes-rpg-2-0
+  requires: []
+  tiers:
+  - 2
 - name: '1406'
   ids:
   - steam:1043350
+  requires: []
+  tiers:
+  - 2
 - name: Grab Bag Game
   ids:
   - unresolved:source:isthereanydeal:7621:grab-bag-game
+  requires: []
+  tiers:
+  - 2
 - name: Charlie II
   ids:
   - steam:777760
+  requires: []
+  tiers:
+  - 2
 - name: 'Fasaria World: Ancients of Moons'
   ids:
   - unresolved:source:isthereanydeal:7621:fasaria-world-ancients-of-moons
+  requires: []
+  tiers:
+  - 2

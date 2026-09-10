@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Power Rage Bundle — Tier 2
-tier: 2
+name: Power Rage Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4487/
@@ -13,33 +15,66 @@ games:
 - name: BattleTime
   ids:
   - steam:509600
+  requires: []
+  tiers:
+  - 2
 - name: Rainbow Rage Squad
   ids:
   - steam:549780
+  requires: []
+  tiers:
+  - 2
 - name: PHAT STACKS
   ids:
   - steam:556160
+  requires: []
+  tiers:
+  - 2
 - name: Dawn's Light 2
   ids:
   - unresolved:source:isthereanydeal:4487:dawns-light-2
+  requires: []
+  tiers:
+  - 2
 - name: Bad birthday
   ids:
   - unresolved:source:isthereanydeal:4487:bad-birthday
+  requires: []
+  tiers:
+  - 2
 - name: 'Defense of Egypt: Cleopatra Mission'
   ids:
   - steam:534010
+  requires: []
+  tiers:
+  - 2
 - name: '1 Moment of Time: Silentville'
   ids:
   - steam:497400
+  requires: []
+  tiers:
+  - 2
 - name: Crazy Flies
   ids:
   - unresolved:source:isthereanydeal:4487:crazy-flies
+  requires: []
+  tiers:
+  - 2
 - name: The Fleets of Sol
   ids:
   - unresolved:source:isthereanydeal:4487:the-fleets-of-sol
+  requires: []
+  tiers:
+  - 2
 - name: Runeyana
   ids:
   - steam:463670
+  requires: []
+  tiers:
+  - 2
 - name: 'Fairyland: Fairy Power'
   ids:
   - unresolved:source:isthereanydeal:4487:fairyland-fairy-power
+  requires: []
+  tiers:
+  - 2

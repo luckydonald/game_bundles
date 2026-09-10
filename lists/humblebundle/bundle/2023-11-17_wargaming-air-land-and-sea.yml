@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Wargaming.net: By Air, Land and Sea Bundle — entire-9-item-bundle'
-tier: 3
+name: 'Wargaming.net: By Air, Land and Sea Bundle'
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13629/
@@ -13,27 +15,54 @@ games:
 - name: World of Warplanes -I-16-29 Pack
   ids:
   - steam:1001291
+  requires: []
+  tiers:
+  - 3
 - name: World of Tanks - French Express Pack
   ids:
   - unresolved:source:isthereanydeal:13629:world-of-tanks-french-express-pack
+  requires: []
+  tiers:
+  - 3
 - name: World of Warships — Smith Pack
   ids:
   - steam:934650
+  requires: []
+  tiers:
+  - 3
 - name: World of Tanks - Lightweight Fighter Pack
   ids:
   - unresolved:source:isthereanydeal:13629:world-of-tanks-lightweight-fighter-pack
+  requires: []
+  tiers:
+  - 3
 - name: World of Warplanes - Messerschmitt Me 210 Pack
   ids:
   - steam:2510930
+  requires: []
+  tiers:
+  - 3
 - name: World of Warships — Marblehead Lima Pack
   ids:
   - steam:934690
+  requires: []
+  tiers:
+  - 3
 - name: World of Warships - Texas Pack
   ids:
   - steam:845000
+  requires: []
+  tiers:
+  - 3
 - name: World of Tanks - Elusive Menace Pack
   ids:
   - unresolved:source:isthereanydeal:13629:world-of-tanks-elusive-menace-pack
+  requires: []
+  tiers:
+  - 3
 - name: World of Warplanes - SNCASE SE 100 Pack
   ids:
   - steam:2288671
+  requires: []
+  tiers:
+  - 3

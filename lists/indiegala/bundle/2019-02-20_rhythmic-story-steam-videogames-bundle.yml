@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rhythmic Story Bundle — Tier 2
-tier: 2
+name: Rhythmic Story Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7050/
@@ -13,24 +15,48 @@ games:
 - name: Drowning
   ids:
   - steam:830430
+  requires: []
+  tiers:
+  - 2
 - name: SWEATER-OK!
   ids:
   - unresolved:source:isthereanydeal:7050:sweater-ok
+  requires: []
+  tiers:
+  - 2
 - name: The Last Sigil
   ids:
   - steam:632100
+  requires: []
+  tiers:
+  - 2
 - name: 'Tales of Nebezem: Elemental Link'
   ids:
   - steam:788410
+  requires: []
+  tiers:
+  - 2
 - name: 'School of the Dead: Anastasia'
   ids:
   - steam:958090
+  requires: []
+  tiers:
+  - 2
 - name: 'Star Story: The Horizon Escape'
   ids:
   - steam:610310
+  requires: []
+  tiers:
+  - 2
 - name: TERRORHYTHM (TRRT) - Rhythm driven action beat 'em up!
   ids:
   - steam:752380
+  requires: []
+  tiers:
+  - 2
 - name: Samsara
   ids:
   - steam:652880
+  requires: []
+  tiers:
+  - 2

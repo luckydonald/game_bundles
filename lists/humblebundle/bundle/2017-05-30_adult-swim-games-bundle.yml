@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Adult Swim Games Bundle — Pay $12 or more
-tier: 3
+name: Humble Adult Swim Games Bundle
+tiers:
+- rank: 3
+  name: Pay $12 or more
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5160/
@@ -13,30 +15,60 @@ games:
 - name: Small Radios Big Televisions
   ids:
   - steam:390040
+  requires: []
+  tiers:
+  - 3
 - name: Volgarr the Viking
   ids:
   - steam:247240
+  requires: []
+  tiers:
+  - 3
 - name: WASTED
   ids:
   - steam:327510
+  requires: []
+  tiers:
+  - 3
 - name: 'Westerado: Double Barreled'
   ids:
   - steam:275200
+  requires: []
+  tiers:
+  - 3
 - name: Rise & Shine
   ids:
   - steam:347290
+  requires: []
+  tiers:
+  - 3
 - name: Headlander
   ids:
   - steam:340000
+  requires: []
+  tiers:
+  - 3
 - name: Duck Game
   ids:
   - steam:312530
+  requires: []
+  tiers:
+  - 3
 - name: Frog Fractions 2
   ids:
   - unresolved:source:isthereanydeal:5160:frog-fractions-2
+  requires: []
+  tiers:
+  - 3
 - name: Glittermitten Grove
   ids:
   - steam:536890
+  requires: []
+  tiers:
+  - 3
 - name: Rain World
   ids:
   - steam:312520
+  requires: []
+  tiers:
+  - 3

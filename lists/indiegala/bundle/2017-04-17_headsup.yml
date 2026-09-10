@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Heads Up Bundle — Tier 2
-tier: 2
+name: The Heads Up Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5011/
@@ -13,24 +15,48 @@ games:
 - name: 'Grotesque Tactics: Evil Heroes'
   ids:
   - steam:46450
+  requires: []
+  tiers:
+  - 2
 - name: Deadly 30
   ids:
   - steam:264730
+  requires: []
+  tiers:
+  - 2
 - name: Solar Shifter EX
   ids:
   - steam:363940
+  requires: []
+  tiers:
+  - 2
 - name: 'Trulon: The Shadow Engine'
   ids:
   - steam:433840
+  requires: []
+  tiers:
+  - 2
 - name: Holy Avatar vs. Maidens of the Dead
   ids:
   - steam:261720
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Heroes: Byte & Magic'
   ids:
   - steam:338320
+  requires: []
+  tiers:
+  - 2
 - name: SoulCraft
   ids:
   - steam:369180
+  requires: []
+  tiers:
+  - 2
 - name: In Between
   ids:
   - steam:388420
+  requires: []
+  tiers:
+  - 2

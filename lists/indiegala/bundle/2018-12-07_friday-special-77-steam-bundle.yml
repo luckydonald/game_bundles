@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #77 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #77'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6737/
@@ -13,24 +15,48 @@ games:
 - name: hocus.
   ids:
   - steam:418040
+  requires: []
+  tiers:
+  - 2
 - name: Super Seeker
   ids:
   - steam:884880
+  requires: []
+  tiers:
+  - 2
 - name: Hero Siege
   ids:
   - steam:269210
+  requires: []
+  tiers:
+  - 2
 - name: Far from Noise
   ids:
   - steam:706130
+  requires: []
+  tiers:
+  - 2
 - name: Has-Been Heroes
   ids:
   - steam:492290
+  requires: []
+  tiers:
+  - 2
 - name: Dreaming Sarah
   ids:
   - steam:296870
+  requires: []
+  tiers:
+  - 2
 - name: Gravity Wars
   ids:
   - steam:877150
+  requires: []
+  tiers:
+  - 2
 - name: Camp Sunshine
   ids:
   - steam:457570
+  requires: []
+  tiers:
+  - 2

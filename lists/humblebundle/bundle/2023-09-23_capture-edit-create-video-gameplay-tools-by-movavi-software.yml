@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Capture, Edit, Create! Video & Gameplay Tools: Movavi Bundle — entire-12-item-bundle'
-tier: 2
+name: 'Capture, Edit, Create! Video & Gameplay Tools: Movavi Bundle'
+tiers:
+- rank: 2
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13502/
@@ -13,36 +15,72 @@ games:
 - name: Gecata by Movavi 6 - Streaming and Game Recording Software
   ids:
   - steam:1403840
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Picverse - Photo Editing Software
   ids:
   - steam:1403800
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Handy Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-handy-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Let's Start a Vlog Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-lets-start-a-vlog-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Future is now Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-future-is-now-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Technology Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-technology-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Horror Stories Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-horror-stories-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Creative Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-creative-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022- Eastern World Set
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-eastern-world-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Good Game Pack
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-good-game-pack
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2022 - Spooky Overlay Pack
   ids:
   - unresolved:source:isthereanydeal:13502:movavi-video-editor-plus-2022-spooky-overlay-pack
+  requires: []
+  tiers:
+  - 2

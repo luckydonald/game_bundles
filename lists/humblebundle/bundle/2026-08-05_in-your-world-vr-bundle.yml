@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: In Your World VR Bundle — Entire 7 Item Bundle
-tier: 2
+name: In Your World VR Bundle
+tiers:
+- rank: 2
+  name: Entire 7 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/in-your-world-vr-bundle
@@ -13,21 +15,42 @@ games:
 - name: Into the Radius VR
   ids:
   - unresolved:source:humblebundle:intotheradiusvr
+  requires: []
+  tiers:
+  - 2
 - name: 'WRATH: Aeon of Ruin VR - Brutal Edition'
   ids:
   - unresolved:source:humblebundle:wrath_aeonofruinvr-brutaledition
+  requires: []
+  tiers:
+  - 2
 - name: 'Racket: Nx'
   ids:
   - unresolved:source:humblebundle:racket_nx
+  requires: []
+  tiers:
+  - 2
 - name: Sairento VR
   ids:
   - unresolved:source:humblebundle:sairentovr
+  requires: []
+  tiers:
+  - 2
 - name: Labyrinthine
   ids:
   - unresolved:source:humblebundle:labyrinthine
+  requires: []
+  tiers:
+  - 2
 - name: DOOM VFR
   ids:
   - unresolved:source:humblebundle:doomvfr
+  requires: []
+  tiers:
+  - 2
 - name: The Utility Room
   ids:
   - unresolved:source:humblebundle:theutilityroom
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jumbo Bundle 6 — entire-11-item-bundle
-tier: 3
+name: Humble Jumbo Bundle 6
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3144/
@@ -13,33 +15,66 @@ games:
 - name: 'WARMACHINE: Tactics - Mercenaries Faction Bundle'
   ids:
   - unresolved:source:isthereanydeal:3144:warmachine-tactics-mercenaries-faction-bundle
+  requires: []
+  tiers:
+  - 3
 - name: 'WARMACHINE: Tactics'
   ids:
   - steam:253510
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Chronicles - Boston Lockdown
   ids:
   - unresolved:source:isthereanydeal:3144:shadowrun-chronicles-boston-lockdown
+  requires: []
+  tiers:
+  - 3
 - name: 'Oceanhorn: Monster of Uncharted Seas'
   ids:
   - steam:339200
+  requires: []
+  tiers:
+  - 3
 - name: TransOcean - The Shipping Company
   ids:
   - steam:289930
+  requires: []
+  tiers:
+  - 3
 - name: 'Shadowrun: Dragonfall - Director''s Cut'
   ids:
   - steam:300550
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamfall Chapters: The Final Cut'
   ids:
   - steam:237850
+  requires: []
+  tiers:
+  - 3
 - name: Magicka 2
   ids:
   - steam:238370
+  requires: []
+  tiers:
+  - 3
 - name: Holy Potatoes! A Weapon Shop?!
   ids:
   - steam:363600
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Returns
   ids:
   - steam:234650
+  requires: []
+  tiers:
+  - 3
 - name: Grey Goo Definitive Edition
   ids:
   - unresolved:source:isthereanydeal:3144:grey-goo-definitive-edition
+  requires: []
+  tiers:
+  - 3

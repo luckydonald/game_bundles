@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Stories from Latin America Bundle — entire-10-item-bundle
-tier: 3
+name: Stories from Latin America Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15457/
@@ -13,30 +15,60 @@ games:
 - name: 9 Years of Shadows
   ids:
   - steam:1402120
+  requires: []
+  tiers:
+  - 3
 - name: The Bunny Graveyard
   ids:
   - steam:1892420
+  requires: []
+  tiers:
+  - 3
 - name: Dreamcore
   ids:
   - steam:2453060
+  requires: []
+  tiers:
+  - 3
 - name: 'Arranger: A Role-Puzzling Adventure'
   ids:
   - steam:2596420
+  requires: []
+  tiers:
+  - 3
 - name: Keylocker | Turn Based Cyberpunk Action
   ids:
   - steam:1325040
+  requires: []
+  tiers:
+  - 3
 - name: Tormented Souls
   ids:
   - steam:1367590
+  requires: []
+  tiers:
+  - 3
 - name: despelote
   ids:
   - steam:2367820
+  requires: []
+  tiers:
+  - 3
 - name: Kulebra and the Souls of Limbo
   ids:
   - steam:2246470
+  requires: []
+  tiers:
+  - 3
 - name: Arco
   ids:
   - steam:2366970
+  requires: []
+  tiers:
+  - 3
 - name: Enigma of Fear
   ids:
   - steam:1507580
+  requires: []
+  tiers:
+  - 3

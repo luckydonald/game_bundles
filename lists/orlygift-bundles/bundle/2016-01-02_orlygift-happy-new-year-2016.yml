@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Happy New Year 2016 Bundle — Tier 2
-tier: 2
+name: Happy New Year 2016 Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2903/
@@ -13,24 +15,48 @@ games:
 - name: Energy Balance
   ids:
   - steam:375010
+  requires: []
+  tiers:
+  - 2
 - name: 'Into the Dark: Ultimate Trash Edition'
   ids:
   - steam:266050
+  requires: []
+  tiers:
+  - 2
 - name: Prism
   ids:
   - unresolved:source:isthereanydeal:2903:prism
+  requires: []
+  tiers:
+  - 2
 - name: Vox Populi Vox Dei 2
   ids:
   - steam:345120
+  requires: []
+  tiers:
+  - 2
 - name: hocus.
   ids:
   - steam:418040
+  requires: []
+  tiers:
+  - 2
 - name: Cluck Yegger in Escape From The Planet of The Poultroid
   ids:
   - steam:416800
+  requires: []
+  tiers:
+  - 2
 - name: Celia's Quest
   ids:
   - steam:380120
+  requires: []
+  tiers:
+  - 2
 - name: Judgement
   ids:
   - steam:383780
+  requires: []
+  tiers:
+  - 2

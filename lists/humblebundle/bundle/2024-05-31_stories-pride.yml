@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Stories of Pride Bundle — entire-8-item-bundle
-tier: 4
+name: Stories of Pride Bundle
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14099/
@@ -13,24 +15,48 @@ games:
 - name: The World Next Door
   ids:
   - steam:755470
+  requires: []
+  tiers:
+  - 4
 - name: Heaven Will Be Mine
   ids:
   - steam:836450
+  requires: []
+  tiers:
+  - 4
 - name: No Longer Home
   ids:
   - steam:651490
+  requires: []
+  tiers:
+  - 4
 - name: Arcadia Fallen
   ids:
   - steam:1174640
+  requires: []
+  tiers:
+  - 4
 - name: 'Coffee Talk Episode 2: Hibiscus & Butterfly'
   ids:
   - steam:1663220
+  requires: []
+  tiers:
+  - 4
 - name: 'Monster Prom 2: Monster Camp'
   ids:
   - steam:1140270
+  requires: []
+  tiers:
+  - 4
 - name: Lakeburg Legacies
   ids:
   - steam:1584940
+  requires: []
+  tiers:
+  - 4
 - name: Wylde Flowers
   ids:
   - steam:1896700
+  requires: []
+  tiers:
+  - 4

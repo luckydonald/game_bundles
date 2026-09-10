@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rhythm is Gonna Get You VR Bundle — entire-8-item-bundle
-tier: 3
+name: Rhythm is Gonna Get You VR Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14433/
@@ -13,24 +15,48 @@ games:
 - name: Thumper
   ids:
   - steam:356400
+  requires: []
+  tiers:
+  - 3
 - name: Spin Rhythm XD
   ids:
   - steam:1058830
+  requires: []
+  tiers:
+  - 3
 - name: PowerBeatsVR - VR Fitness
   ids:
   - steam:810500
+  requires: []
+  tiers:
+  - 3
 - name: Ragnaröck
   ids:
   - steam:1345820
+  requires: []
+  tiers:
+  - 3
 - name: Drums Rock
   ids:
   - steam:1906020
+  requires: []
+  tiers:
+  - 3
 - name: Synth Riders
   ids:
   - steam:885000
+  requires: []
+  tiers:
+  - 3
 - name: Audio Trip
   ids:
   - steam:826540
+  requires: []
+  tiers:
+  - 3
 - name: Pistol Whip
   ids:
   - steam:1079800
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Elder Scrolls Bundle — 7 Products
-tier: 2
+name: The Elder Scrolls Bundle
+tiers:
+- rank: 2
+  name: 7 Products
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14384/
@@ -13,21 +15,42 @@ games:
 - name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
   ids:
   - steam:22320
+  requires: []
+  tiers:
+  - 2
 - name: 'The Elder Scrolls V: Skyrim Special Edition'
   ids:
   - steam:489830
+  requires: []
+  tiers:
+  - 2
 - name: 'An Elder Scrolls Legend: Battlespire'
   ids:
   - steam:1812420
+  requires: []
+  tiers:
+  - 2
 - name: The Elder Scrolls Online
   ids:
   - steam:306130
+  requires: []
+  tiers:
+  - 2
 - name: 'The Elder Scrolls Adventures: Redguard'
   ids:
   - steam:1812410
+  requires: []
+  tiers:
+  - 2
 - name: 'The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)'
   ids:
   - steam:22330
+  requires: []
+  tiers:
+  - 2
 - name: 'The Elder Scrolls V: Skyrim Anniversary Upgrade'
   ids:
   - steam:1746860
+  requires: []
+  tiers:
+  - 2

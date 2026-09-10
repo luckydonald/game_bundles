@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Cosmic Mysteries & Noir Realities Bundle — entire-8-item-bundle
-tier: 3
+name: Cosmic Mysteries & Noir Realities Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15485/
@@ -13,24 +15,48 @@ games:
 - name: Genesis Noir
   ids:
   - steam:735290
+  requires: []
+  tiers:
+  - 3
 - name: Tales of the Neon Sea
   ids:
   - steam:828740
+  requires: []
+  tiers:
+  - 3
 - name: Disco Elysium - The Final Cut
   ids:
   - steam:632470
+  requires: []
+  tiers:
+  - 3
 - name: 'Glitchhikers: The Spaces Between'
   ids:
   - steam:1449230
+  requires: []
+  tiers:
+  - 3
 - name: Strangeland
   ids:
   - steam:1369520
+  requires: []
+  tiers:
+  - 3
 - name: Chicken Police - Paint it RED
   ids:
   - steam:1084640
+  requires: []
+  tiers:
+  - 3
 - name: NORCO
   ids:
   - steam:1221250
+  requires: []
+  tiers:
+  - 3
 - name: The Excavation of Hob's Barrow
   ids:
   - steam:1182310
+  requires: []
+  tiers:
+  - 3

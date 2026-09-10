@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Train Sim World 3 Mega Haul Bundle — entire-16-item-bundle
-tier: 3
+name: Train Sim World 3 Mega Haul Bundle
+tiers:
+- rank: 3
+  name: entire-16-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13309/
@@ -13,51 +15,99 @@ games:
 - name: 'Train Sim World® 2: LIRR M3 EMU Loco Add-On'
   ids:
   - steam:1304463
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World 2: Clinchfield Railroad: Elkhorn - Dante Route Add-On'
   ids:
   - steam:1418849
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World 2: Cathcart Circle Line: Glasgow - Newton & Neilston Route
     Add-On'
   ids:
   - steam:1490112
+  requires: []
+  tiers:
+  - 3
 - name: Train Sim World 3
   ids:
   - steam:1944790
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World 2: Class 20 ''Chopper'''
   ids:
   - unresolved:source:isthereanydeal:13309:train-sim-world-2-class-20-chopper
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Caltrain MP36PH-3C ‘Baby Bullet'' Loco Add-On'
   ids:
   - unresolved:source:isthereanydeal:13309:train-sim-world-2-caltrain-mp36ph-3c-baby-bullet-loco-add-on
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Northern Trans-Pennine: Manchester - Leeds Route Add-On'
   ids:
   - steam:1304415
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World 2: Hauptstrecke Hamburg - Lübeck Route Add-On'
   ids:
   - steam:1490111
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World 2: Rush Hour - London Commuter Route Add-On'
   ids:
   - steam:1490116
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Nahverkehr Dresden -Riesa Route Add-On'
   ids:
   - unresolved:source:isthereanydeal:13309:train-sim-world-2-nahverkehr-dresden-riesa-route-add-on
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Peninsula Corridor: San Francisco - San Jose Route Add-On'
   ids:
   - unresolved:source:isthereanydeal:13309:train-sim-world-2-peninsula-corridor-san-francisco-san-jose-route-add-on
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Tees Valley Line: Darlington - Saltburn-by-the-Sea Route
     Add-On'
   ids:
   - steam:1304442
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Long Island Rail Road: New York - Hicksville Route Add-On'
   ids:
   - steam:1304414
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Rhein-Ruhr Osten: Wuppertal - Hagen Route Add-On'
   ids:
   - steam:1304445
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 2: Great Western Express Route Add-On'
   ids:
   - steam:1304410
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 3: Birmingham Cross-City Line: Lichfield - Bromsgrove &
     Redditch Route Add-On'
   ids:
   - steam:1998976
+  requires: []
+  tiers:
+  - 3

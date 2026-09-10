@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Choose Wisely Bundle — entire-6-item-bundle
-tier: 3
+name: Choose Wisely Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10712/
@@ -13,18 +15,36 @@ games:
 - name: Beholder 2
   ids:
   - steam:761620
+  requires: []
+  tiers:
+  - 3
 - name: We Were Here Together
   ids:
   - steam:865360
+  requires: []
+  tiers:
+  - 3
 - name: Between the Stars
   ids:
   - steam:727130
+  requires: []
+  tiers:
+  - 3
 - name: On Your Tail - Digital Artbook
   ids:
   - unresolved:source:isthereanydeal:10712:on-your-tail-digital-artbook
+  requires: []
+  tiers:
+  - 3
 - name: Beyond Two Souls
   ids:
   - steam:960990
+  requires: []
+  tiers:
+  - 3
 - name: Heavy Rain
   ids:
   - steam:960910
+  requires: []
+  tiers:
+  - 3

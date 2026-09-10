@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Great Brawl Bundle — Tier 2
-tier: 2
+name: Great Brawl Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5147/
@@ -13,33 +15,66 @@ games:
 - name: Whispers
   ids:
   - unresolved:source:isthereanydeal:5147:whispers
+  requires: []
+  tiers:
+  - 2
 - name: Krampus
   ids:
   - unresolved:source:isthereanydeal:5147:krampus
+  requires: []
+  tiers:
+  - 2
 - name: 'Unforgiving Trials: The Darkest Crusade'
   ids:
   - steam:489220
+  requires: []
+  tiers:
+  - 2
 - name: Glass Wing
   ids:
   - unresolved:source:isthereanydeal:5147:glass-wing
+  requires: []
+  tiers:
+  - 2
 - name: Fergus The Fly
   ids:
   - unresolved:source:isthereanydeal:5147:fergus-the-fly
+  requires: []
+  tiers:
+  - 2
 - name: Carrie's Order Up
   ids:
   - steam:522490
+  requires: []
+  tiers:
+  - 2
 - name: Twist of Destiny
   ids:
   - unresolved:source:isthereanydeal:5147:twist-of-destiny
+  requires: []
+  tiers:
+  - 2
 - name: 'Case #8'
   ids:
   - unresolved:source:isthereanydeal:5147:case-8
+  requires: []
+  tiers:
+  - 2
 - name: Cursed West
   ids:
   - steam:512550
+  requires: []
+  tiers:
+  - 2
 - name: MontaSayer
   ids:
   - unresolved:source:isthereanydeal:5147:montasayer
+  requires: []
+  tiers:
+  - 2
 - name: POBEDA
   ids:
   - steam:623580
+  requires: []
+  tiers:
+  - 2

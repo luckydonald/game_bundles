@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 31 — Tier 2
-tier: 2
+name: Be Mine 31
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5409/
@@ -13,18 +15,36 @@ games:
 - name: XenoBloom
   ids:
   - steam:391440
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Space Wolf'
   ids:
   - unresolved:source:isthereanydeal:5409:warhammer-40000-space-wolf
+  requires: []
+  tiers:
+  - 2
 - name: War of the Human Tanks - ALTeR
   ids:
   - steam:301920
+  requires: []
+  tiers:
+  - 2
 - name: Blue Rider
   ids:
   - steam:402340
+  requires: []
+  tiers:
+  - 2
 - name: Super Chibi Knight
   ids:
   - steam:283080
+  requires: []
+  tiers:
+  - 2
 - name: Stardust Galaxy Warriors Combo Package
   ids:
   - unresolved:source:isthereanydeal:5409:stardust-galaxy-warriors-combo-package
+  requires: []
+  tiers:
+  - 2

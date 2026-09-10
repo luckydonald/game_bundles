@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rytmik Ultimate Bundle — Tier 3
-tier: 3
+name: Rytmik Ultimate Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8668/
@@ -13,21 +15,42 @@ games:
 - name: Rytmik Ultimate
   ids:
   - steam:375840
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Cloud Expansion 2
   ids:
   - unresolved:source:isthereanydeal:8668:rytmik-cloud-expansion-2
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Ultimate - Rock Expansion
   ids:
   - steam:525970
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Cloud Expansion
   ids:
   - steam:697380
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Ultimate - Voice & Acoustic Expansion
   ids:
   - steam:525971
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Live
   ids:
   - steam:699060
+  requires: []
+  tiers:
+  - 3
 - name: Rytmik Studio
   ids:
   - steam:657280
+  requires: []
+  tiers:
+  - 3

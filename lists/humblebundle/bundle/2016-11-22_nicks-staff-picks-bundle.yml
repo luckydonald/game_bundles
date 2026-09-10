@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Staff Picks: Nick — Pay $14 or more to also unlock'
-tier: 3
+name: 'Humble Staff Picks: Nick'
+tiers:
+- rank: 3
+  name: Pay $14 or more to also unlock
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4381/
@@ -13,21 +15,42 @@ games:
 - name: Volume
   ids:
   - steam:365770
+  requires: []
+  tiers:
+  - 3
 - name: TIS-100
   ids:
   - steam:370360
+  requires: []
+  tiers:
+  - 3
 - name: Legend of Grimrock II
   ids:
   - unresolved:source:isthereanydeal:4381:legend-of-grimrock-ii
+  requires: []
+  tiers:
+  - 3
 - name: The Secret World
   ids:
   - unresolved:source:isthereanydeal:4381:the-secret-world
+  requires: []
+  tiers:
+  - 3
 - name: Infinifactory
   ids:
   - steam:300570
+  requires: []
+  tiers:
+  - 3
 - name: Dungeons 2
   ids:
   - steam:262280
+  requires: []
+  tiers:
+  - 3
 - name: Grim Dawn
   ids:
   - steam:219990
+  requires: []
+  tiers:
+  - 3

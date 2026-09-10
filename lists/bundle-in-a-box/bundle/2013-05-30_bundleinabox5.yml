@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capsule Computers Indie Bundle 1 — Beat The Average
-tier: 2
+name: Capsule Computers Indie Bundle 1
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/224/
@@ -13,36 +15,72 @@ games:
 - name: 'Hacker Evolution: Untold'
   ids:
   - steam:70110
+  requires: []
+  tiers:
+  - 2
 - name: Pixelry
   ids:
   - unresolved:source:isthereanydeal:224:pixelry
+  requires: []
+  tiers:
+  - 2
 - name: Super Tower Rush
   ids:
   - unresolved:source:isthereanydeal:224:super-tower-rush
+  requires: []
+  tiers:
+  - 2
 - name: The Blackwell Legacy
   ids:
   - steam:80330
+  requires: []
+  tiers:
+  - 2
 - name: Lune
   ids:
   - unresolved:source:isthereanydeal:224:lune
+  requires: []
+  tiers:
+  - 2
 - name: Blackwell Deception
   ids:
   - steam:80360
+  requires: []
+  tiers:
+  - 2
 - name: Blackwell Unbound
   ids:
   - steam:80340
+  requires: []
+  tiers:
+  - 2
 - name: Blackwell Convergence
   ids:
   - steam:80350
+  requires: []
+  tiers:
+  - 2
 - name: Hacker Evolution Duality
   ids:
   - steam:70120
+  requires: []
+  tiers:
+  - 2
 - name: Secret of the Magic Crystals
   ids:
   - steam:45100
+  requires: []
+  tiers:
+  - 2
 - name: Hamlet or the last game without MMORPG features, shaders and product placement
   ids:
   - steam:222160
+  requires: []
+  tiers:
+  - 2
 - name: Hacker Evolution
   ids:
   - steam:70100
+  requires: []
+  tiers:
+  - 2

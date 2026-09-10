@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #63 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #63'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6725/
@@ -13,27 +15,54 @@ games:
 - name: WayDown
   ids:
   - steam:959090
+  requires: []
+  tiers:
+  - 2
 - name: Naughty Elves
   ids:
   - steam:750620
+  requires: []
+  tiers:
+  - 2
 - name: Oops!!! I Slept With Your Mom
   ids:
   - steam:930320
+  requires: []
+  tiers:
+  - 2
 - name: Roboball
   ids:
   - steam:973170
+  requires: []
+  tiers:
+  - 2
 - name: HarmonyTD
   ids:
   - steam:866100
+  requires: []
+  tiers:
+  - 2
 - name: Crazy Plant Shop
   ids:
   - steam:292200
+  requires: []
+  tiers:
+  - 2
 - name: A Bird Story
   ids:
   - steam:327410
+  requires: []
+  tiers:
+  - 2
 - name: 'BROKE PROTOCOL: Online City RPG'
   ids:
   - unresolved:source:isthereanydeal:6725:broke-protocol-online-city-rpg
+  requires: []
+  tiers:
+  - 2
 - name: EnHanced
   ids:
   - steam:882390
+  requires: []
+  tiers:
+  - 2

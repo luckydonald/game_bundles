@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Be Mine: Special Edition — Tier 2'
-tier: 2
+name: 'Be Mine: Special Edition'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/176/
@@ -13,30 +15,60 @@ games:
 - name: Tower Wars
   ids:
   - steam:214360
+  requires: []
+  tiers:
+  - 2
 - name: 'Star Wolves 3: Civil War'
   ids:
   - steam:46260
+  requires: []
+  tiers:
+  - 2
 - name: Fortix
   ids:
   - steam:45400
+  requires: []
+  tiers:
+  - 2
 - name: MacGuffin's Curse
   ids:
   - steam:58230
+  requires: []
+  tiers:
+  - 2
 - name: Ravaged Zombie Apocalypse
   ids:
   - unresolved:source:isthereanydeal:176:ravaged-zombie-apocalypse
+  requires: []
+  tiers:
+  - 2
 - name: 'Hamilton''s Great Adventure: Retro Fever'
   ids:
   - steam:42147
+  requires: []
+  tiers:
+  - 2
 - name: Hamilton's Great Adventure
   ids:
   - steam:42140
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Driver HD Soundtrack
   ids:
   - steam:220822
+  requires: []
+  tiers:
+  - 2
 - name: Krater Collectors Edition
   ids:
   - unresolved:source:isthereanydeal:176:krater-collectors-edition
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Driver HD
   ids:
   - steam:220820
+  requires: []
+  tiers:
+  - 2

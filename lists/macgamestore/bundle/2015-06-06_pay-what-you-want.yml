@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Paradox Interactive Bundle — Beat The Average
-tier: 2
+name: Paradox Interactive Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2097/
@@ -13,27 +15,54 @@ games:
 - name: Majesty 2
   ids:
   - steam:25980
+  requires: []
+  tiers:
+  - 2
 - name: 'Majesty 2: Kingmaker'
   ids:
   - steam:42881
+  requires: []
+  tiers:
+  - 2
 - name: A Game of Dwarves
   ids:
   - steam:200370
+  requires: []
+  tiers:
+  - 2
 - name: 'The Kings Crusade: New Allies'
   ids:
   - unresolved:source:isthereanydeal:2097:the-kings-crusade-new-allies
+  requires: []
+  tiers:
+  - 2
 - name: The Kings' Crusade
   ids:
   - steam:42920
+  requires: []
+  tiers:
+  - 2
 - name: 'Warlock: Master of the Arcane'
   ids:
   - steam:203630
+  requires: []
+  tiers:
+  - 2
 - name: 'Pirates of Black Cove: Origins'
   ids:
   - steam:49337
+  requires: []
+  tiers:
+  - 2
 - name: Pirates of Black Cove
   ids:
   - steam:49330
+  requires: []
+  tiers:
+  - 2
 - name: Supreme Ruler Cold War
   ids:
   - unresolved:source:isthereanydeal:2097:supreme-ruler-cold-war
+  requires: []
+  tiers:
+  - 2

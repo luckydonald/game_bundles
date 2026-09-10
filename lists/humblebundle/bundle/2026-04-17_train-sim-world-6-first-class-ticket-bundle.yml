@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Train Sim World 6: First Class Ticket Bundle — entire-8-item-bundle'
-tier: 2
+name: 'Train Sim World 6: First Class Ticket Bundle'
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16067/
@@ -14,26 +16,50 @@ games:
     Add-On'
   ids:
   - steam:3663440
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World 6: Training Center'
   ids:
   - unresolved:source:isthereanydeal:16067:train-sim-world-6-training-center
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: LNER Class A3 60103 Flying Scotsman Steam Loco Add-On'
   ids:
   - steam:3663180
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: East Coast Main Line: Peterborough - Doncaster Route
     Add-On'
   ids:
   - steam:3663200
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: Pfälzische Ludwigsbahn: Mannheim - Kaiserslautern Route
     Add-On'
   ids:
   - steam:3663510
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: Metrolink Holiday Train Pack'
   ids:
   - unresolved:source:isthereanydeal:16067:train-sim-world-6-metrolink-holiday-train-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: Diesel Legends of the Great Western'
   ids:
   - unresolved:source:isthereanydeal:16067:train-sim-world-6-diesel-legends-of-the-great-western
+  requires: []
+  tiers:
+  - 2
 - name: 'Train Sim World® 6: Great Western Express Remastered'
   ids:
   - unresolved:source:isthereanydeal:16067:train-sim-world-6-great-western-express-remastered
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Masterful Remasters Bundle — Raider
-tier: 3
+name: Masterful Remasters Bundle
+tiers:
+- rank: 3
+  name: Raider
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15610/
@@ -13,21 +15,42 @@ games:
 - name: Stubbs the Zombie in Rebel Without a Pulse
   ids:
   - steam:7800
+  requires: []
+  tiers:
+  - 3
 - name: Shadow Man Remastered
   ids:
   - steam:1413870
+  requires: []
+  tiers:
+  - 3
 - name: 'Rise of the Triad: Ludicrous Edition'
   ids:
   - steam:1421490
+  requires: []
+  tiers:
+  - 3
 - name: Tomb Raider I-III Remastered
   ids:
   - steam:2478970
+  requires: []
+  tiers:
+  - 3
 - name: Legacy of Kain™ Soul Reaver 1&2 Remastered
   ids:
   - steam:2521380
+  requires: []
+  tiers:
+  - 3
 - name: 'Turok 3: Shadow of Oblivion Remastered'
   ids:
   - steam:1996770
+  requires: []
+  tiers:
+  - 3
 - name: Tomb Raider IV-VI Remastered
   ids:
   - steam:2525380
+  requires: []
+  tiers:
+  - 3

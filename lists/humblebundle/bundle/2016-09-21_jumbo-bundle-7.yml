@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jumbo Bundle 7 — Pay $9.99 or more to also unlock
-tier: 3
+name: Humble Jumbo Bundle 7
+tiers:
+- rank: 3
+  name: Pay $9.99 or more to also unlock
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4103/
@@ -13,30 +15,60 @@ games:
 - name: 'RollerCoaster Tycoon 2: Triple Thrill Pack'
   ids:
   - steam:285330
+  requires: []
+  tiers:
+  - 3
 - name: Devil Daggers
   ids:
   - steam:422970
+  requires: []
+  tiers:
+  - 3
 - name: Runestone Keeper
   ids:
   - steam:339400
+  requires: []
+  tiers:
+  - 3
 - name: Road to Ballhalla
   ids:
   - steam:425410
+  requires: []
+  tiers:
+  - 3
 - name: Stronghold Crusader 2
   ids:
   - steam:232890
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect
   ids:
   - steam:233450
+  requires: []
+  tiers:
+  - 3
 - name: Elegy for a Dead World
   ids:
   - unresolved:source:isthereanydeal:4103:elegy-for-a-dead-world
+  requires: []
+  tiers:
+  - 3
 - name: Punch Club
   ids:
   - steam:394310
+  requires: []
+  tiers:
+  - 3
 - name: Agatha Christie - The ABC Murders
   ids:
   - steam:374900
+  requires: []
+  tiers:
+  - 3
 - name: Miscreated
   ids:
   - steam:299740
+  requires: []
+  tiers:
+  - 3

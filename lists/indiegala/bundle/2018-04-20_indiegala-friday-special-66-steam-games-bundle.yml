@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #66 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #66'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6070/
@@ -13,36 +15,72 @@ games:
 - name: CUBE
   ids:
   - unresolved:source:isthereanydeal:6070:cube
+  requires: []
+  tiers:
+  - 2
 - name: Box Maze Extreme
   ids:
   - steam:818890
+  requires: []
+  tiers:
+  - 2
 - name: Slavistan
   ids:
   - steam:504770
+  requires: []
+  tiers:
+  - 2
 - name: 'Parkan: The Imperial Chronicles'
   ids:
   - steam:575690
+  requires: []
+  tiers:
+  - 2
 - name: Color Jumper OST
   ids:
   - unresolved:source:isthereanydeal:6070:color-jumper-ost
+  requires: []
+  tiers:
+  - 2
 - name: An Octonaut Odyssey
   ids:
   - steam:566320
+  requires: []
+  tiers:
+  - 2
 - name: Deep Dark Fight
   ids:
   - steam:764500
+  requires: []
+  tiers:
+  - 2
 - name: Askutron Quiz Show
   ids:
   - steam:701280
+  requires: []
+  tiers:
+  - 2
 - name: Galactic Harvester
   ids:
   - unresolved:source:isthereanydeal:6070:galactic-harvester
+  requires: []
+  tiers:
+  - 2
 - name: Skipper
   ids:
   - steam:674440
+  requires: []
+  tiers:
+  - 2
 - name: Color Jumper
   ids:
   - steam:594810
+  requires: []
+  tiers:
+  - 2
 - name: Instant Death
   ids:
   - steam:779360
+  requires: []
+  tiers:
+  - 2

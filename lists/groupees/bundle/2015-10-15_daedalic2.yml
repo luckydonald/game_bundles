@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Daedalic Entertainment Limited Bundle #2 — Tier 2'
-tier: 2
+name: 'Daedalic Entertainment Limited Bundle #2'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2609/
@@ -13,15 +15,30 @@ games:
 - name: Decay - The Mare
   ids:
   - steam:323720
+  requires: []
+  tiers:
+  - 2
 - name: 'The Dark Eye: Chains of Satinav'
   ids:
   - steam:203830
+  requires: []
+  tiers:
+  - 2
 - name: Goodbye Deponia - Premium Edition
   ids:
   - unresolved:source:isthereanydeal:2609:goodbye-deponia-premium-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'The Last Tinker™: City of Colors'
   ids:
   - steam:260160
+  requires: []
+  tiers:
+  - 2
 - name: 'The Dark Eye: Memoria'
   ids:
   - steam:243200
+  requires: []
+  tiers:
+  - 2

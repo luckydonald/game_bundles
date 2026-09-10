@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Blitz Cubic Bundle — Tier 2
-tier: 2
+name: Blitz Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5221/
@@ -13,36 +15,72 @@ games:
 - name: Sinister City
   ids:
   - steam:326180
+  requires: []
+  tiers:
+  - 2
 - name: CosmoLands | Space-Adventure
   ids:
   - unresolved:source:isthereanydeal:5221:cosmolands-space-adventure
+  requires: []
+  tiers:
+  - 2
 - name: Cubic complex
   ids:
   - unresolved:source:isthereanydeal:5221:cubic-complex
+  requires: []
+  tiers:
+  - 2
 - name: Trouble In The Manor
   ids:
   - steam:338530
+  requires: []
+  tiers:
+  - 2
 - name: 'Wanderland: Advanced Adventurer Pack'
   ids:
   - steam:618980
+  requires: []
+  tiers:
+  - 2
 - name: Dracula's Legacy
   ids:
   - steam:396790
+  requires: []
+  tiers:
+  - 2
 - name: Introvert Quest
   ids:
   - steam:562640
+  requires: []
+  tiers:
+  - 2
 - name: 'Wanderland: Starter Pack'
   ids:
   - steam:607840
+  requires: []
+  tiers:
+  - 2
 - name: 'Whispers: Last Hope'
   ids:
   - unresolved:source:isthereanydeal:5221:whispers-last-hope
+  requires: []
+  tiers:
+  - 2
 - name: Bloodsports.TV
   ids:
   - steam:336420
+  requires: []
+  tiers:
+  - 2
 - name: Orbox C
   ids:
   - steam:544180
+  requires: []
+  tiers:
+  - 2
 - name: 'Alchemy Mysteries: Prague Legends'
   ids:
   - steam:326190
+  requires: []
+  tiers:
+  - 2

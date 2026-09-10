@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Retro Bundle 3 — Tier 2
-tier: 2
+name: Retro Bundle 3
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/705/
@@ -13,33 +15,66 @@ games:
 - name: Retro Racer Combat
   ids:
   - unresolved:source:isthereanydeal:705:retro-racer-combat
+  requires: []
+  tiers:
+  - 2
 - name: Noir Syndrome
   ids:
   - steam:299780
+  requires: []
+  tiers:
+  - 2
 - name: 6180 the moon Deluxe Edition
   ids:
   - steam:299660
+  requires: []
+  tiers:
+  - 2
 - name: Don't Move
   ids:
   - unresolved:source:isthereanydeal:705:don-t-move
+  requires: []
+  tiers:
+  - 2
 - name: Another Perspective
   ids:
   - steam:305920
+  requires: []
+  tiers:
+  - 2
 - name: 'Sugar Cube: Bittersweet Factory'
   ids:
   - steam:212110
+  requires: []
+  tiers:
+  - 2
 - name: Nosferatu - The Wrath Of Malachi
   ids:
   - steam:283290
+  requires: []
+  tiers:
+  - 2
 - name: Droid Assault
   ids:
   - steam:219200
+  requires: []
+  tiers:
+  - 2
 - name: Litil Divil
   ids:
   - steam:283430
+  requires: []
+  tiers:
+  - 2
 - name: The LootCastle
   ids:
   - unresolved:source:isthereanydeal:705:the-lootcastle
+  requires: []
+  tiers:
+  - 2
 - name: Dreaming Sarah
   ids:
   - steam:296870
+  requires: []
+  tiers:
+  - 2

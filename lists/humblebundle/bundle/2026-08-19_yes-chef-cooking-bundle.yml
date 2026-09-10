@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Yes Chef! - Cooking Bundle — Entire 16 Item Bundle
-tier: 3
+name: Yes Chef! - Cooking Bundle
+tiers:
+- rank: 3
+  name: Entire 16 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/yes-chef-cooking-bundle
@@ -24,78 +26,110 @@ games:
   - steam:2756770
   - isthereanydeal:tavern-manager-simulator
   requires: []
+  tiers:
+  - 3
 - name: The Chef's Shift
   ids:
   - steam:2390230
   - isthereanydeal:the-chefs-shift
   requires: []
+  tiers:
+  - 3
 - name: Chef Knight
   ids:
   - steam:4304930
   - isthereanydeal:chef-knight
   requires: []
+  tiers:
+  - 3
 - name: Pizza Possum
   ids:
   - steam:1951230
   - isthereanydeal:pizza-possum
   requires: []
+  tiers:
+  - 3
 - name: Food Truck Simulator
   ids:
   - steam:1160920
   - isthereanydeal:food-truck-simulator
   requires: []
+  tiers:
+  - 3
 - name: Bento Blocks
   ids:
   - steam:3311670
   - isthereanydeal:bento-blocks
   requires: []
+  tiers:
+  - 3
 - name: Magical Delicacy
   ids:
   - steam:2231190
   - isthereanydeal:magical-delicacy
   requires: []
+  tiers:
+  - 3
 - name: Don't Let it Starve
   ids:
   - steam:3930510
   - isthereanydeal:don-t-let-it-starve
   requires: []
+  tiers:
+  - 3
 - name: UMAMI
   ids:
   - steam:3669360
   - isthereanydeal:umami
   requires: []
+  tiers:
+  - 3
 - name: 'Brewmaster: Beer Brewing Simulator'
   ids:
   - steam:1569200
   - isthereanydeal:brewmaster-beer-brewing-simulator
   requires: []
+  tiers:
+  - 3
 - name: 'Tailside: Cozy Cafe Sim'
   ids:
   - steam:2922570
   - isthereanydeal:tailside-cozy-cafe-sim
   requires: []
+  tiers:
+  - 3
 - name: Which Sausage, Mate?
   ids:
   - steam:4429700
   - isthereanydeal:which-sausage-mate
   requires: []
+  tiers:
+  - 3
 - name: Burger Bots Inc.
   ids:
   - steam:3795760
   - isthereanydeal:burger-bots-inc
   requires: []
+  tiers:
+  - 3
 - name: Cannibal Cuisine
   ids:
   - steam:1136020
   - isthereanydeal:cannibal-cuisine
   requires: []
+  tiers:
+  - 3
 - name: Bakery Simulator
   ids:
   - steam:1031120
   - isthereanydeal:bakery-simulator
   requires: []
+  tiers:
+  - 3
 - name: Recipe for Disaster
   ids:
   - steam:1492360
   - isthereanydeal:recipe-for-disaster
   requires: []
+  tiers:
+  - 3

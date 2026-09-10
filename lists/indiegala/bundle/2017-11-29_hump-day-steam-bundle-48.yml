@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #48 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #48'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5669/
@@ -13,30 +15,60 @@ games:
 - name: WAR DRONES
   ids:
   - unresolved:source:isthereanydeal:5669:war-drones
+  requires: []
+  tiers:
+  - 2
 - name: Don't Tax Me, Bro!
   ids:
   - unresolved:source:isthereanydeal:5669:don-t-tax-me-bro
+  requires: []
+  tiers:
+  - 2
 - name: Lines X
   ids:
   - steam:724740
+  requires: []
+  tiers:
+  - 2
 - name: 'Chicago 1930: The Prohibition'
   ids:
   - steam:623920
+  requires: []
+  tiers:
+  - 2
 - name: Mad Games Tycoon
   ids:
   - steam:341000
+  requires: []
+  tiers:
+  - 2
 - name: 'Cornerstone : The song of Tyrim'
   ids:
   - steam:284410
+  requires: []
+  tiers:
+  - 2
 - name: League of Evil
   ids:
   - steam:491060
+  requires: []
+  tiers:
+  - 2
 - name: SuperFlight
   ids:
   - steam:732430
+  requires: []
+  tiers:
+  - 2
 - name: Thing-in-Itself
   ids:
   - steam:569340
+  requires: []
+  tiers:
+  - 2
 - name: 'Alien Arena: Warriors Of Mars'
   ids:
   - steam:629540
+  requires: []
+  tiers:
+  - 2

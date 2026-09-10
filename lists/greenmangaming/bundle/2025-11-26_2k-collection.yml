@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'The 2K Collection: Blockbusters & Beyond — Invasion'
-tier: 3
+name: 'The 2K Collection: Blockbusters & Beyond'
+tiers:
+- rank: 3
+  name: Invasion
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15629/
@@ -13,24 +15,48 @@ games:
 - name: The Quarry
   ids:
   - steam:1577120
+  requires: []
+  tiers:
+  - 3
 - name: Rollerdrome
   ids:
   - steam:1294420
+  requires: []
+  tiers:
+  - 3
 - name: 'BioShock: The Collection'
   ids:
   - unresolved:source:isthereanydeal:15629:bioshock-the-collection
+  requires: []
+  tiers:
+  - 3
 - name: LEGO 2K Drive
   ids:
   - unresolved:source:isthereanydeal:15629:lego-2k-drive
+  requires: []
+  tiers:
+  - 3
 - name: Risk of Rain Returns
   ids:
   - steam:1337520
+  requires: []
+  tiers:
+  - 3
 - name: TopSpin 2K25 Deluxe Edition
   ids:
   - steam:1785650
+  requires: []
+  tiers:
+  - 3
 - name: 'XCOM: Ultimate Collection'
   ids:
   - unresolved:source:isthereanydeal:15629:xcom-ultimate-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
   ids:
   - unresolved:source:isthereanydeal:15629:tiny-tinas-wonderlands-chaotic-great-edition
+  requires: []
+  tiers:
+  - 3

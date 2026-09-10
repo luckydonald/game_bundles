@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine X — Tier 2
-tier: 2
+name: Be Mine X
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/390/
@@ -13,39 +15,78 @@ games:
 - name: Project Night
   ids:
   - unresolved:source:isthereanydeal:390:project-night
+  requires: []
+  tiers:
+  - 2
 - name: Last Knight
   ids:
   - steam:1132620
+  requires: []
+  tiers:
+  - 2
 - name: Electronic Super Joy
   ids:
   - steam:244870
+  requires: []
+  tiers:
+  - 2
 - name: King's Bounty Warriors of the North Valhalla Edition
   ids:
   - steam:203350
+  requires: []
+  tiers:
+  - 2
 - name: One Finger Death Punch
   ids:
   - steam:264200
+  requires: []
+  tiers:
+  - 2
 - name: Little Gardens
   ids:
   - unresolved:source:isthereanydeal:390:little-gardens
+  requires: []
+  tiers:
+  - 2
 - name: Shelter
   ids:
   - unresolved:source:isthereanydeal:390:shelter
+  requires: []
+  tiers:
+  - 2
 - name: Face Noir
   ids:
   - steam:244690
+  requires: []
+  tiers:
+  - 2
 - name: Finding Teddy
   ids:
   - steam:259600
+  requires: []
+  tiers:
+  - 2
 - name: Call of Juarez™
   ids:
   - steam:3020
+  requires: []
+  tiers:
+  - 2
 - name: Legends of Dawn
   ids:
   - unresolved:source:isthereanydeal:390:legends-of-dawn
+  requires: []
+  tiers:
+  - 2
 - name: Pid
   ids:
   - steam:218740
+  requires: []
+  tiers:
+  - 2
 - name: 'Jazz: Trump''s Journey'
   ids:
   - unresolved:source:isthereanydeal:390:jazz-trumps-journey
+  requires: []
+  tiers:
+  - 2

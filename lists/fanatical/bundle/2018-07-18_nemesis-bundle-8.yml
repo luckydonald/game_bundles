@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nemesis Bundle 8 — Tier 3
-tier: 3
+name: Nemesis Bundle 8
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6313/
@@ -13,42 +15,84 @@ games:
 - name: Black & White Bushido
   ids:
   - unresolved:source:isthereanydeal:6313:black-and-white-bushido
+  requires: []
+  tiers:
+  - 3
 - name: Awe
   ids:
   - steam:371450
+  requires: []
+  tiers:
+  - 3
 - name: A.R.E.S. Extinction Agenda EX
   ids:
   - steam:315340
+  requires: []
+  tiers:
+  - 3
 - name: Super Mutant Alien Assault
   ids:
   - steam:368680
+  requires: []
+  tiers:
+  - 3
 - name: Original Journey
   ids:
   - steam:639470
+  requires: []
+  tiers:
+  - 3
 - name: Nightmare Boy
   ids:
   - steam:597860
+  requires: []
+  tiers:
+  - 3
 - name: FIM Speedway Grand Prix 4
   ids:
   - unresolved:source:isthereanydeal:6313:fim-speedway-grand-prix-4
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Souls
   ids:
   - steam:383230
+  requires: []
+  tiers:
+  - 3
 - name: 'True Fear: Forsaken Souls'
   ids:
   - steam:440420
+  requires: []
+  tiers:
+  - 3
 - name: Windward
   ids:
   - steam:326410
+  requires: []
+  tiers:
+  - 3
 - name: Deployment
   ids:
   - steam:755980
+  requires: []
+  tiers:
+  - 3
 - name: DreadOut Soundtrack & Manga
   ids:
   - steam:298680
+  requires: []
+  tiers:
+  - 3
 - name: DreadOut
   ids:
   - steam:269790
+  requires: []
+  tiers:
+  - 3
 - name: 'DreadOut: Keepers of The Dark'
   ids:
   - steam:418950
+  requires: []
+  tiers:
+  - 3

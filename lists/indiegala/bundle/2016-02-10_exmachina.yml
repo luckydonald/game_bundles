@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Ex_Machina Bundle — Tier 2
-tier: 2
+name: Ex_Machina Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3038/
@@ -13,30 +15,60 @@ games:
 - name: 'Data Hacker: Corruption'
   ids:
   - steam:329000
+  requires: []
+  tiers:
+  - 2
 - name: Data Hacker - Initiation
   ids:
   - steam:311860
+  requires: []
+  tiers:
+  - 2
 - name: 'Elements: Soul of Fire'
   ids:
   - unresolved:source:isthereanydeal:3038:elements-soul-of-fire
+  requires: []
+  tiers:
+  - 2
 - name: 'AI: Rampage'
   ids:
   - steam:438020
+  requires: []
+  tiers:
+  - 2
 - name: 'Invasion: Brain Craving'
   ids:
   - steam:423710
+  requires: []
+  tiers:
+  - 2
 - name: PulseCharge
   ids:
   - steam:438010
+  requires: []
+  tiers:
+  - 2
 - name: 'Atonement: Scourge of Time'
   ids:
   - steam:385070
+  requires: []
+  tiers:
+  - 2
 - name: City of Chains
   ids:
   - steam:412170
+  requires: []
+  tiers:
+  - 2
 - name: Dead6hot
   ids:
   - steam:438030
+  requires: []
+  tiers:
+  - 2
 - name: Incitement 3
   ids:
   - steam:391660
+  requires: []
+  tiers:
+  - 2

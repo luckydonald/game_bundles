@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Saints Row Ultimate Franchise Pack Bundle — Tier 2
-tier: 2
+name: Saints Row Ultimate Franchise Pack Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2065/
@@ -13,132 +15,264 @@ games:
 - name: 'Saints Row: The Third Shark Attack Pack'
   ids:
   - steam:55388
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - The Trouble With Clones'
   ids:
   - steam:55382
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Penthouse Pack'
   ids:
   - steam:55391
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Special Ops Vehicle Pack'
   ids:
   - steam:55398
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row Ultimate Franchise Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-ultimate-franchise-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Genki Girl Pack'
   ids:
   - steam:55400
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Warrior Pack'
   ids:
   - steam:55395
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third'
   ids:
   - steam:55230
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third Witches & Wieners Pack'
   ids:
   - steam:55392
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third Horror Pack'
   ids:
   - steam:55399
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third Explosive Combat Pack'
   ids:
   - steam:55387
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third Invincible Pack'
   ids:
   - steam:55390
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Gangstas in Space'
   ids:
   - steam:55381
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Money Shot Pack'
   ids:
   - steam:55389
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row 2
   ids:
   - steam:9480
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - Nyte Blayde Pack'
   ids:
   - steam:55396
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third - FUNTIME! Pack'
   ids:
   - steam:55385
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row: The Third Z Style Pack'
   ids:
   - steam:55386
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV Stone Age Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-stone-age-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - The Super Saints Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-the-super-saints-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Bling Bling Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-bling-bling-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Brady Games Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-brady-games-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Pirate's Booty Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-pirates-booty-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - How the Saints Save Christmas
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-how-the-saints-save-christmas
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Element of Destruction Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-element-of-destruction-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Wild West Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-wild-west-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - GAT V Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-gat-v-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Volition Comics Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-volition-comics-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Grass Roots Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-grass-roots-pack
+  requires: []
+  tiers:
+  - 2
 - name: "Saints Row IV \x96 Zinyak Attack Pack"
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-zinyak-attack-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Anime Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-anime-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV Game of the Century Upgrade Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-game-of-the-century-upgrade-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Presidential Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-presidential-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Dubstep Gun (Remix) Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-dubstep-gun-remix-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Hey Ash Watcha Playin'? Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-hey-ash-watcha-playin-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Game On Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-game-on-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - The Rectifier
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-the-rectifier
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: The Executive Privilege Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-the-executive-privilege-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Enter The Dominatrix
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-enter-the-dominatrix
+  requires: []
+  tiers:
+  - 2
 - name: 'Saints Row IV: Commander-In-Chief Pack'
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-commander-in-chief-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Reverse Cosplay Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-reverse-cosplay-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - College Daze Pack
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-college-daze-pack
+  requires: []
+  tiers:
+  - 2
 - name: Saints Row IV - Gamestop Warped Weapon Challenge
   ids:
   - unresolved:source:isthereanydeal:2065:saints-row-iv-gamestop-warped-weapon-challenge
+  requires: []
+  tiers:
+  - 2

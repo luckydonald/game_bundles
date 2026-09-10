@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fugitive Bundle — Tier 3
-tier: 3
+name: Fugitive Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7537/
@@ -13,36 +15,72 @@ games:
 - name: Devil Daggers
   ids:
   - steam:422970
+  requires: []
+  tiers:
+  - 3
 - name: Blood Bowl - Chaos Edition
   ids:
   - steam:216890
+  requires: []
+  tiers:
+  - 3
 - name: S.T.A.L.K.E.R. Shadow of Chernobyl
   ids:
   - steam:4500
+  requires: []
+  tiers:
+  - 3
 - name: Flashing Lights - Police, Fire, EMS
   ids:
   - steam:605740
+  requires: []
+  tiers:
+  - 3
 - name: Wings of Vi
   ids:
   - steam:318530
+  requires: []
+  tiers:
+  - 3
 - name: Lust for Darkness
   ids:
   - steam:523650
+  requires: []
+  tiers:
+  - 3
 - name: 'Mars: War Logs'
   ids:
   - steam:232750
+  requires: []
+  tiers:
+  - 3
 - name: The Town Of Light
   ids:
   - steam:433100
+  requires: []
+  tiers:
+  - 3
 - name: 'S.T.A.L.K.E.R.: Call of Pripyat'
   ids:
   - steam:41700
+  requires: []
+  tiers:
+  - 3
 - name: Cossacks 3
   ids:
   - steam:333420
+  requires: []
+  tiers:
+  - 3
 - name: 'Redout: Enhanced Edition'
   ids:
   - steam:517710
+  requires: []
+  tiers:
+  - 3
 - name: 'Cossacks 3: Guardians of the Highlands'
   ids:
   - unresolved:source:isthereanydeal:7537:cossacks-3-guardians-of-the-highlands
+  requires: []
+  tiers:
+  - 3

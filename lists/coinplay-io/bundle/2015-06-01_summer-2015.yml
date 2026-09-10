@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Ready For Summer Bundle — Tier 3
-tier: 3
+name: Ready For Summer Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2071/
@@ -13,30 +15,60 @@ games:
 - name: But to Paint a Universe
   ids:
   - steam:335220
+  requires: []
+  tiers:
+  - 3
 - name: 'Cube & Star: An Arbitrary Love'
   ids:
   - steam:261960
+  requires: []
+  tiers:
+  - 3
 - name: Bionic Dues
   ids:
   - steam:238910
+  requires: []
+  tiers:
+  - 3
 - name: 'Call Of Cthulhu: The Wasted Land'
   ids:
   - unresolved:source:isthereanydeal:2071:call-of-cthulhu-the-wasted-land
+  requires: []
+  tiers:
+  - 3
 - name: The Few
   ids:
   - steam:300320
+  requires: []
+  tiers:
+  - 3
 - name: The Tiny Tale 2
   ids:
   - steam:340720
+  requires: []
+  tiers:
+  - 3
 - name: Words for Evil
   ids:
   - steam:335790
+  requires: []
+  tiers:
+  - 3
 - name: Hamlet or the last game without MMORPG features, shaders and product placement
   ids:
   - steam:222160
+  requires: []
+  tiers:
+  - 3
 - name: 'Chess 2: The Sequel Two-Pack'
   ids:
   - unresolved:source:isthereanydeal:2071:chess-2-the-sequel-two-pack
+  requires: []
+  tiers:
+  - 3
 - name: Viktor
   ids:
   - steam:296730
+  requires: []
+  tiers:
+  - 3

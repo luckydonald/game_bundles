@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: November Cubic Bundle — Tier 2
-tier: 2
+name: November Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2728/
@@ -13,21 +15,42 @@ games:
 - name: Hammerfight
   ids:
   - steam:41100
+  requires: []
+  tiers:
+  - 2
 - name: Sacraboar
   ids:
   - steam:40500
+  requires: []
+  tiers:
+  - 2
 - name: Bernie Needs Love
   ids:
   - steam:373120
+  requires: []
+  tiers:
+  - 2
 - name: Escape Goat
   ids:
   - steam:251370
+  requires: []
+  tiers:
+  - 2
 - name: Invasion
   ids:
   - steam:503630
+  requires: []
+  tiers:
+  - 2
 - name: 500 Years Act 1
   ids:
   - steam:357200
+  requires: []
+  tiers:
+  - 2
 - name: Alien Shooter 2 Conscription
   ids:
   - steam:211010
+  requires: []
+  tiers:
+  - 2

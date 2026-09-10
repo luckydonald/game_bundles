@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Ind of the Year 2024 Bundle — Tier 5
-tier: 5
+name: Ind of the Year 2024 Bundle
+tiers:
+- rank: 5
+  name: Tier 5
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14695/
@@ -13,141 +15,282 @@ games:
 - name: Port Traventor
   ids:
   - unresolved:source:isthereanydeal:14695:port-traventor
+  requires: []
+  tiers:
+  - 5
 - name: Redux
   ids:
   - steam:1676560
+  requires: []
+  tiers:
+  - 5
 - name: Fealty
   ids:
   - steam:1770120
+  requires: []
+  tiers:
+  - 5
 - name: LORDSWORN
   ids:
   - unresolved:source:isthereanydeal:14695:lordsworn
+  requires: []
+  tiers:
+  - 5
 - name: Linedraw
   ids:
   - unresolved:source:isthereanydeal:14695:linedraw
+  requires: []
+  tiers:
+  - 5
 - name: She Traveled, You Stayed / She Stayed, You Traveled
   ids:
   - unresolved:source:isthereanydeal:14695:she-traveled-you-stayed-she-stayed-you-traveled
+  requires: []
+  tiers:
+  - 5
 - name: Danse Macabre ☉ Prima Mors
   ids:
   - unresolved:source:isthereanydeal:14695:danse-macabre-prima-mors
+  requires: []
+  tiers:
+  - 5
 - name: Blister Critters! Rulebook
   ids:
   - unresolved:source:isthereanydeal:14695:blister-critters-rulebook
+  requires: []
+  tiers:
+  - 5
 - name: Squires
   ids:
   - unresolved:source:isthereanydeal:14695:squires
+  requires: []
+  tiers:
+  - 5
 - name: The Cog That Remains
   ids:
   - unresolved:source:isthereanydeal:14695:the-cog-that-remains
+  requires: []
+  tiers:
+  - 5
 - name: 'In The Land of Zero Gravity: Upsee Town'
   ids:
   - unresolved:source:isthereanydeal:14695:in-the-land-of-zero-gravity-upsee-town
+  requires: []
+  tiers:
+  - 5
 - name: Saga of Song
   ids:
   - unresolved:source:isthereanydeal:14695:saga-of-song
+  requires: []
+  tiers:
+  - 5
 - name: Randy & Manilla
   ids:
   - steam:2881270
+  requires: []
+  tiers:
+  - 5
 - name: The Voice in the Woods
   ids:
   - unresolved:source:isthereanydeal:14695:the-voice-in-the-woods
+  requires: []
+  tiers:
+  - 5
 - name: The Whimsy Collectors
   ids:
   - unresolved:source:isthereanydeal:14695:the-whimsy-collectors
+  requires: []
+  tiers:
+  - 5
 - name: The Infection - A Metahumans Rising Adventure
   ids:
   - unresolved:source:isthereanydeal:14695:the-infection-a-metahumans-rising-adventure
+  requires: []
+  tiers:
+  - 5
 - name: The Sinister Secret of SuperWorld
   ids:
   - unresolved:source:isthereanydeal:14695:the-sinister-secret-of-superworld
+  requires: []
+  tiers:
+  - 5
 - name: Nemesis
   ids:
   - unresolved:source:isthereanydeal:14695:nemesis
+  requires: []
+  tiers:
+  - 5
 - name: This Frog is Ruining My Dungeon Crawl
   ids:
   - unresolved:source:isthereanydeal:14695:this-frog-is-ruining-my-dungeon-crawl
+  requires: []
+  tiers:
+  - 5
 - name: CozyIsland
   ids:
   - unresolved:source:isthereanydeal:14695:cozyisland
+  requires: []
+  tiers:
+  - 5
 - name: Metamorphosis BX
   ids:
   - unresolved:source:isthereanydeal:14695:metamorphosis-bx
+  requires: []
+  tiers:
+  - 5
 - name: Yes, Vandpire
   ids:
   - unresolved:source:isthereanydeal:14695:yes-vandpire
+  requires: []
+  tiers:
+  - 5
 - name: Memories from the Lost Horizon
   ids:
   - unresolved:source:isthereanydeal:14695:memories-from-the-lost-horizon
+  requires: []
+  tiers:
+  - 5
 - name: She's just not into me
   ids:
   - unresolved:source:isthereanydeal:14695:shes-just-not-into-me
+  requires: []
+  tiers:
+  - 5
 - name: Haunting of Cliff Cove
   ids:
   - unresolved:source:isthereanydeal:14695:haunting-of-cliff-cove
+  requires: []
+  tiers:
+  - 5
 - name: Now What Do I Do?
   ids:
   - unresolved:source:isthereanydeal:14695:now-what-do-i-do
+  requires: []
+  tiers:
+  - 5
 - name: Secret Early Access Bramblewood
   ids:
   - unresolved:source:isthereanydeal:14695:secret-early-access-bramblewood
+  requires: []
+  tiers:
+  - 5
 - name: NOSTOS
   ids:
   - unresolved:source:isthereanydeal:14695:nostos
+  requires: []
+  tiers:
+  - 5
 - name: Basilisk
   ids:
   - unresolved:source:isthereanydeal:14695:basilisk
+  requires: []
+  tiers:
+  - 5
 - name: Goth Witches RPG
   ids:
   - unresolved:source:isthereanydeal:14695:goth-witches-rpg
+  requires: []
+  tiers:
+  - 5
 - name: Lo! Thy Dread Empire
   ids:
   - unresolved:source:isthereanydeal:14695:lo-thy-dread-empire
+  requires: []
+  tiers:
+  - 5
 - name: Sound Check
   ids:
   - unresolved:source:isthereanydeal:14695:sound-check
+  requires: []
+  tiers:
+  - 5
 - name: Claim the Victim
   ids:
   - unresolved:source:isthereanydeal:14695:claim-the-victim
+  requires: []
+  tiers:
+  - 5
 - name: Loaf’s – Amped Up (Zine)
   ids:
   - unresolved:source:isthereanydeal:14695:loafs-amped-up-zine
+  requires: []
+  tiers:
+  - 5
 - name: THE WIZARD HAS FUCKED YOU OVER
   ids:
   - unresolved:source:isthereanydeal:14695:the-wizard-has-fucked-you-over
+  requires: []
+  tiers:
+  - 5
 - name: Against the Odds
   ids:
   - unresolved:source:isthereanydeal:14695:against-the-odds
+  requires: []
+  tiers:
+  - 5
 - name: Love & Darkness
   ids:
   - unresolved:source:isthereanydeal:14695:love-and-darkness
+  requires: []
+  tiers:
+  - 5
 - name: Dreamers
   ids:
   - unresolved:source:isthereanydeal:14695:dreamers
+  requires: []
+  tiers:
+  - 5
 - name: Augury
   ids:
   - steam:1564280
+  requires: []
+  tiers:
+  - 5
 - name: Guidance
   ids:
   - unresolved:source:isthereanydeal:14695:guidance
+  requires: []
+  tiers:
+  - 5
 - name: Happy Monster
   ids:
   - steam:2847340
+  requires: []
+  tiers:
+  - 5
 - name: Whimsical Life
   ids:
   - unresolved:source:isthereanydeal:14695:whimsical-life
+  requires: []
+  tiers:
+  - 5
 - name: The Summoned
   ids:
   - unresolved:source:isthereanydeal:14695:the-summoned
+  requires: []
+  tiers:
+  - 5
 - name: 64 STORIES
   ids:
   - unresolved:source:isthereanydeal:14695:64-stories
+  requires: []
+  tiers:
+  - 5
 - name: The Space Between (Trifold Edition)
   ids:
   - unresolved:source:isthereanydeal:14695:the-space-between-trifold-edition
+  requires: []
+  tiers:
+  - 5
 - name: ungrateful
   ids:
   - unresolved:source:isthereanydeal:14695:ungrateful
+  requires: []
+  tiers:
+  - 5
 - name: 'Finding Fossils: A Solo Journaling TTRPG Zine by EGGENE'
   ids:
   - unresolved:source:isthereanydeal:14695:finding-fossils-a-solo-journaling-ttrpg-zine-by-eggene
+  requires: []
+  tiers:
+  - 5

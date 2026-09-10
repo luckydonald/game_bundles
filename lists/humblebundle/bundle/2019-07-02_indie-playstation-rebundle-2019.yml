@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Indie Playstation ReBundle 2019 — entire-13-item-bundle
-tier: 3
+name: Humble Indie Playstation ReBundle 2019
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7597/
@@ -13,39 +15,78 @@ games:
 - name: InnerSpace
   ids:
   - steam:347000
+  requires: []
+  tiers:
+  - 3
 - name: The Bard's Tale - Remastered and Resnarkled
   ids:
   - unresolved:source:isthereanydeal:7597:the-bards-tale-remastered-and-resnarkled
+  requires: []
+  tiers:
+  - 3
 - name: Grim Fandango Remastered
   ids:
   - steam:316790
+  requires: []
+  tiers:
+  - 3
 - name: Grim Fandango Remastered - Soundtrack
   ids:
   - steam:368190
+  requires: []
+  tiers:
+  - 3
 - name: InnerSpace - Soundtrack
   ids:
   - unresolved:source:isthereanydeal:7597:innerspace-soundtrack
+  requires: []
+  tiers:
+  - 3
 - name: Layers of Fear - Soundtrack
   ids:
   - steam:2402240
+  requires: []
+  tiers:
+  - 3
 - name: 'Wasteland 2: Director''s Cut'
   ids:
   - steam:240760
+  requires: []
+  tiers:
+  - 3
 - name: Layers of Fear
   ids:
   - steam:1946700
+  requires: []
+  tiers:
+  - 3
 - name: The Talos Principle
   ids:
   - steam:257510
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age - Soundtrack
   ids:
   - steam:271950
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age
   ids:
   - steam:232790
+  requires: []
+  tiers:
+  - 3
 - name: Shadow Warrior 2
   ids:
   - steam:324800
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2
   ids:
   - steam:232090
+  requires: []
+  tiers:
+  - 3

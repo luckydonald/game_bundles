@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Stardock Bundle — entire-13-item-bundle
-tier: 3
+name: Humble Stardock Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5518/
@@ -13,39 +15,78 @@ games:
 - name: Fallen Enchantress
   ids:
   - unresolved:source:isthereanydeal:5518:fallen-enchantress
+  requires: []
+  tiers:
+  - 3
 - name: 'Sorcerer King: Rivals'
   ids:
   - steam:496730
+  requires: []
+  tiers:
+  - 3
 - name: The Corporate Machine
   ids:
   - steam:351080
+  requires: []
+  tiers:
+  - 3
 - name: The Political Machine 2016
   ids:
   - unresolved:source:isthereanydeal:5518:the-political-machine-2016
+  requires: []
+  tiers:
+  - 3
 - name: 'Sins of a Solar Empire: Rebellion'
   ids:
   - steam:204880
+  requires: []
+  tiers:
+  - 3
 - name: Fallen Enchantress Ultimate Edition
   ids:
   - unresolved:source:isthereanydeal:5518:fallen-enchantress-ultimate-edition
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Civilizations III
   ids:
   - steam:226860
+  requires: []
+  tiers:
+  - 3
 - name: 'Ashes of the Singularity: Escalation - Gauntlet'
   ids:
   - steam:520644
+  requires: []
+  tiers:
+  - 3
 - name: 'Ashes of the Singularity: Escalation - Turtle Wars'
   ids:
   - steam:520643
+  requires: []
+  tiers:
+  - 3
 - name: Offworld Trading Company™
   ids:
   - steam:271240
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Crusade Expansion Pack'
   ids:
   - steam:527070
+  requires: []
+  tiers:
+  - 3
 - name: 'Ashes of the Singularity: Escalation - Overlord Scenario Pack'
   ids:
   - steam:520640
+  requires: []
+  tiers:
+  - 3
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
+  requires: []
+  tiers:
+  - 3

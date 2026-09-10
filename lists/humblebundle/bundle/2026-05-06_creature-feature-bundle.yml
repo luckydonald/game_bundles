@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Creature Feature Bundle — entire-9-item-bundle
-tier: 3
+name: Creature Feature Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16133/
@@ -13,27 +15,54 @@ games:
 - name: Cubism
   ids:
   - steam:804530
+  requires: []
+  tiers:
+  - 3
 - name: Prison Boss VR
   ids:
   - steam:673600
+  requires: []
+  tiers:
+  - 3
 - name: Budget Cuts Ultimate
   ids:
   - steam:2221980
+  requires: []
+  tiers:
+  - 3
 - name: Thrasher
   ids:
   - steam:2702300
+  requires: []
+  tiers:
+  - 3
 - name: Crossings
   ids:
   - steam:2782960
+  requires: []
+  tiers:
+  - 3
 - name: Deadly Delivery
   ids:
   - steam:3743090
+  requires: []
+  tiers:
+  - 3
 - name: Maestro
   ids:
   - steam:2701700
+  requires: []
+  tiers:
+  - 3
 - name: The Light Brigade
   ids:
   - steam:1579880
+  requires: []
+  tiers:
+  - 3
 - name: 'Crime Shop Simulator: A Prison Boss Game'
   ids:
   - steam:2973830
+  requires: []
+  tiers:
+  - 3

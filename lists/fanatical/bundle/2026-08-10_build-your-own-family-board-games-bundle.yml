@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Family Board Games Bundle — pick 7
-tier: 3
-pick_quota: 7
+name: Build Your Own Family Board Games Bundle
+tiers:
+- rank: 3
+  name: pick 7
+  pick_quota: 7
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16471/
@@ -18,108 +20,152 @@ games:
   - steam:893050
   - isthereanydeal:hasbros-battleship
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride
   ids:
   - steam:2477010
   - isthereanydeal:ticket-to-ride
   requires: []
+  tiers:
+  - 3
 - name: THE GAME OF LIFE 2
   ids:
   - steam:1455630
   - isthereanydeal:the-game-of-life-2
   requires: []
+  tiers:
+  - 3
 - name: Clue/Cluedo
   ids:
   - steam:2506480
   - isthereanydeal:clue-cluedo
   requires: []
+  tiers:
+  - 3
 - name: Clue/Cluedo - Tropical Pack
   ids:
   - steam:2556800
   - isthereanydeal:clue-cluedo-tropical-pack
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - Europe Expansion
   ids:
   - steam:2608220
   - isthereanydeal:ticket-to-ride-europe-expansion
   requires: []
+  tiers:
+  - 3
 - name: 'Clue/Cluedo: Classic Edition'
   ids:
   - steam:794800
   - isthereanydeal:clue-cluedo-classic-edition
   requires: []
+  tiers:
+  - 3
 - name: THE GAME OF LIFE
   ids:
   - steam:403120
   - isthereanydeal:the-game-of-life--1
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - Nordic Expansion
   ids:
   - steam:2856300
   - isthereanydeal:ticket-to-ride-nordic-expansion
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - USA 1910 Ticket Pack
   ids:
   - steam:2938560
   - isthereanydeal:ticket-to-ride-usa-1910-ticket-pack
   requires: []
+  tiers:
+  - 3
 - name: Exploding Kittens 2
   ids:
   - steam:2999030
   - isthereanydeal:exploding-kittens-2
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride - India Expansion
   ids:
   - steam:2938570
   - isthereanydeal:ticket-to-ride-india-expansion
   requires: []
+  tiers:
+  - 3
 - name: Exploding Kittens® 2 - Explosive Expansions Pass
   ids:
   - steam:3140320
   - isthereanydeal:exploding-kittens-2-explosive-expansions-pass
   requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride® - Switzerland Expansion
   ids:
   - steam:3366230
   - isthereanydeal:ticket-to-ride-switzerland-expansion
   requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: San Francisco City Expansion'
   ids:
   - steam:3252260
   - isthereanydeal:ticket-to-ride-san-francisco-city-expansion
   requires: []
+  tiers:
+  - 3
 - name: 'Clue/Cluedo: 2016 Suspect Pack'
   ids:
   - steam:3465720
   - isthereanydeal:clue-cluedo-2016-suspect-pack
   requires: []
+  tiers:
+  - 3
 - name: 'Clue/Cluedo: Whispering Pines Retreat Crime Scene'
   ids:
   - steam:2880150
   - isthereanydeal:clue-cluedo-whispering-pines-retreat-crime-scene
   requires: []
+  tiers:
+  - 3
 - name: 'Clue/Cluedo: Polar Research Station Crime Scene Bundle'
   ids:
   - steam:3252340
   - isthereanydeal:clue-cluedo-polar-research-station-crime-scene-bundle
   requires: []
+  tiers:
+  - 3
 - name: 'Exploding Kittens 2: Beach Day Pack'
   ids:
   - unresolved:source:isthereanydeal:16471:exploding-kittens-2-beach-day-pack
   - isthereanydeal:exploding-kittens-2-beach-day-pack
   requires: []
+  tiers:
+  - 3
 - name: 'THE GAME OF LIFE 2: Ultimate Life Collection'
   ids:
   - steam:1461050
   - isthereanydeal:the-game-of-life-2-ultimate-life-collection
   requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: Legendary Asia Expansion'
   ids:
   - steam:3102710
   - isthereanydeal:ticket-to-ride-legendary-asia-expansion
   requires: []
+  tiers:
+  - 3
 - name: 'Clue/Cluedo: Noir Crime Scene'
   ids:
   - steam:3659490
   - isthereanydeal:clue-cluedo-noir-crime-scene
   requires: []
+  tiers:
+  - 3

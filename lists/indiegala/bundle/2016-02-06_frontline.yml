@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Frontline Assault — Tier 2
-tier: 2
+name: Frontline Assault
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3022/
@@ -13,33 +15,66 @@ games:
 - name: Alien Shooter
   ids:
   - steam:33100
+  requires: []
+  tiers:
+  - 2
 - name: Praetorians
   ids:
   - steam:277460
+  requires: []
+  tiers:
+  - 2
 - name: Street Racing Syndicate
   ids:
   - steam:292410
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Shooter
   ids:
   - steam:33130
+  requires: []
+  tiers:
+  - 2
 - name: YASAI NINJA
   ids:
   - steam:372150
+  requires: []
+  tiers:
+  - 2
 - name: What's under your blanket !?
   ids:
   - unresolved:source:isthereanydeal:3022:whats-under-your-blanket
+  requires: []
+  tiers:
+  - 2
 - name: Alien Shooter 2 Reloaded
   ids:
   - steam:33120
+  requires: []
+  tiers:
+  - 2
 - name: Imperial Glory
   ids:
   - steam:277450
+  requires: []
+  tiers:
+  - 2
 - name: TORO
   ids:
   - steam:416720
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Shooter 2
   ids:
   - steam:33180
+  requires: []
+  tiers:
+  - 2
 - name: BanHammer
   ids:
   - unresolved:source:isthereanydeal:3022:banhammer
+  requires: []
+  tiers:
+  - 2

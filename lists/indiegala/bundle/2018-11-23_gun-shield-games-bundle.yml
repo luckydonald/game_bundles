@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Gun Shield Bundle — Tier 2
-tier: 2
+name: The Gun Shield Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6707/
@@ -13,27 +15,54 @@ games:
 - name: Shield Impact
   ids:
   - steam:771680
+  requires: []
+  tiers:
+  - 2
 - name: LOOT BOX ACHIEVEMENT SIMULATOR
   ids:
   - unresolved:source:isthereanydeal:6707:loot-box-achievement-simulator
+  requires: []
+  tiers:
+  - 2
 - name: monstercakes
   ids:
   - steam:614910
+  requires: []
+  tiers:
+  - 2
 - name: All Episodes (Episodes 1-4)
   ids:
   - steam:483420
+  requires: []
+  tiers:
+  - 2
 - name: Owl Watch
   ids:
   - steam:887340
+  requires: []
+  tiers:
+  - 2
 - name: Journey Through Memories
   ids:
   - steam:948340
+  requires: []
+  tiers:
+  - 2
 - name: Beat The Game
   ids:
   - steam:543100
+  requires: []
+  tiers:
+  - 2
 - name: Krampus Quest
   ids:
   - steam:758170
+  requires: []
+  tiers:
+  - 2
 - name: Hue Defense
   ids:
   - steam:512070
+  requires: []
+  tiers:
+  - 2

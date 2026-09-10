@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Masterful Modern 3D Platformers Bundle — entire-8-item-bundle
-tier: 3
+name: Masterful Modern 3D Platformers Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13418/
@@ -13,24 +15,48 @@ games:
 - name: Pumpkin Jack
   ids:
   - steam:1186640
+  requires: []
+  tiers:
+  - 3
 - name: New Super Lucky's Tale
   ids:
   - steam:1038300
+  requires: []
+  tiers:
+  - 3
 - name: Hell Pie
   ids:
   - steam:889910
+  requires: []
+  tiers:
+  - 3
 - name: Demon Turf
   ids:
   - unresolved:source:isthereanydeal:13418:demon-turf
+  requires: []
+  tiers:
+  - 3
 - name: The Spirit and the Mouse
   ids:
   - steam:1679210
+  requires: []
+  tiers:
+  - 3
 - name: 'Kao the Kangaroo: Anniversary Edition'
   ids:
   - steam:1370140
+  requires: []
+  tiers:
+  - 3
 - name: A Hat in Time - Seal the Deal
   ids:
   - steam:787340
+  requires: []
+  tiers:
+  - 3
 - name: A Hat in Time
   ids:
   - steam:253230
+  requires: []
+  tiers:
+  - 3

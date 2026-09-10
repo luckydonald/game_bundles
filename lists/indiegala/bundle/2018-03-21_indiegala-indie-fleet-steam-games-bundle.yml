@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Fleet Bundle — Tier 2
-tier: 2
+name: Indie Fleet Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5990/
@@ -13,36 +15,72 @@ games:
 - name: World Inside Out
   ids:
   - unresolved:source:isthereanydeal:5990:world-inside-out
+  requires: []
+  tiers:
+  - 2
 - name: Christmas Race 2
   ids:
   - steam:801890
+  requires: []
+  tiers:
+  - 2
 - name: Mortos
   ids:
   - steam:377980
+  requires: []
+  tiers:
+  - 2
 - name: 'Mermaid Adventures: The Frozen Time'
   ids:
   - steam:798610
+  requires: []
+  tiers:
+  - 2
 - name: AEGYPTUS
   ids:
   - steam:675130
+  requires: []
+  tiers:
+  - 2
 - name: 7th Deep
   ids:
   - steam:806580
+  requires: []
+  tiers:
+  - 2
 - name: Empty Soul - S&S Edition
   ids:
   - steam:464670
+  requires: []
+  tiers:
+  - 2
 - name: Nomad Fleet
   ids:
   - steam:371010
+  requires: []
+  tiers:
+  - 2
 - name: Army of squirrels
   ids:
   - steam:793260
+  requires: []
+  tiers:
+  - 2
 - name: 'Exorcism: Case Zero'
   ids:
   - unresolved:source:isthereanydeal:5990:exorcism-case-zero
+  requires: []
+  tiers:
+  - 2
 - name: Green Slaughter
   ids:
   - unresolved:source:isthereanydeal:5990:green-slaughter
+  requires: []
+  tiers:
+  - 2
 - name: Insert Paper
   ids:
   - steam:661490
+  requires: []
+  tiers:
+  - 2

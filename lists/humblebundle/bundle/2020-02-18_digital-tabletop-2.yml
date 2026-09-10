@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Digital Tabletop Bundle 2 — entire-7-item-bundle
-tier: 3
+name: Humble Digital Tabletop Bundle 2
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8414/
@@ -13,21 +15,42 @@ games:
 - name: 'Reigns: Her Majesty'
   ids:
   - steam:717640
+  requires: []
+  tiers:
+  - 3
 - name: Gremlins, Inc.
   ids:
   - steam:369990
+  requires: []
+  tiers:
+  - 3
 - name: Reigns
   ids:
   - steam:474750
+  requires: []
+  tiers:
+  - 3
 - name: Terraforming Mars
   ids:
   - steam:800270
+  requires: []
+  tiers:
+  - 3
 - name: Armello
   ids:
   - steam:290340
+  requires: []
+  tiers:
+  - 3
 - name: For The King
   ids:
   - steam:527230
+  requires: []
+  tiers:
+  - 3
 - name: Slay the Spire
   ids:
   - steam:646570
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Friday Funday Bundle — Tier 2
-tier: 2
+name: Friday Funday Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2513/
@@ -13,36 +15,72 @@ games:
 - name: Get Rich or Die Gaming
   ids:
   - steam:395910
+  requires: []
+  tiers:
+  - 2
 - name: Pilot Crusader
   ids:
   - unresolved:source:isthereanydeal:2513:pilot-crusader
+  requires: []
+  tiers:
+  - 2
 - name: Naninights
   ids:
   - unresolved:source:isthereanydeal:2513:naninights
+  requires: []
+  tiers:
+  - 2
 - name: Break Into Zatwor
   ids:
   - unresolved:source:isthereanydeal:2513:break-into-zatwor
+  requires: []
+  tiers:
+  - 2
 - name: gShift
   ids:
   - steam:396730
+  requires: []
+  tiers:
+  - 2
 - name: Urizen Shadows of the Cold Deluxe Frosty Edition
   ids:
   - unresolved:source:isthereanydeal:2513:urizen-shadows-of-the-cold-deluxe-frosty-edition
+  requires: []
+  tiers:
+  - 2
 - name: C:raft
   ids:
   - steam:386710
+  requires: []
+  tiers:
+  - 2
 - name: 'After The End: The Harvest'
   ids:
   - steam:386140
+  requires: []
+  tiers:
+  - 2
 - name: Arclight Cascade
   ids:
   - steam:391210
+  requires: []
+  tiers:
+  - 2
 - name: Hektor
   ids:
   - steam:334070
+  requires: []
+  tiers:
+  - 2
 - name: Abduction Action! Plus
   ids:
   - steam:360580
+  requires: []
+  tiers:
+  - 2
 - name: Egyptian Senet
   ids:
   - steam:391580
+  requires: []
+  tiers:
+  - 2

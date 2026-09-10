@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: New Reality Bundle Reloaded — Tier 3
-tier: 3
+name: New Reality Bundle Reloaded
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3485/
@@ -13,63 +15,126 @@ games:
 - name: 'Data Hacker: Corruption'
   ids:
   - steam:329000
+  requires: []
+  tiers:
+  - 3
 - name: Data Hacker - Initiation
   ids:
   - steam:311860
+  requires: []
+  tiers:
+  - 3
 - name: 'Elements: Soul of Fire'
   ids:
   - unresolved:source:isthereanydeal:3485:elements-soul-of-fire
+  requires: []
+  tiers:
+  - 3
 - name: Outrage
   ids:
   - steam:457820
+  requires: []
+  tiers:
+  - 3
 - name: Insincere
   ids:
   - steam:467000
+  requires: []
+  tiers:
+  - 3
 - name: 'Invasion: Brain Craving'
   ids:
   - steam:423710
+  requires: []
+  tiers:
+  - 3
 - name: 'Love is Blind: Mutants'
   ids:
   - unresolved:source:isthereanydeal:3485:love-is-blind-mutants
+  requires: []
+  tiers:
+  - 3
 - name: PulseCharge
   ids:
   - steam:438010
+  requires: []
+  tiers:
+  - 3
 - name: 'Atonement: Scourge of Time'
   ids:
   - steam:385070
+  requires: []
+  tiers:
+  - 3
 - name: Guardians of Victoria
   ids:
   - steam:385080
+  requires: []
+  tiers:
+  - 3
 - name: Broken Dreams
   ids:
   - steam:444480
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon of Zolthan
   ids:
   - steam:463220
+  requires: []
+  tiers:
+  - 3
 - name: City of Chains
   ids:
   - steam:412170
+  requires: []
+  tiers:
+  - 3
 - name: Dead6hot
   ids:
   - steam:438030
+  requires: []
+  tiers:
+  - 3
 - name: 'Data Hacker: Reboot'
   ids:
   - steam:331790
+  requires: []
+  tiers:
+  - 3
 - name: Incitement 3
   ids:
   - steam:391660
+  requires: []
+  tiers:
+  - 3
 - name: 'Elements II: Hearts of Light'
   ids:
   - unresolved:source:isthereanydeal:3485:elements-ii-hearts-of-light
+  requires: []
+  tiers:
+  - 3
 - name: 'Hero Quest: Tower Conflict'
   ids:
   - steam:453820
+  requires: []
+  tiers:
+  - 3
 - name: Project Starship
   ids:
   - steam:454890
+  requires: []
+  tiers:
+  - 3
 - name: State of Anarchy
   ids:
   - steam:463210
+  requires: []
+  tiers:
+  - 3
 - name: New Reality Studio Pack
   ids:
   - unresolved:source:isthereanydeal:3485:new-reality-studio-pack
+  requires: []
+  tiers:
+  - 3

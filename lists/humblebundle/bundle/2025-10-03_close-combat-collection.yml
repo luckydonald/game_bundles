@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Close Combat Collection Bundle — entire-8-item-bundle
-tier: 3
+name: Close Combat Collection Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15474/
@@ -13,24 +15,48 @@ games:
 - name: Chronicon
   ids:
   - steam:375480
+  requires: []
+  tiers:
+  - 3
 - name: Dungeons of Sundaria
   ids:
   - steam:587520
+  requires: []
+  tiers:
+  - 3
 - name: 'Blossom Tales II: The Minotaur Prince'
   ids:
   - steam:1747830
+  requires: []
+  tiers:
+  - 3
 - name: Dwarven Realms
   ids:
   - steam:2015240
+  requires: []
+  tiers:
+  - 3
 - name: Into the Necrovale
   ids:
   - steam:1717090
+  requires: []
+  tiers:
+  - 3
 - name: 'BloodRayne: Terminal Cut'
   ids:
   - steam:1373510
+  requires: []
+  tiers:
+  - 3
 - name: Ghostlore
   ids:
   - steam:1783280
+  requires: []
+  tiers:
+  - 3
 - name: The Last Soldier of the Ming Dynasty
   ids:
   - steam:2494450
+  requires: []
+  tiers:
+  - 3

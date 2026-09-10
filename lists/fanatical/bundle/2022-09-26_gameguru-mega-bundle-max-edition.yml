@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: GameGuru Mega Bundle (Max Edition) — Tier 3
-tier: 3
+name: GameGuru Mega Bundle (Max Edition)
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12129/
@@ -13,81 +15,162 @@ games:
 - name: GameGuru - Sci-Fi Mission to Mars Pack
   ids:
   - steam:404570
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Melee Weapons Pack
   ids:
   - steam:822010
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru
   ids:
   - steam:266310
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Fantasy Pack
   ids:
   - steam:365530
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 3
   ids:
   - steam:321142
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 2
   ids:
   - steam:321141
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Enhanced Weapons Pack
   ids:
   - steam:907510
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 1
   ids:
   - steam:321140
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Abandoned Apartment Pack
   ids:
   - steam:989810
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Easter Game
   ids:
   - steam:451370
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Antiques In The Attic Pack
   ids:
   - steam:935590
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Construction Site Pack
   ids:
   - steam:854050
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Death Valley Pack
   ids:
   - steam:365540
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Cold War Pack
   ids:
   - steam:996910
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Buildings Pack
   ids:
   - steam:365520
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Medical Pack
   ids:
   - steam:964530
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Military Pack
   ids:
   - steam:1150680
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Walled Garden Pack
   ids:
   - steam:1154060
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Cemetery Pack
   ids:
   - steam:1306830
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Tool Shed Pack
   ids:
   - steam:1315570
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Camping Pack
   ids:
   - steam:1338070
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Retro 80's Pack
   ids:
   - steam:1343490
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Ancient Treasures Pack
   ids:
   - steam:1361590
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Trees, Plants & Rocks Pack
   ids:
   - steam:1361591
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Furniture Pack
   ids:
   - steam:1436740
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Industrial Sewer Pack
   ids:
   - steam:1717480
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX
   ids:
   - steam:1247290
+  requires: []
+  tiers:
+  - 3

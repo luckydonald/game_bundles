@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Best of Tabletop Bundle — pick 3
-tier: 2
-pick_quota: 3
+name: Build Your Own Best of Tabletop Bundle
+tiers:
+- rank: 2
+  name: pick 3
+  pick_quota: 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16400/
@@ -15,83 +17,146 @@ games:
   ids:
   - steam:981430
   - isthereanydeal:gordian-quest
+  requires: []
+  tiers:
+  - 2
 - name: 'Fuzz Force: Spook Squad'
   ids:
   - steam:1422190
   - isthereanydeal:fuzz-force-spook-squad
+  requires: []
+  tiers:
+  - 2
 - name: Lost In Fantaland
   ids:
   - steam:1266430
   - isthereanydeal:lost-in-fantaland
+  requires: []
+  tiers:
+  - 2
 - name: Kardboard Kings - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:16400:kardboard-kings-deluxe-edition
   - isthereanydeal:kardboard-kings-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: Overrogue
   ids:
   - steam:1960800
   - isthereanydeal:overrogue
+  requires: []
+  tiers:
+  - 2
 - name: Cardboard Town
   ids:
   - steam:2198070
   - isthereanydeal:cardboard-town
+  requires: []
+  tiers:
+  - 2
 - name: HeistGeist
   ids:
   - steam:1982940
   - isthereanydeal:heistgeist
+  requires: []
+  tiers:
+  - 2
 - name: Isle of Swaps
   ids:
   - steam:2294160
   - isthereanydeal:isle-of-swaps
+  requires: []
+  tiers:
+  - 2
 - name: 'K2: Digital Edition'
   ids:
   - steam:2561310
   - isthereanydeal:k2-digital-edition
+  requires: []
+  tiers:
+  - 2
 - name: Dawnmaker
   ids:
   - steam:2749100
   - isthereanydeal:dawnmaker
+  requires: []
+  tiers:
+  - 2
 - name: Roll Player - The Board Game
   ids:
   - steam:1939940
   - isthereanydeal:roll-player-the-board-game
+  requires: []
+  tiers:
+  - 2
 - name: Quilts and Cats of Calico Special Edition
   ids:
   - unresolved:source:isthereanydeal:16400:quilts-and-cats-of-calico-special-edition
   - isthereanydeal:quilts-and-cats-of-calico-special-edition
+  requires: []
+  tiers:
+  - 2
 - name: SuperTaxCity
   ids:
   - steam:2881800
   - isthereanydeal:supertaxcity
+  requires: []
+  tiers:
+  - 2
 - name: Into the Restless Ruins
   ids:
   - steam:2877770
   - isthereanydeal:into-the-restless-ruins
+  requires: []
+  tiers:
+  - 2
 - name: 'Talisman: Digital 5th Edition'
   ids:
   - steam:908060
   - isthereanydeal:talisman-digital-5th-edition
+  requires: []
+  tiers:
+  - 2
 - name: Necromancer For A Week
   ids:
   - steam:2987110
   - isthereanydeal:necromancer-for-a-week
+  requires: []
+  tiers:
+  - 2
 - name: How We Die
   ids:
   - steam:3008240
   - isthereanydeal:how-we-die--2
+  requires: []
+  tiers:
+  - 2
 - name: Heart of the Dice Bundle
   ids:
   - unresolved:source:isthereanydeal:16400:heart-of-the-dice-bundle
   - isthereanydeal:heart-of-the-dice-bundle
+  requires: []
+  tiers:
+  - 2
 - name: Kingdomino
   ids:
   - steam:3029180
   - isthereanydeal:kingdomino
+  requires: []
+  tiers:
+  - 2
 - name: The Royal Writ
   ids:
   - steam:3333700
   - isthereanydeal:the-royal-writ
+  requires: []
+  tiers:
+  - 2
 - name: 'Deckbuilder Triple Pack: Deliverance & Reign + DungeonTop + Demontide'
   ids:
   - unresolved:source:isthereanydeal:16400:deckbuilder-triple-pack-deliverance-and-reign-and-dungeontop-and-demontide
   - isthereanydeal:deckbuilder-triple-pack-deliverance-and-reign-and-dungeontop-and-demontide
+  requires: []
+  tiers:
+  - 2

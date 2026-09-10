@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Sonic 30th Anniversary Bundle — entire-13-item-bundle
-tier: 3
+name: Sonic 30th Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10617/
@@ -13,39 +15,78 @@ games:
 - name: "Sonic Adventure\x99 2"
   ids:
   - steam:213610
+  requires: []
+  tiers:
+  - 3
 - name: Sonic The Hedgehog 4 Episode 1
   ids:
   - unresolved:source:isthereanydeal:10617:sonic-the-hedgehog-4-episode-1
+  requires: []
+  tiers:
+  - 3
 - name: Sonic & Sega All-Stars Racing
   ids:
   - steam:34190
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Adventure DX
   ids:
   - steam:71250
+  requires: []
+  tiers:
+  - 3
 - name: Sonic The Hedgehog 4 Episode II
   ids:
   - steam:203650
+  requires: []
+  tiers:
+  - 3
 - name: 'SONIC ADVENTURE 2: BATTLE'
   ids:
   - steam:217900
+  requires: []
+  tiers:
+  - 3
 - name: Sonic & All-Stars Racing Transformed Collection
   ids:
   - steam:212480
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Generations Collection
   ids:
   - steam:71340
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Mania Encore
   ids:
   - steam:845640
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Lost World
   ids:
   - steam:329440
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Mania
   ids:
   - steam:584400
+  requires: []
+  tiers:
+  - 3
 - name: Team Sonic Racing
   ids:
   - steam:785260
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Forces Digital Bonus Edition
   ids:
   - unresolved:source:isthereanydeal:10617:sonic-forces-digital-bonus-edition
+  requires: []
+  tiers:
+  - 3

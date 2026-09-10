@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Capcom Mega Bundle — entire-19-item-bundle
-tier: 3
+name: Humble Capcom Mega Bundle
+tiers:
+- rank: 3
+  name: entire-19-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8504/
@@ -13,57 +15,114 @@ games:
 - name: Mega Man Legacy Collection
   ids:
   - steam:363440
+  requires: []
+  tiers:
+  - 3
 - name: RESIDENT EVIL 2 - All In-game Rewards Unlock
   ids:
   - steam:920571
+  requires: []
+  tiers:
+  - 3
 - name: STRIDER™ / ストライダー飛竜®
   ids:
   - steam:235210
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 - Episode One: Penal Colony'
   ids:
   - steam:287290
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 Raid Mode Character - HUNK'
   ids:
   - steam:320370
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations'
   ids:
   - steam:222480
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil 0 HD Remaster
   ids:
   - steam:339340
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 - Episode Four: Metamorphosis'
   ids:
   - steam:320351
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 - Episode Two: Contemplation'
   ids:
   - steam:319810
+  requires: []
+  tiers:
+  - 3
 - name: Mega Man X Legacy Collection
   ids:
   - steam:743890
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 - Episode Three: Judgment'
   ids:
   - steam:320350
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 Extra Episode - The Struggle'
   ids:
   - steam:320352
+  requires: []
+  tiers:
+  - 3
 - name: 'Resident Evil: Revelations 2 Extra Episode - Little Miss'
   ids:
   - steam:320353
+  requires: []
+  tiers:
+  - 3
 - name: Devil May Cry® 4 Special Edition
   ids:
   - steam:329050
+  requires: []
+  tiers:
+  - 3
 - name: Mega Man 11
   ids:
   - steam:742300
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil HD Remaster
   ids:
   - steam:304240
+  requires: []
+  tiers:
+  - 3
 - name: 'Dragon''s Dogma: Dark Arisen'
   ids:
   - steam:367500
+  requires: []
+  tiers:
+  - 3
 - name: Street Fighter 30th Anniversary Collection
   ids:
   - steam:586200
+  requires: []
+  tiers:
+  - 3
 - name: Dead Rising 4
   ids:
   - steam:543460
+  requires: []
+  tiers:
+  - 3

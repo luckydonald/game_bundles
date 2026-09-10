@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardians Bundle — Tier 2
-tier: 2
+name: Guardians Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8000/
@@ -13,27 +15,54 @@ games:
 - name: Guards
   ids:
   - steam:460340
+  requires: []
+  tiers:
+  - 2
 - name: Rym 9000
   ids:
   - steam:774561
+  requires: []
+  tiers:
+  - 2
 - name: 'Asura: Vengeance Edition'
   ids:
   - steam:524640
+  requires: []
+  tiers:
+  - 2
 - name: ALLTYNEX Second
   ids:
   - steam:283840
+  requires: []
+  tiers:
+  - 2
 - name: Guards of the Gate
   ids:
   - steam:815290
+  requires: []
+  tiers:
+  - 2
 - name: Jet Set Knights
   ids:
   - steam:405550
+  requires: []
+  tiers:
+  - 2
 - name: Attack of the Earthlings
   ids:
   - steam:621930
+  requires: []
+  tiers:
+  - 2
 - name: Odyssey - The Story of Science
   ids:
   - steam:558110
+  requires: []
+  tiers:
+  - 2
 - name: Gunman Tales
   ids:
   - steam:760320
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Kalypso Hits Bundle — entire-10-item-bundle
-tier: 4
+name: Kalypso Hits Bundle
+tiers:
+- rank: 4
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11471/
@@ -13,30 +15,60 @@ games:
 - name: Dungeons
   ids:
   - steam:57650
+  requires: []
+  tiers:
+  - 4
 - name: 'Commandos: Behind Enemy Lines'
   ids:
   - steam:6800
+  requires: []
+  tiers:
+  - 4
 - name: Commandos 2 - HD Remaster
   ids:
   - steam:1100410
+  requires: []
+  tiers:
+  - 4
 - name: Dungeons 3
   ids:
   - steam:493900
+  requires: []
+  tiers:
+  - 4
 - name: Tropico 5
   ids:
   - steam:245620
+  requires: []
+  tiers:
+  - 4
 - name: Sudden Strike 4
   ids:
   - steam:373930
+  requires: []
+  tiers:
+  - 4
 - name: Dungeons 2
   ids:
   - steam:262280
+  requires: []
+  tiers:
+  - 4
 - name: Spacebase Startopia
   ids:
   - steam:840390
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire
   ids:
   - steam:503940
+  requires: []
+  tiers:
+  - 4
 - name: Tropico 6
   ids:
   - steam:492720
+  requires: []
+  tiers:
+  - 4

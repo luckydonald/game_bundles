@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Eroge Bundle 11 — The Complete Eroge Bundle 5
-tier: 2
+name: Eroge Bundle 11
+tiers:
+- rank: 2
+  name: The Complete Eroge Bundle 5
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10107/
@@ -13,36 +15,72 @@ games:
 - name: The Tale of the Lewd Kunoichi Sisters
   ids:
   - unresolved:source:isthereanydeal:10107:the-tale-of-the-lewd-kunoichi-sisters
+  requires: []
+  tiers:
+  - 2
 - name: Men's completion plan
   ids:
   - unresolved:source:isthereanydeal:10107:mens-completion-plan
+  requires: []
+  tiers:
+  - 2
 - name: Time Is Mine
   ids:
   - unresolved:source:isthereanydeal:10107:time-is-mine
+  requires: []
+  tiers:
+  - 2
 - name: Fantasy Tavern Sextet -Vol.2 Adventurer's Days
   ids:
   - steam:1461770
+  requires: []
+  tiers:
+  - 2
 - name: DRINK BAR MAID -REGRESSION
   ids:
   - steam:1449330
+  requires: []
+  tiers:
+  - 2
 - name: Spheria's Familiar
   ids:
   - steam:1500100
+  requires: []
+  tiers:
+  - 2
 - name: LONGING RING OF ESCA
   ids:
   - unresolved:source:isthereanydeal:10107:longing-ring-of-esca
+  requires: []
+  tiers:
+  - 2
 - name: Kamimachi Site - Dating story
   ids:
   - steam:989580
+  requires: []
+  tiers:
+  - 2
 - name: NinNinDays
   ids:
   - steam:1075980
+  requires: []
+  tiers:
+  - 2
 - name: Harem Game
   ids:
   - unresolved:source:isthereanydeal:10107:harem-game
+  requires: []
+  tiers:
+  - 2
 - name: Sword Maiden of Azure Dragon
   ids:
   - unresolved:source:isthereanydeal:10107:sword-maiden-of-azure-dragon
+  requires: []
+  tiers:
+  - 2
 - name: KukkoroDays
   ids:
   - steam:1258340
+  requires: []
+  tiers:
+  - 2

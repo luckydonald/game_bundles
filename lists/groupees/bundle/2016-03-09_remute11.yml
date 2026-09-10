@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Remute 11: Trippy? Arty? Fun! — Tier 2'
-tier: 2
+name: 'Remute 11: Trippy? Arty? Fun!'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3152/
@@ -13,36 +15,72 @@ games:
 - name: Silver Knight
   ids:
   - steam:432170
+  requires: []
+  tiers:
+  - 2
 - name: Elems
   ids:
   - steam:528670
+  requires: []
+  tiers:
+  - 2
 - name: NAL Is Dead
   ids:
   - unresolved:source:isthereanydeal:3152:nal-is-dead
+  requires: []
+  tiers:
+  - 2
 - name: '"BUTTS: The VR Experience"'
   ids:
   - steam:439260
+  requires: []
+  tiers:
+  - 2
 - name: Division-A
   ids:
   - unresolved:source:isthereanydeal:3152:division-a
+  requires: []
+  tiers:
+  - 2
 - name: Vilmonic
   ids:
   - steam:458330
+  requires: []
+  tiers:
+  - 2
 - name: 'Burning Man: Beyond Black Rock'
   ids:
   - unresolved:source:isthereanydeal:3152:burning-man-beyond-black-rock
+  requires: []
+  tiers:
+  - 2
 - name: Gobbo Goes
   ids:
   - unresolved:source:isthereanydeal:3152:gobbo-goes
+  requires: []
+  tiers:
+  - 2
 - name: New Lethes
   ids:
   - unresolved:source:isthereanydeal:3152:new-lethes
+  requires: []
+  tiers:
+  - 2
 - name: Jupitron Game Collection Vol.1
   ids:
   - unresolved:source:isthereanydeal:3152:jupitron-game-collection-vol-1
+  requires: []
+  tiers:
+  - 2
 - name: 'Blasting Agent: Ultimate Edition'
   ids:
   - steam:453810
+  requires: []
+  tiers:
+  - 2
 - name: Mondrian - Abstraction in Beauty
   ids:
   - steam:392780
+  requires: []
+  tiers:
+  - 2

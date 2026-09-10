@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Best of Humble Bundle: Beamdog & Owlcat - RPG Masters Bundle — entire-12-item-bundle'
-tier: 5
+name: 'Best of Humble Bundle: Beamdog & Owlcat - RPG Masters Bundle'
+tiers:
+- rank: 5
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15885/
@@ -13,36 +15,72 @@ games:
 - name: 'Icewind Dale: Enhanced Edition'
   ids:
   - steam:321800
+  requires: []
+  tiers:
+  - 5
 - name: 'Planescape: Torment: Enhanced Edition'
   ids:
   - steam:466300
+  requires: []
+  tiers:
+  - 5
 - name: MythForce
   ids:
   - steam:363860
+  requires: []
+  tiers:
+  - 5
 - name: 'Baldur''s Gate II: Enhanced Edition'
   ids:
   - steam:257350
+  requires: []
+  tiers:
+  - 5
 - name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
   ids:
   - steam:640820
+  requires: []
+  tiers:
+  - 5
 - name: 'Baldur''s Gate: Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:15885:baldurs-gate-deluxe-edition
+  requires: []
+  tiers:
+  - 5
 - name: 'Neverwinter Nights: Complete Adventures'
   ids:
   - unresolved:source:isthereanydeal:15885:neverwinter-nights-complete-adventures
+  requires: []
+  tiers:
+  - 5
 - name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
   ids:
   - steam:1184370
+  requires: []
+  tiers:
+  - 5
 - name: 'Pathfinder: Kingmaker - Season Pass'
   ids:
   - unresolved:source:isthereanydeal:15885:pathfinder-kingmaker-season-pass
+  requires: []
+  tiers:
+  - 5
 - name: 'Pathfinder: Wrath of the Righteous - Season Pass'
   ids:
   - steam:1694801
+  requires: []
+  tiers:
+  - 5
 - name: 'Pathfinder: Wrath of the Righteous - Season Pass 2'
   ids:
   - steam:2145870
+  requires: []
+  tiers:
+  - 5
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:
   - steam:2186680
+  requires: []
+  tiers:
+  - 5

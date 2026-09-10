@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Down To Earth Bundle — entire-8-item-bundle
-tier: 3
+name: Humble Down To Earth Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9942/
@@ -13,24 +15,48 @@ games:
 - name: Figment
   ids:
   - steam:493540
+  requires: []
+  tiers:
+  - 3
 - name: Yono and the Celestial Elephants
   ids:
   - steam:602430
+  requires: []
+  tiers:
+  - 3
 - name: Never Alone (Kisima Ingitchuna)
   ids:
   - steam:295790
+  requires: []
+  tiers:
+  - 3
 - name: ABZU
   ids:
   - steam:384190
+  requires: []
+  tiers:
+  - 3
 - name: 'Árida: Backland''s Awakening'
   ids:
   - steam:907760
+  requires: []
+  tiers:
+  - 3
 - name: Summer in Mara
   ids:
   - steam:962580
+  requires: []
+  tiers:
+  - 3
 - name: Lost Ember
   ids:
   - steam:563840
+  requires: []
+  tiers:
+  - 3
 - name: Beyond Blue
   ids:
   - steam:883360
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: ARMOR GAMES FLASHBACK BUNDLE — Diehard
-tier: 2
+name: ARMOR GAMES FLASHBACK BUNDLE
+tiers:
+- rank: 2
+  name: Diehard
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/armor-games-flashback-bundle/
@@ -24,58 +26,82 @@ games:
   - steam:3620940
   - isthereanydeal:sushi-cat-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: Chaos Faction Legacy Collection
   ids:
   - steam:3038340
   - isthereanydeal:chaos-faction-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: The Last Stand Legacy Collection
   ids:
   - steam:1615100
   - isthereanydeal:the-last-stand-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: Crush the Castle Legacy Collection
   ids:
   - steam:1838970
   - isthereanydeal:crush-the-castle-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: 'Shift: Legacy Collection'
   ids:
   - steam:2764830
   - isthereanydeal:shift-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: Deep Sleep Trilogy
   ids:
   - steam:1146510
   - isthereanydeal:deep-sleep-trilogy
   requires: []
+  tiers:
+  - 2
 - name: Don't Escape Trilogy
   ids:
   - steam:1070550
   - isthereanydeal:don-t-escape-trilogy
   requires: []
+  tiers:
+  - 2
 - name: Swords & Souls Legacy
   ids:
   - steam:3189440
   - isthereanydeal:swords-and-souls-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: Warfare Legacy Collection
   ids:
   - steam:2745870
   - isthereanydeal:warfare-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: The Elephant Collection
   ids:
   - steam:2274110
   - isthereanydeal:the-elephant-collection
   requires: []
+  tiers:
+  - 2
 - name: Decision Legacy Collection
   ids:
   - steam:3015510
   - isthereanydeal:decision-legacy-collection
   requires: []
+  tiers:
+  - 2
 - name: Sonny Legacy Collection
   ids:
   - steam:2757720
   - isthereanydeal:sonny-legacy-collection
   requires: []
+  tiers:
+  - 2

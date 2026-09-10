@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Anime Wonderland Bundle — Tier 2
-tier: 2
+name: Anime Wonderland Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5588/
@@ -13,33 +15,66 @@ games:
 - name: Games&Girls
   ids:
   - steam:610750
+  requires: []
+  tiers:
+  - 2
 - name: Swordbreaker The Game
   ids:
   - steam:411760
+  requires: []
+  tiers:
+  - 2
 - name: Sixtieth Kilometer
   ids:
   - steam:448780
+  requires: []
+  tiers:
+  - 2
 - name: Serafina's Crown
   ids:
   - steam:449340
+  requires: []
+  tiers:
+  - 2
 - name: Book Series - Alice in Wonderland
   ids:
   - unresolved:source:isthereanydeal:5588:book-series-alice-in-wonderland
+  requires: []
+  tiers:
+  - 2
 - name: Crystal City
   ids:
   - unresolved:source:isthereanydeal:5588:crystal-city
+  requires: []
+  tiers:
+  - 2
 - name: Animal Lover
   ids:
   - steam:542200
+  requires: []
+  tiers:
+  - 2
 - name: Aozora Meikyuu
   ids:
   - steam:427980
+  requires: []
+  tiers:
+  - 2
 - name: The Legend of Dark Witch
   ids:
   - steam:420770
+  requires: []
+  tiers:
+  - 2
 - name: Blade Kitten
   ids:
   - steam:9940
+  requires: []
+  tiers:
+  - 2
 - name: One Last Chance
   ids:
   - steam:460150
+  requires: []
+  tiers:
+  - 2

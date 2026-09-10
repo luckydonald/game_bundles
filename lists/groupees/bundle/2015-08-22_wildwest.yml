@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Wild Wild West Bundle — Tier 2
-tier: 2
+name: Wild Wild West Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2365/
@@ -13,18 +15,36 @@ games:
 - name: 'Wild West Quest: Gold Rush'
   ids:
   - unresolved:source:isthereanydeal:2365:wild-west-quest-gold-rush
+  requires: []
+  tiers:
+  - 2
 - name: Grand Mech Shooter
   ids:
   - unresolved:source:isthereanydeal:2365:grand-mech-shooter
+  requires: []
+  tiers:
+  - 2
 - name: Governor of Poker 2 Premium Edition
   ids:
   - unresolved:source:isthereanydeal:2365:governor-of-poker-2-premium-edition
+  requires: []
+  tiers:
+  - 2
 - name: Helldorado
   ids:
   - steam:18470
+  requires: []
+  tiers:
+  - 2
 - name: Boot Hill Heroes
   ids:
   - steam:313470
+  requires: []
+  tiers:
+  - 2
 - name: 'Lead and Gold: Gangs of the Wild West'
   ids:
   - steam:42120
+  requires: []
+  tiers:
+  - 2

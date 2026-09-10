@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble&#39;s Early Access All-Stars Bundle — entire-6-item-bundle
-tier: 3
+name: Humble&#39;s Early Access All-Stars Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10295/
@@ -13,18 +15,36 @@ games:
 - name: Retrowave
   ids:
   - steam:1239690
+  requires: []
+  tiers:
+  - 3
 - name: Golf It!
   ids:
   - steam:571740
+  requires: []
+  tiers:
+  - 3
 - name: I-NFECTED
   ids:
   - unresolved:source:isthereanydeal:10295:i-nfected
+  requires: []
+  tiers:
+  - 3
 - name: 'Snowtopia: Ski Resort Tycoon'
   ids:
   - unresolved:source:isthereanydeal:10295:snowtopia-ski-resort-tycoon
+  requires: []
+  tiers:
+  - 3
 - name: Warpips
   ids:
   - steam:1291010
+  requires: []
+  tiers:
+  - 3
 - name: Luck be a Landlord
   ids:
   - steam:1404850
+  requires: []
+  tiers:
+  - 3

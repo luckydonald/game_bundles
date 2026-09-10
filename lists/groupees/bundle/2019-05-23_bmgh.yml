@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Be Mine: Greatest Hits — Tier 3'
-tier: 3
+name: 'Be Mine: Greatest Hits'
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7430/
@@ -13,54 +15,108 @@ games:
 - name: The Ball
   ids:
   - steam:35460
+  requires: []
+  tiers:
+  - 3
 - name: BEEP
   ids:
   - steam:104200
+  requires: []
+  tiers:
+  - 3
 - name: Xotic Temple Crypt Expansion Pack
   ids:
   - unresolved:source:isthereanydeal:7430:xotic-temple-crypt-expansion-pack
+  requires: []
+  tiers:
+  - 3
 - name: Dream Aquarium
   ids:
   - unresolved:source:isthereanydeal:7430:dream-aquarium
+  requires: []
+  tiers:
+  - 3
 - name: BEEP - Soundtrack
   ids:
   - steam:456470
+  requires: []
+  tiers:
+  - 3
 - name: Sideway™ New York
   ids:
   - steam:200190
+  requires: []
+  tiers:
+  - 3
 - name: 'Xotic: Warp Field Expansion Pack'
   ids:
   - unresolved:source:isthereanydeal:7430:xotic-warp-field-expansion-pack
+  requires: []
+  tiers:
+  - 3
 - name: Xotic
   ids:
   - steam:92600
+  requires: []
+  tiers:
+  - 3
 - name: 'Xotic: Pipe Works Expansion Pack'
   ids:
   - unresolved:source:isthereanydeal:7430:xotic-pipe-works-expansion-pack
+  requires: []
+  tiers:
+  - 3
 - name: Wasteland Angel
   ids:
   - steam:46520
+  requires: []
+  tiers:
+  - 3
 - name: Betrayer
   ids:
   - unresolved:source:isthereanydeal:7430:betrayer
+  requires: []
+  tiers:
+  - 3
 - name: Guns of Icarus Online
   ids:
   - steam:209080
+  requires: []
+  tiers:
+  - 3
 - name: The Cat Lady
   ids:
   - steam:253110
+  requires: []
+  tiers:
+  - 3
 - name: 'Kingdom Wars 2: Battles'
   ids:
   - unresolved:source:isthereanydeal:7430:kingdom-wars-2-battles
+  requires: []
+  tiers:
+  - 3
 - name: Ittle Dew
   ids:
   - steam:241320
+  requires: []
+  tiers:
+  - 3
 - name: 'Ring Runner: Flight of the Sages'
   ids:
   - steam:258010
+  requires: []
+  tiers:
+  - 3
 - name: Two Worlds Epic Edition
   ids:
   - steam:1930
+  requires: []
+  tiers:
+  - 3
 - name: Be Mine Grab Bag
   ids:
   - unresolved:source:isthereanydeal:7430:be-mine-grab-bag
+  requires: []
+  tiers:
+  - 3

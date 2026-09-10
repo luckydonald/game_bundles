@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble One Special Day Bundle — $9 or More
-tier: 3
+name: Humble One Special Day Bundle
+tiers:
+- rank: 3
+  name: $9 or More
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6479/
@@ -13,30 +15,60 @@ games:
 - name: Crazy Taxi™
   ids:
   - unresolved:source:isthereanydeal:6479:crazy-taxi
+  requires: []
+  tiers:
+  - 3
 - name: 'OlliOlli2: Welcome to Olliwood'
   ids:
   - steam:365660
+  requires: []
+  tiers:
+  - 3
 - name: Streets of Rage
   ids:
   - unresolved:source:isthereanydeal:6479:streets-of-rage
+  requires: []
+  tiers:
+  - 3
 - name: Binary Domain Collection
   ids:
   - unresolved:source:isthereanydeal:6479:binary-domain-collection
+  requires: []
+  tiers:
+  - 3
 - name: GRID 2
   ids:
   - unresolved:source:isthereanydeal:6479:grid-2
+  requires: []
+  tiers:
+  - 3
 - name: 'Operation Flashpoint: Red River'
   ids:
   - unresolved:source:isthereanydeal:6479:operation-flashpoint-red-river
+  requires: []
+  tiers:
+  - 3
 - name: Alpha Protocol
   ids:
   - steam:34010
+  requires: []
+  tiers:
+  - 3
 - name: 'Surgeon Simulator: Anniversary Edition'
   ids:
   - unresolved:source:isthereanydeal:6479:surgeon-simulator-anniversary-edition
+  requires: []
+  tiers:
+  - 3
 - name: Stronghold Crusader 2
   ids:
   - steam:232890
+  requires: []
+  tiers:
+  - 3
 - name: 'Marvel''s Guardians of the Galaxy: The Telltale Series'
   ids:
   - unresolved:source:isthereanydeal:6479:marvels-guardians-of-the-galaxy-the-telltale-series
+  requires: []
+  tiers:
+  - 3

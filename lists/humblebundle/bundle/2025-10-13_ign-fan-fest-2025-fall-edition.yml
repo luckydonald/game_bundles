@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: IGN Fan Fest Bundle (Fall 2025) — entire-12-item-bundle
-tier: 3
+name: IGN Fan Fest Bundle (Fall 2025)
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15487/
@@ -13,37 +15,73 @@ games:
 - name: TerraTech
   ids:
   - steam:285920
+  requires: []
+  tiers:
+  - 3
 - name: 'Predator: Hunting Grounds'
   ids:
   - steam:1556200
+  requires: []
+  tiers:
+  - 3
 - name: 'Invincible Presents: Atom Eve'
   ids:
   - steam:2060870
+  requires: []
+  tiers:
+  - 3
 - name: 'SpongeBob SquarePants: The Cosmic Shake'
   ids:
   - steam:1282150
+  requires: []
+  tiers:
+  - 3
 - name: Wandering Sword
   ids:
   - steam:1876890
+  requires: []
+  tiers:
+  - 3
 - name: Koira
   ids:
   - steam:1626620
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:
   - steam:2186680
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 6: MBTA Providence/Stoughton Line HSP46 Add-On'
   ids:
   - steam:3663860
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 6: Maintalbahn: Aschaffenburg - Miltenberg Route Add-On'
   ids:
   - steam:3663230
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 6: MBTA Commuter: Boston - Framingham/Worcester Line Route
     Add-On'
   ids:
   - steam:3663500
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World® 6: Sand Patch Grade Route Add-On'
   ids:
   - steam:3662880
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Sim World ® 6: Free Starter Pack'
   ids:
   - unresolved:source:isthereanydeal:15487:train-sim-world-6-free-starter-pack
+  requires: []
+  tiers:
+  - 3

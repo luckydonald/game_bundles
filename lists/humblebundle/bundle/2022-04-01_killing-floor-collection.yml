@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Killing Floor Collection Bundle — entire-20-item-bundle
-tier: 3
+name: Killing Floor Collection Bundle
+tiers:
+- rank: 3
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11277/
@@ -13,60 +15,120 @@ games:
 - name: Killing Floor
   ids:
   - steam:1250
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Mrs Foster Pack
   ids:
   - steam:210945
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - The Chickenator Pack
   ids:
   - steam:210936
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Neon Character Pack
   ids:
   - steam:309990
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Neon Weapon Pack
   ids:
   - steam:309991
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Community Weapon Pack
   ids:
   - steam:210934
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Community Weapons Pack 3 - Us Versus Them Total Conflict Pack
   ids:
   - steam:258751
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Digital Deluxe Edition Upgrade
   ids:
   - steam:354020
+  requires: []
+  tiers:
+  - 3
 - name: 'Killing Floor: Incursion'
   ids:
   - steam:690810
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor Outbreak Character Pack
   ids:
   - steam:1256
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor - Community Weapon Pack 2
   ids:
   - steam:210943
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2
   ids:
   - steam:232090
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Christmas 2020 Full Gear Bundle
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-christmas-2020-full-gear-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Cardboard Knight Bundle
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-cardboard-knight-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Mrs. Foster
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-mrs-foster
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Headshot FX Pack 1
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-headshot-fx-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Headshot FX Pack 2
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-headshot-fx-pack-2
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Horzine Mark 7 Bundle
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-horzine-mark-7-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Armory Season Pass
   ids:
   - steam:1524820
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 - Halloween 2020 Full Gear Bundle
   ids:
   - unresolved:source:isthereanydeal:11277:killing-floor-2-halloween-2020-full-gear-bundle
+  requires: []
+  tiers:
+  - 3

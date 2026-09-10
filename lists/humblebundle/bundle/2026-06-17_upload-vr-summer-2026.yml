@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Upload VR Summer 2026 — Entire 9 Item Bundle
-tier: 3
+name: Upload VR Summer 2026
+tiers:
+- rank: 3
+  name: Entire 9 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/upload-vr-summer-2026
@@ -13,27 +15,54 @@ games:
 - name: VTOL VR
   ids:
   - steam:667970
+  requires: []
+  tiers:
+  - 3
 - name: Zero Caliber 2 Remastered
   ids:
   - steam:2719740
+  requires: []
+  tiers:
+  - 3
 - name: Metro Awakening
   ids:
   - steam:2669410
+  requires: []
+  tiers:
+  - 3
 - name: 'Thief VR: Legacy of Shadow'
   ids:
   - steam:2800080
+  requires: []
+  tiers:
+  - 3
 - name: Tactical Assault VR
   ids:
   - steam:2314160
+  requires: []
+  tiers:
+  - 3
 - name: Ancient Dungeon
   ids:
   - steam:1125240
+  requires: []
+  tiers:
+  - 3
 - name: Arizona Sunshine Remake
   ids:
   - steam:2897700
+  requires: []
+  tiers:
+  - 3
 - name: 'Among Us 3D: VR'
   ids:
   - steam:1849900
+  requires: []
+  tiers:
+  - 3
 - name: Zero Caliber VR
   ids:
   - steam:877200
+  requires: []
+  tiers:
+  - 3

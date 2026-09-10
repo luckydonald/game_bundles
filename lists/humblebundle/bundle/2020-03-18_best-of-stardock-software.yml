@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Software Bundle: Best of Stardock 2020 — entire-11-item-bundle'
-tier: 3
+name: 'Humble Software Bundle: Best of Stardock 2020'
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8511/
@@ -13,33 +15,66 @@ games:
 - name: WindowBlinds
   ids:
   - unresolved:source:isthereanydeal:8511:windowblinds
+  requires: []
+  tiers:
+  - 3
 - name: Iconpackager
   ids:
   - unresolved:source:isthereanydeal:8511:iconpackager
+  requires: []
+  tiers:
+  - 3
 - name: CursorFX
   ids:
   - steam:1299980
+  requires: []
+  tiers:
+  - 3
 - name: DeskScapes
   ids:
   - steam:1027220
+  requires: []
+  tiers:
+  - 3
 - name: Start10
   ids:
   - unresolved:source:isthereanydeal:8511:start10
+  requires: []
+  tiers:
+  - 3
 - name: SpaceMonger
   ids:
   - unresolved:source:isthereanydeal:8511:spacemonger
+  requires: []
+  tiers:
+  - 3
 - name: WindowFX
   ids:
   - unresolved:source:isthereanydeal:8511:windowfx
+  requires: []
+  tiers:
+  - 3
 - name: Groupy
   ids:
   - unresolved:source:isthereanydeal:8511:groupy
+  requires: []
+  tiers:
+  - 3
 - name: Fences
   ids:
   - unresolved:source:isthereanydeal:8511:fences
+  requires: []
+  tiers:
+  - 3
 - name: Multiplicity
   ids:
   - unresolved:source:isthereanydeal:8511:multiplicity
+  requires: []
+  tiers:
+  - 3
 - name: TouchTasks
   ids:
   - unresolved:source:isthereanydeal:8511:touchtasks
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble tinyBuild Bundle 2019 — entire-11-item-bundle
-tier: 3
+name: Humble tinyBuild Bundle 2019
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7417/
@@ -13,33 +15,66 @@ games:
 - name: Diaries of a Spaceport Janitor
   ids:
   - steam:436500
+  requires: []
+  tiers:
+  - 3
 - name: SpeedRunners
   ids:
   - steam:207140
+  requires: []
+  tiers:
+  - 3
 - name: Punch Club
   ids:
   - steam:394310
+  requires: []
+  tiers:
+  - 3
 - name: The Final Station
   ids:
   - steam:435530
+  requires: []
+  tiers:
+  - 3
 - name: 'Party Hard: High Crimes'
   ids:
   - steam:554791
+  requires: []
+  tiers:
+  - 3
 - name: Streets of Rogue
   ids:
   - steam:512900
+  requires: []
+  tiers:
+  - 3
 - name: Party Hard
   ids:
   - steam:356570
+  requires: []
+  tiers:
+  - 3
 - name: Hello Neighbor
   ids:
   - steam:521890
+  requires: []
+  tiers:
+  - 3
 - name: ClusterTruck
   ids:
   - steam:397950
+  requires: []
+  tiers:
+  - 3
 - name: Party Hard 2
   ids:
   - steam:572430
+  requires: []
+  tiers:
+  - 3
 - name: Graveyard Keeper
   ids:
   - steam:599140
+  requires: []
+  tiers:
+  - 3

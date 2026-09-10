@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fighting Farmers Bundle — entire-7-item-bundle
-tier: 2
+name: Fighting Farmers Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12903/
@@ -13,21 +15,42 @@ games:
 - name: Stranded Sails - Explorers of the Cursed Islands
   ids:
   - steam:943260
+  requires: []
+  tiers:
+  - 2
 - name: Forager
   ids:
   - steam:751780
+  requires: []
+  tiers:
+  - 2
 - name: Serin Fate
   ids:
   - steam:1070860
+  requires: []
+  tiers:
+  - 2
 - name: Kitaria Fables
   ids:
   - steam:1356280
+  requires: []
+  tiers:
+  - 2
 - name: Re:Legend
   ids:
   - steam:823950
+  requires: []
+  tiers:
+  - 2
 - name: Len's Island
   ids:
   - steam:1335830
+  requires: []
+  tiers:
+  - 2
 - name: Spirit Of The Island
   ids:
   - steam:1592110
+  requires: []
+  tiers:
+  - 2

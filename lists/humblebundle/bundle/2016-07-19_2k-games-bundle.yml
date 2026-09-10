@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble 2K Bundle 2 — entire-12-item-bundle
-tier: 3
+name: Humble 2K Bundle 2
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3772/
@@ -13,36 +15,72 @@ games:
 - name: Duke Nukem Forever
   ids:
   - steam:57900
+  requires: []
+  tiers:
+  - 3
 - name: 'Spec Ops: The Line'
   ids:
   - unresolved:source:isthereanydeal:3772:spec-ops-the-line
+  requires: []
+  tiers:
+  - 3
 - name: The Darkness II
   ids:
   - steam:67370
+  requires: []
+  tiers:
+  - 3
 - name: "Mafia II: Director\x92s Cut"
   ids:
   - unresolved:source:isthereanydeal:3772:mafia-ii-directors-cut
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V
   ids:
   - steam:8930
+  requires: []
+  tiers:
+  - 3
 - name: 'The Bureau: XCOM Declassified'
   ids:
   - steam:65930
+  requires: []
+  tiers:
+  - 3
 - name: NBA 2K16
   ids:
   - unresolved:source:isthereanydeal:3772:nba-2k16
+  requires: []
+  tiers:
+  - 3
 - name: Freedom Force
   ids:
   - steam:8880
+  requires: []
+  tiers:
+  - 3
 - name: Railroad Tycoon 3
   ids:
   - steam:7610
+  requires: []
+  tiers:
+  - 3
 - name: Freedom Force vs. the 3rd Reich
   ids:
   - steam:8890
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: The Pre-Sequel'
   ids:
   - steam:261640
+  requires: []
+  tiers:
+  - 3
 - name: Battleborn
   ids:
   - unresolved:source:isthereanydeal:3772:battleborn
+  requires: []
+  tiers:
+  - 3

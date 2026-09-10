@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Indie Strategy Bundle — Beat The Average
-tier: 2
+name: The Indie Strategy Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/392/
@@ -13,39 +15,78 @@ games:
 - name: Storm over the Pacific
   ids:
   - steam:302320
+  requires: []
+  tiers:
+  - 2
 - name: Creeper World
   ids:
   - unresolved:source:isthereanydeal:392:creeper-world
+  requires: []
+  tiers:
+  - 2
 - name: 'AI War: Fleet Command'
   ids:
   - steam:40400
+  requires: []
+  tiers:
+  - 2
 - name: Age of Conquest III
   ids:
   - unresolved:source:isthereanydeal:392:age-of-conquest-iii
+  requires: []
+  tiers:
+  - 2
 - name: US and THEM
   ids:
   - steam:281350
+  requires: []
+  tiers:
+  - 2
 - name: AI War Prototype
   ids:
   - unresolved:source:isthereanydeal:392:ai-war-prototype
+  requires: []
+  tiers:
+  - 2
 - name: Strategic War in Europe
   ids:
   - steam:283000
+  requires: []
+  tiers:
+  - 2
 - name: The Trouble With Robots
   ids:
   - unresolved:source:isthereanydeal:392:the-trouble-with-robots
+  requires: []
+  tiers:
+  - 2
 - name: 'Creeper World 2: Redemption'
   ids:
   - unresolved:source:isthereanydeal:392:creeper-world-2-redemption
+  requires: []
+  tiers:
+  - 2
 - name: Mayhem Intergalactic
   ids:
   - steam:18600
+  requires: []
+  tiers:
+  - 2
 - name: 'AI War: The Zenith Remnant'
   ids:
   - steam:40403
+  requires: []
+  tiers:
+  - 2
 - name: Fall Weiss
   ids:
   - unresolved:source:isthereanydeal:392:fall-weiss
+  requires: []
+  tiers:
+  - 2
 - name: Project Aftermath
   ids:
   - unresolved:source:isthereanydeal:392:project-aftermath
+  requires: []
+  tiers:
+  - 2

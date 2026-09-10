@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble MangaGamer and Friends Bundle — entire-12-item-bundle
-tier: 3
+name: Humble MangaGamer and Friends Bundle
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5724/
@@ -13,36 +15,72 @@ games:
 - name: Eden
   ids:
   - steam:315810
+  requires: []
+  tiers:
+  - 3
 - name: A Kiss for the Petals - Remembering How We Met
   ids:
   - steam:397270
+  requires: []
+  tiers:
+  - 3
 - name: Higurashi When They Cry Hou - Ch.2 Watanagashi
   ids:
   - steam:410890
+  requires: []
+  tiers:
+  - 3
 - name: Higurashi When They Cry Hou - Ch.1 Onikakushi
   ids:
   - steam:310360
+  requires: []
+  tiers:
+  - 3
 - name: Higurashi When They Cry Hou - Ch.3 Tatarigoroshi
   ids:
   - steam:472870
+  requires: []
+  tiers:
+  - 3
 - name: Go! Go! Nippon! Complete Collection
   ids:
   - unresolved:source:isthereanydeal:5724:go-go-nippon-complete-collection
+  requires: []
+  tiers:
+  - 3
 - name: If My Heart Had Wings
   ids:
   - steam:326480
+  requires: []
+  tiers:
+  - 3
 - name: LoveKami -Divinity Stage
   ids:
   - steam:547340
+  requires: []
+  tiers:
+  - 3
 - name: Higurashi When They Cry Hou - Ch.4 Himatsubushi
   ids:
   - steam:526490
+  requires: []
+  tiers:
+  - 3
 - name: Love Kami -Useless Goddess
   ids:
   - unresolved:source:isthereanydeal:5724:love-kami-useless-goddess
+  requires: []
+  tiers:
+  - 3
 - name: Princess Evangile
   ids:
   - steam:344630
+  requires: []
+  tiers:
+  - 3
 - name: Higurashi When They Cry Hou - Ch.5 Meakashi
   ids:
   - steam:577480
+  requires: []
+  tiers:
+  - 3

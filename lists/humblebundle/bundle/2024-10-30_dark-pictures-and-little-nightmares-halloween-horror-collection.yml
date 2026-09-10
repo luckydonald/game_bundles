@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Dark Pictures & Little Nightmares: Halloween Horror Bundle — entire-7-item-bundle'
-tier: 4
+name: 'Dark Pictures & Little Nightmares: Halloween Horror Bundle'
+tiers:
+- rank: 4
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14573/
@@ -13,21 +15,42 @@ games:
 - name: Little Nightmares
   ids:
   - steam:424840
+  requires: []
+  tiers:
+  - 4
 - name: 'The Dark Pictures Anthology: Man of Medan'
   ids:
   - steam:939850
+  requires: []
+  tiers:
+  - 4
 - name: 'Little Nightmares: Secrets of The Maw Expansion Pass'
   ids:
   - steam:640920
+  requires: []
+  tiers:
+  - 4
 - name: 'The Dark Pictures Anthology: Little Hope'
   ids:
   - steam:1194630
+  requires: []
+  tiers:
+  - 4
 - name: Little Nightmares II Deluxe Edition
   ids:
   - steam:860510
+  requires: []
+  tiers:
+  - 4
 - name: 'The Dark Pictures Anthology: House of Ashes'
   ids:
   - steam:1281590
+  requires: []
+  tiers:
+  - 4
 - name: 'The Dark Pictures Anthology: The Devil in Me'
   ids:
   - steam:1567020
+  requires: []
+  tiers:
+  - 4

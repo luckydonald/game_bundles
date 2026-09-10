@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Narrative Masterpieces — Entire 12 Item Bundle
-tier: 3
+name: Narrative Masterpieces
+tiers:
+- rank: 3
+  name: Entire 12 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/narrative-masterpieces
@@ -24,59 +26,83 @@ games:
   - steam:1350200
   - isthereanydeal:immortality
   requires: []
+  tiers:
+  - 3
 - name: Wednesdays
   ids:
   - steam:2747770
   - isthereanydeal:wednesdays
   requires: []
+  tiers:
+  - 3
 - name: 'Tavern Talk 2: Dreamwalker'
   ids:
   - steam:3500880
   - isthereanydeal:tavern-talk-2-dreamwalker
   requires: []
+  tiers:
+  - 3
 - name: 'Tavern Talk 2: Dreamwalker - Drowsy Druid (Decoration Pack)'
   ids:
   - steam:4464060
   - isthereanydeal:tavern-talk-2-dreamwalker-drowsy-druid-decoration-pack
   requires: []
+  tiers:
+  - 3
 - name: 'Tavern Talk 2: Dreamwalker - Wondrous Wizard (Decoration Pack)'
   ids:
   - steam:4464070
   - unresolved:source:isthereanydeal:16538:tavern-talk-2-dreamwalker-wondrous-wizard-decoration-pack
   - isthereanydeal:tavern-talk-2-dreamwalker-wondrous-wizard-decoration-pack
   requires: []
+  tiers:
+  - 3
 - name: The Wreck
   ids:
   - steam:1687960
   - isthereanydeal:the-wreck
   requires: []
+  tiers:
+  - 3
 - name: The Pale Beyond
   ids:
   - steam:1266030
   - isthereanydeal:the-pale-beyond
   requires: []
+  tiers:
+  - 3
 - name: SUNLESS SKIES
   ids:
   - steam:596970
   - isthereanydeal:sunless-skies-sovereign-edition
   requires: []
+  tiers:
+  - 3
 - name: Eliza
   ids:
   - steam:716500
   - isthereanydeal:eliza
   requires: []
+  tiers:
+  - 3
 - name: Along the Edge
   ids:
   - steam:504390
   - isthereanydeal:along-the-edge
   requires: []
+  tiers:
+  - 3
 - name: We. The Revolution
   ids:
   - steam:736850
   - isthereanydeal:we-the-revolution
   requires: []
+  tiers:
+  - 3
 - name: 'Crowns and Pawns: Kingdom of Deceit'
   ids:
   - steam:1125910
   - isthereanydeal:crowns-and-pawns-kingdom-of-deceit
   requires: []
+  tiers:
+  - 3
