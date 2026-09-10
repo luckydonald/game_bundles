@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #64 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6251/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6251/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6251/source.json
+games:
+- name: Trio
+  ids:
+  - steam:642520
+  requires: []
+- name: Fruit Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:6251:fruit-sudoku
+  requires: []
+- name: Planet jump
+  ids:
+  - unresolved:source:isthereanydeal:6251:planet-jump
+  requires: []
+- name: Stickman Destruction 2
+  ids:
+  - steam:761660
+  requires: []
+- name: 'Blue Snake Adventures : Master Level'
+  ids:
+  - steam:722090
+  requires: []
+- name: Robot Pirates
+  ids:
+  - steam:645780
+  requires: []
+- name: Grand Pskov Story
+  ids:
+  - unresolved:source:isthereanydeal:6251:grand-pskov-story
+  requires: []
+- name: SoulFrost
+  ids:
+  - steam:675220
+  requires: []
+- name: Grand Pskov Story - artbook "50 shadows of Pskov"
+  ids:
+  - unresolved:source:isthereanydeal:6251:grand-pskov-story-artbook-50-shadows-of-pskov
+  requires: []
+- name: Pixel Shooter
+  ids:
+  - steam:647280
+  requires: []
+- name: The Scarecrow
+  ids:
+  - unresolved:source:isthereanydeal:6251:the-scarecrow
+  requires: []
+- name: '!LABrpgUP!'
+  ids:
+  - steam:870990
+  requires: []
+- name: SoulFrost Original+Arranged SoundTrack
+  ids:
+  - unresolved:source:isthereanydeal:6251:soulfrost-original-and-arranged-soundtrack
+  requires: []
+- name: The Dark Maze
+  ids:
+  - unresolved:source:isthereanydeal:6251:the-dark-maze
+  requires: []
+- name: Blue Snake Adventures
+  ids:
+  - steam:722080
+  requires: []

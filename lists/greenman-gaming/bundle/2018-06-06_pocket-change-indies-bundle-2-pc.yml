@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pocket Change Indies Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6215/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6215/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6215/source.json
+games:
+- name: Arkshot
+  ids:
+  - steam:468800
+  requires: []
+- name: Action Alien
+  ids:
+  - steam:382080
+  requires: []
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+  requires: []
+- name: 'Heroes & Legends: Conquerors of Kolhar'
+  ids:
+  - steam:306950
+  requires: []
+- name: Dreambreak
+  ids:
+  - steam:443570
+  requires: []
+- name: Aerial Destruction
+  ids:
+  - steam:592730
+  requires: []
+- name: Three Dead Zed
+  ids:
+  - steam:291390
+  requires: []
+- name: 'Supreme League of Patriots: Issue 1 - A Patriot Is Born'
+  ids:
+  - steam:331760
+  requires: []
+- name: Huntsman - The Orphanage Halloween Edition
+  ids:
+  - steam:246740
+  requires: []
+- name: 'Supreme League of Patriots - Issue 2: Patriot Frames'
+  ids:
+  - steam:336710
+  requires: []

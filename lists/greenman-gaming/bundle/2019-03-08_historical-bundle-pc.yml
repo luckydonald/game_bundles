@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Historical Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7143/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7143/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7143/source.json
+games:
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+  requires: []
+- name: 'Mount and Blade: With Fire and Sword'
+  ids:
+  - steam:48720
+  requires: []
+- name: Mount & Blade
+  ids:
+  - steam:22100
+  requires: []
+- name: Rise of the Argonauts
+  ids:
+  - unresolved:source:isthereanydeal:7143:rise-of-the-argonauts
+  requires: []
+- name: 'FIVE: Guardians of David'
+  ids:
+  - steam:387010
+  requires: []

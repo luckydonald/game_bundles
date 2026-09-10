@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #11 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6571/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6571/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6571/source.json
+games:
+- name: Little Kite
+  ids:
+  - steam:610120
+  requires: []
+- name: Carton
+  ids:
+  - unresolved:source:isthereanydeal:6571:carton
+  requires: []
+- name: Zenodyne R
+  ids:
+  - steam:466820
+  requires: []
+- name: Pink Rage Otome
+  ids:
+  - steam:664620
+  requires: []
+- name: Zenohell
+  ids:
+  - steam:402030
+  requires: []
+- name: Zenodyne R - Soundtrack
+  ids:
+  - steam:471410
+  requires: []
+- name: Little Kite - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6571:little-kite-original-soundtrack
+  requires: []
+- name: Survive in Angaria
+  ids:
+  - steam:803260
+  requires: []
+- name: Defense of Roman Britain
+  ids:
+  - steam:657790
+  requires: []
+- name: Homeworld Defense
+  ids:
+  - steam:787100
+  requires: []
+- name: Hamster Daily
+  ids:
+  - steam:839590
+  requires: []
+- name: The Secrets of The Forest
+  ids:
+  - unresolved:source:isthereanydeal:6571:the-secrets-of-the-forest
+  requires: []

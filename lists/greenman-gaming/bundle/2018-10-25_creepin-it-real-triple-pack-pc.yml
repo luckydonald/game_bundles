@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Creepin It Real Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6607/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6607/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6607/source.json
+games:
+- name: Killing Floor
+  ids:
+  - steam:1250
+  requires: []
+- name: Puzzle Chronicles
+  ids:
+  - steam:19020
+  requires: []
+- name: Beyond Eyes
+  ids:
+  - unresolved:source:isthereanydeal:6607:beyond-eyes
+  requires: []
