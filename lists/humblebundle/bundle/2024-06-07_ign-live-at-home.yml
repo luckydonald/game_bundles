@@ -2,6 +2,8 @@
 schema: 1
 name: IGN Live At Home Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1607680
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grindstone
   ids:
   - steam:1818690
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'MechWarrior 5: Mercenaries'
   ids:

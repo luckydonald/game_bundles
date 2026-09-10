@@ -2,6 +2,8 @@
 schema: 1
 name: Down Under Bundle
 tiers:
+- rank: 1
+  name: Pay What You Want ($1 for Steam Keys)
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:324740
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hand of Fate
   ids:
   - steam:266510
   requires: []
   tiers:
+  - 1
   - 3
 - name: Screencheat
   ids:
   - steam:301970
   requires: []
   tiers:
+  - 1
   - 3
 - name: Satellite Reign
   ids:
   - steam:268870
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hacknet - Labyrinths
   ids:

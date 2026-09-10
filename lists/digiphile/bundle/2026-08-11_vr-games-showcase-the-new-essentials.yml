@@ -2,6 +2,8 @@
 schema: 1
 name: 'VR Games Showcase: The New Essentials'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 7
   name: Charity tier, 100% goes to charity
 references:
@@ -18,6 +20,7 @@ games:
   - isthereanydeal:unloop--1
   requires: []
   tiers:
+  - 1
   - 7
 - name: CONVRGENCE
   ids:

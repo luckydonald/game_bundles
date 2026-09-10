@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #52'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:3535090
   requires: []
   tiers:
+  - 1
   - 2
 - name: LocoSoccer
   ids:
   - unresolved:source:isthereanydeal:6284:locosoccer
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blackjack In Space
   ids:
   - steam:805090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kebab it Up!
   ids:

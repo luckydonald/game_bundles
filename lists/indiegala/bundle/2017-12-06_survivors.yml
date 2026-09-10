@@ -2,6 +2,8 @@
 schema: 1
 name: The Indie Survivors Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:3433200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Olson's Boxing Challenge
   ids:
   - steam:747790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Lagat
   ids:
   - unresolved:source:isthereanydeal:5691:space-lagat
   requires: []
   tiers:
+  - 1
   - 2
 - name: Happy Neighbors
   ids:

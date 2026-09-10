@@ -2,6 +2,8 @@
 schema: 1
 name: Dream Teams Bundle
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:321360
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Trine 2: Complete Story'
   ids:

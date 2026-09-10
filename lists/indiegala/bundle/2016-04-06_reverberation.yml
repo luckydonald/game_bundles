@@ -2,6 +2,8 @@
 schema: 1
 name: Reverberation Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:284970
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Shadowgate: MacVenture Series'
   ids:
   - steam:343800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sherlock Holmes Consulting Detective: The Case of the Mystified Murderess'
   ids:
   - steam:376790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Guncraft
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Remute&#39;s Adventurous Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:712660
   requires: []
   tiers:
+  - 1
   - 2
 - name: '[ V A S T ] VAPORWAVE AESTHETIC SIMULATOR TYCOON'
   ids:
   - unresolved:source:isthereanydeal:5320:v-as-t-vaporwave-aesthetic-simulator-tycoon
   requires: []
   tiers:
+  - 1
   - 2
 - name: BURGERWAVE
   ids:
   - unresolved:source:isthereanydeal:5320:burgerwave
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pizza Connection 2
   ids:

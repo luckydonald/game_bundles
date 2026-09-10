@@ -2,6 +2,8 @@
 schema: 1
 name: Goosebumps Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:450850
   requires: []
   tiers:
+  - 1
   - 2
 - name: ONE DAY for Ched
   ids:
   - steam:321030
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Safety Driving Simulator: Car'
   ids:
   - steam:450590
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ninja Stealth
   ids:

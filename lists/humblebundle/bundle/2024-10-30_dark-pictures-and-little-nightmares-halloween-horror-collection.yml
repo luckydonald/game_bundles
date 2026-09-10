@@ -2,6 +2,8 @@
 schema: 1
 name: 'Dark Pictures & Little Nightmares: Halloween Horror Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:424840
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'The Dark Pictures Anthology: Man of Medan'
   ids:
   - steam:939850
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Little Nightmares: Secrets of The Maw Expansion Pass'
   ids:

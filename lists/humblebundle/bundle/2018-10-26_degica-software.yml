@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Software Bundle: RPG Maker'
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 4
   name: entire-37-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:235900
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Game Character Hub PE: DS Generator Parts'
   ids:
   - steam:531601
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Game Character Hub: Second Story'
   ids:
   - steam:372710
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Game Character Hub: Portfolio Edition'
   ids:
   - steam:529830
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Last Word
   ids:
   - unresolved:source:isthereanydeal:6611:the-last-word
   requires: []
   tiers:
+  - 1
   - 4
 - name: Skyborn
   ids:

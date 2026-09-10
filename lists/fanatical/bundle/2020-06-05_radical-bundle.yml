@@ -2,6 +2,8 @@
 schema: 1
 name: Radical Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:306490
   requires: []
   tiers:
+  - 1
   - 3
 - name: Thunder Wolves
   ids:
   - steam:232970
   requires: []
   tiers:
+  - 1
   - 3
 - name: SkyDrift
   ids:
   - steam:91100
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
   ids:

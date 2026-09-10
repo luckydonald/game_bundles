@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Jumbo Bundle 10
 tiers:
+- rank: 1
+  name: Pay What You Want ($1 for Steam Keys)
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:314660
   requires: []
   tiers:
+  - 1
   - 3
 - name: Epistory - Typing Chronicles
   ids:
   - steam:398850
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grey Goo Definitive Edition
   ids:
   - unresolved:source:isthereanydeal:5585:grey-goo-definitive-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kingdom: New Lands'
   ids:

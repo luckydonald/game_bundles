@@ -2,6 +2,8 @@
 schema: 1
 name: Telltale Games Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:207610
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'The Walking Dead: 400 Days'
   ids:
   - steam:207620
   requires: []
   tiers:
+  - 1
   - 3
 - name: Batman - The Telltale Series
   ids:

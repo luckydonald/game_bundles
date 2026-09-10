@@ -2,6 +2,8 @@
 schema: 1
 name: Talisman Heresy Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:5921:talisman-the-horus-heresy
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Talisman: The Horus Heresy - Heroes & Villains 1'
   ids:

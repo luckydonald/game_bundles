@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Magic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6253:corpse-mob
   requires: []
   tiers:
+  - 1
   - 2
 - name: They Are Hundreds
   ids:
   - steam:806860
   requires: []
   tiers:
+  - 1
   - 2
 - name: 36 Fragments of Midnight
   ids:
   - steam:679930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Runefall
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Adventures Bundle
 tiers:
+- rank: 1
+  name: Adventurer
 - rank: 3
   name: Legend
 references:
@@ -17,6 +19,7 @@ games:
   - steam:1488200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Disco Elysium - The Final Cut
   ids:

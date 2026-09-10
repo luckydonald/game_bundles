@@ -2,6 +2,8 @@
 schema: 1
 name: Sovereign Sandbox Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1571940
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wildmender
   ids:
   - steam:1599330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nova Lands
   ids:
   - steam:1501610
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'My Little Universe: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:16028:my-little-universe-complete-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prehistoric Kingdom
   ids:

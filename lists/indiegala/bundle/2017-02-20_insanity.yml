@@ -2,6 +2,8 @@
 schema: 1
 name: The Insanity Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:223470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cthulhu Saves the World & Breath of Death VII Double Pack
   ids:
   - unresolved:source:isthereanydeal:4806:cthulhu-saves-the-world-and-breath-of-death-vii-double-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: Teria
   ids:
   - steam:557970
   requires: []
   tiers:
+  - 1
   - 2
 - name: SQUAKE
   ids:

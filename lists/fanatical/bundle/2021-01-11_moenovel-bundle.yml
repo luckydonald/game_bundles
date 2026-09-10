@@ -2,6 +2,8 @@
 schema: 1
 name: MoeNovel Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - steam:745960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Love Kami -Useless Goddess
   ids:
   - unresolved:source:isthereanydeal:9621:love-kami-useless-goddess
   requires: []
   tiers:
+  - 1
   - 2
 - name: Adventure of a Lifetime
   ids:
   - steam:820730
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'CROSS†CHANNEL: Steam Edition'
   ids:
   - steam:812560
   requires: []
   tiers:
+  - 1
   - 2
 - name: If My Heart Had Wings
   ids:
   - steam:326480
   requires: []
   tiers:
+  - 1
   - 2
 - name: LoveKami -Divinity Stage
   ids:
   - steam:547340
   requires: []
   tiers:
+  - 1
   - 2
 - name: LoveKami -Healing Harem
   ids:
   - steam:938270
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'If My Heart Had Wings -Flight Diary- - New Wings: Akari'
   ids:

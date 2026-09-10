@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Armored Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:947290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Galactic Bulwark Strike
   ids:
   - steam:803930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crimson Shift
   ids:
   - steam:837330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ashes of Kanaka
   ids:

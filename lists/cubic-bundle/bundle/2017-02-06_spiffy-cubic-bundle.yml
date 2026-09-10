@@ -2,6 +2,8 @@
 schema: 1
 name: Spiffy Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:522570
   requires: []
   tiers:
+  - 1
   - 2
 - name: North side
   ids:
   - unresolved:source:isthereanydeal:4729:north-side
   requires: []
   tiers:
+  - 1
   - 2
 - name: Our Wonderful World
   ids:
   - steam:562600
   requires: []
   tiers:
+  - 1
   - 2
 - name: KickHim
   ids:
   - unresolved:source:isthereanydeal:4729:kickhim
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cube Master: Light Adventure'
   ids:

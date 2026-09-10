@@ -2,6 +2,8 @@
 schema: 1
 name: Humble GameOn Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:368370
   requires: []
   tiers:
+  - 1
   - 3
 - name: Worms Clan Wars
   ids:
   - steam:233840
   requires: []
   tiers:
+  - 1
   - 3
 - name: 80 days
   ids:
   - steam:381780
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Stanley Parable
   ids:

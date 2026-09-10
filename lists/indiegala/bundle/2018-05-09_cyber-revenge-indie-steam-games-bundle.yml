@@ -2,6 +2,8 @@
 schema: 1
 name: Cyber Revenge Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6115:cyber-fight
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fear Half Factor
   ids:
   - steam:805690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ball laB
   ids:
   - steam:780800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Squareface
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: The Telltale Collection Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:31170
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Batman: The Enemy Within - The Telltale Series'
   ids:
   - steam:675260
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Wolf Among Us
   ids:
   - steam:250320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Batman - The Telltale Series
   ids:
   - steam:498240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Batman - The Telltale Series Shadows Mode
   ids:
   - steam:1182000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Batman - The Enemy Within Shadows Mode
   ids:
   - steam:1181990
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Walking Dead: The Telltale Definitive Series'
   ids:

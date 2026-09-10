@@ -2,6 +2,8 @@
 schema: 1
 name: Humble 2K Bundle 2
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:57900
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Spec Ops: The Line'
   ids:
   - unresolved:source:isthereanydeal:3772:spec-ops-the-line
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Darkness II
   ids:
   - steam:67370
   requires: []
   tiers:
+  - 1
   - 3
 - name: "Mafia II: Director\x92s Cut"
   ids:

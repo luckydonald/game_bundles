@@ -2,6 +2,8 @@
 schema: 1
 name: Origins Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:394310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rebel Galaxy
   ids:
   - steam:290300
   requires: []
   tiers:
+  - 1
   - 2
 - name: Grey Goo Definitive Edition
   ids:
   - unresolved:source:isthereanydeal:6576:grey-goo-definitive-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: RiME
   ids:

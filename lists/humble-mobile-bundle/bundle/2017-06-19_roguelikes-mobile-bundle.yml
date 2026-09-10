@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Mobile Bundle: Roguelikes'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - steam:226620
   requires: []
   tiers:
+  - 1
   - 3
 - name: bit Dungeon I
   ids:
   - unresolved:source:isthereanydeal:5239:bit-dungeon-i
   requires: []
   tiers:
+  - 1
   - 3
 - name: bit Dungeon II
   ids:
   - steam:331440
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Pixel Heroes: Byte & Magic'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Angels Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3483:sword-of-asumi-deluxe-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Last Days of Spring Visual Novel
   ids:
   - steam:407680
   requires: []
   tiers:
+  - 1
   - 2
 - name: Go! Go! Nippon! ~My First Trip to Japan~
   ids:
   - steam:251870
   requires: []
   tiers:
+  - 1
   - 2
 - name: Serafina's Crown
   ids:

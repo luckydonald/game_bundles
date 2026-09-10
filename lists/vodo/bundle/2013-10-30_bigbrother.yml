@@ -2,6 +2,8 @@
 schema: 1
 name: Big Brother Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,6 +19,7 @@ games:
   - steam:245390
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hacker Evolution Duality
   ids:

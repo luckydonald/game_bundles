@@ -2,6 +2,8 @@
 schema: 1
 name: Completionist Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:655600
   requires: []
   tiers:
+  - 1
   - 2
 - name: It Comes Around - A Kinetic Novel
   ids:
   - steam:520520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lamp Head
   ids:
   - unresolved:source:isthereanydeal:5455:lamp-head
   requires: []
   tiers:
+  - 1
   - 2
 - name: Z69
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: The Simply Super Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:487530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crappy day enhanced edition
   ids:
   - unresolved:source:isthereanydeal:5191:crappy-day-enhanced-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: No Time To Live
   ids:
   - steam:397940
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tower Dwellers
   ids:

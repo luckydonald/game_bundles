@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Arma 2018 Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-13-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:65790
   requires: []
   tiers:
+  - 1
   - 4
 - name: ArmA Gold Edition
   ids:
   - steam:65780
   requires: []
   tiers:
+  - 1
   - 4
 - name: Arma Tactics
   ids:
   - steam:224860
   requires: []
   tiers:
+  - 1
   - 4
 - name: ArmA 2 Operation Arrowhead
   ids:

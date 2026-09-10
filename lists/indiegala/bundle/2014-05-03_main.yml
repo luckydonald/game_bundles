@@ -2,6 +2,8 @@
 schema: 1
 name: Tiny Mix Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: BTA
 references:
@@ -17,18 +19,21 @@ games:
   - steam:271900
   requires: []
   tiers:
+  - 1
   - 2
 - name: POSTAL
   ids:
   - steam:232770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sylia - Act I
   ids:
   - unresolved:source:isthereanydeal:758:sylia-act-i
   requires: []
   tiers:
+  - 1
   - 2
 - name: Poöf vs The Cursed Kitty
   ids:

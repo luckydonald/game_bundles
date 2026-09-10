@@ -2,6 +2,8 @@
 schema: 1
 name: Jackbox Summer Party Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-17-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:252730
   requires: []
   tiers:
+  - 1
   - 4
 - name: YOU DON'T KNOW JACK Vol. 2
   ids:
   - steam:259940
   requires: []
   tiers:
+  - 1
   - 4
 - name: YOU DON'T KNOW JACK Vol. 3
   ids:
   - steam:259960
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Jackbox Party Pack 3
   ids:

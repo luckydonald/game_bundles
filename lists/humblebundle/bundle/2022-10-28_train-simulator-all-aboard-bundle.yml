@@ -2,6 +2,8 @@
 schema: 1
 name: Train Simulator All Aboard! Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 3
   name: entire-19-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:277763
   requires: []
   tiers:
+  - 1
   - 3
 - name: DB BR 648 Loco Add-On
   ids:
   - unresolved:source:isthereanydeal:12330:db-br-648-loco-add-on
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: Class 170 ‘Turbostar'' DMU Add-On'
   ids:
   - steam:208364
   requires: []
   tiers:
+  - 1
   - 3
 - name: Thompson Class B1 Add-On
   ids:
   - steam:208289
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Peninsula Corridor: San Francisco - San Jose'
   ids:
   - unresolved:source:isthereanydeal:12330:peninsula-corridor-san-francisco-san-jose
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Simulator Classic
   ids:
   - unresolved:source:isthereanydeal:12330:train-simulator-classic
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Train Simulator: DB BR 605 ICE TD Add-On'
   ids:

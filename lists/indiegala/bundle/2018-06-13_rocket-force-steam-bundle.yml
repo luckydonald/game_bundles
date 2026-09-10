@@ -2,6 +2,8 @@
 schema: 1
 name: Rocket Force Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6235:thunderbolt-ii
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Mystery of Devils House
   ids:
   - steam:825970
   requires: []
   tiers:
+  - 1
   - 2
 - name: Burgerwise The Clown
   ids:
   - steam:860430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rise of Crustaceans
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #82'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:416550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zasa - An AI Story
   ids:
   - steam:447240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bakery
   ids:

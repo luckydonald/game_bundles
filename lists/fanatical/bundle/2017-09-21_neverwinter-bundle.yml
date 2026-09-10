@@ -2,6 +2,8 @@
 schema: 1
 name: Neverwinter Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5488:neverwinter-defensive-starter-pack
   requires: []
   tiers:
+  - 1
   - 4
 - name: Neverwinter - Offensive Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-offensive-starter-pack
   requires: []
   tiers:
+  - 1
   - 4
 - name: Neverwinter - Endurance Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-endurance-starter-pack
   requires: []
   tiers:
+  - 1
   - 4
 - name: Neverwinter Trove of Elemental Evil
   ids:

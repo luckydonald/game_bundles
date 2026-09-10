@@ -2,6 +2,8 @@
 schema: 1
 name: 'Daedalic Entertainment Limited Bundle #2'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:323720
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Dark Eye: Chains of Satinav'
   ids:
   - steam:203830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Goodbye Deponia - Premium Edition
   ids:

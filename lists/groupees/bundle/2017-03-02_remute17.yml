@@ -2,6 +2,8 @@
 schema: 1
 name: Remute&#39;s Alien Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:471380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kick Ass Commandos
   ids:
   - steam:359140
   requires: []
   tiers:
+  - 1
   - 2
 - name: Akihabara - Feel the Rhythm - Soundtrack
   ids:
   - unresolved:source:isthereanydeal:4850:akihabara-feel-the-rhythm-soundtrack
   requires: []
   tiers:
+  - 1
   - 2
 - name: You Must be 18 or Older to Enter
   ids:
   - steam:608510
   requires: []
   tiers:
+  - 1
   - 2
 - name: 20something
   ids:

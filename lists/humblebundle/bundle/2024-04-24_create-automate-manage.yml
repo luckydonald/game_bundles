@@ -2,6 +2,8 @@
 schema: 1
 name: Create, Automate & Manage Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:860890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Buggos
   ids:
   - steam:789660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Recipe for Disaster
   ids:
   - steam:1492360
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Colonists
   ids:

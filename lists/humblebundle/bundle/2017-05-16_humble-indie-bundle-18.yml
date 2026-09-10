@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Indie Bundle 18
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:308420
   requires: []
   tiers:
+  - 1
   - 3
 - name: SteamWorld Heist
   ids:
   - steam:322190
   requires: []
   tiers:
+  - 1
   - 3
 - name: Windward
   ids:
   - steam:326410
   requires: []
   tiers:
+  - 1
   - 3
 - name: Neon Drive
   ids:

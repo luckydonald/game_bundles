@@ -2,6 +2,8 @@
 schema: 1
 name: Neon Lights Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:589780
   requires: []
   tiers:
+  - 1
   - 3
 - name: Black Future '88
   ids:
   - steam:751820
   requires: []
   tiers:
+  - 1
   - 3
 - name: Neon Abyss
   ids:
   - steam:788100
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ghostrunner
   ids:

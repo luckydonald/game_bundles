@@ -2,6 +2,8 @@
 schema: 1
 name: The Insurgency Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:238430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Monday Night Combat
   ids:
   - steam:63200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bedlam
   ids:

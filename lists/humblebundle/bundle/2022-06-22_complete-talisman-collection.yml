@@ -2,6 +2,8 @@
 schema: 1
 name: 'Talisman: The Complete Collection Bundle'
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 3
   name: Beat The Average
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:11636:talisman-digital-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Talisman: Origins'
   ids:

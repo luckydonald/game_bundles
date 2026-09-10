@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Show
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:527800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Maniac GO
   ids:
   - unresolved:source:isthereanydeal:5358:maniac-go
   requires: []
   tiers:
+  - 1
   - 2
 - name: Universe in Fire
   ids:
   - unresolved:source:isthereanydeal:5358:universe-in-fire
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wild Goo Chase
   ids:

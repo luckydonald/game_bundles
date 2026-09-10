@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality Bundle XXVIII
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:494040
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Yanone: Letter Splatter'
   ids:
   - unresolved:source:isthereanydeal:6345:yanone-letter-splatter
   requires: []
   tiers:
+  - 1
   - 2
 - name: Great Mountain Experience
   ids:
   - steam:853830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Waking the Glares - Chapters I and II
   ids:

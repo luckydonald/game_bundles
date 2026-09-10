@@ -2,6 +2,8 @@
 schema: 1
 name: Kalypso Hits Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-10-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:57650
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Commandos: Behind Enemy Lines'
   ids:
   - steam:6800
   requires: []
   tiers:
+  - 1
   - 4
 - name: Commandos 2 - HD Remaster
   ids:

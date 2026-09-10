@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #69'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:410670
   requires: []
   tiers:
+  - 1
   - 2
 - name: EvilQuest
   ids:
   - steam:263820
   requires: []
   tiers:
+  - 1
   - 2
 - name: Syrian Warfare
   ids:

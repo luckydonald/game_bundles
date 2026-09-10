@@ -2,6 +2,8 @@
 schema: 1
 name: The Mighty Monday GameBundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Beat The Average + $0.20
 references:
@@ -17,12 +19,14 @@ games:
   - steam:538590
   requires: []
   tiers:
+  - 1
   - 3
 - name: Nightork Adventures - Beyond the Moons of Shadalee
   ids:
   - steam:493780
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ballistick
   ids:

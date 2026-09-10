@@ -2,6 +2,8 @@
 schema: 1
 name: Deus Ex Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - steam:6920
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Deus Ex: Game of the Year Edition'
   ids:
   - steam:6910
   requires: []
   tiers:
+  - 1
   - 3
 - name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
   ids:

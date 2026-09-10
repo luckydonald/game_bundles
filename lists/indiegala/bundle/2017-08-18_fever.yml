@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Fever
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5402:laseronium-over-the-line
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mad Muzzles
   ids:
   - unresolved:source:isthereanydeal:5402:mad-muzzles
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Long Road Home
   ids:
   - steam:576160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Runaway Train
   ids:

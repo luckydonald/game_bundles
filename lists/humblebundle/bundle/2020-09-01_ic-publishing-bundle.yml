@@ -2,6 +2,8 @@
 schema: 1
 name: Humble 1C Publishing Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 4
   name: entire-20-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:887720
   requires: []
   tiers:
+  - 1
   - 4
 - name: Shiny
   ids:
   - steam:496390
   requires: []
   tiers:
+  - 1
   - 4
 - name: Gift of Parthax
   ids:
   - steam:795610
   requires: []
   tiers:
+  - 1
   - 4
 - name: Haimrik
   ids:
   - steam:492180
   requires: []
   tiers:
+  - 1
   - 4
 - name: 7,62 High Calibre + 7,62 Hard Life
   ids:
   - unresolved:source:isthereanydeal:9116:7-62-high-calibre-and-7-62-hard-life
   requires: []
   tiers:
+  - 1
   - 4
 - name: Quantum Replica
   ids:

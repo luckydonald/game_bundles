@@ -2,6 +2,8 @@
 schema: 1
 name: 'Plaion: The Hits - Saints Row & Red Faction Bundle'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:20530
   requires: []
   tiers:
+  - 1
   - 3
 - name: Saints Row 2
   ids:
   - steam:9480
   requires: []
   tiers:
+  - 1
   - 3
 - name: Red Faction II
   ids:
   - steam:20550
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Red Faction: Armageddon - Path to War'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Sakura Series Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-16-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:521500
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sakura Shrine Girls
   ids:
   - steam:517000
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sakura Sadist
   ids:
   - steam:813700
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sakura Agent
   ids:
   - steam:575510
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sakura Gamer
   ids:
   - steam:685680
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sakura MMO 3
   ids:

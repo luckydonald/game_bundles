@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Summer Adventure Games Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:207610
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Batman: The Enemy Within - The Telltale Series'
   ids:
   - steam:675260
   requires: []
   tiers:
+  - 1
   - 3
 - name: Oxenfree
   ids:
   - steam:388880
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'The Walking Dead: 400 Days'
   ids:
   - steam:207620
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'The Walking Dead: Season Two'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXXVII Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:503150
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vehicle VR
   ids:
   - steam:648810
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Secret of Puffin Cove
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Sierra Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 4
   name: entire-17-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:501990
   requires: []
   tiers:
+  - 1
   - 4
 - name: Shiftlings
   ids:
   - unresolved:source:isthereanydeal:4521:shiftlings
   requires: []
   tiers:
+  - 1
   - 4
 - name: Space Quest™ Collection
   ids:
   - steam:10110
   requires: []
   tiers:
+  - 1
   - 4
 - name: Police Quest Collection
   ids:
   - steam:494740
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Phantasmagoria 2: A Puzzle of Flesh'
   ids:
   - steam:501970
   requires: []
   tiers:
+  - 1
   - 4
 - name: TimeShift™
   ids:

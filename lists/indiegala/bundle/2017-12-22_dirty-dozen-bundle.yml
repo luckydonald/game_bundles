@@ -2,6 +2,8 @@
 schema: 1
 name: The Dirty Dozen Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5760:ropelike
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Under
   ids:
   - unresolved:source:isthereanydeal:5760:the-under
   requires: []
   tiers:
+  - 1
   - 2
 - name: Operation Antiterror
   ids:
   - unresolved:source:isthereanydeal:5760:operation-antiterror
   requires: []
   tiers:
+  - 1
   - 2
 - name: SK8
   ids:

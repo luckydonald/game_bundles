@@ -2,6 +2,8 @@
 schema: 1
 name: Best of Humble Bundle - Sci-Fi Shooters 2.0
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:782330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Black Mesa
   ids:
   - steam:362890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prey Digital Deluxe
   ids:
   - unresolved:source:isthereanydeal:15837:prey-digital-deluxe
   requires: []
   tiers:
+  - 1
   - 2
 - name: Battle Shapers
   ids:
   - steam:1421290
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Starship Troopers: Extermination'
   ids:

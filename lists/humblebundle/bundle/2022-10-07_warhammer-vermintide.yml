@@ -2,6 +2,8 @@
 schema: 1
 name: 'Warhammer: Vermintide Franchise Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-20-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:373540
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 1
   - 4
 - name: Warhammer Vermintide - Bardin 'Studded Leather' Skin
   ids:

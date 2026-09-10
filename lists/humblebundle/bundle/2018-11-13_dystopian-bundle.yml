@@ -2,6 +2,8 @@
 schema: 1
 name: Dystopian Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:635200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tokyo 42
   ids:
   - steam:490450
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Orwell: Keeping an Eye On You'
   ids:
   - steam:491950
   requires: []
   tiers:
+  - 1
   - 3
 - name: Beholder
   ids:
   - steam:475550
   requires: []
   tiers:
+  - 1
   - 3
 - name: 60 Seconds!
   ids:

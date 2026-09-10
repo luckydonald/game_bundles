@@ -2,6 +2,8 @@
 schema: 1
 name: Microids Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,42 +19,49 @@ games:
   - steam:294770
   requires: []
   tiers:
+  - 1
   - 3
 - name: Syberia
   ids:
   - steam:46500
   requires: []
   tiers:
+  - 1
   - 3
 - name: Moto Racer Collection
   ids:
   - steam:324110
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hospital Manager
   ids:
   - steam:348290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Iron Storm
   ids:
   - steam:296180
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Monument Builders: Alcatraz'
   ids:
   - unresolved:source:isthereanydeal:4741:monument-builders-alcatraz
   requires: []
   tiers:
+  - 1
   - 3
 - name: Darkstone
   ids:
   - steam:320320
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Bluecoats North vs South
   ids:

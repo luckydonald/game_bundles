@@ -2,6 +2,8 @@
 schema: 1
 name: Metroidvania Mayhem Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:400910
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aeterna Noctis
   ids:
   - steam:1517970
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Fist: Forged in Shadow Torch'
   ids:
   - steam:1330470
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lost Ruins
   ids:

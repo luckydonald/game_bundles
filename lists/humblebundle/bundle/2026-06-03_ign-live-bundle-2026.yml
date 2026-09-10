@@ -2,6 +2,8 @@
 schema: 1
 name: IGN Live Bundle 2026
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:990630
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'TOEM: A Photo Adventure'
   ids:
   - steam:1307580
   requires: []
   tiers:
+  - 1
   - 3
 - name: Blair Witch
   ids:

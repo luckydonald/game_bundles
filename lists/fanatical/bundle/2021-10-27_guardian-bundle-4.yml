@@ -2,6 +2,8 @@
 schema: 1
 name: Guardian Bundle 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:434160
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sumoman
   ids:
   - steam:552970
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shape of the World
   ids:
   - steam:642610
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ministry of Broadcast
   ids:

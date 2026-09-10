@@ -2,6 +2,8 @@
 schema: 1
 name: 'Dungeons & Dragons: Classics Collection 2026'
 tiers:
+- rank: 1
+  name: 7 Item Bundle
 - rank: 3
   name: Entire 17 Item Bundle
 references:
@@ -12,6 +14,41 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-31_dungeons-dragons-classics-collection-2026/source.json
 games:
+- name: 'Forgotten Realms: The Archives - Collection Three'
+  ids:
+  - steam:1904530
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: 'Al-Qadim: The Genie''s Curse'
+  ids:
+  - steam:1904640
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
+  ids:
+  - steam:1904650
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: DragonStrike
+  ids:
+  - steam:2350520
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: DeathKeep
+  ids:
+  - steam:2350540
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Forgotten Realms: Demon Stone'
   ids:
   - unresolved:source:humblebundle:forgottenrealms_demonstone
@@ -69,36 +106,6 @@ games:
 - name: Silver Box Classics
   ids:
   - steam:2344020
-  requires: []
-  tiers:
-  - 3
-- name: 'Forgotten Realms: The Archives - Collection Three'
-  ids:
-  - steam:1904530
-  requires: []
-  tiers:
-  - 3
-- name: 'Al-Qadim: The Genie''s Curse'
-  ids:
-  - steam:1904640
-  requires: []
-  tiers:
-  - 3
-- name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
-  ids:
-  - steam:1904650
-  requires: []
-  tiers:
-  - 3
-- name: DragonStrike
-  ids:
-  - steam:2350520
-  requires: []
-  tiers:
-  - 3
-- name: DeathKeep
-  ids:
-  - steam:2350540
   requires: []
   tiers:
   - 3

@@ -2,6 +2,8 @@
 schema: 1
 name: Big Bad Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - steam:673580
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hack, Slash, Loot
   ids:
   - steam:207430
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tobe's Vertical Adventure
   ids:

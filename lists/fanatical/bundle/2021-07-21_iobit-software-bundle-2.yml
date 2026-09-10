@@ -2,6 +2,8 @@
 schema: 1
 name: IObit Software Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:10269:start-menu-8-pro
   requires: []
   tiers:
+  - 1
   - 3
 - name: Protected Folder Pro
   ids:
   - unresolved:source:isthereanydeal:10269:protected-folder-pro
   requires: []
   tiers:
+  - 1
   - 3
 - name: Driver Booster 8 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:driver-booster-8-pro
   requires: []
   tiers:
+  - 1
   - 3
 - name: Advanced SystemCare 14 PRO
   ids:

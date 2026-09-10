@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Fabric Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:773230
   requires: []
   tiers:
+  - 1
   - 2
 - name: GORB
   ids:
   - steam:612310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Now Man Flies
   ids:
   - steam:739690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Blockbreak 3D
   ids:

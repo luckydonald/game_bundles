@@ -2,6 +2,8 @@
 schema: 1
 name: SteamPunk 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:355080
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Namariel Legends: The Iron Lord Premium Edition'
   ids:
   - unresolved:source:isthereanydeal:2345:namariel-legends-the-iron-lord-premium-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Damnation
   ids:

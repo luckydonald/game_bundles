@@ -2,6 +2,8 @@
 schema: 1
 name: 2K Sports Champions Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-5-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:3472040
   requires: []
   tiers:
+  - 1
   - 2
 - name: NBA 2K26 35,000 Virtual Currency Pack
   ids:
   - unresolved:source:isthereanydeal:16238:nba-2k26-35000-virtual-currency-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: OlliOlli World Rad Edition
   ids:

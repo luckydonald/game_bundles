@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #43'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5939:crazy-pirate
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dice Tower Defense
   ids:
   - unresolved:source:isthereanydeal:5939:dice-tower-defense
   requires: []
   tiers:
+  - 1
   - 2
 - name: puzzlement
   ids:
   - steam:775530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dual Snake
   ids:

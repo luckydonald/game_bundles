@@ -2,6 +2,8 @@
 schema: 1
 name: The Mixed Up Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:23700
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Flying Dutchman
   ids:
   - steam:321600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Shannon Tweed's Attack of the Groupies
   ids:
   - steam:289050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vault Cracker
   ids:

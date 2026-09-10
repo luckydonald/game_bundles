@@ -2,6 +2,8 @@
 schema: 1
 name: 'Indie Cubic Bundle #1'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:381170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zeus vs Monsters - Math Game for kids
   ids:
   - steam:444430
   requires: []
   tiers:
+  - 1
   - 2
 - name: David.
   ids:
   - steam:346180
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'BlackSoul: Extended Edition'
   ids:
   - unresolved:source:isthereanydeal:3223:blacksoul-extended-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Haywire on Fuel Station Zeta
   ids:

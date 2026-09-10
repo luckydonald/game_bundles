@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XVII
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:589380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Astral Domine
   ids:
   - steam:458990
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vehicle VR
   ids:
   - steam:648810
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Last Sorcerer
   ids:

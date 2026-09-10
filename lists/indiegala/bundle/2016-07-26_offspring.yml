@@ -2,6 +2,8 @@
 schema: 1
 name: The Offspring Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:347240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Let's Explore the Farm (Junior Field Trips)
   ids:
   - steam:363060
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'SPY Fox in: Hold the Mustard'
   ids:
   - steam:292300
   requires: []
   tiers:
+  - 1
   - 2
 - name: Putt-Putt Enters the Race
   ids:

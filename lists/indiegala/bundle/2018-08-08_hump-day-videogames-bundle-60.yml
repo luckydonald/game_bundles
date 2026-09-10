@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #60'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:563810
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Crown Champion: Legends of the Arena'
   ids:
   - steam:527710
   requires: []
   tiers:
+  - 1
   - 2
 - name: DERE EVIL .EXE
   ids:
   - steam:871950
   requires: []
   tiers:
+  - 1
   - 2
 - name: Steam Tactics
   ids:

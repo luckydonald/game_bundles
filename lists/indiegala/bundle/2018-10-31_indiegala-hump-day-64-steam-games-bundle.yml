@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #64'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6637:clicker-achievements-the-impossible-challenge
   requires: []
   tiers:
+  - 1
   - 2
 - name: OS:Path
   ids:
   - steam:831090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wormster Dash
   ids:
   - steam:818050
   requires: []
   tiers:
+  - 1
   - 2
 - name: NOSTOI
   ids:

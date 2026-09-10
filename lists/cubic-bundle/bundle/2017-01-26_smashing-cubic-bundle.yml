@@ -2,6 +2,8 @@
 schema: 1
 name: Smashing Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:527810
   requires: []
   tiers:
+  - 1
   - 2
 - name: HardCube
   ids:
   - unresolved:source:isthereanydeal:4680:hardcube
   requires: []
   tiers:
+  - 1
   - 2
 - name: Endless room
   ids:
   - unresolved:source:isthereanydeal:4680:endless-room
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dynamic Very, Very, Hard game!!
   ids:
   - steam:546340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Guardian's Oath
   ids:

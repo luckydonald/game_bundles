@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 9
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6087:nightmares-from-the-deep-3-davy-jones
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Nightmares from the Deep 2: The Siren`s Call'
   ids:
   - unresolved:source:isthereanydeal:6087:nightmares-from-the-deep-2-the-sirens-call
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Abyss: The Wraiths of Eden'
   ids:
   - steam:284710
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Persian Nights: Sands of Wonders'
   ids:

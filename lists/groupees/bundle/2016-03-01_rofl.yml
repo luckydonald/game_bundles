@@ -2,6 +2,8 @@
 schema: 1
 name: The ROFL Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:269890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rage Parking Simulator 2016
   ids:
   - unresolved:source:isthereanydeal:3112:rage-parking-simulator-2016
   requires: []
   tiers:
+  - 1
   - 2
 - name: Run Rabbit Run
   ids:

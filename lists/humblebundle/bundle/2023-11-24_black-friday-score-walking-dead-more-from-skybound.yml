@@ -2,6 +2,8 @@
 schema: 1
 name: 'Black Friday Score: Walking Dead & More Bundle'
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 5
   name: entire-15-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:13650:the-walking-dead-season-1
   requires: []
   tiers:
+  - 1
   - 5
 - name: 'The Walking Dead: 400 Days'
   ids:

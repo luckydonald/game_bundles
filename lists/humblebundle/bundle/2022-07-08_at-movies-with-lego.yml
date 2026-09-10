@@ -2,6 +2,8 @@
 schema: 1
 name: At The Movies with LEGO Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:249130
   requires: []
   tiers:
+  - 1
   - 3
 - name: The LEGO Movie Videogame
   ids:
   - steam:267530
   requires: []
   tiers:
+  - 1
   - 3
 - name: LEGO® MARVEL's Avengers
   ids:

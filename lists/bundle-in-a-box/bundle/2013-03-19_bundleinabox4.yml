@@ -2,6 +2,8 @@
 schema: 1
 name: Cerebral Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,36 +19,42 @@ games:
   - unresolved:source:isthereanydeal:223:dedale
   requires: []
   tiers:
+  - 1
   - 2
 - name: Phantasmaburbia
   ids:
   - unresolved:source:isthereanydeal:223:phantasmaburbia
   requires: []
   tiers:
+  - 1
   - 2
 - name: Amidos Puzzle Collection
   ids:
   - unresolved:source:isthereanydeal:223:amidos-puzzle-collection
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vampires!
   ids:
   - unresolved:source:isthereanydeal:223:vampires
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dinner Date
   ids:
   - steam:94000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Necrotic Drift Deluxe
   ids:
   - unresolved:source:isthereanydeal:223:necrotic-drift-deluxe
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition Episode 1: The Hangman'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Explore & Expand Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:651660
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sins of a Solar Empire: Trinity'
   ids:
   - steam:201290
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Rain of Reflections: Chapter 1'
   ids:
   - unresolved:source:isthereanydeal:9464:rain-of-reflections-chapter-1
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Galactic Civilizations III: Crusade Expansion'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Microids Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6060:the-bluecoats-north-vs-south
   requires: []
   tiers:
+  - 1
   - 2
 - name: Return to Mysterious Island 2
   ids:
   - steam:277270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Curse - The Eye of Isis
   ids:
   - steam:302210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Alice in Wonderland - Hidden Objects
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Bullid Games Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6436:unblock-the-parking
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cryptochain
   ids:
   - unresolved:source:isthereanydeal:6436:cryptochain
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Golf 2018
   ids:
   - unresolved:source:isthereanydeal:6436:super-golf-2018
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dr. Pills
   ids:

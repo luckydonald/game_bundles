@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #59'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:905150
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mindsight
   ids:
   - steam:716070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Amora
   ids:
   - steam:816280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Salty Seabird Bay
   ids:

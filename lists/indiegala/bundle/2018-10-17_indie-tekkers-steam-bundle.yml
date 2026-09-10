@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Tekkers Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1206320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Type Defense
   ids:
   - steam:904440
   requires: []
   tiers:
+  - 1
   - 2
 - name: HENTAI IDOL
   ids:
   - unresolved:source:isthereanydeal:6574:hentai-idol
   requires: []
   tiers:
+  - 1
   - 2
 - name: Handball Manager - TEAM
   ids:

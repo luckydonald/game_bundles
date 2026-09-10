@@ -2,6 +2,8 @@
 schema: 1
 name: Revolution Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,24 +19,28 @@ games:
   - steam:215930
   requires: []
   tiers:
+  - 1
   - 4
 - name: Jagged Alliance 2 Classic
   ids:
   - steam:545210
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Deus Ex: Game of the Year Edition'
   ids:
   - steam:6910
   requires: []
   tiers:
+  - 1
   - 4
 - name: Dungeon Rats
   ids:
   - steam:531930
   requires: []
   tiers:
+  - 1
   - 4
 - name: Learn Japanese To Survive! Hiragana Battle
   ids:

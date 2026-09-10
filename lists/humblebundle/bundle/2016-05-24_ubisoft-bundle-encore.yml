@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Ubisoft Bundle Encore
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-11-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:323320
   requires: []
   tiers:
+  - 1
   - 4
 - name: Rayman(R) Origins
   ids:
   - steam:207490
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Call of Juarez: Gunslinger'
   ids:
   - steam:204450
   requires: []
   tiers:
+  - 1
   - 4
 - name: Far Cry 3
   ids:

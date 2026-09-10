@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #47'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5606:case-9
   requires: []
   tiers:
+  - 1
   - 2
 - name: House of Velez - part 1
   ids:
   - steam:724010
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dungeons Of Kremlin: Remastered'
   ids:
   - unresolved:source:isthereanydeal:5606:dungeons-of-kremlin-remastered
   requires: []
   tiers:
+  - 1
   - 2
 - name: Neighboring Islands
   ids:

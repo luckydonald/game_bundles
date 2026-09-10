@@ -2,6 +2,8 @@
 schema: 1
 name: Hardcore Neon Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:685790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Neon Hardcore
   ids:
   - steam:673660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cube Color
   ids:
   - steam:748430
   requires: []
   tiers:
+  - 1
   - 2
 - name: 3D Hardcore Cube
   ids:

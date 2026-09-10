@@ -2,6 +2,8 @@
 schema: 1
 name: Nemesis Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:328760
   requires: []
   tiers:
+  - 1
   - 3
 - name: Eldritch
   ids:
   - steam:252630
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lovely Planet Arcade
   ids:
   - steam:436000
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Shadow Blade: Reload'
   ids:
   - steam:272330
   requires: []
   tiers:
+  - 1
   - 3
 - name: Chroma Squad
   ids:

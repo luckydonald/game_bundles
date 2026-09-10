@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Warfare Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:502240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Puzlogic
   ids:
   - steam:865220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Red Tractor Tycoon
   ids:

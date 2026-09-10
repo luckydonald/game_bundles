@@ -2,6 +2,8 @@
 schema: 1
 name: AppGameKit Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:10708:appgamekit-visual-editor
   requires: []
   tiers:
+  - 1
   - 3
 - name: AppGameKit - 3D Asset Pack
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-3d-asset-pack
   requires: []
   tiers:
+  - 1
   - 3
 - name: AppGameKit Sound Library
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-sound-library
   requires: []
   tiers:
+  - 1
   - 3
 - name: AppGameKit - Shader Pack
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-shader-pack
   requires: []
   tiers:
+  - 1
   - 3
 - name: AppGameKit - Giant Asset Pack 1
   ids:

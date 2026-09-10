@@ -2,6 +2,8 @@
 schema: 1
 name: The Indie Squad Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:858840
   requires: []
   tiers:
+  - 1
   - 2
 - name: How to be Best Russian Game Developer
   ids:
   - steam:880550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hearing
   ids:
   - steam:682730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Knight King Assassin
   ids:

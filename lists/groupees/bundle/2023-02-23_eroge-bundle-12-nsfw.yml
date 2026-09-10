@@ -2,6 +2,8 @@
 schema: 1
 name: Eroge Bundle 12
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1684780
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grayscale Memories
   ids:
   - steam:1645780
   requires: []
   tiers:
+  - 1
   - 3
 - name: NinNinDays2
   ids:
   - steam:1698030
   requires: []
   tiers:
+  - 1
   - 3
 - name: Meria and The Island of Orcs
   ids:

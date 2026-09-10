@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #66'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6070:cube
   requires: []
   tiers:
+  - 1
   - 2
 - name: Box Maze Extreme
   ids:
   - steam:818890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Slavistan
   ids:
   - steam:504770
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Parkan: The Imperial Chronicles'
   ids:

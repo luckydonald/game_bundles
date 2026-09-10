@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Clickteam Fusion Bundle
 tiers:
+- rank: 1
+  name: Pay $1 or more
 - rank: 3
   name: Pay $15 or more to also unlock
 references:
@@ -17,30 +19,35 @@ games:
   - unresolved:source:isthereanydeal:4126:necromonads
   requires: []
   tiers:
+  - 1
   - 3
 - name: Plantera
   ids:
   - steam:421040
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tick Tock Isle
   ids:
   - steam:418440
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Oniken: Unstoppable Edition'
   ids:
   - steam:252010
   requires: []
   tiers:
+  - 1
   - 3
 - name: Clickteam Fusion 2.5
   ids:
   - steam:248170
   requires: []
   tiers:
+  - 1
   - 3
 - name: UWP Exporter for Clickteam Fusion 2.5
   ids:

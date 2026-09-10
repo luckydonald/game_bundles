@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Flash Bundle: Paradox Interactive Giving Tuesday'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:227760
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Darkest Hour: A Hearts of Iron Game'
   ids:
   - steam:73170
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sword of the Stars II Enhanced Edition
   ids:
   - steam:42990
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'War of the Roses: Kingmaker'
   ids:
   - unresolved:source:isthereanydeal:1443:war-of-the-roses-kingmaker
   requires: []
   tiers:
+  - 1
   - 3
 - name: Cities in Motion II
   ids:

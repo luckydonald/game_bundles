@@ -2,6 +2,8 @@
 schema: 1
 name: Battle Academy Complete Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - steam:287070
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Rommel in Normandy'
   ids:
   - steam:287094
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Operation Sealion'
   ids:
   - steam:287092
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Operation Husky'
   ids:
   - steam:287093
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Fortress Metz'
   ids:
   - steam:287095
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Blitzkrieg France'
   ids:
   - steam:287090
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy: Operation Market Garden'
   ids:
   - steam:287091
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Battle Academy 2: Eastern Front'
   ids:

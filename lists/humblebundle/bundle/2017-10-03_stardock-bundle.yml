@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Stardock Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:5518:fallen-enchantress
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sorcerer King: Rivals'
   ids:
   - steam:496730
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Corporate Machine
   ids:
   - steam:351080
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Political Machine 2016
   ids:
   - unresolved:source:isthereanydeal:5518:the-political-machine-2016
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sins of a Solar Empire: Rebellion'
   ids:

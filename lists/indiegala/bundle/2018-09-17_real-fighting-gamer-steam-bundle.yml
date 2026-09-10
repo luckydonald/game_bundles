@@ -2,6 +2,8 @@
 schema: 1
 name: Real Fighting Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6468:stickman-fighting
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Steel Arena: Robot War'
   ids:
   - unresolved:source:isthereanydeal:6468:steel-arena-robot-war
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sea Battle: Through the Ages'
   ids:
   - unresolved:source:isthereanydeal:6468:sea-battle-through-the-ages
   requires: []
   tiers:
+  - 1
   - 2
 - name: Robot Fighting
   ids:

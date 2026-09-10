@@ -2,6 +2,8 @@
 schema: 1
 name: THE GEARBOX COLLECTION
 tiers:
+- rank: 1
+  name: Rare
 - rank: 3
   name: Legendary
 references:
@@ -19,12 +21,14 @@ games:
   - steam:858820
   requires: []
   tiers:
+  - 1
   - 3
 - name: Borderlands Game of the Year Enhanced
   ids:
   - steam:729040
   requires: []
   tiers:
+  - 1
   - 3
 - name: Blanc
   ids:

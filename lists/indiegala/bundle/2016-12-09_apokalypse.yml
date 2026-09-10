@@ -2,6 +2,8 @@
 schema: 1
 name: Apokalypse Countdown Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4467:apokalypsis
   requires: []
   tiers:
+  - 1
   - 2
 - name: SAMOLIOTIK DELUXE EDITION
   ids:
   - unresolved:source:isthereanydeal:4467:samoliotik-deluxe-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Leviathan Starblade
   ids:
   - steam:549900
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Lost Valley
   ids:

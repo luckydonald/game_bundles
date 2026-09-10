@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Jumbo Bundle 12
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:347290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Pinstripe
   ids:
   - steam:331480
   requires: []
   tiers:
+  - 1
   - 3
 - name: Super House of Dead Ninjas
   ids:
   - steam:224820
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Super House of Dead Ninjas: True Ninja Pack'
   ids:
   - steam:238570
   requires: []
   tiers:
+  - 1
   - 3
 - name: Construction Simulator 2015
   ids:

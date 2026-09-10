@@ -2,6 +2,8 @@
 schema: 1
 name: Talisman Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:5920:talisman-digital-edition
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Talisman - Character Pack #2 - Courtesan'
   ids:
   - steam:258814
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Talisman - Character Pack #1 - Exorcist'
   ids:
   - steam:258813
   requires: []
   tiers:
+  - 1
   - 4
 - name: Talisman - Complete Runestone Deck
   ids:
   - steam:258812
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Talisman - Character Pack #6 - Gambler'
   ids:

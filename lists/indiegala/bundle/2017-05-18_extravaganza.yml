@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Extravaganza Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5107:cat-goes-platform
   requires: []
   tiers:
+  - 1
   - 2
 - name: Santa's Special Delivery
   ids:
   - steam:564420
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Strike Squadron: Caracará'
   ids:
   - steam:507340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deus Ex Machina - The Best Game You Never Played in Your Life - pdf
   ids:

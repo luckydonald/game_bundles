@@ -2,6 +2,8 @@
 schema: 1
 name: Decked Out Collection - Great on Handheld Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:535520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vampire Survivors
   ids:
   - steam:1794680
   requires: []
   tiers:
+  - 1
   - 2
 - name: HASTE
   ids:

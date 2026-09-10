@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 5
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:7510
   requires: []
   tiers:
+  - 1
   - 3
 - name: NEO Scavenger
   ids:
   - steam:248860
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'King''s Bounty: The Legend'
   ids:
   - steam:25900
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kung Fu Strike: The Warrior''s Rise'
   ids:
   - steam:212030
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Oddworld: Stranger''s Wrath HD'
   ids:

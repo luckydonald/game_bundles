@@ -2,6 +2,8 @@
 schema: 1
 name: Curve Overload Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,30 +19,35 @@ games:
   - steam:352640
   requires: []
   tiers:
+  - 1
   - 3
 - name: Explodemon!
   ids:
   - steam:281820
   requires: []
   tiers:
+  - 1
   - 3
 - name: Stealth Bastard Deluxe
   ids:
   - steam:209190
   requires: []
   tiers:
+  - 1
   - 3
 - name: Murder
   ids:
   - steam:404080
   requires: []
   tiers:
+  - 1
   - 3
 - name: Velocity®Ultra
   ids:
   - steam:244890
   requires: []
   tiers:
+  - 1
   - 3
 - name: Stikbold! A Dodgeball Adventure
   ids:

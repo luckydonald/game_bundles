@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 9
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,48 +19,56 @@ games:
   - steam:234940
   requires: []
   tiers:
+  - 1
   - 2
 - name: Particulars
   ids:
   - steam:259470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chompy Chomp Chomp
   ids:
   - steam:292570
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mini Motor Racing EVO
   ids:
   - unresolved:source:isthereanydeal:31:mini-motor-racing-evo
   requires: []
   tiers:
+  - 1
   - 2
 - name: Depths of Peril
   ids:
   - steam:23600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Panda Adventures
   ids:
   - steam:311190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Splatter - Blood Red Edition
   ids:
   - unresolved:source:isthereanydeal:31:splatter-blood-red-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Whispered World, The
   ids:
   - unresolved:source:isthereanydeal:31:whispered-world-the
   requires: []
   tiers:
+  - 1
   - 2
 - name: Eador. Masters of the Broken World
   ids:

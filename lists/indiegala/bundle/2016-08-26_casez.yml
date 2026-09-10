@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Case Z
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3964:the-falling-sun
   requires: []
   tiers:
+  - 1
   - 2
 - name: Collider
   ids:
   - steam:371880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Build 'n Bump
   ids:
   - steam:375790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Worst Case Z
   ids:

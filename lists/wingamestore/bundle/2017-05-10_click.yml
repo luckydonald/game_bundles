@@ -2,6 +2,8 @@
 schema: 1
 name: 12th Anniversary Pay What You Want Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - steam:242780
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Silent Age
   ids:
   - steam:352520
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Soulless: Ray Of Hope'
   ids:
   - steam:528300
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Out There: Ω Edition'
   ids:

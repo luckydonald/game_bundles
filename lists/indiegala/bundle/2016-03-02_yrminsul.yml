@@ -2,6 +2,8 @@
 schema: 1
 name: The Yrminsul Debut Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:259600
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Ethan: Meteor Hunter'
   ids:
   - steam:266330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Legends of Persia
   ids:
   - steam:301220
   requires: []
   tiers:
+  - 1
   - 2
 - name: "Freaking Meatbags \x96"
   ids:

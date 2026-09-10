@@ -2,6 +2,8 @@
 schema: 1
 name: Spring Into Summer GameBundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Beat The Average + $0.50
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3587:doctor-who-the-adventure-games
   requires: []
   tiers:
+  - 1
   - 3
 - name: Space Station Alpha
   ids:
   - steam:341930
   requires: []
   tiers:
+  - 1
   - 3
 - name: Story Of the Survivor
   ids:
   - steam:440950
   requires: []
   tiers:
+  - 1
   - 3
 - name: Velocibox
   ids:

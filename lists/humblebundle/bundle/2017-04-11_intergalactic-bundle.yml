@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Intergalactic Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:214150
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sins of a Solar Empire: Trinity'
   ids:
   - steam:201290
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Galactic Civilizations II: Ultimate Edition'
   ids:
   - steam:202200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Space Hulk Ascension Edition
   ids:
   - unresolved:source:isthereanydeal:4996:space-hulk-ascension-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Planetary Annihilation: TITANS'
   ids:

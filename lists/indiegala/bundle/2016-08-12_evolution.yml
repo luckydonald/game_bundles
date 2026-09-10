@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Evolution
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:409170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prism
   ids:
   - unresolved:source:isthereanydeal:3896:prism
   requires: []
   tiers:
+  - 1
   - 2
 - name: Burst
   ids:
   - unresolved:source:isthereanydeal:3896:burst
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Evolution Planet: Gold Edition'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: The AttrAction Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:358380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Math Rescue
   ids:
   - steam:358200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Death Rally
   ids:
   - steam:108700
   requires: []
   tiers:
+  - 1
   - 2
 - name: Word Rescue
   ids:
   - steam:358340
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Blake Stone: Planet Strike'
   ids:

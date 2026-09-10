@@ -2,6 +2,8 @@
 schema: 1
 name: Spring Rush Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:250580
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Joylancer: Legendary Motor Knight'
   ids:
   - steam:315540
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deep Dungeons of Doom
   ids:
   - steam:325090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Motorama
   ids:

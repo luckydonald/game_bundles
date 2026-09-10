@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #56'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:805400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cluster Dust
   ids:
   - steam:802070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Before Nightfall
   ids:
   - steam:896380
   requires: []
   tiers:
+  - 1
   - 2
 - name: George's Memories EP.1
   ids:

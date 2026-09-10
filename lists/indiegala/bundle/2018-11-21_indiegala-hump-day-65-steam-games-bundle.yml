@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #65'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:357120
   requires: []
   tiers:
+  - 1
   - 2
 - name: bit Dungeon II
   ids:
   - steam:331440
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'BADLAND: Game of the Year Edition'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Down on the Farm Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:894940
   requires: []
   tiers:
+  - 1
   - 3
 - name: No Place Like Home
   ids:
   - steam:1472660
   requires: []
   tiers:
+  - 1
   - 3
 - name: Everdream Valley
   ids:

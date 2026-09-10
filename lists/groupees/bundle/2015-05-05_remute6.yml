@@ -2,6 +2,8 @@
 schema: 1
 name: Terrific Time Travel Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:364790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Eradicator
   ids:
   - steam:329640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gare Sapphire Mechs
   ids:
   - steam:359090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bonsai Worlds
   ids:
   - unresolved:source:isthereanydeal:1849:bonsai-worlds
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Thanatos: a Winterwitch Tale'
   ids:
   - unresolved:source:isthereanydeal:1849:thanatos-a-winterwitch-tale
   requires: []
   tiers:
+  - 1
   - 2
 - name: Invisible Apartment Zero
   ids:

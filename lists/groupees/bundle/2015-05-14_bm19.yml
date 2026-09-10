@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 19
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:1996:magicraft-swords-and-sorcery
   requires: []
   tiers:
+  - 1
   - 3
 - name: Jones On Fire
   ids:
   - steam:270810
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ubinota
   ids:
   - steam:323630
   requires: []
   tiers:
+  - 1
   - 3
 - name: Jones On Fire Soundtrack
   ids:
   - steam:350260
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dokuro
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #64'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:977340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Stick Nightmare
   ids:
   - steam:652610
   requires: []
   tiers:
+  - 1
   - 2
 - name: Home Sheep Home 2
   ids:

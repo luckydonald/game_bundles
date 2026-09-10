@@ -2,6 +2,8 @@
 schema: 1
 name: Hello Kitty, Hello Doggy
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:397990
   requires: []
   tiers:
+  - 1
   - 3
 - name: ApoCatlypse
   ids:
   - unresolved:source:isthereanydeal:2360:apocatlypse
   requires: []
   tiers:
+  - 1
   - 3
 - name: Reigning Cats
   ids:
   - steam:398110
   requires: []
   tiers:
+  - 1
   - 3
 - name: Jerry Rice & Nitus' Dog Football
   ids:

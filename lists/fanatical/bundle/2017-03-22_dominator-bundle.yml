@@ -2,6 +2,8 @@
 schema: 1
 name: Dominator Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,30 +19,35 @@ games:
   - unresolved:source:isthereanydeal:4934:void-and-meddler
   requires: []
   tiers:
+  - 1
   - 4
 - name: Euclidean
   ids:
   - steam:398180
   requires: []
   tiers:
+  - 1
   - 4
 - name: JumpJet Rex
   ids:
   - steam:329460
   requires: []
   tiers:
+  - 1
   - 4
 - name: Void & Meddler - Soundtrack Ep. 1
   ids:
   - unresolved:source:isthereanydeal:4934:void-and-meddler-soundtrack-ep-1
   requires: []
   tiers:
+  - 1
   - 4
 - name: 10 Second Ninja X
   ids:
   - steam:435790
   requires: []
   tiers:
+  - 1
   - 4
 - name: Scrap Garden
   ids:

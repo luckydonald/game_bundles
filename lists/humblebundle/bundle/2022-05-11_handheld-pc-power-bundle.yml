@@ -2,6 +2,8 @@
 schema: 1
 name: Handheld PC Power Bundle
 tiers:
+- rank: 1
+  name: 7-item-bundle
 - rank: 2
   name: entire-15-item-bundle
 references:
@@ -17,42 +19,49 @@ games:
   - steam:201805
   requires: []
   tiers:
+  - 1
   - 2
 - name: Parkasaurus
   ids:
   - steam:591460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Orcs Must Die 2 - Are We There Yeti?
   ids:
   - steam:201802
   requires: []
   tiers:
+  - 1
   - 2
 - name: Orcs Must Die! 2
   ids:
   - steam:201790
   requires: []
   tiers:
+  - 1
   - 2
 - name: Orcs Must Die! 2 - Fire and Water Booster Pack
   ids:
   - steam:201804
   requires: []
   tiers:
+  - 1
   - 2
 - name: Exanima
   ids:
   - steam:362490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Paint the Town Red
   ids:
   - steam:337320
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Mutant Year Zero: Road to Eden - Deluxe Edition'
   ids:

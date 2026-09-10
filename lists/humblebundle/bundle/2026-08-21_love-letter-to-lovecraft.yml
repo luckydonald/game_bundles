@@ -2,6 +2,8 @@
 schema: 1
 name: Love Letter to Lovecraft
 tiers:
+- rank: 1
+  name: 3 Item Bundle
 - rank: 3
   name: Entire 9 Item Bundle
 references:
@@ -21,6 +23,30 @@ crawlers:
 - isthereanydeal
 - humblebundle
 games:
+- name: Whisper Mountain Outbreak
+  ids:
+  - steam:1953230
+  - isthereanydeal:whisper-mountain-outbreak
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+  - isthereanydeal:forgive-me-father
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: 'Sundered: Eldritch Edition'
+  ids:
+  - steam:535480
+  - isthereanydeal:sundered-eldritch-edition
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Remnant: From the Ashes'
   ids:
   - steam:617290
@@ -74,27 +100,6 @@ games:
   ids:
   - steam:399810
   - isthereanydeal:call-of-cthulhu
-  requires: []
-  tiers:
-  - 3
-- name: Whisper Mountain Outbreak
-  ids:
-  - steam:1953230
-  - isthereanydeal:whisper-mountain-outbreak
-  requires: []
-  tiers:
-  - 3
-- name: Forgive me Father
-  ids:
-  - steam:1590910
-  - isthereanydeal:forgive-me-father
-  requires: []
-  tiers:
-  - 3
-- name: 'Sundered: Eldritch Edition'
-  ids:
-  - steam:535480
-  - isthereanydeal:sundered-eldritch-edition
   requires: []
   tiers:
   - 3

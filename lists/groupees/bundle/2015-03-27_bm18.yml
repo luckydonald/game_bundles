@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 18
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:1746:nicolas-eymerich-inquisitor-book-2-the-village
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Barbarian
   ids:
   - unresolved:source:isthereanydeal:1746:the-barbarian
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Scavenger
   ids:
   - steam:293880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fabula Mortis 4 Pack
   ids:
   - steam:320790
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Forest of Doom
   ids:

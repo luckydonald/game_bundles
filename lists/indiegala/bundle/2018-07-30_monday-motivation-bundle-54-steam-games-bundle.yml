@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #54'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6351:ascii-game-series-beginning
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'ASCII Game Series: Snake'
   ids:
   - unresolved:source:isthereanydeal:6351:ascii-game-series-snake
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gaze At Maze
   ids:
   - steam:861210
   requires: []
   tiers:
+  - 1
   - 2
 - name: CastleMiner Warfare
   ids:

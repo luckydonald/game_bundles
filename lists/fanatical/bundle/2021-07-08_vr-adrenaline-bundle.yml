@@ -2,6 +2,8 @@
 schema: 1
 name: VR Adrenaline Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:814400
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sprint Vector
   ids:
   - steam:590690
   requires: []
   tiers:
+  - 1
   - 3
 - name: Raw Data
   ids:
   - steam:436320
   requires: []
   tiers:
+  - 1
   - 3
 - name: Electronauts - VR Music
   ids:
   - steam:691160
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Creed: Rise to Glory™'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Rush
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:354860
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Magical Silence
   ids:
   - unresolved:source:isthereanydeal:4495:the-magical-silence
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Last Error
   ids:
   - unresolved:source:isthereanydeal:4495:the-last-error
   requires: []
   tiers:
+  - 1
   - 2
 - name: GET THE GEMS
   ids:

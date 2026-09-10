@@ -2,6 +2,8 @@
 schema: 1
 name: Devolver Digital MovieBundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:229520
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bound By Sea (Movie)
   ids:
   - unresolved:source:isthereanydeal:3877:bound-by-sea-movie
   requires: []
   tiers:
+  - 1
   - 3
 - name: Losing LeBron (Movie)
   ids:
   - unresolved:source:isthereanydeal:3877:losing-lebron-movie
   requires: []
   tiers:
+  - 1
   - 3
 - name: Feeding Mr. Baldwin (Movie)
   ids:
   - unresolved:source:isthereanydeal:3877:feeding-mr-baldwin-movie
   requires: []
   tiers:
+  - 1
   - 3
 - name: THE WORST YEAR OF MY LIFE (Movie)
   ids:

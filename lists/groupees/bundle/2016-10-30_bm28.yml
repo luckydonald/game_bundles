@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 28
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:389250
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'MC Lars: The Video Game'
   ids:
   - steam:541160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Save the Ninja Clan
   ids:
   - steam:566670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Midsummer Night
   ids:

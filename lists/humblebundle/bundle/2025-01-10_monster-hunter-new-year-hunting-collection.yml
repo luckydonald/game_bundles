@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monster Hunter: New Year Hunting Collection Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1446780
   requires: []
   tiers:
+  - 1
   - 4
 - name: MONSTER HUNTER RISE Deluxe Kit
   ids:
   - steam:1748411
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Monster Hunter Rise: Sunbreak'
   ids:

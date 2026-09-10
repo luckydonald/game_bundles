@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Jumbo Bundle 6
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:3144:warmachine-tactics-mercenaries-faction-bundle
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'WARMACHINE: Tactics'
   ids:
   - steam:253510
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shadowrun Chronicles - Boston Lockdown
   ids:
   - unresolved:source:isthereanydeal:3144:shadowrun-chronicles-boston-lockdown
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Oceanhorn: Monster of Uncharted Seas'
   ids:
   - steam:339200
   requires: []
   tiers:
+  - 1
   - 3
 - name: TransOcean - The Shipping Company
   ids:

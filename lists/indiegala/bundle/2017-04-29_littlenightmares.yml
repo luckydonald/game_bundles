@@ -2,6 +2,8 @@
 schema: 1
 name: Little Nightmares Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5042:attractio
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ridge Racer Unbounded Bundle
   ids:
   - unresolved:source:isthereanydeal:5042:ridge-racer-unbounded-bundle
   requires: []
   tiers:
+  - 1
   - 3
 - name: DeadCore
   ids:
   - steam:284460
   requires: []
   tiers:
+  - 1
   - 3
 - name: "Ace Combat\x99 Assault Horizon Enhanced Edition"
   ids:

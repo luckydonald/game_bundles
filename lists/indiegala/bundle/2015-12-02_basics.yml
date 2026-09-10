@@ -2,6 +2,8 @@
 schema: 1
 name: Back to Basics
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:2816:sirius
   requires: []
   tiers:
+  - 1
   - 2
 - name: Escape Machines
   ids:
   - steam:363490
   requires: []
   tiers:
+  - 1
   - 2
 - name: New kind of adventure
   ids:
   - steam:375510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Stellar 2D
   ids:
   - steam:391070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tower of Elements
   ids:

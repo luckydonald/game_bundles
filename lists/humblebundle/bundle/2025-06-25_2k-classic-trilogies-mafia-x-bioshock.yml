@@ -2,6 +2,8 @@
 schema: 1
 name: '2K Classic Trilogies: Mafia X BioShock Bundle'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-6-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:8870
   requires: []
   tiers:
+  - 1
   - 2
 - name: BioShock 2 Remastered
   ids:
   - steam:409720
   requires: []
   tiers:
+  - 1
   - 2
 - name: BioShock Remastered
   ids:
   - steam:409710
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Mafia III: Definitive Edition'
   ids:

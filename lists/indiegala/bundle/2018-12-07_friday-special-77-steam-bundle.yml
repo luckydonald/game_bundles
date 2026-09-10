@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #77'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:418040
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Seeker
   ids:
   - steam:884880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hero Siege
   ids:

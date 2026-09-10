@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #54'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:747700
   requires: []
   tiers:
+  - 1
   - 2
 - name: Disparity
   ids:
   - steam:715460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Joy Climb
   ids:
   - steam:792350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Has-Been Heroes
   ids:

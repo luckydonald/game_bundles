@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Unity Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:388880
   requires: []
   tiers:
+  - 1
   - 3
 - name: AER Memories of Old
   ids:
   - steam:331870
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Wasteland 2: Director''s Cut'
   ids:

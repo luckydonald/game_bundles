@@ -2,6 +2,8 @@
 schema: 1
 name: Men of War Assault Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:7830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Men of War Condemned Heroes
   ids:
   - steam:204860
   requires: []
   tiers:
+  - 1
   - 2
 - name: Men of War Red Tide
   ids:
   - steam:3130
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Assault Squad 2: Men of War Origins'
   ids:

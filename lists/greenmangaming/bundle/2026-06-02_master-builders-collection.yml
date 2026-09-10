@@ -2,6 +2,8 @@
 schema: 1
 name: Master Builders Collection
 tiers:
+- rank: 1
+  name: Timber
 - rank: 4
   name: Gold
 references:
@@ -17,6 +19,7 @@ games:
   - steam:1795470
   requires: []
   tiers:
+  - 1
   - 4
 - name: Settlement Survival
   ids:

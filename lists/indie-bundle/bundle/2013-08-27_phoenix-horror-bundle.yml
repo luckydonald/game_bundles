@@ -2,6 +2,8 @@
 schema: 1
 name: Phoenix Horror Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:82:reperfection-volume-1
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition: An Erica Reed Thriller Episode 2 The Wise Monkey'
   ids:
   - unresolved:source:isthereanydeal:82:cognition-an-erica-reed-thriller-episode-2-the-wise-monkey
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Cat Lady
   ids:
   - steam:253110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cognition - Original Soundtrack Vol 1
   ids:

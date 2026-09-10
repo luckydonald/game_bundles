@@ -2,6 +2,8 @@
 schema: 1
 name: 'Frictional Games: Amnesia, SOMA, Penumbra Bundle'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-6-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:15949:penumbra-collectors-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Amnesia: The Dark Descent'
   ids:
   - steam:57300
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Amnesia: A Machine For Pigs'
   ids:
   - steam:239200
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Amnesia: Rebirth'
   ids:
   - steam:999220
   requires: []
   tiers:
+  - 1
   - 2
 - name: SOMA
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Premiere VR Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:650000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Arizona Sunshine
   ids:
   - unresolved:source:isthereanydeal:12619:arizona-sunshine
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cave Digger 2: Dig Harder'
   ids:
   - steam:1523510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bean Stalker
   ids:
   - steam:1704080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vox Machinae
   ids:

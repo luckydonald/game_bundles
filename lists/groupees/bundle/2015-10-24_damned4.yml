@@ -2,6 +2,8 @@
 schema: 1
 name: Bundle of the Damned 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:415780
   requires: []
   tiers:
+  - 1
   - 2
 - name: HUSH
   ids:
   - unresolved:source:isthereanydeal:2643:hush
   requires: []
   tiers:
+  - 1
   - 2
 - name: Goodnight Butcher
   ids:
   - steam:426040
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Land Of Lamia
   ids:

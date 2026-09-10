@@ -2,6 +2,8 @@
 schema: 1
 name: Play Pink with Twin Sails Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-33-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:376680
   requires: []
   tiers:
+  - 1
   - 4
 - name: Love Letter
   ids:
   - steam:926520
   requires: []
   tiers:
+  - 1
   - 4
 - name: Amberial Dreams
   ids:

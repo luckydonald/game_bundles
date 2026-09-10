@@ -2,6 +2,8 @@
 schema: 1
 name: The Game Creators Classic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,36 +19,42 @@ games:
   - steam:404570
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru
   ids:
   - steam:266310
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru Death Valley Pack
   ids:
   - steam:365540
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru Mega Pack 1
   ids:
   - steam:321140
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru - Medical Pack
   ids:
   - steam:964530
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru - Walled Garden Pack
   ids:
   - steam:1154060
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru Mega Pack 2
   ids:

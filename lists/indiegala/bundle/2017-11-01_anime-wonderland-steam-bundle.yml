@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Wonderland Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:610750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Swordbreaker The Game
   ids:
   - steam:411760
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sixtieth Kilometer
   ids:
   - steam:448780
   requires: []
   tiers:
+  - 1
   - 2
 - name: Serafina's Crown
   ids:

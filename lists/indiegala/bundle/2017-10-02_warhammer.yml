@@ -2,6 +2,8 @@
 schema: 1
 name: Warhammer Alliance
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:209080
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Tempest: Pirate Action RPG'
   ids:
   - steam:418180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Yet Another Zombie Defense
   ids:
   - steam:270550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Lords Steam Edition
   ids:

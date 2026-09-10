@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 21
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:2240:fragfest
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sector
   ids:
   - steam:366960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Simple Rockets
   ids:

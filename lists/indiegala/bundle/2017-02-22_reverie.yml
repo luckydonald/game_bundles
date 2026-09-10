@@ -2,6 +2,8 @@
 schema: 1
 name: Reverie Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:571870
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jumping Tank
   ids:
   - unresolved:source:isthereanydeal:4816:jumping-tank
   requires: []
   tiers:
+  - 1
   - 2
 - name: Riot of the numbers
   ids:
   - steam:579150
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Week of Circus Terror
   ids:

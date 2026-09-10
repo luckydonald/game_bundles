@@ -2,6 +2,8 @@
 schema: 1
 name: The Race Against Time Gamer Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:5002:little-things-forever
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Hearts
   ids:
   - steam:229520
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Doc Clock: The Toasted Sandwich of Time'
   ids:

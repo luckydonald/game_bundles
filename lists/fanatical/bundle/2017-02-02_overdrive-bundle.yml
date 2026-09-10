@@ -2,6 +2,8 @@
 schema: 1
 name: Overdrive Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:110400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vangers
   ids:
   - steam:264080
   requires: []
   tiers:
+  - 1
   - 2
 - name: BlazeRush
   ids:
   - steam:302710
   requires: []
   tiers:
+  - 1
   - 2
 - name: GTR Evolution Expansion Pack for RACE 07
   ids:
   - steam:8660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mashed Drive to Survive
   ids:
   - steam:281280
   requires: []
   tiers:
+  - 1
   - 2
 - name: HTR+ Slot Car Simulation
   ids:

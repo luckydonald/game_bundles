@@ -2,6 +2,8 @@
 schema: 1
 name: Relaxing Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:206610
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mechanic Escape
   ids:
   - steam:268240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rover The Dragonslayer
   ids:
   - unresolved:source:isthereanydeal:4880:rover-the-dragonslayer
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pony World 3
   ids:

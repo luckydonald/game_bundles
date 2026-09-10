@@ -2,6 +2,8 @@
 schema: 1
 name: The Leadership Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:57620
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grand Ages Rome
   ids:
   - steam:23450
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Imperium Romanum: Gold Edition'
   ids:
   - steam:23400
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tropico 3
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #67'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:975710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Witchball
   ids:
   - steam:768580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Achaem
   ids:

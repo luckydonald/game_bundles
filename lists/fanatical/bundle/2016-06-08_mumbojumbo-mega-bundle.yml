@@ -2,6 +2,8 @@
 schema: 1
 name: Mumbo Jumbo Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,36 +19,42 @@ games:
   - steam:205830
   requires: []
   tiers:
+  - 1
   - 3
 - name: 7 Wonders II
   ids:
   - steam:15900
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Midnight Mysteries: The Edgar Allan Poe Conspiracy'
   ids:
   - unresolved:source:isthereanydeal:3554:midnight-mysteries-the-edgar-allan-poe-conspiracy
   requires: []
   tiers:
+  - 1
   - 3
 - name: Glowfish
   ids:
   - steam:60350
   requires: []
   tiers:
+  - 1
   - 3
 - name: Samantha Swift and the Hidden Roses of Athena
   ids:
   - steam:16020
   requires: []
   tiers:
+  - 1
   - 3
 - name: Pickers
   ids:
   - steam:204440
   requires: []
   tiers:
+  - 1
   - 3
 - name: Luxor 2 HD
   ids:

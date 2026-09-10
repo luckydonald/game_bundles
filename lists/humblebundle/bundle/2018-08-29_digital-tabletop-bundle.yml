@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Digital Tabletop Bundle 1
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6411:ticket-to-ride-complete-bundle
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sentinels of the Multiverse
   ids:
   - steam:337150
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mysterium
   ids:
   - steam:556180
   requires: []
   tiers:
+  - 1
   - 3
 - name: Pathfinder Adventures
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #69'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6263:plandzz
   requires: []
   tiers:
+  - 1
   - 2
 - name: Plandzz 2
   ids:
   - unresolved:source:isthereanydeal:6263:plandzz-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Spiny Adventures
   ids:
   - unresolved:source:isthereanydeal:6263:spiny-adventures
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Eerie Adventures Of Kally
   ids:

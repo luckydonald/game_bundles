@@ -2,6 +2,8 @@
 schema: 1
 name: Capsule Computers Indie Bundle 1
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,48 +19,56 @@ games:
   - steam:70110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pixelry
   ids:
   - unresolved:source:isthereanydeal:224:pixelry
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Tower Rush
   ids:
   - unresolved:source:isthereanydeal:224:super-tower-rush
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Blackwell Legacy
   ids:
   - steam:80330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lune
   ids:
   - unresolved:source:isthereanydeal:224:lune
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blackwell Deception
   ids:
   - steam:80360
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blackwell Unbound
   ids:
   - steam:80340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blackwell Convergence
   ids:
   - steam:80350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hacker Evolution Duality
   ids:

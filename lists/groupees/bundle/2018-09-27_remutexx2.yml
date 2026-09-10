@@ -2,6 +2,8 @@
 schema: 1
 name: Remute XX RETURN
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:356210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wizardry 6 and 7
   ids:
   - unresolved:source:isthereanydeal:6506:wizardry-6-and-7
   requires: []
   tiers:
+  - 1
   - 2
 - name: 7th Guest, The
   ids:
   - unresolved:source:isthereanydeal:6506:7th-guest-the
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tender Loving Care
   ids:

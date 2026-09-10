@@ -2,6 +2,8 @@
 schema: 1
 name: Slash & Dab Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:826170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Strangers
   ids:
   - unresolved:source:isthereanydeal:6355:strangers
   requires: []
   tiers:
+  - 1
   - 2
 - name: Elude
   ids:
   - steam:825240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gold Rush! 2
   ids:
