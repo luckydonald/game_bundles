@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1086 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12924/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12924/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12924/source.json
+games:
+- name: Heart Chain Kitty
+  ids:
+  - steam:933210
+  requires: []
+- name: Second Chance
+  ids:
+  - steam:908960
+  requires: []
+- name: Super Space Serpent SE
+  ids:
+  - unresolved:source:isthereanydeal:12924:super-space-serpent-se
+  requires: []
+- name: The Shenanigans of Cherry and Trix
+  ids:
+  - steam:1192840
+  requires: []
+- name: Naturalist Stories
+  ids:
+  - steam:1260340
+  requires: []
+- name: Dungeon Raider
+  ids:
+  - unresolved:source:isthereanydeal:12924:dungeon-raider
+  requires: []
+- name: Miko Adventures Puffball
+  ids:
+  - steam:1614960
+  requires: []
+- name: Via Mortis
+  ids:
+  - steam:1987550
+  requires: []
+- name: Dash FPS
+  ids:
+  - unresolved:source:isthereanydeal:12924:dash-fps
+  requires: []

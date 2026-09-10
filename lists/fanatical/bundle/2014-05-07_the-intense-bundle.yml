@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Intense Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/761/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/761/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/761/source.json
+games:
+- name: Hotel Collector's Edition
+  ids:
+  - steam:288750
+  requires: []
+- name: Gomo
+  ids:
+  - steam:265330
+  requires: []
+- name: Zooloretto
+  ids:
+  - unresolved:source:isthereanydeal:761:zooloretto
+  requires: []
+- name: Gray Matter
+  ids:
+  - steam:260570
+  requires: []
+- name: 'Infinite Space III: Sea of Stars'
+  ids:
+  - steam:269990
+  requires: []
+- name: Rescue - Everyday Heroes (U.S. Edition)
+  ids:
+  - unresolved:source:isthereanydeal:761:rescue-everyday-heroes-us-edition
+  requires: []
+- name: Fortix 2
+  ids:
+  - steam:45450
+  requires: []
+- name: QuestRun
+  ids:
+  - steam:286120
+  requires: []
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+  requires: []
+- name: Adventure Park
+  ids:
+  - unresolved:source:isthereanydeal:761:adventure-park
+  requires: []

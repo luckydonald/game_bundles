@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Brutal Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/499/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/499/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/499/source.json
+games:
+- name: 'Steel Storm: Forgotten Prison'
+  ids:
+  - steam:202652
+  requires: []
+- name: 'King''s Bounty: Legions | True Tactician Ultimate Pack'
+  ids:
+  - unresolved:source:isthereanydeal:499:kings-bounty-legions-true-tactician-ultimate-pack
+  requires: []
+- name: Steel Storm Weapon Pack
+  ids:
+  - unresolved:source:isthereanydeal:499:steel-storm-weapon-pack
+  requires: []
+- name: 'Day One : Garry''s Incident'
+  ids:
+  - unresolved:source:isthereanydeal:499:day-one-garrys-incident
+  requires: []
+- name: Dungeonbowl - Knockout Edition
+  ids:
+  - unresolved:source:isthereanydeal:499:dungeonbowl-knockout-edition
+  requires: []
+- name: Port Royale 3
+  ids:
+  - steam:205610
+  requires: []
+- name: 'Iron Sky: Invasion'
+  ids:
+  - steam:224900
+  requires: []
+- name: Stealth Bastard Deluxe
+  ids:
+  - steam:209190
+  requires: []
+- name: 'Steel Storm: Burning Retribution'
+  ids:
+  - steam:96200
+  requires: []
+- name: 'Tropico 4: Steam Special Edition'
+  ids:
+  - unresolved:source:isthereanydeal:499:tropico-4-steam-special-edition
+  requires: []
+- name: Earth 2150 Trilogy
+  ids:
+  - steam:253880
+  requires: []
+- name: Naval Warfare
+  ids:
+  - steam:98500
+  requires: []

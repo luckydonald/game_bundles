@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Outer Limits Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/412/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/412/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/412/source.json
+games:
+- name: Puzzle Kingdoms
+  ids:
+  - steam:23700
+  requires: []
+- name: Razor2 Hidden Skies
+  ids:
+  - steam:34920
+  requires: []
+- name: Race Injection
+  ids:
+  - steam:44680
+  requires: []
+- name: Warfare
+  ids:
+  - steam:35300
+  requires: []
+- name: Supreme Ruler 2020 Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:412:supreme-ruler-2020-gold-edition
+  requires: []
+- name: Blades of Time Limited Edition
+  ids:
+  - unresolved:source:isthereanydeal:412:blades-of-time-limited-edition
+  requires: []
+- name: UFO Extraterrestrials GOLD Edition
+  ids:
+  - unresolved:source:isthereanydeal:412:ufo-extraterrestrials-gold-edition
+  requires: []
+- name: Gumboy Tournament
+  ids:
+  - steam:11230
+  requires: []
+- name: Insane 2
+  ids:
+  - steam:35320
+  requires: []
+- name: 'Hydrophobia: Prophecy'
+  ids:
+  - steam:92000
+  requires: []

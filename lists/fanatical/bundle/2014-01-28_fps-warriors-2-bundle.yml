@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: FPS Warriors Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/526/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/526/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/526/source.json
+games:
+- name: Nuclear Dawn
+  ids:
+  - steam:17710
+  requires: []
+- name: Chaser
+  ids:
+  - steam:39670
+  requires: []
+- name: Zeno Clash
+  ids:
+  - steam:22200
+  requires: []
+- name: 'Painkiller: Black Edition'
+  ids:
+  - steam:39530
+  requires: []
+- name: Zeno Clash 2
+  ids:
+  - steam:215690
+  requires: []
+- name: Hard Reset Extended Edition
+  ids:
+  - steam:98400
+  requires: []
+- name: Painkiller Overdose
+  ids:
+  - steam:3270
+  requires: []
+- name: AirBuccaneers
+  ids:
+  - steam:223630
+  requires: []
