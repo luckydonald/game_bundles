@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Nov 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14592/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14592/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14592/source.json
+games:
+- name: Cassette Beasts
+  ids:
+  - steam:1321440
+  requires: []
+- name: Persona 4 Golden
+  ids:
+  - steam:1113000
+  requires: []
+- name: 'Warhammer 40,000: Darktide'
+  ids:
+  - steam:1361210
+  requires: []
+- name: Hexarchy
+  ids:
+  - steam:1356810
+  requires: []
+- name: KarmaZoo
+  ids:
+  - steam:1661630
+  requires: []
+- name: The Lamplighters League
+  ids:
+  - steam:1167750
+  requires: []
+- name: 'The Bookwalker: Thief of Tales'
+  ids:
+  - steam:1432100
+  requires: []
+- name: 'Garden Life: A Cozy Simulator'
+  ids:
+  - steam:1915380
+  requires: []

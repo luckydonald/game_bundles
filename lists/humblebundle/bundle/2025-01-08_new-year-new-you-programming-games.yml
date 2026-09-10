@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'New Year, New You: Programming Games Bundle — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14821/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14821/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14821/source.json
+games:
+- name: 'while True: learn()'
+  ids:
+  - steam:619150
+  requires: []
+- name: EXAPUNKS
+  ids:
+  - steam:716490
+  requires: []
+- name: TIS-100
+  ids:
+  - steam:370360
+  requires: []
+- name: 7 Billion Humans
+  ids:
+  - steam:792100
+  requires: []
+- name: SHENZHEN I/O
+  ids:
+  - steam:504210
+  requires: []
+- name: Human Resource Machine
+  ids:
+  - steam:375820
+  requires: []
+- name: Learning Factory
+  ids:
+  - steam:1150090
+  requires: []
