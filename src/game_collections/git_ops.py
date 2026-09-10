@@ -104,10 +104,24 @@ def repository_root(start: Path) -> Path:
 def autostash(repository_root: Path) -> bool:
     """Stash pending changes, including untracked files, before a scrape.
 
+    Excludes `ai/errors/` from the pathspec: it's the convention directory for
+    error/session logs a user may be actively `tee`-ing a running `--git`
+    invocation's own output into. `--include-untracked` unlinks any untracked
+    path it stashes, so a log file being written there would keep its
+    already-open file descriptor pointed at a now-detached inode - restoring
+    the stash afterward then recreates the path with only the handful of
+    bytes captured at stash time, silently discarding the rest of the log.
+    Leaving the directory out of the pathspec means the stash never touches
+    it, so a concurrently written log survives untouched.
+
     Returns whether anything was actually stashed, so a later restore step
     knows whether to bother.
     """
-    result = _run(repository_root, "stash", "push", "--include-untracked", "-m", "pre-scrape autostash")
+    result = _run(
+        repository_root,
+        "stash", "push", "--include-untracked", "-m", "pre-scrape autostash",
+        "--", ".", ":!ai/errors",
+    )
     return "No local changes to save" not in result.stdout
 # end def autostash
 
