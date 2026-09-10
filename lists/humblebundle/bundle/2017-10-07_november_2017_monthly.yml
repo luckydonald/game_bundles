@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Nov 2017) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5526/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5526/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5526/source.json
+games:
+- name: Wilmot's Warehouse
+  ids:
+  - steam:839870
+  requires: []
+- name: 'The Elder Scrolls Online: Tamriel Unlimited'
+  ids:
+  - unresolved:source:isthereanydeal:5526:the-elder-scrolls-online-tamriel-unlimited
+  requires: []
+- name: Dead Rising® 2
+  ids:
+  - steam:45740
+  requires: []
+- name: Emily is Away Too
+  ids:
+  - steam:523780
+  requires: []
+- name: World to the West
+  ids:
+  - steam:530020
+  requires: []
+- name: 'The Elder Scrolls: Legends'
+  ids:
+  - unresolved:source:isthereanydeal:5526:the-elder-scrolls-legends
+  requires: []
+- name: Silence
+  ids:
+  - steam:314790
+  requires: []
+- name: Quake Champions
+  ids:
+  - steam:611500
+  requires: []
+- name: 'Shadow Tactics: Blades of the Shogun'
+  ids:
+  - steam:418240
+  requires: []
+- name: Resident Evil 5 GOLD Edition
+  ids:
+  - steam:21690
+  requires: []

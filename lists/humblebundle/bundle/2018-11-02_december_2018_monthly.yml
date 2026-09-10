@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Dec 2018) — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6648/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6648/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6648/source.json
+games:
+- name: Mega Man Legacy Collection
+  ids:
+  - steam:363440
+  requires: []
+- name: Forager
+  ids:
+  - steam:751780
+  requires: []
+- name: 'METAL GEAR SOLID V: The Definitive Experience'
+  ids:
+  - unresolved:source:isthereanydeal:6648:metal-gear-solid-v-the-definitive-experience
+  requires: []
+- name: 'METAL GEAR SOLID V: THE PHANTOM PAIN'
+  ids:
+  - steam:287700
+  requires: []
+- name: 'Cities: Skylines'
+  ids:
+  - steam:255710
+  requires: []
+- name: Zombie Army Trilogy
+  ids:
+  - steam:301640
+  requires: []
+- name: 'Cities: Skylines - After Dark'
+  ids:
+  - steam:369150
+  requires: []
+- name: Purrfect Date - Visual Novel/Dating Simulator
+  ids:
+  - steam:520600
+  requires: []
+- name: NeuroVoider
+  ids:
+  - steam:400450
+  requires: []
+- name: Cut & Run
+  ids:
+  - unresolved:source:isthereanydeal:6648:cut-and-run
+  requires: []
+- name: 'Seven: The Days Long Gone'
+  ids:
+  - unresolved:source:isthereanydeal:6648:seven-the-days-long-gone
+  requires: []
+- name: Immortal Redneck
+  ids:
+  - steam:595140
+  requires: []

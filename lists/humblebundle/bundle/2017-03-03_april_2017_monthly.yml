@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Apr 2017) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4856/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4856/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4856/source.json
+games:
+- name: The Witness
+  ids:
+  - steam:210970
+  requires: []
+- name: Event[0]
+  ids:
+  - steam:470260
+  requires: []
+- name: Tumblestone
+  ids:
+  - steam:269710
+  requires: []
+- name: 'Slime-san: Superslime Edition'
+  ids:
+  - steam:473530
+  requires: []
+- name: Black Mesa
+  ids:
+  - steam:362890
+  requires: []
+- name: 'Kingdom: New Lands Royal Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4856:kingdom-new-lands-royal-edition
+  requires: []
+- name: 'Layers of Fear: Masterpiece Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4856:layers-of-fear-masterpiece-edition
+  requires: []
+- name: Jawns
+  ids:
+  - unresolved:source:isthereanydeal:4856:jawns
+  requires: []
