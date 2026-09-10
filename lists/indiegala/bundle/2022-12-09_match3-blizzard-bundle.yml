@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Match3 Blizzard Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12706/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12706/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12706/source.json
+games:
+- name: Queen's Garden 2
+  ids:
+  - steam:1386210
+  requires: []
+- name: Dress-Up Pups
+  ids:
+  - unresolved:source:isthereanydeal:12706:dress-up-pups
+  requires: []
+- name: Animal Drop Safari
+  ids:
+  - steam:1541530
+  requires: []
+- name: 'Academy of Magic: The Great Dark Wizard''s Curse'
+  ids:
+  - steam:1778770
+  requires: []
+- name: 'Huntress: The cursed Village'
+  ids:
+  - steam:1805560
+  requires: []
+- name: Murder by Moonlight 2 - Crimson Night
+  ids:
+  - steam:1819370
+  requires: []
+- name: '11 Islands 2: Story of Love'
+  ids:
+  - steam:1894450
+  requires: []
+- name: THE NEW CHRONICLES OF NOAH'S ARK
+  ids:
+  - steam:1897350
+  requires: []
+- name: ClearIt 13
+  ids:
+  - steam:2123320
+  requires: []

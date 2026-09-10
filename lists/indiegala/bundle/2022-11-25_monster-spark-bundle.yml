@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Monster Spark Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12579/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12579/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12579/source.json
+games:
+- name: Sparklite
+  ids:
+  - steam:943140
+  requires: []
+- name: The Long Reach
+  ids:
+  - steam:584990
+  requires: []
+- name: DwarfHeim
+  ids:
+  - unresolved:source:isthereanydeal:12579:dwarfheim
+  requires: []
+- name: Mainlining Deluxe Edition
+  ids:
+  - steam:454950
+  requires: []
+- name: RIOT- Civil Unrest
+  ids:
+  - steam:342310
+  requires: []
+- name: Monster Harvest
+  ids:
+  - steam:1363350
+  requires: []

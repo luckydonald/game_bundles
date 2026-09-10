@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: North Pole Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10868/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10868/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10868/source.json
+games:
+- name: 'Icycle: On Thin Ice'
+  ids:
+  - steam:658990
+  requires: []
+- name: The North Pole
+  ids:
+  - steam:1201880
+  requires: []
+- name: Hoser Hockey
+  ids:
+  - steam:801400
+  requires: []
+- name: EBOLA 2
+  ids:
+  - steam:1437050
+  requires: []
+- name: Legend of Chilli Tree
+  ids:
+  - steam:1635250
+  requires: []
+- name: Toy War - Cannon
+  ids:
+  - steam:1834290
+  requires: []

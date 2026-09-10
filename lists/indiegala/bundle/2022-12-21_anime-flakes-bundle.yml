@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Flakes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12801/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12801/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12801/source.json
+games:
+- name: Attack Helicopter Dating Simulator
+  ids:
+  - steam:594350
+  requires: []
+- name: Bloody Chronicles - New Cycle of Death
+  ids:
+  - steam:455310
+  requires: []
+- name: Blankspace
+  ids:
+  - steam:1228600
+  requires: []
+- name: My Dream Sport Dating Simulator
+  ids:
+  - steam:1521490
+  requires: []
+- name: Lu Bu Maker
+  ids:
+  - steam:882900
+  requires: []
+- name: Hell Blasters
+  ids:
+  - steam:1696200
+  requires: []

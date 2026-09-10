@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kawaii Novels Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11184/source.json
+games:
+- name: Detective Kobayashi
+  ids:
+  - steam:1070220
+  requires: []
+- name: Little One
+  ids:
+  - steam:1071350
+  requires: []
+- name: How to Sing to Open Your Heart
+  ids:
+  - steam:924780
+  requires: []
+- name: Lotus Reverie ~ First Nexus
+  ids:
+  - steam:1227570
+  requires: []
+- name: Heart Fragment
+  ids:
+  - steam:1253880
+  requires: []
+- name: Takorita Meets Fries
+  ids:
+  - steam:1394700
+  requires: []

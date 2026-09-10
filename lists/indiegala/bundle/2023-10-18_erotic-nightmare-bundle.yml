@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Erotic Nightmare Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13543/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13543/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13543/source.json
+games:
+- name: Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:13543:nightmare
+  requires: []
+- name: TroubleDays
+  ids:
+  - steam:1171270
+  requires: []
+- name: Succubus★Connect!
+  ids:
+  - steam:1435010
+  requires: []
+- name: Succubus Runa and the Erotic Dungeon
+  ids:
+  - steam:1646180
+  requires: []
+- name: Succubi's Trap Dungeon of Seduction
+  ids:
+  - steam:1864530
+  requires: []
+- name: Exorcist Charlotte
+  ids:
+  - steam:1892700
+  requires: []
+- name: SuccuSeka Resist Succubus Temptation
+  ids:
+  - steam:2274460
+  requires: []
