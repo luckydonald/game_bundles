@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Zombie Splatter Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8050/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8050/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8050/source.json
+games:
+- name: Zombie Desperation
+  ids:
+  - steam:818570
+  requires: []
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+  requires: []
+- name: 'The Chronicles of King Arthur - Episode 1: Excalibur'
+  ids:
+  - steam:989640
+  requires: []
+- name: Time Splatter
+  ids:
+  - steam:949530
+  requires: []
+- name: The Voice from Heaven
+  ids:
+  - steam:1013350
+  requires: []
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+  requires: []
+- name: BAFF 4
+  ids:
+  - steam:1158480
+  requires: []

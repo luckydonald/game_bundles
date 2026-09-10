@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Remute XX Psytronik — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8016/source.json
+games:
+- name: Run Demon Run (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:run-demon-run-c64
+  requires: []
+- name: The Sky Is Falling! (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:the-sky-is-falling-c64
+  requires: []
+- name: Soulless (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:soulless-c64
+  requires: []
+- name: Sizzler (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:sizzler-c64
+  requires: []
+- name: My Life (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:my-life-c64
+  requires: []
+- name: Guns 'n' Ghosts (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:guns-n-ghosts-c64
+  requires: []
+- name: Barnsley Badger (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:barnsley-badger-c64
+  requires: []
+- name: Darkness (C64)
+  ids:
+  - unresolved:source:isthereanydeal:8016:darkness-c64
+  requires: []

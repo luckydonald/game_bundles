@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Mega Itch.io Bundle — Select 4 to 25 Titles for $1.00 up to $6.25
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8007/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8007/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8007/source.json
+games:
+- name: Dangerous Skies 80's edition
+  ids:
+  - steam:896220
+  requires: []
+- name: Souls of Darkness
+  ids:
+  - unresolved:source:isthereanydeal:8007:souls-of-darkness
+  requires: []
+- name: Hellphobia
+  ids:
+  - unresolved:source:isthereanydeal:8007:hellphobia
+  requires: []
+- name: Super Bomberjack
+  ids:
+  - unresolved:source:isthereanydeal:8007:super-bomberjack
+  requires: []
+- name: Sniper Fodder
+  ids:
+  - steam:880840
+  requires: []
+- name: The lost wizard
+  ids:
+  - steam:727110
+  requires: []
+- name: Oubliette
+  ids:
+  - unresolved:source:isthereanydeal:8007:oubliette
+  requires: []
+- name: Crappy day enhanced edition
+  ids:
+  - unresolved:source:isthereanydeal:8007:crappy-day-enhanced-edition
+  requires: []
+- name: In The Dark
+  ids:
+  - unresolved:source:isthereanydeal:8007:in-the-dark
+  requires: []
+- name: ZONE
+  ids:
+  - steam:3607460
+  requires: []
+- name: Valley Of The Moon
+  ids:
+  - steam:1050540
+  requires: []
+- name: Apogee-X
+  ids:
+  - unresolved:source:isthereanydeal:8007:apogee-x
+  requires: []
+- name: The Replicant
+  ids:
+  - unresolved:source:isthereanydeal:8007:the-replicant
+  requires: []
+- name: The Theodore Adventures
+  ids:
+  - steam:656940
+  requires: []
+- name: The Tank Wars
+  ids:
+  - unresolved:source:isthereanydeal:8007:the-tank-wars
+  requires: []
+- name: Space Arena
+  ids:
+  - unresolved:source:isthereanydeal:8007:space-arena
+  requires: []
+- name: 1886 The Witcher Years
+  ids:
+  - unresolved:source:isthereanydeal:8007:1886-the-witcher-years
+  requires: []

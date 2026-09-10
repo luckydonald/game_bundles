@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Weekly Sale: Puppy Games — Beat The Average'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/465/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/465/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/465/source.json
+games:
+- name: Droid Assault
+  ids:
+  - steam:219200
+  requires: []
+- name: Revenge of the Titans
+  ids:
+  - steam:93200
+  requires: []
+- name: Titan Attacks!
+  ids:
+  - steam:203210
+  requires: []
+- name: Ultratron
+  ids:
+  - steam:219190
+  requires: []
+- name: 'Revenge of the Titans: Sandbox Mode'
+  ids:
+  - steam:93206
+  requires: []

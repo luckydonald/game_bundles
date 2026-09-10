@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Eroge Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9988/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9988/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9988/source.json
+games:
+- name: Night crawling is BAD!?
+  ids:
+  - unresolved:source:isthereanydeal:9988:night-crawling-is-bad
+  requires: []
+- name: Fantasy Tavern Sextet -Vol.1 New World Days～
+  ids:
+  - steam:1372830
+  requires: []
+- name: A Secret Between You and Me
+  ids:
+  - unresolved:source:isthereanydeal:9988:a-secret-between-you-and-me
+  requires: []
+- name: Chronicle of Bitch Girl - My Dick is too Large
+  ids:
+  - unresolved:source:isthereanydeal:9988:chronicle-of-bitch-girl-my-dick-is-too-large
+  requires: []
+- name: Suddenly transformed into a girl（Suddenly Feminized?! School Survival）
+  ids:
+  - unresolved:source:isthereanydeal:9988:suddenly-transformed-into-a-girl-suddenly-feminized-school-survival
+  requires: []
+- name: Avenger Princess Michellele
+  ids:
+  - unresolved:source:isthereanydeal:9988:avenger-princess-michellele
+  requires: []

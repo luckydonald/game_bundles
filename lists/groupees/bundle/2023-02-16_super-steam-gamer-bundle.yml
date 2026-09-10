@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Super Steam Gamer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12990/source.json
+games:
+- name: 911 Operator
+  ids:
+  - steam:503560
+  requires: []
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930
+  requires: []
+- name: John Wick Hex
+  ids:
+  - unresolved:source:isthereanydeal:12990:john-wick-hex
+  requires: []
+- name: RIOT- Civil Unrest
+  ids:
+  - steam:342310
+  requires: []
