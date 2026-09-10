@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: White Party Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14680/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14680/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14680/source.json
+games:
+- name: Dinosis Survival
+  ids:
+  - steam:613270
+  requires: []
+- name: Metro Sim Hustle
+  ids:
+  - steam:882250
+  requires: []
+- name: Drift King
+  ids:
+  - steam:1469690
+  requires: []
+- name: 'SEARCH PARTY: Director''s Cut'
+  ids:
+  - steam:1418540
+  requires: []
+- name: 'HELLSTUCK: Rage With Your Friends'
+  ids:
+  - steam:1559570
+  requires: []
+- name: Unwording
+  ids:
+  - steam:1974250
+  requires: []
+- name: The Ritual
+  ids:
+  - steam:3122100
+  requires: []

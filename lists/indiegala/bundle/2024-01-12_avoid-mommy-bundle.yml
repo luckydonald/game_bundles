@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Avoid Mommy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13775/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13775/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13775/source.json
+games:
+- name: ConflictCraft
+  ids:
+  - unresolved:source:isthereanydeal:13775:conflictcraft
+  requires: []
+- name: 'Space: Tower Defense'
+  ids:
+  - unresolved:source:isthereanydeal:13775:space-tower-defense
+  requires: []
+- name: Royal Heroes
+  ids:
+  - unresolved:source:isthereanydeal:13775:royal-heroes
+  requires: []
+- name: Police Hot Pursuit
+  ids:
+  - unresolved:source:isthereanydeal:13775:police-hot-pursuit
+  requires: []
+- name: Avoid It!
+  ids:
+  - unresolved:source:isthereanydeal:13775:avoid-it
+  requires: []
+- name: Hypermarket Tycoon Manager
+  ids:
+  - unresolved:source:isthereanydeal:13775:hypermarket-tycoon-manager
+  requires: []
+- name: Mommy Simulator
+  ids:
+  - unresolved:source:isthereanydeal:13775:mommy-simulator
+  requires: []
+- name: Blackhole on the Road
+  ids:
+  - steam:2616060
+  requires: []
+- name: Tuk Tuk Taxi
+  ids:
+  - unresolved:source:isthereanydeal:13775:tuk-tuk-taxi
+  requires: []

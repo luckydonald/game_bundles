@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Traditions Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15912/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15912/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15912/source.json
+games:
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Japan'
+  ids:
+  - steam:1176150
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Deutschland'
+  ids:
+  - steam:1176157
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Americana'
+  ids:
+  - steam:1176183
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Bavaria'
+  ids:
+  - steam:1176186
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Mexico'
+  ids:
+  - steam:1176201
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Poland'
+  ids:
+  - steam:1176207
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Korea'
+  ids:
+  - steam:1176228
+  requires: []
+- name: 'Pixel Puzzles Traditional Jigsaws Pack: Canarias'
+  ids:
+  - unresolved:source:isthereanydeal:15912:pixel-puzzles-traditional-jigsaws-pack-canarias
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Destructive Creations: 10th Anniversary Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14049/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14049/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14049/source.json
+games:
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+  requires: []
+- name: IS Defense
+  ids:
+  - steam:448370
+  requires: []
+- name: Hatred
+  ids:
+  - steam:341940
+  requires: []
+- name: 'Daymare: 1998'
+  ids:
+  - steam:842100
+  requires: []
+- name: Space Raiders in Space
+  ids:
+  - steam:1278210
+  requires: []
+- name: War Mongrels
+  ids:
+  - steam:1101790
+  requires: []
+- name: Shame Legacy
+  ids:
+  - steam:2014690
+  requires: []
+- name: 63 Days
+  ids:
+  - steam:2202120
+  requires: []

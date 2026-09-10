@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Avenger Pro Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13708/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13708/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13708/source.json
+games:
+- name: The Backrooms
+  ids:
+  - steam:1116520
+  requires: []
+- name: PBA Pro Bowling 2021
+  ids:
+  - steam:1415920
+  requires: []
+- name: Island Idle RPG
+  ids:
+  - steam:2023810
+  requires: []
+- name: 'Superbugs: Awaken'
+  ids:
+  - steam:1393570
+  requires: []
+- name: Upload Simulator
+  ids:
+  - steam:2067590
+  requires: []
+- name: Cyber Avenger
+  ids:
+  - steam:2606270
+  requires: []

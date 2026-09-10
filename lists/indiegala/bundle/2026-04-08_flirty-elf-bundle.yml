@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Flirty Elf Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16027/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16027/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16027/source.json
+games:
+- name: Sexy Elf
+  ids:
+  - steam:2205740
+  requires: []
+- name: Sexy Elf - Pixel Maid
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-maid
+  requires: []
+- name: Sexy Elf - Pixel Maid Cafe
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-maid-cafe
+  requires: []
+- name: Sexy Elf - Pixel Maid Cafe DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-maid-cafe-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Maid Cafe DLC 3
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-maid-cafe-dlc-3
+  requires: []
+- name: Sexy Elf - Pixel Idol DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-idol-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Elf
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-elf
+  requires: []
+- name: Sexy Elf - Pixel Elf DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-elf-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Maid DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-maid-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Idol
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-idol
+  requires: []
+- name: Sexy Elf - Pixel Fast Food
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-fast-food
+  requires: []
+- name: Sexy Elf - Pixel Fast Food DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-fast-food-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Agent
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-agent
+  requires: []
+- name: Sexy Elf - Pixel Agent DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-agent-dlc-2
+  requires: []
+- name: Sexy Elf - Pixel Student
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-student
+  requires: []
+- name: Sexy Elf - Pixel Student DLC 2
+  ids:
+  - unresolved:source:isthereanydeal:16027:sexy-elf-pixel-student-dlc-2
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Wild Rage Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16134/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16134/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16134/source.json
+games:
+- name: 'Zombie Derby: Pixel Survival'
+  ids:
+  - steam:1271690
+  requires: []
+- name: 'Guazu: The Rescue'
+  ids:
+  - steam:1620920
+  requires: []
+- name: Wild Dogs
+  ids:
+  - steam:1752060
+  requires: []
+- name: Sinister Entity
+  ids:
+  - steam:2164870
+  requires: []
+- name: Prickle
+  ids:
+  - steam:2759760
+  requires: []
+- name: Fast food RAGE
+  ids:
+  - steam:4188600
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pixel Puzzles Bundle 16 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15208/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15208/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15208/source.json
+games:
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: PP2 Space'
+  ids:
+  - steam:577405
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 3XS'
+  ids:
+  - steam:1088480
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 4XS'
+  ids:
+  - steam:1630722
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 5XS'
+  ids:
+  - steam:1630728
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 6XS'
+  ids:
+  - steam:1630723
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 26'
+  ids:
+  - unresolved:source:isthereanydeal:15208:jigsaw-puzzle-pack-pixel-puzzles-ultimate-variety-pack-26
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Variety Pack 27'
+  ids:
+  - unresolved:source:isthereanydeal:15208:jigsaw-puzzle-pack-pixel-puzzles-ultimate-variety-pack-27
+  requires: []
+- name: 'Jigsaw Puzzle Pack - Pixel Puzzles Ultimate: Light Trail'
+  ids:
+  - unresolved:source:isthereanydeal:15208:jigsaw-puzzle-pack-pixel-puzzles-ultimate-light-trail
+  requires: []
