@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly - October 2018 — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6444/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6444/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6444/source.json
+games:
+- name: Overwatch®
+  ids:
+  - unresolved:source:isthereanydeal:6444:overwatch
+  requires: []
+- name: Ollie & Bollie's Outdoor Estate
+  ids:
+  - unresolved:source:isthereanydeal:6444:ollie-and-bollies-outdoor-estate
+  requires: []
+- name: American Truck Simulator
+  ids:
+  - steam:270880
+  requires: []
+- name: Dungeons 3
+  ids:
+  - steam:493900
+  requires: []
+- name: Gremlins, Inc.
+  ids:
+  - steam:369990
+  requires: []
+- name: We Were Here Too
+  ids:
+  - steam:677160
+  requires: []
+- name: Old Man's Journey
+  ids:
+  - steam:581270
+  requires: []
+- name: Hidden Folks
+  ids:
+  - steam:435400
+  requires: []

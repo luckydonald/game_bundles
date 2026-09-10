@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jul 2018) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6204/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6204/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6204/source.json
+games:
+- name: Portal Knights
+  ids:
+  - steam:374040
+  requires: []
+- name: 'Hearts of Iron IV: Cadet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:6204:hearts-of-iron-iv-cadet-edition
+  requires: []
+- name: Blackwake
+  ids:
+  - steam:420290
+  requires: []
+- name: Titan Quest Anniversary Edition
+  ids:
+  - steam:475150
+  requires: []
+- name: 'Interplanetary: Enhanced Edition'
+  ids:
+  - steam:650220
+  requires: []
+- name: Serial Cleaner
+  ids:
+  - steam:522210
+  requires: []
+- name: Forts
+  ids:
+  - steam:410900
+  requires: []
+- name: 'Shiness: The Lightning Kingdom'
+  ids:
+  - steam:366640
+  requires: []
+- name: 'Titan Quest: Ragnarök'
+  ids:
+  - steam:741350
+  requires: []
+- name: Stumblehill
+  ids:
+  - unresolved:source:isthereanydeal:6204:stumblehill
+  requires: []

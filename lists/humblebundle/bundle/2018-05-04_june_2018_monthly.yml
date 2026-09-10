@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jun 2018) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6105/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6105/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6105/source.json
+games:
+- name: Yooka-Laylee
+  ids:
+  - steam:360830
+  requires: []
+- name: Bear With Me - Collector's Edition
+  ids:
+  - unresolved:source:isthereanydeal:6105:bear-with-me-collectors-edition
+  requires: []
+- name: Destiny 2
+  ids:
+  - steam:1085660
+  requires: []
+- name: Ken Follett's The Pillars of the Earth
+  ids:
+  - steam:234270
+  requires: []
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+  requires: []
+- name: Acceleration of SUGURI 2
+  ids:
+  - steam:390710
+  requires: []
+- name: Subserial Network
+  ids:
+  - unresolved:source:isthereanydeal:6105:subserial-network
+  requires: []
+- name: Cook, Serve, Delicious! 2!!
+  ids:
+  - steam:386620
+  requires: []
