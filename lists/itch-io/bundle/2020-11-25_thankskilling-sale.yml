@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Thankskilling Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9429/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9429/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9429/source.json
+games:
+- name: The Glass Staircase
+  ids:
+  - unresolved:source:isthereanydeal:9429:the-glass-staircase
+  requires: []
+- name: Power Drill Massacre
+  ids:
+  - unresolved:source:isthereanydeal:9429:power-drill-massacre
+  requires: []
+- name: Babysitter Bloodbath
+  ids:
+  - unresolved:source:isthereanydeal:9429:babysitter-bloodbath
+  requires: []
+- name: Night of the Nun... aka Nun Massacre
+  ids:
+  - unresolved:source:isthereanydeal:9429:night-of-the-nun-aka-nun-massacre
+  requires: []
+- name: Scary Tales Vol. 1
+  ids:
+  - unresolved:source:isthereanydeal:9429:scary-tales-vol-1
+  requires: []
+- name: The Horror Of Salazar House
+  ids:
+  - steam:1405440
+  requires: []

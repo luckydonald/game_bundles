@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Bundle for Abortion Funds — Buy all for $10.00 (or more)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11747/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11747/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11747/source.json
+games:
+- name: Fortune-499
+  ids:
+  - steam:840610
+  requires: []
+- name: Ossuary
+  ids:
+  - steam:363500
+  requires: []
+- name: A Mortician's Tale
+  ids:
+  - steam:578720
+  requires: []
+- name: Haque
+  ids:
+  - steam:662540
+  requires: []
+- name: Beglitched
+  ids:
+  - steam:461220
+  requires: []
+- name: Speed Dating for Ghosts
+  ids:
+  - steam:746400
+  requires: []
+- name: Hypnospace Outlaw
+  ids:
+  - steam:844590
+  requires: []
+- name: THE ENIGMA MACHINE
+  ids:
+  - steam:977810
+  requires: []
+- name: 'ISLANDS: Non-Places'
+  ids:
+  - steam:540510
+  requires: []
+- name: Lieve Oma
+  ids:
+  - unresolved:source:isthereanydeal:11747:lieve-oma
+  requires: []
+- name: Calico
+  ids:
+  - steam:1112890
+  requires: []
+- name: Lavender
+  ids:
+  - steam:886710
+  requires: []
+- name: Wide Ocean Big Jacket
+  ids:
+  - steam:1198040
+  requires: []
+- name: Shutter Stroll
+  ids:
+  - steam:1513480
+  requires: []
+- name: Lonely People Potion Shop
+  ids:
+  - unresolved:source:isthereanydeal:11747:lonely-people-potion-shop
+  requires: []
+- name: Buck Up And Drive!
+  ids:
+  - steam:1714590
+  requires: []
+- name: Zombie Admin
+  ids:
+  - steam:1143860
+  requires: []

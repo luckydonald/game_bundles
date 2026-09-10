@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: May Days Co-Op Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14016/source.json
+games:
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+  requires: []
+- name: Boot Hill Blaster
+  ids:
+  - steam:743660
+  requires: []
+- name: The Amazing Adventures of Lady Fanny Featherstone
+  ids:
+  - unresolved:source:isthereanydeal:14016:the-amazing-adventures-of-lady-fanny-featherstone
+  requires: []
+- name: Firebird DRM-Free version.
+  ids:
+  - unresolved:source:isthereanydeal:14016:firebird-drm-free-version
+  requires: []
+- name: Woodcutter Deluxe Edition
+  ids:
+  - steam:1876670
+  requires: []
+- name: Put This There
+  ids:
+  - unresolved:source:isthereanydeal:14016:put-this-there
+  requires: []
+- name: Surgeons, Please
+  ids:
+  - unresolved:source:isthereanydeal:14016:surgeons-please
+  requires: []
+- name: Octogame
+  ids:
+  - unresolved:source:isthereanydeal:14016:octogame
+  requires: []
+- name: Invasion 360
+  ids:
+  - unresolved:source:isthereanydeal:14016:invasion-360
+  requires: []
+- name: Space [itch.io]
+  ids:
+  - unresolved:source:isthereanydeal:14016:space-itch-io
+  requires: []
+- name: Space shooter [ITCH.IO]
+  ids:
+  - unresolved:source:isthereanydeal:14016:space-shooter-itch-io
+  requires: []
+- name: Saga of Song
+  ids:
+  - unresolved:source:isthereanydeal:14016:saga-of-song
+  requires: []
+- name: Not a Drill
+  ids:
+  - unresolved:source:isthereanydeal:14016:not-a-drill
+  requires: []

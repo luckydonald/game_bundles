@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sapphire City Autumn Sale - All for 1$! Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14705/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14705/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14705/source.json
+games:
+- name: Sapphire City
+  ids:
+  - unresolved:source:isthereanydeal:14705:sapphire-city
+  requires: []
+- name: Sapphire City Part 2
+  ids:
+  - unresolved:source:isthereanydeal:14705:sapphire-city-part-2
+  requires: []
+- name: The Sons
+  ids:
+  - unresolved:source:isthereanydeal:14705:the-sons
+  requires: []
+- name: Sapphire City Part 3
+  ids:
+  - unresolved:source:isthereanydeal:14705:sapphire-city-part-3
+  requires: []
