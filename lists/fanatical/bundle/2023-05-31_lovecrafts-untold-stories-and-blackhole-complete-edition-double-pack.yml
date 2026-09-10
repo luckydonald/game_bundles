@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lovecraft&#39;s Untold Stories & Blackhole CE Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13229/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13229/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13229/source.json
+games:
+- name: 'BLACKHOLE: Complete Edition'
+  ids:
+  - steam:322680
+  requires: []
+- name: Lovecraft's Untold Stories OST
+  ids:
+  - steam:1061960
+  requires: []
+- name: Lovecraft's Untold Stories
+  ids:
+  - steam:871420
+  requires: []
+- name: Lovecraft's Untold Stories Artbook
+  ids:
+  - steam:1081920
+  requires: []

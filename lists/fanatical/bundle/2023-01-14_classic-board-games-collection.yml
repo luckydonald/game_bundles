@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Classic Board Games Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12887/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12887/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12887/source.json
+games:
+- name: 'Clue/Cluedo: The Classic Mystery Game'
+  ids:
+  - unresolved:source:isthereanydeal:12887:clue-cluedo-the-classic-mystery-game
+  requires: []
+- name: Battleship
+  ids:
+  - unresolved:source:isthereanydeal:12887:battleship
+  requires: []
+- name: THE GAME OF LIFE 2
+  ids:
+  - steam:1455630
+  requires: []

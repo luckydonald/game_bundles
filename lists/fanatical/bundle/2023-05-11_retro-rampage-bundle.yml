@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Retro Rampage Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13147/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13147/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13147/source.json
+games:
+- name: MegaRace 2
+  ids:
+  - steam:733760
+  requires: []
+- name: Moto Racer Collection
+  ids:
+  - steam:324110
+  requires: []
+- name: Asterix & Obelix XXL 2
+  ids:
+  - steam:887060
+  requires: []
+- name: Mega Race 1
+  ids:
+  - unresolved:source:isthereanydeal:13147:mega-race-1
+  requires: []
+- name: Toki
+  ids:
+  - steam:1058320
+  requires: []
+- name: MegaRace 3
+  ids:
+  - steam:733770
+  requires: []
+- name: XIII - Classic
+  ids:
+  - steam:1170760
+  requires: []
+- name: 'Asterix & Obelix XXL : Romastered'
+  ids:
+  - steam:1261520
+  requires: []
+- name: 'The Bluecoats: North & South'
+  ids:
+  - steam:963220
+  requires: []
+- name: 'Asterix & Obelix: Slap them All!'
+  ids:
+  - steam:1492310
+  requires: []
+- name: Flashback (2018)
+  ids:
+  - steam:961620
+  requires: []

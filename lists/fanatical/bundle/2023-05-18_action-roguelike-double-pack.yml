@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Action Roguelike Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13164/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13164/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13164/source.json
+games:
+- name: Skeletal Avenger
+  ids:
+  - steam:1277500
+  requires: []
+- name: Tesla Force
+  ids:
+  - steam:1149710
+  requires: []

@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Strategy Bundle (Jan 2023) — Select 3 Titles for $4.99, 5 Titles
+  for $7.99, 7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12925/source.json
+games:
+- name: 'Wargame: European Escalation'
+  ids:
+  - steam:58610
+  requires: []
+- name: 'Tropico 4: Propaganda'
+  ids:
+  - steam:205637
+  requires: []
+- name: 'Tropico 4: Voodoo'
+  ids:
+  - steam:205638
+  requires: []
+- name: 'Tropico 4: Megalopolis'
+  ids:
+  - steam:205633
+  requires: []
+- name: Blood Bowl 2 - Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:12925:blood-bowl-2-legendary-edition
+  requires: []
+- name: 'Tropico 4: Quick-Dry-Cement'
+  ids:
+  - steam:57697
+  requires: []
+- name: 'Tropico 4: Vigilante'
+  ids:
+  - steam:205634
+  requires: []
+- name: Townsmen - A Kingdom Rebuilt
+  ids:
+  - steam:938380
+  requires: []
+- name: 'Tropico 4: Plantador'
+  ids:
+  - steam:57695
+  requires: []
+- name: 'Wargame: AirLand Battle'
+  ids:
+  - steam:222750
+  requires: []
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020
+  requires: []
+- name: Tropico 4 - Pirate Heaven
+  ids:
+  - steam:205632
+  requires: []
+- name: Tropico 4 - Modern Times
+  ids:
+  - steam:205630
+  requires: []
+- name: 'Grand Ages: Rome Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12925:grand-ages-rome-gold-edition
+  requires: []
+- name: Train Valley 2
+  ids:
+  - steam:602320
+  requires: []
+- name: Tropico 4 Junta Military
+  ids:
+  - steam:57696
+  requires: []
+- name: Secret Government
+  ids:
+  - steam:946990
+  requires: []
+- name: 'Interstellar Space: Genesis'
+  ids:
+  - steam:984680
+  requires: []
+- name: 'Tropico 4: Steam Special Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12925:tropico-4-steam-special-edition
+  requires: []
+- name: 'Tropico 4: The Academy'
+  ids:
+  - steam:205635
+  requires: []
+- name: The Shrouded Isle
+  ids:
+  - steam:501320
+  requires: []
+- name: Tropico 4 Apocalypse
+  ids:
+  - steam:205636
+  requires: []
+- name: Crookz - The Big Heist
+  ids:
+  - steam:310490
+  requires: []
+- name: Deep Sky Derelicts
+  ids:
+  - steam:698640
+  requires: []
+- name: Company of Crime
+  ids:
+  - steam:1229420
+  requires: []
+- name: War Mongrels
+  ids:
+  - steam:1101790
+  requires: []
+- name: Beholder 3
+  ids:
+  - steam:1570070
+  requires: []

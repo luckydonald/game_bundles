@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Walking Dead Season 1 & 2 Complete Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12191/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+  requires: []
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+  requires: []
+- name: The Walking Dead Season 2
+  ids:
+  - unresolved:source:isthereanydeal:12191:the-walking-dead-season-2
+  requires: []

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fire and Sky Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12192/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12192/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12192/source.json
+games:
+- name: Blue Fire
+  ids:
+  - steam:1220150
+  requires: []
+- name: Lila's Sky Ark
+  ids:
+  - steam:1573390
+  requires: []

@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Nitro Bundle 3 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12282/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12282/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12282/source.json
+games:
+- name: Crash Drive 2
+  ids:
+  - steam:343440
+  requires: []
+- name: Crashday Redline Edition
+  ids:
+  - steam:508980
+  requires: []
+- name: V-Rally 4
+  ids:
+  - steam:658700
+  requires: []
+- name: Dino Run DX
+  ids:
+  - steam:248330
+  requires: []
+- name: Super Pilot
+  ids:
+  - steam:648050
+  requires: []
+- name: Antigraviator
+  ids:
+  - steam:621020
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: Nimbus
+  ids:
+  - steam:50000
+  requires: []
+- name: Vector Thrust
+  ids:
+  - steam:242130
+  requires: []
+- name: FIA European Truck Racing Championship
+  ids:
+  - steam:940580
+  requires: []
+- name: 'GRIP: Combat Racing'
+  ids:
+  - steam:396900
+  requires: []
+- name: Homebrew - Patent Unknown
+  ids:
+  - steam:325420
+  requires: []
+- name: ClusterTruck
+  ids:
+  - steam:397950
+  requires: []
+- name: Tinker Racers
+  ids:
+  - steam:1234620
+  requires: []
+- name: Hotshot Racing
+  ids:
+  - steam:609920
+  requires: []
+- name: Monster Truck Championship
+  ids:
+  - steam:1209360
+  requires: []
+- name: Race Condition
+  ids:
+  - steam:1209950
+  requires: []
+- name: 80's OVERDRIVE
+  ids:
+  - steam:1381440
+  requires: []
+- name: Pocket Cars
+  ids:
+  - steam:1170720
+  requires: []

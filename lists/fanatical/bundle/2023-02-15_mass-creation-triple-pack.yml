@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Mass Creation Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12978/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12978/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12978/source.json
+games:
+- name: Shing!
+  ids:
+  - steam:1103730
+  requires: []
+- name: Corridor Z
+  ids:
+  - steam:636070
+  requires: []
+- name: Draw Slasher
+  ids:
+  - steam:418270
+  requires: []

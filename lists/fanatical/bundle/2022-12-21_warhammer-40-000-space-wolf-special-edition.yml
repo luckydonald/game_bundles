@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Warhammer 40,000: Space Wolf Special Edition Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12810/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12810/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12810/source.json
+games:
+- name: 'Warhammer 40,000: Space Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:12810:warhammer-40000-space-wolf
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Saga of the Great Awakening'
+  ids:
+  - unresolved:source:isthereanydeal:12810:warhammer-40000-space-wolf-saga-of-the-great-awakening
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Drenn Redblade'
+  ids:
+  - unresolved:source:isthereanydeal:12810:warhammer-40000-space-wolf-drenn-redblade
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Exceptional Card Pack'
+  ids:
+  - unresolved:source:isthereanydeal:12810:warhammer-40000-space-wolf-exceptional-card-pack
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Wrath of the Damned'
+  ids:
+  - unresolved:source:isthereanydeal:12810:warhammer-40000-space-wolf-wrath-of-the-damned
+  requires: []
