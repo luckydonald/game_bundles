@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardian Bundle 5 — Tier 3
-tier: 3
+name: Guardian Bundle 5
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10976/
@@ -13,42 +15,84 @@ games:
 - name: Smile For Me
   ids:
   - steam:1018850
+  requires: []
+  tiers:
+  - 3
 - name: Gone Home Soundtrack
   ids:
   - steam:298720
+  requires: []
+  tiers:
+  - 3
 - name: Gone Home
   ids:
   - steam:232430
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia
   ids:
   - steam:874390
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia - Aquarion Tribe
   ids:
   - steam:982200
+  requires: []
+  tiers:
+  - 3
 - name: Die for Valhalla!
   ids:
   - steam:606000
+  requires: []
+  tiers:
+  - 3
 - name: Highrisers
   ids:
   - steam:733820
+  requires: []
+  tiers:
+  - 3
 - name: The Innsmouth Case
   ids:
   - steam:1231950
+  requires: []
+  tiers:
+  - 3
 - name: Jessika
   ids:
   - steam:1251980
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia - Polaris Tribe
   ids:
   - steam:1237430
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia - Elyrion Tribe
   ids:
   - steam:982201
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia - Cymanti Tribe
   ids:
   - steam:1529660
+  requires: []
+  tiers:
+  - 3
 - name: Blue Fire
   ids:
   - steam:1220150
+  requires: []
+  tiers:
+  - 3
 - name: Guild of Darksteel
   ids:
   - steam:1356580
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'No More Robots: The Unhinged Indie Anthology — Entire 11 Item Bundle'
-tier: 2
+name: 'No More Robots: The Unhinged Indie Anthology'
+tiers:
+- rank: 2
+  name: Entire 11 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/no-more-robots-unhinged-indie-anthology
@@ -13,33 +15,66 @@ games:
 - name: Earth Must Die
   ids:
   - unresolved:source:humblebundle:earthmustdie
+  requires: []
+  tiers:
+  - 2
 - name: Starless Abyss
   ids:
   - unresolved:source:humblebundle:starlessabyss
+  requires: []
+  tiers:
+  - 2
 - name: Let's Build a Zoo
   ids:
   - unresolved:source:humblebundle:letsbuildazoo
+  requires: []
+  tiers:
+  - 2
 - name: Spirittea
   ids:
   - unresolved:source:humblebundle:spirittea
+  requires: []
+  tiers:
+  - 2
 - name: Yes, Your Grace
   ids:
   - unresolved:source:humblebundle:yesyourgrace
+  requires: []
+  tiers:
+  - 2
 - name: Hypnospace Outlaw
   ids:
   - unresolved:source:humblebundle:hypnospaceoutlaw
+  requires: []
+  tiers:
+  - 2
 - name: 'Slayers X: Terminal Aftermath: Vengance of the Slayer'
   ids:
   - unresolved:source:humblebundle:slayersx_terminalaftermath_venganceoftheslayer
+  requires: []
+  tiers:
+  - 2
 - name: Not Tonight 2
   ids:
   - unresolved:source:humblebundle:nottonight2
+  requires: []
+  tiers:
+  - 2
 - name: Tombstar
   ids:
   - unresolved:source:humblebundle:tombstar
+  requires: []
+  tiers:
+  - 2
 - name: Not Tonight
   ids:
   - unresolved:source:humblebundle:nottonight
+  requires: []
+  tiers:
+  - 2
 - name: 'Not Tonight: One Love'
   ids:
   - unresolved:source:humblebundle:nottonight_onelove
+  requires: []
+  tiers:
+  - 2

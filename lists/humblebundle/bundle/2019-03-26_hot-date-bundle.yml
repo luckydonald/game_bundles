@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Hot Date Bundle — entire-11-item-bundle
-tier: 4
+name: Humble Hot Date Bundle
+tiers:
+- rank: 4
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7225/
@@ -13,33 +15,66 @@ games:
 - name: Highway Blossoms
   ids:
   - steam:451760
+  requires: []
+  tiers:
+  - 4
 - name: 'Creature Romances: Kokonoe Kokoro'
   ids:
   - steam:356450
+  requires: []
+  tiers:
+  - 4
 - name: Just Deserts
   ids:
   - steam:488660
+  requires: []
+  tiers:
+  - 4
 - name: Ladykiller in a Bind
   ids:
   - steam:560000
+  requires: []
+  tiers:
+  - 4
 - name: Purrfect Date - Visual Novel/Dating Simulator
   ids:
   - steam:520600
+  requires: []
+  tiers:
+  - 4
 - name: Genital Jousting
   ids:
   - steam:469820
+  requires: []
+  tiers:
+  - 4
 - name: 'Sunrider: Liberation Day - Theme Song'
   ids:
   - steam:451290
+  requires: []
+  tiers:
+  - 4
 - name: 'Sunrider: Liberation Day - Captain''s Edition'
   ids:
   - steam:358750
+  requires: []
+  tiers:
+  - 4
 - name: Sunrider Academy
   ids:
   - steam:340730
+  requires: []
+  tiers:
+  - 4
 - name: G-senjou no Maou - The Devil on G-String Voiced Edition
   ids:
   - steam:377670
+  requires: []
+  tiers:
+  - 4
 - name: CLANNAD
   ids:
   - steam:324160
+  requires: []
+  tiers:
+  - 4

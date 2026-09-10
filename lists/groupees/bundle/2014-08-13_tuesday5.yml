@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Chicken Brigade Bundle — Tier 2
-tier: 2
+name: Chicken Brigade Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1080/
@@ -13,18 +15,36 @@ games:
 - name: "Brigade E5 \x96 New Jagged Union"
   ids:
   - steam:296210
+  requires: []
+  tiers:
+  - 2
 - name: 'Steel & Steam: Episode 1'
   ids:
   - unresolved:source:isthereanydeal:1080:steel-and-steam-episode-1
+  requires: []
+  tiers:
+  - 2
 - name: RC Cars
   ids:
   - steam:289460
+  requires: []
+  tiers:
+  - 2
 - name: Abalone
   ids:
   - steam:279480
+  requires: []
+  tiers:
+  - 2
 - name: 'Steel Storm: Burning Retribution - Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:1080:steel-storm-burning-retribution-complete-edition
+  requires: []
+  tiers:
+  - 2
 - name: Rocketbirds Hardboiled Chicken
   ids:
   - steam:215510
+  requires: []
+  tiers:
+  - 2

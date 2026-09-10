@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Paradox Interactive StrataGems Bundle — entire-11-item-bundle
-tier: 3
+name: Paradox Interactive StrataGems Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10607/
@@ -13,33 +15,66 @@ games:
 - name: Victoria II
   ids:
   - steam:42960
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen & Paper 2
   ids:
   - steam:310060
+  requires: []
+  tiers:
+  - 3
 - name: Ice Lakes
   ids:
   - steam:393430
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect
   ids:
   - steam:233450
+  requires: []
+  tiers:
+  - 3
 - name: Tyranny
   ids:
   - steam:362960
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Dynasty Starter Pack'
   ids:
   - unresolved:source:isthereanydeal:10607:crusader-kings-ii-dynasty-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Prison Architect - Psych Ward: Warden''s Edition'
   ids:
   - steam:1143650
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect - Island Bound
   ids:
   - steam:1244781
+  requires: []
+  tiers:
+  - 3
 - name: Empire of Sin
   ids:
   - steam:604540
+  requires: []
+  tiers:
+  - 3
 - name: 'Imperator: Rome'
   ids:
   - steam:859580
+  requires: []
+  tiers:
+  - 3
 - name: 'Age of Wonders: Planetfall'
   ids:
   - steam:718850
+  requires: []
+  tiers:
+  - 3

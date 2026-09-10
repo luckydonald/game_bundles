@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Artifex Mundi Bundle 13 — Tier 2
-tier: 2
+name: Artifex Mundi Bundle 13
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7784/
@@ -13,30 +15,60 @@ games:
 - name: Demon Hunter Chronicles from beyond
   ids:
   - steam:330990
+  requires: []
+  tiers:
+  - 2
 - name: 'Time Mysteries 3: The Final Enigma'
   ids:
   - steam:319320
+  requires: []
+  tiers:
+  - 2
 - name: 'Grim Legends: The Forsaken Bride'
   ids:
   - steam:284850
+  requires: []
+  tiers:
+  - 2
 - name: 'Endless Fables 3: Dark Moor'
   ids:
   - steam:867050
+  requires: []
+  tiers:
+  - 2
 - name: '9 Clues: The Secret Of Serpent Creek'
   ids:
   - steam:284870
+  requires: []
+  tiers:
+  - 2
 - name: 'Path of Sin: Greed'
   ids:
   - steam:895420
+  requires: []
+  tiers:
+  - 2
 - name: 'Queen''s Quest 3: The End of Dawn'
   ids:
   - steam:589690
+  requires: []
+  tiers:
+  - 2
 - name: 'Lost Grimoires 2: Shard of Mystery'
   ids:
   - steam:574270
+  requires: []
+  tiers:
+  - 2
 - name: 'Abyss: The Wraiths of Eden'
   ids:
   - steam:284710
+  requires: []
+  tiers:
+  - 2
 - name: My Brother Rabbit
   ids:
   - steam:855640
+  requires: []
+  tiers:
+  - 2

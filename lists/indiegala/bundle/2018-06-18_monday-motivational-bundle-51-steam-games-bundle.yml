@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #51 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #51'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6248/
@@ -13,36 +15,72 @@ games:
 - name: SoTo
   ids:
   - steam:717960
+  requires: []
+  tiers:
+  - 2
 - name: Kawaii Rainbow Portal
   ids:
   - steam:823920
+  requires: []
+  tiers:
+  - 2
 - name: Mad Frost
   ids:
   - steam:839030
+  requires: []
+  tiers:
+  - 2
 - name: Project Maze
   ids:
   - steam:659220
+  requires: []
+  tiers:
+  - 2
 - name: Black Bart
   ids:
   - unresolved:source:isthereanydeal:6248:black-bart
+  requires: []
+  tiers:
+  - 2
 - name: Goliath
   ids:
   - steam:363520
+  requires: []
+  tiers:
+  - 2
 - name: Future Proof
   ids:
   - steam:844130
+  requires: []
+  tiers:
+  - 2
 - name: Escort Commander
   ids:
   - steam:754110
+  requires: []
+  tiers:
+  - 2
 - name: Rheum
   ids:
   - steam:849520
+  requires: []
+  tiers:
+  - 2
 - name: Infektor
   ids:
   - unresolved:source:isthereanydeal:6248:infektor
+  requires: []
+  tiers:
+  - 2
 - name: Don't Die
   ids:
   - steam:659870
+  requires: []
+  tiers:
+  - 2
 - name: Pipes!
   ids:
   - unresolved:source:isthereanydeal:6248:pipes
+  requires: []
+  tiers:
+  - 2

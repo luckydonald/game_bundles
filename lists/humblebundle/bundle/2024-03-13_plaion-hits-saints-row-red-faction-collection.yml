@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Plaion: The Hits - Saints Row & Red Faction Bundle — entire-10-item-bundle'
-tier: 3
+name: 'Plaion: The Hits - Saints Row & Red Faction Bundle'
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13909/
@@ -13,30 +15,60 @@ games:
 - name: Red Faction
   ids:
   - steam:20530
+  requires: []
+  tiers:
+  - 3
 - name: Saints Row 2
   ids:
   - steam:9480
+  requires: []
+  tiers:
+  - 3
 - name: Red Faction II
   ids:
   - steam:20550
+  requires: []
+  tiers:
+  - 3
 - name: 'Red Faction: Armageddon - Path to War'
   ids:
   - steam:55115
+  requires: []
+  tiers:
+  - 3
 - name: 'Saints Row: The Third'
   ids:
   - steam:55230
+  requires: []
+  tiers:
+  - 3
 - name: 'Saints Row: Gat Out of Hell'
   ids:
   - steam:301910
+  requires: []
+  tiers:
+  - 3
 - name: 'Red Faction: Armageddon'
   ids:
   - steam:55110
+  requires: []
+  tiers:
+  - 3
 - name: Red Faction Guerrilla Re-Mars-tered
   ids:
   - steam:667720
+  requires: []
+  tiers:
+  - 3
 - name: 'Saints Row IV: Re-Elected'
   ids:
   - steam:206420
+  requires: []
+  tiers:
+  - 3
 - name: Saint's Row The Third Remastered
   ids:
   - steam:978300
+  requires: []
+  tiers:
+  - 3

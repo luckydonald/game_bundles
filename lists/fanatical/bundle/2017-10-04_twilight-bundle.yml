@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Twilight Bundle — Tier 2
-tier: 2
+name: Twilight Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5522/
@@ -13,30 +15,60 @@ games:
 - name: Airport Madness World Edition
   ids:
   - steam:369290
+  requires: []
+  tiers:
+  - 2
 - name: Back to Bed
   ids:
   - steam:308040
+  requires: []
+  tiers:
+  - 2
 - name: Breezeblox
   ids:
   - steam:370080
+  requires: []
+  tiers:
+  - 2
 - name: Chronology
   ids:
   - steam:269330
+  requires: []
+  tiers:
+  - 2
 - name: BalanCity
   ids:
   - steam:462680
+  requires: []
+  tiers:
+  - 2
 - name: Bomb The Monsters
   ids:
   - steam:355020
+  requires: []
+  tiers:
+  - 2
 - name: 'Construct: Escape the System'
   ids:
   - steam:497080
+  requires: []
+  tiers:
+  - 2
 - name: Edge of Twilight - Return to Glory
   ids:
   - steam:489070
+  requires: []
+  tiers:
+  - 2
 - name: Airport Madness 4
   ids:
   - steam:387850
+  requires: []
+  tiers:
+  - 2
 - name: Wooden Floor
   ids:
   - steam:348790
+  requires: []
+  tiers:
+  - 2

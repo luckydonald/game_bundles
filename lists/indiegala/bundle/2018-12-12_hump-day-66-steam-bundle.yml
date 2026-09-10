@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #66 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #66'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6751/
@@ -13,24 +15,48 @@ games:
 - name: CropDuster Supreme
   ids:
   - steam:412620
+  requires: []
+  tiers:
+  - 2
 - name: OutDrive
   ids:
   - steam:441870
+  requires: []
+  tiers:
+  - 2
 - name: Pool Nation & Bumper Pack Bundle
   ids:
   - unresolved:source:isthereanydeal:6751:pool-nation-and-bumper-pack-bundle
+  requires: []
+  tiers:
+  - 2
 - name: Odium To the Core
   ids:
   - steam:795570
+  requires: []
+  tiers:
+  - 2
 - name: Dino D-Day
   ids:
   - steam:70000
+  requires: []
+  tiers:
+  - 2
 - name: Cook, Serve, Delicious!
   ids:
   - steam:247020
+  requires: []
+  tiers:
+  - 2
 - name: Car Mechanic Simulator 2015
   ids:
   - steam:320300
+  requires: []
+  tiers:
+  - 2
 - name: Glass Masquerade
   ids:
   - steam:511470
+  requires: []
+  tiers:
+  - 2

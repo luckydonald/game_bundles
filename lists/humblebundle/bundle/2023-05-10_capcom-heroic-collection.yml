@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capcom Heroic Collection Bundle — entire-10-item-bundle
-tier: 3
+name: Capcom Heroic Collection Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13141/
@@ -13,30 +15,60 @@ games:
 - name: Mega Man Legacy Collection
   ids:
   - steam:363440
+  requires: []
+  tiers:
+  - 3
 - name: 'Bionic Commando: Rearmed'
   ids:
   - steam:21680
+  requires: []
+  tiers:
+  - 3
 - name: STRIDER™ / ストライダー飛竜®
   ids:
   - steam:235210
+  requires: []
+  tiers:
+  - 3
 - name: Lost Planet 3 - Complete
   ids:
   - unresolved:source:isthereanydeal:13141:lost-planet-3-complete
+  requires: []
+  tiers:
+  - 3
 - name: Mega Man 11
   ids:
   - steam:742300
+  requires: []
+  tiers:
+  - 3
 - name: Mega Man Legacy Collection 2
   ids:
   - steam:495050
+  requires: []
+  tiers:
+  - 3
 - name: 'Dragon''s Dogma: Dark Arisen'
   ids:
   - steam:367500
+  requires: []
+  tiers:
+  - 3
 - name: 'Phoenix Wright: Ace Attorney Trilogy'
   ids:
   - steam:787480
+  requires: []
+  tiers:
+  - 3
 - name: Street Fighter 30th Anniversary Collection
   ids:
   - steam:586200
+  requires: []
+  tiers:
+  - 3
 - name: MONSTER HUNTER RISE
   ids:
   - steam:1446780
+  requires: []
+  tiers:
+  - 3

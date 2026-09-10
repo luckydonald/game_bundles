@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Crusader Kings II Bundle — entire-16-item-bundle
-tier: 3
+name: Humble Crusader Kings II Bundle
+tiers:
+- rank: 3
+  name: entire-16-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7696/
@@ -13,48 +15,96 @@ games:
 - name: Crusader Kings II The Old Gods
   ids:
   - steam:210908
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II The Republic
   ids:
   - steam:210906
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II
   ids:
   - steam:203770
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Legacy of Rome'
   ids:
   - steam:210895
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II Sunset Invasion
   ids:
   - steam:210902
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Sword of Islam'
   ids:
   - steam:203778
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Sons of Abraham'
   ids:
   - steam:226667
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Horse Lords'
   ids:
   - steam:354330
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Charlemagne'
   ids:
   - steam:292982
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Rajas of India'
   ids:
   - steam:279600
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Way of Life'
   ids:
   - steam:329010
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Holy Fury'
   ids:
   - steam:756660
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Jade Dragon'
   ids:
   - steam:640140
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: The Reaper''s Due'
   ids:
   - steam:449980
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Conclave'
   ids:
   - steam:394320
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Monks and Mystics'
   ids:
   - steam:530780
+  requires: []
+  tiers:
+  - 3

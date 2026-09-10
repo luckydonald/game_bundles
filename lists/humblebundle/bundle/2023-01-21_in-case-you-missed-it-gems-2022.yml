@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'In Case You Missed It: Gems of 2022 Bundle — entire-7-item-bundle'
-tier: 3
+name: 'In Case You Missed It: Gems of 2022 Bundle'
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12911/
@@ -13,21 +15,42 @@ games:
 - name: Haiku, the Robot
   ids:
   - steam:1231880
+  requires: []
+  tiers:
+  - 3
 - name: Source of Madness
   ids:
   - steam:1315610
+  requires: []
+  tiers:
+  - 3
 - name: PowerSlave Exhumed
   ids:
   - steam:1678430
+  requires: []
+  tiers:
+  - 3
 - name: Supraland Six Inches Under
   ids:
   - steam:1522870
+  requires: []
+  tiers:
+  - 3
 - name: 'Submerged: Hidden Depths'
   ids:
   - steam:1614270
+  requires: []
+  tiers:
+  - 3
 - name: ZERO Sievert
   ids:
   - steam:1782120
+  requires: []
+  tiers:
+  - 3
 - name: Prehistoric Kingdom
   ids:
   - steam:666150
+  requires: []
+  tiers:
+  - 3

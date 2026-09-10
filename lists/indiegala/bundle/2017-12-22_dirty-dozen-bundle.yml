@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Dirty Dozen Bundle — Tier 2
-tier: 2
+name: The Dirty Dozen Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5760/
@@ -13,36 +15,72 @@ games:
 - name: Ropelike
   ids:
   - unresolved:source:isthereanydeal:5760:ropelike
+  requires: []
+  tiers:
+  - 2
 - name: The Under
   ids:
   - unresolved:source:isthereanydeal:5760:the-under
+  requires: []
+  tiers:
+  - 2
 - name: Operation Antiterror
   ids:
   - unresolved:source:isthereanydeal:5760:operation-antiterror
+  requires: []
+  tiers:
+  - 2
 - name: SK8
   ids:
   - unresolved:source:isthereanydeal:5760:sk8
+  requires: []
+  tiers:
+  - 2
 - name: Warlock Revenge
   ids:
   - unresolved:source:isthereanydeal:5760:warlock-revenge
+  requires: []
+  tiers:
+  - 2
 - name: Purple Heart
   ids:
   - steam:745370
+  requires: []
+  tiers:
+  - 2
 - name: sWORD MASTER
   ids:
   - steam:698980
+  requires: []
+  tiers:
+  - 2
 - name: The Mystery Room
   ids:
   - steam:727060
+  requires: []
+  tiers:
+  - 2
 - name: Lost Home
   ids:
   - steam:728020
+  requires: []
+  tiers:
+  - 2
 - name: Your Bunny Wrote
   ids:
   - unresolved:source:isthereanydeal:5760:your-bunny-wrote
+  requires: []
+  tiers:
+  - 2
 - name: Awesome Machine
   ids:
   - steam:626160
+  requires: []
+  tiers:
+  - 2
 - name: Heroes of Myths - Warriors of Gods
   ids:
   - steam:680100
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Yrminsul Debut Bundle — Tier 2
-tier: 2
+name: The Yrminsul Debut Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3118/
@@ -13,24 +15,48 @@ games:
 - name: Finding Teddy
   ids:
   - steam:259600
+  requires: []
+  tiers:
+  - 2
 - name: 'Ethan: Meteor Hunter'
   ids:
   - steam:266330
+  requires: []
+  tiers:
+  - 2
 - name: Legends of Persia
   ids:
   - steam:301220
+  requires: []
+  tiers:
+  - 2
 - name: "Freaking Meatbags \x96"
   ids:
   - steam:297060
+  requires: []
+  tiers:
+  - 2
 - name: Mechanic Escape
   ids:
   - steam:268240
+  requires: []
+  tiers:
+  - 2
 - name: Yrminsul
   ids:
   - steam:412490
+  requires: []
+  tiers:
+  - 2
 - name: Sleep Attack
   ids:
   - steam:366210
+  requires: []
+  tiers:
+  - 2
 - name: The Next Penelope
   ids:
   - steam:332250
+  requires: []
+  tiers:
+  - 2

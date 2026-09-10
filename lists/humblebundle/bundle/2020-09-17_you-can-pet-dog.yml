@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble You Can Pet The Dog Bundle — entire-9-item-bundle
-tier: 3
+name: Humble You Can Pet The Dog Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9169/
@@ -13,27 +15,54 @@ games:
 - name: Scribblenauts Unlimited
   ids:
   - steam:218680
+  requires: []
+  tiers:
+  - 3
 - name: Bulb Boy
   ids:
   - steam:390290
+  requires: []
+  tiers:
+  - 3
 - name: Dog Sled Saga
   ids:
   - steam:286240
+  requires: []
+  tiers:
+  - 3
 - name: Bulb Boy - Soundtrack Remastered
   ids:
   - steam:497010
+  requires: []
+  tiers:
+  - 3
 - name: Beyond Eyes
   ids:
   - unresolved:source:isthereanydeal:9169:beyond-eyes
+  requires: []
+  tiers:
+  - 3
 - name: Shenmue I & II
   ids:
   - steam:758330
+  requires: []
+  tiers:
+  - 3
 - name: Where the Water Tastes Like Wine
   ids:
   - steam:447120
+  requires: []
+  tiers:
+  - 3
 - name: 'Death''s Gambit: Afterlife'
   ids:
   - steam:356650
+  requires: []
+  tiers:
+  - 3
 - name: Blair Witch
   ids:
   - steam:1092660
+  requires: []
+  tiers:
+  - 3

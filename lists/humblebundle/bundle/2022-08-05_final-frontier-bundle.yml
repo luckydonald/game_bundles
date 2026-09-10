@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Final Frontier Bundle — entire-19-item-bundle
-tier: 3
+name: Final Frontier Bundle
+tiers:
+- rank: 3
+  name: entire-19-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11920/
@@ -13,57 +15,114 @@ games:
 - name: Defy Gravity Extended
   ids:
   - steam:96100
+  requires: []
+  tiers:
+  - 3
 - name: EVERSPACE™ - Upgrade to Deluxe Edition
   ids:
   - steam:688700
+  requires: []
+  tiers:
+  - 3
 - name: 'Starpoint Gemini Warlords: Deadly Dozen'
   ids:
   - steam:649280
+  requires: []
+  tiers:
+  - 3
 - name: Starpoint Gemini Warlords
   ids:
   - steam:419480
+  requires: []
+  tiers:
+  - 3
 - name: EVERSPACE™
   ids:
   - steam:396750
+  requires: []
+  tiers:
+  - 3
 - name: Deep Space Battle Simulator
   ids:
   - steam:1055610
+  requires: []
+  tiers:
+  - 3
 - name: EVERSPACE™ - Encounters
   ids:
   - steam:709150
+  requires: []
+  tiers:
+  - 3
 - name: Starpoint Gemini Warlords - Upgrade to Digital Deluxe
   ids:
   - steam:639570
+  requires: []
+  tiers:
+  - 3
 - name: 'Starpoint Gemini Warlords: Rise of Numibia'
   ids:
   - steam:715940
+  requires: []
+  tiers:
+  - 3
 - name: 'Starpoint Gemini Warlords: Cycle of Warfare'
   ids:
   - steam:715920
+  requires: []
+  tiers:
+  - 3
 - name: 'Starpoint Gemini Warlords: Titans Return'
   ids:
   - steam:677900
+  requires: []
+  tiers:
+  - 3
 - name: 'Starpoint Gemini Warlords: Endpoint'
   ids:
   - steam:899130
+  requires: []
+  tiers:
+  - 3
 - name: Battlestar Galactica Deadlock
   ids:
   - unresolved:source:isthereanydeal:11920:battlestar-galactica-deadlock
+  requires: []
+  tiers:
+  - 3
 - name: 'Battlestar Galactica Deadlock: Reinforcement Pack'
   ids:
   - unresolved:source:isthereanydeal:11920:battlestar-galactica-deadlock-reinforcement-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Battlestar Galactica Deadlock: Sin & Sacrifice'
   ids:
   - unresolved:source:isthereanydeal:11920:battlestar-galactica-deadlock-sin-and-sacrifice
+  requires: []
+  tiers:
+  - 3
 - name: Per Aspera
   ids:
   - steam:803050
+  requires: []
+  tiers:
+  - 3
 - name: 'Battlestar Galactica Deadlock: Anabasis'
   ids:
   - unresolved:source:isthereanydeal:11920:battlestar-galactica-deadlock-anabasis
+  requires: []
+  tiers:
+  - 3
 - name: 'Battlestar Galactica Deadlock: The Broken Alliance'
   ids:
   - unresolved:source:isthereanydeal:11920:battlestar-galactica-deadlock-the-broken-alliance
+  requires: []
+  tiers:
+  - 3
 - name: Godlike Burger
   ids:
   - steam:1432910
+  requires: []
+  tiers:
+  - 3

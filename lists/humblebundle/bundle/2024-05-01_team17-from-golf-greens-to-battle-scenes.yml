@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Team17: From Gold Greens to Battle Scenes Bundle — entire-8-item-bundle'
-tier: 4
+name: 'Team17: From Gold Greens to Battle Scenes Bundle'
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14019/
@@ -13,24 +15,48 @@ games:
 - name: Moving Out
   ids:
   - steam:996770
+  requires: []
+  tiers:
+  - 4
 - name: Golf With Your Friends
   ids:
   - steam:431240
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists 2
   ids:
   - steam:641990
+  requires: []
+  tiers:
+  - 4
 - name: Worms W.M.D
   ids:
   - steam:327030
+  requires: []
+  tiers:
+  - 4
 - name: Neon Abyss Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:14019:neon-abyss-deluxe-edition
+  requires: []
+  tiers:
+  - 4
 - name: Gord
   ids:
   - steam:1351210
+  requires: []
+  tiers:
+  - 4
 - name: 'Headbangers: Rhythm Royale'
   ids:
   - steam:1761620
+  requires: []
+  tiers:
+  - 4
 - name: Trepang2
   ids:
   - steam:1164940
+  requires: []
+  tiers:
+  - 4

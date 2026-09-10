@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capsule Computers Bundle — Beat The Average
-tier: 2
+name: Capsule Computers Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/381/
@@ -13,15 +15,30 @@ games:
 - name: Power of Defense
   ids:
   - steam:60700
+  requires: []
+  tiers:
+  - 2
 - name: Tommy Tronic
   ids:
   - steam:41660
+  requires: []
+  tiers:
+  - 2
 - name: Residue
   ids:
   - unresolved:source:isthereanydeal:381:residue
+  requires: []
+  tiers:
+  - 2
 - name: 'Uprising44: The Silent Shadows'
   ids:
   - steam:280380
+  requires: []
+  tiers:
+  - 2
 - name: Spaceforce Constellations
   ids:
   - steam:263800
+  requires: []
+  tiers:
+  - 2

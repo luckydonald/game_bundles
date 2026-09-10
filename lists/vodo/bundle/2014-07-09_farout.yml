@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mindblowingest Bundle — Tier 3
-tier: 3
+name: The Mindblowingest Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/971/
@@ -13,15 +15,30 @@ games:
 - name: "Ampu\x96tea"
   ids:
   - steam:289090
+  requires: []
+  tiers:
+  - 3
 - name: Q.U.B.E.
   ids:
   - unresolved:source:isthereanydeal:971:q-u-b-e
+  requires: []
+  tiers:
+  - 3
 - name: 'Q.U.B.E: Director''s Cut'
   ids:
   - unresolved:source:isthereanydeal:971:q-u-b-e-directors-cut
+  requires: []
+  tiers:
+  - 3
 - name: Cubetractor
   ids:
   - steam:235720
+  requires: []
+  tiers:
+  - 3
 - name: Dustforce DX
   ids:
   - steam:65300
+  requires: []
+  tiers:
+  - 3

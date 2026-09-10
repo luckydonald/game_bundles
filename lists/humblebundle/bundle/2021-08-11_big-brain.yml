@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Big Brain Bundle — entire-8-item-bundle
-tier: 3
+name: Big Brain Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10343/
@@ -13,24 +15,48 @@ games:
 - name: No Time to Relax
   ids:
   - steam:829660
+  requires: []
+  tiers:
+  - 3
 - name: 'I am not a Monster: First Contact'
   ids:
   - steam:826600
+  requires: []
+  tiers:
+  - 3
 - name: The Battle of Polytopia
   ids:
   - steam:874390
+  requires: []
+  tiers:
+  - 3
 - name: 7 Billion Humans
   ids:
   - steam:792100
+  requires: []
+  tiers:
+  - 3
 - name: 5D Chess With Multiverse Time Travel
   ids:
   - steam:1349230
+  requires: []
+  tiers:
+  - 3
 - name: XCOM 2
   ids:
   - steam:268500
+  requires: []
+  tiers:
+  - 3
 - name: 'XCOM 2: Reinforcement Pack'
   ids:
   - steam:426321
+  requires: []
+  tiers:
+  - 3
 - name: BATTLETECH
   ids:
   - steam:637090
+  requires: []
+  tiers:
+  - 3

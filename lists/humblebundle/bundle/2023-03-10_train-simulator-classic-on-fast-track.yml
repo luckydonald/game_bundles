@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Train Simulator Classic: On the Fast Track Bundle — entire-23-item-bundle'
-tier: 3
+name: 'Train Simulator Classic: On the Fast Track Bundle'
+tiers:
+- rank: 3
+  name: entire-23-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13049/
@@ -13,72 +15,141 @@ games:
 - name: 'Train Simulator: DB BR 204 Loco Add-On'
   ids:
   - steam:1098161
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Norfolk Southern Coal District'
   ids:
   - steam:258654
+  requires: []
+  tiers:
+  - 3
 - name: London Faversham High Speed
   ids:
   - steam:222557
+  requires: []
+  tiers:
+  - 3
 - name: European Loco & Asset Pack
   ids:
   - steam:208300
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Sherman Hill'
   ids:
   - steam:208286
+  requires: []
+  tiers:
+  - 3
 - name: Train Simulator Classic
   ids:
   - unresolved:source:isthereanydeal:13049:train-simulator-classic
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: London to Brighton'
   ids:
   - steam:208280
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Portsmouth Direct Line: London Waterloo - Portsmouth Route
     Add-On'
   ids:
   - steam:820203
+  requires: []
+  tiers:
+  - 3
 - name: The Riviera Line - Exeter - Paignton
   ids:
   - steam:222632
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Inselbahn: Stralsund - Sassnitz Route Add-On'
   ids:
   - steam:967287
+  requires: []
+  tiers:
+  - 3
 - name: South London Network
   ids:
   - unresolved:source:isthereanydeal:13049:south-london-network
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: MRCE Dispolok Pack Loco Add-On'
   ids:
   - steam:642800
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Norfolk Southern N-Line Route Add-On'
   ids:
   - steam:980548
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Granger Heartland: Kansas City - Topeka Route Add-On'
   ids:
   - steam:1107812
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Clinchfield Railroad: Elkhorn City - St. Paul Route Add-On'
   ids:
   - steam:1230271
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Clinchfield Railroad U36C Loco Add-On'
   ids:
   - steam:1267503
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Frankfurt - Koblenz Route Add-On'
   ids:
   - steam:1267507
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Northeast Corridor: Washington DC - Baltimore Route Add-On'
   ids:
   - steam:1429754
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Birmingham Cross City Line: Lichfield - Bromsgrove & Redditch
     Route Add-On'
   ids:
   - steam:1515063
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Bahnstrecke Strasbourg - Karlsruhe Route Add-On'
   ids:
   - steam:1637257
+  requires: []
+  tiers:
+  - 3
 - name: 'Chatham Main Line: London Victoria & Blackfriars - Dover & Ramsgate Route
     Add-On'
   ids:
   - steam:1717657
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: North Wales Coast Line: Crewe - Holyhead Route Add-On'
   ids:
   - steam:1804511
+  requires: []
+  tiers:
+  - 3
 - name: 'Train Simulator: Long Island Rail Road: New York - Hicksville Route Add-On'
   ids:
   - steam:1922043
+  requires: []
+  tiers:
+  - 3

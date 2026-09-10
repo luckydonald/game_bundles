@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Maximum Entertainment: Full Send Bundle! — 11 item bundle'
-tier: 3
+name: 'Maximum Entertainment: Full Send Bundle!'
+tiers:
+- rank: 3
+  name: 11 item bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15639/
@@ -13,33 +15,66 @@ games:
 - name: Sclash
   ids:
   - steam:1284130
+  requires: []
+  tiers:
+  - 3
 - name: 'Bramble: The Mountain King'
   ids:
   - steam:1623940
+  requires: []
+  tiers:
+  - 3
 - name: In Nightmare
   ids:
   - steam:1817290
+  requires: []
+  tiers:
+  - 3
 - name: Afterimage
   ids:
   - steam:1701520
+  requires: []
+  tiers:
+  - 3
 - name: Hammerwatch Anniversary Edition
   ids:
   - steam:1905530
+  requires: []
+  tiers:
+  - 3
 - name: In Sound Mind
   ids:
   - steam:1119980
+  requires: []
+  tiers:
+  - 3
 - name: Soulstice
   ids:
   - steam:1602080
+  requires: []
+  tiers:
+  - 3
 - name: Hammerwatch II
   ids:
   - steam:1538970
+  requires: []
+  tiers:
+  - 3
 - name: SunnySide
   ids:
   - steam:1746930
+  requires: []
+  tiers:
+  - 3
 - name: 'Double Dragon Gaiden: Rise Of The Dragons'
   ids:
   - steam:1967260
+  requires: []
+  tiers:
+  - 3
 - name: 'Morbid: The Lords of Ire'
   ids:
   - steam:2171560
+  requires: []
+  tiers:
+  - 3

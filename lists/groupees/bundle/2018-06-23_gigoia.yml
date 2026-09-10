@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Gigoia Studios Bundle — Tier 2
-tier: 2
+name: Gigoia Studios Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6264/
@@ -13,39 +15,78 @@ games:
 - name: IMPRESSIONISTa - Water Lilies
   ids:
   - unresolved:source:isthereanydeal:6264:impressionista-water-lilies
+  requires: []
+  tiers:
+  - 2
 - name: IMPRESSIONISTa - WINDMILLS
   ids:
   - unresolved:source:isthereanydeal:6264:impressionista-windmills
+  requires: []
+  tiers:
+  - 2
 - name: SURREALISTa
   ids:
   - unresolved:source:isthereanydeal:6264:surrealista
+  requires: []
+  tiers:
+  - 2
 - name: Sky Blue
   ids:
   - unresolved:source:isthereanydeal:6264:sky-blue
+  requires: []
+  tiers:
+  - 2
 - name: SONIC CYAN HEXAGON
   ids:
   - unresolved:source:isthereanydeal:6264:sonic-cyan-hexagon
+  requires: []
+  tiers:
+  - 2
 - name: FACES Virtual Art Gallery
   ids:
   - unresolved:source:isthereanydeal:6264:faces-virtual-art-gallery
+  requires: []
+  tiers:
+  - 2
 - name: A HAPPENING AT THE WOODS
   ids:
   - unresolved:source:isthereanydeal:6264:a-happening-at-the-woods
+  requires: []
+  tiers:
+  - 2
 - name: FAUVISTa - Sailboats
   ids:
   - unresolved:source:isthereanydeal:6264:fauvista-sailboats
+  requires: []
+  tiers:
+  - 2
 - name: STRUCTUS
   ids:
   - unresolved:source:isthereanydeal:6264:structus
+  requires: []
+  tiers:
+  - 2
 - name: MAZES OF OGGLAR
   ids:
   - unresolved:source:isthereanydeal:6264:mazes-of-ogglar
+  requires: []
+  tiers:
+  - 2
 - name: GOLDAK
   ids:
   - unresolved:source:isthereanydeal:6264:goldak
+  requires: []
+  tiers:
+  - 2
 - name: STRUCTUS Lo-Fi Edition
   ids:
   - unresolved:source:isthereanydeal:6264:structus-lo-fi-edition
+  requires: []
+  tiers:
+  - 2
 - name: ZORKRON 1998 Edition
   ids:
   - unresolved:source:isthereanydeal:6264:zorkron-1998-edition
+  requires: []
+  tiers:
+  - 2

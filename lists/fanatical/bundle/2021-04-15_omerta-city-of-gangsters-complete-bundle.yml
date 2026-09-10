@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Omerta: City of Gangsters Complete Bundle — Tier 2'
-tier: 2
+name: 'Omerta: City of Gangsters Complete Bundle'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9931/
@@ -13,15 +15,30 @@ games:
 - name: Omerta City of Gangsters
   ids:
   - steam:208520
+  requires: []
+  tiers:
+  - 2
 - name: 'Omerta: City of Gangsters The Con Artist'
   ids:
   - steam:215370
+  requires: []
+  tiers:
+  - 2
 - name: 'Omerta: City of Gangsters: The Arms Industry'
   ids:
   - steam:215372
+  requires: []
+  tiers:
+  - 2
 - name: Omerta City of Gangsters - The Japanese Incentive
   ids:
   - unresolved:source:isthereanydeal:9931:omerta-city-of-gangsters-the-japanese-incentive
+  requires: []
+  tiers:
+  - 2
 - name: 'Omerta: City of Gangsters - Damsel in Distress'
   ids:
   - steam:215371
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Adrenaline Rush Bundle — entire-11-item-bundle
-tier: 3
+name: Adrenaline Rush Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10655/
@@ -13,33 +15,66 @@ games:
 - name: 'Lead and Gold: Gangs of the Wild West'
   ids:
   - steam:42120
+  requires: []
+  tiers:
+  - 3
 - name: Miscreated
   ids:
   - steam:299740
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing - Cygon Garage Kit'
   ids:
   - unresolved:source:isthereanydeal:10655:grip-combat-racing-cygon-garage-kit
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing - Nyvoss Garage Kit'
   ids:
   - steam:942353
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing - Vintek Garage Pack'
   ids:
   - unresolved:source:isthereanydeal:10655:grip-combat-racing-vintek-garage-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing'
   ids:
   - steam:396900
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing - Terra Garage Pack'
   ids:
   - unresolved:source:isthereanydeal:10655:grip-combat-racing-terra-garage-pack
+  requires: []
+  tiers:
+  - 3
 - name: Keep Talking and Nobody Explodes
   ids:
   - steam:341800
+  requires: []
+  tiers:
+  - 3
 - name: Visage
   ids:
   - steam:594330
+  requires: []
+  tiers:
+  - 3
 - name: BIGFOOT
   ids:
   - steam:509980
+  requires: []
+  tiers:
+  - 3
 - name: Second Extinction
   ids:
   - unresolved:source:isthereanydeal:10655:second-extinction
+  requires: []
+  tiers:
+  - 3

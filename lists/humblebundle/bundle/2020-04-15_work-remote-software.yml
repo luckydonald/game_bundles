@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Software Bundle: Work Remote — entire-18-item-bundle'
-tier: 3
+name: 'Humble Software Bundle: Work Remote'
+tiers:
+- rank: 3
+  name: entire-18-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8679/
@@ -13,54 +15,108 @@ games:
 - name: King of Dragon Pass
   ids:
   - steam:352220
+  requires: []
+  tiers:
+  - 3
 - name: Parallels Access 1-Year Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:parallels-access-1-year-subscription
+  requires: []
+  tiers:
+  - 3
 - name: Evernote Premium 3-Month Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:evernote-premium-3-month-subscription
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Wolf - Fall of Kanak'
   ids:
   - unresolved:source:isthereanydeal:8679:warhammer-40000-space-wolf-fall-of-kanak
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Wolf'
   ids:
   - unresolved:source:isthereanydeal:8679:warhammer-40000-space-wolf
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Wolf - Sentry Gun Pack'
   ids:
   - unresolved:source:isthereanydeal:8679:warhammer-40000-space-wolf-sentry-gun-pack
+  requires: []
+  tiers:
+  - 3
 - name: Livedrive Backup 6-Month Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:livedrive-backup-6-month-subscription
+  requires: []
+  tiers:
+  - 3
 - name: Todoist Premium 3-Month Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:todoist-premium-3-month-subscription
+  requires: []
+  tiers:
+  - 3
 - name: Action! - Gameplay Recording & Streaming
   ids:
   - steam:228180
+  requires: []
+  tiers:
+  - 3
 - name: 'INSOMNIA: The Ark'
   ids:
   - steam:783170
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamfall: The Longest Journey'
   ids:
   - steam:6300
+  requires: []
+  tiers:
+  - 3
 - name: DisplayFusion
   ids:
   - steam:227260
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Wolf - Saga of the Great Awakening'
   ids:
   - unresolved:source:isthereanydeal:8679:warhammer-40000-space-wolf-saga-of-the-great-awakening
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Wolf - Sigurd Ironside'
   ids:
   - unresolved:source:isthereanydeal:8679:warhammer-40000-space-wolf-sigurd-ironside
+  requires: []
+  tiers:
+  - 3
 - name: Encrypt.me 1-Year Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:encrypt-me-1-year-subscription
+  requires: []
+  tiers:
+  - 3
 - name: WordPerfect Office X9 - Home & Student Edition
   ids:
   - unresolved:source:isthereanydeal:8679:wordperfect-office-x9-home-and-student-edition
+  requires: []
+  tiers:
+  - 3
 - name: Twisted Unlimited $100-$150 Credit
   ids:
   - unresolved:source:isthereanydeal:8679:twisted-unlimited-100-150-credit
+  requires: []
+  tiers:
+  - 3
 - name: 1Password Families & Teams 6-Month Subscription
   ids:
   - unresolved:source:isthereanydeal:8679:1password-families-and-teams-6-month-subscription
+  requires: []
+  tiers:
+  - 3

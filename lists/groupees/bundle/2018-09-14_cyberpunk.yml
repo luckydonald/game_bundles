@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Cyberpunk Bundle — Tier 2
-tier: 2
+name: Cyberpunk Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6457/
@@ -13,21 +15,42 @@ games:
 - name: Cyber-Chicken
   ids:
   - steam:339710
+  requires: []
+  tiers:
+  - 2
 - name: Tross
   ids:
   - steam:443850
+  requires: []
+  tiers:
+  - 2
 - name: Longest Journey, The
   ids:
   - unresolved:source:isthereanydeal:6457:longest-journey-the
+  requires: []
+  tiers:
+  - 2
 - name: Master Reboot
   ids:
   - steam:251850
+  requires: []
+  tiers:
+  - 2
 - name: 'Cypher: Cyberpunk Text Adventure'
   ids:
   - unresolved:source:isthereanydeal:6457:cypher-cyberpunk-text-adventure
+  requires: []
+  tiers:
+  - 2
 - name: Beat The Game
   ids:
   - steam:543100
+  requires: []
+  tiers:
+  - 2
 - name: Good Robot
   ids:
   - steam:358830
+  requires: []
+  tiers:
+  - 2

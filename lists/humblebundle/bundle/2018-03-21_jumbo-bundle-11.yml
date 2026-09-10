@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jumbo Bundle 11 — entire-11-item-bundle
-tier: 3
+name: Humble Jumbo Bundle 11
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5988/
@@ -13,33 +15,66 @@ games:
 - name: 'Kingdom: New Lands'
   ids:
   - steam:496300
+  requires: []
+  tiers:
+  - 3
 - name: Domina
   ids:
   - unresolved:source:isthereanydeal:5988:domina
+  requires: []
+  tiers:
+  - 3
 - name: 'Rusty Lake: Roots'
   ids:
   - steam:532110
+  requires: []
+  tiers:
+  - 3
 - name: 'Tropico 5: Waterborne'
   ids:
   - steam:284440
+  requires: []
+  tiers:
+  - 3
 - name: Tropico 5 - Espionage
   ids:
   - steam:284441
+  requires: []
+  tiers:
+  - 3
 - name: Flat Kingdom Paper's Cut Edition
   ids:
   - steam:405970
+  requires: []
+  tiers:
+  - 3
 - name: N++ (NPLUSPLUS)
   ids:
   - steam:230270
+  requires: []
+  tiers:
+  - 3
 - name: Kathy Rain
   ids:
   - steam:370910
+  requires: []
+  tiers:
+  - 3
 - name: 'Orwell: Keeping an Eye On You'
   ids:
   - steam:491950
+  requires: []
+  tiers:
+  - 3
 - name: Tropico 5
   ids:
   - steam:245620
+  requires: []
+  tiers:
+  - 3
 - name: Obduction
   ids:
   - steam:306760
+  requires: []
+  tiers:
+  - 3

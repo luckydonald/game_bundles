@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Gems Bundle — Pay $12 or more to also unlock
-tier: 3
+name: Humble Gems Bundle
+tiers:
+- rank: 3
+  name: Pay $12 or more to also unlock
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4249/
@@ -13,21 +15,42 @@ games:
 - name: Chroma Squad
   ids:
   - steam:251130
+  requires: []
+  tiers:
+  - 3
 - name: 'Odallus: The Dark Call'
   ids:
   - steam:319480
+  requires: []
+  tiers:
+  - 3
 - name: Technobabylon
   ids:
   - steam:307580
+  requires: []
+  tiers:
+  - 3
 - name: Spaera
   ids:
   - steam:487250
+  requires: []
+  tiers:
+  - 3
 - name: Assault Android Cactus+
   ids:
   - steam:250110
+  requires: []
+  tiers:
+  - 3
 - name: 'Westerado: Double Barreled'
   ids:
   - steam:275200
+  requires: []
+  tiers:
+  - 3
 - name: Unbox
   ids:
   - steam:512300
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Vault Bundle — Tier 2
-tier: 2
+name: Indie Vault Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6288/
@@ -13,36 +15,72 @@ games:
 - name: FIRST TELEGRAM WAR
   ids:
   - unresolved:source:isthereanydeal:6288:first-telegram-war
+  requires: []
+  tiers:
+  - 2
 - name: Maybe Drinking. Russian Style
   ids:
   - unresolved:source:isthereanydeal:6288:maybe-drinking-russian-style
+  requires: []
+  tiers:
+  - 2
 - name: HellCat
   ids:
   - steam:864860
+  requires: []
+  tiers:
+  - 2
 - name: R.O.V.E.R.
   ids:
   - unresolved:source:isthereanydeal:6288:r-o-v-e-r
+  requires: []
+  tiers:
+  - 2
 - name: Total Singu
   ids:
   - steam:856240
+  requires: []
+  tiers:
+  - 2
 - name: Revenge Quest
   ids:
   - steam:569130
+  requires: []
+  tiers:
+  - 2
 - name: Mushroom Quest
   ids:
   - steam:868230
+  requires: []
+  tiers:
+  - 2
 - name: 'Rogue Quest: The Vault of the Lost Tyrant'
   ids:
   - steam:728420
+  requires: []
+  tiers:
+  - 2
 - name: 'A Tale of Caos: Overture'
   ids:
   - steam:500320
+  requires: []
+  tiers:
+  - 2
 - name: Battle for Orion 2
   ids:
   - steam:564470
+  requires: []
+  tiers:
+  - 2
 - name: Blueprint Word
   ids:
   - steam:870180
+  requires: []
+  tiers:
+  - 2
 - name: Ripped Pants at Work
   ids:
   - steam:752550
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #71 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #71'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7221/
@@ -13,24 +15,48 @@ games:
 - name: Pew Pew Rocket
   ids:
   - unresolved:source:isthereanydeal:7221:pew-pew-rocket
+  requires: []
+  tiers:
+  - 2
 - name: The Behind -- The Beyond
   ids:
   - unresolved:source:isthereanydeal:7221:the-behind-the-beyond
+  requires: []
+  tiers:
+  - 2
 - name: Marble Skies
   ids:
   - steam:742460
+  requires: []
+  tiers:
+  - 2
 - name: Fumiko!
   ids:
   - steam:563810
+  requires: []
+  tiers:
+  - 2
 - name: Warhammer Quest
   ids:
   - steam:326670
+  requires: []
+  tiers:
+  - 2
 - name: The Inner Darkness
   ids:
   - steam:562160
+  requires: []
+  tiers:
+  - 2
 - name: Joggernauts
   ids:
   - steam:747620
+  requires: []
+  tiers:
+  - 2
 - name: 光之迷城 / Dawn of the Lost Castle
   ids:
   - steam:1018170
+  requires: []
+  tiers:
+  - 2

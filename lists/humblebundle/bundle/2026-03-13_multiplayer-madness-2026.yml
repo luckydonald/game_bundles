@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Multiplayer Madness 2026 Games Bundle — 10 Item Bundle
-tier: 2
+name: Multiplayer Madness 2026 Games Bundle
+tiers:
+- rank: 2
+  name: 10 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15959/
@@ -13,30 +15,60 @@ games:
 - name: Clone Drone in the Danger Zone
   ids:
   - steam:597170
+  requires: []
+  tiers:
+  - 2
 - name: Keep Talking and Nobody Explodes
   ids:
   - steam:341800
+  requires: []
+  tiers:
+  - 2
 - name: Party Club
   ids:
   - steam:2796010
+  requires: []
+  tiers:
+  - 2
 - name: Retail Company Simulator
   ids:
   - steam:3089130
+  requires: []
+  tiers:
+  - 2
 - name: Bogos Binted?
   ids:
   - steam:3588490
+  requires: []
+  tiers:
+  - 2
 - name: Shotgun Farmers
   ids:
   - steam:604240
+  requires: []
+  tiers:
+  - 2
 - name: RUNGORE
   ids:
   - steam:2113040
+  requires: []
+  tiers:
+  - 2
 - name: Phantom Squad
   ids:
   - steam:2841770
+  requires: []
+  tiers:
+  - 2
 - name: Fish Stick Protocol
   ids:
   - steam:3367500
+  requires: []
+  tiers:
+  - 2
 - name: 'Shotgun Farmers: Supporter Pack'
   ids:
   - steam:991920
+  requires: []
+  tiers:
+  - 2

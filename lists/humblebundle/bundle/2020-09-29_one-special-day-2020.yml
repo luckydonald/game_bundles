@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble One Special Day Bundle 2020 — entire-13-item-bundle
-tier: 3
+name: Humble One Special Day Bundle 2020
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9229/
@@ -13,39 +15,78 @@ games:
 - name: Smoke and Sacrifice
   ids:
   - steam:695100
+  requires: []
+  tiers:
+  - 3
 - name: 'Surgeon Simulator: Anniversary Edition'
   ids:
   - unresolved:source:isthereanydeal:9229:surgeon-simulator-anniversary-edition
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Celeste's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:9229:idle-champions-celestes-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Battlezone Gold Edition
   ids:
   - steam:312650
+  requires: []
+  tiers:
+  - 3
 - name: 'Stronghold 2: Steam Edition'
   ids:
   - steam:40960
+  requires: []
+  tiers:
+  - 3
 - name: Portal Knights
   ids:
   - steam:374040
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:9229:talisman-digital-edition
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The City Expansion
   ids:
   - steam:267784
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Sacred Pool Expansion
   ids:
   - steam:267781
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Frostmarch Expansion
   ids:
   - steam:267772
+  requires: []
+  tiers:
+  - 3
 - name: DiRT Rally 2.0
   ids:
   - steam:690790
+  requires: []
+  tiers:
+  - 3
 - name: Portal Knights - Elves, Rogues, and Rifts
   ids:
   - steam:1046050
+  requires: []
+  tiers:
+  - 3
 - name: Ogre
   ids:
   - steam:517780
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #55 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #55'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6081/
@@ -13,30 +15,60 @@ games:
 - name: Nimble Bunn
   ids:
   - unresolved:source:isthereanydeal:6081:nimble-bunn
+  requires: []
+  tiers:
+  - 2
 - name: Lines Infinite by Nestor Yavorskyy
   ids:
   - unresolved:source:isthereanydeal:6081:lines-infinite-by-nestor-yavorskyy
+  requires: []
+  tiers:
+  - 2
 - name: PUSH
   ids:
   - steam:676430
+  requires: []
+  tiers:
+  - 2
 - name: Divide
   ids:
   - steam:687270
+  requires: []
+  tiers:
+  - 2
 - name: 'Crazy Dreamz: Best Of'
   ids:
   - unresolved:source:isthereanydeal:6081:crazy-dreamz-best-of
+  requires: []
+  tiers:
+  - 2
 - name: Diabolic
   ids:
   - steam:801290
+  requires: []
+  tiers:
+  - 2
 - name: MINDCUBES - Inside the Twisted Gravity Puzzle
   ids:
   - unresolved:source:isthereanydeal:6081:mindcubes-inside-the-twisted-gravity-puzzle
+  requires: []
+  tiers:
+  - 2
 - name: 'Gladiator: Sword of Vengeance'
   ids:
   - steam:577580
+  requires: []
+  tiers:
+  - 2
 - name: Proxy - Ultimate Hacker
   ids:
   - steam:528860
+  requires: []
+  tiers:
+  - 2
 - name: Next Hero
   ids:
   - steam:756490
+  requires: []
+  tiers:
+  - 2

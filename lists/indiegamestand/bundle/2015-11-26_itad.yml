@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Planetary Annihilation PWYW — Beat the Average
-tier: 2
+name: Planetary Annihilation PWYW
+tiers:
+- rank: 2
+  name: Beat the Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2771/
@@ -13,6 +15,12 @@ games:
 - name: Planetary Annihilation
   ids:
   - unresolved:source:isthereanydeal:2771:planetary-annihilation
+  requires: []
+  tiers:
+  - 2
 - name: Planetary Annihilation - Digital Deluxe
   ids:
   - unresolved:source:isthereanydeal:2771:planetary-annihilation-digital-deluxe
+  requires: []
+  tiers:
+  - 2

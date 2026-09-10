@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Men of War Bundle — Tier 2
-tier: 2
+name: Men of War Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3193/
@@ -13,42 +15,84 @@ games:
 - name: 'Men of War: Assault Squad - Skirmish Pack 2'
   ids:
   - steam:64017
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad'
   ids:
   - steam:64000
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad - MP Supply Pack Alpha'
   ids:
   - steam:64005
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad - MP Supply Pack Charlie'
   ids:
   - steam:64016
+  requires: []
+  tiers:
+  - 2
 - name: Men of War
   ids:
   - steam:7830
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Vietnam'
   ids:
   - steam:63940
+  requires: []
+  tiers:
+  - 2
 - name: Men of War Condemned Heroes
   ids:
   - steam:204860
+  requires: []
+  tiers:
+  - 2
 - name: Men of War Red Tide
   ids:
   - steam:3130
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad - MP Supply Pack Bravo'
   ids:
   - steam:64014
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad - Skirmish Pack'
   ids:
   - steam:64013
+  requires: []
+  tiers:
+  - 2
 - name: "Men of War: Assault Squad 2 \x96"
   ids:
   - steam:244450
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad 2 - Deluxe Edition upgrade'
   ids:
   - steam:271850
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad 2 Iron Fist'
   ids:
   - steam:327130
+  requires: []
+  tiers:
+  - 2
 - name: 'Men of War: Assault Squad 2 - Airborne'
   ids:
   - steam:357760
+  requires: []
+  tiers:
+  - 2

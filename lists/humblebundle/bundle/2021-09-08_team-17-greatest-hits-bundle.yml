@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Team 17 Greatest Hits Bundle — entire-26-item-bundle
-tier: 4
+name: Team 17 Greatest Hits Bundle
+tiers:
+- rank: 4
+  name: entire-26-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10434/
@@ -13,78 +15,156 @@ games:
 - name: Overruled!
   ids:
   - steam:297740
+  requires: []
+  tiers:
+  - 4
 - name: Mugsters
   ids:
   - steam:712180
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists - Escape Team
   ids:
   - steam:376700
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists - Alcatraz
   ids:
   - steam:349350
+  requires: []
+  tiers:
+  - 4
 - name: Yooka-Laylee
   ids:
   - steam:360830
+  requires: []
+  tiers:
+  - 4
 - name: Overcooked - The Lost Morsel
   ids:
   - steam:530060
+  requires: []
+  tiers:
+  - 4
 - name: Yoku's Island Express
   ids:
   - steam:334940
+  requires: []
+  tiers:
+  - 4
 - name: Overcooked
   ids:
   - steam:448510
+  requires: []
+  tiers:
+  - 4
 - name: Worms Rumble
   ids:
   - steam:1186040
+  requires: []
+  tiers:
+  - 4
 - name: Worms Rumble - New Challengers Pack
   ids:
   - steam:1442620
+  requires: []
+  tiers:
+  - 4
 - name: Worms Rumble - Legends Pack
   ids:
   - steam:1440191
+  requires: []
+  tiers:
+  - 4
 - name: Flockers™
   ids:
   - steam:260330
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists
   ids:
   - steam:298630
+  requires: []
+  tiers:
+  - 4
 - name: Alien Breed™ Trilogy
   ids:
   - unresolved:source:isthereanydeal:10434:alien-breed-trilogy
+  requires: []
+  tiers:
+  - 4
 - name: Aven Colony
   ids:
   - steam:484900
+  requires: []
+  tiers:
+  - 4
 - name: Sheltered
   ids:
   - steam:356040
+  requires: []
+  tiers:
+  - 4
 - name: Ageless
   ids:
   - steam:1210150
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists - Duct Tapes are Forever
   ids:
   - steam:408730
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists 2 - Big Top Breakout
   ids:
   - steam:784930
+  requires: []
+  tiers:
+  - 4
 - name: Overcooked! 2
   ids:
   - steam:728880
+  requires: []
+  tiers:
+  - 4
 - name: The Escapists 2
   ids:
   - steam:641990
+  requires: []
+  tiers:
+  - 4
 - name: My Time At Portia
   ids:
   - steam:666140
+  requires: []
+  tiers:
+  - 4
 - name: Overcooked! 2 - Too Many Cooks Pack
   ids:
   - steam:858240
+  requires: []
+  tiers:
+  - 4
 - name: My Time At Portia - NPC Attire Package
   ids:
   - steam:1075041
+  requires: []
+  tiers:
+  - 4
 - name: Worms Rumble - Captain & Shark Double Pack
   ids:
   - steam:1490090
+  requires: []
+  tiers:
+  - 4
 - name: Worms Rumble - Armageddon Weapon Skin Pack
   ids:
   - steam:1490070
+  requires: []
+  tiers:
+  - 4

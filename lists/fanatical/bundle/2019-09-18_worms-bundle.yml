@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Worms Bundle — Tier 3
-tier: 3
+name: Worms Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7921/
@@ -13,33 +15,66 @@ games:
 - name: Worms Crazy Golf
   ids:
   - steam:70620
+  requires: []
+  tiers:
+  - 3
 - name: Worms Ultimate Mayhem
   ids:
   - steam:70600
+  requires: []
+  tiers:
+  - 3
 - name: Worms Blast
   ids:
   - steam:70650
+  requires: []
+  tiers:
+  - 3
 - name: Worms Pinball
   ids:
   - steam:70660
+  requires: []
+  tiers:
+  - 3
 - name: Worms
   ids:
   - steam:70640
+  requires: []
+  tiers:
+  - 3
 - name: Worms Ultimate Mayhem - Customisation Pack
   ids:
   - unresolved:source:isthereanydeal:7921:worms-ultimate-mayhem-customisation-pack
+  requires: []
+  tiers:
+  - 3
 - name: Worms Ultimate Mayhem - Multiplayer Pack
   ids:
   - steam:70616
+  requires: []
+  tiers:
+  - 3
 - name: Worms Armageddon
   ids:
   - steam:217200
+  requires: []
+  tiers:
+  - 3
 - name: Worms Reloaded
   ids:
   - steam:22600
+  requires: []
+  tiers:
+  - 3
 - name: Worms World Party Remastered
   ids:
   - steam:270910
+  requires: []
+  tiers:
+  - 3
 - name: Worms Clan Wars
   ids:
   - steam:233840
+  requires: []
+  tiers:
+  - 3

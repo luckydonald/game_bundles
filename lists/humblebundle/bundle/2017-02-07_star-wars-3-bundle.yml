@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Star Wars Humble Bundle 3 — entire-14-item-bundle
-tier: 3
+name: Star Wars Humble Bundle 3
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4734/
@@ -13,42 +15,84 @@ games:
 - name: 'Star Wars: Knights of the Old Republic'
   ids:
   - steam:32370
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS® X-Wing vs TIE Fighter + Balance of Power
   ids:
   - steam:361690
+  requires: []
+  tiers:
+  - 3
 - name: 'STAR WARS™: X-Wing Alliance™'
   ids:
   - steam:361670
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS™ Galactic Battlegrounds Saga
   ids:
   - steam:356500
+  requires: []
+  tiers:
+  - 3
 - name: 'STAR WARS™: REBEL ASSAULT 1 + 2'
   ids:
   - steam:456540
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Wars®: Jedi Knight® II: Jedi Outcast™'
   ids:
   - steam:6030
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS™ Knights of the Old Republic™ II - The Sith Lords™
   ids:
   - steam:208580
+  requires: []
+  tiers:
+  - 3
 - name: Star Wars Starfighter™
   ids:
   - steam:32350
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS™ Battlefront II (Classic, 2005)
   ids:
   - steam:6060
+  requires: []
+  tiers:
+  - 3
 - name: 'STAR WARS™: Rogue Squadron 3D'
   ids:
   - steam:455910
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Wars: The Force Unleashed: Ultimate Sith Edition'
   ids:
   - steam:32430
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS® THE FORCE UNLEASHED II
   ids:
   - steam:32500
+  requires: []
+  tiers:
+  - 3
 - name: STAR WARS™ Shadows of the Empire™
   ids:
   - steam:560170
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Wars® Empire at War™: Gold Pack'
   ids:
   - steam:32470
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: JAST USA Visual Novel Bundle — Tier 3
-tier: 3
+name: JAST USA Visual Novel Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2757/
@@ -13,18 +15,36 @@ games:
 - name: The Sagara Family
   ids:
   - unresolved:source:isthereanydeal:2757:the-sagara-family
+  requires: []
+  tiers:
+  - 3
 - name: Yo-Jin-Bo ~ The Bodyguards
   ids:
   - unresolved:source:isthereanydeal:2757:yo-jin-bo-the-bodyguards
+  requires: []
+  tiers:
+  - 3
 - name: My Girlfriend Is The President
   ids:
   - unresolved:source:isthereanydeal:2757:my-girlfriend-is-the-president
+  requires: []
+  tiers:
+  - 3
 - name: Cosplay Fetish Academy
   ids:
   - unresolved:source:isthereanydeal:2757:cosplay-fetish-academy
+  requires: []
+  tiers:
+  - 3
 - name: Moero Downhill Night
   ids:
   - unresolved:source:isthereanydeal:2757:moero-downhill-night
+  requires: []
+  tiers:
+  - 3
 - name: School Days HQ
   ids:
   - unresolved:source:isthereanydeal:2757:school-days-hq
+  requires: []
+  tiers:
+  - 3

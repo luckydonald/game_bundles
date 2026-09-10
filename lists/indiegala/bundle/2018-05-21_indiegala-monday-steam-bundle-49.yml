@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #49 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #49'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6154/
@@ -13,33 +15,66 @@ games:
 - name: Gear Path
   ids:
   - steam:764470
+  requires: []
+  tiers:
+  - 2
 - name: Blitz Breaker
   ids:
   - steam:416110
+  requires: []
+  tiers:
+  - 2
 - name: Cube Zone
   ids:
   - steam:834380
+  requires: []
+  tiers:
+  - 2
 - name: Strangers of the Power
   ids:
   - steam:683760
+  requires: []
+  tiers:
+  - 2
 - name: The Rare Nine
   ids:
   - steam:726800
+  requires: []
+  tiers:
+  - 2
 - name: Adventures of Dragon
   ids:
   - steam:770370
+  requires: []
+  tiers:
+  - 2
 - name: Starblast
   ids:
   - steam:673260
+  requires: []
+  tiers:
+  - 2
 - name: Cleansuit
   ids:
   - steam:729300
+  requires: []
+  tiers:
+  - 2
 - name: Super Man Or Monster
   ids:
   - steam:393220
+  requires: []
+  tiers:
+  - 2
 - name: 'Star Fleet Armada: Rogue Adventures'
   ids:
   - steam:459610
+  requires: []
+  tiers:
+  - 2
 - name: GLO - Difficult Indie Platformer
   ids:
   - steam:711550
+  requires: []
+  tiers:
+  - 2

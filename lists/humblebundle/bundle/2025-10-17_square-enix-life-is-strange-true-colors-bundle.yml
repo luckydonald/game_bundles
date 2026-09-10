@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Square Enix - Life is Strange True Colors Bundle — entire-3-item-bundle
-tier: 3
+name: Square Enix - Life is Strange True Colors Bundle
+tiers:
+- rank: 3
+  name: entire-3-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15501/
@@ -13,9 +15,18 @@ games:
 - name: Life is Strange Remastered Collection
   ids:
   - unresolved:source:isthereanydeal:15501:life-is-strange-remastered-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Life is Strange: True Colors'
   ids:
   - steam:936790
+  requires: []
+  tiers:
+  - 3
 - name: 'Life is Strange: True Colors Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:15501:life-is-strange-true-colors-deluxe-edition
+  requires: []
+  tiers:
+  - 3

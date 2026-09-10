@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Hope for Orphans Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Hope for Orphans Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5794/
@@ -13,30 +15,60 @@ games:
 - name: Killing Floor
   ids:
   - steam:1250
+  requires: []
+  tiers:
+  - 3
 - name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm'
   ids:
   - steam:35450
+  requires: []
+  tiers:
+  - 3
 - name: 'IL-2 Sturmovik™: 1946'
   ids:
   - steam:15320
+  requires: []
+  tiers:
+  - 3
 - name: BLACKHOLE
   ids:
   - steam:322680
+  requires: []
+  tiers:
+  - 3
 - name: 'Homefront®: The Revolution'
   ids:
   - steam:223100
+  requires: []
+  tiers:
+  - 3
 - name: King's Bounty Platinum Edition
   ids:
   - unresolved:source:isthereanydeal:5794:kings-bounty-platinum-edition
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2
   ids:
   - steam:232090
+  requires: []
+  tiers:
+  - 3
 - name: Call to Arms - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:5794:call-to-arms-deluxe-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam'
   ids:
   - steam:418460
+  requires: []
+  tiers:
+  - 3
 - name: Call to Arms
   ids:
   - steam:302670
+  requires: []
+  tiers:
+  - 3

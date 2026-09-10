@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bundle's Best of 2016 — $10 or more
-tier: 3
+name: Humble Bundle's Best of 2016
+tiers:
+- rank: 3
+  name: $10 or more
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4645/
@@ -13,21 +15,42 @@ games:
 - name: Else Heart.Break()
   ids:
   - steam:400110
+  requires: []
+  tiers:
+  - 3
 - name: Victor Vran
   ids:
   - steam:345180
+  requires: []
+  tiers:
+  - 3
 - name: Evoland 2
   ids:
   - steam:359310
+  requires: []
+  tiers:
+  - 3
 - name: Stronghold Crusader 2
   ids:
   - steam:232890
+  requires: []
+  tiers:
+  - 3
 - name: Rust
   ids:
   - steam:252490
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Hong Kong - Extended Edition
   ids:
   - steam:346940
+  requires: []
+  tiers:
+  - 3
 - name: Homeworld Remastered Collection
   ids:
   - steam:244160
+  requires: []
+  tiers:
+  - 3

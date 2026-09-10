@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 6 — Tier 2
-tier: 2
+name: Be Mine 6
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/187/
@@ -13,36 +15,72 @@ games:
 - name: Ceville
   ids:
   - steam:23460
+  requires: []
+  tiers:
+  - 2
 - name: Paranormal
   ids:
   - steam:246300
+  requires: []
+  tiers:
+  - 2
 - name: Enclave Gold Edition
   ids:
   - unresolved:source:isthereanydeal:187:enclave-gold-edition
+  requires: []
+  tiers:
+  - 2
 - name: Men of War Condemned Heroes
   ids:
   - steam:204860
+  requires: []
+  tiers:
+  - 2
 - name: 'Cyber-Chicken: Episode 1'
   ids:
   - unresolved:source:isthereanydeal:187:cyber-chicken-episode-1
+  requires: []
+  tiers:
+  - 2
 - name: Rico - A Tale Of Two Brothers
   ids:
   - unresolved:source:isthereanydeal:187:rico-a-tale-of-two-brothers
+  requires: []
+  tiers:
+  - 2
 - name: 'Eschalon: Book I'
   ids:
   - steam:25600
+  requires: []
+  tiers:
+  - 2
 - name: Dawn of Fantasy
   ids:
   - unresolved:source:isthereanydeal:187:dawn-of-fantasy
+  requires: []
+  tiers:
+  - 2
 - name: Earth 2160
   ids:
   - steam:1900
+  requires: []
+  tiers:
+  - 2
 - name: Gorky 17
   ids:
   - steam:253920
+  requires: []
+  tiers:
+  - 2
 - name: Worms Reloaded
   ids:
   - steam:22600
+  requires: []
+  tiers:
+  - 2
 - name: Two Worlds Epic Edition
   ids:
   - steam:1930
+  requires: []
+  tiers:
+  - 2

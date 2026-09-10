@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Fever — Tier 2
-tier: 2
+name: Indie Fever
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5402/
@@ -13,36 +15,72 @@ games:
 - name: 'Laseronium: Over The Line'
   ids:
   - unresolved:source:isthereanydeal:5402:laseronium-over-the-line
+  requires: []
+  tiers:
+  - 2
 - name: Mad Muzzles
   ids:
   - unresolved:source:isthereanydeal:5402:mad-muzzles
+  requires: []
+  tiers:
+  - 2
 - name: A Long Road Home
   ids:
   - steam:576160
+  requires: []
+  tiers:
+  - 2
 - name: Runaway Train
   ids:
   - steam:615080
+  requires: []
+  tiers:
+  - 2
 - name: Slap The Fly
   ids:
   - steam:543030
+  requires: []
+  tiers:
+  - 2
 - name: Mr. Rabbit's Alphabet Forest Adventure
   ids:
   - steam:652390
+  requires: []
+  tiers:
+  - 2
 - name: VThree
   ids:
   - steam:567320
+  requires: []
+  tiers:
+  - 2
 - name: Solitaire - Cat Pirate Portrait
   ids:
   - steam:666800
+  requires: []
+  tiers:
+  - 2
 - name: Golden Fever
   ids:
   - unresolved:source:isthereanydeal:5402:golden-fever
+  requires: []
+  tiers:
+  - 2
 - name: The Revenge of Johnny Bonasera
   ids:
   - steam:536430
+  requires: []
+  tiers:
+  - 2
 - name: Airon Ball
   ids:
   - unresolved:source:isthereanydeal:5402:airon-ball
+  requires: []
+  tiers:
+  - 2
 - name: Spider Wars
   ids:
   - steam:454580
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Gearbox Collection — Legendary
-tier: 3
+name: The Gearbox Collection
+tiers:
+- rank: 3
+  name: Legendary
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16447/
@@ -14,27 +16,48 @@ games:
   ids:
   - steam:729040
   - isthereanydeal:borderlands-game-of-the-year-enhanced
+  requires: []
+  tiers:
+  - 3
 - name: Tribes of Midgard
   ids:
   - steam:858820
   - isthereanydeal:tribes-of-midgard
+  requires: []
+  tiers:
+  - 3
 - name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
   ids:
   - unresolved:source:isthereanydeal:16447:tiny-tinas-wonderlands-chaotic-great-edition
   - isthereanydeal:tiny-tinas-wonderlands-chaotic-great-edition
+  requires: []
+  tiers:
+  - 3
 - name: Blanc
   ids:
   - steam:1982340
   - isthereanydeal:blanc
+  requires: []
+  tiers:
+  - 3
 - name: Risk of Rain Returns
   ids:
   - steam:1337520
   - isthereanydeal:risk-of-rain-returns
+  requires: []
+  tiers:
+  - 3
 - name: Borderlands 3 Ultimate Edition
   ids:
   - unresolved:source:isthereanydeal:16447:borderlands-3-ultimate-edition
   - isthereanydeal:borderlands-3-ultimate-edition
+  requires: []
+  tiers:
+  - 3
 - name: Homeworld 3
   ids:
   - steam:1840080
   - isthereanydeal:homeworld-3
+  requires: []
+  tiers:
+  - 3

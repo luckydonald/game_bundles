@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Stellar Bundle — Tier 2
-tier: 2
+name: Indie Stellar Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6098/
@@ -13,33 +15,66 @@ games:
 - name: Sudoku Zenkai
   ids:
   - steam:809850
+  requires: []
+  tiers:
+  - 2
 - name: 'Fairy Lands: Rinka and the Fairy Gems'
   ids:
   - steam:680930
+  requires: []
+  tiers:
+  - 2
 - name: Bikour!
   ids:
   - steam:780080
+  requires: []
+  tiers:
+  - 2
 - name: Auto Dealership Tycoon
   ids:
   - steam:393920
+  requires: []
+  tiers:
+  - 2
 - name: 'Graven: The Purple Moon Prophecy'
   ids:
   - steam:467490
+  requires: []
+  tiers:
+  - 2
 - name: Ghostly Horizon
   ids:
   - steam:700590
+  requires: []
+  tiers:
+  - 2
 - name: Karradash - The Lost Dungeons
   ids:
   - steam:682020
+  requires: []
+  tiers:
+  - 2
 - name: Bike of the Wild
   ids:
   - steam:745180
+  requires: []
+  tiers:
+  - 2
 - name: Beastiarium
   ids:
   - steam:545150
+  requires: []
+  tiers:
+  - 2
 - name: EGO PROTOCOL
   ids:
   - steam:425760
+  requires: []
+  tiers:
+  - 2
 - name: Stellar Interface
   ids:
   - steam:517330
+  requires: []
+  tiers:
+  - 2

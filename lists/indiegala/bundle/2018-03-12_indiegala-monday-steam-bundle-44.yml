@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #44 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #44'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5968/
@@ -13,33 +15,66 @@ games:
 - name: TRYON
   ids:
   - steam:704700
+  requires: []
+  tiers:
+  - 2
 - name: Crazy Alien
   ids:
   - unresolved:source:isthereanydeal:5968:crazy-alien
+  requires: []
+  tiers:
+  - 2
 - name: 'Vindicator: Uprising'
   ids:
   - steam:367050
+  requires: []
+  tiers:
+  - 2
 - name: Ragna Maya
   ids:
   - steam:707720
+  requires: []
+  tiers:
+  - 2
 - name: DarkLast
   ids:
   - steam:644890
+  requires: []
+  tiers:
+  - 2
 - name: Dizzy Dungeon
   ids:
   - steam:760030
+  requires: []
+  tiers:
+  - 2
 - name: Sky is Arrows
   ids:
   - steam:576670
+  requires: []
+  tiers:
+  - 2
 - name: Chinese Ink Painting Puzzle & Creator / 國畫拼圖創作家
   ids:
   - steam:767200
+  requires: []
+  tiers:
+  - 2
 - name: Greyhound Manager 2 Rebooted
   ids:
   - steam:586460
+  requires: []
+  tiers:
+  - 2
 - name: Energy Invasion
   ids:
   - steam:513600
+  requires: []
+  tiers:
+  - 2
 - name: Tales of the Lumminai
   ids:
   - steam:610560
+  requires: []
+  tiers:
+  - 2

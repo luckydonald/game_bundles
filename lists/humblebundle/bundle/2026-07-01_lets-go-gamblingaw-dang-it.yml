@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Let's Go Gambling!...aw dang it. — Entire 9 Item Bundle
-tier: 2
+name: Let's Go Gambling!...aw dang it.
+tiers:
+- rank: 2
+  name: Entire 9 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/lets-go-gamblingaw-dang-it
@@ -13,27 +15,54 @@ games:
 - name: Dicealot
   ids:
   - steam:3035330
+  requires: []
+  tiers:
+  - 2
 - name: Pip My Dice
   ids:
   - steam:2797650
+  requires: []
+  tiers:
+  - 2
 - name: Dicey Dungeons
   ids:
   - steam:861540
+  requires: []
+  tiers:
+  - 2
 - name: This Ain't Even Poker, Ya Joker
   ids:
   - steam:4038320
+  requires: []
+  tiers:
+  - 2
 - name: Dice of Kalma
   ids:
   - steam:3885520
+  requires: []
+  tiers:
+  - 2
 - name: Explosive Odds
   ids:
   - steam:3674980
+  requires: []
+  tiers:
+  - 2
 - name: Treasure Tiger
   ids:
   - steam:3805710
+  requires: []
+  tiers:
+  - 2
 - name: SuperTaxCity
   ids:
   - steam:2881800
+  requires: []
+  tiers:
+  - 2
 - name: SIDE EFFECTS
   ids:
   - steam:3799100
+  requires: []
+  tiers:
+  - 2

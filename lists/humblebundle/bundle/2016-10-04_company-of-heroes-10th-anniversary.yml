@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Company of Heroes  Anniversary Bundle — Pay $10 or more to also unlock
-tier: 3
+name: Humble Company of Heroes  Anniversary Bundle
+tiers:
+- rank: 3
+  name: Pay $10 or more to also unlock
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4155/
@@ -13,39 +15,78 @@ games:
 - name: 'Company of Heroes: Opposing Fronts'
   ids:
   - steam:9340
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The Western Front Armies
   ids:
   - unresolved:source:isthereanydeal:4155:company-of-heroes-2-the-western-front-armies
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes: Tales of Valor'
   ids:
   - steam:20540
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes
   ids:
   - steam:228200
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2
   ids:
   - steam:231430
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Victory at Stalingrad Mission Pack
   ids:
   - steam:231480
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Case Blue Mission Pack
   ids:
   - steam:231479
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Southern Fronts Mission Pack
   ids:
   - steam:260290
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The Western Front Armies - US Forces
   ids:
   - steam:287370
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Ardennes Assault
   ids:
   - steam:317850
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Ardennes Assault: Fox Company Rangers'
   ids:
   - steam:323230
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The British Forces
   ids:
   - steam:365820
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Exclusive Skins Pack
   ids:
   - unresolved:source:isthereanydeal:4155:company-of-heroes-2-exclusive-skins-pack
+  requires: []
+  tiers:
+  - 3

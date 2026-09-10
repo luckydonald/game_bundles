@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Terrific Time Travel Bundle — Tier 2
-tier: 2
+name: Terrific Time Travel Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1849/
@@ -13,24 +15,48 @@ games:
 - name: Voyage to Farland
   ids:
   - steam:364790
+  requires: []
+  tiers:
+  - 2
 - name: Eradicator
   ids:
   - steam:329640
+  requires: []
+  tiers:
+  - 2
 - name: Gare Sapphire Mechs
   ids:
   - steam:359090
+  requires: []
+  tiers:
+  - 2
 - name: Bonsai Worlds
   ids:
   - unresolved:source:isthereanydeal:1849:bonsai-worlds
+  requires: []
+  tiers:
+  - 2
 - name: 'Thanatos: a Winterwitch Tale'
   ids:
   - unresolved:source:isthereanydeal:1849:thanatos-a-winterwitch-tale
+  requires: []
+  tiers:
+  - 2
 - name: Invisible Apartment Zero
   ids:
   - steam:369120
+  requires: []
+  tiers:
+  - 2
 - name: Spud!
   ids:
   - steam:353790
+  requires: []
+  tiers:
+  - 2
 - name: Robotex
   ids:
   - steam:330350
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Mega Man: Recharged Collection — Entire 9 Item Bundle'
-tier: 4
+name: 'Mega Man: Recharged Collection'
+tiers:
+- rank: 4
+  name: Entire 9 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/mega-man-recharged-collection
@@ -24,43 +26,61 @@ games:
   - steam:363440
   - isthereanydeal:mega-man-legacy-collection
   requires: []
+  tiers:
+  - 4
 - name: Mega Man X Legacy Collection
   ids:
   - steam:743890
   - isthereanydeal:mega-man-x-legacy-collection
   requires: []
+  tiers:
+  - 4
 - name: Mega Man Legacy Collection 2
   ids:
   - steam:495050
   - isthereanydeal:mega-man-legacy-collection-2
   requires: []
+  tiers:
+  - 4
 - name: Mega Man X Legacy Collection 2
   ids:
   - steam:743900
   - isthereanydeal:mega-man-x-legacy-collection-2
   requires: []
+  tiers:
+  - 4
 - name: Mega Man Zero/ZX Legacy Collection
   ids:
   - steam:999020
   - isthereanydeal:mega-man-zero-zx-legacy-collection
   requires: []
+  tiers:
+  - 4
 - name: Mega Man 11
   ids:
   - steam:742300
   - isthereanydeal:mega-man-11
   requires: []
+  tiers:
+  - 4
 - name: Mega Man Battle Network Legacy Collection Vol.2
   ids:
   - steam:1798020
   - isthereanydeal:mega-man-battle-network-legacy-collection-vol-2
   requires: []
+  tiers:
+  - 4
 - name: Mega Man Battle Network Legacy Collection Vol.1
   ids:
   - steam:1798010
   - isthereanydeal:mega-man-battle-network-legacy-collection-vol-1
   requires: []
+  tiers:
+  - 4
 - name: MEGA MAN X DiVE Offline
   ids:
   - steam:2183650
   - isthereanydeal:mega-man-x-dive-offline
   requires: []
+  tiers:
+  - 4

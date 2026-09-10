@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Indie Bundle 17 — entire-10-item-bundle
-tier: 3
+name: Humble Indie Bundle 17
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3920/
@@ -13,30 +15,60 @@ games:
 - name: Galak-Z
   ids:
   - steam:300580
+  requires: []
+  tiers:
+  - 3
 - name: Lethal League
   ids:
   - steam:261180
+  requires: []
+  tiers:
+  - 3
 - name: The Beginner's Guide
   ids:
   - steam:303210
+  requires: []
+  tiers:
+  - 3
 - name: Regency Solitaire
   ids:
   - steam:351090
+  requires: []
+  tiers:
+  - 3
 - name: Hexcells Complete Pack
   ids:
   - unresolved:source:isthereanydeal:3920:hexcells-complete-pack
+  requires: []
+  tiers:
+  - 3
 - name: Expand - Soundtrack Edition
   ids:
   - steam:399780
+  requires: []
+  tiers:
+  - 3
 - name: Super Time Force Ultra
   ids:
   - steam:250700
+  requires: []
+  tiers:
+  - 3
 - name: 'Octodad: Dadliest Catch'
   ids:
   - steam:224480
+  requires: []
+  tiers:
+  - 3
 - name: Lovers in a Dangerous Spacetime
   ids:
   - steam:252110
+  requires: []
+  tiers:
+  - 3
 - name: Nuclear Throne
   ids:
   - steam:242680
+  requires: []
+  tiers:
+  - 3

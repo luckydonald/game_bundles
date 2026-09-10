@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bandai Namco Bundle 4 — entire-9-item-bundle
-tier: 4
+name: Humble Bandai Namco Bundle 4
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8807/
@@ -13,27 +15,54 @@ games:
 - name: 'Enslaved: Odyssey to the West Premium Edition'
   ids:
   - steam:245280
+  requires: []
+  tiers:
+  - 4
 - name: Get Even
   ids:
   - steam:299950
+  requires: []
+  tiers:
+  - 4
 - name: PAC-MAN 256
   ids:
   - steam:455400
+  requires: []
+  tiers:
+  - 4
 - name: Katamari Damacy REROLL
   ids:
   - steam:848350
+  requires: []
+  tiers:
+  - 4
 - name: RAD
   ids:
   - steam:722560
+  requires: []
+  tiers:
+  - 4
 - name: .hack//G.U. Last Recode
   ids:
   - steam:525480
+  requires: []
+  tiers:
+  - 4
 - name: Tales of Berseria
   ids:
   - steam:429660
+  requires: []
+  tiers:
+  - 4
 - name: TEKKEN 7
   ids:
   - steam:389730
+  requires: []
+  tiers:
+  - 4
 - name: 'The Dark Pictures Anthology: Man of Medan'
   ids:
   - steam:939850
+  requires: []
+  tiers:
+  - 4

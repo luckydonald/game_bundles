@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Software Bundle: Organize Your PC — entire-11-item-bundle'
-tier: 3
+name: 'Humble Software Bundle: Organize Your PC'
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9591/
@@ -13,33 +15,66 @@ games:
 - name: WindowBlinds
   ids:
   - unresolved:source:isthereanydeal:9591:windowblinds
+  requires: []
+  tiers:
+  - 3
 - name: Iconpackager
   ids:
   - unresolved:source:isthereanydeal:9591:iconpackager
+  requires: []
+  tiers:
+  - 3
 - name: CursorFX
   ids:
   - steam:1299980
+  requires: []
+  tiers:
+  - 3
 - name: DeskScapes
   ids:
   - steam:1027220
+  requires: []
+  tiers:
+  - 3
 - name: Start10
   ids:
   - unresolved:source:isthereanydeal:9591:start10
+  requires: []
+  tiers:
+  - 3
 - name: SpaceMonger
   ids:
   - unresolved:source:isthereanydeal:9591:spacemonger
+  requires: []
+  tiers:
+  - 3
 - name: WindowFX
   ids:
   - unresolved:source:isthereanydeal:9591:windowfx
+  requires: []
+  tiers:
+  - 3
 - name: Groupy
   ids:
   - unresolved:source:isthereanydeal:9591:groupy
+  requires: []
+  tiers:
+  - 3
 - name: Fences
   ids:
   - unresolved:source:isthereanydeal:9591:fences
+  requires: []
+  tiers:
+  - 3
 - name: Multiplicity
   ids:
   - unresolved:source:isthereanydeal:9591:multiplicity
+  requires: []
+  tiers:
+  - 3
 - name: SoundPackager 10
   ids:
   - steam:975550
+  requires: []
+  tiers:
+  - 3

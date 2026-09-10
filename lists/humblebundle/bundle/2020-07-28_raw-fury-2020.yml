@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Raw Fury 2020 Bundle — entire-12-item-bundle
-tier: 4
+name: Humble Raw Fury 2020 Bundle
+tiers:
+- rank: 4
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9014/
@@ -13,36 +15,72 @@ games:
 - name: GoNNER - BLÜEBERRY Edition
   ids:
   - steam:984210
+  requires: []
+  tiers:
+  - 4
 - name: Tormentor❌Punisher
   ids:
   - steam:500670
+  requires: []
+  tiers:
+  - 4
 - name: Kathy Rain
   ids:
   - steam:370910
+  requires: []
+  tiers:
+  - 4
 - name: Whispers of a Machine
   ids:
   - steam:631570
+  requires: []
+  tiers:
+  - 4
 - name: 'Kingdom: Classic'
   ids:
   - steam:368230
+  requires: []
+  tiers:
+  - 4
 - name: 'Kingdom: New Lands Royal Edition'
   ids:
   - unresolved:source:isthereanydeal:9014:kingdom-new-lands-royal-edition
+  requires: []
+  tiers:
+  - 4
 - name: Uurnog Uurnlimited
   ids:
   - steam:678850
+  requires: []
+  tiers:
+  - 4
 - name: 'Dandara: Trials of Fear Edition'
   ids:
   - steam:612390
+  requires: []
+  tiers:
+  - 4
 - name: Night Call
   ids:
   - steam:680380
+  requires: []
+  tiers:
+  - 4
 - name: 'Bad North: Jotunn Edition'
   ids:
   - steam:688420
+  requires: []
+  tiers:
+  - 4
 - name: Mosaic
   ids:
   - steam:349270
+  requires: []
+  tiers:
+  - 4
 - name: 'Kingdom: Two Crowns'
   ids:
   - steam:701160
+  requires: []
+  tiers:
+  - 4

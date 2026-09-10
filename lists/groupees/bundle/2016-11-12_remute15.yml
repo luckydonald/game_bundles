@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute's Retrofuturism Flashback Bundle — Tier 2
-tier: 2
+name: Remute's Retrofuturism Flashback Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4337/
@@ -13,30 +15,60 @@ games:
 - name: SHOTGUN
   ids:
   - unresolved:source:isthereanydeal:4337:shotgun
+  requires: []
+  tiers:
+  - 2
 - name: A.W.A.
   ids:
   - unresolved:source:isthereanydeal:4337:a-w-a
+  requires: []
+  tiers:
+  - 2
 - name: I Get This Call Every Day
   ids:
   - unresolved:source:isthereanydeal:4337:i-get-this-call-every-day
+  requires: []
+  tiers:
+  - 2
 - name: Galimulator
   ids:
   - steam:808100
+  requires: []
+  tiers:
+  - 2
 - name: Octave
   ids:
   - steam:537700
+  requires: []
+  tiers:
+  - 2
 - name: Super GunWorld 2
   ids:
   - steam:514220
+  requires: []
+  tiers:
+  - 2
 - name: Amiga Forever 2016 Value Edition
   ids:
   - unresolved:source:isthereanydeal:4337:amiga-forever-2016-value-edition
+  requires: []
+  tiers:
+  - 2
 - name: The Gum Machine
   ids:
   - unresolved:source:isthereanydeal:4337:the-gum-machine
+  requires: []
+  tiers:
+  - 2
 - name: Munch - Temple Treasure Hunt
   ids:
   - unresolved:source:isthereanydeal:4337:munch-temple-treasure-hunt
+  requires: []
+  tiers:
+  - 2
 - name: JumpBall
   ids:
   - unresolved:source:isthereanydeal:4337:jumpball
+  requires: []
+  tiers:
+  - 2

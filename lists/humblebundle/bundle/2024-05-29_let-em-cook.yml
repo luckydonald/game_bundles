@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Let 'Em Cook Bundle — entire-9-item-bundle
-tier: 2
+name: Let 'Em Cook Bundle
+tiers:
+- rank: 2
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14091/
@@ -13,27 +15,54 @@ games:
 - name: Diner Bros
   ids:
   - steam:846800
+  requires: []
+  tiers:
+  - 2
 - name: Epic Chef
   ids:
   - steam:1312960
+  requires: []
+  tiers:
+  - 2
 - name: Cafe Owner Simulator
   ids:
   - steam:1498140
+  requires: []
+  tiers:
+  - 2
 - name: PlateUp!
   ids:
   - steam:1599600
+  requires: []
+  tiers:
+  - 2
 - name: Cooking Simulator
   ids:
   - steam:641320
+  requires: []
+  tiers:
+  - 2
 - name: Cooking Simulator - Shelter
   ids:
   - steam:1575660
+  requires: []
+  tiers:
+  - 2
 - name: 'Chef : Full Menu'
   ids:
   - unresolved:source:isthereanydeal:14091:chef-full-menu
+  requires: []
+  tiers:
+  - 2
 - name: Sugar Shack
   ids:
   - steam:1813130
+  requires: []
+  tiers:
+  - 2
 - name: 'One-armed cook: Gourmet Upgrade'
   ids:
   - unresolved:source:isthereanydeal:14091:one-armed-cook-gourmet-upgrade
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: FaceRig Bundle — Tier 3
-tier: 3
+name: FaceRig Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8431/
@@ -13,30 +15,60 @@ games:
 - name: FaceRig
   ids:
   - unresolved:source:isthereanydeal:8431:facerig
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Halloween Avatars 2014
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-halloween-avatars-2014
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Strong Paws
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-strong-paws
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Halloween Avatars 2015
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-halloween-avatars-2015
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Winter Holidays Avatars 2015
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-winter-holidays-avatars-2015
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Warriors
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-warriors
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Julien the Pug Avatar
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-julien-the-pug-avatar
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Twiggy the Monkey Avatar
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-twiggy-the-monkey-avatar
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Fibbi the Sea Creature Avatar
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-fibbi-the-sea-creature-avatar
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Pro Upgrade
   ids:
   - unresolved:source:isthereanydeal:8431:facerig-pro-upgrade
+  requires: []
+  tiers:
+  - 3

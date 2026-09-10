@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #80 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #80'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7002/
@@ -13,24 +15,48 @@ games:
 - name: Deer Man
   ids:
   - steam:459940
+  requires: []
+  tiers:
+  - 2
 - name: Easy Red
   ids:
   - steam:741670
+  requires: []
+  tiers:
+  - 2
 - name: Core Awaken ~The Yuka~
   ids:
   - steam:878150
+  requires: []
+  tiers:
+  - 2
 - name: COSMIC SNAKE 8473/3671(HAMLETs)
   ids:
   - steam:809360
+  requires: []
+  tiers:
+  - 2
 - name: De Mambo
   ids:
   - steam:717540
+  requires: []
+  tiers:
+  - 2
 - name: Cycle 28
   ids:
   - steam:749560
+  requires: []
+  tiers:
+  - 2
 - name: The Maestros
   ids:
   - unresolved:source:isthereanydeal:7002:the-maestros
+  requires: []
+  tiers:
+  - 2
 - name: Skulls of the Shogun
   ids:
   - steam:228960
+  requires: []
+  tiers:
+  - 2

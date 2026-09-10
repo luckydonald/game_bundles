@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Summer Cubic Bundle — Tier 2
-tier: 2
+name: Summer Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3458/
@@ -13,21 +15,42 @@ games:
 - name: Dark Matter
   ids:
   - steam:251410
+  requires: []
+  tiers:
+  - 2
 - name: Glass Wing
   ids:
   - unresolved:source:isthereanydeal:3458:glass-wing
+  requires: []
+  tiers:
+  - 2
 - name: Return of Bantara
   ids:
   - unresolved:source:isthereanydeal:3458:return-of-bantara
+  requires: []
+  tiers:
+  - 2
 - name: Adorables
   ids:
   - steam:366760
+  requires: []
+  tiers:
+  - 2
 - name: Alter World
   ids:
   - steam:357280
+  requires: []
+  tiers:
+  - 2
 - name: GooCubelets 2
   ids:
   - unresolved:source:isthereanydeal:3458:goocubelets-2
+  requires: []
+  tiers:
+  - 2
 - name: Z.I.O.N.
   ids:
   - steam:466890
+  requires: []
+  tiers:
+  - 2

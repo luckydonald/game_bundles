@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: INDIE ADVENTURES — Legend
-tier: 3
+name: INDIE ADVENTURES
+tiers:
+- rank: 3
+  name: Legend
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/indie-adventures/
@@ -16,23 +18,35 @@ games:
   ids:
   - steam:1488200
   requires: []
+  tiers:
+  - 3
 - name: Disco Elysium - The Final Cut
   ids:
   - steam:632470
   requires: []
+  tiers:
+  - 3
 - name: 'Shadow Gambit: The Cursed Crew'
   ids:
   - steam:1545560
   requires: []
+  tiers:
+  - 3
 - name: For the King 2
   ids:
   - steam:1676840
   requires: []
+  tiers:
+  - 3
 - name: 'Flintlock: The Siege of Dawn'
   ids:
   - steam:1832040
   requires: []
+  tiers:
+  - 3
 - name: The Thaumaturge
   ids:
   - steam:1684350
   requires: []
+  tiers:
+  - 3

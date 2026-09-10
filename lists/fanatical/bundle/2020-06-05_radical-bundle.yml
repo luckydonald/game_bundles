@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Radical Bundle — Tier 3
-tier: 3
+name: Radical Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8861/
@@ -13,48 +15,96 @@ games:
 - name: Railroad Pioneer
   ids:
   - steam:306490
+  requires: []
+  tiers:
+  - 3
 - name: Thunder Wolves
   ids:
   - steam:232970
+  requires: []
+  tiers:
+  - 3
 - name: SkyDrift
   ids:
   - steam:91100
+  requires: []
+  tiers:
+  - 3
 - name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
   ids:
   - steam:246960
+  requires: []
+  tiers:
+  - 3
 - name: Rad Rodgers Radical Edition
   ids:
   - steam:805660
+  requires: []
+  tiers:
+  - 3
 - name: Sine Mora EX
   ids:
   - steam:606730
+  requires: []
+  tiers:
+  - 3
 - name: Clouds & Sheep 2
   ids:
   - steam:439800
+  requires: []
+  tiers:
+  - 3
 - name: Kill to Collect
   ids:
   - steam:241760
+  requires: []
+  tiers:
+  - 3
 - name: 'Giana Sisters: Twisted Dreams'
   ids:
   - steam:223220
+  requires: []
+  tiers:
+  - 3
 - name: Airline Tycoon Deluxe
   ids:
   - steam:331920
+  requires: []
+  tiers:
+  - 3
 - name: 'Overclocked: A History of Violence'
   ids:
   - steam:339850
+  requires: []
+  tiers:
+  - 3
 - name: Rogue Stormers
   ids:
   - steam:299480
+  requires: []
+  tiers:
+  - 3
 - name: Lock's Quest
   ids:
   - steam:490080
+  requires: []
+  tiers:
+  - 3
 - name: 1943 Deadly Desert
   ids:
   - steam:616750
+  requires: []
+  tiers:
+  - 3
 - name: Aces of the Luftwaffe
   ids:
   - steam:353940
+  requires: []
+  tiers:
+  - 3
 - name: Stunt Kite Party
   ids:
   - steam:960240
+  requires: []
+  tiers:
+  - 3

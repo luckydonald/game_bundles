@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardian Bundle 2 — Tier 3
-tier: 3
+name: Guardian Bundle 2
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10071/
@@ -13,27 +15,54 @@ games:
 - name: Creepy Tale
   ids:
   - steam:1224020
+  requires: []
+  tiers:
+  - 3
 - name: Company of Crime
   ids:
   - steam:1229420
+  requires: []
+  tiers:
+  - 3
 - name: WarriOrb
   ids:
   - steam:790360
+  requires: []
+  tiers:
+  - 3
 - name: 'Stygian: Reign of the Old Ones'
   ids:
   - steam:779290
+  requires: []
+  tiers:
+  - 3
 - name: Beholder 2
   ids:
   - steam:761620
+  requires: []
+  tiers:
+  - 3
 - name: MindSeize
   ids:
   - steam:851280
+  requires: []
+  tiers:
+  - 3
 - name: Moon Hunters
   ids:
   - steam:320040
+  requires: []
+  tiers:
+  - 3
 - name: Seeds of Resilience
   ids:
   - steam:877080
+  requires: []
+  tiers:
+  - 3
 - name: 'Trine 4: The Nightmare Prince'
   ids:
   - steam:690640
+  requires: []
+  tiers:
+  - 3

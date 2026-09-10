@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Chicken in a Box — Tier 4
-tier: 4
+name: Chicken in a Box
+tiers:
+- rank: 4
+  name: Tier 4
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4664/
@@ -13,15 +15,30 @@ games:
 - name: Days Under Custody
   ids:
   - steam:412730
+  requires: []
+  tiers:
+  - 4
 - name: Fast and Curious
   ids:
   - unresolved:source:isthereanydeal:4664:fast-and-curious
+  requires: []
+  tiers:
+  - 4
 - name: Cyber-Chicken
   ids:
   - steam:339710
+  requires: []
+  tiers:
+  - 4
 - name: Cyber Chicken - OST
   ids:
   - unresolved:source:isthereanydeal:4664:cyber-chicken-ost
+  requires: []
+  tiers:
+  - 4
 - name: Cyber Chicken - Chicken Nuggets (Extra Content)
   ids:
   - unresolved:source:isthereanydeal:4664:cyber-chicken-chicken-nuggets-extra-content
+  requires: []
+  tiers:
+  - 4

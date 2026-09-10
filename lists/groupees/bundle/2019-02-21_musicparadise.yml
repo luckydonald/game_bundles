@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Music Paradise Software Bundle — Tier 2
-tier: 2
+name: Music Paradise Software Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7063/
@@ -13,30 +15,60 @@ games:
 - name: Song Writer
   ids:
   - unresolved:source:isthereanydeal:7063:song-writer
+  requires: []
+  tiers:
+  - 2
 - name: Volume Maximizer
   ids:
   - unresolved:source:isthereanydeal:7063:volume-maximizer
+  requires: []
+  tiers:
+  - 2
 - name: Audio Converter
   ids:
   - unresolved:source:isthereanydeal:7063:audio-converter
+  requires: []
+  tiers:
+  - 2
 - name: Audio Editor
   ids:
   - unresolved:source:isthereanydeal:7063:audio-editor
+  requires: []
+  tiers:
+  - 2
 - name: Party Mixer 3D
   ids:
   - unresolved:source:isthereanydeal:7063:party-mixer-3d
+  requires: []
+  tiers:
+  - 2
 - name: Electronic Piano
   ids:
   - unresolved:source:isthereanydeal:7063:electronic-piano
+  requires: []
+  tiers:
+  - 2
 - name: Circuit Loops
   ids:
   - unresolved:source:isthereanydeal:7063:circuit-loops
+  requires: []
+  tiers:
+  - 2
 - name: DJ Mix Pads
   ids:
   - unresolved:source:isthereanydeal:7063:dj-mix-pads
+  requires: []
+  tiers:
+  - 2
 - name: Pro Microphone
   ids:
   - unresolved:source:isthereanydeal:7063:pro-microphone
+  requires: []
+  tiers:
+  - 2
 - name: Spectrum Analyzer
   ids:
   - unresolved:source:isthereanydeal:7063:spectrum-analyzer
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Outright Games: Heroes of Film & Television Bundle — entire-17-item-bundle'
-tier: 3
+name: 'Outright Games: Heroes of Film & Television Bundle'
+tiers:
+- rank: 3
+  name: entire-17-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13764/
@@ -13,51 +15,102 @@ games:
 - name: Ben 10
   ids:
   - steam:703180
+  requires: []
+  tiers:
+  - 3
 - name: 'Adventure Time: Pirates of the Enchiridion'
   ids:
   - steam:728240
+  requires: []
+  tiers:
+  - 3
 - name: 'Hotel Transylvania 3: Monsters Overboard'
   ids:
   - steam:757600
+  requires: []
+  tiers:
+  - 3
 - name: 'Trollhunters: Defenders of Arcadia'
   ids:
   - steam:1344070
+  requires: []
+  tiers:
+  - 3
 - name: 'TRANSFORMERS: BATTLEGROUNDS'
   ids:
   - unresolved:source:isthereanydeal:13764:transformers-battlegrounds
+  requires: []
+  tiers:
+  - 3
 - name: 'Fast & Furious: Spy Racers Rise of SH1FT3R'
   ids:
   - steam:1434320
+  requires: []
+  tiers:
+  - 3
 - name: 'JUMANJI: The Video Game'
   ids:
   - steam:896950
+  requires: []
+  tiers:
+  - 3
 - name: DreamWorks Dragons Dawn of New Riders
   ids:
   - steam:896960
+  requires: []
+  tiers:
+  - 3
 - name: Ice Age Scrat's Nutty Adventure
   ids:
   - steam:751060
+  requires: []
+  tiers:
+  - 3
 - name: Last Kids on Earth and the Staff of Doom
   ids:
   - steam:1263100
+  requires: []
+  tiers:
+  - 3
 - name: 'DC League of Super-Pets: The Adventures of Krypto & Ace'
   ids:
   - unresolved:source:isthereanydeal:13764:dc-league-of-super-pets-the-adventures-of-krypto-and-ace
+  requires: []
+  tiers:
+  - 3
 - name: 'Ben 10: Power Trip'
   ids:
   - steam:1063040
+  requires: []
+  tiers:
+  - 3
 - name: 'The Addams Family: Mansion Mayhem'
   ids:
   - steam:1543830
+  requires: []
+  tiers:
+  - 3
 - name: 'Hotel Transylvania: Scary Tale Adventures'
   ids:
   - steam:1433500
+  requires: []
+  tiers:
+  - 3
 - name: 'DreamWorks Dragons: Legends of The Nine Realms'
   ids:
   - steam:1721440
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Trek Prodigy: Supernova'
   ids:
   - steam:1655220
+  requires: []
+  tiers:
+  - 3
 - name: 'DC Justice League: Cosmic Chaos'
   ids:
   - unresolved:source:isthereanydeal:13764:dc-justice-league-cosmic-chaos
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Holiday Cubic Bundle — Tier 2
-tier: 2
+name: Holiday Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4510/
@@ -13,30 +15,60 @@ games:
 - name: Wishmaster
   ids:
   - unresolved:source:isthereanydeal:4510:wishmaster
+  requires: []
+  tiers:
+  - 2
 - name: The Construct
   ids:
   - steam:525190
+  requires: []
+  tiers:
+  - 2
 - name: Nanoborg
   ids:
   - unresolved:source:isthereanydeal:4510:nanoborg
+  requires: []
+  tiers:
+  - 2
 - name: HellAngel
   ids:
   - unresolved:source:isthereanydeal:4510:hellangel
+  requires: []
+  tiers:
+  - 2
 - name: Sleight
   ids:
   - unresolved:source:isthereanydeal:4510:sleight
+  requires: []
+  tiers:
+  - 2
 - name: National Zombie Park 2-pack
   ids:
   - unresolved:source:isthereanydeal:4510:national-zombie-park-2-pack
+  requires: []
+  tiers:
+  - 2
 - name: Cube Master
   ids:
   - unresolved:source:isthereanydeal:4510:cube-master
+  requires: []
+  tiers:
+  - 2
 - name: The Orb Chambers II
   ids:
   - unresolved:source:isthereanydeal:4510:the-orb-chambers-ii
+  requires: []
+  tiers:
+  - 2
 - name: The ORB Chambers
   ids:
   - unresolved:source:isthereanydeal:4510:the-orb-chambers
+  requires: []
+  tiers:
+  - 2
 - name: The Sheltered
   ids:
   - steam:364370
+  requires: []
+  tiers:
+  - 2

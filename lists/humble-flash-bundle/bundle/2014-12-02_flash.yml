@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Flash Bundle: Paradox Interactive Giving Tuesday — Tier 3'
-tier: 3
+name: 'Humble Flash Bundle: Paradox Interactive Giving Tuesday'
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1443/
@@ -13,27 +15,54 @@ games:
 - name: March of the Eagles
   ids:
   - steam:227760
+  requires: []
+  tiers:
+  - 3
 - name: 'Darkest Hour: A Hearts of Iron Game'
   ids:
   - steam:73170
+  requires: []
+  tiers:
+  - 3
 - name: Sword of the Stars II Enhanced Edition
   ids:
   - steam:42990
+  requires: []
+  tiers:
+  - 3
 - name: 'War of the Roses: Kingmaker'
   ids:
   - unresolved:source:isthereanydeal:1443:war-of-the-roses-kingmaker
+  requires: []
+  tiers:
+  - 3
 - name: Cities in Motion II
   ids:
   - unresolved:source:isthereanydeal:1443:cities-in-motion-ii
+  requires: []
+  tiers:
+  - 3
 - name: 'Warlock: Master of the Arcane'
   ids:
   - steam:203630
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II Russian Unit Pack
   ids:
   - steam:210899
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II
   ids:
   - steam:203770
+  requires: []
+  tiers:
+  - 3
 - name: 'Crusader Kings II: Norse Unit Pack'
   ids:
   - steam:210905
+  requires: []
+  tiers:
+  - 3

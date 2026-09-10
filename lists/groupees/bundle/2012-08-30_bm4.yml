@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 4 — Tier 2
-tier: 2
+name: Be Mine 4
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/182/
@@ -13,27 +15,54 @@ games:
 - name: Metal Drift
   ids:
   - steam:32200
+  requires: []
+  tiers:
+  - 2
 - name: Laxius Force
   ids:
   - unresolved:source:isthereanydeal:182:laxius-force
+  requires: []
+  tiers:
+  - 2
 - name: Zero Gear
   ids:
   - steam:18820
+  requires: []
+  tiers:
+  - 2
 - name: 'Kaptain Brawe: A Brawe New World'
   ids:
   - steam:65080
+  requires: []
+  tiers:
+  - 2
 - name: Guns of Icarus
   ids:
   - unresolved:source:isthereanydeal:182:guns-of-icarus
+  requires: []
+  tiers:
+  - 2
 - name: Revelations 2012
   ids:
   - steam:201070
+  requires: []
+  tiers:
+  - 2
 - name: Battlemass
   ids:
   - unresolved:source:isthereanydeal:182:battlemass
+  requires: []
+  tiers:
+  - 2
 - name: Guns of Icarus Online
   ids:
   - steam:209080
+  requires: []
+  tiers:
+  - 2
 - name: "Dwarfs!\x81"
   ids:
   - steam:35480
+  requires: []
+  tiers:
+  - 2

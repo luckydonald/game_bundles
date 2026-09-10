@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Origins Bundle — Tier 2
-tier: 2
+name: Origins Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6576/
@@ -13,36 +15,72 @@ games:
 - name: Punch Club Deluxe Edition
   ids:
   - steam:394310
+  requires: []
+  tiers:
+  - 2
 - name: Rebel Galaxy
   ids:
   - steam:290300
+  requires: []
+  tiers:
+  - 2
 - name: Grey Goo Definitive Edition
   ids:
   - unresolved:source:isthereanydeal:6576:grey-goo-definitive-edition
+  requires: []
+  tiers:
+  - 2
 - name: RiME
   ids:
   - steam:493200
+  requires: []
+  tiers:
+  - 2
 - name: 'River City Ransom: Underground'
   ids:
   - steam:422810
+  requires: []
+  tiers:
+  - 2
 - name: Comedy Night
   ids:
   - steam:665360
+  requires: []
+  tiers:
+  - 2
 - name: STARWHAL
   ids:
   - steam:263020
+  requires: []
+  tiers:
+  - 2
 - name: Gloom
   ids:
   - steam:619280
+  requires: []
+  tiers:
+  - 2
 - name: 'Remothered: Tormented Fathers'
   ids:
   - steam:633360
+  requires: []
+  tiers:
+  - 2
 - name: Outpost Zero
   ids:
   - steam:677480
+  requires: []
+  tiers:
+  - 2
 - name: Shuyan Saga
   ids:
   - steam:594680
+  requires: []
+  tiers:
+  - 2
 - name: Overfall
   ids:
   - steam:402310
+  requires: []
+  tiers:
+  - 2

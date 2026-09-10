@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Libredia Summer Sale Bundle — Tier 3
-tier: 3
+name: Libredia Summer Sale Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5334/
@@ -13,45 +15,90 @@ games:
 - name: Chernobyl Terrorist Attack
   ids:
   - unresolved:source:isthereanydeal:5334:chernobyl-terrorist-attack
+  requires: []
+  tiers:
+  - 3
 - name: Zombie Solitaire
   ids:
   - steam:311850
+  requires: []
+  tiers:
+  - 3
 - name: 'I Am Vegend: Zombiegeddon'
   ids:
   - steam:302460
+  requires: []
+  tiers:
+  - 3
 - name: Kingdom Tales
   ids:
   - steam:276440
+  requires: []
+  tiers:
+  - 3
 - name: Redneck Racers
   ids:
   - steam:288730
+  requires: []
+  tiers:
+  - 3
 - name: Where Angels Cry
   ids:
   - steam:277560
+  requires: []
+  tiers:
+  - 3
 - name: 'Kaptain Brawe: A Brawe New World'
   ids:
   - steam:65080
+  requires: []
+  tiers:
+  - 3
 - name: Fury Of The Gods
   ids:
   - steam:373460
+  requires: []
+  tiers:
+  - 3
 - name: IHF Handball Challenge 12
   ids:
   - steam:283490
+  requires: []
+  tiers:
+  - 3
 - name: Ride 'em Low
   ids:
   - steam:65070
+  requires: []
+  tiers:
+  - 3
 - name: HTR+ Slot Car Simulation
   ids:
   - steam:288650
+  requires: []
+  tiers:
+  - 3
 - name: Country Tales
   ids:
   - steam:394270
+  requires: []
+  tiers:
+  - 3
 - name: Island Flight Simulator
   ids:
   - steam:363660
+  requires: []
+  tiers:
+  - 3
 - name: Hotel
   ids:
   - unresolved:source:isthereanydeal:5334:hotel
+  requires: []
+  tiers:
+  - 3
 - name: 3D Pool
   ids:
   - steam:492160
+  requires: []
+  tiers:
+  - 3

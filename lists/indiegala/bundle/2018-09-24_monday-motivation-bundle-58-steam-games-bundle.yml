@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #58 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #58'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6498/
@@ -13,36 +15,72 @@ games:
 - name: Castle of Venia
   ids:
   - steam:918680
+  requires: []
+  tiers:
+  - 2
 - name: THE ART - Puzzle
   ids:
   - unresolved:source:isthereanydeal:6498:the-art-puzzle
+  requires: []
+  tiers:
+  - 2
 - name: Chill Out
   ids:
   - unresolved:source:isthereanydeal:6498:chill-out
+  requires: []
+  tiers:
+  - 2
 - name: Negative World
   ids:
   - steam:832130
+  requires: []
+  tiers:
+  - 2
 - name: Puppies vs Undead
   ids:
   - unresolved:source:isthereanydeal:6498:puppies-vs-undead
+  requires: []
+  tiers:
+  - 2
 - name: Smart Cube
   ids:
   - unresolved:source:isthereanydeal:6498:smart-cube
+  requires: []
+  tiers:
+  - 2
 - name: Magnetic Pairs
   ids:
   - unresolved:source:isthereanydeal:6498:magnetic-pairs
+  requires: []
+  tiers:
+  - 2
 - name: NUMERIC
   ids:
   - steam:864810
+  requires: []
+  tiers:
+  - 2
 - name: Dangerous Lands - Magic and RPG
   ids:
   - steam:913710
+  requires: []
+  tiers:
+  - 2
 - name: Queen of Spades
   ids:
   - unresolved:source:isthereanydeal:6498:queen-of-spades
+  requires: []
+  tiers:
+  - 2
 - name: 'Sea Of Fatness: Save Humanity Together'
   ids:
   - steam:721740
+  requires: []
+  tiers:
+  - 2
 - name: Amethlion
   ids:
   - steam:915820
+  requires: []
+  tiers:
+  - 2

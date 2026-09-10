@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble War Gamez Bundle — entire-9-item-bundle
-tier: 3
+name: Humble War Gamez Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6113/
@@ -13,27 +15,54 @@ games:
 - name: Panzer Corps
   ids:
   - unresolved:source:isthereanydeal:6113:panzer-corps
+  requires: []
+  tiers:
+  - 3
 - name: Mercenary Kings Reloaded Edition
   ids:
   - steam:218820
+  requires: []
+  tiers:
+  - 3
 - name: INSURGENCY
   ids:
   - steam:222880
+  requires: []
+  tiers:
+  - 3
 - name: 'Panzer Corps: Allied Corps'
   ids:
   - steam:276552
+  requires: []
+  tiers:
+  - 3
 - name: Day of Infamy Deluxe Edition
   ids:
   - steam:447820
+  requires: []
+  tiers:
+  - 3
 - name: Gloria Victis
   ids:
   - unresolved:source:isthereanydeal:6113:gloria-victis
+  requires: []
+  tiers:
+  - 3
 - name: 8-Bit Armies
   ids:
   - steam:427250
+  requires: []
+  tiers:
+  - 3
 - name: Rising Storm 2 Vietnam Digital Upgrade
   ids:
   - unresolved:source:isthereanydeal:6113:rising-storm-2-vietnam-digital-upgrade
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam'
   ids:
   - steam:418460
+  requires: []
+  tiers:
+  - 3

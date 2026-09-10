@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #49 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #49'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5752/
@@ -13,30 +15,60 @@ games:
 - name: Cornflakestein
   ids:
   - unresolved:source:isthereanydeal:5752:cornflakestein
+  requires: []
+  tiers:
+  - 2
 - name: Super Dungeon Boy
   ids:
   - steam:718180
+  requires: []
+  tiers:
+  - 2
 - name: 'Beans: The Coffee Shop Simulator'
   ids:
   - steam:549240
+  requires: []
+  tiers:
+  - 2
 - name: John, The Zombie
   ids:
   - steam:741500
+  requires: []
+  tiers:
+  - 2
 - name: Robbie Swifthand and the Orb of Mysteries
   ids:
   - steam:718010
+  requires: []
+  tiers:
+  - 2
 - name: Naught Reawakening
   ids:
   - unresolved:source:isthereanydeal:5752:naught-reawakening
+  requires: []
+  tiers:
+  - 2
 - name: Seraph
   ids:
   - steam:425670
+  requires: []
+  tiers:
+  - 2
 - name: Rise of Man
   ids:
   - steam:670490
+  requires: []
+  tiers:
+  - 2
 - name: Lines
   ids:
   - steam:458540
+  requires: []
+  tiers:
+  - 2
 - name: SQUIDS FROM SPACE
   ids:
   - steam:437610
+  requires: []
+  tiers:
+  - 2

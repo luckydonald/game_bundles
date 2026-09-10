@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Myths & Legends Bundle — pick 7
-tier: 3
-pick_quota: 7
+name: Build Your Own Myths & Legends Bundle
+tiers:
+- rank: 3
+  name: pick 7
+  pick_quota: 7
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16508/
@@ -18,88 +20,124 @@ games:
   - steam:576770
   - isthereanydeal:low-magic-age
   requires: []
+  tiers:
+  - 3
 - name: Ancestors Legacy - Complete Edition
   ids:
   - unresolved:source:isthereanydeal:16508:ancestors-legacy-complete-edition
   - isthereanydeal:ancestors-legacy-complete-edition
   requires: []
+  tiers:
+  - 3
 - name: Omen of Sorrow
   ids:
   - steam:457260
   - isthereanydeal:omen-of-sorrow
   requires: []
+  tiers:
+  - 3
 - name: 'The Lord of the Rings™: Gollum™'
   ids:
   - steam:1265780
   - isthereanydeal:the-lord-of-the-rings-gollum
   requires: []
+  tiers:
+  - 3
 - name: 'Achilles: Legends Untold'
   ids:
   - steam:1314000
   - isthereanydeal:achilles-legends-untold
   requires: []
+  tiers:
+  - 3
 - name: 'Soulstice: Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:16508:soulstice-deluxe-edition
   - isthereanydeal:soulstice-deluxe-edition
   requires: []
+  tiers:
+  - 3
 - name: Hammerwatch II
   ids:
   - steam:1538970
   - isthereanydeal:hammerwatch-ii
   requires: []
+  tiers:
+  - 3
 - name: Deliverance & Reign
   ids:
   - steam:2132840
   - isthereanydeal:deliverance-and-reign
   requires: []
+  tiers:
+  - 3
 - name: Decline's Drops
   ids:
   - steam:1500180
   - isthereanydeal:declines-drops
   requires: []
+  tiers:
+  - 3
 - name: Ludus Mortis
   ids:
   - steam:2197650
   - isthereanydeal:ludus-mortis
   requires: []
+  tiers:
+  - 3
 - name: Death Relives
   ids:
   - steam:1987400
   - isthereanydeal:death-relives
   requires: []
+  tiers:
+  - 3
 - name: Black Dragon Mage
   ids:
   - steam:2207230
   - isthereanydeal:black-dragon-mage
   requires: []
+  tiers:
+  - 3
 - name: Hammerwatch Anniversary Edition
   ids:
   - steam:1905530
   - isthereanydeal:hammerwatch-anniversary-edition
   requires: []
+  tiers:
+  - 3
 - name: Haunted Lands
   ids:
   - steam:2980900
   - isthereanydeal:haunted-lands
   requires: []
+  tiers:
+  - 3
 - name: 'Achilles: Survivor'
   ids:
   - steam:2922410
   - isthereanydeal:achilles-survivor
   requires: []
+  tiers:
+  - 3
 - name: Villages & Dungeons
   ids:
   - steam:3411020
   - isthereanydeal:villages-and-dungeons
   requires: []
+  tiers:
+  - 3
 - name: Auridia
   ids:
   - steam:3443080
   - isthereanydeal:auridia
   requires: []
+  tiers:
+  - 3
 - name: 'Dark Fairy Tale: Dreamland Survivors'
   ids:
   - steam:3288300
   - isthereanydeal:dark-fairy-tale-dreamland-survivors
   requires: []
+  tiers:
+  - 3

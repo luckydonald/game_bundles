@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Offspring Bundle — Tier 2
-tier: 2
+name: The Offspring Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3802/
@@ -13,36 +15,72 @@ games:
 - name: 'Challenge of the Five Realms: Spellbound in the World of Nhagardia'
   ids:
   - steam:347240
+  requires: []
+  tiers:
+  - 2
 - name: Let's Explore the Farm (Junior Field Trips)
   ids:
   - steam:363060
+  requires: []
+  tiers:
+  - 2
 - name: 'SPY Fox in: Hold the Mustard'
   ids:
   - steam:292300
+  requires: []
+  tiers:
+  - 2
 - name: Putt-Putt Enters the Race
   ids:
   - steam:294680
+  requires: []
+  tiers:
+  - 2
 - name: 7th Legion
   ids:
   - steam:327910
+  requires: []
+  tiers:
+  - 2
 - name: Moorhuhn Invasion (Crazy Chicken Invasion)
   ids:
   - unresolved:source:isthereanydeal:3802:moorhuhn-invasion-crazy-chicken-invasion
+  requires: []
+  tiers:
+  - 2
 - name: Let's Explore the Jungle (Junior Field Trips)
   ids:
   - steam:363070
+  requires: []
+  tiers:
+  - 2
 - name: Dragonsphere
   ids:
   - steam:327940
+  requires: []
+  tiers:
+  - 2
 - name: 'Seven Kingdoms: Ancient Adversaries'
   ids:
   - steam:450140
+  requires: []
+  tiers:
+  - 2
 - name: Zoo Empire
   ids:
   - steam:286750
+  requires: []
+  tiers:
+  - 2
 - name: BUBSY Two-Fur
   ids:
   - steam:426630
+  requires: []
+  tiers:
+  - 2
 - name: Let's Explore the Airport (Junior Field Trips)
   ids:
   - steam:363050
+  requires: []
+  tiers:
+  - 2

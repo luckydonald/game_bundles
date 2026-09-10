@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Anime Angels Mega Bundle — Tier 2
-tier: 2
+name: Anime Angels Mega Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3483/
@@ -13,33 +15,66 @@ games:
 - name: Sword of Asumi - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:3483:sword-of-asumi-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: Last Days of Spring Visual Novel
   ids:
   - steam:407680
+  requires: []
+  tiers:
+  - 2
 - name: Go! Go! Nippon! ~My First Trip to Japan~
   ids:
   - steam:251870
+  requires: []
+  tiers:
+  - 2
 - name: Serafina's Crown
   ids:
   - steam:449340
+  requires: []
+  tiers:
+  - 2
 - name: Sakura Beach
   ids:
   - steam:377680
+  requires: []
+  tiers:
+  - 2
 - name: Impulse
   ids:
   - steam:1753760
+  requires: []
+  tiers:
+  - 2
 - name: Sakura Spirit
   ids:
   - steam:313740
+  requires: []
+  tiers:
+  - 2
 - name: Sakura Angels
   ids:
   - steam:342380
+  requires: []
+  tiers:
+  - 2
 - name: Aozora Meikyuu
   ids:
   - steam:427980
+  requires: []
+  tiers:
+  - 2
 - name: Sakura Beach 2
   ids:
   - steam:407980
+  requires: []
+  tiers:
+  - 2
 - name: 'Cyber City 2157: The Visual Novel'
   ids:
   - steam:454690
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: World of Darkness Bundle — entire-8-item-bundle
-tier: 3
+name: World of Darkness Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12274/
@@ -13,24 +15,48 @@ games:
 - name: 'Vampire: The Masquerade - Coteries of New York'
   ids:
   - steam:1096410
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire: The Masquerade - Shadows of New York'
   ids:
   - steam:1279630
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire: The Masquerade — Night Road'
   ids:
   - steam:1290270
+  requires: []
+  tiers:
+  - 3
 - name: 'Werewolf: The Apocalypse - Heart of the Forest'
   ids:
   - steam:1342620
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire: The Masquerade — Out for Blood'
   ids:
   - steam:1290350
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire: The Masquerade — Parliament of Knives'
   ids:
   - steam:1266100
+  requires: []
+  tiers:
+  - 3
 - name: 'Wraith: The Oblivion - Afterlife'
   ids:
   - steam:1386870
+  requires: []
+  tiers:
+  - 3
 - name: 'Vampire: The Masquerade — Sins of the Sires'
   ids:
   - steam:1523990
+  requires: []
+  tiers:
+  - 3

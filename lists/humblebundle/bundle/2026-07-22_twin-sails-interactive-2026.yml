@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Twin Sails Interactive 2026 — Entire 29 Item Bundle
-tier: 2
+name: Twin Sails Interactive 2026
+tiers:
+- rank: 2
+  name: Entire 29 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/twin-sails-interactive-2026
@@ -13,81 +15,162 @@ games:
 - name: Gloomhaven
   ids:
   - unresolved:source:humblebundle:gloomhaven
+  requires: []
+  tiers:
+  - 2
 - name: 'Gloomhaven - Solo Scenarios: Mercenary Challenges'
   ids:
   - unresolved:source:humblebundle:gloomhaven-soloscenarios_mercenarychallenges
+  requires: []
+  tiers:
+  - 2
 - name: Ember Knights
   ids:
   - unresolved:source:humblebundle:emberknights
+  requires: []
+  tiers:
+  - 2
 - name: 'Bloomtown: A Different Story'
   ids:
   - unresolved:source:humblebundle:bloomtown_adifferentstory
+  requires: []
+  tiers:
+  - 2
 - name: 'Wantless : Solace at Worlds End'
   ids:
   - unresolved:source:humblebundle:wantless_solaceatworldsend
+  requires: []
+  tiers:
+  - 2
 - name: Terraforming Mars
   ids:
   - unresolved:source:humblebundle:terraformingmars
+  requires: []
+  tiers:
+  - 2
 - name: Terraforming Mars - Original Promo Pack
   ids:
   - unresolved:source:humblebundle:terraformingmars-originalpromopack
+  requires: []
+  tiers:
+  - 2
 - name: 'Terraforming Mars: Venus Next'
   ids:
   - steam:2625120
+  requires: []
+  tiers:
+  - 2
 - name: 'Terraforming Mars: Prelude DLC'
   ids:
   - unresolved:source:humblebundle:terraformingmars_prelude
+  requires: []
+  tiers:
+  - 2
 - name: 'Terraforming Mars: Hellas & Elysium DLC'
   ids:
   - unresolved:source:humblebundle:terraformingmars-hellaselysium
+  requires: []
+  tiers:
+  - 2
 - name: 'A Game of Thrones: The Board Game - Digital Edition'
   ids:
   - steam:1075190
+  requires: []
+  tiers:
+  - 2
 - name: A Game Of Thrones - A Dance With Dragons
   ids:
   - steam:1416390
+  requires: []
+  tiers:
+  - 2
 - name: A Game Of Thrones - A Feast For Crows
   ids:
   - steam:1416391
+  requires: []
+  tiers:
+  - 2
 - name: Arkham Horror- Mother's Embrace
   ids:
   - steam:840210
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - Tiles & Tactics
   ids:
   - steam:598810
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - The Princess and The Dragon
   ids:
   - unresolved:source:humblebundle:carcassonne_theprincessthedragonexpansion
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - Traders and Builders
   ids:
   - unresolved:source:humblebundle:carcassonne_tradersandbuilders
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - Winter & Gingerbread Man
   ids:
   - unresolved:source:humblebundle:carcassonne_winterandgingerbreadman
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - Inns & Cathedrals
   ids:
   - steam:622030
+  requires: []
+  tiers:
+  - 2
 - name: Carcassonne - The River
   ids:
   - steam:648730
+  requires: []
+  tiers:
+  - 2
 - name: 'The Lord of the Rings: Adventure Card Game - Definitive Edition'
   ids:
   - steam:509580
+  requires: []
+  tiers:
+  - 2
 - name: Innchanted
   ids:
   - steam:1369720
+  requires: []
+  tiers:
+  - 2
 - name: Splendor
   ids:
   - steam:376680
+  requires: []
+  tiers:
+  - 2
 - name: Splendor - The Strongholds
   ids:
   - steam:798250
+  requires: []
+  tiers:
+  - 2
 - name: Splendor - The Cities
   ids:
   - steam:797510
+  requires: []
+  tiers:
+  - 2
 - name: 'Agricola: All Creatures Big & Small'
   ids:
   - unresolved:source:humblebundle:agricola
+  requires: []
+  tiers:
+  - 2
 - name: Isle of Skye
   ids:
   - steam:873980
+  requires: []
+  tiers:
+  - 2

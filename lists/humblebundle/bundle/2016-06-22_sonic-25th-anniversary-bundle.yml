@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Sonic 25th Anniversary Bundle — entire-19-item-bundle
-tier: 3
+name: Humble Sonic 25th Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-19-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3610/
@@ -13,57 +15,114 @@ games:
 - name: Sonic CD
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-cd
+  requires: []
+  tiers:
+  - 3
 - name: Sonic the Hedgehog
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-the-hedgehog
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Adventure DX
   ids:
   - steam:71250
+  requires: []
+  tiers:
+  - 3
 - name: Sonic 3D Blast
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-3d-blast
+  requires: []
+  tiers:
+  - 3
 - name: Sonic the Hedgehog 2
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-the-hedgehog-2
+  requires: []
+  tiers:
+  - 3
 - name: "Sonic Adventure\x99 2"
   ids:
   - steam:213610
+  requires: []
+  tiers:
+  - 3
 - name: Sonic The Hedgehog 4 Episode 1
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-the-hedgehog-4-episode-1
+  requires: []
+  tiers:
+  - 3
 - name: Sonic & Sega All-Stars Racing
   ids:
   - steam:34190
+  requires: []
+  tiers:
+  - 3
 - name: Sonic 3 & Knuckles
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-3-and-knuckles
+  requires: []
+  tiers:
+  - 3
 - name: Dr. Robotnik's Mean Bean Machine
   ids:
   - unresolved:source:isthereanydeal:3610:dr-robotniks-mean-bean-machine
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Spinball
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-spinball
+  requires: []
+  tiers:
+  - 3
 - name: 'SONIC ADVENTURE 2: BATTLE'
   ids:
   - steam:217900
+  requires: []
+  tiers:
+  - 3
 - name: SONIC Generations
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-generations
+  requires: []
+  tiers:
+  - 3
 - name: Sonic & All-Stars Racing Transformed Collection
   ids:
   - steam:212480
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Generations Collection
   ids:
   - steam:71340
+  requires: []
+  tiers:
+  - 3
 - name: 'Sonic and All-Stars Racing Transformed: Ryo Hazuki'
   ids:
   - steam:271030
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Lost World
   ids:
   - steam:329440
+  requires: []
+  tiers:
+  - 3
 - name: Sonic The Hedgehog 4 Episode II
   ids:
   - steam:203650
+  requires: []
+  tiers:
+  - 3
 - name: "Sonic & All\x96Stars Racing Transformed"
   ids:
   - unresolved:source:isthereanydeal:3610:sonic-and-all-stars-racing-transformed
+  requires: []
+  tiers:
+  - 3

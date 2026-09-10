@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Kingdom Bundle — Tier 3
-tier: 3
+name: Kingdom Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10355/
@@ -13,36 +15,72 @@ games:
 - name: Giana Sisters 2D
   ids:
   - steam:350770
+  requires: []
+  tiers:
+  - 3
 - name: Rad Rodgers Radical Edition
   ids:
   - steam:805660
+  requires: []
+  tiers:
+  - 3
 - name: Kill to Collect
   ids:
   - steam:241760
+  requires: []
+  tiers:
+  - 3
 - name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
   ids:
   - steam:246960
+  requires: []
+  tiers:
+  - 3
 - name: SPITLINGS
   ids:
   - steam:1002000
+  requires: []
+  tiers:
+  - 3
 - name: Sine Mora EX
   ids:
   - steam:606730
+  requires: []
+  tiers:
+  - 3
 - name: Bang Bang Racing
   ids:
   - steam:207020
+  requires: []
+  tiers:
+  - 3
 - name: 'Giana Sisters: Twisted Dreams'
   ids:
   - steam:223220
+  requires: []
+  tiers:
+  - 3
 - name: SkyDrift
   ids:
   - steam:91100
+  requires: []
+  tiers:
+  - 3
 - name: Aces of the Luftwaffe - Squadron
   ids:
   - steam:859350
+  requires: []
+  tiers:
+  - 3
 - name: Townsmen - A Kingdom Rebuilt
   ids:
   - steam:938380
+  requires: []
+  tiers:
+  - 3
 - name: 'Jagged Alliance: Rage!'
   ids:
   - steam:463170
+  requires: []
+  tiers:
+  - 3

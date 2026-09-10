@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Gamer Steam Bundle 2023 — Tier 3
-tier: 3
+name: Indie Gamer Steam Bundle 2023
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12913/
@@ -13,45 +15,90 @@ games:
 - name: The Deed
   ids:
   - steam:420740
+  requires: []
+  tiers:
+  - 3
 - name: 'The Deed: Dynasty'
   ids:
   - steam:460960
+  requires: []
+  tiers:
+  - 3
 - name: Lamia's Plan
   ids:
   - steam:1670890
+  requires: []
+  tiers:
+  - 3
 - name: 'Valkyrie: Journey To Midgard'
   ids:
   - steam:1724470
+  requires: []
+  tiers:
+  - 3
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:
   - steam:431710
+  requires: []
+  tiers:
+  - 3
 - name: 'Space Pilgrim Episode IV: Sol'
   ids:
   - steam:446640
+  requires: []
+  tiers:
+  - 3
 - name: 'Space Pilgrim Episode III: Delta Pavonis'
   ids:
   - steam:439250
+  requires: []
+  tiers:
+  - 3
 - name: 'WayOut 2: Hex'
   ids:
   - steam:585950
+  requires: []
+  tiers:
+  - 3
 - name: WayOut
   ids:
   - steam:551110
+  requires: []
+  tiers:
+  - 3
 - name: Airport Madness 3D
   ids:
   - steam:445770
+  requires: []
+  tiers:
+  - 3
 - name: 'Sentience: The Android''s Tale'
   ids:
   - steam:635850
+  requires: []
+  tiers:
+  - 3
 - name: Cubicle Quest
   ids:
   - steam:349500
+  requires: []
+  tiers:
+  - 3
 - name: 'Crown Champion: Legends of the Arena'
   ids:
   - steam:527710
+  requires: []
+  tiers:
+  - 3
 - name: Rencounter
   ids:
   - steam:431810
+  requires: []
+  tiers:
+  - 3
 - name: Looking for Aliens
   ids:
   - steam:1733500
+  requires: []
+  tiers:
+  - 3

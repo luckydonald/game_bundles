@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Asmodee Digital Tabletop 2gether Bundle — entire-18-item-bundle
-tier: 3
+name: Humble Asmodee Digital Tabletop 2gether Bundle
+tiers:
+- rank: 3
+  name: entire-18-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9705/
@@ -13,54 +15,108 @@ games:
 - name: Small World 2 - Grand Dames
   ids:
   - unresolved:source:isthereanydeal:9705:small-world-2-grand-dames
+  requires: []
+  tiers:
+  - 3
 - name: Love Letter
   ids:
   - steam:926520
+  requires: []
+  tiers:
+  - 3
 - name: 'Pandemic: The Board Game'
   ids:
   - unresolved:source:isthereanydeal:9705:pandemic-the-board-game
+  requires: []
+  tiers:
+  - 3
 - name: Small World 2
   ids:
   - steam:235620
+  requires: []
+  tiers:
+  - 3
 - name: 'Pandemic: On the Brink - Virulent Strain'
   ids:
   - unresolved:source:isthereanydeal:9705:pandemic-on-the-brink-virulent-strain
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride Legendary Asia
   ids:
   - unresolved:source:isthereanydeal:9705:ticket-to-ride-legendary-asia
+  requires: []
+  tiers:
+  - 3
 - name: Splendor - The Strongholds
   ids:
   - steam:798250
+  requires: []
+  tiers:
+  - 3
 - name: Ticket To Ride - France
   ids:
   - unresolved:source:isthereanydeal:9705:ticket-to-ride-france
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride
   ids:
   - steam:2477010
+  requires: []
+  tiers:
+  - 3
 - name: Splendor
   ids:
   - steam:376680
+  requires: []
+  tiers:
+  - 3
 - name: Small World 2 - Be not Afraid...
   ids:
   - unresolved:source:isthereanydeal:9705:small-world-2-be-not-afraid
+  requires: []
+  tiers:
+  - 3
 - name: Splendor - The Cities
   ids:
   - steam:797510
+  requires: []
+  tiers:
+  - 3
 - name: 'Pandemic: On the Brink - Roles & Events'
   ids:
   - unresolved:source:isthereanydeal:9705:pandemic-on-the-brink-roles-and-events
+  requires: []
+  tiers:
+  - 3
 - name: 'The Lord of the Rings: Adventure Card Game'
   ids:
   - steam:509580
+  requires: []
+  tiers:
+  - 3
 - name: Terraforming Mars
   ids:
   - steam:800270
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride Europe
   ids:
   - unresolved:source:isthereanydeal:9705:ticket-to-ride-europe
+  requires: []
+  tiers:
+  - 3
 - name: Small World 2 - Cursed!
   ids:
   - unresolved:source:isthereanydeal:9705:small-world-2-cursed
+  requires: []
+  tiers:
+  - 3
 - name: 'Blood Rage : Digital Edition'
   ids:
   - steam:1015930
+  requires: []
+  tiers:
+  - 3

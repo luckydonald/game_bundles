@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: August 2026 Humble Choice — Premium
-tier: 2
-pick_quota: 9
+name: August 2026 Humble Choice
+tiers:
+- rank: 2
+  name: Premium
+  pick_quota: 9
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/membership
@@ -17,35 +19,53 @@ games:
   ids:
   - steam:2072450
   requires: []
+  tiers:
+  - 2
 - name: Dead Cells + The Bad Seed DLC
   ids:
   - steam:1204130
   requires: []
+  tiers:
+  - 2
 - name: 'Teenage Mutant Ninja Turtles: Shredder''s Revenge - Ultimate Edition'
   ids:
   - steam:1361510
   requires: []
+  tiers:
+  - 2
 - name: Decktamer
   ids:
   - steam:2870340
   requires: []
+  tiers:
+  - 2
 - name: Conquest Dark
   ids:
   - steam:3238670
   requires: []
+  tiers:
+  - 2
 - name: Gatekeeper
   ids:
   - steam:2106670
   requires: []
+  tiers:
+  - 2
 - name: Pile Up!
   ids:
   - steam:2094910
   requires: []
+  tiers:
+  - 2
 - name: Dark Envoy
   ids:
   - steam:945770
   requires: []
+  tiers:
+  - 2
 - name: King in the Mountain Playtest
   ids:
   - unresolved:source:humblebundle:kinginthemountain
   requires: []
+  tiers:
+  - 2

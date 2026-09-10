@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Serenity''s Forge: Storyteller''s Bundle — entire-11-item-bundle'
-tier: 3
+name: 'Serenity''s Forge: Storyteller''s Bundle'
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15192/
@@ -13,33 +15,66 @@ games:
 - name: 'LISA: The Joyful'
   ids:
   - steam:379310
+  requires: []
+  tiers:
+  - 3
 - name: Paratopic
   ids:
   - steam:897030
+  requires: []
+  tiers:
+  - 3
 - name: 'LISA: The Painful'
   ids:
   - steam:335670
+  requires: []
+  tiers:
+  - 3
 - name: Neversong
   ids:
   - steam:733210
+  requires: []
+  tiers:
+  - 3
 - name: Smile For Me
   ids:
   - steam:1018850
+  requires: []
+  tiers:
+  - 3
 - name: Lifeless Planet Premier Edition
   ids:
   - steam:261530
+  requires: []
+  tiers:
+  - 3
 - name: Virgo Versus the Zodiac
   ids:
   - steam:920320
+  requires: []
+  tiers:
+  - 3
 - name: 'Death''s Gambit: Afterlife'
   ids:
   - steam:356650
+  requires: []
+  tiers:
+  - 3
 - name: Lifeless Moon
   ids:
   - steam:1147330
+  requires: []
+  tiers:
+  - 3
 - name: Arcadian Atlas
   ids:
   - steam:691790
+  requires: []
+  tiers:
+  - 3
 - name: Long Gone Days
   ids:
   - steam:510540
+  requires: []
+  tiers:
+  - 3

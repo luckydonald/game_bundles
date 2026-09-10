@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Killer Bundle 18 — Tier 2
-tier: 2
+name: Killer Bundle 18
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10207/
@@ -13,33 +15,66 @@ games:
 - name: Help Will Come Tomorrow
   ids:
   - steam:1119600
+  requires: []
+  tiers:
+  - 2
 - name: Rise of Industry
   ids:
   - steam:671440
+  requires: []
+  tiers:
+  - 2
 - name: OVERPASS™
   ids:
   - steam:970840
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Gladius - Relics of War'
   ids:
   - steam:489630
+  requires: []
+  tiers:
+  - 2
 - name: 'Rise of Industry: 2130'
   ids:
   - steam:1139110
+  requires: []
+  tiers:
+  - 2
 - name: 'Shadow Tactics: Blades of the Shogun'
   ids:
   - steam:418240
+  requires: []
+  tiers:
+  - 2
 - name: 'Sundered: Eldritch Edition'
   ids:
   - steam:535480
+  requires: []
+  tiers:
+  - 2
 - name: Hotshot Racing
   ids:
   - steam:609920
+  requires: []
+  tiers:
+  - 2
 - name: 'Kingdom Come: Deliverance - From the Ashes'
   ids:
   - steam:883150
+  requires: []
+  tiers:
+  - 2
 - name: 'Kingdom Come: Deliverance'
   ids:
   - steam:379430
+  requires: []
+  tiers:
+  - 2
 - name: 'Kingdom Come: Deliverance - Band of Bastards'
   ids:
   - steam:977420
+  requires: []
+  tiers:
+  - 2

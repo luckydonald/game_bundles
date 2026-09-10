@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Focus Entertainment Bundle 2026 — 6 item bundle
-tier: 3
+name: Focus Entertainment Bundle 2026
+tiers:
+- rank: 3
+  name: 6 item bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15899/
@@ -13,18 +15,36 @@ games:
 - name: Shady Part of Me
   ids:
   - steam:1116580
+  requires: []
+  tiers:
+  - 3
 - name: Curse of the Dead Gods
   ids:
   - steam:1123770
+  requires: []
+  tiers:
+  - 3
 - name: 'A Plague Tale: Innocence'
   ids:
   - steam:752590
+  requires: []
+  tiers:
+  - 3
 - name: Evil West
   ids:
   - steam:1065310
+  requires: []
+  tiers:
+  - 3
 - name: 'A Plague Tale: Requiem'
   ids:
   - steam:1182900
+  requires: []
+  tiers:
+  - 3
 - name: Atlas Fallen Reign Of Sand
   ids:
   - steam:1230530
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: CATastrophe Bundle — Tier 3
-tier: 3
+name: CATastrophe Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4351/
@@ -13,33 +15,66 @@ games:
 - name: Cat on a Diet
   ids:
   - steam:447890
+  requires: []
+  tiers:
+  - 3
 - name: Shooting Stars!
   ids:
   - steam:415350
+  requires: []
+  tiers:
+  - 3
 - name: Samudai
   ids:
   - unresolved:source:isthereanydeal:4351:samudai
+  requires: []
+  tiers:
+  - 3
 - name: Pix the Cat
   ids:
   - steam:330180
+  requires: []
+  tiers:
+  - 3
 - name: Hot Tin Roof
   ids:
   - steam:253390
+  requires: []
+  tiers:
+  - 3
 - name: MouseCraft
   ids:
   - steam:252750
+  requires: []
+  tiers:
+  - 3
 - name: Beyond Eyes
   ids:
   - unresolved:source:isthereanydeal:4351:beyond-eyes
+  requires: []
+  tiers:
+  - 3
 - name: 'Nyan Cat: Lost In Space'
   ids:
   - steam:415420
+  requires: []
+  tiers:
+  - 3
 - name: The Purring Quest
   ids:
   - steam:409100
+  requires: []
+  tiers:
+  - 3
 - name: Fort Meow
   ids:
   - steam:352070
+  requires: []
+  tiers:
+  - 3
 - name: Kittypocalypse - Ungoggled
   ids:
   - steam:529410
+  requires: []
+  tiers:
+  - 3

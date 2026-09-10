@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble One Special Day Bundle 2019 — entire-9-item-bundle
-tier: 3
+name: Humble One Special Day Bundle 2019
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7969/
@@ -13,27 +15,54 @@ games:
 - name: Purrfect Date
   ids:
   - steam:520600
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age - Soundtrack
   ids:
   - steam:271950
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age
   ids:
   - steam:232790
+  requires: []
+  tiers:
+  - 3
 - name: Purrfect Date Original Soundtrack
   ids:
   - unresolved:source:isthereanydeal:7969:purrfect-date-original-soundtrack
+  requires: []
+  tiers:
+  - 3
 - name: Stronghold Crusader 2
   ids:
   - steam:232890
+  requires: []
+  tiers:
+  - 3
 - name: Bomber Crew
   ids:
   - steam:537800
+  requires: []
+  tiers:
+  - 3
 - name: 'The Swords of Ditto: Mormo''s Curse'
   ids:
   - steam:619780
+  requires: []
+  tiers:
+  - 3
 - name: Tannenberg
   ids:
   - steam:633460
+  requires: []
+  tiers:
+  - 3
 - name: DiRT 4
   ids:
   - unresolved:source:isthereanydeal:7969:dirt-4
+  requires: []
+  tiers:
+  - 3

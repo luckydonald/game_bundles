@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #64 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #64'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6637/
@@ -13,30 +15,60 @@ games:
 - name: CLICKER ACHIEVEMENTS - THE IMPOSSIBLE CHALLENGE
   ids:
   - unresolved:source:isthereanydeal:6637:clicker-achievements-the-impossible-challenge
+  requires: []
+  tiers:
+  - 2
 - name: OS:Path
   ids:
   - steam:831090
+  requires: []
+  tiers:
+  - 2
 - name: Wormster Dash
   ids:
   - steam:818050
+  requires: []
+  tiers:
+  - 2
 - name: NOSTOI
   ids:
   - steam:773810
+  requires: []
+  tiers:
+  - 2
 - name: AntVentor
   ids:
   - steam:739190
+  requires: []
+  tiers:
+  - 2
 - name: Bear Slayer
   ids:
   - unresolved:source:isthereanydeal:6637:bear-slayer
+  requires: []
+  tiers:
+  - 2
 - name: Smogpunk 湮霾之地
   ids:
   - steam:644150
+  requires: []
+  tiers:
+  - 2
 - name: Skein
   ids:
   - steam:407630
+  requires: []
+  tiers:
+  - 2
 - name: Space Rogue
   ids:
   - steam:364300
+  requires: []
+  tiers:
+  - 2
 - name: Jump Gunners
   ids:
   - steam:697660
+  requires: []
+  tiers:
+  - 2

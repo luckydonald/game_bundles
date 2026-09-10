@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Paradoxical Bundle — Tier 2
-tier: 2
+name: The Paradoxical Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1473/
@@ -13,15 +15,30 @@ games:
 - name: 'Leviathan: Warships'
   ids:
   - unresolved:source:isthereanydeal:1473:leviathan-warships
+  requires: []
+  tiers:
+  - 2
 - name: A Game of Dwarves
   ids:
   - steam:200370
+  requires: []
+  tiers:
+  - 2
 - name: Sword of the Stars Complete Collection
   ids:
   - steam:42890
+  requires: []
+  tiers:
+  - 2
 - name: Knights of Honor
   ids:
   - steam:25830
+  requires: []
+  tiers:
+  - 2
 - name: Majesty Gold HD
   ids:
   - steam:25990
+  requires: []
+  tiers:
+  - 2

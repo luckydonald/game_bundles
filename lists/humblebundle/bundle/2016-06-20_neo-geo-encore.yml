@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Neo Geo Encore Bundle — entire-25-item-bundle
-tier: 3
+name: Humble Neo Geo Encore Bundle
+tiers:
+- rank: 3
+  name: entire-25-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3605/
@@ -13,75 +15,150 @@ games:
 - name: FATAL FURY SPECIAL
   ids:
   - unresolved:source:isthereanydeal:3605:fatal-fury-special
+  requires: []
+  tiers:
+  - 3
 - name: BASEBALL STARS 2
   ids:
   - steam:366230
+  requires: []
+  tiers:
+  - 3
 - name: THE KING OF FIGHTERS 2000
   ids:
   - unresolved:source:isthereanydeal:3605:the-king-of-fighters-2000
+  requires: []
+  tiers:
+  - 3
 - name: KING OF THE MONSTERS
   ids:
   - unresolved:source:isthereanydeal:3605:king-of-the-monsters
+  requires: []
+  tiers:
+  - 3
 - name: SENGOKU 3
   ids:
   - unresolved:source:isthereanydeal:3605:sengoku-3
+  requires: []
+  tiers:
+  - 3
 - name: SAMURAI SHODOWN II
   ids:
   - unresolved:source:isthereanydeal:3605:samurai-shodown-ii
+  requires: []
+  tiers:
+  - 3
 - name: ART OF FIGHTING 2
   ids:
   - unresolved:source:isthereanydeal:3605:art-of-fighting-2
+  requires: []
+  tiers:
+  - 3
 - name: BLAZING STAR
   ids:
   - unresolved:source:isthereanydeal:3605:blazing-star
+  requires: []
+  tiers:
+  - 3
 - name: METAL SLUG 2
   ids:
   - steam:366260
+  requires: []
+  tiers:
+  - 3
 - name: IRONCLAD (1996)
   ids:
   - unresolved:source:isthereanydeal:3605:ironclad-1996
+  requires: []
+  tiers:
+  - 3
 - name: METAL SLUG
   ids:
   - steam:366250
+  requires: []
+  tiers:
+  - 3
 - name: THE LAST BLADE
   ids:
   - steam:465840
+  requires: []
+  tiers:
+  - 3
 - name: Metal Slug 3
   ids:
   - steam:250180
+  requires: []
+  tiers:
+  - 3
 - name: TWINKLE STAR SPRITES
   ids:
   - steam:366280
+  requires: []
+  tiers:
+  - 3
 - name: THE KING OF FIGHTERS 2002
   ids:
   - unresolved:source:isthereanydeal:3605:the-king-of-fighters-2002
+  requires: []
+  tiers:
+  - 3
 - name: 'REAL BOUT FATAL FURY 2: THE NEWCOMERS'
   ids:
   - steam:3359900
+  requires: []
+  tiers:
+  - 3
 - name: NEO TURF MASTERS
   ids:
   - unresolved:source:isthereanydeal:3605:neo-turf-masters
+  requires: []
+  tiers:
+  - 3
 - name: PULSTAR (1995)
   ids:
   - unresolved:source:isthereanydeal:3605:pulstar-1995
+  requires: []
+  tiers:
+  - 3
 - name: SHOCK TROOPERS
   ids:
   - steam:366270
+  requires: []
+  tiers:
+  - 3
 - name: THE KING OF FIGHTERS '98 ULTIMATE MATCH FINAL EDITION
   ids:
   - steam:222420
+  requires: []
+  tiers:
+  - 3
 - name: 'GAROU: MARK OF THE WOLVES'
   ids:
   - steam:366240
+  requires: []
+  tiers:
+  - 3
 - name: 'SHOCK TROOPERS: 2nd SQUAD'
   ids:
   - steam:465870
+  requires: []
+  tiers:
+  - 3
 - name: METAL SLUG X
   ids:
   - steam:312610
+  requires: []
+  tiers:
+  - 3
 - name: THE KING OF FIGHTERS 2002 UNLIMITED MATCH
   ids:
   - steam:222440
+  requires: []
+  tiers:
+  - 3
 - name: SAMURAI SHODOWN V SPECIAL
   ids:
   - steam:1076550
+  requires: []
+  tiers:
+  - 3

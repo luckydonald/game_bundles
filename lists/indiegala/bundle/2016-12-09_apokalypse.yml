@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Apokalypse Countdown Bundle — Tier 2
-tier: 2
+name: Apokalypse Countdown Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4467/
@@ -13,33 +15,66 @@ games:
 - name: Apokalypsis
   ids:
   - unresolved:source:isthereanydeal:4467:apokalypsis
+  requires: []
+  tiers:
+  - 2
 - name: SAMOLIOTIK DELUXE EDITION
   ids:
   - unresolved:source:isthereanydeal:4467:samoliotik-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: Leviathan Starblade
   ids:
   - steam:549900
+  requires: []
+  tiers:
+  - 2
 - name: The Lost Valley
   ids:
   - steam:360890
+  requires: []
+  tiers:
+  - 2
 - name: Exteria
   ids:
   - steam:532660
+  requires: []
+  tiers:
+  - 2
 - name: Rescue your chickens
   ids:
   - steam:551080
+  requires: []
+  tiers:
+  - 2
 - name: CRACKHEAD
   ids:
   - steam:554530
+  requires: []
+  tiers:
+  - 2
 - name: Ridge
   ids:
   - steam:492600
+  requires: []
+  tiers:
+  - 2
 - name: Tiny Guardians
   ids:
   - steam:431230
+  requires: []
+  tiers:
+  - 2
 - name: VR Journey
   ids:
   - unresolved:source:isthereanydeal:4467:vr-journey
+  requires: []
+  tiers:
+  - 2
 - name: CountDown
   ids:
   - unresolved:source:isthereanydeal:4467:countdown
+  requires: []
+  tiers:
+  - 2

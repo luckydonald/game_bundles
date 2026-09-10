@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Tycoon Titans Bundle — entire-8-item-bundle
-tier: 2
+name: Tycoon Titans Bundle
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15081/
@@ -13,24 +15,48 @@ games:
 - name: Transport Fever
   ids:
   - steam:446800
+  requires: []
+  tiers:
+  - 2
 - name: Frostpunk
   ids:
   - steam:323190
+  requires: []
+  tiers:
+  - 2
 - name: 'RollerCoaster Tycoon® 3: Complete Edition'
   ids:
   - steam:1368820
+  requires: []
+  tiers:
+  - 2
 - name: PlateUp!
   ids:
   - steam:1599600
+  requires: []
+  tiers:
+  - 2
 - name: Mad Games Tycoon 2
   ids:
   - steam:1342330
+  requires: []
+  tiers:
+  - 2
 - name: Farm Manager 2021
   ids:
   - steam:1123830
+  requires: []
+  tiers:
+  - 2
 - name: Espresso Tycoon
   ids:
   - steam:1543280
+  requires: []
+  tiers:
+  - 2
 - name: Farm Manager 2021 - Agrotourism
   ids:
   - steam:1741390
+  requires: []
+  tiers:
+  - 2

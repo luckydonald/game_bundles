@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Galaxy Bundle — Tier 2
-tier: 2
+name: Indie Galaxy Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5922/
@@ -13,36 +15,72 @@ games:
 - name: Fidget Spinner In Space
   ids:
   - steam:745510
+  requires: []
+  tiers:
+  - 2
 - name: Sumetrick
   ids:
   - steam:771950
+  requires: []
+  tiers:
+  - 2
 - name: Adventures Of Pipi
   ids:
   - steam:744420
+  requires: []
+  tiers:
+  - 2
 - name: Signs Of Darkness
   ids:
   - steam:715410
+  requires: []
+  tiers:
+  - 2
 - name: 'Infinite Space III: Sea of Stars'
   ids:
   - steam:269990
+  requires: []
+  tiers:
+  - 2
 - name: Blood Harvest 2
   ids:
   - steam:753170
+  requires: []
+  tiers:
+  - 2
 - name: Asteroids Millennium
   ids:
   - steam:669830
+  requires: []
+  tiers:
+  - 2
 - name: 'Going Nowhere: The Dream'
   ids:
   - steam:691240
+  requires: []
+  tiers:
+  - 2
 - name: 'Precision Archery: Competitive'
   ids:
   - steam:763490
+  requires: []
+  tiers:
+  - 2
 - name: 'Above: The Fallen'
   ids:
   - steam:715490
+  requires: []
+  tiers:
+  - 2
 - name: 'SPACE ASTEROID SHOOTER : RETRO ACHIEVEMENT ODYSSEY'
   ids:
   - unresolved:source:isthereanydeal:5922:space-asteroid-shooter-retro-achievement-odyssey
+  requires: []
+  tiers:
+  - 2
 - name: Soul Grabber
   ids:
   - steam:788250
+  requires: []
+  tiers:
+  - 2

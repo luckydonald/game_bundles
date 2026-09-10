@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Doodle Heroes Bundle — Tier 2
-tier: 2
+name: Doodle Heroes Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5946/
@@ -13,36 +15,72 @@ games:
 - name: 'Doodle God: Alchemy Jam'
   ids:
   - steam:759750
+  requires: []
+  tiers:
+  - 2
 - name: Find this!
   ids:
   - unresolved:source:isthereanydeal:5946:find-this
+  requires: []
+  tiers:
+  - 2
 - name: Bloody Mice
   ids:
   - steam:676000
+  requires: []
+  tiers:
+  - 2
 - name: AIDEN
   ids:
   - steam:783060
+  requires: []
+  tiers:
+  - 2
 - name: MY 1980's DASHBOARD
   ids:
   - unresolved:source:isthereanydeal:5946:my-1980-s-dashboard
+  requires: []
+  tiers:
+  - 2
 - name: Acro Storm
   ids:
   - steam:546610
+  requires: []
+  tiers:
+  - 2
 - name: 'Doodle God: 8-bit Mania'
   ids:
   - steam:538060
+  requires: []
+  tiers:
+  - 2
 - name: The Surprising Adventures of Munchausen
   ids:
   - steam:696710
+  requires: []
+  tiers:
+  - 2
 - name: 'Solitaire Mystery: Stolen Power'
   ids:
   - steam:679820
+  requires: []
+  tiers:
+  - 2
 - name: Ersatz
   ids:
   - steam:703720
+  requires: []
+  tiers:
+  - 2
 - name: 'Keatz: The Lonely Bird'
   ids:
   - steam:707320
+  requires: []
+  tiers:
+  - 2
 - name: Heroes of Delum
   ids:
   - steam:676700
+  requires: []
+  tiers:
+  - 2

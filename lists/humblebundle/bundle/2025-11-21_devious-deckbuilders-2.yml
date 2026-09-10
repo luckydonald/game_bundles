@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Devious Deckbuilders 2 Bundle — entire-8-item-bundle
-tier: 4
+name: Devious Deckbuilders 2 Bundle
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15619/
@@ -13,24 +15,48 @@ games:
 - name: Ring of Pain
   ids:
   - steam:998740
+  requires: []
+  tiers:
+  - 4
 - name: Evolings
   ids:
   - steam:2281820
+  requires: []
+  tiers:
+  - 4
 - name: Roguebook
   ids:
   - steam:1076200
+  requires: []
+  tiers:
+  - 4
 - name: Heretic's Fork
   ids:
   - steam:2181610
+  requires: []
+  tiers:
+  - 4
 - name: 'Deepest Chamber: Resurrection'
   ids:
   - steam:1552080
+  requires: []
+  tiers:
+  - 4
 - name: Vault of the Void
   ids:
   - steam:1135810
+  requires: []
+  tiers:
+  - 4
 - name: Breach Wanderers
   ids:
   - steam:1394130
+  requires: []
+  tiers:
+  - 4
 - name: Demonic Mahjong
   ids:
   - steam:3444020
+  requires: []
+  tiers:
+  - 4

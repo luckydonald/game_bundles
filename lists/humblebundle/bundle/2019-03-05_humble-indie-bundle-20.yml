@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Indie Bundle 20 — entire-8-item-bundle
-tier: 3
+name: Humble Indie Bundle 20
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7119/
@@ -13,24 +15,48 @@ games:
 - name: Tangledeep
   ids:
   - steam:628770
+  requires: []
+  tiers:
+  - 3
 - name: Tangledeep - Soundtrack
   ids:
   - steam:788620
+  requires: []
+  tiers:
+  - 3
 - name: The First Tree
   ids:
   - steam:555150
+  requires: []
+  tiers:
+  - 3
 - name: Among the Sleep - Enhanced Edition
   ids:
   - steam:250620
+  requires: []
+  tiers:
+  - 3
 - name: Getting Over It with Bennett Foddy
   ids:
   - steam:240720
+  requires: []
+  tiers:
+  - 3
 - name: 'Dream Daddy: A Dad Dating Simulator'
   ids:
   - steam:654880
+  requires: []
+  tiers:
+  - 3
 - name: Tooth and Tail
   ids:
   - steam:286000
+  requires: []
+  tiers:
+  - 3
 - name: Overgrowth
   ids:
   - steam:25000
+  requires: []
+  tiers:
+  - 3

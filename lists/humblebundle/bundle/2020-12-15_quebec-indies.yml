@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Québec Indies Bundle — entire-13-item-bundle
-tier: 3
+name: Humble Québec Indies Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9507/
@@ -13,39 +15,78 @@ games:
 - name: Leap of Fate
   ids:
   - steam:363420
+  requires: []
+  tiers:
+  - 3
 - name: Toto Temple Deluxe
   ids:
   - steam:342920
+  requires: []
+  tiers:
+  - 3
 - name: Aeolis Tournament
   ids:
   - steam:1097770
+  requires: []
+  tiers:
+  - 3
 - name: Knight Squad
   ids:
   - steam:294000
+  requires: []
+  tiers:
+  - 3
 - name: 'Jotun: Valhalla Edition'
   ids:
   - steam:323580
+  requires: []
+  tiers:
+  - 3
 - name: Light Fall
   ids:
   - steam:416830
+  requires: []
+  tiers:
+  - 3
 - name: Epic Manager - Create Your Own Adventuring Agency!
   ids:
   - steam:391280
+  requires: []
+  tiers:
+  - 3
 - name: 'Crew 167: The Grand Block Odyssey'
   ids:
   - steam:772570
+  requires: []
+  tiers:
+  - 3
 - name: 'Crew 167: The Grand Block Odyssey Soundtrack'
   ids:
   - unresolved:source:isthereanydeal:9507:crew-167-the-grand-block-odyssey-soundtrack
+  requires: []
+  tiers:
+  - 3
 - name: 'Tales from Candlekeep: Tomb of Annihilation'
   ids:
   - unresolved:source:isthereanydeal:9507:tales-from-candlekeep-tomb-of-annihilation
+  requires: []
+  tiers:
+  - 3
 - name: Mages of Mystralia
   ids:
   - steam:529660
+  requires: []
+  tiers:
+  - 3
 - name: Speed Brawl
   ids:
   - steam:468670
+  requires: []
+  tiers:
+  - 3
 - name: Castle Story
   ids:
   - steam:227860
+  requires: []
+  tiers:
+  - 3

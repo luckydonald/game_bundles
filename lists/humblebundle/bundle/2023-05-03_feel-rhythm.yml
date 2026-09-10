@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Feel The Rhythm Bundle — entire-7-item-bundle
-tier: 3
+name: Feel The Rhythm Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13130/
@@ -13,21 +15,42 @@ games:
 - name: Project Arrhythmia
   ids:
   - unresolved:source:isthereanydeal:13130:project-arrhythmia
+  requires: []
+  tiers:
+  - 3
 - name: Disaster Band
   ids:
   - steam:2216360
+  requires: []
+  tiers:
+  - 3
 - name: Trombone Champ
   ids:
   - steam:1059990
+  requires: []
+  tiers:
+  - 3
 - name: Soundfall
   ids:
   - steam:1608700
+  requires: []
+  tiers:
+  - 3
 - name: Melody's Escape 2
   ids:
   - steam:1829470
+  requires: []
+  tiers:
+  - 3
 - name: 'No Straight Roads: Encore Edition'
   ids:
   - steam:1726190
+  requires: []
+  tiers:
+  - 3
 - name: Beat Hazard 3
   ids:
   - steam:1493520
+  requires: []
+  tiers:
+  - 3

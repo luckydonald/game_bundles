@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'February Bundle #1 — Tier 2'
-tier: 2
+name: 'February Bundle #1'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2999/
@@ -13,24 +15,48 @@ games:
 - name: ONE DAY for Ched
   ids:
   - steam:321030
+  requires: []
+  tiers:
+  - 2
 - name: On A Roll 3D
   ids:
   - steam:341090
+  requires: []
+  tiers:
+  - 2
 - name: Egyptian Senet
   ids:
   - steam:391580
+  requires: []
+  tiers:
+  - 2
 - name: ShipLord
   ids:
   - steam:422250
+  requires: []
+  tiers:
+  - 2
 - name: Your Quest
   ids:
   - steam:416030
+  requires: []
+  tiers:
+  - 2
 - name: Crayon Chronicles
   ids:
   - steam:341510
+  requires: []
+  tiers:
+  - 2
 - name: Spaceport Hope
   ids:
   - steam:394540
+  requires: []
+  tiers:
+  - 2
 - name: Tomb of Tyrants
   ids:
   - steam:340360
+  requires: []
+  tiers:
+  - 2

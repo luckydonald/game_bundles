@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Anuman Interactive #2 — Tier 2'
-tier: 2
+name: 'Anuman Interactive #2'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4016/
@@ -13,36 +15,72 @@ games:
 - name: 'The Egyptian Prophecy: The Fate of Ramses'
   ids:
   - steam:302160
+  requires: []
+  tiers:
+  - 2
 - name: 'Nicolas Eymerich The Inquisitor - Book I: The Plague'
   ids:
   - steam:279500
+  requires: []
+  tiers:
+  - 2
 - name: Prehistorik
   ids:
   - steam:745870
+  requires: []
+  tiers:
+  - 2
 - name: Titan
   ids:
   - unresolved:source:isthereanydeal:4016:titan
+  requires: []
+  tiers:
+  - 2
 - name: 'Haegemonia: Legions of Iron'
   ids:
   - steam:294770
+  requires: []
+  tiers:
+  - 2
 - name: Nostradamus - The Last Prophecy
   ids:
   - steam:287720
+  requires: []
+  tiers:
+  - 2
 - name: Moto Racer Collection
   ids:
   - steam:324110
+  requires: []
+  tiers:
+  - 2
 - name: ALPAGES / THE FIVE BOOKS
   ids:
   - steam:403860
+  requires: []
+  tiers:
+  - 2
 - name: Haegemonia - The Solon Heritage
   ids:
   - steam:294790
+  requires: []
+  tiers:
+  - 2
 - name: SHOWTIME 2073
   ids:
   - steam:411080
+  requires: []
+  tiers:
+  - 2
 - name: TERROR LAB
   ids:
   - steam:448540
+  requires: []
+  tiers:
+  - 2
 - name: Black Moon Chronicles
   ids:
   - steam:501500
+  requires: []
+  tiers:
+  - 2

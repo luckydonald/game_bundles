@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Unstoppable Cubic Bundle — Tier 2
-tier: 2
+name: Unstoppable Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4604/
@@ -13,27 +15,54 @@ games:
 - name: Undead vs Plants
   ids:
   - unresolved:source:isthereanydeal:4604:undead-vs-plants
+  requires: []
+  tiers:
+  - 2
 - name: Hover Hazard
   ids:
   - steam:545470
+  requires: []
+  tiers:
+  - 2
 - name: One way to exit
   ids:
   - unresolved:source:isthereanydeal:4604:one-way-to-exit
+  requires: []
+  tiers:
+  - 2
 - name: The Return Home Remastered
   ids:
   - steam:502910
+  requires: []
+  tiers:
+  - 2
 - name: Puzzle Cube
   ids:
   - steam:539460
+  requires: []
+  tiers:
+  - 2
 - name: 'Word Killer: Revolution'
   ids:
   - unresolved:source:isthereanydeal:4604:word-killer-revolution
+  requires: []
+  tiers:
+  - 2
 - name: War Cube
   ids:
   - steam:527800
+  requires: []
+  tiers:
+  - 2
 - name: Infinitum
   ids:
   - steam:555670
+  requires: []
+  tiers:
+  - 2
 - name: Once in Yaissor
   ids:
   - steam:553790
+  requires: []
+  tiers:
+  - 2

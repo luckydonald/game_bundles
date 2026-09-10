@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Playful Platformers Bundle (2026) — entire-9-item-bundle
-tier: 3
+name: Playful Platformers Bundle (2026)
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15784/
@@ -13,27 +15,54 @@ games:
 - name: 'Pogostuck: Rage With Your Friends'
   ids:
   - steam:688130
+  requires: []
+  tiers:
+  - 3
 - name: Lunistice
   ids:
   - steam:1701800
+  requires: []
+  tiers:
+  - 3
 - name: Super Kiwi 64
   ids:
   - steam:1949960
+  requires: []
+  tiers:
+  - 3
 - name: Move or Die
   ids:
   - steam:323850
+  requires: []
+  tiers:
+  - 3
 - name: 'Grapple Dogs: Cosmic Canines'
   ids:
   - steam:2278790
+  requires: []
+  tiers:
+  - 3
 - name: 'Demon Turf: Queens Edition'
   ids:
   - steam:1325900
+  requires: []
+  tiers:
+  - 3
 - name: Crumble
   ids:
   - steam:1061180
+  requires: []
+  tiers:
+  - 3
 - name: Kao the Kangaroo
   ids:
   - steam:1370140
+  requires: []
+  tiers:
+  - 3
 - name: 'PEPPERED: an existential platformer'
   ids:
   - steam:1883370
+  requires: []
+  tiers:
+  - 3

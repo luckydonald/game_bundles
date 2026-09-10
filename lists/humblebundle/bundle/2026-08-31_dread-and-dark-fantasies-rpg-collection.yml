@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dread and Dark Fantasies RPG Collection — Entire 10 Item Bundle
-tier: 3
+name: Dread and Dark Fantasies RPG Collection
+tiers:
+- rank: 3
+  name: Entire 10 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/dread-and-dark-fantasies-rpg-collection
@@ -24,38 +26,54 @@ games:
   - steam:560130
   - isthereanydeal:pillars-of-eternity-ii-deadfire
   requires: []
+  tiers:
+  - 3
 - name: Torchlight III
   ids:
   - steam:1030210
   requires: []
+  tiers:
+  - 3
 - name: Torchlight II
   ids:
   - steam:200710
   requires: []
+  tiers:
+  - 3
 - name: Torchlight
   ids:
   - steam:41500
   requires: []
+  tiers:
+  - 3
 - name: Kristala
   ids:
   - steam:1206410
   - isthereanydeal:kristala
   requires: []
+  tiers:
+  - 3
 - name: Darksiders Genesis
   ids:
   - steam:710920
   - isthereanydeal:darksiders-genesis
   requires: []
+  tiers:
+  - 3
 - name: Dread Delusion
   ids:
   - steam:1574240
   - isthereanydeal:dread-delusion
   requires: []
+  tiers:
+  - 3
 - name: Ashen
   ids:
   - steam:649950
   - isthereanydeal:ashen
   requires: []
+  tiers:
+  - 3
 - name: Steelrising
   ids:
   - steam:1283400
@@ -64,6 +82,8 @@ games:
     id: steelrising_bastilleedition
     name: Steelrising - Bastille Edition
   requires: []
+  tiers:
+  - 3
 - name: Steelrising - Discus Chain
   ids:
   - steam:2021370
@@ -71,6 +91,8 @@ games:
     id: steelrising_bastilleedition
     name: Steelrising - Bastille Edition
   requires: []
+  tiers:
+  - 3
 - name: Steelrising - Cagliostro's Secrets
   ids:
   - steam:2004261
@@ -78,8 +100,12 @@ games:
     id: steelrising_bastilleedition
     name: Steelrising - Bastille Edition
   requires: []
+  tiers:
+  - 3
 - name: The Axis Unseen
   ids:
   - steam:1807810
   - isthereanydeal:the-axis-unseen
   requires: []
+  tiers:
+  - 3

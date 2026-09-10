@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Kawaii Anime Bundle — Tier 2
-tier: 2
+name: Kawaii Anime Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6439/
@@ -13,33 +15,66 @@ games:
 - name: Teleportals. I swear it's a nice game
   ids:
   - steam:873200
+  requires: []
+  tiers:
+  - 2
 - name: NALOGI
   ids:
   - steam:810670
+  requires: []
+  tiers:
+  - 2
 - name: Gothicc Breaker
   ids:
   - steam:819230
+  requires: []
+  tiers:
+  - 2
 - name: Panzer Hearts - War Visual Novel
   ids:
   - steam:809680
+  requires: []
+  tiers:
+  - 2
 - name: NALOGI 2
   ids:
   - steam:841350
+  requires: []
+  tiers:
+  - 2
 - name: 'Paper Shakespeare: To Date Or Not To Date?'
   ids:
   - steam:702940
+  requires: []
+  tiers:
+  - 2
 - name: 'Frequent Flyer: A Long Distance Love Story'
   ids:
   - unresolved:source:isthereanydeal:6439:frequent-flyer-a-long-distance-love-story
+  requires: []
+  tiers:
+  - 2
 - name: Nusakana
   ids:
   - steam:401290
+  requires: []
+  tiers:
+  - 2
 - name: Blind Men
   ids:
   - steam:657290
+  requires: []
+  tiers:
+  - 2
 - name: American University Life ~Welcome Week!~
   ids:
   - steam:904050
+  requires: []
+  tiers:
+  - 2
 - name: Ignis Avis Venatio
   ids:
   - steam:809570
+  requires: []
+  tiers:
+  - 2

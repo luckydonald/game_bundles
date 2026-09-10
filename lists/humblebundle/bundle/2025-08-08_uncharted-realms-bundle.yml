@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Uncharted Realms Bundle — entire-9-item-bundle
-tier: 4
+name: Uncharted Realms Bundle
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15343/
@@ -13,27 +15,54 @@ games:
 - name: A Short Hike
   ids:
   - steam:1055540
+  requires: []
+  tiers:
+  - 4
 - name: 'Alba: A Wildlife Adventure'
   ids:
   - steam:1337010
+  requires: []
+  tiers:
+  - 4
 - name: 'FAR: Changing Tides'
   ids:
   - steam:1570010
+  requires: []
+  tiers:
+  - 4
 - name: The Forgotten City
   ids:
   - steam:874260
+  requires: []
+  tiers:
+  - 4
 - name: Under the Waves
   ids:
   - steam:1975440
+  requires: []
+  tiers:
+  - 4
 - name: Journey To The Savage Planet
   ids:
   - steam:973810
+  requires: []
+  tiers:
+  - 4
 - name: The Eternal Cylinder
   ids:
   - steam:865680
+  requires: []
+  tiers:
+  - 4
 - name: Moon Mystery
   ids:
   - steam:1933840
+  requires: []
+  tiers:
+  - 4
 - name: Fort Solis
   ids:
   - steam:1931730
+  requires: []
+  tiers:
+  - 4

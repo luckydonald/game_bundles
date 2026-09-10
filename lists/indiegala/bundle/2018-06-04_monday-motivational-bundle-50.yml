@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #50 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #50'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6207/
@@ -13,36 +15,72 @@ games:
 - name: Draw It!
   ids:
   - steam:816190
+  requires: []
+  tiers:
+  - 2
 - name: Dreamlike Worlds
   ids:
   - steam:602200
+  requires: []
+  tiers:
+  - 2
 - name: SLICE
   ids:
   - steam:840310
+  requires: []
+  tiers:
+  - 2
 - name: Hunter of antiques
   ids:
   - steam:745060
+  requires: []
+  tiers:
+  - 2
 - name: 2V Hoverbike
   ids:
   - steam:665650
+  requires: []
+  tiers:
+  - 2
 - name: ICARUS.1
   ids:
   - steam:395470
+  requires: []
+  tiers:
+  - 2
 - name: 'After Rain: Phoenix Rise'
   ids:
   - steam:693560
+  requires: []
+  tiers:
+  - 2
 - name: Merry Glade
   ids:
   - steam:838390
+  requires: []
+  tiers:
+  - 2
 - name: Grimrush
   ids:
   - steam:704760
+  requires: []
+  tiers:
+  - 2
 - name: Spectrubes Infinity
   ids:
   - unresolved:source:isthereanydeal:6207:spectrubes-infinity
+  requires: []
+  tiers:
+  - 2
 - name: Dinosaur Hunter
   ids:
   - steam:848630
+  requires: []
+  tiers:
+  - 2
 - name: Find Your Way
   ids:
   - unresolved:source:isthereanydeal:6207:find-your-way
+  requires: []
+  tiers:
+  - 2

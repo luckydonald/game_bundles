@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: TEAM17 COLLECTION — Heroes
-tier: 3
+name: TEAM17 COLLECTION
+tiers:
+- rank: 3
+  name: Heroes
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/team17-collection/
@@ -16,31 +18,47 @@ games:
   ids:
   - steam:2181720
   requires: []
+  tiers:
+  - 3
 - name: Warcana
   ids:
   - steam:2022930
   requires: []
+  tiers:
+  - 3
 - name: 'Operation: Tango'
   ids:
   - steam:1335790
   requires: []
+  tiers:
+  - 3
 - name: Conscript Directors Cut
   ids:
   - steam:1286990
   requires: []
+  tiers:
+  - 3
 - name: Heavenly Bodies
   ids:
   - steam:1138850
   requires: []
+  tiers:
+  - 3
 - name: Amber Isle
   ids:
   - steam:1663040
   requires: []
+  tiers:
+  - 3
 - name: SWORN
   ids:
   - steam:1763250
   requires: []
+  tiers:
+  - 3
 - name: Heroes of Hammerwatch II
   ids:
   - steam:619820
   requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Space Bundle 2 — Tier 2
-tier: 2
+name: Space Bundle 2
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2475/
@@ -13,15 +15,30 @@ games:
 - name: Into the Void
   ids:
   - steam:420270
+  requires: []
+  tiers:
+  - 2
 - name: Space Robot Samurai Zombie Slayer
   ids:
   - steam:364100
+  requires: []
+  tiers:
+  - 2
 - name: Houston, we have a problem
   ids:
   - unresolved:source:isthereanydeal:2475:houston-we-have-a-problem
+  requires: []
+  tiers:
+  - 2
 - name: Spaceport Hope
   ids:
   - steam:394540
+  requires: []
+  tiers:
+  - 2
 - name: PeriAreion
   ids:
   - steam:349540
+  requires: []
+  tiers:
+  - 2

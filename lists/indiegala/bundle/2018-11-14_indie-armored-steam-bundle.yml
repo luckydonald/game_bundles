@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Armored Bundle — Tier 2
-tier: 2
+name: Indie Armored Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6687/
@@ -13,27 +15,54 @@ games:
 - name: Arkane Rush
   ids:
   - steam:947290
+  requires: []
+  tiers:
+  - 2
 - name: Galactic Bulwark Strike
   ids:
   - steam:803930
+  requires: []
+  tiers:
+  - 2
 - name: Crimson Shift
   ids:
   - steam:837330
+  requires: []
+  tiers:
+  - 2
 - name: Ashes of Kanaka
   ids:
   - steam:625900
+  requires: []
+  tiers:
+  - 2
 - name: Good Morning
   ids:
   - steam:756090
+  requires: []
+  tiers:
+  - 2
 - name: The Book of Regrets
   ids:
   - steam:869500
+  requires: []
+  tiers:
+  - 2
 - name: Armored Kitten
   ids:
   - steam:713530
+  requires: []
+  tiers:
+  - 2
 - name: HotFloor
   ids:
   - steam:865190
+  requires: []
+  tiers:
+  - 2
 - name: Drifting Cloud
   ids:
   - steam:773710
+  requires: []
+  tiers:
+  - 2

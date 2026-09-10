@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Parallel Worlds Bundle — Tier 2
-tier: 2
+name: Parallel Worlds Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4365/
@@ -13,24 +15,48 @@ games:
 - name: Sleeping Valley
   ids:
   - steam:538590
+  requires: []
+  tiers:
+  - 2
 - name: Swiftly
   ids:
   - steam:418610
+  requires: []
+  tiers:
+  - 2
 - name: Wooden House
   ids:
   - steam:513570
+  requires: []
+  tiers:
+  - 2
 - name: Bye-Bye, Wacky Planet
   ids:
   - unresolved:source:isthereanydeal:4365:bye-bye-wacky-planet
+  requires: []
+  tiers:
+  - 2
 - name: Rituals
   ids:
   - steam:359190
+  requires: []
+  tiers:
+  - 2
 - name: Autumn Dream
   ids:
   - steam:521980
+  requires: []
+  tiers:
+  - 2
 - name: Inevitable Path
   ids:
   - unresolved:source:isthereanydeal:4365:inevitable-path
+  requires: []
+  tiers:
+  - 2
 - name: So Many Cubes
   ids:
   - steam:513590
+  requires: []
+  tiers:
+  - 2

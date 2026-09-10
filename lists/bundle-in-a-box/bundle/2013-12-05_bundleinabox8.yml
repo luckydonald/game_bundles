@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Indie Ordinary Gamer Bundle — Beat The Average
-tier: 2
+name: The Indie Ordinary Gamer Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/441/
@@ -13,33 +15,66 @@ games:
 - name: Star Saviors
   ids:
   - steam:314450
+  requires: []
+  tiers:
+  - 2
 - name: 'Cognition Episode 1: The Hangman'
   ids:
   - unresolved:source:isthereanydeal:441:cognition-episode-1-the-hangman
+  requires: []
+  tiers:
+  - 2
 - name: 'Slender: The Five Pages'
   ids:
   - unresolved:source:isthereanydeal:441:slender-the-five-pages
+  requires: []
+  tiers:
+  - 2
 - name: QbQbQb
   ids:
   - steam:329320
+  requires: []
+  tiers:
+  - 2
 - name: One Finger Death Punch
   ids:
   - steam:264200
+  requires: []
+  tiers:
+  - 2
 - name: 'Cognition Episode 2: The Wise Monkey'
   ids:
   - unresolved:source:isthereanydeal:441:cognition-episode-2-the-wise-monkey
+  requires: []
+  tiers:
+  - 2
 - name: Along Came A Spider
   ids:
   - unresolved:source:isthereanydeal:441:along-came-a-spider
+  requires: []
+  tiers:
+  - 2
 - name: Isaac the Adventurer
   ids:
   - steam:341260
+  requires: []
+  tiers:
+  - 2
 - name: Hairy Tales
   ids:
   - unresolved:source:isthereanydeal:441:hairy-tales
+  requires: []
+  tiers:
+  - 2
 - name: Rooks Keep
   ids:
   - steam:299440
+  requires: []
+  tiers:
+  - 2
 - name: The Grave Digger
   ids:
   - steam:345340
+  requires: []
+  tiers:
+  - 2

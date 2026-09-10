@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Headup Games: Brilliant Bargains — 10 Items'
-tier: 2
+name: 'Headup Games: Brilliant Bargains'
+tiers:
+- rank: 2
+  name: 10 Items
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15612/
@@ -13,30 +15,60 @@ games:
 - name: 'The Inner World: The Last Wind Monk'
   ids:
   - steam:613470
+  requires: []
+  tiers:
+  - 2
 - name: INDUSTRIA
   ids:
   - steam:1172650
+  requires: []
+  tiers:
+  - 2
 - name: Bridge Constructor Portal
   ids:
   - steam:684410
+  requires: []
+  tiers:
+  - 2
 - name: Tinkertown
   ids:
   - steam:1276660
+  requires: []
+  tiers:
+  - 2
 - name: Dr. Fetus' Mean Meat Machine
   ids:
   - steam:2228030
+  requires: []
+  tiers:
+  - 2
 - name: Ben and Ed - Blood Party
   ids:
   - steam:500260
+  requires: []
+  tiers:
+  - 2
 - name: 'The Textorcist: The Story of Ray Bibbia'
   ids:
   - steam:940680
+  requires: []
+  tiers:
+  - 2
 - name: Hell Pie
   ids:
   - steam:889910
+  requires: []
+  tiers:
+  - 2
 - name: Pumpkin Jack
   ids:
   - steam:1186640
+  requires: []
+  tiers:
+  - 2
 - name: Soulslinger - Envoy of Death
   ids:
   - steam:2429240
+  requires: []
+  tiers:
+  - 2

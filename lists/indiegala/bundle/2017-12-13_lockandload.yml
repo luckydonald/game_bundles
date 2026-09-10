@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Lock & Load Bundle — Tier 2
-tier: 2
+name: Lock & Load Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5726/
@@ -13,36 +15,72 @@ games:
 - name: FMatheg
   ids:
   - unresolved:source:isthereanydeal:5726:fmatheg
+  requires: []
+  tiers:
+  - 2
 - name: Pozzo Jello Crusade
   ids:
   - steam:511380
+  requires: []
+  tiers:
+  - 2
 - name: Interloper
   ids:
   - steam:356420
+  requires: []
+  tiers:
+  - 2
 - name: Violent Vectors
   ids:
   - unresolved:source:isthereanydeal:5726:violent-vectors
+  requires: []
+  tiers:
+  - 2
 - name: Sector 177
   ids:
   - unresolved:source:isthereanydeal:5726:sector-177
+  requires: []
+  tiers:
+  - 2
 - name: I'm Awesome
   ids:
   - steam:615490
+  requires: []
+  tiers:
+  - 2
 - name: Neighborhorde
   ids:
   - steam:446760
+  requires: []
+  tiers:
+  - 2
 - name: Nightingale Downs
   ids:
   - steam:727220
+  requires: []
+  tiers:
+  - 2
 - name: 'Putrefaction 2: Rumble in the hometown'
   ids:
   - steam:715690
+  requires: []
+  tiers:
+  - 2
 - name: Cannon Fodder 3
   ids:
   - steam:209750
+  requires: []
+  tiers:
+  - 2
 - name: The Barbarian and the Subterranean Caves
   ids:
   - steam:490690
+  requires: []
+  tiers:
+  - 2
 - name: Clutch
   ids:
   - steam:35310
+  requires: []
+  tiers:
+  - 2

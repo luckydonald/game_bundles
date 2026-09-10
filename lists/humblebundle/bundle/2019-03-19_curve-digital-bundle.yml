@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Curve Digital Bundle — entire-8-item-bundle
-tier: 3
+name: Humble Curve Digital Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7190/
@@ -13,24 +15,48 @@ games:
 - name: 'Stealth Inc. 2: A Game of Clones'
   ids:
   - steam:329380
+  requires: []
+  tiers:
+  - 3
 - name: The Little Acre
   ids:
   - steam:423590
+  requires: []
+  tiers:
+  - 3
 - name: Serial Cleaner
   ids:
   - steam:522210
+  requires: []
+  tiers:
+  - 3
 - name: Stikbold! A Dodgeball Adventure
   ids:
   - steam:429330
+  requires: []
+  tiers:
+  - 3
 - name: Smoke and Sacrifice
   ids:
   - steam:695100
+  requires: []
+  tiers:
+  - 3
 - name: 'Human: Fall Flat'
   ids:
   - steam:477160
+  requires: []
+  tiers:
+  - 3
 - name: Bomber Crew
   ids:
   - steam:537800
+  requires: []
+  tiers:
+  - 3
 - name: For The King
   ids:
   - steam:527230
+  requires: []
+  tiers:
+  - 3

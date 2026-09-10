@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Software Bundle: Streaming 2019 — entire-11-item-bundle'
-tier: 3
+name: 'Humble Software Bundle: Streaming 2019'
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7467/
@@ -13,33 +15,66 @@ games:
 - name: Getting Over It with Bennett Foddy
   ids:
   - steam:240720
+  requires: []
+  tiers:
+  - 3
 - name: 'Darwin Project: Hunter Pack'
   ids:
   - unresolved:source:isthereanydeal:7467:darwin-project-hunter-pack
+  requires: []
+  tiers:
+  - 3
 - name: XSplit VCAM
   ids:
   - unresolved:source:isthereanydeal:7467:xsplit-vcam
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig
   ids:
   - unresolved:source:isthereanydeal:7467:facerig
+  requires: []
+  tiers:
+  - 3
 - name: Aaero
   ids:
   - steam:499890
+  requires: []
+  tiers:
+  - 3
 - name: Action! - Gameplay Recording & Streaming
   ids:
   - steam:228180
+  requires: []
+  tiers:
+  - 3
 - name: Monstercat Gold
   ids:
   - unresolved:source:isthereanydeal:7467:monstercat-gold
+  requires: []
+  tiers:
+  - 3
 - name: Pretzel Rocks Premium
   ids:
   - unresolved:source:isthereanydeal:7467:pretzel-rocks-premium
+  requires: []
+  tiers:
+  - 3
 - name: XSplit Premium
   ids:
   - unresolved:source:isthereanydeal:7467:xsplit-premium
+  requires: []
+  tiers:
+  - 3
 - name: FaceRig Pro Upgrade
   ids:
   - unresolved:source:isthereanydeal:7467:facerig-pro-upgrade
+  requires: []
+  tiers:
+  - 3
 - name: Restream
   ids:
   - unresolved:source:isthereanydeal:7467:restream
+  requires: []
+  tiers:
+  - 3

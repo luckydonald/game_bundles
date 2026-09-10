@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: RPG Maker Bundle — Tier 3
-tier: 3
+name: RPG Maker Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11123/
@@ -13,69 +15,138 @@ games:
 - name: RPG Maker XP
   ids:
   - steam:235900
+  requires: []
+  tiers:
+  - 3
 - name: The Last Word
   ids:
   - unresolved:source:isthereanydeal:11123:the-last-word
+  requires: []
+  tiers:
+  - 3
 - name: Edolie
   ids:
   - steam:349240
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace
   ids:
   - steam:220700
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Modern Day Tiles Resource Pack
   ids:
   - steam:229752
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Old School Modern 2 Resource Pack
   ids:
   - unresolved:source:isthereanydeal:11123:rpg-maker-vx-ace-old-school-modern-2-resource-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'RPG Maker: Zombie Survival Graphic Pack'
   ids:
   - unresolved:source:isthereanydeal:11123:rpg-maker-zombie-survival-graphic-pack
+  requires: []
+  tiers:
+  - 3
 - name: Game Character Hub
   ids:
   - steam:292230
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - DS+ Resource Pack
   ids:
   - steam:258743
+  requires: []
+  tiers:
+  - 3
 - name: 'RPG Maker VX Ace - POP!: Horror City'
   ids:
   - steam:297644
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Always Sometimes Monsters Asset Pack
   ids:
   - steam:321100
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Winter Wonderland Tiles
   ids:
   - steam:337901
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - High Fantasy Main Party Pack II
   ids:
   - steam:268611
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Rebel Rapture Music Pack
   ids:
   - steam:297642
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - High Fantasy Resource Bundle II
   ids:
   - steam:229751
+  requires: []
+  tiers:
+  - 3
 - name: 'Game Character Hub: Second Story'
   ids:
   - steam:372710
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Cinematic Soundtrack Music Pack
   ids:
   - steam:229755
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Gyrowolf's Music Resource Pack 001
   ids:
   - steam:268612
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Wild Steam Resource Pack
   ids:
   - steam:357261
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - High Fantasy Main Party Pack 1
   ids:
   - unresolved:source:isthereanydeal:11123:rpg-maker-vx-ace-high-fantasy-main-party-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Sci-Fi Music Pack
   ids:
   - steam:332290
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Inspirational Vol. 1
   ids:
   - steam:265460
+  requires: []
+  tiers:
+  - 3
 - name: RPG Maker VX Ace - Sinister Hollows
   ids:
   - steam:265462
+  requires: []
+  tiers:
+  - 3

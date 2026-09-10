@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Indie Debate Bundle — Tier 2
-tier: 2
+name: The Indie Debate Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6715/
@@ -13,30 +15,60 @@ games:
 - name: Usual John
   ids:
   - unresolved:source:isthereanydeal:6715:usual-john
+  requires: []
+  tiers:
+  - 2
 - name: Digital Resistance
   ids:
   - unresolved:source:isthereanydeal:6715:digital-resistance
+  requires: []
+  tiers:
+  - 2
 - name: In Celebration of Violence
   ids:
   - steam:509570
+  requires: []
+  tiers:
+  - 2
 - name: Intralism
   ids:
   - steam:513510
+  requires: []
+  tiers:
+  - 2
 - name: The Princess Adventure
   ids:
   - steam:850740
+  requires: []
+  tiers:
+  - 2
 - name: SwordBounce
   ids:
   - steam:852390
+  requires: []
+  tiers:
+  - 2
 - name: Insanely Twisted Shadow Planet
   ids:
   - steam:205730
+  requires: []
+  tiers:
+  - 2
 - name: 'Mosaic: Game of Gods'
   ids:
   - steam:547390
+  requires: []
+  tiers:
+  - 2
 - name: Death Goat
   ids:
   - unresolved:source:isthereanydeal:6715:death-goat
+  requires: []
+  tiers:
+  - 2
 - name: 'Navalny 20!8 : The Rise of Evil'
   ids:
   - unresolved:source:isthereanydeal:6715:navalny-20-8-the-rise-of-evil
+  requires: []
+  tiers:
+  - 2

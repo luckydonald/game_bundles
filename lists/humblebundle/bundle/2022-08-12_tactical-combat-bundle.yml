@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Tactical Combat Bundle — entire-20-item-bundle
-tier: 3
+name: Tactical Combat Bundle
+tiers:
+- rank: 3
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11951/
@@ -13,60 +15,120 @@ games:
 - name: Verdun
   ids:
   - steam:242860
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite V2 Remastered
   ids:
   - steam:728740
+  requires: []
+  tiers:
+  - 3
 - name: Call to Arms - Basic Edition
   ids:
   - unresolved:source:isthereanydeal:11951:call-to-arms-basic-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Brigador: Up-Armored Deluxe'
   ids:
   - unresolved:source:isthereanydeal:11951:brigador-up-armored-deluxe
+  requires: []
+  tiers:
+  - 3
 - name: The Intruder
   ids:
   - steam:2556740
+  requires: []
+  tiers:
+  - 3
 - name: Perfect Heist 2
   ids:
   - steam:1521580
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Target Führer
   ids:
   - steam:474763
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4
   ids:
   - steam:312660
+  requires: []
+  tiers:
+  - 3
 - name: 'Sniper Elite 4 - Deathstorm Part 1: Inception'
   ids:
   - steam:474764
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Silent Warfare Weapons Pack
   ids:
   - steam:474761
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Cold Warfare Winter Expansion Pack
   ids:
   - steam:513033
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Lock and Load Weapons Pack
   ids:
   - steam:513030
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Allied Forces Rifle Pack
   ids:
   - steam:513034
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Covert Heroes Character Pack
   ids:
   - steam:474762
+  requires: []
+  tiers:
+  - 3
 - name: 'Sniper Elite 4 - Deathstorm Part 3: Obliteration'
   ids:
   - steam:474766
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Camouflage Rifles Skin Pack
   ids:
   - steam:474760
+  requires: []
+  tiers:
+  - 3
 - name: 'Sniper Elite 4 - Deathstorm Part 2: Infiltration'
   ids:
   - steam:474765
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Night Fighter Expansion Pack
   ids:
   - steam:513032
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Elite 4 - Urban Assault Expansion Pack
   ids:
   - steam:513031
+  requires: []
+  tiers:
+  - 3
 - name: 'Call to Arms - Gates of Hell: Ostfront'
   ids:
   - steam:400750
+  requires: []
+  tiers:
+  - 3

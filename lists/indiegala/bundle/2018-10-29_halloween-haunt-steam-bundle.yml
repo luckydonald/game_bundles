@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Halloween Haunt Bundle — Tier 2
-tier: 2
+name: Halloween Haunt Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6617/
@@ -13,33 +15,66 @@ games:
 - name: Close Me
   ids:
   - steam:671980
+  requires: []
+  tiers:
+  - 2
 - name: Curse
   ids:
   - steam:510570
+  requires: []
+  tiers:
+  - 2
 - name: Irony Of Nightmare
   ids:
   - steam:740290
+  requires: []
+  tiers:
+  - 2
 - name: Frosty Nights
   ids:
   - steam:733800
+  requires: []
+  tiers:
+  - 2
 - name: 'True Fear: Forsaken Souls'
   ids:
   - steam:440420
+  requires: []
+  tiers:
+  - 2
 - name: Witch The Bloodlines
   ids:
   - steam:925690
+  requires: []
+  tiers:
+  - 2
 - name: ShadowSide
   ids:
   - steam:643820
+  requires: []
+  tiers:
+  - 2
 - name: 'Secrets of Magic: The Book of Spells'
   ids:
   - steam:453780
+  requires: []
+  tiers:
+  - 2
 - name: IMSCARED
   ids:
   - steam:429720
+  requires: []
+  tiers:
+  - 2
 - name: Radiation Island
   ids:
   - steam:307940
+  requires: []
+  tiers:
+  - 2
 - name: Tomato Way 2
   ids:
   - steam:886970
+  requires: []
+  tiers:
+  - 2

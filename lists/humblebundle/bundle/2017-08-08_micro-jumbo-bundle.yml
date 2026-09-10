@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble MicroJumbo Bundle — Beat The Average
-tier: 2
+name: Humble MicroJumbo Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5376/
@@ -13,39 +15,78 @@ games:
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:
   - steam:431710
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode I: Alpha Centauri'
   ids:
   - steam:429470
+  requires: []
+  tiers:
+  - 2
 - name: Oh...Sir! The Insult Simulator
   ids:
   - steam:512250
+  requires: []
+  tiers:
+  - 2
 - name: Geometry Dash
   ids:
   - steam:322170
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode IV: Sol'
   ids:
   - steam:446640
+  requires: []
+  tiers:
+  - 2
 - name: Pony Island
   ids:
   - steam:405640
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode III: Delta Pavonis'
   ids:
   - steam:439250
+  requires: []
+  tiers:
+  - 2
 - name: Who's Your Daddy
   ids:
   - steam:427730
+  requires: []
+  tiers:
+  - 2
 - name: Town of Salem
   ids:
   - steam:334230
+  requires: []
+  tiers:
+  - 2
 - name: Oh...Sir! The Hollywood Roast
   ids:
   - steam:575330
+  requires: []
+  tiers:
+  - 2
 - name: hack_me
   ids:
   - steam:526740
+  requires: []
+  tiers:
+  - 2
 - name: Devil Daggers
   ids:
   - steam:422970
+  requires: []
+  tiers:
+  - 2
 - name: hack_me 2
   ids:
   - steam:602890
+  requires: []
+  tiers:
+  - 2

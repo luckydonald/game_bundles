@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Omega Bundle — Tier 3
-tier: 3
+name: Omega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10387/
@@ -13,36 +15,72 @@ games:
 - name: 'Shadows: Awakening'
   ids:
   - steam:585450
+  requires: []
+  tiers:
+  - 3
 - name: JumpJet Rex
   ids:
   - steam:329460
+  requires: []
+  tiers:
+  - 3
 - name: Caveblazers
   ids:
   - steam:452060
+  requires: []
+  tiers:
+  - 3
 - name: Drink More Glurp
   ids:
   - steam:1056690
+  requires: []
+  tiers:
+  - 3
 - name: Vectronom
   ids:
   - steam:925460
+  requires: []
+  tiers:
+  - 3
 - name: Verlet Swing
   ids:
   - steam:811870
+  requires: []
+  tiers:
+  - 3
 - name: Hyper Knights
   ids:
   - steam:597150
+  requires: []
+  tiers:
+  - 3
 - name: Fictorum
   ids:
   - steam:503620
+  requires: []
+  tiers:
+  - 3
 - name: 'The Wanderer: Frankenstein''s Creature'
   ids:
   - steam:966670
+  requires: []
+  tiers:
+  - 3
 - name: Sea Salt
   ids:
   - steam:983350
+  requires: []
+  tiers:
+  - 3
 - name: Levelhead
   ids:
   - steam:792710
+  requires: []
+  tiers:
+  - 3
 - name: Ken Follett's The Pillars of the Earth
   ids:
   - steam:234270
+  requires: []
+  tiers:
+  - 3

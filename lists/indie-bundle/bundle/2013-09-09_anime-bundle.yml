@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Anime Bundle — Beat The Average
-tier: 2
+name: Anime Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/101/
@@ -13,15 +15,30 @@ games:
 - name: Planet Stronghold - Deluxe Edition
   ids:
   - steam:291050
+  requires: []
+  tiers:
+  - 2
 - name: 'BANZAI PECAN: Last Hope for the Young Century'
   ids:
   - unresolved:source:isthereanydeal:101:banzai-pecan-last-hope-for-the-young-century
+  requires: []
+  tiers:
+  - 2
 - name: 'Alpha Kimori: Great Doubt'
   ids:
   - unresolved:source:isthereanydeal:101:alpha-kimori-great-doubt
+  requires: []
+  tiers:
+  - 2
 - name: Fatal Theory
   ids:
   - steam:392100
+  requires: []
+  tiers:
+  - 2
 - name: QuestRun
   ids:
   - steam:286120
+  requires: []
+  tiers:
+  - 2

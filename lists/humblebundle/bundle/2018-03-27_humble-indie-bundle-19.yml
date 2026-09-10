@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Indie Bundle #19 — entire-9-item-bundle'
-tier: 3
+name: 'Humble Indie Bundle #19'
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6010/
@@ -13,27 +15,54 @@ games:
 - name: Mini Metro
   ids:
   - steam:287980
+  requires: []
+  tiers:
+  - 3
 - name: 'Halcyon 6: Lightspeed Edition'
   ids:
   - steam:651660
+  requires: []
+  tiers:
+  - 3
 - name: Rakuen
   ids:
   - steam:559210
+  requires: []
+  tiers:
+  - 3
 - name: SOMA
   ids:
   - steam:282140
+  requires: []
+  tiers:
+  - 3
 - name: Action Henk
   ids:
   - steam:285820
+  requires: []
+  tiers:
+  - 3
 - name: Poly Bridge
   ids:
   - steam:367450
+  requires: []
+  tiers:
+  - 3
 - name: JYDGE
   ids:
   - unresolved:source:isthereanydeal:6010:jydge
+  requires: []
+  tiers:
+  - 3
 - name: Keep Talking and Nobody Explodes
   ids:
   - steam:341800
+  requires: []
+  tiers:
+  - 3
 - name: SUPERHOT
   ids:
   - steam:322500
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Very Positive Bundle 3 — entire-9-item-bundle
-tier: 3
+name: Humble Very Positive Bundle 3
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7642/
@@ -13,27 +15,54 @@ games:
 - name: Unexplored OST
   ids:
   - unresolved:source:isthereanydeal:7642:unexplored-ost
+  requires: []
+  tiers:
+  - 3
 - name: DISTRAINT 2
   ids:
   - steam:743390
+  requires: []
+  tiers:
+  - 3
 - name: DISTRAINT 2 - OST
   ids:
   - steam:1117030
+  requires: []
+  tiers:
+  - 3
 - name: Rusty Lake Paradise
   ids:
   - steam:744190
+  requires: []
+  tiers:
+  - 3
 - name: Unexplored
   ids:
   - steam:506870
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect
   ids:
   - steam:233450
+  requires: []
+  tiers:
+  - 3
 - name: 'Bendy and the Ink Machine: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:7642:bendy-and-the-ink-machine-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: Nex Machina
   ids:
   - steam:404540
+  requires: []
+  tiers:
+  - 3
 - name: 'Shantae: Half-Genie Hero'
   ids:
   - steam:253840
+  requires: []
+  tiers:
+  - 3

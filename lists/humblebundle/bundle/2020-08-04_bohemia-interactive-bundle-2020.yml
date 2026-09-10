@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bohemia Interactive Bundle 2020 — entire-15-item-bundle
-tier: 4
+name: Humble Bohemia Interactive Bundle 2020
+tiers:
+- rank: 4
+  name: entire-15-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9033/
@@ -13,45 +15,90 @@ games:
 - name: Take On Mars
   ids:
   - steam:244030
+  requires: []
+  tiers:
+  - 4
 - name: Take On Helicopters
   ids:
   - steam:65730
+  requires: []
+  tiers:
+  - 4
 - name: Carrier Command Gaea Mission
   ids:
   - steam:65740
+  requires: []
+  tiers:
+  - 4
 - name: 'Arma X: Anniversary Edition'
   ids:
   - unresolved:source:isthereanydeal:9033:arma-x-anniversary-edition
+  requires: []
+  tiers:
+  - 4
 - name: Fairy Tale about Father Frost, Ivan and Nastya
   ids:
   - steam:289320
+  requires: []
+  tiers:
+  - 4
 - name: Original War
   ids:
   - steam:235320
+  requires: []
+  tiers:
+  - 4
 - name: 'UFO: Afterlight'
   ids:
   - steam:237950
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3
   ids:
   - steam:107410
+  requires: []
+  tiers:
+  - 4
 - name: Ylands - Exploration Pack
   ids:
   - unresolved:source:isthereanydeal:9033:ylands-exploration-pack
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Jets
   ids:
   - steam:601670
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Marksmen
   ids:
   - steam:332350
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Apex Edition
   ids:
   - unresolved:source:isthereanydeal:9033:arma-3-apex-edition
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Tac-Ops Mission Pack
   ids:
   - steam:744950
+  requires: []
+  tiers:
+  - 4
 - name: DayZ
   ids:
   - steam:221100
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Contact Edition
   ids:
   - unresolved:source:isthereanydeal:9033:arma-3-contact-edition
+  requires: []
+  tiers:
+  - 4

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Daedalic Bundle 2018 — entire-12-item-bundle
-tier: 3
+name: Humble Daedalic Bundle 2018
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6212/
@@ -13,36 +15,72 @@ games:
 - name: Caravan
   ids:
   - steam:352890
+  requires: []
+  tiers:
+  - 3
 - name: Anna's Quest
   ids:
   - steam:327220
+  requires: []
+  tiers:
+  - 3
 - name: Deponia - The Complete Journey
   ids:
   - steam:292910
+  requires: []
+  tiers:
+  - 3
 - name: Memoria Soundtrack
   ids:
   - steam:558210
+  requires: []
+  tiers:
+  - 3
 - name: 'The Dark Eye: Memoria'
   ids:
   - steam:243200
+  requires: []
+  tiers:
+  - 3
 - name: Deponia Doomsday
   ids:
   - steam:421050
+  requires: []
+  tiers:
+  - 3
 - name: Silence
   ids:
   - steam:314790
+  requires: []
+  tiers:
+  - 3
 - name: Witch It
   ids:
   - steam:559650
+  requires: []
+  tiers:
+  - 3
 - name: Deponia Doomsday Soundtrack
   ids:
   - steam:558150
+  requires: []
+  tiers:
+  - 3
 - name: Bounty Train
   ids:
   - steam:371520
+  requires: []
+  tiers:
+  - 3
 - name: 'Shadow Tactics: Blades of the Shogun'
   ids:
   - steam:418240
+  requires: []
+  tiers:
+  - 3
 - name: The Long Journey Home
   ids:
   - steam:366910
+  requires: []
+  tiers:
+  - 3

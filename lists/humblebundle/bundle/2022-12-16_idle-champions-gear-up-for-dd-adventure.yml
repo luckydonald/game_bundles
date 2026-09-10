@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Idle Champions: Gear Up for D&D Adventure! Bundle — entire-14-item-bundle'
-tier: 3
+name: 'Idle Champions: Gear Up for D&D Adventure! Bundle'
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12781/
@@ -13,42 +15,84 @@ games:
 - name: Idle Champions - Bruenor's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-bruenors-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Arkhan's Force Grey Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-arkhans-force-grey-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Jamilah's Force Grey Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-jamilahs-force-grey-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Jarlaxle's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-jarlaxles-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Minsc & Boo's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-minsc-and-boos-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Delina's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-delinas-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Celeste's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-celestes-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Calliope Force Grey Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-calliope-force-grey-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Tyril's Force Grey Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-tyrils-force-grey-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Asharra's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-asharras-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Nayeli's Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-nayelis-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Hitch's Force Grey Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-hitchs-force-grey-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Makos' Starter Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-makos-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Idle Champions - Red the Squirrel Familiar Pack
   ids:
   - unresolved:source:isthereanydeal:12781:idle-champions-red-the-squirrel-familiar-pack
+  requires: []
+  tiers:
+  - 3

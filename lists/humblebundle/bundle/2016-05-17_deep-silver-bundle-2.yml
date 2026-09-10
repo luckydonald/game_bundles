@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Deep Silver Bundle 2 — entire-10-item-bundle
-tier: 3
+name: Deep Silver Bundle 2
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3441/
@@ -13,30 +15,60 @@ games:
 - name: Risen
   ids:
   - steam:40300
+  requires: []
+  tiers:
+  - 3
 - name: 'Risen 2: Dark Waters Gold Edition'
   ids:
   - unresolved:source:isthereanydeal:3441:risen-2-dark-waters-gold-edition
+  requires: []
+  tiers:
+  - 3
 - name: Dead Island Game of the Year Edition
   ids:
   - unresolved:source:isthereanydeal:3441:dead-island-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 3
 - name: Sacred 3 Gold Edition
   ids:
   - unresolved:source:isthereanydeal:3441:sacred-3-gold-edition
+  requires: []
+  tiers:
+  - 3
 - name: Saints Row 2
   ids:
   - steam:9480
+  requires: []
+  tiers:
+  - 3
 - name: 'Saints Row: The Third - The Full Package'
   ids:
   - unresolved:source:isthereanydeal:3441:saints-row-the-third-the-full-package
+  requires: []
+  tiers:
+  - 3
 - name: Dead Island Riptide Complete Edition
   ids:
   - unresolved:source:isthereanydeal:3441:dead-island-riptide-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: Killer is Dead - Nightmare Edition
   ids:
   - steam:261110
+  requires: []
+  tiers:
+  - 3
 - name: Saints Row IV
   ids:
   - unresolved:source:isthereanydeal:3441:saints-row-iv
+  requires: []
+  tiers:
+  - 3
 - name: Risen 3 - Titan Lords
   ids:
   - steam:249230
+  requires: []
+  tiers:
+  - 3

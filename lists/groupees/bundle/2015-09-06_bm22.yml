@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 22 — Tier 2
-tier: 2
+name: Be Mine 22
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2415/
@@ -13,21 +15,42 @@ games:
 - name: Tracks and Turrets Main Game
   ids:
   - unresolved:source:isthereanydeal:2415:tracks-and-turrets-main-game
+  requires: []
+  tiers:
+  - 2
 - name: Mad Squad
   ids:
   - unresolved:source:isthereanydeal:2415:mad-squad
+  requires: []
+  tiers:
+  - 2
 - name: 'Terra Nova: Strike Force Centauri'
   ids:
   - steam:368600
+  requires: []
+  tiers:
+  - 2
 - name: Ankh - Anniversary Edition
   ids:
   - steam:353980
+  requires: []
+  tiers:
+  - 2
 - name: In Verbis Virtus - Original Soundtrack Edition
   ids:
   - steam:242840
+  requires: []
+  tiers:
+  - 2
 - name: Belladonna
   ids:
   - steam:351340
+  requires: []
+  tiers:
+  - 2
 - name: Corto Maltese Secrets of Venice
   ids:
   - steam:310460
+  requires: []
+  tiers:
+  - 2

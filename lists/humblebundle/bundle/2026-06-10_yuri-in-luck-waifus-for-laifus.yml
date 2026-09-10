@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Yuri in Luck: Waifus for Laifus — entire-11-item-bundle'
-tier: 2
+name: 'Yuri in Luck: Waifus for Laifus'
+tiers:
+- rank: 2
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16255/
@@ -13,33 +15,66 @@ games:
 - name: Blackberry Honey
   ids:
   - steam:716340
+  requires: []
+  tiers:
+  - 2
 - name: Highway Blossoms
   ids:
   - steam:451760
+  requires: []
+  tiers:
+  - 2
 - name: 'Highway Blossoms: Next Exit'
   ids:
   - steam:490270
+  requires: []
+  tiers:
+  - 2
 - name: Night Cascades
   ids:
   - steam:1743080
+  requires: []
+  tiers:
+  - 2
 - name: Fatal Twelve
   ids:
   - steam:620210
+  requires: []
+  tiers:
+  - 2
 - name: Lilycle Rainbow Stage!!!
   ids:
   - steam:978870
+  requires: []
+  tiers:
+  - 2
 - name: SeaBed
   ids:
   - steam:583090
+  requires: []
+  tiers:
+  - 2
 - name: Kindred Spirits on the Roof
   ids:
   - steam:402620
+  requires: []
+  tiers:
+  - 2
 - name: 'OshiRabu: Waifus Over Husbandos'
   ids:
   - steam:1233270
+  requires: []
+  tiers:
+  - 2
 - name: Please Be Happy
   ids:
   - steam:844670
+  requires: []
+  tiers:
+  - 2
 - name: Letters From a Rainy Day -Oceans and Lace
   ids:
   - steam:1637370
+  requires: []
+  tiers:
+  - 2

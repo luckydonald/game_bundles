@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Kalypso Greatest Hits Bundle — Tier 3
-tier: 3
+name: Kalypso Greatest Hits Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12126/
@@ -13,54 +15,108 @@ games:
 - name: 'Omerta: City of Gangsters - GOLD EDITION'
   ids:
   - unresolved:source:isthereanydeal:12126:omerta-city-of-gangsters-gold-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Immortal Realms: Vampire Wars'
   ids:
   - steam:1024480
+  requires: []
+  tiers:
+  - 3
 - name: Dungeons 3
   ids:
   - steam:493900
+  requires: []
+  tiers:
+  - 3
 - name: Sudden Strike 4
   ids:
   - steam:373930
+  requires: []
+  tiers:
+  - 3
 - name: Port Royale 3 Gold
   ids:
   - unresolved:source:isthereanydeal:12126:port-royale-3-gold
+  requires: []
+  tiers:
+  - 3
 - name: Tropico 5 - Complete Collection
   ids:
   - unresolved:source:isthereanydeal:12126:tropico-5-complete-collection
+  requires: []
+  tiers:
+  - 3
 - name: Sudden Strike 4 - Africa Desert War
   ids:
   - steam:873870
+  requires: []
+  tiers:
+  - 3
 - name: 'Sudden Strike 4 - Finland: Winter Storm'
   ids:
   - steam:813390
+  requires: []
+  tiers:
+  - 3
 - name: Sudden Strike 4 - Road to Dunkirk
   ids:
   - steam:606080
+  requires: []
+  tiers:
+  - 3
 - name: Sudden Strike 4 - The Pacific War
   ids:
   - steam:873871
+  requires: []
+  tiers:
+  - 3
 - name: Sudden Strike 4 - Battle of Kursk
   ids:
   - steam:501560
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: An Unexpected'
   ids:
   - steam:975360
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: Evil of the Caribbean'
   ids:
   - steam:711680
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: Famous Last Words'
   ids:
   - steam:1049940
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: Lord of the Kings'
   ids:
   - steam:711681
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: Once upon a time'
   ids:
   - steam:711172
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: Clash of Gods'
   ids:
   - steam:824610
+  requires: []
+  tiers:
+  - 3
 - name: 'Dungeons 3: A Multitude of Maps'
   ids:
   - steam:1198940
+  requires: []
+  tiers:
+  - 3

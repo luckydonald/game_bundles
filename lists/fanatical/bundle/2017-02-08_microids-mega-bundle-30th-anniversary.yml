@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Microids Mega Bundle — Tier 3
-tier: 3
+name: Microids Mega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4741/
@@ -13,75 +15,150 @@ games:
 - name: 'Haegemonia: Legions of Iron'
   ids:
   - steam:294770
+  requires: []
+  tiers:
+  - 3
 - name: Syberia
   ids:
   - steam:46500
+  requires: []
+  tiers:
+  - 3
 - name: Moto Racer Collection
   ids:
   - steam:324110
+  requires: []
+  tiers:
+  - 3
 - name: Hospital Manager
   ids:
   - steam:348290
+  requires: []
+  tiers:
+  - 3
 - name: Iron Storm
   ids:
   - steam:296180
+  requires: []
+  tiers:
+  - 3
 - name: 'Monument Builders: Alcatraz'
   ids:
   - unresolved:source:isthereanydeal:4741:monument-builders-alcatraz
+  requires: []
+  tiers:
+  - 3
 - name: Darkstone
   ids:
   - steam:320320
+  requires: []
+  tiers:
+  - 3
 - name: The Bluecoats North vs South
   ids:
   - unresolved:source:isthereanydeal:4741:the-bluecoats-north-vs-south
+  requires: []
+  tiers:
+  - 3
 - name: Sinking Island
   ids:
   - steam:333430
+  requires: []
+  tiers:
+  - 3
 - name: Nostradamus - The Last Prophecy
   ids:
   - steam:287720
+  requires: []
+  tiers:
+  - 3
 - name: Return to Mysterious Island
   ids:
   - steam:277110
+  requires: []
+  tiers:
+  - 3
 - name: Return to Mysterious Island 2
   ids:
   - steam:277270
+  requires: []
+  tiers:
+  - 3
 - name: 'Voyage: Journey to the Moon'
   ids:
   - steam:302180
+  requires: []
+  tiers:
+  - 3
 - name: Still Life
   ids:
   - steam:46480
+  requires: []
+  tiers:
+  - 3
 - name: Haegemonia - The Solon Heritage
   ids:
   - steam:294790
+  requires: []
+  tiers:
+  - 3
 - name: Experience 112
   ids:
   - steam:324770
+  requires: []
+  tiers:
+  - 3
 - name: 'Nicolas Eymerich The Inquisitor - Book I: The Plague'
   ids:
   - steam:279500
+  requires: []
+  tiers:
+  - 3
 - name: 'Dracula: The Resurrection'
   ids:
   - steam:289800
+  requires: []
+  tiers:
+  - 3
 - name: "Nicolas Eymerich Inquisitor \x96 Book 2: The Village"
   ids:
   - unresolved:source:isthereanydeal:4741:nicolas-eymerich-inquisitor-book-2-the-village
+  requires: []
+  tiers:
+  - 3
 - name: Still Life 2
   ids:
   - steam:46490
+  requires: []
+  tiers:
+  - 3
 - name: Subject 13
   ids:
   - steam:322970
+  requires: []
+  tiers:
+  - 3
 - name: Dream Chamber
   ids:
   - steam:391590
+  requires: []
+  tiers:
+  - 3
 - name: 'Pirates vs Corsairs: Davy Jones''s Gold'
   ids:
   - steam:355650
+  requires: []
+  tiers:
+  - 3
 - name: Bet on Soldier
   ids:
   - steam:335320
+  requires: []
+  tiers:
+  - 3
 - name: Syberia II
   ids:
   - steam:46510
+  requires: []
+  tiers:
+  - 3

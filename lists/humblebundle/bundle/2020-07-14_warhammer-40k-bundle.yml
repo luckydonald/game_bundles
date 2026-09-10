@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Warhammer Bundle 2020 — entire-11-item-bundle
-tier: 3
+name: Humble Warhammer Bundle 2020
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8977/
@@ -13,33 +15,66 @@ games:
 - name: 'Warhammer® 40000®: Kill Team™'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-kill-team
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer® 40,000: Dawn of War® - Game of the Year Edition'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-dawn-of-war-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Legacy of Dorn: Herald of Oblivion'
   ids:
   - steam:389850
+  requires: []
+  tiers:
+  - 3
 - name: "Warhammer® 40,000\x99: Dawn of War® II"
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-dawn-of-war-ii
+  requires: []
+  tiers:
+  - 3
 - name: 'Battlefleet Gothic: Armada'
   ids:
   - steam:363680
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Deathwatch - Enhanced Edition'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-deathwatch-enhanced-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Sanctus Reach'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-sanctus-reach
+  requires: []
+  tiers:
+  - 3
 - name: Warhammer 40,000 Dawn of War III
   ids:
   - steam:285190
+  requires: []
+  tiers:
+  - 3
 - name: Blood Bowl 2 - Legendary Edition
   ids:
   - unresolved:source:isthereanydeal:8977:blood-bowl-2-legendary-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Space Marine Collection'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-space-marine-collection
+  requires: []
+  tiers:
+  - 3

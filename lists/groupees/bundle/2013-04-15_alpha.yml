@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Alpha Funding Groupee — Tier 2
-tier: 2
+name: Alpha Funding Groupee
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/196/
@@ -13,18 +15,36 @@ games:
 - name: PirateHell
   ids:
   - unresolved:source:isthereanydeal:196:piratehell
+  requires: []
+  tiers:
+  - 2
 - name: Enola - The Original Soundtrack
   ids:
   - steam:497200
+  requires: []
+  tiers:
+  - 2
 - name: Dungeon Prospector
   ids:
   - unresolved:source:isthereanydeal:196:dungeon-prospector
+  requires: []
+  tiers:
+  - 2
 - name: Enola
   ids:
   - steam:263520
+  requires: []
+  tiers:
+  - 2
 - name: Realm Explorer
   ids:
   - unresolved:source:isthereanydeal:196:realm-explorer
+  requires: []
+  tiers:
+  - 2
 - name: Dary's Legend
   ids:
   - unresolved:source:isthereanydeal:196:darys-legend
+  requires: []
+  tiers:
+  - 2

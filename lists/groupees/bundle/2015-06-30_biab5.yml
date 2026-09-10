@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bundle in a Box 5 — Tier 2
-tier: 2
+name: Bundle in a Box 5
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2180/
@@ -13,24 +15,48 @@ games:
 - name: Xing Chess
   ids:
   - unresolved:source:isthereanydeal:2180:xing-chess
+  requires: []
+  tiers:
+  - 2
 - name: Porradaria 2 Pagode of the Night
   ids:
   - unresolved:source:isthereanydeal:2180:porradaria-2-pagode-of-the-night
+  requires: []
+  tiers:
+  - 2
 - name: Transcend
   ids:
   - steam:760860
+  requires: []
+  tiers:
+  - 2
 - name: 'Frankenstein: Master of Death'
   ids:
   - steam:347430
+  requires: []
+  tiers:
+  - 2
 - name: F1 Chequered Flag
   ids:
   - unresolved:source:isthereanydeal:2180:f1-chequered-flag
+  requires: []
+  tiers:
+  - 2
 - name: Royal Defense
   ids:
   - steam:291170
+  requires: []
+  tiers:
+  - 2
 - name: Tiki Man
   ids:
   - steam:376920
+  requires: []
+  tiers:
+  - 2
 - name: CastleAbra
   ids:
   - steam:366570
+  requires: []
+  tiers:
+  - 2

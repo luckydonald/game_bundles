@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Crescent Moon Games Bundle — Tier 2
-tier: 2
+name: Crescent Moon Games Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6793/
@@ -13,24 +15,48 @@ games:
 - name: Mines of Mars
   ids:
   - steam:413740
+  requires: []
+  tiers:
+  - 2
 - name: Neon Shadow
   ids:
   - steam:296890
+  requires: []
+  tiers:
+  - 2
 - name: The Deer God
   ids:
   - steam:328940
+  requires: []
+  tiers:
+  - 2
 - name: 'Ravensword: Shadowlands'
   ids:
   - steam:253410
+  requires: []
+  tiers:
+  - 2
 - name: Morphite
   ids:
   - steam:661740
+  requires: []
+  tiers:
+  - 2
 - name: Crystal Catacombs
   ids:
   - steam:325880
+  requires: []
+  tiers:
+  - 2
 - name: Legend of the Skyfish
   ids:
   - steam:589300
+  requires: []
+  tiers:
+  - 2
 - name: Clash of Puppets
   ids:
   - steam:325870
+  requires: []
+  tiers:
+  - 2

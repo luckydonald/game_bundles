@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Pixel & Cartoon Enthusiasts Bundle (GOG.com) — entire-14-item-bundle
-tier: 3
+name: Pixel & Cartoon Enthusiasts Bundle (GOG.com)
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15286/
@@ -13,42 +15,84 @@ games:
 - name: Gunslugs
   ids:
   - steam:371890
+  requires: []
+  tiers:
+  - 3
 - name: Sir Questionnaire
   ids:
   - steam:2124790
+  requires: []
+  tiers:
+  - 3
 - name: Heroes of Loot
   ids:
   - steam:359280
+  requires: []
+  tiers:
+  - 3
 - name: Snake Core
   ids:
   - steam:1262770
+  requires: []
+  tiers:
+  - 3
 - name: Space Grunts
   ids:
   - steam:371430
+  requires: []
+  tiers:
+  - 3
 - name: Gunslugs 2
   ids:
   - steam:340750
+  requires: []
+  tiers:
+  - 3
 - name: Meganoid
   ids:
   - steam:606030
+  requires: []
+  tiers:
+  - 3
 - name: Heroes of Loot 2
   ids:
   - steam:439880
+  requires: []
+  tiers:
+  - 3
 - name: Space Grunts 2
   ids:
   - steam:1125370
+  requires: []
+  tiers:
+  - 3
 - name: Through the Darkest of Times
   ids:
   - steam:1003090
+  requires: []
+  tiers:
+  - 3
 - name: Ashworld
   ids:
   - steam:580320
+  requires: []
+  tiers:
+  - 3
 - name: 'Gunslugs 3: Rogue Tactics'
   ids:
   - steam:1012360
+  requires: []
+  tiers:
+  - 3
 - name: Residual
   ids:
   - steam:1290780
+  requires: []
+  tiers:
+  - 3
 - name: El Hijo - A Wild West Tale
   ids:
   - steam:853050
+  requires: []
+  tiers:
+  - 3

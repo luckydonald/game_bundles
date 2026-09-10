@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Civilization Bundle — entire-21-item-bundle
-tier: 3
+name: Humble Civilization Bundle
+tiers:
+- rank: 3
+  name: entire-21-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4813/
@@ -13,65 +15,128 @@ games:
 - name: 'Sid Meier''s Civilization® III: Complete'
   ids:
   - steam:3910
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization IV: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:4813:sid-meiers-civilization-iv-the-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V: Gods and Kings'
   ids:
   - steam:16870
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Korea'
   ids:
   - steam:99612
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V: Brave New World'
   ids:
   - steam:235580
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V
   ids:
   - steam:8930
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V - Scrambled Nations Map Pack
   ids:
   - steam:235585
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V - Explorer's Map Pack
   ids:
   - steam:16866
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Polynesia'
   ids:
   - steam:99610
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V - Scrambled Continents Map Pack
   ids:
   - steam:235584
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Scenario Pack: Wonders of the Ancient World'
   ids:
   - steam:99614
+  requires: []
+  tiers:
+  - 3
 - name: Sid Meier's Civilization V - Babylon (Nebuchadnezzar II)
   ids:
   - steam:16868
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Civilization and Scenario Pack: Denmark (The
     Vikings)'
   ids:
   - steam:99611
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Mesopotamia'
   ids:
   - steam:16863
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Mediterranean'
   ids:
   - steam:16860
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Asia'
   ids:
   - steam:16861
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Cradle of Civilization Map Pack: Americas'
   ids:
   - steam:16862
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization V - Civilization and Scenario Double Pack: Spain
     and Inca'
   ids:
   - steam:16867
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization: Beyond Earth'
   ids:
   - steam:65980
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization®: Beyond Earth™ - Exoplanets Map Pack'
   ids:
   - steam:304010
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization: Beyond Earth - Rising Tide'
   ids:
   - steam:353830
+  requires: []
+  tiers:
+  - 3

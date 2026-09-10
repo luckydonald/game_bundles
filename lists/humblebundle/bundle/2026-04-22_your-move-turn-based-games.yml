@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Your Move: Turn Based Games Bundle — entire-8-item-bundle'
-tier: 3
+name: 'Your Move: Turn Based Games Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16081/
@@ -13,24 +15,48 @@ games:
 - name: Crown Trick
   ids:
   - steam:1000010
+  requires: []
+  tiers:
+  - 3
 - name: Legends of Kingdom Rush
   ids:
   - steam:1904860
+  requires: []
+  tiers:
+  - 3
 - name: 'Battle Chasers: Nightwar'
   ids:
   - steam:451020
+  requires: []
+  tiers:
+  - 3
 - name: For The King II
   ids:
   - steam:1676840
+  requires: []
+  tiers:
+  - 3
 - name: Dungeons of Aether
   ids:
   - steam:1668290
+  requires: []
+  tiers:
+  - 3
 - name: Moonbreaker
   ids:
   - steam:845890
+  requires: []
+  tiers:
+  - 3
 - name: 'Deep Sleep: Labyrinth of the Forsaken'
   ids:
   - steam:1868360
+  requires: []
+  tiers:
+  - 3
 - name: 'Abalon: Roguelike Tactics CCG'
   ids:
   - steam:1681840
+  requires: []
+  tiers:
+  - 3

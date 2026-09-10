@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Talisman: The Complete Collection Bundle — Beat The Average'
-tier: 3
+name: 'Talisman: The Complete Collection Bundle'
+tiers:
+- rank: 3
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11636/
@@ -13,159 +15,318 @@ games:
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:11636:talisman-digital-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Origins'
   ids:
   - steam:1033170
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Ancient Beasts Expansion
   ids:
   - steam:1059290
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Origins - Beyond the Veil'
   ids:
   - steam:1093430
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Woodland Expansion
   ids:
   - steam:773600
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Dragon Expansion
   ids:
   - steam:267789
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #18 Pathfinder'
   ids:
   - steam:827810
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #17 Woodsman'
   ids:
   - steam:827820
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Clockwork Kingdom Expansion
   ids:
   - steam:1059291
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #16 - Samurai'
   ids:
   - steam:802460
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Origins - The Legend of Pandora''s Box'
   ids:
   - unresolved:source:isthereanydeal:11636:talisman-origins-the-legend-of-pandoras-box
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Harbinger Expansion
   ids:
   - steam:707670
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Firelands Expansion
   ids:
   - steam:525520
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Cataclysm Expansion
   ids:
   - steam:929550
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Origins - The Eternal Conflict'
   ids:
   - steam:1189990
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Reaper Expansion: Legendary Deck'
   ids:
   - steam:1248181
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #19 Swordsman'
   ids:
   - steam:1261540
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Base Game: Legendary Deck'
   ids:
   - steam:1248180
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Dungeon Expansion: Legendary Deck'
   ids:
   - steam:1248182
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Highland Expansion: Legendary Deck'
   ids:
   - steam:1248183
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #21 Witch Hunter'
   ids:
   - steam:1261542
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #20 Ranger'
   ids:
   - steam:1261541
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #23 Pilgrim'
   ids:
   - steam:1287581
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #24 - Satyr'
   ids:
   - steam:1287582
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #22 - Vampire'
   ids:
   - steam:1287580
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Sacred Pool Expansion: Legendary Deck'
   ids:
   - unresolved:source:isthereanydeal:11636:talisman-the-sacred-pool-expansion-legendary-deck
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The City Expansion: Legendary Deck'
   ids:
   - steam:1690082
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Blood Moon Expansion: Legendary Deck'
   ids:
   - unresolved:source:isthereanydeal:11636:talisman-the-blood-moon-expansion-legendary-deck
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Realm of Souls Expansion
   ids:
   - steam:1003200
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #6 - Gambler'
   ids:
   - steam:267771
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #10 - Shaman'
   ids:
   - steam:267782
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #4 - Genie'
   ids:
   - steam:258816
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Nether Realm Expansion
   ids:
   - steam:267787
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Reaper Expansion
   ids:
   - steam:258810
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #8 - Apprentice Mage'
   ids:
   - steam:267774
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #11 - Illusionist'
   ids:
   - steam:267783
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #2 - Courtesan'
   ids:
   - steam:258814
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Highland Expansion
   ids:
   - steam:267780
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #7 - Black Witch'
   ids:
   - steam:267773
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #1 - Exorcist'
   ids:
   - steam:258813
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #3 - Devil''s Minion'
   ids:
   - steam:258815
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #15 - Saracen'
   ids:
   - steam:267777
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #5 - Martyr'
   ids:
   - steam:267770
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The City Expansion
   ids:
   - steam:267784
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Blood Moon Expansion
   ids:
   - steam:267788
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #12 - Jester'
   ids:
   - steam:267785
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Sacred Pool Expansion
   ids:
   - steam:267781
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Dungeon Expansion
   ids:
   - steam:267775
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #14 - Martial Artist'
   ids:
   - steam:267776
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - Complete Runestone Deck
   ids:
   - steam:258812
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #13 - Goblin Shaman'
   ids:
   - steam:267786
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - Character Pack #9 - Shape Shifter'
   ids:
   - steam:267778
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman - The Frostmarch Expansion: Legendary Deck'
   ids:
   - unresolved:source:isthereanydeal:11636:talisman-the-frostmarch-expansion-legendary-deck
+  requires: []
+  tiers:
+  - 3

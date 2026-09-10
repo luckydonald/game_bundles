@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: IGN Live At Home Bundle — entire-7-item-bundle
-tier: 3
+name: IGN Live At Home Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14117/
@@ -13,21 +15,42 @@ games:
 - name: Bread & Fred
   ids:
   - steam:1607680
+  requires: []
+  tiers:
+  - 3
 - name: Grindstone
   ids:
   - steam:1818690
+  requires: []
+  tiers:
+  - 3
 - name: 'MechWarrior 5: Mercenaries'
   ids:
   - steam:784080
+  requires: []
+  tiers:
+  - 3
 - name: Soulslinger - Envoy of Death
   ids:
   - steam:2429240
+  requires: []
+  tiers:
+  - 3
 - name: 'Revival: Recolonization'
   ids:
   - steam:1306770
+  requires: []
+  tiers:
+  - 3
 - name: High On Life
   ids:
   - steam:1583230
+  requires: []
+  tiers:
+  - 3
 - name: 'Atari 50: The Anniversary Celebration'
   ids:
   - steam:1919470
+  requires: []
+  tiers:
+  - 3

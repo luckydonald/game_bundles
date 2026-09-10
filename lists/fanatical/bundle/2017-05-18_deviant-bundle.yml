@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Deviant Bundle — Tier 3
-tier: 3
+name: Deviant Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5110/
@@ -13,33 +15,66 @@ games:
 - name: The Marvellous Miss Take
   ids:
   - steam:327310
+  requires: []
+  tiers:
+  - 3
 - name: PONCHO
   ids:
   - steam:332620
+  requires: []
+  tiers:
+  - 3
 - name: '- Ratz Instagib'
   ids:
   - steam:338170
+  requires: []
+  tiers:
+  - 3
 - name: 'Deadly Premonition: The Director''s Cut'
   ids:
   - steam:247660
+  requires: []
+  tiers:
+  - 3
 - name: Lumini
   ids:
   - steam:360840
+  requires: []
+  tiers:
+  - 3
 - name: 'Fist Slash: Of Ultimate Fury'
   ids:
   - steam:409070
+  requires: []
+  tiers:
+  - 3
 - name: Kromaia
   ids:
   - steam:285980
+  requires: []
+  tiers:
+  - 3
 - name: The Land of Eyas
   ids:
   - steam:299800
+  requires: []
+  tiers:
+  - 3
 - name: I Want To Be Human
   ids:
   - unresolved:source:isthereanydeal:5110:i-want-to-be-human
+  requires: []
+  tiers:
+  - 3
 - name: One Upon Light
   ids:
   - unresolved:source:isthereanydeal:5110:one-upon-light
+  requires: []
+  tiers:
+  - 3
 - name: Conga Master
   ids:
   - steam:489720
+  requires: []
+  tiers:
+  - 3

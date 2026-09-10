@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #59 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #59'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6555/
@@ -13,33 +15,66 @@ games:
 - name: 'Trivia Quiz: All about everything!'
   ids:
   - steam:905150
+  requires: []
+  tiers:
+  - 2
 - name: Mindsight
   ids:
   - steam:716070
+  requires: []
+  tiers:
+  - 2
 - name: Amora
   ids:
   - steam:816280
+  requires: []
+  tiers:
+  - 2
 - name: Salty Seabird Bay
   ids:
   - steam:868180
+  requires: []
+  tiers:
+  - 2
 - name: Master of Rogues:The Seven Artifacts
   ids:
   - steam:928130
+  requires: []
+  tiers:
+  - 2
 - name: A nova Califórnia
   ids:
   - unresolved:source:isthereanydeal:6555:a-nova-california
+  requires: []
+  tiers:
+  - 2
 - name: Infommi
   ids:
   - steam:916910
+  requires: []
+  tiers:
+  - 2
 - name: Flagsplosion
   ids:
   - steam:652340
+  requires: []
+  tiers:
+  - 2
 - name: Stories In Stone
   ids:
   - unresolved:source:isthereanydeal:6555:stories-in-stone
+  requires: []
+  tiers:
+  - 2
 - name: Zaba The Frog
   ids:
   - steam:673530
+  requires: []
+  tiers:
+  - 2
 - name: 'Auro: A Monster-Bumping Adventure'
   ids:
   - steam:459680
+  requires: []
+  tiers:
+  - 2

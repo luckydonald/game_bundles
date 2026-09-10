@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nemesis Bundle 5 — Tier 3
-tier: 3
+name: Nemesis Bundle 5
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5838/
@@ -13,42 +15,84 @@ games:
 - name: Galak-Z
   ids:
   - steam:300580
+  requires: []
+  tiers:
+  - 3
 - name: 'Infectonator : Survivors'
   ids:
   - steam:269310
+  requires: []
+  tiers:
+  - 3
 - name: Still Not Dead
   ids:
   - steam:337290
+  requires: []
+  tiers:
+  - 3
 - name: Holy Potatoes! A Weapon Shop?!
   ids:
   - steam:363600
+  requires: []
+  tiers:
+  - 3
 - name: The Way
   ids:
   - steam:311010
+  requires: []
+  tiers:
+  - 3
 - name: The Warlock of Firetop Mountain
   ids:
   - steam:324740
+  requires: []
+  tiers:
+  - 3
 - name: Wick
   ids:
   - steam:418300
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: The Fall of the Dungeon Guardians - Enhanced Edition
   ids:
   - steam:409450
+  requires: []
+  tiers:
+  - 3
 - name: Holy Potatoes! We're in Space?!
   ids:
   - steam:505730
+  requires: []
+  tiers:
+  - 3
 - name: Mytheon
   ids:
   - steam:413030
+  requires: []
+  tiers:
+  - 3
 - name: Space Hulk Ascension Edition
   ids:
   - unresolved:source:isthereanydeal:5838:space-hulk-ascension-edition
+  requires: []
+  tiers:
+  - 3
 - name: Gloria Victis
   ids:
   - unresolved:source:isthereanydeal:5838:gloria-victis
+  requires: []
+  tiers:
+  - 3
 - name: Lords of the Fallen™ (2014) - Digital Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:5838:lords-of-the-fallen-2014-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 3

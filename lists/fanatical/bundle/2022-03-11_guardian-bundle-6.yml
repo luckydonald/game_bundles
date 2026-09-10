@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardian Bundle 6 — Tier 3
-tier: 3
+name: Guardian Bundle 6
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11150/
@@ -13,27 +15,54 @@ games:
 - name: Super Fancy Pants Adventure
   ids:
   - steam:668210
+  requires: []
+  tiers:
+  - 3
 - name: Nation Red
   ids:
   - steam:39800
+  requires: []
+  tiers:
+  - 3
 - name: Copy Kitty
   ids:
   - steam:349250
+  requires: []
+  tiers:
+  - 3
 - name: 'Monsters'' Den: Godfall'
   ids:
   - steam:469720
+  requires: []
+  tiers:
+  - 3
 - name: Versus Squad
   ids:
   - steam:471330
+  requires: []
+  tiers:
+  - 3
 - name: Tangledeep
   ids:
   - steam:628770
+  requires: []
+  tiers:
+  - 3
 - name: Glyph
   ids:
   - steam:1569150
+  requires: []
+  tiers:
+  - 3
 - name: Jetboard Joust
   ids:
   - steam:1181600
+  requires: []
+  tiers:
+  - 3
 - name: Unrailed!
   ids:
   - steam:1016920
+  requires: []
+  tiers:
+  - 3

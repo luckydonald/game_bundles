@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'May Cubic Bundle #2 — Tier 2'
-tier: 2
+name: 'May Cubic Bundle #2'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5089/
@@ -13,30 +15,60 @@ games:
 - name: Jack's Gang
   ids:
   - unresolved:source:isthereanydeal:5089:jacks-gang
+  requires: []
+  tiers:
+  - 2
 - name: 'Defense of Egypt: Cleopatra Mission'
   ids:
   - steam:534010
+  requires: []
+  tiers:
+  - 2
 - name: Spheroid
   ids:
   - unresolved:source:isthereanydeal:5089:spheroid
+  requires: []
+  tiers:
+  - 2
 - name: Doomed Kingdoms
   ids:
   - unresolved:source:isthereanydeal:5089:doomed-kingdoms
+  requires: []
+  tiers:
+  - 2
 - name: Alchemist
   ids:
   - steam:1942050
+  requires: []
+  tiers:
+  - 2
 - name: LUXIS
   ids:
   - steam:513820
+  requires: []
+  tiers:
+  - 2
 - name: Shut Up And Dig
   ids:
   - unresolved:source:isthereanydeal:5089:shut-up-and-dig
+  requires: []
+  tiers:
+  - 2
 - name: Omega One
   ids:
   - unresolved:source:isthereanydeal:5089:omega-one
+  requires: []
+  tiers:
+  - 2
 - name: '1 vs 1 : Global Operations'
   ids:
   - unresolved:source:isthereanydeal:5089:1-vs-1-global-operations
+  requires: []
+  tiers:
+  - 2
 - name: Dream Dealer
   ids:
   - steam:532030
+  requires: []
+  tiers:
+  - 2

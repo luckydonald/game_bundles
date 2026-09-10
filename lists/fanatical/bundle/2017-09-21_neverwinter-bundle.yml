@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Neverwinter Bundle — Tier 4
-tier: 4
+name: Neverwinter Bundle
+tiers:
+- rank: 4
+  name: Tier 4
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5488/
@@ -13,24 +15,48 @@ games:
 - name: Neverwinter - Defensive Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-defensive-starter-pack
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter - Offensive Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-offensive-starter-pack
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter - Endurance Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-endurance-starter-pack
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter Trove of Elemental Evil
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-trove-of-elemental-evil
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter - Gelatinous Cube Companion
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-gelatinous-cube-companion
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter Storm Rider Companion
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-storm-rider-companion
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter - Stormraider Horse Mount
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-stormraider-horse-mount
+  requires: []
+  tiers:
+  - 4
 - name: Neverwinter Knight of the Feywild Supplies Pack
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-knight-of-the-feywild-supplies-pack
+  requires: []
+  tiers:
+  - 4

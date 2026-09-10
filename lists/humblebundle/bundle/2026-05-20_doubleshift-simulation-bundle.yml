@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Double Shift: Simulation Bundle S2 Games — Entire 19 Item Bundle'
-tier: 2
+name: 'Double Shift: Simulation Bundle S2 Games'
+tiers:
+- rank: 2
+  name: Entire 19 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16183/
@@ -13,57 +15,114 @@ games:
 - name: Bakery Simulator
   ids:
   - steam:1031120
+  requires: []
+  tiers:
+  - 2
 - name: YouTubers Life
   ids:
   - steam:428690
+  requires: []
+  tiers:
+  - 2
 - name: Castle Flipper
   ids:
   - steam:944250
+  requires: []
+  tiers:
+  - 2
 - name: Demolish & Build 2018
   ids:
   - steam:577670
+  requires: []
+  tiers:
+  - 2
 - name: Accident
   ids:
   - steam:852220
+  requires: []
+  tiers:
+  - 2
 - name: Demolish & Build 2017
   ids:
   - steam:470740
+  requires: []
+  tiers:
+  - 2
 - name: Electrician Simulator
   ids:
   - steam:1080020
+  requires: []
+  tiers:
+  - 2
 - name: 'Brewmaster: Beer Brewing Simulator'
   ids:
   - steam:1569200
+  requires: []
+  tiers:
+  - 2
 - name: Plane Accident
   ids:
   - steam:1682340
+  requires: []
+  tiers:
+  - 2
 - name: Demolish & Build 3
   ids:
   - steam:1203670
+  requires: []
+  tiers:
+  - 2
 - name: 'Purrrifiers: Cleaning Chaos'
   ids:
   - steam:2117430
+  requires: []
+  tiers:
+  - 2
 - name: Farmer's Life
   ids:
   - steam:1137750
+  requires: []
+  tiers:
+  - 2
 - name: Barn Finders
   ids:
   - steam:991170
+  requires: []
+  tiers:
+  - 2
 - name: House Builder
   ids:
   - steam:1244630
+  requires: []
+  tiers:
+  - 2
 - name: Firefighting Simulator - The Squad
   ids:
   - steam:420560
+  requires: []
+  tiers:
+  - 2
 - name: Underground Garage
   ids:
   - steam:1452250
+  requires: []
+  tiers:
+  - 2
 - name: Youtubers Life 2
   ids:
   - steam:1493760
+  requires: []
+  tiers:
+  - 2
 - name: 'Barn Finders: Bid Wars'
   ids:
   - steam:1554910
+  requires: []
+  tiers:
+  - 2
 - name: 'Barn Finders: Amerykan Dream'
   ids:
   - steam:1424060
+  requires: []
+  tiers:
+  - 2

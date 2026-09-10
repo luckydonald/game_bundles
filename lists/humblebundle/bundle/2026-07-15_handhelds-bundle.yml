@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Handhelds Bundle — Entire 7 Item Bundle
-tier: 3
+name: Humble Handhelds Bundle
+tiers:
+- rank: 3
+  name: Entire 7 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16395/
@@ -14,27 +16,48 @@ games:
   ids:
   - steam:673130
   - isthereanydeal:amid-evil
+  requires: []
+  tiers:
+  - 3
 - name: 'Children of Morta: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:16395:children-of-morta-complete-edition
   - isthereanydeal:children-of-morta-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: Nova Drift
   ids:
   - steam:858210
   - isthereanydeal:nova-drift
+  requires: []
+  tiers:
+  - 3
 - name: Manifold Garden
   ids:
   - steam:473950
   - isthereanydeal:manifold-garden
+  requires: []
+  tiers:
+  - 3
 - name: Sable
   ids:
   - steam:757310
   - isthereanydeal:sable
+  requires: []
+  tiers:
+  - 3
 - name: 'Symphony of War: The Nephilim Saga'
   ids:
   - steam:1488200
   - isthereanydeal:symphony-of-war-the-nephilim-saga
+  requires: []
+  tiers:
+  - 3
 - name: Blood West
   ids:
   - steam:1587130
   - isthereanydeal:blood-west
+  requires: []
+  tiers:
+  - 3

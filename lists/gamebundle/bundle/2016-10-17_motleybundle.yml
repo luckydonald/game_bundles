@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Motley GameBundle — Beat The Average + $0.20
-tier: 3
+name: The Motley GameBundle
+tiers:
+- rank: 3
+  name: Beat The Average + $0.20
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4210/
@@ -13,24 +15,48 @@ games:
 - name: 'StarFringe: Adversus'
   ids:
   - steam:458030
+  requires: []
+  tiers:
+  - 3
 - name: Squirbs
   ids:
   - steam:429700
+  requires: []
+  tiers:
+  - 3
 - name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
   ids:
   - steam:342630
+  requires: []
+  tiers:
+  - 3
 - name: 35MM
   ids:
   - steam:466500
+  requires: []
+  tiers:
+  - 3
 - name: Death Stair
   ids:
   - steam:444880
+  requires: []
+  tiers:
+  - 3
 - name: 'Namariel Legends: The Iron Lord Premium Edition'
   ids:
   - unresolved:source:isthereanydeal:4210:namariel-legends-the-iron-lord-premium-edition
+  requires: []
+  tiers:
+  - 3
 - name: Leave The Nest
   ids:
   - unresolved:source:isthereanydeal:4210:leave-the-nest
+  requires: []
+  tiers:
+  - 3
 - name: Groovy
   ids:
   - steam:372490
+  requires: []
+  tiers:
+  - 3

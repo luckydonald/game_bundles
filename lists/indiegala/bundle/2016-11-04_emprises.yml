@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Battles & Emprises — Tier 2
-tier: 2
+name: Battles & Emprises
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4298/
@@ -13,51 +15,102 @@ games:
 - name: "7.62 \x96 High Calibre"
   ids:
   - steam:289890
+  requires: []
+  tiers:
+  - 2
 - name: Pilot Brothers
   ids:
   - steam:336760
+  requires: []
+  tiers:
+  - 2
 - name: Ascension to the Throne
   ids:
   - steam:289200
+  requires: []
+  tiers:
+  - 2
 - name: Jane Angel Templar Mystery
   ids:
   - steam:323270
+  requires: []
+  tiers:
+  - 2
 - name: 'Elven Legacy: Magic'
   ids:
   - steam:42930
+  requires: []
+  tiers:
+  - 2
 - name: 'Twilight City: Love as a Cure'
   ids:
   - steam:428270
+  requires: []
+  tiers:
+  - 2
 - name: 'Pilot Brothers 3: Back Side of the Earth'
   ids:
   - steam:336780
+  requires: []
+  tiers:
+  - 2
 - name: Desert Law
   ids:
   - steam:356280
+  requires: []
+  tiers:
+  - 2
 - name: Cuban Missile Crisis
   ids:
   - steam:356270
+  requires: []
+  tiers:
+  - 2
 - name: 'Elven Legacy: Ranger'
   ids:
   - steam:42950
+  requires: []
+  tiers:
+  - 2
 - name: 'Cuban Missile Crisis: Ice Crusade'
   ids:
   - steam:356290
+  requires: []
+  tiers:
+  - 2
 - name: Elven Legacy
   ids:
   - steam:25850
+  requires: []
+  tiers:
+  - 2
 - name: 'Perimeter: Emperor''s Testament'
   ids:
   - steam:289240
+  requires: []
+  tiers:
+  - 2
 - name: 'Elven Legacy: Siege'
   ids:
   - steam:42940
+  requires: []
+  tiers:
+  - 2
 - name: Perimeter
   ids:
   - steam:289440
+  requires: []
+  tiers:
+  - 2
 - name: A.I.M Racing
   ids:
   - unresolved:source:isthereanydeal:4298:a-i-m-racing
+  requires: []
+  tiers:
+  - 2
 - name: Pilot Brothers 2
   ids:
   - steam:336770
+  requires: []
+  tiers:
+  - 2

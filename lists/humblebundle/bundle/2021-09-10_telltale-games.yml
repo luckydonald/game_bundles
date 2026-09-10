@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Telltale Games Bundle — entire-11-item-bundle
-tier: 3
+name: Telltale Games Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10445/
@@ -13,33 +15,66 @@ games:
 - name: The Walking Dead
   ids:
   - steam:207610
+  requires: []
+  tiers:
+  - 3
 - name: 'The Walking Dead: 400 Days'
   ids:
   - steam:207620
+  requires: []
+  tiers:
+  - 3
 - name: Batman - The Telltale Series
   ids:
   - steam:498240
+  requires: []
+  tiers:
+  - 3
 - name: The Walking Dead Season 2
   ids:
   - unresolved:source:isthereanydeal:10445:the-walking-dead-season-2
+  requires: []
+  tiers:
+  - 3
 - name: 'The Walking Dead: Michonne - A Telltale Miniseries'
   ids:
   - steam:429570
+  requires: []
+  tiers:
+  - 3
 - name: 'Batman: The Enemy Within - The Telltale Series'
   ids:
   - steam:675260
+  requires: []
+  tiers:
+  - 3
 - name: The Wolf Among Us
   ids:
   - steam:250320
+  requires: []
+  tiers:
+  - 3
 - name: 'The Walking Dead: The Final Season'
   ids:
   - steam:866800
+  requires: []
+  tiers:
+  - 3
 - name: 'The Walking Dead: A New Frontier'
   ids:
   - steam:536220
+  requires: []
+  tiers:
+  - 3
 - name: Batman - The Telltale Series Shadows Mode
   ids:
   - steam:1182000
+  requires: []
+  tiers:
+  - 3
 - name: Batman - The Enemy Within Shadows Mode
   ids:
   - steam:1181990
+  requires: []
+  tiers:
+  - 3

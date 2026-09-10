@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble CI Games 2020 Bundle — entire-13-item-bundle
-tier: 3
+name: Humble CI Games 2020 Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9191/
@@ -13,39 +15,78 @@ games:
 - name: "Art of Murder \x96 Cards of Destiny"
   ids:
   - steam:836770
+  requires: []
+  tiers:
+  - 3
 - name: Chronicles of Mystery The Tree of Life
   ids:
   - steam:837090
+  requires: []
+  tiers:
+  - 3
 - name: Dogfight 1942
   ids:
   - steam:217790
+  requires: []
+  tiers:
+  - 3
 - name: "Alien Rage \x96 Unlimited"
   ids:
   - steam:217920
+  requires: []
+  tiers:
+  - 3
 - name: 'Chronicles of Mystery: The Scorpio Ritual'
   ids:
   - steam:34800
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior 3
   ids:
   - steam:368070
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior 3 - All-terrain vehicle
   ids:
   - steam:575290
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior 3 - Sniper Rifle McMillan TAC-338A
   ids:
   - steam:575291
+  requires: []
+  tiers:
+  - 3
 - name: Lords of the Fallen™ (2014) Game of the Year Edition
   ids:
   - unresolved:source:isthereanydeal:9191:lords-of-the-fallen-2014-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior 3 - Multiplayer Map Pack
   ids:
   - steam:575301
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior 3 - The Sabotage
   ids:
   - steam:575300
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior Contracts
   ids:
   - steam:973580
+  requires: []
+  tiers:
+  - 3
 - name: Sniper Ghost Warrior Contracts - STURM BODYGUARD 9
   ids:
   - unresolved:source:isthereanydeal:9191:sniper-ghost-warrior-contracts-sturm-bodyguard-9
+  requires: []
+  tiers:
+  - 3

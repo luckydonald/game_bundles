@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Alawar Cubic Bundle — Tier 2
-tier: 2
+name: Alawar Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5399/
@@ -13,45 +15,90 @@ games:
 - name: 'Mountain Crime: Requital'
   ids:
   - steam:394680
+  requires: []
+  tiers:
+  - 2
 - name: Elementary My Dear Majesty
   ids:
   - steam:343390
+  requires: []
+  tiers:
+  - 2
 - name: 'Sacra Terra: Angelic Night'
   ids:
   - steam:344440
+  requires: []
+  tiers:
+  - 2
 - name: Rescue Team 5
   ids:
   - steam:416320
+  requires: []
+  tiers:
+  - 2
 - name: Hidden Object Bundle 4 in 1
   ids:
   - steam:347610
+  requires: []
+  tiers:
+  - 2
 - name: 'Sacra Terra: Kiss of Death Collector''s Edition'
   ids:
   - steam:560760
+  requires: []
+  tiers:
+  - 2
 - name: Hidden Object 6-in-1 bundle
   ids:
   - steam:448400
+  requires: []
+  tiers:
+  - 2
 - name: 'Heroes of Hellas 3: Athens'
   ids:
   - steam:347590
+  requires: []
+  tiers:
+  - 2
 - name: Prehistoric Tales
   ids:
   - steam:466780
+  requires: []
+  tiers:
+  - 2
 - name: Rescue Team 7
   ids:
   - steam:666050
+  requires: []
+  tiers:
+  - 2
 - name: 'Weather Lord: Following the Princess Collector''s Edition'
   ids:
   - steam:456690
+  requires: []
+  tiers:
+  - 2
 - name: Hidden Object Bundle 5 in 1
   ids:
   - steam:346140
+  requires: []
+  tiers:
+  - 2
 - name: 'Incredible Dracula: Chasing Love Collector''s Edition'
   ids:
   - steam:435040
+  requires: []
+  tiers:
+  - 2
 - name: House of Snark 6-in-1 Bundle
   ids:
   - steam:486810
+  requires: []
+  tiers:
+  - 2
 - name: 'Meridian: Age of Invention'
   ids:
   - steam:397770
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #62 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #62'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6481/
@@ -13,36 +15,72 @@ games:
 - name: Mini Ghost
   ids:
   - steam:586880
+  requires: []
+  tiers:
+  - 2
 - name: Hentai Sokoban
   ids:
   - unresolved:source:isthereanydeal:6481:hentai-sokoban
+  requires: []
+  tiers:
+  - 2
 - name: Pixel Hentai Mosaic
   ids:
   - unresolved:source:isthereanydeal:6481:pixel-hentai-mosaic
+  requires: []
+  tiers:
+  - 2
 - name: Q-YO Blaster
   ids:
   - steam:772610
+  requires: []
+  tiers:
+  - 2
 - name: 'SUPER BENBO QUEST: TURBO DELUXE'
   ids:
   - unresolved:source:isthereanydeal:6481:super-benbo-quest-turbo-deluxe
+  requires: []
+  tiers:
+  - 2
 - name: Hentai Puzzle
   ids:
   - steam:914850
+  requires: []
+  tiers:
+  - 2
 - name: Aircraft Evolution
   ids:
   - steam:597030
+  requires: []
+  tiers:
+  - 2
 - name: 'The Uncertain: Last Quiet Day'
   ids:
   - steam:406970
+  requires: []
+  tiers:
+  - 2
 - name: Strangers of the Power 2
   ids:
   - steam:851840
+  requires: []
+  tiers:
+  - 2
 - name: Neverliria
   ids:
   - steam:904890
+  requires: []
+  tiers:
+  - 2
 - name: The Line
   ids:
   - steam:738760
+  requires: []
+  tiers:
+  - 2
 - name: 'The Adventures of Elena Temple: Definitive Edition'
   ids:
   - steam:800190
+  requires: []
+  tiers:
+  - 2

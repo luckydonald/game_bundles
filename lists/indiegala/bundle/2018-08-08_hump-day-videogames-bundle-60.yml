@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #60 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #60'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6371/
@@ -13,30 +15,60 @@ games:
 - name: Fumiko!
   ids:
   - steam:563810
+  requires: []
+  tiers:
+  - 2
 - name: 'Crown Champion: Legends of the Arena'
   ids:
   - steam:527710
+  requires: []
+  tiers:
+  - 2
 - name: DERE EVIL .EXE
   ids:
   - steam:871950
+  requires: []
+  tiers:
+  - 2
 - name: Steam Tactics
   ids:
   - steam:708950
+  requires: []
+  tiers:
+  - 2
 - name: Weapon Shop Fantasy
   ids:
   - steam:599460
+  requires: []
+  tiers:
+  - 2
 - name: Burnin' Rubber 5 HD
   ids:
   - steam:420660
+  requires: []
+  tiers:
+  - 2
 - name: Dynasty Feud
   ids:
   - steam:493180
+  requires: []
+  tiers:
+  - 2
 - name: What A Trash Game!
   ids:
   - unresolved:source:isthereanydeal:6371:what-a-trash-game
+  requires: []
+  tiers:
+  - 2
 - name: Demon's Rise - Lords of Chaos
   ids:
   - steam:844420
+  requires: []
+  tiers:
+  - 2
 - name: Demon's Rise - War for the Deep
   ids:
   - steam:843900
+  requires: []
+  tiers:
+  - 2

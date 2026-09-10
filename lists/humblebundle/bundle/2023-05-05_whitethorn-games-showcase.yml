@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Easy-going Games: Whitethorn Showcase — entire-12-item-bundle'
-tier: 3
+name: 'Easy-going Games: Whitethorn Showcase'
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13138/
@@ -13,36 +15,72 @@ games:
 - name: Newt One
   ids:
   - steam:842850
+  requires: []
+  tiers:
+  - 3
 - name: Evan's Remains
   ids:
   - steam:1110050
+  requires: []
+  tiers:
+  - 3
 - name: Starcrossed
   ids:
   - steam:956560
+  requires: []
+  tiers:
+  - 3
 - name: We should talk.
   ids:
   - steam:1255990
+  requires: []
+  tiers:
+  - 3
 - name: Teacup
   ids:
   - steam:1444300
+  requires: []
+  tiers:
+  - 3
 - name: Beasts of Maravilla Island
   ids:
   - steam:1378020
+  requires: []
+  tiers:
+  - 3
 - name: Aground
   ids:
   - steam:876650
+  requires: []
+  tiers:
+  - 3
 - name: Calico
   ids:
   - steam:1112890
+  requires: []
+  tiers:
+  - 3
 - name: Princess Farmer
   ids:
   - steam:1320490
+  requires: []
+  tiers:
+  - 3
 - name: Wytchwood
   ids:
   - steam:729000
+  requires: []
+  tiers:
+  - 3
 - name: Lake
   ids:
   - steam:1118240
+  requires: []
+  tiers:
+  - 3
 - name: APICO
   ids:
   - steam:1390190
+  requires: []
+  tiers:
+  - 3

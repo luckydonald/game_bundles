@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Grab The Games Bundle — Tier 2
-tier: 2
+name: Grab The Games Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3066/
@@ -13,27 +15,54 @@ games:
 - name: Fiends Of Imprisonment
   ids:
   - unresolved:source:isthereanydeal:3066:fiends-of-imprisonment
+  requires: []
+  tiers:
+  - 2
 - name: They Came from The Moon
   ids:
   - unresolved:source:isthereanydeal:3066:they-came-from-the-moon
+  requires: []
+  tiers:
+  - 2
 - name: Why So Evil
   ids:
   - unresolved:source:isthereanydeal:3066:why-so-evil
+  requires: []
+  tiers:
+  - 2
 - name: Goo Cubelets
   ids:
   - unresolved:source:isthereanydeal:3066:goo-cubelets
+  requires: []
+  tiers:
+  - 2
 - name: Break Into Zatwor
   ids:
   - unresolved:source:isthereanydeal:3066:break-into-zatwor
+  requires: []
+  tiers:
+  - 2
 - name: Brilliant Bob
   ids:
   - unresolved:source:isthereanydeal:3066:brilliant-bob
+  requires: []
+  tiers:
+  - 2
 - name: 'Why So Evil 2: Dystopia'
   ids:
   - unresolved:source:isthereanydeal:3066:why-so-evil-2-dystopia
+  requires: []
+  tiers:
+  - 2
 - name: GooCubelets 2
   ids:
   - unresolved:source:isthereanydeal:3066:goocubelets-2
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: The Algoorithm'
   ids:
   - unresolved:source:isthereanydeal:3066:goocubelets-the-algoorithm
+  requires: []
+  tiers:
+  - 2

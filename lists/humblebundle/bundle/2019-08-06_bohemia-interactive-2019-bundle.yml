@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bohemia Interactive Bundle 2019 with Dayz — entire-11-item-bundle
-tier: 4
+name: Humble Bohemia Interactive Bundle 2019 with Dayz
+tiers:
+- rank: 4
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7722/
@@ -13,33 +15,66 @@ games:
 - name: Take On Mars
   ids:
   - steam:244030
+  requires: []
+  tiers:
+  - 4
 - name: Take On Helicopters
   ids:
   - steam:65730
+  requires: []
+  tiers:
+  - 4
 - name: Carrier Command Gaea Mission
   ids:
   - steam:65740
+  requires: []
+  tiers:
+  - 4
 - name: ArmA 2
   ids:
   - steam:33900
+  requires: []
+  tiers:
+  - 4
 - name: Original War
   ids:
   - steam:235320
+  requires: []
+  tiers:
+  - 4
 - name: Pound of Ground
   ids:
   - steam:33980
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3
   ids:
   - steam:107410
+  requires: []
+  tiers:
+  - 4
 - name: Ylands
   ids:
   - steam:298610
+  requires: []
+  tiers:
+  - 4
 - name: 'Arma X: Anniversary Edition'
   ids:
   - unresolved:source:isthereanydeal:7722:arma-x-anniversary-edition
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Apex Edition
   ids:
   - unresolved:source:isthereanydeal:7722:arma-3-apex-edition
+  requires: []
+  tiers:
+  - 4
 - name: DayZ
   ids:
   - steam:221100
+  requires: []
+  tiers:
+  - 4

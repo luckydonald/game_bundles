@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Hunie Sekai Bundle — entire-18-item-bundle
-tier: 3
+name: Humble Hunie Sekai Bundle
+tiers:
+- rank: 3
+  name: entire-18-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5894/
@@ -13,54 +15,108 @@ games:
 - name: Sunrider Academy
   ids:
   - steam:340730
+  requires: []
+  tiers:
+  - 3
 - name: fault milestone two side:above
   ids:
   - steam:344770
+  requires: []
+  tiers:
+  - 3
 - name: Machina of the Planet Tree -Planet Ruler
   ids:
   - steam:383960
+  requires: []
+  tiers:
+  - 3
 - name: KARAKARA
   ids:
   - steam:487430
+  requires: []
+  tiers:
+  - 3
 - name: fault milestone one
   ids:
   - steam:286260
+  requires: []
+  tiers:
+  - 3
 - name: Raiders Sphere 4th
   ids:
   - unresolved:source:isthereanydeal:5894:raiders-sphere-4th
+  requires: []
+  tiers:
+  - 3
 - name: Root Double- Before Crime * After Days- Xtend Edition
   ids:
   - steam:438130
+  requires: []
+  tiers:
+  - 3
 - name: Highway Blossoms
   ids:
   - steam:451760
+  requires: []
+  tiers:
+  - 3
 - name: 'Sunrider: Liberation Day - Captain''s Edition'
   ids:
   - steam:358750
+  requires: []
+  tiers:
+  - 3
 - name: A Magical High School Girl / 魔法の女子高生
   ids:
   - steam:555630
+  requires: []
+  tiers:
+  - 3
 - name: HuniePop
   ids:
   - steam:339800
+  requires: []
+  tiers:
+  - 3
 - name: Just Deserts
   ids:
   - steam:488660
+  requires: []
+  tiers:
+  - 3
 - name: HunieCam Studio
   ids:
   - steam:426000
+  requires: []
+  tiers:
+  - 3
 - name: KARAKARA2
   ids:
   - steam:745850
+  requires: []
+  tiers:
+  - 3
 - name: NEKO-NIN exHeart +PLUS Saiha
   ids:
   - steam:750990
+  requires: []
+  tiers:
+  - 3
 - name: NEKO-NIN exHeart +PLUS Nachi
   ids:
   - steam:744520
+  requires: []
+  tiers:
+  - 3
 - name: NEKO-NIN exHeart
   ids:
   - steam:407310
+  requires: []
+  tiers:
+  - 3
 - name: 'Saku Saku: Love Blooms with the Cherry Blossoms'
   ids:
   - steam:691150
+  requires: []
+  tiers:
+  - 3

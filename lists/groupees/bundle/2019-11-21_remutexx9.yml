@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute XX Anarchy Enterprises — Tier 2
-tier: 2
+name: Remute XX Anarchy Enterprises
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8146/
@@ -13,30 +15,60 @@ games:
 - name: 'Ant War: Domination'
   ids:
   - steam:406080
+  requires: []
+  tiers:
+  - 2
 - name: 'Age of Castles: Warlords'
   ids:
   - steam:371710
+  requires: []
+  tiers:
+  - 2
 - name: 'Zombie Apocalypse: Escape The Undead City'
   ids:
   - steam:492490
+  requires: []
+  tiers:
+  - 2
 - name: 'Ghost Encounters: Deadwood - Collector''s Edition'
   ids:
   - steam:353070
+  requires: []
+  tiers:
+  - 2
 - name: Hide and Secret Treasure of the Ages
   ids:
   - steam:489470
+  requires: []
+  tiers:
+  - 2
 - name: Miner Mayhem
   ids:
   - steam:402850
+  requires: []
+  tiers:
+  - 2
 - name: 'Redrum: Dead Diary'
   ids:
   - steam:541720
+  requires: []
+  tiers:
+  - 2
 - name: 'Redrum: Time Lies'
   ids:
   - steam:353080
+  requires: []
+  tiers:
+  - 2
 - name: Tiki Man
   ids:
   - steam:376920
+  requires: []
+  tiers:
+  - 2
 - name: Kick Ass Commandos
   ids:
   - steam:359140
+  requires: []
+  tiers:
+  - 2

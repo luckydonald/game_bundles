@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Overwhelmingly Positive Bundle 2 — Includes Tiers 1 & 2
-tier: 3
+name: Humble Overwhelmingly Positive Bundle 2
+tiers:
+- rank: 3
+  name: Includes Tiers 1 & 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6533/
@@ -13,24 +15,48 @@ games:
 - name: Subsurface Circular
   ids:
   - steam:676820
+  requires: []
+  tiers:
+  - 3
 - name: Wuppo
   ids:
   - steam:400630
+  requires: []
+  tiers:
+  - 3
 - name: SIMULACRA
   ids:
   - steam:712730
+  requires: []
+  tiers:
+  - 3
 - name: SOMA
   ids:
   - steam:282140
+  requires: []
+  tiers:
+  - 3
 - name: 'LISA: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:6533:lisa-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Momodora: Reverie Under the Moonlight'
   ids:
   - steam:428550
+  requires: []
+  tiers:
+  - 3
 - name: Nuclear Throne
   ids:
   - steam:242680
+  requires: []
+  tiers:
+  - 3
 - name: Opus Magnum
   ids:
   - steam:558990
+  requires: []
+  tiers:
+  - 3

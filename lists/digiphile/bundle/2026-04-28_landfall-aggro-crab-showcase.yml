@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Landfall x Aggro Crab Showcase — Charity
-tier: 5
+name: Landfall x Aggro Crab Showcase
+tiers:
+- rank: 5
+  name: Charity
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16099/
@@ -13,36 +15,72 @@ games:
 - name: 'Stick Fight: The Game'
   ids:
   - steam:674940
+  requires: []
+  tiers:
+  - 5
 - name: Going Under
   ids:
   - steam:1154810
+  requires: []
+  tiers:
+  - 5
 - name: Subway Midnight
   ids:
   - steam:1750570
+  requires: []
+  tiers:
+  - 5
 - name: Totally Accurate Battle Simulator
   ids:
   - steam:508440
+  requires: []
+  tiers:
+  - 5
 - name: Content Warning
   ids:
   - steam:2881650
+  requires: []
+  tiers:
+  - 5
 - name: PEAK
   ids:
   - steam:3527290
+  requires: []
+  tiers:
+  - 5
 - name: HASTE
   ids:
   - steam:1796470
+  requires: []
+  tiers:
+  - 5
 - name: Another Crab's Treasure
   ids:
   - steam:1887840
+  requires: []
+  tiers:
+  - 5
 - name: 'Stick Fight: The Game OST'
   ids:
   - steam:726050
+  requires: []
+  tiers:
+  - 5
 - name: Going Under - Soundtrack
   ids:
   - steam:1394870
+  requires: []
+  tiers:
+  - 5
 - name: Another Crab's Treasure Soundtrack
   ids:
   - steam:2944800
+  requires: []
+  tiers:
+  - 5
 - name: Haste Soundtrack
   ids:
   - steam:3587100
+  requires: []
+  tiers:
+  - 5

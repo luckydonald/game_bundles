@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Deadly Heist Bundle — Tier 2
-tier: 2
+name: Deadly Heist Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6020/
@@ -13,30 +15,60 @@ games:
 - name: NeoBalls
   ids:
   - unresolved:source:isthereanydeal:6020:neoballs
+  requires: []
+  tiers:
+  - 2
 - name: Hitori
   ids:
   - unresolved:source:isthereanydeal:6020:hitori
+  requires: []
+  tiers:
+  - 2
 - name: Balloon
   ids:
   - steam:792810
+  requires: []
+  tiers:
+  - 2
 - name: Deadly Escape
   ids:
   - steam:649450
+  requires: []
+  tiers:
+  - 2
 - name: Qubika
   ids:
   - steam:797060
+  requires: []
+  tiers:
+  - 2
 - name: Razenroth
   ids:
   - steam:340830
+  requires: []
+  tiers:
+  - 2
 - name: NeoBalls2
   ids:
   - unresolved:source:isthereanydeal:6020:neoballs2
+  requires: []
+  tiers:
+  - 2
 - name: Peace Duke
   ids:
   - steam:823100
+  requires: []
+  tiers:
+  - 2
 - name: Dupio
   ids:
   - steam:793990
+  requires: []
+  tiers:
+  - 2
 - name: The Ultimate Heist
   ids:
   - steam:758400
+  requires: []
+  tiers:
+  - 2

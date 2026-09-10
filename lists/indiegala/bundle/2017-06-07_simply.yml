@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Simply Super Bundle — Tier 2
-tier: 2
+name: The Simply Super Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5191/
@@ -13,36 +15,72 @@ games:
 - name: Simple Ball:Extended Edition
   ids:
   - steam:487530
+  requires: []
+  tiers:
+  - 2
 - name: Crappy day enhanced edition
   ids:
   - unresolved:source:isthereanydeal:5191:crappy-day-enhanced-edition
+  requires: []
+  tiers:
+  - 2
 - name: No Time To Live
   ids:
   - steam:397940
+  requires: []
+  tiers:
+  - 2
 - name: Tower Dwellers
   ids:
   - steam:461860
+  requires: []
+  tiers:
+  - 2
 - name: Chromadrome 2
   ids:
   - steam:378350
+  requires: []
+  tiers:
+  - 2
 - name: 'SuperCluster: Void'
   ids:
   - steam:610740
+  requires: []
+  tiers:
+  - 2
 - name: Night of Terror
   ids:
   - unresolved:source:isthereanydeal:5191:night-of-terror
+  requires: []
+  tiers:
+  - 2
 - name: Stunt Toys
   ids:
   - steam:597720
+  requires: []
+  tiers:
+  - 2
 - name: Super Trench Attack™
   ids:
   - steam:311870
+  requires: []
+  tiers:
+  - 2
 - name: Apple Jack 1&2
   ids:
   - steam:351690
+  requires: []
+  tiers:
+  - 2
 - name: Rozkol
   ids:
   - unresolved:source:isthereanydeal:5191:rozkol
+  requires: []
+  tiers:
+  - 2
 - name: 'Valcarta: Rise of the Demon'
   ids:
   - steam:488220
+  requires: []
+  tiers:
+  - 2

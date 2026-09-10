@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bang Bang Bundle — Tier 2
-tier: 2
+name: Bang Bang Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6013/
@@ -13,36 +15,72 @@ games:
 - name: Bitcoin Miner
   ids:
   - unresolved:source:isthereanydeal:6013:bitcoin-miner
+  requires: []
+  tiers:
+  - 2
 - name: Miniballist
   ids:
   - steam:628580
+  requires: []
+  tiers:
+  - 2
 - name: Cube XL
   ids:
   - steam:645360
+  requires: []
+  tiers:
+  - 2
 - name: BANG! BANG! Totally Accurate Redneck Simulator
   ids:
   - steam:651380
+  requires: []
+  tiers:
+  - 2
 - name: Rainyday
   ids:
   - steam:712980
+  requires: []
+  tiers:
+  - 2
 - name: Paradox Wrench
   ids:
   - steam:779250
+  requires: []
+  tiers:
+  - 2
 - name: Relaxicon
   ids:
   - steam:815010
+  requires: []
+  tiers:
+  - 2
 - name: Cubiques
   ids:
   - steam:788760
+  requires: []
+  tiers:
+  - 2
 - name: Deep GachiGASM
   ids:
   - steam:744430
+  requires: []
+  tiers:
+  - 2
 - name: Nebulous
   ids:
   - steam:370140
+  requires: []
+  tiers:
+  - 2
 - name: Cubiques 2
   ids:
   - steam:805340
+  requires: []
+  tiers:
+  - 2
 - name: 'Stick War: Castle Defence'
   ids:
   - steam:815360
+  requires: []
+  tiers:
+  - 2

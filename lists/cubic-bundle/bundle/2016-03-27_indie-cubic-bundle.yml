@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Indie Cubic Bundle #1 — Tier 2'
-tier: 2
+name: 'Indie Cubic Bundle #1'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3223/
@@ -13,24 +15,48 @@ games:
 - name: Lost in Paradise
   ids:
   - steam:381170
+  requires: []
+  tiers:
+  - 2
 - name: Zeus vs Monsters - Math Game for kids
   ids:
   - steam:444430
+  requires: []
+  tiers:
+  - 2
 - name: David.
   ids:
   - steam:346180
+  requires: []
+  tiers:
+  - 2
 - name: 'BlackSoul: Extended Edition'
   ids:
   - unresolved:source:isthereanydeal:3223:blacksoul-extended-edition
+  requires: []
+  tiers:
+  - 2
 - name: Haywire on Fuel Station Zeta
   ids:
   - steam:368970
+  requires: []
+  tiers:
+  - 2
 - name: Story Of the Survivor
   ids:
   - steam:440950
+  requires: []
+  tiers:
+  - 2
 - name: Defense zone
   ids:
   - steam:312410
+  requires: []
+  tiers:
+  - 2
 - name: Unknown Battle
   ids:
   - unresolved:source:isthereanydeal:3223:unknown-battle
+  requires: []
+  tiers:
+  - 2

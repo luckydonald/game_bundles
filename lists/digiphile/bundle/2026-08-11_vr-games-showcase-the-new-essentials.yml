@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'VR Games Showcase: The New Essentials — Charity tier, 100% goes to charity'
-tier: 7
+name: 'VR Games Showcase: The New Essentials'
+tiers:
+- rank: 7
+  name: Charity tier, 100% goes to charity
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16473/
@@ -14,43 +16,76 @@ games:
   ids:
   - steam:2672470
   - isthereanydeal:unloop--1
+  requires: []
+  tiers:
+  - 7
 - name: CONVRGENCE
   ids:
   - steam:2609610
   - isthereanydeal:convrgence
+  requires: []
+  tiers:
+  - 7
 - name: Arizona Sunshine® VR 2
   ids:
   - steam:1540210
   - isthereanydeal:arizona-sunshine-vr-2
+  requires: []
+  tiers:
+  - 7
 - name: Bootstrap Island
   ids:
   - steam:1942110
   - isthereanydeal:bootstrap-island
+  requires: []
+  tiers:
+  - 7
 - name: UNDERDOGS
   ids:
   - steam:2441700
   - isthereanydeal:underdogs
+  requires: []
+  tiers:
+  - 7
 - name: EXD - Extra Dimensional
   ids:
   - steam:3962020
   - isthereanydeal:exd-extra-dimensional
+  requires: []
+  tiers:
+  - 7
 - name: Into the Radius 2
   ids:
   - steam:2307350
   - isthereanydeal:into-the-radius-2
+  requires: []
+  tiers:
+  - 7
 - name: CONVRGENCE - Supporter Pack
   ids:
   - steam:2925670
   - isthereanydeal:convrgence-supporter-pack
+  requires: []
+  tiers:
+  - 7
 - name: UNDERDOGS Soundtrack
   ids:
   - steam:3207600
   - isthereanydeal:underdogs-soundtrack
+  requires: []
+  tiers:
+  - 7
 - name: Bootstrap Island - Ornate Arms Collections
   ids:
   - steam:4456430
   - isthereanydeal:bootstrap-island-ornate-arms-collections
+  requires: []
+  tiers:
+  - 7
 - name: Into the Radius 2 - Classic Explorer Kit
   ids:
   - steam:4767560
   - isthereanydeal:into-the-radius-2-classic-explorer-kit
+  requires: []
+  tiers:
+  - 7

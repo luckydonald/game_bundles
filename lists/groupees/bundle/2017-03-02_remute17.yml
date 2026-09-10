@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute&#39;s Alien Bundle — Tier 2
-tier: 2
+name: Remute&#39;s Alien Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4850/
@@ -13,33 +15,66 @@ games:
 - name: Urban Pirate
   ids:
   - steam:471380
+  requires: []
+  tiers:
+  - 2
 - name: Kick Ass Commandos
   ids:
   - steam:359140
+  requires: []
+  tiers:
+  - 2
 - name: Akihabara - Feel the Rhythm - Soundtrack
   ids:
   - unresolved:source:isthereanydeal:4850:akihabara-feel-the-rhythm-soundtrack
+  requires: []
+  tiers:
+  - 2
 - name: You Must be 18 or Older to Enter
   ids:
   - steam:608510
+  requires: []
+  tiers:
+  - 2
 - name: 20something
   ids:
   - steam:582840
+  requires: []
+  tiers:
+  - 2
 - name: The Last Hope
   ids:
   - steam:522570
+  requires: []
+  tiers:
+  - 2
 - name: Akihabara - Feel the Rhythm
   ids:
   - steam:565660
+  requires: []
+  tiers:
+  - 2
 - name: Indie Dev Story
   ids:
   - steam:746520
+  requires: []
+  tiers:
+  - 2
 - name: 1917 - The Alien Invasion
   ids:
   - steam:470060
+  requires: []
+  tiers:
+  - 2
 - name: NakedMan VS The Clothes
   ids:
   - steam:592130
+  requires: []
+  tiers:
+  - 2
 - name: 'Cliff Parchment: The Mystery of Skeleton Lake'
   ids:
   - unresolved:source:isthereanydeal:4850:cliff-parchment-the-mystery-of-skeleton-lake
+  requires: []
+  tiers:
+  - 2

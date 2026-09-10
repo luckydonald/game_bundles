@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Genesis Bundle — Tier 2
-tier: 2
+name: Indie Genesis Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5616/
@@ -13,36 +15,72 @@ games:
 - name: Mighty Action RPG
   ids:
   - unresolved:source:isthereanydeal:5616:mighty-action-rpg
+  requires: []
+  tiers:
+  - 2
 - name: Devour them all
   ids:
   - unresolved:source:isthereanydeal:5616:devour-them-all
+  requires: []
+  tiers:
+  - 2
 - name: Iron Impact
   ids:
   - unresolved:source:isthereanydeal:5616:iron-impact
+  requires: []
+  tiers:
+  - 2
 - name: Half Past Disaster
   ids:
   - steam:683630
+  requires: []
+  tiers:
+  - 2
 - name: Alphadia Genesis
   ids:
   - steam:323450
+  requires: []
+  tiers:
+  - 2
 - name: Side Quest
   ids:
   - steam:433570
+  requires: []
+  tiers:
+  - 2
 - name: Sponchies
   ids:
   - steam:593670
+  requires: []
+  tiers:
+  - 2
 - name: Bug Killers
   ids:
   - steam:676720
+  requires: []
+  tiers:
+  - 2
 - name: Gravity Quest
   ids:
   - steam:645450
+  requires: []
+  tiers:
+  - 2
 - name: Tears Revolude
   ids:
   - steam:504660
+  requires: []
+  tiers:
+  - 2
 - name: Deaths Maze
   ids:
   - unresolved:source:isthereanydeal:5616:deaths-maze
+  requires: []
+  tiers:
+  - 2
 - name: Reverie
   ids:
   - steam:708850
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Indie Zone Bundle — Tier 2
-tier: 2
+name: The Indie Zone Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4360/
@@ -13,36 +15,72 @@ games:
 - name: Ballistick
   ids:
   - steam:518620
+  requires: []
+  tiers:
+  - 2
 - name: Black Sand Drift
   ids:
   - steam:507380
+  requires: []
+  tiers:
+  - 2
 - name: Iron Commando - Koutetsu no Senshi
   ids:
   - steam:418640
+  requires: []
+  tiers:
+  - 2
 - name: O3DX
   ids:
   - steam:363270
+  requires: []
+  tiers:
+  - 2
 - name: Charm Tale Quest
   ids:
   - steam:550220
+  requires: []
+  tiers:
+  - 2
 - name: 'Stories of Bethem: Full Moon Edition'
   ids:
   - steam:412270
+  requires: []
+  tiers:
+  - 2
 - name: Dorke and Ymp
   ids:
   - steam:474810
+  requires: []
+  tiers:
+  - 2
 - name: BitMaster
   ids:
   - steam:514660
+  requires: []
+  tiers:
+  - 2
 - name: NEO NOW
   ids:
   - unresolved:source:isthereanydeal:4360:neo-now
+  requires: []
+  tiers:
+  - 2
 - name: Monsterland
   ids:
   - steam:406920
+  requires: []
+  tiers:
+  - 2
 - name: 'The Gleam: VR Escape the Room'
   ids:
   - steam:526750
+  requires: []
+  tiers:
+  - 2
 - name: Swapperoo
   ids:
   - steam:410150
+  requires: []
+  tiers:
+  - 2

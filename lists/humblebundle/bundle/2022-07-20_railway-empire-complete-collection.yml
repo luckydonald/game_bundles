@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Railway Empire Complete Collection Bundle — entire-10-item-bundle
-tier: 4
+name: Railway Empire Complete Collection Bundle
+tiers:
+- rank: 4
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11783/
@@ -13,30 +15,60 @@ games:
 - name: Railway Empire
   ids:
   - steam:503940
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire France
   ids:
   - steam:884142
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Great Britain & Ireland
   ids:
   - steam:884141
+  requires: []
+  tiers:
+  - 4
 - name: 'Railway Empire: Down Under'
   ids:
   - steam:1161421
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Crossing the Andes
   ids:
   - steam:884140
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Mexico
   ids:
   - steam:820930
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - The Great Lakes
   ids:
   - steam:873880
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Germany
   ids:
   - steam:884143
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Northern Europe
   ids:
   - steam:1161420
+  requires: []
+  tiers:
+  - 4
 - name: Railway Empire - Japan
   ids:
   - steam:1479630
+  requires: []
+  tiers:
+  - 4

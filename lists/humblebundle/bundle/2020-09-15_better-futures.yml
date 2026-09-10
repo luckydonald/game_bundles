@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Better Futures Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Better Futures Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9157/
@@ -13,42 +15,84 @@ games:
 - name: Torchlight
   ids:
   - steam:41500
+  requires: []
+  tiers:
+  - 3
 - name: 'Agent A: A puzzle in disguise'
   ids:
   - steam:801480
+  requires: []
+  tiers:
+  - 3
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:9157:throne-of-lies-the-online-game-of-deceit
+  requires: []
+  tiers:
+  - 3
 - name: Road Redemption
   ids:
   - steam:300380
+  requires: []
+  tiers:
+  - 3
 - name: Vanquish
   ids:
   - steam:460810
+  requires: []
+  tiers:
+  - 3
 - name: Torchlight II
   ids:
   - steam:200710
+  requires: []
+  tiers:
+  - 3
 - name: This War of Mine
   ids:
   - steam:282070
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Trek Online: Klingon Elite Starter Pack'
   ids:
   - unresolved:source:isthereanydeal:9157:star-trek-online-klingon-elite-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Neverwinter: Companion Pack'
   ids:
   - unresolved:source:isthereanydeal:9157:neverwinter-companion-pack
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen & Paper +1 Edition
   ids:
   - steam:231740
+  requires: []
+  tiers:
+  - 3
 - name: 'Knights of Pen & Paper: Haunted Fall'
   ids:
   - steam:324250
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen & Paper 2
   ids:
   - steam:310060
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen and Paper 2 - Here Be Dragons
   ids:
   - steam:420640
+  requires: []
+  tiers:
+  - 3
 - name: Mythic Ocean
   ids:
   - steam:814360
+  requires: []
+  tiers:
+  - 3

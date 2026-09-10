@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Summer Games Done Quick 2026 — Entire 10 Item Bundle
-tier: 2
+name: Summer Games Done Quick 2026
+tiers:
+- rank: 2
+  name: Entire 10 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/summer-games-done-quick-2026
@@ -13,24 +15,48 @@ games:
 - name: Solar Ash
   ids:
   - steam:1867530
+  requires: []
+  tiers:
+  - 2
 - name: Bomb Rush Cyberfunk
   ids:
   - steam:1353230
+  requires: []
+  tiers:
+  - 2
 - name: 'Isopod: A Webbed Spin-off'
   ids:
   - steam:2053910
+  requires: []
+  tiers:
+  - 2
 - name: Grandma, No
   ids:
   - steam:2362680
+  requires: []
+  tiers:
+  - 2
 - name: 20XX
   ids:
   - steam:322110
+  requires: []
+  tiers:
+  - 2
 - name: Maiden and Spell
   ids:
   - steam:1004770
+  requires: []
+  tiers:
+  - 2
 - name: DUSK
   ids:
   - steam:519860
+  requires: []
+  tiers:
+  - 2
 - name: The Gunk
   ids:
   - steam:1087760
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine Anniversary 5 — Tier 2
-tier: 2
+name: Be Mine Anniversary 5
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7018/
@@ -13,24 +15,48 @@ games:
 - name: Hardway Party
   ids:
   - steam:816150
+  requires: []
+  tiers:
+  - 2
 - name: Gran Skrea Online
   ids:
   - unresolved:source:isthereanydeal:7018:gran-skrea-online
+  requires: []
+  tiers:
+  - 2
 - name: 96 Mill
   ids:
   - steam:561480
+  requires: []
+  tiers:
+  - 2
 - name: 'The Way Of Love: Sub Zero'
   ids:
   - steam:461590
+  requires: []
+  tiers:
+  - 2
 - name: Just Ignore Them - Game Soundtrack
   ids:
   - steam:612330
+  requires: []
+  tiers:
+  - 2
 - name: 'DROD: The Second Sky'
   ids:
   - steam:351320
+  requires: []
+  tiers:
+  - 2
 - name: Just Ignore Them
   ids:
   - steam:561770
+  requires: []
+  tiers:
+  - 2
 - name: The Curse Of Yendor
   ids:
   - steam:576420
+  requires: []
+  tiers:
+  - 2

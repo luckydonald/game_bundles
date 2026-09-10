@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jackbox Party Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Jackbox Party Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6380/
@@ -13,30 +15,60 @@ games:
 - name: Quiplash
   ids:
   - steam:351510
+  requires: []
+  tiers:
+  - 3
 - name: YOU DON'T KNOW JACK Vol. 1 XL
   ids:
   - steam:252730
+  requires: []
+  tiers:
+  - 3
 - name: YOU DON'T KNOW JACK Vol. 2
   ids:
   - steam:259940
+  requires: []
+  tiers:
+  - 3
 - name: Fibbage XL
   ids:
   - steam:448080
+  requires: []
+  tiers:
+  - 3
 - name: YOU DON'T KNOW JACK Vol. 4 The Ride
   ids:
   - steam:259980
+  requires: []
+  tiers:
+  - 3
 - name: YOU DON'T KNOW JACK Vol. 3
   ids:
   - steam:259960
+  requires: []
+  tiers:
+  - 3
 - name: The Jackbox Party Pack 2
   ids:
   - steam:397460
+  requires: []
+  tiers:
+  - 3
 - name: The Jackbox Party Pack
   ids:
   - steam:331670
+  requires: []
+  tiers:
+  - 3
 - name: Drawful 2
   ids:
   - steam:442070
+  requires: []
+  tiers:
+  - 3
 - name: The Jackbox Party Pack 3
   ids:
   - steam:434170
+  requires: []
+  tiers:
+  - 3

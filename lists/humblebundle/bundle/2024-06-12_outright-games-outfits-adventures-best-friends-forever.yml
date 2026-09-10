@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Outright Games: Outfits, Adventures & Best Friends Forever — entire-8-item-bundle'
-tier: 2
+name: 'Outright Games: Outfits, Adventures & Best Friends Forever'
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14128/
@@ -13,24 +15,48 @@ games:
 - name: My Friend Peppa Pig
   ids:
   - steam:1635590
+  requires: []
+  tiers:
+  - 2
 - name: L.O.L. Surprise! B.B.s BORN TO TRAVEL™
   ids:
   - unresolved:source:isthereanydeal:14128:l-o-l-surprise-b-bs-born-to-travel
+  requires: []
+  tiers:
+  - 2
 - name: 'JoJo Siwa: Worldwide Party'
   ids:
   - steam:1910300
+  requires: []
+  tiers:
+  - 2
 - name: DreamWorks Spirit Lucky's Big Adventure
   ids:
   - steam:1270720
+  requires: []
+  tiers:
+  - 2
 - name: 'MY LITTLE PONY: A Maretime Bay Adventure'
   ids:
   - steam:1600780
+  requires: []
+  tiers:
+  - 2
 - name: 'Bratz: Flaunt your fashion'
   ids:
   - steam:2088340
+  requires: []
+  tiers:
+  - 2
 - name: 'Peppa Pig: World Adventures'
   ids:
   - steam:1998980
+  requires: []
+  tiers:
+  - 2
 - name: 'RAINBOW HIGH: RUNWAY RUSH'
   ids:
   - steam:2007520
+  requires: []
+  tiers:
+  - 2

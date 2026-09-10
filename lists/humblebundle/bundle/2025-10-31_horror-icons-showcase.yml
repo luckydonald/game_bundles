@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Horror Icons Showcase Bundle — entire-9-item-bundle
-tier: 4
+name: Horror Icons Showcase Bundle
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15561/
@@ -13,27 +15,54 @@ games:
 - name: Bendy and the Ink Machine
   ids:
   - steam:622650
+  requires: []
+  tiers:
+  - 4
 - name: Bendy and the Dark Revival
   ids:
   - steam:1063660
+  requires: []
+  tiers:
+  - 4
 - name: Choo-Choo Charles
   ids:
   - steam:1766740
+  requires: []
+  tiers:
+  - 4
 - name: Scorn
   ids:
   - steam:698670
+  requires: []
+  tiers:
+  - 4
 - name: 'STASIS: BONE TOTEM'
   ids:
   - steam:1426010
+  requires: []
+  tiers:
+  - 4
 - name: The Mortuary Assistant
   ids:
   - steam:1295920
+  requires: []
+  tiers:
+  - 4
 - name: The Axis Unseen
   ids:
   - steam:1807810
+  requires: []
+  tiers:
+  - 4
 - name: 'The Thing: Remastered'
   ids:
   - steam:2958970
+  requires: []
+  tiers:
+  - 4
 - name: 'Bendy: Lone Wolf'
   ids:
   - steam:3232610
+  requires: []
+  tiers:
+  - 4

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Digital Tribe Groupee — Tier 2
-tier: 2
+name: Digital Tribe Groupee
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/190/
@@ -13,15 +15,30 @@ games:
 - name: 'Monster Madness: Battle for Suburbia'
   ids:
   - unresolved:source:isthereanydeal:190:monster-madness-battle-for-suburbia
+  requires: []
+  tiers:
+  - 2
 - name: Roogoo
   ids:
   - steam:38210
+  requires: []
+  tiers:
+  - 2
 - name: Section 8
   ids:
   - unresolved:source:isthereanydeal:190:section-8
+  requires: []
+  tiers:
+  - 2
 - name: Hotel Giant 2
   ids:
   - steam:38230
+  requires: []
+  tiers:
+  - 2
 - name: Cargo Commander
   ids:
   - steam:220460
+  requires: []
+  tiers:
+  - 2

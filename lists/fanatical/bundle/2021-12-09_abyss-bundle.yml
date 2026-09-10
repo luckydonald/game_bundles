@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Abyss Bundle — Tier 3
-tier: 3
+name: Abyss Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10799/
@@ -13,24 +15,48 @@ games:
 - name: Torchlight
   ids:
   - steam:41500
+  requires: []
+  tiers:
+  - 3
 - name: Main Assembly
   ids:
   - steam:1078920
+  requires: []
+  tiers:
+  - 3
 - name: 'Oddworld: Stranger''s Wrath HD'
   ids:
   - steam:15750
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Gladius - Relics of War'
   ids:
   - steam:489630
+  requires: []
+  tiers:
+  - 3
 - name: Fling to the Finish
   ids:
   - steam:1054430
+  requires: []
+  tiers:
+  - 3
 - name: Verdun
   ids:
   - steam:242860
+  requires: []
+  tiers:
+  - 3
 - name: Warpips
   ids:
   - steam:1291010
+  requires: []
+  tiers:
+  - 3
 - name: Barotrauma
   ids:
   - steam:602960
+  requires: []
+  tiers:
+  - 3

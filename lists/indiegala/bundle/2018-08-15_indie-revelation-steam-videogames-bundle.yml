@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Revelation Bundle — Tier 2
-tier: 2
+name: Indie Revelation Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6383/
@@ -13,33 +15,66 @@ games:
 - name: Dangerous Skies 80's edition
   ids:
   - steam:896220
+  requires: []
+  tiers:
+  - 2
 - name: Replica
   ids:
   - steam:496890
+  requires: []
+  tiers:
+  - 2
 - name: MIND MAZE
   ids:
   - steam:645460
+  requires: []
+  tiers:
+  - 2
 - name: We Are The Dwarves
   ids:
   - steam:395570
+  requires: []
+  tiers:
+  - 2
 - name: Alter Cosmos
   ids:
   - steam:675620
+  requires: []
+  tiers:
+  - 2
 - name: Arena of the Gods
   ids:
   - unresolved:source:isthereanydeal:6383:arena-of-the-gods
+  requires: []
+  tiers:
+  - 2
 - name: Helltown
   ids:
   - steam:710070
+  requires: []
+  tiers:
+  - 2
 - name: Seraph
   ids:
   - steam:425670
+  requires: []
+  tiers:
+  - 2
 - name: Reveal
   ids:
   - steam:882200
+  requires: []
+  tiers:
+  - 2
 - name: Deployment
   ids:
   - steam:755980
+  requires: []
+  tiers:
+  - 2
 - name: The Mims Beginning
   ids:
   - steam:337820
+  requires: []
+  tiers:
+  - 2

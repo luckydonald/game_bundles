@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rocket Force Bundle — Tier 2
-tier: 2
+name: Rocket Force Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6235/
@@ -13,39 +15,78 @@ games:
 - name: Thunderbolt II
   ids:
   - unresolved:source:isthereanydeal:6235:thunderbolt-ii
+  requires: []
+  tiers:
+  - 2
 - name: The Mystery of Devils House
   ids:
   - steam:825970
+  requires: []
+  tiers:
+  - 2
 - name: Burgerwise The Clown
   ids:
   - steam:860430
+  requires: []
+  tiers:
+  - 2
 - name: Rise of Crustaceans
   ids:
   - unresolved:source:isthereanydeal:6235:rise-of-crustaceans
+  requires: []
+  tiers:
+  - 2
 - name: Gray Cat
   ids:
   - steam:816710
+  requires: []
+  tiers:
+  - 2
 - name: Trippy Jump
   ids:
   - steam:855700
+  requires: []
+  tiers:
+  - 2
 - name: Escape the Darkness
   ids:
   - steam:793200
+  requires: []
+  tiers:
+  - 2
 - name: Space Force
   ids:
   - steam:864010
+  requires: []
+  tiers:
+  - 2
 - name: Wheelz2
   ids:
   - steam:792970
+  requires: []
+  tiers:
+  - 2
 - name: Snake, snake, snake!
   ids:
   - steam:857140
+  requires: []
+  tiers:
+  - 2
 - name: Rocket Fist
   ids:
   - steam:413500
+  requires: []
+  tiers:
+  - 2
 - name: One Bit Arena
   ids:
   - steam:803270
+  requires: []
+  tiers:
+  - 2
 - name: Super Flipside
   ids:
   - steam:659170
+  requires: []
+  tiers:
+  - 2

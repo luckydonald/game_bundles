@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XXIII Bundle — Tier 2
-tier: 2
+name: Virtual Reality XXIII Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6058/
@@ -13,30 +15,60 @@ games:
 - name: Seabed Prelude
   ids:
   - unresolved:source:isthereanydeal:6058:seabed-prelude
+  requires: []
+  tiers:
+  - 2
 - name: Kamikazo VR
   ids:
   - steam:776290
+  requires: []
+  tiers:
+  - 2
 - name: Goaltender VR
   ids:
   - unresolved:source:isthereanydeal:6058:goaltender-vr
+  requires: []
+  tiers:
+  - 2
 - name: Day of Destruction
   ids:
   - steam:488020
+  requires: []
+  tiers:
+  - 2
 - name: Scrap Attack VR
   ids:
   - steam:774401
+  requires: []
+  tiers:
+  - 2
 - name: Kartong - Death by Cardboard!
   ids:
   - steam:602480
+  requires: []
+  tiers:
+  - 2
 - name: RPG Merchant
   ids:
   - steam:789290
+  requires: []
+  tiers:
+  - 2
 - name: Frantic Freighter
   ids:
   - steam:503150
+  requires: []
+  tiers:
+  - 2
 - name: Volotic
   ids:
   - unresolved:source:isthereanydeal:6058:volotic
+  requires: []
+  tiers:
+  - 2
 - name: Battle Ion
   ids:
   - unresolved:source:isthereanydeal:6058:battle-ion
+  requires: []
+  tiers:
+  - 2

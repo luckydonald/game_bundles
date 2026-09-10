@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mumbo Jumbo Mega Bundle — Tier 3
-tier: 3
+name: Mumbo Jumbo Mega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3554/
@@ -13,54 +15,108 @@ games:
 - name: Luxor Evolved
   ids:
   - steam:205830
+  requires: []
+  tiers:
+  - 3
 - name: 7 Wonders II
   ids:
   - steam:15900
+  requires: []
+  tiers:
+  - 3
 - name: 'Midnight Mysteries: The Edgar Allan Poe Conspiracy'
   ids:
   - unresolved:source:isthereanydeal:3554:midnight-mysteries-the-edgar-allan-poe-conspiracy
+  requires: []
+  tiers:
+  - 3
 - name: Glowfish
   ids:
   - steam:60350
+  requires: []
+  tiers:
+  - 3
 - name: Samantha Swift and the Hidden Roses of Athena
   ids:
   - steam:16020
+  requires: []
+  tiers:
+  - 3
 - name: Pickers
   ids:
   - steam:204440
+  requires: []
+  tiers:
+  - 3
 - name: Luxor 2 HD
   ids:
   - steam:234350
+  requires: []
+  tiers:
+  - 3
 - name: '7 Wonders: Ancient Alien Makeover'
   ids:
   - steam:223000
+  requires: []
+  tiers:
+  - 3
 - name: 'Midnight Mysteries 3: Devil on the Mississippi'
   ids:
   - steam:208630
+  requires: []
+  tiers:
+  - 3
 - name: 'Midnight Mysteries 2: Salem Witch Trials'
   ids:
   - steam:208620
+  requires: []
+  tiers:
+  - 3
 - name: 'LUXOR: Mah Jong'
   ids:
   - steam:32110
+  requires: []
+  tiers:
+  - 3
 - name: Zombie Bowl-o-Rama
   ids:
   - steam:32160
+  requires: []
+  tiers:
+  - 3
 - name: 'Luxor: 5th Passage'
   ids:
   - steam:60340
+  requires: []
+  tiers:
+  - 3
 - name: 'Midnight Mysteries: Witches of Abraham - Collector''s Edition'
   ids:
   - steam:332810
+  requires: []
+  tiers:
+  - 3
 - name: Luxor HD
   ids:
   - steam:361020
+  requires: []
+  tiers:
+  - 3
 - name: 'Midnight Mysteries 4: Haunted Houdini'
   ids:
   - steam:208640
+  requires: []
+  tiers:
+  - 3
 - name: '7 Wonders: Treasures of Seven'
   ids:
   - steam:16030
+  requires: []
+  tiers:
+  - 3
 - name: Luxor 3
   ids:
   - steam:15930
+  requires: []
+  tiers:
+  - 3

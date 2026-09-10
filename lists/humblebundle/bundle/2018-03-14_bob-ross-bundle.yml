@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bob Ross Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Bob Ross Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5975/
@@ -13,30 +15,60 @@ games:
 - name: Draw Your Game
   ids:
   - unresolved:source:isthereanydeal:5975:draw-your-game
+  requires: []
+  tiers:
+  - 3
 - name: 'Draw a Stickman: EPIC'
   ids:
   - steam:248650
+  requires: []
+  tiers:
+  - 3
 - name: 'Draw A Stickman: EPIC 2 - Drawn Below'
   ids:
   - steam:487320
+  requires: []
+  tiers:
+  - 3
 - name: 'Draw a Stickman: EPIC 2'
   ids:
   - steam:403180
+  requires: []
+  tiers:
+  - 3
 - name: Crayon Physics Deluxe
   ids:
   - steam:26900
+  requires: []
+  tiers:
+  - 3
 - name: 'Draw a Stickman: EPIC - Friend''s Journey'
   ids:
   - steam:435570
+  requires: []
+  tiers:
+  - 3
 - name: Drawful 2
   ids:
   - steam:442070
+  requires: []
+  tiers:
+  - 3
 - name: 'Passpartout: The Starving Artist'
   ids:
   - steam:582550
+  requires: []
+  tiers:
+  - 3
 - name: Corel Painter Essentials 6
   ids:
   - unresolved:source:isthereanydeal:5975:corel-painter-essentials-6
+  requires: []
+  tiers:
+  - 3
 - name: Corel Painter Essentials Mystic Mountain Essentials Brush Pack
   ids:
   - unresolved:source:isthereanydeal:5975:corel-painter-essentials-mystic-mountain-essentials-brush-pack
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: IGN Live Bundle (2025) — entire-8-item-bundle
-tier: 3
+name: IGN Live Bundle (2025)
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15167/
@@ -13,24 +15,48 @@ games:
 - name: Slay the Spire
   ids:
   - steam:646570
+  requires: []
+  tiers:
+  - 3
 - name: Bloodroots
   ids:
   - steam:820540
+  requires: []
+  tiers:
+  - 3
 - name: 'Potion Craft: Alchemist Simulator'
   ids:
   - steam:1210320
+  requires: []
+  tiers:
+  - 3
 - name: Black Book
   ids:
   - steam:1138660
+  requires: []
+  tiers:
+  - 3
 - name: art of rally
   ids:
   - steam:550320
+  requires: []
+  tiers:
+  - 3
 - name: Old World
   ids:
   - steam:597180
+  requires: []
+  tiers:
+  - 3
 - name: The Medium
   ids:
   - steam:1293160
+  requires: []
+  tiers:
+  - 3
 - name: Wartales
   ids:
   - steam:1527950
+  requires: []
+  tiers:
+  - 3
