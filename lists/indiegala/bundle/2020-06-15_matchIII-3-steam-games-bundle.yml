@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Match III Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8900/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8900/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8900/source.json
+games:
+- name: Juice Mania
+  ids:
+  - unresolved:source:isthereanydeal:8900:juice-mania
+  requires: []
+- name: Lost Labyrinth
+  ids:
+  - unresolved:source:isthereanydeal:8900:lost-labyrinth
+  requires: []
+- name: Mundus - Impossible Universe
+  ids:
+  - unresolved:source:isthereanydeal:8900:mundus-impossible-universe
+  requires: []
+- name: 'Bato: Treasures of Tibet'
+  ids:
+  - steam:1218560
+  requires: []
+- name: 'Storm Chasers: Tornado Islands'
+  ids:
+  - steam:1226010
+  requires: []
+- name: Season Match 4
+  ids:
+  - steam:1243240
+  requires: []
+- name: Bunny Quest
+  ids:
+  - steam:1255030
+  requires: []
+- name: The Chronicles of Robin Hood - The King of Thieves
+  ids:
+  - steam:1276600
+  requires: []
+- name: 'Queens Garden: Sakura Season'
+  ids:
+  - steam:1285580
+  requires: []

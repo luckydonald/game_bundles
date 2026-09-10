@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dharker Studio Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8933/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8933/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8933/source.json
+games:
+- name: Quantum Flux
+  ids:
+  - steam:396610
+  requires: []

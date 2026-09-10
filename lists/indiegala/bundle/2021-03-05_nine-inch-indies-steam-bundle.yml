@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Nine Inch Indies Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9810/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9810/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9810/source.json
+games:
+- name: Planet Nine
+  ids:
+  - steam:996860
+  requires: []
+- name: Prehistoric Tales
+  ids:
+  - steam:466780
+  requires: []
+- name: Rescue Team 7
+  ids:
+  - steam:666050
+  requires: []
+- name: HotFloor
+  ids:
+  - steam:865190
+  requires: []
+- name: Alter Army
+  ids:
+  - steam:602300
+  requires: []
+- name: Charlie II
+  ids:
+  - steam:777760
+  requires: []
+- name: ALTERITY EXPERIENCE
+  ids:
+  - steam:1143720
+  requires: []
+- name: Trailer Trashers
+  ids:
+  - steam:1248140
+  requires: []
+- name: 'Peekaboo: Hide and Seek'
+  ids:
+  - unresolved:source:isthereanydeal:9810:peekaboo-hide-and-seek
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Waifu Memories Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9102/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9102/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9102/source.json
+games:
+- name: Hentai Mosaique Puzzle
+  ids:
+  - steam:993740
+  requires: []
+- name: 'Hentai: Memory leak'
+  ids:
+  - steam:1158320
+  requires: []
+- name: 'Hentai energy: Halloween'
+  ids:
+  - steam:1170320
+  requires: []
+- name: 'ClickCells: Office Lady'
+  ids:
+  - steam:1189460
+  requires: []
+- name: RUN HARE RUN
+  ids:
+  - steam:1212870
+  requires: []
+- name: 'ClickCells: Winter Lady'
+  ids:
+  - steam:1221030
+  requires: []
+- name: Hentai Mosaique Neko Waifus
+  ids:
+  - unresolved:source:isthereanydeal:9102:hentai-mosaique-neko-waifus
+  requires: []
+- name: 'Hentai: Memory leak II'
+  ids:
+  - steam:1246780
+  requires: []
+- name: Desirable
+  ids:
+  - steam:1381150
+  requires: []

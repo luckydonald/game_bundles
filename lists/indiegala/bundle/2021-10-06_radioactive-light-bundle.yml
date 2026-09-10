@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Radioactive Light Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10549/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10549/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10549/source.json
+games:
+- name: tricone lab
+  ids:
+  - steam:392610
+  requires: []
+- name: Zeran's Folly
+  ids:
+  - steam:665030
+  requires: []
+- name: Offroad Mania
+  ids:
+  - steam:1222040
+  requires: []
+- name: 'Radioactive dwarfs: evil from the sewers'
+  ids:
+  - steam:1403080
+  requires: []
+- name: 'Firelight Fantasy: Phoenix Crew'
+  ids:
+  - steam:1595000
+  requires: []
+- name: Cavegirl Adventures
+  ids:
+  - steam:1710400
+  requires: []

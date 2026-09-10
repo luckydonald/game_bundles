@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Royal Solitaire Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9044/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9044/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9044/source.json
+games:
+- name: 'The Far Kingdoms: Age Of Solitaire'
+  ids:
+  - steam:997480
+  requires: []
+- name: Nordic Storm Solitaire
+  ids:
+  - steam:1203050
+  requires: []
+- name: 'The Far Kingdoms: Winter Solitaire'
+  ids:
+  - steam:1034250
+  requires: []
+- name: 'The Far Kingdoms: Awakening Solitaire'
+  ids:
+  - steam:1034240
+  requires: []
+- name: Luxor Solitaire
+  ids:
+  - steam:1034270
+  requires: []
+- name: 'The Far Kingdoms: Sacred Grove Solitaire'
+  ids:
+  - steam:1034260
+  requires: []
+- name: 'The Far Kingdoms: Elements'
+  ids:
+  - steam:1002280
+  requires: []
+- name: Maidens of the Ocean Solitaire
+  ids:
+  - steam:1333900
+  requires: []
+- name: Flowers Garden Solitaire
+  ids:
+  - steam:1339820
+  requires: []
+- name: Marie Antoinette's Solitaire
+  ids:
+  - steam:1341080
+  requires: []

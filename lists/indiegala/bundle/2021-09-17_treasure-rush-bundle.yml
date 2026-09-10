@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Treasure Rush Bundle — T
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10477/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10477/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10477/source.json
+games:
+- name: Summer Rush
+  ids:
+  - steam:1075480
+  requires: []
+- name: Mini Golf
+  ids:
+  - unresolved:source:isthereanydeal:10477:mini-golf
+  requires: []
+- name: 'Scarytales: All Hail King Mongo'
+  ids:
+  - steam:1081240
+  requires: []
+- name: 'The Far Kingdoms: Magic Mosaics'
+  ids:
+  - steam:1703950
+  requires: []
+- name: 'Bato: Treasures of Tibet'
+  ids:
+  - steam:1218560
+  requires: []
+- name: 'Viking Chronicles: Tale of the lost Queen'
+  ids:
+  - steam:1344140
+  requires: []
+- name: Sweetest Thing
+  ids:
+  - steam:1363960
+  requires: []
+- name: Home Designer - Home Sweet Home
+  ids:
+  - steam:1531610
+  requires: []
+- name: Pokitaire
+  ids:
+  - steam:1565650
+  requires: []

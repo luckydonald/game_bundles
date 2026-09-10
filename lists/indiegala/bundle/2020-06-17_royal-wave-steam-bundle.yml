@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Royal Wave Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8908/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8908/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8908/source.json
+games:
+- name: Rainyday
+  ids:
+  - steam:712980
+  requires: []
+- name: BIOSZARD Corporation
+  ids:
+  - steam:1037690
+  requires: []
+- name: Tragedy of Prince Rupert
+  ids:
+  - steam:611850
+  requires: []
+- name: Queen of Seas 2
+  ids:
+  - steam:858870
+  requires: []
+- name: Synthwave Dream '85
+  ids:
+  - steam:881130
+  requires: []
+- name: Loathing Heart
+  ids:
+  - unresolved:source:isthereanydeal:8908:loathing-heart
+  requires: []
+- name: MIND SHIFT
+  ids:
+  - unresolved:source:isthereanydeal:8908:mind-shift
+  requires: []
+- name: Nauseous Pines
+  ids:
+  - steam:1126860
+  requires: []
