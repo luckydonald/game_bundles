@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Shinyloot Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/991/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/991/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/991/source.json
+games:
+- name: 'Hacker Evolution: Untold'
+  ids:
+  - steam:70110
+  requires: []
+- name: Way to Go!
+  ids:
+  - steam:336230
+  requires: []
+- name: Escape Goat
+  ids:
+  - steam:251370
+  requires: []
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+  requires: []
+- name: Subject 9
+  ids:
+  - unresolved:source:isthereanydeal:991:subject-9
+  requires: []
+- name: Hacker Evolution
+  ids:
+  - steam:70100
+  requires: []

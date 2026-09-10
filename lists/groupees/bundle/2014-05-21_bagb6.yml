@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/810/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/810/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/810/source.json
+games:
+- name: The Lady
+  ids:
+  - steam:341060
+  requires: []
+- name: Steam and Metal
+  ids:
+  - steam:335010
+  requires: []
+- name: ONE DAY for Ched
+  ids:
+  - steam:321030
+  requires: []
+- name: Magic Meisters
+  ids:
+  - unresolved:source:isthereanydeal:810:magic-meisters
+  requires: []
+- name: 'Tales of the Orient: The Rising Sun'
+  ids:
+  - steam:339160
+  requires: []
+- name: Friendship Club
+  ids:
+  - steam:332760
+  requires: []
+- name: Agapan
+  ids:
+  - unresolved:source:isthereanydeal:810:agapan
+  requires: []
+- name: Towers of Altrac - Epic Defense Battles
+  ids:
+  - steam:333660
+  requires: []
+- name: Road so far
+  ids:
+  - unresolved:source:isthereanydeal:810:road-so-far
+  requires: []
+- name: Loot Hunter
+  ids:
+  - steam:341470
+  requires: []
+- name: 'Steamalot: Epoch''s Journey'
+  ids:
+  - steam:361160
+  requires: []

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Give Back Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1219/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1219/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1219/source.json
+games:
+- name: SanctuaryRPG
+  ids:
+  - unresolved:source:isthereanydeal:1219:sanctuaryrpg
+  requires: []
+- name: BoxesWithGuns
+  ids:
+  - steam:342520
+  requires: []
+- name: Borealis
+  ids:
+  - steam:307170
+  requires: []

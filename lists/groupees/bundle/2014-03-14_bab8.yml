@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/642/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/642/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/642/source.json
+games:
+- name: Heroes of Steel RPG
+  ids:
+  - steam:291190
+  requires: []
+- name: CastleMiner Z
+  ids:
+  - steam:253430
+  requires: []
+- name: Legends of Aethereus
+  ids:
+  - unresolved:source:isthereanydeal:642:legends-of-aethereus
+  requires: []
+- name: Skyborn
+  ids:
+  - steam:278460
+  requires: []
+- name: Guise Of The Wolf
+  ids:
+  - steam:259640
+  requires: []
+- name: 'Arson & Plunder: Unleashed'
+  ids:
+  - steam:293600
+  requires: []
+- name: Whitewash
+  ids:
+  - steam:1524290
+  requires: []
+- name: Power-Up
+  ids:
+  - unresolved:source:isthereanydeal:642:power-up
+  requires: []
+- name: 'Aveyond: Lord of Twilight'
+  ids:
+  - steam:272010
+  requires: []
+- name: Luxor 3
+  ids:
+  - steam:15930
+  requires: []

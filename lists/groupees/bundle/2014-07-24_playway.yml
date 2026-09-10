@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: PlayWay Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1024/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1024/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1024/source.json
+games:
+- name: Western Shooter
+  ids:
+  - unresolved:source:isthereanydeal:1024:western-shooter
+  requires: []
+- name: Dino Speedboat
+  ids:
+  - unresolved:source:isthereanydeal:1024:dino-speedboat
+  requires: []
+- name: Sudoku
+  ids:
+  - unresolved:source:isthereanydeal:1024:sudoku
+  requires: []
+- name: 'Police: Destruction Street'
+  ids:
+  - unresolved:source:isthereanydeal:1024:police-destruction-street
+  requires: []
+- name: ELF - Crazy Adventures
+  ids:
+  - unresolved:source:isthereanydeal:1024:elf-crazy-adventures
+  requires: []
+- name: Pinocchio
+  ids:
+  - unresolved:source:isthereanydeal:1024:pinocchio
+  requires: []
+- name: Crazy Planes
+  ids:
+  - unresolved:source:isthereanydeal:1024:crazy-planes
+  requires: []
+- name: "Sweet Home \x96 Pets"
+  ids:
+  - unresolved:source:isthereanydeal:1024:sweet-home-pets
+  requires: []
+- name: Dino
+  ids:
+  - unresolved:source:isthereanydeal:1024:dino
+  requires: []
+- name: Trucker
+  ids:
+  - steam:451660
+  requires: []
+- name: Santa Claus
+  ids:
+  - unresolved:source:isthereanydeal:1024:santa-claus
+  requires: []
+- name: Reindeer Adventure
+  ids:
+  - unresolved:source:isthereanydeal:1024:reindeer-adventure
+  requires: []
+- name: Little Ghost
+  ids:
+  - unresolved:source:isthereanydeal:1024:little-ghost
+  requires: []
+- name: ATV GP
+  ids:
+  - unresolved:source:isthereanydeal:1024:atv-gp
+  requires: []
+- name: Aqua Fish
+  ids:
+  - steam:763090
+  requires: []
+- name: Magic Solitaire
+  ids:
+  - unresolved:source:isthereanydeal:1024:magic-solitaire
+  requires: []
+- name: Kroc And Roll
+  ids:
+  - unresolved:source:isthereanydeal:1024:kroc-and-roll
+  requires: []
+- name: Mouse Boy
+  ids:
+  - unresolved:source:isthereanydeal:1024:mouse-boy
+  requires: []
