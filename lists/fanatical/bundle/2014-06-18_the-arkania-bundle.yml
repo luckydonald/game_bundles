@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Arkania Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/907/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/907/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/907/source.json
+games:
+- name: Realms of Arkania - Blade of Destiny
+  ids:
+  - steam:237550
+  requires: []
+- name: 'Realms of Arkania: Blade of Destiny - For the Gods'
+  ids:
+  - steam:264840
+  requires: []
+- name: Realms of Arkania 3 - Shadows over Riva Classic
+  ids:
+  - steam:270760
+  requires: []
+- name: Realms of Arkania 2 - Star Trail Classic
+  ids:
+  - steam:270750
+  requires: []
+- name: Realms of Arkania 1 - Blade of Destiny Classic
+  ids:
+  - steam:267670
+  requires: []

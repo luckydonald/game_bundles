@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Run & Gun Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2058/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2058/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2058/source.json
+games:
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+  requires: []
+- name: 'Operation Flashpoint: Red River'
+  ids:
+  - unresolved:source:isthereanydeal:2058:operation-flashpoint-red-river
+  requires: []
+- name: Epigenesis
+  ids:
+  - steam:244590
+  requires: []
+- name: 'Operation Flashpoint: Dragon Rising'
+  ids:
+  - unresolved:source:isthereanydeal:2058:operation-flashpoint-dragon-rising
+  requires: []
+- name: Once Bitten, Twice Dead!
+  ids:
+  - unresolved:source:isthereanydeal:2058:once-bitten-twice-dead
+  requires: []
+- name: Reload
+  ids:
+  - steam:330370
+  requires: []
+- name: 'Depths of Fear :: Knossos'
+  ids:
+  - steam:252570
+  requires: []
+- name: Blades of Time Limited Edition
+  ids:
+  - unresolved:source:isthereanydeal:2058:blades-of-time-limited-edition
+  requires: []
+- name: Nam
+  ids:
+  - steam:329650
+  requires: []
+- name: Ubersoldier II
+  ids:
+  - steam:281410
+  requires: []

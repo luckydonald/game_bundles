@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 8 Ball Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1559/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1559/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1559/source.json
+games:
+- name: World Basketball Tycoon
+  ids:
+  - steam:260510
+  requires: []
+- name: International Snooker
+  ids:
+  - unresolved:source:isthereanydeal:1559:international-snooker
+  requires: []
+- name: Pool Nation
+  ids:
+  - steam:254440
+  requires: []
+- name: FX Football - The Manager for Every Football Fan
+  ids:
+  - unresolved:source:isthereanydeal:1559:fx-football-the-manager-for-every-football-fan
+  requires: []
+- name: Franchise Hockey Manager 2014
+  ids:
+  - unresolved:source:isthereanydeal:1559:franchise-hockey-manager-2014
+  requires: []
+- name: Total Pro Golf 3
+  ids:
+  - unresolved:source:isthereanydeal:1559:total-pro-golf-3
+  requires: []
+- name: Out of the Park Baseball 14
+  ids:
+  - unresolved:source:isthereanydeal:1559:out-of-the-park-baseball-14
+  requires: []

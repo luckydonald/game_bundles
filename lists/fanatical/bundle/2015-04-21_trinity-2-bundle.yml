@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Trinity 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1808/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1808/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1808/source.json
+games:
+- name: Circuits
+  ids:
+  - steam:282760
+  requires: []
+- name: Neocolonialism
+  ids:
+  - steam:333540
+  requires: []
+- name: Anoxemia
+  ids:
+  - steam:338050
+  requires: []
+- name: Defend Your Life!
+  ids:
+  - steam:357780
+  requires: []
+- name: Dustforce DX
+  ids:
+  - steam:65300
+  requires: []
+- name: Capsized
+  ids:
+  - steam:95300
+  requires: []
+- name: POSTAL 2
+  ids:
+  - steam:223470
+  requires: []
+- name: The Maker's Eden Soundtrack Edition
+  ids:
+  - steam:313360
+  requires: []
+- name: Roommates - Deluxe Edition
+  ids:
+  - steam:317300
+  requires: []
+- name: The Inner World Bundle
+  ids:
+  - unresolved:source:isthereanydeal:1808:the-inner-world-bundle
+  requires: []

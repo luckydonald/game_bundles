@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: King Arthur Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1491/source.json
+games:
+- name: "King Arthur \x96 The Role\x96playing Wargame"
+  ids:
+  - steam:24400
+  requires: []
+- name: 'King Arthur: Knights and Vassals'
+  ids:
+  - steam:24440
+  requires: []
+- name: 'King Arthur II: Dead Legions'
+  ids:
+  - steam:24488
+  requires: []
+- name: 'King Arthur: Fallen Champions'
+  ids:
+  - steam:24460
+  requires: []
+- name: 'King Arthur: The Saxons'
+  ids:
+  - steam:24447
+  requires: []
+- name: 'King Arthur II: The Role-playing Wargame'
+  ids:
+  - steam:24480
+  requires: []
+- name: 'King Arthur: The Druids'
+  ids:
+  - steam:24449
+  requires: []
+- name: 'King Arthur: Legendary Artifacts'
+  ids:
+  - steam:24441
+  requires: []

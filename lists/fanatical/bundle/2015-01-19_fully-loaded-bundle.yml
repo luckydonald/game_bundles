@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fully Loaded 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1555/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1555/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1555/source.json
+games:
+- name: 'Onikira: Demon Killer'
+  ids:
+  - steam:310850
+  requires: []
+- name: DARK
+  ids:
+  - steam:225360
+  requires: []
+- name: Super Toy Cars
+  ids:
+  - steam:116100
+  requires: []
+- name: Silence of the Sleep
+  ids:
+  - steam:321870
+  requires: []
+- name: Wrack
+  ids:
+  - steam:253610
+  requires: []
+- name: "The Detail Episode 1 \x96 Where the Dead Lie"
+  ids:
+  - steam:319970
+  requires: []
+- name: 'The Joylancer: Legendary Motor Knight'
+  ids:
+  - steam:315540
+  requires: []
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+  requires: []
+- name: BlazeRush
+  ids:
+  - steam:302710
+  requires: []
+- name: Magnetic By Nature
+  ids:
+  - steam:296510
+  requires: []

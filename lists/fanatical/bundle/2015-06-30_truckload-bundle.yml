@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Truckload Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2183/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2183/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2183/source.json
+games:
+- name: Hot Dish
+  ids:
+  - steam:12570
+  requires: []
+- name: Hunting Unlimited 2010
+  ids:
+  - steam:12690
+  requires: []
+- name: Mission Runway
+  ids:
+  - steam:12670
+  requires: []
+- name: The Undergarden
+  ids:
+  - steam:9980
+  requires: []
+- name: Dr. Daisy Pet Vet
+  ids:
+  - steam:12580
+  requires: []
+- name: 'Mahjongg Investigations: Under Suspicion'
+  ids:
+  - steam:12540
+  requires: []
+- name: 18 Wheels of Steel American Long Haul
+  ids:
+  - steam:12520
+  requires: []
+- name: Elizabeth Find M.D. - Diagnosis Mystery - Season 2
+  ids:
+  - unresolved:source:isthereanydeal:2183:elizabeth-find-m-d-diagnosis-mystery-season-2
+  requires: []
+- name: Sprint Cars Road to Knoxville
+  ids:
+  - steam:12590
+  requires: []
+- name: 'Deadlock II: Shrine Wars'
+  ids:
+  - steam:328450
+  requires: []

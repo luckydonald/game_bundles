@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Valhalla Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1121/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1121/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1121/source.json
+games:
+- name: "7.62 \x96 High Calibre"
+  ids:
+  - steam:289890
+  requires: []
+- name: King's Bounty Warriors of the North
+  ids:
+  - steam:203350
+  requires: []
+- name: 'Star Wolves 3: Civil War'
+  ids:
+  - steam:46260
+  requires: []
+- name: 'Perimeter + Perimeter: Emperor''s Testament'
+  ids:
+  - unresolved:source:isthereanydeal:1121:perimeter-and-perimeter-emperors-testament
+  requires: []
+- name: Parkan 2
+  ids:
+  - steam:289400
+  requires: []
+- name: Planet Alcatraz
+  ids:
+  - steam:289420
+  requires: []
+- name: Theatre of War
+  ids:
+  - steam:46290
+  requires: []
+- name: 'Soldiers: Heroes of World War II - Enhanced Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1121:soldiers-heroes-of-world-war-ii-enhanced-edition
+  requires: []
