@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: Secret Octagon — Tier 1
 references:
@@ -12,24 +12,32 @@ games:
 - name: Video blogger Story
   ids:
   - unresolved:source:isthereanydeal:4105:video-blogger-story
+  requires: []
 - name: Monsti
   ids:
   - steam:526790
+  requires: []
 - name: BomberZone
   ids:
   - steam:473140
+  requires: []
 - name: BitRay2
   ids:
   - unresolved:source:isthereanydeal:4105:bitray2
+  requires: []
 - name: 'Toby: The Secret Mine'
   ids:
   - steam:395160
+  requires: []
 - name: Defunct
   ids:
   - steam:359350
+  requires: []
 - name: Save the Dodos
   ids:
   - steam:428830
+  requires: []
 - name: Rime Berta
   ids:
   - steam:312600
+  requires: []
