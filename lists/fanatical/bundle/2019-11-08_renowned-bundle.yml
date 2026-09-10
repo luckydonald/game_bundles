@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Renowned Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8110/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8110/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8110/source.json
+games:
+- name: 'Flying Tigers: Shadows Over China'
+  ids:
+  - steam:365810
+  requires: []
+- name: The Signal From Tölva
+  ids:
+  - steam:457760
+  requires: []
+- name: 'Space Rangers HD: A War Apart'
+  ids:
+  - steam:214730
+  requires: []
+- name: Distrust
+  ids:
+  - steam:635200
+  requires: []
+- name: 'Renowned Explorers: International Society'
+  ids:
+  - steam:296970
+  requires: []
+- name: 'Odallus: The Dark Call'
+  ids:
+  - steam:319480
+  requires: []
+- name: SimCity 4 Deluxe Edition
+  ids:
+  - steam:24780
+  requires: []
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+  requires: []

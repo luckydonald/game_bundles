@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Quantum Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8131/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8131/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8131/source.json
+games:
+- name: Quantum Replica
+  ids:
+  - steam:470090
+  requires: []
+- name: Shiny
+  ids:
+  - steam:496390
+  requires: []
+- name: In Fear I Trust
+  ids:
+  - steam:522690
+  requires: []
+- name: Gift of Parthax
+  ids:
+  - steam:795610
+  requires: []
+- name: 'Fall of Light: Darkest Edition'
+  ids:
+  - steam:633950
+  requires: []
+- name: In Fear I Trust - Episode 4
+  ids:
+  - steam:523852
+  requires: []
+- name: RENOIR
+  ids:
+  - steam:496400
+  requires: []
+- name: Haimrik
+  ids:
+  - steam:492180
+  requires: []
+- name: In Fear I Trust - Episode 2
+  ids:
+  - steam:523850
+  requires: []
+- name: The Watchmaker
+  ids:
+  - steam:504430
+  requires: []
+- name: In Fear I Trust - Episode 3
+  ids:
+  - steam:523851
+  requires: []
+- name: Codex of Victory
+  ids:
+  - steam:464100
+  requires: []

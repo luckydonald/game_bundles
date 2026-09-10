@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Collection Build Your Own Bundle (May 2020) — Select 3 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8756/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8756/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8756/source.json
+games:
+- name: Flashing Lights - Police, Fire, EMS
+  ids:
+  - steam:605740
+  requires: []
+- name: Stars End
+  ids:
+  - steam:623340
+  requires: []
+- name: Sleeping Dogs™ Definitive Edition
+  ids:
+  - steam:307690
+  requires: []
+- name: 'Life is Feudal: Forest Village'
+  ids:
+  - steam:496460
+  requires: []
+- name: Just Cause™ 3 XXL Edition
+  ids:
+  - unresolved:source:isthereanydeal:8756:just-cause-3-xxl-edition
+  requires: []
+- name: Sniper Ghost Warrior 3
+  ids:
+  - steam:368070
+  requires: []
+- name: Jalopy
+  ids:
+  - steam:446020
+  requires: []
+- name: Craft The World
+  ids:
+  - steam:248390
+  requires: []
+- name: 'Deus Ex: Mankind Divided'
+  ids:
+  - steam:337000
+  requires: []
+- name: Felix The Reaper
+  ids:
+  - steam:919410
+  requires: []
+- name: Silence
+  ids:
+  - steam:314790
+  requires: []
+- name: The Surge
+  ids:
+  - steam:378540
+  requires: []
+- name: Mist Survival
+  ids:
+  - steam:914620
+  requires: []
+- name: Sudden Strike 4
+  ids:
+  - steam:373930
+  requires: []
+- name: Tropico 5
+  ids:
+  - steam:245620
+  requires: []
+- name: The Great Perhaps
+  ids:
+  - steam:1016930
+  requires: []
+- name: Niffelheim
+  ids:
+  - steam:351100
+  requires: []

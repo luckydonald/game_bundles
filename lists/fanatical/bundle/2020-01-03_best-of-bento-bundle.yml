@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Best of Bento Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8289/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8289/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8289/source.json
+games:
+- name: 仙劍奇俠傳六 (Chinese Paladin：Sword and Fairy 6)
+  ids:
+  - unresolved:source:isthereanydeal:8289:xian-jian-qi-xia-chuan-liu-chinese-paladin-sword-and-fairy-6
+  requires: []
+- name: Soul Saber 2
+  ids:
+  - steam:581230
+  requires: []
+- name: Detention
+  ids:
+  - steam:555220
+  requires: []
+- name: Graze Counter
+  ids:
+  - steam:629440
+  requires: []
+- name: GUILTY GEAR Xrd -SIGN
+  ids:
+  - steam:376300
+  requires: []
+- name: 'Celestian Tales: Old North'
+  ids:
+  - steam:315860
+  requires: []
+- name: World's Dawn
+  ids:
+  - steam:432010
+  requires: []
+- name: 天使帝國四《Empire of Angels IV》
+  ids:
+  - steam:562470
+  requires: []
+- name: 'Analogue: A Hate Story'
+  ids:
+  - steam:209370
+  requires: []
+- name: 軒轅劍外傳穹之扉(The Gate of Firmament)
+  ids:
+  - unresolved:source:isthereanydeal:8289:xuan-yuan-jian-wai-chuan-qiong-zhi-fei-the-gate-of-firmament
+  requires: []
+- name: The Adventures of Fei Duanmu 端木斐异闻录
+  ids:
+  - steam:593200
+  requires: []
+- name: THE KING OF FIGHTERS 2002 UNLIMITED MATCH
+  ids:
+  - steam:222440
+  requires: []

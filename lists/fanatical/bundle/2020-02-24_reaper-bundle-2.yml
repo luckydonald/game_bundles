@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reaper Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8438/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8438/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8438/source.json
+games:
+- name: 'Star Wars: Jedi Knight: Jedi Academy'
+  ids:
+  - steam:6020
+  requires: []
+- name: 'Star Wars®: Jedi Knight® II: Jedi Outcast™'
+  ids:
+  - steam:6030
+  requires: []
+- name: Day of Infamy
+  ids:
+  - steam:447820
+  requires: []
+- name: Re-Legion
+  ids:
+  - steam:782140
+  requires: []
+- name: SimCity 4 Deluxe Edition
+  ids:
+  - steam:24780
+  requires: []
+- name: Eagle Island
+  ids:
+  - steam:681110
+  requires: []
+- name: S.T.A.L.K.E.R. Shadow of Chernobyl
+  ids:
+  - steam:4500
+  requires: []
+- name: 'Override: Mech City Brawl'
+  ids:
+  - unresolved:source:isthereanydeal:8438:override-mech-city-brawl
+  requires: []
+- name: 'S.T.A.L.K.E.R.: Call of Pripyat'
+  ids:
+  - steam:41700
+  requires: []
+- name: 'S.T.A.L.K.E.R.: Clear Sky'
+  ids:
+  - steam:20510
+  requires: []

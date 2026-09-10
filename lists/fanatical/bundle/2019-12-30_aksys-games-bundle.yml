@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Aksys Games Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8281/source.json
+games:
+- name: Mind Zero
+  ids:
+  - steam:322630
+  requires: []
+- name: 'XBlaze Code: Embryo'
+  ids:
+  - steam:421610
+  requires: []
+- name: Creeping Terror
+  ids:
+  - steam:726430
+  requires: []
+- name: 'XBlaze Lost: Memories'
+  ids:
+  - steam:438940
+  requires: []
+- name: 'Aegis of Earth: Protonovus Assault'
+  ids:
+  - steam:450250
+  requires: []

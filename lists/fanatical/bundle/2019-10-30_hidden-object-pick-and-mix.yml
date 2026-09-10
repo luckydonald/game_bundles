@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Object Pick & Mix Bundle — Select 5 Titles for $1.99, 10 Titles for $2.99,
+  15 Titles for $3.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8070/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8070/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8070/source.json
+games:
+- name: 'The Fog: Trap for Moths'
+  ids:
+  - steam:1048900
+  requires: []
+- name: 'Alex Hunter: Lord of the Mind'
+  ids:
+  - steam:1120800
+  requires: []
+- name: 'Eternal Journey: New Atlantis'
+  ids:
+  - steam:1038630
+  requires: []
+- name: 'House of 1000 Doors: Serpent Flame'
+  ids:
+  - steam:1090390
+  requires: []
+- name: Joan Jade and the Gates of Xibalba
+  ids:
+  - steam:1038640
+  requires: []
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+  requires: []
+- name: 'House of 1000 Doors: Evil Inside'
+  ids:
+  - steam:1038620
+  requires: []
+- name: 'Mountain Crime: Requital'
+  ids:
+  - steam:394680
+  requires: []
+- name: 'Love Alchemy: A Heart In Winter'
+  ids:
+  - steam:1038650
+  requires: []
+- name: 'The Saint: Abyss of Despair'
+  ids:
+  - steam:560820
+  requires: []
+- name: 'Mind''s Eye: Secrets of the Forgotten'
+  ids:
+  - steam:1038670
+  requires: []
+- name: 'Magic Encyclopedia: Moon Light'
+  ids:
+  - steam:1059830
+  requires: []
+- name: 'Dark Strokes: The Legend of the Snow Kingdom Collector''s Edition'
+  ids:
+  - steam:765690
+  requires: []
+- name: 'Shtriga: Summer Camp'
+  ids:
+  - steam:560740
+  requires: []
+- name: 'Sonya: The Great Adventure'
+  ids:
+  - steam:558780
+  requires: []
+- name: 'World Keepers: Last Resort'
+  ids:
+  - steam:560750
+  requires: []
+- name: 'Dark Angels: Masquerade of Shadows'
+  ids:
+  - steam:560720
+  requires: []
+- name: 'Esoterica: Hollow Earth'
+  ids:
+  - unresolved:source:isthereanydeal:8070:esoterica-hollow-earth
+  requires: []
+- name: 'Sacra Terra: Angelic Night'
+  ids:
+  - steam:344440
+  requires: []
+- name: 'The Last Dream: Developer''s Edition'
+  ids:
+  - steam:395860
+  requires: []
+- name: 'House of 1000 Doors: Family Secrets'
+  ids:
+  - steam:1151630
+  requires: []
+- name: 'Forest Legends: The Call of Love Collector''s Edition'
+  ids:
+  - steam:765770
+  requires: []
+- name: Inbetween Land
+  ids:
+  - steam:345540
+  requires: []
+- name: 'House of 1000 Doors: The Palm of Zoroaster'
+  ids:
+  - steam:1175160
+  requires: []

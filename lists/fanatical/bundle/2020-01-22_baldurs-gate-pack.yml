@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Baldur&#39;s Gate Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8339/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8339/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8339/source.json
+games:
+- name: 'Baldur''s Gate: Siege of Dragonspear'
+  ids:
+  - steam:385970
+  requires: []
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+  requires: []
+- name: 'Baldur''s Gate: Enhanced Edition'
+  ids:
+  - steam:228280
+  requires: []

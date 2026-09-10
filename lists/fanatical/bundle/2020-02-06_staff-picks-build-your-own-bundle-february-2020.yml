@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Staff Picks Build Your Own Bundle (Feb 2020) — Select 3 Titles For $2.49, 5
+  Titles For $3.99, 7 Titles For $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8369/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8369/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8369/source.json
+games:
+- name: Guns, Gore & Cannoli
+  ids:
+  - steam:322210
+  requires: []
+- name: Hero of the Kingdom III
+  ids:
+  - steam:772430
+  requires: []
+- name: Bomber Crew - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:8369:bomber-crew-deluxe-edition
+  requires: []
+- name: Stronghold Crusader HD
+  ids:
+  - steam:40970
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: Party Hard
+  ids:
+  - steam:356570
+  requires: []
+- name: 'SEUM: Speedrunners from Hell'
+  ids:
+  - steam:457210
+  requires: []
+- name: 'Tropico 4: Steam Special Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8369:tropico-4-steam-special-edition
+  requires: []
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+  requires: []
+- name: Siralim 3
+  ids:
+  - steam:841770
+  requires: []
+- name: Punch Club
+  ids:
+  - steam:394310
+  requires: []
+- name: Guts and Glory
+  ids:
+  - steam:537340
+  requires: []
+- name: ClusterTruck
+  ids:
+  - steam:397950
+  requires: []
+- name: Caveblazers
+  ids:
+  - steam:452060
+  requires: []
+- name: Beholder
+  ids:
+  - steam:475550
+  requires: []
+- name: 'I am not a Monster: First Contact'
+  ids:
+  - steam:826600
+  requires: []

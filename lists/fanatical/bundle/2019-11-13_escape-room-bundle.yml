@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Escape Room Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8124/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8124/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8124/source.json
+games:
+- name: ALONE...
+  ids:
+  - steam:514240
+  requires: []
+- name: The Initiate
+  ids:
+  - steam:659480
+  requires: []
+- name: Kidnapped
+  ids:
+  - steam:382300
+  requires: []
+- name: Silent Descent
+  ids:
+  - steam:729060
+  requires: []
+- name: Room 208
+  ids:
+  - steam:1059240
+  requires: []
+- name: 'The Initiate 2: The First Interviews'
+  ids:
+  - steam:858360
+  requires: []
