@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 945: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12067/source.json
+games:
+- name: 'CYCOM: Cybernet Combat'
+  ids:
+  - unresolved:source:isthereanydeal:12067:cycom-cybernet-combat
+  requires: []
+- name: airRevo VR
+  ids:
+  - steam:594150
+  requires: []
+- name: The Frontier Outskirts VR
+  ids:
+  - unresolved:source:isthereanydeal:12067:the-frontier-outskirts-vr
+  requires: []
+- name: Cargo Breach
+  ids:
+  - steam:722040
+  requires: []
+- name: Spirit Guide Crucible
+  ids:
+  - steam:619100
+  requires: []
+- name: Flappy Arms
+  ids:
+  - steam:764110
+  requires: []
+- name: Murder Hornets
+  ids:
+  - unresolved:source:isthereanydeal:12067:murder-hornets
+  requires: []
+- name: MOMO.EXE VR
+  ids:
+  - steam:1363600
+  requires: []
+- name: Travel The Words!
+  ids:
+  - steam:2053060
+  requires: []

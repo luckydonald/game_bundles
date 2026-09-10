@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 949 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12076/source.json
+games:
+- name: Amaze'd
+  ids:
+  - unresolved:source:isthereanydeal:12076:amaze-d
+  requires: []
+- name: Exocomets
+  ids:
+  - steam:655950
+  requires: []
+- name: 'Beast Mode: Night of the Werewolf'
+  ids:
+  - steam:655760
+  requires: []
+- name: A Glider's Journey
+  ids:
+  - steam:1102500
+  requires: []
+- name: LifeZ - Survival
+  ids:
+  - steam:809210
+  requires: []
+- name: NIGHT FALLEN
+  ids:
+  - steam:943030
+  requires: []
+- name: 'Duckles: the Jigsaw Witch'
+  ids:
+  - steam:512700
+  requires: []
+- name: EnHanced
+  ids:
+  - steam:882390
+  requires: []
+- name: Soul Grabber
+  ids:
+  - steam:788250
+  requires: []

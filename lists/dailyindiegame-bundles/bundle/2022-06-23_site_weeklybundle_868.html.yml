@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 868: Visual Novels — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11641/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11641/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11641/source.json
+games:
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+  requires: []
+- name: New Tricks for Old Gods
+  ids:
+  - steam:1165490
+  requires: []
+- name: Edge of Reality
+  ids:
+  - steam:1236860
+  requires: []
+- name: Axiom Alternative
+  ids:
+  - unresolved:source:isthereanydeal:11641:axiom-alternative
+  requires: []
+- name: 'I''m Oh, So Busy...: A Week with Yoshimi'
+  ids:
+  - steam:1367090
+  requires: []
+- name: Ghost in the pool
+  ids:
+  - steam:919330
+  requires: []
+- name: 'Welcome To... Chichester 2 - Part II : No Extra Regrets For The Future'
+  ids:
+  - unresolved:source:isthereanydeal:11641:welcome-to-chichester-2-part-ii-no-extra-regrets-for-the-future
+  requires: []
+- name: Louder Than Words ~The Story of a Field Trip~
+  ids:
+  - steam:1766830
+  requires: []
+- name: 'WTC : Recruitment Day'
+  ids:
+  - steam:1916660
+  requires: []

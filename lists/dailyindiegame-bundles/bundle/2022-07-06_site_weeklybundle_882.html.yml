@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 882 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11735/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11735/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11735/source.json
+games:
+- name: FISHERY
+  ids:
+  - steam:809730
+  requires: []
+- name: GORILLA TOWN
+  ids:
+  - steam:1217560
+  requires: []
+- name: Era of Survival
+  ids:
+  - steam:1234380
+  requires: []
+- name: Super Arcade Soccer 2021
+  ids:
+  - steam:1256710
+  requires: []
+- name: Cheat or Die
+  ids:
+  - steam:1381280
+  requires: []
+- name: Endless Void
+  ids:
+  - unresolved:source:isthereanydeal:11735:endless-void
+  requires: []
+- name: 'Eugene''s Dream: The Daily Ins And Outs Of A Sane Robot In An Insane World'
+  ids:
+  - steam:1463360
+  requires: []
+- name: CuberPunk 2090
+  ids:
+  - steam:1388400
+  requires: []
+- name: 'OnlySociety: Arena'
+  ids:
+  - unresolved:source:isthereanydeal:11735:onlysociety-arena
+  requires: []

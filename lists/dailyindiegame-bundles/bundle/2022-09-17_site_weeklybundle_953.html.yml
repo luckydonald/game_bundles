@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 953 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12093/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12093/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12093/source.json
+games:
+- name: Starboost EX
+  ids:
+  - steam:917990
+  requires: []
+- name: Super Arcade Soccer
+  ids:
+  - steam:1024430
+  requires: []
+- name: NO-GO
+  ids:
+  - unresolved:source:isthereanydeal:12093:no-go
+  requires: []
+- name: Euler Wars
+  ids:
+  - steam:1246320
+  requires: []
+- name: Fire Guild
+  ids:
+  - unresolved:source:isthereanydeal:12093:fire-guild
+  requires: []
+- name: Contract Killers
+  ids:
+  - steam:1176360
+  requires: []
+- name: Snake In The Cube
+  ids:
+  - steam:1358510
+  requires: []
+- name: 'Alzheimer''s: Memories'
+  ids:
+  - steam:1624990
+  requires: []
+- name: Nerraia
+  ids:
+  - steam:1862850
+  requires: []
