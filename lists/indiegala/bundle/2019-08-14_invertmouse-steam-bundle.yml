@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The InvertMouse Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7767/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7767/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7767/source.json
+games:
+- name: Without Within 3
+  ids:
+  - steam:676130
+  requires: []
+- name: Unhack 2 - Digital artbook
+  ids:
+  - steam:444611
+  requires: []
+- name: Unhack
+  ids:
+  - steam:340800
+  requires: []
+- name: Without Within 2
+  ids:
+  - steam:398980
+  requires: []
+- name: Cursed Sight
+  ids:
+  - steam:360550
+  requires: []
+- name: Cursed Sight - Digital artbook
+  ids:
+  - steam:373690
+  requires: []
+- name: The Last Birdling - Digital artbook
+  ids:
+  - steam:633330
+  requires: []
+- name: Without Within 3 - Digital artbook
+  ids:
+  - steam:676151
+  requires: []
+- name: Without Within 2 - Digital artbook
+  ids:
+  - steam:399021
+  requires: []
+- name: The Last Birdling
+  ids:
+  - steam:629430
+  requires: []
+- name: Unhack 2
+  ids:
+  - steam:444170
+  requires: []
+- name: Unhack - Digital Artbook
+  ids:
+  - steam:374100
+  requires: []

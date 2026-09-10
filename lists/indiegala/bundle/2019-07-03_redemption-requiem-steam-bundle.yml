@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Redemption Requiem Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7599/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7599/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7599/source.json
+games:
+- name: Puzzle Puppers
+  ids:
+  - steam:578430
+  requires: []
+- name: Baby Redemption
+  ids:
+  - steam:1029040
+  requires: []
+- name: Endhall
+  ids:
+  - steam:838990
+  requires: []
+- name: 'Attrition: Tactical Fronts'
+  ids:
+  - steam:656400
+  requires: []
+- name: My Super Defender
+  ids:
+  - unresolved:source:isthereanydeal:7599:my-super-defender
+  requires: []
+- name: POLYCRUSHER
+  ids:
+  - unresolved:source:isthereanydeal:7599:polycrusher
+  requires: []

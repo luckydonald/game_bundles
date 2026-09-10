@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Battle Kingdoms Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8041/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8041/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8041/source.json
+games:
+- name: Pull Ball
+  ids:
+  - steam:1006920
+  requires: []
+- name: Destructions
+  ids:
+  - steam:845290
+  requires: []
+- name: Desert Of The Dead
+  ids:
+  - steam:1102780
+  requires: []
+- name: Oik 3
+  ids:
+  - steam:655100
+  requires: []
+- name: Restaurant Empire 2
+  ids:
+  - unresolved:source:isthereanydeal:8041:restaurant-empire-2
+  requires: []
+- name: City Defense
+  ids:
+  - steam:997870
+  requires: []
+- name: Battle for Orion 2
+  ids:
+  - steam:564470
+  requires: []
+- name: Seven Kingdoms 2 HD
+  ids:
+  - steam:338800
+  requires: []

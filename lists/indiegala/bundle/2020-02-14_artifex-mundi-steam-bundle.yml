@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Artifex Mundi Bundle 14 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8398/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8398/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8398/source.json
+games:
+- name: 'Demon Hunter 3: Revelation'
+  ids:
+  - steam:527420
+  requires: []
+- name: 'Left in the Dark: No One on Board'
+  ids:
+  - steam:284890
+  requires: []
+- name: 'The Emerald Maiden: Symphony of Dreams'
+  ids:
+  - steam:429610
+  requires: []
+- name: 'Nightmares from the Deep 3: Davy Jones'
+  ids:
+  - unresolved:source:isthereanydeal:8398:nightmares-from-the-deep-3-davy-jones
+  requires: []
+- name: 'The Myth Seekers: The Legacy of Vulcan'
+  ids:
+  - steam:657040
+  requires: []
+- name: 'Skyland: Heart of the Mountain'
+  ids:
+  - steam:949800
+  requires: []
+- name: 'Time Mysteries 2: The Ancient Spectres'
+  ids:
+  - steam:313650
+  requires: []
+- name: 'Dreamwalker: Never Fall Asleep'
+  ids:
+  - steam:916160
+  requires: []
+- name: 'Eventide 2: The Sorcerers Mirror'
+  ids:
+  - steam:510650
+  requires: []
+- name: 'The Secret Order 7: Shadow Breach'
+  ids:
+  - steam:1004860
+  requires: []

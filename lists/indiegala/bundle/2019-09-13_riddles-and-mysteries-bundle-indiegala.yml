@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Riddles & Mysteries Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7891/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7891/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7891/source.json
+games:
+- name: 'Victorian Mysteries: Woman in White'
+  ids:
+  - steam:1101940
+  requires: []
+- name: 'Unsolved Mystery Club: Ancient Astronauts - Collector''s Edition'
+  ids:
+  - steam:1107350
+  requires: []
+- name: 'Mystery Masterpiece: The Moonstone'
+  ids:
+  - steam:1104830
+  requires: []
+- name: 'Victorian Mysteries: The Yellow Room'
+  ids:
+  - steam:1108190
+  requires: []
+- name: 'Scarytales: All Hail King Mongo'
+  ids:
+  - steam:1081240
+  requires: []
+- name: 'Unsolved Mystery Club: Amelia Earhart'
+  ids:
+  - steam:1116890
+  requires: []
+- name: 'Greed 3: Old Enemies Returning'
+  ids:
+  - steam:1034280
+  requires: []
+- name: 'Epic Adventures: La Jangada'
+  ids:
+  - steam:1008320
+  requires: []
+- name: 'Epic Adventures: Cursed Onboard'
+  ids:
+  - steam:1056080
+  requires: []
+- name: Hidden Fears (Moonlight Edition)
+  ids:
+  - steam:1122270
+  requires: []

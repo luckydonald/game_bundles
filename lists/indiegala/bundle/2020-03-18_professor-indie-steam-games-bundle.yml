@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Professor Indie Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8512/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8512/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8512/source.json
+games:
+- name: 'Trivia Vault: Super Heroes Trivia'
+  ids:
+  - steam:687490
+  requires: []
+- name: 'Professor Watts Word Search: Yummy Foods'
+  ids:
+  - steam:884440
+  requires: []
+- name: 'Professor Watts Word Search: Into The Ocean'
+  ids:
+  - steam:658430
+  requires: []
+- name: Grav Blazer
+  ids:
+  - steam:657590
+  requires: []
+- name: 'Land of Puzzles: Battles'
+  ids:
+  - steam:931360
+  requires: []
+- name: 'Trivia Vault: Mini Mixed Trivia 4'
+  ids:
+  - steam:710120
+  requires: []
+- name: 'Trivia Vault: 1980''s Trivia'
+  ids:
+  - steam:689180
+  requires: []
+- name: 'Trivia Vault: Auto Racing Trivia'
+  ids:
+  - steam:822460
+  requires: []

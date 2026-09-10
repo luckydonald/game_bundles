@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dream Quest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7819/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7819/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7819/source.json
+games:
+- name: TACTICAL
+  ids:
+  - steam:751950
+  requires: []
+- name: Sudoku Quest
+  ids:
+  - steam:436280
+  requires: []
+- name: THE E BALL
+  ids:
+  - steam:915020
+  requires: []
+- name: The Quest for Achievements Remix
+  ids:
+  - unresolved:source:isthereanydeal:7819:the-quest-for-achievements-remix
+  requires: []
+- name: Apple Pop
+  ids:
+  - unresolved:source:isthereanydeal:7819:apple-pop
+  requires: []
+- name: 'Chaos Dream: Retribution'
+  ids:
+  - steam:1101100
+  requires: []
+- name: ASTRAL
+  ids:
+  - steam:703600
+  requires: []
