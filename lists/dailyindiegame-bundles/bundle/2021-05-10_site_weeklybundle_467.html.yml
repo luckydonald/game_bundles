@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 467 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10011/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10011/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10011/source.json
+games:
+- name: Little Adventurer III
+  ids:
+  - steam:785030
+  requires: []
+- name: The Dark Maze
+  ids:
+  - unresolved:source:isthereanydeal:10011:the-dark-maze
+  requires: []
+- name: Fantasy Adventure
+  ids:
+  - steam:1949880
+  requires: []
+- name: Park Walk
+  ids:
+  - unresolved:source:isthereanydeal:10011:park-walk
+  requires: []
+- name: Island World
+  ids:
+  - unresolved:source:isthereanydeal:10011:island-world
+  requires: []
+- name: Taoyuan Adventure
+  ids:
+  - unresolved:source:isthereanydeal:10011:taoyuan-adventure
+  requires: []
+- name: Old Quarry
+  ids:
+  - unresolved:source:isthereanydeal:10011:old-quarry
+  requires: []
+- name: Stone River
+  ids:
+  - unresolved:source:isthereanydeal:10011:stone-river
+  requires: []
+- name: Keep looking
+  ids:
+  - unresolved:source:isthereanydeal:10011:keep-looking
+  requires: []

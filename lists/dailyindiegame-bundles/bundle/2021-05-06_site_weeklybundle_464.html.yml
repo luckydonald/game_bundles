@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 464 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10005/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10005/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10005/source.json
+games:
+- name: Back to Bed
+  ids:
+  - steam:308040
+  requires: []
+- name: Adam Wolfe
+  ids:
+  - steam:483420
+  requires: []
+- name: Edge of Twilight - Return to Glory
+  ids:
+  - steam:489070
+  requires: []
+- name: Chipmonk!
+  ids:
+  - steam:1019730
+  requires: []
+- name: Violett - Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:10005:violett-remastered-edition
+  requires: []
+- name: Blood Bond - Into the Shroud
+  ids:
+  - unresolved:source:isthereanydeal:10005:blood-bond-into-the-shroud
+  requires: []
+- name: Trailer Trashers
+  ids:
+  - steam:1248140
+  requires: []
+- name: Rover Wars
+  ids:
+  - steam:1259130
+  requires: []
+- name: 'Peekaboo: Hide and Seek'
+  ids:
+  - unresolved:source:isthereanydeal:10005:peekaboo-hide-and-seek
+  requires: []

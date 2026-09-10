@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 511 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10197/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10197/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10197/source.json
+games:
+- name: Glass Masquerade
+  ids:
+  - steam:511470
+  requires: []
+- name: GORILLA TOWN
+  ids:
+  - steam:1217560
+  requires: []
+- name: Fever Cabin
+  ids:
+  - steam:1226210
+  requires: []
+- name: 'Slaughter 3: The Rebels'
+  ids:
+  - steam:1214920
+  requires: []
+- name: 'GUNPIG: Firepower For Hire'
+  ids:
+  - steam:1344980
+  requires: []
+- name: 'Jack Hayes: The Lazarus Sign'
+  ids:
+  - steam:1295750
+  requires: []
+- name: Speed Swing
+  ids:
+  - steam:1314930
+  requires: []
+- name: RENEGADE
+  ids:
+  - unresolved:source:isthereanydeal:10197:renegade
+  requires: []
+- name: Until Last Breath
+  ids:
+  - steam:1425140
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 486 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10066/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10066/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10066/source.json
+games:
+- name: The thirst of hearts
+  ids:
+  - unresolved:source:isthereanydeal:10066:the-thirst-of-hearts
+  requires: []
+- name: Basketball Hoop
+  ids:
+  - steam:908230
+  requires: []
+- name: LP
+  ids:
+  - steam:1440850
+  requires: []
+- name: OLEG MONGOL
+  ids:
+  - unresolved:source:isthereanydeal:10066:oleg-mongol
+  requires: []
+- name: The Road to Gelendzhik Palace
+  ids:
+  - steam:1543320
+  requires: []
+- name: Asteroids Maneuvers
+  ids:
+  - unresolved:source:isthereanydeal:10066:asteroids-maneuvers
+  requires: []
+- name: Partless Ron
+  ids:
+  - unresolved:source:isthereanydeal:10066:partless-ron
+  requires: []
+- name: TOOTHY HISTORY
+  ids:
+  - steam:1562240
+  requires: []
+- name: 'Among Ass 2: Butt Warfare'
+  ids:
+  - steam:1574800
+  requires: []

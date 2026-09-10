@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 490 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10087/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10087/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10087/source.json
+games:
+- name: Leisure Town
+  ids:
+  - steam:920510
+  requires: []
+- name: Control Craft 2
+  ids:
+  - steam:439930
+  requires: []
+- name: Control Craft 3
+  ids:
+  - steam:490910
+  requires: []
+- name: Brick Breaker Unicorn
+  ids:
+  - unresolved:source:isthereanydeal:10087:brick-breaker-unicorn
+  requires: []
+- name: Colorful Colore
+  ids:
+  - steam:1444090
+  requires: []
+- name: SHADOW STEP
+  ids:
+  - unresolved:source:isthereanydeal:10087:shadow-step
+  requires: []
+- name: Tetrius
+  ids:
+  - unresolved:source:isthereanydeal:10087:tetrius
+  requires: []
+- name: Unicorn and Sweets
+  ids:
+  - steam:1625790
+  requires: []
+- name: Bouncing Traveler
+  ids:
+  - steam:1632640
+  requires: []

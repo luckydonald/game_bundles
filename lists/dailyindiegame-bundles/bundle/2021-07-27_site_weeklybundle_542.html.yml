@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 542 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10292/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10292/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10292/source.json
+games:
+- name: 立方杀阵（Cubic Kill Array）
+  ids:
+  - steam:898090
+  requires: []
+- name: Square Norm
+  ids:
+  - steam:1102890
+  requires: []
+- name: Ancient Anathema
+  ids:
+  - steam:1010540
+  requires: []
+- name: MOMO.EXE
+  ids:
+  - steam:923470
+  requires: []
+- name: HATCH
+  ids:
+  - steam:871190
+  requires: []
+- name: Valley
+  ids:
+  - steam:378610
+  requires: []
+- name: Shitty Cactus
+  ids:
+  - steam:1229650
+  requires: []
+- name: '486'
+  ids:
+  - steam:1263680
+  requires: []
+- name: Axiom Alternative
+  ids:
+  - unresolved:source:isthereanydeal:10292:axiom-alternative
+  requires: []

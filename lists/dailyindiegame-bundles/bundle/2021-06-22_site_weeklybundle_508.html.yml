@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 508 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10174/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10174/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10174/source.json
+games:
+- name: Gold Rush! 2
+  ids:
+  - steam:609100
+  requires: []
+- name: Catch'em
+  ids:
+  - steam:861910
+  requires: []
+- name: Gold Rush! Anniversary
+  ids:
+  - steam:319230
+  requires: []
+- name: Game Tycoon 2
+  ids:
+  - steam:404640
+  requires: []
+- name: One Hundred Ways
+  ids:
+  - steam:404630
+  requires: []
+- name: Snowboarding
+  ids:
+  - steam:1659170
+  requires: []
+- name: Little Big Man - Survival
+  ids:
+  - steam:1623320
+  requires: []
+- name: Candy land
+  ids:
+  - unresolved:source:isthereanydeal:10174:candy-land
+  requires: []
+- name: Mini ship wars
+  ids:
+  - unresolved:source:isthereanydeal:10174:mini-ship-wars
+  requires: []

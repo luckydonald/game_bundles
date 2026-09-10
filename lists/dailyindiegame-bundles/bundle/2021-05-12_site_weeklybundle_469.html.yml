@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 469 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10017/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10017/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10017/source.json
+games:
+- name: Enoki
+  ids:
+  - steam:1447050
+  requires: []
+- name: Meatball
+  ids:
+  - unresolved:source:isthereanydeal:10017:meatball
+  requires: []
+- name: Cars vs Zombies
+  ids:
+  - unresolved:source:isthereanydeal:10017:cars-vs-zombies
+  requires: []
+- name: Save Christmas
+  ids:
+  - unresolved:source:isthereanydeal:10017:save-christmas
+  requires: []
+- name: Smoked Gun
+  ids:
+  - steam:1506720
+  requires: []
+- name: 'Asteroids Belt: Try to Survive!'
+  ids:
+  - steam:1506430
+  requires: []
+- name: Battle Cube
+  ids:
+  - steam:1506660
+  requires: []
+- name: Infected Town
+  ids:
+  - steam:1512170
+  requires: []
+- name: 1000 Shards
+  ids:
+  - steam:1517320
+  requires: []

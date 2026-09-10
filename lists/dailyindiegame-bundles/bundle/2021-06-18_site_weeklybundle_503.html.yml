@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 503 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10155/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10155/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10155/source.json
+games:
+- name: Formula X
+  ids:
+  - unresolved:source:isthereanydeal:10155:formula-x
+  requires: []
+- name: zombie wars
+  ids:
+  - steam:1638870
+  requires: []
+- name: Memories of East Coast
+  ids:
+  - steam:1607430
+  requires: []
+- name: Train Tycoon
+  ids:
+  - steam:1606620
+  requires: []
+- name: LineArt Jigsaw Puzzle - Airplanes
+  ids:
+  - steam:1616230
+  requires: []
+- name: LineArt Jigsaw Puzzle - Airplanes ArtBook
+  ids:
+  - steam:1617730
+  requires: []
+- name: AMID THE LINES
+  ids:
+  - steam:1611110
+  requires: []
+- name: Axiom Alternative II
+  ids:
+  - steam:1645620
+  requires: []
+- name: 流光記憶之灰 Grayscale Memories
+  ids:
+  - steam:1645780
+  requires: []

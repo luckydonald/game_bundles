@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 483 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10058/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10058/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10058/source.json
+games:
+- name: Waves of the Atlantide
+  ids:
+  - steam:992210
+  requires: []
+- name: VoidSpace
+  ids:
+  - steam:1150500
+  requires: []
+- name: Dark Sauce
+  ids:
+  - steam:995790
+  requires: []
+- name: Concrete Jungle
+  ids:
+  - steam:400160
+  requires: []
+- name: Digital Siege
+  ids:
+  - unresolved:source:isthereanydeal:10058:digital-siege
+  requires: []
+- name: Miriel Saga
+  ids:
+  - steam:1148710
+  requires: []
+- name: Kingdoms In Chaos
+  ids:
+  - steam:1333650
+  requires: []
+- name: Hero of Not Our Time
+  ids:
+  - steam:1409730
+  requires: []
+- name: 'Cybernetica: fallen city'
+  ids:
+  - steam:1432930
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 517 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10216/source.json
+games:
+- name: CaptainMarlene
+  ids:
+  - steam:1064580
+  requires: []
+- name: Laserium
+  ids:
+  - unresolved:source:isthereanydeal:10216:laserium
+  requires: []
+- name: 100$
+  ids:
+  - steam:1016250
+  requires: []
+- name: 'Quest: Escape Room 2'
+  ids:
+  - steam:1464910
+  requires: []
+- name: Vojo
+  ids:
+  - steam:1598370
+  requires: []
+- name: Eyewitness Hopper
+  ids:
+  - unresolved:source:isthereanydeal:10216:eyewitness-hopper
+  requires: []
+- name: Magic defense
+  ids:
+  - steam:1632040
+  requires: []
+- name: Circular
+  ids:
+  - steam:1635950
+  requires: []
+- name: Euro 100
+  ids:
+  - unresolved:source:isthereanydeal:10216:euro-100
+  requires: []

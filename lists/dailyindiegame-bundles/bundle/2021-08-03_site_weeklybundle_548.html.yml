@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 548 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10312/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10312/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10312/source.json
+games:
+- name: Labirinto 2
+  ids:
+  - steam:824770
+  requires: []
+- name: Cannibal Chickens
+  ids:
+  - steam:1077390
+  requires: []
+- name: The Island Combat
+  ids:
+  - steam:886310
+  requires: []
+- name: Gurney to Gurney
+  ids:
+  - unresolved:source:isthereanydeal:10312:gurney-to-gurney
+  requires: []
+- name: Angry Squirrel
+  ids:
+  - steam:1596070
+  requires: []
+- name: Infinity ZigZag
+  ids:
+  - steam:1596060
+  requires: []
+- name: Dead Night
+  ids:
+  - steam:1596610
+  requires: []
+- name: Line of War
+  ids:
+  - steam:1599210
+  requires: []
+- name: Barking Puzzle
+  ids:
+  - steam:1673550
+  requires: []
