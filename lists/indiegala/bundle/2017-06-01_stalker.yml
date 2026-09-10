@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: S.T.A.L.K.E.R Bundle — Tier 1
 references:
@@ -12,9 +12,12 @@ games:
 - name: S.T.A.L.K.E.R. Shadow of Chernobyl
   ids:
   - steam:4500
+  requires: []
 - name: 'S.T.A.L.K.E.R.: Call of Pripyat'
   ids:
   - steam:41700
+  requires: []
 - name: 'S.T.A.L.K.E.R.: Clear Sky'
   ids:
   - steam:20510
+  requires: []
