@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Horde Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2695/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2695/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2695/source.json
+games:
+- name: Hot Dish
+  ids:
+  - steam:12570
+  requires: []
+- name: Hunting Unlimited 2010
+  ids:
+  - steam:12690
+  requires: []
+- name: Ride! Carnival Tycoon
+  ids:
+  - steam:12560
+  requires: []
+- name: Age of Enigma - The Secret of the Sixth Ghost
+  ids:
+  - steam:362740
+  requires: []
+- name: Mission Runway
+  ids:
+  - steam:12670
+  requires: []
+- name: Drakensang - Phileasson's Secret
+  ids:
+  - steam:33780
+  requires: []
+- name: Hunting Unlimited™ 2008
+  ids:
+  - steam:12530
+  requires: []
+- name: 'Midnight Outlaw: 6 Hours to SunUp'
+  ids:
+  - steam:12600
+  requires: []
+- name: Drakensang - The River of Time
+  ids:
+  - steam:33770
+  requires: []
+- name: 'Mahjongg Investigations: Under Suspicion'
+  ids:
+  - steam:12540
+  requires: []
+- name: 18 Wheels of Steel Extreme Trucker
+  ids:
+  - steam:33730
+  requires: []
+- name: Sprint Cars Road to Knoxville
+  ids:
+  - steam:12590
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2451/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2451/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2451/source.json
+games:
+- name: Decay - The Mare
+  ids:
+  - steam:323720
+  requires: []
+- name: Worms Revolution
+  ids:
+  - steam:200170
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: 'Tales From Space: Mutant Blobs Attack'
+  ids:
+  - steam:206370
+  requires: []
+- name: '140'
+  ids:
+  - steam:242820
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []
+- name: Eidolon
+  ids:
+  - steam:286140
+  requires: []
+- name: 'S.T.A.L.K.E.R.: Call of Pripyat'
+  ids:
+  - steam:41700
+  requires: []

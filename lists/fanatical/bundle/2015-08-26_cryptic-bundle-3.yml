@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2375/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2375/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2375/source.json
+games:
+- name: Portal of Evil Stolen Runes Collector's Edition
+  ids:
+  - steam:361850
+  requires: []
+- name: 'Apothecarium: The Renaissance of Evil - Premium Edition'
+  ids:
+  - steam:373860
+  requires: []
+- name: 'Sea Legends: Phantasmal Light Collector''s Edition'
+  ids:
+  - steam:323280
+  requires: []
+- name: 'Lost Lands: The Four Horsemen'
+  ids:
+  - unresolved:source:isthereanydeal:2375:lost-lands-the-four-horsemen
+  requires: []
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+  requires: []
+- name: 'Sacra Terra: Angelic Night'
+  ids:
+  - steam:344440
+  requires: []
+- name: 'New York Mysteries: Secrets of the Mafia'
+  ids:
+  - unresolved:source:isthereanydeal:2375:new-york-mysteries-secrets-of-the-mafia
+  requires: []
+- name: 'Lost Lands: Dark Overlord'
+  ids:
+  - unresolved:source:isthereanydeal:2375:lost-lands-dark-overlord
+  requires: []

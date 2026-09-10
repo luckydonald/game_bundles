@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 4 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2815/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2815/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2815/source.json
+games:
+- name: Guacamelee! Super Turbo Championship Edition
+  ids:
+  - steam:275390
+  requires: []
+- name: PixelJunk Monsters Ultimate
+  ids:
+  - steam:243780
+  requires: []
+- name: Sniper Ghost Warrior 2
+  ids:
+  - steam:34870
+  requires: []
+- name: PixelJunk Shooter
+  ids:
+  - steam:255870
+  requires: []
+- name: GT Legends
+  ids:
+  - steam:44690
+  requires: []
+- name: Survivalist
+  ids:
+  - steam:340050
+  requires: []
+- name: Evoland
+  ids:
+  - steam:233470
+  requires: []
+- name: 'Letter Quest: Grimm''s Journey Remastered'
+  ids:
+  - steam:373970
+  requires: []
+- name: Overture
+  ids:
+  - steam:343100
+  requires: []

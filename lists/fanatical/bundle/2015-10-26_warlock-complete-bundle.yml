@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Warlock Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2648/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2648/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2648/source.json
+games:
+- name: 'Warlock 2: Spectacular Spell Pack'
+  ids:
+  - steam:320750
+  requires: []
+- name: 'Warlock2 : The Thrilling Trio'
+  ids:
+  - unresolved:source:isthereanydeal:2648:warlock2-the-thrilling-trio
+  requires: []
+- name: Warlock 2 - Wrath of the Nagas
+  ids:
+  - steam:306150
+  requires: []
+- name: 'Warlock I and II: Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:2648:warlock-i-and-ii-soundtrack
+  requires: []
+- name: 'Warlock 2: The Exiled'
+  ids:
+  - steam:205990
+  requires: []
+- name: 'Warlock 2 E-book: The Great Mage Game'
+  ids:
+  - steam:281511
+  requires: []
+- name: 'Warlock 2: The Good, the Bad, & the Muddy'
+  ids:
+  - steam:320721
+  requires: []
+- name: 'Warlock 2: Three Mighty Mages'
+  ids:
+  - steam:320730
+  requires: []
+- name: Warlock - Master of the Arcane Complete Edition
+  ids:
+  - steam:203630
+  requires: []

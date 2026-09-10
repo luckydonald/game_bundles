@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2348/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2348/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2348/source.json
+games:
+- name: The Sun & Moon
+  ids:
+  - steam:321560
+  requires: []
+- name: Sudeki
+  ids:
+  - steam:233350
+  requires: []
+- name: The Silent Age
+  ids:
+  - steam:352520
+  requires: []
+- name: GODUS
+  ids:
+  - unresolved:source:isthereanydeal:2348:godus
+  requires: []
+- name: Of Guards And Thieves
+  ids:
+  - steam:302590
+  requires: []
+- name: Lemma
+  ids:
+  - steam:300340
+  requires: []
+- name: A Story About My Uncle
+  ids:
+  - steam:278360
+  requires: []
+- name: 'theHunter: Primal'
+  ids:
+  - unresolved:source:isthereanydeal:2348:thehunter-primal
+  requires: []
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+  requires: []
+- name: Overture
+  ids:
+  - steam:343100
+  requires: []

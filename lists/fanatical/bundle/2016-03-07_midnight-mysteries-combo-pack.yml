@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Midnight Mysteries Combo Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3135/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3135/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3135/source.json
+games:
+- name: 'Midnight Mysteries 3: Devil on the Mississippi'
+  ids:
+  - steam:208630
+  requires: []
+- name: 'Midnight Mysteries: The Edgar Allan Poe Conspiracy'
+  ids:
+  - unresolved:source:isthereanydeal:3135:midnight-mysteries-the-edgar-allan-poe-conspiracy
+  requires: []
+- name: 'Midnight Mysteries 2: Salem Witch Trials'
+  ids:
+  - steam:208620
+  requires: []
+- name: 'Midnight Mysteries 4: Haunted Houdini'
+  ids:
+  - steam:208640
+  requires: []

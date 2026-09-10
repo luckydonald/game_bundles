@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Damnation Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2465/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2465/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2465/source.json
+games:
+- name: Painkiller Hell & Damnation
+  ids:
+  - steam:214870
+  requires: []
+- name: Runers
+  ids:
+  - steam:306550
+  requires: []
+- name: 'Kingdom Wars 2: Battles'
+  ids:
+  - unresolved:source:isthereanydeal:2465:kingdom-wars-2-battles
+  requires: []
+- name: Super Dungeon Run
+  ids:
+  - steam:382480
+  requires: []
+- name: Shattered Planet
+  ids:
+  - steam:305640
+  requires: []
+- name: CONSORTIUM
+  ids:
+  - unresolved:source:isthereanydeal:2465:consortium
+  requires: []
+- name: Cosmochoria
+  ids:
+  - steam:293240
+  requires: []
+- name: '- Ratz Instagib'
+  ids:
+  - steam:338170
+  requires: []

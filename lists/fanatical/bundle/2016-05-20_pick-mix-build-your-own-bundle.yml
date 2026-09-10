@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pick & Mix - Build Your Own Bundle — Select 3 Titles for $3, 5 Titles for $4,
+  10 Titles for $6
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3449/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3449/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3449/source.json
+games:
+- name: INK
+  ids:
+  - steam:385710
+  requires: []
+- name: Ironclad Tactics
+  ids:
+  - steam:226960
+  requires: []
+- name: Sanctum
+  ids:
+  - steam:91600
+  requires: []
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+  requires: []
+- name: Zoombinis
+  ids:
+  - steam:397430
+  requires: []
+- name: FarSky
+  ids:
+  - unresolved:source:isthereanydeal:3449:farsky
+  requires: []
+- name: A Story About My Uncle
+  ids:
+  - steam:278360
+  requires: []
+- name: Trench Run
+  ids:
+  - steam:262100
+  requires: []
+- name: The Last Word
+  ids:
+  - unresolved:source:isthereanydeal:3449:the-last-word
+  requires: []
+- name: Albert and Otto
+  ids:
+  - steam:368590
+  requires: []
+- name: Red Risk
+  ids:
+  - steam:448070
+  requires: []
+- name: Nihilumbra
+  ids:
+  - steam:252670
+  requires: []
+- name: Malebolgia
+  ids:
+  - steam:318860
+  requires: []
+- name: Reverse Crawl
+  ids:
+  - steam:400660
+  requires: []
+- name: Skulls of the Shogun
+  ids:
+  - steam:228960
+  requires: []

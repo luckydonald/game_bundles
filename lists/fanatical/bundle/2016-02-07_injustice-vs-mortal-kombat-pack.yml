@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Injustice vs Mortal Kombat Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3027/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3027/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3027/source.json
+games:
+- name: Mortal Kombat Komplete Edition
+  ids:
+  - unresolved:source:isthereanydeal:3027:mortal-kombat-komplete-edition
+  requires: []
+- name: 'Injustice: Gods Among Us - Ultimate Edition'
+  ids:
+  - steam:242700
+  requires: []

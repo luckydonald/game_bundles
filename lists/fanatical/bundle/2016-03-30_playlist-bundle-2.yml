@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Playlist Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3236/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3236/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3236/source.json
+games:
+- name: Wild Frontera
+  ids:
+  - unresolved:source:isthereanydeal:3236:wild-frontera
+  requires: []
+- name: Hatch & Slay
+  ids:
+  - unresolved:source:isthereanydeal:3236:hatch-and-slay
+  requires: []
+- name: Stop Online - Battle of Words
+  ids:
+  - steam:406310
+  requires: []
+- name: Luna Sky
+  ids:
+  - steam:361600
+  requires: []
+- name: Cataegis - The White Wind
+  ids:
+  - steam:344130
+  requires: []
+- name: Flobe
+  ids:
+  - steam:434530
+  requires: []
+- name: Normality
+  ids:
+  - steam:400370
+  requires: []
+- name: Spellblast
+  ids:
+  - unresolved:source:isthereanydeal:3236:spellblast
+  requires: []
+- name: 'Foreign Legion: Multi Massacre'
+  ids:
+  - steam:205550
+  requires: []
+- name: 'Chainsaw Warrior: Lords of the Night'
+  ids:
+  - steam:307600
+  requires: []

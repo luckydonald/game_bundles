@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Infinite Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2404/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2404/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2404/source.json
+games:
+- name: 'Frederic: Evil Strikes Back'
+  ids:
+  - steam:301200
+  requires: []
+- name: Millie
+  ids:
+  - steam:294230
+  requires: []
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:2404:teddy-floppy-ear-kayaking
+  requires: []
+- name: Frederic - Resurrection of Music
+  ids:
+  - steam:301190
+  requires: []
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:2404:teddy-floppy-ear-the-race
+  requires: []
+- name: Merchants of Kaidan
+  ids:
+  - steam:294020
+  requires: []
+- name: Teddy Floppy Ear - Mountain Adventure
+  ids:
+  - unresolved:source:isthereanydeal:2404:teddy-floppy-ear-mountain-adventure
+  requires: []
+- name: Iesabel
+  ids:
+  - steam:248710
+  requires: []
+- name: Sparkle 2 Evo
+  ids:
+  - steam:253650
+  requires: []
+- name: 16 bit trader
+  ids:
+  - unresolved:source:isthereanydeal:2404:16-bit-trader
+  requires: []
+- name: Violett
+  ids:
+  - unresolved:source:isthereanydeal:2404:violett
+  requires: []
+- name: 'Sparkle 3: Genesis'
+  ids:
+  - steam:361190
+  requires: []

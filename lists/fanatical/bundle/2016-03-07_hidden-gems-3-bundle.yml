@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3136/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3136/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3136/source.json
+games:
+- name: Planet Diver
+  ids:
+  - steam:417980
+  requires: []
+- name: Crowman & Wolfboy
+  ids:
+  - steam:339590
+  requires: []
+- name: 'Galagan''s Island: Repyrmian Rising - Soundtrack Edition'
+  ids:
+  - unresolved:source:isthereanydeal:3136:galagans-island-repyrmian-rising-soundtrack-edition
+  requires: []
+- name: Galactic Inheritors
+  ids:
+  - steam:322540
+  requires: []
+- name: Defend The Highlands
+  ids:
+  - steam:374830
+  requires: []
+- name: Centauri Sector
+  ids:
+  - steam:355810
+  requires: []
+- name: Cashtronauts
+  ids:
+  - steam:386750
+  requires: []
+- name: Story Of the Survivor
+  ids:
+  - steam:440950
+  requires: []
+- name: Anode
+  ids:
+  - steam:401120
+  requires: []
+- name: Jerry McPartlin - Rebel with a Cause
+  ids:
+  - unresolved:source:isthereanydeal:3136:jerry-mcpartlin-rebel-with-a-cause
+  requires: []
