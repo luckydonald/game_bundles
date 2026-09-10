@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Microbundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3083/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3083/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3083/source.json
+games:
+- name: Survivors
+  ids:
+  - steam:2563120
+  requires: []
+- name: Aztaka
+  ids:
+  - unresolved:source:isthereanydeal:3083:aztaka
+  requires: []

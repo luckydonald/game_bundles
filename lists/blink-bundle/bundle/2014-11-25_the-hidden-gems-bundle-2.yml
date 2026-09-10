@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1419/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1419/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1419/source.json
+games:
+- name: OMG Zombies!
+  ids:
+  - steam:259870
+  requires: []
+- name: Lost Marbles
+  ids:
+  - steam:291430
+  requires: []
+- name: Rise to Ruins
+  ids:
+  - steam:328080
+  requires: []
+- name: From The Depths
+  ids:
+  - steam:268650
+  requires: []
