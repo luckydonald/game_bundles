@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 4
   name: Tier 4
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Heroes & Villains 1'
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Heroes & Villains 2'
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Isstvan Campaign'
   ids:
@@ -44,24 +49,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Heroes & Villains 4'
   ids:
   - steam:635340
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Prospero'
   ids:
   - steam:530770
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Heroes & Villains 3'
   ids:
   - steam:521020
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Talisman: The Horus Heresy - Shadow Crusade'
   ids:

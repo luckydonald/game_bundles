@@ -6,6 +6,8 @@ tiers:
   name: 8-item-bundle
 - rank: 2
   name: 9-item-bundle
+- rank: 3
+  name: 10-item-bundle
 - rank: 4
   name: entire-11-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Borderlands: The Pre-Sequel'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Borderlands: Game of the Year Enhanced'
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Borderlands 3
   ids:
@@ -47,6 +52,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Tales from the Borderlands
   ids:
@@ -55,6 +61,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Borderlands 2 VR
   ids:
@@ -63,6 +70,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
   ids:
@@ -71,6 +79,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: New Tales from the Borderlands
   ids:
@@ -79,6 +88,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Borderlands 4
   ids:
@@ -86,12 +96,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Borderlands 4 Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:15662:borderlands-4-deluxe-edition
   requires: []
   tiers:
+  - 3
   - 4
 - name: Borderlands 4 Super Deluxe Edition
   ids:

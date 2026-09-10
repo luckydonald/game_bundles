@@ -6,6 +6,8 @@ tiers:
   name: Pack 01 (Each Pack Sold Separately)
 - rank: 2
   name: Pack 02 (Each Pack Sold Separately)
+- rank: 3
+  name: Pack 03 (Each Pack Sold Separately)
 - rank: 16
   name: Pack 16 (Each Pack Sold Separately)
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 16
 - name: Canyon Capers
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 16
 - name: Biozone
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 16
 - name: Huntsman:The Orphanage
   ids:
@@ -45,18 +50,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 16
 - name: Rocket Knight
   ids:
   - steam:19030
   requires: []
   tiers:
+  - 3
   - 16
 - name: Tower 57
   ids:
   - steam:530950
   requires: []
   tiers:
+  - 3
   - 16
 - name: Beat Cop
   ids:

@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 2-item-bundle
+- rank: 3
+  name: 4-item-bundle
 - rank: 5
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Quiplash
   ids:
@@ -30,18 +33,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: The Jackbox Party Pack
   ids:
   - steam:331670
   requires: []
   tiers:
+  - 3
   - 5
 - name: The Jackbox Party Starter
   ids:
   - steam:1755580
   requires: []
   tiers:
+  - 3
   - 5
 - name: The Jackbox Party Pack 3
   ids:

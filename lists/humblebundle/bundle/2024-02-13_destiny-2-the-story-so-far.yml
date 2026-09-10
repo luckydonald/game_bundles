@@ -6,6 +6,8 @@ tiers:
   name: 2-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 6-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Destiny 2: Forsaken Pack'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Destiny 2: Beyond Light'
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Destiny 2: Bungie 30th Anniversary Pack'
   ids:
@@ -45,6 +50,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Destiny 2: The Witch Queen'
   ids:
@@ -52,12 +58,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Destiny 2: Lightfall'
   ids:
   - steam:1945340
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Destiny 2: Lightfall + Annual Pass'
   ids:
