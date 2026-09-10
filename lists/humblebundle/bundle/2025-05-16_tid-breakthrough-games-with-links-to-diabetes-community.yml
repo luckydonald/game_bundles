@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'T1D Breakthrough: Games with Links to Diabetes Community — entire-9-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15121/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15121/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15121/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+  requires: []
+- name: Never Alone (Kisima Ingitchuna)
+  ids:
+  - steam:295790
+  requires: []
+- name: 'Batman: The Enemy Within - The Telltale Series'
+  ids:
+  - steam:675260
+  requires: []
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+  requires: []
+- name: Batman - The Telltale Series
+  ids:
+  - steam:498240
+  requires: []
+- name: Sam & Max Save the World
+  ids:
+  - steam:1440440
+  requires: []
+- name: Observation
+  ids:
+  - steam:906100
+  requires: []
+- name: Sam & Max Beyond Time and Space
+  ids:
+  - steam:1747050
+  requires: []
+- name: Station to Station
+  ids:
+  - steam:2272400
+  requires: []

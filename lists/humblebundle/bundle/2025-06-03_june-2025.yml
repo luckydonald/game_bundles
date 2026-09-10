@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jun 2025) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15158/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15158/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15158/source.json
+games:
+- name: biped
+  ids:
+  - steam:1071870
+  requires: []
+- name: Tchia
+  ids:
+  - steam:1496590
+  requires: []
+- name: Havendock
+  ids:
+  - steam:2020710
+  requires: []
+- name: Sker Ritual
+  ids:
+  - steam:1492070
+  requires: []
+- name: 'Warhammer 40,000: Boltgun'
+  ids:
+  - steam:2005010
+  requires: []
+- name: Dungeons of Hinterberg
+  ids:
+  - steam:1983260
+  requires: []
+- name: Nobody Wants to Die
+  ids:
+  - steam:1939970
+  requires: []
+- name: Legacy of Kain™ Soul Reaver 1&2 Remastered
+  ids:
+  - steam:2521380
+  requires: []
