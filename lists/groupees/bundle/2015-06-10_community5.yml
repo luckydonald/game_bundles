@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Community Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2107/source.json
+games:
+- name: 'Gat Life: Boyfriend Bar'
+  ids:
+  - unresolved:source:isthereanydeal:2107:gat-life-boyfriend-bar
+  requires: []
+- name: Boot Hill Blaster
+  ids:
+  - steam:743660
+  requires: []
+- name: Shoppy Mart
+  ids:
+  - unresolved:source:isthereanydeal:2107:shoppy-mart
+  requires: []
+- name: Raywin
+  ids:
+  - steam:386110
+  requires: []
+- name: Dramaze
+  ids:
+  - unresolved:source:isthereanydeal:2107:dramaze
+  requires: []
+- name: 'GROUPEES: Revenge of The Visual Novel'
+  ids:
+  - unresolved:source:isthereanydeal:2107:groupees-revenge-of-the-visual-novel
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 27 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2201/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2201/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2201/source.json
+games:
+- name: 'Codename : Rogue Fleet'
+  ids:
+  - steam:403690
+  requires: []
+- name: Nandeyanen!? - The 1st Sūtra
+  ids:
+  - steam:386090
+  requires: []
+- name: Grid Masters
+  ids:
+  - steam:449330
+  requires: []
+- name: Gerty
+  ids:
+  - steam:455100
+  requires: []
+- name: Evolution
+  ids:
+  - steam:391820
+  requires: []
+- name: At the mountains of Madness
+  ids:
+  - steam:393820
+  requires: []
+- name: Void Vikings
+  ids:
+  - steam:440660
+  requires: []
+- name: Magical Brickout
+  ids:
+  - steam:384940
+  requires: []
+- name: Toby the Brave
+  ids:
+  - unresolved:source:isthereanydeal:2201:toby-the-brave
+  requires: []
+- name: Louie Cooks
+  ids:
+  - steam:398480
+  requires: []

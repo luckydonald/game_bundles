@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 31 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2464/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2464/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2464/source.json
+games:
+- name: Networm
+  ids:
+  - steam:408170
+  requires: []
+- name: Eaten Alive
+  ids:
+  - steam:403560
+  requires: []
+- name: Chill the Piro
+  ids:
+  - steam:437180
+  requires: []
+- name: Flag N Frag
+  ids:
+  - steam:456160
+  requires: []
+- name: Dinosaurs A Prehistoric Adventure
+  ids:
+  - steam:751590
+  requires: []
+- name: Combat Racers
+  ids:
+  - steam:444870
+  requires: []
+- name: H.E.
+  ids:
+  - unresolved:source:isthereanydeal:2464:h-e
+  requires: []
+- name: 'Levantera: Tale of The Winds'
+  ids:
+  - steam:506700
+  requires: []
+- name: Perfect Universe
+  ids:
+  - steam:405720
+  requires: []

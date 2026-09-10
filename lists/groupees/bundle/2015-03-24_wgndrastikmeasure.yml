@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Drastik Measure — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1734/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1734/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1734/source.json
+games:
+- name: Warriors & Castles
+  ids:
+  - steam:372380
+  requires: []
+- name: Waste Walkers Prepper's Edition
+  ids:
+  - steam:371100
+  requires: []
+- name: 'Into the Dark: Ultimate Trash Edition'
+  ids:
+  - steam:266050
+  requires: []
+- name: Call of Tomsk-7
+  ids:
+  - steam:390660
+  requires: []
+- name: Downpour
+  ids:
+  - steam:371400
+  requires: []
+- name: Volt
+  ids:
+  - steam:290280
+  requires: []
+- name: Chowderchu
+  ids:
+  - steam:431740
+  requires: []
+- name: a Family of Grave Diggers
+  ids:
+  - steam:383020
+  requires: []
+- name: Steam Heroes
+  ids:
+  - steam:341160
+  requires: []
+- name: LowcoBall
+  ids:
+  - unresolved:source:isthereanydeal:1734:lowcoball
+  requires: []
+- name: 'Soul Gambler: Dark Arts Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1734:soul-gambler-dark-arts-edition
+  requires: []

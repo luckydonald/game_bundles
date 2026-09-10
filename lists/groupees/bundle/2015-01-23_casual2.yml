@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Casual Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1579/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1579/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1579/source.json
+games:
+- name: 'Doctor Who: The Adventure Games'
+  ids:
+  - unresolved:source:isthereanydeal:1579:doctor-who-the-adventure-games
+  requires: []
+- name: Murder, She Wrote 2
+  ids:
+  - unresolved:source:isthereanydeal:1579:murder-she-wrote-2
+  requires: []
+- name: 'Atlantis: Pearls of the Deep'
+  ids:
+  - steam:521280
+  requires: []
+- name: Dungeon of Elements
+  ids:
+  - steam:302310
+  requires: []
+- name: 'Paranormal State: Poison Spring'
+  ids:
+  - unresolved:source:isthereanydeal:1579:paranormal-state-poison-spring
+  requires: []
+- name: Miner Wars Arena
+  ids:
+  - steam:219070
+  requires: []
+- name: 'Terra Incognita ~ Chapter One: The Descendant'
+  ids:
+  - steam:347560
+  requires: []
+- name: Criminal Minds
+  ids:
+  - unresolved:source:isthereanydeal:1579:criminal-minds
+  requires: []
+- name: Tribloos 2
+  ids:
+  - steam:271550
+  requires: []
+- name: 'Evil Pumpkin: The Lost Halloween'
+  ids:
+  - steam:300360
+  requires: []

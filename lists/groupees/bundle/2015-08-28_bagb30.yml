@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 30 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2384/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2384/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2384/source.json
+games:
+- name: Astral Breakers
+  ids:
+  - steam:406120
+  requires: []
+- name: The Light Empire
+  ids:
+  - steam:416220
+  requires: []
+- name: Clergy Splode
+  ids:
+  - steam:403900
+  requires: []
+- name: Pills4Skills
+  ids:
+  - steam:427770
+  requires: []
+- name: Birth of Shadows
+  ids:
+  - steam:401170
+  requires: []
+- name: The Rise of Chubtan
+  ids:
+  - steam:396010
+  requires: []
+- name: FreqFlux - Music-based rhythm & arcade runner game
+  ids:
+  - unresolved:source:isthereanydeal:2384:freqflux-music-based-rhythm-and-arcade-runner-game
+  requires: []
+- name: Heaps
+  ids:
+  - unresolved:source:isthereanydeal:2384:heaps
+  requires: []
+- name: Tin Boy
+  ids:
+  - unresolved:source:isthereanydeal:2384:tin-boy
+  requires: []
+- name: DAWT
+  ids:
+  - unresolved:source:isthereanydeal:2384:dawt
+  requires: []

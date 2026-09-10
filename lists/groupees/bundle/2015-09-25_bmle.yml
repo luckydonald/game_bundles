@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine Limited Edition — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2512/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2512/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2512/source.json
+games:
+- name: BRAWL
+  ids:
+  - steam:365680
+  requires: []
+- name: Prism
+  ids:
+  - unresolved:source:isthereanydeal:2512:prism
+  requires: []
+- name: House of Caravan
+  ids:
+  - steam:353550
+  requires: []
+- name: Cashtronauts
+  ids:
+  - steam:386750
+  requires: []
+- name: Lonath Online
+  ids:
+  - unresolved:source:isthereanydeal:2512:lonath-online
+  requires: []
+- name: Cute Things Dying Violently
+  ids:
+  - steam:305820
+  requires: []
+- name: Rubber & Lead
+  ids:
+  - steam:389810
+  requires: []

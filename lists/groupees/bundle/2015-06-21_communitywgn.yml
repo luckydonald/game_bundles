@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: WGN Community & Greenlight Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2142/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2142/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2142/source.json
+games:
+- name: Retro Killer:The Contract
+  ids:
+  - unresolved:source:isthereanydeal:2142:retro-killer-the-contract
+  requires: []
+- name: Necromonads
+  ids:
+  - unresolved:source:isthereanydeal:2142:necromonads
+  requires: []
+- name: Big Journey to Home
+  ids:
+  - steam:388440
+  requires: []
+- name: Celia's Quest
+  ids:
+  - steam:380120
+  requires: []
+- name: Grey phobia
+  ids:
+  - steam:465050
+  requires: []
+- name: Runeyana
+  ids:
+  - steam:463670
+  requires: []
+- name: Squarelands
+  ids:
+  - steam:383560
+  requires: []
+- name: Incandescent
+  ids:
+  - steam:380550
+  requires: []

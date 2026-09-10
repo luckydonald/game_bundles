@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Mini Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2390/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2390/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2390/source.json
+games:
+- name: 'Playing History 2: Slave Trade'
+  ids:
+  - steam:386870
+  requires: []
+- name: Nightclub Emporium
+  ids:
+  - steam:389690
+  requires: []
+- name: Lucky Rabbit Reflex!
+  ids:
+  - steam:404030
+  requires: []
+- name: Joe's Diner
+  ids:
+  - steam:346040
+  requires: []
+- name: Evoland
+  ids:
+  - steam:233470
+  requires: []
