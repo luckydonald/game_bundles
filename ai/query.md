@@ -2923,3 +2923,5 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 > </details>
 >
 
+❯ We can keep `--tiers {all,highest}`. Move migrate stuff into its own subfolder and subcommand.
+
