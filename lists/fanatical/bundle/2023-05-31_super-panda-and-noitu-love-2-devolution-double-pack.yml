@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Super Panda & Noitu Love 2: Devolution Double Pack — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13230/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13230/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13230/source.json
+games:
+- name: Super Panda Adventures
+  ids:
+  - steam:311190
+  requires: []
+- name: 'Noitu Love 2: Devolution'
+  ids:
+  - steam:207530
+  requires: []

@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Strategy Bundle (BundleFest Edition) — 3 for 4.99, 5 for 6.99,
+  8 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14073/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14073/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14073/source.json
+games:
+- name: 'Kingdom: New Lands'
+  ids:
+  - steam:496300
+  requires: []
+- name: Project Highrise
+  ids:
+  - steam:423580
+  requires: []
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+  requires: []
+- name: 'Strategic Command: World War I'
+  ids:
+  - steam:1096930
+  requires: []
+- name: 'Kapital: Sparks of Revolution'
+  ids:
+  - steam:1399700
+  requires: []
+- name: Tyrant's Blessing
+  ids:
+  - steam:1520760
+  requires: []
+- name: Dark Deity
+  ids:
+  - steam:1374840
+  requires: []
+- name: Telepath Tactics Liberated
+  ids:
+  - steam:1849820
+  requires: []
+- name: Mystic Vale Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:14073:mystic-vale-complete-pack
+  requires: []
+- name: 'Talisman: Origins Complete Collection'
+  ids:
+  - unresolved:source:isthereanydeal:14073:talisman-origins-complete-collection
+  requires: []
+- name: Guardians of Holme
+  ids:
+  - steam:2086850
+  requires: []
+- name: How 2 Escape
+  ids:
+  - steam:2264140
+  requires: []
+- name: WizardChess
+  ids:
+  - steam:1274210
+  requires: []

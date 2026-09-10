@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Wordle Super Game Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13636/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13636/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13636/source.json
+games:
+- name: Wordle
+  ids:
+  - steam:1334000
+  requires: []
+- name: Wordle 2
+  ids:
+  - steam:1386730
+  requires: []
+- name: Wordle 3
+  ids:
+  - steam:1428820
+  requires: []
+- name: Wordle 5
+  ids:
+  - steam:1867190
+  requires: []

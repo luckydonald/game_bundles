@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Relentless Bundle — Select 3 Titles for $4.99, 5 Titles for $6.99,
+  8 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13790/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13790/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13790/source.json
+games:
+- name: Red Faction Guerrilla Re-Mars-tered
+  ids:
+  - steam:667720
+  requires: []
+- name: Black Book
+  ids:
+  - steam:1138660
+  requires: []
+- name: Jetstream
+  ids:
+  - steam:738860
+  requires: []
+- name: For The King
+  ids:
+  - steam:527230
+  requires: []
+- name: Graveyard Keeper
+  ids:
+  - steam:599140
+  requires: []
+- name: Neverinth
+  ids:
+  - steam:966430
+  requires: []
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+  requires: []
+- name: Fates of Ort
+  ids:
+  - steam:895480
+  requires: []
+- name: The Life and Suffering of Sir Brante
+  ids:
+  - steam:1272160
+  requires: []
+- name: 'Blind Fate: Edo no Yami'
+  ids:
+  - steam:1294880
+  requires: []
+- name: Neighbours Back From Hell
+  ids:
+  - steam:1283190
+  requires: []
+- name: The Horror Of Salazar House
+  ids:
+  - steam:1405440
+  requires: []
+- name: Chicken Police - Paint it RED
+  ids:
+  - steam:1084640
+  requires: []
+- name: 'SEARCH PARTY: Director''s Cut'
+  ids:
+  - steam:1418540
+  requires: []
+- name: Void Scrappers
+  ids:
+  - steam:2005210
+  requires: []
+- name: Bosorka
+  ids:
+  - steam:2118370
+  requires: []
+- name: WizardChess
+  ids:
+  - steam:1274210
+  requires: []

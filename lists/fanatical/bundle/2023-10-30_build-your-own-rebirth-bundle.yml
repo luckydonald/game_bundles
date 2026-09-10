@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Rebirth Bundle — Select 2 for $2.49, 5 for $4.99, 10 for $8.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13578/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13578/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13578/source.json
+games:
+- name: The Hong Kong Massacre
+  ids:
+  - steam:741510
+  requires: []
+- name: Songbringer
+  ids:
+  - steam:367080
+  requires: []
+- name: Roundguard
+  ids:
+  - steam:848030
+  requires: []
+- name: 'Slain: Back from Hell'
+  ids:
+  - steam:369070
+  requires: []
+- name: Forced Showdown
+  ids:
+  - steam:265000
+  requires: []
+- name: 'NEXT JUMP: Shmup Tactics'
+  ids:
+  - steam:624690
+  requires: []
+- name: 'FORCED: Slightly Better Edition'
+  ids:
+  - steam:249990
+  requires: []
+- name: Blazing Beaks
+  ids:
+  - steam:585710
+  requires: []
+- name: Valfaris
+  ids:
+  - steam:600130
+  requires: []
+- name: Colt Canyon
+  ids:
+  - steam:940710
+  requires: []
+- name: Heroes of Hammerwatch
+  ids:
+  - steam:677120
+  requires: []
+- name: West of Dead
+  ids:
+  - steam:1016790
+  requires: []
+- name: Golden Light
+  ids:
+  - steam:1245430
+  requires: []
+- name: Ruin Raiders
+  ids:
+  - steam:1262720
+  requires: []
+- name: Banners of Ruin
+  ids:
+  - steam:1075740
+  requires: []
+- name: The Darkest Tales
+  ids:
+  - steam:1307690
+  requires: []
+- name: Legend of Keepers
+  ids:
+  - steam:978520
+  requires: []
+- name: City of Beats
+  ids:
+  - steam:1470390
+  requires: []
+- name: Flame Keeper
+  ids:
+  - steam:1374230
+  requires: []
+- name: 'Alder''s Blood: Definitive Edition'
+  ids:
+  - steam:820020
+  requires: []

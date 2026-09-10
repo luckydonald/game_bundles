@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Platformania Bundle — Select 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14242/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14242/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14242/source.json
+games:
+- name: Elderand
+  ids:
+  - steam:1413660
+  requires: []
+- name: GRIME
+  ids:
+  - steam:1123050
+  requires: []
+- name: ICEY
+  ids:
+  - steam:553640
+  requires: []
+- name: Pumpkin Jack
+  ids:
+  - steam:1186640
+  requires: []
+- name: 'Batbarian: Testament of the Primordials'
+  ids:
+  - steam:837460
+  requires: []
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+  requires: []
+- name: Imp of the Sun
+  ids:
+  - steam:1535780
+  requires: []
+- name: The Legend of Tianding
+  ids:
+  - steam:1406850
+  requires: []
+- name: Mail Time
+  ids:
+  - steam:1607240
+  requires: []
+- name: 'DARQ: Complete Edition'
+  ids:
+  - steam:433550
+  requires: []
+- name: 'Gibbon: Beyond the Trees'
+  ids:
+  - steam:1837330
+  requires: []
+- name: 'Valfaris: Mecha Therion'
+  ids:
+  - steam:1647920
+  requires: []
+- name: Teslagrad Remastered
+  ids:
+  - steam:2168150
+  requires: []
+- name: Magenta Horizon
+  ids:
+  - unresolved:source:isthereanydeal:14242:magenta-horizon
+  requires: []
+- name: Ugly
+  ids:
+  - steam:1983220
+  requires: []
+- name: 'Boti: Byteland Overclocked'
+  ids:
+  - steam:2161050
+  requires: []
