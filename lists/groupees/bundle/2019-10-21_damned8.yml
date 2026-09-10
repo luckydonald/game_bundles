@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of the Damned 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8030/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8030/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8030/source.json
+games:
+- name: ZHIVE
+  ids:
+  - steam:1119530
+  requires: []
+- name: Lucius III
+  ids:
+  - steam:513290
+  requires: []
+- name: House Number 666
+  ids:
+  - steam:1162690
+  requires: []
+- name: Walls Closing In
+  ids:
+  - unresolved:source:isthereanydeal:8030:walls-closing-in
+  requires: []
+- name: GraFi Halloween
+  ids:
+  - steam:1172660
+  requires: []

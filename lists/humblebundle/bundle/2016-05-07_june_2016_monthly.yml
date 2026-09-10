@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jun 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3390/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3390/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3390/source.json
+games:
+- name: Steredenn
+  ids:
+  - steam:347160
+  requires: []
+- name: Rocket League
+  ids:
+  - unresolved:source:isthereanydeal:3390:rocket-league
+  requires: []
+- name: Dungeon of the Endless
+  ids:
+  - steam:249050
+  requires: []
+- name: Cat Girl Without Salad
+  ids:
+  - unresolved:source:isthereanydeal:3390:cat-girl-without-salad
+  requires: []
+- name: 'Planetary Annihilation: TITANS'
+  ids:
+  - steam:386070
+  requires: []
+- name: The Forest
+  ids:
+  - steam:242760
+  requires: []
+- name: WASTED
+  ids:
+  - steam:327510
+  requires: []
+- name: Keep Talking and Nobody Explodes
+  ids:
+  - steam:341800
+  requires: []
