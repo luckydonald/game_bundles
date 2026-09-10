@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Asteroid Gate Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9195/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9195/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9195/source.json
+games:
+- name: Hypergate
+  ids:
+  - steam:809530
+  requires: []
+- name: Asteroids Millennium
+  ids:
+  - steam:669830
+  requires: []
+- name: Hexologic
+  ids:
+  - steam:785890
+  requires: []
+- name: Trancelation
+  ids:
+  - steam:716560
+  requires: []
+- name: Origami Flight
+  ids:
+  - steam:911950
+  requires: []
+- name: Gangsters 1920
+  ids:
+  - steam:1163490
+  requires: []

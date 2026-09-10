@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Beyond Infinity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9316/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9316/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9316/source.json
+games:
+- name: Subdivision Infinity DX
+  ids:
+  - steam:908790
+  requires: []
+- name: Robot Wants It All
+  ids:
+  - steam:834760
+  requires: []
+- name: Ballistic Craft
+  ids:
+  - steam:1137110
+  requires: []
+- name: Beyond This Side
+  ids:
+  - steam:1254480
+  requires: []
+- name: SWORDSHOT
+  ids:
+  - steam:1257600
+  requires: []
+- name: Evil Ritual - Horror Escape
+  ids:
+  - steam:1416600
+  requires: []

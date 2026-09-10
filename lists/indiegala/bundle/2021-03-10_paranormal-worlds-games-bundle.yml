@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Paranormal Worlds Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9821/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9821/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9821/source.json
+games:
+- name: The Mysterious Case of Dr Jekyll and Mr Hyde
+  ids:
+  - steam:1215900
+  requires: []
+- name: 1912 Titanic Mystery
+  ids:
+  - steam:1114270
+  requires: []
+- name: Hidden World of Art 2
+  ids:
+  - steam:1182200
+  requires: []
+- name: Emily Archer and the Curse of Tutankhamun
+  ids:
+  - steam:1223090
+  requires: []
+- name: Castle Wonders - A Castle Tale
+  ids:
+  - steam:1390880
+  requires: []
+- name: Home Designer - Living Room
+  ids:
+  - steam:1393640
+  requires: []
+- name: Paranormal Stories
+  ids:
+  - steam:1420160
+  requires: []
+- name: Home Designer - Home Sweet Home
+  ids:
+  - steam:1531610
+  requires: []

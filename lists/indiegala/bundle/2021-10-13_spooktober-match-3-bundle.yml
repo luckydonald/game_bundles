@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Spooktober Match 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10565/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10565/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10565/source.json
+games:
+- name: Artifact Hunter
+  ids:
+  - steam:1440020
+  requires: []
+- name: Runes of Avalon 2
+  ids:
+  - steam:1683510
+  requires: []
+- name: Cave Quest
+  ids:
+  - steam:1213570
+  requires: []
+- name: DIG THE GROUND
+  ids:
+  - steam:1435840
+  requires: []
+- name: Halloween Trouble 2
+  ids:
+  - steam:1519800
+  requires: []
+- name: 'Allura: The Three Realms'
+  ids:
+  - steam:1573250
+  requires: []
+- name: 'Academy of Magic: Dark Possession'
+  ids:
+  - steam:1663940
+  requires: []
+- name: Wildlife Match
+  ids:
+  - steam:1660370
+  requires: []
+- name: Suddenly Meow
+  ids:
+  - steam:1723720
+  requires: []
