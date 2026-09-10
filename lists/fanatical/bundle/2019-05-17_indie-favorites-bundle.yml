@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Favorites Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7402/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7402/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7402/source.json
+games:
+- name: 'Stealth Inc. 2: A Game of Clones'
+  ids:
+  - steam:329380
+  requires: []
+- name: Stealth Bastard Deluxe
+  ids:
+  - steam:209190
+  requires: []
+- name: Hue
+  ids:
+  - steam:383270
+  requires: []
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+  requires: []
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+  requires: []
+- name: Jump Stars
+  ids:
+  - steam:486990
+  requires: []
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+  requires: []

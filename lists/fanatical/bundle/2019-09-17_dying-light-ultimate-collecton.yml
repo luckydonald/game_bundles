@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dying Light Ultimate Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7910/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7910/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7910/source.json
+games:
+- name: Dying Light - White Death Bundle
+  ids:
+  - steam:748340
+  requires: []
+- name: Dying Light
+  ids:
+  - steam:239140
+  requires: []
+- name: Dying Light - Gun Psycho Bundle
+  ids:
+  - steam:436081
+  requires: []
+- name: Dying Light - Vintage Gunslinger Bundle
+  ids:
+  - steam:748341
+  requires: []
+- name: Dying Light - Harran Ranger Bundle
+  ids:
+  - steam:436080
+  requires: []
+- name: Dying Light Season Pass
+  ids:
+  - steam:335810
+  requires: []
+- name: Dying Light - Rais Elite Bundle
+  ids:
+  - steam:1112520
+  requires: []
+- name: Dying Light- Crash Test Skin Pack
+  ids:
+  - unresolved:source:isthereanydeal:7910:dying-light-crash-test-skin-pack
+  requires: []
+- name: Dying Light - Volatile Hunter Bundle
+  ids:
+  - steam:436082
+  requires: []

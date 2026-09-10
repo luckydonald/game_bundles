@@ -1,0 +1,123 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Square Enix Pick & Mix Bundle — Select 3 Titles for $8.99 or 5 Titles for $12.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7903/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7903/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7903/source.json
+games:
+- name: 'Kane & Lynch : Dead Men'
+  ids:
+  - steam:8080
+  requires: []
+- name: Dungeon Siege
+  ids:
+  - steam:39190
+  requires: []
+- name: Dungeon Siege II
+  ids:
+  - steam:39200
+  requires: []
+- name: Dungeon Siege III
+  ids:
+  - steam:39160
+  requires: []
+- name: Tomb Raider Game of the Year Edition
+  ids:
+  - steam:203160
+  requires: []
+- name: Just Cause 2
+  ids:
+  - steam:8190
+  requires: []
+- name: 'Legacy of Kain: Soul Reaver 2'
+  ids:
+  - steam:224940
+  requires: []
+- name: 'Thief: Deadly Shadows'
+  ids:
+  - steam:6980
+  requires: []
+- name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
+  ids:
+  - steam:238010
+  requires: []
+- name: 'Deus Ex: Invisible War'
+  ids:
+  - steam:6920
+  requires: []
+- name: Just Cause
+  ids:
+  - steam:6880
+  requires: []
+- name: 'Tomb Raider: Underworld'
+  ids:
+  - steam:8140
+  requires: []
+- name: 'Hitman GO: Definitive Edition'
+  ids:
+  - steam:427820
+  requires: []
+- name: 'Legacy of Kain: Soul Reaver'
+  ids:
+  - unresolved:source:isthereanydeal:7903:legacy-of-kain-soul-reaver
+  requires: []
+- name: Lara Croft and the Guardian of Light
+  ids:
+  - steam:35130
+  requires: []
+- name: Lara Croft GO
+  ids:
+  - steam:540840
+  requires: []
+- name: Just Cause™ 3
+  ids:
+  - steam:225540
+  requires: []
+- name: 'Tomb Raider: Anniversary'
+  ids:
+  - steam:8000
+  requires: []
+- name: 'Kane & Lynch 2: Dog Days'
+  ids:
+  - steam:28000
+  requires: []
+- name: 'Tomb Raider: Legend'
+  ids:
+  - steam:7000
+  requires: []
+- name: 'Legacy of Kain: Defiance'
+  ids:
+  - steam:224300
+  requires: []
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910
+  requires: []
+- name: Tomb Raider I (1996)
+  ids:
+  - steam:224960
+  requires: []
+- name: Tomb Raider II (1997)
+  ids:
+  - steam:225300
+  requires: []
+- name: Tomb Raider III (1998)
+  ids:
+  - steam:225320
+  requires: []
+- name: 'Tomb Raider IV: The Last Revelation (1999)'
+  ids:
+  - steam:224980
+  requires: []
+- name: 'Tomb Raider VI: The Angel of Darkness (2003)'
+  ids:
+  - steam:225020
+  requires: []
+- name: 'Tomb Raider V: Chronicles (2000)'
+  ids:
+  - steam:225000
+  requires: []
