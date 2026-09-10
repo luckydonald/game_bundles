@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Rogue Activity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8575/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8575/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8575/source.json
+games:
+- name: Rogue Wizards
+  ids:
+  - steam:392260
+  requires: []
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+  requires: []
+- name: 'Eredia: The Diary of Heroes'
+  ids:
+  - steam:713180
+  requires: []
+- name: Eva Reynes
+  ids:
+  - steam:1055150
+  requires: []
+- name: Frostford
+  ids:
+  - steam:1213890
+  requires: []
+- name: Deep Despair
+  ids:
+  - steam:1241040
+  requires: []

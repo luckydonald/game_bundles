@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Unreal Worlds Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8102/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8102/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8102/source.json
+games:
+- name: Boogeyman
+  ids:
+  - steam:412770
+  requires: []
+- name: Siberian Run VR
+  ids:
+  - steam:1055870
+  requires: []
+- name: A Story of Distress
+  ids:
+  - steam:791760
+  requires: []
+- name: Frosty Nights
+  ids:
+  - steam:733800
+  requires: []
+- name: Boogeyman 2
+  ids:
+  - steam:567130
+  requires: []
+- name: VRAdventure
+  ids:
+  - steam:1057730
+  requires: []

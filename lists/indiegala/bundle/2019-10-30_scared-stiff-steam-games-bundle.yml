@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Scared Stiff Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8068/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8068/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8068/source.json
+games:
+- name: Death's Hangover
+  ids:
+  - steam:521920
+  requires: []
+- name: Post Soviet Zombies
+  ids:
+  - steam:1113310
+  requires: []
+- name: 'Doorways: Holy Mountains of Flesh'
+  ids:
+  - steam:383930
+  requires: []
+- name: The Mystery Of Woolley Mountain
+  ids:
+  - steam:521560
+  requires: []
+- name: Cluck Yegger in Escape From The Planet of The Poultroid
+  ids:
+  - steam:416800
+  requires: []
+- name: Lucius
+  ids:
+  - steam:218640
+  requires: []
+- name: 'Root Of Evil: The Tailor'
+  ids:
+  - steam:550310
+  requires: []
+- name: Sarcophag
+  ids:
+  - steam:631830
+  requires: []
+- name: Radiation Island
+  ids:
+  - steam:307940
+  requires: []
+- name: Nosferatu - The Wrath Of Malachi
+  ids:
+  - steam:283290
+  requires: []

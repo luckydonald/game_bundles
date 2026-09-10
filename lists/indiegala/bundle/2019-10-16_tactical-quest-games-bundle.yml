@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tactical Quest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8010/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8010/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8010/source.json
+games:
+- name: Island Tribe 3
+  ids:
+  - steam:817630
+  requires: []
+- name: Island Tribe 5
+  ids:
+  - steam:573750
+  requires: []
+- name: Northern Tale 4
+  ids:
+  - steam:573740
+  requires: []
+- name: Farm Mania 2
+  ids:
+  - steam:573710
+  requires: []
+- name: Northern Tale 3
+  ids:
+  - steam:573730
+  requires: []
+- name: 'Viking Saga: New World'
+  ids:
+  - steam:416340
+  requires: []
+- name: All My Gods
+  ids:
+  - steam:404270
+  requires: []
+- name: Royal Adventure
+  ids:
+  - steam:832650
+  requires: []
+- name: 'Roads of Rome: New Generation'
+  ids:
+  - steam:573760
+  requires: []
+- name: 'Viking Saga: Epic Adventure'
+  ids:
+  - steam:573720
+  requires: []
+- name: Turtle Odyssey
+  ids:
+  - steam:412480
+  requires: []

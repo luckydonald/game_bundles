@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Summer Club Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7742/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7742/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7742/source.json
+games:
+- name: Beauty Bounce
+  ids:
+  - steam:372330
+  requires: []
+- name: Club Life
+  ids:
+  - steam:404180
+  requires: []
+- name: Highschool Romance
+  ids:
+  - steam:398100
+  requires: []
+- name: Echo Tokyo - Wallpapers
+  ids:
+  - steam:372810
+  requires: []
+- name: Beach Bounce - Soundtrack
+  ids:
+  - steam:394050
+  requires: []
+- name: 'Echo Tokyo: Graphic Novel'
+  ids:
+  - steam:390490
+  requires: []
+- name: Beach Bounce
+  ids:
+  - steam:352010
+  requires: []
+- name: Club Life - Soundtrack
+  ids:
+  - steam:452900
+  requires: []
+- name: Sword of Asumi - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:7742:sword-of-asumi-deluxe-edition
+  requires: []
+- name: 'Echo Tokyo: Intro'
+  ids:
+  - steam:345700
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Chromatic November Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8091/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8091/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8091/source.json
+games:
+- name: Landlord Simulator
+  ids:
+  - steam:803310
+  requires: []
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+  requires: []
+- name: Purple Heart
+  ids:
+  - steam:745370
+  requires: []
+- name: Dark Sauce
+  ids:
+  - steam:995790
+  requires: []
+- name: Blood Harvest 2
+  ids:
+  - steam:753170
+  requires: []
+- name: The Binding Of YOU
+  ids:
+  - unresolved:source:isthereanydeal:8091:the-binding-of-you
+  requires: []
+- name: Pukan Bye Bye
+  ids:
+  - steam:822530
+  requires: []
+- name: Alone in the War
+  ids:
+  - steam:1114910
+  requires: []
+- name: Joe Jump Impossible Quest
+  ids:
+  - unresolved:source:isthereanydeal:8091:joe-jump-impossible-quest
+  requires: []
+- name: Deployment
+  ids:
+  - steam:755980
+  requires: []
+- name: Sideral
+  ids:
+  - steam:1095070
+  requires: []
+- name: Ace of Space
+  ids:
+  - steam:1304310
+  requires: []
