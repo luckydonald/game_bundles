@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: B._.render Spring Game Giveaway!! (PWYW) — Pay What You Want
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13944/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13944/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13944/source.json
+games:
+- name: Drug Dealin Sim 2024
+  ids:
+  - unresolved:source:isthereanydeal:13944:drug-dealin-sim-2024
+  requires: []
+- name: Small RPG
+  ids:
+  - unresolved:source:isthereanydeal:13944:small-rpg
+  requires: []
+- name: Dummy Smasher
+  ids:
+  - unresolved:source:isthereanydeal:13944:dummy-smasher
+  requires: []
+- name: Stacky Stacky Game Game
+  ids:
+  - unresolved:source:isthereanydeal:13944:stacky-stacky-game-game
+  requires: []
+- name: Candy Cartel
+  ids:
+  - unresolved:source:isthereanydeal:13944:candy-cartel
+  requires: []
+- name: Quest In A Castle
+  ids:
+  - unresolved:source:isthereanydeal:13944:quest-in-a-castle
+  requires: []

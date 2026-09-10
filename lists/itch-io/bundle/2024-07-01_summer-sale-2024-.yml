@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Sale 2024 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14179/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14179/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14179/source.json
+games:
+- name: Port Traventor
+  ids:
+  - unresolved:source:isthereanydeal:14179:port-traventor
+  requires: []
+- name: Succubus Shop
+  ids:
+  - unresolved:source:isthereanydeal:14179:succubus-shop
+  requires: []
+- name: Towerø
+  ids:
+  - unresolved:source:isthereanydeal:14179:towero
+  requires: []
+- name: Dragon Unleashed
+  ids:
+  - unresolved:source:isthereanydeal:14179:dragon-unleashed
+  requires: []
+- name: Harpy Lady Lyd
+  ids:
+  - unresolved:source:isthereanydeal:14179:harpy-lady-lyd
+  requires: []

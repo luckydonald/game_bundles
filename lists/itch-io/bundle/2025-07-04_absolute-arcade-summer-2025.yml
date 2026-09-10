@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Absolute Arcade - Summer 2025 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15233/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15233/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15233/source.json
+games:
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+  requires: []
+- name: Boot Hill Blaster
+  ids:
+  - steam:743660
+  requires: []
+- name: Super Space Serpent SE
+  ids:
+  - unresolved:source:isthereanydeal:15233:super-space-serpent-se
+  requires: []
+- name: Metori
+  ids:
+  - steam:856190
+  requires: []
+- name: BinaryGrab
+  ids:
+  - unresolved:source:isthereanydeal:15233:binarygrab
+  requires: []
+- name: Woodcutter Deluxe Edition
+  ids:
+  - steam:1876670
+  requires: []
+- name: Trapers Platformer
+  ids:
+  - steam:2257790
+  requires: []
+- name: MF-01 Aerostrike
+  ids:
+  - steam:2303500
+  requires: []
+- name: Invasion 360
+  ids:
+  - unresolved:source:isthereanydeal:15233:invasion-360
+  requires: []
+- name: Saga of Song
+  ids:
+  - unresolved:source:isthereanydeal:15233:saga-of-song
+  requires: []
+- name: Geometry Jump Reimagined
+  ids:
+  - unresolved:source:isthereanydeal:15233:geometry-jump-reimagined
+  requires: []
+- name: Wizard Fighters
+  ids:
+  - unresolved:source:isthereanydeal:15233:wizard-fighters
+  requires: []
+- name: Data Rush
+  ids:
+  - unresolved:source:isthereanydeal:15233:data-rush
+  requires: []
