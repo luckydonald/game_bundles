@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Baldur&#39;s Gate: The Complete Saga Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8400/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8400/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8400/source.json
+games:
+- name: 'Baldur''s Gate: Siege of Dragonspear'
+  ids:
+  - steam:385970
+  requires: []
+- name: 'Baldur''s Gate: Siege of Dragonspear Official Soundtrack'
+  ids:
+  - steam:459290
+  requires: []
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+  requires: []
+- name: 'Baldur''s Gate: Enhanced Edition'
+  ids:
+  - steam:228280
+  requires: []
+- name: 'Baldur''s Gate: Enhanced Edition Official Soundtrack'
+  ids:
+  - steam:459280
+  requires: []
+- name: 'Baldur''s Gate: Faces of Good and Evil'
+  ids:
+  - steam:687500
+  requires: []
+- name: 'Baldur''s Gate II: Enhanced Edition Official Soundtrack'
+  ids:
+  - steam:467620
+  requires: []

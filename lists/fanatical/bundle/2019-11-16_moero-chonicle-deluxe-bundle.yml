@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Moero Chronicle Deluxe Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8138/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8138/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8138/source.json
+games:
+- name: Moero Chronicle
+  ids:
+  - steam:638160
+  requires: []
+- name: Moero Chronicle - Deluxe Pack
+  ids:
+  - steam:688090
+  requires: []

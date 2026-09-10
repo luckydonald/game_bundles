@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8391/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8391/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8391/source.json
+games:
+- name: 'Endless Fables 3: Dark Moor'
+  ids:
+  - steam:867050
+  requires: []
+- name: 'Chronicles of Magic: Divided Kingdoms'
+  ids:
+  - steam:746840
+  requires: []
+- name: 'Lost Grimoires 3: The Forgotten Well'
+  ids:
+  - steam:740090
+  requires: []
+- name: 'Kingmaker: Rise to the Throne'
+  ids:
+  - steam:834390
+  requires: []
+- name: 'Path of Sin: Greed'
+  ids:
+  - steam:895420
+  requires: []
+- name: 'Queen''s Quest 4: Sacred Truce'
+  ids:
+  - steam:814030
+  requires: []
+- name: 'Noir Chronicles: City of Crime'
+  ids:
+  - steam:756500
+  requires: []
+- name: My Brother Rabbit
+  ids:
+  - steam:855640
+  requires: []

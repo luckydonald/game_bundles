@@ -1,0 +1,136 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own RPG Bundle (2020) — Select 3 Titles for $2.99, 5 Titles for $3.99,
+  7 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8912/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8912/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8912/source.json
+games:
+- name: 'Disciples 3: Reincarnation'
+  ids:
+  - unresolved:source:isthereanydeal:8912:disciples-3-reincarnation
+  requires: []
+- name: Lock's Quest
+  ids:
+  - steam:490080
+  requires: []
+- name: Rogue Wizards
+  ids:
+  - steam:392260
+  requires: []
+- name: Nadia Was Here
+  ids:
+  - unresolved:source:isthereanydeal:8912:nadia-was-here
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: 'Tokyo Twilight Ghost Hunters Daybreak: Special Gigs'
+  ids:
+  - steam:425460
+  requires: []
+- name: 'Cornerstone : The song of Tyrim'
+  ids:
+  - steam:284410
+  requires: []
+- name: 'Tales from Candlekeep: Tomb of Annihilation'
+  ids:
+  - unresolved:source:isthereanydeal:8912:tales-from-candlekeep-tomb-of-annihilation
+  requires: []
+- name: The Age of Decadence
+  ids:
+  - steam:230070
+  requires: []
+- name: 'King''s Bounty: The Legend'
+  ids:
+  - steam:25900
+  requires: []
+- name: VENDETTA - Curse of Raven's Cry
+  ids:
+  - steam:386280
+  requires: []
+- name: Wizardry 6 and 7
+  ids:
+  - unresolved:source:isthereanydeal:8912:wizardry-6-and-7
+  requires: []
+- name: Wizardry 8
+  ids:
+  - steam:245450
+  requires: []
+- name: World's Dawn
+  ids:
+  - steam:432010
+  requires: []
+- name: Eternity - The Last Unicorn
+  ids:
+  - steam:714250
+  requires: []
+- name: King's Bounty Warriors of the North Valhalla Edition
+  ids:
+  - steam:203350
+  requires: []
+- name: 'King''s Bounty: Armored Princess'
+  ids:
+  - steam:3170
+  requires: []
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+  requires: []
+- name: King's Bounty Crossworlds
+  ids:
+  - steam:63910
+  requires: []
+- name: One More Dungeon
+  ids:
+  - steam:415030
+  requires: []
+- name: Heroes of the Monkey Tavern
+  ids:
+  - steam:492500
+  requires: []
+- name: Legends of Eisenwald
+  ids:
+  - steam:246760
+  requires: []
+- name: Blood Knights
+  ids:
+  - steam:258220
+  requires: []
+- name: Chaos Reborn
+  ids:
+  - steam:319050
+  requires: []
+- name: Unexplored
+  ids:
+  - steam:506870
+  requires: []
+- name: Create an RPG Town with NPCs and Dialogs
+  ids:
+  - unresolved:source:isthereanydeal:8912:create-an-rpg-town-with-npcs-and-dialogs
+  requires: []
+- name: Game Character Customization with UMA
+  ids:
+  - unresolved:source:isthereanydeal:8912:game-character-customization-with-uma
+  requires: []
+- name: RPG Development - Turn-Based Battle System
+  ids:
+  - unresolved:source:isthereanydeal:8912:rpg-development-turn-based-battle-system
+  requires: []
+- name: Learn to Implement Game Saving
+  ids:
+  - unresolved:source:isthereanydeal:8912:learn-to-implement-game-saving
+  requires: []
+- name: Build a Micro-RPG
+  ids:
+  - unresolved:source:isthereanydeal:8912:build-a-micro-rpg
+  requires: []
+- name: bit Dungeon II
+  ids:
+  - steam:331440
+  requires: []

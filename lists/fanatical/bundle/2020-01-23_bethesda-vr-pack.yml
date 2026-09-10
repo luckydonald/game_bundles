@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bethesda VR Pack (2021) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8342/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8342/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8342/source.json
+games:
+- name: 'WOLFENSTEIN: Cyberpilot'
+  ids:
+  - steam:1056970
+  requires: []
+- name: DOOM VFR
+  ids:
+  - steam:650000
+  requires: []
+- name: 'The Elder Scrolls V: Skyrim VR'
+  ids:
+  - steam:611670
+  requires: []
+- name: Fallout 4 VR
+  ids:
+  - steam:611660
+  requires: []
