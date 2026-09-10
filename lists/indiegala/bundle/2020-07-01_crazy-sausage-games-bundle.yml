@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Crazy Sausage Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8947/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8947/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8947/source.json
+games:
+- name: Mysterious Adventure of Michael
+  ids:
+  - steam:670340
+  requires: []
+- name: Nation War:Chronicles | 国战:列国志传
+  ids:
+  - unresolved:source:isthereanydeal:8947:nation-war-chronicles-guo-zhan-lie-guo-zhi-chuan
+  requires: []
+- name: The Legend of the Dragonflame High School
+  ids:
+  - steam:696910
+  requires: []
+- name: Sausage Hunter
+  ids:
+  - steam:1296880
+  requires: []
+- name: Trailer Trashers
+  ids:
+  - steam:1248140
+  requires: []
+- name: Rover Wars
+  ids:
+  - steam:1259130
+  requires: []
+- name: Crazy Derby Racing
+  ids:
+  - steam:1333270
+  requires: []
+- name: Wordle
+  ids:
+  - steam:1334000
+  requires: []

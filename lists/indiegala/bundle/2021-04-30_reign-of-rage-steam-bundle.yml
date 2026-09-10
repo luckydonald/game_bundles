@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reign of Rage Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9986/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9986/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9986/source.json
+games:
+- name: Rest House 2 - The Wizard
+  ids:
+  - steam:1245580
+  requires: []
+- name: Terrordrome - Reign of the Legends
+  ids:
+  - steam:1291170
+  requires: []
+- name: FALCO AXE
+  ids:
+  - steam:1561870
+  requires: []
+- name: Rabbit Riot
+  ids:
+  - steam:1557230
+  requires: []
+- name: Caveman
+  ids:
+  - steam:1579030
+  requires: []
+- name: Sheriff Rage
+  ids:
+  - steam:1557240
+  requires: []
+- name: Galaxy Arena
+  ids:
+  - steam:1558420
+  requires: []

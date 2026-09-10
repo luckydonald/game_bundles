@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Diabolic Cat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9846/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9846/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9846/source.json
+games:
+- name: HA/CK
+  ids:
+  - steam:1002540
+  requires: []
+- name: Diabolic
+  ids:
+  - steam:801290
+  requires: []
+- name: 'One Gun: Cat'
+  ids:
+  - steam:924900
+  requires: []
+- name: Necesse
+  ids:
+  - steam:1169040
+  requires: []
+- name: Tinker Racers
+  ids:
+  - steam:1234620
+  requires: []
+- name: Block Dungeon
+  ids:
+  - steam:1394720
+  requires: []

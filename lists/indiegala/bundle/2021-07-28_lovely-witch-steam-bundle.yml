@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lovely Witch Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10296/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10296/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10296/source.json
+games:
+- name: Witch College
+  ids:
+  - steam:1116020
+  requires: []
+- name: Pleasure Airlines
+  ids:
+  - steam:1085110
+  requires: []
+- name: Lovely Heroines
+  ids:
+  - steam:1170290
+  requires: []
+- name: Space Love Delta
+  ids:
+  - steam:1430980
+  requires: []
+- name: The Legend of Arcadieu
+  ids:
+  - steam:1178710
+  requires: []
+- name: Witch College 2
+  ids:
+  - steam:1244850
+  requires: []
+- name: Hanapon Princess
+  ids:
+  - steam:1362980
+  requires: []
+- name: The Legend of Arcadieu 2
+  ids:
+  - steam:1445110
+  requires: []
