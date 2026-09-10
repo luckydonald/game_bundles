@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cobi Treasure Deluxe - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2642/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2642/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2642/source.json
+games:
+- name: Cobi Treasure Deluxe
+  ids:
+  - steam:301690
+  requires: []

@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: ASMR Universe - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3895/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3895/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3895/source.json
+games:
+- name: ASMR Universe
+  ids:
+  - steam:448830
+  requires: []

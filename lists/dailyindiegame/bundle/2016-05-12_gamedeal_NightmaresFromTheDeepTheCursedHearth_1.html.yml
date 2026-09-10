@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Nightmares From The Deep: The Cursed Heart - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3420/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3420/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3420/source.json
+games:
+- name: 'Nightmares From the Deep: The Cursed Heart'
+  ids:
+  - unresolved:source:isthereanydeal:3420:nightmares-from-the-deep-the-cursed-heart
+  requires: []

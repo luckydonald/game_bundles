@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bloop Reloaded - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3168/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3168/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3168/source.json
+games:
+- name: Bloop Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:3168:bloop-reloaded
+  requires: []

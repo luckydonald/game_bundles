@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1234/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1234/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1234/source.json
+games:
+- name: Project Night
+  ids:
+  - unresolved:source:isthereanydeal:1234:project-night
+  requires: []
+- name: 'Wisps: The Redeeming'
+  ids:
+  - unresolved:source:isthereanydeal:1234:wisps-the-redeeming
+  requires: []
+- name: 500 Years Act 1
+  ids:
+  - steam:357200
+  requires: []
+- name: Onager
+  ids:
+  - steam:705440
+  requires: []
+- name: Power-Up
+  ids:
+  - unresolved:source:isthereanydeal:1234:power-up
+  requires: []
+- name: Hacker Evolution
+  ids:
+  - steam:70100
+  requires: []
