@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Heroes 2 Bundle (2018) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6182/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6182/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6182/source.json
+games:
+- name: Sudeki
+  ids:
+  - steam:233350
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: Drakensang
+  ids:
+  - steam:12640
+  requires: []
+- name: Blood Knights
+  ids:
+  - steam:258220
+  requires: []
+- name: Deep Dungeons of Doom
+  ids:
+  - steam:325090
+  requires: []
+- name: Hero of the Kingdom
+  ids:
+  - steam:259550
+  requires: []

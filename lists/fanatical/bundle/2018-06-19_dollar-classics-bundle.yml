@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Classics Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6250/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6250/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6250/source.json
+games:
+- name: Marco Polo
+  ids:
+  - steam:781260
+  requires: []
+- name: The Great Escape
+  ids:
+  - steam:434800
+  requires: []
+- name: Alien Rampage
+  ids:
+  - steam:516440
+  requires: []
+- name: Bubble Ghost
+  ids:
+  - unresolved:source:isthereanydeal:6250:bubble-ghost
+  requires: []
+- name: Eternam
+  ids:
+  - steam:781250
+  requires: []
+- name: Spiritual Warfare & Wisdom Tree Collection
+  ids:
+  - steam:624550
+  requires: []
+- name: Drakkhen
+  ids:
+  - steam:781220
+  requires: []
+- name: Last Rites
+  ids:
+  - steam:814610
+  requires: []
+- name: Central Intelligence
+  ids:
+  - steam:814620
+  requires: []
+- name: Prophecy I - The Viking Child
+  ids:
+  - steam:719290
+  requires: []
+- name: Sleepwalker
+  ids:
+  - steam:814640
+  requires: []
+- name: Mystical
+  ids:
+  - steam:781240
+  requires: []
+- name: Tunnel B1
+  ids:
+  - steam:814600
+  requires: []
+- name: Where Time Stood Still
+  ids:
+  - steam:814580
+  requires: []
+- name: Elf
+  ids:
+  - steam:814630
+  requires: []
+- name: 'Hostage: Rescue Mission'
+  ids:
+  - steam:781290
+  requires: []
+- name: Chamber of the Sci-Mutant Priestess
+  ids:
+  - steam:768480
+  requires: []
+- name: King's Table - The Legend of Ragnarok
+  ids:
+  - steam:719310
+  requires: []
+- name: Daemonsgate
+  ids:
+  - steam:719300
+  requires: []
+- name: Chaos Control
+  ids:
+  - steam:781270
+  requires: []
+- name: Pushover
+  ids:
+  - steam:814650
+  requires: []

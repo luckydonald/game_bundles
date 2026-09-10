@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Order of Battle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6164/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6164/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6164/source.json
+games:
+- name: 'Order of Battle: Rising Sun'
+  ids:
+  - steam:464591
+  requires: []
+- name: 'Order of Battle: U.S. Pacific'
+  ids:
+  - steam:464590
+  requires: []
+- name: 'Order of Battle: World War II'
+  ids:
+  - steam:312450
+  requires: []
+- name: 'Order of Battle: Morning Sun'
+  ids:
+  - steam:412580
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tank Battle Dollar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6271/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6271/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6271/source.json
+games:
+- name: 'Tank Battle: Pacific'
+  ids:
+  - steam:665310
+  requires: []
+- name: 'Tank Battle: East Front'
+  ids:
+  - steam:613120
+  requires: []
+- name: 'Tank Battle: 1944'
+  ids:
+  - steam:396320
+  requires: []
+- name: 'Tank Battle: 1945'
+  ids:
+  - steam:540250
+  requires: []
+- name: 'Tank Battle: Blitzkrieg'
+  ids:
+  - steam:540150
+  requires: []
+- name: 'Tank Battle: North Africa'
+  ids:
+  - steam:465750
+  requires: []
+- name: 'Tank Battle: Normandy'
+  ids:
+  - steam:374940
+  requires: []

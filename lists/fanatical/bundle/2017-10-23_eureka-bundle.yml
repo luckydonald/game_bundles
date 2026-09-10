@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Eureka Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5560/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5560/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5560/source.json
+games:
+- name: Flippt
+  ids:
+  - unresolved:source:isthereanydeal:5560:flippt
+  requires: []
+- name: Alimardan's Mischief
+  ids:
+  - steam:694420
+  requires: []
+- name: oO
+  ids:
+  - steam:367570
+  requires: []
+- name: Metamorphabet
+  ids:
+  - steam:353280
+  requires: []
+- name: That's Mahjong!
+  ids:
+  - steam:547310
+  requires: []
+- name: Alimardan Meets Merlin
+  ids:
+  - steam:694430
+  requires: []
+- name: Zenge
+  ids:
+  - steam:461840
+  requires: []
+- name: Mystery Loss
+  ids:
+  - steam:689740
+  requires: []
+- name: Hook
+  ids:
+  - steam:367580
+  requires: []
+- name: klocki
+  ids:
+  - steam:499440
+  requires: []
+- name: TREBUCHET
+  ids:
+  - steam:336680
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: VR Realms Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5933/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5933/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5933/source.json
+games:
+- name: Drone Hunter VR
+  ids:
+  - steam:466520
+  requires: []
+- name: 'FATED: The Silent Oath'
+  ids:
+  - steam:401820
+  requires: []
+- name: Atlantis VR
+  ids:
+  - steam:741490
+  requires: []
+- name: Pyro VR
+  ids:
+  - steam:586360
+  requires: []
+- name: Firebird - La Peri
+  ids:
+  - steam:436490
+  requires: []
+- name: Viking Rage
+  ids:
+  - steam:589150
+  requires: []
+- name: Keep Defending
+  ids:
+  - steam:527720
+  requires: []
+- name: Snow Fortress
+  ids:
+  - steam:468740
+  requires: []
+- name: 'Reaching for Petals: VR Edition'
+  ids:
+  - steam:720290
+  requires: []
+- name: Craft Keep VR
+  ids:
+  - steam:546350
+  requires: []

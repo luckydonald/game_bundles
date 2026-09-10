@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Warner Legends Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6185/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6185/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6185/source.json
+games:
+- name: Mad Max
+  ids:
+  - steam:234140
+  requires: []
+- name: 'Batman: Arkham Origins'
+  ids:
+  - steam:209000
+  requires: []
+- name: 'Injustice: Gods Among Us - Ultimate Edition'
+  ids:
+  - steam:242700
+  requires: []
