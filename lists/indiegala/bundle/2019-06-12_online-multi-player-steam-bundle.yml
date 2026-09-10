@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: Online Multi-Player Bundle 1 — Tier 1
 references:
@@ -12,18 +12,24 @@ games:
 - name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm'
   ids:
   - steam:35450
+  requires: []
 - name: 'Crazy Soccer: Football Stars'
   ids:
   - steam:735550
+  requires: []
 - name: George VS Bonny PP Wars
   ids:
   - steam:663830
+  requires: []
 - name: Valnir Rok Survival RPG
   ids:
   - steam:658980
+  requires: []
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:7495:throne-of-lies-the-online-game-of-deceit
+  requires: []
 - name: 'Robothorium: Sci-fi Dungeon Crawler'
   ids:
   - unresolved:source:isthereanydeal:7495:robothorium-sci-fi-dungeon-crawler
+  requires: []

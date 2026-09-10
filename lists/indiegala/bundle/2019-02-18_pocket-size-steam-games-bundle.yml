@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: 'The Pocket-Size Bundle #1 — Tier 1'
 references:
@@ -12,9 +12,12 @@ games:
 - name: The Black Death
   ids:
   - unresolved:source:isthereanydeal:7040:the-black-death
+  requires: []
 - name: Hammerwatch
   ids:
   - steam:239070
+  requires: []
 - name: Hatred
   ids:
   - steam:341940
+  requires: []
