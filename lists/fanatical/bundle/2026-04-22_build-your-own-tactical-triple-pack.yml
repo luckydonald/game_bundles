@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Tactical Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16077/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16077/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16077/source.json
+games:
+- name: The Hive
+  ids:
+  - steam:325730
+  requires: []
+- name: Mercury Fallen
+  ids:
+  - steam:704510
+  requires: []
+- name: Railroad Corporation
+  ids:
+  - steam:797400
+  requires: []
+- name: Technotopia
+  ids:
+  - steam:2825110
+  requires: []
+- name: 'The Dungeon Of Naheulbeuk: The Amulet Of Chaos'
+  ids:
+  - steam:970830
+  requires: []
+- name: One Lonely Outpost
+  ids:
+  - steam:1465550
+  requires: []
+- name: 'Evil Genius 2: World Domination Deluxe Edition'
+  ids:
+  - steam:700600
+  requires: []
+- name: Castle Of Alchemists
+  ids:
+  - steam:1724770
+  requires: []
+- name: Necrosmith 2
+  ids:
+  - steam:2277320
+  requires: []
+- name: 'Operation: Polygon Storm'
+  ids:
+  - steam:2310160
+  requires: []
+- name: Skies above the Great War
+  ids:
+  - steam:2320040
+  requires: []
+- name: EcoGnomix
+  ids:
+  - steam:2473640
+  requires: []
+- name: Necroking
+  ids:
+  - steam:2852980
+  requires: []

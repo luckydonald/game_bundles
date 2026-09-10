@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #9 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5292/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5292/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5292/source.json
+games:
+- name: Countless Rooms of Death
+  ids:
+  - steam:341380
+  requires: []
+- name: Creature Clicker - Capture, Train, Ascend!
+  ids:
+  - steam:529240
+  requires: []
+- name: Glow
+  ids:
+  - steam:491830
+  requires: []
+- name: Hope in Hell
+  ids:
+  - steam:410040
+  requires: []
+- name: Inferno Puzzle
+  ids:
+  - steam:654980
+  requires: []
+- name: 'Fairyland: Incursion'
+  ids:
+  - unresolved:source:isthereanydeal:5292:fairyland-incursion
+  requires: []
+- name: Creature Clicker - Deluxe Pack
+  ids:
+  - steam:631332
+  requires: []
+- name: 'Fairyland: Fairy Power'
+  ids:
+  - unresolved:source:isthereanydeal:5292:fairyland-fairy-power
+  requires: []
+- name: 'One Late Night: Deadline'
+  ids:
+  - steam:337880
+  requires: []

@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Zenith Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16161/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16161/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16161/source.json
+games:
+- name: The Oddboxx
+  ids:
+  - unresolved:source:isthereanydeal:16161:the-oddboxx
+  requires: []
+- name: Starpoint Gemini Warlords Gold Pack
+  ids:
+  - unresolved:source:isthereanydeal:16161:starpoint-gemini-warlords-gold-pack
+  requires: []
+- name: The Forgotten City
+  ids:
+  - steam:874260
+  requires: []
+- name: 'Frostpunk: Game of the Year edition'
+  ids:
+  - unresolved:source:isthereanydeal:16161:frostpunk-game-of-the-year-edition
+  requires: []
+- name: Sniper Ghost Warrior Contracts 2
+  ids:
+  - steam:1338770
+  requires: []
+- name: Patron
+  ids:
+  - steam:1538570
+  requires: []
+- name: 'Oddworld: Soulstorm Enhanced Edition'
+  ids:
+  - steam:619390
+  requires: []
+- name: Aquatico
+  ids:
+  - steam:1812300
+  requires: []
+- name: 'Dino Hazard: Chronos Blackout'
+  ids:
+  - steam:1287540
+  requires: []
+- name: 'Punch Club 2: Fast Forward'
+  ids:
+  - steam:1161590
+  requires: []
+- name: Terra Memoria
+  ids:
+  - steam:1912750
+  requires: []
+- name: Pilo and the Holobook
+  ids:
+  - steam:2423270
+  requires: []
+- name: 'Oddworld: New ''n'' Tasty with Alf & Abe DLC Packs'
+  ids:
+  - unresolved:source:isthereanydeal:16161:oddworld-new-n-tasty-with-alf-and-abe-dlc-packs
+  requires: []
+- name: 'Troublemaker 2: Beyond Dream'
+  ids:
+  - steam:2479770
+  requires: []
+- name: SuperTaxCity
+  ids:
+  - steam:2881800
+  requires: []
+- name: 'Talisman: Digital 5th Edition'
+  ids:
+  - steam:908060
+  requires: []
+- name: Green Hell - Anniversary Edition
+  ids:
+  - steam:815370
+  requires: []
+- name: Wall World 2
+  ids:
+  - steam:3467710
+  requires: []
+- name: Knights of the Crusades
+  ids:
+  - steam:3440120
+  requires: []
+- name: Rogue Trooper, AvP Classic 2000 & Dredd Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:16161:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  requires: []

@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Arcane Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16142/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16142/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16142/source.json
+games:
+- name: Spellcaster University
+  ids:
+  - steam:895620
+  requires: []
+- name: Stirring Abyss
+  ids:
+  - steam:1178210
+  requires: []
+- name: Of Blades & Tails
+  ids:
+  - steam:1768780
+  requires: []
+- name: Spells & Secrets
+  ids:
+  - steam:1518220
+  requires: []
+- name: Hand of Doom
+  ids:
+  - steam:1924400
+  requires: []
+- name: RUNGORE
+  ids:
+  - steam:2113040
+  requires: []
+- name: 'Mystic Academy: Escape Room'
+  ids:
+  - steam:1991980
+  requires: []
+- name: Somber Echoes
+  ids:
+  - steam:1299290
+  requires: []
+- name: Bella Wants Blood
+  ids:
+  - steam:3007660
+  requires: []
+- name: Luck & Loot
+  ids:
+  - steam:3208110
+  requires: []
+- name: Ambidextro
+  ids:
+  - steam:3445580
+  requires: []
+- name: Dice With Death
+  ids:
+  - steam:3435260
+  requires: []
+- name: Witchy Business
+  ids:
+  - steam:3415230
+  requires: []
+- name: Dice of Kalma
+  ids:
+  - steam:3885520
+  requires: []
+- name: Fortune Seller
+  ids:
+  - steam:3874000
+  requires: []
+- name: 'Scholar Adventure: Mystery of Silence'
+  ids:
+  - steam:3929410
+  requires: []
