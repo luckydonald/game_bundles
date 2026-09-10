@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 730 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11018/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11018/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11018/source.json
+games:
+- name: CENTRALIA
+  ids:
+  - steam:1122110
+  requires: []
+- name: Commando Dog
+  ids:
+  - steam:1103650
+  requires: []
+- name: CHAIN SAW
+  ids:
+  - steam:1098670
+  requires: []
+- name: House of Evil 2
+  ids:
+  - steam:1051830
+  requires: []
+- name: EBOLA
+  ids:
+  - steam:1094660
+  requires: []
+- name: Sunny Smiles
+  ids:
+  - unresolved:source:isthereanydeal:11018:sunny-smiles
+  requires: []
+- name: 'Centralia: Homecoming'
+  ids:
+  - steam:1166740
+  requires: []
+- name: The Walking Evil
+  ids:
+  - steam:1215870
+  requires: []
+- name: The Moon Relax
+  ids:
+  - steam:1360360
+  requires: []

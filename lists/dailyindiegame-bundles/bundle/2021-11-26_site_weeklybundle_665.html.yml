@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 665 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10747/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10747/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10747/source.json
+games:
+- name: WestLand Adventure
+  ids:
+  - unresolved:source:isthereanydeal:10747:westland-adventure
+  requires: []
+- name: Quick Square
+  ids:
+  - steam:1446980
+  requires: []
+- name: Spinning_Kid_2
+  ids:
+  - steam:1447070
+  requires: []
+- name: Colored Shapes
+  ids:
+  - steam:1449380
+  requires: []
+- name: 'SMFly: Ice Age'
+  ids:
+  - steam:1447080
+  requires: []
+- name: Inside My Mind
+  ids:
+  - steam:1563820
+  requires: []
+- name: Shots fired in the Dark Forest
+  ids:
+  - steam:1564920
+  requires: []
+- name: Two Legs
+  ids:
+  - steam:1564950
+  requires: []
+- name: A Strange City
+  ids:
+  - steam:1564940
+  requires: []

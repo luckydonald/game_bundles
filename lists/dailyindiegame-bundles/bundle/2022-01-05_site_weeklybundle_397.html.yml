@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Limited Bundle 2 (2022) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10937/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10937/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10937/source.json
+games:
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+  requires: []
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:10937:the-adventures-of-chris
+  requires: []
+- name: Rym 9000
+  ids:
+  - steam:774561
+  requires: []
+- name: Woodlands
+  ids:
+  - steam:646100
+  requires: []
+- name: Airport Madness 4
+  ids:
+  - steam:387850
+  requires: []
+- name: REZPLZ
+  ids:
+  - steam:911680
+  requires: []
+- name: Dark Podval
+  ids:
+  - steam:1526780
+  requires: []
+- name: TOP TRUCK DRIVER
+  ids:
+  - steam:1547820
+  requires: []
+- name: 'Cybernetica: Final'
+  ids:
+  - steam:1549710
+  requires: []

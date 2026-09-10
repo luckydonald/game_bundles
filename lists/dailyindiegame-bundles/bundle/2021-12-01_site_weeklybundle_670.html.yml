@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Holiday Blowout 2021 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10771/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10771/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10771/source.json
+games:
+- name: 'Viki Spotter: Professions'
+  ids:
+  - unresolved:source:isthereanydeal:10771:viki-spotter-professions
+  requires: []
+- name: Cowboy's Adventure
+  ids:
+  - steam:666960
+  requires: []
+- name: 'The Warrior Of Treasures 2: Skull Hunter'
+  ids:
+  - steam:923240
+  requires: []
+- name: Stickman go
+  ids:
+  - unresolved:source:isthereanydeal:10771:stickman-go
+  requires: []
+- name: Inglorious Pirate
+  ids:
+  - unresolved:source:isthereanydeal:10771:inglorious-pirate
+  requires: []
+- name: Colorize
+  ids:
+  - steam:1348220
+  requires: []
+- name: Jad
+  ids:
+  - steam:1447060
+  requires: []
+- name: Tarek
+  ids:
+  - steam:1447090
+  requires: []
+- name: Angry Space Bees
+  ids:
+  - steam:1564930
+  requires: []

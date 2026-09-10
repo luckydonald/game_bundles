@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 699 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10910/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10910/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10910/source.json
+games:
+- name: Paradise Lost
+  ids:
+  - steam:982720
+  requires: []
+- name: Loveless cat
+  ids:
+  - unresolved:source:isthereanydeal:10910:loveless-cat
+  requires: []
+- name: 'Outliver: Redemption'
+  ids:
+  - steam:1011370
+  requires: []
+- name: Griefer
+  ids:
+  - steam:823040
+  requires: []
+- name: Save the Village
+  ids:
+  - steam:3229540
+  requires: []
+- name: Cursed Mummies
+  ids:
+  - unresolved:source:isthereanydeal:10910:cursed-mummies
+  requires: []
+- name: The Old House
+  ids:
+  - unresolved:source:isthereanydeal:10910:the-old-house
+  requires: []
+- name: Dark Side of War
+  ids:
+  - steam:1464610
+  requires: []
+- name: Lab BreakOut
+  ids:
+  - steam:1569760
+  requires: []
