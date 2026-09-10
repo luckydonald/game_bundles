@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Grim Trekker Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2460/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2460/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2460/source.json
+games:
+- name: Uncanny Valley
+  ids:
+  - steam:359580
+  requires: []
+- name: 'Paranautical Activity: Deluxe Atonement Edition'
+  ids:
+  - steam:250580
+  requires: []
+- name: Anoxemia
+  ids:
+  - steam:338050
+  requires: []
+- name: 'Letter Quest: Grimm''s Journey'
+  ids:
+  - steam:328730
+  requires: []
+- name: Vertical Drop Heroes HD
+  ids:
+  - steam:311480
+  requires: []
+- name: 'Three Fourths Home: Extended Edition'
+  ids:
+  - steam:344500
+  requires: []
+- name: Kraven Manor
+  ids:
+  - steam:296630
+  requires: []

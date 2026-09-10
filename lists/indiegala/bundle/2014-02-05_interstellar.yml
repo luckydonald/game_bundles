@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Interstellar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/546/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/546/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/546/source.json
+games:
+- name: Cubicity
+  ids:
+  - unresolved:source:isthereanydeal:546:cubicity
+  requires: []
+- name: PixelJunk Monsters Ultimate
+  ids:
+  - steam:243780
+  requires: []
+- name: Rush Bros
+  ids:
+  - steam:234490
+  requires: []
+- name: Sang-Froid - Tales of Werewolves
+  ids:
+  - steam:227220
+  requires: []
+- name: Finding Teddy
+  ids:
+  - steam:259600
+  requires: []
+- name: PixelJunk Shooter
+  ids:
+  - steam:255870
+  requires: []
+- name: Interstellar Marines
+  ids:
+  - unresolved:source:isthereanydeal:546:interstellar-marines
+  requires: []
+- name: Dynamite Jack
+  ids:
+  - steam:202730
+  requires: []
+- name: Interstellar Marines - Spearhead Edition
+  ids:
+  - steam:236370
+  requires: []
+- name: Beast Boxing Turbo
+  ids:
+  - unresolved:source:isthereanydeal:546:beast-boxing-turbo
+  requires: []

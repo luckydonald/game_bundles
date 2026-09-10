@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: July Madness Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/989/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/989/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/989/source.json
+games:
+- name: Mata Hari
+  ids:
+  - steam:18480
+  requires: []
+- name: The Chaos Engine
+  ids:
+  - steam:242530
+  requires: []
+- name: The Culling Of The Cows
+  ids:
+  - steam:297020
+  requires: []
+- name: Pressured
+  ids:
+  - steam:292620
+  requires: []
+- name: Speedball 2 HD
+  ids:
+  - steam:251690
+  requires: []
+- name: God Mode
+  ids:
+  - unresolved:source:isthereanydeal:989:god-mode
+  requires: []
+- name: Ice Cream Surfer
+  ids:
+  - steam:361560
+  requires: []
+- name: Perimeter
+  ids:
+  - steam:289440
+  requires: []
+- name: El Matador
+  ids:
+  - steam:289280
+  requires: []
+- name: Labyrinthine Dreams
+  ids:
+  - steam:278570
+  requires: []
+- name: Konung 2
+  ids:
+  - steam:289360
+  requires: []
+- name: Sweet Lily Dreams
+  ids:
+  - steam:300540
+  requires: []
+- name: 'Konung III: Ties of the Dynasty'
+  ids:
+  - steam:289380
+  requires: []
