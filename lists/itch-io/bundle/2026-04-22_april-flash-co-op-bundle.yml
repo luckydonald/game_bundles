@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: April Flash Co-op Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16076/source.json
+games:
+- name: Castle Warfare
+  ids:
+  - unresolved:source:isthereanydeal:16076:castle-warfare
+  requires: []
+- name: Mycelium Heaven
+  ids:
+  - steam:2656520
+  requires: []
+- name: Rabbit Horror Show
+  ids:
+  - unresolved:source:isthereanydeal:16076:rabbit-horror-show
+  requires: []
+- name: 'RUN!: The DLC Mission'
+  ids:
+  - unresolved:source:isthereanydeal:16076:run-the-dlc-mission
+  requires: []
+- name: Looped
+  ids:
+  - steam:2727850
+  requires: []
+- name: Grave Digger
+  ids:
+  - unresolved:source:isthereanydeal:16076:grave-digger
+  requires: []
+- name: Kill Will
+  ids:
+  - unresolved:source:isthereanydeal:16076:kill-will
+  requires: []
+- name: SPEED OF LIFE 3D
+  ids:
+  - unresolved:source:isthereanydeal:16076:speed-of-life-3d
+  requires: []
+- name: LILA
+  ids:
+  - unresolved:source:isthereanydeal:16076:lila
+  requires: []
+- name: BEHEMOTH™
+  ids:
+  - steam:3027260
+  requires: []
+- name: Abobi's Guide
+  ids:
+  - unresolved:source:isthereanydeal:16076:abobis-guide
+  requires: []
+- name: Insurance Fraud Simulator
+  ids:
+  - unresolved:source:isthereanydeal:16076:insurance-fraud-simulator
+  requires: []
+- name: Aryze
+  ids:
+  - unresolved:source:isthereanydeal:16076:aryze
+  requires: []
+- name: Cypress Galaxy
+  ids:
+  - unresolved:source:isthereanydeal:16076:cypress-galaxy
+  requires: []

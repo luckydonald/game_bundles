@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #25 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6210/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6210/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6210/source.json
+games:
+- name: Super Punchman
+  ids:
+  - steam:845570
+  requires: []
+- name: God of Failure
+  ids:
+  - steam:709190
+  requires: []
+- name: SOLITUNE
+  ids:
+  - steam:615670
+  requires: []
+- name: The Risers
+  ids:
+  - steam:857770
+  requires: []
+- name: 'Edepth Angel: Pinocchio''s Murder'
+  ids:
+  - steam:764780
+  requires: []
+- name: Forbidden Clicker Party
+  ids:
+  - steam:783200
+  requires: []
+- name: Battle for Enlor
+  ids:
+  - steam:614880
+  requires: []
+- name: Twist of Destiny
+  ids:
+  - unresolved:source:isthereanydeal:6210:twist-of-destiny
+  requires: []
+- name: Last Heroes
+  ids:
+  - steam:370710
+  requires: []
+- name: The Rex
+  ids:
+  - unresolved:source:isthereanydeal:6210:the-rex
+  requires: []

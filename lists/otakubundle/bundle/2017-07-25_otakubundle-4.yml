@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5354/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5354/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5354/source.json
+games:
+- name: Archangel
+  ids:
+  - steam:661520
+  requires: []
+- name: Rest House
+  ids:
+  - steam:582290
+  requires: []
+- name: 'Police: Destruction Street'
+  ids:
+  - unresolved:source:isthereanydeal:5354:police-destruction-street
+  requires: []
+- name: Akihabara - Feel the Rhythm
+  ids:
+  - steam:565660
+  requires: []
+- name: NakedMan VS The Clothes
+  ids:
+  - steam:592130
+  requires: []
+- name: Ping
+  ids:
+  - unresolved:source:isthereanydeal:5354:ping
+  requires: []
+- name: Life Beetle
+  ids:
+  - unresolved:source:isthereanydeal:5354:life-beetle
+  requires: []
+- name: Jump Like A Pirate
+  ids:
+  - unresolved:source:isthereanydeal:5354:jump-like-a-pirate
+  requires: []
+- name: Akihabara - Feel the Rhythm - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5354:akihabara-feel-the-rhythm-soundtrack
+  requires: []

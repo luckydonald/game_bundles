@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle DX #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5265/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5265/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5265/source.json
+games:
+- name: Narborion Saga
+  ids:
+  - steam:581340
+  requires: []
+- name: Wake
+  ids:
+  - steam:233530
+  requires: []
+- name: Toricky Demo
+  ids:
+  - unresolved:source:isthereanydeal:5265:toricky-demo
+  requires: []
+- name: Wordlase - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5265:wordlase-soundtrack
+  requires: []
+- name: Wordlase
+  ids:
+  - steam:602930
+  requires: []
+- name: Miaou Moon
+  ids:
+  - steam:513580
+  requires: []
+- name: Grey phobia
+  ids:
+  - steam:465050
+  requires: []
+- name: Runeyana
+  ids:
+  - steam:463670
+  requires: []

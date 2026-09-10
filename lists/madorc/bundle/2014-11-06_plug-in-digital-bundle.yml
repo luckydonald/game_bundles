@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Plug In Digital Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1362/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1362/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1362/source.json
+games:
+- name: Fly'n
+  ids:
+  - steam:223730
+  requires: []
+- name: Finding Teddy
+  ids:
+  - steam:259600
+  requires: []
+- name: "Meltdown \x96"
+  ids:
+  - steam:268220
+  requires: []
+- name: Legends of Persia
+  ids:
+  - steam:301220
+  requires: []
