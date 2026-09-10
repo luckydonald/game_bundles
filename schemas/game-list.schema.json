@@ -36,6 +36,14 @@
           },
           "title": "Requires",
           "type": "array"
+        },
+        "tiers": {
+          "items": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "title": "Tiers",
+          "type": "array"
         }
       },
       "required": [
@@ -110,6 +118,41 @@
       ],
       "title": "Reference",
       "type": "object"
+    },
+    "TierDefinition": {
+      "additionalProperties": false,
+      "description": "One purchase variation (\"tier\") of a bundle list.",
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "pick_quota": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pick Quota"
+        },
+        "rank": {
+          "minimum": 1,
+          "title": "Rank",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "rank",
+        "name"
+      ],
+      "title": "TierDefinition",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -168,18 +211,12 @@
       "title": "Schema",
       "type": "integer"
     },
-    "tier": {
-      "anyOf": [
-        {
-          "minimum": 1,
-          "type": "integer"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null,
-      "title": "Tier"
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/TierDefinition"
+      },
+      "title": "Tiers",
+      "type": "array"
     }
   },
   "required": [

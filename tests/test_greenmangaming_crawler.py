@@ -65,14 +65,13 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
 
     paths = write_gmg_offer(_offer(), lists_root, archive_root, tmp_path)
 
-    bundle_root = "greenmangaming/bundle/metroidvania-madness"
-    list_path = lists_root / bundle_root / "bundle.yml"
+    list_path = lists_root / "greenmangaming/bundle/metroidvania-madness.yml"
     metadata_path = archive_root / "greenmangaming/bundle/metroidvania-madness/metadata.json"
     source_path = archive_root / "greenmangaming/bundle/metroidvania-madness/source.json"
     assert set(paths) == {list_path, metadata_path, source_path}
 
     loaded = load_game_list(list_path, lists_root)
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
     assert loaded.data.name == "METROIDVANIA MADNESS — Bronze"
     assert loaded.data.crawlers == ["greenmangaming"]
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Afterimage", ["steam:1235140"])]
@@ -104,13 +103,16 @@ def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
 
     paths = write_gmg_offer(CrawledGmgOffer(archive=archive, source={}), tmp_path / "lists", tmp_path / "archives", tmp_path)
 
-    bundle_root = "greenmangaming/bundle/metroidvania-madness"
     lists_root = tmp_path / "lists"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
-    assert load_game_list(first_path, lists_root).data.tier == 1
-    assert load_game_list(second_path, lists_root).data.tier == 2
+    list_path = lists_root / "greenmangaming/bundle/metroidvania-madness.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {list_path}
+
+    loaded = load_game_list(list_path, lists_root)
+    assert [tier.rank for tier in loaded.data.tiers] == [1, 2]
+    assert loaded.data.name == "METROIDVANIA MADNESS"
+    games_by_name = {game.name: game for game in loaded.data.games}
+    assert games_by_name["Afterimage"].tiers == [1]
+    assert games_by_name["Silver Game"].tiers == [2]
 # end def test_writer_numbers_multiple_tiers
 
 

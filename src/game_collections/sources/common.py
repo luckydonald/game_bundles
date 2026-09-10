@@ -12,7 +12,7 @@ import yaml
 from pydantic import BaseModel, ValidationError
 from rapidfuzz import fuzz
 
-from game_collections.models import Game, GameList, Reference, duplicate_qualified_ids
+from game_collections.models import Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
 from game_collections.sources.storefronts import normalized_title
 
 
@@ -181,12 +181,28 @@ def find_matching_game(fresh_game: Game, candidates: list[Game]) -> Game | None:
 # end def find_matching_game
 
 
+def _carry_tiers(existing_game: Game, fresh_game: Game) -> Game:
+    """Keep `existing_game`'s manually-preserved identity but `fresh_game`'s tier membership.
+
+    Tier membership reflects the bundle's current, source-of-truth shape, not
+    manual curation, so a re-crawl must still update it even when the rest of
+    the game entry (`ids`/`group`) is preserved from `existing`.
+    """
+    if existing_game.tiers == fresh_game.tiers:
+        return existing_game
+    # end if
+    return existing_game.model_copy(update={"tiers": fresh_game.tiers})
+# end def _carry_tiers
+
+
 def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative: bool = False) -> GameList:
     """Combine a freshly-crawled list with any already-committed list at the same path.
 
     Appends (never overwrites) `references`, and otherwise takes bundle-level
-    metadata (`name`/`tier`/`pick_quota`) from `fresh` since that reflects the
-    source of truth, not manual curation.
+    metadata (`name`/`tiers`/`pick_quota`) from `fresh` since that reflects the
+    source of truth, not manual curation. Each matched game's tier membership
+    is likewise refreshed from `fresh` (see `_carry_tiers`) even though its
+    `ids`/`group` are preserved from `existing`.
 
     With `authoritative=False` (the default), games are only ever added, never
     removed: every existing `Game` entry is kept as-is (preserving manual
@@ -215,7 +231,12 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
     if not authoritative:
         existing_by_name = {game.name.casefold(): game for game in existing.games}
         fresh_names = {game.name.casefold() for game in fresh.games}
-        merged_games = [existing_by_name.get(game.name.casefold(), game) for game in fresh.games]
+        merged_games = [
+            _carry_tiers(existing_by_name[game.name.casefold()], game)
+            if game.name.casefold() in existing_by_name
+            else game
+            for game in fresh.games
+        ]
         merged_games.extend(game for game in existing.games if game.name.casefold() not in fresh_names)
         return fresh.model_copy(update={"games": merged_games, "references": references, "crawlers": crawlers})
     # end if
@@ -236,7 +257,7 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
         other_fresh_ids = total_fresh_ids - set(fresh_game.ids)
         if match is not None and other_fresh_ids.isdisjoint(match.ids):
             candidates.remove(match)
-            merged_games.append(match)
+            merged_games.append(_carry_tiers(match, fresh_game))
         else:
             merged_games.append(fresh_game)
         # end if
@@ -246,6 +267,43 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
         update={"games": merged_games, "invalid": candidates, "references": references, "crawlers": crawlers}
     )
 # end def merge_game_list
+
+
+def merge_tiered_games(
+    tiers: list[tuple[int, str, list[Game], int | None]],
+) -> tuple[list[TierDefinition], list[Game]]:
+    """Combine one bundle's per-tier game lists into one deduped roster.
+
+    Each element is `(rank, tier_name, games, pick_quota)` for one purchase
+    variation, ordered ascending by rank. A game is matched across tiers by
+    its qualified IDs (deterministic per source item, so the same item always
+    produces the same ID set on every tier it appears in); the first
+    occurrence's `name`/`group`/`requires` win, and every rank it's found on
+    is recorded on its `tiers` field. Works for both cumulative tiers (a
+    higher rank's list is a superset of lower ones) and non-cumulative ones
+    (e.g. a build-your-own-bundle tier sharing one identical pool across every
+    rank) since membership is read directly off each rank's own list rather
+    than assumed contiguous.
+    """
+    tier_definitions = [
+        TierDefinition(rank=rank, name=name, pick_quota=quota) for rank, name, _games, quota in tiers
+    ]
+    merged: dict[tuple[str, ...], Game] = {}
+    order: list[tuple[str, ...]] = []
+    for rank, _name, games, _quota in tiers:
+        for game in games:
+            key = tuple(sorted(game.ids))
+            existing_game = merged.get(key)
+            if existing_game is None:
+                merged[key] = game.model_copy(update={"tiers": [rank]})
+                order.append(key)
+            elif rank not in existing_game.tiers:
+                merged[key] = existing_game.model_copy(update={"tiers": [*existing_game.tiers, rank]})
+            # end if
+        # end for
+    # end for
+    return tier_definitions, [merged[key] for key in order]
+# end def merge_tiered_games
 
 
 def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path) -> str:
@@ -258,6 +316,14 @@ def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path
     if not value.get("crawlers"):
         value.pop("crawlers", None)
     # end if
+    if not value.get("tiers"):
+        value.pop("tiers", None)
+    # end if
+    for game in [*value.get("games", []), *value.get("invalid", [])]:
+        if not game.get("tiers"):
+            game.pop("tiers", None)
+        # end if
+    # end for
     return (
         f"# yaml-language-server: $schema={schema_path}\n"
         + yaml.safe_dump(value, sort_keys=False, allow_unicode=True)

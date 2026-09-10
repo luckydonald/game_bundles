@@ -280,11 +280,11 @@ def test_write_itad_offer_creates_archive_and_list(tmp_path: Path) -> None:
 
     metadata_path = archive_root / "isthereanydeal/bundle/1/metadata.json"
     source_path = archive_root / "isthereanydeal/bundle/1/source.json"
-    list_path = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    list_path = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness.yml"
     assert set(paths) == {metadata_path, source_path, list_path}
 
     loaded = load_game_list(list_path, lists_root)
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
     assert loaded.data.crawlers == ["isthereanydeal"]
     assert loaded.data.games == [Game(name="GRIME", ids=["steam:1123050"])]
     source = json.loads(source_path.read_text(encoding="utf-8"))
@@ -316,11 +316,13 @@ def test_write_itad_offer_numbers_multiple_tiers(tmp_path: Path) -> None:
     )
 
     bundle_root = "greenmangaming/bundle/2026-07-10_metroidvania-madness"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
-    assert load_game_list(first_path, lists_root).data.tier == 1
-    assert load_game_list(second_path, lists_root).data.tier == 2
+    list_path = lists_root / f"{bundle_root}.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {list_path}
+    loaded = load_game_list(list_path, lists_root)
+    assert [tier.rank for tier in loaded.data.tiers] == [1, 2]
+    games_by_name = {game.name: game for game in loaded.data.games}
+    assert games_by_name["GRIME"].tiers == [1, 2]
+    assert games_by_name["Second Game"].tiers == [2]
 # end def test_write_itad_offer_numbers_multiple_tiers
 
 
@@ -354,18 +356,15 @@ def test_write_itad_offer_byob_writes_one_list_per_pick_count(tmp_path: Path) ->
     )
 
     bundle_root = "greenmangaming/bundle/2026-07-10_metroidvania-madness"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
-    first = load_game_list(first_path, lists_root)
-    second = load_game_list(second_path, lists_root)
-    assert first.data.pick_quota == 1
-    assert first.data.tier == 1
-    assert second.data.pick_quota == 2
-    assert second.data.tier == 2
-    assert first.data.games == second.data.games == [
-        Game(name="GRIME", ids=["steam:1123050"]),
-        Game(name="Second Game", ids=["steam:99999"]),
+    list_path = lists_root / f"{bundle_root}.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {list_path}
+    loaded = load_game_list(list_path, lists_root)
+    assert [(tier.rank, tier.pick_quota) for tier in loaded.data.tiers] == [(1, 1), (2, 2)]
+    # BYOB tiers share one identical pool, so every game belongs to every rank.
+    assert all(game.tiers == [1, 2] for game in loaded.data.games)
+    assert [(game.name, game.ids) for game in loaded.data.games] == [
+        ("GRIME", ["steam:1123050"]),
+        ("Second Game", ["steam:99999"]),
     ]
 # end def test_write_itad_offer_byob_writes_one_list_per_pick_count
 
@@ -382,11 +381,11 @@ def test_write_itad_offer_byob_single_pick_count_uses_bundle_yml(tmp_path: Path)
         CrawledItadOffer(archive=archive, summary=offer.summary), lists_root, archive_root, tmp_path
     )
 
-    path = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    path = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness.yml"
     assert {p for p in paths if p.suffix == ".yml"} == {path}
     loaded = load_game_list(path, lists_root)
     assert loaded.data.pick_quota == 1
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
 # end def test_write_itad_offer_byob_single_pick_count_uses_bundle_yml
 
 

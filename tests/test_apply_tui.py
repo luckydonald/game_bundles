@@ -15,13 +15,34 @@ from game_collections.apply.tui import ApplyPickerApp, _NodeData
 
 
 def _write_list(lists_root: Path, list_id: str, *, item_count: int, tier: int | None, name: str) -> None:
-    path = lists_root / f"{list_id}.yml"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    games = [{"name": f"Game {index}", "ids": [f"steam:{1000 + index}"]} for index in range(item_count)]
-    document: dict[str, object] = {"schema": 1, "name": name, "games": games}
-    if tier is not None:
-        document["tier"] = tier
+    """Write one fixture list, merging sibling `tier=` calls sharing a base path.
+
+    A real multi-variation bundle is one merged `<key>.yml` file with a
+    `tiers:` list and per-game `tiers:` membership (see `models.GameList`);
+    `ApplyPickerApp` then expands it into one synthetic `<key>#tier-N` entry
+    per tier via `lists.expand_list_tiers`. Two `_write_list` calls whose
+    `list_id` differs only by a trailing `/tier-<N>` therefore write into the
+    same underlying file instead of two.
+    """
+    base = list_id.rsplit(f"/tier-{tier}", 1)[0] if tier is not None else list_id
+    path = lists_root / f"{base}.yml"
+    prefix = f"Game {tier}-" if tier is not None else "Game "
+    games = [
+        {"name": f"{prefix}{index}", "ids": [f"steam:{(tier or 0) * 1000 + index}"], "tiers": [tier] if tier else []}
+        for index in range(item_count)
+    ]
+
+    if tier is not None and path.exists():
+        document = yaml.safe_load(path.read_text(encoding="utf-8"))
+        document["tiers"].append({"rank": tier, "name": name})
+        document["games"].extend(games)
+    else:
+        document = {"schema": 1, "name": name, "games": games}
+        if tier is not None:
+            document["tiers"] = [{"rank": tier, "name": name}]
+        # end if
     # end if
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(yaml.safe_dump(document, sort_keys=False), encoding="utf-8")
 # end def _write_list
 
@@ -433,7 +454,7 @@ def test_ctrl_a_toggles_select_all_or_none(tmp_path: Path) -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             all_ids = {
-                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "greenmangaming/bundle/2026-02-01_b#tier-2",
                 "humblebundle/bundle/2026-01-01_a/bundle",
             }
             assert app._checked == all_ids
@@ -459,7 +480,7 @@ def test_ctrl_a_only_affects_bundles_passing_the_filter(tmp_path: Path) -> None:
             await _run_until_loaded(app, pilot)
             app.query_one("#filter-min-items", Input).value = "5"
             await pilot.pause()
-            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b#tier-2"}
 
             await pilot.press("ctrl+a")
             await pilot.pause()
@@ -505,11 +526,11 @@ def test_bundles_pre_checked_and_grouped_by_source(tmp_path: Path) -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert app._checked == {
-                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "greenmangaming/bundle/2026-02-01_b#tier-2",
                 "humblebundle/bundle/2026-01-01_a/bundle",
             }
             assert set(_source_nodes(app)) == {"greenmangaming", "humblebundle"}
-            assert _leaf_list_ids(app, "greenmangaming") == ["greenmangaming/bundle/2026-02-01_b/tier-2"]
+            assert _leaf_list_ids(app, "greenmangaming") == ["greenmangaming/bundle/2026-02-01_b#tier-2"]
             assert _leaf_list_ids(app, "humblebundle") == ["humblebundle/bundle/2026-01-01_a/bundle"]
         # end async with
     # end def scenario
@@ -520,7 +541,7 @@ def test_bundles_pre_checked_and_grouped_by_source(tmp_path: Path) -> None:
 
 def test_status_line_shows_shown_and_selected_counts(tmp_path: Path) -> None:
     async def scenario() -> None:
-        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b#tier-2"})
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             status = app.query_one("#status", Static).renderable
@@ -541,7 +562,7 @@ def test_status_line_shows_shown_and_selected_counts(tmp_path: Path) -> None:
 
 def test_previously_excluded_bundle_starts_unchecked(tmp_path: Path) -> None:
     async def scenario() -> None:
-        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b#tier-2"})
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert app._checked == {"humblebundle/bundle/2026-01-01_a/bundle"}
@@ -557,7 +578,7 @@ def test_toggling_bundle_leaf_toggles_only_itself(tmp_path: Path) -> None:
         app = ApplyPickerApp(_make_lists_root(tmp_path), excluded=set())
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            app._toggle(_NodeData(kind="bundle", source="greenmangaming", list_id="greenmangaming/bundle/2026-02-01_b/tier-2"))
+            app._toggle(_NodeData(kind="bundle", source="greenmangaming", list_id="greenmangaming/bundle/2026-02-01_b#tier-2"))
             await pilot.pause()
             assert app._checked == {"humblebundle/bundle/2026-01-01_a/bundle"}
         # end async with
@@ -584,7 +605,7 @@ def test_toggling_source_node_toggles_all_its_bundles(tmp_path: Path) -> None:
             await pilot.pause()
             assert "humblebundle/bundle/2026-01-01_a/bundle" not in app._checked
             assert "humblebundle/bundle/2026-04-01_d/bundle" not in app._checked
-            assert "greenmangaming/bundle/2026-02-01_b/tier-2" in app._checked
+            assert "greenmangaming/bundle/2026-02-01_b#tier-2" in app._checked
 
             app._toggle(_NodeData(kind="source", source="humblebundle"))
             await pilot.pause()
@@ -774,19 +795,19 @@ def test_filter_deselects_non_matching_bundles(tmp_path: Path) -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert app._checked == {
-                "greenmangaming/bundle/2026-02-01_b/tier-2",
+                "greenmangaming/bundle/2026-02-01_b#tier-2",
                 "humblebundle/bundle/2026-01-01_a/bundle",
             }
 
             # min-items excludes the 3-item humblebundle bundle, leaving the 10-item one
             app.query_one("#filter-min-items", Input).value = "5"
             await pilot.pause()
-            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b#tier-2"}
 
             # widening the filter back doesn't resurrect the deselected bundle (one-way ratchet)
             app.query_one("#filter-min-items", Input).value = ""
             await pilot.pause()
-            assert app._checked == {"greenmangaming/bundle/2026-02-01_b/tier-2"}
+            assert app._checked == {"greenmangaming/bundle/2026-02-01_b#tier-2"}
         # end async with
     # end def scenario
 
@@ -861,7 +882,7 @@ def test_manually_deselected_bundle_stays_visible_regardless_of_show_filtered(tm
     # a bundle that isn't excluded by any active filter is always shown, whether the
     # user unchecked it by hand or not - "show filtered" only concerns filtered bundles
     async def scenario() -> None:
-        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b/tier-2"})
+        app = ApplyPickerApp(_make_lists_root(tmp_path), excluded={"greenmangaming/bundle/2026-02-01_b#tier-2"})
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             app.query_one("#filter-show-filtered", Checkbox).value = True
@@ -884,20 +905,20 @@ def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path)
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
             assert {
-                "vendorx/bundle/2026-03-01_c/tier-1",
-                "vendorx/bundle/2026-03-01_c/tier-2",
+                "vendorx/bundle/2026-03-01_c#tier-1",
+                "vendorx/bundle/2026-03-01_c#tier-2",
             } <= app._checked
 
             app.query_one("#filter-tiers", Select).value = "highest"
             await pilot.pause()
-            assert "vendorx/bundle/2026-03-01_c/tier-1" not in app._checked
-            assert "vendorx/bundle/2026-03-01_c/tier-2" in app._checked
+            assert "vendorx/bundle/2026-03-01_c#tier-1" not in app._checked
+            assert "vendorx/bundle/2026-03-01_c#tier-2" in app._checked
 
             app.query_one("#filter-tiers", Select).value = "all"
             await pilot.pause()
             assert {
-                "vendorx/bundle/2026-03-01_c/tier-1",
-                "vendorx/bundle/2026-03-01_c/tier-2",
+                "vendorx/bundle/2026-03-01_c#tier-1",
+                "vendorx/bundle/2026-03-01_c#tier-2",
             } <= app._checked
         # end async with
     # end def scenario
@@ -997,7 +1018,7 @@ def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> No
     async def scenario() -> None:
         async with app.run_test() as pilot:
             await _run_until_loaded(app, pilot)
-            app._toggle(_NodeData(kind="bundle", source="greenmangaming", list_id="greenmangaming/bundle/2026-02-01_b/tier-2"))
+            app._toggle(_NodeData(kind="bundle", source="greenmangaming", list_id="greenmangaming/bundle/2026-02-01_b#tier-2"))
             await pilot.pause()
             app.action_save()
             await pilot.pause()
@@ -1010,9 +1031,9 @@ def test_unchecking_and_saving_produces_expected_selection(tmp_path: Path) -> No
 
     assert app.return_value is not None
     assert app.return_value.selection.selected == ["humblebundle/bundle/2026-01-01_a/bundle"]
-    assert app.return_value.selection.excluded == ["greenmangaming/bundle/2026-02-01_b/tier-2"]
+    assert app.return_value.selection.excluded == ["greenmangaming/bundle/2026-02-01_b#tier-2"]
     assert [game_list.id for game_list in app.all_game_lists] == [
-        "greenmangaming/bundle/2026-02-01_b/tier-2",
+        "greenmangaming/bundle/2026-02-01_b#tier-2",
         "humblebundle/bundle/2026-01-01_a/bundle",
     ]
 # end def test_unchecking_and_saving_produces_expected_selection
