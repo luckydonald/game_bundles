@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Hidden Gems Bundle 2 — Select 1 Title for $1.00, 5 Titles for
+  $2.99, 10 Titles for $4.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11275/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11275/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11275/source.json
+games:
+- name: Journey of a Roach
+  ids:
+  - steam:255300
+  requires: []
+- name: Size Matters
+  ids:
+  - steam:976700
+  requires: []
+- name: Silence
+  ids:
+  - steam:314790
+  requires: []
+- name: Crazy Machines 3
+  ids:
+  - steam:351920
+  requires: []
+- name: Skyhill
+  ids:
+  - steam:382140
+  requires: []
+- name: Paw Paw Paw
+  ids:
+  - steam:1037910
+  requires: []
+- name: Ken Follett's The Pillars of the Earth
+  ids:
+  - steam:234270
+  requires: []
+- name: My Big Sister
+  ids:
+  - steam:733300
+  requires: []
+- name: 'Scheming Through The Zombie Apocalypse: The Beginning'
+  ids:
+  - steam:813540
+  requires: []
+- name: The Mims Beginning
+  ids:
+  - steam:337820
+  requires: []
+- name: State of Mind
+  ids:
+  - steam:437630
+  requires: []
+- name: AVICII Invector
+  ids:
+  - steam:986800
+  requires: []
+- name: Mad Tracks
+  ids:
+  - steam:1202970
+  requires: []
+- name: Danger Scavenger
+  ids:
+  - steam:1169740
+  requires: []
+- name: Hextones
+  ids:
+  - steam:1570750
+  requires: []
+- name: Underland
+  ids:
+  - steam:1528050
+  requires: []
+- name: 'Underland: The Climb'
+  ids:
+  - steam:1592340
+  requires: []
+- name: 'Hextones: Spacetime'
+  ids:
+  - steam:1652720
+  requires: []
+- name: Hidden Shapes Old West - Jigsaw Puzzle Game
+  ids:
+  - steam:1653870
+  requires: []
+- name: Hidden Shapes Black Skull - Jigsaw Puzzle Game
+  ids:
+  - steam:1692580
+  requires: []
+- name: 'Hextones: Spacetime Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:11275:hextones-spacetime-soundtrack
+  requires: []
+- name: Farm Kitten - Puzzle Pipes
+  ids:
+  - steam:1721270
+  requires: []
+- name: Give Me More Pills
+  ids:
+  - steam:1752610
+  requires: []
+- name: Mining Cats
+  ids:
+  - steam:1837920
+  requires: []

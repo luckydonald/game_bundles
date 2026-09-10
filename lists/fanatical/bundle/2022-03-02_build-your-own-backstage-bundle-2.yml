@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Backstage Bundle 2 — Select 3 Titles for $4.99, 5 Titles for
+  $7.99, 7 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11116/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11116/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11116/source.json
+games:
+- name: 'Wargame: European Escalation'
+  ids:
+  - steam:58610
+  requires: []
+- name: 'Wargame: AirLand Battle'
+  ids:
+  - steam:222750
+  requires: []
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020
+  requires: []
+- name: Main Assembly
+  ids:
+  - steam:1078920
+  requires: []
+- name: Victor Vran ARPG
+  ids:
+  - steam:345180
+  requires: []
+- name: 'Driftland: The Magic Revival'
+  ids:
+  - steam:718650
+  requires: []
+- name: SPINTIRES
+  ids:
+  - unresolved:source:isthereanydeal:11116:spintires
+  requires: []
+- name: Chess Ultra
+  ids:
+  - steam:518060
+  requires: []
+- name: TOHU
+  ids:
+  - steam:1075200
+  requires: []
+- name: Moon Hunters
+  ids:
+  - steam:320040
+  requires: []
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+  requires: []
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+  requires: []
+- name: The Shrouded Isle
+  ids:
+  - steam:501320
+  requires: []
+- name: Goat of Duty
+  ids:
+  - steam:555000
+  requires: []
+- name: Cat Quest
+  ids:
+  - steam:593280
+  requires: []
+- name: My Memory of Us
+  ids:
+  - steam:651500
+  requires: []
+- name: Verdun
+  ids:
+  - steam:242860
+  requires: []
+- name: Blue Fire
+  ids:
+  - steam:1220150
+  requires: []
