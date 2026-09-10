@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Hype Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13210/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13210/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13210/source.json
+games:
+- name: Spinnortality | cyberpunk management sim
+  ids:
+  - steam:822990
+  requires: []
+- name: Alchemist's Awakening
+  ids:
+  - steam:431450
+  requires: []
+- name: Output Pasture
+  ids:
+  - steam:1156900
+  requires: []
+- name: 'The Wake: Mourning Father, Mourning Mother'
+  ids:
+  - steam:1311540
+  requires: []
+- name: Hype Prototype
+  ids:
+  - steam:1694550
+  requires: []
+- name: Decks Of Power
+  ids:
+  - steam:2216700
+  requires: []

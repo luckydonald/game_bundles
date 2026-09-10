@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: December Delights Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12759/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12759/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12759/source.json
+games:
+- name: Lust of the Apartment Wives
+  ids:
+  - steam:1201950
+  requires: []
+- name: Neighbor Watching
+  ids:
+  - steam:1448630
+  requires: []
+- name: Nakadashi Banzai
+  ids:
+  - steam:1201960
+  requires: []
+- name: Blood price
+  ids:
+  - steam:1300270
+  requires: []
+- name: Men's completion plan
+  ids:
+  - unresolved:source:isthereanydeal:12759:mens-completion-plan
+  requires: []
+- name: School Detective Yamako
+  ids:
+  - unresolved:source:isthereanydeal:12759:school-detective-yamako
+  requires: []
+- name: Ren the Summoner and the Erotic Dungeon
+  ids:
+  - steam:1653030
+  requires: []
+- name: Ecstasy Elf Shotenken -Naruru's Sexy Adventure
+  ids:
+  - steam:1678770
+  requires: []

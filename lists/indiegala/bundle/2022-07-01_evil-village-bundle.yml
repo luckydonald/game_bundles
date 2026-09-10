@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Evil Village Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11707/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11707/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11707/source.json
+games:
+- name: EBOLA
+  ids:
+  - steam:1094660
+  requires: []
+- name: 'Centralia: Homecoming'
+  ids:
+  - steam:1166740
+  requires: []
+- name: Zombie Claus
+  ids:
+  - steam:1213640
+  requires: []
+- name: The Walking Evil
+  ids:
+  - steam:1215870
+  requires: []
+- name: EBOLA 2
+  ids:
+  - steam:1437050
+  requires: []
+- name: VILLAGE THE SIBERIA
+  ids:
+  - steam:1819800
+  requires: []

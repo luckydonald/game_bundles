@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Twilight Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12248/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12248/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12248/source.json
+games:
+- name: Skautfold - Usurper
+  ids:
+  - steam:603020
+  requires: []
+- name: Project Heartbeat
+  ids:
+  - steam:1216230
+  requires: []
+- name: Jester / King
+  ids:
+  - steam:1424300
+  requires: []
+- name: 'Twilight Town: A Cyberpunk Day In Life'
+  ids:
+  - steam:1572990
+  requires: []
+- name: My Inner Darkness Is A Hot Anime Girl!
+  ids:
+  - steam:1753050
+  requires: []
+- name: Neko Journey
+  ids:
+  - steam:1737730
+  requires: []
