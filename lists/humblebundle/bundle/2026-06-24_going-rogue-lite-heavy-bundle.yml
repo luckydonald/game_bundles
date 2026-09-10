@@ -2,6 +2,8 @@
 schema: 1
 name: 'Going Rogue: A Lite Heavy Bundle'
 tiers:
+- rank: 1
+  name: 4 Item Bundle
 - rank: 2
   name: Entire 9 Item Bundle
 references:
@@ -12,6 +14,27 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-06-24_going-rogue-lite-heavy-bundle/source.json
 games:
+- name: None Shall Intrude
+  ids:
+  - steam:2518630
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Rogue Legacy
+  ids:
+  - steam:241600
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: UnderMine
+  ids:
+  - steam:656350
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: Brutal Orchestra
   ids:
   - steam:1734320
@@ -39,24 +62,6 @@ games:
 - name: 'Lynked: Banner of the Spark'
   ids:
   - steam:3159570
-  requires: []
-  tiers:
-  - 2
-- name: None Shall Intrude
-  ids:
-  - steam:2518630
-  requires: []
-  tiers:
-  - 2
-- name: Rogue Legacy
-  ids:
-  - steam:241600
-  requires: []
-  tiers:
-  - 2
-- name: UnderMine
-  ids:
-  - steam:656350
   requires: []
   tiers:
   - 2

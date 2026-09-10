@@ -2,6 +2,8 @@
 schema: 1
 name: Power Up Pride Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:523210
   requires: []
   tiers:
+  - 1
   - 3
 - name: Welcome To Elk
   ids:
   - steam:1015940
   requires: []
   tiers:
+  - 1
   - 3
 - name: Heart of the Woods
   ids:
   - steam:844660
   requires: []
   tiers:
+  - 1
   - 3
 - name: Haven
   ids:

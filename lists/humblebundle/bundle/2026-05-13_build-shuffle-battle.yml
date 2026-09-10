@@ -2,6 +2,8 @@
 schema: 1
 name: Build, Shuffle, Battle! Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:2315400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Placid Plastic Deck - A Quiet Quest
   ids:
   - steam:2510020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deck of Haunts
   ids:
   - steam:3179730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Occlude
   ids:
   - steam:3547010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dogpile
   ids:
   - steam:3839300
   requires: []
   tiers:
+  - 1
   - 2
 - name: BOOK OF HOURS
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Frontline Assault
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:33100
   requires: []
   tiers:
+  - 1
   - 2
 - name: Praetorians
   ids:
   - steam:277460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Street Racing Syndicate
   ids:
   - steam:292410
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombie Shooter
   ids:
   - steam:33130
   requires: []
   tiers:
+  - 1
   - 2
 - name: YASAI NINJA
   ids:
   - steam:372150
   requires: []
   tiers:
+  - 1
   - 2
 - name: What's under your blanket !?
   ids:
   - unresolved:source:isthereanydeal:3022:whats-under-your-blanket
   requires: []
   tiers:
+  - 1
   - 2
 - name: Alien Shooter 2 Reloaded
   ids:

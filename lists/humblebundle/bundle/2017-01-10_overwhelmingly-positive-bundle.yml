@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Overwhelmingly Positive Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:405640
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shantae and the Pirate's Curse
   ids:
   - steam:345820
   requires: []
   tiers:
+  - 1
   - 3
 - name: Epic Battle Fantasy 4
   ids:
   - steam:265610
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bit Blaster XL
   ids:

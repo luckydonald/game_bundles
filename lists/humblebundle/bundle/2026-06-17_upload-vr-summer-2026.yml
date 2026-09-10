@@ -2,6 +2,8 @@
 schema: 1
 name: Upload VR Summer 2026
 tiers:
+- rank: 1
+  name: 2 Item Bundle
 - rank: 3
   name: Entire 9 Item Bundle
 references:
@@ -12,6 +14,20 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-06-17_upload-vr-summer-2026/source.json
 games:
+- name: 'Among Us 3D: VR'
+  ids:
+  - steam:1849900
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Zero Caliber VR
+  ids:
+  - steam:877200
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: VTOL VR
   ids:
   - steam:667970
@@ -51,18 +67,6 @@ games:
 - name: Arizona Sunshine Remake
   ids:
   - steam:2897700
-  requires: []
-  tiers:
-  - 3
-- name: 'Among Us 3D: VR'
-  ids:
-  - steam:1849900
-  requires: []
-  tiers:
-  - 3
-- name: Zero Caliber VR
-  ids:
-  - steam:877200
   requires: []
   tiers:
   - 3

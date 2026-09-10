@@ -2,6 +2,8 @@
 schema: 1
 name: Steel & Giants Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:38230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rail Cargo Simulator
   ids:
   - steam:446490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Realms of Arkania 1 - Blade of Destiny Classic
   ids:
   - steam:267670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Industry Giant 2
   ids:

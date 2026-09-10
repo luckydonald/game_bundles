@@ -2,6 +2,8 @@
 schema: 1
 name: Blitz Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:371410
   requires: []
   tiers:
+  - 1
   - 2
 - name: The lost wizard
   ids:
   - steam:727110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Greenwood the Last Ritual
   ids:
   - steam:536410
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sacra Terra: Kiss of Death Collector''s Edition'
   ids:

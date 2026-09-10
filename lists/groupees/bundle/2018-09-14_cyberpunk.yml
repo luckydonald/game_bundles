@@ -2,6 +2,8 @@
 schema: 1
 name: Cyberpunk Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:339710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tross
   ids:
   - steam:443850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Longest Journey, The
   ids:
   - unresolved:source:isthereanydeal:6457:longest-journey-the
   requires: []
   tiers:
+  - 1
   - 2
 - name: Master Reboot
   ids:

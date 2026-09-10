@@ -2,6 +2,8 @@
 schema: 1
 name: Evoland Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:259600
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Nicolas Eymerich The Inquisitor - Book I: The Plague'
   ids:
   - steam:279500
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Lady
   ids:

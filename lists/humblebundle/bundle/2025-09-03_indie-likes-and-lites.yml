@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Likes & Lites Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:787810
   requires: []
   tiers:
+  - 1
   - 2
 - name: Luck be a Landlord
   ids:
   - steam:1404850
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Ouroboros King
   ids:
   - steam:2096510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rack and Slay
   ids:
   - steam:2311990
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Meteorfall: Krumit''s Tale'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Omega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:585450
   requires: []
   tiers:
+  - 1
   - 3
 - name: JumpJet Rex
   ids:
   - steam:329460
   requires: []
   tiers:
+  - 1
   - 3
 - name: Caveblazers
   ids:
   - steam:452060
   requires: []
   tiers:
+  - 1
   - 3
 - name: Drink More Glurp
   ids:

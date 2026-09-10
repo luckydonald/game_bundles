@@ -2,6 +2,8 @@
 schema: 1
 name: Chicken in a Box
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 4
   name: Tier 4
 references:
@@ -17,6 +19,7 @@ games:
   - steam:412730
   requires: []
   tiers:
+  - 1
   - 4
 - name: Fast and Curious
   ids:

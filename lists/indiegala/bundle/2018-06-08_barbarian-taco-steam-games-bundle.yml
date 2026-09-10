@@ -2,6 +2,8 @@
 schema: 1
 name: Barbarian Taco Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:706240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombie Quarantine
   ids:
   - steam:360400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Elite Force
   ids:
   - steam:855850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crafting Tycoon
   ids:

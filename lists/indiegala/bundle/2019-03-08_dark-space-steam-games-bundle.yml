@@ -2,6 +2,8 @@
 schema: 1
 name: Dark Space Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:585950
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Deed
   ids:
   - steam:420740
   requires: []
   tiers:
+  - 1
   - 2
 - name: Snake Eyes Dungeon
   ids:
   - steam:740240
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Space Pilgrim Episode I: Alpha Centauri'
   ids:

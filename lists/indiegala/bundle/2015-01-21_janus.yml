@@ -2,6 +2,8 @@
 schema: 1
 name: Blades of Janus
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:1562:dracula-5-the-blood-legacy
   requires: []
   tiers:
+  - 1
   - 2
 - name: Betrayer
   ids:
   - unresolved:source:isthereanydeal:1562:betrayer
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dracula 4: Shadow of the Dragon'
   ids:
   - unresolved:source:isthereanydeal:1562:dracula-4-shadow-of-the-dragon
   requires: []
   tiers:
+  - 1
   - 2
 - name: Primal Carnage
   ids:

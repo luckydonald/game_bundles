@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Assassin's Creed Bundle
 tiers:
+- rank: 1
+  name: $1 Tier
 - rank: 3
   name: $15 Tier
 references:
@@ -17,24 +19,28 @@ games:
   - steam:354380
   requires: []
   tiers:
+  - 1
   - 3
 - name: Assassin's Creed™ Director's Cut Edition
   ids:
   - steam:15100
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Assassin''s Creed® Chronicles: Russia'
   ids:
   - steam:359600
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Assassin''s Creed® Chronicles: India'
   ids:
   - steam:359610
   requires: []
   tiers:
+  - 1
   - 3
 - name: Assassin's Creed® III
   ids:

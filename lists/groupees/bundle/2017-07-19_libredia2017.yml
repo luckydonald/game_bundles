@@ -2,6 +2,8 @@
 schema: 1
 name: Libredia Summer Sale Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,30 +19,35 @@ games:
   - unresolved:source:isthereanydeal:5334:chernobyl-terrorist-attack
   requires: []
   tiers:
+  - 1
   - 3
 - name: Zombie Solitaire
   ids:
   - steam:311850
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'I Am Vegend: Zombiegeddon'
   ids:
   - steam:302460
   requires: []
   tiers:
+  - 1
   - 3
 - name: Kingdom Tales
   ids:
   - steam:276440
   requires: []
   tiers:
+  - 1
   - 3
 - name: Redneck Racers
   ids:
   - steam:288730
   requires: []
   tiers:
+  - 1
   - 3
 - name: Where Angels Cry
   ids:

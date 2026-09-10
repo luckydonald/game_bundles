@@ -2,6 +2,8 @@
 schema: 1
 name: Serious Sam Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-17-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:111600
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Serious Sam: The Random Encounter'
   ids:
   - steam:201480
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Serious Sam: Kamikaze Attack'
   ids:
   - steam:1623420
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Serious Sam Classics: Revolution'
   ids:
   - steam:227780
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Serious Sam HD: The Second Encounter'
   ids:

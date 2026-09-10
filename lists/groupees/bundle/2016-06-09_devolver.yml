@@ -2,6 +2,8 @@
 schema: 1
 name: Devolver Digital Films Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:465150
   requires: []
   tiers:
+  - 1
   - 3
 - name: Motivational Growth
   ids:
   - unresolved:source:isthereanydeal:3558:motivational-growth
   requires: []
   tiers:
+  - 1
   - 3
 - name: Magnetic
   ids:
   - unresolved:source:isthereanydeal:3558:magnetic
   requires: []
   tiers:
+  - 1
   - 3
 - name: Gaming In Color
   ids:

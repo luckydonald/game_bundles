@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Shootout
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:628750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bumper
   ids:
   - steam:509850
   requires: []
   tiers:
+  - 1
   - 2
 - name: HellGunner
   ids:
   - unresolved:source:isthereanydeal:5228:hellgunner
   requires: []
   tiers:
+  - 1
   - 2
 - name: Robo Do It
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Long Dozen Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:452650
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Go Mission: Space Travel'
   ids:
   - unresolved:source:isthereanydeal:4237:go-mission-space-travel
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bibou
   ids:
   - unresolved:source:isthereanydeal:4237:bibou
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kabitis
   ids:
   - unresolved:source:isthereanydeal:4237:kabitis
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
   ids:

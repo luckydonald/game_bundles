@@ -2,6 +2,8 @@
 schema: 1
 name: Let 'Em Cook Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:846800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Epic Chef
   ids:
   - steam:1312960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cafe Owner Simulator
   ids:
   - steam:1498140
   requires: []
   tiers:
+  - 1
   - 2
 - name: PlateUp!
   ids:
   - steam:1599600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cooking Simulator
   ids:

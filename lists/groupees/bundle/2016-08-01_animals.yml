@@ -2,6 +2,8 @@
 schema: 1
 name: World of Animals
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:276220
   requires: []
   tiers:
+  - 1
   - 2
 - name: My Riding Stables
   ids:
   - unresolved:source:isthereanydeal:3836:my-riding-stables
   requires: []
   tiers:
+  - 1
   - 2
 - name: My Pet Hotel
   ids:
   - steam:276380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Riding Star
   ids:

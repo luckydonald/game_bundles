@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Capcom Rising Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:220440
   requires: []
   tiers:
+  - 1
   - 3
 - name: Umbrella Corps™
   ids:
   - steam:390340
   requires: []
   tiers:
+  - 1
   - 3
 - name: STRIDER™ / ストライダー飛竜®
   ids:
   - steam:235210
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Dead Rising® 2: Off The Record'
   ids:

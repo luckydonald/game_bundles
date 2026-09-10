@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 12
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:279800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Secret Order 2: Masked Intent'
   ids:
   - steam:399890
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Lost Grimoires: Stolen Kingdom'
   ids:

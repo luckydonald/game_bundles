@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Codemasters Bundle 2020
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:8892:grid-autosport
   requires: []
   tiers:
+  - 1
   - 3
 - name: Toybox Turbos
   ids:
   - unresolved:source:isthereanydeal:8892:toybox-turbos
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Operation Flashpoint: Dragon Rising'
   ids:
   - unresolved:source:isthereanydeal:8892:operation-flashpoint-dragon-rising
   requires: []
   tiers:
+  - 1
   - 3
 - name: Overlord II
   ids:
   - steam:12810
   requires: []
   tiers:
+  - 1
   - 3
 - name: DiRT Rally
   ids:

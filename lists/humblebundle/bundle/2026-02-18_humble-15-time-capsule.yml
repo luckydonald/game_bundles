@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble 15: Time Capsule Bundle'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:18700
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lugaru HD
   ids:
   - steam:25010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Samorost 2
   ids:
   - steam:40720
   requires: []
   tiers:
+  - 1
   - 2
 - name: Osmos
   ids:
   - steam:29180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Inkbound
   ids:

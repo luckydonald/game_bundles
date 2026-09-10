@@ -2,6 +2,8 @@
 schema: 1
 name: Humble CI Games 2020 Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:836770
   requires: []
   tiers:
+  - 1
   - 3
 - name: Chronicles of Mystery The Tree of Life
   ids:
   - steam:837090
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dogfight 1942
   ids:
   - steam:217790
   requires: []
   tiers:
+  - 1
   - 3
 - name: "Alien Rage \x96 Unlimited"
   ids:
   - steam:217920
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Chronicles of Mystery: The Scorpio Ritual'
   ids:
   - steam:34800
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sniper Ghost Warrior 3
   ids:

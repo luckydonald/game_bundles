@@ -2,6 +2,8 @@
 schema: 1
 name: Divergent Kingdoms Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:347270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Seven Kingdoms 2 HD
   ids:
   - steam:338800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 18 Wheels of Steel American Long Haul
   ids:
   - steam:12520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hunting Unlimited 2010
   ids:

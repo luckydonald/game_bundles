@@ -2,6 +2,8 @@
 schema: 1
 name: Narrative Masterpieces
 tiers:
+- rank: 1
+  name: 3 Item Bundle
 - rank: 3
   name: Entire 12 Item Bundle
 references:
@@ -21,6 +23,30 @@ crawlers:
 - humblebundle
 - isthereanydeal
 games:
+- name: Along the Edge
+  ids:
+  - steam:504390
+  - isthereanydeal:along-the-edge
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: We. The Revolution
+  ids:
+  - steam:736850
+  - isthereanydeal:we-the-revolution
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: 'Crowns and Pawns: Kingdom of Deceit'
+  ids:
+  - steam:1125910
+  - isthereanydeal:crowns-and-pawns-kingdom-of-deceit
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: IMMORTALITY
   ids:
   - steam:1350200
@@ -82,27 +108,6 @@ games:
   ids:
   - steam:716500
   - isthereanydeal:eliza
-  requires: []
-  tiers:
-  - 3
-- name: Along the Edge
-  ids:
-  - steam:504390
-  - isthereanydeal:along-the-edge
-  requires: []
-  tiers:
-  - 3
-- name: We. The Revolution
-  ids:
-  - steam:736850
-  - isthereanydeal:we-the-revolution
-  requires: []
-  tiers:
-  - 3
-- name: 'Crowns and Pawns: Kingdom of Deceit'
-  ids:
-  - steam:1125910
-  - isthereanydeal:crowns-and-pawns-kingdom-of-deceit
   requires: []
   tiers:
   - 3

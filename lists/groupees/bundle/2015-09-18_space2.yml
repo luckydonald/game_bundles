@@ -2,6 +2,8 @@
 schema: 1
 name: Space Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:420270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Robot Samurai Zombie Slayer
   ids:
   - steam:364100
   requires: []
   tiers:
+  - 1
   - 2
 - name: Houston, we have a problem
   ids:

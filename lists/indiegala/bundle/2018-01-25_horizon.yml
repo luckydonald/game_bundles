@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Horizon Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:604010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Harts
   ids:
   - steam:769360
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dragon Boar and Lady Rabbit
   ids:
   - steam:769370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nemo_DO
   ids:

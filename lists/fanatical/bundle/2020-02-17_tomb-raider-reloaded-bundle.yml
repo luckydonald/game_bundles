@@ -2,6 +2,8 @@
 schema: 1
 name: Tomb Raider Reloaded Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:224980
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tomb Raider VI: The Angel of Darkness (2003)'
   ids:
   - steam:225020
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tomb Raider V: Chronicles (2000)'
   ids:
   - steam:225000
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tomb Raider: Underworld'
   ids:

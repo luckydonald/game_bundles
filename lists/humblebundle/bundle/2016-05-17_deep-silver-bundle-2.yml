@@ -2,6 +2,8 @@
 schema: 1
 name: Deep Silver Bundle 2
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:40300
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Risen 2: Dark Waters Gold Edition'
   ids:
   - unresolved:source:isthereanydeal:3441:risen-2-dark-waters-gold-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dead Island Game of the Year Edition
   ids:
   - unresolved:source:isthereanydeal:3441:dead-island-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sacred 3 Gold Edition
   ids:
   - unresolved:source:isthereanydeal:3441:sacred-3-gold-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Saints Row 2
   ids:
   - steam:9480
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Saints Row: The Third - The Full Package'
   ids:

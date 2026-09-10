@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Adult Swim Games Bundle
 tiers:
+- rank: 1
+  name: Pay What You Want
 - rank: 3
   name: Pay $12 or more
 references:
@@ -17,24 +19,28 @@ games:
   - steam:390040
   requires: []
   tiers:
+  - 1
   - 3
 - name: Volgarr the Viking
   ids:
   - steam:247240
   requires: []
   tiers:
+  - 1
   - 3
 - name: WASTED
   ids:
   - steam:327510
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Westerado: Double Barreled'
   ids:
   - steam:275200
   requires: []
   tiers:
+  - 1
   - 3
 - name: Rise & Shine
   ids:

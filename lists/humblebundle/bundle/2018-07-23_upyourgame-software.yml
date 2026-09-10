@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Software Bundle: Up Your Game!'
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 2
   name: Beat the Average
 references:
@@ -17,6 +19,7 @@ games:
   - steam:374400
   requires: []
   tiers:
+  - 1
   - 2
 - name: DisplayFusion
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: War Commander Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1202130
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer 40,000: Battlesector'
   ids:
   - steam:1295500
   requires: []
   tiers:
+  - 1
   - 3
 - name: Headquarters World War II
   ids:
   - steam:1840800
   requires: []
   tiers:
+  - 1
   - 3
 - name: Panzer Corps 2
   ids:

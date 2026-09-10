@@ -2,6 +2,8 @@
 schema: 1
 name: Freddy's Halloween Bundle
 tiers:
+- rank: 1
+  name: Pay $1 or more for Steam keys
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:365020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Shutter
   ids:
   - steam:359560
   requires: []
   tiers:
+  - 1
   - 2
 - name: Spectre
   ids:
   - steam:314950
   requires: []
   tiers:
+  - 1
   - 2
 - name: You Deserve
   ids:

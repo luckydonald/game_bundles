@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #60'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:907220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Money Master
   ids:
   - steam:929460
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Cat and the Coup (4K Remaster)
   ids:
   - unresolved:source:isthereanydeal:6590:the-cat-and-the-coup-4k-remaster
   requires: []
   tiers:
+  - 1
   - 2
 - name: GROOD
   ids:

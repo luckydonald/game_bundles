@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Handhelds Bundle
 tiers:
+- rank: 1
+  name: 2 Item Bundle
 - rank: 3
   name: Entire 7 Item Bundle
 references:
@@ -18,6 +20,7 @@ games:
   - isthereanydeal:amid-evil
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Children of Morta: Complete Edition'
   ids:
@@ -25,6 +28,7 @@ games:
   - isthereanydeal:children-of-morta-complete-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Nova Drift
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Realms Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5317:adventure-rage
   requires: []
   tiers:
+  - 1
   - 2
 - name: Castle Defender
   ids:
   - steam:651520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Desert Ashes
   ids:
   - steam:324420
   requires: []
   tiers:
+  - 1
   - 2
 - name: Oddplanet
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Daedalic Entertainment Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:268540
   requires: []
   tiers:
+  - 1
   - 3
 - name: A New Beginning - Final Cut
   ids:
   - steam:105000
   requires: []
   tiers:
+  - 1
   - 3
 - name: Caravan
   ids:
   - steam:352890
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Franz Kafka Videogame
   ids:

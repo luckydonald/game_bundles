@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Mayhem
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:420740
   requires: []
   tiers:
+  - 1
   - 2
 - name: Circularity
   ids:
   - steam:709380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Forgotten Land
   ids:
   - steam:685990
   requires: []
   tiers:
+  - 1
   - 2
 - name: Slugs Destroyer
   ids:

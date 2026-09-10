@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Aftermath
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:418440
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gal-X-E
   ids:
   - steam:473510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Let's Draw
   ids:
   - steam:575490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ghostship Aftermath
   ids:

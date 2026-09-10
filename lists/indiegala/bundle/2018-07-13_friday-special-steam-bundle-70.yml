@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #70'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6302:lepur
   requires: []
   tiers:
+  - 1
   - 2
 - name: BattleStar Mazay
   ids:
   - unresolved:source:isthereanydeal:6302:battlestar-mazay
   requires: []
   tiers:
+  - 1
   - 2
 - name: mr.Vegan
   ids:
   - steam:873610
   requires: []
   tiers:
+  - 1
   - 2
 - name: Watchlist
   ids:

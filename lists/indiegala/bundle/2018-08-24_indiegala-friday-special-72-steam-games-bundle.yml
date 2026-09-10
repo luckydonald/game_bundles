@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #72'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6407:accurate-segmentation
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kenshō
   ids:
   - steam:766000
   requires: []
   tiers:
+  - 1
   - 2
 - name: MIND TWINS - The Twisted Co-op Platformer
   ids:
   - unresolved:source:isthereanydeal:6407:mind-twins-the-twisted-co-op-platformer
   requires: []
   tiers:
+  - 1
   - 2
 - name: Revolution 25th Anniversary Documentary
   ids:

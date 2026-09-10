@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #62'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:655910
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Atomic Adam: Episode 1'
   ids:
   - steam:764280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Endless Horde
   ids:
   - steam:618610
   requires: []
   tiers:
+  - 1
   - 2
 - name: TZOMPANTLI
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Spooktacular Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:292860
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'SPY Fox in: Cheese Chase'
   ids:
   - steam:292280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hyperspeed
   ids:
   - steam:347260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Age of Enigma - The Secret of the Sixth Ghost
   ids:

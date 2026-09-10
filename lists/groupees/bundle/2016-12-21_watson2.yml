@@ -2,6 +2,8 @@
 schema: 1
 name: Wats On Groupees - Play Indies
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:519990
   requires: []
   tiers:
+  - 1
   - 2
 - name: Krampus
   ids:
   - unresolved:source:isthereanydeal:4511:krampus
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deep Space Dash
   ids:
   - steam:493650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Midnight Carnival
   ids:
   - steam:546980
   requires: []
   tiers:
+  - 1
   - 2
 - name: HTR+ Slot Car Simulation
   ids:

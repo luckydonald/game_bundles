@@ -2,6 +2,8 @@
 schema: 1
 name: The Gearbox Collection
 tiers:
+- rank: 1
+  name: Rare
 - rank: 3
   name: Legendary
 references:
@@ -18,6 +20,7 @@ games:
   - isthereanydeal:borderlands-game-of-the-year-enhanced
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tribes of Midgard
   ids:
@@ -25,6 +28,7 @@ games:
   - isthereanydeal:tribes-of-midgard
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tiny Tina''s Wonderlands: Chaotic Great Edition'
   ids:

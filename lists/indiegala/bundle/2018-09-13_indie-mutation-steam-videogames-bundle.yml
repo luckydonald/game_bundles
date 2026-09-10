@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Mutation Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:895470
   requires: []
   tiers:
+  - 1
   - 2
 - name: dead forest
   ids:
   - steam:588140
   requires: []
   tiers:
+  - 1
   - 2
 - name: Doors Push or Pull
   ids:
   - steam:854390
   requires: []
   tiers:
+  - 1
   - 2
 - name: 立方杀阵（Cubic Kill Array）
   ids:

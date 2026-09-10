@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine Endgame
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:994870
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Chess: King of Crowns Chess Online'
   ids:
   - unresolved:source:isthereanydeal:7621:chess-king-of-crowns-chess-online
   requires: []
   tiers:
+  - 1
   - 2
 - name: Charlie II - Expansion Pack
   ids:

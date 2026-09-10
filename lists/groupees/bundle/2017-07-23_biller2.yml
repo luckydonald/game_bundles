@@ -2,6 +2,8 @@
 schema: 1
 name: Billerica&#39;s Premiere Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:592020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mars 2030
   ids:
   - steam:510850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sonya: The Great Adventure'
   ids:
   - steam:558780
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dyna Bomb
   ids:
   - steam:467220
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'I Can''t Escape: Darkness'
   ids:

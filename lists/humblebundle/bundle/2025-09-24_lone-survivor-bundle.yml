@@ -2,6 +2,8 @@
 schema: 1
 name: Lone Survivor Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:738520
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'State of Decay 2: Juggernaut Edition'
   ids:
   - steam:495420
   requires: []
   tiers:
+  - 1
   - 2
 - name: Above Snakes
   ids:
   - steam:1589120
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Force of Nature 2: Ghost Keeper'
   ids:
   - steam:1316230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Forager
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Forgotten Realms Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:257350
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Baldur''s Gate: Enhanced Edition'
   ids:
   - steam:228280
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Icewind Dale: Enhanced Edition'
   ids:
   - steam:321800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Baldur''s Gate: Siege of Dragonspear'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Fugitive Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:422970
   requires: []
   tiers:
+  - 1
   - 3
 - name: Blood Bowl - Chaos Edition
   ids:
   - steam:216890
   requires: []
   tiers:
+  - 1
   - 3
 - name: S.T.A.L.K.E.R. Shadow of Chernobyl
   ids:
   - steam:4500
   requires: []
   tiers:
+  - 1
   - 3
 - name: Flashing Lights - Police, Fire, EMS
   ids:

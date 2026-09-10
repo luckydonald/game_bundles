@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #52'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:789730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pipe Push Paradise
   ids:
   - steam:721390
   requires: []
   tiers:
+  - 1
   - 2
 - name: Object "Cleaning"
   ids:
   - steam:781880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tiny Rails
   ids:

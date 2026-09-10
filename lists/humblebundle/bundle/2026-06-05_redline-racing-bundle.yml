@@ -2,6 +2,8 @@
 schema: 1
 name: Redline Racing Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:675010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Descenders
   ids:
   - steam:681280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Parking Garage Rally Circuit
   ids:
   - steam:2737300
   requires: []
   tiers:
+  - 1
   - 2
 - name: art of rally
   ids:

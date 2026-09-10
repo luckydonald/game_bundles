@@ -2,6 +2,8 @@
 schema: 1
 name: Perplexing Puzzles Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:2685900
   requires: []
   tiers:
+  - 1
   - 3
 - name: Proverbs
   ids:
   - steam:3083300
   requires: []
   tiers:
+  - 1
   - 3
 - name: Linkito
   ids:

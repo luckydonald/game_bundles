@@ -2,6 +2,8 @@
 schema: 1
 name: HeroCraftPC Complete Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-11-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:352220
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'FootLOL: Epic Soccer League'
   ids:
   - steam:263740
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'INSOMNIA: The Ark'
   ids:

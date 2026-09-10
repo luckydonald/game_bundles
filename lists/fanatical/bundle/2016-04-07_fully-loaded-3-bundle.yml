@@ -2,6 +2,8 @@
 schema: 1
 name: Fully Loaded 3 Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:438080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Adorables
   ids:
   - steam:366760
   requires: []
   tiers:
+  - 1
   - 2
 - name: My Name is Mayo
   ids:
   - steam:434260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Recursion Deluxe
   ids:

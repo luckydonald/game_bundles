@@ -2,6 +2,8 @@
 schema: 1
 name: Supernova Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:375010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon of Gain
   ids:
   - steam:340030
   requires: []
   tiers:
+  - 1
   - 2
 - name: Retaliation
   ids:
   - unresolved:source:isthereanydeal:2958:retaliation
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bomb The Monsters
   ids:
   - steam:355020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nebula Online
   ids:

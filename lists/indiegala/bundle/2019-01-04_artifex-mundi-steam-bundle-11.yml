@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 11
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:284730
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Fairy Tale Mysteries 2: The Beanstalk'
   ids:
   - steam:403510
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Nightmares From the Deep: The Cursed Heart'
   ids:
   - unresolved:source:isthereanydeal:6872:nightmares-from-the-deep-the-cursed-heart
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Faces of Illusion: The Twin Phantoms'
   ids:

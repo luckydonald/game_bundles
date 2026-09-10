@@ -2,6 +2,8 @@
 schema: 1
 name: Retro Gems Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:327920
   requires: []
   tiers:
+  - 1
   - 2
 - name: Putt-Putt® and Pep's Balloon-o-Rama
   ids:
   - steam:284000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sprint Cars Road to Knoxville
   ids:
   - steam:12590
   requires: []
   tiers:
+  - 1
   - 2
 - name: 18 Wheels of Steel Convoy
   ids:

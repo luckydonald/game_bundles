@@ -2,6 +2,8 @@
 schema: 1
 name: Paradox Interactive Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,30 +19,35 @@ games:
   - steam:25980
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Majesty 2: Kingmaker'
   ids:
   - steam:42881
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Game of Dwarves
   ids:
   - steam:200370
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Kings Crusade: New Allies'
   ids:
   - unresolved:source:isthereanydeal:2097:the-kings-crusade-new-allies
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Kings' Crusade
   ids:
   - steam:42920
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Warlock: Master of the Arcane'
   ids:

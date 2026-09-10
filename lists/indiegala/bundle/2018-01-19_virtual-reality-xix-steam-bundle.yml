@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XIX Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:586990
   requires: []
   tiers:
+  - 1
   - 2
 - name: airRevo VR
   ids:
   - steam:594150
   requires: []
   tiers:
+  - 1
   - 2
 - name: Journey to Alien Worlds
   ids:
   - steam:628960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bits n Bullets
   ids:

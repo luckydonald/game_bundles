@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Indie Playstation Bundle 2019
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:347000
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grim Fandango Remastered
   ids:
   - steam:316790
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Bard's Tale
   ids:
   - unresolved:source:isthereanydeal:6965:the-bards-tale
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Wasteland 2: Director''s Cut'
   ids:

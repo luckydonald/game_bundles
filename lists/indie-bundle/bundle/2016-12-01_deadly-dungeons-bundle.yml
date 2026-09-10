@@ -2,6 +2,8 @@
 schema: 1
 name: Deadly Dungeons Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4427:dwarf-quest
   requires: []
   tiers:
+  - 1
   - 2
 - name: Knytt Underground
   ids:
   - steam:248190
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Fray
   ids:
   - unresolved:source:isthereanydeal:4427:dungeon-fray
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dary's Legend
   ids:

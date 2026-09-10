@@ -2,6 +2,8 @@
 schema: 1
 name: X Universe Collection Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:2850
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'X: Beyond The Frontier'
   ids:
   - steam:2840
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'X2: The Threat'
   ids:
   - steam:2800
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'X3: Terran Conflict'
   ids:

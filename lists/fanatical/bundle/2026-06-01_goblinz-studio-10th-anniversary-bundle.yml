@@ -2,6 +2,8 @@
 schema: 1
 name: Goblinz Studio 10th Anniversary Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1989070
   requires: []
   tiers:
+  - 1
   - 3
 - name: Luxman Moonlit Market
   ids:
   - steam:3642440
   requires: []
   tiers:
+  - 1
   - 3
 - name: Microtopia
   ids:

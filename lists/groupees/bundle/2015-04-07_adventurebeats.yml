@@ -2,6 +2,8 @@
 schema: 1
 name: Adventure Beats Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:341690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Alphabeats
   ids:
   - unresolved:source:isthereanydeal:1775:alphabeats
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sentinel
   ids:
   - steam:293200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Red Johnson's Chronicles - 1+2 - Steam Special Edition
   ids:

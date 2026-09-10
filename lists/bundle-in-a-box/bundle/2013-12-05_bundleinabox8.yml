@@ -2,6 +2,8 @@
 schema: 1
 name: The Indie Ordinary Gamer Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,30 +19,35 @@ games:
   - steam:314450
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition Episode 1: The Hangman'
   ids:
   - unresolved:source:isthereanydeal:441:cognition-episode-1-the-hangman
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Slender: The Five Pages'
   ids:
   - unresolved:source:isthereanydeal:441:slender-the-five-pages
   requires: []
   tiers:
+  - 1
   - 2
 - name: QbQbQb
   ids:
   - steam:329320
   requires: []
   tiers:
+  - 1
   - 2
 - name: One Finger Death Punch
   ids:
   - steam:264200
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cognition Episode 2: The Wise Monkey'
   ids:

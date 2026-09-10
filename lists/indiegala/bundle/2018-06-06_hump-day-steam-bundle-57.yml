@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #57'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:763520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gunlock
   ids:
   - steam:750450
   requires: []
   tiers:
+  - 1
   - 2
 - name: Air Threat
   ids:
   - unresolved:source:isthereanydeal:6217:air-threat
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark SASI
   ids:

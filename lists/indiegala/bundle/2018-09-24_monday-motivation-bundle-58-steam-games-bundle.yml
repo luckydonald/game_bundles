@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #58'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:918680
   requires: []
   tiers:
+  - 1
   - 2
 - name: THE ART - Puzzle
   ids:
   - unresolved:source:isthereanydeal:6498:the-art-puzzle
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chill Out
   ids:
   - unresolved:source:isthereanydeal:6498:chill-out
   requires: []
   tiers:
+  - 1
   - 2
 - name: Negative World
   ids:

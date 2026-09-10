@@ -2,6 +2,8 @@
 schema: 1
 name: Remute XX Anarchy Enterprises
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:406080
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Age of Castles: Warlords'
   ids:
   - steam:371710
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Zombie Apocalypse: Escape The Undead City'
   ids:
   - steam:492490
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Ghost Encounters: Deadwood - Collector''s Edition'
   ids:
   - steam:353070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hide and Secret Treasure of the Ages
   ids:
   - steam:489470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Miner Mayhem
   ids:

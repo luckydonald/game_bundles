@@ -2,6 +2,8 @@
 schema: 1
 name: WB Games™ Classics Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6592:middle-earth-shadow-of-mordor-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: Scribblenauts Unlimited
   ids:
   - steam:218680
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Batman: Arkham Origins'
   ids:
   - steam:209000
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bastion
   ids:

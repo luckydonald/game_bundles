@@ -2,6 +2,8 @@
 schema: 1
 name: 'The Casual Bundle #8'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:349060
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Worm
   ids:
   - steam:405070
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Trendpoker 3D: Texas Hold''em Poker'
   ids:
   - steam:662230
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Puppy Dog: Jigsaw Puzzles'
   ids:

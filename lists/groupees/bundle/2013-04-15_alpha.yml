@@ -2,6 +2,8 @@
 schema: 1
 name: Alpha Funding Groupee
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:196:piratehell
   requires: []
   tiers:
+  - 1
   - 2
 - name: Enola - The Original Soundtrack
   ids:
   - steam:497200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Prospector
   ids:
   - unresolved:source:isthereanydeal:196:dungeon-prospector
   requires: []
   tiers:
+  - 1
   - 2
 - name: Enola
   ids:
   - steam:263520
   requires: []
   tiers:
+  - 1
   - 2
 - name: Realm Explorer
   ids:

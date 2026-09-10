@@ -2,6 +2,8 @@
 schema: 1
 name: Controller'd Chaos Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1449280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sunset Overdrive
   ids:
   - steam:847370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Destroy All Humans
   ids:
   - steam:803330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rain on Your Parade
   ids:
   - steam:1213230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Maneater
   ids:

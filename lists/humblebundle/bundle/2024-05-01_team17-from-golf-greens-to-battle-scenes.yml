@@ -2,6 +2,8 @@
 schema: 1
 name: 'Team17: From Gold Greens to Battle Scenes Bundle'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:996770
   requires: []
   tiers:
+  - 1
   - 4
 - name: Golf With Your Friends
   ids:
   - steam:431240
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Escapists 2
   ids:
   - steam:641990
   requires: []
   tiers:
+  - 1
   - 4
 - name: Worms W.M.D
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Legends 9 Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:457680
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ice Lakes
   ids:
   - steam:393430
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 1
   - 3
 - name: Monstrum
   ids:
   - steam:296710
   requires: []
   tiers:
+  - 1
   - 3
 - name: Medieval Kingdom Wars
   ids:

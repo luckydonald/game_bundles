@@ -2,6 +2,8 @@
 schema: 1
 name: Let&#39;s Build a Doujin Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:340440
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'QUALIA 3: Multi Agent Deluxe Edition'
   ids:
   - steam:290440
   requires: []
   tiers:
+  - 1
   - 2
 - name: Akane the Kunoichi
   ids:
   - steam:291130
   requires: []
   tiers:
+  - 1
   - 2
 - name: dUpLicity ~Beyond the Lies~
   ids:
   - steam:335690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Stagelight
   ids:

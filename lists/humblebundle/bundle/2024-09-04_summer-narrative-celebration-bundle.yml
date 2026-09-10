@@ -2,6 +2,8 @@
 schema: 1
 name: Summer Narrative Celebration Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:735290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Death and Taxes
   ids:
   - steam:1166290
   requires: []
   tiers:
+  - 1
   - 3
 - name: Suzerain
   ids:
   - steam:1207650
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Pale Beyond
   ids:

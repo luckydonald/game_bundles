@@ -2,6 +2,8 @@
 schema: 1
 name: The Extinction Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4424:torch-cave-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vektor Wars
   ids:
   - steam:365760
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'GooCubelets: OCD'
   ids:
   - unresolved:source:isthereanydeal:4424:goocubelets-ocd
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pro Skater 2D
   ids:

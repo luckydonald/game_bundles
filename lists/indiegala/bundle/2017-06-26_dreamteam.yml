@@ -2,6 +2,8 @@
 schema: 1
 name: The Dream Team Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:454160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Death Goat
   ids:
   - unresolved:source:isthereanydeal:5267:death-goat
   requires: []
   tiers:
+  - 1
   - 2
 - name: Adventures of Shuggy
   ids:
   - steam:211440
   requires: []
   tiers:
+  - 1
   - 2
 - name: Circuits
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Adventure Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,30 +19,35 @@ games:
   - steam:80310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ben There, Dan That!
   ids:
   - unresolved:source:isthereanydeal:220:ben-there-dan-that
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Sea Will Claim Everything
   ids:
   - steam:337720
   requires: []
   tiers:
+  - 1
   - 2
 - name: Time Gentlemen, Please! and Ben There, Dan That! Special Edition Double Pack
   ids:
   - steam:37400
   requires: []
   tiers:
+  - 1
   - 2
 - name: '1893: A World''s Fair Mystery'
   ids:
   - unresolved:source:isthereanydeal:220:1893-a-worlds-fair-mystery
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Shivah
   ids:

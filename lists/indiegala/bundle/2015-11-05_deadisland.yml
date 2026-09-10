@@ -2,6 +2,8 @@
 schema: 1
 name: Dead Island Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:2712:dead-island-riptide
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dead Island Game of the Year Edition
   ids:
   - unresolved:source:isthereanydeal:2712:dead-island-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: "Dead Island Riptide \x96 Fashion Victim"
   ids:
   - unresolved:source:isthereanydeal:2712:dead-island-riptide-fashion-victim
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dead Island Riptide: Survivor Pack'
   ids:
   - unresolved:source:isthereanydeal:2712:dead-island-riptide-survivor-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: Escape Dead Island
   ids:

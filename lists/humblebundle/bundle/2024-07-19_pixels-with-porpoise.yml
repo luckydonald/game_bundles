@@ -2,6 +2,8 @@
 schema: 1
 name: Pixels with Porpoise Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:251470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Celeste
   ids:
   - steam:504230
   requires: []
   tiers:
+  - 1
   - 2
 - name: TowerFall Dark World Expansion
   ids:
   - steam:337840
   requires: []
   tiers:
+  - 1
   - 2
 - name: Webbed
   ids:
   - steam:1390350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rivals of Aether
   ids:

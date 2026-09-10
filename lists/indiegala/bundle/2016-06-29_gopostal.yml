@@ -2,6 +2,8 @@
 schema: 1
 name: Go Postal
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3645:lands-of-devastation
   requires: []
   tiers:
+  - 1
   - 2
 - name: POSTAL
   ids:
   - steam:232770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Six Sides of the World
   ids:
   - steam:384480
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Melting Hearts: Our Love Will Grow 2'
   ids:

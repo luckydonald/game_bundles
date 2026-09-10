@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 10
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6425:enigmatis-ghosts-of-maple-creek
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Clockwork Tales: Of Glass and Ink'
   ids:
   - steam:284830
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Enigmatis 2: The Mists of Ravenwood'
   ids:
   - steam:284770
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Endless Fables: The Minotaur''s Curse'
   ids:

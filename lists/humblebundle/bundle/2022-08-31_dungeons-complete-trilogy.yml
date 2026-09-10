@@ -2,6 +2,8 @@
 schema: 1
 name: 'Dungeons: The Complete Trilogy Bundle'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-16-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:57655
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeons
   ids:
   - steam:57650
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeons - The Dark Lord
   ids:
   - steam:200550
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Dungeons: Map Pack'
   ids:
   - steam:57656
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Dungeons 2: A Chance Of Dragons'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Bang Bang Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6013:bitcoin-miner
   requires: []
   tiers:
+  - 1
   - 2
 - name: Miniballist
   ids:
   - steam:628580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cube XL
   ids:
   - steam:645360
   requires: []
   tiers:
+  - 1
   - 2
 - name: BANG! BANG! Totally Accurate Redneck Simulator
   ids:

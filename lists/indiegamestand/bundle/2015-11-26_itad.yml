@@ -2,6 +2,8 @@
 schema: 1
 name: Planetary Annihilation PWYW
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat the Average
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:2771:planetary-annihilation
   requires: []
   tiers:
+  - 1
   - 2
 - name: Planetary Annihilation - Digital Deluxe
   ids:

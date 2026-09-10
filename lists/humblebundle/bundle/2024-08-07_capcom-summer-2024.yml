@@ -2,6 +2,8 @@
 schema: 1
 name: Capcom Summer 2024 Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-12-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:45740
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Dead Rising® 2: Off The Record'
   ids:
   - steam:45770
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Dragon''s Dogma: Dark Arisen'
   ids:
   - steam:367500
   requires: []
   tiers:
+  - 1
   - 4
 - name: Dead Rising 3 Apocalypse Edition
   ids:

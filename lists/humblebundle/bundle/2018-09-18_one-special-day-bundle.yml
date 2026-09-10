@@ -2,6 +2,8 @@
 schema: 1
 name: Humble One Special Day Bundle
 tiers:
+- rank: 1
+  name: Pay $1 to Unlock
 - rank: 3
   name: $9 or More
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:6479:crazy-taxi
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'OlliOlli2: Welcome to Olliwood'
   ids:
   - steam:365660
   requires: []
   tiers:
+  - 1
   - 3
 - name: Streets of Rage
   ids:
   - unresolved:source:isthereanydeal:6479:streets-of-rage
   requires: []
   tiers:
+  - 1
   - 3
 - name: Binary Domain Collection
   ids:
   - unresolved:source:isthereanydeal:6479:binary-domain-collection
   requires: []
   tiers:
+  - 1
   - 3
 - name: GRID 2
   ids:

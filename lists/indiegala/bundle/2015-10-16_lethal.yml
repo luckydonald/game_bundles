@@ -2,6 +2,8 @@
 schema: 1
 name: The Lethal Mix Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:370170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Owys
   ids:
   - steam:394770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Woof Blaster
   ids:
   - steam:397990
   requires: []
   tiers:
+  - 1
   - 2
 - name: Broadside
   ids:

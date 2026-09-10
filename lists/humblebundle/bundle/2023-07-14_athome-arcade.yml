@@ -2,6 +2,8 @@
 schema: 1
 name: At-Home Arcade Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1016180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mortal Kombat 11 Ultimate
   ids:
   - unresolved:source:isthereanydeal:13340:mortal-kombat-11-ultimate
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'THE HOUSE OF THE DEAD: Remake'
   ids:
   - steam:1694600
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Pinball FX - Indiana Jones™: The Pinball Adventure Legacy Bundle'
   ids:
   - unresolved:source:isthereanydeal:13340:pinball-fx-indiana-jones-the-pinball-adventure-legacy-bundle
   requires: []
   tiers:
+  - 1
   - 2
 - name: River City Girls
   ids:

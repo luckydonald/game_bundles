@@ -2,6 +2,8 @@
 schema: 1
 name: Deck Builder Bundle (Extended)
 tiers:
+- rank: 1
+  name: 7-item-bundle
 - rank: 2
   name: entire-11-item-bundle
 references:
@@ -17,42 +19,49 @@ games:
   - steam:871900
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cultist Simulator: Original Soundtrack'
   ids:
   - steam:988320
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cultist Simulator: The Priest'
   ids:
   - steam:871651
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cultist Simulator
   ids:
   - steam:718670
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cultist Simulator: The Dancer'
   ids:
   - steam:871650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vault of the Void
   ids:
   - steam:1135810
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cultist Simulator: The Exile'
   ids:
   - steam:1259930
   requires: []
   tiers:
+  - 1
   - 2
 - name: One Step From Eden
   ids:

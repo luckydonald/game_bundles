@@ -2,6 +2,8 @@
 schema: 1
 name: Interplay 35th Anniversary Limited VIP Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:38460
   requires: []
   tiers:
+  - 1
   - 3
 - name: Earthworm Jim Collection
   ids:
   - unresolved:source:isthereanydeal:6149:earthworm-jim-collection
   requires: []
   tiers:
+  - 1
   - 3
 - name: MDK
   ids:
   - steam:38450
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kingpin: Life of Crime'
   ids:

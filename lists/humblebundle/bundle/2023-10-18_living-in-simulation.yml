@@ -2,6 +2,8 @@
 schema: 1
 name: Living in a Simulation Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-10-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:968970
   requires: []
   tiers:
+  - 1
   - 2
 - name: SimpleRockets 2
   ids:
   - unresolved:source:isthereanydeal:13544:simplerockets-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Electrician Simulator
   ids:
   - steam:1080020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fresh Start Cleaning Simulator
   ids:
   - steam:1856030
   requires: []
   tiers:
+  - 1
   - 2
 - name: Builder Simulator
   ids:

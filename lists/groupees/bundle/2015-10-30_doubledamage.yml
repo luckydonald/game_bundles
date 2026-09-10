@@ -2,6 +2,8 @@
 schema: 1
 name: Double Damage
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:258890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pretentious Game
   ids:
   - steam:279540
   requires: []
   tiers:
+  - 1
   - 2
 - name: Raiden Legacy
   ids:
   - steam:407600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Antisquad
   ids:

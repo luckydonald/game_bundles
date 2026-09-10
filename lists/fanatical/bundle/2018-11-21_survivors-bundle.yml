@@ -2,6 +2,8 @@
 schema: 1
 name: Survivors Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:337490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Rushers
   ids:
   - steam:429620
   requires: []
   tiers:
+  - 1
   - 2
 - name: March of the Living
   ids:
   - steam:458000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Shoppe Keep
   ids:
   - steam:381120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Heart&Slash
   ids:

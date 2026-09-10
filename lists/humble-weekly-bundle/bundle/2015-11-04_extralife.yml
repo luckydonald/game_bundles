@@ -2,6 +2,8 @@
 schema: 1
 name: Extra life
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:11450
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Jazzpunk: Director''s Cut'
   ids:
   - steam:250260
   requires: []
   tiers:
+  - 1
   - 3
 - name: How To Survive
   ids:
   - steam:250400
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'How To Survive: Third Person Standalone'
   ids:

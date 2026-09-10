@@ -2,6 +2,8 @@
 schema: 1
 name: Battle Stations Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:315260
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Space Trader: Merchant Marine'
   ids:
   - steam:11240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tank Universal
   ids:
   - steam:19200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crash Time 2
   ids:
   - steam:11390
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Matter
   ids:

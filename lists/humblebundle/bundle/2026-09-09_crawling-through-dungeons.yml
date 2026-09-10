@@ -2,6 +2,8 @@
 schema: 1
 name: Crawling Through the Dungeons
 tiers:
+- rank: 1
+  name: 8 Item Bundle
 - rank: 2
   name: Entire 11 Item Bundle
 references:
@@ -21,6 +23,70 @@ crawlers:
 - humblebundle
 - isthereanydeal
 games:
+- name: Crawl
+  ids:
+  - steam:293780
+  - isthereanydeal:crawl
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Wizardry: Labyrinth of Lost Souls'
+  ids:
+  - steam:948640
+  - isthereanydeal:wizardry-labyrinth-of-lost-souls
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Xanadu Next
+  ids:
+  - steam:312560
+  - isthereanydeal:xanadu-next
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: BroomSweeper
+  ids:
+  - steam:3473250
+  - isthereanydeal:broomsweeper
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Cthulhu''s Reach: Devil Reef'
+  ids:
+  - steam:2412200
+  - isthereanydeal:cthulhus-reach-devil-reef
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Astalon: Tears of the Earth'
+  ids:
+  - steam:1046400
+  - isthereanydeal:astalon-tears-of-the-earth
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Touhou Artificial Dream in Arcadia
+  ids:
+  - steam:2248430
+  - isthereanydeal:touhou-artificial-dream-in-arcadia
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Dungeon Tycoon
+  ids:
+  - steam:2400770
+  - isthereanydeal:dungeon-tycoon
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: The Bard's Tale Trilogy
   ids:
   - steam:843260
@@ -39,62 +105,6 @@ games:
   ids:
   - steam:1824580
   - isthereanydeal:dungeon-drafters
-  requires: []
-  tiers:
-  - 2
-- name: Crawl
-  ids:
-  - steam:293780
-  - isthereanydeal:crawl
-  requires: []
-  tiers:
-  - 2
-- name: 'Wizardry: Labyrinth of Lost Souls'
-  ids:
-  - steam:948640
-  - isthereanydeal:wizardry-labyrinth-of-lost-souls
-  requires: []
-  tiers:
-  - 2
-- name: Xanadu Next
-  ids:
-  - steam:312560
-  - isthereanydeal:xanadu-next
-  requires: []
-  tiers:
-  - 2
-- name: BroomSweeper
-  ids:
-  - steam:3473250
-  - isthereanydeal:broomsweeper
-  requires: []
-  tiers:
-  - 2
-- name: 'Cthulhu''s Reach: Devil Reef'
-  ids:
-  - steam:2412200
-  - isthereanydeal:cthulhus-reach-devil-reef
-  requires: []
-  tiers:
-  - 2
-- name: 'Astalon: Tears of the Earth'
-  ids:
-  - steam:1046400
-  - isthereanydeal:astalon-tears-of-the-earth
-  requires: []
-  tiers:
-  - 2
-- name: Touhou Artificial Dream in Arcadia
-  ids:
-  - steam:2248430
-  - isthereanydeal:touhou-artificial-dream-in-arcadia
-  requires: []
-  tiers:
-  - 2
-- name: Dungeon Tycoon
-  ids:
-  - steam:2400770
-  - isthereanydeal:dungeon-tycoon
   requires: []
   tiers:
   - 2

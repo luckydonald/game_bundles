@@ -2,6 +2,8 @@
 schema: 1
 name: Build a Be Mine Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Bonus
 references:
@@ -17,54 +19,63 @@ games:
   - steam:277470
   requires: []
   tiers:
+  - 1
   - 2
 - name: 99 Spirits - Cage of Night
   ids:
   - steam:262142
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Campaign Series: Fall Weiss'
   ids:
   - steam:283020
   requires: []
   tiers:
+  - 1
   - 2
 - name: 99 Spirits
   ids:
   - steam:258090
   requires: []
   tiers:
+  - 1
   - 2
 - name: BloodRayne
   ids:
   - unresolved:source:isthereanydeal:1050:bloodrayne
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Lili: Child of Geos - Complete Edition'
   ids:
   - steam:266490
   requires: []
   tiers:
+  - 1
   - 2
 - name: Isomer
   ids:
   - steam:311980
   requires: []
   tiers:
+  - 1
   - 2
 - name: 100% Orange Juice
   ids:
   - steam:282800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Twinsen's Little Big Adventure Classic
   ids:
   - steam:397330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ballpoint Universe - Infinite
   ids:

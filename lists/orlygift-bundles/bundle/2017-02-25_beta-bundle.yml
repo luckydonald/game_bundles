@@ -2,6 +2,8 @@
 schema: 1
 name: Limited Bundle (BETA)
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:280010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jet Racing Extreme
   ids:
   - steam:385270
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sometimes: Success Requires Sacrifice'
   ids:
   - steam:351470
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pushcat
   ids:

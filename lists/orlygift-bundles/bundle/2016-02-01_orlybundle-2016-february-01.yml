@@ -2,6 +2,8 @@
 schema: 1
 name: 'February Bundle #1'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:321030
   requires: []
   tiers:
+  - 1
   - 2
 - name: On A Roll 3D
   ids:
   - steam:341090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Egyptian Senet
   ids:
   - steam:391580
   requires: []
   tiers:
+  - 1
   - 2
 - name: ShipLord
   ids:

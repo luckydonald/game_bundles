@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 16
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:246420
   requires: []
   tiers:
+  - 1
   - 2
 - name: Blue Rose
   ids:
   - steam:362660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Betrayer
   ids:
   - unresolved:source:isthereanydeal:1411:betrayer
   requires: []
   tiers:
+  - 1
   - 2
 - name: Beyond Space
   ids:
   - unresolved:source:isthereanydeal:1411:beyond-space
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Depth Hunter 2: Deep Dive'
   ids:
   - steam:248530
   requires: []
   tiers:
+  - 1
   - 2
 - name: DANGEROUS DUELS
   ids:
   - steam:524650
   requires: []
   tiers:
+  - 1
   - 2
 - name: Surgeon Simulator 2013
   ids:

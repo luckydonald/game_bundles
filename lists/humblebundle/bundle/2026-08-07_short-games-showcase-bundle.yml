@@ -2,6 +2,8 @@
 schema: 1
 name: Short Games Showcase Bundle
 tiers:
+- rank: 1
+  name: 7 Item Bundle
 - rank: 2
   name: Entire 14 Item Bundle
 references:
@@ -18,6 +20,62 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-07_short-games-showcase-bundle/source.json
 games:
+- name: Fill Up The Hole
+  ids:
+  - steam:3343160
+  - isthereanydeal:fill-up-the-hole
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Old Man's Journey
+  ids:
+  - steam:581270
+  - isthereanydeal:old-mans-journey
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Teacup
+  ids:
+  - steam:1444300
+  - isthereanydeal:teacup
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+  - isthereanydeal:a-jugglers-tale
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Scanner Sombre
+  ids:
+  - steam:475190
+  - isthereanydeal:scanner-sombre
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Astro Prospector
+  ids:
+  - steam:3503440
+  - isthereanydeal:astro-prospector
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: A Tiny Sticker Tale
+  ids:
+  - steam:2322180
+  - isthereanydeal:a-tiny-sticker-tale
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: Botany Manor
   ids:
   - steam:1425350
@@ -64,55 +122,6 @@ games:
   ids:
   - steam:3587610
   - isthereanydeal:the-dark-queen-of-mortholme
-  requires: []
-  tiers:
-  - 2
-- name: Fill Up The Hole
-  ids:
-  - steam:3343160
-  - isthereanydeal:fill-up-the-hole
-  requires: []
-  tiers:
-  - 2
-- name: Old Man's Journey
-  ids:
-  - steam:581270
-  - isthereanydeal:old-mans-journey
-  requires: []
-  tiers:
-  - 2
-- name: Teacup
-  ids:
-  - steam:1444300
-  - isthereanydeal:teacup
-  requires: []
-  tiers:
-  - 2
-- name: A Juggler's Tale
-  ids:
-  - steam:1252830
-  - isthereanydeal:a-jugglers-tale
-  requires: []
-  tiers:
-  - 2
-- name: Scanner Sombre
-  ids:
-  - steam:475190
-  - isthereanydeal:scanner-sombre
-  requires: []
-  tiers:
-  - 2
-- name: Astro Prospector
-  ids:
-  - steam:3503440
-  - isthereanydeal:astro-prospector
-  requires: []
-  tiers:
-  - 2
-- name: A Tiny Sticker Tale
-  ids:
-  - steam:2322180
-  - isthereanydeal:a-tiny-sticker-tale
   requires: []
   tiers:
   - 2

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #61'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:727730
   requires: []
   tiers:
+  - 1
   - 2
 - name: Indecision.
   ids:
   - steam:720030
   requires: []
   tiers:
+  - 1
   - 2
 - name: Antaria Online
   ids:
   - unresolved:source:isthereanydeal:6414:antaria-online
   requires: []
   tiers:
+  - 1
   - 2
 - name: Armed to the Gears
   ids:

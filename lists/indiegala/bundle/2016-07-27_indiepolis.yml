@@ -2,6 +2,8 @@
 schema: 1
 name: Indiepolis Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:429200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Candy Blast
   ids:
   - steam:474050
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Apotheosis Project
   ids:
   - steam:364350
   requires: []
   tiers:
+  - 1
   - 2
 - name: 123 Slaughter Me Street
   ids:

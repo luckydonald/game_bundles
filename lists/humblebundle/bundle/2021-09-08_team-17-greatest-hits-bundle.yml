@@ -2,6 +2,8 @@
 schema: 1
 name: Team 17 Greatest Hits Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-26-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:297740
   requires: []
   tiers:
+  - 1
   - 4
 - name: Mugsters
   ids:
   - steam:712180
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Escapists - Escape Team
   ids:

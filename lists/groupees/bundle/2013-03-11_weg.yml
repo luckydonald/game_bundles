@@ -2,6 +2,8 @@
 schema: 1
 name: Wadjet Eye Groupee
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:252370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gemini Rue
   ids:
   - steam:80310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Da New Guys
   ids:
   - unresolved:source:isthereanydeal:193:da-new-guys
   requires: []
   tiers:
+  - 1
   - 2
 - name: Puzzle Bots
   ids:
   - steam:80300
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Blackwell Legacy
   ids:

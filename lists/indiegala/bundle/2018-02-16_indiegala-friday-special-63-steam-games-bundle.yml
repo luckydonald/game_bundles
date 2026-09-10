@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #63'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:750210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Radar Warfare
   ids:
   - steam:724130
   requires: []
   tiers:
+  - 1
   - 2
 - name: Loops of Zen
   ids:
   - steam:563710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bouncing Duck Simulator
   ids:

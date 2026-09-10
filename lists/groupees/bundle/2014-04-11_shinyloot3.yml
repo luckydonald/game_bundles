@@ -2,6 +2,8 @@
 schema: 1
 name: ShinyLoot Roguelike Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:269210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crayon Chronicles
   ids:
   - steam:341510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tower of Eglathia
   ids:
   - steam:351220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kilgazar
   ids:
   - unresolved:source:isthereanydeal:702:kilgazar
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tales of Maj'Eyal
   ids:
   - steam:259680
   requires: []
   tiers:
+  - 1
   - 2
 - name: Flatspace
   ids:
   - steam:1210780
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sword of the Stars: The Pit - Gold Edition'
   ids:

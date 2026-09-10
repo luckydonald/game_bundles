@@ -2,6 +2,8 @@
 schema: 1
 name: Deep Space Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,42 +19,49 @@ games:
   - steam:338760
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bagfull of Wrong
   ids:
   - unresolved:source:isthereanydeal:221:bagfull-of-wrong
   requires: []
   tiers:
+  - 1
   - 2
 - name: War Mac 2000
   ids:
   - unresolved:source:isthereanydeal:221:war-mac-2000
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Wreckless
   ids:
   - unresolved:source:isthereanydeal:221:the-wreckless
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Scavenger
   ids:
   - steam:293880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Armalyte
   ids:
   - unresolved:source:isthereanydeal:221:armalyte
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Giraffe
   ids:
   - steam:27800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Miner Wars Arena
   ids:

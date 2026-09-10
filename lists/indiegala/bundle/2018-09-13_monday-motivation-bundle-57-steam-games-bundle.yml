@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #57'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:542310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Everything Will Flow 万物皆逝
   ids:
   - unresolved:source:isthereanydeal:6453:everything-will-flow-wan-wu-jie-shi
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Loop
   ids:
   - unresolved:source:isthereanydeal:6453:the-loop
   requires: []
   tiers:
+  - 1
   - 2
 - name: Intelligence Trader
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Take Off Mega
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:428430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Into the Void
   ids:
   - steam:420270
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Age of Steel: Recharge'
   ids:
   - steam:421060
   requires: []
   tiers:
+  - 1
   - 2
 - name: Red Faction Guerrilla Re-Mars-tered
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Software Bundle: Organize Your PC'
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:9591:windowblinds
   requires: []
   tiers:
+  - 1
   - 3
 - name: Iconpackager
   ids:
   - unresolved:source:isthereanydeal:9591:iconpackager
   requires: []
   tiers:
+  - 1
   - 3
 - name: CursorFX
   ids:
   - steam:1299980
   requires: []
   tiers:
+  - 1
   - 3
 - name: DeskScapes
   ids:

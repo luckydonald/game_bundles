@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Bandai Namco Bundle 4
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:245280
   requires: []
   tiers:
+  - 1
   - 4
 - name: Get Even
   ids:
   - steam:299950
   requires: []
   tiers:
+  - 1
   - 4
 - name: PAC-MAN 256
   ids:
   - steam:455400
   requires: []
   tiers:
+  - 1
   - 4
 - name: Katamari Damacy REROLL
   ids:

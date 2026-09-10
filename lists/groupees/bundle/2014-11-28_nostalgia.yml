@@ -2,6 +2,8 @@
 schema: 1
 name: The Nostalgia Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:253960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Square Heroes
   ids:
   - steam:334560
   requires: []
   tiers:
+  - 1
   - 2
 - name: GEARCRACK Arena
   ids:
   - unresolved:source:isthereanydeal:1434:gearcrack-arena
   requires: []
   tiers:
+  - 1
   - 2
 - name: Septerra Core
   ids:

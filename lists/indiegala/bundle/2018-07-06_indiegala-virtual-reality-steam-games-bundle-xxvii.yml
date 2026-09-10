@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality Bundle XXVII
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:845170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Funball Games VR
   ids:
   - steam:722370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kingdom Watcher
   ids:
   - steam:680970
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Road to Hades
   ids:

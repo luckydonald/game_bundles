@@ -2,6 +2,8 @@
 schema: 1
 name: Strategic Minds Collection Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:790820
   requires: []
   tiers:
+  - 1
   - 2
 - name: Old World
   ids:
   - steam:597180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Songs of Conquest
   ids:
   - steam:867210
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Last Spell
   ids:

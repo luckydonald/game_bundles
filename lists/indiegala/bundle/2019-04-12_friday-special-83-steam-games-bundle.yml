@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #83'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:922150
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Super Ledgehop: Double Laser'
   ids:
   - steam:787070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Thugs Law
   ids:

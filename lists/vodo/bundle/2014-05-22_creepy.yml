@@ -2,6 +2,8 @@
 schema: 1
 name: The Really Creepy Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,12 +19,14 @@ games:
   - steam:286320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Finding Teddy
   ids:
   - steam:259600
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Path
   ids:

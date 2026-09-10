@@ -2,6 +2,8 @@
 schema: 1
 name: indie.io Indie Game Favorites Bundle
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - steam:946720
   requires: []
   tiers:
+  - 1
   - 3
 - name: Airborne Kingdom
   ids:
   - steam:982290
   requires: []
   tiers:
+  - 1
   - 3
 - name: One More Island
   ids:
   - steam:1454160
   requires: []
   tiers:
+  - 1
   - 3
 - name: Troublemaker
   ids:
   - steam:1498740
   requires: []
   tiers:
+  - 1
   - 3
 - name: Everwarder
   ids:
   - steam:2307170
   requires: []
   tiers:
+  - 1
   - 3
 - name: Broken Pieces
   ids:

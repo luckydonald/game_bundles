@@ -2,6 +2,8 @@
 schema: 1
 name: Back 2 School GameBundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Beat The Average + $0.25
 references:
@@ -17,18 +19,21 @@ games:
   - steam:431330
   requires: []
   tiers:
+  - 1
   - 3
 - name: 3DRPG
   ids:
   - steam:431840
   requires: []
   tiers:
+  - 1
   - 3
 - name: Taimumari
   ids:
   - unresolved:source:isthereanydeal:3948:taimumari
   requires: []
   tiers:
+  - 1
   - 3
 - name: Re-Volt
   ids:

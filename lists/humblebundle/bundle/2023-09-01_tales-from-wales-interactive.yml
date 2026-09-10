@@ -2,6 +2,8 @@
 schema: 1
 name: Tales From Wales Interactive Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-6-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:584980
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bloodshore
   ids:
   - steam:1490840
   requires: []
   tiers:
+  - 1
   - 2
 - name: COMPLEX
   ids:

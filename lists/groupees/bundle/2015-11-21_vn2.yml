@@ -2,6 +2,8 @@
 schema: 1
 name: JAST USA Visual Novel Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:2757:the-sagara-family
   requires: []
   tiers:
+  - 1
   - 3
 - name: Yo-Jin-Bo ~ The Bodyguards
   ids:
   - unresolved:source:isthereanydeal:2757:yo-jin-bo-the-bodyguards
   requires: []
   tiers:
+  - 1
   - 3
 - name: My Girlfriend Is The President
   ids:

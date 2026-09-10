@@ -2,6 +2,8 @@
 schema: 1
 name: 'One Special Bundle: The Legacy of Adult Swim Games'
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:250260
   requires: []
   tiers:
+  - 1
   - 4
 - name: Duck Game
   ids:
   - steam:312530
   requires: []
   tiers:
+  - 1
   - 4
 - name: Battle Chef Brigade Deluxe
   ids:
   - steam:452570
   requires: []
   tiers:
+  - 1
   - 4
 - name: Pool Panic
   ids:
   - steam:522240
   requires: []
   tiers:
+  - 1
   - 4
 - name: Rain World
   ids:

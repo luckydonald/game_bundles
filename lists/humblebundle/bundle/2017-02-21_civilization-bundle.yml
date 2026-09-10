@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Civilization Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-21-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:3910
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sid Meier''s Civilization IV: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:4813:sid-meiers-civilization-iv-the-complete-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sid Meier''s Civilization V: Gods and Kings'
   ids:

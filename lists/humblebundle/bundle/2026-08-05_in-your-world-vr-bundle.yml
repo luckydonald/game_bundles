@@ -2,6 +2,8 @@
 schema: 1
 name: In Your World VR Bundle
 tiers:
+- rank: 1
+  name: 3 Item Bundle
 - rank: 2
   name: Entire 7 Item Bundle
 references:
@@ -12,6 +14,27 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-08-05_in-your-world-vr-bundle/source.json
 games:
+- name: Labyrinthine
+  ids:
+  - unresolved:source:humblebundle:labyrinthine
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: DOOM VFR
+  ids:
+  - unresolved:source:humblebundle:doomvfr
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Utility Room
+  ids:
+  - unresolved:source:humblebundle:theutilityroom
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: Into the Radius VR
   ids:
   - unresolved:source:humblebundle:intotheradiusvr
@@ -33,24 +56,6 @@ games:
 - name: Sairento VR
   ids:
   - unresolved:source:humblebundle:sairentovr
-  requires: []
-  tiers:
-  - 2
-- name: Labyrinthine
-  ids:
-  - unresolved:source:humblebundle:labyrinthine
-  requires: []
-  tiers:
-  - 2
-- name: DOOM VFR
-  ids:
-  - unresolved:source:humblebundle:doomvfr
-  requires: []
-  tiers:
-  - 2
-- name: The Utility Room
-  ids:
-  - unresolved:source:humblebundle:theutilityroom
   requires: []
   tiers:
   - 2

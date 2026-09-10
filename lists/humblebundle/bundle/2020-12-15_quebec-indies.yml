@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Québec Indies Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-13-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:363420
   requires: []
   tiers:
+  - 1
   - 3
 - name: Toto Temple Deluxe
   ids:
   - steam:342920
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aeolis Tournament
   ids:
   - steam:1097770
   requires: []
   tiers:
+  - 1
   - 3
 - name: Knight Squad
   ids:

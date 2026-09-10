@@ -2,6 +2,8 @@
 schema: 1
 name: The Big Time Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - steam:57700
   requires: []
   tiers:
+  - 1
   - 3
 - name: Bang Bang Racing
   ids:
   - steam:207020
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sine Mora
   ids:

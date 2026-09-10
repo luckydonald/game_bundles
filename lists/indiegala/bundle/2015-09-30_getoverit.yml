@@ -2,6 +2,8 @@
 schema: 1
 name: Get Over It Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:22200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Realms of Arkania - Blade of Destiny
   ids:
   - steam:237550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pixel Piracy
   ids:
   - steam:264140
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dino D-Day
   ids:
   - steam:70000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pressure
   ids:
   - unresolved:source:isthereanydeal:2539:pressure
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Weird Worlds: Return to Infinite Space'
   ids:
   - steam:226120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Knights & Merchants
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 8
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:394280
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Grim Legends 2: Song of the Dark Swan'
   ids:
   - steam:279800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Grim Legends: The Forsaken Bride'
   ids:
   - steam:284850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Fairy Tale Mysteries: The Puppet Thief'
   ids:

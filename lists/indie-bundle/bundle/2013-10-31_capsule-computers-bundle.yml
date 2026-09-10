@@ -2,6 +2,8 @@
 schema: 1
 name: Capsule Computers Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - steam:60700
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tommy Tronic
   ids:
   - steam:41660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Residue
   ids:
   - unresolved:source:isthereanydeal:381:residue
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Uprising44: The Silent Shadows'
   ids:

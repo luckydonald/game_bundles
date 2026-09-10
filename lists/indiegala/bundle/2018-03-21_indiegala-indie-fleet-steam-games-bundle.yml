@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Fleet Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5990:world-inside-out
   requires: []
   tiers:
+  - 1
   - 2
 - name: Christmas Race 2
   ids:
   - steam:801890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mortos
   ids:
   - steam:377980
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Mermaid Adventures: The Frozen Time'
   ids:

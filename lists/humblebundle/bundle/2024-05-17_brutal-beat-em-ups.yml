@@ -2,6 +2,8 @@
 schema: 1
 name: Brutal Beat 'Em Ups Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:564050
   requires: []
   tiers:
+  - 1
   - 3
 - name: Battletoads
   ids:
   - steam:1244950
   requires: []
   tiers:
+  - 1
   - 3
 - name: River City Girls Zero
   ids:
   - steam:1851020
   requires: []
   tiers:
+  - 1
   - 3
 - name: River City Girls
   ids:

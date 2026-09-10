@@ -2,6 +2,8 @@
 schema: 1
 name: Savage Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:241410
   requires: []
   tiers:
+  - 1
   - 2
 - name: Semblance
   ids:
   - steam:700160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crush Your Enemies
   ids:
   - steam:406850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Hard West: Scars of Freedom'
   ids:

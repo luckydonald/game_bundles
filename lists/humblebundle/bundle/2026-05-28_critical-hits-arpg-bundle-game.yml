@@ -2,6 +2,8 @@
 schema: 1
 name: Critical Hits ARPG bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 2
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:606880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Eldest Souls
   ids:
   - steam:1108590
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Soulstice: Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:16213:soulstice-deluxe-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hellpoint
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: September Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:4013:cubium-dreams
   requires: []
   tiers:
+  - 1
   - 2
 - name: Elementary My Dear Majesty
   ids:
   - steam:343390
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
   ids:
   - steam:427930
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Land Fit For Heroes
   ids:
   - unresolved:source:isthereanydeal:4013:a-land-fit-for-heroes
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Scaven
   ids:

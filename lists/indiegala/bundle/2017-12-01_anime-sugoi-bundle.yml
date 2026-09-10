@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Sugoi Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:2508630
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Girl on the Train
   ids:
   - unresolved:source:isthereanydeal:5677:the-girl-on-the-train
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wandering in space
   ids:
   - steam:1971770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jake's Love Story
   ids:

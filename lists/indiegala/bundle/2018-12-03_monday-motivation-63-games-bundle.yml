@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #63'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:959090
   requires: []
   tiers:
+  - 1
   - 2
 - name: Naughty Elves
   ids:
   - steam:750620
   requires: []
   tiers:
+  - 1
   - 2
 - name: Oops!!! I Slept With Your Mom
   ids:
   - steam:930320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Roboball
   ids:

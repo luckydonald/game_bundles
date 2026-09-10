@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #58'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:817250
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombie Desperation
   ids:
   - steam:818570
   requires: []
   tiers:
+  - 1
   - 2
 - name: Framed Wings
   ids:
   - steam:479140
   requires: []
   tiers:
+  - 1
   - 2
 - name: The God
   ids:

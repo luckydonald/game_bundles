@@ -2,6 +2,8 @@
 schema: 1
 name: Altered Worlds Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:265120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Devils & Demons
   ids:
   - steam:363960
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tulpa
   ids:
   - steam:331340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Coffin Dodgers
   ids:

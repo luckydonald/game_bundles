@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Life Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:343270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Project Pulsation
   ids:
   - steam:424000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Find Out
   ids:
   - steam:444410
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crowman & Wolfboy
   ids:

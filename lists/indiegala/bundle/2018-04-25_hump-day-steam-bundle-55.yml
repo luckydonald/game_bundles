@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #55'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6081:nimble-bunn
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lines Infinite by Nestor Yavorskyy
   ids:
   - unresolved:source:isthereanydeal:6081:lines-infinite-by-nestor-yavorskyy
   requires: []
   tiers:
+  - 1
   - 2
 - name: PUSH
   ids:
   - steam:676430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Divide
   ids:

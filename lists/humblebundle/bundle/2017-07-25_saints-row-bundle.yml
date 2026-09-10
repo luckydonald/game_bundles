@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Saints Row Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 4
   name: entire-16-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:55100
   requires: []
   tiers:
+  - 1
   - 4
 - name: Risen 3 - Complete Edition
   ids:
   - unresolved:source:isthereanydeal:5353:risen-3-complete-edition
   requires: []
   tiers:
+  - 1
   - 4
 - name: Deadlight Directors Cut
   ids:
   - steam:423950
   requires: []
   tiers:
+  - 1
   - 4
 - name: Saints Row 2
   ids:
   - steam:9480
   requires: []
   tiers:
+  - 1
   - 4
 - name: Lost Horizon
   ids:

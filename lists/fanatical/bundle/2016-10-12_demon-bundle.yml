@@ -2,6 +2,8 @@
 schema: 1
 name: Demon Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,36 +19,42 @@ games:
   - steam:404690
   requires: []
   tiers:
+  - 1
   - 3
 - name: Silence of the Sleep
   ids:
   - steam:321870
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'POSTAL 2: Paradise Lost'
   ids:
   - steam:360960
   requires: []
   tiers:
+  - 1
   - 3
 - name: Kholat
   ids:
   - steam:343710
   requires: []
   tiers:
+  - 1
   - 3
 - name: POSTAL 2
   ids:
   - steam:223470
   requires: []
   tiers:
+  - 1
   - 3
 - name: Lucius II
   ids:
   - steam:296830
   requires: []
   tiers:
+  - 1
   - 3
 - name: I Shall Remain
   ids:

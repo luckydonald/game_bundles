@@ -2,6 +2,8 @@
 schema: 1
 name: House Flipper & Friends Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-14-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:613100
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Station Renovation
   ids:
   - steam:914010
   requires: []
   tiers:
+  - 1
   - 3
 - name: Train Station Renovation - Germany
   ids:
   - steam:1610540
   requires: []
   tiers:
+  - 1
   - 3
 - name: House Flipper - Party Furniture Pack
   ids:
   - steam:3363170
   requires: []
   tiers:
+  - 1
   - 3
 - name: Builder Simulator
   ids:

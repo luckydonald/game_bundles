@@ -2,6 +2,8 @@
 schema: 1
 name: The Postal Party Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5335:samurai-wars
   requires: []
   tiers:
+  - 1
   - 2
 - name: Breezeblox
   ids:
   - steam:370080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Stardust Vanguards
   ids:
   - steam:341530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Get CARNAGE!!!
   ids:

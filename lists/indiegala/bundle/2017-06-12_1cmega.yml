@@ -2,6 +2,8 @@
 schema: 1
 name: 1C Company Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:289480
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
   ids:
   - steam:373870
   requires: []
   tiers:
+  - 1
   - 3
 - name: Star Wolves
   ids:
   - steam:46270
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Book of Desires
   ids:

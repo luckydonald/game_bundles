@@ -2,6 +2,8 @@
 schema: 1
 name: Sacred Metro
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:286690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sacred 2 Gold Edition
   ids:
   - steam:225640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sacred Citadel
   ids:

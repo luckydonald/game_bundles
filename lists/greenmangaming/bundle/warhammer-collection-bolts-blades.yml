@@ -2,6 +2,8 @@
 schema: 1
 name: 'WARHAMMER COLLECTION: BOLTS & BLADES'
 tiers:
+- rank: 1
+  name: Rat Catcher
 - rank: 4
   name: For the Emperor!
 references:
@@ -19,12 +21,14 @@ games:
   - steam:sub/79384
   requires: []
   tiers:
+  - 1
   - 4
 - name: Warhammer Vermintide 2
   ids:
   - steam:552500
   requires: []
   tiers:
+  - 1
   - 4
 - name: Necromunda Hired Gun
   ids:

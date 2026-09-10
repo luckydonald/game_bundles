@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XVI
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:616660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tengutana
   ids:
   - steam:630070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Butterfly Moment
   ids:
   - unresolved:source:isthereanydeal:5636:butterfly-moment
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cliffstone Manor
   ids:

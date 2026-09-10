@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Mashup Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:215:stardrone
   requires: []
   tiers:
+  - 1
   - 2
 - name: "JAZZ : Trumpâ\x80\x99s Journey"
   ids:
   - unresolved:source:isthereanydeal:215:jazz-trumpas-journey
   requires: []
   tiers:
+  - 1
   - 2
 - name: Still Life 2
   ids:

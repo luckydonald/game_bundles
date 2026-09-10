@@ -2,6 +2,8 @@
 schema: 1
 name: Casual Bundle 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - unresolved:source:isthereanydeal:2412:streets-of-chaos
   requires: []
   tiers:
+  - 1
   - 2
 - name: TeraBlaster
   ids:
   - steam:384150
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gnomes Garden
   ids:
   - steam:415830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hospital Manager
   ids:
   - steam:348290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Streets of Chaos - Conspiracy Expansion Pack
   ids:
   - unresolved:source:isthereanydeal:2412:streets-of-chaos-conspiracy-expansion-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Day D: Tower Rush'
   ids:
   - steam:423550
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hills of Glory 3D
   ids:

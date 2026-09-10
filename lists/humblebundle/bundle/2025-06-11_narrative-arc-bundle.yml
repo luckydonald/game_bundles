@@ -2,6 +2,8 @@
 schema: 1
 name: Narrative Arc Bundle
 tiers:
+- rank: 1
+  name: 3 Item Bundle
 - rank: 3
   name: 7 Item Bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1080750
   requires: []
   tiers:
+  - 1
   - 3
 - name: Venba
   ids:
   - steam:1491670
   requires: []
   tiers:
+  - 1
   - 3
 - name: Frank and Drake
   ids:
   - steam:1530800
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dustborn
   ids:

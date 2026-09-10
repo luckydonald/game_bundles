@@ -2,6 +2,8 @@
 schema: 1
 name: Adventure Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:220090
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Runaway: Dream of the Turtle'
   ids:
   - unresolved:source:isthereanydeal:1836:runaway-dream-of-the-turtle
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Mushroom Men: Truffle Trouble'
   ids:

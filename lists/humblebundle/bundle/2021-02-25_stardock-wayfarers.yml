@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Stardock Wayfarers Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:228260
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Sins of a Solar Empire: Rebellion'
   ids:
   - steam:204880
   requires: []
   tiers:
+  - 1
   - 3
 - name: Siege of Centauri
   ids:

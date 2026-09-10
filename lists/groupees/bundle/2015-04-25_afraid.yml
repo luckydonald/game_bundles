@@ -2,6 +2,8 @@
 schema: 1
 name: Be Afraid Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:1819:ted-by-dawn
   requires: []
   tiers:
+  - 1
   - 2
 - name: One Night
   ids:
   - steam:752180
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Echo
   ids:
   - unresolved:source:isthereanydeal:1819:dark-echo
   requires: []
   tiers:
+  - 1
   - 2
 - name: I Have No Mouth, and I Must Scream
   ids:

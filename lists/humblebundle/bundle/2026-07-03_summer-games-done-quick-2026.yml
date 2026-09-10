@@ -2,6 +2,8 @@
 schema: 1
 name: Summer Games Done Quick 2026
 tiers:
+- rank: 1
+  name: 7 Item Bundle
 - rank: 2
   name: Entire 10 Item Bundle
 references:
@@ -12,6 +14,41 @@ references:
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-07-03_summer-games-done-quick-2026/source.json
 games:
+- name: Grandma, No
+  ids:
+  - steam:2362680
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 20XX
+  ids:
+  - steam:322110
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Maiden and Spell
+  ids:
+  - steam:1004770
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: DUSK
+  ids:
+  - steam:519860
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Gunk
+  ids:
+  - steam:1087760
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: Solar Ash
   ids:
   - steam:1867530
@@ -27,36 +64,6 @@ games:
 - name: 'Isopod: A Webbed Spin-off'
   ids:
   - steam:2053910
-  requires: []
-  tiers:
-  - 2
-- name: Grandma, No
-  ids:
-  - steam:2362680
-  requires: []
-  tiers:
-  - 2
-- name: 20XX
-  ids:
-  - steam:322110
-  requires: []
-  tiers:
-  - 2
-- name: Maiden and Spell
-  ids:
-  - steam:1004770
-  requires: []
-  tiers:
-  - 2
-- name: DUSK
-  ids:
-  - steam:519860
-  requires: []
-  tiers:
-  - 2
-- name: The Gunk
-  ids:
-  - steam:1087760
   requires: []
   tiers:
   - 2
