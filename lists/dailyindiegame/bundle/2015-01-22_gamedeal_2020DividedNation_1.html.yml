@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 2020 Divided Nation - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1566/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1566/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1566/source.json
+games:
+- name: '2020: Divided Nation'
+  ids:
+  - unresolved:source:isthereanydeal:1566:2020-divided-nation
+  requires: []

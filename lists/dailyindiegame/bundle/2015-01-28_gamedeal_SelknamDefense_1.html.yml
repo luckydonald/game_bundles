@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Selknam Defense - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1586/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1586/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1586/source.json
+games:
+- name: Selknam Defense
+  ids:
+  - steam:306260
+  requires: []

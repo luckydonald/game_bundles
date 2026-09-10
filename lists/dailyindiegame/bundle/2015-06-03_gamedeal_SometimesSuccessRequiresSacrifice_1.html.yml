@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Sometimes: Success Requires Sacrifice - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2085/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2085/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2085/source.json
+games:
+- name: 'Sometimes: Success Requires Sacrifice'
+  ids:
+  - steam:351470
+  requires: []
