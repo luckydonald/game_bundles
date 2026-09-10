@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sacred Mysteries Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8886/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8886/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8886/source.json
+games:
+- name: Back to Bed
+  ids:
+  - steam:308040
+  requires: []
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+  requires: []
+- name: 'Twilight City: Love as a Cure'
+  ids:
+  - steam:428270
+  requires: []
+- name: 'The Saint: Abyss of Despair'
+  ids:
+  - steam:560820
+  requires: []
+- name: 'Weather Lord: Following the Princess Collector''s Edition'
+  ids:
+  - steam:456690
+  requires: []
+- name: Tangled Up!
+  ids:
+  - steam:502380
+  requires: []
+- name: 'Esoterica: Hollow Earth'
+  ids:
+  - unresolved:source:isthereanydeal:8886:esoterica-hollow-earth
+  requires: []
+- name: Mystery Loss
+  ids:
+  - steam:689740
+  requires: []
+- name: 'Mystery Castle: The Mirror''s Secret'
+  ids:
+  - steam:428250
+  requires: []

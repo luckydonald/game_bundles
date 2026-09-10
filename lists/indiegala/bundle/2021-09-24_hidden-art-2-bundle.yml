@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Art 2 Bundle — T
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10506/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10506/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10506/source.json
+games:
+- name: GEESE vs CTHULHU
+  ids:
+  - steam:1157260
+  requires: []
+- name: 100 hidden snails
+  ids:
+  - steam:1446330
+  requires: []
+- name: 100 hidden birds
+  ids:
+  - steam:1473050
+  requires: []
+- name: 100 hidden eternals
+  ids:
+  - steam:1480120
+  requires: []
+- name: 100 hidden aliens
+  ids:
+  - steam:1493300
+  requires: []
+- name: 100 hidden cupcakes
+  ids:
+  - unresolved:source:isthereanydeal:10506:100-hidden-cupcakes
+  requires: []
+- name: 100 hidden mice
+  ids:
+  - steam:1522560
+  requires: []
+- name: 100 hidden snails 2
+  ids:
+  - steam:1549030
+  requires: []
+- name: 100 hidden mushrooms
+  ids:
+  - steam:1573750
+  requires: []
+- name: 100 hidden cats
+  ids:
+  - steam:1587560
+  requires: []
+- name: 100 hidden cats 2
+  ids:
+  - steam:1679320
+  requires: []
+- name: 100 hidden rams
+  ids:
+  - steam:1708190
+  requires: []

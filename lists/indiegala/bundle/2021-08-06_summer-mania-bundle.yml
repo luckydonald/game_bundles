@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Mania Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10329/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10329/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10329/source.json
+games:
+- name: Yoshimitsu Hatsumi
+  ids:
+  - steam:1686440
+  requires: []
+- name: Ancient Dino Runner
+  ids:
+  - steam:1671390
+  requires: []
+- name: Save The Octo
+  ids:
+  - steam:1676920
+  requires: []
+- name: Magic gems
+  ids:
+  - steam:1664090
+  requires: []
+- name: CubePuzzle
+  ids:
+  - steam:1683300
+  requires: []
+- name: Hungry Fish
+  ids:
+  - steam:1683720
+  requires: []
+- name: AirFighter
+  ids:
+  - steam:1686340
+  requires: []
+- name: Match3 mania!
+  ids:
+  - steam:1686370
+  requires: []
+- name: Misha Adventures
+  ids:
+  - steam:1683240
+  requires: []

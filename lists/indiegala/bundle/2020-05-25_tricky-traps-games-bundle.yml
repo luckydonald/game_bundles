@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tricky Traps Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8821/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8821/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8821/source.json
+games:
+- name: Marble Trap
+  ids:
+  - steam:1145560
+  requires: []
+- name: Tricky Cat
+  ids:
+  - steam:1042330
+  requires: []
+- name: Cube Mission
+  ids:
+  - steam:1008740
+  requires: []
+- name: Cleansuit
+  ids:
+  - steam:729300
+  requires: []
+- name: bit Dungeon III
+  ids:
+  - steam:856210
+  requires: []
+- name: Him and I
+  ids:
+  - steam:1157010
+  requires: []
+- name: Exile Squadron
+  ids:
+  - steam:1161910
+  requires: []

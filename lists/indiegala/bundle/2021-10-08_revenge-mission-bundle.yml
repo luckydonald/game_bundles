@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Revenge Mission Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10555/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10555/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10555/source.json
+games:
+- name: 'The Revenge of Johnny Bonasera: Episode 3'
+  ids:
+  - steam:1004230
+  requires: []
+- name: 'The Revenge of Johnny Bonasera: Episode 2'
+  ids:
+  - steam:790390
+  requires: []
+- name: The Revenge of Johnny Bonasera
+  ids:
+  - steam:536430
+  requires: []
+- name: Dungeon Origins
+  ids:
+  - steam:1220120
+  requires: []
+- name: 'The Revenge of Johnny Bonasera: Episode 4'
+  ids:
+  - steam:1221860
+  requires: []
+- name: 'Khimera: Puzzle Island'
+  ids:
+  - steam:1217830
+  requires: []
+- name: Alone on Mars
+  ids:
+  - steam:1637490
+  requires: []

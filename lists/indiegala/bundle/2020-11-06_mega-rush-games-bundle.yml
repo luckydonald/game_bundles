@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Mega Rush Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9366/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9366/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9366/source.json
+games:
+- name: Tower of Archeos
+  ids:
+  - steam:499370
+  requires: []
+- name: Voidrun
+  ids:
+  - steam:1048560
+  requires: []
+- name: XenoRaptor
+  ids:
+  - steam:298280
+  requires: []
+- name: Super Mega Space Blaster Special Turbo
+  ids:
+  - steam:748330
+  requires: []
+- name: 'Boss Rush: Mythology'
+  ids:
+  - steam:1237870
+  requires: []
+- name: Mage World - The Wizard's Stone
+  ids:
+  - steam:1431380
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Destiny Forger Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9940/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9940/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9940/source.json
+games:
+- name: Forge and Fight
+  ids:
+  - unresolved:source:isthereanydeal:9940:forge-and-fight
+  requires: []
+- name: 'Arkan: The dog adventurer'
+  ids:
+  - steam:1157040
+  requires: []
+- name: Deep Despair
+  ids:
+  - steam:1241040
+  requires: []
+- name: 'D3D INSIDE 2: HELL'
+  ids:
+  - steam:1256920
+  requires: []
+- name: Four Rendezvous
+  ids:
+  - steam:1273570
+  requires: []
+- name: Conflict Area
+  ids:
+  - steam:1343550
+  requires: []
+- name: Crystal sword
+  ids:
+  - steam:1513710
+  requires: []

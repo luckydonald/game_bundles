@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Legendary Land Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9430/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9430/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9430/source.json
+games:
+- name: Magical Monster Land
+  ids:
+  - steam:949990
+  requires: []
+- name: MineRalph
+  ids:
+  - steam:1071190
+  requires: []
+- name: ADAPTR
+  ids:
+  - steam:516570
+  requires: []
+- name: Space Love Delta
+  ids:
+  - steam:1430980
+  requires: []
+- name: Hanapon Princess
+  ids:
+  - steam:1362980
+  requires: []
+- name: The Legend of Arcadieu 2
+  ids:
+  - steam:1445110
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Winter Jam Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9469/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9469/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9469/source.json
+games:
+- name: bomber-un
+  ids:
+  - steam:829300
+  requires: []
+- name: Soft cookie
+  ids:
+  - steam:1019070
+  requires: []
+- name: What do you hear?? Yanny vs Laurel
+  ids:
+  - steam:868550
+  requires: []
+- name: Peace Duke
+  ids:
+  - steam:823100
+  requires: []
+- name: Gravity Jump
+  ids:
+  - steam:867800
+  requires: []
+- name: 30 days to survive
+  ids:
+  - steam:645270
+  requires: []
+- name: Fill all
+  ids:
+  - steam:1261640
+  requires: []
+- name: Gray platformer
+  ids:
+  - steam:1270870
+  requires: []

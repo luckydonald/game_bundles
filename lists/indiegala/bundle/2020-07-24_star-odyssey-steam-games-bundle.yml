@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Star Odyssey Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9006/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9006/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9006/source.json
+games:
+- name: Space Battle VR
+  ids:
+  - steam:982700
+  requires: []
+- name: 'Raptor: Cretaceous Island'
+  ids:
+  - steam:929230
+  requires: []
+- name: 'Starbear: Taxi'
+  ids:
+  - steam:702030
+  requires: []
+- name: Galactic Rangers
+  ids:
+  - unresolved:source:isthereanydeal:9006:galactic-rangers
+  requires: []
+- name: 'Odyssey: The Deep Space Expedition'
+  ids:
+  - steam:738600
+  requires: []
+- name: Weapons Genius VR
+  ids:
+  - steam:1273380
+  requires: []
