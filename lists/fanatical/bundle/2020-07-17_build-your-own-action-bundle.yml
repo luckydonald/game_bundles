@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Action Bundle — Select 3 Titles for $2.99, 5 Titles for $3.99,
+  7 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8984/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8984/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8984/source.json
+games:
+- name: Gates of Hell
+  ids:
+  - steam:1136420
+  requires: []
+- name: Deadly 30
+  ids:
+  - steam:264730
+  requires: []
+- name: The Extinction
+  ids:
+  - unresolved:source:isthereanydeal:8984:the-extinction
+  requires: []
+- name: The Signal From Tölva
+  ids:
+  - steam:457760
+  requires: []
+- name: 'The Ship: Murder Party'
+  ids:
+  - steam:2400
+  requires: []
+- name: Thunder Wolves
+  ids:
+  - steam:232970
+  requires: []
+- name: 'Magrunner: Dark Pulse'
+  ids:
+  - steam:209630
+  requires: []
+- name: Rad Rodgers Radical Edition
+  ids:
+  - steam:805660
+  requires: []
+- name: Sine Mora EX
+  ids:
+  - steam:606730
+  requires: []
+- name: 35MM
+  ids:
+  - steam:466500
+  requires: []
+- name: Kill to Collect
+  ids:
+  - steam:241760
+  requires: []
+- name: Aces of the Luftwaffe
+  ids:
+  - steam:353940
+  requires: []
+- name: Dimension Drifter
+  ids:
+  - steam:913590
+  requires: []
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  requires: []
+- name: Alekhine's Gun
+  ids:
+  - steam:406720
+  requires: []
+- name: Panzer Elite Action Gold Edition
+  ids:
+  - steam:292420
+  requires: []
+- name: Deployment
+  ids:
+  - steam:755980
+  requires: []
+- name: Rogue Stormers
+  ids:
+  - steam:299480
+  requires: []
+- name: The spy who shot me™
+  ids:
+  - steam:771810
+  requires: []
+- name: SkyDrift
+  ids:
+  - steam:91100
+  requires: []

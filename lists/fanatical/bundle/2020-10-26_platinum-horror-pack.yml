@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Horror Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9323/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9323/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9323/source.json
+games:
+- name: The House of Da Vinci
+  ids:
+  - steam:522470
+  requires: []
+- name: Home Sweet Home
+  ids:
+  - steam:617160
+  requires: []
+- name: 'The Walking Dead: The Final Season'
+  ids:
+  - steam:866800
+  requires: []

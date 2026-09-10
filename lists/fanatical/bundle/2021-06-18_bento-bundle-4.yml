@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bento Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10158/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10158/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10158/source.json
+games:
+- name: 'Spirit Hunter: Death Mark'
+  ids:
+  - steam:980830
+  requires: []
+- name: Tokyo Xanadu eX+
+  ids:
+  - steam:587260
+  requires: []
+- name: Learn Japanese To Survive! Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:10158:learn-japanese-to-survive-trilogy
+  requires: []
+- name: Synergia
+  ids:
+  - steam:1047010
+  requires: []
+- name: 'White Day : a labyrinth named school'
+  ids:
+  - steam:466130
+  requires: []
+- name: 'The eXceed Collection: Aural Brutality Edition'
+  ids:
+  - unresolved:source:isthereanydeal:10158:the-exceed-collection-aural-brutality-edition
+  requires: []

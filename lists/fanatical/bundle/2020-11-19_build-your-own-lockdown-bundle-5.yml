@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Lockdown Bundle 5 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9408/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9408/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9408/source.json
+games:
+- name: Super Inefficient Golf
+  ids:
+  - steam:772480
+  requires: []
+- name: Chroma Squad
+  ids:
+  - steam:251130
+  requires: []
+- name: Galaxy of Pen & Paper +1
+  ids:
+  - steam:349790
+  requires: []
+- name: Pumped BMX Pro
+  ids:
+  - steam:966720
+  requires: []
+- name: Toybox Turbos
+  ids:
+  - unresolved:source:isthereanydeal:9408:toybox-turbos
+  requires: []
+- name: Bomber Crew - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:9408:bomber-crew-deluxe-edition
+  requires: []
+- name: Dead Secret
+  ids:
+  - steam:402260
+  requires: []
+- name: The Age of Decadence
+  ids:
+  - steam:230070
+  requires: []
+- name: Rad Rodgers Radical Edition
+  ids:
+  - steam:805660
+  requires: []
+- name: Sine Mora EX
+  ids:
+  - steam:606730
+  requires: []
+- name: 'Hover: Revolt of Gamers'
+  ids:
+  - steam:280180
+  requires: []
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+  requires: []
+- name: The Last Leviathan
+  ids:
+  - unresolved:source:isthereanydeal:9408:the-last-leviathan
+  requires: []
+- name: 'Giana Sisters: Twisted Dreams'
+  ids:
+  - steam:223220
+  requires: []
+- name: Exception
+  ids:
+  - steam:456390
+  requires: []
+- name: The Inner World
+  ids:
+  - steam:251430
+  requires: []
+- name: Swag and Sorcery
+  ids:
+  - steam:929010
+  requires: []
+- name: Super Sportmatchen
+  ids:
+  - steam:749860
+  requires: []
+- name: STASIS
+  ids:
+  - steam:380150
+  requires: []
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330
+  requires: []
+- name: The Fall
+  ids:
+  - steam:290770
+  requires: []
+- name: Of Orcs and Men
+  ids:
+  - steam:216910
+  requires: []

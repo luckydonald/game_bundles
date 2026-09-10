@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hall of Fame Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9301/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9301/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9301/source.json
+games:
+- name: 'Fahrenheit: Indigo Prophecy Remastered'
+  ids:
+  - steam:312840
+  requires: []
+- name: 'RollerCoaster Tycoon 2: Triple Thrill Pack'
+  ids:
+  - steam:285330
+  requires: []
+- name: Atari Vault
+  ids:
+  - unresolved:source:isthereanydeal:9301:atari-vault
+  requires: []
+- name: Atari Vault - 50 Game Add-On Pack
+  ids:
+  - unresolved:source:isthereanydeal:9301:atari-vault-50-game-add-on-pack
+  requires: []

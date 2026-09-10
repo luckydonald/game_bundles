@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Safe in Our World 1st Anniversary Charity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9310/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9310/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9310/source.json
+games:
+- name: RiME
+  ids:
+  - steam:493200
+  requires: []
+- name: GRIS
+  ids:
+  - steam:683320
+  requires: []
+- name: 'Dear Esther: Landmark Edition'
+  ids:
+  - steam:520720
+  requires: []
+- name: The Town Of Light
+  ids:
+  - steam:433100
+  requires: []
+- name: Fractured Minds
+  ids:
+  - steam:688740
+  requires: []
+- name: AVICII Invector
+  ids:
+  - steam:986800
+  requires: []
+- name: Meadow - A Shelter Game
+  ids:
+  - steam:486310
+  requires: []
