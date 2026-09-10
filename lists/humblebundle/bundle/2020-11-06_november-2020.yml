@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Nov 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9367/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9367/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9367/source.json
+games:
+- name: Rover Mechanic Simulator
+  ids:
+  - steam:864680
+  requires: []
+- name: Darksiders III
+  ids:
+  - steam:606280
+  requires: []
+- name: Darksburg
+  ids:
+  - steam:939100
+  requires: []
+- name: Smile For Me
+  ids:
+  - steam:1018850
+  requires: []
+- name: Townsmen - A Kingdom Rebuilt
+  ids:
+  - steam:938380
+  requires: []
+- name: Darkwood
+  ids:
+  - steam:274520
+  requires: []
+- name: Crying Suns
+  ids:
+  - steam:873940
+  requires: []
+- name: Little Misfortune
+  ids:
+  - steam:714120
+  requires: []
+- name: Yakuza Kiwami 2
+  ids:
+  - steam:3717340
+  requires: []
+- name: 'Imperator: Rome Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9367:imperator-rome-deluxe-edition
+  requires: []
+- name: Tsioque
+  ids:
+  - steam:393190
+  requires: []
+- name: Youropa
+  ids:
+  - steam:640120
+  requires: []
+- name: Torii
+  ids:
+  - steam:1589680
+  requires: []

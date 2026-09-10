@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Build Your Own Bandai Namco Bundle (2020) — Select 3 Titles for 80% Off,
+  4 Titles for 83% Off, 5+ Titles for 85% Off
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9262/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9262/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9262/source.json
+games:
+- name: 'Enslaved: Odyssey to the West Premium Edition'
+  ids:
+  - steam:245280
+  requires: []
+- name: Tales of Berseria
+  ids:
+  - steam:429660
+  requires: []
+- name: GOD EATER 2 Rage Burst
+  ids:
+  - steam:438490
+  requires: []
+- name: Get Even
+  ids:
+  - steam:299950
+  requires: []
+- name: 'Ni no Kuni™ II: Revenant Kingdom'
+  ids:
+  - steam:589360
+  requires: []
+- name: 11-11 Memories Retold
+  ids:
+  - steam:735580
+  requires: []
+- name: Little Nightmares
+  ids:
+  - steam:424840
+  requires: []
+- name: DRAGON BALL FIGHTERZ - Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:9262:dragon-ball-fighterz-ultimate-edition
+  requires: []
+- name: DRAGON BALL XENOVERSE 2
+  ids:
+  - steam:454650
+  requires: []
+- name: .hack//G.U. Last Recode
+  ids:
+  - steam:525480
+  requires: []
+- name: Naruto to Boruto Shinobi Striker
+  ids:
+  - steam:633230
+  requires: []
+- name: Project CARS 2
+  ids:
+  - unresolved:source:isthereanydeal:9262:project-cars-2
+  requires: []
+- name: SOULCALIBUR VI
+  ids:
+  - steam:544750
+  requires: []
