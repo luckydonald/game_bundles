@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Chernobyl Commando - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1453/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1453/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1453/source.json
+games:
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:1453:chernobyl-commando
+  requires: []

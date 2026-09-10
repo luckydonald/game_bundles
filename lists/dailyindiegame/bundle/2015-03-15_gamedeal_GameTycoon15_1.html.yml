@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Game Tycoon 1.5 - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1700/source.json
+games:
+- name: Game Tycoon 1.5
+  ids:
+  - steam:273770
+  requires: []

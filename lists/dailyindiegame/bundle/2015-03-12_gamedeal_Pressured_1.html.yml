@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Pressured - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1688/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1688/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1688/source.json
+games:
+- name: Pressured
+  ids:
+  - steam:292620
+  requires: []

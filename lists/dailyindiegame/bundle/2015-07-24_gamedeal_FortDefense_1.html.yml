@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fort Defense - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2261/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2261/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2261/source.json
+games:
+- name: Fort Defense
+  ids:
+  - steam:343930
+  requires: []

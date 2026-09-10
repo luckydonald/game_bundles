@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Lilly And Sasha: Curse Of The Immortals - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2350/source.json
+games:
+- name: 'Lilly and Sasha: Curse of the Immortals'
+  ids:
+  - unresolved:source:isthereanydeal:2350:lilly-and-sasha-curse-of-the-immortals
+  requires: []

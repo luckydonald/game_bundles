@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Airship Dragoon - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1488/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1488/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1488/source.json
+games:
+- name: Airship Dragoon
+  ids:
+  - steam:308380
+  requires: []
