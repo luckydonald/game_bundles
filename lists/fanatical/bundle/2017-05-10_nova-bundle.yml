@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Nova Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5076/source.json
+games:
+- name: Double Cubes
+  ids:
+  - unresolved:source:isthereanydeal:5076:double-cubes
+  requires: []
+- name: VR Journey
+  ids:
+  - unresolved:source:isthereanydeal:5076:vr-journey
+  requires: []
+- name: Random Journey
+  ids:
+  - unresolved:source:isthereanydeal:5076:random-journey
+  requires: []
+- name: Dungeon Journey
+  ids:
+  - steam:485490
+  requires: []
+- name: Coma:Mortuary
+  ids:
+  - steam:293320
+  requires: []
+- name: Alien Attack In Space
+  ids:
+  - steam:391310
+  requires: []
+- name: 'Alien Attack: Zero'
+  ids:
+  - steam:601690
+  requires: []
+- name: Envoy
+  ids:
+  - steam:2561200
+  requires: []
+- name: Android John
+  ids:
+  - unresolved:source:isthereanydeal:5076:android-john
+  requires: []

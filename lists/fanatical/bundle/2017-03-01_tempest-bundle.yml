@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tempest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4841/source.json
+games:
+- name: Stay Dead Evolution
+  ids:
+  - steam:341070
+  requires: []
+- name: 'Raptor: Call of The Shadows - 2015 Edition'
+  ids:
+  - steam:336060
+  requires: []
+- name: '"The Grandfather"'
+  ids:
+  - steam:433750
+  requires: []
+- name: Crazy Pixel Streaker
+  ids:
+  - steam:393460
+  requires: []
+- name: A Blind Legend
+  ids:
+  - steam:437530
+  requires: []
+- name: ABRACA - Imagic Games
+  ids:
+  - steam:345990
+  requires: []
+- name: Wickland
+  ids:
+  - unresolved:source:isthereanydeal:4841:wickland
+  requires: []
+- name: Evoland 2
+  ids:
+  - steam:359310
+  requires: []

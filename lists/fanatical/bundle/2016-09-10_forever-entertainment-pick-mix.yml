@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Forever Entertainment Pick & Mix Bundle — Select 5 Titles for $1.49, 10 Titles
+  for $1.99, 15 Titles for $2.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4027/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4027/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4027/source.json
+games:
+- name: 'Frederic: Evil Strikes Back'
+  ids:
+  - steam:301200
+  requires: []
+- name: Millie
+  ids:
+  - steam:294230
+  requires: []
+- name: Sinless + OST
+  ids:
+  - steam:340320
+  requires: []
+- name: Cat on a Diet
+  ids:
+  - steam:447890
+  requires: []
+- name: Surfingers
+  ids:
+  - steam:438080
+  requires: []
+- name: Timberman
+  ids:
+  - steam:398710
+  requires: []
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:4027:teddy-floppy-ear-kayaking
+  requires: []
+- name: Frederic - Resurrection of Music
+  ids:
+  - steam:301190
+  requires: []
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:4027:teddy-floppy-ear-the-race
+  requires: []
+- name: Merchants of Kaidan
+  ids:
+  - steam:294020
+  requires: []
+- name: Risky Rescue
+  ids:
+  - steam:439910
+  requires: []
+- name: Teddy Floppy Ear - Mountain Adventure
+  ids:
+  - unresolved:source:isthereanydeal:4027:teddy-floppy-ear-mountain-adventure
+  requires: []
+- name: Sparkle ZERO
+  ids:
+  - steam:448000
+  requires: []
+- name: Violett - Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:4027:violett-remastered-edition
+  requires: []
+- name: Iesabel
+  ids:
+  - steam:248710
+  requires: []
+- name: Sparkle 2 Evo
+  ids:
+  - steam:253650
+  requires: []
+- name: 16 bit trader
+  ids:
+  - unresolved:source:isthereanydeal:4027:16-bit-trader
+  requires: []
+- name: 'Sparkle 3: Genesis'
+  ids:
+  - steam:361190
+  requires: []

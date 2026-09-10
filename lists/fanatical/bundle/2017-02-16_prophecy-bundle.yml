@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Prophecy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4781/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4781/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4781/source.json
+games:
+- name: 'Haunted Past: Realm of Ghosts'
+  ids:
+  - steam:288840
+  requires: []
+- name: 'The Emerald Maiden: Symphony of Dreams'
+  ids:
+  - steam:429610
+  requires: []
+- name: Zoombinis
+  ids:
+  - steam:397430
+  requires: []
+- name: Princess Isabella
+  ids:
+  - steam:292660
+  requires: []
+- name: 'Enigmatis 3: The Shadow of Karkhala'
+  ids:
+  - steam:495110
+  requires: []
+- name: 'House of 1,000 Doors: The Palm of Zoroaster Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4781:house-of-1000-doors-the-palm-of-zoroaster-collectors-edition
+  requires: []
+- name: 'Demon Hunter 2: New Chapter'
+  ids:
+  - steam:465720
+  requires: []
+- name: 'Small Town Terrors: Livingston'
+  ids:
+  - steam:432770
+  requires: []
+- name: 'The Last Dream: Developer''s Edition'
+  ids:
+  - steam:395860
+  requires: []
+- name: 'Princess Isabella: Return of the Curse'
+  ids:
+  - steam:292670
+  requires: []
+- name: Inbetween Land
+  ids:
+  - steam:345540
+  requires: []

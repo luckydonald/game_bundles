@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Majestic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3675/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3675/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3675/source.json
+games:
+- name: Tiny Guardians
+  ids:
+  - steam:431230
+  requires: []
+- name: 'Zero Reflex: Black Eye Edition'
+  ids:
+  - steam:405650
+  requires: []
+- name: Pumped BMX +
+  ids:
+  - steam:392070
+  requires: []
+- name: Capsule Force
+  ids:
+  - steam:364060
+  requires: []
+- name: Dub Dash
+  ids:
+  - steam:406940
+  requires: []
+- name: On My Own
+  ids:
+  - steam:351730
+  requires: []
+- name: Chariot
+  ids:
+  - steam:319450
+  requires: []
+- name: Solarix
+  ids:
+  - steam:284990
+  requires: []
+- name: Porcunipine
+  ids:
+  - steam:352620
+  requires: []
+- name: Cally's Trials
+  ids:
+  - steam:476510
+  requires: []

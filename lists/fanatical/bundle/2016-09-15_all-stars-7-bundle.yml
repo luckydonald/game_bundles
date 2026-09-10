@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 7 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4060/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4060/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4060/source.json
+games:
+- name: Chaos on Deponia
+  ids:
+  - steam:220740
+  requires: []
+- name: FlatOut
+  ids:
+  - steam:6220
+  requires: []
+- name: Super 3-D Noah's Ark
+  ids:
+  - steam:371180
+  requires: []
+- name: it came from space and ate our brains
+  ids:
+  - steam:342620
+  requires: []
+- name: 'Surgeon Simulator: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4060:surgeon-simulator-anniversary-edition
+  requires: []
+- name: King Arthur's Gold
+  ids:
+  - steam:219830
+  requires: []
+- name: 'Nether: Resurrected'
+  ids:
+  - unresolved:source:isthereanydeal:4060:nether-resurrected
+  requires: []
+- name: Skulls of the Shogun
+  ids:
+  - steam:228960
+  requires: []

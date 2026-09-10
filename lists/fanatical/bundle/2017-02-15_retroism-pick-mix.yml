@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Retroism Pick & Mix Bundle — Select 2 Titles for $1.00, 5 Titles for $1.99,
+  10 Titles for $3.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4776/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4776/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4776/source.json
+games:
+- name: Sid Meier's Pirates! Gold Plus (Classic)
+  ids:
+  - steam:327380
+  requires: []
+- name: Sword of the Samurai
+  ids:
+  - steam:327950
+  requires: []
+- name: Eradicator
+  ids:
+  - steam:329640
+  requires: []
+- name: "Wars and Warriors \x96 Joan of Arc"
+  ids:
+  - steam:294590
+  requires: []
+- name: Marine Park Empire
+  ids:
+  - steam:294730
+  requires: []
+- name: Moorhuhn Invasion (Crazy Chicken Invasion)
+  ids:
+  - unresolved:source:isthereanydeal:4776:moorhuhn-invasion-crazy-chicken-invasion
+  requires: []
+- name: Shadow Ops - Red Mercury
+  ids:
+  - steam:286770
+  requires: []
+- name: Sid Meier's Covert Action (Classic)
+  ids:
+  - steam:327390
+  requires: []
+- name: '18 Wheels of Steel: Across America'
+  ids:
+  - steam:514160
+  requires: []
+- name: 18 Wheels of Steel Haulin
+  ids:
+  - steam:514180
+  requires: []
+- name: Command H.Q.
+  ids:
+  - unresolved:source:isthereanydeal:4776:command-h-q
+  requires: []
+- name: 'Seven Kingdoms: Ancient Adversaries'
+  ids:
+  - steam:450140
+  requires: []
+- name: Capitalism Plus
+  ids:
+  - steam:450120
+  requires: []
+- name: F-19 Stealth Fighter
+  ids:
+  - steam:347250
+  requires: []
+- name: Redline
+  ids:
+  - steam:328460
+  requires: []
+- name: Sid Meier's Colonization (Classic)
+  ids:
+  - steam:327400
+  requires: []
+- name: Moorhuhn (Crazy Chicken)
+  ids:
+  - unresolved:source:isthereanydeal:4776:moorhuhn-crazy-chicken
+  requires: []
+- name: Darklands
+  ids:
+  - steam:327930
+  requires: []
+- name: Nam
+  ids:
+  - steam:329650
+  requires: []
+- name: Slave Zero
+  ids:
+  - steam:328470
+  requires: []

@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: KISS Pick & Mix Bundle — Select 10 Titles for $2.49, 15 Titles for $3.49, 20
+  Titles for $3.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4043/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4043/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4043/source.json
+games:
+- name: Unrest
+  ids:
+  - steam:292400
+  requires: []
+- name: The Story Goes On
+  ids:
+  - steam:369560
+  requires: []
+- name: Blackbay Asylum
+  ids:
+  - steam:313140
+  requires: []
+- name: Bedlam
+  ids:
+  - unresolved:source:isthereanydeal:4043:bedlam
+  requires: []
+- name: Platypus
+  ids:
+  - steam:307340
+  requires: []
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Gun Metal
+  ids:
+  - steam:267920
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: Defend The Highlands
+  ids:
+  - steam:374830
+  requires: []
+- name: Between Me And The Night
+  ids:
+  - steam:285070
+  requires: []
+- name: AX:EL
+  ids:
+  - unresolved:source:isthereanydeal:4043:ax-el
+  requires: []
+- name: 'Pixel Puzzles 2: Birds'
+  ids:
+  - steam:344230
+  requires: []
+- name: Gold Rush! Anniversary
+  ids:
+  - steam:319230
+  requires: []
+- name: Darkout
+  ids:
+  - steam:257050
+  requires: []
+- name: 'Pixel Puzzles 2: Space'
+  ids:
+  - steam:355920
+  requires: []
+- name: 'Pixel Puzzles: UndeadZ'
+  ids:
+  - steam:285010
+  requires: []
+- name: Fist of Jesus
+  ids:
+  - unresolved:source:isthereanydeal:4043:fist-of-jesus
+  requires: []
+- name: One Hundred Ways
+  ids:
+  - steam:404630
+  requires: []
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+  requires: []
+- name: Solarix
+  ids:
+  - steam:284990
+  requires: []
+- name: Fly in the House
+  ids:
+  - steam:350500
+  requires: []
+- name: Bloop Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:4043:bloop-reloaded
+  requires: []
+- name: 'Selfie: Sisters of the Amniotic Lens'
+  ids:
+  - unresolved:source:isthereanydeal:4043:selfie-sisters-of-the-amniotic-lens
+  requires: []
+- name: Nosferatu - The Wrath Of Malachi
+  ids:
+  - steam:283290
+  requires: []
+- name: 'Pixel Puzzles 2: Anime'
+  ids:
+  - steam:350810
+  requires: []
