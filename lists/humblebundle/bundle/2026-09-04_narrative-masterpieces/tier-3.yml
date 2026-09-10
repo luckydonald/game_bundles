@@ -9,54 +9,74 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16538/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16538/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16538/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: IMMORTALITY
   ids:
   - steam:1350200
+  - isthereanydeal:immortality
   requires: []
 - name: Wednesdays
   ids:
   - steam:2747770
+  - isthereanydeal:wednesdays
   requires: []
 - name: 'Tavern Talk 2: Dreamwalker'
   ids:
   - steam:3500880
+  - isthereanydeal:tavern-talk-2-dreamwalker
   requires: []
 - name: 'Tavern Talk 2: Dreamwalker - Drowsy Druid (Decoration Pack)'
   ids:
   - steam:4464060
+  - isthereanydeal:tavern-talk-2-dreamwalker-drowsy-druid-decoration-pack
   requires: []
 - name: 'Tavern Talk 2: Dreamwalker - Wondrous Wizard (Decoration Pack)'
   ids:
   - steam:4464070
+  - unresolved:source:isthereanydeal:16538:tavern-talk-2-dreamwalker-wondrous-wizard-decoration-pack
+  - isthereanydeal:tavern-talk-2-dreamwalker-wondrous-wizard-decoration-pack
   requires: []
 - name: The Wreck
   ids:
   - steam:1687960
+  - isthereanydeal:the-wreck
   requires: []
 - name: The Pale Beyond
   ids:
   - steam:1266030
+  - isthereanydeal:the-pale-beyond
   requires: []
 - name: SUNLESS SKIES
   ids:
   - steam:596970
+  - isthereanydeal:sunless-skies-sovereign-edition
   requires: []
 - name: Eliza
   ids:
   - steam:716500
+  - isthereanydeal:eliza
   requires: []
 - name: Along the Edge
   ids:
   - steam:504390
+  - isthereanydeal:along-the-edge
   requires: []
 - name: We. The Revolution
   ids:
   - steam:736850
+  - isthereanydeal:we-the-revolution
   requires: []
 - name: 'Crowns and Pawns: Kingdom of Deceit'
   ids:
   - steam:1125910
+  - isthereanydeal:crowns-and-pawns-kingdom-of-deceit
   requires: []

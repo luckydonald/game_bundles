@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Happy Queens Bundle — Price Increase after first 24 hours
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16549/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16549/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16549/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: SEX Massage
+  ids:
+  - steam:2666200
+  - isthereanydeal:sex-massage
+  requires: []
+- name: Escort's Secrets 18+
+  ids:
+  - steam:2668160
+  - isthereanydeal:escorts-secrets-18_plus
+  requires: []
+- name: CUM Queens
+  ids:
+  - steam:2711320
+  - isthereanydeal:cum-queens
+  requires: []
+- name: SEX Massage 2 🔞
+  ids:
+  - steam:3066910
+  - isthereanydeal:sex-massage-2
+  requires: []
+- name: Quickie Massage 🧴💦
+  ids:
+  - steam:4173760
+  - isthereanydeal:quickie-massage
+  requires: []
