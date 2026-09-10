@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Aug 2019) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7606/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7606/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7606/source.json
+games:
+- name: Surviving Mars
+  ids:
+  - unresolved:source:isthereanydeal:7606:surviving-mars
+  requires: []
+- name: Swords & Soldiers II Shawarmageddon
+  ids:
+  - steam:703880
+  requires: []
+- name: 'Rising Storm 2: Vietnam - Uncle Ho''s Heroes Cosmetic'
+  ids:
+  - steam:794340
+  requires: []
+- name: Don't Give Up
+  ids:
+  - steam:1489150
+  requires: []
+- name: 'Kingdom Come: Deliverance'
+  ids:
+  - steam:379430
+  requires: []
+- name: 'Almost There: The Platformer'
+  ids:
+  - steam:951940
+  requires: []
+- name: 'Rising Storm 2: Vietnam'
+  ids:
+  - steam:418460
+  requires: []
+- name: The Adventure Pals
+  ids:
+  - steam:396710
+  requires: []
+- name: Yoku's Island Express
+  ids:
+  - steam:334940
+  requires: []
+- name: 'Rising Storm 2: Vietnam - Born in the USA Cosmetic'
+  ids:
+  - steam:794341
+  requires: []
