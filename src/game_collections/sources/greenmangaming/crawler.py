@@ -13,11 +13,12 @@ from urllib.parse import urlparse
 
 import httpx
 
-from game_collections.models import Game, GameGroup, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
     load_cached_archive,
+    merge_tiered_games,
     render_game_list_yaml,
 )
 from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgTier
@@ -279,29 +280,32 @@ def write_gmg_offer(
             tiers_with_games.append((tier, games))
         # end if
     # end for
-    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
-        if len(tiers_with_games) == 1:
-            path = list_directory / "bundle.yml"
-            list_tier = None
-        else:
-            path = list_directory / f"tier-{rank}.yml"
-            list_tier = rank
-        # end if
-        game_list = GameList(
-            schema=1,
-            name=f"{archive.name} — {tier.name}",
-            tier=list_tier,
-            references=[
-                Reference(name="Green Man Gaming bundle", url=archive.url),
-                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
-                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
-            ],
-            crawlers=["greenmangaming"],
-            games=games,
+
+    path = list_directory.parent / f"{list_directory.name}.yml"
+    if len(tiers_with_games) == 1:
+        tier, games = tiers_with_games[0]
+        name = f"{archive.name} — {tier.name}"
+        tier_definitions: list[TierDefinition] = []
+    else:
+        name = archive.name
+        tier_definitions, games = merge_tiered_games(
+            [(rank, tier.name, tier_games, None) for rank, (tier, tier_games) in enumerate(tiers_with_games, start=1)]
         )
-        atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
-        written.append(path)
-    # end for
+    # end if
+    game_list = GameList(
+        schema=1,
+        name=name,
+        tiers=tier_definitions,
+        references=[
+            Reference(name="Green Man Gaming bundle", url=archive.url),
+            Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+            Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+        ],
+        crawlers=["greenmangaming"],
+        games=games,
+    )
+    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    written.append(path)
     return tuple(written)
 # end def write_gmg_offer
 

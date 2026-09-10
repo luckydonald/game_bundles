@@ -15,12 +15,13 @@ from urllib.parse import urljoin, urlparse
 import httpx
 
 from game_collections.lists import load_game_list
-from game_collections.models import Game, GameGroup, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
     load_cached_archive,
     merge_game_list,
+    merge_tiered_games,
     render_game_list_yaml,
 )
 from game_collections.sources.humblebundle.models import HumbleArchive, HumbleItem, HumbleTier
@@ -316,31 +317,38 @@ def write_humble_offer(
             pool_games.extend(_games_for_item(item))
             seen_pool_ids.update(item_ids)
         # end for
-        pick_directory = list_directory / key
-        for rank, option in enumerate(archive.choice_pick_options, start=1):
-            if len(archive.choice_pick_options) == 1:
-                path = pick_directory / "bundle.yml"
-                list_tier = None
-            else:
-                path = pick_directory / f"tier-{rank}.yml"
-                list_tier = rank
-            # end if
-            game_list = GameList(
-                schema=1,
-                name=f"{archive.name} — {option.tier_key.title()}",
-                tier=list_tier,
-                pick_quota=option.quota,
-                references=[
-                    Reference(name="Humble Bundle offer", url=archive.url),
-                    Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
-                    Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
-                ],
-                crawlers=["humblebundle"],
-                games=pool_games,
+        path = list_directory / f"{key}.yml"
+        pick_quota: int | None = None
+        if len(archive.choice_pick_options) == 1:
+            option = archive.choice_pick_options[0]
+            name = f"{archive.name} — {option.tier_key.title()}"
+            tier_definitions: list[TierDefinition] = []
+            games = pool_games
+            pick_quota = option.quota
+        else:
+            name = archive.name
+            tier_definitions, games = merge_tiered_games(
+                [
+                    (rank, option.tier_key.title(), pool_games, option.quota)
+                    for rank, option in enumerate(archive.choice_pick_options, start=1)
+                ]
             )
-            _write_merged_game_list(game_list, path, lists_root, repository_root)
-            written.append(path)
-        # end for
+        # end if
+        game_list = GameList(
+            schema=1,
+            name=name,
+            tiers=tier_definitions,
+            pick_quota=pick_quota,
+            references=[
+                Reference(name="Humble Bundle offer", url=archive.url),
+                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+            ],
+            crawlers=["humblebundle"],
+            games=games,
+        )
+        _write_merged_game_list(game_list, path, lists_root, repository_root)
+        written.append(path)
         return tuple(written)
     # end if
 
@@ -361,43 +369,50 @@ def write_humble_offer(
         # end if
     # end for
     # Humble's own `tier_order` lists the full/entire tier first (descending item
-    # count); re-sort ascending so `tier-1.yml` is the smallest tier and the
-    # highest-numbered file is always the full bundle, matching isthereanydeal's
-    # convention and avoiding cross-source file conflicts.
+    # count); re-sort ascending so tier 1 is the smallest and the highest rank is
+    # always the full bundle, matching isthereanydeal's convention.
     tiers_with_games.sort(key=lambda pair: pair[0].item_count)
-    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
-        name = archive.name if archive.kind == "choice" else f"{archive.name} — {tier.name}"
-        if archive.kind == "choice":
-            path = list_directory / f"{key}.yml"
-            list_tier = None
-        elif len(tiers_with_games) == 1:
-            path = list_directory / "bundle.yml"
-            list_tier = None
-        else:
-            path = list_directory / f"tier-{rank}.yml"
-            list_tier = rank
-        # end if
-        game_list = GameList(
-            schema=1,
-            name=name,
-            tier=list_tier,
-            references=[
-                Reference(name="Humble Bundle offer", url=archive.url),
-                Reference(
-                    name="Crawl metadata",
-                    path=os.path.relpath(metadata_path, path.parent),
-                ),
-                Reference(
-                    name="Crawl source",
-                    path=os.path.relpath(source_path, path.parent),
-                ),
-            ],
-            crawlers=["humblebundle"],
-            games=games,
+    if archive.kind == "choice":
+        # A Choice archive without pick options: single flat pool, no variations.
+        path = list_directory / f"{key}.yml"
+        name = archive.name
+        tier_definitions = []
+        games = tiers_with_games[0][1] if tiers_with_games else []
+    elif len(tiers_with_games) == 1:
+        path = list_directory.parent / f"{key}.yml"
+        name = f"{archive.name} — {tiers_with_games[0][0].name}"
+        tier_definitions = []
+        games = tiers_with_games[0][1]
+    else:
+        path = list_directory.parent / f"{key}.yml"
+        name = archive.name
+        tier_definitions, games = merge_tiered_games(
+            [(rank, tier.name, tier_games, None) for rank, (tier, tier_games) in enumerate(tiers_with_games, start=1)]
         )
-        _write_merged_game_list(game_list, path, lists_root, repository_root)
-        written.append(path)
-    # end for
+    # end if
+    game_list = GameList(
+        schema=1,
+        name=name,
+        tiers=tier_definitions,
+        references=[
+            Reference(
+                name="Humble Bundle offer",
+                url=archive.url,
+            ),
+            Reference(
+                name="Crawl metadata",
+                path=os.path.relpath(metadata_path, path.parent),
+            ),
+            Reference(
+                name="Crawl source",
+                path=os.path.relpath(source_path, path.parent),
+            ),
+        ],
+        crawlers=["humblebundle"],
+        games=games,
+    )
+    _write_merged_game_list(game_list, path, lists_root, repository_root)
+    written.append(path)
     return tuple(written)
 # end def write_humble_offer
 

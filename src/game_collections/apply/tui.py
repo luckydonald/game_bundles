@@ -23,7 +23,7 @@ from game_collections.apply.filter_widgets import FilterCheckbox, FilterInput, F
 from game_collections.apply.metadata import BundleMetadata, load_bundle_metadata
 from game_collections.apply.tree_checkbox import CheckState, is_checkbox_click, render_checkbox
 from game_collections.completion import GameListCompletion, MissingHandling, evaluate_completion
-from game_collections.lists import LoadedGameList, discover_game_lists
+from game_collections.lists import LoadedGameList, discover_game_lists, expand_list_tiers, split_tier_suffix
 from game_collections.models import Game
 from game_collections.os_open import open_url as _open_url
 from game_collections.sources.storefronts import product_url
@@ -485,7 +485,11 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             self.call_from_thread(self._update_loading_progress, index, total, path)
         # end def on_progress
 
-        game_lists = discover_game_lists(self._lists_root, on_progress=on_progress)
+        game_lists = [
+            expanded
+            for game_list in discover_game_lists(self._lists_root, on_progress=on_progress)
+            for expanded in expand_list_tiers(game_list)
+        ]
         bundles = load_bundle_metadata(game_lists)
         self.call_from_thread(self._finish_loading, game_lists, bundles)
     # end def _load_lists
@@ -764,7 +768,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             if bundle.tier is None:
                 continue
             # end if
-            parent = bundle.list_id.rpartition("/")[0]
+            parent = split_tier_suffix(bundle.list_id)[0]
             groups.setdefault(parent, []).append(bundle)
         # end for
         return {max(siblings, key=lambda bundle: bundle.tier or 0).list_id for siblings in groups.values()}
@@ -1043,7 +1047,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             if bundle.tier is None:
                 continue
             # end if
-            parent = bundle.list_id.rpartition("/")[0]
+            parent = split_tier_suffix(bundle.list_id)[0]
             groups.setdefault(parent, []).append(bundle)
         # end for
         for siblings in groups.values():

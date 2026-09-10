@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -11,6 +12,9 @@ import yaml
 from pydantic import ValidationError
 
 from game_collections.models import GameList, validate_list_id
+
+
+TIER_SUFFIX_PATTERN = re.compile(r"^(?P<base>.+)#tier-(?P<rank>[0-9]+)$")
 
 
 class ListLoadError(ValueError):
@@ -28,6 +32,55 @@ class LoadedGameList:
     data: GameList
 
 # end class LoadedGameList
+
+
+def expand_list_tiers(game_list: LoadedGameList) -> list[LoadedGameList]:
+    """Expand one merged bundle list into one synthetic list per tier, if any.
+
+    A list with `tiers` (a multi-variation bundle) represents several
+    launcher-facing collections at once - one per purchase variation - each
+    with only the games belonging to that tier. Expand it into one synthetic
+    `LoadedGameList` per `TierDefinition`, keyed `f"{list_id}#tier-{rank}"`
+    (see `split_tier_suffix`) so launcher adapters and the `apply` picker can
+    keep treating "one collection" as "one list", exactly as when each tier
+    lived in its own file. A list without `tiers` is returned unchanged.
+    """
+    if not game_list.data.tiers:
+        return [game_list]
+    # end if
+    expanded: list[LoadedGameList] = []
+    for tier in game_list.data.tiers:
+        games = [
+            game.model_copy(update={"tiers": []})
+            for game in game_list.data.games
+            if tier.rank in game.tiers
+        ]
+        data = game_list.data.model_copy(
+            update={
+                "name": f"{game_list.data.name} — {tier.name}",
+                "tiers": [],
+                "pick_quota": tier.pick_quota,
+                "games": games,
+            }
+        )
+        expanded.append(LoadedGameList(id=f"{game_list.id}#tier-{tier.rank}", path=game_list.path, data=data))
+    # end for
+    return expanded
+# end def expand_list_tiers
+
+
+def split_tier_suffix(list_id: str) -> tuple[str, int | None]:
+    """Split a synthetic per-tier list ID back into its base ID and rank.
+
+    Returns `(list_id, None)` unchanged for a list ID `expand_list_tiers`
+    never touched (i.e. not a multi-variation bundle).
+    """
+    match = TIER_SUFFIX_PATTERN.fullmatch(list_id)
+    if match is None:
+        return list_id, None
+    # end if
+    return match.group("base"), int(match.group("rank"))
+# end def split_tier_suffix
 
 
 def derive_list_id(path: Path, lists_root: Path) -> str:
