@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 372 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9661/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9661/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9661/source.json
+games:
+- name: THE DISHWASHER
+  ids:
+  - unresolved:source:isthereanydeal:9661:the-dishwasher
+  requires: []
+- name: MinSweeper
+  ids:
+  - steam:726030
+  requires: []
+- name: AF-ZERO
+  ids:
+  - steam:744280
+  requires: []
+- name: Metori
+  ids:
+  - steam:856190
+  requires: []
+- name: 'AVA: Dark History'
+  ids:
+  - steam:1162320
+  requires: []
+- name: Spoils of Plunder
+  ids:
+  - steam:982250
+  requires: []
+- name: Valletine against Darkne
+  ids:
+  - steam:1375000
+  requires: []
+- name: Soulestination
+  ids:
+  - steam:1477330
+  requires: []
+- name: STOP and MOVE
+  ids:
+  - steam:1519850
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 436 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9913/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9913/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9913/source.json
+games:
+- name: Type Defense
+  ids:
+  - steam:904440
+  requires: []
+- name: Loveless cat
+  ids:
+  - unresolved:source:isthereanydeal:9913:loveless-cat
+  requires: []
+- name: Monster Shooter™
+  ids:
+  - steam:2843970
+  requires: []
+- name: Red Risk
+  ids:
+  - steam:448070
+  requires: []
+- name: Choco Pixel 3
+  ids:
+  - steam:1254590
+  requires: []
+- name: Cemetery War
+  ids:
+  - steam:1306860
+  requires: []
+- name: Zball
+  ids:
+  - unresolved:source:isthereanydeal:9913:zball
+  requires: []
+- name: Zball II
+  ids:
+  - unresolved:source:isthereanydeal:9913:zball-ii
+  requires: []
+- name: Furgal's Jetpack
+  ids:
+  - steam:1398270
+  requires: []

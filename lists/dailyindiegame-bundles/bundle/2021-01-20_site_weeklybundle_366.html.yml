@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 366: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9643/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9643/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9643/source.json
+games:
+- name: Borderus
+  ids:
+  - steam:1262100
+  requires: []
+- name: Stay home and play with waifu!
+  ids:
+  - steam:1298260
+  requires: []
+- name: Hentai Nureta Puzzle Power Girls
+  ids:
+  - steam:1432330
+  requires: []
+- name: Hentai Coloring Game
+  ids:
+  - steam:1493720
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica Christmas
+  ids:
+  - steam:1502240
+  requires: []
+- name: 'Desirable: Dream Hotel'
+  ids:
+  - steam:1508890
+  requires: []
+- name: Happy Valentine's Day
+  ids:
+  - unresolved:source:isthereanydeal:9643:happy-valentines-day
+  requires: []
+- name: Elven Truth
+  ids:
+  - unresolved:source:isthereanydeal:9643:elven-truth
+  requires: []
+- name: Ero Snooker
+  ids:
+  - steam:1522530
+  requires: []

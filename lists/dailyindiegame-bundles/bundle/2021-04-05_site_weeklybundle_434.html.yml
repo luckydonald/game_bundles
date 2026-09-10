@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 434: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9907/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9907/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9907/source.json
+games:
+- name: Jubox 2
+  ids:
+  - unresolved:source:isthereanydeal:9907:jubox-2
+  requires: []
+- name: Dodge Rocket
+  ids:
+  - steam:1141450
+  requires: []
+- name: Hero
+  ids:
+  - steam:486020
+  requires: []
+- name: 'Bitcoin Collector: Spinners Attack'
+  ids:
+  - steam:722020
+  requires: []
+- name: mmmmm donuts arhhh......
+  ids:
+  - steam:1151750
+  requires: []
+- name: Sea Explorer
+  ids:
+  - steam:846210
+  requires: []
+- name: Daedalic Complex
+  ids:
+  - unresolved:source:isthereanydeal:9907:daedalic-complex
+  requires: []
+- name: Star Sweet
+  ids:
+  - steam:760350
+  requires: []
+- name: 武儒绘卷 - 启示录
+  ids:
+  - steam:1204490
+  requires: []

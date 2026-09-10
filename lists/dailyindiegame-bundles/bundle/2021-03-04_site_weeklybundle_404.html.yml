@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 404 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9805/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9805/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9805/source.json
+games:
+- name: XENOS Defense
+  ids:
+  - unresolved:source:isthereanydeal:9805:xenos-defense
+  requires: []
+- name: WannaMine
+  ids:
+  - steam:801500
+  requires: []
+- name: Kasmo
+  ids:
+  - steam:1414490
+  requires: []
+- name: Arthur's Revenge
+  ids:
+  - unresolved:source:isthereanydeal:9805:arthurs-revenge
+  requires: []
+- name: Inland
+  ids:
+  - steam:1468280
+  requires: []
+- name: Dark Side of War
+  ids:
+  - steam:1464610
+  requires: []
+- name: Pripyat-3
+  ids:
+  - unresolved:source:isthereanydeal:9805:pripyat-3
+  requires: []
+- name: Jumping Knight
+  ids:
+  - steam:1463870
+  requires: []
+- name: Heroic Adventures
+  ids:
+  - unresolved:source:isthereanydeal:9805:heroic-adventures
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 391 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9764/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9764/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9764/source.json
+games:
+- name: 'UFO: Afterlight'
+  ids:
+  - steam:237950
+  requires: []
+- name: Pixel Puzzles Junior
+  ids:
+  - unresolved:source:isthereanydeal:9764:pixel-puzzles-junior
+  requires: []
+- name: Woodlands
+  ids:
+  - steam:646100
+  requires: []
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500
+  requires: []
+- name: CRYEP
+  ids:
+  - steam:798240
+  requires: []
+- name: The Last Express Gold Edition
+  ids:
+  - steam:252710
+  requires: []
+- name: Goblin Times
+  ids:
+  - steam:1191870
+  requires: []
+- name: Macro golf
+  ids:
+  - unresolved:source:isthereanydeal:9764:macro-golf
+  requires: []
+- name: Dark spot
+  ids:
+  - steam:1511620
+  requires: []

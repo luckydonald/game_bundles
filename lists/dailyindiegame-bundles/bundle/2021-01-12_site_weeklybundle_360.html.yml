@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 360 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9623/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9623/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9623/source.json
+games:
+- name: Gordon Streaman
+  ids:
+  - steam:1131810
+  requires: []
+- name: 'Tower Tank: TD Reversal'
+  ids:
+  - unresolved:source:isthereanydeal:9623:tower-tank-td-reversal
+  requires: []
+- name: FINAL MATCH
+  ids:
+  - steam:841260
+  requires: []
+- name: Crimson Shift
+  ids:
+  - steam:837330
+  requires: []
+- name: 'Catch The Kids: Priest Simulator Game'
+  ids:
+  - steam:915730
+  requires: []
+- name: FEB - Brazilian Elite Force
+  ids:
+  - steam:1213650
+  requires: []
+- name: Aurora - Hidden Colors
+  ids:
+  - steam:1184530
+  requires: []
+- name: Plataforma branca
+  ids:
+  - unresolved:source:isthereanydeal:9623:plataforma-branca
+  requires: []
+- name: 'Hieroglyph: Prologue'
+  ids:
+  - unresolved:source:isthereanydeal:9623:hieroglyph-prologue
+  requires: []

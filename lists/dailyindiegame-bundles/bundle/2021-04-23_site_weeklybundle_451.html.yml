@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 451 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9969/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9969/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9969/source.json
+games:
+- name: Pursuer
+  ids:
+  - steam:1013660
+  requires: []
+- name: Telekinetic
+  ids:
+  - steam:992000
+  requires: []
+- name: Treater
+  ids:
+  - steam:1137050
+  requires: []
+- name: The Refuge
+  ids:
+  - steam:1128650
+  requires: []
+- name: Edge of Dreams
+  ids:
+  - steam:1261020
+  requires: []
+- name: ElementalsFight
+  ids:
+  - steam:1415540
+  requires: []
+- name: Meteoroids 3D
+  ids:
+  - unresolved:source:isthereanydeal:9969:meteoroids-3d
+  requires: []
+- name: Planets Battle
+  ids:
+  - steam:1607850
+  requires: []
+- name: Water Drift
+  ids:
+  - unresolved:source:isthereanydeal:9969:water-drift
+  requires: []

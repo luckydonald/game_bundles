@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 380 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9709/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9709/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9709/source.json
+games:
+- name: Maze Slider
+  ids:
+  - steam:1262260
+  requires: []
+- name: 'Zombie Wars: Invasion'
+  ids:
+  - steam:429060
+  requires: []
+- name: Mage
+  ids:
+  - steam:1013100
+  requires: []
+- name: AEGYPTUS
+  ids:
+  - steam:675130
+  requires: []
+- name: Idle Earth
+  ids:
+  - steam:789750
+  requires: []
+- name: Another Hardcore Game
+  ids:
+  - steam:951050
+  requires: []
+- name: Color Buster!
+  ids:
+  - unresolved:source:isthereanydeal:9709:color-buster
+  requires: []
+- name: Click on their Heads
+  ids:
+  - steam:1498630
+  requires: []
+- name: Fly The Cloud
+  ids:
+  - steam:1495260
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 412: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9837/source.json
+games:
+- name: Cyberpunk Sex Simulator
+  ids:
+  - steam:1175950
+  requires: []
+- name: Aria Dating Simulator
+  ids:
+  - steam:1181290
+  requires: []
+- name: 'Rascallz: Tiki Tiki'
+  ids:
+  - steam:1247070
+  requires: []
+- name: Sex Apocalypse
+  ids:
+  - steam:1351970
+  requires: []
+- name: Desirable
+  ids:
+  - steam:1381150
+  requires: []
+- name: Shiny Summer
+  ids:
+  - unresolved:source:isthereanydeal:9837:shiny-summer
+  requires: []
+- name: 'Borderus: Angels & Demons'
+  ids:
+  - steam:1459720
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 2
+  ids:
+  - steam:1482000
+  requires: []
+- name: True Spring Love
+  ids:
+  - unresolved:source:isthereanydeal:9837:true-spring-love
+  requires: []

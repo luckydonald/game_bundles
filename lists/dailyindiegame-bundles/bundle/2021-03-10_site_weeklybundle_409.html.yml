@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 409 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9822/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9822/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9822/source.json
+games:
+- name: 'Project: R.E.B.O.O.T 2'
+  ids:
+  - unresolved:source:isthereanydeal:9822:project-r-e-b-o-o-t-2
+  requires: []
+- name: Fall Down
+  ids:
+  - steam:765530
+  requires: []
+- name: Magic Box
+  ids:
+  - steam:575750
+  requires: []
+- name: Dark Shadows - Army of Evil
+  ids:
+  - steam:280640
+  requires: []
+- name: Bleeding Border
+  ids:
+  - steam:416290
+  requires: []
+- name: 'Project: R.E.B.O.O.T'
+  ids:
+  - unresolved:source:isthereanydeal:9822:project-r-e-b-o-o-t
+  requires: []
+- name: Drunken Fight Simulator
+  ids:
+  - steam:576480
+  requires: []
+- name: Cold Blooded Cube
+  ids:
+  - unresolved:source:isthereanydeal:9822:cold-blooded-cube
+  requires: []
+- name: Inner silence
+  ids:
+  - steam:575780
+  requires: []

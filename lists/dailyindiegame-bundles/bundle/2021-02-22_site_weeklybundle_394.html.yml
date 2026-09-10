@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 394 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9771/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9771/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9771/source.json
+games:
+- name: The Mystery Of Woolley Mountain
+  ids:
+  - steam:521560
+  requires: []
+- name: Cotropitorii
+  ids:
+  - steam:992420
+  requires: []
+- name: CuberPunk 2089
+  ids:
+  - steam:938300
+  requires: []
+- name: 3 Days in the Abyss
+  ids:
+  - steam:970180
+  requires: []
+- name: Blood Drift
+  ids:
+  - steam:798140
+  requires: []
+- name: SHELL_BREAK
+  ids:
+  - steam:988590
+  requires: []
+- name: CuBB
+  ids:
+  - unresolved:source:isthereanydeal:9771:cubb
+  requires: []
+- name: Jack In Town
+  ids:
+  - steam:1175500
+  requires: []
+- name: Onmyoudou - Arcade Edition
+  ids:
+  - steam:1351840
+  requires: []

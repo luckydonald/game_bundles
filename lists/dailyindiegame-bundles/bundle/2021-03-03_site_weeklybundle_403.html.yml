@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 403: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9800/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9800/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9800/source.json
+games:
+- name: PomboTroll
+  ids:
+  - steam:964170
+  requires: []
+- name: Bloody sand
+  ids:
+  - unresolved:source:isthereanydeal:9800:bloody-sand
+  requires: []
+- name: Zack Y
+  ids:
+  - steam:937620
+  requires: []
+- name: Pet Puzzle
+  ids:
+  - steam:1092080
+  requires: []
+- name: Colorcers
+  ids:
+  - unresolved:source:isthereanydeal:9800:colorcers
+  requires: []
+- name: Chromium Man Clicker
+  ids:
+  - unresolved:source:isthereanydeal:9800:chromium-man-clicker
+  requires: []
+- name: KOLOBOK
+  ids:
+  - steam:757170
+  requires: []
+- name: Inglorious Pirate
+  ids:
+  - unresolved:source:isthereanydeal:9800:inglorious-pirate
+  requires: []
+- name: Apple Hopper
+  ids:
+  - steam:1371610
+  requires: []

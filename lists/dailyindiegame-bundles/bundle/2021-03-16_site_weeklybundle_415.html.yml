@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 415 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9841/source.json
+games:
+- name: Bird
+  ids:
+  - steam:2196750
+  requires: []
+- name: 'SmFly: Gravity Adventure'
+  ids:
+  - steam:1403890
+  requires: []
+- name: Roscosmas Landing
+  ids:
+  - unresolved:source:isthereanydeal:9841:roscosmas-landing
+  requires: []
+- name: Mad Bus
+  ids:
+  - unresolved:source:isthereanydeal:9841:mad-bus
+  requires: []
+- name: FartPart
+  ids:
+  - unresolved:source:isthereanydeal:9841:fartpart
+  requires: []
+- name: Lazy Postman
+  ids:
+  - unresolved:source:isthereanydeal:9841:lazy-postman
+  requires: []
+- name: Squirrel Divorce
+  ids:
+  - unresolved:source:isthereanydeal:9841:squirrel-divorce
+  requires: []
+- name: Elder Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:9841:elder-puzzle
+  requires: []
+- name: Puzzle Challengers
+  ids:
+  - steam:1550810
+  requires: []
