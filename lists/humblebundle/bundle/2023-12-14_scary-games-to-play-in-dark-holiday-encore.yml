@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Scary Games to Play in the Dark Bundle (Holiday Encore) — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13706/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13706/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13706/source.json
+games:
+- name: Them & Us
+  ids:
+  - steam:915600
+  requires: []
+- name: The Blackout Club
+  ids:
+  - steam:599080
+  requires: []
+- name: SCP022
+  ids:
+  - steam:1009990
+  requires: []
+- name: Visage
+  ids:
+  - steam:594330
+  requires: []
+- name: The Mortuary Assistant
+  ids:
+  - steam:1295920
+  requires: []
+- name: Labyrinthe
+  ids:
+  - unresolved:source:isthereanydeal:13706:labyrinthe
+  requires: []
