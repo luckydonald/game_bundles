@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'HeroCraft Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5735/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5735/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5735/source.json
+games:
+- name: 'Warhammer 40,000: Space Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:5735:warhammer-40000-space-wolf
+  requires: []
+- name: Tempest - Original Soundtrack
+  ids:
+  - steam:527010
+  requires: []
+- name: 'Strategy & Tactics: Wargame Collection'
+  ids:
+  - steam:338130
+  requires: []
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+  requires: []
+- name: 'Strategy & Tactics: Wargame Collection - Vikings!'
+  ids:
+  - steam:536740
+  requires: []
+- name: 'Strategy & Tactics: Wargame Collection - USSR vs USA!'
+  ids:
+  - steam:536741
+  requires: []
+- name: 'Tempest: Pirate Action RPG'
+  ids:
+  - steam:418180
+  requires: []
+- name: 'Strategy & Tactics: Dark Ages'
+  ids:
+  - steam:508300
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Exceptional Card Pack'
+  ids:
+  - unresolved:source:isthereanydeal:5735:warhammer-40000-space-wolf-exceptional-card-pack
+  requires: []
+- name: Tempest - Treasure Lands
+  ids:
+  - steam:651020
+  requires: []
+- name: Marble Duel
+  ids:
+  - steam:338120
+  requires: []
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+  requires: []
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740
+  requires: []

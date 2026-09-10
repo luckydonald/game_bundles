@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kiss My Funbox Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1056/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1056/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1056/source.json
+games:
+- name: Incoming + Incoming Forces
+  ids:
+  - steam:283390
+  requires: []
+- name: Gun Metal
+  ids:
+  - steam:267920
+  requires: []
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+  requires: []
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+  requires: []
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+  requires: []
+- name: Actua Soccer 3
+  ids:
+  - unresolved:source:isthereanydeal:1056:actua-soccer-3
+  requires: []
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+  requires: []
+- name: Desert Thunder
+  ids:
+  - steam:283330
+  requires: []

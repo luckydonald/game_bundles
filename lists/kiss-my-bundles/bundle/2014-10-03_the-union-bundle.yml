@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Union Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1244/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1244/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1244/source.json
+games:
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Truffle Saga
+  ids:
+  - steam:302260
+  requires: []
+- name: Smash Cat
+  ids:
+  - unresolved:source:isthereanydeal:1244:smash-cat
+  requires: []
+- name: Chompy Chomp Chomp
+  ids:
+  - steam:292570
+  requires: []
+- name: Rover Rescue
+  ids:
+  - unresolved:source:isthereanydeal:1244:rover-rescue
+  requires: []
+- name: Lunar Panda Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:1244:lunar-panda-deluxe
+  requires: []
+- name: Numba Deluxe
+  ids:
+  - steam:301700
+  requires: []
+- name: RADical ROACH
+  ids:
+  - unresolved:source:isthereanydeal:1244:radical-roach
+  requires: []

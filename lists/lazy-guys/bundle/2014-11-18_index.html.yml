@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: New Times Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1402/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1402/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1402/source.json
+games:
+- name: Circuits
+  ids:
+  - steam:282760
+  requires: []
+- name: BEEP
+  ids:
+  - steam:104200
+  requires: []
+- name: Omegalodon
+  ids:
+  - steam:248350
+  requires: []
+- name: Commando Jack
+  ids:
+  - steam:299260
+  requires: []
+- name: Clones
+  ids:
+  - steam:72400
+  requires: []
+- name: Airship Dragoon
+  ids:
+  - steam:308380
+  requires: []
+- name: 'Smooth Operators: Call Center Chaos'
+  ids:
+  - steam:262900
+  requires: []
+- name: GamersGoMakers
+  ids:
+  - steam:314320
+  requires: []
+- name: Echo of the Wilds
+  ids:
+  - steam:305780
+  requires: []

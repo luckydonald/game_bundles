@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #31 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6365/source.json
+games:
+- name: Dark Old Sun
+  ids:
+  - steam:739290
+  requires: []
+- name: R.O.V.E.R.
+  ids:
+  - unresolved:source:isthereanydeal:6365:r-o-v-e-r
+  requires: []
+- name: 'The Warrior War: Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:6365:the-warrior-war-soundtrack
+  requires: []
+- name: ArchRobo - Robotic Annihilation
+  ids:
+  - steam:692110
+  requires: []
+- name: Sniper Fodder
+  ids:
+  - steam:880840
+  requires: []
+- name: Fog Of War - Complete Edition
+  ids:
+  - steam:791890
+  requires: []
+- name: The Warrior War
+  ids:
+  - steam:882460
+  requires: []
+- name: Fog Of War
+  ids:
+  - steam:574080
+  requires: []
+- name: Andromeda Wing
+  ids:
+  - steam:691750
+  requires: []
+- name: Interplanetary Hunter
+  ids:
+  - unresolved:source:isthereanydeal:6365:interplanetary-hunter
+  requires: []
+- name: Band of Outlaws
+  ids:
+  - steam:670950
+  requires: []
+- name: ZKILLER
+  ids:
+  - unresolved:source:isthereanydeal:6365:zkiller
+  requires: []
+- name: Fog Of War Original Soundtrack
+  ids:
+  - steam:628970
+  requires: []
+- name: 'Neckbeards: Basement Arena'
+  ids:
+  - steam:693380
+  requires: []

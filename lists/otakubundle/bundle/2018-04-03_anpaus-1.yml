@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku ANPA.US Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6029/source.json
+games:
+- name: Dinosaur Hunt - Vampires, Gargoyles, Mutants Hunter Expansion Pack
+  ids:
+  - steam:431190
+  requires: []
+- name: Brain Power
+  ids:
+  - unresolved:source:isthereanydeal:6029:brain-power
+  requires: []
+- name: Dinosaur Hunt - Carnotaurus Expansion Pack
+  ids:
+  - steam:408101
+  requires: []
+- name: Dinosaur Hunt - Medieval Knights Hunter Expansion Pack
+  ids:
+  - steam:434940
+  requires: []
+- name: Dinosaur Hunt - Stegosaurus Expansion Pack
+  ids:
+  - steam:408100
+  requires: []
+- name: Knights Hunt
+  ids:
+  - steam:724430
+  requires: []
+- name: Red Wake Carnage
+  ids:
+  - steam:656610
+  requires: []
+- name: Dinosaur Hunt - WW2 War Expansion Pack
+  ids:
+  - steam:434944
+  requires: []
+- name: Dinosaur Hunt - Giant Spiders Hunter Expansion Pack
+  ids:
+  - steam:431191
+  requires: []
+- name: Dinosaur Hunt - Guns Expansion Pack
+  ids:
+  - steam:434941
+  requires: []
+- name: Survival Zombies The Inverted Evolution
+  ids:
+  - steam:440730
+  requires: []
+- name: Machine Hunt
+  ids:
+  - steam:546930
+  requires: []
+- name: West of Red
+  ids:
+  - steam:709870
+  requires: []
+- name: Dinosaur Forest
+  ids:
+  - steam:506730
+  requires: []
+- name: Dinosaur Hunt - Dragon Hunter Expansion Pack
+  ids:
+  - steam:408102
+  requires: []
+- name: Sense of The Devil
+  ids:
+  - steam:705710
+  requires: []
+- name: Dinosaur Hunt
+  ids:
+  - steam:401190
+  requires: []
+- name: Bloody Glimpse
+  ids:
+  - steam:709840
+  requires: []
+- name: Dinosaur Hunt - Brontosaurus Expansion Pack
+  ids:
+  - steam:434942
+  requires: []
+- name: Dinosaur Hunt First Blood
+  ids:
+  - steam:650490
+  requires: []
+- name: Dinosaur Hunt - Wild West Guns Expansion Pack
+  ids:
+  - steam:434943
+  requires: []
+- name: Blood Feed
+  ids:
+  - steam:575950
+  requires: []

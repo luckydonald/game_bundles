@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #27 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6255/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6255/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6255/source.json
+games:
+- name: dontbegrey
+  ids:
+  - steam:681490
+  requires: []
+- name: Goblin Harvest - The Mighty Quest
+  ids:
+  - steam:604060
+  requires: []
+- name: Simple Light Cycles
+  ids:
+  - steam:655030
+  requires: []
+- name: Forgotten Places - Lost Circus
+  ids:
+  - steam:818440
+  requires: []
+- name: Breaking Fast
+  ids:
+  - steam:523870
+  requires: []
+- name: Don't Tax Me, Bro!
+  ids:
+  - unresolved:source:isthereanydeal:6255:don-t-tax-me-bro
+  requires: []
+- name: Absolute Blue
+  ids:
+  - steam:806220
+  requires: []
+- name: '!Dead Pixels Adventure!'
+  ids:
+  - unresolved:source:isthereanydeal:6255:dead-pixels-adventure
+  requires: []
+- name: RoboWorlD tactics
+  ids:
+  - steam:808990
+  requires: []
+- name: 'Forgotten Places: Regained Castle'
+  ids:
+  - steam:777160
+  requires: []
+- name: Vehicle VR
+  ids:
+  - steam:648810
+  requires: []

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #23 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6127/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6127/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6127/source.json
+games:
+- name: Druid
+  ids:
+  - steam:552390
+  requires: []
+- name: Space Ranger ASK
+  ids:
+  - steam:449560
+  requires: []
+- name: Simple Story - Alex
+  ids:
+  - steam:814200
+  requires: []
+- name: Army of squirrels
+  ids:
+  - steam:793260
+  requires: []
+- name: Hunahpu Quest. Mechanoid
+  ids:
+  - steam:773010
+  requires: []
+- name: NYAN DESTROYER
+  ids:
+  - steam:773130
+  requires: []
+- name: Empire of the Fallen Steel
+  ids:
+  - steam:543380
+  requires: []
+- name: Star Phoenix
+  ids:
+  - steam:556770
+  requires: []
+- name: A Salem Witch Trial
+  ids:
+  - unresolved:source:isthereanydeal:6127:a-salem-witch-trial
+  requires: []
+- name: The Entity
+  ids:
+  - steam:857370
+  requires: []
+- name: CGWallpapers
+  ids:
+  - steam:527350
+  requires: []

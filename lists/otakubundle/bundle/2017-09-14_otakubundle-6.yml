@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #6 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5463/source.json
+games:
+- name: Project Abyss - Art & Music Collection
+  ids:
+  - unresolved:source:isthereanydeal:5463:project-abyss-art-and-music-collection
+  requires: []
+- name: Solaright
+  ids:
+  - steam:615590
+  requires: []
+- name: Leashed Soul
+  ids:
+  - steam:589850
+  requires: []
+- name: Project Abyss
+  ids:
+  - steam:552410
+  requires: []
+- name: DepthMera
+  ids:
+  - unresolved:source:isthereanydeal:5463:depthmera
+  requires: []
+- name: Art of Guile
+  ids:
+  - steam:600250
+  requires: []
+- name: Andoran Skye XD
+  ids:
+  - unresolved:source:isthereanydeal:5463:andoran-skye-xd
+  requires: []
+- name: Darkness and a Crowd
+  ids:
+  - unresolved:source:isthereanydeal:5463:darkness-and-a-crowd
+  requires: []
+- name: Cublast HD
+  ids:
+  - steam:580590
+  requires: []

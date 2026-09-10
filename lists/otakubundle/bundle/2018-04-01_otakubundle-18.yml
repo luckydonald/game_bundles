@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #18 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6027/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6027/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6027/source.json
+games:
+- name: Supermagical
+  ids:
+  - steam:681100
+  requires: []
+- name: SpaceDweller
+  ids:
+  - steam:599510
+  requires: []
+- name: Volkstein
+  ids:
+  - steam:763200
+  requires: []
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: Amaranthine
+  ids:
+  - steam:454900
+  requires: []
+- name: Blue Horizon
+  ids:
+  - unresolved:source:isthereanydeal:6027:blue-horizon
+  requires: []
+- name: Amaranthine - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6027:amaranthine-original-soundtrack
+  requires: []
+- name: Story of a Cube Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6027:story-of-a-cube-soundtrack
+  requires: []
+- name: Mad Digger
+  ids:
+  - steam:584100
+  requires: []
+- name: The Lost Gardens
+  ids:
+  - steam:734700
+  requires: []
+- name: Story of a Cube
+  ids:
+  - steam:440750
+  requires: []

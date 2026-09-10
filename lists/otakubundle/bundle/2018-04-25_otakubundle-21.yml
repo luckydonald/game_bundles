@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #21 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6080/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6080/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6080/source.json
+games:
+- name: 'IN-VERT: Soundtrack'
+  ids:
+  - steam:495640
+  requires: []
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Legend of Himari
+  ids:
+  - steam:634340
+  requires: []
+- name: Inexistence
+  ids:
+  - steam:444720
+  requires: []
+- name: JigsawMania
+  ids:
+  - unresolved:source:isthereanydeal:6080:jigsawmania
+  requires: []
+- name: Save your Mother
+  ids:
+  - steam:423740
+  requires: []
+- name: Official Guide - Inexistence
+  ids:
+  - steam:463600
+  requires: []
+- name: Australian trip - Full music tracks
+  ids:
+  - unresolved:source:isthereanydeal:6080:australian-trip-full-music-tracks
+  requires: []
+- name: Orbital X
+  ids:
+  - steam:514650
+  requires: []
+- name: Australian trip
+  ids:
+  - steam:757870
+  requires: []
+- name: Coffee Crawl
+  ids:
+  - steam:793820
+  requires: []
+- name: Invert
+  ids:
+  - steam:1774700
+  requires: []
