@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Tabletop Battles Bundle — pick 10
-tier: 3
-pick_quota: 10
+name: Build Your Own Tabletop Battles Bundle
+tiers:
+- rank: 3
+  name: pick 10
+  pick_quota: 10
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16505/
@@ -18,143 +20,201 @@ games:
   - steam:287070
   - isthereanydeal:battle-academy
   requires: []
+  tiers:
+  - 3
 - name: Close Combat - Gateway to Caen
   ids:
   - steam:297750
   - isthereanydeal:close-combat-gateway-to-caen
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory: Empires'
   ids:
   - steam:1011390
   - isthereanydeal:field-of-glory-empires
   requires: []
+  tiers:
+  - 3
 - name: 'Close Combat : Panthers in the Fog'
   ids:
   - steam:368220
   - isthereanydeal:close-combat-panthers-in-the-fog
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy 2: Eastern Front'
   ids:
   - steam:306640
   - isthereanydeal:battle-academy-2-eastern-front
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy 2: Battle of Kursk'
   ids:
   - steam:345930
   - isthereanydeal:battle-academy-2-battle-of-kursk
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Rommel in Normandy'
   ids:
   - steam:287094
   - isthereanydeal:battle-academy-rommel-in-normandy
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Operation Sealion'
   ids:
   - steam:287092
   - isthereanydeal:battle-academy-operation-sealion
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Operation Husky'
   ids:
   - steam:287093
   - isthereanydeal:battle-academy-operation-husky
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Fortress Metz'
   ids:
   - steam:287095
   - isthereanydeal:battle-academy-fortress-metz
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Blitzkrieg France'
   ids:
   - steam:287090
   - isthereanydeal:battle-academy-blitzkrieg-france
   requires: []
+  tiers:
+  - 3
 - name: 'Close Combat: Cross of Iron'
   ids:
   - steam:1367320
   - isthereanydeal:close-combat-cross-of-iron
   requires: []
+  tiers:
+  - 3
 - name: Fantasy General II
   ids:
   - steam:1025440
   - isthereanydeal:fantasy-general-ii
   requires: []
+  tiers:
+  - 3
 - name: 'Battle Academy: Operation Market Garden'
   ids:
   - steam:287091
   - isthereanydeal:battle-academy-operation-market-garden
   requires: []
+  tiers:
+  - 3
 - name: Radio Commander
   ids:
   - steam:871530
   - isthereanydeal:radio-commander
   requires: []
+  tiers:
+  - 3
 - name: 'Fantasy General II: Onslaught'
   ids:
   - steam:1193871
   - isthereanydeal:fantasy-general-ii-onslaught
   requires: []
+  tiers:
+  - 3
 - name: 'Radio Commander: Squad Management'
   ids:
   - steam:1208880
   - isthereanydeal:radio-commander-squad-management
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory: Empires - Persia 550 - 330 BCE'
   ids:
   - steam:1257440
   - isthereanydeal:field-of-glory-empires-persia-550-330-bce
   requires: []
+  tiers:
+  - 3
 - name: 'Close Combat: Wacht am Rhein'
   ids:
   - steam:1272110
   - isthereanydeal:close-combat-wacht-am-rhein
   requires: []
+  tiers:
+  - 3
 - name: 'Close Combat: The Longest Day'
   ids:
   - steam:1272130
   - isthereanydeal:close-combat-the-longest-day
   requires: []
+  tiers:
+  - 3
 - name: 'Fantasy General II: Empire Aflame'
   ids:
   - steam:1193870
   - isthereanydeal:fantasy-general-ii-empire-aflame
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval'
   ids:
   - steam:1368870
   - isthereanydeal:field-of-glory-ii-medieval
   requires: []
+  tiers:
+  - 3
 - name: 'Fantasy General II: Evolution'
   ids:
   - steam:1401480
   - isthereanydeal:fantasy-general-ii-evolution
   requires: []
+  tiers:
+  - 3
 - name: Fantasy General II - Hero Edition Upgrade Pack
   ids:
   - steam:1158810
   - isthereanydeal:fantasy-general-ii-hero-edition-upgrade-pack
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval - Reconquista'
   ids:
   - steam:1548770
   - isthereanydeal:field-of-glory-ii-medieval-reconquista
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval - Swords and Scimitars'
   ids:
   - steam:1651570
   - isthereanydeal:field-of-glory-ii-medieval-swords-and-scimitars
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval - Storm of Arrows'
   ids:
   - steam:1736340
   - isthereanydeal:field-of-glory-ii-medieval-storm-of-arrows
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval - Rise of the Swiss'
   ids:
   - steam:1882110
   - isthereanydeal:field-of-glory-ii-medieval-rise-of-the-swiss
   requires: []
+  tiers:
+  - 3
 - name: 'Field of Glory II: Medieval - Sublime Porte'
   ids:
   - steam:2009600
   - isthereanydeal:field-of-glory-ii-medieval-sublime-porte
   requires: []
+  tiers:
+  - 3

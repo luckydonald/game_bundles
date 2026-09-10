@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Best of Boomer Shooters: Bigger and Boomier Bundle — entire-8-item-bundle'
-tier: 3
+name: 'Best of Boomer Shooters: Bigger and Boomier Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13078/
@@ -13,24 +15,48 @@ games:
 - name: Impaler
   ids:
   - unresolved:source:isthereanydeal:13078:impaler
+  requires: []
+  tiers:
+  - 3
 - name: Viscerafest
   ids:
   - steam:1406780
+  requires: []
+  tiers:
+  - 3
 - name: Forgive me Father
   ids:
   - steam:1590910
+  requires: []
+  tiers:
+  - 3
 - name: The Citadel
   ids:
   - steam:1378290
+  requires: []
+  tiers:
+  - 3
 - name: 'WRATH: Aeon of Ruin'
   ids:
   - steam:1000410
+  requires: []
+  tiers:
+  - 3
 - name: Nightmare Reaper
   ids:
   - steam:1051690
+  requires: []
+  tiers:
+  - 3
 - name: GRAVEN
   ids:
   - steam:1371690
+  requires: []
+  tiers:
+  - 3
 - name: Deadlink
   ids:
   - steam:1676130
+  requires: []
+  tiers:
+  - 3

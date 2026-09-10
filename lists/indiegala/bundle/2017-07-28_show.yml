@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Show — Tier 2
-tier: 2
+name: Indie Show
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5358/
@@ -13,36 +15,72 @@ games:
 - name: War Cube
   ids:
   - steam:527800
+  requires: []
+  tiers:
+  - 2
 - name: Maniac GO
   ids:
   - unresolved:source:isthereanydeal:5358:maniac-go
+  requires: []
+  tiers:
+  - 2
 - name: Universe in Fire
   ids:
   - unresolved:source:isthereanydeal:5358:universe-in-fire
+  requires: []
+  tiers:
+  - 2
 - name: Wild Goo Chase
   ids:
   - unresolved:source:isthereanydeal:5358:wild-goo-chase
+  requires: []
+  tiers:
+  - 2
 - name: Void Source
   ids:
   - steam:611770
+  requires: []
+  tiers:
+  - 2
 - name: Five Elements
   ids:
   - steam:575670
+  requires: []
+  tiers:
+  - 2
 - name: Death By Game Show
   ids:
   - steam:409730
+  requires: []
+  tiers:
+  - 2
 - name: Run, Goo, Run
   ids:
   - unresolved:source:isthereanydeal:5358:run-goo-run
+  requires: []
+  tiers:
+  - 2
 - name: Space Hit
   ids:
   - steam:656910
+  requires: []
+  tiers:
+  - 2
 - name: Pixel Shooter
   ids:
   - steam:647280
+  requires: []
+  tiers:
+  - 2
 - name: 'Forgotten Tales: Day of the Dead'
   ids:
   - steam:453770
+  requires: []
+  tiers:
+  - 2
 - name: The little vampir
   ids:
   - steam:619380
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 1C Company Mega Bundle — Tier 3
-tier: 3
+name: 1C Company Mega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5212/
@@ -13,60 +15,120 @@ games:
 - name: The Tomorrow War
   ids:
   - steam:289480
+  requires: []
+  tiers:
+  - 3
 - name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
   ids:
   - steam:373870
+  requires: []
+  tiers:
+  - 3
 - name: Star Wolves
   ids:
   - steam:46270
+  requires: []
+  tiers:
+  - 3
 - name: The Book of Desires
   ids:
   - steam:428260
+  requires: []
+  tiers:
+  - 3
 - name: World War 1
   ids:
   - unresolved:source:isthereanydeal:5212:world-war-1
+  requires: []
+  tiers:
+  - 3
 - name: Death to Spies
   ids:
   - steam:9800
+  requires: []
+  tiers:
+  - 3
 - name: A.I.M. 2 - Clan Wars
   ids:
   - unresolved:source:isthereanydeal:5212:a-i-m-2-clan-wars
+  requires: []
+  tiers:
+  - 3
 - name: NecroVision
   ids:
   - steam:7860
+  requires: []
+  tiers:
+  - 3
 - name: Faces of War
   ids:
   - steam:289300
+  requires: []
+  tiers:
+  - 3
 - name: 'UFO: Aftermath'
   ids:
   - steam:292160
+  requires: []
+  tiers:
+  - 3
 - name: Stalingrad
   ids:
   - steam:356260
+  requires: []
+  tiers:
+  - 3
 - name: Star Wolves 2
   ids:
   - steam:46280
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Wolves 3: Civil War'
   ids:
   - steam:46260
+  requires: []
+  tiers:
+  - 3
 - name: RC Cars
   ids:
   - steam:289460
+  requires: []
+  tiers:
+  - 3
 - name: 'Death to Spies: Moment of Truth'
   ids:
   - steam:34410
+  requires: []
+  tiers:
+  - 3
 - name: Planet Alcatraz
   ids:
   - steam:289420
+  requires: []
+  tiers:
+  - 3
 - name: 'UFO: Aftershock'
   ids:
   - steam:289500
+  requires: []
+  tiers:
+  - 3
 - name: NecroVisioN Lost Company
   ids:
   - steam:46250
+  requires: []
+  tiers:
+  - 3
 - name: Theatre of War Collection
   ids:
   - unresolved:source:isthereanydeal:5212:theatre-of-war-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Soldiers: Heroes of World War II - Enhanced Edition'
   ids:
   - unresolved:source:isthereanydeal:5212:soldiers-heroes-of-world-war-ii-enhanced-edition
+  requires: []
+  tiers:
+  - 3

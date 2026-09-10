@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Deck Builder Bundle (Extended) — entire-11-item-bundle
-tier: 2
+name: Deck Builder Bundle (Extended)
+tiers:
+- rank: 2
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11922/
@@ -13,33 +15,66 @@ games:
 - name: 'Cultist Simulator: The Ghoul'
   ids:
   - steam:871900
+  requires: []
+  tiers:
+  - 2
 - name: 'Cultist Simulator: Original Soundtrack'
   ids:
   - steam:988320
+  requires: []
+  tiers:
+  - 2
 - name: 'Cultist Simulator: The Priest'
   ids:
   - steam:871651
+  requires: []
+  tiers:
+  - 2
 - name: Cultist Simulator
   ids:
   - steam:718670
+  requires: []
+  tiers:
+  - 2
 - name: 'Cultist Simulator: The Dancer'
   ids:
   - steam:871650
+  requires: []
+  tiers:
+  - 2
 - name: Vault of the Void
   ids:
   - steam:1135810
+  requires: []
+  tiers:
+  - 2
 - name: 'Cultist Simulator: The Exile'
   ids:
   - steam:1259930
+  requires: []
+  tiers:
+  - 2
 - name: One Step From Eden
   ids:
   - steam:960690
+  requires: []
+  tiers:
+  - 2
 - name: Wingspan
   ids:
   - steam:1054490
+  requires: []
+  tiers:
+  - 2
 - name: Black Book
   ids:
   - steam:1138660
+  requires: []
+  tiers:
+  - 2
 - name: Library Of Ruina
   ids:
   - steam:1256670
+  requires: []
+  tiers:
+  - 2

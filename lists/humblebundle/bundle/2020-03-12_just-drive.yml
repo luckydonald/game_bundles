@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Just Drive Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Just Drive Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8487/
@@ -13,42 +15,84 @@ games:
 - name: "MXGP \x96 The Official Motocross Videogame"
   ids:
   - steam:256370
+  requires: []
+  tiers:
+  - 3
 - name: MotoGP™15
   ids:
   - steam:355130
+  requires: []
+  tiers:
+  - 3
 - name: WRC 7 FIA World Rally Championship
   ids:
   - steam:621830
+  requires: []
+  tiers:
+  - 3
 - name: Project CARS
   ids:
   - unresolved:source:isthereanydeal:8487:project-cars
+  requires: []
+  tiers:
+  - 3
 - name: Road Redemption
   ids:
   - steam:300380
+  requires: []
+  tiers:
+  - 3
 - name: DiRT 4
   ids:
   - unresolved:source:isthereanydeal:8487:dirt-4
+  requires: []
+  tiers:
+  - 3
 - name: Project CARS - Limited Edition Upgrade
   ids:
   - unresolved:source:isthereanydeal:8487:project-cars-limited-edition-upgrade
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa
   ids:
   - steam:244210
+  requires: []
+  tiers:
+  - 3
 - name: Project CARS 2 - Japanese Cars Bonus Pack
   ids:
   - unresolved:source:isthereanydeal:8487:project-cars-2-japanese-cars-bonus-pack
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 1
   ids:
   - steam:347990
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 3
   ids:
   - steam:423630
+  requires: []
+  tiers:
+  - 3
 - name: NASCAR Heat 4
   ids:
   - unresolved:source:isthereanydeal:8487:nascar-heat-4
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 2
   ids:
   - steam:404430
+  requires: []
+  tiers:
+  - 3
 - name: Project CARS 2
   ids:
   - unresolved:source:isthereanydeal:8487:project-cars-2
+  requires: []
+  tiers:
+  - 3

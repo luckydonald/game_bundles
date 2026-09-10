@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #61 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #61'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6414/
@@ -13,30 +15,60 @@ games:
 - name: Shiver
   ids:
   - steam:727730
+  requires: []
+  tiers:
+  - 2
 - name: Indecision.
   ids:
   - steam:720030
+  requires: []
+  tiers:
+  - 2
 - name: Antaria Online
   ids:
   - unresolved:source:isthereanydeal:6414:antaria-online
+  requires: []
+  tiers:
+  - 2
 - name: Armed to the Gears
   ids:
   - steam:804870
+  requires: []
+  tiers:
+  - 2
 - name: Chroma Squad
   ids:
   - steam:251130
+  requires: []
+  tiers:
+  - 2
 - name: Cheitha
   ids:
   - steam:799910
+  requires: []
+  tiers:
+  - 2
 - name: Game Dev Studio
   ids:
   - steam:773580
+  requires: []
+  tiers:
+  - 2
 - name: Tiny Hands Adventure
   ids:
   - steam:869470
+  requires: []
+  tiers:
+  - 2
 - name: 'Void Monsters: Spring City Tales'
   ids:
   - steam:807060
+  requires: []
+  tiers:
+  - 2
 - name: 'Garrison: Archangel'
   ids:
   - steam:682450
+  requires: []
+  tiers:
+  - 2

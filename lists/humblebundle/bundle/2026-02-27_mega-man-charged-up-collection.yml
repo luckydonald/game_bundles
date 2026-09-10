@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mega Man Charged Up Collection Bundle — entire-9-item-bundle
-tier: 4
+name: Mega Man Charged Up Collection Bundle
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15920/
@@ -13,27 +15,54 @@ games:
 - name: Mega Man Battle Network Legacy Collection Vol. 1
   ids:
   - steam:1798010
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man Battle Network Legacy Collection Vol. 2
   ids:
   - steam:1798020
+  requires: []
+  tiers:
+  - 4
 - name: MEGA MAN X DiVE Offline
   ids:
   - steam:2183650
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man 11
   ids:
   - steam:742300
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man Zero/ZX Legacy Collection
   ids:
   - steam:999020
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man X Legacy Collection 2
   ids:
   - steam:743900
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man Legacy Collection 2
   ids:
   - steam:495050
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man Legacy Collection
   ids:
   - steam:363440
+  requires: []
+  tiers:
+  - 4
 - name: Mega Man X Legacy Collection
   ids:
   - steam:743890
+  requires: []
+  tiers:
+  - 4

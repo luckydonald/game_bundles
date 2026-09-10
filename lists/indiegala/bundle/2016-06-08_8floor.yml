@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 8 Floor Bundle — Tier 2
-tier: 2
+name: 8 Floor Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3550/
@@ -13,39 +15,78 @@ games:
 - name: Gnomes Garden
   ids:
   - steam:415830
+  requires: []
+  tiers:
+  - 2
 - name: Solitaire Christmas Match 2 Cards
   ids:
   - steam:428510
+  requires: []
+  tiers:
+  - 2
 - name: Chronicles of Witches & Warlocks
   ids:
   - unresolved:source:isthereanydeal:3550:chronicles-of-witches-and-warlocks
+  requires: []
+  tiers:
+  - 2
 - name: Portal of Evil Stolen Runes Collector's Edition
   ids:
   - steam:361850
+  requires: []
+  tiers:
+  - 2
 - name: Royal Defense
   ids:
   - steam:291170
+  requires: []
+  tiers:
+  - 2
 - name: 'Royal Defense: Invisible Threat'
   ids:
   - steam:320830
+  requires: []
+  tiers:
+  - 2
 - name: Alice's Patchwork
   ids:
   - steam:444280
+  requires: []
+  tiers:
+  - 2
 - name: Contract with the Devil
   ids:
   - steam:409600
+  requires: []
+  tiers:
+  - 2
 - name: Gnumz Masters of Defense
   ids:
   - steam:371460
+  requires: []
+  tiers:
+  - 2
 - name: Fort Defense - Bermuda Triangle
   ids:
   - steam:363351
+  requires: []
+  tiers:
+  - 2
 - name: Fort Defense - Atlantic Ocean
   ids:
   - steam:363350
+  requires: []
+  tiers:
+  - 2
 - name: Fort Defense
   ids:
   - steam:343930
+  requires: []
+  tiers:
+  - 2
 - name: Gems of the Aztecs
   ids:
   - steam:429280
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: VR Thrills Bundle — Tier 2
-tier: 2
+name: VR Thrills Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10510/
@@ -13,21 +15,42 @@ games:
 - name: Fantastic Contraption
   ids:
   - steam:386690
+  requires: []
+  tiers:
+  - 2
 - name: 'Starbear: Taxi'
   ids:
   - steam:702030
+  requires: []
+  tiers:
+  - 2
 - name: 'XING: The Land Beyond'
   ids:
   - steam:299400
+  requires: []
+  tiers:
+  - 2
 - name: Skyworld
   ids:
   - steam:342190
+  requires: []
+  tiers:
+  - 2
 - name: 'Groundhog Day: Like Father Like Son'
   ids:
   - steam:1087500
+  requires: []
+  tiers:
+  - 2
 - name: Traffic Jams
   ids:
   - steam:1301930
+  requires: []
+  tiers:
+  - 2
 - name: Hello Puppets! VR
   ids:
   - steam:1426280
+  requires: []
+  tiers:
+  - 2

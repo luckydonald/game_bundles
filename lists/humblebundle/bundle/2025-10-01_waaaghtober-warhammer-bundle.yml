@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Waaaghtober!: A Warhammer Bundle — entire-12-item-bundle'
-tier: 2
+name: 'Waaaghtober!: A Warhammer Bundle'
+tiers:
+- rank: 2
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15468/
@@ -13,36 +15,72 @@ games:
 - name: 'Warhammer: Vermintide 2'
   ids:
   - steam:552500
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Mechanicus'
   ids:
   - steam:673880
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Inquisitor - Prophecy'
   ids:
   - steam:1042800
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer: Chaosbane'
   ids:
   - steam:774241
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Dakka Squadron - Flyboyz Edition'
   ids:
   - steam:1253190
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Inquisitor - Martyr'
   ids:
   - steam:527430
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Battlesector'
   ids:
   - steam:1295500
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Shootas, Blood & Teef'
   ids:
   - steam:1324530
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Space Marine - Anniversary Edition'
   ids:
   - steam:55150
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Battlesector - Blood Angels Elites'
   ids:
   - steam:1718640
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer 40,000: Battlesector - Tyranid Elites'
   ids:
   - steam:1793050
+  requires: []
+  tiers:
+  - 2

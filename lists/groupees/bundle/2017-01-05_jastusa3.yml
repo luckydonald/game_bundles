@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'JAST USA Bundle #3 — Tier 3'
-tier: 3
+name: 'JAST USA Bundle #3'
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4581/
@@ -13,27 +15,54 @@ games:
 - name: Cat Girl Alliance
   ids:
   - unresolved:source:isthereanydeal:4581:cat-girl-alliance
+  requires: []
+  tiers:
+  - 3
 - name: Kana ~ Little Sister
   ids:
   - unresolved:source:isthereanydeal:4581:kana-little-sister
+  requires: []
+  tiers:
+  - 3
 - name: Figures of Happiness
   ids:
   - unresolved:source:isthereanydeal:4581:figures-of-happiness
+  requires: []
+  tiers:
+  - 3
 - name: Heart de Roommate
   ids:
   - unresolved:source:isthereanydeal:4581:heart-de-roommate
+  requires: []
+  tiers:
+  - 3
 - name: Snow Drop
   ids:
   - unresolved:source:isthereanydeal:4581:snow-drop
+  requires: []
+  tiers:
+  - 3
 - name: Yumina the Ethereal
   ids:
   - unresolved:source:isthereanydeal:4581:yumina-the-ethereal
+  requires: []
+  tiers:
+  - 3
 - name: 'Yukkuri Panic: Escalation'
   ids:
   - unresolved:source:isthereanydeal:4581:yukkuri-panic-escalation
+  requires: []
+  tiers:
+  - 3
 - name: Kana ~ Okaeri
   ids:
   - unresolved:source:isthereanydeal:4581:kana-okaeri
+  requires: []
+  tiers:
+  - 3
 - name: 'Starless: Nymphomaniac'
   ids:
   - unresolved:source:isthereanydeal:4581:starless-nymphomaniac
+  requires: []
+  tiers:
+  - 3

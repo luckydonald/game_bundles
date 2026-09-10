@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Lone Survivor Bundle — entire-9-item-bundle
-tier: 2
+name: Lone Survivor Bundle
+tiers:
+- rank: 2
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15451/
@@ -13,27 +15,54 @@ games:
 - name: Breathedge
   ids:
   - steam:738520
+  requires: []
+  tiers:
+  - 2
 - name: 'State of Decay 2: Juggernaut Edition'
   ids:
   - steam:495420
+  requires: []
+  tiers:
+  - 2
 - name: Above Snakes
   ids:
   - steam:1589120
+  requires: []
+  tiers:
+  - 2
 - name: 'Force of Nature 2: Ghost Keeper'
   ids:
   - steam:1316230
+  requires: []
+  tiers:
+  - 2
 - name: Forager
   ids:
   - steam:751780
+  requires: []
+  tiers:
+  - 2
 - name: Conan Exiles
   ids:
   - steam:440900
+  requires: []
+  tiers:
+  - 2
 - name: Starsand
   ids:
   - steam:1380220
+  requires: []
+  tiers:
+  - 2
 - name: DUCKSIDE
   ids:
   - steam:2682580
+  requires: []
+  tiers:
+  - 2
 - name: Chernobylite Premium Edition
   ids:
   - unresolved:source:isthereanydeal:15451:chernobylite-premium-edition
+  requires: []
+  tiers:
+  - 2

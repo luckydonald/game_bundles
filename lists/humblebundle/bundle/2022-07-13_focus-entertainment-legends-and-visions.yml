@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Focus Entertainment: Legends & Visions Bundle — entire-7-item-bundle'
-tier: 4
+name: 'Focus Entertainment: Legends & Visions Bundle'
+tiers:
+- rank: 4
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11763/
@@ -13,21 +15,42 @@ games:
 - name: The Technomancer
   ids:
   - steam:338390
+  requires: []
+  tiers:
+  - 4
 - name: MudRunner
   ids:
   - steam:675010
+  requires: []
+  tiers:
+  - 4
 - name: The Surge 2
   ids:
   - steam:644830
+  requires: []
+  tiers:
+  - 4
 - name: The Surge
   ids:
   - steam:378540
+  requires: []
+  tiers:
+  - 4
 - name: Bound By Flame
   ids:
   - steam:243930
+  requires: []
+  tiers:
+  - 4
 - name: Vampyr
   ids:
   - steam:427290
+  requires: []
+  tiers:
+  - 4
 - name: 'Hood: Outlaws & Legends'
   ids:
   - unresolved:source:isthereanydeal:11763:hood-outlaws-and-legends
+  requires: []
+  tiers:
+  - 4

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Action Roguelikes: What Kills You Makes You Stronger Bundle — entire-7-item-bundle'
-tier: 4
+name: 'Action Roguelikes: What Kills You Makes You Stronger Bundle'
+tiers:
+- rank: 4
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13621/
@@ -13,21 +15,42 @@ games:
 - name: Cryptark
   ids:
   - steam:344740
+  requires: []
+  tiers:
+  - 4
 - name: Wall World
   ids:
   - steam:2187290
+  requires: []
+  tiers:
+  - 4
 - name: God Of Weapons
   ids:
   - steam:2342950
+  requires: []
+  tiers:
+  - 4
 - name: Paint the Town Red
   ids:
   - steam:337320
+  requires: []
+  tiers:
+  - 4
 - name: Dead Estate
   ids:
   - steam:1484720
+  requires: []
+  tiers:
+  - 4
 - name: Barony
   ids:
   - steam:371970
+  requires: []
+  tiers:
+  - 4
 - name: Lumencraft
   ids:
   - steam:1713810
+  requires: []
+  tiers:
+  - 4

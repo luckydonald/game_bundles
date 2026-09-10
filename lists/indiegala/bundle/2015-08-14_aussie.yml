@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Downunder Bundle — Tier 2
-tier: 2
+name: The Downunder Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2333/
@@ -13,36 +15,72 @@ games:
 - name: Unhack
   ids:
   - steam:340800
+  requires: []
+  tiers:
+  - 2
 - name: Once Bitten, Twice Dead!
   ids:
   - unresolved:source:isthereanydeal:2333:once-bitten-twice-dead
+  requires: []
+  tiers:
+  - 2
 - name: 'Zafehouse: Diaries'
   ids:
   - steam:249360
+  requires: []
+  tiers:
+  - 2
 - name: Deadnaut
   ids:
   - steam:337040
+  requires: []
+  tiers:
+  - 2
 - name: Freedom Fall
   ids:
   - steam:262770
+  requires: []
+  tiers:
+  - 2
 - name: Bermuda
   ids:
   - steam:337630
+  requires: []
+  tiers:
+  - 2
 - name: '8-Bit Adventures: The Forgotten Journey Remastered Edition'
   ids:
   - steam:370300
+  requires: []
+  tiers:
+  - 2
 - name: Amygdala
   ids:
   - steam:369060
+  requires: []
+  tiers:
+  - 2
 - name: Gamebook Adventures Assassin Game Bundle
   ids:
   - unresolved:source:isthereanydeal:2333:gamebook-adventures-assassin-game-bundle
+  requires: []
+  tiers:
+  - 2
 - name: Blade Kitten
   ids:
   - steam:9940
+  requires: []
+  tiers:
+  - 2
 - name: An Assassin in Orlandes
   ids:
   - steam:335460
+  requires: []
+  tiers:
+  - 2
 - name: Star Gazer
   ids:
   - unresolved:source:isthereanydeal:2333:star-gazer
+  requires: []
+  tiers:
+  - 2

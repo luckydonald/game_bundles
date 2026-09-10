@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Extinction Bundle — Tier 2
-tier: 2
+name: The Extinction Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4424/
@@ -13,33 +15,66 @@ games:
 - name: Torch Cave 2
   ids:
   - unresolved:source:isthereanydeal:4424:torch-cave-2
+  requires: []
+  tiers:
+  - 2
 - name: Vektor Wars
   ids:
   - steam:365760
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: OCD'
   ids:
   - unresolved:source:isthereanydeal:4424:goocubelets-ocd
+  requires: []
+  tiers:
+  - 2
 - name: Pro Skater 2D
   ids:
   - unresolved:source:isthereanydeal:4424:pro-skater-2d
+  requires: []
+  tiers:
+  - 2
 - name: Ubinota
   ids:
   - steam:323630
+  requires: []
+  tiers:
+  - 2
 - name: Sword 'N' Board
   ids:
   - steam:425230
+  requires: []
+  tiers:
+  - 2
 - name: 'Tracks of Triumph: Summertime'
   ids:
   - unresolved:source:isthereanydeal:4424:tracks-of-triumph-summertime
+  requires: []
+  tiers:
+  - 2
 - name: Project Hovercraft
   ids:
   - unresolved:source:isthereanydeal:4424:project-hovercraft
+  requires: []
+  tiers:
+  - 2
 - name: 'A.R.E.S.: Extinction Agenda'
   ids:
   - unresolved:source:isthereanydeal:4424:a-r-es-extinction-agenda
+  requires: []
+  tiers:
+  - 2
 - name: Lone Leader
   ids:
   - steam:518800
+  requires: []
+  tiers:
+  - 2
 - name: A.R.E.S. Extinction Agenda EX
   ids:
   - steam:315340
+  requires: []
+  tiers:
+  - 2

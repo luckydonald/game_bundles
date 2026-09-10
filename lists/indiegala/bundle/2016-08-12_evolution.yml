@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Evolution — Tier 2
-tier: 2
+name: Indie Evolution
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3896/
@@ -13,36 +15,72 @@ games:
 - name: Contract
   ids:
   - steam:409170
+  requires: []
+  tiers:
+  - 2
 - name: Prism
   ids:
   - unresolved:source:isthereanydeal:3896:prism
+  requires: []
+  tiers:
+  - 2
 - name: Burst
   ids:
   - unresolved:source:isthereanydeal:3896:burst
+  requires: []
+  tiers:
+  - 2
 - name: 'Evolution Planet: Gold Edition'
   ids:
   - steam:495090
+  requires: []
+  tiers:
+  - 2
 - name: Project G
   ids:
   - steam:465670
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode I: Alpha Centauri'
   ids:
   - steam:429470
+  requires: []
+  tiers:
+  - 2
 - name: TribeQuest Red Killer
   ids:
   - steam:388830
+  requires: []
+  tiers:
+  - 2
 - name: Robot Legions Reborn
   ids:
   - steam:490880
+  requires: []
+  tiers:
+  - 2
 - name: 'Smugglers 5: Invasion'
   ids:
   - unresolved:source:isthereanydeal:3896:smugglers-5-invasion
+  requires: []
+  tiers:
+  - 2
 - name: Smugglers V
   ids:
   - unresolved:source:isthereanydeal:3896:smugglers-v
+  requires: []
+  tiers:
+  - 2
 - name: Cubic complex
   ids:
   - unresolved:source:isthereanydeal:3896:cubic-complex
+  requires: []
+  tiers:
+  - 2
 - name: Hack Run ZERO
   ids:
   - steam:384890
+  requires: []
+  tiers:
+  - 2

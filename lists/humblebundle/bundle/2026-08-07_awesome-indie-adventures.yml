@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Awesome Indie Adventures — Entire 12 Item Bundle
-tier: 3
+name: Awesome Indie Adventures
+tiers:
+- rank: 3
+  name: Entire 12 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16461/
@@ -23,53 +25,75 @@ games:
   - steam:1492680
   - isthereanydeal:the-pathless
   requires: []
+  tiers:
+  - 3
 - name: Post Trauma
   ids:
   - steam:1750030
   - isthereanydeal:post-trauma
   requires: []
+  tiers:
+  - 3
 - name: BIOMORPH
   ids:
   - steam:1430220
   - isthereanydeal:biomorph
   requires: []
+  tiers:
+  - 3
 - name: Wavetale
   ids:
   - steam:1823930
   - isthereanydeal:wavetale
   requires: []
+  tiers:
+  - 3
 - name: Baladins
   ids:
   - steam:1866320
   - isthereanydeal:baladins
   requires: []
+  tiers:
+  - 3
 - name: Jenny LeClue - Detectivu
   ids:
   - steam:319870
   - isthereanydeal:jenny-leclue-detectivu
   requires: []
+  tiers:
+  - 3
 - name: Beyond a Steel Sky
   ids:
   - steam:1146310
   - isthereanydeal:beyond-a-steel-sky
   requires: []
+  tiers:
+  - 3
 - name: Beyond a Steel Sky Soundtrack
   ids:
   - steam:1368370
   - isthereanydeal:beyond-a-steel-sky-soundtrack
   requires: []
+  tiers:
+  - 3
 - name: Kitaria Fables
   ids:
   - steam:1356280
   - isthereanydeal:kitaria-fables
   requires: []
+  tiers:
+  - 3
 - name: Before Your Eyes
   ids:
   - steam:1082430
   - isthereanydeal:before-your-eyes
   requires: []
+  tiers:
+  - 3
 - name: 'Moonlighter: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:16461:moonlighter-complete-edition
   - isthereanydeal:moonlighter-complete-edition
   requires: []
+  tiers:
+  - 3

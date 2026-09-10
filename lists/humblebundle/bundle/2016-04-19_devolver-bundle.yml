@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Devolver Bundle — entire-10-item-bundle
-tier: 3
+name: Devolver Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3319/
@@ -13,30 +15,60 @@ games:
 - name: Gods Will Be Watching
   ids:
   - steam:274290
+  requires: []
+  tiers:
+  - 3
 - name: RONIN
   ids:
   - steam:274230
+  requires: []
+  tiers:
+  - 3
 - name: A Fistful of Gun
   ids:
   - steam:229810
+  requires: []
+  tiers:
+  - 3
 - name: Shadow Warrior
   ids:
   - steam:233130
+  requires: []
+  tiers:
+  - 3
 - name: Not A Hero
   ids:
   - steam:274270
+  requires: []
+  tiers:
+  - 3
 - name: 'OlliOlli2: Welcome to Olliwood'
   ids:
   - steam:365660
+  requires: []
+  tiers:
+  - 3
 - name: Dropsy
   ids:
   - steam:274350
+  requires: []
+  tiers:
+  - 3
 - name: Noct
   ids:
   - unresolved:source:isthereanydeal:3319:noct
+  requires: []
+  tiers:
+  - 3
 - name: Titan Souls
   ids:
   - steam:297130
+  requires: []
+  tiers:
+  - 3
 - name: 'Hatoful Boyfriend: Holiday Star'
   ids:
   - steam:377080
+  requires: []
+  tiers:
+  - 3

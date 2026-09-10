@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 3 — Tier 2
-tier: 2
+name: Be Mine 3
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/180/
@@ -13,24 +15,48 @@ games:
 - name: 'Oddworld: Abe''s Oddysee'
   ids:
   - steam:15700
+  requires: []
+  tiers:
+  - 2
 - name: 'Red Orchestra: Ostfront 41-45'
   ids:
   - steam:1200
+  requires: []
+  tiers:
+  - 2
 - name: Syberia
   ids:
   - steam:46500
+  requires: []
+  tiers:
+  - 2
 - name: Avernum Trilogy Bundle
   ids:
   - unresolved:source:isthereanydeal:180:avernum-trilogy-bundle
+  requires: []
+  tiers:
+  - 2
 - name: Hamilton's Great Adventure
   ids:
   - steam:42140
+  requires: []
+  tiers:
+  - 2
 - name: POSTAL 2
   ids:
   - steam:223470
+  requires: []
+  tiers:
+  - 2
 - name: 'Oddworld: Abe''s Exoddus'
   ids:
   - steam:15710
+  requires: []
+  tiers:
+  - 2
 - name: 'Garshasp: The Monster Slayer'
   ids:
   - steam:99400
+  requires: []
+  tiers:
+  - 2

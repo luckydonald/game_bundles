@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Relaxing Bundle — Tier 2
-tier: 2
+name: Relaxing Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4880/
@@ -13,30 +15,60 @@ games:
 - name: 3SwitcheD
   ids:
   - steam:206610
+  requires: []
+  tiers:
+  - 2
 - name: Mechanic Escape
   ids:
   - steam:268240
+  requires: []
+  tiers:
+  - 2
 - name: Rover The Dragonslayer
   ids:
   - unresolved:source:isthereanydeal:4880:rover-the-dragonslayer
+  requires: []
+  tiers:
+  - 2
 - name: Pony World 3
   ids:
   - steam:364940
+  requires: []
+  tiers:
+  - 2
 - name: 'The Saint: Abyss of Despair'
   ids:
   - steam:560820
+  requires: []
+  tiers:
+  - 2
 - name: 'Shtriga: Summer Camp'
   ids:
   - steam:560740
+  requires: []
+  tiers:
+  - 2
 - name: 'World Keepers: Last Resort'
   ids:
   - steam:560750
+  requires: []
+  tiers:
+  - 2
 - name: 'Dark Angels: Masquerade of Shadows'
   ids:
   - steam:560720
+  requires: []
+  tiers:
+  - 2
 - name: Paintball eXtreme
   ids:
   - unresolved:source:isthereanydeal:4880:paintball-extreme
+  requires: []
+  tiers:
+  - 2
 - name: 'Esoterica: Hollow Earth'
   ids:
   - unresolved:source:isthereanydeal:4880:esoterica-hollow-earth
+  requires: []
+  tiers:
+  - 2

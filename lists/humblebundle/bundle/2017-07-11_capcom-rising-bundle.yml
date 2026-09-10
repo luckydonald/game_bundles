@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Capcom Rising Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Capcom Rising Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5315/
@@ -13,30 +15,60 @@ games:
 - name: DMC - Devil May Cry
   ids:
   - steam:220440
+  requires: []
+  tiers:
+  - 3
 - name: Umbrella Corps™
   ids:
   - steam:390340
+  requires: []
+  tiers:
+  - 3
 - name: STRIDER™ / ストライダー飛竜®
   ids:
   - steam:235210
+  requires: []
+  tiers:
+  - 3
 - name: 'Dead Rising® 2: Off The Record'
   ids:
   - steam:45770
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil 0 HD Remaster
   ids:
   - steam:339340
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil 6
   ids:
   - steam:221040
+  requires: []
+  tiers:
+  - 3
 - name: Upgrade Pack/エージェントゴーストパック
   ids:
   - steam:450000
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil HD Remaster
   ids:
   - steam:304240
+  requires: []
+  tiers:
+  - 3
 - name: Dead Rising® 2
   ids:
   - steam:45740
+  requires: []
+  tiers:
+  - 3
 - name: Dead Rising 3 Apocalypse Edition
   ids:
   - steam:265550
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 20 — Tier 2
-tier: 2
+name: Be Mine 20
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2099/
@@ -13,27 +15,54 @@ games:
 - name: Lightrise
   ids:
   - steam:382250
+  requires: []
+  tiers:
+  - 2
 - name: Z.A.R.
   ids:
   - unresolved:source:isthereanydeal:2099:z-a-r
+  requires: []
+  tiers:
+  - 2
 - name: Arcana Kirā
   ids:
   - unresolved:source:isthereanydeal:2099:arcana-kira
+  requires: []
+  tiers:
+  - 2
 - name: Angels That Kill - The Final Cut
   ids:
   - steam:383240
+  requires: []
+  tiers:
+  - 2
 - name: 'Time Mysteries: Inheritance - Remastered'
   ids:
   - steam:350010
+  requires: []
+  tiers:
+  - 2
 - name: 'Morningstar: Descent to Deadrock'
   ids:
   - steam:339130
+  requires: []
+  tiers:
+  - 2
 - name: Shadowgate
   ids:
   - steam:294440
+  requires: []
+  tiers:
+  - 2
 - name: Pier Solar and the Great Architects
   ids:
   - steam:286220
+  requires: []
+  tiers:
+  - 2
 - name: Hektor
   ids:
   - steam:334070
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Hanako Anime Bundle — Tier 3
-tier: 3
+name: Hanako Anime Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6364/
@@ -13,27 +15,54 @@ games:
 - name: Science Girls
   ids:
   - steam:269010
+  requires: []
+  tiers:
+  - 3
 - name: Date Warp
   ids:
   - steam:301380
+  requires: []
+  tiers:
+  - 3
 - name: Sword Daughter
   ids:
   - steam:342450
+  requires: []
+  tiers:
+  - 3
 - name: 'Magical Diary: Horse Hall'
   ids:
   - steam:211340
+  requires: []
+  tiers:
+  - 3
 - name: The Confines Of The Crown
   ids:
   - steam:356530
+  requires: []
+  tiers:
+  - 3
 - name: Long Live the Queen
   ids:
   - steam:251990
+  requires: []
+  tiers:
+  - 3
 - name: Black Closet
   ids:
   - steam:400580
+  requires: []
+  tiers:
+  - 3
 - name: A Little Lily Princess
   ids:
   - steam:449250
+  requires: []
+  tiers:
+  - 3
 - name: England Exchange
   ids:
   - steam:627820
+  requires: []
+  tiers:
+  - 3

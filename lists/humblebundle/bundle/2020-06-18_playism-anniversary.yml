@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Playism Anniversary Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Playism Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8915/
@@ -13,42 +15,84 @@ games:
 - name: One Way Heroics
   ids:
   - steam:266210
+  requires: []
+  tiers:
+  - 3
 - name: REVOLVER360 RE:ACTOR
   ids:
   - steam:313400
+  requires: []
+  tiers:
+  - 3
 - name: Mitsurugi Kamui Hikae
   ids:
   - steam:263620
+  requires: []
+  tiers:
+  - 3
 - name: Unholy Heights
   ids:
   - steam:249330
+  requires: []
+  tiers:
+  - 3
 - name: Ace of Seafood
   ids:
   - steam:450500
+  requires: []
+  tiers:
+  - 3
 - name: Lost Technology
   ids:
   - steam:420520
+  requires: []
+  tiers:
+  - 3
 - name: LiEat
   ids:
   - steam:373770
+  requires: []
+  tiers:
+  - 3
 - name: Kero Blaster
   ids:
   - steam:292500
+  requires: []
+  tiers:
+  - 3
 - name: GOCCO OF WAR
   ids:
   - steam:346730
+  requires: []
+  tiers:
+  - 3
 - name: Mad Father
   ids:
   - steam:483980
+  requires: []
+  tiers:
+  - 3
 - name: 'Momodora: Reverie Under the Moonlight'
   ids:
   - steam:428550
+  requires: []
+  tiers:
+  - 3
 - name: The Silver Case
   ids:
   - steam:476650
+  requires: []
+  tiers:
+  - 3
 - name: Astebreed Definitive Edition
   ids:
   - steam:283680
+  requires: []
+  tiers:
+  - 3
 - name: BREAK ARTS II
   ids:
   - steam:547360
+  requires: []
+  tiers:
+  - 3

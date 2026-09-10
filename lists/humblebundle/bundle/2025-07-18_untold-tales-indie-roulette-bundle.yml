@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Untold Tales: Indie Roulette Bundle — entire-10-item-bundle'
-tier: 3
+name: 'Untold Tales: Indie Roulette Bundle'
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15269/
@@ -13,30 +15,60 @@ games:
 - name: 'ATONE: Heart of the Elder Tree'
   ids:
   - steam:894620
+  requires: []
+  tiers:
+  - 3
 - name: Mythic Ocean
   ids:
   - steam:814360
+  requires: []
+  tiers:
+  - 3
 - name: Don't Be Afraid
   ids:
   - steam:760410
+  requires: []
+  tiers:
+  - 3
 - name: What the Duck
   ids:
   - steam:1034590
+  requires: []
+  tiers:
+  - 3
 - name: Golf Club Nostalgia
   ids:
   - steam:1556870
+  requires: []
+  tiers:
+  - 3
 - name: The Hong Kong Massacre
   ids:
   - steam:741510
+  requires: []
+  tiers:
+  - 3
 - name: 'Arise: A Simple Story'
   ids:
   - steam:866140
+  requires: []
+  tiers:
+  - 3
 - name: Flame Keeper
   ids:
   - steam:1374230
+  requires: []
+  tiers:
+  - 3
 - name: Everdream Valley
   ids:
   - steam:1403650
+  requires: []
+  tiers:
+  - 3
 - name: Frozenheim
   ids:
   - steam:1134100
+  requires: []
+  tiers:
+  - 3

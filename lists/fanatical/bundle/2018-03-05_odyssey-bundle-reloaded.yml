@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Odyssey Bundle Reloaded — Tier 2
-tier: 2
+name: Odyssey Bundle Reloaded
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5954/
@@ -13,42 +15,84 @@ games:
 - name: 'The Last Door: Collectors Edition'
   ids:
   - steam:284390
+  requires: []
+  tiers:
+  - 2
 - name: Face Noir
   ids:
   - steam:244690
+  requires: []
+  tiers:
+  - 2
 - name: Quest For Infamy
   ids:
   - steam:264560
+  requires: []
+  tiers:
+  - 2
 - name: 'Cognition: An Erica Reed Thriller - Game of the Year Edition'
   ids:
   - steam:242780
+  requires: []
+  tiers:
+  - 2
 - name: 'Heroes & Legends: Conquerors of Kolhar'
   ids:
   - steam:306950
+  requires: []
+  tiers:
+  - 2
 - name: 'Cornerstone : The song of Tyrim'
   ids:
   - steam:284410
+  requires: []
+  tiers:
+  - 2
 - name: 'Morningstar: Descent to Deadrock'
   ids:
   - steam:339130
+  requires: []
+  tiers:
+  - 2
 - name: Tick's Tales
   ids:
   - steam:411610
+  requires: []
+  tiers:
+  - 2
 - name: 'Supreme League of Patriots: Issue 1 - A Patriot Is Born'
   ids:
   - steam:331760
+  requires: []
+  tiers:
+  - 2
 - name: Lost Civilization
   ids:
   - steam:264580
+  requires: []
+  tiers:
+  - 2
 - name: 'The Last Door: Season 2 - Collector''s Edition'
   ids:
   - steam:402530
+  requires: []
+  tiers:
+  - 2
 - name: 'Supreme League of Patriots - Issue 2: Patriot Frames'
   ids:
   - steam:336710
+  requires: []
+  tiers:
+  - 2
 - name: 'Moebius: Empire Rising'
   ids:
   - steam:264520
+  requires: []
+  tiers:
+  - 2
 - name: 'Supreme League of Patriots - Issue 3: Ice Cold in Ellis'
   ids:
   - steam:336730
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #68 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #68'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7010/
@@ -13,27 +15,54 @@ games:
 - name: Sudoku Zenkai
   ids:
   - steam:809850
+  requires: []
+  tiers:
+  - 2
 - name: '03.04'
   ids:
   - steam:952950
+  requires: []
+  tiers:
+  - 2
 - name: Earth Muncher
   ids:
   - steam:809460
+  requires: []
+  tiers:
+  - 2
 - name: You Have 10 Seconds 3
   ids:
   - steam:978640
+  requires: []
+  tiers:
+  - 2
 - name: Space Orb
   ids:
   - steam:843840
+  requires: []
+  tiers:
+  - 2
 - name: Survivalist
   ids:
   - steam:340050
+  requires: []
+  tiers:
+  - 2
 - name: Super Chibi Knight
   ids:
   - steam:283080
+  requires: []
+  tiers:
+  - 2
 - name: Stardust Vanguards
   ids:
   - steam:341530
+  requires: []
+  tiers:
+  - 2
 - name: Heaven And Earth
   ids:
   - steam:673630
+  requires: []
+  tiers:
+  - 2

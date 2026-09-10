@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: roseVeRte Complete Bundle — Tier 2
-tier: 2
+name: roseVeRte Complete Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6591/
@@ -13,45 +15,90 @@ games:
 - name: CAFE 0 ~The Drowned Mermaid~
   ids:
   - steam:335660
+  requires: []
+  tiers:
+  - 2
 - name: How to Take Off Your Mask
   ids:
   - steam:365350
+  requires: []
+  tiers:
+  - 2
 - name: CAFE 0 ~The Drowned Mermaid~ - Japanese Voice Add-On
   ids:
   - steam:336460
+  requires: []
+  tiers:
+  - 2
 - name: East Tower - Kuon
   ids:
   - steam:356550
+  requires: []
+  tiers:
+  - 2
 - name: East Tower - Akio
   ids:
   - steam:354950
+  requires: []
+  tiers:
+  - 2
 - name: dUpLicity ~Beyond the Lies~
   ids:
   - steam:335690
+  requires: []
+  tiers:
+  - 2
 - name: How to Take Off Your Mask - Theme Song
   ids:
   - steam:411730
+  requires: []
+  tiers:
+  - 2
 - name: East Tower - Takashi
   ids:
   - steam:356540
+  requires: []
+  tiers:
+  - 2
 - name: East Tower - Kurenai
   ids:
   - steam:356560
+  requires: []
+  tiers:
+  - 2
 - name: How to Fool a Liar King - Theme Song
   ids:
   - unresolved:source:isthereanydeal:6591:how-to-fool-a-liar-king-theme-song
+  requires: []
+  tiers:
+  - 2
 - name: CAFE 0 ~The Sleeping Beast~ - Theme Song
   ids:
   - steam:562890
+  requires: []
+  tiers:
+  - 2
 - name: CAFE 0 ~The Sleeping Beast~ - Original Soundtrack
   ids:
   - steam:562891
+  requires: []
+  tiers:
+  - 2
 - name: CAFE 0 ~The Sleeping Beast~
   ids:
   - steam:461810
+  requires: []
+  tiers:
+  - 2
 - name: How to Fool a Liar King
   ids:
   - steam:635790
+  requires: []
+  tiers:
+  - 2
 - name: How to Fool a Liar King - Insert Song "Issho ni"
   ids:
   - unresolved:source:isthereanydeal:6591:how-to-fool-a-liar-king-insert-song-issho-ni
+  requires: []
+  tiers:
+  - 2

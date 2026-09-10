@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Tekkers Bundle — Includes Tier 1
-tier: 2
+name: Indie Tekkers Bundle
+tiers:
+- rank: 2
+  name: Includes Tier 1
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6574/
@@ -13,33 +15,66 @@ games:
 - name: Primitive Survival
   ids:
   - steam:1206320
+  requires: []
+  tiers:
+  - 2
 - name: Type Defense
   ids:
   - steam:904440
+  requires: []
+  tiers:
+  - 2
 - name: HENTAI IDOL
   ids:
   - unresolved:source:isthereanydeal:6574:hentai-idol
+  requires: []
+  tiers:
+  - 2
 - name: Handball Manager - TEAM
   ids:
   - steam:623860
+  requires: []
+  tiers:
+  - 2
 - name: Drift Stunt Racing 2019
   ids:
   - steam:938600
+  requires: []
+  tiers:
+  - 2
 - name: TimeTekker
   ids:
   - steam:849680
+  requires: []
+  tiers:
+  - 2
 - name: Click and Manage Tycoon
   ids:
   - steam:919690
+  requires: []
+  tiers:
+  - 2
 - name: Sudoku Jigsaw / 拼图数独
   ids:
   - steam:858040
+  requires: []
+  tiers:
+  - 2
 - name: A.D.M(Angels,Demons And Men)
   ids:
   - unresolved:source:isthereanydeal:6574:a-d-m-angels-demons-and-men
+  requires: []
+  tiers:
+  - 2
 - name: TANKS
   ids:
   - steam:866420
+  requires: []
+  tiers:
+  - 2
 - name: Thick Light 2
   ids:
   - unresolved:source:isthereanydeal:6574:thick-light-2
+  requires: []
+  tiers:
+  - 2

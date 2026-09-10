@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble 15: Time Capsule Bundle — entire-9-item-bundle'
-tier: 2
+name: 'Humble 15: Time Capsule Bundle'
+tiers:
+- rank: 2
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15888/
@@ -13,27 +15,54 @@ games:
 - name: And Yet It Moves
   ids:
   - steam:18700
+  requires: []
+  tiers:
+  - 2
 - name: Lugaru HD
   ids:
   - steam:25010
+  requires: []
+  tiers:
+  - 2
 - name: Samorost 2
   ids:
   - steam:40720
+  requires: []
+  tiers:
+  - 2
 - name: Osmos
   ids:
   - steam:29180
+  requires: []
+  tiers:
+  - 2
 - name: Inkbound
   ids:
   - steam:1062810
+  requires: []
+  tiers:
+  - 2
 - name: Bionic Bay
   ids:
   - steam:1928690
+  requires: []
+  tiers:
+  - 2
 - name: 'Oddsparks: An Automation Adventure'
   ids:
   - steam:1817800
+  requires: []
+  tiers:
+  - 2
 - name: KILL KNIGHT
   ids:
   - steam:2694420
+  requires: []
+  tiers:
+  - 2
 - name: Mark of the Deep - Deluxe Edition
   ids:
   - steam:1933370
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: GameGuru MAX Bundle — Tier 3
-tier: 3
+name: GameGuru MAX Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13655/
@@ -13,27 +15,54 @@ games:
 - name: GameGuru MAX Low Poly Mini Kit - Sci-Fi Portals
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-mini-kit-sci-fi-portals
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Low Poly Mini Kit - Fantasy Portals
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-mini-kit-fantasy-portals
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Aztec Game Kit
   ids:
   - steam:1962060
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Low Poly Asset Pack - Arctic Ruins
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-arctic-ruins
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Low Poly Asset Pack - Mechanist's Settlement
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-mechanists-settlement
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX 3D Models Booster Pack
   ids:
   - steam:1928630
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX
   ids:
   - steam:1247290
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Low Poly Asset Pack - Knight's Bastion
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-knights-bastion
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru MAX Low Poly Asset Pack - Knight Weapons Melee
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-knight-weapons-melee
+  requires: []
+  tiers:
+  - 3

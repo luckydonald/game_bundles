@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Fishing Season: Bassmaster & More Bundle — entire-24-item-bundle'
-tier: 3
+name: 'Fishing Season: Bassmaster & More Bundle'
+tiers:
+- rank: 3
+  name: entire-24-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12994/
@@ -13,72 +15,144 @@ games:
 - name: 'Fishing Sim World®: Pro Tour - Lago Del Mundo'
   ids:
   - steam:978880
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World®: Pro Tour'
   ids:
   - steam:834280
+  requires: []
+  tiers:
+  - 3
 - name: 'Euro Fishing: The Moat'
   ids:
   - steam:321475
+  requires: []
+  tiers:
+  - 3
 - name: 'Euro Fishing: Foundry Dock'
   ids:
   - steam:321460
+  requires: []
+  tiers:
+  - 3
 - name: Euro Fishing
   ids:
   - steam:314520
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World®: Pro Tour - Talon Fishery'
   ids:
   - steam:1136001
+  requires: []
+  tiers:
+  - 3
 - name: 'Euro Fishing: Waldsee'
   ids:
   - steam:321473
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World®: Pro Tour - Lake Arnold'
   ids:
   - steam:931530
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World®: Pro Tour - Laguna Iquitos'
   ids:
   - steam:1136000
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World®: Pro Tour - Big Fish Lure Pack'
   ids:
   - steam:1203720
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing Sim World: Pro Tour - Bass Pro Shops Equipment Pack'
   ids:
   - steam:1369000
+  requires: []
+  tiers:
+  - 3
 - name: 'The Catch: Carp & Coarse Fishing'
   ids:
   - steam:1237610
+  requires: []
+  tiers:
+  - 3
 - name: Bassmaster® Fishing 2022
   ids:
   - unresolved:source:isthereanydeal:12994:bassmaster-fishing-2022
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Predator Equipment Pack'
   ids:
   - steam:1796151
+  requires: []
+  tiers:
+  - 3
 - name: 'The Catch: Carp & Coarse - Jezioro Bestii'
   ids:
   - steam:1351270
+  requires: []
+  tiers:
+  - 3
 - name: 'The Catch: Carp & Coarse - Lake Beasts Equipment Pack'
   ids:
   - steam:1351271
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Deluxe Upgrade Pack'
   ids:
   - unresolved:source:isthereanydeal:12994:bassmaster-fishing-2022-deluxe-upgrade-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Lake Hartwell'
   ids:
   - steam:1796155
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Elite Fishing Equipment Pack'
   ids:
   - steam:1796154
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Jordan Lake'
   ids:
   - steam:1796152
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Lake Seminole'
   ids:
   - steam:1796150
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Synthwave Pack'
   ids:
   - steam:1796159
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Pixel Pro Pack'
   ids:
   - unresolved:source:isthereanydeal:12994:bassmaster-fishing-2022-pixel-pro-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Bassmaster® Fishing 2022: Throwback B.A.S.S.® Pack'
   ids:
   - unresolved:source:isthereanydeal:12994:bassmaster-fishing-2022-throwback-b-as-s-pack
+  requires: []
+  tiers:
+  - 3

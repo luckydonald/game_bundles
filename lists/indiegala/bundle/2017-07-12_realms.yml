@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Realms Bundle — Tier 2
-tier: 2
+name: Indie Realms Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5317/
@@ -13,33 +15,66 @@ games:
 - name: Adventure Rage
   ids:
   - unresolved:source:isthereanydeal:5317:adventure-rage
+  requires: []
+  tiers:
+  - 2
 - name: Castle Defender
   ids:
   - steam:651520
+  requires: []
+  tiers:
+  - 2
 - name: Desert Ashes
   ids:
   - steam:324420
+  requires: []
+  tiers:
+  - 2
 - name: Oddplanet
   ids:
   - steam:465930
+  requires: []
+  tiers:
+  - 2
 - name: Siege Saga + Optika
   ids:
   - unresolved:source:isthereanydeal:5317:siege-saga-and-optika
+  requires: []
+  tiers:
+  - 2
 - name: The Tale of Doris and the Dragon - Episode 1
   ids:
   - steam:516840
+  requires: []
+  tiers:
+  - 2
 - name: Mushroom Wars
   ids:
   - steam:431250
+  requires: []
+  tiers:
+  - 2
 - name: Plague Road
   ids:
   - steam:622080
+  requires: []
+  tiers:
+  - 2
 - name: Awakened
   ids:
   - unresolved:source:isthereanydeal:5317:awakened
+  requires: []
+  tiers:
+  - 2
 - name: Twisty's Asylum Escapades
   ids:
   - steam:506760
+  requires: []
+  tiers:
+  - 2
 - name: My Super Tower 2
   ids:
   - unresolved:source:isthereanydeal:5317:my-super-tower-2
+  requires: []
+  tiers:
+  - 2

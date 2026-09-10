@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nice Cubic Bundle — Tier 2
-tier: 2
+name: Nice Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4928/
@@ -13,30 +15,60 @@ games:
 - name: Brave Dungeon
   ids:
   - unresolved:source:isthereanydeal:4928:brave-dungeon
+  requires: []
+  tiers:
+  - 2
 - name: Candy Blast
   ids:
   - steam:474050
+  requires: []
+  tiers:
+  - 2
 - name: JumpBall
   ids:
   - unresolved:source:isthereanydeal:4928:jumpball
+  requires: []
+  tiers:
+  - 2
 - name: Just Hero
   ids:
   - steam:527760
+  requires: []
+  tiers:
+  - 2
 - name: Invention 2
   ids:
   - unresolved:source:isthereanydeal:4928:invention-2
+  requires: []
+  tiers:
+  - 2
 - name: The Atomy
   ids:
   - unresolved:source:isthereanydeal:4928:the-atomy
+  requires: []
+  tiers:
+  - 2
 - name: Big Journey to Home
   ids:
   - steam:388440
+  requires: []
+  tiers:
+  - 2
 - name: CountDown
   ids:
   - unresolved:source:isthereanydeal:4928:countdown
+  requires: []
+  tiers:
+  - 2
 - name: 'Word Killer: Zorgilonian Chronicles'
   ids:
   - unresolved:source:isthereanydeal:4928:word-killer-zorgilonian-chronicles
+  requires: []
+  tiers:
+  - 2
 - name: Judas
   ids:
   - steam:581820
+  requires: []
+  tiers:
+  - 2

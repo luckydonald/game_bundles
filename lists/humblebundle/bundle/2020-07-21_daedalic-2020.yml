@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Daedalic Bundle 2020 — entire-11-item-bundle
-tier: 3
+name: Humble Daedalic Bundle 2020
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8996/
@@ -13,33 +15,66 @@ games:
 - name: Fire!
   ids:
   - unresolved:source:isthereanydeal:8996:fire
+  requires: []
+  tiers:
+  - 3
 - name: A Year Of Rain
   ids:
   - steam:319540
+  requires: []
+  tiers:
+  - 3
 - name: The Night Of The Rabbit
   ids:
   - steam:230820
+  requires: []
+  tiers:
+  - 3
 - name: AER Memories of Old
   ids:
   - steam:331870
+  requires: []
+  tiers:
+  - 3
 - name: The Great Perhaps
   ids:
   - steam:1016930
+  requires: []
+  tiers:
+  - 3
 - name: CryoFall
   ids:
   - steam:829590
+  requires: []
+  tiers:
+  - 3
 - name: State of Mind
   ids:
   - steam:437630
+  requires: []
+  tiers:
+  - 3
 - name: Ken Follett's The Pillars of the Earth
   ids:
   - steam:234270
+  requires: []
+  tiers:
+  - 3
 - name: Iron Danger
   ids:
   - steam:899310
+  requires: []
+  tiers:
+  - 3
 - name: 'Iratus: Lord of the Dead'
   ids:
   - steam:807120
+  requires: []
+  tiers:
+  - 3
 - name: The Suicide of Rachel Foster
   ids:
   - steam:1057750
+  requires: []
+  tiers:
+  - 3

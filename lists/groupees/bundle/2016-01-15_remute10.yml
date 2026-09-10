@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute X — Tier 2
-tier: 2
+name: Remute X
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2939/
@@ -13,33 +15,66 @@ games:
 - name: The Chaos Engine
   ids:
   - steam:242530
+  requires: []
+  tiers:
+  - 2
 - name: Vector Strain
   ids:
   - steam:419090
+  requires: []
+  tiers:
+  - 2
 - name: Deranged Rabbits
   ids:
   - unresolved:source:isthereanydeal:2939:deranged-rabbits
+  requires: []
+  tiers:
+  - 2
 - name: 'Car Washer: Summer of the Ninja'
   ids:
   - steam:369360
+  requires: []
+  tiers:
+  - 2
 - name: LowcoBall
   ids:
   - unresolved:source:isthereanydeal:2939:lowcoball
+  requires: []
+  tiers:
+  - 2
 - name: World War II GI
   ids:
   - steam:376750
+  requires: []
+  tiers:
+  - 2
 - name: Gon' E-Choo!
   ids:
   - steam:384990
+  requires: []
+  tiers:
+  - 2
 - name: Starlord
   ids:
   - steam:410540
+  requires: []
+  tiers:
+  - 2
 - name: Carrie's Order Up
   ids:
   - steam:522490
+  requires: []
+  tiers:
+  - 2
 - name: Blam Blam Planet
   ids:
   - unresolved:source:isthereanydeal:2939:blam-blam-planet
+  requires: []
+  tiers:
+  - 2
 - name: Gaspar's Ghost Panic
   ids:
   - unresolved:source:isthereanydeal:2939:gaspars-ghost-panic
+  requires: []
+  tiers:
+  - 2

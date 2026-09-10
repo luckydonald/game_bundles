@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Wats on Groupees: Thrillers — Tier 2'
-tier: 2
+name: 'Wats on Groupees: Thrillers'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4147/
@@ -13,24 +15,48 @@ games:
 - name: Whispers
   ids:
   - unresolved:source:isthereanydeal:4147:whispers
+  requires: []
+  tiers:
+  - 2
 - name: 'Redrum: Dead Diary'
   ids:
   - steam:541720
+  requires: []
+  tiers:
+  - 2
 - name: Apartment 666
   ids:
   - steam:375680
+  requires: []
+  tiers:
+  - 2
 - name: The Cain Complex
   ids:
   - unresolved:source:isthereanydeal:4147:the-cain-complex
+  requires: []
+  tiers:
+  - 2
 - name: Hush Hush - Unlimited Survival Horror
   ids:
   - steam:449500
+  requires: []
+  tiers:
+  - 2
 - name: The Bloc
   ids:
   - unresolved:source:isthereanydeal:4147:the-bloc
+  requires: []
+  tiers:
+  - 2
 - name: ZombieZoid - Zenith
   ids:
   - steam:403230
+  requires: []
+  tiers:
+  - 2
 - name: Basement
   ids:
   - steam:340150
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jumbo Bundle 8 — entire-10-item-bundle
-tier: 3
+name: Humble Jumbo Bundle 8
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4872/
@@ -13,30 +15,60 @@ games:
 - name: The Journey Down 1+2 Bundle
   ids:
   - unresolved:source:isthereanydeal:4872:the-journey-down-1-and-2-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Valhalla Hills
   ids:
   - steam:351910
+  requires: []
+  tiers:
+  - 3
 - name: Legends of Eisenwald
   ids:
   - steam:246760
+  requires: []
+  tiers:
+  - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:
   - steam:368080
+  requires: []
+  tiers:
+  - 3
 - name: Void Destroyer
   ids:
   - steam:259660
+  requires: []
+  tiers:
+  - 3
 - name: 'Jotun: Valhalla Edition'
   ids:
   - steam:323580
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: The Interactive Adventures of Dog Mendonça & Pizzaboy®
   ids:
   - steam:330420
+  requires: []
+  tiers:
+  - 3
 - name: Turmoil
   ids:
   - steam:361280
+  requires: []
+  tiers:
+  - 3
 - name: Verdun
   ids:
   - steam:242860
+  requires: []
+  tiers:
+  - 3

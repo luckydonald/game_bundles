@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality Bundle XXVII — Tier 2
-tier: 2
+name: Virtual Reality Bundle XXVII
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6292/
@@ -13,30 +15,60 @@ games:
 - name: Block Smashers VR
   ids:
   - steam:845170
+  requires: []
+  tiers:
+  - 2
 - name: Funball Games VR
   ids:
   - steam:722370
+  requires: []
+  tiers:
+  - 2
 - name: Kingdom Watcher
   ids:
   - steam:680970
+  requires: []
+  tiers:
+  - 2
 - name: The Road to Hades
   ids:
   - steam:826460
+  requires: []
+  tiers:
+  - 2
 - name: Wild Downtown
   ids:
   - steam:731700
+  requires: []
+  tiers:
+  - 2
 - name: 'Galactic Core: The Lost Fleet - VR'
   ids:
   - steam:571860
+  requires: []
+  tiers:
+  - 2
 - name: Alien Food Frenzy
   ids:
   - unresolved:source:isthereanydeal:6292:alien-food-frenzy
+  requires: []
+  tiers:
+  - 2
 - name: 'Stage 3: Azaria'
   ids:
   - unresolved:source:isthereanydeal:6292:stage-3-azaria
+  requires: []
+  tiers:
+  - 2
 - name: The Take
   ids:
   - steam:809410
+  requires: []
+  tiers:
+  - 2
 - name: HeadOn!
   ids:
   - unresolved:source:isthereanydeal:6292:headon
+  requires: []
+  tiers:
+  - 2

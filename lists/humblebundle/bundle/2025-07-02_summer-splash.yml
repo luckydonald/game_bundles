@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Summer Splash Bundle — entire-8-item-bundle
-tier: 3
+name: Summer Splash Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15228/
@@ -13,24 +15,48 @@ games:
 - name: Stranded Sails - Explorers of the Cursed Islands
   ids:
   - steam:943260
+  requires: []
+  tiers:
+  - 3
 - name: Ultimate Fishing Simulator
   ids:
   - steam:468920
+  requires: []
+  tiers:
+  - 3
 - name: Aquarium Designer
   ids:
   - steam:1339000
+  requires: []
+  tiers:
+  - 3
 - name: ABZU
   ids:
   - steam:384190
+  requires: []
+  tiers:
+  - 3
 - name: Blazing Sails
   ids:
   - steam:1158940
+  requires: []
+  tiers:
+  - 3
 - name: 'Fishing: North Atlantic'
   ids:
   - steam:1264250
+  requires: []
+  tiers:
+  - 3
 - name: Koa and the Five Pirates of Mara
   ids:
   - steam:1819450
+  requires: []
+  tiers:
+  - 3
 - name: Crab God
   ids:
   - steam:2289390
+  requires: []
+  tiers:
+  - 3

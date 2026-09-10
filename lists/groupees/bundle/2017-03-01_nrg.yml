@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: NRG Reloaded — Tier 3
-tier: 3
+name: NRG Reloaded
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4845/
@@ -13,45 +15,90 @@ games:
 - name: Data Hacker - Initiation
   ids:
   - steam:311860
+  requires: []
+  tiers:
+  - 3
 - name: 'AI: Rampage'
   ids:
   - steam:438020
+  requires: []
+  tiers:
+  - 3
 - name: 'Invasion: Brain Craving'
   ids:
   - steam:423710
+  requires: []
+  tiers:
+  - 3
 - name: So Many Cubes
   ids:
   - steam:513590
+  requires: []
+  tiers:
+  - 3
 - name: State of Anarchy
   ids:
   - steam:463210
+  requires: []
+  tiers:
+  - 3
 - name: Dreamlord
   ids:
   - unresolved:source:isthereanydeal:4845:dreamlord
+  requires: []
+  tiers:
+  - 3
 - name: Incitement 3
   ids:
   - steam:391660
+  requires: []
+  tiers:
+  - 3
 - name: 'Atonement 2: Ruptured by Despair'
   ids:
   - steam:533820
+  requires: []
+  tiers:
+  - 3
 - name: purgatory
   ids:
   - steam:473470
+  requires: []
+  tiers:
+  - 3
 - name: 'Desolate Wastes: Vendor Chronicles'
   ids:
   - steam:563120
+  requires: []
+  tiers:
+  - 3
 - name: Fall of Civilization
   ids:
   - unresolved:source:isthereanydeal:4845:fall-of-civilization
+  requires: []
+  tiers:
+  - 3
 - name: Project Starship
   ids:
   - steam:454890
+  requires: []
+  tiers:
+  - 3
 - name: Broken Dreams
   ids:
   - steam:444480
+  requires: []
+  tiers:
+  - 3
 - name: Reset 1-1
   ids:
   - steam:491650
+  requires: []
+  tiers:
+  - 3
 - name: New Reality Studio Pack
   ids:
   - unresolved:source:isthereanydeal:4845:new-reality-studio-pack
+  requires: []
+  tiers:
+  - 3

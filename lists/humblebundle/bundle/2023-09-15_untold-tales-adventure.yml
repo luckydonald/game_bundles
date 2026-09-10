@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Untold Tales of Adventure Bundle — entire-10-item-bundle
-tier: 3
+name: Untold Tales of Adventure Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13483/
@@ -13,30 +15,60 @@ games:
 - name: Mythic Ocean
   ids:
   - steam:814360
+  requires: []
+  tiers:
+  - 3
 - name: SAMUDRA
   ids:
   - steam:1116260
+  requires: []
+  tiers:
+  - 3
 - name: 'Aspire: Ina''s Tale'
   ids:
   - steam:1720090
+  requires: []
+  tiers:
+  - 3
 - name: What Lies in the Multiverse
   ids:
   - steam:1721170
+  requires: []
+  tiers:
+  - 3
 - name: Golf Club Nostalgia
   ids:
   - steam:1556870
+  requires: []
+  tiers:
+  - 3
 - name: 'ATONE: Heart of the Elder Tree'
   ids:
   - steam:894620
+  requires: []
+  tiers:
+  - 3
 - name: Metamorphosis
   ids:
   - steam:1025410
+  requires: []
+  tiers:
+  - 3
 - name: 'Arise: A Simple Story'
   ids:
   - steam:866140
+  requires: []
+  tiers:
+  - 3
 - name: Flame Keeper
   ids:
   - steam:1374230
+  requires: []
+  tiers:
+  - 3
 - name: 'Bang-On Balls: Chronicles'
   ids:
   - steam:1227650
+  requires: []
+  tiers:
+  - 3

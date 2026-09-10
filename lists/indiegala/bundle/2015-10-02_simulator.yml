@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Deep Simulator — Tier 3
-tier: 3
+name: Deep Simulator
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2545/
@@ -13,21 +15,42 @@ games:
 - name: Beach Resort Simulator
   ids:
   - unresolved:source:isthereanydeal:2545:beach-resort-simulator
+  requires: []
+  tiers:
+  - 3
 - name: Truck Mechanic Simulator 2015
   ids:
   - steam:331880
+  requires: []
+  tiers:
+  - 3
 - name: Construction Machines Simulator 2016
   ids:
   - unresolved:source:isthereanydeal:2545:construction-machines-simulator-2016
+  requires: []
+  tiers:
+  - 3
 - name: Farm Mechanic Simulator 2015
   ids:
   - unresolved:source:isthereanydeal:2545:farm-mechanic-simulator-2015
+  requires: []
+  tiers:
+  - 3
 - name: Farm Expert 2016
   ids:
   - unresolved:source:isthereanydeal:2545:farm-expert-2016
+  requires: []
+  tiers:
+  - 3
 - name: Helicopter 2015 - Natural Disasters
   ids:
   - unresolved:source:isthereanydeal:2545:helicopter-2015-natural-disasters
+  requires: []
+  tiers:
+  - 3
 - name: Mining Industry Simulator
   ids:
   - unresolved:source:isthereanydeal:2545:mining-industry-simulator
+  requires: []
+  tiers:
+  - 3

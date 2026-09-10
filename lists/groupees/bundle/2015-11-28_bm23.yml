@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 23 — Tier 2
-tier: 2
+name: Be Mine 23
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2778/
@@ -13,24 +15,48 @@ games:
 - name: GoatPunks Party
   ids:
   - unresolved:source:isthereanydeal:2778:goatpunks-party
+  requires: []
+  tiers:
+  - 2
 - name: Turbo Pug
   ids:
   - steam:418070
+  requires: []
+  tiers:
+  - 2
 - name: Nightside
   ids:
   - steam:360390
+  requires: []
+  tiers:
+  - 2
 - name: Days Under Custody
   ids:
   - steam:412730
+  requires: []
+  tiers:
+  - 2
 - name: Vapour
   ids:
   - steam:345440
+  requires: []
+  tiers:
+  - 2
 - name: Aerannis
   ids:
   - steam:356580
+  requires: []
+  tiers:
+  - 2
 - name: Albert and Otto
   ids:
   - steam:368590
+  requires: []
+  tiers:
+  - 2
 - name: Torque
   ids:
   - unresolved:source:isthereanydeal:2778:torque
+  requires: []
+  tiers:
+  - 2

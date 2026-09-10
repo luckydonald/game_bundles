@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bullid Games Bundle — Tier 2
-tier: 2
+name: Bullid Games Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6436/
@@ -13,39 +15,78 @@ games:
 - name: 'Unblock: The Parking'
   ids:
   - unresolved:source:isthereanydeal:6436:unblock-the-parking
+  requires: []
+  tiers:
+  - 2
 - name: Cryptochain
   ids:
   - unresolved:source:isthereanydeal:6436:cryptochain
+  requires: []
+  tiers:
+  - 2
 - name: Super Golf 2018
   ids:
   - unresolved:source:isthereanydeal:6436:super-golf-2018
+  requires: []
+  tiers:
+  - 2
 - name: Dr. Pills
   ids:
   - unresolved:source:isthereanydeal:6436:dr-pills
+  requires: []
+  tiers:
+  - 2
 - name: Super GTR Racing
   ids:
   - unresolved:source:isthereanydeal:6436:super-gtr-racing
+  requires: []
+  tiers:
+  - 2
 - name: Inca Blocks
   ids:
   - unresolved:source:isthereanydeal:6436:inca-blocks
+  requires: []
+  tiers:
+  - 2
 - name: SAWkoban
   ids:
   - unresolved:source:isthereanydeal:6436:sawkoban
+  requires: []
+  tiers:
+  - 2
 - name: 'Royal Casino: Video Poker'
   ids:
   - unresolved:source:isthereanydeal:6436:royal-casino-video-poker
+  requires: []
+  tiers:
+  - 2
 - name: Ninja Way
   ids:
   - unresolved:source:isthereanydeal:6436:ninja-way
+  requires: []
+  tiers:
+  - 2
 - name: Immersion
   ids:
   - unresolved:source:isthereanydeal:6436:immersion
+  requires: []
+  tiers:
+  - 2
 - name: inca marble
   ids:
   - unresolved:source:isthereanydeal:6436:inca-marble
+  requires: []
+  tiers:
+  - 2
 - name: Gold Digger Maze
   ids:
   - unresolved:source:isthereanydeal:6436:gold-digger-maze
+  requires: []
+  tiers:
+  - 2
 - name: Pinball 2018
   ids:
   - unresolved:source:isthereanydeal:6436:pinball-2018
+  requires: []
+  tiers:
+  - 2

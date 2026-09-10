@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Tales From Wales Interactive Bundle — entire-6-item-bundle
-tier: 2
+name: Tales From Wales Interactive Bundle
+tiers:
+- rank: 2
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13448/
@@ -13,18 +15,36 @@ games:
 - name: Late Shift
   ids:
   - steam:584980
+  requires: []
+  tiers:
+  - 2
 - name: Bloodshore
   ids:
   - steam:1490840
+  requires: []
+  tiers:
+  - 2
 - name: COMPLEX
   ids:
   - unresolved:source:isthereanydeal:13448:complex
+  requires: []
+  tiers:
+  - 2
 - name: The Bunker
   ids:
   - steam:481110
+  requires: []
+  tiers:
+  - 2
 - name: Five Dates
   ids:
   - steam:1353270
+  requires: []
+  tiers:
+  - 2
 - name: Mia and the Dragon Princess
   ids:
   - steam:1837580
+  requires: []
+  tiers:
+  - 2

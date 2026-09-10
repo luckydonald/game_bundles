@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Badass Brawlers Bundle — entire-7-item-bundle
-tier: 3
+name: Badass Brawlers Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15142/
@@ -13,21 +15,42 @@ games:
 - name: Double Dragon Neon
   ids:
   - steam:252350
+  requires: []
+  tiers:
+  - 3
 - name: Full Metal Furies
   ids:
   - steam:416600
+  requires: []
+  tiers:
+  - 3
 - name: Final Vendetta
   ids:
   - steam:1891090
+  requires: []
+  tiers:
+  - 3
 - name: River City Girls
   ids:
   - steam:1049320
+  requires: []
+  tiers:
+  - 3
 - name: Young Souls
   ids:
   - steam:985900
+  requires: []
+  tiers:
+  - 3
 - name: Dawn of the Monsters
   ids:
   - steam:1642170
+  requires: []
+  tiers:
+  - 3
 - name: River City Girls 2
   ids:
   - steam:1920480
+  requires: []
+  tiers:
+  - 3

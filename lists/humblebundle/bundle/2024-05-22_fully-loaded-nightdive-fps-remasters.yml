@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Fully Loaded: Nightdive FPS Remasters Bundle — entire-9-item-bundle'
-tier: 4
+name: 'Fully Loaded: Nightdive FPS Remasters Bundle'
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14075/
@@ -13,27 +15,54 @@ games:
 - name: Turok
   ids:
   - steam:405820
+  requires: []
+  tiers:
+  - 4
 - name: 'Blood: Fresh Supply'
   ids:
   - steam:1010750
+  requires: []
+  tiers:
+  - 4
 - name: SiN Gold
   ids:
   - steam:1313
+  requires: []
+  tiers:
+  - 4
 - name: 'Turok 2: Seeds of Evil'
   ids:
   - steam:405830
+  requires: []
+  tiers:
+  - 4
 - name: Forsaken Remastered
   ids:
   - steam:668980
+  requires: []
+  tiers:
+  - 4
 - name: DOOM 64
   ids:
   - steam:1148590
+  requires: []
+  tiers:
+  - 4
 - name: PowerSlave Exhumed
   ids:
   - steam:1678430
+  requires: []
+  tiers:
+  - 4
 - name: 'Rise of the Triad: Ludicrous Edition'
   ids:
   - steam:1421490
+  requires: []
+  tiers:
+  - 4
 - name: 'Turok 3: Shadow of Oblivion Remastered'
   ids:
   - steam:1996770
+  requires: []
+  tiers:
+  - 4

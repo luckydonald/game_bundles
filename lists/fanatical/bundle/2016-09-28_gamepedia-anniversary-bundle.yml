@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Gamepedia Anniversary Bundle — Tier 3
-tier: 3
+name: Gamepedia Anniversary Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4129/
@@ -13,30 +15,60 @@ games:
 - name: Edge of Space
   ids:
   - steam:238240
+  requires: []
+  tiers:
+  - 3
 - name: Bloodsports.TV
   ids:
   - steam:336420
+  requires: []
+  tiers:
+  - 3
 - name: Awesomenauts - the 2D moba
   ids:
   - unresolved:source:isthereanydeal:4129:awesomenauts-the-2d-moba
+  requires: []
+  tiers:
+  - 3
 - name: First Assault - Section 9 Starter Crate
   ids:
   - unresolved:source:isthereanydeal:4129:first-assault-section-9-starter-crate
+  requires: []
+  tiers:
+  - 3
 - name: MASSIVE CHALICE
   ids:
   - steam:246110
+  requires: []
+  tiers:
+  - 3
 - name: FORCED
   ids:
   - unresolved:source:isthereanydeal:4129:forced
+  requires: []
+  tiers:
+  - 3
 - name: 'Neverwinter: Bane of Baphomet Pack (redeem in Arc client)'
   ids:
   - unresolved:source:isthereanydeal:4129:neverwinter-bane-of-baphomet-pack-redeem-in-arc-client
+  requires: []
+  tiers:
+  - 3
 - name: Reverse Crawl
   ids:
   - steam:400660
+  requires: []
+  tiers:
+  - 3
 - name: 'Shadowrun: Dragonfall - Director''s Cut'
   ids:
   - steam:300550
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Returns
   ids:
   - steam:234650
+  requires: []
+  tiers:
+  - 3

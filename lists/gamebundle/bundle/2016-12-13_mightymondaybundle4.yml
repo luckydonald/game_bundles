@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mighty Monday GameBundle 4 — Beat The Average + $0.40
-tier: 3
+name: The Mighty Monday GameBundle 4
+tiers:
+- rank: 3
+  name: Beat The Average + $0.40
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4481/
@@ -13,27 +15,54 @@ games:
 - name: 'Shadow Ninja: Apocalypse'
   ids:
   - steam:389160
+  requires: []
+  tiers:
+  - 3
 - name: IACTURA
   ids:
   - steam:512770
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
   ids:
   - steam:353110
+  requires: []
+  tiers:
+  - 3
 - name: Grey phobia
   ids:
   - steam:465050
+  requires: []
+  tiers:
+  - 3
 - name: 'Shadow Ninja: endless runner'
   ids:
   - steam:420050
+  requires: []
+  tiers:
+  - 3
 - name: Veilia
   ids:
   - steam:516920
+  requires: []
+  tiers:
+  - 3
 - name: BLACK HOLE HAZARD
   ids:
   - steam:485160
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamscapes: The Sandman'
   ids:
   - steam:289260
+  requires: []
+  tiers:
+  - 3
 - name: Beat The Dictators
   ids:
   - unresolved:source:isthereanydeal:4481:beat-the-dictators
+  requires: []
+  tiers:
+  - 3

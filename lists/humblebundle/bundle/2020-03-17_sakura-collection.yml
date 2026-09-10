@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Sakura Collection Bundle — entire-20-item-bundle
-tier: 3
+name: Humble Sakura Collection Bundle
+tiers:
+- rank: 3
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8502/
@@ -13,60 +15,120 @@ games:
 - name: Sakura Fantasy
   ids:
   - steam:375200
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Beach
   ids:
   - steam:377680
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Spirit
   ids:
   - steam:313740
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Angels
   ids:
   - steam:342380
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Beach 2
   ids:
   - steam:407980
+  requires: []
+  tiers:
+  - 3
 - name: Sakura MMO
   ids:
   - steam:935070
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Space
   ids:
   - steam:521500
+  requires: []
+  tiers:
+  - 3
 - name: Sakura MMO 2
   ids:
   - steam:968950
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Shrine Girls
   ids:
   - steam:517000
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Magical Girls
   ids:
   - steam:581520
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Sadist
   ids:
   - steam:813700
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Cupid
   ids:
   - steam:733740
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Agent
   ids:
   - steam:575510
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Gamer
   ids:
   - steam:685680
+  requires: []
+  tiers:
+  - 3
 - name: Sakura MMO 3
   ids:
   - steam:1064130
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Nova
   ids:
   - steam:539670
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Dungeon
   ids:
   - steam:407330
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Swim Club
   ids:
   - steam:402180
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Fox Adventure
   ids:
   - steam:1157640
+  requires: []
+  tiers:
+  - 3
 - name: Sakura Gamer 2
   ids:
   - steam:1161650
+  requires: []
+  tiers:
+  - 3

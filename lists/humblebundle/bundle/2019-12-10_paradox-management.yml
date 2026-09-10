@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Paradox Management Bundle — entire-17-item-bundle
-tier: 3
+name: Humble Paradox Management Bundle
+tiers:
+- rank: 3
+  name: entire-17-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8193/
@@ -13,51 +15,102 @@ games:
 - name: Cities in Motion II
   ids:
   - unresolved:source:isthereanydeal:8193:cities-in-motion-ii
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect
   ids:
   - steam:233450
+  requires: []
+  tiers:
+  - 3
 - name: Cities in Motion
   ids:
   - steam:73010
+  requires: []
+  tiers:
+  - 3
 - name: Prison Architect - Aficionado
   ids:
   - steam:1195240
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities in Motion 2: European Cities'
   ids:
   - steam:283530
+  requires: []
+  tiers:
+  - 3
 - name: Cities in Motion US Cities
   ids:
   - steam:73187
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: European Suburbia'
   ids:
   - steam:715190
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines'
   ids:
   - steam:255710
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Green Cities'
   ids:
   - steam:614580
+  requires: []
+  tiers:
+  - 3
 - name: Cities in Motion German Cities
   ids:
   - steam:73185
+  requires: []
+  tiers:
+  - 3
 - name: Cities in Motion Tokyo
   ids:
   - steam:73181
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Synthetic Dawn Radio'
   ids:
   - steam:944070
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Green Planet'
   ids:
   - unresolved:source:isthereanydeal:8193:surviving-mars-green-planet
+  requires: []
+  tiers:
+  - 3
 - name: Surviving Mars - Digital Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:8193:surviving-mars-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Industries'
   ids:
   - steam:715194
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Space Race'
   ids:
   - unresolved:source:isthereanydeal:8193:surviving-mars-space-race
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Project Laika'
   ids:
   - unresolved:source:isthereanydeal:8193:surviving-mars-project-laika
+  requires: []
+  tiers:
+  - 3

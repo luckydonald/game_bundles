@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Houses Bundle — entire-12-item-bundle
-tier: 3
+name: Indie Houses Bundle
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10994/
@@ -13,36 +15,72 @@ games:
 - name: Super Mutant Alien Assault
   ids:
   - steam:368680
+  requires: []
+  tiers:
+  - 3
 - name: The Count Lucanor
   ids:
   - steam:440880
+  requires: []
+  tiers:
+  - 3
 - name: Hiveswap Friendsim
   ids:
   - steam:833040
+  requires: []
+  tiers:
+  - 3
 - name: Desert Child
   ids:
   - steam:844050
+  requires: []
+  tiers:
+  - 3
 - name: 'Elden: Path of the Forgotten'
   ids:
   - steam:715020
+  requires: []
+  tiers:
+  - 3
 - name: Western Press
   ids:
   - steam:377360
+  requires: []
+  tiers:
+  - 3
 - name: We should talk.
   ids:
   - steam:1255990
+  requires: []
+  tiers:
+  - 3
 - name: Etherborn
   ids:
   - steam:812160
+  requires: []
+  tiers:
+  - 3
 - name: Jack Axe
   ids:
   - steam:985780
+  requires: []
+  tiers:
+  - 3
 - name: Mosaic
   ids:
   - steam:349270
+  requires: []
+  tiers:
+  - 3
 - name: GONNER2
   ids:
   - steam:1117670
+  requires: []
+  tiers:
+  - 3
 - name: Beasts of Maravilla Island
   ids:
   - steam:1378020
+  requires: []
+  tiers:
+  - 3

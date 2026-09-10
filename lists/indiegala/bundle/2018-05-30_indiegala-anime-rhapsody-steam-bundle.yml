@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Anime Rhapsody Bundle — Tier 2
-tier: 2
+name: Anime Rhapsody Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6198/
@@ -13,36 +15,72 @@ games:
 - name: What is love?
   ids:
   - steam:1653180
+  requires: []
+  tiers:
+  - 2
 - name: Border of her Heart - HD
   ids:
   - steam:812750
+  requires: []
+  tiers:
+  - 2
 - name: One Night Stand
   ids:
   - steam:549860
+  requires: []
+  tiers:
+  - 2
 - name: Border of her Heart
   ids:
   - steam:795680
+  requires: []
+  tiers:
+  - 2
 - name: Yozora Rhapsody
   ids:
   - steam:569210
+  requires: []
+  tiers:
+  - 2
 - name: Wild Romance
   ids:
   - steam:493450
+  requires: []
+  tiers:
+  - 2
 - name: Four Horsemen
   ids:
   - steam:668200
+  requires: []
+  tiers:
+  - 2
 - name: 'School of Talent: SUZU-ROUTE'
   ids:
   - steam:573040
+  requires: []
+  tiers:
+  - 2
 - name: A Hand in the Darkness
   ids:
   - unresolved:source:isthereanydeal:6198:a-hand-in-the-darkness
+  requires: []
+  tiers:
+  - 2
 - name: One day in London
   ids:
   - steam:465180
+  requires: []
+  tiers:
+  - 2
 - name: Yandere School
   ids:
   - steam:687750
+  requires: []
+  tiers:
+  - 2
 - name: Pawn
   ids:
   - steam:557770
+  requires: []
+  tiers:
+  - 2

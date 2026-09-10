@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Beyond the Metroidverse Bundle — Entire 7 Item Bundle
-tier: 2
+name: Beyond the Metroidverse Bundle
+tiers:
+- rank: 2
+  name: Entire 7 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/beyond-metroidverse-bundle
@@ -24,33 +26,47 @@ games:
   - steam:1522870
   - isthereanydeal:supraland-six-inches-under
   requires: []
+  tiers:
+  - 2
 - name: HAAK
   ids:
   - steam:1352930
   - isthereanydeal:haak
   requires: []
+  tiers:
+  - 2
 - name: Monster Boy and the Cursed Kingdom
   ids:
   - steam:449610
   - isthereanydeal:monster-boy-and-the-cursed-kingdom
   requires: []
+  tiers:
+  - 2
 - name: Worldless
   ids:
   - steam:1898500
   - isthereanydeal:worldless
   requires: []
+  tiers:
+  - 2
 - name: Hunter X
   ids:
   - steam:1918450
   - isthereanydeal:hunterx
   requires: []
+  tiers:
+  - 2
 - name: Salt and Sanctuary
   ids:
   - steam:283640
   - isthereanydeal:salt-and-sanctuary
   requires: []
+  tiers:
+  - 2
 - name: Salt and Sacrifice
   ids:
   - steam:1437400
   - isthereanydeal:salt-and-sacrifice
   requires: []
+  tiers:
+  - 2

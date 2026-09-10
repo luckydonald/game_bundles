@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Summer GameBundle — Beat The Average
-tier: 2
+name: The Summer GameBundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3797/
@@ -13,27 +15,54 @@ games:
 - name: Vapour
   ids:
   - steam:345440
+  requires: []
+  tiers:
+  - 2
 - name: Collider
   ids:
   - steam:371880
+  requires: []
+  tiers:
+  - 2
 - name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
   ids:
   - steam:427930
+  requires: []
+  tiers:
+  - 2
 - name: Story of a Cube
   ids:
   - steam:440750
+  requires: []
+  tiers:
+  - 2
 - name: No Pineapple Left Behind
   ids:
   - steam:350090
+  requires: []
+  tiers:
+  - 2
 - name: PRiO
   ids:
   - steam:428410
+  requires: []
+  tiers:
+  - 2
 - name: Amigdala
   ids:
   - steam:450110
+  requires: []
+  tiers:
+  - 2
 - name: The Sacred Stone
   ids:
   - steam:432410
+  requires: []
+  tiers:
+  - 2
 - name: X-17
   ids:
   - steam:448060
+  requires: []
+  tiers:
+  - 2

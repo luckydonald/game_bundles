@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Going Rogue: A Lite Heavy Bundle — Entire 9 Item Bundle'
-tier: 2
+name: 'Going Rogue: A Lite Heavy Bundle'
+tiers:
+- rank: 2
+  name: Entire 9 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/going-rogue-lite-heavy-bundle
@@ -13,24 +15,48 @@ games:
 - name: Brutal Orchestra
   ids:
   - steam:1734320
+  requires: []
+  tiers:
+  - 2
 - name: Moros Protocol
   ids:
   - steam:1605250
+  requires: []
+  tiers:
+  - 2
 - name: Nightmare Reaper
   ids:
   - steam:1051690
+  requires: []
+  tiers:
+  - 2
 - name: Home Behind 2
   ids:
   - steam:1220010
+  requires: []
+  tiers:
+  - 2
 - name: 'Lynked: Banner of the Spark'
   ids:
   - steam:3159570
+  requires: []
+  tiers:
+  - 2
 - name: None Shall Intrude
   ids:
   - steam:2518630
+  requires: []
+  tiers:
+  - 2
 - name: Rogue Legacy
   ids:
   - steam:241600
+  requires: []
+  tiers:
+  - 2
 - name: UnderMine
   ids:
   - steam:656350
+  requires: []
+  tiers:
+  - 2

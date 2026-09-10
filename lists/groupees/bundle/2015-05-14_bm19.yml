@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 19 — Tier 3
-tier: 3
+name: Be Mine 19
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1996/
@@ -13,30 +15,60 @@ games:
 - name: 'Magicraft : Swords and Sorcery'
   ids:
   - unresolved:source:isthereanydeal:1996:magicraft-swords-and-sorcery
+  requires: []
+  tiers:
+  - 3
 - name: Jones On Fire
   ids:
   - steam:270810
+  requires: []
+  tiers:
+  - 3
 - name: Ubinota
   ids:
   - steam:323630
+  requires: []
+  tiers:
+  - 3
 - name: Jones On Fire Soundtrack
   ids:
   - steam:350260
+  requires: []
+  tiers:
+  - 3
 - name: Dokuro
   ids:
   - steam:317840
+  requires: []
+  tiers:
+  - 3
 - name: NaissanceE
   ids:
   - steam:265690
+  requires: []
+  tiers:
+  - 3
 - name: 'Grim Legends 2: Song of the Dark Swan'
   ids:
   - steam:279800
+  requires: []
+  tiers:
+  - 3
 - name: 18 Wheels of Steel Extreme Trucker
   ids:
   - steam:33730
+  requires: []
+  tiers:
+  - 3
 - name: Woolfe - The Red Hood Diaries
   ids:
   - steam:281940
+  requires: []
+  tiers:
+  - 3
 - name: Station
   ids:
   - steam:3411540
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Insanity Bundle — Tier 2
-tier: 2
+name: The Insanity Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4806/
@@ -13,36 +15,72 @@ games:
 - name: POSTAL 2
   ids:
   - steam:223470
+  requires: []
+  tiers:
+  - 2
 - name: Cthulhu Saves the World & Breath of Death VII Double Pack
   ids:
   - unresolved:source:isthereanydeal:4806:cthulhu-saves-the-world-and-breath-of-death-vii-double-pack
+  requires: []
+  tiers:
+  - 2
 - name: Teria
   ids:
   - steam:557970
+  requires: []
+  tiers:
+  - 2
 - name: SQUAKE
   ids:
   - unresolved:source:isthereanydeal:4806:squake
+  requires: []
+  tiers:
+  - 2
 - name: De-Void
   ids:
   - steam:468570
+  requires: []
+  tiers:
+  - 2
 - name: 'POSTAL 2: Paradise Lost'
   ids:
   - steam:360960
+  requires: []
+  tiers:
+  - 2
 - name: TAIKU MANSION
   ids:
   - steam:529760
+  requires: []
+  tiers:
+  - 2
 - name: 'Parvaneh: Legacy of the Light''s Guardians'
   ids:
   - steam:353990
+  requires: []
+  tiers:
+  - 2
 - name: 'Tempest: Pirate Action RPG'
   ids:
   - steam:418180
+  requires: []
+  tiers:
+  - 2
 - name: Projector Face
   ids:
   - steam:431850
+  requires: []
+  tiers:
+  - 2
 - name: Camp Sunshine
   ids:
   - steam:457570
+  requires: []
+  tiers:
+  - 2
 - name: Cthulhu Saves the World
   ids:
   - steam:107310
+  requires: []
+  tiers:
+  - 2

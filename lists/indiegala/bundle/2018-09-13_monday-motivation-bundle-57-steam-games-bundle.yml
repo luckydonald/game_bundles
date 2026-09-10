@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #57 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #57'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6453/
@@ -13,36 +15,72 @@ games:
 - name: Escape the Game
   ids:
   - steam:542310
+  requires: []
+  tiers:
+  - 2
 - name: Everything Will Flow 万物皆逝
   ids:
   - unresolved:source:isthereanydeal:6453:everything-will-flow-wan-wu-jie-shi
+  requires: []
+  tiers:
+  - 2
 - name: The Loop
   ids:
   - unresolved:source:isthereanydeal:6453:the-loop
+  requires: []
+  tiers:
+  - 2
 - name: Intelligence Trader
   ids:
   - unresolved:source:isthereanydeal:6453:intelligence-trader
+  requires: []
+  tiers:
+  - 2
 - name: Realm of the Ghost King
   ids:
   - steam:764370
+  requires: []
+  tiers:
+  - 2
 - name: Sort the Cube
   ids:
   - steam:878510
+  requires: []
+  tiers:
+  - 2
 - name: Nepenthe
   ids:
   - steam:789570
+  requires: []
+  tiers:
+  - 2
 - name: Inflatality
   ids:
   - steam:653080
+  requires: []
+  tiers:
+  - 2
 - name: Golden8bits
   ids:
   - steam:794230
+  requires: []
+  tiers:
+  - 2
 - name: Supesu
   ids:
   - steam:879280
+  requires: []
+  tiers:
+  - 2
 - name: High Cats
   ids:
   - unresolved:source:isthereanydeal:6453:high-cats
+  requires: []
+  tiers:
+  - 2
 - name: 'Life & Debt: A Real Life Simulator'
   ids:
   - steam:799840
+  requires: []
+  tiers:
+  - 2

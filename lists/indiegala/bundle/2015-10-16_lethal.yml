@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Lethal Mix Bundle — Tier 2
-tier: 2
+name: The Lethal Mix Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2615/
@@ -13,36 +15,72 @@ games:
 - name: Dale Hardshovel HD
   ids:
   - steam:370170
+  requires: []
+  tiers:
+  - 2
 - name: Owys
   ids:
   - steam:394770
+  requires: []
+  tiers:
+  - 2
 - name: Woof Blaster
   ids:
   - steam:397990
+  requires: []
+  tiers:
+  - 2
 - name: Broadside
   ids:
   - unresolved:source:isthereanydeal:2615:broadside
+  requires: []
+  tiers:
+  - 2
 - name: 'MANOS: The Hands of Fate: Director''s Cut'
   ids:
   - steam:350780
+  requires: []
+  tiers:
+  - 2
 - name: Shmup Love Boom
   ids:
   - steam:387110
+  requires: []
+  tiers:
+  - 2
 - name: Invasion
   ids:
   - steam:503630
+  requires: []
+  tiers:
+  - 2
 - name: Lost Moon
   ids:
   - unresolved:source:isthereanydeal:2615:lost-moon
+  requires: []
+  tiers:
+  - 2
 - name: 'ASDAD: All-Stars Dungeons and Diamonds'
   ids:
   - unresolved:source:isthereanydeal:2615:asdad-all-stars-dungeons-and-diamonds
+  requires: []
+  tiers:
+  - 2
 - name: Flesh Eaters
   ids:
   - steam:383580
+  requires: []
+  tiers:
+  - 2
 - name: The Bizarre Creations of Keith the Magnificent
   ids:
   - unresolved:source:isthereanydeal:2615:the-bizarre-creations-of-keith-the-magnificent
+  requires: []
+  tiers:
+  - 2
 - name: Are You Smarter Than a 5th Grader?™
   ids:
   - steam:1521160
+  requires: []
+  tiers:
+  - 2

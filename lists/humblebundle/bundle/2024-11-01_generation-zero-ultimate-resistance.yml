@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Generation Zero: The Ultimate Resistance Bundle — entire-19-item-bundle'
-tier: 4
+name: 'Generation Zero: The Ultimate Resistance Bundle'
+tiers:
+- rank: 4
+  name: entire-19-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14586/
@@ -13,57 +15,114 @@ games:
 - name: Generation Zero®
   ids:
   - steam:704270
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Schweet Vanity Pack
   ids:
   - steam:1062420
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - US Weapons Pack
   ids:
   - steam:1450340
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Soviet Weapons Pack
   ids:
   - steam:1580920
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - US Weapons Pack 2
   ids:
   - steam:1610690
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Base Defense Pack
   ids:
   - steam:1610720
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Base Support Pack
   ids:
   - steam:1850670
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Resistance Weapons Pack
   ids:
   - steam:1771050
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Tactical Equipment Pack
   ids:
   - steam:2009530
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Camo Weapon Skins Pack
   ids:
   - steam:2144760
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Eastern European Weapons Pack
   ids:
   - steam:2200740
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Advanced Intelligence Cosmetics Pack
   ids:
   - steam:2591100
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Alpine Unrest
   ids:
   - steam:1157550
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - FNIX Rising
   ids:
   - steam:1301740
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Motorbikes Pack
   ids:
   - steam:2144761
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Tactical Equipment Pack 2
   ids:
   - steam:2334430
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Companion Accessories Pack
   ids:
   - steam:2473770
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Reinforced Flakmoped Pack
   ids:
   - steam:2689180
+  requires: []
+  tiers:
+  - 4
 - name: Generation Zero® - Heavy Weapons Pack
   ids:
   - steam:2955520
+  requires: []
+  tiers:
+  - 4

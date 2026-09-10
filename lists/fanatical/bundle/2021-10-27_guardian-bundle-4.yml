@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardian Bundle 4 — Tier 3
-tier: 3
+name: Guardian Bundle 4
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10615/
@@ -13,33 +15,66 @@ games:
 - name: A Hole New World
   ids:
   - steam:434160
+  requires: []
+  tiers:
+  - 3
 - name: Sumoman
   ids:
   - steam:552970
+  requires: []
+  tiers:
+  - 3
 - name: Shape of the World
   ids:
   - steam:642610
+  requires: []
+  tiers:
+  - 3
 - name: Ministry of Broadcast
   ids:
   - steam:874040
+  requires: []
+  tiers:
+  - 3
 - name: Evan's Remains
   ids:
   - steam:1110050
+  requires: []
+  tiers:
+  - 3
 - name: A Long Way Down
   ids:
   - steam:856990
+  requires: []
+  tiers:
+  - 3
 - name: Depraved
   ids:
   - steam:762650
+  requires: []
+  tiers:
+  - 3
 - name: She Sees Red - Interactive Movie
   ids:
   - steam:1081510
+  requires: []
+  tiers:
+  - 3
 - name: 'GTTOD: Get To The Orange Door'
   ids:
   - steam:541200
+  requires: []
+  tiers:
+  - 3
 - name: Helheim Hassle
   ids:
   - steam:1095120
+  requires: []
+  tiers:
+  - 3
 - name: 'Neurodeck : Psychological Deckbuilder'
   ids:
   - steam:1253860
+  requires: []
+  tiers:
+  - 3

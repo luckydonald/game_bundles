@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: indie.io Super Bundle — entire-13-item-bundle
-tier: 4
+name: indie.io Super Bundle
+tiers:
+- rank: 4
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14443/
@@ -13,39 +15,78 @@ games:
 - name: Blood And Zombies
   ids:
   - steam:1739880
+  requires: []
+  tiers:
+  - 4
 - name: To The Rescue!
   ids:
   - steam:946720
+  requires: []
+  tiers:
+  - 4
 - name: Coromon
   ids:
   - steam:1218210
+  requires: []
+  tiers:
+  - 4
 - name: Dark Deity
   ids:
   - steam:1374840
+  requires: []
+  tiers:
+  - 4
 - name: LunarLux
   ids:
   - steam:1932680
+  requires: []
+  tiers:
+  - 4
 - name: Airborne Kingdom
   ids:
   - steam:982290
+  requires: []
+  tiers:
+  - 4
 - name: Cat Cafe Manager
   ids:
   - steam:1354830
+  requires: []
+  tiers:
+  - 4
 - name: One Lonely Outpost
   ids:
   - steam:1465550
+  requires: []
+  tiers:
+  - 4
 - name: 'Symphony of War: The Nephilim Saga'
   ids:
   - steam:1488200
+  requires: []
+  tiers:
+  - 4
 - name: Sands of Aura
   ids:
   - steam:1119840
+  requires: []
+  tiers:
+  - 4
 - name: Voltaire - The Vegan Vampire
   ids:
   - steam:1952540
+  requires: []
+  tiers:
+  - 4
 - name: Dream Tactics
   ids:
   - steam:1897650
+  requires: []
+  tiers:
+  - 4
 - name: 'Airship: Kingdoms Adrift'
   ids:
   - steam:1597310
+  requires: []
+  tiers:
+  - 4

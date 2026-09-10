@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Microids Bundle — Tier 2
-tier: 2
+name: Microids Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6060/
@@ -13,42 +15,84 @@ games:
 - name: The Bluecoats North vs South
   ids:
   - unresolved:source:isthereanydeal:6060:the-bluecoats-north-vs-south
+  requires: []
+  tiers:
+  - 2
 - name: Return to Mysterious Island 2
   ids:
   - steam:277270
+  requires: []
+  tiers:
+  - 2
 - name: Curse - The Eye of Isis
   ids:
   - steam:302210
+  requires: []
+  tiers:
+  - 2
 - name: Alice in Wonderland - Hidden Objects
   ids:
   - steam:812110
+  requires: []
+  tiers:
+  - 2
 - name: Agon - The Lost Sword of Toledo
   ids:
   - steam:410130
+  requires: []
+  tiers:
+  - 2
 - name: Around the Words
   ids:
   - steam:677230
+  requires: []
+  tiers:
+  - 2
 - name: AGON - The Mysterious Codex (Trilogy)
   ids:
   - steam:410120
+  requires: []
+  tiers:
+  - 2
 - name: Mega Race 1
   ids:
   - unresolved:source:isthereanydeal:6060:mega-race-1
+  requires: []
+  tiers:
+  - 2
 - name: Moto Racer 4 - Space Dasher
   ids:
   - steam:465291
+  requires: []
+  tiers:
+  - 2
 - name: MegaRace 3
   ids:
   - steam:733770
+  requires: []
+  tiers:
+  - 2
 - name: Hidden Object - 12 in 1 bundle
   ids:
   - steam:493580
+  requires: []
+  tiers:
+  - 2
 - name: Moto Racer 4 - The Truth
   ids:
   - steam:465292
+  requires: []
+  tiers:
+  - 2
 - name: Moto Racer 4
   ids:
   - steam:417430
+  requires: []
+  tiers:
+  - 2
 - name: Nostradamus - The Four Horsemen of the Apocalypse
   ids:
   - steam:774131
+  requires: []
+  tiers:
+  - 2

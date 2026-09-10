@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Learn and Play VR-AR Game Dev Bundle — entire-5-item-bundle
-tier: 3
+name: Humble Learn and Play VR-AR Game Dev Bundle
+tiers:
+- rank: 3
+  name: entire-5-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8074/
@@ -13,15 +15,30 @@ games:
 - name: Insect Revolution VR
   ids:
   - unresolved:source:isthereanydeal:8074:insect-revolution-vr
+  requires: []
+  tiers:
+  - 3
 - name: Panzer Panic VR
   ids:
   - steam:589170
+  requires: []
+  tiers:
+  - 3
 - name: Keep Defending
   ids:
   - steam:527720
+  requires: []
+  tiers:
+  - 3
 - name: Stunt Kite Masters VR
   ids:
   - steam:589280
+  requires: []
+  tiers:
+  - 3
 - name: Devil and the Fairy VR
   ids:
   - unresolved:source:isthereanydeal:8074:devil-and-the-fairy-vr
+  requires: []
+  tiers:
+  - 3

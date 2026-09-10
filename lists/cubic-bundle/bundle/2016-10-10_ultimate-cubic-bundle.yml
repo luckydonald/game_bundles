@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Ultimate Cubic Bundle — Tier 2
-tier: 2
+name: Ultimate Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4174/
@@ -13,33 +15,66 @@ games:
 - name: 'Pixel Puzzles 2: Birds'
   ids:
   - steam:344230
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Puzzles 2: Space'
   ids:
   - steam:355920
+  requires: []
+  tiers:
+  - 2
 - name: Rescue Team 5
   ids:
   - steam:416320
+  requires: []
+  tiers:
+  - 2
 - name: Showtime!
   ids:
   - unresolved:source:isthereanydeal:4174:showtime
+  requires: []
+  tiers:
+  - 2
 - name: 'Heroes of Hellas 3: Athens'
   ids:
   - steam:347590
+  requires: []
+  tiers:
+  - 2
 - name: Dungetris
   ids:
   - unresolved:source:isthereanydeal:4174:dungetris
+  requires: []
+  tiers:
+  - 2
 - name: Between Me And The Night
   ids:
   - steam:285070
+  requires: []
+  tiers:
+  - 2
 - name: Darkout
   ids:
   - steam:257050
+  requires: []
+  tiers:
+  - 2
 - name: The Bridge
   ids:
   - steam:204240
+  requires: []
+  tiers:
+  - 2
 - name: 'Goblin Defenders: Steel ''n'' Wood'
   ids:
   - steam:416310
+  requires: []
+  tiers:
+  - 2
 - name: 'Meridian: Age of Invention'
   ids:
   - steam:397770
+  requires: []
+  tiers:
+  - 2

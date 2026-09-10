@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Hooked on Multiplayer Bundle 2019 — entire-8-item-bundle
-tier: 3
+name: Humble Hooked on Multiplayer Bundle 2019
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7668/
@@ -13,24 +15,48 @@ games:
 - name: Think of the Children
   ids:
   - steam:573600
+  requires: []
+  tiers:
+  - 3
 - name: Death Squared
   ids:
   - steam:471810
+  requires: []
+  tiers:
+  - 3
 - name: INVERSUS Deluxe
   ids:
   - steam:432980
+  requires: []
+  tiers:
+  - 3
 - name: Totally Accurate Battlegrounds
   ids:
   - steam:823130
+  requires: []
+  tiers:
+  - 3
 - name: Super Animal Royale
   ids:
   - steam:843380
+  requires: []
+  tiers:
+  - 3
 - name: Barony
   ids:
   - steam:371970
+  requires: []
+  tiers:
+  - 3
 - name: 'Deathgarden: BLOODHARVEST'
   ids:
   - unresolved:source:isthereanydeal:7668:deathgarden-bloodharvest
+  requires: []
+  tiers:
+  - 3
 - name: Killing Floor 2 Digital Deluxe Edition
   ids:
   - steam:354020
+  requires: []
+  tiers:
+  - 3

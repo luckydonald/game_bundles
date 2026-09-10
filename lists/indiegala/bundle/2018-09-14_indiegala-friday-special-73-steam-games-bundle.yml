@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #73 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #73'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6459/
@@ -13,33 +15,66 @@ games:
 - name: Little hidden city
   ids:
   - steam:706490
+  requires: []
+  tiers:
+  - 2
 - name: Light Fantastik
   ids:
   - steam:690630
+  requires: []
+  tiers:
+  - 2
 - name: JUST DASH
   ids:
   - steam:891350
+  requires: []
+  tiers:
+  - 2
 - name: Redline Ultimate Racing
   ids:
   - unresolved:source:isthereanydeal:6459:redline-ultimate-racing
+  requires: []
+  tiers:
+  - 2
 - name: 'Disturbed: Beyond Aramor'
   ids:
   - steam:617620
+  requires: []
+  tiers:
+  - 2
 - name: Atex Brawl
   ids:
   - unresolved:source:isthereanydeal:6459:atex-brawl
+  requires: []
+  tiers:
+  - 2
 - name: 'NEXT JUMP: Shmup Tactics'
   ids:
   - steam:624690
+  requires: []
+  tiers:
+  - 2
 - name: Repentant
   ids:
   - steam:874370
+  requires: []
+  tiers:
+  - 2
 - name: Infecto
   ids:
   - steam:815800
+  requires: []
+  tiers:
+  - 2
 - name: Perfect Heist
   ids:
   - steam:787040
+  requires: []
+  tiers:
+  - 2
 - name: Helping Hand
   ids:
   - steam:820880
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Plug In Digital Limited VIP Bundle — Tier 2
-tier: 2
+name: Plug In Digital Limited VIP Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6211/
@@ -13,24 +15,48 @@ games:
 - name: Rise of Balloons
   ids:
   - steam:610460
+  requires: []
+  tiers:
+  - 2
 - name: DragoDino
   ids:
   - steam:561510
+  requires: []
+  tiers:
+  - 2
 - name: Army General
   ids:
   - steam:606950
+  requires: []
+  tiers:
+  - 2
 - name: Rugby World Cup 2015
   ids:
   - unresolved:source:isthereanydeal:6211:rugby-world-cup-2015
+  requires: []
+  tiers:
+  - 2
 - name: Anarcute
   ids:
   - steam:390720
+  requires: []
+  tiers:
+  - 2
 - name: Wars Across The World - Expanded Edition
   ids:
   - unresolved:source:isthereanydeal:6211:wars-across-the-world-expanded-edition
+  requires: []
+  tiers:
+  - 2
 - name: WRC 5
   ids:
   - unresolved:source:isthereanydeal:6211:wrc-5
+  requires: []
+  tiers:
+  - 2
 - name: Pankapu
   ids:
   - steam:418670
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #48 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #48'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6108/
@@ -13,33 +15,66 @@ games:
 - name: Keep Rollin!
   ids:
   - unresolved:source:isthereanydeal:6108:keep-rollin
+  requires: []
+  tiers:
+  - 2
 - name: Born Tubi Wild
   ids:
   - steam:756150
+  requires: []
+  tiers:
+  - 2
 - name: Keeplanet
   ids:
   - steam:703120
+  requires: []
+  tiers:
+  - 2
 - name: CRAZY MAZE
   ids:
   - steam:820170
+  requires: []
+  tiers:
+  - 2
 - name: Planetship
   ids:
   - steam:337280
+  requires: []
+  tiers:
+  - 2
 - name: Dragon Drop
   ids:
   - steam:665790
+  requires: []
+  tiers:
+  - 2
 - name: Slimebrawl
   ids:
   - steam:690000
+  requires: []
+  tiers:
+  - 2
 - name: Baobabs Mausoleum Ep. 2 1313 Barnabas Dead End Drive
   ids:
   - steam:687720
+  requires: []
+  tiers:
+  - 2
 - name: Rogue Buddies - Aztek Gold
   ids:
   - steam:753570
+  requires: []
+  tiers:
+  - 2
 - name: Without Escape
   ids:
   - steam:720730
+  requires: []
+  tiers:
+  - 2
 - name: Atomic Heist
   ids:
   - steam:791000
+  requires: []
+  tiers:
+  - 2

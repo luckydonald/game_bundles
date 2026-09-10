@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fully Loaded 2 Bundle — Tier 2
-tier: 2
+name: Fully Loaded 2 Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2857/
@@ -13,36 +15,72 @@ games:
 - name: Funk of Titans
   ids:
   - steam:383750
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Office Politics
   ids:
   - unresolved:source:isthereanydeal:2857:zombie-office-politics
+  requires: []
+  tiers:
+  - 2
 - name: Black Sails - The Ghost Ship
   ids:
   - steam:373240
+  requires: []
+  tiers:
+  - 2
 - name: Supreme Ruler 1936
   ids:
   - steam:244410
+  requires: []
+  tiers:
+  - 2
 - name: ShipLord
   ids:
   - steam:422250
+  requires: []
+  tiers:
+  - 2
 - name: TY the Tasmanian Tiger 4
   ids:
   - steam:287840
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Kill of the Week - Reborn
   ids:
   - steam:342300
+  requires: []
+  tiers:
+  - 2
 - name: Terra Lander Remastered
   ids:
   - steam:338550
+  requires: []
+  tiers:
+  - 2
 - name: 'Store Manager: Cellular Edition'
   ids:
   - unresolved:source:isthereanydeal:2857:store-manager-cellular-edition
+  requires: []
+  tiers:
+  - 2
 - name: The Troma Project
   ids:
   - steam:279640
+  requires: []
+  tiers:
+  - 2
 - name: Son of Nor
   ids:
   - steam:264000
+  requires: []
+  tiers:
+  - 2
 - name: The Legend of Dark Witch
   ids:
   - steam:420770
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Double Fine Presents Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Double Fine Presents Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6919/
@@ -13,30 +15,60 @@ games:
 - name: 140 Soundtrack
   ids:
   - steam:662290
+  requires: []
+  tiers:
+  - 3
 - name: THOTH
   ids:
   - steam:510620
+  requires: []
+  tiers:
+  - 3
 - name: Mountain
   ids:
   - steam:313340
+  requires: []
+  tiers:
+  - 3
 - name: THOTH Soundtrack
   ids:
   - steam:667860
+  requires: []
+  tiers:
+  - 3
 - name: '140'
   ids:
   - steam:242820
+  requires: []
+  tiers:
+  - 3
 - name: GNOG
   ids:
   - steam:290510
+  requires: []
+  tiers:
+  - 3
 - name: Escape Goat 2
   ids:
   - steam:255340
+  requires: []
+  tiers:
+  - 3
 - name: Gang Beasts
   ids:
   - steam:285900
+  requires: []
+  tiers:
+  - 3
 - name: EVERYTHING
   ids:
   - steam:582270
+  requires: []
+  tiers:
+  - 3
 - name: Everything OST
   ids:
   - steam:619940
+  requires: []
+  tiers:
+  - 3

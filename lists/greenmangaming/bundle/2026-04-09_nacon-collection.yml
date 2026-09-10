@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nacon Collection — Streets
-tier: 4
+name: Nacon Collection
+tiers:
+- rank: 4
+  name: Streets
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16031/
@@ -13,27 +15,54 @@ games:
 - name: 'Mordheim: City of the Damned'
   ids:
   - steam:276810
+  requires: []
+  tiers:
+  - 4
 - name: Of Orcs and Men
   ids:
   - steam:216910
+  requires: []
+  tiers:
+  - 4
 - name: 'Clash: Artifacts of Chaos'
   ids:
   - steam:1430680
+  requires: []
+  tiers:
+  - 4
 - name: WRC Generations - The FIA WRC Official Game
   ids:
   - steam:1953520
+  requires: []
+  tiers:
+  - 4
 - name: Steelrising
   ids:
   - steam:1283400
+  requires: []
+  tiers:
+  - 4
 - name: Chef Life - A Restaurant Simulator
   ids:
   - steam:1122340
+  requires: []
+  tiers:
+  - 4
 - name: The Last Spell
   ids:
   - steam:1105670
+  requires: []
+  tiers:
+  - 4
 - name: 'Session: Skate Sim'
   ids:
   - steam:861650
+  requires: []
+  tiers:
+  - 4
 - name: 'Taxi Life: A City Driving Simulator'
   ids:
   - steam:1351240
+  requires: []
+  tiers:
+  - 4

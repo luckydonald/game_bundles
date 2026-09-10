@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Warhammer: Vermintide Bundle — Tier 3'
-tier: 3
+name: 'Warhammer: Vermintide Bundle'
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8729/
@@ -13,21 +15,42 @@ games:
 - name: 'Warhammer: Vermintide 2'
   ids:
   - steam:552500
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: Vermintide 2 - Shadows Over Bögenhafen'
   ids:
   - steam:828790
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: Vermintide 2 - Back to Ubersreik'
   ids:
   - steam:975400
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: Vermintide 2 - Winds of Magic'
   ids:
   - steam:1033060
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: Vermintide 2 - Collector''s Edition Upgrade'
   ids:
   - steam:737040
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: Vermintide 2 Cosmetic - Incandescent Brand'
   ids:
   - unresolved:source:isthereanydeal:8729:warhammer-vermintide-2-cosmetic-incandescent-brand
+  requires: []
+  tiers:
+  - 3

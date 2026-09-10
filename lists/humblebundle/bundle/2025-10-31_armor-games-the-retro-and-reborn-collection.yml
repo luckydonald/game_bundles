@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Armor Games Retro & Reborn — 14 Item Bundle
-tier: 3
+name: Armor Games Retro & Reborn
+tiers:
+- rank: 3
+  name: 14 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15560/
@@ -13,42 +15,84 @@ games:
 - name: GemCraft - Chasing Shadows
   ids:
   - steam:296490
+  requires: []
+  tiers:
+  - 3
 - name: Nauticrawl
   ids:
   - steam:922100
+  requires: []
+  tiers:
+  - 3
 - name: ITTA
   ids:
   - steam:775580
+  requires: []
+  tiers:
+  - 3
 - name: 'Infectonator 3: Apocalypse'
   ids:
   - steam:666570
+  requires: []
+  tiers:
+  - 3
 - name: Don't Escape Trilogy
   ids:
   - steam:1070550
+  requires: []
+  tiers:
+  - 3
 - name: Deep Sleep Trilogy
   ids:
   - steam:1146510
+  requires: []
+  tiers:
+  - 3
 - name: Crush the Castle Legacy Collection
   ids:
   - steam:1838970
+  requires: []
+  tiers:
+  - 3
 - name: Bilkins' Folly
   ids:
   - steam:1526370
+  requires: []
+  tiers:
+  - 3
 - name: The Spirit and the Mouse
   ids:
   - steam:1679210
+  requires: []
+  tiers:
+  - 3
 - name: The Elephant Collection
   ids:
   - steam:2274110
+  requires: []
+  tiers:
+  - 3
 - name: Decision Legacy Collection
   ids:
   - steam:3015510
+  requires: []
+  tiers:
+  - 3
 - name: 'The Last Stand: Aftermath'
   ids:
   - steam:1266840
+  requires: []
+  tiers:
+  - 3
 - name: 'Defender''s Quest 2: Mists of Ruin'
   ids:
   - steam:252190
+  requires: []
+  tiers:
+  - 3
 - name: Swords & Souls Legacy Collection
   ids:
   - steam:3189440
+  requires: []
+  tiers:
+  - 3

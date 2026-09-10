@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Postmodern Bundle with Catherine Classic — entire-8-item-bundle
-tier: 3
+name: Humble Postmodern Bundle with Catherine Classic
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8009/
@@ -13,24 +15,48 @@ games:
 - name: Thomas Was Alone
   ids:
   - steam:220780
+  requires: []
+  tiers:
+  - 3
 - name: Beckett
   ids:
   - steam:588230
+  requires: []
+  tiers:
+  - 3
 - name: Rusty Lake Hotel
   ids:
   - steam:435120
+  requires: []
+  tiers:
+  - 3
 - name: Yume Nikki
   ids:
   - steam:650700
+  requires: []
+  tiers:
+  - 3
 - name: EVERYTHING
   ids:
   - steam:582270
+  requires: []
+  tiers:
+  - 3
 - name: The Stanley Parable
   ids:
   - steam:221910
+  requires: []
+  tiers:
+  - 3
 - name: YUMENIKKI -DREAM DIARY
   ids:
   - steam:774811
+  requires: []
+  tiers:
+  - 3
 - name: Catherine Classic
   ids:
   - steam:893180
+  requires: []
+  tiers:
+  - 3

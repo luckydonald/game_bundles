@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capcom Summer 2024 Bundle — entire-12-item-bundle
-tier: 4
+name: Capcom Summer 2024 Bundle
+tiers:
+- rank: 4
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14306/
@@ -13,36 +15,72 @@ games:
 - name: Dead Rising® 2
   ids:
   - steam:45740
+  requires: []
+  tiers:
+  - 4
 - name: 'Dead Rising® 2: Off The Record'
   ids:
   - steam:45770
+  requires: []
+  tiers:
+  - 4
 - name: 'Dragon''s Dogma: Dark Arisen'
   ids:
   - steam:367500
+  requires: []
+  tiers:
+  - 4
 - name: Dead Rising 3 Apocalypse Edition
   ids:
   - steam:265550
+  requires: []
+  tiers:
+  - 4
 - name: Street Fighter 30th Anniversary Collection
   ids:
   - steam:586200
+  requires: []
+  tiers:
+  - 4
 - name: Street Fighter V - Champion Edition
   ids:
   - unresolved:source:isthereanydeal:14306:street-fighter-v-champion-edition
+  requires: []
+  tiers:
+  - 4
 - name: 'Phoenix Wright: Ace Attorney Trilogy'
   ids:
   - steam:787480
+  requires: []
+  tiers:
+  - 4
 - name: Capcom Beat 'Em Up Bundle
   ids:
   - steam:885150
+  requires: []
+  tiers:
+  - 4
 - name: Dead Rising 4 Frank's Big Package
   ids:
   - unresolved:source:isthereanydeal:14306:dead-rising-4-franks-big-package
+  requires: []
+  tiers:
+  - 4
 - name: The Great Ace Attorney Chronicles
   ids:
   - steam:1158850
+  requires: []
+  tiers:
+  - 4
 - name: Capcom Fighting Collection
   ids:
   - steam:1685750
+  requires: []
+  tiers:
+  - 4
 - name: 'Ghost Trick: Phantom Detective'
   ids:
   - steam:1967430
+  requires: []
+  tiers:
+  - 4

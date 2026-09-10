@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Big Time Bundle — Tier 3
-tier: 3
+name: The Big Time Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1696/
@@ -13,24 +15,48 @@ games:
 - name: Whos That Flying?!
   ids:
   - steam:57700
+  requires: []
+  tiers:
+  - 3
 - name: Bang Bang Racing
   ids:
   - steam:207020
+  requires: []
+  tiers:
+  - 3
 - name: Sine Mora
   ids:
   - steam:207040
+  requires: []
+  tiers:
+  - 3
 - name: Ceville
   ids:
   - steam:23460
+  requires: []
+  tiers:
+  - 3
 - name: Anna Extended Edition
   ids:
   - steam:217690
+  requires: []
+  tiers:
+  - 3
 - name: Crash Time 3
   ids:
   - steam:33620
+  requires: []
+  tiers:
+  - 3
 - name: Grand Ages Rome
   ids:
   - steam:23450
+  requires: []
+  tiers:
+  - 3
 - name: "Grand Ages: Rome \x96 The Reign of Augustus"
   ids:
   - unresolved:source:isthereanydeal:1696:grand-ages-rome-the-reign-of-augustus
+  requires: []
+  tiers:
+  - 3

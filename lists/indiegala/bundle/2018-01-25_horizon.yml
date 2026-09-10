@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Horizon Bundle — Tier 2
-tier: 2
+name: Indie Horizon Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5837/
@@ -13,33 +15,66 @@ games:
 - name: Chimpology
   ids:
   - steam:604010
+  requires: []
+  tiers:
+  - 2
 - name: Harts
   ids:
   - steam:769360
+  requires: []
+  tiers:
+  - 2
 - name: Dragon Boar and Lady Rabbit
   ids:
   - steam:769370
+  requires: []
+  tiers:
+  - 2
 - name: Nemo_DO
   ids:
   - unresolved:source:isthereanydeal:5837:nemo_do
+  requires: []
+  tiers:
+  - 2
 - name: Avoid The Monsters
   ids:
   - steam:687560
+  requires: []
+  tiers:
+  - 2
 - name: Willful
   ids:
   - steam:664060
+  requires: []
+  tiers:
+  - 2
 - name: Blue Horizon
   ids:
   - unresolved:source:isthereanydeal:5837:blue-horizon
+  requires: []
+  tiers:
+  - 2
 - name: Free Yourself - A Gravity Puzzle Game Starring YOU!
   ids:
   - steam:768820
+  requires: []
+  tiers:
+  - 2
 - name: SEGFAULT
   ids:
   - steam:715290
+  requires: []
+  tiers:
+  - 2
 - name: 'Water Heroes: A Game for Change'
   ids:
   - steam:530010
+  requires: []
+  tiers:
+  - 2
 - name: Albert Mort - Desert Heat
   ids:
   - steam:670780
+  requires: []
+  tiers:
+  - 2

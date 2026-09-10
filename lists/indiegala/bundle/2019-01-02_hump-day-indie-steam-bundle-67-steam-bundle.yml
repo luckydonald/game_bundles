@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #67 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #67'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6865/
@@ -13,24 +15,48 @@ games:
 - name: Razenroth
   ids:
   - steam:340830
+  requires: []
+  tiers:
+  - 2
 - name: Grand Pigeon's Duty
   ids:
   - steam:449530
+  requires: []
+  tiers:
+  - 2
 - name: Hillbilly Apocalypse
   ids:
   - steam:603000
+  requires: []
+  tiers:
+  - 2
 - name: Operation Hardcore
   ids:
   - steam:395550
+  requires: []
+  tiers:
+  - 2
 - name: The Crown of Leaves
   ids:
   - steam:604330
+  requires: []
+  tiers:
+  - 2
 - name: Strike of Horror
   ids:
   - steam:984660
+  requires: []
+  tiers:
+  - 2
 - name: POSTAL Redux
   ids:
   - steam:401680
+  requires: []
+  tiers:
+  - 2
 - name: 'Eximius: Seize the Frontline'
   ids:
   - steam:505740
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 3D Realms Bundle — Tier 2
-tier: 2
+name: 3D Realms Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3580/
@@ -13,81 +15,162 @@ games:
 - name: Bio Menace
   ids:
   - unresolved:source:isthereanydeal:3580:bio-menace
+  requires: []
+  tiers:
+  - 2
 - name: 'Raptor: Call of the Shadows (1994 Classic Edition)'
   ids:
   - steam:358360
+  requires: []
+  tiers:
+  - 2
 - name: Alien Carnage / Halloween Harry
   ids:
   - unresolved:source:isthereanydeal:3580:alien-carnage-halloween-harry
+  requires: []
+  tiers:
+  - 2
 - name: Major Stryker
   ids:
   - steam:358300
+  requires: []
+  tiers:
+  - 2
 - name: 'Blake Stone: Aliens of Gold'
   ids:
   - steam:358190
+  requires: []
+  tiers:
+  - 2
 - name: Arctic Adventure
   ids:
   - unresolved:source:isthereanydeal:3580:arctic-adventure
+  requires: []
+  tiers:
+  - 2
 - name: Monster Bash
   ids:
   - steam:358210
+  requires: []
+  tiers:
+  - 2
 - name: 'Strategy & Tactics: Dark Ages'
   ids:
   - steam:508300
+  requires: []
+  tiers:
+  - 2
 - name: Monuments of Mars
   ids:
   - unresolved:source:isthereanydeal:3580:monuments-of-mars
+  requires: []
+  tiers:
+  - 2
 - name: 'Xenophage: Alien Bloodsport'
   ids:
   - unresolved:source:isthereanydeal:3580:xenophage-alien-bloodsport
+  requires: []
+  tiers:
+  - 2
 - name: Pharaoh's Tomb
   ids:
   - unresolved:source:isthereanydeal:3580:pharaohs-tomb
+  requires: []
+  tiers:
+  - 2
 - name: Stargunner
   ids:
   - steam:358390
+  requires: []
+  tiers:
+  - 2
 - name: Wacky Wheels
   ids:
   - steam:358380
+  requires: []
+  tiers:
+  - 2
 - name: 'Blake Stone: Planet Strike'
   ids:
   - steam:358310
+  requires: []
+  tiers:
+  - 2
 - name: 'Rise of the Triad: Dark War'
   ids:
   - steam:358410
+  requires: []
+  tiers:
+  - 2
 - name: Secret Agent
   ids:
   - steam:358350
+  requires: []
+  tiers:
+  - 2
 - name: Crystal Caves
   ids:
   - steam:358260
+  requires: []
+  tiers:
+  - 2
 - name: Math Rescue
   ids:
   - steam:358200
+  requires: []
+  tiers:
+  - 2
 - name: Mystic Towers
   ids:
   - steam:358220
+  requires: []
+  tiers:
+  - 2
 - name: Death Rally
   ids:
   - steam:108700
+  requires: []
+  tiers:
+  - 2
 - name: Word Rescue
   ids:
   - steam:358340
+  requires: []
+  tiers:
+  - 2
 - name: Shadow Warrior Classic Redux
   ids:
   - steam:358400
+  requires: []
+  tiers:
+  - 2
 - name: Cosmo's Cosmic Adventure
   ids:
   - steam:358250
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Chaos
   ids:
   - steam:358320
+  requires: []
+  tiers:
+  - 2
 - name: Paganitzu
   ids:
   - steam:358230
+  requires: []
+  tiers:
+  - 2
 - name: Hocus Pocus
   ids:
   - steam:358290
+  requires: []
+  tiers:
+  - 2
 - name: 'Terminal Velocity: Legacy'
   ids:
   - unresolved:source:isthereanydeal:3580:terminal-velocity-legacy
+  requires: []
+  tiers:
+  - 2

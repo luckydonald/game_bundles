@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Surviving Mars Bundle — entire-10-item-bundle
-tier: 3
+name: Surviving Mars Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10978/
@@ -13,30 +15,60 @@ games:
 - name: Surviving Mars
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Stellaris Dome Set'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-stellaris-dome-set
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Marsvision Song Contest'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-marsvision-song-contest
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Project Laika'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-project-laika
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Colony Design Set'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-colony-design-set
+  requires: []
+  tiers:
+  - 3
 - name: Surviving Mars - Mars Lifestyle Radio
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-mars-lifestyle-radio
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Green Planet'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-green-planet
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Space Race'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-space-race
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: Deluxe Upgrade Pack'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-deluxe-upgrade-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Surviving Mars: In-Dome Buildings Pack'
   ids:
   - unresolved:source:isthereanydeal:10978:surviving-mars-in-dome-buildings-pack
+  requires: []
+  tiers:
+  - 3

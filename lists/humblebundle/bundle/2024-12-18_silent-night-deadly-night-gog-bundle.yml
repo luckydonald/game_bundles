@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Silent Night, Deadly Night: A GOG Bundle — 7 Items'
-tier: 3
+name: 'Silent Night, Deadly Night: A GOG Bundle'
+tiers:
+- rank: 3
+  name: 7 Items
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14747/
@@ -13,21 +15,42 @@ games:
 - name: KUNAI
   ids:
   - steam:1001800
+  requires: []
+  tiers:
+  - 3
 - name: Aragami
   ids:
   - steam:280160
+  requires: []
+  tiers:
+  - 3
 - name: Sclash
   ids:
   - steam:1284130
+  requires: []
+  tiers:
+  - 3
 - name: They Always Run
   ids:
   - steam:1585440
+  requires: []
+  tiers:
+  - 3
 - name: Furi
   ids:
   - steam:423230
+  requires: []
+  tiers:
+  - 3
 - name: Aragami 2
   ids:
   - steam:1158370
+  requires: []
+  tiers:
+  - 3
 - name: Slave Zero X
   ids:
   - steam:1903910
+  requires: []
+  tiers:
+  - 3

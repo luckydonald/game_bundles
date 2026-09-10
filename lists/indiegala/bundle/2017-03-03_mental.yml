@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Mental — Tier 2
-tier: 2
+name: Indie Mental
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4853/
@@ -13,36 +15,72 @@ games:
 - name: Bullet Candy
   ids:
   - steam:6600
+  requires: []
+  tiers:
+  - 2
 - name: Super Switch
   ids:
   - steam:521430
+  requires: []
+  tiers:
+  - 2
 - name: Nuclear Contingency
   ids:
   - steam:540900
+  requires: []
+  tiers:
+  - 2
 - name: WayOut
   ids:
   - steam:551110
+  requires: []
+  tiers:
+  - 2
 - name: Interstellar Logistics Inc.
   ids:
   - steam:502150
+  requires: []
+  tiers:
+  - 2
 - name: Only One Hope
   ids:
   - unresolved:source:isthereanydeal:4853:only-one-hope
+  requires: []
+  tiers:
+  - 2
 - name: PROJECT XINATRA
   ids:
   - steam:508610
+  requires: []
+  tiers:
+  - 2
 - name: The Fall of Gods
   ids:
   - steam:424170
+  requires: []
+  tiers:
+  - 2
 - name: '''n Verlore Verstand'
   ids:
   - steam:439550
+  requires: []
+  tiers:
+  - 2
 - name: Bulby - Diamond Course
   ids:
   - steam:461390
+  requires: []
+  tiers:
+  - 2
 - name: Fire Arrow Plus
   ids:
   - steam:509780
+  requires: []
+  tiers:
+  - 2
 - name: The Dungeons of Castle Madness
   ids:
   - steam:506840
+  requires: []
+  tiers:
+  - 2

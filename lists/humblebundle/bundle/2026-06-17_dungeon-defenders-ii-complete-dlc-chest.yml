@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Dungeon Defenders II: Complete DLC Chest Bundle — entire-7-item-bundle'
-tier: 3
+name: 'Dungeon Defenders II: Complete DLC Chest Bundle'
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16271/
@@ -13,21 +15,42 @@ games:
 - name: Dungeon Defenders II - Halloween Party Pack
   ids:
   - steam:544832
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Adventurer's Arsenal Pack
   ids:
   - steam:2950500
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Bundle of the Beast
   ids:
   - steam:726190
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Imperial Cache Pack
   ids:
   - steam:2950520
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Treasure Trove Pack
   ids:
   - steam:2950510
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Ethereal Trove Pack
   ids:
   - steam:2950530
+  requires: []
+  tiers:
+  - 3
 - name: Dungeon Defenders II - Celestial Vault Pack
   ids:
   - steam:2950540
+  requires: []
+  tiers:
+  - 3

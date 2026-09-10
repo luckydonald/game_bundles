@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #68 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #68'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6201/
@@ -13,33 +15,66 @@ games:
 - name: One More Line
   ids:
   - steam:356890
+  requires: []
+  tiers:
+  - 2
 - name: Primitive Race
   ids:
   - unresolved:source:isthereanydeal:6201:primitive-race
+  requires: []
+  tiers:
+  - 2
 - name: Starting The Game
   ids:
   - unresolved:source:isthereanydeal:6201:starting-the-game
+  requires: []
+  tiers:
+  - 2
 - name: Vidar
   ids:
   - steam:355370
+  requires: []
+  tiers:
+  - 2
 - name: MIND REFLECTION - Inside the Black Mirror Puzzle
   ids:
   - unresolved:source:isthereanydeal:6201:mind-reflection-inside-the-black-mirror-puzzle
+  requires: []
+  tiers:
+  - 2
 - name: 30 Seconds To Jail
   ids:
   - steam:817770
+  requires: []
+  tiers:
+  - 2
 - name: 'Doughlings: Arcade'
   ids:
   - steam:747470
+  requires: []
+  tiers:
+  - 2
 - name: Forestation
   ids:
   - unresolved:source:isthereanydeal:6201:forestation
+  requires: []
+  tiers:
+  - 2
 - name: DEEP SPACE | Space-Platformer
   ids:
   - steam:853040
+  requires: []
+  tiers:
+  - 2
 - name: Linch
   ids:
   - steam:756360
+  requires: []
+  tiers:
+  - 2
 - name: Dead Ground
   ids:
   - steam:778410
+  requires: []
+  tiers:
+  - 2

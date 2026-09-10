@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Return of the Immersive Sim — Extra items
-tier: 5
+name: Return of the Immersive Sim
+tiers:
+- rank: 5
+  name: Extra items
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15590/
@@ -13,30 +15,60 @@ games:
 - name: Ctrl Alt Ego
   ids:
   - steam:1571940
+  requires: []
+  tiers:
+  - 5
 - name: Blood West
   ids:
   - steam:1587130
+  requires: []
+  tiers:
+  - 5
 - name: Shadows of Doubt
   ids:
   - steam:986130
+  requires: []
+  tiers:
+  - 5
 - name: System Shock
   ids:
   - steam:482400
+  requires: []
+  tiers:
+  - 5
 - name: Fallen Aces
   ids:
   - steam:1411910
+  requires: []
+  tiers:
+  - 5
 - name: Peripeteia
   ids:
   - steam:1437760
+  requires: []
+  tiers:
+  - 5
 - name: 'System Shock 2: 25th Anniversary Remaster'
   ids:
   - steam:866570
+  requires: []
+  tiers:
+  - 5
 - name: System Shock Soundtrack
   ids:
   - steam:2456840
+  requires: []
+  tiers:
+  - 5
 - name: Shadows of Doubt - Digital Artbook
   ids:
   - steam:3229880
+  requires: []
+  tiers:
+  - 5
 - name: 'Blood West: Dead Man''s Promise'
   ids:
   - steam:3158590
+  requires: []
+  tiers:
+  - 5

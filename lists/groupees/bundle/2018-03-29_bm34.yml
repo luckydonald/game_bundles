@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 34 — Tier 2
-tier: 2
+name: Be Mine 34
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6015/
@@ -13,21 +15,42 @@ games:
 - name: Clicker bAdventure
   ids:
   - steam:736430
+  requires: []
+  tiers:
+  - 2
 - name: Ghostship Bundle
   ids:
   - unresolved:source:isthereanydeal:6015:ghostship-bundle
+  requires: []
+  tiers:
+  - 2
 - name: Drift Into Eternity
   ids:
   - steam:431830
+  requires: []
+  tiers:
+  - 2
 - name: Alicia Griffith - Lakeside Murder
   ids:
   - steam:569380
+  requires: []
+  tiers:
+  - 2
 - name: Super Blackjack Battle 2 Turbo Edition - The Card Warriors
   ids:
   - steam:545200
+  requires: []
+  tiers:
+  - 2
 - name: The Fan
   ids:
   - steam:572330
+  requires: []
+  tiers:
+  - 2
 - name: Rocket Fist
   ids:
   - steam:413500
+  requires: []
+  tiers:
+  - 2

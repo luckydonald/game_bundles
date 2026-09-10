@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fore! A Golf Games Bundle — entire-10-item-bundle
-tier: 2
+name: Fore! A Golf Games Bundle
+tiers:
+- rank: 2
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16091/
@@ -13,30 +15,60 @@ games:
 - name: WHAT THE GOLF?
   ids:
   - steam:785790
+  requires: []
+  tiers:
+  - 2
 - name: Golf Peaks
   ids:
   - steam:923260
+  requires: []
+  tiers:
+  - 2
 - name: Dangerous Golf
   ids:
   - steam:405500
+  requires: []
+  tiers:
+  - 2
 - name: 100ft Robot Golf
   ids:
   - steam:368000
+  requires: []
+  tiers:
+  - 2
 - name: Golfinite
   ids:
   - steam:2133870
+  requires: []
+  tiers:
+  - 2
 - name: Grass Gnome Golf
   ids:
   - steam:4169150
+  requires: []
+  tiers:
+  - 2
 - name: Golfie
   ids:
   - steam:1579020
+  requires: []
+  tiers:
+  - 2
 - name: A Little Golf Journey
   ids:
   - steam:1232150
+  requires: []
+  tiers:
+  - 2
 - name: 4D Golf
   ids:
   - steam:2147950
+  requires: []
+  tiers:
+  - 2
 - name: Dungeon Golf
   ids:
   - steam:2144040
+  requires: []
+  tiers:
+  - 2

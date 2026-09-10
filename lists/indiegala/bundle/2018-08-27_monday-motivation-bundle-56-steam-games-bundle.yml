@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #56 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #56'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6409/
@@ -13,39 +15,78 @@ games:
 - name: Mahjong Solitaire
   ids:
   - steam:805400
+  requires: []
+  tiers:
+  - 2
 - name: Cluster Dust
   ids:
   - steam:802070
+  requires: []
+  tiers:
+  - 2
 - name: Before Nightfall
   ids:
   - steam:896380
+  requires: []
+  tiers:
+  - 2
 - name: George's Memories EP.1
   ids:
   - unresolved:source:isthereanydeal:6409:georges-memories-ep-1
+  requires: []
+  tiers:
+  - 2
 - name: Bleeding Knife
   ids:
   - steam:788520
+  requires: []
+  tiers:
+  - 2
 - name: Bernie's Nightmare
   ids:
   - steam:894390
+  requires: []
+  tiers:
+  - 2
 - name: The Basilisk
   ids:
   - steam:873410
+  requires: []
+  tiers:
+  - 2
 - name: Venal Soul (Chapter One)
   ids:
   - unresolved:source:isthereanydeal:6409:venal-soul-chapter-one
+  requires: []
+  tiers:
+  - 2
 - name: 'Temporal Storm X: Hyperspace Dream'
   ids:
   - steam:678010
+  requires: []
+  tiers:
+  - 2
 - name: BORIS the Mutant Bear with a Gun
   ids:
   - steam:879060
+  requires: []
+  tiers:
+  - 2
 - name: Jolly Battle
   ids:
   - steam:824620
+  requires: []
+  tiers:
+  - 2
 - name: CubeRun
   ids:
   - steam:809700
+  requires: []
+  tiers:
+  - 2
 - name: Samsa and the Knights of Light
   ids:
   - steam:371320
+  requires: []
+  tiers:
+  - 2

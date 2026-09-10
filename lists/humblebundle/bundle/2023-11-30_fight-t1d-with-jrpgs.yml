@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Fight T1D with JRPGs! Bundle — entire-7-item-bundle
-tier: 2
+name: Fight T1D with JRPGs! Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13657/
@@ -13,21 +15,42 @@ games:
 - name: 'Bug Fables: The Everlasting Sapling'
   ids:
   - steam:1082710
+  requires: []
+  tiers:
+  - 2
 - name: 'Nexomon: Extinction'
   ids:
   - steam:1196630
+  requires: []
+  tiers:
+  - 2
 - name: Dark Deity
   ids:
   - steam:1374840
+  requires: []
+  tiers:
+  - 2
 - name: 'Eiyuden Chronicle: Rising'
   ids:
   - steam:1658290
+  requires: []
+  tiers:
+  - 2
 - name: Edge Of Eternity
   ids:
   - steam:269190
+  requires: []
+  tiers:
+  - 2
 - name: 'Symphony of War: The Nephilim Saga'
   ids:
   - steam:1488200
+  requires: []
+  tiers:
+  - 2
 - name: Mato Anomalies
   ids:
   - steam:2024390
+  requires: []
+  tiers:
+  - 2

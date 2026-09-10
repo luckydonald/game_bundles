@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: MidWeek Attack Bundle — Tier 2
-tier: 2
+name: MidWeek Attack Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2572/
@@ -13,30 +15,60 @@ games:
 - name: Metrocide
   ids:
   - steam:313130
+  requires: []
+  tiers:
+  - 2
 - name: 'Postmortem: One Must Die (Extended Cut)'
   ids:
   - steam:263140
+  requires: []
+  tiers:
+  - 2
 - name: 'Mind: Path to Thalamus Enhanced Edition'
   ids:
   - steam:296070
+  requires: []
+  tiers:
+  - 2
 - name: Party of Sin
   ids:
   - steam:212700
+  requires: []
+  tiers:
+  - 2
 - name: OTTTD
   ids:
   - steam:312630
+  requires: []
+  tiers:
+  - 2
 - name: Ironclad Tactics
   ids:
   - steam:226960
+  requires: []
+  tiers:
+  - 2
 - name: Back to Bed
   ids:
   - steam:308040
+  requires: []
+  tiers:
+  - 2
 - name: Particulars
   ids:
   - steam:259470
+  requires: []
+  tiers:
+  - 2
 - name: 'Zombie Tycoon 2: Brainhov''s Revenge'
   ids:
   - steam:252270
+  requires: []
+  tiers:
+  - 2
 - name: Inbetween Land
   ids:
   - steam:345540
+  requires: []
+  tiers:
+  - 2

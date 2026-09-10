@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XXX Bundle — Tier 2
-tier: 2
+name: Virtual Reality XXX Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6442/
@@ -13,30 +15,60 @@ games:
 - name: Galaxy Race
   ids:
   - steam:760680
+  requires: []
+  tiers:
+  - 2
 - name: Kraken
   ids:
   - steam:729190
+  requires: []
+  tiers:
+  - 2
 - name: Supermarket VR and mini-games
   ids:
   - steam:843420
+  requires: []
+  tiers:
+  - 2
 - name: VR Drivers
   ids:
   - steam:713230
+  requires: []
+  tiers:
+  - 2
 - name: Rosebaker's Icy Treats - The VR Iceman Sim
   ids:
   - steam:667780
+  requires: []
+  tiers:
+  - 2
 - name: Arrowborn
   ids:
   - steam:833070
+  requires: []
+  tiers:
+  - 2
 - name: VR Shooter Guns
   ids:
   - steam:489160
+  requires: []
+  tiers:
+  - 2
 - name: Project 59
   ids:
   - unresolved:source:isthereanydeal:6442:project-59
+  requires: []
+  tiers:
+  - 2
 - name: HELI
   ids:
   - steam:743030
+  requires: []
+  tiers:
+  - 2
 - name: Jingo
   ids:
   - steam:731690
+  requires: []
+  tiers:
+  - 2

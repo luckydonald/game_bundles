@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Smashing Cubic Bundle — Tier 2
-tier: 2
+name: Smashing Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4680/
@@ -13,30 +15,60 @@ games:
 - name: Dynamite Alex
   ids:
   - steam:527810
+  requires: []
+  tiers:
+  - 2
 - name: HardCube
   ids:
   - unresolved:source:isthereanydeal:4680:hardcube
+  requires: []
+  tiers:
+  - 2
 - name: Endless room
   ids:
   - unresolved:source:isthereanydeal:4680:endless-room
+  requires: []
+  tiers:
+  - 2
 - name: Dynamic Very, Very, Hard game!!
   ids:
   - steam:546340
+  requires: []
+  tiers:
+  - 2
 - name: Guardian's Oath
   ids:
   - steam:531890
+  requires: []
+  tiers:
+  - 2
 - name: The Lords of The Earth Flame
   ids:
   - steam:487180
+  requires: []
+  tiers:
+  - 2
 - name: PIGMENTUM
   ids:
   - unresolved:source:isthereanydeal:4680:pigmentum
+  requires: []
+  tiers:
+  - 2
 - name: Cranium Conundrum
   ids:
   - steam:527790
+  requires: []
+  tiers:
+  - 2
 - name: Hexoscope
   ids:
   - steam:495780
+  requires: []
+  tiers:
+  - 2
 - name: QUBIC
   ids:
   - unresolved:source:isthereanydeal:4680:qubic
+  requires: []
+  tiers:
+  - 2

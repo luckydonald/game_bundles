@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Yogscast Jingle Jam 2018 — entire-80-item-bundle
-tier: 2
+name: Yogscast Jingle Jam 2018
+tiers:
+- rank: 2
+  name: entire-80-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6724/
@@ -13,240 +15,480 @@ games:
 - name: 'Call Of Duty: Black Ops 4 - Black Ops C.O.D.E. Salute Pack'
   ids:
   - unresolved:source:isthereanydeal:6724:call-of-duty-black-ops-4-black-ops-c-o-d-e-salute-pack
+  requires: []
+  tiers:
+  - 2
 - name: Marvin's Mittens
   ids:
   - steam:333260
+  requires: []
+  tiers:
+  - 2
 - name: Don't Stand Out
   ids:
   - unresolved:source:isthereanydeal:6724:don-t-stand-out
+  requires: []
+  tiers:
+  - 2
 - name: Unit 4
   ids:
   - steam:633440
+  requires: []
+  tiers:
+  - 2
 - name: 'Fahrenheit: Indigo Prophecy Remastered'
   ids:
   - steam:312840
+  requires: []
+  tiers:
+  - 2
 - name: Cloudborn
   ids:
   - steam:677040
+  requires: []
+  tiers:
+  - 2
 - name: Animal Super Squad
   ids:
   - unresolved:source:isthereanydeal:6724:animal-super-squad
+  requires: []
+  tiers:
+  - 2
 - name: Mindball Play
   ids:
   - steam:446850
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly 2
   ids:
   - steam:236730
+  requires: []
+  tiers:
+  - 2
 - name: Lakeview Cabin Collection
   ids:
   - steam:361990
+  requires: []
+  tiers:
+  - 2
 - name: BATALJ
   ids:
   - unresolved:source:isthereanydeal:6724:batalj
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode I: Alpha Centauri'
   ids:
   - steam:429470
+  requires: []
+  tiers:
+  - 2
 - name: Match Point
   ids:
   - steam:764890
+  requires: []
+  tiers:
+  - 2
 - name: Race the Sun
   ids:
   - steam:253030
+  requires: []
+  tiers:
+  - 2
 - name: Blade & Bones
   ids:
   - steam:513370
+  requires: []
+  tiers:
+  - 2
 - name: 'CardLife: Cardboard Survival'
   ids:
   - unresolved:source:isthereanydeal:6724:cardlife-cardboard-survival
+  requires: []
+  tiers:
+  - 2
 - name: Future Proof
   ids:
   - steam:844130
+  requires: []
+  tiers:
+  - 2
 - name: Splash Blast Panic
   ids:
   - steam:503750
+  requires: []
+  tiers:
+  - 2
 - name: Elite Dangerous Cobra Mk III Ship Skin
   ids:
   - unresolved:source:isthereanydeal:6724:elite-dangerous-cobra-mk-iii-ship-skin
+  requires: []
+  tiers:
+  - 2
 - name: Zero G Arena
   ids:
   - steam:467820
+  requires: []
+  tiers:
+  - 2
 - name: Guild Wars 2 - Toy Mini Egg
   ids:
   - unresolved:source:isthereanydeal:6724:guild-wars-2-toy-mini-egg
+  requires: []
+  tiers:
+  - 2
 - name: Switchblade - Epic Pack
   ids:
   - unresolved:source:isthereanydeal:6724:switchblade-epic-pack
+  requires: []
+  tiers:
+  - 2
 - name: Freaky Awesome
   ids:
   - steam:622370
+  requires: []
+  tiers:
+  - 2
 - name: Temple of Xiala
   ids:
   - steam:774411
+  requires: []
+  tiers:
+  - 2
 - name: The Haunting of Billy
   ids:
   - steam:445170
+  requires: []
+  tiers:
+  - 2
 - name: Splotches
   ids:
   - steam:373640
+  requires: []
+  tiers:
+  - 2
 - name: GUILTY GEAR Xrd -SIGN
   ids:
   - steam:376300
+  requires: []
+  tiers:
+  - 2
 - name: 'Detective Case and Clown Bot in: Murder in the Hotel Lisbon'
   ids:
   - steam:297290
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly Warzone Earth Mobile Campaign
   ids:
   - steam:252170
+  requires: []
+  tiers:
+  - 2
 - name: Board Battlefield
   ids:
   - unresolved:source:isthereanydeal:6724:board-battlefield
+  requires: []
+  tiers:
+  - 2
 - name: Convoy
   ids:
   - steam:318230
+  requires: []
+  tiers:
+  - 2
 - name: In memory of TITAN
   ids:
   - steam:787780
+  requires: []
+  tiers:
+  - 2
 - name: VoidExpanse
   ids:
   - steam:324260
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly Defenders
   ids:
   - steam:294750
+  requires: []
+  tiers:
+  - 2
 - name: Super Steampunk Pinball 2D
   ids:
   - steam:775490
+  requires: []
+  tiers:
+  - 2
 - name: Alan Wake's American Nightmare
   ids:
   - steam:202750
+  requires: []
+  tiers:
+  - 2
 - name: Game Dev Studio
   ids:
   - steam:773580
+  requires: []
+  tiers:
+  - 2
 - name: Guild Wars Nightfall
   ids:
   - unresolved:source:isthereanydeal:6724:guild-wars-nightfall
+  requires: []
+  tiers:
+  - 2
 - name: Wizorb
   ids:
   - steam:207420
+  requires: []
+  tiers:
+  - 2
 - name: Hello Pollution!
   ids:
   - steam:846120
+  requires: []
+  tiers:
+  - 2
 - name: Last Encounter
   ids:
   - steam:719800
+  requires: []
+  tiers:
+  - 2
 - name: Clatter
   ids:
   - steam:602770
+  requires: []
+  tiers:
+  - 2
 - name: 'Slime-san: Superslime Edition'
   ids:
   - steam:473530
+  requires: []
+  tiers:
+  - 2
 - name: Indecision.
   ids:
   - steam:720030
+  requires: []
+  tiers:
+  - 2
 - name: R-COIL
   ids:
   - steam:717070
+  requires: []
+  tiers:
+  - 2
 - name: No Time To Explain Remastered
   ids:
   - steam:368730
+  requires: []
+  tiers:
+  - 2
 - name: Love
   ids:
   - steam:269270
+  requires: []
+  tiers:
+  - 2
 - name: Jurassic World Evolution - Ankylosaurus Skin (Vivid Variant)
   ids:
   - unresolved:source:isthereanydeal:6724:jurassic-world-evolution-ankylosaurus-skin-vivid-variant
+  requires: []
+  tiers:
+  - 2
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 2
 - name: Pizza Titan Ultra
   ids:
   - steam:819480
+  requires: []
+  tiers:
+  - 2
 - name: 'LostWinds 2: Winter of the Melodias'
   ids:
   - steam:447800
+  requires: []
+  tiers:
+  - 2
 - name: KABOUNCE
   ids:
   - steam:431930
+  requires: []
+  tiers:
+  - 2
 - name: Sure Footing
   ids:
   - steam:670730
+  requires: []
+  tiers:
+  - 2
 - name: Dungeon Escape
   ids:
   - steam:454100
+  requires: []
+  tiers:
+  - 2
 - name: Tross
   ids:
   - steam:443850
+  requires: []
+  tiers:
+  - 2
 - name: 'Chivalry: Medieval Warfare'
   ids:
   - steam:219640
+  requires: []
+  tiers:
+  - 2
 - name: Guns of Icarus Alliance Collector's Edition
   ids:
   - unresolved:source:isthereanydeal:6724:guns-of-icarus-alliance-collectors-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'Guild Wars: Eye of the North'
   ids:
   - steam:4103450
+  requires: []
+  tiers:
+  - 2
 - name: Tower 57
   ids:
   - steam:530950
+  requires: []
+  tiers:
+  - 2
 - name: 'Westerado: Double Barreled'
   ids:
   - steam:275200
+  requires: []
+  tiers:
+  - 2
 - name: Hyperdrive Massacre
   ids:
   - steam:402390
+  requires: []
+  tiers:
+  - 2
 - name: Grimm & Tonic
   ids:
   - steam:942020
+  requires: []
+  tiers:
+  - 2
 - name: Clicker bAdventure
   ids:
   - steam:736430
+  requires: []
+  tiers:
+  - 2
 - name: Sorcery! Part 3
   ids:
   - steam:445040
+  requires: []
+  tiers:
+  - 2
 - name: Perfect Heist
   ids:
   - steam:787040
+  requires: []
+  tiers:
+  - 2
 - name: 'Guild Wars 2: Heroic Edition'
   ids:
   - unresolved:source:isthereanydeal:6724:guild-wars-2-heroic-edition
+  requires: []
+  tiers:
+  - 2
 - name: Flux8
   ids:
   - steam:658810
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly Warzone Earth
   ids:
   - steam:91200
+  requires: []
+  tiers:
+  - 2
 - name: Squidlit
   ids:
   - steam:799510
+  requires: []
+  tiers:
+  - 2
 - name: Deep Dungeons of Doom
   ids:
   - steam:325090
+  requires: []
+  tiers:
+  - 2
 - name: Fort Meow
   ids:
   - steam:352070
+  requires: []
+  tiers:
+  - 2
 - name: Lucius Demake
   ids:
   - steam:364230
+  requires: []
+  tiers:
+  - 2
 - name: Blacksmith
   ids:
   - steam:787840
+  requires: []
+  tiers:
+  - 2
 - name: Cube Link
   ids:
   - steam:681620
+  requires: []
+  tiers:
+  - 2
 - name: Throne of Lies ♔ The Online Game of Deceit
   ids:
   - unresolved:source:isthereanydeal:6724:throne-of-lies-the-online-game-of-deceit
+  requires: []
+  tiers:
+  - 2
 - name: HackyZack
   ids:
   - steam:508530
+  requires: []
+  tiers:
+  - 2
 - name: Road Doom
   ids:
   - steam:792860
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly Korea
   ids:
   - steam:251530
+  requires: []
+  tiers:
+  - 2
 - name: The Greater Good
   ids:
   - steam:899960
+  requires: []
+  tiers:
+  - 2
 - name: Lost in the Dungeon
   ids:
   - steam:780580
+  requires: []
+  tiers:
+  - 2

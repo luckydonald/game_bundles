@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Fabric Bundle — Tier 2
-tier: 2
+name: Indie Fabric Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5872/
@@ -13,39 +15,78 @@ games:
 - name: The Evil Party
   ids:
   - steam:773230
+  requires: []
+  tiers:
+  - 2
 - name: GORB
   ids:
   - steam:612310
+  requires: []
+  tiers:
+  - 2
 - name: Now Man Flies
   ids:
   - steam:739690
+  requires: []
+  tiers:
+  - 2
 - name: Super Blockbreak 3D
   ids:
   - steam:684470
+  requires: []
+  tiers:
+  - 2
 - name: 猫肉「Cat Meat」
   ids:
   - steam:464530
+  requires: []
+  tiers:
+  - 2
 - name: Fabric
   ids:
   - steam:489660
+  requires: []
+  tiers:
+  - 2
 - name: YBit
   ids:
   - steam:712660
+  requires: []
+  tiers:
+  - 2
 - name: 'Drone Racer: Canyons'
   ids:
   - steam:690570
+  requires: []
+  tiers:
+  - 2
 - name: 'Radical Spectrum: Volume 2'
   ids:
   - steam:661300
+  requires: []
+  tiers:
+  - 2
 - name: Gun-Running War Dogs
   ids:
   - steam:678820
+  requires: []
+  tiers:
+  - 2
 - name: Fairy of the treasures
   ids:
   - steam:770400
+  requires: []
+  tiers:
+  - 2
 - name: WingMen
   ids:
   - unresolved:source:isthereanydeal:5872:wingmen
+  requires: []
+  tiers:
+  - 2
 - name: Morps
   ids:
   - steam:725540
+  requires: []
+  tiers:
+  - 2

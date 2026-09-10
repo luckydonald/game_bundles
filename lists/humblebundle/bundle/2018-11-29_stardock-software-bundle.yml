@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Best Of Stardock Bundle — entire-9-item-bundle
-tier: 3
+name: Best Of Stardock Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6718/
@@ -13,27 +15,54 @@ games:
 - name: Iconpackager
   ids:
   - unresolved:source:isthereanydeal:6718:iconpackager
+  requires: []
+  tiers:
+  - 3
 - name: Start8
   ids:
   - unresolved:source:isthereanydeal:6718:start8
+  requires: []
+  tiers:
+  - 3
 - name: WindowBlinds
   ids:
   - unresolved:source:isthereanydeal:6718:windowblinds
+  requires: []
+  tiers:
+  - 3
 - name: Start10
   ids:
   - unresolved:source:isthereanydeal:6718:start10
+  requires: []
+  tiers:
+  - 3
 - name: SpaceMonger
   ids:
   - unresolved:source:isthereanydeal:6718:spacemonger
+  requires: []
+  tiers:
+  - 3
 - name: Groupy
   ids:
   - unresolved:source:isthereanydeal:6718:groupy
+  requires: []
+  tiers:
+  - 3
 - name: Fences
   ids:
   - unresolved:source:isthereanydeal:6718:fences
+  requires: []
+  tiers:
+  - 3
 - name: DeskScapes
   ids:
   - steam:1027220
+  requires: []
+  tiers:
+  - 3
 - name: Multiplicity
   ids:
   - unresolved:source:isthereanydeal:6718:multiplicity
+  requires: []
+  tiers:
+  - 3

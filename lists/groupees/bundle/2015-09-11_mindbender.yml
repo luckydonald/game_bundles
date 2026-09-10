@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: MINDBender — Tier 2
-tier: 2
+name: MINDBender
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2440/
@@ -13,15 +15,30 @@ games:
 - name: The Lady
   ids:
   - steam:341060
+  requires: []
+  tiers:
+  - 2
 - name: Dinner Date
   ids:
   - steam:94000
+  requires: []
+  tiers:
+  - 2
 - name: The Silent Age
   ids:
   - steam:352520
+  requires: []
+  tiers:
+  - 2
 - name: 'Mind: Path to Thalamus Enhanced Edition'
   ids:
   - steam:296070
+  requires: []
+  tiers:
+  - 2
 - name: Zone 22
   ids:
   - steam:321390
+  requires: []
+  tiers:
+  - 2

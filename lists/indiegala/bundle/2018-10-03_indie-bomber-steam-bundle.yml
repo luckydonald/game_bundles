@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Bomber Bundle — Includes Tier 1
-tier: 2
+name: Indie Bomber Bundle
+tiers:
+- rank: 2
+  name: Includes Tier 1
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6537/
@@ -13,36 +15,72 @@ games:
 - name: 18+
   ids:
   - steam:877360
+  requires: []
+  tiers:
+  - 2
 - name: Trash Story
   ids:
   - steam:827640
+  requires: []
+  tiers:
+  - 2
 - name: Resistance
   ids:
   - unresolved:source:isthereanydeal:6537:resistance
+  requires: []
+  tiers:
+  - 2
 - name: 21+
   ids:
   - steam:904990
+  requires: []
+  tiers:
+  - 2
 - name: WIL
   ids:
   - steam:717940
+  requires: []
+  tiers:
+  - 2
 - name: ZOOMnBOOM
   ids:
   - steam:870580
+  requires: []
+  tiers:
+  - 2
 - name: Unending Galaxy
   ids:
   - steam:439720
+  requires: []
+  tiers:
+  - 2
 - name: 'Seul.(Alone): the entrée'
   ids:
   - steam:856310
+  requires: []
+  tiers:
+  - 2
 - name: Space Duty
   ids:
   - unresolved:source:isthereanydeal:6537:space-duty
+  requires: []
+  tiers:
+  - 2
 - name: Sit on bottle
   ids:
   - steam:776820
+  requires: []
+  tiers:
+  - 2
 - name: Bunny - The Horror Game
   ids:
   - steam:911040
+  requires: []
+  tiers:
+  - 2
 - name: 'Pe-2: Dive Bomber'
   ids:
   - steam:314770
+  requires: []
+  tiers:
+  - 2

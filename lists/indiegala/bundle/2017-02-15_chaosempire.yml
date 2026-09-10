@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Chaos Empire — Tier 2
-tier: 2
+name: Chaos Empire
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4779/
@@ -13,33 +15,66 @@ games:
 - name: 'Word Killer: Revolution'
   ids:
   - unresolved:source:isthereanydeal:4779:word-killer-revolution
+  requires: []
+  tiers:
+  - 2
 - name: The Temporal Invasion
   ids:
   - steam:454220
+  requires: []
+  tiers:
+  - 2
 - name: Spaceman Sparkles 2
   ids:
   - steam:365860
+  requires: []
+  tiers:
+  - 2
 - name: Spaceman Sparkles 3
   ids:
   - steam:453740
+  requires: []
+  tiers:
+  - 2
 - name: Hydraulic Empire
   ids:
   - steam:381220
+  requires: []
+  tiers:
+  - 2
 - name: Verde Station
   ids:
   - steam:324120
+  requires: []
+  tiers:
+  - 2
 - name: King Lucas
   ids:
   - steam:391600
+  requires: []
+  tiers:
+  - 2
 - name: 'Worlds of Chaos : Invasion'
   ids:
   - steam:436510
+  requires: []
+  tiers:
+  - 2
 - name: High On Racing
   ids:
   - steam:362610
+  requires: []
+  tiers:
+  - 2
 - name: Zotrix
   ids:
   - steam:343280
+  requires: []
+  tiers:
+  - 2
 - name: Through the Mirror
   ids:
   - steam:548720
+  requires: []
+  tiers:
+  - 2

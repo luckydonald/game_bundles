@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Microids Games & Comics Crossover Collection Bundle — entire-13-item-bundle
-tier: 3
+name: Microids Games & Comics Crossover Collection Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10808/
@@ -13,39 +15,78 @@ games:
 - name: Syberia
   ids:
   - steam:46500
+  requires: []
+  tiers:
+  - 3
 - name: Garfield Kart
   ids:
   - steam:362930
+  requires: []
+  tiers:
+  - 3
 - name: Syberia II
   ids:
   - steam:46510
+  requires: []
+  tiers:
+  - 3
 - name: Asterix & Obelix XXL 2
   ids:
   - steam:887060
+  requires: []
+  tiers:
+  - 3
 - name: Agatha Christie - The ABC Murders
   ids:
   - steam:374900
+  requires: []
+  tiers:
+  - 3
 - name: Asterix & Obelix XXL 3 - The Crystal Menhir
   ids:
   - steam:1109690
+  requires: []
+  tiers:
+  - 3
 - name: XIII - Classic
   ids:
   - steam:1170760
+  requires: []
+  tiers:
+  - 3
 - name: The Bluecoats North vs South
   ids:
   - unresolved:source:isthereanydeal:10808:the-bluecoats-north-vs-south
+  requires: []
+  tiers:
+  - 3
 - name: XIII
   ids:
   - steam:1154790
+  requires: []
+  tiers:
+  - 3
 - name: 'Blacksad : Under the Skin'
   ids:
   - steam:1003890
+  requires: []
+  tiers:
+  - 3
 - name: Syberia 3 - Deluxe Edition
   ids:
   - steam:464340
+  requires: []
+  tiers:
+  - 3
 - name: Garfield Kart - Furious Racing
   ids:
   - steam:1085510
+  requires: []
+  tiers:
+  - 3
 - name: 'Asterix & Obelix XXL : Romastered'
   ids:
   - steam:1261520
+  requires: []
+  tiers:
+  - 3

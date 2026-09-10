@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Steel & Giants Bundle — Tier 2
-tier: 2
+name: Steel & Giants Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3678/
@@ -13,42 +15,84 @@ games:
 - name: Hotel Giant 2
   ids:
   - steam:38230
+  requires: []
+  tiers:
+  - 2
 - name: Rail Cargo Simulator
   ids:
   - steam:446490
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Arkania 1 - Blade of Destiny Classic
   ids:
   - steam:267670
+  requires: []
+  tiers:
+  - 2
 - name: Industry Giant 2
   ids:
   - steam:271360
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Arkania - Blade of Destiny
   ids:
   - steam:237550
+  requires: []
+  tiers:
+  - 2
 - name: ABC Coloring Town
   ids:
   - steam:478010
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Arkania 3 - Shadows over Riva Classic
   ids:
   - steam:270760
+  requires: []
+  tiers:
+  - 2
 - name: School Bus Fun
   ids:
   - steam:301990
+  requires: []
+  tiers:
+  - 2
 - name: Puzzles Under The Hill
   ids:
   - steam:487600
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Arkania 2 - Star Trail Classic
   ids:
   - steam:270750
+  requires: []
+  tiers:
+  - 2
 - name: Mini Golf Mundo
   ids:
   - steam:468320
+  requires: []
+  tiers:
+  - 2
 - name: Mahjong Deluxe 3
   ids:
   - steam:462220
+  requires: []
+  tiers:
+  - 2
 - name: Pineview Drive
   ids:
   - steam:288880
+  requires: []
+  tiers:
+  - 2
 - name: Transport Giant
   ids:
   - steam:271370
+  requires: []
+  tiers:
+  - 2

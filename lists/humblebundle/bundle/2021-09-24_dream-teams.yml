@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dream Teams Bundle — entire-6-item-bundle
-tier: 3
+name: Dream Teams Bundle
+tiers:
+- rank: 3
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10509/
@@ -13,18 +15,36 @@ games:
 - name: 'Primal Carnage: Extinction'
   ids:
   - steam:321360
+  requires: []
+  tiers:
+  - 3
 - name: 'Trine 2: Complete Story'
   ids:
   - steam:35720
+  requires: []
+  tiers:
+  - 3
 - name: Shift Happens
   ids:
   - steam:359840
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide Collector''s Edition'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: Survive the Nights
   ids:
   - steam:541300
+  requires: []
+  tiers:
+  - 3
 - name: Trailmakers Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:10509:trailmakers-deluxe-edition
+  requires: []
+  tiers:
+  - 3

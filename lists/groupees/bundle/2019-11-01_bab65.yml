@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build a Bundle 65 — Tier 2
-tier: 2
+name: Build a Bundle 65
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8084/
@@ -13,33 +15,66 @@ games:
 - name: 'Atonement 2: Ruptured by Despair'
   ids:
   - steam:533820
+  requires: []
+  tiers:
+  - 2
 - name: Fruit Lockers Reborn! 2
   ids:
   - steam:1012390
+  requires: []
+  tiers:
+  - 2
 - name: Space Struck Run
   ids:
   - steam:994650
+  requires: []
+  tiers:
+  - 2
 - name: Incoming Evil
   ids:
   - steam:926210
+  requires: []
+  tiers:
+  - 2
 - name: GraFi 4
   ids:
   - steam:1150790
+  requires: []
+  tiers:
+  - 2
 - name: Dragon Chase
   ids:
   - steam:1011240
+  requires: []
+  tiers:
+  - 2
 - name: Escape From The Dragons
   ids:
   - steam:975770
+  requires: []
+  tiers:
+  - 2
 - name: Dread of Laughter
   ids:
   - steam:953050
+  requires: []
+  tiers:
+  - 2
 - name: Orc Raid
   ids:
   - steam:1061160
+  requires: []
+  tiers:
+  - 2
 - name: 'Renegade Grounds: Episode 1'
   ids:
   - steam:661670
+  requires: []
+  tiers:
+  - 2
 - name: 'Mercury: Cascade into Madness'
   ids:
   - steam:661120
+  requires: []
+  tiers:
+  - 2

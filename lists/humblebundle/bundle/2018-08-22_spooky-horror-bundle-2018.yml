@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Spooky Horror Bundle 2018 — entire-9-item-bundle
-tier: 3
+name: Humble Spooky Horror Bundle 2018
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6396/
@@ -13,27 +15,54 @@ games:
 - name: Layers of Fear
   ids:
   - steam:1946700
+  requires: []
+  tiers:
+  - 3
 - name: How to Survive 2
   ids:
   - steam:360170
+  requires: []
+  tiers:
+  - 3
 - name: How To Survive
   ids:
   - steam:250400
+  requires: []
+  tiers:
+  - 3
 - name: White Noise 2
   ids:
   - steam:503350
+  requires: []
+  tiers:
+  - 3
 - name: Detention
   ids:
   - steam:555220
+  requires: []
+  tiers:
+  - 3
 - name: BioShock Remastered
   ids:
   - steam:409710
+  requires: []
+  tiers:
+  - 3
 - name: 'Yomawari: Night Alone'
   ids:
   - steam:477870
+  requires: []
+  tiers:
+  - 3
 - name: Dead by Daylight
   ids:
   - steam:381210
+  requires: []
+  tiers:
+  - 3
 - name: 'Friday the 13th: The Game'
   ids:
   - unresolved:source:isthereanydeal:6396:friday-the-13th-the-game
+  requires: []
+  tiers:
+  - 3

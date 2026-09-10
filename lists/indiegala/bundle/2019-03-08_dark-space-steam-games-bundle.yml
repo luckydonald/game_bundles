@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dark Space Bundle — Tier 2
-tier: 2
+name: Dark Space Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7146/
@@ -13,36 +15,72 @@ games:
 - name: 'WayOut 2: Hex'
   ids:
   - steam:585950
+  requires: []
+  tiers:
+  - 2
 - name: The Deed
   ids:
   - steam:420740
+  requires: []
+  tiers:
+  - 2
 - name: Snake Eyes Dungeon
   ids:
   - steam:740240
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Episode I: Alpha Centauri'
   ids:
   - steam:429470
+  requires: []
+  tiers:
+  - 2
 - name: Packed Train
   ids:
   - steam:821400
+  requires: []
+  tiers:
+  - 2
 - name: 'Sentience: The Android''s Tale'
   ids:
   - steam:635850
+  requires: []
+  tiers:
+  - 2
 - name: ZOMBORG
   ids:
   - steam:729720
+  requires: []
+  tiers:
+  - 2
 - name: Paradox Soul
   ids:
   - steam:610570
+  requires: []
+  tiers:
+  - 2
 - name: Stick Spartans
   ids:
   - steam:868040
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Pilgrim Academy: Year 1'
   ids:
   - steam:694370
+  requires: []
+  tiers:
+  - 2
 - name: Chamber of Darkness
   ids:
   - steam:712530
+  requires: []
+  tiers:
+  - 2
 - name: Rencounter
   ids:
   - steam:431810
+  requires: []
+  tiers:
+  - 2

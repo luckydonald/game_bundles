@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Brutal Beat 'Em Ups Bundle — entire-7-item-bundle
-tier: 3
+name: Brutal Beat 'Em Ups Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14063/
@@ -13,21 +15,42 @@ games:
 - name: Bud Spencer & Terence Hill - Slaps And Beans
   ids:
   - steam:564050
+  requires: []
+  tiers:
+  - 3
 - name: Battletoads
   ids:
   - steam:1244950
+  requires: []
+  tiers:
+  - 3
 - name: River City Girls Zero
   ids:
   - steam:1851020
+  requires: []
+  tiers:
+  - 3
 - name: River City Girls
   ids:
   - steam:1049320
+  requires: []
+  tiers:
+  - 3
 - name: Bud Spencer & Terence Hill - Slaps And Beans 2
   ids:
   - steam:2142330
+  requires: []
+  tiers:
+  - 3
 - name: River City Girls 2
   ids:
   - steam:1920480
+  requires: []
+  tiers:
+  - 3
 - name: 'Double Dragon Gaiden: Rise Of The Dragons'
   ids:
   - steam:1967260
+  requires: []
+  tiers:
+  - 3

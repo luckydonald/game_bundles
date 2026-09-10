@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dystopian Bundle — entire-8-item-bundle
-tier: 3
+name: Dystopian Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6682/
@@ -13,24 +15,48 @@ games:
 - name: Distrust
   ids:
   - steam:635200
+  requires: []
+  tiers:
+  - 3
 - name: Tokyo 42
   ids:
   - steam:490450
+  requires: []
+  tiers:
+  - 3
 - name: 'Orwell: Keeping an Eye On You'
   ids:
   - steam:491950
+  requires: []
+  tiers:
+  - 3
 - name: Beholder
   ids:
   - steam:475550
+  requires: []
+  tiers:
+  - 3
 - name: 60 Seconds!
   ids:
   - steam:368360
+  requires: []
+  tiers:
+  - 3
 - name: 'Orwell: Ignorance is Strength'
   ids:
   - steam:633060
+  requires: []
+  tiers:
+  - 3
 - name: Rain World
   ids:
   - steam:312520
+  requires: []
+  tiers:
+  - 3
 - name: Observer
   ids:
   - unresolved:source:isthereanydeal:6682:observer
+  requires: []
+  tiers:
+  - 3

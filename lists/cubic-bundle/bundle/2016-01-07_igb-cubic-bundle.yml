@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: IGB Cubic Bundle — Tier 2
-tier: 2
+name: IGB Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2922/
@@ -13,24 +15,48 @@ games:
 - name: 'Foreign Legion: Buckets of Blood'
   ids:
   - steam:36000
+  requires: []
+  tiers:
+  - 2
 - name: Demon Horde Master
   ids:
   - unresolved:source:isthereanydeal:2922:demon-horde-master
+  requires: []
+  tiers:
+  - 2
 - name: Radial Impact
   ids:
   - steam:387890
+  requires: []
+  tiers:
+  - 2
 - name: Pirates Deck
   ids:
   - unresolved:source:isthereanydeal:2922:pirates-deck
+  requires: []
+  tiers:
+  - 2
 - name: In Exilium
   ids:
   - unresolved:source:isthereanydeal:2922:in-exilium
+  requires: []
+  tiers:
+  - 2
 - name: Samudai
   ids:
   - unresolved:source:isthereanydeal:2922:samudai
+  requires: []
+  tiers:
+  - 2
 - name: STEEL RIVALS
   ids:
   - unresolved:source:isthereanydeal:2922:steel-rivals
+  requires: []
+  tiers:
+  - 2
 - name: Rats - Time is running out!
   ids:
   - unresolved:source:isthereanydeal:2922:rats-time-is-running-out
+  requires: []
+  tiers:
+  - 2

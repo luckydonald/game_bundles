@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #70 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #70'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7154/
@@ -13,30 +15,60 @@ games:
 - name: VODKA
   ids:
   - unresolved:source:isthereanydeal:7154:vodka
+  requires: []
+  tiers:
+  - 2
 - name: Loathing Heart
   ids:
   - unresolved:source:isthereanydeal:7154:loathing-heart
+  requires: []
+  tiers:
+  - 2
 - name: 'Tiny & Big: Grandpa''s Leftovers'
   ids:
   - steam:205910
+  requires: []
+  tiers:
+  - 2
 - name: Suna
   ids:
   - steam:803920
+  requires: []
+  tiers:
+  - 2
 - name: The Survey
   ids:
   - steam:547910
+  requires: []
+  tiers:
+  - 2
 - name: the earth is a better person than me
   ids:
   - steam:959710
+  requires: []
+  tiers:
+  - 2
 - name: Nonogram - The Greatest Painter
   ids:
   - steam:742490
+  requires: []
+  tiers:
+  - 2
 - name: Human Rocket Person
   ids:
   - steam:965340
+  requires: []
+  tiers:
+  - 2
 - name: POWERCUT, Inc.
   ids:
   - steam:944440
+  requires: []
+  tiers:
+  - 2
 - name: Tomato Way 2
   ids:
   - steam:886970
+  requires: []
+  tiers:
+  - 2

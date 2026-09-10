@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Software Bundle: RPG Maker — entire-37-item-bundle'
-tier: 4
+name: 'Humble Software Bundle: RPG Maker'
+tiers:
+- rank: 4
+  name: entire-37-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6611/
@@ -13,111 +15,222 @@ games:
 - name: RPG Maker XP
   ids:
   - steam:235900
+  requires: []
+  tiers:
+  - 4
 - name: 'Game Character Hub PE: DS Generator Parts'
   ids:
   - steam:531601
+  requires: []
+  tiers:
+  - 4
 - name: 'Game Character Hub: Second Story'
   ids:
   - steam:372710
+  requires: []
+  tiers:
+  - 4
 - name: 'Game Character Hub: Portfolio Edition'
   ids:
   - steam:529830
+  requires: []
+  tiers:
+  - 4
 - name: The Last Word
   ids:
   - unresolved:source:isthereanydeal:6611:the-last-word
+  requires: []
+  tiers:
+  - 4
 - name: Skyborn
   ids:
   - steam:278460
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker VX
   ids:
   - steam:521880
+  requires: []
+  tiers:
+  - 4
 - name: Always Sometimes Monsters
   ids:
   - steam:274310
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker VX Ace - Fantasy Hero Character Pack
   ids:
   - steam:265464
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker VX Ace
   ids:
   - steam:220700
+  requires: []
+  tiers:
+  - 4
 - name: Echoes Of Aetheria
   ids:
   - steam:354740
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker VX Ace - Futuristic Tiles Resource Pack
   ids:
   - steam:229750
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker VX Ace - Animations Collection I: Quintessence'
   ids:
   - steam:542500
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker VX Ace - Ancient Dungeons: Base Pack'
   ids:
   - steam:406071
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker VX Ace - Fantastic Buildings - Medieval
   ids:
   - steam:333091
+  requires: []
+  tiers:
+  - 4
 - name: Pale Echoes
   ids:
   - steam:377190
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker VX Ace - POP!: Horror City'
   ids:
   - steam:297644
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker VX Ace - Seraph Circle: Monster Pack 1'
   ids:
   - unresolved:source:isthereanydeal:6611:rpg-maker-vx-ace-seraph-circle-monster-pack-1
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker MV - Samurai Japan: Castle Tiles'
   ids:
   - steam:919180
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV
   ids:
   - steam:363890
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - SAKAN
   ids:
   - steam:608680
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker MV - Hiroki Kikuta music pack: The Fury'
   ids:
   - steam:599440
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - GENE
   ids:
   - steam:794060
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Karugamo Fantasy BGM Pack 01
   ids:
   - steam:491400
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Urban Slow Piano Vol.1
   ids:
   - steam:852994
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - M-DRIVE 16-bit Music Pack
   ids:
   - unresolved:source:isthereanydeal:6611:rpg-maker-mv-m-drive-16-bit-music-pack
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Fantasy Heroine Character Pack
   ids:
   - steam:618700
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker MV - Fantastic Buildings: Medieval'
   ids:
   - steam:721060
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Future Steam Punk
   ids:
   - unresolved:source:isthereanydeal:6611:rpg-maker-mv-future-steam-punk
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Light Novel Standard Music
   ids:
   - unresolved:source:isthereanydeal:6611:rpg-maker-mv-light-novel-standard-music
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker MV - Animations Collection I: Quintessence'
   ids:
   - steam:542490
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Dungeon Music Pack
   ids:
   - unresolved:source:isthereanydeal:6611:rpg-maker-mv-dungeon-music-pack
+  requires: []
+  tiers:
+  - 4
 - name: 'RPG Maker MV - FSM: Town of Beginnings Tiles'
   ids:
   - steam:549840
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - MADO
   ids:
   - steam:662970
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Pop! Horror City
   ids:
   - steam:455220
+  requires: []
+  tiers:
+  - 4
 - name: Visual Novel Maker + Live2D
   ids:
   - steam:495480
+  requires: []
+  tiers:
+  - 4
 - name: RPG Maker MV - Katakura Hibiki's Lords of Darkness
   ids:
   - steam:455223
+  requires: []
+  tiers:
+  - 4

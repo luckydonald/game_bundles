@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: All Stars Multiplayer Bundle — Tier 2
-tier: 2
+name: All Stars Multiplayer Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8691/
@@ -13,27 +15,54 @@ games:
 - name: Guns, Gore & Cannoli
   ids:
   - steam:322210
+  requires: []
+  tiers:
+  - 2
 - name: Neon Chrome
   ids:
   - steam:428750
+  requires: []
+  tiers:
+  - 2
 - name: GIBZ
   ids:
   - steam:448320
+  requires: []
+  tiers:
+  - 2
 - name: Cook, Serve, Delicious! 2!!
   ids:
   - steam:386620
+  requires: []
+  tiers:
+  - 2
 - name: Rain World
   ids:
   - steam:312520
+  requires: []
+  tiers:
+  - 2
 - name: White Noise 2
   ids:
   - steam:503350
+  requires: []
+  tiers:
+  - 2
 - name: Caveblazers
   ids:
   - steam:452060
+  requires: []
+  tiers:
+  - 2
 - name: Day of Infamy
   ids:
   - steam:447820
+  requires: []
+  tiers:
+  - 2
 - name: Day of Infamy - Deluxe DLC (Unit Starter Pack and Soundtrack)
   ids:
   - steam:610400
+  requires: []
+  tiers:
+  - 2

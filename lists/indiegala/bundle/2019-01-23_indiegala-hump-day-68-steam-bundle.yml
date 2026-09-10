@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #68 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #68'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6945/
@@ -13,24 +15,48 @@ games:
 - name: Rot Gut
   ids:
   - steam:395500
+  requires: []
+  tiers:
+  - 2
 - name: Spooky Cats
   ids:
   - steam:372210
+  requires: []
+  tiers:
+  - 2
 - name: Wings of Vi
   ids:
   - steam:318530
+  requires: []
+  tiers:
+  - 2
 - name: Shadwen
   ids:
   - steam:425210
+  requires: []
+  tiers:
+  - 2
 - name: Burnin' Rubber 5 HD
   ids:
   - steam:420660
+  requires: []
+  tiers:
+  - 2
 - name: Crisis in the Kremlin
   ids:
   - steam:599750
+  requires: []
+  tiers:
+  - 2
 - name: Deep Sixed
   ids:
   - steam:591000
+  requires: []
+  tiers:
+  - 2
 - name: Shadowgrounds
   ids:
   - steam:2500
+  requires: []
+  tiers:
+  - 2

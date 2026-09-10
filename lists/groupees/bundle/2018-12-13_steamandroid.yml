@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Steamy Android Bundle — Tier 2
-tier: 2
+name: The Steamy Android Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6760/
@@ -13,24 +15,48 @@ games:
 - name: Stickman Fighting
   ids:
   - unresolved:source:isthereanydeal:6760:stickman-fighting
+  requires: []
+  tiers:
+  - 2
 - name: Cross And Crush
   ids:
   - unresolved:source:isthereanydeal:6760:cross-and-crush
+  requires: []
+  tiers:
+  - 2
 - name: Achievement Machine
   ids:
   - unresolved:source:isthereanydeal:6760:achievement-machine
+  requires: []
+  tiers:
+  - 2
 - name: A Normal Lost Phone
   ids:
   - steam:523210
+  requires: []
+  tiers:
+  - 2
 - name: Mahjong Classic
   ids:
   - unresolved:source:isthereanydeal:6760:mahjong-classic
+  requires: []
+  tiers:
+  - 2
 - name: Dead Age
   ids:
   - steam:363930
+  requires: []
+  tiers:
+  - 2
 - name: Pocket Kingdom
   ids:
   - steam:462620
+  requires: []
+  tiers:
+  - 2
 - name: Dead In Bermuda
   ids:
   - steam:384310
+  requires: []
+  tiers:
+  - 2

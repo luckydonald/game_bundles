@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: GameMaker Studio 2 Bundle — entire-10-item-bundle
-tier: 3
+name: GameMaker Studio 2 Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10851/
@@ -13,30 +15,60 @@ games:
 - name: Post Void
   ids:
   - steam:1285670
+  requires: []
+  tiers:
+  - 3
 - name: Super Raft Boat
   ids:
   - unresolved:source:isthereanydeal:10851:super-raft-boat
+  requires: []
+  tiers:
+  - 3
 - name: GameMaker Studio 2 Creator
   ids:
   - unresolved:source:isthereanydeal:10851:gamemaker-studio-2-creator
+  requires: []
+  tiers:
+  - 3
 - name: Last Horizon
   ids:
   - steam:394220
+  requires: []
+  tiers:
+  - 3
 - name: Space Gladiators
   ids:
   - steam:1144910
+  requires: []
+  tiers:
+  - 3
 - name: Cattails | Become a Cat!
   ids:
   - steam:634160
+  requires: []
+  tiers:
+  - 3
 - name: Ministry of Broadcast
   ids:
   - steam:874040
+  requires: []
+  tiers:
+  - 3
 - name: Crashlands
   ids:
   - steam:391730
+  requires: []
+  tiers:
+  - 3
 - name: Cook, Serve, Delicious! 3?!
   ids:
   - steam:1000030
+  requires: []
+  tiers:
+  - 3
 - name: GameMaker Studio 2 Indie
   ids:
   - unresolved:source:isthereanydeal:10851:gamemaker-studio-2-indie
+  requires: []
+  tiers:
+  - 3

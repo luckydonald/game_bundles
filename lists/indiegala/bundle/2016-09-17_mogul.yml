@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Mogul Bundle — Tier 2
-tier: 2
+name: Indie Mogul Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4085/
@@ -13,33 +15,66 @@ games:
 - name: Noir Syndrome
   ids:
   - steam:299780
+  requires: []
+  tiers:
+  - 2
 - name: Erusal
   ids:
   - steam:509230
+  requires: []
+  tiers:
+  - 2
 - name: Cubicle Quest
   ids:
   - steam:349500
+  requires: []
+  tiers:
+  - 2
 - name: Lovely Weather We're Having
   ids:
   - unresolved:source:isthereanydeal:4085:lovely-weather-we-re-having
+  requires: []
+  tiers:
+  - 2
 - name: Football Mogul 15
   ids:
   - steam:514010
+  requires: []
+  tiers:
+  - 2
 - name: 'BADLAND: Game of the Year Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:4085:badland-game-of-the-year-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: RX squad
   ids:
   - steam:494120
+  requires: []
+  tiers:
+  - 2
 - name: Football Mogul 2014
   ids:
   - steam:371850
+  requires: []
+  tiers:
+  - 2
 - name: Super GunWorld 2
   ids:
   - steam:514220
+  requires: []
+  tiers:
+  - 2
 - name: Baseball Mogul Diamond
   ids:
   - steam:507080
+  requires: []
+  tiers:
+  - 2
 - name: Baseball Mogul 2015
   ids:
   - steam:388270
+  requires: []
+  tiers:
+  - 2

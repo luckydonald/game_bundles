@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'One Special Bundle: The Legacy of Adult Swim Games — entire-9-item-bundle'
-tier: 4
+name: 'One Special Bundle: The Legacy of Adult Swim Games'
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14459/
@@ -13,27 +15,54 @@ games:
 - name: 'Jazzpunk: Director''s Cut'
   ids:
   - steam:250260
+  requires: []
+  tiers:
+  - 4
 - name: Duck Game
   ids:
   - steam:312530
+  requires: []
+  tiers:
+  - 4
 - name: Battle Chef Brigade Deluxe
   ids:
   - steam:452570
+  requires: []
+  tiers:
+  - 4
 - name: Pool Panic
   ids:
   - steam:522240
+  requires: []
+  tiers:
+  - 4
 - name: Rain World
   ids:
   - steam:312520
+  requires: []
+  tiers:
+  - 4
 - name: 'Death''s Gambit: Afterlife'
   ids:
   - steam:356650
+  requires: []
+  tiers:
+  - 4
 - name: 'Death''s Gambit: Afterlife - Ashes of Vados'
   ids:
   - steam:1866620
+  requires: []
+  tiers:
+  - 4
 - name: 'Rain World: Downpour'
   ids:
   - steam:1933390
+  requires: []
+  tiers:
+  - 4
 - name: 'Samurai Jack: Battle Through Time'
   ids:
   - unresolved:source:isthereanydeal:14459:samurai-jack-battle-through-time
+  requires: []
+  tiers:
+  - 4

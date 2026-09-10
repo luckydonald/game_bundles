@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Best of Bandai Namco Bundle — entire-9-item-bundle
-tier: 4
+name: Humble Best of Bandai Namco Bundle
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10033/
@@ -13,27 +15,54 @@ games:
 - name: PAC-MAN 256
   ids:
   - steam:455400
+  requires: []
+  tiers:
+  - 4
 - name: Tales of Berseria
   ids:
   - steam:429660
+  requires: []
+  tiers:
+  - 4
 - name: TEKKEN 7
   ids:
   - steam:389730
+  requires: []
+  tiers:
+  - 4
 - name: Katamari Damacy REROLL
   ids:
   - steam:848350
+  requires: []
+  tiers:
+  - 4
 - name: RAD
   ids:
   - steam:722560
+  requires: []
+  tiers:
+  - 4
 - name: Little Nightmares Complete Edition
   ids:
   - steam:424840
+  requires: []
+  tiers:
+  - 4
 - name: Tales of Zestiria
   ids:
   - steam:351970
+  requires: []
+  tiers:
+  - 4
 - name: Code Vein
   ids:
   - steam:678960
+  requires: []
+  tiers:
+  - 4
 - name: Project Cars 3
   ids:
   - unresolved:source:isthereanydeal:10033:project-cars-3
+  requires: []
+  tiers:
+  - 4

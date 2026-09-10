@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capsule Computers Indie Bundle 3 — Tier 2
-tier: 2
+name: Capsule Computers Indie Bundle 3
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/501/
@@ -13,30 +15,60 @@ games:
 - name: Rush Bros
   ids:
   - steam:234490
+  requires: []
+  tiers:
+  - 2
 - name: Return to Mysterious Island
   ids:
   - steam:277110
+  requires: []
+  tiers:
+  - 2
 - name: Bad Bots
   ids:
   - steam:235070
+  requires: []
+  tiers:
+  - 2
 - name: Rise of the Ravager
   ids:
   - unresolved:source:isthereanydeal:501:rise-of-the-ravager
+  requires: []
+  tiers:
+  - 2
 - name: Starpoint Gemini
   ids:
   - steam:108110
+  requires: []
+  tiers:
+  - 2
 - name: 'World War 2: Time of Wrath'
   ids:
   - steam:305390
+  requires: []
+  tiers:
+  - 2
 - name: 'Ravensword: Shadowlands'
   ids:
   - steam:253410
+  requires: []
+  tiers:
+  - 2
 - name: Storm over the Pacific
   ids:
   - steam:302320
+  requires: []
+  tiers:
+  - 2
 - name: Haegemonia Gold Edition
   ids:
   - unresolved:source:isthereanydeal:501:haegemonia-gold-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'A.R.E.S.: Extinction Agenda'
   ids:
   - unresolved:source:isthereanydeal:501:a-r-es-extinction-agenda
+  requires: []
+  tiers:
+  - 2

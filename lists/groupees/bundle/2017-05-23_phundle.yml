@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Phime Bundle — Tier 2
-tier: 2
+name: Phime Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5129/
@@ -13,21 +15,42 @@ games:
 - name: Dale Hardshovel HD
   ids:
   - steam:370170
+  requires: []
+  tiers:
+  - 2
 - name: Dash Fleet
   ids:
   - steam:586160
+  requires: []
+  tiers:
+  - 2
 - name: interLOGIC
   ids:
   - steam:563150
+  requires: []
+  tiers:
+  - 2
 - name: 'Showing Tonight: Mindhunters Incident'
   ids:
   - steam:416370
+  requires: []
+  tiers:
+  - 2
 - name: Mad Dojo
   ids:
   - steam:586170
+  requires: []
+  tiers:
+  - 2
 - name: Ziggy`s Chase
   ids:
   - steam:533660
+  requires: []
+  tiers:
+  - 2
 - name: A-Gents
   ids:
   - steam:460910
+  requires: []
+  tiers:
+  - 2

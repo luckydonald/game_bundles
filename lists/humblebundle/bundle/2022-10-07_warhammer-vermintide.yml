@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Warhammer: Vermintide Franchise Bundle — entire-20-item-bundle'
-tier: 4
+name: 'Warhammer: Vermintide Franchise Bundle'
+tiers:
+- rank: 4
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12184/
@@ -13,60 +15,120 @@ games:
 - name: 'Warhammer: End Times - Vermintide Collector''s Edition Upgrade'
   ids:
   - steam:373540
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide - Bardin 'Studded Leather' Skin
   ids:
   - steam:463799
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide - Kerillian 'Tirsyth Garment' Skin
   ids:
   - steam:463798
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2'
   ids:
   - steam:552500
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide Drachenfels'
   ids:
   - steam:453280
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide Stromdorf'
   ids:
   - steam:463795
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide - Kruber 'Carroburg Livery' Skin
   ids:
   - steam:463797
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide - Sienna 'Wyrmscales' Skin
   ids:
   - steam:463796
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide Schluesselschloss'
   ids:
   - steam:437070
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide Karak Azgaraz'
   ids:
   - steam:463791
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide - Saltzpyre ' Estalian Leather Coat' Skin
   ids:
   - steam:463790
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: End Times - Vermintide Death on the Reik'
   ids:
   - steam:741420
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Winds of Magic'
   ids:
   - steam:1033060
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Collector''s Edition Upgrade'
   ids:
   - steam:737040
+  requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide 2 Shadows Over Bgenhafen
   ids:
   - unresolved:source:isthereanydeal:12184:warhammer-vermintide-2-shadows-over-bgenhafen
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Grail Knight Career'
   ids:
   - steam:1343500
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Outcast Engineer Career'
   ids:
   - steam:1443780
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Forgotten Relics Pack'
   ids:
   - steam:1592630
+  requires: []
+  tiers:
+  - 4
 - name: 'Warhammer: Vermintide 2 - Outcast Engineer Career Cosmetic Upgrade'
   ids:
   - unresolved:source:isthereanydeal:12184:warhammer-vermintide-2-outcast-engineer-career-cosmetic-upgrade
+  requires: []
+  tiers:
+  - 4

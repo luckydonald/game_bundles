@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: HeroCraftPC Complete Bundle — entire-11-item-bundle
-tier: 4
+name: HeroCraftPC Complete Bundle
+tiers:
+- rank: 4
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15001/
@@ -13,33 +15,66 @@ games:
 - name: King of Dragon Pass
   ids:
   - steam:352220
+  requires: []
+  tiers:
+  - 4
 - name: 'FootLOL: Epic Soccer League'
   ids:
   - steam:263740
+  requires: []
+  tiers:
+  - 4
 - name: 'INSOMNIA: The Ark'
   ids:
   - steam:783170
+  requires: []
+  tiers:
+  - 4
 - name: Odysseus Kosmos and his Robot Quest (Complete Season)
   ids:
   - steam:645820
+  requires: []
+  tiers:
+  - 4
 - name: Organs Please
   ids:
   - steam:1593780
+  requires: []
+  tiers:
+  - 4
 - name: Gravewood High - Complete
   ids:
   - steam:2097360
+  requires: []
+  tiers:
+  - 4
 - name: 'Tempest: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:15001:tempest-complete-edition
+  requires: []
+  tiers:
+  - 4
 - name: Catizens
   ids:
   - steam:957660
+  requires: []
+  tiers:
+  - 4
 - name: Anvil Saga
   ids:
   - steam:1587540
+  requires: []
+  tiers:
+  - 4
 - name: Deck of Souls
   ids:
   - steam:2088770
+  requires: []
+  tiers:
+  - 4
 - name: 'Revival: Recolonization'
   ids:
   - steam:1306770
+  requires: []
+  tiers:
+  - 4

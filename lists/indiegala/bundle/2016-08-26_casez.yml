@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Case Z — Tier 2
-tier: 2
+name: Indie Case Z
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3964/
@@ -13,33 +15,66 @@ games:
 - name: The Falling Sun
   ids:
   - unresolved:source:isthereanydeal:3964:the-falling-sun
+  requires: []
+  tiers:
+  - 2
 - name: Collider
   ids:
   - steam:371880
+  requires: []
+  tiers:
+  - 2
 - name: Build 'n Bump
   ids:
   - steam:375790
+  requires: []
+  tiers:
+  - 2
 - name: Worst Case Z
   ids:
   - unresolved:source:isthereanydeal:3964:worst-case-z
+  requires: []
+  tiers:
+  - 2
 - name: Abrix the robot
   ids:
   - steam:461850
+  requires: []
+  tiers:
+  - 2
 - name: Dance of Death
   ids:
   - steam:430020
+  requires: []
+  tiers:
+  - 2
 - name: Scoregasm
   ids:
   - steam:202410
+  requires: []
+  tiers:
+  - 2
 - name: Abrix for kids
   ids:
   - unresolved:source:isthereanydeal:3964:abrix-for-kids
+  requires: []
+  tiers:
+  - 2
 - name: The Orb Chambers II
   ids:
   - unresolved:source:isthereanydeal:3964:the-orb-chambers-ii
+  requires: []
+  tiers:
+  - 2
 - name: Pinga Ponga
   ids:
   - steam:509960
+  requires: []
+  tiers:
+  - 2
 - name: Lord Mayor
   ids:
   - steam:499330
+  requires: []
+  tiers:
+  - 2

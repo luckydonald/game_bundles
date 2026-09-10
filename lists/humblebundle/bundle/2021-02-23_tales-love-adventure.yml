@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Tales of Love & Adventure Bundle — entire-8-item-bundle
-tier: 4
+name: Humble Tales of Love & Adventure Bundle
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9773/
@@ -13,24 +15,48 @@ games:
 - name: Tales of Monkey Island Complete Season
   ids:
   - steam:31170
+  requires: []
+  tiers:
+  - 4
 - name: Reventure
   ids:
   - steam:900270
+  requires: []
+  tiers:
+  - 4
 - name: Neo Cab
   ids:
   - steam:794540
+  requires: []
+  tiers:
+  - 4
 - name: Half Past Fate
   ids:
   - steam:1048740
+  requires: []
+  tiers:
+  - 4
 - name: Telltale Batman Shadows Edition
   ids:
   - unresolved:source:isthereanydeal:9773:telltale-batman-shadows-edition
+  requires: []
+  tiers:
+  - 4
 - name: 'Blacksad : Under the Skin'
   ids:
   - steam:1003890
+  requires: []
+  tiers:
+  - 4
 - name: 'HIVESWAP: Act 2'
   ids:
   - steam:1181840
+  requires: []
+  tiers:
+  - 4
 - name: Indivisible
   ids:
   - steam:421170
+  requires: []
+  tiers:
+  - 4

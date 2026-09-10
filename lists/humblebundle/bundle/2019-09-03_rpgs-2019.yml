@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble RPG Bundle 2019 — entire-8-item-bundle
-tier: 3
+name: Humble RPG Bundle 2019
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7865/
@@ -13,24 +15,48 @@ games:
 - name: Immortal Planet
   ids:
   - steam:631980
+  requires: []
+  tiers:
+  - 3
 - name: 'HIVESWAP: ACT 1 Original Soundtrack'
   ids:
   - steam:680910
+  requires: []
+  tiers:
+  - 3
 - name: 'HIVESWAP: ACT 1'
   ids:
   - steam:623940
+  requires: []
+  tiers:
+  - 3
 - name: Deep Sky Derelicts
   ids:
   - steam:698640
+  requires: []
+  tiers:
+  - 3
 - name: Pillars of Eternity Hero Edition
   ids:
   - unresolved:source:isthereanydeal:7865:pillars-of-eternity-hero-edition
+  requires: []
+  tiers:
+  - 3
 - name: Tyranny
   ids:
   - steam:362960
+  requires: []
+  tiers:
+  - 3
 - name: Cat Quest
   ids:
   - steam:593280
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: Game of the Year Enhanced'
   ids:
   - steam:729040
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Goblinz Studio 10th Anniversary Bundle — Tier 3
-tier: 3
+name: Goblinz Studio 10th Anniversary Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16227/
@@ -13,30 +15,60 @@ games:
 - name: Synergy
   ids:
   - steam:1989070
+  requires: []
+  tiers:
+  - 3
 - name: Luxman Moonlit Market
   ids:
   - steam:3642440
+  requires: []
+  tiers:
+  - 3
 - name: Microtopia
   ids:
   - steam:2750000
+  requires: []
+  tiers:
+  - 3
 - name: Day of the Shell
   ids:
   - steam:3008340
+  requires: []
+  tiers:
+  - 3
 - name: Knightica
   ids:
   - steam:3093400
+  requires: []
+  tiers:
+  - 3
 - name: Runeborn
   ids:
   - steam:3073990
+  requires: []
+  tiers:
+  - 3
 - name: Repel The Rifts
   ids:
   - steam:3686580
+  requires: []
+  tiers:
+  - 3
 - name: Sol Cesto
   ids:
   - steam:2738490
+  requires: []
+  tiers:
+  - 3
 - name: Smash It Wild
   ids:
   - steam:2432240
+  requires: []
+  tiers:
+  - 3
 - name: Hold The Mine
   ids:
   - steam:3164960
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mecha Mania Bundle — entire-9-item-bundle
-tier: 3
+name: Mecha Mania Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16090/
@@ -13,27 +15,54 @@ games:
 - name: Star Renegades
   ids:
   - steam:651670
+  requires: []
+  tiers:
+  - 3
 - name: Mech Mechanic Simulator
   ids:
   - steam:1044980
+  requires: []
+  tiers:
+  - 3
 - name: UFO ROBOT GRENDIZER - The Feast of the Wolves
   ids:
   - steam:2295970
+  requires: []
+  tiers:
+  - 3
 - name: Mechabellum
   ids:
   - steam:669330
+  requires: []
+  tiers:
+  - 3
 - name: Vox Machinae
   ids:
   - steam:334540
+  requires: []
+  tiers:
+  - 3
 - name: Oblivion Override
   ids:
   - steam:1952370
+  requires: []
+  tiers:
+  - 3
 - name: 'Project MIKHAIL: A Muv-Luv War Story'
   ids:
   - steam:1557480
+  requires: []
+  tiers:
+  - 3
 - name: Bounty Star
   ids:
   - steam:1497430
+  requires: []
+  tiers:
+  - 3
 - name: M.A.S.S. Builder
   ids:
   - steam:956680
+  requires: []
+  tiers:
+  - 3

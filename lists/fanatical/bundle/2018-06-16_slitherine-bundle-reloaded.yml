@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Slitherine Bundle Reloaded — Tier 3
-tier: 3
+name: Slitherine Bundle Reloaded
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6244/
@@ -13,24 +15,48 @@ games:
 - name: Time of Fury
   ids:
   - steam:303910
+  requires: []
+  tiers:
+  - 3
 - name: Battle of the Bulge
   ids:
   - steam:365560
+  requires: []
+  tiers:
+  - 3
 - name: Pride of Nations
   ids:
   - steam:73190
+  requires: []
+  tiers:
+  - 3
 - name: Last Days of Old Earth
   ids:
   - steam:376450
+  requires: []
+  tiers:
+  - 3
 - name: Alea Jacta Est
   ids:
   - steam:313660
+  requires: []
+  tiers:
+  - 3
 - name: Advanced Tactics Gold
   ids:
   - steam:310390
+  requires: []
+  tiers:
+  - 3
 - name: Hell
   ids:
   - steam:312420
+  requires: []
+  tiers:
+  - 3
 - name: 'Pandora : First Contact'
   ids:
   - steam:287580
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 12th Anniversary Pay What You Want Bundle — Beat The Average
-tier: 2
+name: 12th Anniversary Pay What You Want Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5077/
@@ -13,24 +15,48 @@ games:
 - name: 'Cognition: An Erica Reed Thriller - Game of the Year Edition'
   ids:
   - steam:242780
+  requires: []
+  tiers:
+  - 2
 - name: The Silent Age
   ids:
   - steam:352520
+  requires: []
+  tiers:
+  - 2
 - name: 'Soulless: Ray Of Hope'
   ids:
   - steam:528300
+  requires: []
+  tiers:
+  - 2
 - name: 'Out There: Ω Edition'
   ids:
   - steam:334420
+  requires: []
+  tiers:
+  - 2
 - name: Californium
   ids:
   - steam:402060
+  requires: []
+  tiers:
+  - 2
 - name: 'realMyst: Masterpiece Edition'
   ids:
   - steam:244430
+  requires: []
+  tiers:
+  - 2
 - name: Dead In Bermuda
   ids:
   - steam:384310
+  requires: []
+  tiers:
+  - 2
 - name: Evoland
   ids:
   - steam:233470
+  requires: []
+  tiers:
+  - 2

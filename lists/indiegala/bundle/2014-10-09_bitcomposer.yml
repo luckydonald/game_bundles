@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: bitComposer Bundle — Tier 2
-tier: 2
+name: bitComposer Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1260/
@@ -13,21 +15,42 @@ games:
 - name: Galaxy on Fire 2 ™ Full HD
   ids:
   - steam:212010
+  requires: []
+  tiers:
+  - 2
 - name: "Air Conflicts \x96 Secret Wars"
   ids:
   - steam:95900
+  requires: []
+  tiers:
+  - 2
 - name: Wildlife Park 3
   ids:
   - steam:287200
+  requires: []
+  tiers:
+  - 2
 - name: 'Disciples 3: Reincarnation'
   ids:
   - unresolved:source:isthereanydeal:1260:disciples-3-reincarnation
+  requires: []
+  tiers:
+  - 2
 - name: Thunder Wolves
   ids:
   - steam:232970
+  requires: []
+  tiers:
+  - 2
 - name: Cargo! - The Quest for Gravity
   ids:
   - steam:41740
+  requires: []
+  tiers:
+  - 2
 - name: The Void
   ids:
   - steam:37000
+  requires: []
+  tiers:
+  - 2

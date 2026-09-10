@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Down on the Farm Bundle — entire-8-item-bundle
-tier: 3
+name: Down on the Farm Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14002/
@@ -13,24 +15,48 @@ games:
 - name: Littlewood
   ids:
   - steam:894940
+  requires: []
+  tiers:
+  - 3
 - name: No Place Like Home
   ids:
   - steam:1472660
+  requires: []
+  tiers:
+  - 3
 - name: Everdream Valley
   ids:
   - steam:1403650
+  requires: []
+  tiers:
+  - 3
 - name: Immortal Life
   ids:
   - steam:1201230
+  requires: []
+  tiers:
+  - 3
 - name: 'Ikonei Island: An Earthlock Adventure'
   ids:
   - steam:1550730
+  requires: []
+  tiers:
+  - 3
 - name: 'Cattails: Wildwood Story'
   ids:
   - steam:1882500
+  requires: []
+  tiers:
+  - 3
 - name: The Witch of Fern Island
   ids:
   - steam:1550010
+  requires: []
+  tiers:
+  - 3
 - name: Cornucopia
   ids:
   - steam:1681600
+  requires: []
+  tiers:
+  - 3

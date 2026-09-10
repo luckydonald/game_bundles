@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Insurgency Bundle — Tier 2
-tier: 2
+name: The Insurgency Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2568/
@@ -13,12 +15,24 @@ games:
 - name: Contagion
   ids:
   - steam:238430
+  requires: []
+  tiers:
+  - 2
 - name: Monday Night Combat
   ids:
   - steam:63200
+  requires: []
+  tiers:
+  - 2
 - name: Bedlam
   ids:
   - unresolved:source:isthereanydeal:2568:bedlam
+  requires: []
+  tiers:
+  - 2
 - name: INSURGENCY
   ids:
   - steam:222880
+  requires: []
+  tiers:
+  - 2

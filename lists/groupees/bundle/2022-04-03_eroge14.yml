@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Anime Games Bundle 14 — Tier 3
-tier: 3
+name: Anime Games Bundle 14
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11293/
@@ -13,36 +15,72 @@ games:
 - name: Nightmare
   ids:
   - unresolved:source:isthereanydeal:11293:nightmare
+  requires: []
+  tiers:
+  - 3
 - name: Demon Lord Jill -REVIVAL
   ids:
   - steam:1667720
+  requires: []
+  tiers:
+  - 3
 - name: Magical Girl Noble Rose
   ids:
   - steam:1607170
+  requires: []
+  tiers:
+  - 3
 - name: KiraKira Stars Idol Project AI
   ids:
   - steam:1202770
+  requires: []
+  tiers:
+  - 3
 - name: Kirakira Stars Idol Project Nagisa
   ids:
   - steam:1281510
+  requires: []
+  tiers:
+  - 3
 - name: Ecstasy Elf Shotenken -Naruru's Sexy Adventure
   ids:
   - steam:1678770
+  requires: []
+  tiers:
+  - 3
 - name: Adventurer Liz and the Erotic Dungeon
   ids:
   - steam:1652220
+  requires: []
+  tiers:
+  - 3
 - name: Metempsychosis
   ids:
   - unresolved:source:isthereanydeal:11293:metempsychosis
+  requires: []
+  tiers:
+  - 3
 - name: Sutekina kanojo no tsukurikata
   ids:
   - steam:1396150
+  requires: []
+  tiers:
+  - 3
 - name: IdolDays
   ids:
   - steam:1576130
+  requires: []
+  tiers:
+  - 3
 - name: Maken-shi Sara
   ids:
   - unresolved:source:isthereanydeal:11293:maken-shi-sara
+  requires: []
+  tiers:
+  - 3
 - name: Secret Kiss is Sweet and Tender
   ids:
   - unresolved:source:isthereanydeal:11293:secret-kiss-is-sweet-and-tender
+  requires: []
+  tiers:
+  - 3

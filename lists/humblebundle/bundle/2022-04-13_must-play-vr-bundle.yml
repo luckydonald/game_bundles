@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Must Play VR Bundle — entire-8-item-bundle
-tier: 3
+name: Must Play VR Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11368/
@@ -13,24 +15,48 @@ games:
 - name: Vanishing Realms
   ids:
   - steam:322770
+  requires: []
+  tiers:
+  - 3
 - name: PowerBeatsVR
   ids:
   - steam:810500
+  requires: []
+  tiers:
+  - 3
 - name: Down The Rabbit Hole
   ids:
   - steam:1215270
+  requires: []
+  tiers:
+  - 3
 - name: Traffic Jams
   ids:
   - steam:1301930
+  requires: []
+  tiers:
+  - 3
 - name: Propagation VR - Co-op
   ids:
   - steam:1487770
+  requires: []
+  tiers:
+  - 3
 - name: Vacation Simulator
   ids:
   - steam:726830
+  requires: []
+  tiers:
+  - 3
 - name: Pistol Whip
   ids:
   - steam:1079800
+  requires: []
+  tiers:
+  - 3
 - name: Ragnaröck
   ids:
   - steam:1345820
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bundle In A Box 4 — Tier 2
-tier: 2
+name: Bundle In A Box 4
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1855/
@@ -13,21 +15,42 @@ games:
 - name: Sirius
   ids:
   - unresolved:source:isthereanydeal:1855:sirius
+  requires: []
+  tiers:
+  - 2
 - name: Siege of Inaolia
   ids:
   - unresolved:source:isthereanydeal:1855:siege-of-inaolia
+  requires: []
+  tiers:
+  - 2
 - name: CortexGear:AngryDroids
   ids:
   - steam:375620
+  requires: []
+  tiers:
+  - 2
 - name: 8Bit Fiesta
   ids:
   - unresolved:source:isthereanydeal:1855:8bit-fiesta
+  requires: []
+  tiers:
+  - 2
 - name: Jane Angel Templar Mystery
   ids:
   - steam:323270
+  requires: []
+  tiers:
+  - 2
 - name: Hexus
   ids:
   - steam:323250
+  requires: []
+  tiers:
+  - 2
 - name: 'Northmark: Hour of the Wolf'
   ids:
   - steam:307010
+  requires: []
+  tiers:
+  - 2

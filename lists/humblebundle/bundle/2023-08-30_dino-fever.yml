@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Dino Fever! Bundle — entire-8-item-bundle
-tier: 2
+name: Dino Fever! Bundle
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13441/
@@ -13,24 +15,48 @@ games:
 - name: 'Turok 2: Seeds of Evil'
   ids:
   - steam:405830
+  requires: []
+  tiers:
+  - 2
 - name: 'Primal Carnage: Extinction'
   ids:
   - steam:321360
+  requires: []
+  tiers:
+  - 2
 - name: Turok
   ids:
   - steam:405820
+  requires: []
+  tiers:
+  - 2
 - name: Animal Revolt Battle Simulator
   ids:
   - steam:1215390
+  requires: []
+  tiers:
+  - 2
 - name: Saurian
   ids:
   - steam:587450
+  requires: []
+  tiers:
+  - 2
 - name: Dinosaur Fossil Hunter
   ids:
   - steam:864700
+  requires: []
+  tiers:
+  - 2
 - name: Prehistoric Hunt
   ids:
   - steam:752900
+  requires: []
+  tiers:
+  - 2
 - name: 'Carnivores: Dinosaur Hunt'
   ids:
   - steam:1461030
+  requires: []
+  tiers:
+  - 2

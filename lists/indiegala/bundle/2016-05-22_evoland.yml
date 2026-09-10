@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Evoland Bundle — Tier 2
-tier: 2
+name: Evoland Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3463/
@@ -13,24 +15,48 @@ games:
 - name: Finding Teddy
   ids:
   - steam:259600
+  requires: []
+  tiers:
+  - 2
 - name: 'Nicolas Eymerich The Inquisitor - Book I: The Plague'
   ids:
   - steam:279500
+  requires: []
+  tiers:
+  - 2
 - name: The Lady
   ids:
   - steam:341060
+  requires: []
+  tiers:
+  - 2
 - name: Type:Rider
   ids:
   - steam:258890
+  requires: []
+  tiers:
+  - 2
 - name: Machines at War 3
   ids:
   - steam:303860
+  requires: []
+  tiers:
+  - 2
 - name: World War One Centenial Edition
   ids:
   - unresolved:source:isthereanydeal:3463:world-war-one-centenial-edition
+  requires: []
+  tiers:
+  - 2
 - name: Legends of Persia
   ids:
   - steam:301220
+  requires: []
+  tiers:
+  - 2
 - name: Evoland
   ids:
   - steam:233470
+  requires: []
+  tiers:
+  - 2

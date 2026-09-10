@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Critical Hits ARPG bundle — entire-7-item-bundle
-tier: 2
+name: Critical Hits ARPG bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16213/
@@ -13,21 +15,42 @@ games:
 - name: GreedFall
   ids:
   - steam:606880
+  requires: []
+  tiers:
+  - 2
 - name: Eldest Souls
   ids:
   - steam:1108590
+  requires: []
+  tiers:
+  - 2
 - name: 'Soulstice: Deluxe Edition'
   ids:
   - unresolved:source:isthereanydeal:16213:soulstice-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: Hellpoint
   ids:
   - steam:628670
+  requires: []
+  tiers:
+  - 2
 - name: Blade of Darkness
   ids:
   - steam:1710170
+  requires: []
+  tiers:
+  - 2
 - name: BLACKTAIL
   ids:
   - steam:1532690
+  requires: []
+  tiers:
+  - 2
 - name: The Last Hero of Nostalgaia
   ids:
   - steam:1766100
+  requires: []
+  tiers:
+  - 2

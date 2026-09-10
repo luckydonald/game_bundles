@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 4X Xplore, Xpand, Xploit, Xterminate — 8 games, 13 DLC, 5 coupons
-tier: 2
+name: 4X Xplore, Xpand, Xploit, Xterminate
+tiers:
+- rank: 2
+  name: 8 games, 13 DLC, 5 coupons
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16195/
@@ -13,63 +15,126 @@ games:
 - name: Endless Legend™ - Shifters
   ids:
   - steam:451050
+  requires: []
+  tiers:
+  - 2
 - name: 'Thea 2: The Shattering'
   ids:
   - steam:606230
+  requires: []
+  tiers:
+  - 2
 - name: Endless Legend
   ids:
   - steam:289130
+  requires: []
+  tiers:
+  - 2
 - name: 'Interstellar Space: Genesis'
   ids:
   - steam:984680
+  requires: []
+  tiers:
+  - 2
 - name: AI War 2
   ids:
   - steam:573410
+  requires: []
+  tiers:
+  - 2
 - name: Endless Legend™ - The Lost Tales
   ids:
   - steam:415710
+  requires: []
+  tiers:
+  - 2
 - name: Endless Legend - Guardians
   ids:
   - steam:357360
+  requires: []
+  tiers:
+  - 2
 - name: 'AI War 2: The Spire Rises'
   ids:
   - steam:1196420
+  requires: []
+  tiers:
+  - 2
 - name: 'AI War 2: Zenith Onslaught'
   ids:
   - steam:1290340
+  requires: []
+  tiers:
+  - 2
 - name: 'AI War 2: The Neinzul Abyss'
   ids:
   - steam:1466780
+  requires: []
+  tiers:
+  - 2
 - name: Endless Legend™ - Monstrous Tales
   ids:
   - steam:1523740
+  requires: []
+  tiers:
+  - 2
 - name: Distant Worlds 2
   ids:
   - steam:1531540
+  requires: []
+  tiers:
+  - 2
 - name: Songs Of Silence
   ids:
   - steam:2195410
+  requires: []
+  tiers:
+  - 2
 - name: Rogue Hex
   ids:
   - steam:2275940
+  requires: []
+  tiers:
+  - 2
 - name: 'Interstellar Space: Genesis - Natural Law'
   ids:
   - steam:1419960
+  requires: []
+  tiers:
+  - 2
 - name: 'Interstellar Space: Genesis - Evolving Empires'
   ids:
   - steam:1974170
+  requires: []
+  tiers:
+  - 2
 - name: 'Distant Worlds 2: Factions - Ikkuro and Dhayut'
   ids:
   - steam:2140010
+  requires: []
+  tiers:
+  - 2
 - name: 'Interstellar Space: Genesis - Terrains Pack'
   ids:
   - steam:2783160
+  requires: []
+  tiers:
+  - 2
 - name: Songs of Silence - Lighteaters
   ids:
   - steam:3400120
+  requires: []
+  tiers:
+  - 2
 - name: 'Elemental: Reforged'
   ids:
   - steam:3796960
+  requires: []
+  tiers:
+  - 2
 - name: 'Songs of Silence: Celestial Church Expansion'
   ids:
   - steam:4179260
+  requires: []
+  tiers:
+  - 2

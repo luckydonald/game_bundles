@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'WARHAMMER COLLECTION: BOLTS & BLADES — For the Emperor!'
-tier: 4
+name: 'WARHAMMER COLLECTION: BOLTS & BLADES'
+tiers:
+- rank: 4
+  name: For the Emperor!
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/warhammer-collection-bolts-blades/
@@ -16,27 +18,41 @@ games:
   ids:
   - steam:sub/79384
   requires: []
+  tiers:
+  - 4
 - name: Warhammer Vermintide 2
   ids:
   - steam:552500
   requires: []
+  tiers:
+  - 4
 - name: Necromunda Hired Gun
   ids:
   - steam:1222370
   requires: []
+  tiers:
+  - 4
 - name: 'Warhammer Age of Sigmar: Realms of Ruin'
   ids:
   - steam:1844380
   requires: []
+  tiers:
+  - 4
 - name: 'Warhammer 40.000: Chaos Gate Daemonhunters'
   ids:
   - steam:1611910
   requires: []
+  tiers:
+  - 4
 - name: 'Warhammer 40,000: Boltgun'
   ids:
   - steam:2005010
   requires: []
+  tiers:
+  - 4
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:
   - steam:2186680
   requires: []
+  tiers:
+  - 4

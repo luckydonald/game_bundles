@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: VRKiwi Complete Collection Bundle — entire-12-item-bundle
-tier: 2
+name: VRKiwi Complete Collection Bundle
+tiers:
+- rank: 2
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16080/
@@ -13,36 +15,72 @@ games:
 - name: ArtPulse
   ids:
   - steam:1229190
+  requires: []
+  tiers:
+  - 2
 - name: OPERATION SERPENS
   ids:
   - steam:1364340
+  requires: []
+  tiers:
+  - 2
 - name: 'Seeker: My Shadow'
   ids:
   - steam:1253930
+  requires: []
+  tiers:
+  - 2
 - name: Ashen Arrows
   ids:
   - steam:1947240
+  requires: []
+  tiers:
+  - 2
 - name: 'Survivorman VR: The Descent'
   ids:
   - steam:2185160
+  requires: []
+  tiers:
+  - 2
 - name: LOFI Katana
   ids:
   - steam:1723680
+  requires: []
+  tiers:
+  - 2
 - name: Towers & Powers
   ids:
   - steam:2501980
+  requires: []
+  tiers:
+  - 2
 - name: Cave Digger
   ids:
   - steam:844380
+  requires: []
+  tiers:
+  - 2
 - name: 'Pirates VR: Jolly Roger'
   ids:
   - steam:1443620
+  requires: []
+  tiers:
+  - 2
 - name: 'Cave Digger 2: Dig Harder'
   ids:
   - steam:1523510
+  requires: []
+  tiers:
+  - 2
 - name: Virtual Hunter
   ids:
   - steam:1549850
+  requires: []
+  tiers:
+  - 2
 - name: Stilt
   ids:
   - steam:2482270
+  requires: []
+  tiers:
+  - 2

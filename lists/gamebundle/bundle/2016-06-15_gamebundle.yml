@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Spring Into Summer GameBundle — Beat The Average + $0.50
-tier: 3
+name: Spring Into Summer GameBundle
+tiers:
+- rank: 3
+  name: Beat The Average + $0.50
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3587/
@@ -13,27 +15,54 @@ games:
 - name: 'Doctor Who: The Adventure Games'
   ids:
   - unresolved:source:isthereanydeal:3587:doctor-who-the-adventure-games
+  requires: []
+  tiers:
+  - 3
 - name: Space Station Alpha
   ids:
   - steam:341930
+  requires: []
+  tiers:
+  - 3
 - name: Story Of the Survivor
   ids:
   - steam:440950
+  requires: []
+  tiers:
+  - 3
 - name: Velocibox
   ids:
   - steam:317710
+  requires: []
+  tiers:
+  - 3
 - name: Expert Rifleman - Reloaded
   ids:
   - steam:383590
+  requires: []
+  tiers:
+  - 3
 - name: Top Hat
   ids:
   - steam:315940
+  requires: []
+  tiers:
+  - 3
 - name: Victory At Sea
   ids:
   - steam:298480
+  requires: []
+  tiers:
+  - 3
 - name: League of Mermaids
   ids:
   - steam:383950
+  requires: []
+  tiers:
+  - 3
 - name: JUJU
   ids:
   - steam:300840
+  requires: []
+  tiers:
+  - 3

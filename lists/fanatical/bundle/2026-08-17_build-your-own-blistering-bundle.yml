@@ -1,8 +1,10 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Build Your Own Blistering Bundle — pick 10
-tier: 3
-pick_quota: 10
+name: Build Your Own Blistering Bundle
+tiers:
+- rank: 3
+  name: pick 10
+  pick_quota: 10
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16487/
@@ -18,93 +20,131 @@ games:
   - steam:33610
   - isthereanydeal:broken-sword-3-the-sleeping-dragon
   requires: []
+  tiers:
+  - 3
 - name: 'Broken Sword 2 - The Smoking Mirror: Remastered'
   ids:
   - steam:33600
   - isthereanydeal:broken-sword-2-the-smoking-mirror-remastered
   requires: []
+  tiers:
+  - 3
 - name: 'Broken Sword 4: The Angel of Death'
   ids:
   - steam:316160
   - isthereanydeal:broken-sword-4-the-angel-of-death
   requires: []
+  tiers:
+  - 3
 - name: pureya
   ids:
   - steam:1268960
   - isthereanydeal:pureya
   requires: []
+  tiers:
+  - 3
 - name: FOBIA - St. Dinfna Hotel
   ids:
   - steam:1298140
   - isthereanydeal:fobia-st-dinfna-hotel
   requires: []
+  tiers:
+  - 3
 - name: Teratopia
   ids:
   - steam:1338100
   - isthereanydeal:teratopia
   requires: []
+  tiers:
+  - 3
 - name: Night Loops
   ids:
   - steam:1826060
   - isthereanydeal:night-loops
   requires: []
+  tiers:
+  - 3
 - name: Cosmic Waves
   ids:
   - steam:2292540
   - isthereanydeal:cosmic-waves
   requires: []
+  tiers:
+  - 3
 - name: Painted Peril
   ids:
   - steam:2428920
   - isthereanydeal:painted-peril
   requires: []
+  tiers:
+  - 3
 - name: Skye Tales
   ids:
   - steam:2138300
   - isthereanydeal:skye-tales
   requires: []
+  tiers:
+  - 3
 - name: Dino Market
   ids:
   - steam:3098750
   - isthereanydeal:dino-market
   requires: []
+  tiers:
+  - 3
 - name: Mauri Mursu's Odyssey
   ids:
   - steam:3207480
   - isthereanydeal:mauri-mursus-odyssey
   requires: []
+  tiers:
+  - 3
 - name: Destroyer Burger
   ids:
   - steam:3261200
   - isthereanydeal:destroyer-burger
   requires: []
+  tiers:
+  - 3
 - name: Replicube
   ids:
   - steam:3401490
   - isthereanydeal:replicube
   requires: []
+  tiers:
+  - 3
 - name: Bad Janitor
   ids:
   - steam:3474420
   - isthereanydeal:bad-janitor
   requires: []
+  tiers:
+  - 3
 - name: Side Effects
   ids:
   - steam:3799100
   - isthereanydeal:side-effects
   requires: []
+  tiers:
+  - 3
 - name: Loophole
   ids:
   - steam:3629400
   - isthereanydeal:loophole
   requires: []
+  tiers:
+  - 3
 - name: Ultimate Drummer
   ids:
   - steam:3646020
   - isthereanydeal:ultimate-drummer
   requires: []
+  tiers:
+  - 3
 - name: White Cat Knight / 白猫骑士物语
   ids:
   - steam:2421540
   - isthereanydeal:white-cat-knight-bai-mao-qi-shi-wu-yu
   requires: []
+  tiers:
+  - 3

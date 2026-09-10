@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Flaming Indie Steam Bundle — Tier 2
-tier: 2
+name: Flaming Indie Steam Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6319/
@@ -13,33 +15,66 @@ games:
 - name: Spaceguard 80
   ids:
   - steam:676180
+  requires: []
+  tiers:
+  - 2
 - name: Battle Simulator
   ids:
   - steam:879670
+  requires: []
+  tiers:
+  - 2
 - name: Outrunner 2
   ids:
   - unresolved:source:isthereanydeal:6319:outrunner-2
+  requires: []
+  tiers:
+  - 2
 - name: Flamebound
   ids:
   - unresolved:source:isthereanydeal:6319:flamebound
+  requires: []
+  tiers:
+  - 2
 - name: 'Shadows on the Vatican - Act II: Wrath'
   ids:
   - steam:378630
+  requires: []
+  tiers:
+  - 2
 - name: Flaming Pixels
   ids:
   - unresolved:source:isthereanydeal:6319:flaming-pixels
+  requires: []
+  tiers:
+  - 2
 - name: 'Sonya: The Great Adventure'
   ids:
   - steam:558780
+  requires: []
+  tiers:
+  - 2
 - name: I was rebuilt
   ids:
   - steam:560080
+  requires: []
+  tiers:
+  - 2
 - name: Circle Up
   ids:
   - steam:663410
+  requires: []
+  tiers:
+  - 2
 - name: The Pirates of Sector 7
   ids:
   - steam:877270
+  requires: []
+  tiers:
+  - 2
 - name: Sol Trader
   ids:
   - steam:396680
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Tiny Mix Bundle — BTA
-tier: 2
+name: Tiny Mix Bundle
+tiers:
+- rank: 2
+  name: BTA
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/758/
@@ -13,33 +15,66 @@ games:
 - name: Hexcells Plus
   ids:
   - steam:271900
+  requires: []
+  tiers:
+  - 2
 - name: POSTAL
   ids:
   - steam:232770
+  requires: []
+  tiers:
+  - 2
 - name: Sylia - Act I
   ids:
   - unresolved:source:isthereanydeal:758:sylia-act-i
+  requires: []
+  tiers:
+  - 2
 - name: Poöf vs The Cursed Kitty
   ids:
   - steam:243280
+  requires: []
+  tiers:
+  - 2
 - name: Gravi
   ids:
   - steam:247310
+  requires: []
+  tiers:
+  - 2
 - name: Truck Racer
   ids:
   - steam:256070
+  requires: []
+  tiers:
+  - 2
 - name: 'Ethan: Meteor Hunter'
   ids:
   - steam:266330
+  requires: []
+  tiers:
+  - 2
 - name: Grimind
   ids:
   - steam:265380
+  requires: []
+  tiers:
+  - 2
 - name: 'Aveyond: Lord of Twilight'
   ids:
   - steam:272010
+  requires: []
+  tiers:
+  - 2
 - name: 'Helicopter Simulator 2014: Search and Rescue'
   ids:
   - steam:266290
+  requires: []
+  tiers:
+  - 2
 - name: Angvik
   ids:
   - steam:278890
+  requires: []
+  tiers:
+  - 2

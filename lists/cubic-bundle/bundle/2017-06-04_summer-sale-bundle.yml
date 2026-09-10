@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Summer Sale Bundle — Tier 2
-tier: 2
+name: Summer Sale Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5177/
@@ -13,36 +15,72 @@ games:
 - name: Jackal
   ids:
   - steam:3124230
+  requires: []
+  tiers:
+  - 2
 - name: Cavern Escape Extremely Hard game!!!
   ids:
   - steam:546400
+  requires: []
+  tiers:
+  - 2
 - name: Jumping Tank
   ids:
   - unresolved:source:isthereanydeal:5177:jumping-tank
+  requires: []
+  tiers:
+  - 2
 - name: Etaria | Survival Adventure
   ids:
   - unresolved:source:isthereanydeal:5177:etaria-survival-adventure
+  requires: []
+  tiers:
+  - 2
 - name: Socxel | Pixel Soccer
   ids:
   - unresolved:source:isthereanydeal:5177:socxel-pixel-soccer
+  requires: []
+  tiers:
+  - 2
 - name: Chicken Assassin - Master of Humiliation
   ids:
   - unresolved:source:isthereanydeal:5177:chicken-assassin-master-of-humiliation
+  requires: []
+  tiers:
+  - 2
 - name: Call to 10
   ids:
   - unresolved:source:isthereanydeal:5177:call-to-10
+  requires: []
+  tiers:
+  - 2
 - name: Beerman
   ids:
   - steam:508950
+  requires: []
+  tiers:
+  - 2
 - name: Hoplite
   ids:
   - unresolved:source:isthereanydeal:5177:hoplite
+  requires: []
+  tiers:
+  - 2
 - name: Nuclear Contingency
   ids:
   - steam:540900
+  requires: []
+  tiers:
+  - 2
 - name: 'Unforgiving Trials: The Space Crusade'
   ids:
   - steam:535760
+  requires: []
+  tiers:
+  - 2
 - name: Bootombaa!!!
   ids:
   - unresolved:source:isthereanydeal:5177:bootombaa
+  requires: []
+  tiers:
+  - 2

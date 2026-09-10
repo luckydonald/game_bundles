@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Pizza Bundle (Remute 18) — Tier 2
-tier: 2
+name: The Pizza Bundle (Remute 18)
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5057/
@@ -13,27 +15,54 @@ games:
 - name: RaGaBa
   ids:
   - unresolved:source:isthereanydeal:5057:ragaba
+  requires: []
+  tiers:
+  - 2
 - name: The Adventures Of Fatman
   ids:
   - steam:395250
+  requires: []
+  tiers:
+  - 2
 - name: PushGo
   ids:
   - unresolved:source:isthereanydeal:5057:pushgo
+  requires: []
+  tiers:
+  - 2
 - name: ALEA
   ids:
   - steam:799770
+  requires: []
+  tiers:
+  - 2
 - name: Macbat 64
   ids:
   - steam:568040
+  requires: []
+  tiers:
+  - 2
 - name: Permute
   ids:
   - steam:575630
+  requires: []
+  tiers:
+  - 2
 - name: Ben The Exorcist
   ids:
   - steam:654020
+  requires: []
+  tiers:
+  - 2
 - name: The Abomination by Eclipsing Binary
   ids:
   - unresolved:source:isthereanydeal:5057:the-abomination-by-eclipsing-binary
+  requires: []
+  tiers:
+  - 2
 - name: Pizza Connection
   ids:
   - steam:598990
+  requires: []
+  tiers:
+  - 2

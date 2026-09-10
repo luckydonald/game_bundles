@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Frogware's Lovecraft & Sherlock Classics  Bundle — entire-12-item-bundle
-tier: 3
+name: Frogware's Lovecraft & Sherlock Classics  Bundle
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15583/
@@ -13,36 +15,72 @@ games:
 - name: Sherlock Holmes - Nemesis
   ids:
   - steam:11040
+  requires: []
+  tiers:
+  - 3
 - name: Sherlock Holmes versus Jack the Ripper
   ids:
   - steam:11190
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: The Silver Earring'
   ids:
   - steam:11150
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: The Mystery of the Persian Carpet'
   ids:
   - steam:11180
+  requires: []
+  tiers:
+  - 3
 - name: Sherlock Holmes and The Hound of The Baskervilles
   ids:
   - steam:209230
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: The Awakened (2008)'
   ids:
   - steam:11140
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: Crimes and Punishments'
   ids:
   - steam:241260
+  requires: []
+  tiers:
+  - 3
 - name: The Testament of Sherlock Holmes
   ids:
   - steam:205650
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: The Devil''s Daughter'
   ids:
   - steam:350640
+  requires: []
+  tiers:
+  - 3
 - name: Sherlock Holmes - The Awakened
   ids:
   - steam:1949030
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: Chapter One'
   ids:
   - steam:1137300
+  requires: []
+  tiers:
+  - 3
 - name: The Sinking City Remastered
   ids:
   - steam:750130
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Game Creators Bundle — Tier 3
-tier: 3
+name: The Game Creators Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10489/
@@ -13,60 +15,120 @@ games:
 - name: GameGuru
   ids:
   - steam:266310
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 3
   ids:
   - steam:321142
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 2
   ids:
   - steam:321141
+  requires: []
+  tiers:
+  - 3
 - name: Fungoids
   ids:
   - steam:663480
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Mega Pack 1
   ids:
   - steam:321140
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Buildings Pack
   ids:
   - steam:365520
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Sci-Fi Mission to Mars Pack
   ids:
   - steam:404570
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Giant Asset Pack 1
   ids:
   - unresolved:source:isthereanydeal:10489:appgamekit-giant-asset-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: Solar Wind
   ids:
   - steam:756630
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Construction Site Pack
   ids:
   - steam:854050
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Classic
   ids:
   - unresolved:source:isthereanydeal:10489:appgamekit-classic
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit - Games Pack 2
   ids:
   - unresolved:source:isthereanydeal:10489:appgamekit-games-pack-2
+  requires: []
+  tiers:
+  - 3
 - name: The Eye of Borrack
   ids:
   - steam:1170960
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru Fantasy Pack
   ids:
   - steam:365530
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Antiques In The Attic Pack
   ids:
   - steam:935590
+  requires: []
+  tiers:
+  - 3
 - name: Solstice
   ids:
   - steam:317280
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Studio
   ids:
   - steam:1024640
+  requires: []
+  tiers:
+  - 3
 - name: AppGameKit Studio - MEGA Media Pack
   ids:
   - steam:1107700
+  requires: []
+  tiers:
+  - 3
 - name: GameGuru - Military Pack
   ids:
   - steam:1150680
+  requires: []
+  tiers:
+  - 3
 - name: Stranded 2
   ids:
   - steam:1437170
+  requires: []
+  tiers:
+  - 3

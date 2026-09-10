@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #60 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #60'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6590/
@@ -13,33 +15,66 @@ games:
 - name: One Piu Day
   ids:
   - steam:907220
+  requires: []
+  tiers:
+  - 2
 - name: Money Master
   ids:
   - steam:929460
+  requires: []
+  tiers:
+  - 2
 - name: The Cat and the Coup (4K Remaster)
   ids:
   - unresolved:source:isthereanydeal:6590:the-cat-and-the-coup-4k-remaster
+  requires: []
+  tiers:
+  - 2
 - name: GROOD
   ids:
   - steam:793630
+  requires: []
+  tiers:
+  - 2
 - name: Lost Cosmonauts ARG
   ids:
   - unresolved:source:isthereanydeal:6590:lost-cosmonauts-arg
+  requires: []
+  tiers:
+  - 2
 - name: Owari
   ids:
   - steam:547140
+  requires: []
+  tiers:
+  - 2
 - name: In memory of TITAN
   ids:
   - steam:787780
+  requires: []
+  tiers:
+  - 2
 - name: Ms. Squeaker's Home for the Sick
   ids:
   - steam:936700
+  requires: []
+  tiers:
+  - 2
 - name: Sea Explorer
   ids:
   - steam:846210
+  requires: []
+  tiers:
+  - 2
 - name: Minaurs
   ids:
   - steam:763750
+  requires: []
+  tiers:
+  - 2
 - name: Stones of Yalmrith
   ids:
   - steam:867080
+  requires: []
+  tiers:
+  - 2

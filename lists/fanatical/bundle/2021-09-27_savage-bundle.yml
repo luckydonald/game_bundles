@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Savage Bundle — Tier 2
-tier: 2
+name: Savage Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10516/
@@ -13,36 +15,72 @@ games:
 - name: CastleStorm
   ids:
   - steam:241410
+  requires: []
+  tiers:
+  - 2
 - name: Semblance
   ids:
   - steam:700160
+  requires: []
+  tiers:
+  - 2
 - name: Crush Your Enemies
   ids:
   - steam:406850
+  requires: []
+  tiers:
+  - 2
 - name: 'Hard West: Scars of Freedom'
   ids:
   - steam:441700
+  requires: []
+  tiers:
+  - 2
 - name: The World Next Door
   ids:
   - steam:755470
+  requires: []
+  tiers:
+  - 2
 - name: Oxenfree
   ids:
   - steam:388880
+  requires: []
+  tiers:
+  - 2
 - name: 'Masquerada: Songs and Shadows'
   ids:
   - steam:459090
+  requires: []
+  tiers:
+  - 2
 - name: Verdant Skies
   ids:
   - steam:730050
+  requires: []
+  tiers:
+  - 2
 - name: The Shrouded Isle
   ids:
   - steam:501320
+  requires: []
+  tiers:
+  - 2
 - name: Lornsword Winter Chronicle
   ids:
   - steam:960900
+  requires: []
+  tiers:
+  - 2
 - name: Hard West Collector's Edition
   ids:
   - steam:307670
+  requires: []
+  tiers:
+  - 2
 - name: OUTBUDDIES DX
   ids:
   - steam:1083310
+  requires: []
+  tiers:
+  - 2

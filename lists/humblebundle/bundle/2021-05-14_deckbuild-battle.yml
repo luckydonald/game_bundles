@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Deckbuild & Battle Bundle — entire-7-item-bundle
-tier: 3
+name: Humble Deckbuild & Battle Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10022/
@@ -13,21 +15,42 @@ games:
 - name: 'Thea: The Awakening'
   ids:
   - steam:378720
+  requires: []
+  tiers:
+  - 3
 - name: 'SteamWorld Quest: Hand of Gilgamech'
   ids:
   - steam:804010
+  requires: []
+  tiers:
+  - 3
 - name: Cultist Simulator
   ids:
   - steam:718670
+  requires: []
+  tiers:
+  - 3
 - name: 'Thea 2: The Shattering'
   ids:
   - steam:606230
+  requires: []
+  tiers:
+  - 3
 - name: 'Imperator: Rome'
   ids:
   - steam:859580
+  requires: []
+  tiers:
+  - 3
 - name: NEOVERSE
   ids:
   - steam:994220
+  requires: []
+  tiers:
+  - 3
 - name: Fantasy General II
   ids:
   - steam:1025440
+  requires: []
+  tiers:
+  - 3

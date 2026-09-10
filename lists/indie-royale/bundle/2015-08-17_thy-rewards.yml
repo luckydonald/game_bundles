@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Thy Rewards — 30 Bundles Purchased
-tier: 5
+name: Thy Rewards
+tiers:
+- rank: 5
+  name: 30 Bundles Purchased
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2337/
@@ -13,15 +15,30 @@ games:
 - name: Super Space Rubbish
   ids:
   - unresolved:source:isthereanydeal:2337:super-space-rubbish
+  requires: []
+  tiers:
+  - 5
 - name: Fireball
   ids:
   - steam:3017070
+  requires: []
+  tiers:
+  - 5
 - name: Corril Slayer
   ids:
   - unresolved:source:isthereanydeal:2337:corril-slayer
+  requires: []
+  tiers:
+  - 5
 - name: Pushcat
   ids:
   - steam:308440
+  requires: []
+  tiers:
+  - 5
 - name: 'Dino Run: Marathon of Doom'
   ids:
   - unresolved:source:isthereanydeal:2337:dino-run-marathon-of-doom
+  requires: []
+  tiers:
+  - 5

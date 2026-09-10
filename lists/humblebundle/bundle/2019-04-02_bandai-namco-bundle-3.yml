@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bandai Namco Bundle 3 — entire-10-item-bundle
-tier: 4
+name: Humble Bandai Namco Bundle 3
+tiers:
+- rank: 4
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7259/
@@ -13,30 +15,60 @@ games:
 - name: 'Enslaved: Odyssey to the West Premium Edition'
   ids:
   - steam:245280
+  requires: []
+  tiers:
+  - 4
 - name: PAC-MAN Championship Edition DX+
   ids:
   - steam:236450
+  requires: []
+  tiers:
+  - 4
 - name: Impact Winter
   ids:
   - unresolved:source:isthereanydeal:7259:impact-winter
+  requires: []
+  tiers:
+  - 4
 - name: Project CARS
   ids:
   - unresolved:source:isthereanydeal:7259:project-cars
+  requires: []
+  tiers:
+  - 4
 - name: Get Even
   ids:
   - steam:299950
+  requires: []
+  tiers:
+  - 4
 - name: 11-11 Memories Retold
   ids:
   - steam:735580
+  requires: []
+  tiers:
+  - 4
 - name: Little Nightmares
   ids:
   - steam:424840
+  requires: []
+  tiers:
+  - 4
 - name: GOD EATER 2 Rage Burst
   ids:
   - steam:438490
+  requires: []
+  tiers:
+  - 4
 - name: 'Sword Art Online: Fatal Bullet'
   ids:
   - steam:626690
+  requires: []
+  tiers:
+  - 4
 - name: TEKKEN 7
   ids:
   - steam:389730
+  requires: []
+  tiers:
+  - 4

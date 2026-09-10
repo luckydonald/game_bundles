@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Sekai Project Bundle — Pay $12 or more to also unlock!
-tier: 3
+name: Humble Sekai Project Bundle
+tiers:
+- rank: 3
+  name: Pay $12 or more to also unlock!
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5187/
@@ -13,51 +15,102 @@ games:
 - name: Ame no Marginal -Rain Marginal
   ids:
   - steam:348950
+  requires: []
+  tiers:
+  - 3
 - name: KARAKARA
   ids:
   - steam:487430
+  requires: []
+  tiers:
+  - 3
 - name: NEKOPARA Vol. 0
   ids:
   - steam:385800
+  requires: []
+  tiers:
+  - 3
 - name: fault milestone one
   ids:
   - steam:286260
+  requires: []
+  tiers:
+  - 3
 - name: Highway Blossoms
   ids:
   - steam:451760
+  requires: []
+  tiers:
+  - 3
 - name: Japanese School Life
   ids:
   - steam:555640
+  requires: []
+  tiers:
+  - 3
 - name: Idol Magical Girl Chiru Chiru Michiru Part 1
   ids:
   - steam:377710
+  requires: []
+  tiers:
+  - 3
 - name: fault milestone two side:above
   ids:
   - steam:344770
+  requires: []
+  tiers:
+  - 3
 - name: NEKOPARA Vol. 1
   ids:
   - steam:333600
+  requires: []
+  tiers:
+  - 3
 - name: Narcissu 10th Anniversary Anthology Project
   ids:
   - steam:426690
+  requires: []
+  tiers:
+  - 3
 - name: Sound of Drop - fall into poison
   ids:
   - steam:383460
+  requires: []
+  tiers:
+  - 3
 - name: Idol Magical Girl Chiru Chiru Michiru Part 2
   ids:
   - steam:377720
+  requires: []
+  tiers:
+  - 3
 - name: Root Double- Before Crime * After Days- Xtend Edition
   ids:
   - steam:438130
+  requires: []
+  tiers:
+  - 3
 - name: 'Sunrider: Liberation Day - Captain''s Edition'
   ids:
   - steam:358750
+  requires: []
+  tiers:
+  - 3
 - name: NEKOPARA Vol. 2
   ids:
   - steam:420110
+  requires: []
+  tiers:
+  - 3
 - name: WORLD END ECONOMiCA -complete
   ids:
   - unresolved:source:isthereanydeal:5187:world-end-economica-complete
+  requires: []
+  tiers:
+  - 3
 - name: Memory's Dogma CODE:01
   ids:
   - steam:386970
+  requires: []
+  tiers:
+  - 3

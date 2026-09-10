@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: IObit Software Bundle 2 — Tier 3
-tier: 3
+name: IObit Software Bundle 2
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10269/
@@ -13,24 +15,48 @@ games:
 - name: Start Menu 8 pro
   ids:
   - unresolved:source:isthereanydeal:10269:start-menu-8-pro
+  requires: []
+  tiers:
+  - 3
 - name: Protected Folder Pro
   ids:
   - unresolved:source:isthereanydeal:10269:protected-folder-pro
+  requires: []
+  tiers:
+  - 3
 - name: Driver Booster 8 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:driver-booster-8-pro
+  requires: []
+  tiers:
+  - 3
 - name: Advanced SystemCare 14 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:advanced-systemcare-14-pro
+  requires: []
+  tiers:
+  - 3
 - name: IObit Uninstaller 10 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:iobit-uninstaller-10-pro
+  requires: []
+  tiers:
+  - 3
 - name: iFun Screen Recorder PRO
   ids:
   - unresolved:source:isthereanydeal:10269:ifun-screen-recorder-pro
+  requires: []
+  tiers:
+  - 3
 - name: IObit Software Updater 4 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:iobit-software-updater-4-pro
+  requires: []
+  tiers:
+  - 3
 - name: MacBooster 8 PRO
   ids:
   - unresolved:source:isthereanydeal:10269:macbooster-8-pro
+  requires: []
+  tiers:
+  - 3

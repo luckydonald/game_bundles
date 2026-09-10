@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mighty Monday GameBundle 2 — Beat The Average + $0.20
-tier: 3
+name: The Mighty Monday GameBundle 2
+tiers:
+- rank: 3
+  name: Beat The Average + $0.20
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4345/
@@ -13,24 +15,48 @@ games:
 - name: Roogoo
   ids:
   - steam:38210
+  requires: []
+  tiers:
+  - 3
 - name: Castle Chaos
   ids:
   - steam:412410
+  requires: []
+  tiers:
+  - 3
 - name: Stronghold 3 Gold Edition
   ids:
   - unresolved:source:isthereanydeal:4345:stronghold-3-gold-edition
+  requires: []
+  tiers:
+  - 3
 - name: House of Snark 6-in-1 Bundle
   ids:
   - steam:486810
+  requires: []
+  tiers:
+  - 3
 - name: Robin's Island Adventure
   ids:
   - steam:323260
+  requires: []
+  tiers:
+  - 3
 - name: Fleeting Ages
   ids:
   - steam:373880
+  requires: []
+  tiers:
+  - 3
 - name: Hidden Object Bundle 5 in 1
   ids:
   - steam:346140
+  requires: []
+  tiers:
+  - 3
 - name: Hexus
   ids:
   - steam:323250
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble 15: Indie Icons Showcase Bundle — entire-8-item-bundle'
-tier: 3
+name: 'Humble 15: Indie Icons Showcase Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16153/
@@ -13,24 +15,48 @@ games:
 - name: Starbound
   ids:
   - steam:211820
+  requires: []
+  tiers:
+  - 3
 - name: Celeste
   ids:
   - steam:504230
+  requires: []
+  tiers:
+  - 3
 - name: Slime Rancher
   ids:
   - steam:433340
+  requires: []
+  tiers:
+  - 3
 - name: The Witness
   ids:
   - steam:210970
+  requires: []
+  tiers:
+  - 3
 - name: SUPERHOT
   ids:
   - steam:322500
+  requires: []
+  tiers:
+  - 3
 - name: Citizen Sleeper
   ids:
   - steam:1578650
+  requires: []
+  tiers:
+  - 3
 - name: 'Bloodstained: Ritual of the Night'
   ids:
   - steam:692850
+  requires: []
+  tiers:
+  - 3
 - name: Risk of Rain Returns
   ids:
   - steam:1337520
+  requires: []
+  tiers:
+  - 3

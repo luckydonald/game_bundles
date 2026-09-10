@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #61 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #61'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5786/
@@ -13,30 +15,60 @@ games:
 - name: Bottle
   ids:
   - steam:2384850
+  requires: []
+  tiers:
+  - 2
 - name: Dark Days
   ids:
   - steam:422020
+  requires: []
+  tiers:
+  - 2
 - name: DeathMetal
   ids:
   - steam:553820
+  requires: []
+  tiers:
+  - 2
 - name: 'Space Merchants: Arena'
   ids:
   - steam:548080
+  requires: []
+  tiers:
+  - 2
 - name: 'Squareboy vs Bullies: Arena Edition'
   ids:
   - steam:709620
+  requires: []
+  tiers:
+  - 2
 - name: 'Gemini: Heroes Reborn'
   ids:
   - steam:324650
+  requires: []
+  tiers:
+  - 2
 - name: 'Drizzlepath: Genie'
   ids:
   - steam:438340
+  requires: []
+  tiers:
+  - 2
 - name: Project Remedium
   ids:
   - steam:475090
+  requires: []
+  tiers:
+  - 2
 - name: Until None Remain
   ids:
   - unresolved:source:isthereanydeal:5786:until-none-remain
+  requires: []
+  tiers:
+  - 2
 - name: Ancient Siberia
   ids:
   - unresolved:source:isthereanydeal:5786:ancient-siberia
+  requires: []
+  tiers:
+  - 2

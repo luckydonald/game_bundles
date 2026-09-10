@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble THQ Nordic Playstation Bundle — entire-15-item-bundle
-tier: 3
+name: Humble THQ Nordic Playstation Bundle
+tiers:
+- rank: 3
+  name: entire-15-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4977/
@@ -13,45 +15,90 @@ games:
 - name: Deponia
   ids:
   - steam:214340
+  requires: []
+  tiers:
+  - 3
 - name: Red Faction
   ids:
   - steam:20530
+  requires: []
+  tiers:
+  - 3
 - name: The Book of Unwritten Tales 2
   ids:
   - steam:279940
+  requires: []
+  tiers:
+  - 3
 - name: Super Dungeon Bros
   ids:
   - steam:306000
+  requires: []
+  tiers:
+  - 3
 - name: 'ArcaniA: The Complete Tale'
   ids:
   - unresolved:source:isthereanydeal:4977:arcania-the-complete-tale
+  requires: []
+  tiers:
+  - 3
 - name: Destroy All Humans! 2
   ids:
   - unresolved:source:isthereanydeal:4977:destroy-all-humans-2
+  requires: []
+  tiers:
+  - 3
 - name: Legend of Kay Anniversary
   ids:
   - steam:313810
+  requires: []
+  tiers:
+  - 3
 - name: Destroy All Humans
   ids:
   - steam:803330
+  requires: []
+  tiers:
+  - 3
 - name: 'Battle Worlds: Kronos'
   ids:
   - steam:237470
+  requires: []
+  tiers:
+  - 3
 - name: MX vs. ATV Supercross Encore Edition
   ids:
   - unresolved:source:isthereanydeal:4977:mx-vs-atv-supercross-encore-edition
+  requires: []
+  tiers:
+  - 3
 - name: MX vs. ATV Supercross
   ids:
   - unresolved:source:isthereanydeal:4977:mx-vs-atv-supercross
+  requires: []
+  tiers:
+  - 3
 - name: Darksiders Warmastered Edition
   ids:
   - steam:462780
+  requires: []
+  tiers:
+  - 3
 - name: Darksiders II
   ids:
   - unresolved:source:isthereanydeal:4977:darksiders-ii
+  requires: []
+  tiers:
+  - 3
 - name: Darksiders
   ids:
   - steam:50620
+  requires: []
+  tiers:
+  - 3
 - name: Darksiders II Deathinitive Edition
   ids:
   - steam:388410
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #67 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #67'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6129/
@@ -13,33 +15,66 @@ games:
 - name: Quanect
   ids:
   - steam:745940
+  requires: []
+  tiers:
+  - 2
 - name: Drop The Bomb
   ids:
   - unresolved:source:isthereanydeal:6129:drop-the-bomb
+  requires: []
+  tiers:
+  - 2
 - name: EXIST
   ids:
   - steam:804130
+  requires: []
+  tiers:
+  - 2
 - name: Mutant Fighting Cup 2
   ids:
   - steam:561450
+  requires: []
+  tiers:
+  - 2
 - name: TrickStyle
   ids:
   - steam:588490
+  requires: []
+  tiers:
+  - 2
 - name: Germination
   ids:
   - steam:428490
+  requires: []
+  tiers:
+  - 2
 - name: 'Myrne: The Quest'
   ids:
   - steam:589470
+  requires: []
+  tiers:
+  - 2
 - name: Nicky - The Home Alone Golf Ball
   ids:
   - steam:829370
+  requires: []
+  tiers:
+  - 2
 - name: Guardian
   ids:
   - steam:543150
+  requires: []
+  tiers:
+  - 2
 - name: Gorescript
   ids:
   - steam:618690
+  requires: []
+  tiers:
+  - 2
 - name: Extreme-G 2
   ids:
   - steam:582260
+  requires: []
+  tiers:
+  - 2

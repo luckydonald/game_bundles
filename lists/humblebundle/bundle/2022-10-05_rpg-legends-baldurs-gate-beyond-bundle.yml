@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'RPG Legends: Baldur&#39;s Gate & Beyond Bundle — entire-8-item-bundle'
-tier: 3
+name: 'RPG Legends: Baldur&#39;s Gate & Beyond Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12173/
@@ -13,24 +15,48 @@ games:
 - name: 'Icewind Dale: Enhanced Edition'
   ids:
   - steam:321800
+  requires: []
+  tiers:
+  - 3
 - name: 'Planescape: Torment: Enhanced Edition'
   ids:
   - steam:466300
+  requires: []
+  tiers:
+  - 3
 - name: 'Baldur''s Gate: Siege of Dragonspear'
   ids:
   - steam:385970
+  requires: []
+  tiers:
+  - 3
 - name: 'Baldur''s Gate II: Enhanced Edition'
   ids:
   - steam:257350
+  requires: []
+  tiers:
+  - 3
 - name: 'Baldur''s Gate: Enhanced Edition'
   ids:
   - steam:228280
+  requires: []
+  tiers:
+  - 3
 - name: 'Baldur''s Gate: Faces of Good and Evil'
   ids:
   - steam:687500
+  requires: []
+  tiers:
+  - 3
 - name: 'Neverwinter Nights: Complete Adventures'
   ids:
   - unresolved:source:isthereanydeal:12173:neverwinter-nights-complete-adventures
+  requires: []
+  tiers:
+  - 3
 - name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
   ids:
   - steam:1184370
+  requires: []
+  tiers:
+  - 3

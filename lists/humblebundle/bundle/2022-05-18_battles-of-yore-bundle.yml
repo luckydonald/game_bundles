@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Battles of Yore Bundle — entire-8-item-bundle
-tier: 3
+name: Battles of Yore Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11505/
@@ -13,24 +15,48 @@ games:
 - name: Tyranny - Deluxe Edition
   ids:
   - steam:362960
+  requires: []
+  tiers:
+  - 3
 - name: 'CROSSBOW: Bloodnight'
   ids:
   - steam:1329540
+  requires: []
+  tiers:
+  - 3
 - name: Ember
   ids:
   - steam:339580
+  requires: []
+  tiers:
+  - 3
 - name: 'Plebby Quest: The Crusades'
   ids:
   - steam:334310
+  requires: []
+  tiers:
+  - 3
 - name: 'Pathfinder: Kingmaker - The Wildcards'
   ids:
   - steam:900447
+  requires: []
+  tiers:
+  - 3
 - name: 'Pathfinder: Kingmaker - Royal Ascension'
   ids:
   - unresolved:source:isthereanydeal:11505:pathfinder-kingmaker-royal-ascension
+  requires: []
+  tiers:
+  - 3
 - name: Gordian Quest
   ids:
   - steam:981430
+  requires: []
+  tiers:
+  - 3
 - name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
   ids:
   - steam:640820
+  requires: []
+  tiers:
+  - 3

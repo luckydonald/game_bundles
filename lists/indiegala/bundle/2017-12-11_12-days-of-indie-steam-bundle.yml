@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 12 Days of Indie Bundle — Tier 2
-tier: 2
+name: 12 Days of Indie Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5709/
@@ -13,36 +15,72 @@ games:
 - name: Molemen Must Die!
   ids:
   - steam:602120
+  requires: []
+  tiers:
+  - 2
 - name: Over 9000 Zombies!
   ids:
   - steam:273500
+  requires: []
+  tiers:
+  - 2
 - name: Zombo Buster Rising
   ids:
   - steam:518730
+  requires: []
+  tiers:
+  - 2
 - name: Miner Meltdown
   ids:
   - steam:426190
+  requires: []
+  tiers:
+  - 2
 - name: Zup!
   ids:
   - steam:533300
+  requires: []
+  tiers:
+  - 2
 - name: 'The Deed: Dynasty'
   ids:
   - steam:460960
+  requires: []
+  tiers:
+  - 2
 - name: Zup! 2
   ids:
   - steam:562220
+  requires: []
+  tiers:
+  - 2
 - name: Aritana and the Harpy's Feather
   ids:
   - steam:314360
+  requires: []
+  tiers:
+  - 2
 - name: ClickRaid
   ids:
   - steam:658160
+  requires: []
+  tiers:
+  - 2
 - name: Star Vikings Forever
   ids:
   - steam:488960
+  requires: []
+  tiers:
+  - 2
 - name: Ara Fell
   ids:
   - unresolved:source:isthereanydeal:5709:ara-fell
+  requires: []
+  tiers:
+  - 2
 - name: POLYCRUSHER
   ids:
   - unresolved:source:isthereanydeal:5709:polycrusher
+  requires: []
+  tiers:
+  - 2

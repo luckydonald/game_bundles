@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: At-Home Arcade Bundle — entire-7-item-bundle
-tier: 2
+name: At-Home Arcade Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13340/
@@ -13,21 +15,42 @@ games:
 - name: Terror of Hemasaurus
   ids:
   - steam:1016180
+  requires: []
+  tiers:
+  - 2
 - name: Mortal Kombat 11 Ultimate
   ids:
   - unresolved:source:isthereanydeal:13340:mortal-kombat-11-ultimate
+  requires: []
+  tiers:
+  - 2
 - name: 'THE HOUSE OF THE DEAD: Remake'
   ids:
   - steam:1694600
+  requires: []
+  tiers:
+  - 2
 - name: 'Pinball FX - Indiana Jones™: The Pinball Adventure Legacy Bundle'
   ids:
   - unresolved:source:isthereanydeal:13340:pinball-fx-indiana-jones-the-pinball-adventure-legacy-bundle
+  requires: []
+  tiers:
+  - 2
 - name: River City Girls
   ids:
   - steam:1049320
+  requires: []
+  tiers:
+  - 2
 - name: Redout 2
   ids:
   - steam:1799930
+  requires: []
+  tiers:
+  - 2
 - name: TRAIL OUT
   ids:
   - steam:1664220
+  requires: []
+  tiers:
+  - 2

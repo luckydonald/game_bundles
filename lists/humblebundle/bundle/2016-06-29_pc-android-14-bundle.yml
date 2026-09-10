@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble PC & Android Bundle 14 — Beat The Average + $3.00
-tier: 3
+name: Humble PC & Android Bundle 14
+tiers:
+- rank: 3
+  name: Beat The Average + $3.00
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3642/
@@ -13,33 +15,66 @@ games:
 - name: 'BADLAND: Game of the Year Edition'
   ids:
   - steam:269670
+  requires: []
+  tiers:
+  - 3
 - name: 10,000,000
   ids:
   - steam:227580
+  requires: []
+  tiers:
+  - 3
 - name: SPACECOM
   ids:
   - steam:263860
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen & Paper +1 Edition
   ids:
   - steam:231740
+  requires: []
+  tiers:
+  - 3
 - name: Unmechanical
   ids:
   - steam:211180
+  requires: []
+  tiers:
+  - 3
 - name: Asdivine Hearts
   ids:
   - steam:406110
+  requires: []
+  tiers:
+  - 3
 - name: 'Spider: Rite of the Shrouded Moon'
   ids:
   - steam:278420
+  requires: []
+  tiers:
+  - 3
 - name: Please, Don't Touch Anything
   ids:
   - steam:354240
+  requires: []
+  tiers:
+  - 3
 - name: You Must Build A Boat
   ids:
   - steam:290890
+  requires: []
+  tiers:
+  - 3
 - name: Knights of Pen & Paper 2
   ids:
   - steam:310060
+  requires: []
+  tiers:
+  - 3
 - name: Desktop Dungeons
   ids:
   - steam:226620
+  requires: []
+  tiers:
+  - 3

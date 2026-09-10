@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: E3 2017 Digital Ticket Bundle — $15
-tier: 3
+name: E3 2017 Digital Ticket Bundle
+tiers:
+- rank: 3
+  name: $15
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5211/
@@ -13,67 +15,133 @@ games:
 - name: Gems of War - Demon Hunter Bundle
   ids:
   - steam:526300
+  requires: []
+  tiers:
+  - 3
 - name: SpellForce 3
   ids:
   - unresolved:source:isthereanydeal:5211:spellforce-3
+  requires: []
+  tiers:
+  - 3
 - name: Blade & Soul Shadow Guard Bundle
   ids:
   - unresolved:source:isthereanydeal:5211:blade-and-soul-shadow-guard-bundle
+  requires: []
+  tiers:
+  - 3
 - name: 'Gemini: Heroes Reborn'
   ids:
   - steam:324650
+  requires: []
+  tiers:
+  - 3
 - name: MXM Poharan Pack
   ids:
   - unresolved:source:isthereanydeal:5211:mxm-poharan-pack
+  requires: []
+  tiers:
+  - 3
 - name: Crossout - Thug Starter Pack
   ids:
   - unresolved:source:isthereanydeal:5211:crossout-thug-starter-pack
+  requires: []
+  tiers:
+  - 3
 - name: Tyranny - Portrait Pack
   ids:
   - steam:611370
+  requires: []
+  tiers:
+  - 3
 - name: Battle Island Commanders
   ids:
   - unresolved:source:isthereanydeal:5211:battle-island-commanders
+  requires: []
+  tiers:
+  - 3
 - name: 'Gotham City Impostors: Free To Play'
   ids:
   - unresolved:source:isthereanydeal:5211:gotham-city-impostors-free-to-play
+  requires: []
+  tiers:
+  - 3
 - name: Rock of Ages 2 - Classic Pack + Soundtrack
   ids:
   - steam:645970
+  requires: []
+  tiers:
+  - 3
 - name: HAWKEN - Prosk Starter Bundle
   ids:
   - unresolved:source:isthereanydeal:5211:hawken-prosk-starter-bundle
+  requires: []
+  tiers:
+  - 3
 - name: 'XCOM: Enemy Unknown - The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:5211:xcom-enemy-unknown-the-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: Robocraft - Eagle Pack
   ids:
   - unresolved:source:isthereanydeal:5211:robocraft-eagle-pack
+  requires: []
+  tiers:
+  - 3
 - name: Riders of Icarus - Heroic Ranger's Fury Package
   ids:
   - unresolved:source:isthereanydeal:5211:riders-of-icarus-heroic-rangers-fury-package
+  requires: []
+  tiers:
+  - 3
 - name: Ghost in the Shell Stand Alone Complex First Assault Online - First Connection
     Crate
   ids:
   - unresolved:source:isthereanydeal:5211:ghost-in-the-shell-stand-alone-complex-first-assault-online-first-conne-92033d22
+  requires: []
+  tiers:
+  - 3
 - name: Neverwinter - Gilded White Steed
   ids:
   - unresolved:source:isthereanydeal:5211:neverwinter-gilded-white-steed
+  requires: []
+  tiers:
+  - 3
 - name: Paragon - Gunslinger Pack
   ids:
   - unresolved:source:isthereanydeal:5211:paragon-gunslinger-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Total War: WARHAMMER - The Grim & The Grave'
   ids:
   - steam:404013
+  requires: []
+  tiers:
+  - 3
 - name: PAC-MAN™ Championship Edition 2
   ids:
   - steam:441380
+  requires: []
+  tiers:
+  - 3
 - name: Duke Nukem's Bulletstorm Tour
   ids:
   - steam:561730
+  requires: []
+  tiers:
+  - 3
 - name: HackyZack
   ids:
   - steam:508530
+  requires: []
+  tiers:
+  - 3
 - name: Verdun
   ids:
   - steam:242860
+  requires: []
+  tiers:
+  - 3

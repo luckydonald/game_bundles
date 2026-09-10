@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Honor & Blade Bundle — Tier 2
-tier: 2
+name: Honor & Blade Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7332/
@@ -13,27 +15,54 @@ games:
 - name: Hope For Village
   ids:
   - steam:1005630
+  requires: []
+  tiers:
+  - 2
 - name: 'Paper Shakespeare: Stick Julius Caesar (with a dagger)'
   ids:
   - unresolved:source:isthereanydeal:7332:paper-shakespeare-stick-julius-caesar-with-a-dagger
+  requires: []
+  tiers:
+  - 2
 - name: Static
   ids:
   - steam:1043560
+  requires: []
+  tiers:
+  - 2
 - name: Beach Rules
   ids:
   - steam:768880
+  requires: []
+  tiers:
+  - 2
 - name: 'Hanako: Honor & Blade'
   ids:
   - steam:349510
+  requires: []
+  tiers:
+  - 2
 - name: Cosa Nostra
   ids:
   - steam:954000
+  requires: []
+  tiers:
+  - 2
 - name: I Support Breast Cancer Research
   ids:
   - unresolved:source:isthereanydeal:7332:i-support-breast-cancer-research
+  requires: []
+  tiers:
+  - 2
 - name: 'Mortadelo y Filemón: Una aventura de cine - Edición especial'
   ids:
   - steam:1019580
+  requires: []
+  tiers:
+  - 2
 - name: Find Your Way
   ids:
   - unresolved:source:isthereanydeal:7332:find-your-way
+  requires: []
+  tiers:
+  - 2

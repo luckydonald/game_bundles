@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Survive This Bundle — entire-7-item-bundle
-tier: 3
+name: Humble Survive This Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3882/
@@ -13,21 +15,42 @@ games:
 - name: Tharsis
   ids:
   - steam:323060
+  requires: []
+  tiers:
+  - 3
 - name: Kholat
   ids:
   - steam:343710
+  requires: []
+  tiers:
+  - 3
 - name: Savage Lands
   ids:
   - steam:307880
+  requires: []
+  tiers:
+  - 3
 - name: Space Engineers
   ids:
   - steam:244850
+  requires: []
+  tiers:
+  - 3
 - name: Rust
   ids:
   - steam:252490
+  requires: []
+  tiers:
+  - 3
 - name: Shelter 2
   ids:
   - steam:275100
+  requires: []
+  tiers:
+  - 3
 - name: Planetbase
   ids:
   - steam:403190
+  requires: []
+  tiers:
+  - 3

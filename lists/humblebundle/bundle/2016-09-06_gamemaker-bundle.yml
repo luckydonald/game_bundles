@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Gamemaker Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Gamemaker Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4008/
@@ -13,42 +15,84 @@ games:
 - name: Uncanny Valley
   ids:
   - steam:359580
+  requires: []
+  tiers:
+  - 3
 - name: INK
   ids:
   - steam:385710
+  requires: []
+  tiers:
+  - 3
 - name: Shep Hard
   ids:
   - unresolved:source:isthereanydeal:4008:shep-hard
+  requires: []
+  tiers:
+  - 3
 - name: 'Angry Chicken: Egg Madness!'
   ids:
   - unresolved:source:isthereanydeal:4008:angry-chicken-egg-madness
+  requires: []
+  tiers:
+  - 3
 - name: Cook, Serve, Delicious!
   ids:
   - steam:247020
+  requires: []
+  tiers:
+  - 3
 - name: 'GameMaker: Studio Professional'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-professional
+  requires: []
+  tiers:
+  - 3
 - name: Home
   ids:
   - steam:215670
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Missile Defense
   ids:
   - steam:388550
+  requires: []
+  tiers:
+  - 3
 - name: Solstice
   ids:
   - steam:317280
+  requires: []
+  tiers:
+  - 3
 - name: 'GameMaker: Studio HTML5'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-html5
+  requires: []
+  tiers:
+  - 3
 - name: 'GameMaker: Studio Android'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-android
+  requires: []
+  tiers:
+  - 3
 - name: 'GameMaker: Studio Windows Phone 8'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-windows-phone-8
+  requires: []
+  tiers:
+  - 3
 - name: 'GameMaker: Studio iOS'
   ids:
   - unresolved:source:isthereanydeal:4008:gamemaker-studio-ios
+  requires: []
+  tiers:
+  - 3
 - name: Flop Rocket
   ids:
   - unresolved:source:isthereanydeal:4008:flop-rocket
+  requires: []
+  tiers:
+  - 3

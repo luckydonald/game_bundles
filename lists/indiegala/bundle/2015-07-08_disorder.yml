@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Digital Disorder Bundle — Tier 2
-tier: 2
+name: Digital Disorder Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2213/
@@ -13,42 +15,84 @@ games:
 - name: Chernobyl Commando
   ids:
   - unresolved:source:isthereanydeal:2213:chernobyl-commando
+  requires: []
+  tiers:
+  - 2
 - name: Eurofighter Typhoon
   ids:
   - steam:283350
+  requires: []
+  tiers:
+  - 2
 - name: Desert Thunder
   ids:
   - steam:283330
+  requires: []
+  tiers:
+  - 2
 - name: Motorama
   ids:
   - steam:327010
+  requires: []
+  tiers:
+  - 2
 - name: Incoming Forces
   ids:
   - unresolved:source:isthereanydeal:2213:incoming-forces
+  requires: []
+  tiers:
+  - 2
 - name: "Ampu\x96tea"
   ids:
   - steam:289090
+  requires: []
+  tiers:
+  - 2
 - name: Chompy Chomp Chomp
   ids:
   - steam:292570
+  requires: []
+  tiers:
+  - 2
 - name: Bin Weevils Arty Arcade
   ids:
   - steam:322410
+  requires: []
+  tiers:
+  - 2
 - name: //SNOWFLAKE TATTOO//
   ids:
   - steam:355430
+  requires: []
+  tiers:
+  - 2
 - name: 'Purgatory: War of the Damned'
   ids:
   - steam:284910
+  requires: []
+  tiers:
+  - 2
 - name: Melissa K. and the Heart of Gold Collector's Edition
   ids:
   - steam:321150
+  requires: []
+  tiers:
+  - 2
 - name: 'CT Special Forces: Fire for Effect'
   ids:
   - steam:283410
+  requires: []
+  tiers:
+  - 2
 - name: Z Steel Soldiers
   ids:
   - steam:275510
+  requires: []
+  tiers:
+  - 2
 - name: Steam Heroes
   ids:
   - steam:341160
+  requires: []
+  tiers:
+  - 2

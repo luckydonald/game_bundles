@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble 2K&#39;s Game Together Bundle — entire-13-item-bundle
-tier: 3
+name: Humble 2K&#39;s Game Together Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8673/
@@ -13,39 +15,78 @@ games:
 - name: Sid Meier's Pirates!
   ids:
   - steam:3920
+  requires: []
+  tiers:
+  - 3
 - name: 'Spec Ops: The Line'
   ids:
   - unresolved:source:isthereanydeal:8673:spec-ops-the-line
+  requires: []
+  tiers:
+  - 3
 - name: Carnival Games® VR
   ids:
   - steam:458920
+  requires: []
+  tiers:
+  - 3
 - name: The Darkness II
   ids:
   - steam:67370
+  requires: []
+  tiers:
+  - 3
 - name: 'BioShock: The Collection'
   ids:
   - unresolved:source:isthereanydeal:8673:bioshock-the-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Sid Meier''s Civilization® III: Complete'
   ids:
   - steam:3910
+  requires: []
+  tiers:
+  - 3
 - name: NBA 2K Playgrounds 2
   ids:
   - unresolved:source:isthereanydeal:8673:nba-2k-playgrounds-2
+  requires: []
+  tiers:
+  - 3
 - name: The Golf Club™ 2019 Featuring PGA TOUR
   ids:
   - unresolved:source:isthereanydeal:8673:the-golf-club-2019-featuring-pga-tour
+  requires: []
+  tiers:
+  - 3
 - name: 'XCOM: Enemy Unknown - The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:8673:xcom-enemy-unknown-the-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: The Handsome Collection'
   ids:
   - unresolved:source:isthereanydeal:8673:borderlands-the-handsome-collection
+  requires: []
+  tiers:
+  - 3
 - name: NBA 2K20
   ids:
   - unresolved:source:isthereanydeal:8673:nba-2k20
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: Game of the Year Enhanced'
   ids:
   - steam:729040
+  requires: []
+  tiers:
+  - 3
 - name: WWE 2K20
   ids:
   - unresolved:source:isthereanydeal:8673:wwe-2k20
+  requires: []
+  tiers:
+  - 3

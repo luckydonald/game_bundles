@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nemesis Bundle 7 — Tier 3
-tier: 3
+name: Nemesis Bundle 7
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6031/
@@ -13,42 +15,84 @@ games:
 - name: Cat Interstellar
   ids:
   - steam:384740
+  requires: []
+  tiers:
+  - 3
 - name: 35MM
   ids:
   - steam:466500
+  requires: []
+  tiers:
+  - 3
 - name: Car Mechanic Simulator 2015
   ids:
   - steam:320300
+  requires: []
+  tiers:
+  - 3
 - name: Ara Fell
   ids:
   - unresolved:source:isthereanydeal:6031:ara-fell
+  requires: []
+  tiers:
+  - 3
 - name: 'OPUS: The Day We Found Earth'
   ids:
   - steam:457680
+  requires: []
+  tiers:
+  - 3
 - name: The Mooseman
   ids:
   - steam:574310
+  requires: []
+  tiers:
+  - 3
 - name: DreadOut
   ids:
   - steam:269790
+  requires: []
+  tiers:
+  - 3
 - name: Who's Your Daddy
   ids:
   - steam:427730
+  requires: []
+  tiers:
+  - 3
 - name: Zombie Party
   ids:
   - steam:384500
+  requires: []
+  tiers:
+  - 3
 - name: March of the Living
   ids:
   - steam:458000
+  requires: []
+  tiers:
+  - 3
 - name: Pony Island
   ids:
   - steam:405640
+  requires: []
+  tiers:
+  - 3
 - name: Syndrome
   ids:
   - steam:409320
+  requires: []
+  tiers:
+  - 3
 - name: Craft The World
   ids:
   - steam:248390
+  requires: []
+  tiers:
+  - 3
 - name: Super Cloudbuilt
   ids:
   - unresolved:source:isthereanydeal:6031:super-cloudbuilt
+  requires: []
+  tiers:
+  - 3

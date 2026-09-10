@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Pixel Pride Bundle — entire-7-item-bundle
-tier: 2
+name: Pixel Pride Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13263/
@@ -13,21 +15,42 @@ games:
 - name: Celeste
   ids:
   - steam:504230
+  requires: []
+  tiers:
+  - 2
 - name: Later Alligator
   ids:
   - steam:966320
+  requires: []
+  tiers:
+  - 2
 - name: Get In The Car, Loser!
   ids:
   - steam:938860
+  requires: []
+  tiers:
+  - 2
 - name: BAD END THEATER
   ids:
   - steam:1764390
+  requires: []
+  tiers:
+  - 2
 - name: Boyfriend Dungeon
   ids:
   - steam:674930
+  requires: []
+  tiers:
+  - 2
 - name: Growing Up
   ids:
   - steam:1191120
+  requires: []
+  tiers:
+  - 2
 - name: Super Lesbian Animal RPG
   ids:
   - steam:2124380
+  requires: []
+  tiers:
+  - 2

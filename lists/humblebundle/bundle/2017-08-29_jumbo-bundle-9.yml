@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Jumbo Bundle 9 — entire-11-item-bundle
-tier: 3
+name: Humble Jumbo Bundle 9
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5417/
@@ -13,33 +15,66 @@ games:
 - name: Infested Planet - Trickster's Arsenal
   ids:
   - steam:358020
+  requires: []
+  tiers:
+  - 3
 - name: Infested Planet
   ids:
   - steam:204530
+  requires: []
+  tiers:
+  - 3
 - name: 'Human: Fall Flat'
   ids:
   - steam:477160
+  requires: []
+  tiers:
+  - 3
 - name: The Flame in the Flood
   ids:
   - steam:318600
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide Drachenfels'
   ids:
   - steam:453280
+  requires: []
+  tiers:
+  - 3
 - name: Marooners
   ids:
   - steam:423810
+  requires: []
+  tiers:
+  - 3
 - name: Samorost 3
   ids:
   - steam:421120
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
+  requires: []
+  tiers:
+  - 3
 - name: Caveblazers
   ids:
   - steam:452060
+  requires: []
+  tiers:
+  - 3
 - name: Verdun
   ids:
   - steam:242860
+  requires: []
+  tiers:
+  - 3
 - name: American Truck Simulator
   ids:
   - steam:270880
+  requires: []
+  tiers:
+  - 3

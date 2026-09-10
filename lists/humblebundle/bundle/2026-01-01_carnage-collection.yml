@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Carnage Collection Bundle — entire-9-item-bundle
-tier: 3
+name: The Carnage Collection Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15757/
@@ -13,27 +15,54 @@ games:
 - name: Easy Red 2
   ids:
   - steam:1324780
+  requires: []
+  tiers:
+  - 3
 - name: Warstride Challenges
   ids:
   - steam:1608470
+  requires: []
+  tiers:
+  - 3
 - name: Death in the Water 2
   ids:
   - steam:1338840
+  requires: []
+  tiers:
+  - 3
 - name: Maneater
   ids:
   - steam:629820
+  requires: []
+  tiers:
+  - 3
 - name: 'Laika: Aged Through Blood'
   ids:
   - steam:1796220
+  requires: []
+  tiers:
+  - 3
 - name: Hellboy Web of Wyrd
   ids:
   - steam:2160480
+  requires: []
+  tiers:
+  - 3
 - name: Dead Island 2
   ids:
   - steam:934700
+  requires: []
+  tiers:
+  - 3
 - name: Trepang2
   ids:
   - steam:1164940
+  requires: []
+  tiers:
+  - 3
 - name: Dead Island 2 Expansion Pass
   ids:
   - steam:2813110
+  requires: []
+  tiers:
+  - 3

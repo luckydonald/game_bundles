@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Action Fu Bundle — Tier 2
-tier: 2
+name: Action Fu Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6966/
@@ -13,24 +15,48 @@ games:
 - name: Treasure Hunter Man 2
   ids:
   - steam:870140
+  requires: []
+  tiers:
+  - 2
 - name: Super Destronaut
   ids:
   - steam:510250
+  requires: []
+  tiers:
+  - 2
 - name: 'Shaq-Fu: A Legend Reborn'
   ids:
   - steam:496040
+  requires: []
+  tiers:
+  - 2
 - name: Q-YO Blaster
   ids:
   - steam:772610
+  requires: []
+  tiers:
+  - 2
 - name: Corrupted
   ids:
   - steam:832610
+  requires: []
+  tiers:
+  - 2
 - name: Shadow Bug
   ids:
   - steam:656550
+  requires: []
+  tiers:
+  - 2
 - name: After Hours
   ids:
   - steam:989040
+  requires: []
+  tiers:
+  - 2
 - name: Rune Classic
   ids:
   - steam:210950
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Fulqrum Publishing: Spring Break Bundle — entire-7-item-bundle'
-tier: 3
+name: 'Fulqrum Publishing: Spring Break Bundle'
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14989/
@@ -13,21 +15,42 @@ games:
 - name: 'Stygian: Reign of the Old Ones'
   ids:
   - steam:779290
+  requires: []
+  tiers:
+  - 3
 - name: Through the Woods
   ids:
   - steam:368430
+  requires: []
+  tiers:
+  - 3
 - name: 'WRATH: Aeon of Ruin'
   ids:
   - steam:1000410
+  requires: []
+  tiers:
+  - 3
 - name: 'Fell Seal: Arbiter''s Mark'
   ids:
   - steam:699170
+  requires: []
+  tiers:
+  - 3
 - name: Dread Templar
   ids:
   - steam:1334730
+  requires: []
+  tiers:
+  - 3
 - name: Viscerafest
   ids:
   - steam:1406780
+  requires: []
+  tiers:
+  - 3
 - name: Forgive me Father
   ids:
   - steam:1590910
+  requires: []
+  tiers:
+  - 3
