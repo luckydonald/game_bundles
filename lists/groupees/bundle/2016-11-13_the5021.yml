@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Battlestorm Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4340/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4340/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4340/source.json
+games:
+- name: BattleStorm
+  ids:
+  - unresolved:source:isthereanydeal:4340:battlestorm
+  requires: []
+- name: Rise of the Ancients
+  ids:
+  - steam:485950
+  requires: []
+- name: School Bus Fun
+  ids:
+  - steam:301990
+  requires: []
+- name: Tales of Destruction
+  ids:
+  - steam:486480
+  requires: []
+- name: Road Madness
+  ids:
+  - steam:457710
+  requires: []

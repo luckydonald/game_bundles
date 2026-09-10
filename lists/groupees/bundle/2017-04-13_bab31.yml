@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 31 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5000/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5000/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5000/source.json
+games:
+- name: Yrminsul
+  ids:
+  - steam:412490
+  requires: []
+- name: KWAAN
+  ids:
+  - unresolved:source:isthereanydeal:5000:kwaan
+  requires: []
+- name: Plight of the Zombie
+  ids:
+  - steam:434070
+  requires: []
+- name: Escape The Past
+  ids:
+  - steam:486120
+  requires: []
+- name: Featherpunk Prime
+  ids:
+  - unresolved:source:isthereanydeal:5000:featherpunk-prime
+  requires: []
+- name: Tomato Jones 2
+  ids:
+  - steam:625940
+  requires: []
+- name: MechRunner
+  ids:
+  - steam:288100
+  requires: []
+- name: PolyRace
+  ids:
+  - unresolved:source:isthereanydeal:5000:polyrace
+  requires: []

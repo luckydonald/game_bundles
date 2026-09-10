@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Casual Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4402/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4402/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4402/source.json
+games:
+- name: PHAT STACKS 2
+  ids:
+  - steam:655600
+  requires: []
+- name: REED
+  ids:
+  - unresolved:source:isthereanydeal:4402:reed
+  requires: []
+- name: The Housewife
+  ids:
+  - steam:496750
+  requires: []
+- name: Deep Space Dash
+  ids:
+  - steam:493650
+  requires: []
+- name: Etaria | Survival Adventure
+  ids:
+  - unresolved:source:isthereanydeal:4402:etaria-survival-adventure
+  requires: []
+- name: Hyper color ball
+  ids:
+  - steam:515470
+  requires: []
+- name: GrottyScape
+  ids:
+  - unresolved:source:isthereanydeal:4402:grottyscape
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 27 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4656/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4656/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4656/source.json
+games:
+- name: Beer Drinkin' Terrorist Hunter
+  ids:
+  - unresolved:source:isthereanydeal:4656:beer-drinkin-terrorist-hunter
+  requires: []
+- name: Airport Madness World Edition
+  ids:
+  - steam:369290
+  requires: []
+- name: Highland Warriors
+  ids:
+  - steam:446460
+  requires: []
+- name: Cowboy Dash
+  ids:
+  - unresolved:source:isthereanydeal:4656:cowboy-dash
+  requires: []
+- name: Take Thy Throne
+  ids:
+  - steam:491260
+  requires: []
+- name: Normality
+  ids:
+  - steam:400370
+  requires: []
+- name: Akin
+  ids:
+  - steam:487370
+  requires: []
+- name: 'Fairyland: Fairy Power'
+  ids:
+  - unresolved:source:isthereanydeal:4656:fairyland-fairy-power
+  requires: []
+- name: Freebie
+  ids:
+  - steam:487220
+  requires: []

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - The Hero Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4753/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4753/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4753/source.json
+games:
+- name: Bunny & Piggy
+  ids:
+  - unresolved:source:isthereanydeal:4753:bunny-and-piggy
+  requires: []
+- name: Way of Hero
+  ids:
+  - unresolved:source:isthereanydeal:4753:way-of-hero
+  requires: []
+- name: Project Freeze
+  ids:
+  - unresolved:source:isthereanydeal:4753:project-freeze
+  requires: []
+- name: SAMOLIOTIK
+  ids:
+  - steam:449680
+  requires: []
+- name: Master Pixel
+  ids:
+  - unresolved:source:isthereanydeal:4753:master-pixel
+  requires: []
