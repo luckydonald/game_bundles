@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Jet Racing Extreme - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2814/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2814/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2814/source.json
+games:
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+  requires: []
