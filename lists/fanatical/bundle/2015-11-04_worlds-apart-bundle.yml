@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Worlds Apart Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2702/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2702/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2702/source.json
+games:
+- name: Crash Drive 2
+  ids:
+  - steam:343440
+  requires: []
+- name: Rituals
+  ids:
+  - steam:359190
+  requires: []
+- name: Aaru's Awakening
+  ids:
+  - steam:294060
+  requires: []
+- name: Lovely Planet
+  ids:
+  - steam:298600
+  requires: []
+- name: Coin Crypt
+  ids:
+  - steam:264690
+  requires: []
+- name: Urja
+  ids:
+  - steam:338710
+  requires: []
+- name: Last Inua
+  ids:
+  - steam:331980
+  requires: []
+- name: Alexia Crow and the Cave of Heroes
+  ids:
+  - steam:365280
+  requires: []
+- name: The Architect
+  ids:
+  - unresolved:source:isthereanydeal:2702:the-architect
+  requires: []
+- name: 'Glorkian Warrior: The Trials Of Glork'
+  ids:
+  - steam:341120
+  requires: []
+- name: Relativity Wars - A Science Space RTS
+  ids:
+  - steam:341640
+  requires: []
+- name: Starship Traveller (Standalone)
+  ids:
+  - steam:348180
+  requires: []

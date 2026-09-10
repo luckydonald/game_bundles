@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Game Makers Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2449/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2449/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2449/source.json
+games:
+- name: 'RPG Maker: Classic Fantasy Music Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-classic-fantasy-music-pack
+  requires: []
+- name: 'RPG Maker: Arabian Nights'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-arabian-nights
+  requires: []
+- name: 'RPG Maker: Magnificent Quest Music Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-magnificent-quest-music-pack
+  requires: []
+- name: GameGuru
+  ids:
+  - steam:266310
+  requires: []
+- name: GameGuru Fantasy Pack
+  ids:
+  - steam:365530
+  requires: []
+- name: 'RPG Maker: Pixel Myth: Germania'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-pixel-myth-germania
+  requires: []
+- name: RPG Maker VX Ace
+  ids:
+  - steam:220700
+  requires: []
+- name: 'RPG Maker: Old School Modern Resource Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-old-school-modern-resource-pack
+  requires: []
+- name: 'RPG Maker: Time Fantasy'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-time-fantasy
+  requires: []
+- name: GameGuru Mega Pack 3
+  ids:
+  - steam:321142
+  requires: []
+- name: GameGuru Mega Pack 2
+  ids:
+  - steam:321141
+  requires: []
+- name: Game Character Hub
+  ids:
+  - steam:292230
+  requires: []
+- name: 'RPG Maker: Luna Engine'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-luna-engine
+  requires: []
+- name: RPG Maker VX Ace - DS+ Resource Pack
+  ids:
+  - steam:258743
+  requires: []
+- name: 'RPG Maker: DS Resource Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-ds-resource-pack
+  requires: []
+- name: 'RPG Maker: Rural Farm Tiles Resource Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2449:rpg-maker-rural-farm-tiles-resource-pack
+  requires: []
+- name: GameGuru Death Valley Pack
+  ids:
+  - steam:365540
+  requires: []
+- name: GameGuru - Buildings Pack
+  ids:
+  - steam:365520
+  requires: []

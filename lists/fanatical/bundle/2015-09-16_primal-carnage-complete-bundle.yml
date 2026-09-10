@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Primal Carnage Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2461/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2461/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2461/source.json
+games:
+- name: Primal Carnage - Dinosaur Skin Pack 3
+  ids:
+  - steam:235150
+  requires: []
+- name: Primal Carnage
+  ids:
+  - steam:215470
+  requires: []
+- name: Primal Carnage - Tupandactylus - Premium
+  ids:
+  - steam:258501
+  requires: []
+- name: Primal Carnage Agent Trapper
+  ids:
+  - steam:223262
+  requires: []
+- name: Primal Carnage - Dinosaur Skin Pack 2
+  ids:
+  - steam:235130
+  requires: []
+- name: Primal Carnage - Oviraptor - Premium
+  ids:
+  - steam:258500
+  requires: []
+- name: Primal Carnage Pilot Commando
+  ids:
+  - steam:223261
+  requires: []
+- name: Primal Carnage - Dinobuster Skin
+  ids:
+  - steam:235140
+  requires: []
+- name: Primal Carnage Skin Bundle
+  ids:
+  - unresolved:source:isthereanydeal:2461:primal-carnage-skin-bundle
+  requires: []
+- name: Primal Carnage Dinosaur Skin Pack 1
+  ids:
+  - steam:225780
+  requires: []

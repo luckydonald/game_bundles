@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Vigilante Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2294/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2294/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2294/source.json
+games:
+- name: Noir Syndrome
+  ids:
+  - steam:299780
+  requires: []
+- name: Forest Warrior
+  ids:
+  - steam:378590
+  requires: []
+- name: Abandoned
+  ids:
+  - unresolved:source:isthereanydeal:2294:abandoned
+  requires: []
+- name: Metrocide
+  ids:
+  - steam:313130
+  requires: []
+- name: Kidnapped
+  ids:
+  - steam:382300
+  requires: []
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+  requires: []
+- name: Hordelicious
+  ids:
+  - unresolved:source:isthereanydeal:2294:hordelicious
+  requires: []
+- name: Super Distro
+  ids:
+  - steam:364690
+  requires: []
+- name: TownCraft
+  ids:
+  - steam:296280
+  requires: []
+- name: Super Cyborg
+  ids:
+  - steam:341550
+  requires: []

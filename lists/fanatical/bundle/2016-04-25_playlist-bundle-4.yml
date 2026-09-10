@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Playlist Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3337/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3337/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3337/source.json
+games:
+- name: Energy Balance
+  ids:
+  - steam:375010
+  requires: []
+- name: Dark Years
+  ids:
+  - steam:382160
+  requires: []
+- name: Keebles
+  ids:
+  - steam:347040
+  requires: []
+- name: 'NeXus: One Core'
+  ids:
+  - steam:341080
+  requires: []
+- name: Butsbal
+  ids:
+  - steam:375330
+  requires: []
+- name: Zeus vs Monsters - Math Game for kids
+  ids:
+  - steam:444430
+  requires: []
+- name: PIXELMAN
+  ids:
+  - steam:438000
+  requires: []
+- name: Taimumari
+  ids:
+  - unresolved:source:isthereanydeal:3337:taimumari
+  requires: []
+- name: Moonlight
+  ids:
+  - unresolved:source:isthereanydeal:3337:moonlight
+  requires: []
+- name: Two Digits
+  ids:
+  - steam:371330
+  requires: []

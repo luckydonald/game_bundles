@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Super Turbo Mega — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3301/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3301/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3301/source.json
+games:
+- name: Tower of Elements
+  ids:
+  - unresolved:source:isthereanydeal:3301:tower-of-elements
+  requires: []
+- name: Clergy Splode
+  ids:
+  - steam:403900
+  requires: []
+- name: Super Mustache
+  ids:
+  - steam:438180
+  requires: []
+- name: Turbo Pug
+  ids:
+  - steam:418070
+  requires: []
+- name: Kivi, Toilet and Shotgun
+  ids:
+  - steam:428950
+  requires: []
+- name: Lup
+  ids:
+  - steam:412600
+  requires: []
+- name: Catch a Falling Star
+  ids:
+  - steam:451880
+  requires: []
+- name: 'Terra Incognita ~ Chapter One: The Descendant'
+  ids:
+  - steam:347560
+  requires: []
+- name: Eaten Alive
+  ids:
+  - steam:403560
+  requires: []
+- name: Flesh Eaters
+  ids:
+  - steam:383580
+  requires: []
+- name: Tin Boy
+  ids:
+  - unresolved:source:isthereanydeal:3301:tin-boy
+  requires: []
+- name: Neon Hardcorps
+  ids:
+  - steam:454200
+  requires: []
+- name: Ampersand
+  ids:
+  - steam:410210
+  requires: []
+- name: 'Star Chronicles: Delta Quadrant'
+  ids:
+  - steam:383330
+  requires: []
+- name: Escape Machines
+  ids:
+  - steam:363490
+  requires: []
+- name: New kind of adventure
+  ids:
+  - steam:375510
+  requires: []
+- name: Calcu-Late
+  ids:
+  - steam:449200
+  requires: []
+- name: Stellar 2D
+  ids:
+  - steam:391070
+  requires: []

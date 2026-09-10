@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Multiplayer Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2331/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2331/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2331/source.json
+games:
+- name: Orbital Gear
+  ids:
+  - steam:298520
+  requires: []
+- name: 'The Ship: Murder Party'
+  ids:
+  - steam:2400
+  requires: []
+- name: CastleMiner Z
+  ids:
+  - steam:253430
+  requires: []
+- name: Epigenesis
+  ids:
+  - steam:244590
+  requires: []
+- name: Murder Miners
+  ids:
+  - steam:274900
+  requires: []
+- name: Iron Grip Warlord with Scorched Earth
+  ids:
+  - unresolved:source:isthereanydeal:2331:iron-grip-warlord-with-scorched-earth
+  requires: []
+- name: White Noise Online
+  ids:
+  - steam:293860
+  requires: []

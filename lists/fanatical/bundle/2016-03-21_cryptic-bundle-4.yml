@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3202/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3202/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3202/source.json
+games:
+- name: 'Living Legends: The Frozen Fear Collection'
+  ids:
+  - steam:398620
+  requires: []
+- name: 'Twilight City: Love as a Cure'
+  ids:
+  - steam:428270
+  requires: []
+- name: 'Lost Legends: The Weeping Woman Collector''s Edition'
+  ids:
+  - steam:397440
+  requires: []
+- name: Runaway Express Mystery
+  ids:
+  - steam:299020
+  requires: []
+- name: 'Twisted Lands Trilogy: Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:3202:twisted-lands-trilogy-collectors-edition
+  requires: []
+- name: Dracula's Legacy
+  ids:
+  - steam:396790
+  requires: []
+- name: 'Frankenstein: Master of Death'
+  ids:
+  - steam:347430
+  requires: []
+- name: 'Mystery of Unicorn Castle: The Beastmaster'
+  ids:
+  - steam:428280
+  requires: []
+- name: Adventures of Robinson Crusoe
+  ids:
+  - steam:334470
+  requires: []
+- name: 'Mystery Castle: The Mirror''s Secret'
+  ids:
+  - steam:428250
+  requires: []

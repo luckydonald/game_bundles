@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Space Engineers and Medieval Engineers Combo Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3013/source.json
+games:
+- name: Space Engineers
+  ids:
+  - steam:244850
+  requires: []
+- name: Medieval Engineers
+  ids:
+  - steam:333950
+  requires: []

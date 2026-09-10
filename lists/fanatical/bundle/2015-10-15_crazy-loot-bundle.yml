@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Crazy Loot Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2611/source.json
+games:
+- name: 1Quest
+  ids:
+  - steam:332710
+  requires: []
+- name: StarFence
+  ids:
+  - unresolved:source:isthereanydeal:2611:starfence
+  requires: []
+- name: Paper Dungeons
+  ids:
+  - steam:283040
+  requires: []
+- name: Cards and Castles
+  ids:
+  - steam:360730
+  requires: []
+- name: Love
+  ids:
+  - steam:269270
+  requires: []
+- name: Space Thinger
+  ids:
+  - steam:402670
+  requires: []
+- name: Luna's Wandering Stars
+  ids:
+  - steam:330660
+  requires: []
+- name: 'Steamalot: Epoch''s Journey'
+  ids:
+  - steam:361160
+  requires: []

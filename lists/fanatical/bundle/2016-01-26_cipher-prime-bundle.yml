@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cipher Prime Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2982/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2982/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2982/source.json
+games:
+- name: Intake
+  ids:
+  - steam:237760
+  requires: []
+- name: Splice
+  ids:
+  - steam:209790
+  requires: []
+- name: Auditorium
+  ids:
+  - steam:205870
+  requires: []
+- name: 'Fractal: Make Blooms Not War'
+  ids:
+  - steam:61310
+  requires: []

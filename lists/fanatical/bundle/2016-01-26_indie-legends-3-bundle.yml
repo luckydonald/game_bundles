@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Legends 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2978/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2978/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2978/source.json
+games:
+- name: Dungeon Defenders
+  ids:
+  - steam:65800
+  requires: []
+- name: INSURGENCY
+  ids:
+  - steam:222880
+  requires: []
+- name: Dyscourse Special Edition
+  ids:
+  - unresolved:source:isthereanydeal:2978:dyscourse-special-edition
+  requires: []
+- name: Outcast 1.1
+  ids:
+  - steam:336610
+  requires: []
+- name: Freedom Planet
+  ids:
+  - steam:248310
+  requires: []
+- name: 'Surgeon Simulator: Anniversary Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2978:surgeon-simulator-anniversary-edition
+  requires: []
+- name: King Arthur's Gold
+  ids:
+  - steam:219830
+  requires: []
+- name: 'Nether: Resurrected'
+  ids:
+  - unresolved:source:isthereanydeal:2978:nether-resurrected
+  requires: []
+- name: UnEpic
+  ids:
+  - steam:233980
+  requires: []
+- name: Super Win the Game
+  ids:
+  - steam:310700
+  requires: []
