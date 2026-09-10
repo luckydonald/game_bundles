@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Match III Heat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11762/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11762/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11762/source.json
+games:
+- name: Lost Labyrinth
+  ids:
+  - unresolved:source:isthereanydeal:11762:lost-labyrinth
+  requires: []
+- name: Save the Planet
+  ids:
+  - steam:1420730
+  requires: []
+- name: Halloween Trouble 2
+  ids:
+  - steam:1519800
+  requires: []
+- name: Suddenly Meow
+  ids:
+  - steam:1723720
+  requires: []
+- name: Rorys Restaurant Deluxe
+  ids:
+  - steam:1781780
+  requires: []
+- name: Gaslamp Cases 2
+  ids:
+  - steam:1798160
+  requires: []
+- name: Catherine Ragnor and the Legend of the Flying Dutchman
+  ids:
+  - steam:1836360
+  requires: []
+- name: Funny Pets
+  ids:
+  - steam:1849560
+  requires: []
+- name: 100 Days without delays
+  ids:
+  - steam:1874920
+  requires: []

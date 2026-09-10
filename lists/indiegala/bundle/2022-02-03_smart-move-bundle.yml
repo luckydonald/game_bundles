@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Smart Move Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11022/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11022/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11022/source.json
+games:
+- name: 'BOT.vinnik Chess: Combination Lessons'
+  ids:
+  - steam:1339900
+  requires: []
+- name: 'BOT.vinnik Chess: Winning Patterns'
+  ids:
+  - steam:1395540
+  requires: []
+- name: Carebotz
+  ids:
+  - steam:1468240
+  requires: []
+- name: 'BOT.vinnik Chess: Opening Traps'
+  ids:
+  - steam:1493840
+  requires: []
+- name: 'GAI Stops Auto: Right Version Simulator'
+  ids:
+  - steam:1594400
+  requires: []
+- name: 'BOT.vinnik Chess: Early USSR Championships'
+  ids:
+  - steam:1711190
+  requires: []
+- name: 'BOT.vinnik Chess: Mid-Century USSR Championships'
+  ids:
+  - steam:1788410
+  requires: []
+- name: 'BOT.vinnik Chess: Late USSR Championships'
+  ids:
+  - steam:1788430
+  requires: []
+- name: Hidden Islands
+  ids:
+  - steam:1864860
+  requires: []

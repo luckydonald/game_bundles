@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Labyrinth Rush Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11070/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11070/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11070/source.json
+games:
+- name: Labyronia Elements
+  ids:
+  - steam:750770
+  requires: []
+- name: Chinese inn
+  ids:
+  - steam:762480
+  requires: []
+- name: 'The World of Labyrinths: Labyronia'
+  ids:
+  - steam:864740
+  requires: []
+- name: Red Rush
+  ids:
+  - steam:1208580
+  requires: []
+- name: 'The End of Labyronia: Nerubis'
+  ids:
+  - steam:1304220
+  requires: []
+- name: VILLAGE THE SIBERIA
+  ids:
+  - steam:1819800
+  requires: []

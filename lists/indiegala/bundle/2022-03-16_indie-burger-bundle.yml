@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Burger Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11167/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11167/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11167/source.json
+games:
+- name: 'Herald: An Interactive Period Drama - Book I & II'
+  ids:
+  - steam:380810
+  requires: []
+- name: Ghoulboy
+  ids:
+  - steam:752500
+  requires: []
+- name: Make the Burger
+  ids:
+  - steam:1358610
+  requires: []
+- name: There Will Be No Turkey This Christmas
+  ids:
+  - steam:1639040
+  requires: []
+- name: Hidden Western
+  ids:
+  - steam:1902260
+  requires: []
+- name: Bad Cat
+  ids:
+  - steam:1810210
+  requires: []

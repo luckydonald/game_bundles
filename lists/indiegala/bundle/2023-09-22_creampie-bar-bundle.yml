@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Creampie Bar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13498/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13498/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13498/source.json
+games:
+- name: NekoMiko
+  ids:
+  - steam:969700
+  requires: []
+- name: GIRLS DEFENCE
+  ids:
+  - unresolved:source:isthereanydeal:13498:girls-defence
+  requires: []
+- name: DRINK BAR MAID -REGRESSION
+  ids:
+  - steam:1449330
+  requires: []
+- name: DEMON'S SWORD SNAKES -Sweet Dreams of the Cursed Snake
+  ids:
+  - steam:1307560
+  requires: []
+- name: A Secret Between You and Me
+  ids:
+  - unresolved:source:isthereanydeal:13498:a-secret-between-you-and-me
+  requires: []
+- name: Creampie Sugoroku
+  ids:
+  - unresolved:source:isthereanydeal:13498:creampie-sugoroku
+  requires: []

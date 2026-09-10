@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Conspiracy Corner Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12066/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12066/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12066/source.json
+games:
+- name: Fhtagn! - Tales of the Creeping Madness
+  ids:
+  - steam:802400
+  requires: []
+- name: 'The Corridor: On Behalf Of The Dead'
+  ids:
+  - unresolved:source:isthereanydeal:12066:the-corridor-on-behalf-of-the-dead
+  requires: []
+- name: Who Stole My Beard?
+  ids:
+  - steam:1141270
+  requires: []
+- name: Just Take Your Left
+  ids:
+  - steam:1459930
+  requires: []
+- name: NMNE
+  ids:
+  - steam:1773200
+  requires: []
+- name: Abetot Family Estate
+  ids:
+  - steam:1951970
+  requires: []
