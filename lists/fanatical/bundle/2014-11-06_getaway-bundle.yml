@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Getaway Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1358/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1358/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1358/source.json
+games:
+- name: Overruled!
+  ids:
+  - steam:297740
+  requires: []
+- name: LA Cops
+  ids:
+  - steam:278810
+  requires: []
+- name: The Escapists
+  ids:
+  - steam:298630
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Touchdown Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1590/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1590/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1590/source.json
+games:
+- name: New Star Soccer 5
+  ids:
+  - steam:212780
+  requires: []
+- name: Front Page Sports Football
+  ids:
+  - steam:316700
+  requires: []
+- name: Ducati World Championship
+  ids:
+  - steam:6270
+  requires: []
+- name: Bloodbath
+  ids:
+  - steam:304150
+  requires: []
+- name: Chicken Shoot Gold
+  ids:
+  - steam:259340
+  requires: []
+- name: GAUGE
+  ids:
+  - steam:272990
+  requires: []
+- name: Governor of Poker 2 Premium Edition
+  ids:
+  - unresolved:source:isthereanydeal:1590:governor-of-poker-2-premium-edition
+  requires: []
+- name: Foosball - Street Edition
+  ids:
+  - steam:280830
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The FPS Bulletproof Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1604/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1604/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1604/source.json
+games:
+- name: Fancy Skulls
+  ids:
+  - steam:307090
+  requires: []
+- name: Axis Game Factory's AGFPRO - Drone Kombat FPS Multiplayer
+  ids:
+  - unresolved:source:isthereanydeal:1604:axis-game-factorys-agfpro-drone-kombat-fps-multiplayer
+  requires: []
+- name: 'NecroVisioN + NecroVisioN: Lost Company'
+  ids:
+  - unresolved:source:isthereanydeal:1604:necrovision-and-necrovision-lost-company
+  requires: []
+- name: Heavy Fire Afghanistan
+  ids:
+  - steam:305980
+  requires: []
+- name: Axis Game Factory's AGFPRO v2
+  ids:
+  - unresolved:source:isthereanydeal:1604:axis-game-factorys-agfpro-v2
+  requires: []
+- name: Dementium II HD
+  ids:
+  - steam:217100
+  requires: []
+- name: Parkan 2
+  ids:
+  - steam:289400
+  requires: []
+- name: Dead Effect
+  ids:
+  - steam:286040
+  requires: []
+- name: SickBrick
+  ids:
+  - unresolved:source:isthereanydeal:1604:sickbrick
+  requires: []
+- name: Ubersoldier II
+  ids:
+  - steam:281410
+  requires: []

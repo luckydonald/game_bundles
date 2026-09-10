@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Supernatural Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1301/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1301/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1301/source.json
+games:
+- name: Blackbay Asylum
+  ids:
+  - steam:313140
+  requires: []
+- name: 'Into the Dark: Ultimate Trash Edition'
+  ids:
+  - steam:266050
+  requires: []
+- name: Dracula 4 and 5
+  ids:
+  - steam:279560
+  requires: []
+- name: Dracula Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:1301:dracula-trilogy
+  requires: []
+- name: Zombie Solitaire
+  ids:
+  - steam:311850
+  requires: []
+- name: Necronomicon - The Dawning of Darkness
+  ids:
+  - steam:302390
+  requires: []
+- name: Larva Mortus
+  ids:
+  - steam:11340
+  requires: []
+- name: 'Pixel Puzzles: UndeadZ'
+  ids:
+  - steam:285010
+  requires: []
+- name: Splatter - Blood Red Edition
+  ids:
+  - unresolved:source:isthereanydeal:1301:splatter-blood-red-edition
+  requires: []
+- name: White Noise Online
+  ids:
+  - steam:293860
+  requires: []

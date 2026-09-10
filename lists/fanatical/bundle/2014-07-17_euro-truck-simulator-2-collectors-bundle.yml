@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Euro Truck Simulator 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1003/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1003/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1003/source.json
+games:
+- name: Euro Truck Simulator 2 - Ice Cold Paint Jobs Pack
+  ids:
+  - steam:266930
+  requires: []
+- name: Scania Truck Driving Simulator
+  ids:
+  - steam:258760
+  requires: []
+- name: Euro Truck Simulator 2 - Force of Nature Paint Jobs Pack
+  ids:
+  - steam:292320
+  requires: []
+- name: Trucks & Trailers
+  ids:
+  - steam:302060
+  requires: []
+- name: 'Euro Truck Simulator 2: Go East'
+  ids:
+  - unresolved:source:isthereanydeal:1003:euro-truck-simulator-2-go-east
+  requires: []
+- name: Euro Truck Simulator 2
+  ids:
+  - steam:227300
+  requires: []
+- name: Euro Truck Simulator
+  ids:
+  - steam:232010
+  requires: []
+- name: Bus Driver
+  ids:
+  - steam:302080
+  requires: []
+- name: Euro Truck Simulator 2 - Halloween Paint Jobs Pack
+  ids:
+  - steam:258460
+  requires: []

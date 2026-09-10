@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Victoria Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1114/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1114/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1114/source.json
+games:
+- name: 'Victoria II: Interwar Engineer Unit Pack'
+  ids:
+  - steam:215004
+  requires: []
+- name: 'Victoria II: Heart of Darkness'
+  ids:
+  - steam:215001
+  requires: []
+- name: Victoria II
+  ids:
+  - steam:42960
+  requires: []
+- name: 'Victoria II: German Unit Pack'
+  ids:
+  - steam:215003
+  requires: []
+- name: 'Victoria II: A House Divided'
+  ids:
+  - steam:42968
+  requires: []
+- name: 'Victoria II: Songs of the Civil War'
+  ids:
+  - steam:215002
+  requires: []
+- name: Victoria II Interwar Artillery Sprite Pack
+  ids:
+  - steam:42965
+  requires: []
+- name: Victoria II Interwar Planes Sprite Pack
+  ids:
+  - steam:42966
+  requires: []
+- name: 'Victoria II: A House Divided: American Civil War Spritepack'
+  ids:
+  - steam:215000
+  requires: []
+- name: Victoria Complete
+  ids:
+  - unresolved:source:isthereanydeal:1114:victoria-complete
+  requires: []
+- name: "Victoria II Interwar \x96 Spritepack"
+  ids:
+  - steam:42964
+  requires: []

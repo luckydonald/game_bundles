@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Gauntlet Party Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2096/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2096/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2096/source.json
+games:
+- name: Gauntlet - Lilith the Necromancer Pack
+  ids:
+  - steam:335510
+  requires: []
+- name: Gauntlet
+  ids:
+  - steam:1755970
+  requires: []

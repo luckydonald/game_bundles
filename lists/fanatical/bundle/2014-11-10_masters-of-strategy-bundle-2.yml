@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Masters of Strategy 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1376/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1376/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1376/source.json
+games:
+- name: Supreme Commander Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:1376:supreme-commander-gold-edition
+  requires: []
+- name: 'Creeper World 3: Arc Eternal'
+  ids:
+  - steam:280220
+  requires: []
+- name: Planet Stronghold - Deluxe Edition
+  ids:
+  - steam:291050
+  requires: []
+- name: Eador. Masters of the Broken World
+  ids:
+  - steam:232050
+  requires: []
+- name: Battle Group 2
+  ids:
+  - steam:277490
+  requires: []
+- name: 'Eador: Genesis'
+  ids:
+  - steam:235660
+  requires: []
+- name: 'Jagged Alliance 1: Gold Edition'
+  ids:
+  - steam:283270
+  requires: []

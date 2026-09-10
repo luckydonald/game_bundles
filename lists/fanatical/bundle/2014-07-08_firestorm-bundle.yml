@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Firestorm Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/966/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/966/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/966/source.json
+games:
+- name: 'Mount and Blade: With Fire and Sword'
+  ids:
+  - steam:48720
+  requires: []
+- name: Explodemon!
+  ids:
+  - steam:281820
+  requires: []
+- name: Praetorians
+  ids:
+  - steam:277460
+  requires: []
+- name: Electronic Super Joy Groove City
+  ids:
+  - steam:301460
+  requires: []
+- name: Velocity®Ultra
+  ids:
+  - steam:244890
+  requires: []
+- name: Imperial Glory
+  ids:
+  - steam:277450
+  requires: []
+- name: Project Aftermath
+  ids:
+  - unresolved:source:isthereanydeal:966:project-aftermath
+  requires: []
+- name: InFlux
+  ids:
+  - steam:246980
+  requires: []

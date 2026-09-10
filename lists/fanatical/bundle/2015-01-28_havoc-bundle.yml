@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Havoc Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1587/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1587/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1587/source.json
+games:
+- name: Poöf vs The Cursed Kitty
+  ids:
+  - steam:243280
+  requires: []
+- name: Fly'n
+  ids:
+  - steam:223730
+  requires: []
+- name: Sang-Froid - Tales of Werewolves
+  ids:
+  - steam:227220
+  requires: []
+- name: Robot Rescue Revolution
+  ids:
+  - steam:284200
+  requires: []
+- name: 99 Spirits
+  ids:
+  - steam:258090
+  requires: []
+- name: LEVEL 22
+  ids:
+  - unresolved:source:isthereanydeal:1587:level-22
+  requires: []
+- name: Cloud Chamber
+  ids:
+  - unresolved:source:isthereanydeal:1587:cloud-chamber
+  requires: []
+- name: Kick-Ass 2
+  ids:
+  - steam:304170
+  requires: []
+- name: Dungeon Lurk II - Leona
+  ids:
+  - steam:322580
+  requires: []
+- name: Desert Ashes
+  ids:
+  - steam:324420
+  requires: []

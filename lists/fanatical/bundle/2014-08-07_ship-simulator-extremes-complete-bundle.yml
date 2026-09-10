@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Ship Simulator Extremes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1063/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1063/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1063/source.json
+games:
+- name: 'Ship Simulator Extremes: Offshore Vessel'
+  ids:
+  - steam:48805
+  requires: []
+- name: 'Ship Simulator Extremes: Ocean Cruise Ship'
+  ids:
+  - steam:48806
+  requires: []
+- name: Ship Simulator Extremes - Ferry Pack
+  ids:
+  - steam:48803
+  requires: []
+- name: 'Ship Simulator Extremes: Cargo Vessel'
+  ids:
+  - steam:48804
+  requires: []
+- name: 'Ship Simulator Extremes: Sigita Pack'
+  ids:
+  - steam:48802
+  requires: []
+- name: Ship Simulator Extremes
+  ids:
+  - steam:48800
+  requires: []

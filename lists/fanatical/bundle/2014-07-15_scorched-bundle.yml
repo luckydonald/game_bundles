@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Scorched Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/995/source.json
+games:
+- name: Litil Divil
+  ids:
+  - steam:283430
+  requires: []
+- name: Lightfish
+  ids:
+  - steam:116120
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: Fortix
+  ids:
+  - steam:45400
+  requires: []
+- name: Deponia
+  ids:
+  - steam:214340
+  requires: []
+- name: Clones
+  ids:
+  - steam:72400
+  requires: []
+- name: iBomber Attack
+  ids:
+  - steam:218660
+  requires: []
+- name: Crystals of Time
+  ids:
+  - steam:306410
+  requires: []
+- name: No Time to Explain
+  ids:
+  - unresolved:source:isthereanydeal:995:no-time-to-explain
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:995:n-p-p-d-rush-the-milk-of-ultra-violet
+  requires: []
+- name: Ignite
+  ids:
+  - steam:45410
+  requires: []
+- name: Skyward Collapse Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:995:skyward-collapse-complete-edition
+  requires: []
+- name: 'Q.U.B.E: Director''s Cut'
+  ids:
+  - unresolved:source:isthereanydeal:995:q-u-b-e-directors-cut
+  requires: []
