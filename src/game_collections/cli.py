@@ -102,6 +102,14 @@ from game_collections.sources.isthereanydeal.shop_config import load_shop_config
 from game_collections.sources.prompting import choose_store_candidate
 
 
+
+# Piping stdout (e.g. `| tee log.txt`) switches Python to full block buffering instead of
+# line buffering, so live progress logs (`log=typer.echo` in the scrape crawlers) sit in
+# an in-process buffer and never reach the pipe until it fills or the process exits
+# cleanly. Force line buffering unconditionally so `tee`/redirected logs stay live and
+# survive an interrupted run.
+sys.stdout.reconfigure(line_buffering=True)
+
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
@@ -1321,6 +1329,7 @@ def sync_command(
     unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"], typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership.")] = "ignore",
     tiers: Annotated[Literal["all", "highest"], typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier.")] = "highest",
     selection_config: Annotated[Path, typer.Option("--selection-config", help="Selection config from `apply`; silently ignored if absent.")] = DEFAULT_SELECTION_CONFIG_PATH,
+    allow_stale_pipe: Annotated[bool, typer.Option("--allow-stale-pipe", help="Proceed even if Steam's IPC pipe file is still present after Steam's PID check passed (a common leftover from a prior exit); skips the interactive IGNORE-PIPE prompt.")] = False,
 ) -> None:
     """Plan or stage and explicitly apply launcher collection changes."""
     if launcher != "steam":
@@ -1372,7 +1381,7 @@ def sync_command(
             typer.echo("Nothing in Steam was changed.")
             return
         # end if
-        adapter.apply(staged, lambda prompt: typer.prompt(prompt))
+        adapter.apply(staged, lambda prompt: typer.prompt(prompt), allow_stale_pipe=allow_stale_pipe)
         typer.echo("Steam files replaced and verified. Keep Steam closed if restoring.")
         typer.echo(f"Restore with: game-collections restore steam {staged}")
         typer.echo(f"Backups remain in: {staged}")
@@ -1421,6 +1430,7 @@ def apply_command(
     unsupported_store_handling: Annotated[Literal["hide", "ignore", "enforce"] | None, typer.Option("--unsupported-store-handling", help="How games from stores without a URL builder count toward ownership. Falls back to a saved selection's value, then `ignore`, if not passed.")] = None,
     tiers: Annotated[Literal["all", "highest"] | None, typer.Option("--tiers", help="Include all matching tiers or only the highest matching sibling tier. Falls back to a saved selection's value, then `highest`, if not passed.")] = None,
     selection_config: Annotated[Path, typer.Option("--selection-config")] = DEFAULT_SELECTION_CONFIG_PATH,
+    allow_stale_pipe: Annotated[bool, typer.Option("--allow-stale-pipe", help="Proceed even if Steam's IPC pipe file is still present after Steam's PID check passed (a common leftover from a prior exit); skips the interactive IGNORE-PIPE prompt.")] = False,
 ) -> None:
     """Interactively pick which bundles to sync, then continue like `sync`."""
     if launcher != "steam":
@@ -1666,7 +1676,7 @@ def apply_command(
             typer.echo("Nothing in Steam was changed.")
             return
         # end if
-        adapter.apply(staged, lambda prompt: typer.prompt(prompt))
+        adapter.apply(staged, lambda prompt: typer.prompt(prompt), allow_stale_pipe=allow_stale_pipe)
         typer.echo("Steam files replaced and verified. Keep Steam closed if restoring.")
         typer.echo(f"Restore with: game-collections restore steam {staged}")
         typer.echo(f"Backups remain in: {staged}")
@@ -1683,6 +1693,7 @@ def restore_command(
     staged_dir: Annotated[Path, typer.Argument()],
     steam_root: Annotated[Path | None, typer.Option("--steam-root")] = None,
     steam_id: Annotated[str | None, typer.Option("--steam-id")] = None,
+    allow_stale_pipe: Annotated[bool, typer.Option("--allow-stale-pipe", help="Proceed even if Steam's IPC pipe file is still present after Steam's PID check passed (a common leftover from a prior exit); skips the interactive IGNORE-PIPE prompt.")] = False,
 ) -> None:
     """Restore a verified launcher backup while the launcher is stopped."""
     if launcher != "steam":
@@ -1692,7 +1703,7 @@ def restore_command(
     try:
         gateway = SteamFileGateway.discover(discover_steam_root(steam_root), steam_id)
         typer.echo(f"Backup directory: {staged_dir.resolve()}")
-        gateway.restore(staged_dir, lambda prompt: typer.prompt(prompt))
+        gateway.restore(staged_dir, lambda prompt: typer.prompt(prompt), allow_stale_pipe=allow_stale_pipe)
         typer.echo("Steam backups restored and verified.")
     except (OSError, ValueError, RuntimeError, SteamIoError) as error:
         typer.echo(str(error), err=True)
