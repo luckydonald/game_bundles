@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Painkiller Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2086/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2086/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2086/source.json
+games:
+- name: Painkiller Resurrection
+  ids:
+  - steam:39560
+  requires: []
+- name: 'Painkiller: Black Edition'
+  ids:
+  - steam:39530
+  requires: []
+- name: Painkiller Redemption
+  ids:
+  - steam:65560
+  requires: []
+- name: Painkiller Recurring Evil
+  ids:
+  - steam:206760
+  requires: []
+- name: Painkiller Overdose
+  ids:
+  - steam:3270
+  requires: []

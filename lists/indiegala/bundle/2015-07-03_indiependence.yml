@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indiependence Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2194/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2194/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2194/source.json
+games:
+- name: Tycoon City New York
+  ids:
+  - steam:9730
+  requires: []
+- name: The Bluecoats North vs South
+  ids:
+  - unresolved:source:isthereanydeal:2194:the-bluecoats-north-vs-south
+  requires: []
+- name: The Race for the White House
+  ids:
+  - steam:338590
+  requires: []
+- name: 'Commander COTA: Complete Pack'
+  ids:
+  - unresolved:source:isthereanydeal:2194:commander-cota-complete-pack
+  requires: []
+- name: Gold Rush! - Classic
+  ids:
+  - steam:308000
+  requires: []
+- name: Sideway™ New York
+  ids:
+  - steam:200190
+  requires: []
+- name: Major Mayhem
+  ids:
+  - steam:264340
+  requires: []
+- name: 'Battleplan: American Civil War'
+  ids:
+  - steam:285130
+  requires: []

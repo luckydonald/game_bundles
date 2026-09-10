@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Every Monday Bundle #54 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1772/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1772/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1772/source.json
+games:
+- name: Disillusions Manga Horror
+  ids:
+  - steam:343270
+  requires: []
+- name: Project Night
+  ids:
+  - unresolved:source:isthereanydeal:1772:project-night
+  requires: []
+- name: Metal Dead
+  ids:
+  - steam:302690
+  requires: []
+- name: Urban Legends
+  ids:
+  - unresolved:source:isthereanydeal:1772:urban-legends
+  requires: []
+- name: Astray
+  ids:
+  - steam:329200
+  requires: []
+- name: Long Night
+  ids:
+  - steam:270590
+  requires: []
+- name: Pineview Drive
+  ids:
+  - steam:288880
+  requires: []

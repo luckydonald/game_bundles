@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Rugged Rogues Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16/source.json
+games:
+- name: Voyage to Farland
+  ids:
+  - steam:364790
+  requires: []
+- name: Tales of Maj'Eyal
+  ids:
+  - steam:259680
+  requires: []
+- name: Obludia
+  ids:
+  - steam:314290
+  requires: []
+- name: Dungeon Prospector
+  ids:
+  - unresolved:source:isthereanydeal:16:dungeon-prospector
+  requires: []
+- name: Man in a Maze
+  ids:
+  - unresolved:source:isthereanydeal:16:man-in-a-maze
+  requires: []

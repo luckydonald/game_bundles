@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Breath of Wind Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/927/source.json
+games:
+- name: Windforge
+  ids:
+  - steam:266170
+  requires: []
+- name: Sang-Froid - Tales of Werewolves
+  ids:
+  - steam:227220
+  requires: []
+- name: LYNE
+  ids:
+  - steam:266010
+  requires: []
+- name: Critical Mass
+  ids:
+  - steam:105300
+  requires: []
+- name: Towers of Altrac - Epic Defense Battles
+  ids:
+  - steam:333660
+  requires: []
+- name: Final Slam 2
+  ids:
+  - steam:291330
+  requires: []
