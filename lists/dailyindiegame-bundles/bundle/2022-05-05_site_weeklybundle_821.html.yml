@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 821 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11464/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11464/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11464/source.json
+games:
+- name: How to create a Multiplayer First Person Shooter (FPS)
+  ids:
+  - unresolved:source:isthereanydeal:11464:how-to-create-a-multiplayer-first-person-shooter-fps
+  requires: []
+- name: Flow
+  ids:
+  - steam:1453870
+  requires: []
+- name: Dallen Clicker Ultimate
+  ids:
+  - steam:1394420
+  requires: []
+- name: Cavebound
+  ids:
+  - steam:1522980
+  requires: []
+- name: Snow Wars
+  ids:
+  - unresolved:source:isthereanydeal:11464:snow-wars
+  requires: []
+- name: Vylan
+  ids:
+  - steam:1445650
+  requires: []
+- name: 1/2 Red Riding Hood
+  ids:
+  - steam:1782130
+  requires: []
+- name: Jo-Jo Fighter
+  ids:
+  - unresolved:source:isthereanydeal:11464:jo-jo-fighter
+  requires: []
+- name: 'HOGuru Presents: The House With Too Many Zombies In It'
+  ids:
+  - steam:1785510
+  requires: []

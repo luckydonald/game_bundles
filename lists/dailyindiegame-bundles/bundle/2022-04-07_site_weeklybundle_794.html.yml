@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 794 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11344/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11344/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11344/source.json
+games:
+- name: Heart Chain Kitty
+  ids:
+  - steam:933210
+  requires: []
+- name: AMazing TD
+  ids:
+  - steam:1140030
+  requires: []
+- name: SSTR
+  ids:
+  - unresolved:source:isthereanydeal:11344:sstr
+  requires: []
+- name: Mystic Escape - Diary of a Prisoner
+  ids:
+  - steam:1251520
+  requires: []
+- name: Naturalist Stories
+  ids:
+  - steam:1260340
+  requires: []
+- name: Infected zone
+  ids:
+  - steam:1353250
+  requires: []
+- name: Starlight Alliance
+  ids:
+  - steam:1544530
+  requires: []
+- name: Crime District
+  ids:
+  - steam:1593660
+  requires: []
+- name: 'Shankaram: CODE REBORN'
+  ids:
+  - steam:1809420
+  requires: []

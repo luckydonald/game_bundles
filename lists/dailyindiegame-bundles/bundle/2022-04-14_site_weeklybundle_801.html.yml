@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 801 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11374/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11374/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11374/source.json
+games:
+- name: STOORM - Yellow Edition.
+  ids:
+  - unresolved:source:isthereanydeal:11374:stoorm-yellow-edition
+  requires: []
+- name: Aerannis
+  ids:
+  - steam:356580
+  requires: []
+- name: LightTrack
+  ids:
+  - steam:722910
+  requires: []
+- name: Turn-Based Champion
+  ids:
+  - steam:847230
+  requires: []
+- name: Westboro
+  ids:
+  - steam:416060
+  requires: []
+- name: Game of the forgotten Gods. Wake up
+  ids:
+  - steam:828540
+  requires: []
+- name: NIGHT FALLEN
+  ids:
+  - steam:943030
+  requires: []
+- name: 'Duckles: the Jigsaw Witch'
+  ids:
+  - steam:512700
+  requires: []
+- name: Master Pyrox Wizard Smackdown
+  ids:
+  - steam:861960
+  requires: []

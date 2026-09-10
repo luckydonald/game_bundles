@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 831 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11498/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11498/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11498/source.json
+games:
+- name: 'Puzzle Art: Cats'
+  ids:
+  - steam:1767890
+  requires: []
+- name: Maverta
+  ids:
+  - steam:1799570
+  requires: []
+- name: Kingdom of Maverta
+  ids:
+  - steam:1804450
+  requires: []
+- name: 'Maze Art: Black'
+  ids:
+  - steam:1815860
+  requires: []
+- name: 'Maze Art: Blue'
+  ids:
+  - steam:1815880
+  requires: []
+- name: Pirates of the Maverta
+  ids:
+  - steam:1848280
+  requires: []
+- name: One By One
+  ids:
+  - steam:1780480
+  requires: []
+- name: Aoihana
+  ids:
+  - unresolved:source:isthereanydeal:11498:aoihana
+  requires: []
+- name: Wet Dreams
+  ids:
+  - unresolved:source:isthereanydeal:11498:wet-dreams
+  requires: []

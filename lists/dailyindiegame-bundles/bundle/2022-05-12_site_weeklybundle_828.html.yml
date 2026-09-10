@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 828: Positive — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11491/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11491/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11491/source.json
+games:
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:11491:teddy-floppy-ear-kayaking
+  requires: []
+- name: Anstorm
+  ids:
+  - steam:966010
+  requires: []
+- name: PowBall Renaissance
+  ids:
+  - steam:654600
+  requires: []
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:11491:teddy-floppy-ear-the-race
+  requires: []
+- name: Soul Valley
+  ids:
+  - steam:1041780
+  requires: []
+- name: Crimson Shift
+  ids:
+  - steam:837330
+  requires: []
+- name: Dungeon of Rikka
+  ids:
+  - steam:1183840
+  requires: []
+- name: Hexia
+  ids:
+  - steam:1173730
+  requires: []
+- name: Legend of Chilli Tree
+  ids:
+  - steam:1635250
+  requires: []

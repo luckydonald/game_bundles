@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 795 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11350/source.json
+games:
+- name: 'HellScape: Two Brothers'
+  ids:
+  - steam:1218090
+  requires: []
+- name: Vitality Girl Ⅱ:Fire
+  ids:
+  - unresolved:source:isthereanydeal:11350:vitality-girl-ii-fire
+  requires: []
+- name: Diptych
+  ids:
+  - steam:1766580
+  requires: []
+- name: Vitality Girl Ⅲ:Pixel
+  ids:
+  - unresolved:source:isthereanydeal:11350:vitality-girl-iii-pixel
+  requires: []
+- name: Slice of Life Fantasy
+  ids:
+  - unresolved:source:isthereanydeal:11350:slice-of-life-fantasy
+  requires: []
+- name: DownTheDead
+  ids:
+  - steam:1936250
+  requires: []
+- name: 3D PUZZLE - Alchemist House
+  ids:
+  - steam:1955000
+  requires: []
+- name: Elemental Angel II
+  ids:
+  - unresolved:source:isthereanydeal:11350:elemental-angel-ii
+  requires: []
+- name: Goddess Of War Ashley II
+  ids:
+  - unresolved:source:isthereanydeal:11350:goddess-of-war-ashley-ii
+  requires: []

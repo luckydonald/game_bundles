@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 797 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11359/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11359/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11359/source.json
+games:
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: Multimirror
+  ids:
+  - steam:533860
+  requires: []
+- name: 'Heroes Of Maidan 3: Crimean Battle'
+  ids:
+  - unresolved:source:isthereanydeal:11359:heroes-of-maidan-3-crimean-battle
+  requires: []
+- name: War of the Wasteland
+  ids:
+  - unresolved:source:isthereanydeal:11359:war-of-the-wasteland
+  requires: []
+- name: Whiskey.Mafia. Leo's Family
+  ids:
+  - steam:1300430
+  requires: []
+- name: CLASSIC TANKS 2020
+  ids:
+  - steam:1393610
+  requires: []
+- name: Nether Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:11359:nether-nightmare
+  requires: []
+- name: Beam Car Crash Derby
+  ids:
+  - unresolved:source:isthereanydeal:11359:beam-car-crash-derby
+  requires: []
+- name: Mystery Swords
+  ids:
+  - steam:1760670
+  requires: []

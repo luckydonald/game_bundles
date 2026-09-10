@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 772 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11168/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11168/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11168/source.json
+games:
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+  requires: []
+- name: 'Welcome To... Chichester 1 : Test Project Files'
+  ids:
+  - unresolved:source:isthereanydeal:11168:welcome-to-chichester-1-test-project-files
+  requires: []
+- name: 'Welcome To... Chichester OVN : The Project'
+  ids:
+  - unresolved:source:isthereanydeal:11168:welcome-to-chichester-ovn-the-project
+  requires: []
+- name: 'Welcome To... Chichester 2 - Part II : Project Code'
+  ids:
+  - unresolved:source:isthereanydeal:11168:welcome-to-chichester-2-part-ii-project-code
+  requires: []
+- name: Welcome To... Chichester 2 - No Extra Regrets For The Future Script
+  ids:
+  - unresolved:source:isthereanydeal:11168:welcome-to-chichester-2-no-extra-regrets-for-the-future-script
+  requires: []
+- name: 'WTC : Recruitment Day'
+  ids:
+  - steam:1916660
+  requires: []
+- name: 'WTC : Recruitment Day Project Files'
+  ids:
+  - unresolved:source:isthereanydeal:11168:wtc-recruitment-day-project-files
+  requires: []
+- name: 'WTC : Recruitment Day Voice Files'
+  ids:
+  - unresolved:source:isthereanydeal:11168:wtc-recruitment-day-voice-files
+  requires: []
+- name: 'WTC : Recruitment Day Script'
+  ids:
+  - unresolved:source:isthereanydeal:11168:wtc-recruitment-day-script
+  requires: []
