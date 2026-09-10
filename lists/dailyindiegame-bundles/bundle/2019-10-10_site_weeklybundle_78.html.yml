@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 78 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7997/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7997/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7997/source.json
+games:
+- name: Grind Zones
+  ids:
+  - unresolved:source:isthereanydeal:7997:grind-zones
+  requires: []
+- name: Defense Of Greece TD
+  ids:
+  - steam:537200
+  requires: []
+- name: 'Word Killer: Revolution'
+  ids:
+  - unresolved:source:isthereanydeal:7997:word-killer-revolution
+  requires: []
+- name: Helpless Zombies
+  ids:
+  - unresolved:source:isthereanydeal:7997:helpless-zombies
+  requires: []
+- name: Itineris
+  ids:
+  - unresolved:source:isthereanydeal:7997:itineris
+  requires: []
+- name: Polaris
+  ids:
+  - steam:2482850
+  requires: []
+- name: 'VCB: Why City 4k'
+  ids:
+  - unresolved:source:isthereanydeal:7997:vcb-why-city-4k
+  requires: []
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+  requires: []
+- name: Nippon Ecchi Jigsaw
+  ids:
+  - steam:1019240
+  requires: []

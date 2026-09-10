@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 100: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8168/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8168/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8168/source.json
+games:
+- name: Best Life Simulator
+  ids:
+  - steam:949960
+  requires: []
+- name: One Manga Day - Bonus Content
+  ids:
+  - steam:367380
+  requires: []
+- name: BomberZone
+  ids:
+  - steam:473140
+  requires: []
+- name: A Girls Fabric Face
+  ids:
+  - steam:603810
+  requires: []
+- name: Stroke Fill
+  ids:
+  - steam:1089140
+  requires: []
+- name: Where Are My Friends?
+  ids:
+  - steam:721350
+  requires: []
+- name: Muay Thai Fighting
+  ids:
+  - unresolved:source:isthereanydeal:8168:muay-thai-fighting
+  requires: []
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:8168:a-d-m-angels-demons-and-men
+  requires: []
+- name: 'Welcome To... Chichester 3 : The Demon Of Chichester And The Last Day'
+  ids:
+  - steam:1041660
+  requires: []

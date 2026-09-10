@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 145 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8482/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8482/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8482/source.json
+games:
+- name: Cocktail for Beauty
+  ids:
+  - steam:1141180
+  requires: []
+- name: 'The Searchers of Legends : Origin'
+  ids:
+  - steam:1107490
+  requires: []
+- name: Hentai Time
+  ids:
+  - unresolved:source:isthereanydeal:8482:hentai-time
+  requires: []
+- name: Cyber OutRun
+  ids:
+  - steam:1132410
+  requires: []
+- name: Cyberprank Girls 2077
+  ids:
+  - unresolved:source:isthereanydeal:8482:cyberprank-girls-2077
+  requires: []
+- name: 落华居
+  ids:
+  - steam:1133610
+  requires: []
+- name: Mommy
+  ids:
+  - steam:1204220
+  requires: []
+- name: CatDog Puzzle
+  ids:
+  - steam:1241780
+  requires: []
+- name: Alien Cat
+  ids:
+  - steam:1247170
+  requires: []

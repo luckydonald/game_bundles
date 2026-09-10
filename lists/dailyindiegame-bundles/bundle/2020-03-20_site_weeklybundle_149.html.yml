@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8561/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8561/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8561/source.json
+games:
+- name: Aaru's Awakening
+  ids:
+  - steam:294060
+  requires: []
+- name: Autumn Dream
+  ids:
+  - steam:521980
+  requires: []
+- name: The Housewife
+  ids:
+  - steam:496750
+  requires: []
+- name: Silence in the Space - Season One
+  ids:
+  - unresolved:source:isthereanydeal:8561:silence-in-the-space-season-one
+  requires: []
+- name: Project Shield
+  ids:
+  - unresolved:source:isthereanydeal:8561:project-shield
+  requires: []
+- name: Super Mr. Kake
+  ids:
+  - steam:672050
+  requires: []
+- name: Surrounded by mice
+  ids:
+  - unresolved:source:isthereanydeal:8561:surrounded-by-mice
+  requires: []
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+  requires: []
+- name: Colorful 3D II
+  ids:
+  - steam:1251760
+  requires: []

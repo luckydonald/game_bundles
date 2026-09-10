@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 105: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8215/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8215/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8215/source.json
+games:
+- name: Gangsta Woman
+  ids:
+  - steam:1108620
+  requires: []
+- name: Space Waver
+  ids:
+  - steam:668970
+  requires: []
+- name: 'Steel Arena: Robot War'
+  ids:
+  - unresolved:source:isthereanydeal:8215:steel-arena-robot-war
+  requires: []
+- name: Freedom Fighter
+  ids:
+  - steam:514360
+  requires: []
+- name: Full Body Workout
+  ids:
+  - unresolved:source:isthereanydeal:8215:full-body-workout
+  requires: []
+- name: 'A New World: Kingdoms'
+  ids:
+  - steam:628650
+  requires: []
+- name: Robot Warriors
+  ids:
+  - steam:756560
+  requires: []
+- name: The Grave Digger
+  ids:
+  - steam:345340
+  requires: []
+- name: 酒店
+  ids:
+  - steam:934810
+  requires: []

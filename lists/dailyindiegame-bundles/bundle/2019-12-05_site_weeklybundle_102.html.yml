@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 102: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8180/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8180/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8180/source.json
+games:
+- name: VaporFly
+  ids:
+  - steam:1119770
+  requires: []
+- name: Milly the dog
+  ids:
+  - steam:1081110
+  requires: []
+- name: Kitten Life Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8180:kitten-life-simulator
+  requires: []
+- name: 'Climatic Survival: Northern Storm'
+  ids:
+  - steam:1131640
+  requires: []
+- name: 'Fancy Skiing: Speed'
+  ids:
+  - steam:1081910
+  requires: []
+- name: Fading Visage
+  ids:
+  - unresolved:source:isthereanydeal:8180:fading-visage
+  requires: []
+- name: Emergency Robot Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8180:emergency-robot-simulator
+  requires: []
+- name: Eggness
+  ids:
+  - unresolved:source:isthereanydeal:8180:eggness
+  requires: []
+- name: After The Suns
+  ids:
+  - steam:1101200
+  requires: []

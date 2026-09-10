@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 98: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8158/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8158/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8158/source.json
+games:
+- name: 'Longest Monday: Unveiling'
+  ids:
+  - unresolved:source:isthereanydeal:8158:longest-monday-unveiling
+  requires: []
+- name: Grater
+  ids:
+  - unresolved:source:isthereanydeal:8158:grater
+  requires: []
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+  requires: []
+- name: Gregor Hills Haunted Hospital
+  ids:
+  - steam:1084770
+  requires: []
+- name: Alien Revival
+  ids:
+  - unresolved:source:isthereanydeal:8158:alien-revival
+  requires: []
+- name: The Risers
+  ids:
+  - steam:857770
+  requires: []
+- name: 幻世情缘
+  ids:
+  - steam:869660
+  requires: []
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:8158:frozen-mystery
+  requires: []
+- name: Last Alive
+  ids:
+  - unresolved:source:isthereanydeal:8158:last-alive
+  requires: []

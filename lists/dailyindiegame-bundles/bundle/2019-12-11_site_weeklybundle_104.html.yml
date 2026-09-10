@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 104 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8195/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8195/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8195/source.json
+games:
+- name: Pull Ball
+  ids:
+  - steam:1006920
+  requires: []
+- name: Type Defense
+  ids:
+  - steam:904440
+  requires: []
+- name: Cargo Breach
+  ids:
+  - steam:722040
+  requires: []
+- name: 'M1: A Death in the Desert'
+  ids:
+  - steam:675530
+  requires: []
+- name: Achievements printer
+  ids:
+  - steam:806140
+  requires: []
+- name: Tale's Casino Escape
+  ids:
+  - steam:1149930
+  requires: []
+- name: '航海日記：起航(Uncharted Ocean : Set Sail)'
+  ids:
+  - unresolved:source:isthereanydeal:8195:hang-hai-ri-ji-qi-hang-uncharted-ocean-set-sail
+  requires: []
+- name: Terro Lunkka Adventures
+  ids:
+  - steam:1186730
+  requires: []
+- name: Sanctum Breach
+  ids:
+  - unresolved:source:isthereanydeal:8195:sanctum-breach
+  requires: []

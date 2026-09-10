@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 89: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8111/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8111/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8111/source.json
+games:
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+  requires: []
+- name: TRIP:Steam Edition
+  ids:
+  - steam:341540
+  requires: []
+- name: Longboard Stunts and Tricks
+  ids:
+  - unresolved:source:isthereanydeal:8111:longboard-stunts-and-tricks
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:8111:magic-chess
+  requires: []
+- name: Interregnum-Alpha
+  ids:
+  - unresolved:source:isthereanydeal:8111:interregnum-alpha
+  requires: []
+- name: Bubble Rush
+  ids:
+  - steam:717910
+  requires: []
+- name: Pursuer
+  ids:
+  - steam:1013660
+  requires: []
+- name: Space Flowers
+  ids:
+  - steam:821480
+  requires: []
+- name: Diminutive
+  ids:
+  - unresolved:source:isthereanydeal:8111:diminutive
+  requires: []

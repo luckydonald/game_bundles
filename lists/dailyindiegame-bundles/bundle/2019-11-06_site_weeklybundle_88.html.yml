@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 88 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8103/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8103/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8103/source.json
+games:
+- name: Bumper
+  ids:
+  - steam:509850
+  requires: []
+- name: Zombillie
+  ids:
+  - steam:456810
+  requires: []
+- name: The Fragment
+  ids:
+  - steam:1107190
+  requires: []
+- name: Kalaban
+  ids:
+  - steam:571520
+  requires: []
+- name: Violett - Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:8103:violett-remastered-edition
+  requires: []
+- name: Rude Racers
+  ids:
+  - steam:1099440
+  requires: []
+- name: Wildland
+  ids:
+  - steam:1112960
+  requires: []
+- name: 16 bit trader
+  ids:
+  - unresolved:source:isthereanydeal:8103:16-bit-trader
+  requires: []
+- name: New Tricks for Old Gods
+  ids:
+  - steam:1165490
+  requires: []

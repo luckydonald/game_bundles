@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 122 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8340/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8340/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8340/source.json
+games:
+- name: Challenging Dogfights
+  ids:
+  - unresolved:source:isthereanydeal:8340:challenging-dogfights
+  requires: []
+- name: Monsters!
+  ids:
+  - steam:336160
+  requires: []
+- name: Star Girls
+  ids:
+  - steam:842430
+  requires: []
+- name: The Cows Are Watching
+  ids:
+  - steam:563130
+  requires: []
+- name: Race Race Racer
+  ids:
+  - steam:1190380
+  requires: []
+- name: Mouse Mayhem Shooting & Racing
+  ids:
+  - steam:1201200
+  requires: []
+- name: Flirt Balls
+  ids:
+  - steam:1212860
+  requires: []
+- name: Pinball universe
+  ids:
+  - steam:1206870
+  requires: []
+- name: Formula Car Racing Simulator
+  ids:
+  - steam:1221590
+  requires: []

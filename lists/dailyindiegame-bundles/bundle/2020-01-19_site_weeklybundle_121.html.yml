@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 121 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8329/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8329/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8329/source.json
+games:
+- name: Voyage to Farland
+  ids:
+  - steam:364790
+  requires: []
+- name: Sick Way
+  ids:
+  - steam:1200430
+  requires: []
+- name: X-Blades
+  ids:
+  - steam:7510
+  requires: []
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: 'World War III: Black Gold'
+  ids:
+  - steam:254080
+  requires: []
+- name: The Depths of Tolagal
+  ids:
+  - steam:340600
+  requires: []
+- name: Alone in the War
+  ids:
+  - steam:1114910
+  requires: []
+- name: Guardians Of Rings
+  ids:
+  - steam:1200400
+  requires: []
+- name: '1111660'
+  ids:
+  - unresolved:source:isthereanydeal:8329:1111660
+  requires: []

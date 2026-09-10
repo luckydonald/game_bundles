@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 92: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8126/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8126/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8126/source.json
+games:
+- name: Master of Mutations
+  ids:
+  - unresolved:source:isthereanydeal:8126:master-of-mutations
+  requires: []
+- name: Stary
+  ids:
+  - steam:995280
+  requires: []
+- name: 'Lawnmower Game 3: Horror'
+  ids:
+  - steam:907620
+  requires: []
+- name: Seasonal Soccer
+  ids:
+  - steam:818380
+  requires: []
+- name: Heroes Of The Offworld Arena
+  ids:
+  - unresolved:source:isthereanydeal:8126:heroes-of-the-offworld-arena
+  requires: []
+- name: AlpenCROSS
+  ids:
+  - steam:801700
+  requires: []
+- name: Defense of Roman Britain
+  ids:
+  - steam:657790
+  requires: []
+- name: World of Virtual Reality (VR)
+  ids:
+  - unresolved:source:isthereanydeal:8126:world-of-virtual-reality-vr
+  requires: []
+- name: Find Your Way
+  ids:
+  - unresolved:source:isthereanydeal:8126:find-your-way
+  requires: []
