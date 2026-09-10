@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Feb 2016) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2900/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2900/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2900/source.json
+games:
+- name: Titan Souls
+  ids:
+  - steam:297130
+  requires: []
+- name: Volume
+  ids:
+  - steam:365770
+  requires: []
+- name: Penarium
+  ids:
+  - steam:307590
+  requires: []
+- name: Planetoid Pioneers
+  ids:
+  - steam:300260
+  requires: []
+- name: 'Alien: Isolation'
+  ids:
+  - steam:214490
+  requires: []
+- name: Dropsy
+  ids:
+  - steam:274350
+  requires: []
+- name: Broken Age
+  ids:
+  - steam:232790
+  requires: []
+- name: Elephant in the Room
+  ids:
+  - unresolved:source:isthereanydeal:2900:elephant-in-the-room
+  requires: []

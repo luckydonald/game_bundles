@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Valiant Bundle — entire-1-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1183/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1183/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1183/source.json
+games:
+- name: Shadow Man
+  ids:
+  - unresolved:source:isthereanydeal:1183:shadow-man
+  requires: []
