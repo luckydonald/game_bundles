@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Survival Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7132/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7132/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7132/source.json
+games:
+- name: Tharsis
+  ids:
+  - steam:323060
+  requires: []
+- name: DEADLIGHT
+  ids:
+  - steam:211400
+  requires: []
+- name: Killing Room
+  ids:
+  - steam:407560
+  requires: []
+- name: Distrust
+  ids:
+  - steam:635200
+  requires: []
+- name: Savage Lands
+  ids:
+  - steam:307880
+  requires: []
+- name: 35MM
+  ids:
+  - steam:466500
+  requires: []
+- name: March of the Living
+  ids:
+  - steam:458000
+  requires: []
+- name: This Strange Realm Of Mine
+  ids:
+  - steam:655730
+  requires: []
+- name: Valnir Rok Survival RPG
+  ids:
+  - steam:658980
+  requires: []
+- name: Band of Defenders
+  ids:
+  - steam:644640
+  requires: []

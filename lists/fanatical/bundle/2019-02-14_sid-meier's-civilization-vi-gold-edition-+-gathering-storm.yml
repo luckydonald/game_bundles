@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sid Meier&#39;s Civilization VI Gold + Gathering Storm — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7025/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7025/source.json
+games:
+- name: Sid Meier's Civilization® VI Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:7025:sid-meiers-civilization-vi-gold-edition
+  requires: []
+- name: 'Sid Meier''s Civilization® VI: Gathering Storm'
+  ids:
+  - steam:947510
+  requires: []

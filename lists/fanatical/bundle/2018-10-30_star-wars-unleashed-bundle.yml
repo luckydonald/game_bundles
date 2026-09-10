@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Star Wars Unleashed Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6620/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6620/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6620/source.json
+games:
+- name: 'Star Wars: Jedi Knight: Jedi Academy'
+  ids:
+  - steam:6020
+  requires: []
+- name: 'Star Wars: Knights of the Old Republic'
+  ids:
+  - steam:32370
+  requires: []
+- name: 'Star Wars: The Force Unleashed: Ultimate Sith Edition'
+  ids:
+  - steam:32430
+  requires: []
+- name: 'Star Wars®: Jedi Knight® II: Jedi Outcast™'
+  ids:
+  - steam:6030
+  requires: []
+- name: STAR WARS™ Knights of the Old Republic™ II - The Sith Lords™
+  ids:
+  - steam:208580
+  requires: []

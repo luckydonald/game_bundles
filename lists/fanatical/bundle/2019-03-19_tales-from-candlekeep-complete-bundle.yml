@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tales From Candlekeep - Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7186/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7186/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7186/source.json
+games:
+- name: Tales from Candlekeep - Birdsong's Entertainer Pack
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-birdsongs-entertainer-pack
+  requires: []
+- name: 'Tales from Candlekeep: Tomb of Annihilation'
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-tomb-of-annihilation
+  requires: []
+- name: Tales from Candlekeep - Dragonbait's Dungeoneer Pack
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-dragonbaits-dungeoneer-pack
+  requires: []
+- name: Tales from Candlekeep - Qawasha the Human Druid
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-qawasha-the-human-druid
+  requires: []
+- name: Tales from Candlekeep - Asharra's Diplomat Pack
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-asharras-diplomat-pack
+  requires: []
+- name: Tales from Candlekeep - Artus Cimber's Explorer Pack
+  ids:
+  - unresolved:source:isthereanydeal:7186:tales-from-candlekeep-artus-cimbers-explorer-pack
+  requires: []

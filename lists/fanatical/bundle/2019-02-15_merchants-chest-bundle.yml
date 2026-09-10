@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Merchant&#39;s Chest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7029/source.json
+games:
+- name: 'Port Royale 3: Harbour Master'
+  ids:
+  - steam:215970
+  requires: []
+- name: "Rise of Venice \x96 Beyond the Sea"
+  ids:
+  - steam:260860
+  requires: []
+- name: Port Royale 3
+  ids:
+  - steam:205610
+  requires: []
+- name: Patrician IV
+  ids:
+  - steam:57620
+  requires: []
+- name: Port Royale 3 Dawn of Pirates
+  ids:
+  - steam:215971
+  requires: []
+- name: 'Patrician IV: Rise of a Dynasty'
+  ids:
+  - steam:57730
+  requires: []
+- name: Port Royale 3 New Adventures
+  ids:
+  - steam:215972
+  requires: []
+- name: Rise of Venice
+  ids:
+  - steam:227020
+  requires: []
+- name: Patrician III
+  ids:
+  - steam:33570
+  requires: []
