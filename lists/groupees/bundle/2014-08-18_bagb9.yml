@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1092/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1092/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1092/source.json
+games:
+- name: Irregular Zone
+  ids:
+  - unresolved:source:isthereanydeal:1092:irregular-zone
+  requires: []
+- name: Hashtag Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:1092:hashtag-dungeon
+  requires: []
+- name: 'The Ingenious Machine: New and Improved Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1092:the-ingenious-machine-new-and-improved-edition
+  requires: []
+- name: Avner
+  ids:
+  - unresolved:source:isthereanydeal:1092:avner
+  requires: []
+- name: Dwarf Tower
+  ids:
+  - steam:335100
+  requires: []
+- name: Snow Light
+  ids:
+  - steam:329480
+  requires: []
+- name: Hearthlands
+  ids:
+  - steam:336300
+  requires: []
+- name: Bloody Streets
+  ids:
+  - steam:336110
+  requires: []
+- name: Wickland
+  ids:
+  - unresolved:source:isthereanydeal:1092:wickland
+  requires: []
+- name: Prelogate
+  ids:
+  - steam:332830
+  requires: []

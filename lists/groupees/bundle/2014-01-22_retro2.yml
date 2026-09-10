@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Retro Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/512/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/512/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/512/source.json
+games:
+- name: Raiden Legacy, The Return
+  ids:
+  - unresolved:source:isthereanydeal:512:raiden-legacy-the-return
+  requires: []
+- name: Two Brothers
+  ids:
+  - steam:259760
+  requires: []
+- name: Super Killer Hornet
+  ids:
+  - unresolved:source:isthereanydeal:512:super-killer-hornet
+  requires: []
+- name: Al Emmo & the Lost Dutchman's Mine
+  ids:
+  - steam:296850
+  requires: []
+- name: Rot Gut
+  ids:
+  - steam:395500
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:512:n-p-p-d-rush-the-milk-of-ultra-violet
+  requires: []
+- name: Saturday Morning RPG
+  ids:
+  - steam:263320
+  requires: []
+- name: Pineapple Smash Crew
+  ids:
+  - steam:204390
+  requires: []
+- name: IREM Arcade Hits
+  ids:
+  - unresolved:source:isthereanydeal:512:irem-arcade-hits
+  requires: []
+- name: Gobliiins Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:512:gobliiins-trilogy
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kiss My Bundles — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/834/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/834/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/834/source.json
+games:
+- name: iBomber Defense
+  ids:
+  - steam:104000
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:834:n-p-p-d-rush-the-milk-of-ultra-violet
+  requires: []
+- name: Storm in a Teacup
+  ids:
+  - steam:104020
+  requires: []
+- name: Humanity Asset
+  ids:
+  - steam:271640
+  requires: []
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370
+  requires: []

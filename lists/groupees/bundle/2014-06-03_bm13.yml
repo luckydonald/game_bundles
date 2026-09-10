@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/857/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/857/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/857/source.json
+games:
+- name: Fly'n
+  ids:
+  - steam:223730
+  requires: []
+- name: Miasmata
+  ids:
+  - steam:223510
+  requires: []
+- name: Alpha Kimori™ 1
+  ids:
+  - steam:265870
+  requires: []
+- name: Antisquad
+  ids:
+  - steam:268200
+  requires: []
+- name: Mechanic Escape
+  ids:
+  - steam:268240
+  requires: []
+- name: Journey of a Roach
+  ids:
+  - steam:255300
+  requires: []
+- name: Spate
+  ids:
+  - unresolved:source:isthereanydeal:857:spate
+  requires: []
+- name: Alcarys Complex
+  ids:
+  - unresolved:source:isthereanydeal:857:alcarys-complex
+  requires: []
+- name: Legend of Dungeon
+  ids:
+  - steam:238280
+  requires: []
+- name: Nekro
+  ids:
+  - unresolved:source:isthereanydeal:857:nekro
+  requires: []
+- name: Longest Journey, The
+  ids:
+  - unresolved:source:isthereanydeal:857:longest-journey-the
+  requires: []

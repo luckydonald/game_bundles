@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Let&#39;s Build a Doujin Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/364/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/364/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/364/source.json
+games:
+- name: Princess' Edge - Dragonstone
+  ids:
+  - steam:444190
+  requires: []
+- name: eXceed 3rd - Jade Penetrate Black Package
+  ids:
+  - unresolved:source:isthereanydeal:364:exceed-3rd-jade-penetrate-black-package
+  requires: []
+- name: ARMED SEVEN
+  ids:
+  - steam:349690
+  requires: []
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Suguri Collection
+  ids:
+  - unresolved:source:isthereanydeal:364:suguri-collection
+  requires: []
+- name: eXceed 2nd - Vampire REX - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:364:exceed-2nd-vampire-rex-original-soundtrack
+  requires: []
+- name: KAMUI
+  ids:
+  - steam:283820
+  requires: []
+- name: HellSinker
+  ids:
+  - steam:1067720
+  requires: []
+- name: Hatoful Boyfriend
+  ids:
+  - steam:310080
+  requires: []
+- name: eXceed 2nd - Vampire REX
+  ids:
+  - unresolved:source:isthereanydeal:364:exceed-2nd-vampire-rex
+  requires: []
+- name: Higurashi When They Cry Hou - Ch.1 Onikakushi
+  ids:
+  - steam:310360
+  requires: []
+- name: eXceed - Gun Bullet Children
+  ids:
+  - unresolved:source:isthereanydeal:364:exceed-gun-bullet-children
+  requires: []

@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kiss Groupee 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/318/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/318/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/318/source.json
+games:
+- name: Night of the Living Dead Defense
+  ids:
+  - unresolved:source:isthereanydeal:318:night-of-the-living-dead-defense
+  requires: []
+- name: Train Simulator 2017
+  ids:
+  - unresolved:source:isthereanydeal:318:train-simulator-2017
+  requires: []
+- name: Super Killer Hornet
+  ids:
+  - unresolved:source:isthereanydeal:318:super-killer-hornet
+  requires: []
+- name: Bloop
+  ids:
+  - steam:340200
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: International Snooker
+  ids:
+  - unresolved:source:isthereanydeal:318:international-snooker
+  requires: []
+- name: Pester
+  ids:
+  - steam:354920
+  requires: []
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+  requires: []
+- name: 'Shadows on the Vatican - Act 1: Greed'
+  ids:
+  - unresolved:source:isthereanydeal:318:shadows-on-the-vatican-act-1-greed
+  requires: []
+- name: Grimind
+  ids:
+  - steam:265380
+  requires: []
+- name: HyperSonic 4
+  ids:
+  - unresolved:source:isthereanydeal:318:hypersonic-4
+  requires: []
+- name: RADical ROACH
+  ids:
+  - unresolved:source:isthereanydeal:318:radical-roach
+  requires: []
+- name: Steam Heroes
+  ids:
+  - steam:341160
+  requires: []

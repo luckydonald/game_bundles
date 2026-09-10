@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sherlock Holmes Charity Bundle — Select Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/202/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/202/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/202/source.json
+games:
+- name: 'Sherlock Holmes: The Mystery of the Mummy'
+  ids:
+  - steam:11130
+  requires: []
+- name: 'Dracula: Love Kills'
+  ids:
+  - steam:252890
+  requires: []
+- name: Sherlock Holmes - Nemesis
+  ids:
+  - steam:11040
+  requires: []
+- name: Sherlock Holmes versus Jack the Ripper
+  ids:
+  - steam:11190
+  requires: []
+- name: 'Sherlock Holmes: The Silver Earring'
+  ids:
+  - steam:11150
+  requires: []
+- name: 'Sherlock Holmes: The Mystery of the Persian Carpet'
+  ids:
+  - steam:11180
+  requires: []
+- name: Sherlock Holmes and The Hound of The Baskervilles
+  ids:
+  - steam:209230
+  requires: []
+- name: Journey to the Center of the Earth
+  ids:
+  - steam:474240
+  requires: []
+- name: Dracula Origin
+  ids:
+  - steam:11050
+  requires: []
+- name: 'Sherlock Holmes: The Awakened (2008)'
+  ids:
+  - steam:11140
+  requires: []
