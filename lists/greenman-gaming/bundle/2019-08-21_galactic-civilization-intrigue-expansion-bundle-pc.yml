@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Galactic Civilization Intrigue Expansion Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7809/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7809/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7809/source.json
+games:
+- name: Galactic Civilizations III - Lost Treasures
+  ids:
+  - steam:495370
+  requires: []
+- name: Galactic Civilizations III - Mech Parts Kit
+  ids:
+  - steam:513520
+  requires: []
+- name: 'Galactic Civilizations III: Intrigue Expansion'
+  ids:
+  - steam:747060
+  requires: []
+- name: 'Galactic Civilizations III - Heroes of Star Control: Origins'
+  ids:
+  - steam:954810
+  requires: []

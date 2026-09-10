@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Outlast Trinity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9329/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9329/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9329/source.json
+games:
+- name: Outlast
+  ids:
+  - steam:238320
+  requires: []
+- name: 'Outlast: Whistleblower'
+  ids:
+  - steam:273300
+  requires: []
+- name: Outlast 2
+  ids:
+  - steam:414700
+  requires: []

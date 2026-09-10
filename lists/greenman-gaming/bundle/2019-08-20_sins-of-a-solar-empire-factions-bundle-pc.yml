@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sins of a Solar Empire Factions Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7798/source.json
+games:
+- name: 'Sins of a Solar Empire: Rebellion - Forbidden Worlds'
+  ids:
+  - steam:228601
+  requires: []
+- name: 'Sins of a Solar Empire: Rebellion - Stellar Phenomena'
+  ids:
+  - steam:255910
+  requires: []
+- name: 'Sins of a Solar Empire: Rebellion - Minor Factions'
+  ids:
+  - steam:974650
+  requires: []
+- name: 'Sins of a Solar Empire: Rebellion - Outlaw Sectors'
+  ids:
+  - steam:487280
+  requires: []

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Sniper: Ghost Warrior Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7755/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7755/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7755/source.json
+games:
+- name: Sniper Ghost Warrior 3
+  ids:
+  - steam:368070
+  requires: []
+- name: 'Sniper: Ghost Warrior 2 Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:7755:sniper-ghost-warrior-2-collectors-edition
+  requires: []
+- name: 'Sniper: Ghost Warrior Gold Edition'
+  ids:
+  - unresolved:source:isthereanydeal:7755:sniper-ghost-warrior-gold-edition
+  requires: []

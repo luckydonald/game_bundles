@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: VR Starter Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7748/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7748/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7748/source.json
+games:
+- name: Dream Coaster VR
+  ids:
+  - steam:663190
+  requires: []
+- name: Drone Hunter VR
+  ids:
+  - steam:466520
+  requires: []
+- name: Atlantis VR
+  ids:
+  - steam:741490
+  requires: []
+- name: 'FIVE: Champions of Canaan'
+  ids:
+  - steam:492870
+  requires: []
+- name: Lunapark VR
+  ids:
+  - steam:812770
+  requires: []
+- name: TimeLock VR
+  ids:
+  - unresolved:source:isthereanydeal:7748:timelock-vr
+  requires: []
+- name: Rift Coaster HD Remastered VR
+  ids:
+  - steam:663200
+  requires: []
