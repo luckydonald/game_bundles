@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Bento Bundle (Spring 2026) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16049/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16049/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16049/source.json
+games:
+- name: Viviette
+  ids:
+  - steam:883070
+  requires: []
+- name: Rise of the Third Power
+  ids:
+  - steam:698700
+  requires: []
+- name: 'Bug Fables: The Everlasting Sapling'
+  ids:
+  - steam:1082710
+  requires: []
+- name: Evil Tonight
+  ids:
+  - steam:1480830
+  requires: []
+- name: Blacksmith of the Sand Kingdom
+  ids:
+  - steam:1445440
+  requires: []
+- name: Nanomon Virtual Pet
+  ids:
+  - steam:1498060
+  requires: []
+- name: Lost Ruins
+  ids:
+  - steam:1306630
+  requires: []
+- name: Flowstone Saga
+  ids:
+  - steam:1372000
+  requires: []
+- name: Dark Deity Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16049:dark-deity-deluxe-edition
+  requires: []
+- name: 'GRAND CROSS: ReNOVATION'
+  ids:
+  - steam:1808900
+  requires: []
+- name: SHIRONE the Dragon Girl
+  ids:
+  - steam:1805200
+  requires: []
+- name: 'Endless Monday: Dreams and Deadlines'
+  ids:
+  - steam:2262610
+  requires: []
+- name: Looper Tactics
+  ids:
+  - steam:2140850
+  requires: []
+- name: Songs Of Life
+  ids:
+  - steam:2346570
+  requires: []
+- name: Isekai Rondo
+  ids:
+  - steam:2476490
+  requires: []
+- name: Kin and Quarry
+  ids:
+  - steam:3505770
+  requires: []
+- name: Crypterion Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:16049:crypterion-deluxe
+  requires: []
+- name: Little problems
+  ids:
+  - steam:2653470
+  requires: []
+- name: 'Meow Palace: Forbidden City'
+  ids:
+  - steam:3915610
+  requires: []

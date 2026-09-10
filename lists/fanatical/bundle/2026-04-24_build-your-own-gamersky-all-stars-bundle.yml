@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Gamersky All-Stars Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16089/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16089/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16089/source.json
+games:
+- name: Greedland
+  ids:
+  - steam:2218400
+  requires: []
+- name: 'Stickman Strikes: Conquer Fantasy World'
+  ids:
+  - steam:2924170
+  requires: []
+- name: Tiny Pasture
+  ids:
+  - steam:3167550
+  requires: []
+- name: 'I Am Legion: Stand Survivors'
+  ids:
+  - steam:3109580
+  requires: []
+- name: Monster Battles
+  ids:
+  - steam:3141720
+  requires: []
+- name: Fischer's Fishing Journey
+  ids:
+  - steam:3363270
+  requires: []
+- name: Loot of Baal
+  ids:
+  - steam:3358250
+  requires: []
+- name: Fantasy Idle Dungeon
+  ids:
+  - steam:3424610
+  requires: []
+- name: Whimsy Bake＆Craft
+  ids:
+  - steam:3713000
+  requires: []
+- name: Your Big, Cute Monster Farm
+  ids:
+  - steam:3659410
+  requires: []
+- name: 'Trench Lord: Eastern Front'
+  ids:
+  - steam:1647310
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Bundle Limited #11 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5386/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5386/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5386/source.json
+games:
+- name: OHOTA KREPKOE
+  ids:
+  - unresolved:source:isthereanydeal:5386:ohota-krepkoe
+  requires: []
+- name: OHOTA KREPKOE - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5386:ohota-krepkoe-soundtrack
+  requires: []
+- name: Douche bag
+  ids:
+  - unresolved:source:isthereanydeal:5386:douche-bag
+  requires: []
+- name: Final Dusk
+  ids:
+  - unresolved:source:isthereanydeal:5386:final-dusk
+  requires: []
+- name: Simulator gas station
+  ids:
+  - unresolved:source:isthereanydeal:5386:simulator-gas-station
+  requires: []
+- name: PuppyStory
+  ids:
+  - unresolved:source:isthereanydeal:5386:puppystory
+  requires: []
+- name: Jumping Tank
+  ids:
+  - unresolved:source:isthereanydeal:5386:jumping-tank
+  requires: []
+- name: 'Age of Steel: Recharge'
+  ids:
+  - steam:421060
+  requires: []
+- name: Legends of Persia
+  ids:
+  - steam:301220
+  requires: []

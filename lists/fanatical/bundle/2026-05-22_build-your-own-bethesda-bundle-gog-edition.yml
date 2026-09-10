@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Bethesda Bundle - GOG Edition (Summer 2026) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16192/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16192/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16192/source.json
+games:
+- name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
+  ids:
+  - steam:22320
+  requires: []
+- name: QUAKE
+  ids:
+  - steam:2310
+  requires: []
+- name: Prey
+  ids:
+  - steam:480490
+  requires: []
+- name: DOOM 3
+  ids:
+  - steam:208200
+  requires: []
+- name: Dishonored - Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:16192:dishonored-definitive-edition
+  requires: []
+- name: 'Wolfenstein: The Old Blood'
+  ids:
+  - steam:350080
+  requires: []
+- name: The Evil Within
+  ids:
+  - steam:268050
+  requires: []
+- name: 'Fallout®: New Vegas™ Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16192:fallout-new-vegas-ultimate-edition
+  requires: []
+- name: 'Wolfenstein®: The New Order'
+  ids:
+  - steam:201810
+  requires: []
+- name: 'Wolfenstein II: The New Colossus'
+  ids:
+  - steam:612880
+  requires: []
+- name: Dishonored 2
+  ids:
+  - steam:403640
+  requires: []
+- name: The Evil Within 2
+  ids:
+  - steam:601430
+  requires: []
+- name: 'Fallout 3: Game of the Year Edition'
+  ids:
+  - steam:22370
+  requires: []
+- name: Quake 4
+  ids:
+  - steam:2210
+  requires: []
+- name: QUAKE III Arena
+  ids:
+  - steam:2200
+  requires: []
+- name: QUAKE II
+  ids:
+  - steam:2320
+  requires: []
+- name: 'Dishonored: Death of the Outsider'
+  ids:
+  - steam:614570
+  requires: []
+- name: 'The Elder Scrolls IV: Oblivion® Game of the Year Edition Deluxe (2009)'
+  ids:
+  - unresolved:source:isthereanydeal:16192:the-elder-scrolls-iv-oblivion-game-of-the-year-edition-deluxe-2009
+  requires: []

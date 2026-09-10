@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Signature Collection — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16268/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16268/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16268/source.json
+games:
+- name: Kingdom of Night
+  ids:
+  - steam:1094600
+  requires: []
+- name: Pluto
+  ids:
+  - steam:3057670
+  requires: []
+- name: Mr. Sleepy Man
+  ids:
+  - steam:1657740
+  requires: []
+- name: The Thaumaturge
+  ids:
+  - steam:1684350
+  requires: []
+- name: KONOSUBA - God's Blessing on this Wonderful World! Love For These Clothes
+    Of Desire!
+  ids:
+  - steam:2349140
+  requires: []
+- name: Kebab Chefs! - Restaurant Simulator
+  ids:
+  - steam:1001270
+  requires: []
+- name: 'Stygian: Outer Gods'
+  ids:
+  - steam:2581410
+  requires: []
+- name: Whispers of the Eyeless
+  ids:
+  - steam:2523890
+  requires: []
+- name: 'Lone Fungus: Melody of Spores'
+  ids:
+  - steam:2463220
+  requires: []
+- name: Coffee Talk Tokyo
+  ids:
+  - steam:3161220
+  requires: []
+- name: 'Predator: Hunting Grounds Yautja Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16268:predator-hunting-grounds-yautja-edition
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Game of the Year Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16268:pathfinder-wrath-of-the-righteous-game-of-the-year-edition
+  requires: []
+- name: Nanomon Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16268:nanomon-deluxe-edition
+  requires: []
+- name: Kotama&amp;Academy Citadel
+  ids:
+  - steam:3639650
+  requires: []
+- name: 'City States: Medieval'
+  ids:
+  - steam:4066390
+  requires: []
+- name: GIGASWORD - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16268:gigasword-deluxe-edition
+  requires: []
+- name: Grind Survivors Supporter Edition
+  ids:
+  - unresolved:source:isthereanydeal:16268:grind-survivors-supporter-edition
+  requires: []
+- name: Strange Seed - Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:16268:strange-seed-complete-pack
+  requires: []

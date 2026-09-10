@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Very Positive Deluxe Collection — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16298/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16298/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16298/source.json
+games:
+- name: Harold Halibut
+  ids:
+  - steam:924750
+  requires: []
+- name: Touch Type Tale - Strategic Typing
+  ids:
+  - steam:909470
+  requires: []
+- name: Ghost Song
+  ids:
+  - steam:347800
+  requires: []
+- name: Lone Fungus
+  ids:
+  - steam:1674780
+  requires: []
+- name: 'The Bridge Curse 2: The Extrication'
+  ids:
+  - steam:2331330
+  requires: []
+- name: Ancient Kingdoms
+  ids:
+  - steam:2241380
+  requires: []
+- name: Tavern Manager Simulator
+  ids:
+  - steam:2756770
+  requires: []
+- name: The Smurfs - Dreams
+  ids:
+  - steam:2602020
+  requires: []
+- name: HELLBREAK
+  ids:
+  - steam:3043760
+  requires: []
+- name: Look Mum No Computer
+  ids:
+  - steam:3400380
+  requires: []
+- name: Greenhearth Necromancer
+  ids:
+  - steam:2127570
+  requires: []
+- name: Amanda the Adventurer 3
+  ids:
+  - steam:3657210
+  requires: []

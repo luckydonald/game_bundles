@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Ultimate Collection — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16211/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16211/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16211/source.json
+games:
+- name: 'DEATHLOOP + Ghostwire: Tokyo Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:16211:deathloop-and-ghostwire-tokyo-bundle
+  requires: []
+- name: Windswept
+  ids:
+  - steam:1660960
+  requires: []
+- name: Galacticare
+  ids:
+  - steam:494730
+  requires: []
+- name: Wandering Sword
+  ids:
+  - steam:1876890
+  requires: []
+- name: TEVI
+  ids:
+  - steam:2230650
+  requires: []
+- name: 'Roman Triumph: Survival City Builder'
+  ids:
+  - steam:1864880
+  requires: []
+- name: StarRupture
+  ids:
+  - steam:1631270
+  requires: []
+- name: Farming Simulator 25
+  ids:
+  - steam:2300320
+  requires: []
+- name: 'Deadzone: Rogue'
+  ids:
+  - steam:3228590
+  requires: []
+- name: Len's Island Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16211:lens-island-deluxe-edition
+  requires: []
+- name: 'Fallout 76: Mojave - Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16211:fallout-76-mojave-deluxe-edition
+  requires: []
+- name: METAL EDEN & Blood Rush Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:16211:metal-eden-and-blood-rush-double-pack
+  requires: []
+- name: DOOM Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:16211:doom-quad-pack
+  requires: []

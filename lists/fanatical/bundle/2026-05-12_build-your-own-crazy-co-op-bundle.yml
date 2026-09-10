@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Crazy Co-Op Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16151/source.json
+games:
+- name: King of the Hat
+  ids:
+  - steam:837350
+  requires: []
+- name: Move or Die
+  ids:
+  - steam:323850
+  requires: []
+- name: Super Volley Blast
+  ids:
+  - steam:822040
+  requires: []
+- name: BallisticNG Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16151:ballisticng-deluxe-edition
+  requires: []
+- name: ALL HANDS ON DECK!
+  ids:
+  - steam:2122880
+  requires: []
+- name: Remnant Records
+  ids:
+  - steam:1916310
+  requires: []
+- name: Silent Rain
+  ids:
+  - steam:1791910
+  requires: []
+- name: Dunk Dunk
+  ids:
+  - steam:2410590
+  requires: []
+- name: 'Bang On Balls Chronicles + Boti: Byteland Overclocked'
+  ids:
+  - unresolved:source:isthereanydeal:16151:bang-on-balls-chronicles-and-boti-byteland-overclocked
+  requires: []
+- name: Tools Up! Ultimate Edition
+  ids:
+  - steam:2551920
+  requires: []
+- name: Content Warning
+  ids:
+  - steam:2881650
+  requires: []
+- name: Retail Company Simulator
+  ids:
+  - steam:3089130
+  requires: []
+- name: Brave Escape
+  ids:
+  - steam:1354260
+  requires: []
+- name: Gorilla Showdown
+  ids:
+  - steam:3217900
+  requires: []
+- name: PEAK
+  ids:
+  - steam:3527290
+  requires: []
+- name: Everdream Valley - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:16151:everdream-valley-complete-edition
+  requires: []
+- name: 'Blazing Sails + Hellbreach: Vegas Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:16151:blazing-sails-and-hellbreach-vegas-double-pack
+  requires: []

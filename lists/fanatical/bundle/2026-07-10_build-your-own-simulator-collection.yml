@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Simulator Bundle (2026) — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16375/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16375/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16375/source.json
+games:
+- name: Construction Simulator
+  ids:
+  - steam:1273400
+  requires: []
+- name: The Universim - Collector's Edition Bundle (Vol 1)
+  ids:
+  - unresolved:source:isthereanydeal:16375:the-universim-collectors-edition-bundle-vol-1
+  requires: []
+- name: SÆLIG
+  ids:
+  - steam:612720
+  requires: []
+- name: TrackDayR
+  ids:
+  - steam:1511630
+  requires: []
+- name: 'Police Simulator: Patrol Officers'
+  ids:
+  - steam:997010
+  requires: []
+- name: WRC 10 FIA World Rally Championship Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16375:wrc-10-fia-world-rally-championship-deluxe-edition
+  requires: []
+- name: Gaucho and the Grassland
+  ids:
+  - steam:1670830
+  requires: []
+- name: Bus Simulator 21 Next Stop
+  ids:
+  - steam:976590
+  requires: []
+- name: 'CraftCraft: Fantasy Merchant Simulator'
+  ids:
+  - steam:2226430
+  requires: []
+- name: Furnish Master
+  ids:
+  - steam:2004080
+  requires: []
+- name: 'Taxi Life: A City Driving Simulator'
+  ids:
+  - steam:1351240
+  requires: []
+- name: 'Garden Life: A Cozy Simulator - Supporter Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16375:garden-life-a-cozy-simulator-supporter-edition
+  requires: []
+- name: The Witch of Fern Island Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16375:the-witch-of-fern-island-deluxe-edition
+  requires: []
+- name: Let's School - Super Headmaster Edition
+  ids:
+  - unresolved:source:isthereanydeal:16375:lets-school-super-headmaster-edition
+  requires: []
+- name: Better Mart Simulator
+  ids:
+  - steam:3498270
+  requires: []
+- name: 'Chef Life: A Restaurant Simulator Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16375:chef-life-a-restaurant-simulator-complete-edition
+  requires: []
+- name: 'Session: Skate Sim Supporter Edition + Paris DLC Pack'
+  ids:
+  - unresolved:source:isthereanydeal:16375:session-skate-sim-supporter-edition-and-paris-dlc-pack
+  requires: []

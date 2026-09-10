@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Triple Pack (Summer 2026) — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16308/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16308/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16308/source.json
+games:
+- name: Catmaze
+  ids:
+  - steam:620220
+  requires: []
+- name: 'This War of Mine: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16308:this-war-of-mine-complete-edition
+  requires: []
+- name: Elderand
+  ids:
+  - steam:1413660
+  requires: []
+- name: Blazing Sails
+  ids:
+  - steam:1158940
+  requires: []
+- name: 'Siege Survival: Gloria Victis'
+  ids:
+  - steam:1167140
+  requires: []
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+  requires: []
+- name: 'Soulstice: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16308:soulstice-deluxe-edition
+  requires: []
+- name: Echoes of the Plum Grove
+  ids:
+  - steam:1536090
+  requires: []
+- name: Assault On Proxima
+  ids:
+  - steam:2271200
+  requires: []
+- name: Into the Necrovale
+  ids:
+  - steam:1717090
+  requires: []
+- name: 'Hellbreach: Vegas'
+  ids:
+  - steam:1691320
+  requires: []
+- name: 'Jack Holmes : Master of Puppets'
+  ids:
+  - steam:2235820
+  requires: []
+- name: 'Midnight Monitor: Anomaly Watch'
+  ids:
+  - steam:2551780
+  requires: []
+- name: Y. Village - The Visitors
+  ids:
+  - steam:2649190
+  requires: []
+- name: Everwarder
+  ids:
+  - steam:2307170
+  requires: []
+- name: Hauntsville
+  ids:
+  - steam:2348730
+  requires: []
+- name: Golden Lap
+  ids:
+  - steam:2052040
+  requires: []
+- name: Aaero2
+  ids:
+  - steam:3010090
+  requires: []

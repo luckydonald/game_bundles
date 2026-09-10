@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #10 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5362/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5362/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5362/source.json
+games:
+- name: SQR
+  ids:
+  - steam:3433200
+  requires: []
+- name: Cowboy zombie
+  ids:
+  - unresolved:source:isthereanydeal:5362:cowboy-zombie
+  requires: []
+- name: Drive By Hero
+  ids:
+  - steam:640310
+  requires: []
+- name: Trolley Gold
+  ids:
+  - steam:498320
+  requires: []
+- name: Snowman
+  ids:
+  - unresolved:source:isthereanydeal:5362:snowman
+  requires: []
+- name: Sandstorm
+  ids:
+  - steam:548710
+  requires: []
+- name: Pills4Skills
+  ids:
+  - steam:427770
+  requires: []
+- name: Lost In Woods 2
+  ids:
+  - unresolved:source:isthereanydeal:5362:lost-in-woods-2
+  requires: []
+- name: Mortifero Motus
+  ids:
+  - unresolved:source:isthereanydeal:5362:mortifero-motus
+  requires: []

@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Arcade and Shooter Bundle — Select 3 for 4.95 (1.65 each), 5
+  for 7.99 (1.60 each), 7 for 10.15 (1.45 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15926/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15926/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15926/source.json
+games:
+- name: Aura of Worlds
+  ids:
+  - steam:841600
+  requires: []
+- name: Strange Brigade Deluxe Edition
+  ids:
+  - steam:312670
+  requires: []
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  requires: []
+- name: 'Gori: Cuddly Carnage'
+  ids:
+  - steam:1299690
+  requires: []
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  requires: []
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+  requires: []
+- name: Moonlight Pulse
+  ids:
+  - steam:2243250
+  requires: []
+- name: Kick Bastards
+  ids:
+  - steam:1737400
+  requires: []
+- name: Afterimage Deluxe Edition
+  ids:
+  - steam:1701520
+  requires: []
+- name: 'Double Dragon Gaiden: Rise Of The Dragons'
+  ids:
+  - steam:1967260
+  requires: []
+- name: 'Hellbreach: Vegas'
+  ids:
+  - steam:1691320
+  requires: []
+- name: Ultimate Zombie Defense 2
+  ids:
+  - steam:1765300
+  requires: []
+- name: Intravenous 2
+  ids:
+  - steam:2608270
+  requires: []
+- name: Gatekeeper
+  ids:
+  - steam:2106670
+  requires: []
+- name: ZERO PROTOCOL
+  ids:
+  - steam:2840250
+  requires: []
