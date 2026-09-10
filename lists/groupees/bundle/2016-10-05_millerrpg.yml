@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Miller's Role Playing Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4156/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4156/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4156/source.json
+games:
+- name: Final Quest II
+  ids:
+  - steam:540020
+  requires: []
+- name: Guardian's Oath
+  ids:
+  - steam:531890
+  requires: []
+- name: Waste Walkers Prepper's Edition
+  ids:
+  - steam:371100
+  requires: []
+- name: Waste Walkers Awareness
+  ids:
+  - steam:443750
+  requires: []
+- name: Waste Walkers Deliverance
+  ids:
+  - steam:439900
+  requires: []
+- name: Squeezone
+  ids:
+  - unresolved:source:isthereanydeal:4156:squeezone
+  requires: []
+- name: The Land of Dasthir
+  ids:
+  - steam:545700
+  requires: []
+- name: Anykey Simulator
+  ids:
+  - unresolved:source:isthereanydeal:4156:anykey-simulator
+  requires: []
+- name: Colossal Blueprint
+  ids:
+  - unresolved:source:isthereanydeal:4156:colossal-blueprint
+  requires: []
+- name: Lectrovolt II
+  ids:
+  - steam:518140
+  requires: []

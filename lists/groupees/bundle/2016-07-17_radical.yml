@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Radical Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3756/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3756/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3756/source.json
+games:
+- name: $1 Ride
+  ids:
+  - steam:508290
+  requires: []
+- name: Kill All Melons
+  ids:
+  - unresolved:source:isthereanydeal:3756:kill-all-melons
+  requires: []
+- name: Mahjong Destiny
+  ids:
+  - steam:491580
+  requires: []
+- name: Pepe Porcupine
+  ids:
+  - steam:487590
+  requires: []
+- name: Puzzles At Mystery Manor
+  ids:
+  - unresolved:source:isthereanydeal:3756:puzzles-at-mystery-manor
+  requires: []
+- name: Final Quest
+  ids:
+  - steam:512640
+  requires: []

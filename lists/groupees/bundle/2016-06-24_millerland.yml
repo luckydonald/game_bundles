@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Millerland — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3619/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3619/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3619/source.json
+games:
+- name: Scapeland
+  ids:
+  - steam:444440
+  requires: []
+- name: 'Yellow: The Yellow Artifact'
+  ids:
+  - unresolved:source:isthereanydeal:3619:yellow-the-yellow-artifact
+  requires: []
+- name: The Magical Silence
+  ids:
+  - unresolved:source:isthereanydeal:3619:the-magical-silence
+  requires: []
+- name: Running Clones
+  ids:
+  - unresolved:source:isthereanydeal:3619:running-clones
+  requires: []
+- name: Demented
+  ids:
+  - steam:418000
+  requires: []
+- name: Detective Noir
+  ids:
+  - unresolved:source:isthereanydeal:3619:detective-noir
+  requires: []

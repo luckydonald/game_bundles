@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 37 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2927/source.json
+games:
+- name: Cube Land Arena
+  ids:
+  - steam:450850
+  requires: []
+- name: 'Sekaiju: Yggdrasil'
+  ids:
+  - unresolved:source:isthereanydeal:2927:sekaiju-yggdrasil
+  requires: []
+- name: Soup
+  ids:
+  - unresolved:source:isthereanydeal:2927:soup
+  requires: []
+- name: Super Mustache
+  ids:
+  - steam:438180
+  requires: []
+- name: Pointless
+  ids:
+  - steam:442290
+  requires: []
+- name: PIXELMAN
+  ids:
+  - steam:438000
+  requires: []
+- name: Temporal Temple
+  ids:
+  - unresolved:source:isthereanydeal:2927:temporal-temple
+  requires: []
+- name: OddEven
+  ids:
+  - unresolved:source:isthereanydeal:2927:oddeven
+  requires: []
+- name: 'Mysteries of the Past: Shadow of the Daemon Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:2927:mysteries-of-the-past-shadow-of-the-daemon-collectors-edition
+  requires: []
+- name: Kabitis
+  ids:
+  - unresolved:source:isthereanydeal:2927:kabitis
+  requires: []

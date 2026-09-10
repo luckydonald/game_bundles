@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Visibility Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3394/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3394/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3394/source.json
+games:
+- name: The Book of Desires
+  ids:
+  - steam:428260
+  requires: []
+- name: Visibility
+  ids:
+  - steam:368290
+  requires: []
+- name: Fill Up!
+  ids:
+  - steam:405050
+  requires: []
+- name: X-Blades
+  ids:
+  - steam:7510
+  requires: []
+- name: Nebula Online
+  ids:
+  - unresolved:source:isthereanydeal:3394:nebula-online
+  requires: []
+- name: Kidnapped
+  ids:
+  - steam:382300
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Two Weeks of Miller Terror — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3951/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3951/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3951/source.json
+games:
+- name: A Week of Circus Terror
+  ids:
+  - steam:498450
+  requires: []
+- name: Conclusion
+  ids:
+  - unresolved:source:isthereanydeal:3951:conclusion
+  requires: []
+- name: Super Cube Smash
+  ids:
+  - steam:466280
+  requires: []
+- name: Second Death
+  ids:
+  - steam:496940
+  requires: []
+- name: Get A Job!
+  ids:
+  - unresolved:source:isthereanydeal:3951:get-a-job
+  requires: []
+- name: Traumerin
+  ids:
+  - unresolved:source:isthereanydeal:3951:traumerin
+  requires: []
+- name: Awakened
+  ids:
+  - unresolved:source:isthereanydeal:3951:awakened
+  requires: []
