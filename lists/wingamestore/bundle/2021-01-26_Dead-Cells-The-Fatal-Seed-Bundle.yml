@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dead Cells: The Fatal Seed Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9660/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9660/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9660/source.json
+games:
+- name: Dead Cells
+  ids:
+  - steam:588650
+  requires: []
+- name: Dead Cells - The Bad Seed
+  ids:
+  - steam:1204130
+  requires: []
+- name: 'Dead Cells: Fatal Falls'
+  ids:
+  - steam:1451460
+  requires: []

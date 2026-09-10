@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Curve Digital Summer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7561/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7561/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7561/source.json
+games:
+- name: Pumped BMX Pro
+  ids:
+  - steam:966720
+  requires: []
+- name: Bomber Crew
+  ids:
+  - steam:537800
+  requires: []
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+  requires: []
+- name: Serial Cleaner
+  ids:
+  - steam:522210
+  requires: []
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+  requires: []

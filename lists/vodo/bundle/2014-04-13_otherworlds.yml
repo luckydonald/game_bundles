@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Otherworlds Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/704/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/704/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/704/source.json
+games:
+- name: 'AI War: Fleet Command'
+  ids:
+  - steam:40400
+  requires: []
+- name: Bientôt l'été
+  ids:
+  - steam:229600
+  requires: []

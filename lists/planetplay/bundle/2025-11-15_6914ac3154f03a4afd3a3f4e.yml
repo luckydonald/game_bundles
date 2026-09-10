@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Expedition 22 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15603/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15603/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15603/source.json
+games:
+- name: Imagine Earth
+  ids:
+  - steam:280720
+  requires: []
+- name: 'Hellblade: Senua''s Sacrifice'
+  ids:
+  - steam:414340
+  requires: []
+- name: For The King
+  ids:
+  - steam:527230
+  requires: []
+- name: Last Day of June
+  ids:
+  - steam:635320
+  requires: []
+- name: Sizeable
+  ids:
+  - steam:1333910
+  requires: []
+- name: STUFFED
+  ids:
+  - steam:1243200
+  requires: []
+- name: PaperKlay
+  ids:
+  - steam:1350720
+  requires: []
+- name: Trash Goblin
+  ids:
+  - steam:2407830
+  requires: []
+- name: 'Monument Valley 2: Game & Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:15603:monument-valley-2-game-and-soundtrack
+  requires: []
