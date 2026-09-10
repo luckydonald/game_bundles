@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5081/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5081/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5081/source.json
+games:
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+  requires: []
+- name: 'The Saint: Abyss of Despair'
+  ids:
+  - steam:560820
+  requires: []
+- name: Where Angels Cry
+  ids:
+  - steam:277560
+  requires: []
+- name: 'Night Mysteries: The Amphora Prisoner'
+  ids:
+  - steam:348870
+  requires: []
+- name: 'Shtriga: Summer Camp'
+  ids:
+  - steam:560740
+  requires: []
+- name: 'World Keepers: Last Resort'
+  ids:
+  - steam:560750
+  requires: []
+- name: Black Rainbow
+  ids:
+  - steam:288500
+  requires: []
+- name: 'Dark Angels: Masquerade of Shadows'
+  ids:
+  - steam:560720
+  requires: []
+- name: 'Esoterica: Hollow Earth'
+  ids:
+  - unresolved:source:isthereanydeal:5081:esoterica-hollow-earth
+  requires: []
+- name: 'Red Crow Mysteries: Legion'
+  ids:
+  - steam:372890
+  requires: []

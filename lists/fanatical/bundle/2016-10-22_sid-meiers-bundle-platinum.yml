@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sid Meier's Bundle Platinum — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4232/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4232/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4232/source.json
+games:
+- name: Sid Meier's Pirates!
+  ids:
+  - steam:3920
+  requires: []
+- name: "Sid Meier\x92s Railroads!"
+  ids:
+  - steam:7600
+  requires: []
+- name: Sid Meier's Ace Patrol
+  ids:
+  - steam:244070
+  requires: []
+- name: Sid Meier's Starships
+  ids:
+  - steam:282210
+  requires: []
+- name: 'Sid Meier''s Civilization V: The Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4232:sid-meiers-civilization-v-the-complete-edition
+  requires: []
+- name: 'Sid Meier''s Civilization® III: Complete'
+  ids:
+  - steam:3910
+  requires: []
+- name: 'Sid Meier''s Civilization IV: The Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4232:sid-meiers-civilization-iv-the-complete-edition
+  requires: []

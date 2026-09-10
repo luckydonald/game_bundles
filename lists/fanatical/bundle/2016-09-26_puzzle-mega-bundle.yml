@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Puzzle Mega Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4123/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4123/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4123/source.json
+games:
+- name: Miko Mole
+  ids:
+  - steam:473480
+  requires: []
+- name: Prehistoric Tales
+  ids:
+  - steam:466780
+  requires: []
+- name: Crab Cakes Rescue
+  ids:
+  - steam:328680
+  requires: []
+- name: Energy Cycle Collector's Edition
+  ids:
+  - steam:415960
+  requires: []
+- name: 'Weather Lord: Following the Princess Collector''s Edition'
+  ids:
+  - steam:456690
+  requires: []
+- name: Puzzles Under The Hill
+  ids:
+  - steam:487600
+  requires: []
+- name: 'Ferrum''s secrets: where is grandpa?'
+  ids:
+  - steam:391340
+  requires: []
+- name: 'Snail Bob 2: Tiny Troubles'
+  ids:
+  - steam:349760
+  requires: []
+- name: Ludo Supremo
+  ids:
+  - steam:487580
+  requires: []
+- name: Pepe Porcupine
+  ids:
+  - steam:487590
+  requires: []
+- name: Square's Route
+  ids:
+  - steam:448530
+  requires: []
+- name: Quell Collection
+  ids:
+  - unresolved:source:isthereanydeal:4123:quell-collection
+  requires: []
+- name: It's Spring Again Collector's Edition
+  ids:
+  - steam:434210
+  requires: []
+- name: Mahjong Deluxe 3
+  ids:
+  - steam:462220
+  requires: []

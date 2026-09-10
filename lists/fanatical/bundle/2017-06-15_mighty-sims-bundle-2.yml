@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Mighty Sims Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5220/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5220/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5220/source.json
+games:
+- name: Safety First
+  ids:
+  - steam:497700
+  requires: []
+- name: Romopolis
+  ids:
+  - steam:471170
+  requires: []
+- name: 'Soviet Monsters: Ekranoplans'
+  ids:
+  - steam:372160
+  requires: []
+- name: Car Mechanic Manager
+  ids:
+  - steam:397840
+  requires: []
+- name: Ice Lakes
+  ids:
+  - steam:393430
+  requires: []
+- name: 'Real Heroes: Firefighter'
+  ids:
+  - unresolved:source:isthereanydeal:5220:real-heroes-firefighter
+  requires: []
+- name: Megapolis
+  ids:
+  - steam:485080
+  requires: []
+- name: Townopolis
+  ids:
+  - steam:462730
+  requires: []
+- name: Car Mechanic Simulator 2014
+  ids:
+  - steam:270850
+  requires: []
+- name: Euro Truck Simulator
+  ids:
+  - steam:232010
+  requires: []
