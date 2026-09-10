@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Weekend Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2389/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2389/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2389/source.json
+games:
+- name: Plain Sight
+  ids:
+  - steam:49900
+  requires: []
+- name: Castle
+  ids:
+  - steam:339290
+  requires: []
+- name: Victim of Xen
+  ids:
+  - steam:300220
+  requires: []
+- name: Shattered Haven
+  ids:
+  - steam:234370
+  requires: []
+- name: Schein
+  ids:
+  - steam:321920
+  requires: []

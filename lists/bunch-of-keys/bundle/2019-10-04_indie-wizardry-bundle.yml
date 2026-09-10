@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Wizardry Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7976/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7976/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7976/source.json
+games:
+- name: Please Find Me
+  ids:
+  - steam:1045070
+  requires: []
+- name: The God
+  ids:
+  - steam:836330
+  requires: []
+- name: The Lost Sky
+  ids:
+  - steam:863920
+  requires: []
+- name: Falnarion Tactics II
+  ids:
+  - steam:1078450
+  requires: []
+- name: Ruthless Safari
+  ids:
+  - steam:685790
+  requires: []
+- name: DollKart
+  ids:
+  - steam:895370
+  requires: []
+- name: Witch The Bloodlines
+  ids:
+  - steam:925690
+  requires: []
+- name: 'Outliver: Redemption'
+  ids:
+  - steam:1011370
+  requires: []
+- name: You Shall Not Break!
+  ids:
+  - steam:959020
+  requires: []

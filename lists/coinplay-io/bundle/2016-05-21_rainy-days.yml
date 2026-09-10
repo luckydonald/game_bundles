@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Rainy Days Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3456/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3456/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3456/source.json
+games:
+- name: Circuits
+  ids:
+  - steam:282760
+  requires: []
+- name: Snik
+  ids:
+  - steam:388050
+  requires: []
+- name: PING 1.5+
+  ids:
+  - steam:363580
+  requires: []
+- name: Dungeon of Elements
+  ids:
+  - steam:302310
+  requires: []
+- name: Shadows of War
+  ids:
+  - steam:340220
+  requires: []
+- name: Networm
+  ids:
+  - steam:408170
+  requires: []
+- name: Lost in Paradise
+  ids:
+  - steam:381170
+  requires: []
+- name: Musclecar Online
+  ids:
+  - steam:346440
+  requires: []
+- name: Cyto
+  ids:
+  - steam:302650
+  requires: []
+- name: Story of a Cube
+  ids:
+  - steam:440750
+  requires: []
