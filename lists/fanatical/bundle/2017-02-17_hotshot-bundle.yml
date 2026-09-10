@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hotshot Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4788/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4788/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4788/source.json
+games:
+- name: The Seven Years War (1756-1763)
+  ids:
+  - steam:400470
+  requires: []
+- name: Axis Football 2016
+  ids:
+  - steam:501190
+  requires: []
+- name: Meld
+  ids:
+  - steam:449180
+  requires: []
+- name: Chicken Assassin - Master of Humiliation
+  ids:
+  - unresolved:source:isthereanydeal:4788:chicken-assassin-master-of-humiliation
+  requires: []
+- name: The Battle for Sector 219
+  ids:
+  - steam:455200
+  requires: []
+- name: Home is Where One Starts
+  ids:
+  - steam:355970
+  requires: []
+- name: Super Hop 'N' Bop ULTRA
+  ids:
+  - unresolved:source:isthereanydeal:4788:super-hop-n-bop-ultra
+  requires: []
+- name: ASCII Attack
+  ids:
+  - steam:370490
+  requires: []
+- name: Global Soccer Manager
+  ids:
+  - unresolved:source:isthereanydeal:4788:global-soccer-manager
+  requires: []
+- name: 'Green Game: TimeSwapper'
+  ids:
+  - steam:432990
+  requires: []
+- name: Zombo Buster Rising
+  ids:
+  - steam:518730
+  requires: []
+- name: Hack RUN
+  ids:
+  - steam:378110
+  requires: []

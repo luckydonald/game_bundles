@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Legends 5 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4289/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4289/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4289/source.json
+games:
+- name: Robot Roller-Derby Disco Dodgeball
+  ids:
+  - steam:270450
+  requires: []
+- name: Castlestorm Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:4289:castlestorm-complete-edition
+  requires: []
+- name: Papo & Yo
+  ids:
+  - steam:227080
+  requires: []
+- name: Never Alone Arctic Collection
+  ids:
+  - steam:295790
+  requires: []
+- name: Grey Goo Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:4289:grey-goo-definitive-edition
+  requires: []
+- name: From The Depths
+  ids:
+  - steam:268650
+  requires: []
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+  requires: []
+- name: 'The Dark Eye: Memoria'
+  ids:
+  - steam:243200
+  requires: []

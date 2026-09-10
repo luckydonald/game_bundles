@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Born 2 Race 4 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4544/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4544/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4544/source.json
+games:
+- name: Ignite
+  ids:
+  - steam:45410
+  requires: []
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:4544:race-a-bit
+  requires: []
+- name: Drift Streets Japan
+  ids:
+  - steam:412880
+  requires: []
+- name: BARRIER X
+  ids:
+  - steam:463150
+  requires: []
+- name: GTR Evolution Expansion Pack for RACE 07
+  ids:
+  - steam:8660
+  requires: []
+- name: PolyRace
+  ids:
+  - unresolved:source:isthereanydeal:4544:polyrace
+  requires: []
+- name: JDM Tuner Racing
+  ids:
+  - steam:488210
+  requires: []
+- name: Mashed Drive to Survive
+  ids:
+  - steam:281280
+  requires: []

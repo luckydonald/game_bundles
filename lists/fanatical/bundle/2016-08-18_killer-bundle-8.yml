@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3927/source.json
+games:
+- name: Dead Effect 2
+  ids:
+  - steam:394760
+  requires: []
+- name: 'Odallus: The Dark Call'
+  ids:
+  - steam:319480
+  requires: []
+- name: PONCHO
+  ids:
+  - steam:332620
+  requires: []
+- name: Riff Racer - Race Your Music!
+  ids:
+  - unresolved:source:isthereanydeal:3927:riff-racer-race-your-music
+  requires: []
+- name: Blue Estate The Game
+  ids:
+  - steam:305380
+  requires: []
+- name: Cross of the Dutchman
+  ids:
+  - steam:384000
+  requires: []
+- name: One More Dungeon
+  ids:
+  - steam:415030
+  requires: []
+- name: Better Late Than Dead
+  ids:
+  - steam:352950
+  requires: []
+- name: 'Carnivores: Dinosaur Hunter Reborn'
+  ids:
+  - unresolved:source:isthereanydeal:3927:carnivores-dinosaur-hunter-reborn
+  requires: []

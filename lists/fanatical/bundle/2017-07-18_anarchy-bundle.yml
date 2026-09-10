@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anarchy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5331/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5331/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5331/source.json
+games:
+- name: 'Construct: Escape the System'
+  ids:
+  - steam:497080
+  requires: []
+- name: Zombie Kill of the Week - Reborn
+  ids:
+  - steam:342300
+  requires: []
+- name: 'FIVE: Champions of Canaan'
+  ids:
+  - steam:492870
+  requires: []
+- name: Turner
+  ids:
+  - steam:499340
+  requires: []
+- name: Pixel Gladiator
+  ids:
+  - steam:542400
+  requires: []
+- name: Castle of no Escape 2
+  ids:
+  - steam:542350
+  requires: []
+- name: 'State of Anarchy: Master of Mayhem'
+  ids:
+  - steam:576130
+  requires: []
+- name: 'Beast Mode: Night of the Werewolf'
+  ids:
+  - steam:655760
+  requires: []
+- name: Hyperdrive Massacre
+  ids:
+  - steam:402390
+  requires: []
+- name: Polywar
+  ids:
+  - steam:444490
+  requires: []
