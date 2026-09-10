@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #26 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6245/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6245/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6245/source.json
+games:
+- name: Santa Sling
+  ids:
+  - steam:571050
+  requires: []
+- name: Nightmare Grotto
+  ids:
+  - steam:614700
+  requires: []
+- name: inVokeR
+  ids:
+  - steam:627070
+  requires: []
+- name: Lightform
+  ids:
+  - unresolved:source:isthereanydeal:6245:lightform
+  requires: []
+- name: 'The Federal Rescue: Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:6245:the-federal-rescue-soundtrack
+  requires: []
+- name: Dead Dust
+  ids:
+  - steam:816990
+  requires: []
+- name: Stash
+  ids:
+  - steam:466660
+  requires: []
+- name: Chronicles of Vinland
+  ids:
+  - unresolved:source:isthereanydeal:6245:chronicles-of-vinland
+  requires: []
+- name: Space Maze
+  ids:
+  - steam:873500
+  requires: []
+- name: VRZ Torment
+  ids:
+  - steam:484350
+  requires: []
+- name: The Federal Rescue
+  ids:
+  - steam:869340
+  requires: []

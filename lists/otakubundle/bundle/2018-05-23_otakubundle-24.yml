@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #24 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6166/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6166/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6166/source.json
+games:
+- name: Katie
+  ids:
+  - steam:829560
+  requires: []
+- name: Shield Impact
+  ids:
+  - steam:771680
+  requires: []
+- name: ARAYA
+  ids:
+  - steam:466740
+  requires: []
+- name: Molecule - a chemical challenge
+  ids:
+  - steam:796840
+  requires: []
+- name: 'Katie: Gratitude Pack'
+  ids:
+  - unresolved:source:isthereanydeal:6166:katie-gratitude-pack
+  requires: []
+- name: Gone Fireflies
+  ids:
+  - steam:784100
+  requires: []
+- name: Reflection of Mine
+  ids:
+  - steam:476020
+  requires: []
+- name: 'Vzerthos: Heir of Thunder'
+  ids:
+  - steam:536450
+  requires: []
+- name: Open Sorcery
+  ids:
+  - steam:585180
+  requires: []
+- name: Luvocious
+  ids:
+  - steam:714730
+  requires: []

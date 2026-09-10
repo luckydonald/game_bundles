@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #28 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6289/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6289/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6289/source.json
+games:
+- name: Future Proof
+  ids:
+  - steam:844130
+  requires: []
+- name: Rocking Pilot
+  ids:
+  - steam:593680
+  requires: []
+- name: LOG the game!
+  ids:
+  - unresolved:source:isthereanydeal:6289:log-the-game
+  requires: []
+- name: DEEP SPACE | Space-Platformer
+  ids:
+  - steam:853040
+  requires: []
+- name: Galactic Harvester
+  ids:
+  - unresolved:source:isthereanydeal:6289:galactic-harvester
+  requires: []
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: SCROLLONOID
+  ids:
+  - steam:625160
+  requires: []
+- name: Marble Run
+  ids:
+  - steam:726720
+  requires: []
+- name: ToaZZle
+  ids:
+  - steam:817470
+  requires: []
+- name: BREACH IT
+  ids:
+  - steam:591790
+  requires: []
+- name: Deep Space - Official OST
+  ids:
+  - unresolved:source:isthereanydeal:6289:deep-space-official-ost
+  requires: []
+- name: Dead Ground - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6289:dead-ground-soundtrack
+  requires: []

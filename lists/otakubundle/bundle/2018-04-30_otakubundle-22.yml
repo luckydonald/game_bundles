@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #22 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6091/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6091/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6091/source.json
+games:
+- name: Slap The Fly
+  ids:
+  - steam:543030
+  requires: []
+- name: Neighboring Islands
+  ids:
+  - steam:588710
+  requires: []
+- name: Project Lounge
+  ids:
+  - steam:508710
+  requires: []
+- name: Never Give Up
+  ids:
+  - steam:555320
+  requires: []
+- name: Sweet fantasy
+  ids:
+  - steam:612110
+  requires: []
+- name: TZOMPANTLI
+  ids:
+  - steam:542240
+  requires: []
+- name: These nights in Cairo
+  ids:
+  - steam:612100
+  requires: []
+- name: Neighboring Islands - soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6091:neighboring-islands-soundtrack
+  requires: []
+- name: Survive in Angaria
+  ids:
+  - steam:803260
+  requires: []
+- name: 'Unknown Pain: Hardcore'
+  ids:
+  - unresolved:source:isthereanydeal:6091:unknown-pain-hardcore
+  requires: []

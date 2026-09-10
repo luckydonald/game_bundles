@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #11 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5692/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5692/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5692/source.json
+games:
+- name: Little Kite
+  ids:
+  - steam:610120
+  requires: []
+- name: Carton
+  ids:
+  - unresolved:source:isthereanydeal:5692:carton
+  requires: []
+- name: Depopulation
+  ids:
+  - steam:718210
+  requires: []
+- name: Air Combat
+  ids:
+  - steam:746350
+  requires: []
+- name: Dark Rising
+  ids:
+  - steam:710880
+  requires: []
+- name: Street Warriors Online
+  ids:
+  - steam:417910
+  requires: []
+- name: Square Head Zombies - FPS Game
+  ids:
+  - steam:711930
+  requires: []
+- name: Little Kite - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5692:little-kite-original-soundtrack
+  requires: []
+- name: symeCu8e
+  ids:
+  - unresolved:source:isthereanydeal:5692:symecu8e
+  requires: []
