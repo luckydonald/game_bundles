@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Greenlight Goodbye Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5051/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5051/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5051/source.json
+games:
+- name: Jim is Moving Out!
+  ids:
+  - steam:643940
+  requires: []
+- name: Turbo Pug DX
+  ids:
+  - steam:513780
+  requires: []
+- name: Drumers
+  ids:
+  - unresolved:source:isthereanydeal:5051:drumers
+  requires: []
+- name: Outcry of the fallen
+  ids:
+  - unresolved:source:isthereanydeal:5051:outcry-of-the-fallen
+  requires: []
+- name: Bobby Solo
+  ids:
+  - unresolved:source:isthereanydeal:5051:bobby-solo
+  requires: []
+- name: 'World of Dimensions: Scar of Memories'
+  ids:
+  - unresolved:source:isthereanydeal:5051:world-of-dimensions-scar-of-memories
+  requires: []
+- name: Turbo Pug
+  ids:
+  - steam:418070
+  requires: []
+- name: Worman3D
+  ids:
+  - unresolved:source:isthereanydeal:5051:worman3d
+  requires: []
+- name: Cave In
+  ids:
+  - steam:2944190
+  requires: []
+- name: The heart of the Earth
+  ids:
+  - unresolved:source:isthereanydeal:5051:the-heart-of-the-earth
+  requires: []
+- name: The Winters Curse
+  ids:
+  - unresolved:source:isthereanydeal:5051:the-winters-curse
+  requires: []
+- name: Super Mega Neo Pug
+  ids:
+  - steam:469730
+  requires: []
+- name: Boyd X
+  ids:
+  - unresolved:source:isthereanydeal:5051:boyd-x
+  requires: []
+- name: Jak Commander
+  ids:
+  - unresolved:source:isthereanydeal:5051:jak-commander
+  requires: []
+- name: The Moon
+  ids:
+  - unresolved:source:isthereanydeal:5051:the-moon
+  requires: []

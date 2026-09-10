@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The RPGVideo Bundle — Select 4 to 10 titles; $1.00 up to $2.25
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4795/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4795/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4795/source.json
+games:
+- name: Final Quest II
+  ids:
+  - steam:540020
+  requires: []
+- name: Drayt Empire
+  ids:
+  - steam:502140
+  requires: []
+- name: Start the ball
+  ids:
+  - unresolved:source:isthereanydeal:4795:start-the-ball
+  requires: []
+- name: PROJECT DORA
+  ids:
+  - unresolved:source:isthereanydeal:4795:project-dora
+  requires: []
+- name: Black/White Renegade
+  ids:
+  - unresolved:source:isthereanydeal:4795:black-white-renegade
+  requires: []
+- name: Another Day
+  ids:
+  - steam:2412640
+  requires: []
+- name: The Land of Dasthir
+  ids:
+  - steam:545700
+  requires: []
+- name: Final Quest
+  ids:
+  - steam:512640
+  requires: []
+- name: OR
+  ids:
+  - steam:586620
+  requires: []
+- name: Warriors of Vilvatikta
+  ids:
+  - steam:515690
+  requires: []
+- name: Epy
+  ids:
+  - unresolved:source:isthereanydeal:4795:epy
+  requires: []

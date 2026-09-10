@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Herocraft Android Bundle 2 — Select 4 to 8 Titles; $1.00 up to $2.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5527/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5527/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5527/source.json
+games:
+- name: Zombie Derby
+  ids:
+  - steam:831770
+  requires: []
+- name: Catch the Candy
+  ids:
+  - unresolved:source:isthereanydeal:5527:catch-the-candy
+  requires: []
+- name: Gibbets 2
+  ids:
+  - unresolved:source:isthereanydeal:5527:gibbets-2
+  requires: []
+- name: Neon Commander
+  ids:
+  - unresolved:source:isthereanydeal:5527:neon-commander
+  requires: []
+- name: 'KiKORiKi: Platformer'
+  ids:
+  - unresolved:source:isthereanydeal:5527:kikoriki-platformer
+  requires: []
+- name: 'Protoxide: Death Race'
+  ids:
+  - unresolved:source:isthereanydeal:5527:protoxide-death-race
+  requires: []
+- name: 'Strategy & Tactics: Medieval Wars Premium'
+  ids:
+  - unresolved:source:isthereanydeal:5527:strategy-and-tactics-medieval-wars-premium
+  requires: []
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+  requires: []

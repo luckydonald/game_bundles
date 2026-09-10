@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 51 — Pick At Least Two
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4301/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4301/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4301/source.json
+games:
+- name: Zolg
+  ids:
+  - steam:555710
+  requires: []
+- name: Gold Crusader
+  ids:
+  - steam:556000
+  requires: []
+- name: Yet Another RPG Game
+  ids:
+  - unresolved:source:isthereanydeal:4301:yet-another-rpg-game
+  requires: []
+- name: Demented Pixie
+  ids:
+  - steam:559450
+  requires: []
+- name: Special Edition
+  ids:
+  - steam:4248320
+  requires: []
+- name: Vecitas
+  ids:
+  - steam:555830
+  requires: []
+- name: PHAT STACKS
+  ids:
+  - steam:556160
+  requires: []
+- name: My Pet Rock
+  ids:
+  - steam:557830
+  requires: []
+- name: symeCu8e
+  ids:
+  - unresolved:source:isthereanydeal:4301:symecu8e
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 32 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5117/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5117/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5117/source.json
+games:
+- name: Hellphobia
+  ids:
+  - unresolved:source:isthereanydeal:5117:hellphobia
+  requires: []
+- name: Demented Pixie
+  ids:
+  - steam:559450
+  requires: []
+- name: Archimedes
+  ids:
+  - steam:530920
+  requires: []
+- name: Heaven Forest Nights
+  ids:
+  - steam:360970
+  requires: []
+- name: InDangerous
+  ids:
+  - unresolved:source:isthereanydeal:5117:indangerous
+  requires: []
+- name: 'Whispers: Last Hope'
+  ids:
+  - unresolved:source:isthereanydeal:5117:whispers-last-hope
+  requires: []
+- name: Beyond Space Remastered Edition
+  ids:
+  - unresolved:source:isthereanydeal:5117:beyond-space-remastered-edition
+  requires: []
+- name: Janken Cards
+  ids:
+  - steam:527210
+  requires: []

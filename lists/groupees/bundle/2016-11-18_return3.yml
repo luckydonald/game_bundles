@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: RETURN strikes back! — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4359/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4359/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4359/source.json
+games:
+- name: Gravitrix
+  ids:
+  - steam:3909500
+  requires: []
+- name: My Life
+  ids:
+  - unresolved:source:isthereanydeal:4359:my-life
+  requires: []
+- name: Powerglove
+  ids:
+  - unresolved:source:isthereanydeal:4359:powerglove
+  requires: []
+- name: Soulless
+  ids:
+  - unresolved:source:isthereanydeal:4359:soulless
+  requires: []
+- name: Tiger Claw
+  ids:
+  - unresolved:source:isthereanydeal:4359:tiger-claw
+  requires: []
+- name: Moonspire
+  ids:
+  - steam:3509090
+  requires: []
+- name: Jam It [Commodore 64 - C64]
+  ids:
+  - unresolved:source:isthereanydeal:4359:jam-it-commodore-64-c64
+  requires: []

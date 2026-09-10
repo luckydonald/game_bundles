@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Build a Kiss Mega Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4674/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4674/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4674/source.json
+games:
+- name: Hyper Fighters
+  ids:
+  - steam:267960
+  requires: []
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Nux
+  ids:
+  - steam:307350
+  requires: []
+- name: International Snooker
+  ids:
+  - unresolved:source:isthereanydeal:4674:international-snooker
+  requires: []
+- name: Truffle Saga
+  ids:
+  - steam:302260
+  requires: []
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+  requires: []
+- name: Defend The Highlands
+  ids:
+  - steam:374830
+  requires: []
+- name: The Culling Of The Cows
+  ids:
+  - steam:297020
+  requires: []
+- name: "Ampu\x96tea"
+  ids:
+  - steam:289090
+  requires: []
+- name: Inside The Gear
+  ids:
+  - steam:333120
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: Chaos Domain Soundtrack Edition
+  ids:
+  - unresolved:source:isthereanydeal:4674:chaos-domain-soundtrack-edition
+  requires: []
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:4674:n-p-p-d-rush-the-milk-of-ultra-violet
+  requires: []
+- name: Platypus II
+  ids:
+  - steam:319180
+  requires: []
+- name: RADical ROACH Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:4674:radical-roach-deluxe-edition
+  requires: []
+- name: Game Tycoon 1.5
+  ids:
+  - steam:273770
+  requires: []
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+  requires: []
+- name: 'Marine Sharpshooter II: Jungle Warfare'
+  ids:
+  - steam:283370
+  requires: []

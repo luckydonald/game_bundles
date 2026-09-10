@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 25 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4475/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4475/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4475/source.json
+games:
+- name: Space Incident
+  ids:
+  - unresolved:source:isthereanydeal:4475:space-incident
+  requires: []
+- name: Ultra Aktion
+  ids:
+  - unresolved:source:isthereanydeal:4475:ultra-aktion
+  requires: []
+- name: Grind Zones
+  ids:
+  - unresolved:source:isthereanydeal:4475:grind-zones
+  requires: []
+- name: Aztecalypse
+  ids:
+  - steam:517010
+  requires: []
+- name: Deep Eclipse - New Space Odyssey
+  ids:
+  - steam:326990
+  requires: []
+- name: Night Forest
+  ids:
+  - unresolved:source:isthereanydeal:4475:night-forest
+  requires: []
+- name: Tears of a Dragon
+  ids:
+  - steam:577760
+  requires: []
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+  requires: []

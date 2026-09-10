@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build A Greenlight Bundle 55 — Choose 2 to 8 Games
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4712/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4712/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4712/source.json
+games:
+- name: 'Intelligent Design: An Evolutionary Sandbox'
+  ids:
+  - steam:627620
+  requires: []
+- name: Not your game
+  ids:
+  - unresolved:source:isthereanydeal:4712:not-your-game
+  requires: []
+- name: Turn Around
+  ids:
+  - unresolved:source:isthereanydeal:4712:turn-around
+  requires: []
+- name: Kith - Tales from the Fractured Plateaus
+  ids:
+  - steam:596710
+  requires: []
+- name: Witchpires
+  ids:
+  - unresolved:source:isthereanydeal:4712:witchpires
+  requires: []
+- name: TROID BLASTER
+  ids:
+  - steam:600690
+  requires: []
+- name: Night at the Colosseum
+  ids:
+  - unresolved:source:isthereanydeal:4712:night-at-the-colosseum
+  requires: []
+- name: johns.game
+  ids:
+  - unresolved:source:isthereanydeal:4712:johns-game
+  requires: []
+- name: Gravity Gobbler
+  ids:
+  - unresolved:source:isthereanydeal:4712:gravity-gobbler
+  requires: []
+- name: The girl in red
+  ids:
+  - unresolved:source:isthereanydeal:4712:the-girl-in-red
+  requires: []
