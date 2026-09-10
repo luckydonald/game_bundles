@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Mar 2017) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4720/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4720/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4720/source.json
+games:
+- name: 'Total War™: WARHAMMER®'
+  ids:
+  - steam:364360
+  requires: []
+- name: Flat Heroes
+  ids:
+  - steam:508790
+  requires: []
+- name: Space Run Galaxy
+  ids:
+  - steam:355800
+  requires: []
+- name: RIVE
+  ids:
+  - steam:278100
+  requires: []
+- name: ONE PIECE PIRATE WARRIORS 3
+  ids:
+  - steam:331600
+  requires: []
+- name: Uurnog
+  ids:
+  - unresolved:source:isthereanydeal:4720:uurnog
+  requires: []
+- name: Poly Bridge
+  ids:
+  - steam:367450
+  requires: []
+- name: Uurnog Uurnlimited
+  ids:
+  - steam:678850
+  requires: []
+- name: Morphblade
+  ids:
+  - steam:494720
+  requires: []

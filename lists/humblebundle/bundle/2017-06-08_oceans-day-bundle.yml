@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Oceans Day Bundle — entire-11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5195/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5195/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5195/source.json
+games:
+- name: Columns™ III
+  ids:
+  - unresolved:source:isthereanydeal:5195:columns-iii
+  requires: []
+- name: Columns
+  ids:
+  - unresolved:source:isthereanydeal:5195:columns
+  requires: []
+- name: ABZU
+  ids:
+  - steam:384190
+  requires: []
+- name: Brothers - A Tale of Two Sons
+  ids:
+  - steam:225080
+  requires: []
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+  requires: []
+- name: NEO AQUARIUM - The King of Crustaceans - Soundtrack Edition
+  ids:
+  - steam:355240
+  requires: []
+- name: Aquaria
+  ids:
+  - steam:24420
+  requires: []
+- name: UnderWater Adventure
+  ids:
+  - unresolved:source:isthereanydeal:5195:underwater-adventure
+  requires: []
+- name: World of Diving
+  ids:
+  - unresolved:source:isthereanydeal:5195:world-of-diving
+  requires: []
+- name: 'Riptide GP: Renegade'
+  ids:
+  - steam:443860
+  requires: []
+- name: Submerged
+  ids:
+  - steam:301860
+  requires: []

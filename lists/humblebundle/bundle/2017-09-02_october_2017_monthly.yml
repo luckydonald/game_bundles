@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Oct 2017) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5429/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5429/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5429/source.json
+games:
+- name: Rise of the Tomb Raider™
+  ids:
+  - steam:391220
+  requires: []
+- name: Getting Over It with Bennett Foddy
+  ids:
+  - steam:240720
+  requires: []
+- name: Seasons after Fall
+  ids:
+  - steam:366320
+  requires: []
+- name: Scanner Sombre
+  ids:
+  - steam:475190
+  requires: []
+- name: The Shrouded Isle
+  ids:
+  - steam:501320
+  requires: []
+- name: Furi
+  ids:
+  - steam:423230
+  requires: []
+- name: 'Orwell: Keeping an Eye On You'
+  ids:
+  - steam:491950
+  requires: []
+- name: 'Wargame: Red Dragon'
+  ids:
+  - steam:251060
+  requires: []
