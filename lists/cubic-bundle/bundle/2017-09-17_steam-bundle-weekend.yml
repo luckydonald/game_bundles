@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Weekend Cubic Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5476/source.json
+games:
+- name: Leon's crusade (La cruzada de León)
+  ids:
+  - steam:689480
+  requires: []
+- name: Flow:The Sliding
+  ids:
+  - steam:661000
+  requires: []
+- name: Nightork Adventures 2 - Legacy of Chaos
+  ids:
+  - steam:688630
+  requires: []
+- name: Investigator
+  ids:
+  - steam:482300
+  requires: []
+- name: Labyrinth Escape
+  ids:
+  - steam:654950
+  requires: []
+- name: Remaining in a dream
+  ids:
+  - unresolved:source:isthereanydeal:5476:remaining-in-a-dream
+  requires: []
+- name: NakedMan VS The Clothes
+  ids:
+  - steam:592130
+  requires: []
+- name: Golden Fever
+  ids:
+  - unresolved:source:isthereanydeal:5476:golden-fever
+  requires: []
+- name: Dark Fear
+  ids:
+  - steam:454160
+  requires: []
+- name: Optika
+  ids:
+  - steam:504400
+  requires: []

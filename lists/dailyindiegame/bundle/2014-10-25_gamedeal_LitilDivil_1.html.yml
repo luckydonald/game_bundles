@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Litil Divil - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1324/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1324/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1324/source.json
+games:
+- name: Litil Divil
+  ids:
+  - steam:283430
+  requires: []

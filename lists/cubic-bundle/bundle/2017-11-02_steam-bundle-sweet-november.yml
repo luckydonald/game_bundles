@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sweet November Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5598/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5598/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5598/source.json
+games:
+- name: Pixel Car
+  ids:
+  - steam:728990
+  requires: []
+- name: Gazzel Quest, The Five Magic Stones
+  ids:
+  - steam:500120
+  requires: []
+- name: PROJECT XINATRA
+  ids:
+  - steam:508610
+  requires: []
+- name: Stickman - Killer of Apples
+  ids:
+  - unresolved:source:isthereanydeal:5598:stickman-killer-of-apples
+  requires: []
+- name: 'Apocalypse: The Game'
+  ids:
+  - steam:705050
+  requires: []
+- name: Pixel Shooter
+  ids:
+  - steam:647280
+  requires: []
+- name: Touch My Spinner
+  ids:
+  - steam:702220
+  requires: []
+- name: Three Days
+  ids:
+  - steam:375580
+  requires: []
+- name: 'Valcarta: Rise of the Demon'
+  ids:
+  - steam:488220
+  requires: []
+- name: Combat Raccoon
+  ids:
+  - unresolved:source:isthereanydeal:5598:combat-raccoon
+  requires: []

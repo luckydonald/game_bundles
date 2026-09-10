@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Weekend Cubic Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5430/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5430/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5430/source.json
+games:
+- name: Arcane RE-Raise
+  ids:
+  - unresolved:source:isthereanydeal:5430:arcane-re-raise
+  requires: []
+- name: Arcane Raise
+  ids:
+  - steam:603750
+  requires: []
+- name: Drift Horizon Online
+  ids:
+  - steam:491280
+  requires: []
+- name: WtBoy
+  ids:
+  - unresolved:source:isthereanydeal:5430:wtboy
+  requires: []
+- name: Arcane (pre)Raise
+  ids:
+  - unresolved:source:isthereanydeal:5430:arcane-pre-raise
+  requires: []
+- name: Weapons Genius
+  ids:
+  - steam:385400
+  requires: []
+- name: Drift Streets Japan
+  ids:
+  - steam:412880
+  requires: []
+- name: Flower Design
+  ids:
+  - steam:546070
+  requires: []
+- name: JDM Tuner Racing
+  ids:
+  - steam:488210
+  requires: []
+- name: Draw_Love
+  ids:
+  - unresolved:source:isthereanydeal:5430:draw_love
+  requires: []
+- name: 'J.U.R : Japan Underground Racing'
+  ids:
+  - steam:513930
+  requires: []

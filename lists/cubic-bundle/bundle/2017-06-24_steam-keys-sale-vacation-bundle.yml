@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Vacation Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5251/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5251/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5251/source.json
+games:
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+  requires: []
+- name: A Demon's Game - Episode 1
+  ids:
+  - steam:569430
+  requires: []
+- name: Space Beret
+  ids:
+  - steam:547960
+  requires: []
+- name: Take Thy Throne
+  ids:
+  - steam:491260
+  requires: []
+- name: Help
+  ids:
+  - steam:541920
+  requires: []
+- name: 'Shtriga: Summer Camp'
+  ids:
+  - steam:560740
+  requires: []
+- name: Crazy Buggy Racing
+  ids:
+  - steam:610780
+  requires: []
+- name: Fluffy Creatures VS The World
+  ids:
+  - steam:619400
+  requires: []
+- name: 'Esoterica: Hollow Earth'
+  ids:
+  - unresolved:source:isthereanydeal:5251:esoterica-hollow-earth
+  requires: []
+- name: StoneBack | Prehistory
+  ids:
+  - unresolved:source:isthereanydeal:5251:stoneback-prehistory
+  requires: []
+- name: Rogue Port - Red Nightmare
+  ids:
+  - steam:467310
+  requires: []
