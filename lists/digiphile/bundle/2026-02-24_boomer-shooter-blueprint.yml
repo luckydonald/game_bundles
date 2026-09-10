@@ -10,6 +10,8 @@ tiers:
   name: 4 Items
 - rank: 4
   name: 6 Items
+- rank: 5
+  name: 7 Items
 - rank: 9
   name: Add-on to any tier (3)
 references:
@@ -29,6 +31,7 @@ games:
   - 2
   - 3
   - 4
+  - 5
   - 9
 - name: INCISION
   ids:
@@ -38,6 +41,7 @@ games:
   - 2
   - 3
   - 4
+  - 5
   - 9
 - name: 'Warhammer 40,000: Boltgun'
   ids:
@@ -47,6 +51,7 @@ games:
   - 2
   - 3
   - 4
+  - 5
   - 9
 - name: Beyond Citadel
   ids:
@@ -55,6 +60,7 @@ games:
   tiers:
   - 3
   - 4
+  - 5
   - 9
 - name: MULLET MADJACK
   ids:
@@ -62,6 +68,7 @@ games:
   requires: []
   tiers:
   - 4
+  - 5
   - 9
 - name: I Am Your Beast
   ids:
@@ -69,12 +76,14 @@ games:
   requires: []
   tiers:
   - 4
+  - 5
   - 9
 - name: Selaco
   ids:
   - steam:1592280
   requires: []
   tiers:
+  - 5
   - 9
 - name: CULTIC Soundtrack
   ids:
