@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kalypso Pick & Mix Bundle (Mar 2020) — Select 3 Titles for $2.49, 10 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8393/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8393/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8393/source.json
+games:
+- name: Omerta City of Gangsters
+  ids:
+  - steam:208520
+  requires: []
+- name: Port Royale 3
+  ids:
+  - steam:205610
+  requires: []
+- name: DARK
+  ids:
+  - steam:225360
+  requires: []
+- name: Grand Ages Rome
+  ids:
+  - steam:23450
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: Tropico 3
+  ids:
+  - steam:23490
+  requires: []
+- name: Sudden Strike 2 Gold
+  ids:
+  - steam:612520
+  requires: []
+- name: Tropico Reloaded
+  ids:
+  - steam:33520
+  requires: []
+- name: Sudden Strike Gold
+  ids:
+  - steam:612300
+  requires: []
+- name: Imperial Glory
+  ids:
+  - steam:277450
+  requires: []
+- name: DUNGEONS - Steam Special Edition
+  ids:
+  - unresolved:source:isthereanydeal:8393:dungeons-steam-special-edition
+  requires: []
+- name: Urban Empire
+  ids:
+  - steam:352550
+  requires: []
+- name: Rise of Venice
+  ids:
+  - steam:227020
+  requires: []
+- name: Dungeons 2
+  ids:
+  - steam:262280
+  requires: []
+- name: Sudden Strike 3
+  ids:
+  - steam:612540
+  requires: []
+- name: Patrician III
+  ids:
+  - steam:33570
+  requires: []
+- name: The First Templar - Special Edition
+  ids:
+  - steam:57680
+  requires: []

@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Lockdown Bundle 2 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8932/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8932/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8932/source.json
+games:
+- name: Divekick
+  ids:
+  - steam:244730
+  requires: []
+- name: Mable & The Wood
+  ids:
+  - steam:568070
+  requires: []
+- name: Detention
+  ids:
+  - steam:555220
+  requires: []
+- name: The Light Keeps Us Safe
+  ids:
+  - steam:853240
+  requires: []
+- name: Use Your Words
+  ids:
+  - steam:521350
+  requires: []
+- name: ATV Drift & Tricks
+  ids:
+  - steam:622020
+  requires: []
+- name: Joggernauts
+  ids:
+  - steam:747620
+  requires: []
+- name: Castaway Paradise - Town Building Sim
+  ids:
+  - unresolved:source:isthereanydeal:8932:castaway-paradise-town-building-sim
+  requires: []
+- name: Double Cross
+  ids:
+  - steam:838010
+  requires: []
+- name: 'Angry Video Game Nerd II: ASSimilation'
+  ids:
+  - steam:409660
+  requires: []
+- name: Eagle Island
+  ids:
+  - steam:681110
+  requires: []
+- name: World of Zoo
+  ids:
+  - steam:43100
+  requires: []
+- name: BLACKHOLE
+  ids:
+  - steam:322680
+  requires: []
+- name: Angry Video Game Nerd Adventures
+  ids:
+  - steam:237740
+  requires: []
+- name: SimplePlanes
+  ids:
+  - steam:397340
+  requires: []
+- name: Spirits of Xanadu
+  ids:
+  - steam:312230
+  requires: []
+- name: Lucius III
+  ids:
+  - steam:513290
+  requires: []
+- name: Rise of Insanity
+  ids:
+  - steam:629220
+  requires: []
+- name: Pathologic Classic HD
+  ids:
+  - steam:384110
+  requires: []
+- name: Bridge Constructor Medieval
+  ids:
+  - steam:319850
+  requires: []
+- name: Trident's Wake
+  ids:
+  - steam:704880
+  requires: []
+- name: Caveblazers
+  ids:
+  - steam:452060
+  requires: []
+- name: Moto Racer 4
+  ids:
+  - steam:417430
+  requires: []
+- name: 'Days of War: Definitive Edition'
+  ids:
+  - steam:454350
+  requires: []

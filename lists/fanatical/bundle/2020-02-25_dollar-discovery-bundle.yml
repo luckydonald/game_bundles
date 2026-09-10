@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Discovery Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8441/source.json
+games:
+- name: Spin Rush
+  ids:
+  - steam:528660
+  requires: []
+- name: Dino Run DX
+  ids:
+  - steam:248330
+  requires: []
+- name: Slash It Ultimate
+  ids:
+  - steam:656600
+  requires: []
+- name: Upside Down
+  ids:
+  - steam:586960
+  requires: []
+- name: Last Horizon
+  ids:
+  - steam:394220
+  requires: []
+- name: Neon Space 2
+  ids:
+  - steam:505210
+  requires: []
+- name: Cube Runner
+  ids:
+  - steam:567280
+  requires: []
+- name: Slash It 2
+  ids:
+  - steam:583760
+  requires: []
+- name: 'Glorkian Warrior: The Trials Of Glork'
+  ids:
+  - steam:341120
+  requires: []
+- name: Slash It
+  ids:
+  - steam:567290
+  requires: []
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500
+  requires: []
+- name: Charlie's Adventure
+  ids:
+  - steam:556870
+  requires: []

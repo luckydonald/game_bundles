@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Legacy of Kain Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8331/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8331/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8331/source.json
+games:
+- name: 'Legacy of Kain: Soul Reaver 2'
+  ids:
+  - steam:224940
+  requires: []
+- name: 'Legacy of Kain: Soul Reaver'
+  ids:
+  - unresolved:source:isthereanydeal:8331:legacy-of-kain-soul-reaver
+  requires: []
+- name: 'Legacy of Kain: Defiance'
+  ids:
+  - steam:224300
+  requires: []

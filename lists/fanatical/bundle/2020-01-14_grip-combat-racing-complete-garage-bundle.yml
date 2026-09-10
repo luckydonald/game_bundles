@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: GRIP Combat Racing + Complete Garage  Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8313/source.json
+games:
+- name: 'GRIP: Combat Racing - Garage Bundle Pack 2'
+  ids:
+  - unresolved:source:isthereanydeal:8313:grip-combat-racing-garage-bundle-pack-2
+  requires: []
+- name: 'GRIP: Combat Racing - Garage Bundle Pack'
+  ids:
+  - unresolved:source:isthereanydeal:8313:grip-combat-racing-garage-bundle-pack
+  requires: []
+- name: 'GRIP: Combat Racing'
+  ids:
+  - steam:396900
+  requires: []
+- name: 'GRIP: Combat Racing - Garage Bundle Pack 3'
+  ids:
+  - unresolved:source:isthereanydeal:8313:grip-combat-racing-garage-bundle-pack-3
+  requires: []

@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'SNK Pick & Mix Bundle: GOG Edition — Select 1 Title for $1.00, 5 Titles for
+  $2.99'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8565/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8565/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8565/source.json
+games:
+- name: METAL SLUG
+  ids:
+  - steam:366250
+  requires: []
+- name: Pulstar
+  ids:
+  - unresolved:source:isthereanydeal:8565:pulstar
+  requires: []
+- name: 'GAROU: MARK OF THE WOLVES'
+  ids:
+  - steam:366240
+  requires: []
+- name: FATAL FURY SPECIAL
+  ids:
+  - unresolved:source:isthereanydeal:8565:fatal-fury-special
+  requires: []
+- name: BASEBALL STARS 2
+  ids:
+  - steam:366230
+  requires: []
+- name: THE KING OF FIGHTERS 2000
+  ids:
+  - unresolved:source:isthereanydeal:8565:the-king-of-fighters-2000
+  requires: []
+- name: THE LAST BLADE
+  ids:
+  - steam:465840
+  requires: []
+- name: 'SHOCK TROOPERS: 2nd SQUAD'
+  ids:
+  - steam:465870
+  requires: []
+- name: THE KING OF FIGHTERS XIII GALAXY EDITION
+  ids:
+  - unresolved:source:isthereanydeal:8565:the-king-of-fighters-xiii-galaxy-edition
+  requires: []
+- name: KING OF THE MONSTERS
+  ids:
+  - unresolved:source:isthereanydeal:8565:king-of-the-monsters
+  requires: []
+- name: Metal Slug 3
+  ids:
+  - steam:250180
+  requires: []
+- name: TWINKLE STAR SPRITES
+  ids:
+  - steam:366280
+  requires: []
+- name: SENGOKU 3
+  ids:
+  - unresolved:source:isthereanydeal:8565:sengoku-3
+  requires: []
+- name: THE KING OF FIGHTERS 2002
+  ids:
+  - unresolved:source:isthereanydeal:8565:the-king-of-fighters-2002
+  requires: []
+- name: 'REAL BOUT FATAL FURY 2: THE NEWCOMERS'
+  ids:
+  - steam:3359900
+  requires: []
+- name: SAMURAI SHODOWN II
+  ids:
+  - unresolved:source:isthereanydeal:8565:samurai-shodown-ii
+  requires: []
+- name: METAL SLUG X
+  ids:
+  - steam:312610
+  requires: []
+- name: ART OF FIGHTING 2
+  ids:
+  - unresolved:source:isthereanydeal:8565:art-of-fighting-2
+  requires: []
+- name: SHOCK TROOPERS
+  ids:
+  - steam:366270
+  requires: []
+- name: THE KING OF FIGHTERS 2002 UNLIMITED MATCH
+  ids:
+  - steam:222440
+  requires: []
+- name: THE KING OF FIGHTERS '98 ULTIMATE MATCH FINAL EDITION
+  ids:
+  - steam:222420
+  requires: []
+- name: SAMURAI SHODOWN V SPECIAL
+  ids:
+  - steam:1076550
+  requires: []
+- name: BLAZING STAR
+  ids:
+  - unresolved:source:isthereanydeal:8565:blazing-star
+  requires: []
+- name: METAL SLUG 2
+  ids:
+  - steam:366260
+  requires: []
+- name: IRONCLAD (1996)
+  ids:
+  - unresolved:source:isthereanydeal:8565:ironclad-1996
+  requires: []

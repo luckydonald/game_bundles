@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sanctuary Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8720/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8720/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8720/source.json
+games:
+- name: The Walking Dead
+  ids:
+  - steam:207610
+  requires: []
+- name: 'The Walking Dead: Season Two'
+  ids:
+  - steam:261030
+  requires: []
+- name: 'The Walking Dead: 400 Days'
+  ids:
+  - steam:207620
+  requires: []
+- name: 'Redeemer: Enhanced Edition'
+  ids:
+  - steam:447290
+  requires: []
+- name: 'Warhammer 40,000: Sanctus Reach'
+  ids:
+  - unresolved:source:isthereanydeal:8720:warhammer-40000-sanctus-reach
+  requires: []
+- name: 'Blood: Fresh Supply'
+  ids:
+  - steam:1010750
+  requires: []
+- name: 'The Walking Dead: Michonne - A Telltale Miniseries'
+  ids:
+  - steam:429570
+  requires: []
+- name: 'This War of Mine: Stories - Season Pass'
+  ids:
+  - steam:750031
+  requires: []
+- name: This War of Mine
+  ids:
+  - steam:282070
+  requires: []
+- name: RollerCoaster Tycoon Classic
+  ids:
+  - steam:683900
+  requires: []

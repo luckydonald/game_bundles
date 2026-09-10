@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Oracle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8090/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8090/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8090/source.json
+games:
+- name: Four Sided Fantasy
+  ids:
+  - steam:337490
+  requires: []
+- name: The Last Federation
+  ids:
+  - steam:273070
+  requires: []
+- name: Abducted!
+  ids:
+  - unresolved:source:isthereanydeal:8090:abducted
+  requires: []
+- name: Moon Tycoon
+  ids:
+  - steam:982800
+  requires: []
+- name: Kick Ass Commandos
+  ids:
+  - steam:359140
+  requires: []
+- name: GIBZ
+  ids:
+  - steam:448320
+  requires: []
+- name: Out of Reach
+  ids:
+  - steam:327090
+  requires: []

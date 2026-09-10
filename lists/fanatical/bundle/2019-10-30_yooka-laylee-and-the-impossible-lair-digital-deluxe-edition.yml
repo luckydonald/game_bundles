@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Yooka-Laylee and the Impossible Lair Digital Deluxe Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8071/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8071/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8071/source.json
+games:
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+  requires: []
+- name: Yooka-Laylee and the Impossible Lair OST
+  ids:
+  - steam:1169811
+  requires: []
+- name: Yooka-Laylee and the Kracklestone - Graphic Novel
+  ids:
+  - steam:1169810
+  requires: []
+- name: Yooka-Laylee and the Impossible Lair - Trowzer's Top Tonic Pack
+  ids:
+  - unresolved:source:isthereanydeal:8071:yooka-laylee-and-the-impossible-lair-trowzers-top-tonic-pack
+  requires: []
