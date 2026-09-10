@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1159/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1159/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1159/source.json
+games:
+- name: 'Star Traders: 4X Empires'
+  ids:
+  - steam:334270
+  requires: []
+- name: SinaRun
+  ids:
+  - steam:324470
+  requires: []
+- name: The Adventures of Chris
+  ids:
+  - unresolved:source:isthereanydeal:1159:the-adventures-of-chris
+  requires: []
+- name: Alter World
+  ids:
+  - steam:357280
+  requires: []
+- name: Astraea
+  ids:
+  - steam:2152060
+  requires: []
+- name: The Legend of The Artifact
+  ids:
+  - unresolved:source:isthereanydeal:1159:the-legend-of-the-artifact
+  requires: []
+- name: Crunch Time!
+  ids:
+  - steam:340550
+  requires: []
+- name: Domestic Dog
+  ids:
+  - steam:340340
+  requires: []
+- name: Phoenix Force
+  ids:
+  - steam:332480
+  requires: []
+- name: Luna Shattered Hearts Episode 1
+  ids:
+  - steam:331400
+  requires: []
+- name: 'Sometimes: Success Requires Sacrifice'
+  ids:
+  - steam:351470
+  requires: []

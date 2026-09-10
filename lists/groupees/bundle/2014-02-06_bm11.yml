@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Be Mine 11 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/550/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/550/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/550/source.json
+games:
+- name: Shufflepuck Cantina Deluxe
+  ids:
+  - steam:259510
+  requires: []
+- name: 1953 - KGB Unleashed
+  ids:
+  - steam:248490
+  requires: []
+- name: Aerena - Clash of Champions
+  ids:
+  - unresolved:source:isthereanydeal:550:aerena-clash-of-champions
+  requires: []
+- name: 'IL-2 Sturmovik™: 1946'
+  ids:
+  - steam:15320
+  requires: []
+- name: 'Ultionus: A Tale of Petty Revenge'
+  ids:
+  - steam:279160
+  requires: []
+- name: Grimm Season One
+  ids:
+  - unresolved:source:isthereanydeal:550:grimm-season-one
+  requires: []
+- name: Guns of Icarus Online Collectors Edition
+  ids:
+  - unresolved:source:isthereanydeal:550:guns-of-icarus-online-collectors-edition
+  requires: []
+- name: 'Infected: The Twin Vaccine - Collector''s Edition'
+  ids:
+  - unresolved:source:isthereanydeal:550:infected-the-twin-vaccine-collectors-edition
+  requires: []
+- name: The Body Changer
+  ids:
+  - steam:324390
+  requires: []
+- name: Redshirt
+  ids:
+  - steam:247870
+  requires: []

@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Glow Ball Spotlight — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/807/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/807/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/807/source.json
+games:
+- name: '"Glow Ball" - The billiard puzzle game'
+  ids:
+  - steam:388390
+  requires: []

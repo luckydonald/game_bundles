@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Radical Heroes: Crimson City Crisis Spotlight — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/847/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/847/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/847/source.json
+games:
+- name: 'RADICAL HEROES : CRIMSON CITY CRISIS'
+  ids:
+  - unresolved:source:isthereanydeal:847:radical-heroes-crimson-city-crisis
+  requires: []

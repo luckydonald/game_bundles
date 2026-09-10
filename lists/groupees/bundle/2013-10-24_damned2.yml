@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle of the Damned 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/369/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/369/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/369/source.json
+games:
+- name: Survivor Squad
+  ids:
+  - steam:258050
+  requires: []
+- name: 'Postmortem: One Must Die - Extended Scythe Cut'
+  ids:
+  - unresolved:source:isthereanydeal:369:postmortem-one-must-die-extended-scythe-cut
+  requires: []
+- name: Lucius
+  ids:
+  - steam:218640
+  requires: []
+- name: BlackSoul
+  ids:
+  - unresolved:source:isthereanydeal:369:blacksoul
+  requires: []
+- name: Undead Legions
+  ids:
+  - unresolved:source:isthereanydeal:369:undead-legions
+  requires: []
+- name: Burn Zombie Burn!
+  ids:
+  - steam:50510
+  requires: []

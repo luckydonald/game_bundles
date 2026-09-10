@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/911/source.json
+games:
+- name: Attractio
+  ids:
+  - unresolved:source:isthereanydeal:911:attractio
+  requires: []
+- name: The Tiny Tale 2
+  ids:
+  - steam:340720
+  requires: []
+- name: inSynch
+  ids:
+  - steam:343410
+  requires: []
+- name: Urban War Defense
+  ids:
+  - unresolved:source:isthereanydeal:911:urban-war-defense
+  requires: []
+- name: Tallowmere
+  ids:
+  - steam:340520
+  requires: []
+- name: Deity Quest
+  ids:
+  - steam:340330
+  requires: []
+- name: Siralim
+  ids:
+  - steam:362090
+  requires: []
+- name: Wooden Floor
+  ids:
+  - steam:348790
+  requires: []
+- name: Virus Jigglin' Fever
+  ids:
+  - steam:363200
+  requires: []
+- name: Hyper Gauntlet
+  ids:
+  - unresolved:source:isthereanydeal:911:hyper-gauntlet
+  requires: []

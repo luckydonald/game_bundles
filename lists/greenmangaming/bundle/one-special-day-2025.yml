@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: ONE SPECIAL DAY — Supporter
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/one-special-day-2025/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/one-special-day-2025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/one-special-day-2025/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'RoboCop: Rogue City'
+  ids:
+  - steam:1681430
+  requires: []
+- name: Battle Shapers
+  ids:
+  - steam:1421290
+  requires: []
+- name: Knights in Tight Spaces
+  ids:
+  - steam:2315400
+  requires: []
+- name: Old World
+  ids:
+  - steam:597180
+  requires: []
+- name: Border Pioneer
+  ids:
+  - steam:2346410
+  requires: []
+- name: Citizen Sleeper
+  ids:
+  - steam:1578650
+  requires: []
+- name: Moonscars
+  ids:
+  - steam:1374970
+  requires: []
+- name: 'Model Builder: Complete Edition'
+  ids:
+  - steam:1164250
+  requires: []
