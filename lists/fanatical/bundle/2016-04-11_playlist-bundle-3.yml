@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Playlist Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3291/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3291/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3291/source.json
+games:
+- name: Fly'n
+  ids:
+  - steam:223730
+  requires: []
+- name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
+  ids:
+  - steam:358080
+  requires: []
+- name: Loot Hero - DX
+  ids:
+  - steam:294040
+  requires: []
+- name: Tap Heroes
+  ids:
+  - steam:371570
+  requires: []
+- name: Space Drifters 2D
+  ids:
+  - steam:377570
+  requires: []
+- name: 'Uriel''s Chasm 2: את'
+  ids:
+  - steam:414580
+  requires: []
+- name: 'World Defense : A Fragmented Reality Game'
+  ids:
+  - steam:372430
+  requires: []
+- name: Sixtieth Kilometer
+  ids:
+  - steam:448780
+  requires: []
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+  requires: []
+- name: 'Victory: The Age of Racing - Deluxe Edition Content'
+  ids:
+  - unresolved:source:isthereanydeal:3291:victory-the-age-of-racing-deluxe-edition-content
+  requires: []

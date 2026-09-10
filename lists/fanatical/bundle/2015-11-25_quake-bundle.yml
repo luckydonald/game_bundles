@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Quake Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2768/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2768/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2768/source.json
+games:
+- name: 'QUAKE II Mission Pack: Ground Zero'
+  ids:
+  - unresolved:source:isthereanydeal:2768:quake-ii-mission-pack-ground-zero
+  requires: []
+- name: 'QUAKE III: Team Arena'
+  ids:
+  - unresolved:source:isthereanydeal:2768:quake-iii-team-arena
+  requires: []
+- name: QUAKE
+  ids:
+  - steam:2310
+  requires: []
+- name: 'QUAKE II Mission Pack: The Reckoning'
+  ids:
+  - unresolved:source:isthereanydeal:2768:quake-ii-mission-pack-the-reckoning
+  requires: []
+- name: 'QUAKE Mission Pack 2: Dissolution of Eternity'
+  ids:
+  - unresolved:source:isthereanydeal:2768:quake-mission-pack-2-dissolution-of-eternity
+  requires: []
+- name: Quake 4
+  ids:
+  - steam:2210
+  requires: []
+- name: QUAKE III Arena
+  ids:
+  - steam:2200
+  requires: []
+- name: 'QUAKE Mission Pack 1: Scourge of Armagon'
+  ids:
+  - unresolved:source:isthereanydeal:2768:quake-mission-pack-1-scourge-of-armagon
+  requires: []
+- name: QUAKE II
+  ids:
+  - steam:2320
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Timeless Bundle — 2.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2540/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2540/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2540/source.json
+games:
+- name: 'Doctor Who: The Adventure Games'
+  ids:
+  - unresolved:source:isthereanydeal:2540:doctor-who-the-adventure-games
+  requires: []
+- name: Fritz for Fun 13
+  ids:
+  - steam:328890
+  requires: []
+- name: Stranded In Time
+  ids:
+  - steam:385150
+  requires: []
+- name: 'Mountain Crime: Requital'
+  ids:
+  - steam:394680
+  requires: []
+- name: 'Paranormal State: Poison Spring'
+  ids:
+  - unresolved:source:isthereanydeal:2540:paranormal-state-poison-spring
+  requires: []
+- name: 'GabeN: The Final Decision'
+  ids:
+  - steam:403740
+  requires: []
+- name: AR-K
+  ids:
+  - steam:269890
+  requires: []
+- name: League of Mermaids
+  ids:
+  - steam:383950
+  requires: []
+- name: Summer Athletics
+  ids:
+  - steam:27200
+  requires: []
+- name: 'Legends of Atlantis: Exodus'
+  ids:
+  - steam:347520
+  requires: []
+- name: Fort Defense
+  ids:
+  - steam:343930
+  requires: []
+- name: Showtime!
+  ids:
+  - unresolved:source:isthereanydeal:2540:showtime
+  requires: []
