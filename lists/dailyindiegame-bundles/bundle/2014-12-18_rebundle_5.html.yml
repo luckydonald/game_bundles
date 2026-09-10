@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1482/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1482/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1482/source.json
+games:
+- name: Lightfish
+  ids:
+  - steam:116120
+  requires: []
+- name: Gun Metal
+  ids:
+  - steam:267920
+  requires: []
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+  requires: []
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+  requires: []
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+  requires: []
+- name: 'Soul Gambler: Dark Arts Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1482:soul-gambler-dark-arts-edition
+  requires: []

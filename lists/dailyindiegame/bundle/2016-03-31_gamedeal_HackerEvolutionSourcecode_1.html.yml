@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hacker Evolution Source Code - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3242/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3242/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3242/source.json
+games:
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+  requires: []
