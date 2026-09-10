@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: 'THE 2K COLLECTION: BLOCKBUSTERS & BEYOND — Invasion'
+tier: 3
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/2k-collection/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/2k-collection/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/2k-collection/source.json
+crawlers:
+- greenmangaming
+games:
+- name: The Quarry
+  ids:
+  - steam:1577120
+  requires: []
+- name: Rollerdrome
+  ids:
+  - steam:1294420
+  requires: []
+- name: Topspin 2K25 Deluxe Edition
+  ids:
+  - steam:sub/1014216
+  requires: []
+- name: LEGO® 2K Drive
+  ids:
+  - steam:1451810
+  requires: []
+- name: Risk of Rain Returns
+  ids:
+  - steam:1337520
+  requires: []
+- name: 'BioShock: The Collection'
+  ids:
+  - unresolved:source:greenmangaming:25
+  requires: []
+- name: Tiny Tina's Wonderlands Chaotic Great Edition
+  ids:
+  - steam:bundle/38150
+  requires: []
+- name: 'XCOM: Ultimate Collection'
+  ids:
+  - steam:bundle/20109
+  requires: []
