@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Mini Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2612/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2612/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2612/source.json
+games:
+- name: Abducted!
+  ids:
+  - unresolved:source:isthereanydeal:2612:abducted
+  requires: []
+- name: The Blue Flamingo
+  ids:
+  - steam:302010
+  requires: []
+- name: TRISTOY
+  ids:
+  - steam:303260
+  requires: []
+- name: Minotaur
+  ids:
+  - steam:496660
+  requires: []
+- name: 'Supreme League of Patriots - Issue 3: Ice Cold in Ellis'
+  ids:
+  - steam:336730
+  requires: []

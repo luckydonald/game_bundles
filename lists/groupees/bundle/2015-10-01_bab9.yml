@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2544/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2544/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2544/source.json
+games:
+- name: RC Mini Racers
+  ids:
+  - steam:311820
+  requires: []
+- name: Stay Dead Evolution
+  ids:
+  - steam:341070
+  requires: []
+- name: Rogue Harvest
+  ids:
+  - steam:409490
+  requires: []
+- name: Dusters
+  ids:
+  - unresolved:source:isthereanydeal:2544:dusters
+  requires: []
+- name: Deadlands Noir - That Old Time Religion
+  ids:
+  - steam:383670
+  requires: []
+- name: Fury Of The Gods
+  ids:
+  - steam:373460
+  requires: []
+- name: BlastZone 2
+  ids:
+  - steam:349260
+  requires: []
+- name: 'Kult: Heretic Kingdoms'
+  ids:
+  - steam:277650
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Shoppaholic Greenlight Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2324/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2324/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2324/source.json
+games:
+- name: Respawn Man
+  ids:
+  - steam:398940
+  requires: []
+- name: Dream Factory
+  ids:
+  - steam:408440
+  requires: []
+- name: Miracle Fly
+  ids:
+  - steam:395140
+  requires: []
+- name: The Dwarf Run
+  ids:
+  - steam:395420
+  requires: []
+- name: Tisnart Tiles
+  ids:
+  - steam:398920
+  requires: []
+- name: Habitus
+  ids:
+  - steam:394990
+  requires: []
+- name: Beyond Humanity
+  ids:
+  - unresolved:source:isthereanydeal:2324:beyond-humanity
+  requires: []
+- name: Lift It
+  ids:
+  - steam:402220
+  requires: []

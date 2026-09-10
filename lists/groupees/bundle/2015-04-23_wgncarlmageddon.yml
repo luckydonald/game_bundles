@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Carlmageddon — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1812/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1812/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1812/source.json
+games:
+- name: Voice of Pripyat 3D Four-Pack
+  ids:
+  - unresolved:source:isthereanydeal:1812:voice-of-pripyat-3d-four-pack
+  requires: []
+- name: 'Supreme League of Patriots: Issue 1 - A Patriot Is Born'
+  ids:
+  - steam:331760
+  requires: []
+- name: 'Play the Mayor: Become the Mayor of Fortune''s City'
+  ids:
+  - unresolved:source:isthereanydeal:1812:play-the-mayor-become-the-mayor-of-fortunes-city
+  requires: []
+- name: 'Fortune''s Tavern: Pet Egg-stravaganza'
+  ids:
+  - unresolved:source:isthereanydeal:1812:fortunes-tavern-pet-egg-stravaganza
+  requires: []
+- name: 'Monument Builders: Alcatraz'
+  ids:
+  - unresolved:source:isthereanydeal:1812:monument-builders-alcatraz
+  requires: []
+- name: 'The Defenders: The Second Wave'
+  ids:
+  - steam:351400
+  requires: []
+- name: Fortune's Tavern - The Fantasy Tavern Simulator!
+  ids:
+  - unresolved:source:isthereanydeal:1812:fortunes-tavern-the-fantasy-tavern-simulator
+  requires: []

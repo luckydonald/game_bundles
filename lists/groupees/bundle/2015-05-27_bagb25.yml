@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 25 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2051/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2051/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2051/source.json
+games:
+- name: Biodrone Battle
+  ids:
+  - steam:377290
+  requires: []
+- name: Super Star Path
+  ids:
+  - steam:375120
+  requires: []
+- name: UNDEADS
+  ids:
+  - steam:2664670
+  requires: []
+- name: Superstatic
+  ids:
+  - steam:375290
+  requires: []
+- name: Super Space Meltdown
+  ids:
+  - steam:388500
+  requires: []
+- name: 'Hentai: exposed bundle'
+  ids:
+  - unresolved:source:isthereanydeal:2051:hentai-exposed-bundle
+  requires: []
+- name: XNemesis
+  ids:
+  - steam:399240
+  requires: []
+- name: Project Graviton
+  ids:
+  - steam:437880
+  requires: []
+- name: 'Atonement: Scourge of Time'
+  ids:
+  - steam:385070
+  requires: []
+- name: Quiz.Life
+  ids:
+  - unresolved:source:isthereanydeal:2051:quiz-life
+  requires: []

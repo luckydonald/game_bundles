@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 33 — All games
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2634/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2634/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2634/source.json
+games:
+- name: Of Carrots And Blood
+  ids:
+  - steam:439440
+  requires: []
+- name: Militia
+  ids:
+  - steam:421260
+  requires: []
+- name: Shattered Throne
+  ids:
+  - steam:469710
+  requires: []
+- name: Intense Wizardry
+  ids:
+  - unresolved:source:isthereanydeal:2634:intense-wizardry
+  requires: []
+- name: 'Worlds of Chaos : Invasion'
+  ids:
+  - steam:436510
+  requires: []
+- name: Color Chaos
+  ids:
+  - steam:423720
+  requires: []
+- name: Squirbs
+  ids:
+  - steam:429700
+  requires: []
+- name: Gigachess
+  ids:
+  - steam:415910
+  requires: []
+- name: HotLead
+  ids:
+  - unresolved:source:isthereanydeal:2634:hotlead
+  requires: []
+- name: Bounce 'em Up
+  ids:
+  - unresolved:source:isthereanydeal:2634:bounce-em-up
+  requires: []

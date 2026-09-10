@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Colonies And States Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2005/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2005/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2005/source.json
+games:
+- name: Fly'n
+  ids:
+  - steam:223730
+  requires: []
+- name: InnerCube
+  ids:
+  - steam:344270
+  requires: []
+- name: 'Sword of the Stars: The Pit - Gold Edition'
+  ids:
+  - steam:258930
+  requires: []
+- name: Ground Pounders
+  ids:
+  - steam:267730
+  requires: []
+- name: States, Firms, & Households
+  ids:
+  - steam:458820
+  requires: []
+- name: 'Ground Pounders: Tarka'
+  ids:
+  - steam:323570
+  requires: []
+- name: Dreadnought Pack
+  ids:
+  - unresolved:source:isthereanydeal:2005:dreadnought-pack
+  requires: []
+- name: 'Sword of the Stars: The Pit - Pilgrim'
+  ids:
+  - unresolved:source:isthereanydeal:2005:sword-of-the-stars-the-pit-pilgrim
+  requires: []
+- name: Top Hat
+  ids:
+  - steam:315940
+  requires: []
+- name: Overdosed - A Trip To Hell
+  ids:
+  - steam:413830
+  requires: []

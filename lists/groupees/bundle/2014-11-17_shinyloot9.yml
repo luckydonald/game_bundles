@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Shinyloot Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1398/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1398/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1398/source.json
+games:
+- name: Space War Commander
+  ids:
+  - unresolved:source:isthereanydeal:1398:space-war-commander
+  requires: []
+- name: Soulbringer
+  ids:
+  - steam:283310
+  requires: []
+- name: Gray Matter
+  ids:
+  - steam:260570
+  requires: []
+- name: Conspiracies II
+  ids:
+  - unresolved:source:isthereanydeal:1398:conspiracies-ii
+  requires: []
+- name: Rexzilla
+  ids:
+  - unresolved:source:isthereanydeal:1398:rexzilla
+  requires: []
+- name: Realms of the Haunting
+  ids:
+  - steam:292390
+  requires: []
+- name: 'Valcarta: Rise of the Demon'
+  ids:
+  - steam:488220
+  requires: []
+- name: 'The Island: Castaway'
+  ids:
+  - unresolved:source:isthereanydeal:1398:the-island-castaway
+  requires: []
+- name: 'FootLOL: Epic Soccer League'
+  ids:
+  - steam:263740
+  requires: []
