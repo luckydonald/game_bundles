@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 40 — Build Your Own Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3124/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3124/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3124/source.json
+games:
+- name: Kamu
+  ids:
+  - unresolved:source:isthereanydeal:3124:kamu
+  requires: []
+- name: RPG Fighter League
+  ids:
+  - steam:550170
+  requires: []
+- name: Particles
+  ids:
+  - unresolved:source:isthereanydeal:3124:particles
+  requires: []
+- name: To Ash
+  ids:
+  - steam:453950
+  requires: []
+- name: The Temporal Invasion
+  ids:
+  - steam:454220
+  requires: []
+- name: Dear RED - Extended
+  ids:
+  - steam:453850
+  requires: []
+- name: A Land Fit For Heroes
+  ids:
+  - unresolved:source:isthereanydeal:3124:a-land-fit-for-heroes
+  requires: []
+- name: TableTop Soccer
+  ids:
+  - steam:453710
+  requires: []
+- name: Burst
+  ids:
+  - unresolved:source:isthereanydeal:3124:burst
+  requires: []
+- name: Neon Hardcorps
+  ids:
+  - steam:454200
+  requires: []
+- name: Cyber City 2157
+  ids:
+  - unresolved:source:isthereanydeal:3124:cyber-city-2157
+  requires: []
+- name: Gravity Den
+  ids:
+  - steam:454970
+  requires: []

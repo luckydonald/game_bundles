@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lovely Miller We're Having — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3757/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3757/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3757/source.json
+games:
+- name: Lovely Weather We're Having
+  ids:
+  - unresolved:source:isthereanydeal:3757:lovely-weather-we-re-having
+  requires: []
+- name: The Seeker
+  ids:
+  - steam:503680
+  requires: []
+- name: Amigdala
+  ids:
+  - steam:450110
+  requires: []
+- name: Alien Run
+  ids:
+  - unresolved:source:isthereanydeal:3757:alien-run
+  requires: []
+- name: Crappy day enhanced edition
+  ids:
+  - unresolved:source:isthereanydeal:3757:crappy-day-enhanced-edition
+  requires: []
+- name: Genesis of Drones
+  ids:
+  - steam:364880
+  requires: []
+- name: Techwars Online
+  ids:
+  - steam:444180
+  requires: []

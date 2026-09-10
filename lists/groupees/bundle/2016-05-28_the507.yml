@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Betrayer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3499/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3499/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3499/source.json
+games:
+- name: 'Showing Tonight: Mindhunters Incident'
+  ids:
+  - steam:416370
+  requires: []
+- name: 'Apothecarium: The Renaissance of Evil - Premium Edition'
+  ids:
+  - steam:373860
+  requires: []
+- name: RoBoRumble
+  ids:
+  - steam:420970
+  requires: []
+- name: Throne Rushers
+  ids:
+  - unresolved:source:isthereanydeal:3499:throne-rushers
+  requires: []
+- name: Betrayer
+  ids:
+  - unresolved:source:isthereanydeal:3499:betrayer
+  requires: []
+- name: Bloodbath Kavkaz
+  ids:
+  - unresolved:source:isthereanydeal:3499:bloodbath-kavkaz
+  requires: []

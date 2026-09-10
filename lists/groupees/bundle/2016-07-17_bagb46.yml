@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 46 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3758/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3758/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3758/source.json
+games:
+- name: Interstellar Logistics Inc.
+  ids:
+  - steam:502150
+  requires: []
+- name: NeoWars
+  ids:
+  - unresolved:source:isthereanydeal:3758:neowars
+  requires: []
+- name: Our Hero! Hyper Sword
+  ids:
+  - unresolved:source:isthereanydeal:3758:our-hero-hyper-sword
+  requires: []
+- name: Sprint
+  ids:
+  - unresolved:source:isthereanydeal:3758:sprint
+  requires: []
+- name: Zero-G
+  ids:
+  - steam:567890
+  requires: []
+- name: Aviators
+  ids:
+  - unresolved:source:isthereanydeal:3758:aviators
+  requires: []
+- name: BGP Orbit
+  ids:
+  - unresolved:source:isthereanydeal:3758:bgp-orbit
+  requires: []
+- name: Indigo Viper
+  ids:
+  - unresolved:source:isthereanydeal:3758:indigo-viper
+  requires: []
+- name: 'Go Mission: Space Travel'
+  ids:
+  - unresolved:source:isthereanydeal:3758:go-mission-space-travel
+  requires: []
+- name: NightmareZ
+  ids:
+  - steam:509930
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 36 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2870/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2870/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2870/source.json
+games:
+- name: Clumsy Runners
+  ids:
+  - steam:455590
+  requires: []
+- name: Koru
+  ids:
+  - unresolved:source:isthereanydeal:2870:koru
+  requires: []
+- name: Dungeons Are Random
+  ids:
+  - steam:431330
+  requires: []
+- name: Skeletal Dance Party
+  ids:
+  - steam:599160
+  requires: []
+- name: BoX -containment
+  ids:
+  - steam:479150
+  requires: []
+- name: Tribal Siege
+  ids:
+  - steam:558720
+  requires: []
+- name: DropCore
+  ids:
+  - steam:3726110
+  requires: []
+- name: The Last Hope For All
+  ids:
+  - unresolved:source:isthereanydeal:2870:the-last-hope-for-all
+  requires: []
+- name: Disastr_Blastr
+  ids:
+  - steam:431200
+  requires: []
+- name: Attack of the Mutant Fishcrows
+  ids:
+  - unresolved:source:isthereanydeal:2870:attack-of-the-mutant-fishcrows
+  requires: []

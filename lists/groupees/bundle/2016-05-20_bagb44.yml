@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 44 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3451/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3451/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3451/source.json
+games:
+- name: CyberSentinel
+  ids:
+  - unresolved:source:isthereanydeal:3451:cybersentinel
+  requires: []
+- name: Cosmic Dust & Rust
+  ids:
+  - steam:473560
+  requires: []
+- name: Toxic Terror
+  ids:
+  - steam:486630
+  requires: []
+- name: Run The Gamut
+  ids:
+  - steam:489730
+  requires: []
+- name: Laraan
+  ids:
+  - steam:493710
+  requires: []
+- name: Star Merc
+  ids:
+  - steam:485830
+  requires: []
+- name: Guppy's Quest
+  ids:
+  - unresolved:source:isthereanydeal:3451:guppys-quest
+  requires: []
+- name: Nary
+  ids:
+  - steam:491720
+  requires: []
+- name: Hypnorain
+  ids:
+  - steam:495230
+  requires: []
+- name: 'Machine Made: Rebirth'
+  ids:
+  - steam:485390
+  requires: []

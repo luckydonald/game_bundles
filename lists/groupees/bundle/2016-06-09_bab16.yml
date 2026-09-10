@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 16 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3555/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3555/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3555/source.json
+games:
+- name: White Mirror
+  ids:
+  - steam:428630
+  requires: []
+- name: The Lost Souls
+  ids:
+  - steam:453670
+  requires: []
+- name: Sleep Attack
+  ids:
+  - steam:366210
+  requires: []
+- name: Catch a Falling Star
+  ids:
+  - steam:451880
+  requires: []
+- name: 'GooCubelets: OCD'
+  ids:
+  - unresolved:source:isthereanydeal:3555:goocubelets-ocd
+  requires: []
+- name: Green Ranch
+  ids:
+  - steam:493980
+  requires: []
+- name: VERGE:Lost chapter
+  ids:
+  - steam:400740
+  requires: []
+- name: Fast and Curious
+  ids:
+  - unresolved:source:isthereanydeal:3555:fast-and-curious
+  requires: []
