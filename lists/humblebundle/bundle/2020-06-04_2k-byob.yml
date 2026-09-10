@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 2K Build Your Own Bundle (2020) — Select 3 Titles For 80% Off, 4 Titles For
+  83% Off, 5 Titles For 85% Off
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8856/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8856/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8856/source.json
+games:
+- name: Borderlands 2 Game of the Year Edition
+  ids:
+  - unresolved:source:isthereanydeal:8856:borderlands-2-game-of-the-year-edition
+  requires: []
+- name: 'Borderlands: The Handsome Collection'
+  ids:
+  - unresolved:source:isthereanydeal:8856:borderlands-the-handsome-collection
+  requires: []
+- name: BioShock 2
+  ids:
+  - steam:8850
+  requires: []
+- name: Duke Nukem Forever
+  ids:
+  - steam:57900
+  requires: []
+- name: 'BioShock: The Collection'
+  ids:
+  - unresolved:source:isthereanydeal:8856:bioshock-the-collection
+  requires: []
+- name: Borderlands 2
+  ids:
+  - steam:49520
+  requires: []
+- name: NBA 2K20
+  ids:
+  - unresolved:source:isthereanydeal:8856:nba-2k20
+  requires: []
+- name: BioShock Infinite
+  ids:
+  - steam:8870
+  requires: []
+- name: 'Sid Meier''s Civilization: Beyond Earth'
+  ids:
+  - steam:65980
+  requires: []
+- name: Borderlands 2 Season Pass
+  ids:
+  - steam:218560
+  requires: []
+- name: 'Spec Ops: The Line'
+  ids:
+  - unresolved:source:isthereanydeal:8856:spec-ops-the-line
+  requires: []
+- name: 'XCOM: Enemy Unknown'
+  ids:
+  - steam:200510
+  requires: []
+- name: BioShock
+  ids:
+  - steam:7670
+  requires: []
+- name: Carnival Games® VR
+  ids:
+  - steam:458920
+  requires: []
+- name: 'The Bureau: XCOM Declassified'
+  ids:
+  - steam:65930
+  requires: []
+- name: 'Borderlands: The Pre-Sequel'
+  ids:
+  - steam:261640
+  requires: []
+- name: The Darkness II
+  ids:
+  - steam:67370
+  requires: []
+- name: 'XCOM: Enemy Within'
+  ids:
+  - steam:225340
+  requires: []
+- name: WWE 2K20
+  ids:
+  - unresolved:source:isthereanydeal:8856:wwe-2k20
+  requires: []
+- name: 'Sid Meier''s Civilization IV: The Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:8856:sid-meiers-civilization-iv-the-complete-edition
+  requires: []
+- name: 'Carnival Games® VR: Alley Adventure'
+  ids:
+  - steam:631690
+  requires: []

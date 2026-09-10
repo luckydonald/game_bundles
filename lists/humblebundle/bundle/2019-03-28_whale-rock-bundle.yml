@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Whale Rock Bundle — entire-3-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7238/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7238/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7238/source.json
+games:
+- name: We Are The Dwarves
+  ids:
+  - steam:395570
+  requires: []
+- name: TimeLock VR
+  ids:
+  - unresolved:source:isthereanydeal:7238:timelock-vr
+  requires: []
+- name: Deployment
+  ids:
+  - steam:755980
+  requires: []

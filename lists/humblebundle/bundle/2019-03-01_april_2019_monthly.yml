@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Apr 2019) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7098/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7098/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7098/source.json
+games:
+- name: 'Mutant Year Zero: Road to Eden'
+  ids:
+  - steam:760060
+  requires: []
+- name: She Remembered Caterpillars
+  ids:
+  - steam:470780
+  requires: []
+- name: Tannenberg
+  ids:
+  - steam:633460
+  requires: []
+- name: Absolver
+  ids:
+  - steam:473690
+  requires: []
+- name: A Short Hike
+  ids:
+  - steam:1055540
+  requires: []
+- name: Northgard
+  ids:
+  - steam:466560
+  requires: []
+- name: Minit
+  ids:
+  - steam:609490
+  requires: []
+- name: Steel Rats
+  ids:
+  - steam:619700
+  requires: []
+- name: 'Dandara: Trials of Fear Edition'
+  ids:
+  - steam:612390
+  requires: []

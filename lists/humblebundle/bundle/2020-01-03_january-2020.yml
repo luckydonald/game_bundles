@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jan 2020) — Select 3 Choices for $14.99, 9 Choices for $19.99,
+  10 Choices for $12.00*
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8292/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8292/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8292/source.json
+games:
+- name: Whispers of a Machine
+  ids:
+  - steam:631570
+  requires: []
+- name: Street Fighter V
+  ids:
+  - steam:310950
+  requires: []
+- name: DiRT Rally 2.0
+  ids:
+  - steam:690790
+  requires: []
+- name: 'Middle-earth: Shadow of War'
+  ids:
+  - steam:356190
+  requires: []
+- name: Them's Fightin' Herds
+  ids:
+  - steam:574980
+  requires: []
+- name: Unrailed!
+  ids:
+  - steam:1016920
+  requires: []
+- name: DiRT Rally 2.0 - Opel Manta 400
+  ids:
+  - steam:1004960
+  requires: []
+- name: Two Point Hospital
+  ids:
+  - steam:535930
+  requires: []
+- name: DiRT Rally 2.0 - H2 RWD Double Pack
+  ids:
+  - steam:988662
+  requires: []
+- name: 'Bad North: Jotunn Edition'
+  ids:
+  - steam:688420
+  requires: []
+- name: Trailmakers
+  ids:
+  - steam:585420
+  requires: []
+- name: 'GRIP: Combat Racing'
+  ids:
+  - steam:396900
+  requires: []
+- name: Mages of Mystralia
+  ids:
+  - steam:529660
+  requires: []
+- name: Graveyard Keeper
+  ids:
+  - steam:599140
+  requires: []
+- name: 'GRIP: Combat Racing - Artifex Car Pack'
+  ids:
+  - steam:1087830
+  requires: []
+- name: Dirt Rally 2.0 - Porsche 911 RGT Rally Spec
+  ids:
+  - steam:977660
+  requires: []
