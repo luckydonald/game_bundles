@@ -8,6 +8,8 @@ tiers:
   name: Tier 2
 - rank: 3
   name: Tier 3
+- rank: 4
+  name: Tier 4
 - rank: 7
   name: Charity tier, 100% goes to charity
 references:
@@ -27,6 +29,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 7
 - name: CONVRGENCE
   ids:
@@ -36,6 +39,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 7
 - name: Arizona Sunshine® VR 2
   ids:
@@ -45,6 +49,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 7
 - name: Bootstrap Island
   ids:
@@ -53,6 +58,7 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 7
 - name: UNDERDOGS
   ids:
@@ -60,6 +66,7 @@ games:
   - isthereanydeal:underdogs
   requires: []
   tiers:
+  - 4
   - 7
 - name: EXD - Extra Dimensional
   ids:
