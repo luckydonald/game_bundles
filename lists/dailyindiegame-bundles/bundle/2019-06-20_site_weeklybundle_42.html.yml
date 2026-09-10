@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 42 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7540/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7540/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7540/source.json
+games:
+- name: Christmas Time 2019
+  ids:
+  - steam:1005900
+  requires: []
+- name: Death Rpg
+  ids:
+  - steam:1007080
+  requires: []
+- name: Mahjong Solitaire
+  ids:
+  - steam:805400
+  requires: []
+- name: SLIDER
+  ids:
+  - steam:884900
+  requires: []
+- name: Othello 2018
+  ids:
+  - steam:874140
+  requires: []
+- name: RGB RUN
+  ids:
+  - steam:978340
+  requires: []
+- name: Before Nightfall
+  ids:
+  - steam:896380
+  requires: []
+- name: Powerless
+  ids:
+  - steam:775200
+  requires: []
+- name: Bonsai
+  ids:
+  - steam:444160
+  requires: []

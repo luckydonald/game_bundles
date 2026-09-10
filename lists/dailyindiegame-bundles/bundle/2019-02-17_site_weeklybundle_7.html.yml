@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7034/source.json
+games:
+- name: Dragonfly Chronicles
+  ids:
+  - unresolved:source:isthereanydeal:7034:dragonfly-chronicles
+  requires: []
+- name: Once upon a Dungeon
+  ids:
+  - steam:772090
+  requires: []
+- name: TimeTekker
+  ids:
+  - steam:849680
+  requires: []
+- name: Forever Home
+  ids:
+  - steam:718200
+  requires: []
+- name: Supesu
+  ids:
+  - steam:879280
+  requires: []
+- name: Outbreak in Space VR
+  ids:
+  - unresolved:source:isthereanydeal:7034:outbreak-in-space-vr
+  requires: []
+- name: Alien Revival - Episode 1 - Duty Calls
+  ids:
+  - unresolved:source:isthereanydeal:7034:alien-revival-episode-1-duty-calls
+  requires: []
+- name: Fantasya Final Definitiva REMAKE
+  ids:
+  - unresolved:source:isthereanydeal:7034:fantasya-final-definitiva-remake
+  requires: []
+- name: Ninja Midori
+  ids:
+  - steam:858440
+  requires: []

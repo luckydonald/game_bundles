@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 99 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5007/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5007/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5007/source.json
+games:
+- name: Jack's Gang
+  ids:
+  - unresolved:source:isthereanydeal:5007:jacks-gang
+  requires: []
+- name: Crab Dub
+  ids:
+  - steam:539450
+  requires: []
+- name: 'Word Killer: Revolution'
+  ids:
+  - unresolved:source:isthereanydeal:5007:word-killer-revolution
+  requires: []
+- name: Drop Hunt - Adventure Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:5007:drop-hunt-adventure-puzzle
+  requires: []
+- name: Space Codex
+  ids:
+  - steam:469890
+  requires: []
+- name: 'Word Killer: Zorgilonian Chronicles'
+  ids:
+  - unresolved:source:isthereanydeal:5007:word-killer-zorgilonian-chronicles
+  requires: []

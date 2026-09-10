@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 85 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4653/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4653/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4653/source.json
+games:
+- name: Gunspell
+  ids:
+  - steam:328100
+  requires: []
+- name: Orczz
+  ids:
+  - steam:502200
+  requires: []
+- name: Merger 3D
+  ids:
+  - steam:527750
+  requires: []
+- name: Normality
+  ids:
+  - steam:400370
+  requires: []
+- name: Gone In November
+  ids:
+  - steam:507390
+  requires: []
+- name: Madrobot X
+  ids:
+  - steam:513610
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 81 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4546/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4546/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4546/source.json
+games:
+- name: Luna Sky
+  ids:
+  - steam:361600
+  requires: []
+- name: Uriels Chasm 2
+  ids:
+  - steam:414580
+  requires: []
+- name: 'Global Ops: Commando Libya'
+  ids:
+  - steam:200020
+  requires: []
+- name: Deer Hunt Legends
+  ids:
+  - steam:328670
+  requires: []
+- name: Naval Warfare
+  ids:
+  - steam:98500
+  requires: []
+- name: Bloop Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:4546:bloop-reloaded
+  requires: []

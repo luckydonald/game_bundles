@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 89 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4719/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4719/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4719/source.json
+games:
+- name: Torsion
+  ids:
+  - unresolved:source:isthereanydeal:4719:torsion
+  requires: []
+- name: Hypership Out of Control
+  ids:
+  - steam:354040
+  requires: []
+- name: Puzzle Cube
+  ids:
+  - steam:539460
+  requires: []
+- name: Russian SuperHero Dead Ivan
+  ids:
+  - steam:527770
+  requires: []
+- name: Akin
+  ids:
+  - steam:487370
+  requires: []
+- name: Beerman
+  ids:
+  - steam:508950
+  requires: []

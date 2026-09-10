@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6998/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6998/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6998/source.json
+games:
+- name: Dragon Chase
+  ids:
+  - steam:1011240
+  requires: []
+- name: COMPLEX a VR Puzzle Game
+  ids:
+  - steam:772420
+  requires: []
+- name: Witch The Bloodlines
+  ids:
+  - steam:925690
+  requires: []
+- name: Morphine
+  ids:
+  - steam:410430
+  requires: []
+- name: Master Pyrox Wizard Smackdown
+  ids:
+  - steam:861960
+  requires: []
+- name: JumpBall 2
+  ids:
+  - steam:750870
+  requires: []
+- name: Yandere School
+  ids:
+  - steam:687750
+  requires: []
+- name: A Killer's Sorrow
+  ids:
+  - steam:937070
+  requires: []
+- name: Away From Earth 2
+  ids:
+  - unresolved:source:isthereanydeal:6998:away-from-earth-2
+  requires: []

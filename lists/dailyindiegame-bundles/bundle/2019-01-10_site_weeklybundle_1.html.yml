@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6896/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6896/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6896/source.json
+games:
+- name: Zombie Desperation
+  ids:
+  - steam:818570
+  requires: []
+- name: 'A Front Too Far: Normandy'
+  ids:
+  - steam:958320
+  requires: []
+- name: 'Codename: Ghost Hunt'
+  ids:
+  - steam:844030
+  requires: []
+- name: 'Pegasus-5: Gone Astray'
+  ids:
+  - steam:794030
+  requires: []
+- name: Operation Lone Wolf
+  ids:
+  - steam:926010
+  requires: []
+- name: AstroViking
+  ids:
+  - steam:903580
+  requires: []
+- name: Die In The Dark
+  ids:
+  - steam:847860
+  requires: []
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+  requires: []
+- name: Soul Grabber
+  ids:
+  - steam:788250
+  requires: []

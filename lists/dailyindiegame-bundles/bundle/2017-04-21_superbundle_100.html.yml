@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 100 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5026/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5026/source.json
+games:
+- name: 'Real Warfare: 1242'
+  ids:
+  - steam:46350
+  requires: []
+- name: Parkan 2
+  ids:
+  - steam:289400
+  requires: []
+- name: Borderzone
+  ids:
+  - steam:289220
+  requires: []
+- name: Perimeter
+  ids:
+  - steam:289440
+  requires: []
+- name: Freight Tycoon Inc.
+  ids:
+  - steam:289340
+  requires: []
+- name: "Off\x96Road Drive"
+  ids:
+  - steam:200230
+  requires: []
