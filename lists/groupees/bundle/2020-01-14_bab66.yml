@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 66 — Select 2 to 7 Titles for $1.00 up to $2.80
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8314/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8314/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8314/source.json
+games:
+- name: Disgraced
+  ids:
+  - steam:485360
+  requires: []
+- name: Giga Girl
+  ids:
+  - steam:474620
+  requires: []
+- name: Space Wars
+  ids:
+  - steam:892910
+  requires: []
+- name: Waste Walkers
+  ids:
+  - steam:371100
+  requires: []
+- name: Eternal Space Battles
+  ids:
+  - steam:926820
+  requires: []
+- name: The Sky Climber
+  ids:
+  - steam:958690
+  requires: []
+- name: 'Outliver: Redemption'
+  ids:
+  - steam:1011370
+  requires: []

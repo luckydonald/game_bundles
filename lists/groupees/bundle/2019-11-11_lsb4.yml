@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lock, Stock and Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8119/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8119/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8119/source.json
+games:
+- name: Hamsterdam
+  ids:
+  - steam:922040
+  requires: []
+- name: Quest of Dungeons
+  ids:
+  - steam:270050
+  requires: []
+- name: Paper Dungeons Crawler
+  ids:
+  - steam:754340
+  requires: []
+- name: 'Gurumin: A Monstrous Adventure'
+  ids:
+  - steam:322290
+  requires: []
+- name: BallisticNG
+  ids:
+  - steam:473770
+  requires: []

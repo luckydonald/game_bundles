@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Davi Fox Games Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10700/source.json
+games:
+- name: Sleepy Blocks
+  ids:
+  - unresolved:source:isthereanydeal:10700:sleepy-blocks
+  requires: []
+- name: Lucky Guy
+  ids:
+  - unresolved:source:isthereanydeal:10700:lucky-guy
+  requires: []
+- name: Juice It!
+  ids:
+  - unresolved:source:isthereanydeal:10700:juice-it
+  requires: []
+- name: Mixtape Fever
+  ids:
+  - unresolved:source:isthereanydeal:10700:mixtape-fever
+  requires: []
+- name: Spring Time!
+  ids:
+  - unresolved:source:isthereanydeal:10700:spring-time
+  requires: []
+- name: Bullmerang
+  ids:
+  - unresolved:source:isthereanydeal:10700:bullmerang
+  requires: []
+- name: Pocket Snake
+  ids:
+  - unresolved:source:isthereanydeal:10700:pocket-snake
+  requires: []
+- name: Pocket Cat
+  ids:
+  - unresolved:source:isthereanydeal:10700:pocket-cat
+  requires: []
+- name: How To Make Frankie
+  ids:
+  - unresolved:source:isthereanydeal:10700:how-to-make-frankie
+  requires: []
+- name: One Bullet Man
+  ids:
+  - unresolved:source:isthereanydeal:10700:one-bullet-man
+  requires: []
