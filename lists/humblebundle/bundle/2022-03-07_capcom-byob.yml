@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Build Your Own Bundle — Select 3 Titles for 75% Off, 4 Titles for 77%
+  Off, 5 Titles for 80% Off
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11133/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11133/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11133/source.json
+games:
+- name: Ultra Street Fighter IV
+  ids:
+  - steam:45760
+  requires: []
+- name: Dead Rising® 2
+  ids:
+  - steam:45740
+  requires: []
+- name: 'Dead Rising® 2: Off The Record'
+  ids:
+  - steam:45770
+  requires: []
+- name: 'Bionic Commando: Rearmed'
+  ids:
+  - steam:21680
+  requires: []
+- name: Resident Evil 0 HD Remaster
+  ids:
+  - steam:339340
+  requires: []
+- name: Resident Evil 6
+  ids:
+  - steam:221040
+  requires: []
+- name: Resident Evil 5
+  ids:
+  - unresolved:source:isthereanydeal:11133:resident-evil-5
+  requires: []
+- name: Remember Me
+  ids:
+  - steam:228300
+  requires: []
+- name: Remember Me™ Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:11133:remember-me-complete-pack
+  requires: []
+- name: 'Marvel vs. Capcom: Infinite'
+  ids:
+  - steam:493840
+  requires: []
+- name: Umbrella Corps™
+  ids:
+  - steam:390340
+  requires: []
+- name: Umbrella Corps™ Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:11133:umbrella-corps-deluxe-edition
+  requires: []
+- name: Resident Evil Revelations Unveiled Edition
+  ids:
+  - unresolved:source:isthereanydeal:11133:resident-evil-revelations-unveiled-edition
+  requires: []
+- name: Resident Evil HD Remaster
+  ids:
+  - steam:304240
+  requires: []
+- name: Lost Planet 3
+  ids:
+  - steam:226720
+  requires: []
+- name: Ultimate Marvel vs. Capcom 3
+  ids:
+  - steam:357190
+  requires: []
+- name: Dead Rising 3 Apocalypse Edition
+  ids:
+  - steam:265550
+  requires: []
+- name: 'Dragon''s Dogma: Dark Arisen'
+  ids:
+  - steam:367500
+  requires: []
+- name: 'Lost Planet™: Extreme Condition'
+  ids:
+  - steam:6510
+  requires: []
+- name: Dead Rising 4 Frank's Big Package
+  ids:
+  - unresolved:source:isthereanydeal:11133:dead-rising-4-franks-big-package
+  requires: []
+- name: Bionic Commando
+  ids:
+  - steam:21670
+  requires: []
+- name: The Bionic Commando Pack
+  ids:
+  - unresolved:source:isthereanydeal:11133:the-bionic-commando-pack
+  requires: []
+- name: Dead Rising
+  ids:
+  - steam:427190
+  requires: []
+- name: 'Marvel vs. Capcom: Infinite - Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:11133:marvel-vs-capcom-infinite-deluxe-edition
+  requires: []
+- name: Resident Evil 5 GOLD Edition
+  ids:
+  - steam:21690
+  requires: []
+- name: Resident Evil 4 (2005)
+  ids:
+  - steam:254700
+  requires: []
+- name: RESIDENT EVIL 3 (2020)
+  ids:
+  - steam:952060
+  requires: []
