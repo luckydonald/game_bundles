@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Born 2 Race 2 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2935/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2935/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2935/source.json
+games:
+- name: RC Mini Racers
+  ids:
+  - steam:311820
+  requires: []
+- name: Wacky Wheels
+  ids:
+  - steam:358380
+  requires: []
+- name: Super Toy Cars
+  ids:
+  - steam:116100
+  requires: []
+- name: StuntMANIA Reloaded
+  ids:
+  - steam:324750
+  requires: []
+- name: InMomentum
+  ids:
+  - steam:110400
+  requires: []
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+  requires: []
+- name: rFactor
+  ids:
+  - steam:339790
+  requires: []
+- name: BlazeRush
+  ids:
+  - steam:302710
+  requires: []
+- name: Death Rally (Classic)
+  ids:
+  - steam:358270
+  requires: []

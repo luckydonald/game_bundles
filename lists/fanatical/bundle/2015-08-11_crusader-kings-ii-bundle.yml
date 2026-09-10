@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Crusader Kings II Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2325/source.json
+games:
+- name: Crusader Kings II The Old Gods
+  ids:
+  - steam:210908
+  requires: []
+- name: 'Crusader Kings II: Sons of Abraham'
+  ids:
+  - steam:226667
+  requires: []
+- name: 'Crusader Kings II: Turkish Unit Pack'
+  ids:
+  - steam:279601
+  requires: []
+- name: Crusader Kings II The Republic
+  ids:
+  - steam:210906
+  requires: []
+- name: Crusader Kings II
+  ids:
+  - steam:203770
+  requires: []
+- name: 'Crusader Kings II: Legacy of Rome'
+  ids:
+  - steam:210895
+  requires: []
+- name: 'Crusader Kings II: Customization Pack'
+  ids:
+  - steam:226666
+  requires: []
+- name: Crusader Kings II Sunset Invasion
+  ids:
+  - steam:210902
+  requires: []
+- name: 'Crusader Kings II: Celtic Unit Pack'
+  ids:
+  - steam:226662
+  requires: []
+- name: 'Crusader Kings II: Ruler Designer'
+  ids:
+  - steam:203776
+  requires: []
+- name: 'Crusader Kings II: Saxon Unit Pack'
+  ids:
+  - steam:226672
+  requires: []

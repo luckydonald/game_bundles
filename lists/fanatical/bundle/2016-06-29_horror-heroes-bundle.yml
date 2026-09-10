@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Horror Heroes Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3643/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3643/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3643/source.json
+games:
+- name: Blackbay Asylum
+  ids:
+  - steam:313140
+  requires: []
+- name: Deadly 30
+  ids:
+  - steam:264730
+  requires: []
+- name: Dead Pixels
+  ids:
+  - steam:222980
+  requires: []
+- name: 'Doorways: The Underworld'
+  ids:
+  - steam:311250
+  requires: []
+- name: Belladonna
+  ids:
+  - steam:351340
+  requires: []
+- name: Kraven Manor
+  ids:
+  - steam:296630
+  requires: []
+- name: 99 Levels To Hell
+  ids:
+  - steam:264280
+  requires: []
+- name: 'Viscera Cleanup Detail: Santa''s Rampage'
+  ids:
+  - steam:265210
+  requires: []

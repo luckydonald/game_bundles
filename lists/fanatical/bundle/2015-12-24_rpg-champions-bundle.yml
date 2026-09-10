@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Champions Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2884/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2884/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2884/source.json
+games:
+- name: Enclave
+  ids:
+  - steam:253980
+  requires: []
+- name: 'Two Worlds II: Pirates of the Flying Fortress'
+  ids:
+  - steam:200440
+  requires: []
+- name: Two Worlds II HD
+  ids:
+  - steam:7520
+  requires: []
+- name: Septerra Core
+  ids:
+  - steam:253940
+  requires: []
+- name: Gorky 17
+  ids:
+  - steam:253920
+  requires: []
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930
+  requires: []

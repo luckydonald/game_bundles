@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dragon Brawl Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2895/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2895/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2895/source.json
+games:
+- name: Uncanny Valley
+  ids:
+  - steam:359580
+  requires: []
+- name: Pizza Express
+  ids:
+  - steam:375250
+  requires: []
+- name: The Dark Stone from Mebara
+  ids:
+  - steam:346950
+  requires: []
+- name: The I of the Dragon
+  ids:
+  - steam:279720
+  requires: []
+- name: Signal to Noise
+  ids:
+  - unresolved:source:isthereanydeal:2895:signal-to-noise
+  requires: []
+- name: The Adventures of Mr. Bobley
+  ids:
+  - steam:375710
+  requires: []
+- name: Pester
+  ids:
+  - steam:354920
+  requires: []
+- name: The Adventures of Tree
+  ids:
+  - steam:354860
+  requires: []
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: Air Brawl
+  ids:
+  - steam:375600
+  requires: []
+- name: Pongo
+  ids:
+  - steam:369000
+  requires: []
+- name: Rubber & Lead
+  ids:
+  - steam:389810
+  requires: []
+- name: 'Angels of Fasaria: Version 2.0'
+  ids:
+  - steam:335900
+  requires: []
+- name: Schein
+  ids:
+  - steam:321920
+  requires: []

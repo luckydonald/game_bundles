@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tex Murphy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2672/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2672/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2672/source.json
+games:
+- name: 'Tex Murphy: The Pandora Directive'
+  ids:
+  - steam:302360
+  requires: []
+- name: 'Tex Murphy: Overseer'
+  ids:
+  - steam:302370
+  requires: []
+- name: 'Tex Murphy: Under a Killing Moon'
+  ids:
+  - steam:302350
+  requires: []
+- name: 'Tex Murphy: Martian Memorandum'
+  ids:
+  - steam:302340
+  requires: []
+- name: 'Tex Murphy: Mean Streets'
+  ids:
+  - steam:302330
+  requires: []
