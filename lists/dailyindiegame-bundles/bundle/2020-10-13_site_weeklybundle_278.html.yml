@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 278 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9278/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9278/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9278/source.json
+games:
+- name: Loot Hero - DX
+  ids:
+  - steam:294040
+  requires: []
+- name: Anoxemia
+  ids:
+  - steam:338050
+  requires: []
+- name: Kings under the hill
+  ids:
+  - unresolved:source:isthereanydeal:9278:kings-under-the-hill
+  requires: []
+- name: MUTATION PHASE
+  ids:
+  - steam:871850
+  requires: []
+- name: The logic inside
+  ids:
+  - unresolved:source:isthereanydeal:9278:the-logic-inside
+  requires: []
+- name: Mad Digger
+  ids:
+  - steam:584100
+  requires: []
+- name: EXCHANGE
+  ids:
+  - steam:854400
+  requires: []
+- name: Royal Battleships
+  ids:
+  - unresolved:source:isthereanydeal:9278:royal-battleships
+  requires: []
+- name: 'Pixel Puzzles 2: Anime'
+  ids:
+  - steam:350810
+  requires: []

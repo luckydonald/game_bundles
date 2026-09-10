@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 301: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9380/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9380/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9380/source.json
+games:
+- name: MOMO.EXE - Official Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9380:momo-exe-official-soundtrack
+  requires: []
+- name: Kontrakt OST
+  ids:
+  - steam:962120
+  requires: []
+- name: Kabitis in Bibou's Game
+  ids:
+  - unresolved:source:isthereanydeal:9380:kabitis-in-bibous-game
+  requires: []
+- name: Button Tales - Original Soundtrack
+  ids:
+  - steam:565310
+  requires: []
+- name: MOMO.EXE 2 - Official Soundtrack
+  ids:
+  - steam:952480
+  requires: []
+- name: Swipe Fruit Smash - Skins
+  ids:
+  - unresolved:source:isthereanydeal:9380:swipe-fruit-smash-skins
+  requires: []
+- name: Dead Ground - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9380:dead-ground-soundtrack
+  requires: []
+- name: Planet Bounce Vengeance DLC Pack
+  ids:
+  - steam:1270250
+  requires: []
+- name: Roundabout 3 Soundtrack
+  ids:
+  - steam:1359200
+  requires: []

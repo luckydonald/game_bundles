@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 271 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9252/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9252/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9252/source.json
+games:
+- name: Gregor Hills Haunted Hospital
+  ids:
+  - steam:1084770
+  requires: []
+- name: Wrestlers Without Boundaries
+  ids:
+  - unresolved:source:isthereanydeal:9252:wrestlers-without-boundaries
+  requires: []
+- name: Ritter
+  ids:
+  - steam:887710
+  requires: []
+- name: 'Puss in Boots: Fear Not Hooman'
+  ids:
+  - steam:1034820
+  requires: []
+- name: 'Sea Battle: Through the Ages'
+  ids:
+  - unresolved:source:isthereanydeal:9252:sea-battle-through-the-ages
+  requires: []
+- name: Green Ranch
+  ids:
+  - steam:493980
+  requires: []
+- name: The Orphan A Tale of An Errant Ghost - Hidden Object Game
+  ids:
+  - steam:1176560
+  requires: []
+- name: Danko and the mystery of the jungle
+  ids:
+  - steam:1215340
+  requires: []
+- name: Alien's Armageddon
+  ids:
+  - unresolved:source:isthereanydeal:9252:aliens-armageddon
+  requires: []

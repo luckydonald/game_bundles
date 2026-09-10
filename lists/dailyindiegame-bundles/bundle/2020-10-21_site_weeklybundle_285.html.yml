@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 285 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9309/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9309/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9309/source.json
+games:
+- name: 'Glass Masquerade 2: Illusions'
+  ids:
+  - steam:935880
+  requires: []
+- name: Ailment
+  ids:
+  - steam:1167530
+  requires: []
+- name: 'LOGA: Unexpected Adventure'
+  ids:
+  - steam:1189020
+  requires: []
+- name: Malus
+  ids:
+  - unresolved:source:isthereanydeal:9309:malus
+  requires: []
+- name: Knockdown the Ball Twice
+  ids:
+  - steam:1268280
+  requires: []
+- name: Endurance - space shooter
+  ids:
+  - steam:1378390
+  requires: []
+- name: Beat Me If You Can
+  ids:
+  - steam:1385540
+  requires: []
+- name: Until Last Breath
+  ids:
+  - steam:1425140
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica
+  ids:
+  - steam:1430160
+  requires: []

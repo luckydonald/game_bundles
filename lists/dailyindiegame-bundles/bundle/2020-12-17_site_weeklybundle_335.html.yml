@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 335 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9527/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9527/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9527/source.json
+games:
+- name: Mermaid Land
+  ids:
+  - unresolved:source:isthereanydeal:9527:mermaid-land
+  requires: []
+- name: Last Soldier
+  ids:
+  - unresolved:source:isthereanydeal:9527:last-soldier
+  requires: []
+- name: 'Welcome To... Chichester OVN : The Beach'
+  ids:
+  - unresolved:source:isthereanydeal:9527:welcome-to-chichester-ovn-the-beach
+  requires: []
+- name: Пацанский цитатник / Russian Test
+  ids:
+  - steam:1088880
+  requires: []
+- name: aMAZE Dark Times
+  ids:
+  - steam:692200
+  requires: []
+- name: Achievements printer
+  ids:
+  - steam:806140
+  requires: []
+- name: WildIsland
+  ids:
+  - steam:1141340
+  requires: []
+- name: Virus Kombat
+  ids:
+  - steam:1285820
+  requires: []
+- name: oldbl tyt ?
+  ids:
+  - unresolved:source:isthereanydeal:9527:oldbl-tyt
+  requires: []

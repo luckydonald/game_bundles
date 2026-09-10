@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 339: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9548/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9548/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9548/source.json
+games:
+- name: 'Lemuria: Lost in Space - VR Edition'
+  ids:
+  - steam:679780
+  requires: []
+- name: airRevo VR
+  ids:
+  - steam:594150
+  requires: []
+- name: Spirit Guide Crucible
+  ids:
+  - steam:619100
+  requires: []
+- name: COMPLEX
+  ids:
+  - unresolved:source:isthereanydeal:9548:complex
+  requires: []
+- name: VR Shooter Guns
+  ids:
+  - steam:489160
+  requires: []
+- name: WW2 Zombie Range VR
+  ids:
+  - steam:1088010
+  requires: []
+- name: World of Virtual Reality (VR)
+  ids:
+  - unresolved:source:isthereanydeal:9548:world-of-virtual-reality-vr
+  requires: []
+- name: VRAdventure
+  ids:
+  - steam:1057730
+  requires: []
+- name: World War 2 Winter Gun Range VR Simulator
+  ids:
+  - steam:1161440
+  requires: []

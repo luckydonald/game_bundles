@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 342: Shooters — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9569/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9569/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9569/source.json
+games:
+- name: All Of Zhem
+  ids:
+  - steam:988070
+  requires: []
+- name: Sniper Squad Mission
+  ids:
+  - unresolved:source:isthereanydeal:9569:sniper-squad-mission
+  requires: []
+- name: PARSE ALLY
+  ids:
+  - unresolved:source:isthereanydeal:9569:parse-ally
+  requires: []
+- name: Operation Lone Wolf
+  ids:
+  - steam:926010
+  requires: []
+- name: Bloody Faerie
+  ids:
+  - steam:811950
+  requires: []
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+  requires: []
+- name: Grunt1914
+  ids:
+  - steam:1059040
+  requires: []
+- name: NO-GO
+  ids:
+  - unresolved:source:isthereanydeal:9569:no-go
+  requires: []
+- name: Ice Star
+  ids:
+  - unresolved:source:isthereanydeal:9569:ice-star
+  requires: []

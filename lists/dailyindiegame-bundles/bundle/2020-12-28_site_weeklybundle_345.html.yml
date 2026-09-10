@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 345 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9581/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9581/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9581/source.json
+games:
+- name: ColorCube
+  ids:
+  - steam:2066920
+  requires: []
+- name: Sheepageddon
+  ids:
+  - steam:913000
+  requires: []
+- name: Anstorm
+  ids:
+  - steam:966010
+  requires: []
+- name: Link the animals
+  ids:
+  - steam:1082650
+  requires: []
+- name: Kolumno
+  ids:
+  - steam:970710
+  requires: []
+- name: CubeRace
+  ids:
+  - unresolved:source:isthereanydeal:9581:cuberace
+  requires: []
+- name: Tavern Cards
+  ids:
+  - steam:1221240
+  requires: []
+- name: Ultimate Battle
+  ids:
+  - steam:1487160
+  requires: []
+- name: Connected Towers
+  ids:
+  - steam:1500240
+  requires: []

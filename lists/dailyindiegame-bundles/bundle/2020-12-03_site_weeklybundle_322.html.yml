@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 322 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9473/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9473/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9473/source.json
+games:
+- name: The Botanist
+  ids:
+  - unresolved:source:isthereanydeal:9473:the-botanist
+  requires: []
+- name: Lumen
+  ids:
+  - steam:520040
+  requires: []
+- name: Crunch
+  ids:
+  - steam:1091260
+  requires: []
+- name: AMazing TD
+  ids:
+  - steam:1140030
+  requires: []
+- name: Miriel Saga
+  ids:
+  - steam:1148710
+  requires: []
+- name: Boom Blaster
+  ids:
+  - steam:1246230
+  requires: []
+- name: 'Cybernetica: fallen city'
+  ids:
+  - steam:1432930
+  requires: []
+- name: Divine Stone
+  ids:
+  - steam:1464200
+  requires: []
+- name: 'Corridor: Amount of Fear'
+  ids:
+  - unresolved:source:isthereanydeal:9473:corridor-amount-of-fear
+  requires: []

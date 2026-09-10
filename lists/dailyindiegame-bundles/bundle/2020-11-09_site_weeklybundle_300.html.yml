@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 300 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9377/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9377/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9377/source.json
+games:
+- name: MMMmmm... Cake!
+  ids:
+  - steam:925910
+  requires: []
+- name: Easy Racing
+  ids:
+  - steam:891290
+  requires: []
+- name: Starlight
+  ids:
+  - steam:696630
+  requires: []
+- name: MOMO.EXE 2
+  ids:
+  - steam:946780
+  requires: []
+- name: MAZE
+  ids:
+  - steam:1136770
+  requires: []
+- name: MOMO.EXE
+  ids:
+  - steam:923470
+  requires: []
+- name: Phalanx of Resistance
+  ids:
+  - steam:1236320
+  requires: []
+- name: Chessmates
+  ids:
+  - steam:1265110
+  requires: []
+- name: The Cabin
+  ids:
+  - steam:1336170
+  requires: []
