@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 🔥 2026 Fire Sale 🔥 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15768/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15768/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15768/source.json
+games:
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+  requires: []
+- name: BinaryGrab
+  ids:
+  - unresolved:source:isthereanydeal:15768:binarygrab
+  requires: []
+- name: Super Extra Team Dungeon Game
+  ids:
+  - unresolved:source:isthereanydeal:15768:super-extra-team-dungeon-game
+  requires: []
+- name: MF-01 Aerostrike
+  ids:
+  - steam:2303500
+  requires: []
+- name: Invasion 360
+  ids:
+  - unresolved:source:isthereanydeal:15768:invasion-360
+  requires: []
+- name: Saga of Song
+  ids:
+  - unresolved:source:isthereanydeal:15768:saga-of-song
+  requires: []
+- name: Combinatorix
+  ids:
+  - unresolved:source:isthereanydeal:15768:combinatorix
+  requires: []
+- name: Variatonix
+  ids:
+  - unresolved:source:isthereanydeal:15768:variatonix
+  requires: []
+- name: Hoppemix
+  ids:
+  - unresolved:source:isthereanydeal:15768:hoppemix
+  requires: []
+- name: Brainsport Extreme
+  ids:
+  - unresolved:source:isthereanydeal:15768:brainsport-extreme
+  requires: []
+- name: Frantic Freddie Returns
+  ids:
+  - unresolved:source:isthereanydeal:15768:frantic-freddie-returns
+  requires: []
+- name: Jumping Gal
+  ids:
+  - unresolved:source:isthereanydeal:15768:jumping-gal
+  requires: []
+- name: Logicenix
+  ids:
+  - unresolved:source:isthereanydeal:15768:logicenix
+  requires: []
+- name: Magic Vials
+  ids:
+  - unresolved:source:isthereanydeal:15768:magic-vials
+  requires: []
+- name: Puzzlexia
+  ids:
+  - unresolved:source:isthereanydeal:15768:puzzlexia
+  requires: []
+- name: Sokolux
+  ids:
+  - unresolved:source:isthereanydeal:15768:sokolux
+  requires: []
+- name: Super Extra Horde Survival Game
+  ids:
+  - unresolved:source:isthereanydeal:15768:super-extra-horde-survival-game
+  requires: []

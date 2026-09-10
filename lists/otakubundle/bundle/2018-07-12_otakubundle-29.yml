@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #29 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6301/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6301/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6301/source.json
+games:
+- name: Runaway Train
+  ids:
+  - steam:615080
+  requires: []
+- name: 'The Island Combat: Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:6301:the-island-combat-soundtrack
+  requires: []
+- name: Obscure - Challenge Your Mind
+  ids:
+  - unresolved:source:isthereanydeal:6301:obscure-challenge-your-mind
+  requires: []
+- name: 'Invasion: Episode 1 OST'
+  ids:
+  - unresolved:source:isthereanydeal:6301:invasion-episode-1-ost
+  requires: []
+- name: Armored Freedom
+  ids:
+  - steam:586150
+  requires: []
+- name: Paradox Wrench
+  ids:
+  - steam:779250
+  requires: []
+- name: Lit the Torch
+  ids:
+  - steam:671330
+  requires: []
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: Patent9 - Goddess of Trust
+  ids:
+  - steam:794740
+  requires: []
+- name: Jack the Barbarian
+  ids:
+  - steam:852160
+  requires: []
+- name: The Island Combat
+  ids:
+  - steam:886310
+  requires: []
+- name: Pixplode
+  ids:
+  - steam:631770
+  requires: []
