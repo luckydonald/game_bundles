@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 207 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8960/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8960/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8960/source.json
+games:
+- name: Finnish Roller
+  ids:
+  - unresolved:source:isthereanydeal:8960:finnish-roller
+  requires: []
+- name: Farstorm
+  ids:
+  - steam:923420
+  requires: []
+- name: Dead Bits
+  ids:
+  - steam:303390
+  requires: []
+- name: 'Pixel Puzzles: Japan'
+  ids:
+  - steam:284950
+  requires: []
+- name: The Juicer
+  ids:
+  - steam:400790
+  requires: []
+- name: DARTHY
+  ids:
+  - steam:404850
+  requires: []
+- name: It's Spring Again
+  ids:
+  - steam:434210
+  requires: []
+- name: Energy Invasion
+  ids:
+  - steam:513600
+  requires: []
+- name: '!Anyway!'
+  ids:
+  - steam:866510
+  requires: []

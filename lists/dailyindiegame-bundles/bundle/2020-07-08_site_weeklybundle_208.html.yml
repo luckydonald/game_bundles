@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 208 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8963/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8963/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8963/source.json
+games:
+- name: Starboost EX
+  ids:
+  - steam:917990
+  requires: []
+- name: Ancient Anathema
+  ids:
+  - steam:1010540
+  requires: []
+- name: JOBU-KI
+  ids:
+  - unresolved:source:isthereanydeal:8963:jobu-ki
+  requires: []
+- name: The Challenge
+  ids:
+  - steam:496440
+  requires: []
+- name: Eggys Games Flash Collection
+  ids:
+  - steam:1002520
+  requires: []
+- name: Fear of Dark
+  ids:
+  - steam:1084350
+  requires: []
+- name: Cyber Battle 69
+  ids:
+  - steam:1250210
+  requires: []
+- name: Isle Of Spirits
+  ids:
+  - steam:1237480
+  requires: []
+- name: Frag Grounds
+  ids:
+  - unresolved:source:isthereanydeal:8963:frag-grounds
+  requires: []

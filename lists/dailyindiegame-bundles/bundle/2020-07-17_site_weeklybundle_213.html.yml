@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 213 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8987/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8987/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8987/source.json
+games:
+- name: Cotropitorii
+  ids:
+  - steam:992420
+  requires: []
+- name: Hero
+  ids:
+  - steam:486020
+  requires: []
+- name: Chishiki Runner
+  ids:
+  - unresolved:source:isthereanydeal:8987:chishiki-runner
+  requires: []
+- name: Gravity Ball
+  ids:
+  - steam:716870
+  requires: []
+- name: All Of ZHEM 僵尸们
+  ids:
+  - unresolved:source:isthereanydeal:8987:all-of-zhem-jiang-shi-men
+  requires: []
+- name: Contract Killers
+  ids:
+  - steam:1176360
+  requires: []
+- name: Rogue Bots
+  ids:
+  - unresolved:source:isthereanydeal:8987:rogue-bots
+  requires: []
+- name: Into the TIMEVERSE
+  ids:
+  - unresolved:source:isthereanydeal:8987:into-the-timeverse
+  requires: []
+- name: RUN! GRANDPA! RUN!
+  ids:
+  - steam:1330570
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 169 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8728/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8728/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8728/source.json
+games:
+- name: Chernobyl Commando
+  ids:
+  - unresolved:source:isthereanydeal:8728:chernobyl-commando
+  requires: []
+- name: Neon Hardcore
+  ids:
+  - steam:673660
+  requires: []
+- name: Simple Story - Alex
+  ids:
+  - steam:814200
+  requires: []
+- name: Sunny Smiles
+  ids:
+  - unresolved:source:isthereanydeal:8728:sunny-smiles
+  requires: []
+- name: 'Story: Heaven & Hell (Complete Edition)'
+  ids:
+  - unresolved:source:isthereanydeal:8728:story-heaven-and-hell-complete-edition
+  requires: []
+- name: Phalanx of Resistance
+  ids:
+  - steam:1236320
+  requires: []
+- name: Polary
+  ids:
+  - steam:1262780
+  requires: []
+- name: Motion Of The Heart
+  ids:
+  - steam:1261570
+  requires: []
+- name: Bat of Dead
+  ids:
+  - steam:1270370
+  requires: []

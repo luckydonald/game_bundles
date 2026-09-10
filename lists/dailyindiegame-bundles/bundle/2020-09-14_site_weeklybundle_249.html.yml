@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 249 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9154/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9154/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9154/source.json
+games:
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+  requires: []
+- name: MMX
+  ids:
+  - steam:1146890
+  requires: []
+- name: Sweet Thomas
+  ids:
+  - steam:1179540
+  requires: []
+- name: Gang District
+  ids:
+  - steam:1196170
+  requires: []
+- name: Pianistic
+  ids:
+  - steam:1325470
+  requires: []
+- name: Poly Party
+  ids:
+  - steam:1291110
+  requires: []
+- name: Strike VR
+  ids:
+  - steam:1394210
+  requires: []
+- name: 'SmFly: Gravity Adventure'
+  ids:
+  - steam:1403890
+  requires: []
+- name: Sweet Halloween
+  ids:
+  - unresolved:source:isthereanydeal:9154:sweet-halloween
+  requires: []

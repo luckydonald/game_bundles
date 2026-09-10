@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 235 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9090/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9090/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9090/source.json
+games:
+- name: Necrolance
+  ids:
+  - steam:935250
+  requires: []
+- name: MOE
+  ids:
+  - steam:959770
+  requires: []
+- name: Noob Squad
+  ids:
+  - steam:496550
+  requires: []
+- name: Fidget Spinner
+  ids:
+  - steam:657630
+  requires: []
+- name: Nightmare Game (噩梦游戏)
+  ids:
+  - steam:1114110
+  requires: []
+- name: Secret Girl
+  ids:
+  - steam:946210
+  requires: []
+- name: Software House Simulator
+  ids:
+  - steam:1293400
+  requires: []
+- name: Panic Timing (惊恐计时)
+  ids:
+  - steam:1284700
+  requires: []
+- name: Cube Shifter
+  ids:
+  - steam:1372010
+  requires: []
