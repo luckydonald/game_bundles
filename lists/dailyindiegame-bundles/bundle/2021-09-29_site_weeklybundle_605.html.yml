@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 605 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10529/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10529/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10529/source.json
+games:
+- name: Dongo Adventure
+  ids:
+  - steam:811450
+  requires: []
+- name: Funny Puzzle
+  ids:
+  - steam:1759480
+  requires: []
+- name: Fool's Paradise
+  ids:
+  - steam:1466070
+  requires: []
+- name: Magic Time
+  ids:
+  - steam:1754380
+  requires: []
+- name: Mystery Swords
+  ids:
+  - steam:1760670
+  requires: []
+- name: Angels vs Demons
+  ids:
+  - steam:1756490
+  requires: []
+- name: Searching for Objects in the Forest
+  ids:
+  - unresolved:source:isthereanydeal:10529:searching-for-objects-in-the-forest
+  requires: []
+- name: Hidden Caves
+  ids:
+  - steam:1765800
+  requires: []
+- name: Hidden Lands
+  ids:
+  - steam:1765810
+  requires: []

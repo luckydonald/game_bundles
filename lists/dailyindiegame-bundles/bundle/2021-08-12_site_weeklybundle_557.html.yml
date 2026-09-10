@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 557 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10345/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10345/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10345/source.json
+games:
+- name: Space Struck Run
+  ids:
+  - steam:994650
+  requires: []
+- name: Time Splatter
+  ids:
+  - steam:949530
+  requires: []
+- name: Dragon Chase
+  ids:
+  - steam:1011240
+  requires: []
+- name: Escape From The Dragons
+  ids:
+  - steam:975770
+  requires: []
+- name: Super Space Jump Man
+  ids:
+  - steam:1035860
+  requires: []
+- name: Achievement Machine
+  ids:
+  - unresolved:source:isthereanydeal:10345:achievement-machine
+  requires: []
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:10345:frozen-mystery
+  requires: []
+- name: Hexa Path
+  ids:
+  - steam:1052760
+  requires: []
+- name: The Cabin
+  ids:
+  - steam:1336170
+  requires: []

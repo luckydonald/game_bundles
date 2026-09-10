@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 613: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10551/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10551/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10551/source.json
+games:
+- name: Gravitycers
+  ids:
+  - unresolved:source:isthereanydeal:10551:gravitycers
+  requires: []
+- name: Jamping
+  ids:
+  - unresolved:source:isthereanydeal:10551:jamping
+  requires: []
+- name: CuBB
+  ids:
+  - unresolved:source:isthereanydeal:10551:cubb
+  requires: []
+- name: House Number 666
+  ids:
+  - steam:1162690
+  requires: []
+- name: TriangleStorm
+  ids:
+  - steam:1192070
+  requires: []
+- name: 'Axizon Labs: Zombies'
+  ids:
+  - steam:1280310
+  requires: []
+- name: Soldier in the darkness
+  ids:
+  - steam:1526790
+  requires: []
+- name: Tap-Tap Adventure
+  ids:
+  - steam:1482510
+  requires: []
+- name: The Haunted Tunnel
+  ids:
+  - steam:1539970
+  requires: []

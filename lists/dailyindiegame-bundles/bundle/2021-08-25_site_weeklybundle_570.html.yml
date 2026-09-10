@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 570 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10378/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10378/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10378/source.json
+games:
+- name: Neighboring Islands
+  ids:
+  - steam:588710
+  requires: []
+- name: The Doorbreaker
+  ids:
+  - steam:699480
+  requires: []
+- name: MechDefender
+  ids:
+  - steam:562730
+  requires: []
+- name: Wavy trip
+  ids:
+  - steam:1729080
+  requires: []
+- name: Sperm Runner
+  ids:
+  - unresolved:source:isthereanydeal:10378:sperm-runner
+  requires: []
+- name: The Square Key
+  ids:
+  - steam:1381880
+  requires: []
+- name: Box Pusher
+  ids:
+  - steam:1653660
+  requires: []
+- name: Sin-Cay
+  ids:
+  - steam:1680440
+  requires: []
+- name: Three Hundred Bucks
+  ids:
+  - unresolved:source:isthereanydeal:10378:three-hundred-bucks
+  requires: []

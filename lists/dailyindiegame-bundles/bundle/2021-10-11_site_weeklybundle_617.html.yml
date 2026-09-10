@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 617 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10563/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10563/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10563/source.json
+games:
+- name: Paug
+  ids:
+  - unresolved:source:isthereanydeal:10563:paug
+  requires: []
+- name: Neon Warrior
+  ids:
+  - steam:1505440
+  requires: []
+- name: Froggerty Arcade
+  ids:
+  - steam:1559970
+  requires: []
+- name: Connect the Dots.
+  ids:
+  - steam:1605190
+  requires: []
+- name: The Endless Adventure
+  ids:
+  - steam:1709040
+  requires: []
+- name: Cubicus
+  ids:
+  - steam:1752190
+  requires: []
+- name: Cubicus 2
+  ids:
+  - steam:1754350
+  requires: []
+- name: Junkyard Fury
+  ids:
+  - steam:1706940
+  requires: []
+- name: Bouncy Cube
+  ids:
+  - unresolved:source:isthereanydeal:10563:bouncy-cube
+  requires: []

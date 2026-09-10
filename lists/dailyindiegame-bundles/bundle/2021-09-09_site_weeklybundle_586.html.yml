@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 586: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10440/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10440/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10440/source.json
+games:
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:10440:great-ball-of-fire
+  requires: []
+- name: GUNMAN
+  ids:
+  - steam:4307790
+  requires: []
+- name: Thunderbolt
+  ids:
+  - steam:803390
+  requires: []
+- name: Sky Jump
+  ids:
+  - steam:710780
+  requires: []
+- name: The Hotel 2
+  ids:
+  - unresolved:source:isthereanydeal:10440:the-hotel-2
+  requires: []
+- name: Another Hardcore Game
+  ids:
+  - steam:951050
+  requires: []
+- name: Crimson Shift
+  ids:
+  - steam:837330
+  requires: []
+- name: Ghost In The Barn House
+  ids:
+  - steam:1219220
+  requires: []
+- name: Click on their Heads
+  ids:
+  - steam:1498630
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 600 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10507/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10507/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10507/source.json
+games:
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+  requires: []
+- name: Peekaboo
+  ids:
+  - steam:1048100
+  requires: []
+- name: The Botanist
+  ids:
+  - unresolved:source:isthereanydeal:10507:the-botanist
+  requires: []
+- name: Dungeons of the Fallen
+  ids:
+  - steam:701610
+  requires: []
+- name: YORG.io 3
+  ids:
+  - steam:1134480
+  requires: []
+- name: 'Barbarous: Tavern Of Emyr'
+  ids:
+  - steam:1202170
+  requires: []
+- name: My Diggy Dog 2
+  ids:
+  - steam:1216300
+  requires: []
+- name: Prince Of Wallachia
+  ids:
+  - steam:1428030
+  requires: []
+- name: The Dawning Clocks Of Time
+  ids:
+  - unresolved:source:isthereanydeal:10507:the-dawning-clocks-of-time
+  requires: []

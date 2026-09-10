@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 599 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10499/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10499/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10499/source.json
+games:
+- name: Transporter Truck Simulator
+  ids:
+  - steam:1091570
+  requires: []
+- name: Moon Defense
+  ids:
+  - unresolved:source:isthereanydeal:10499:moon-defense
+  requires: []
+- name: Mountain Taxi Driver
+  ids:
+  - steam:1092980
+  requires: []
+- name: Village Bus Driver Simulator
+  ids:
+  - steam:1159510
+  requires: []
+- name: Truck Crash
+  ids:
+  - unresolved:source:isthereanydeal:10499:truck-crash
+  requires: []
+- name: Beam Car Crash Derby
+  ids:
+  - unresolved:source:isthereanydeal:10499:beam-car-crash-derby
+  requires: []
+- name: USA Truck Simulator
+  ids:
+  - unresolved:source:isthereanydeal:10499:usa-truck-simulator
+  requires: []
+- name: Balloon Azuna
+  ids:
+  - steam:1719540
+  requires: []
+- name: Skattered Dream
+  ids:
+  - steam:1745410
+  requires: []

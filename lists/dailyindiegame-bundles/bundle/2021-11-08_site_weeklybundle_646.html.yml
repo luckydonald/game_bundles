@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 646 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10666/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10666/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10666/source.json
+games:
+- name: 'BattleCubes: Arena'
+  ids:
+  - unresolved:source:isthereanydeal:10666:battlecubes-arena
+  requires: []
+- name: Save Daddy Trump
+  ids:
+  - steam:1084080
+  requires: []
+- name: Lazy Postman
+  ids:
+  - unresolved:source:isthereanydeal:10666:lazy-postman
+  requires: []
+- name: Splash Jump
+  ids:
+  - unresolved:source:isthereanydeal:10666:splash-jump
+  requires: []
+- name: Animal Match
+  ids:
+  - unresolved:source:isthereanydeal:10666:animal-match
+  requires: []
+- name: Sweet Hero
+  ids:
+  - unresolved:source:isthereanydeal:10666:sweet-hero
+  requires: []
+- name: Sumy Shelltris - ICEBLOCKS 1
+  ids:
+  - steam:1780960
+  requires: []
+- name: Block Collide
+  ids:
+  - steam:1797250
+  requires: []
+- name: Cyberpunk Fighting
+  ids:
+  - steam:1797840
+  requires: []
