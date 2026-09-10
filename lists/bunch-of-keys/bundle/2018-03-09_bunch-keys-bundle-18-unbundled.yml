@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Bunch Keys Bundle #18: Unbundled2bundled — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5966/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5966/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5966/source.json
+games:
+- name: Pooper Scooper
+  ids:
+  - steam:682370
+  requires: []
+- name: ReHack
+  ids:
+  - steam:786180
+  requires: []
+- name: 'Armored Animals: H1N1z'
+  ids:
+  - unresolved:source:isthereanydeal:5966:armored-animals-h1n1z
+  requires: []
+- name: WARIUM
+  ids:
+  - steam:713010
+  requires: []
+- name: 'Druid''s Tale: Crystal Cave'
+  ids:
+  - steam:700560
+  requires: []
+- name: Roulette Simulator
+  ids:
+  - steam:779570
+  requires: []
+- name: Debtor
+  ids:
+  - unresolved:source:isthereanydeal:5966:debtor
+  requires: []
+- name: Zed Survival
+  ids:
+  - steam:794390
+  requires: []
+- name: Blackjack In Space
+  ids:
+  - steam:805090
+  requires: []
+- name: The Bits That Saved The Universe
+  ids:
+  - unresolved:source:isthereanydeal:5966:the-bits-that-saved-the-universe
+  requires: []
+- name: ReHack - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5966:rehack-soundtrack
+  requires: []

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Contest Bundle #4 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2335/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2335/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2335/source.json
+games:
+- name: Selknam Defense
+  ids:
+  - steam:306260
+  requires: []
+- name: Retro/Grade
+  ids:
+  - steam:222660
+  requires: []
+- name: Starion Tactics
+  ids:
+  - steam:312960
+  requires: []
+- name: On A Roll 3D
+  ids:
+  - steam:341090
+  requires: []
+- name: Skyward Collapse
+  ids:
+  - steam:238890
+  requires: []

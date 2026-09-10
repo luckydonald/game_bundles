@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: December Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2826/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2826/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2826/source.json
+games:
+- name: STOORM - Full Edition.
+  ids:
+  - unresolved:source:isthereanydeal:2826:stoorm-full-edition
+  requires: []
+- name: Agapan
+  ids:
+  - unresolved:source:isthereanydeal:2826:agapan
+  requires: []
+- name: Shut Up And Dig
+  ids:
+  - unresolved:source:isthereanydeal:2826:shut-up-and-dig
+  requires: []
+- name: POSTAL
+  ids:
+  - steam:232770
+  requires: []
+- name: Melissa K. and the Heart of Gold Collector's Edition
+  ids:
+  - steam:321150
+  requires: []
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+  requires: []
+- name: Hit Tank PRO
+  ids:
+  - steam:423760
+  requires: []
