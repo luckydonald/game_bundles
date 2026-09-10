@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Twist & Tangle Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16221/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16221/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16221/source.json
+games:
+- name: A Tangle of Snakes
+  ids:
+  - steam:4301200
+  requires: []
+- name: Slither Realm
+  ids:
+  - steam:4301190
+  requires: []
+- name: Grim Hammer
+  ids:
+  - steam:4336050
+  requires: []
+- name: Final Payload
+  ids:
+  - steam:4336060
+  requires: []
+- name: Wriggle apple
+  ids:
+  - steam:4400120
+  requires: []
+- name: Rushfall
+  ids:
+  - steam:4400070
+  requires: []
+- name: Wriggle apple 2
+  ids:
+  - steam:4438660
+  requires: []
+- name: Wriggle apple 3
+  ids:
+  - steam:4481610
+  requires: []
+- name: Wriggle apple 4
+  ids:
+  - steam:4521140
+  requires: []

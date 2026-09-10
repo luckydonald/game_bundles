@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Brave Souls Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13904/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13904/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13904/source.json
+games:
+- name: DeadFall
+  ids:
+  - steam:2448420
+  requires: []
+- name: Plot of the Druid
+  ids:
+  - steam:1108170
+  requires: []
+- name: Deep Despair 2
+  ids:
+  - steam:1686130
+  requires: []
+- name: Repetendium
+  ids:
+  - steam:2055500
+  requires: []
+- name: Confabulation
+  ids:
+  - steam:2246400
+  requires: []
+- name: The Brave Little Cloud
+  ids:
+  - steam:2635070
+  requires: []

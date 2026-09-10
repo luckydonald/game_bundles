@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Blade Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16269/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16269/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16269/source.json
+games:
+- name: Epic City Builder 4
+  ids:
+  - steam:1503580
+  requires: []
+- name: 'RogueJack: Roguelike Blackjack'
+  ids:
+  - steam:1302440
+  requires: []
+- name: The Sorrowvirus
+  ids:
+  - steam:1177110
+  requires: []
+- name: De:Void
+  ids:
+  - steam:1173250
+  requires: []
+- name: King's Blade
+  ids:
+  - steam:2204620
+  requires: []
+- name: Rabbit Samurai
+  ids:
+  - steam:4224900
+  requires: []

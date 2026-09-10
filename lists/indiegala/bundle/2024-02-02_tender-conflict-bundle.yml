@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tender Conflict Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13816/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13816/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13816/source.json
+games:
+- name: Hopeless
+  ids:
+  - steam:1995280
+  requires: []
+- name: The Monster PIMP
+  ids:
+  - steam:1789130
+  requires: []
+- name: Got reincarnated into a world of RPG full of NPCs…
+  ids:
+  - steam:1809250
+  requires: []
+- name: Momo's Conflict
+  ids:
+  - steam:1896800
+  requires: []
+- name: Slaves
+  ids:
+  - steam:1963060
+  requires: []
+- name: Omni Magic!
+  ids:
+  - steam:1994450
+  requires: []
+- name: Intrusion of Alice
+  ids:
+  - steam:1989820
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Corp Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15782/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15782/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15782/source.json
+games:
+- name: Piczle Lines DX+α
+  ids:
+  - steam:998790
+  requires: []
+- name: Lynn , The Girl Drawn On Puzzles
+  ids:
+  - steam:1249080
+  requires: []
+- name: Energy Island Corp.
+  ids:
+  - steam:1241710
+  requires: []
+- name: Alekon
+  ids:
+  - steam:1479390
+  requires: []
+- name: Minabo - A walk through life
+  ids:
+  - steam:1822560
+  requires: []
+- name: The Gray Man
+  ids:
+  - steam:2216860
+  requires: []

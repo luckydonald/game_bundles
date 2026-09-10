@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Monster Waifu Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15044/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15044/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15044/source.json
+games:
+- name: Monster Waifu
+  ids:
+  - steam:2205670
+  requires: []
+- name: Minotaur - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:minotaur-dlc
+  requires: []
+- name: Rat Woman - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:rat-woman-dlc
+  requires: []
+- name: Werewolf - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:werewolf-dlc
+  requires: []
+- name: Leprechaun - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:leprechaun-dlc
+  requires: []
+- name: Mummy - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:mummy-dlc
+  requires: []
+- name: Faun - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:faun-dlc
+  requires: []
+- name: Hyena Woman - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:hyena-woman-dlc
+  requires: []
+- name: Goblin - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:goblin-dlc
+  requires: []
+- name: Orc - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:orc-dlc
+  requires: []
+- name: Vampire - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:vampire-dlc
+  requires: []
+- name: Kobold - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:kobold-dlc
+  requires: []
+- name: Triton - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:triton-dlc
+  requires: []
+- name: Djinn - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:djinn-dlc
+  requires: []
+- name: Eagle Woman - DLC
+  ids:
+  - unresolved:source:isthereanydeal:15044:eagle-woman-dlc
+  requires: []

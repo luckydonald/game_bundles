@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kiss Academy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14074/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14074/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14074/source.json
+games:
+- name: BLACK★ACADEMY
+  ids:
+  - steam:1602390
+  requires: []
+- name: Secret Kiss is Sweet and Tender
+  ids:
+  - unresolved:source:isthereanydeal:14074:secret-kiss-is-sweet-and-tender
+  requires: []
+- name: Hot“Sento Girls”and love
+  ids:
+  - steam:1934180
+  requires: []
+- name: A Maiden Astrologer Divines the Future
+  ids:
+  - steam:2162950
+  requires: []
+- name: Mokoko X Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:14074:mokoko-x-deluxe
+  requires: []
+- name: Love on Leave
+  ids:
+  - steam:2278640
+  requires: []
