@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Starpoint Gemini 2 Gold Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12537/source.json
+games:
+- name: Starpoint Gemini 2 Secrets of Aethera
+  ids:
+  - steam:345870
+  requires: []
+- name: 'Starpoint Gemini 2: Titans'
+  ids:
+  - steam:411420
+  requires: []
+- name: 'Starpoint Gemini 2: Origins'
+  ids:
+  - steam:371060
+  requires: []
+- name: Starpoint Gemini 2
+  ids:
+  - steam:236150
+  requires: []

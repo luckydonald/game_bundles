@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Labor Day Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12059/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12059/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12059/source.json
+games:
+- name: 'Monsters'' Den: Book of Dread'
+  ids:
+  - steam:502230
+  requires: []
+- name: Muddledash
+  ids:
+  - steam:769840
+  requires: []
+- name: THE CORRIDOR
+  ids:
+  - steam:1347030
+  requires: []
+- name: Odyssey - The Story of Science
+  ids:
+  - steam:558110
+  requires: []
+- name: Perfect Heist
+  ids:
+  - steam:787040
+  requires: []
+- name: 'Narcos: Rise of the Cartels'
+  ids:
+  - unresolved:source:isthereanydeal:12059:narcos-rise-of-the-cartels
+  requires: []
+- name: She Sees Red - Interactive Movie
+  ids:
+  - steam:1081510
+  requires: []
+- name: Onirike
+  ids:
+  - steam:1229270
+  requires: []
+- name: Company of Crime
+  ids:
+  - steam:1229420
+  requires: []
+- name: Savage Halloween
+  ids:
+  - steam:1232810
+  requires: []
+- name: Wordle
+  ids:
+  - steam:1334000
+  requires: []
+- name: Sky Fleet
+  ids:
+  - steam:1347540
+  requires: []
+- name: Wordle 2
+  ids:
+  - steam:1386730
+  requires: []
+- name: Wounded - The Beginning
+  ids:
+  - steam:1015130
+  requires: []
+- name: Wordle 3
+  ids:
+  - steam:1428820
+  requires: []
+- name: Wordle 4
+  ids:
+  - steam:1477020
+  requires: []
+- name: Cats in Time
+  ids:
+  - steam:1599880
+  requires: []
+- name: Raven's Hike
+  ids:
+  - steam:1689270
+  requires: []
+- name: Save Room - Organization Puzzle
+  ids:
+  - steam:1955330
+  requires: []

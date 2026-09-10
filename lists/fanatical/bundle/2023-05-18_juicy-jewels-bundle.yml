@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Juicy Jewels Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13166/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13166/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13166/source.json
+games:
+- name: Fruit Lockers Reborn! 2
+  ids:
+  - steam:1012390
+  requires: []
+- name: Juice Mania
+  ids:
+  - unresolved:source:isthereanydeal:13166:juice-mania
+  requires: []
+- name: Amanda's Sticker Book
+  ids:
+  - steam:985640
+  requires: []
+- name: 'Mythic Pearls: The Legend of Tirnanog'
+  ids:
+  - steam:1133530
+  requires: []
+- name: DIG THE GROUND
+  ids:
+  - steam:1435840
+  requires: []
+- name: Save the Planet
+  ids:
+  - steam:1420730
+  requires: []
+- name: 10th Corpse
+  ids:
+  - steam:1718560
+  requires: []
+- name: 'Rorys Restaurant: Winter Rush'
+  ids:
+  - steam:1801920
+  requires: []
+- name: 100 Days without delays
+  ids:
+  - steam:1874920
+  requires: []
+- name: ClearIt 13
+  ids:
+  - steam:2123320
+  requires: []

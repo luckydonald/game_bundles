@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Star Wars Jedi Knight Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12099/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12099/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12099/source.json
+games:
+- name: 'Star Wars: Jedi Knight: Jedi Academy'
+  ids:
+  - steam:6020
+  requires: []
+- name: 'Star Wars®: Jedi Knight® II: Jedi Outcast™'
+  ids:
+  - steam:6030
+  requires: []
+- name: 'Star Wars Jedi Knight: Mysteries of the Sith'
+  ids:
+  - steam:32390
+  requires: []
+- name: 'Star Wars Jedi Knight: Dark Forces II'
+  ids:
+  - steam:32380
+  requires: []
+- name: STAR WARS™ Dark Forces (Classic, 1995)
+  ids:
+  - unresolved:source:isthereanydeal:12099:star-wars-dark-forces-classic-1995
+  requires: []
