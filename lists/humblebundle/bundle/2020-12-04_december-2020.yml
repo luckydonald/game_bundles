@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Dec 2020) — Select 3 Choices for BASIC, 14 Choices for PREMIUM,
+  14 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9480/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9480/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9480/source.json
+games:
+- name: One Step From Eden
+  ids:
+  - steam:960690
+  requires: []
+- name: 'Zwei: The Arges Adventure'
+  ids:
+  - steam:427680
+  requires: []
+- name: Children of Morta
+  ids:
+  - steam:330020
+  requires: []
+- name: 'Frog Detective 2: The Case of the Invisible Wizard'
+  ids:
+  - steam:1047220
+  requires: []
+- name: Shining Resonance Refrain
+  ids:
+  - steam:809890
+  requires: []
+- name: Overcooked! 2
+  ids:
+  - steam:728880
+  requires: []
+- name: THE CORRIDOR
+  ids:
+  - steam:1347030
+  requires: []
+- name: The Beast Inside
+  ids:
+  - steam:792300
+  requires: []
+- name: Struggling
+  ids:
+  - steam:1035560
+  requires: []
+- name: Indivisible
+  ids:
+  - steam:421170
+  requires: []
+- name: 'Zwei: The Ilvard Insurrection'
+  ids:
+  - steam:427700
+  requires: []
+- name: Still There
+  ids:
+  - steam:1063490
+  requires: []
+- name: Tabletop Playground
+  ids:
+  - steam:838410
+  requires: []
+- name: Overcooked! 2 - Surf 'n' Turf
+  ids:
+  - steam:909720
+  requires: []
+- name: Overcooked! 2 - Too Many Cooks Pack
+  ids:
+  - steam:858240
+  requires: []
+- name: Path of Giants
+  ids:
+  - steam:1181400
+  requires: []
+- name: 'Frog Detective 1: The Haunted Island'
+  ids:
+  - steam:963000
+  requires: []
