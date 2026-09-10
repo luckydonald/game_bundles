@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 946 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12070/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12070/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12070/source.json
+games:
+- name: Heart Chain Kitty
+  ids:
+  - steam:933210
+  requires: []
+- name: Orbi's chronicles
+  ids:
+  - steam:1492190
+  requires: []
+- name: The Legend of Azarias
+  ids:
+  - steam:2065820
+  requires: []
+- name: Truck Rally Hyper Hardcore
+  ids:
+  - steam:2064410
+  requires: []
+- name: Dash FPS
+  ids:
+  - unresolved:source:isthereanydeal:12070:dash-fps
+  requires: []
+- name: Legacy of Sin blood oath
+  ids:
+  - steam:1969820
+  requires: []
+- name: Griddy
+  ids:
+  - unresolved:source:isthereanydeal:12070:griddy
+  requires: []
+- name: Star Trust - 3D Shooter Game
+  ids:
+  - steam:2111770
+  requires: []
+- name: 'SSS222: HyperSpace'
+  ids:
+  - unresolved:source:isthereanydeal:12070:sss222-hyperspace
+  requires: []

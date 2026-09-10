@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 894: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11777/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11777/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11777/source.json
+games:
+- name: CrazyDriving
+  ids:
+  - steam:929210
+  requires: []
+- name: Game Tycoon 2
+  ids:
+  - steam:404640
+  requires: []
+- name: Fleeting World
+  ids:
+  - steam:1365700
+  requires: []
+- name: Emerald Lake
+  ids:
+  - steam:1363660
+  requires: []
+- name: NOREN
+  ids:
+  - steam:1595270
+  requires: []
+- name: Bus stop in the fog
+  ids:
+  - steam:1602150
+  requires: []
+- name: Сольфеджио
+  ids:
+  - unresolved:source:isthereanydeal:11777:sol-fedzio
+  requires: []
+- name: World of Bärn
+  ids:
+  - unresolved:source:isthereanydeal:11777:world-of-barn
+  requires: []
+- name: Violation
+  ids:
+  - unresolved:source:isthereanydeal:11777:violation
+  requires: []

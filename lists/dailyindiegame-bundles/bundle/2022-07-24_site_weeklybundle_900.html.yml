@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 900 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11811/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11811/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11811/source.json
+games:
+- name: Golden war spirit
+  ids:
+  - steam:1042860
+  requires: []
+- name: 'Foreign Legion: Buckets of Blood'
+  ids:
+  - steam:36000
+  requires: []
+- name: 'Foreign Legion: Multi Massacre'
+  ids:
+  - steam:205550
+  requires: []
+- name: 玄龙棋MysieriesDragonChess
+  ids:
+  - unresolved:source:isthereanydeal:11811:xuan-long-qimysieriesdragonchess
+  requires: []
+- name: The Quiet Sleep
+  ids:
+  - steam:724510
+  requires: []
+- name: Hue Defense
+  ids:
+  - steam:512070
+  requires: []
+- name: Remember, Lights Out
+  ids:
+  - steam:1171620
+  requires: []
+- name: Piping Hot
+  ids:
+  - unresolved:source:isthereanydeal:11811:piping-hot
+  requires: []
+- name: GameBook
+  ids:
+  - steam:1170390
+  requires: []

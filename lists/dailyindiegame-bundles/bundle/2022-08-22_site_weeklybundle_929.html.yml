@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 929: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11995/source.json
+games:
+- name: My Name is Addiction
+  ids:
+  - steam:713860
+  requires: []
+- name: Sakura Girls
+  ids:
+  - unresolved:source:isthereanydeal:11995:sakura-girls
+  requires: []
+- name: Club Girl
+  ids:
+  - unresolved:source:isthereanydeal:11995:club-girl
+  requires: []
+- name: Fantasy Sliding Puzzle
+  ids:
+  - steam:1738630
+  requires: []
+- name: Fantasy Sliding Puzzle - ArtBook
+  ids:
+  - steam:1746690
+  requires: []
+- name: Adult Puzzles - Hentai Christmas
+  ids:
+  - steam:1815160
+  requires: []
+- name: Adult Puzzles - Hentai Christmas ArtBook
+  ids:
+  - steam:1816630
+  requires: []
+- name: Hentai Memory - Sexy Couples ArtBook
+  ids:
+  - steam:1831600
+  requires: []
+- name: Hentai Memory - Sexy Couples
+  ids:
+  - steam:1824760
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 935 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12025/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12025/source.json
+games:
+- name: Sky Goddess
+  ids:
+  - unresolved:source:isthereanydeal:12025:sky-goddess
+  requires: []
+- name: Elemental Angel
+  ids:
+  - unresolved:source:isthereanydeal:12025:elemental-angel
+  requires: []
+- name: Rhythm Knights
+  ids:
+  - unresolved:source:isthereanydeal:12025:rhythm-knights
+  requires: []
+- name: Frog Ball Rerolled
+  ids:
+  - steam:1774160
+  requires: []
+- name: Kingdom of Maverta
+  ids:
+  - steam:1804450
+  requires: []
+- name: VILLAGE THE SIBERIA
+  ids:
+  - steam:1819800
+  requires: []
+- name: Obsessive revenge
+  ids:
+  - steam:1897430
+  requires: []
+- name: Sky Goddess II
+  ids:
+  - unresolved:source:isthereanydeal:12025:sky-goddess-ii
+  requires: []
+- name: The Thief 1897410
+  ids:
+  - unresolved:source:isthereanydeal:12025:the-thief-1897410
+  requires: []

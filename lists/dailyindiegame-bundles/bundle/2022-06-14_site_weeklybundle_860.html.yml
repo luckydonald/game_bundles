@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 860: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11604/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11604/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11604/source.json
+games:
+- name: Best Life Simulator
+  ids:
+  - steam:949960
+  requires: []
+- name: Square Head Zombies
+  ids:
+  - steam:711930
+  requires: []
+- name: 幻世情缘 FANTASY LOVE STORY
+  ids:
+  - steam:869660
+  requires: []
+- name: Cotropitorii
+  ids:
+  - steam:992420
+  requires: []
+- name: KOLOBOK
+  ids:
+  - steam:757170
+  requires: []
+- name: CuBB
+  ids:
+  - unresolved:source:isthereanydeal:11604:cubb
+  requires: []
+- name: TriangleStorm
+  ids:
+  - steam:1192070
+  requires: []
+- name: Knife Quest
+  ids:
+  - steam:1303760
+  requires: []
+- name: O.C.D. - On Completeness & Dissonance
+  ids:
+  - unresolved:source:isthereanydeal:11604:ocd-on-completeness-and-dissonance
+  requires: []
