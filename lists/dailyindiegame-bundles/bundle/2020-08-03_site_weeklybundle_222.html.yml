@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 222 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9031/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9031/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9031/source.json
+games:
+- name: Reflex
+  ids:
+  - steam:281860
+  requires: []
+- name: Press F to pay respects
+  ids:
+  - steam:1033880
+  requires: []
+- name: Warcube
+  ids:
+  - steam:505060
+  requires: []
+- name: World Of Walking Cities
+  ids:
+  - unresolved:source:isthereanydeal:9031:world-of-walking-cities
+  requires: []
+- name: Helpless Zombies
+  ids:
+  - unresolved:source:isthereanydeal:9031:helpless-zombies
+  requires: []
+- name: mmmmm donuts arhhh......
+  ids:
+  - steam:1151750
+  requires: []
+- name: RGB RUN
+  ids:
+  - steam:978340
+  requires: []
+- name: 幻世情缘
+  ids:
+  - steam:869660
+  requires: []
+- name: Connor's Desert Adventure
+  ids:
+  - steam:1143440
+  requires: []

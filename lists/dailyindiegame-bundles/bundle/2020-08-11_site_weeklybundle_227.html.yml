@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 227 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9048/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9048/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9048/source.json
+games:
+- name: Protect your planet
+  ids:
+  - steam:730280
+  requires: []
+- name: Knights & Merchants
+  ids:
+  - steam:253900
+  requires: []
+- name: Heli Heroes
+  ids:
+  - steam:259320
+  requires: []
+- name: Bubble Strike
+  ids:
+  - steam:823180
+  requires: []
+- name: Tactikk
+  ids:
+  - steam:1144670
+  requires: []
+- name: 'Jack Orlando: Directors Cut'
+  ids:
+  - steam:253960
+  requires: []
+- name: Topfold
+  ids:
+  - steam:1217820
+  requires: []
+- name: Hentai Girlfriend Simulator
+  ids:
+  - steam:1225870
+  requires: []
+- name: INVADER
+  ids:
+  - unresolved:source:isthereanydeal:9048:invader
+  requires: []

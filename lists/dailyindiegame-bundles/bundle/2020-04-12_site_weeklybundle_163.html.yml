@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 163 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8667/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8667/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8667/source.json
+games:
+- name: JOYDOOR
+  ids:
+  - steam:917800
+  requires: []
+- name: VENDETTA - Curse of Raven's Cry
+  ids:
+  - steam:386280
+  requires: []
+- name: Sento Stream
+  ids:
+  - unresolved:source:isthereanydeal:8667:sento-stream
+  requires: []
+- name: The Story of My Life
+  ids:
+  - unresolved:source:isthereanydeal:8667:the-story-of-my-life
+  requires: []
+- name: MMX
+  ids:
+  - steam:1146890
+  requires: []
+- name: Restless Hero
+  ids:
+  - steam:1164410
+  requires: []
+- name: Position
+  ids:
+  - steam:1206180
+  requires: []
+- name: Psychedelic world
+  ids:
+  - unresolved:source:isthereanydeal:8667:psychedelic-world
+  requires: []
+- name: Rescue Elves
+  ids:
+  - steam:1251680
+  requires: []

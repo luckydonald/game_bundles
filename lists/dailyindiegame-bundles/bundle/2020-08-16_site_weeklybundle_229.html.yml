@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 229 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9061/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9061/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9061/source.json
+games:
+- name: PomboTroll
+  ids:
+  - steam:964170
+  requires: []
+- name: Super Commander XL
+  ids:
+  - steam:939240
+  requires: []
+- name: Raffle Blast
+  ids:
+  - steam:967060
+  requires: []
+- name: Casual Penalty
+  ids:
+  - steam:857050
+  requires: []
+- name: Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:9061:nightmare
+  requires: []
+- name: 'HuH?: and the Adventures of something'
+  ids:
+  - unresolved:source:isthereanydeal:9061:huh-and-the-adventures-of-something
+  requires: []
+- name: 'Before Nightfall: Summertime'
+  ids:
+  - steam:1362860
+  requires: []
+- name: Divine Favor
+  ids:
+  - steam:1376640
+  requires: []
+- name: AutoLand
+  ids:
+  - steam:1384090
+  requires: []

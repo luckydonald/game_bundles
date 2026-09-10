@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 181 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8813/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8813/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8813/source.json
+games:
+- name: Deadly Escape
+  ids:
+  - steam:649450
+  requires: []
+- name: Grind Zones
+  ids:
+  - unresolved:source:isthereanydeal:8813:grind-zones
+  requires: []
+- name: Mindsight
+  ids:
+  - steam:716070
+  requires: []
+- name: Jewel Puzzle Click
+  ids:
+  - steam:995700
+  requires: []
+- name: Interregnum-Alpha
+  ids:
+  - unresolved:source:isthereanydeal:8813:interregnum-alpha
+  requires: []
+- name: '2100'
+  ids:
+  - steam:1018090
+  requires: []
+- name: Destruction Paper
+  ids:
+  - steam:890200
+  requires: []
+- name: AlpenCROSS
+  ids:
+  - steam:801700
+  requires: []
+- name: Guardians Of Rings
+  ids:
+  - steam:1200400
+  requires: []

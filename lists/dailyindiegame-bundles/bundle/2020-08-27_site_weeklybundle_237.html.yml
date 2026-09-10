@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 237 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9092/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9092/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9092/source.json
+games:
+- name: BAPTISM
+  ids:
+  - steam:747160
+  requires: []
+- name: 'Honor Cry: Aftermath'
+  ids:
+  - steam:867540
+  requires: []
+- name: Tower Blitz
+  ids:
+  - steam:1237820
+  requires: []
+- name: Sphere Game
+  ids:
+  - steam:1376590
+  requires: []
+- name: Sausage Hunter
+  ids:
+  - steam:1296880
+  requires: []
+- name: RUN HARE RUN
+  ids:
+  - steam:1212870
+  requires: []
+- name: Crazy Derby Racing
+  ids:
+  - steam:1333270
+  requires: []
+- name: Flyist
+  ids:
+  - steam:1333980
+  requires: []
+- name: Lucky Burst
+  ids:
+  - unresolved:source:isthereanydeal:9092:lucky-burst
+  requires: []

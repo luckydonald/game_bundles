@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8949/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8949/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8949/source.json
+games:
+- name: 'Cartoonway : Mini Cars'
+  ids:
+  - unresolved:source:isthereanydeal:8949:cartoonway-mini-cars
+  requires: []
+- name: 'Word Killer: Revolution'
+  ids:
+  - unresolved:source:isthereanydeal:8949:word-killer-revolution
+  requires: []
+- name: Peas Adventure
+  ids:
+  - steam:1062120
+  requires: []
+- name: Knights of Hearts
+  ids:
+  - unresolved:source:isthereanydeal:8949:knights-of-hearts
+  requires: []
+- name: Oh, you touch my balls ( ͡° ͜ʖ ͡°)
+  ids:
+  - steam:922140
+  requires: []
+- name: Power Brain Trainer
+  ids:
+  - steam:1070300
+  requires: []
+- name: TriangleStorm
+  ids:
+  - steam:1192070
+  requires: []
+- name: WildIsland
+  ids:
+  - steam:1141340
+  requires: []
+- name: CatDog Puzzle
+  ids:
+  - steam:1241780
+  requires: []

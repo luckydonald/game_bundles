@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 221 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9030/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9030/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9030/source.json
+games:
+- name: Pichon
+  ids:
+  - steam:497190
+  requires: []
+- name: Rainyday
+  ids:
+  - steam:712980
+  requires: []
+- name: Brutal Runner
+  ids:
+  - steam:697930
+  requires: []
+- name: Unfinished Battle
+  ids:
+  - steam:799180
+  requires: []
+- name: Space Force
+  ids:
+  - steam:864010
+  requires: []
+- name: Bomb Royale
+  ids:
+  - steam:604150
+  requires: []
+- name: Forgotten
+  ids:
+  - steam:1097270
+  requires: []
+- name: '30km survival zone: Chernobyl'
+  ids:
+  - unresolved:source:isthereanydeal:9030:30km-survival-zone-chernobyl
+  requires: []
+- name: Terro Lunkka Adventures
+  ids:
+  - steam:1186730
+  requires: []

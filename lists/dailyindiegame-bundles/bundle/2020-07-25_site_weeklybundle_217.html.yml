@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 217 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9008/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9008/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9008/source.json
+games:
+- name: FluxCaves
+  ids:
+  - unresolved:source:isthereanydeal:9008:fluxcaves
+  requires: []
+- name: Cube Mission
+  ids:
+  - steam:1008740
+  requires: []
+- name: The Dark Room
+  ids:
+  - steam:918530
+  requires: []
+- name: NeonCode
+  ids:
+  - steam:976780
+  requires: []
+- name: Spray Dynamite X Radioactive Insects
+  ids:
+  - unresolved:source:isthereanydeal:9008:spray-dynamite-x-radioactive-insects
+  requires: []
+- name: 'Angry Bunny 3: Virus'
+  ids:
+  - steam:1289330
+  requires: []
+- name: Box Factory
+  ids:
+  - steam:1357750
+  requires: []
+- name: EMBERZONE
+  ids:
+  - steam:1362460
+  requires: []
+- name: Onmyoudou - Arcade Edition
+  ids:
+  - steam:1351840
+  requires: []

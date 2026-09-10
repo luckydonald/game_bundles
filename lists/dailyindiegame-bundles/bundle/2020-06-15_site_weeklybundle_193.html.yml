@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 193 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8902/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8902/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8902/source.json
+games:
+- name: The Adventures of Capitano Navarro
+  ids:
+  - steam:671810
+  requires: []
+- name: Ghost Stories
+  ids:
+  - steam:1078520
+  requires: []
+- name: Safety First
+  ids:
+  - steam:497700
+  requires: []
+- name: Make War
+  ids:
+  - steam:1120210
+  requires: []
+- name: 'Kingdom of Aurelia: Mystery of the Poisoned Dagger'
+  ids:
+  - steam:550390
+  requires: []
+- name: Super Sports Surgery
+  ids:
+  - unresolved:source:isthereanydeal:8902:super-sports-surgery
+  requires: []
+- name: Deep Despair
+  ids:
+  - steam:1241040
+  requires: []
+- name: Boom slayer
+  ids:
+  - steam:1295440
+  requires: []
+- name: HEDE Game Engine
+  ids:
+  - steam:1313330
+  requires: []

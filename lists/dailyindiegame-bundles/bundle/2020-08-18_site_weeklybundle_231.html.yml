@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 231 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9067/source.json
+games:
+- name: 立方杀阵（Cubic Kill Array）
+  ids:
+  - steam:898090
+  requires: []
+- name: TRAGO
+  ids:
+  - steam:869080
+  requires: []
+- name: Mad Cat's World
+  ids:
+  - steam:954860
+  requires: []
+- name: Bliss Maze(极乐迷宫)
+  ids:
+  - unresolved:source:isthereanydeal:9067:bliss-maze-ji-le-mi-gong
+  requires: []
+- name: EONIA
+  ids:
+  - steam:826180
+  requires: []
+- name: NO-GO
+  ids:
+  - unresolved:source:isthereanydeal:9067:no-go
+  requires: []
+- name: Edge of Dreams
+  ids:
+  - steam:1261020
+  requires: []
+- name: Flower Challenge
+  ids:
+  - steam:1390830
+  requires: []
+- name: Berries Challenge
+  ids:
+  - steam:1391990
+  requires: []
