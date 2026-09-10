@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 48 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2755/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2755/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2755/source.json
+games:
+- name: 'Playing History: Vikings'
+  ids:
+  - steam:368760
+  requires: []
+- name: 'Age of Fear: The Undead King'
+  ids:
+  - steam:351480
+  requires: []
+- name: Turbo Pug
+  ids:
+  - steam:418070
+  requires: []
+- name: 'Playing History: Slave Trade'
+  ids:
+  - unresolved:source:isthereanydeal:2755:playing-history-slave-trade
+  requires: []
+- name: 'Playing History: The Plague'
+  ids:
+  - steam:395920
+  requires: []
+- name: //SNOWFLAKE TATTOO//
+  ids:
+  - steam:355430
+  requires: []

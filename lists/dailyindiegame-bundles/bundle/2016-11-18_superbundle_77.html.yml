@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 77 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4361/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4361/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4361/source.json
+games:
+- name: Existentia
+  ids:
+  - unresolved:source:isthereanydeal:4361:existentia
+  requires: []
+- name: BoneBone
+  ids:
+  - unresolved:source:isthereanydeal:4361:bonebone
+  requires: []
+- name: Botology
+  ids:
+  - steam:363610
+  requires: []
+- name: Tales from the Void
+  ids:
+  - unresolved:source:isthereanydeal:4361:tales-from-the-void
+  requires: []
+- name: JumpBall
+  ids:
+  - unresolved:source:isthereanydeal:4361:jumpball
+  requires: []
+- name: Door To Door
+  ids:
+  - steam:416200
+  requires: []

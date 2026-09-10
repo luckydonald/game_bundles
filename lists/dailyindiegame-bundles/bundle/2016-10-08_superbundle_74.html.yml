@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 74 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4169/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4169/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4169/source.json
+games:
+- name: To Ash
+  ids:
+  - steam:453950
+  requires: []
+- name: Wooden Floor 2 - Resurrection
+  ids:
+  - steam:433790
+  requires: []
+- name: Gold Rush! Anniversary
+  ids:
+  - steam:319230
+  requires: []
+- name: Wooden Floor
+  ids:
+  - steam:348790
+  requires: []
+- name: Final Quest
+  ids:
+  - steam:512640
+  requires: []
+- name: Warriors of Vilvatikta
+  ids:
+  - steam:515690
+  requires: []

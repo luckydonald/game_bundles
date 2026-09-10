@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Desura Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1697/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1697/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1697/source.json
+games:
+- name: DarkBase 01
+  ids:
+  - unresolved:source:isthereanydeal:1697:darkbase-01
+  requires: []
+- name: Led It Rain
+  ids:
+  - steam:464610
+  requires: []
+- name: It's time to get out from the solar system
+  ids:
+  - steam:399090
+  requires: []
+- name: Pester
+  ids:
+  - steam:354920
+  requires: []
+- name: 'Zilm: A Game of Reflex'
+  ids:
+  - unresolved:source:isthereanydeal:1697:zilm-a-game-of-reflex
+  requires: []
+- name: 'Atonement: Scourge of Time'
+  ids:
+  - steam:385070
+  requires: []

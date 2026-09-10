@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2790/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2790/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2790/source.json
+games:
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+  requires: []
+- name: RIP Trilogy
+  ids:
+  - steam:2540
+  requires: []
+- name: 'Chronicles of a Dark Lord: Episode 1 Tides of Fate Complete'
+  ids:
+  - unresolved:source:isthereanydeal:2790:chronicles-of-a-dark-lord-episode-1-tides-of-fate-complete
+  requires: []
+- name: Crash Time 2
+  ids:
+  - steam:11390
+  requires: []
+- name: 'Chronicles of a Dark Lord Episode II: War of the Abyss'
+  ids:
+  - unresolved:source:isthereanydeal:2790:chronicles-of-a-dark-lord-episode-ii-war-of-the-abyss
+  requires: []
+- name: 'Sometimes: Success Requires Sacrifice'
+  ids:
+  - steam:351470
+  requires: []

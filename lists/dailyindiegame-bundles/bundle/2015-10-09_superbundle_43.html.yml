@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 43 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2581/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2581/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2581/source.json
+games:
+- name: Survivor Squad
+  ids:
+  - steam:258050
+  requires: []
+- name: Project Druid - 2D Labyrinth Explorer
+  ids:
+  - steam:388160
+  requires: []
+- name: Flix The Flea
+  ids:
+  - steam:371390
+  requires: []
+- name: Volt
+  ids:
+  - steam:290280
+  requires: []
+- name: Lost in Paradise
+  ids:
+  - steam:381170
+  requires: []
+- name: Blood of Old - The Rise to Greatness!
+  ids:
+  - unresolved:source:isthereanydeal:2581:blood-of-old-the-rise-to-greatness
+  requires: []

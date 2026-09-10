@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 19 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1612/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1612/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1612/source.json
+games:
+- name: Streets of Chaos
+  ids:
+  - unresolved:source:isthereanydeal:1612:streets-of-chaos
+  requires: []
+- name: Selknam Defense
+  ids:
+  - steam:306260
+  requires: []
+- name: Nux
+  ids:
+  - steam:307350
+  requires: []
+- name: Pressured
+  ids:
+  - steam:292620
+  requires: []
+- name: Game Tycoon 1.5
+  ids:
+  - steam:273770
+  requires: []
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+  requires: []

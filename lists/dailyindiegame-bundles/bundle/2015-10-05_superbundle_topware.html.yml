@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG TopWare Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2563/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2563/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2563/source.json
+games:
+- name: Enclave
+  ids:
+  - steam:253980
+  requires: []
+- name: 'World War II: Panzer Claws'
+  ids:
+  - steam:254100
+  requires: []
+- name: Gorky 17
+  ids:
+  - steam:253920
+  requires: []
+- name: Pressure
+  ids:
+  - unresolved:source:isthereanydeal:2563:pressure
+  requires: []
+- name: KnightShift
+  ids:
+  - steam:254060
+  requires: []
+- name: Two Worlds Epic Edition
+  ids:
+  - steam:1930
+  requires: []
