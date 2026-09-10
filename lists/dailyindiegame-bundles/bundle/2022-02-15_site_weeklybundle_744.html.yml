@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 744 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11063/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11063/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11063/source.json
+games:
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+  requires: []
+- name: Football tournament
+  ids:
+  - steam:1691700
+  requires: []
+- name: Pirates vs monkeys
+  ids:
+  - steam:1704780
+  requires: []
+- name: Candy gun
+  ids:
+  - unresolved:source:isthereanydeal:11063:candy-gun
+  requires: []
+- name: Medieval Wars
+  ids:
+  - steam:1715530
+  requires: []
+- name: 'Magic Defense 2: The Return of the Legend'
+  ids:
+  - steam:1721130
+  requires: []
+- name: Freon
+  ids:
+  - steam:1721520
+  requires: []
+- name: Robo Go
+  ids:
+  - unresolved:source:isthereanydeal:11063:robo-go
+  requires: []
+- name: Space Adventures
+  ids:
+  - steam:1731860
+  requires: []

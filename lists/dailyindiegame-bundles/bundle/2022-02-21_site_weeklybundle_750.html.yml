@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 750: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11076/source.json
+games:
+- name: 酒店
+  ids:
+  - steam:934810
+  requires: []
+- name: Beach anime day
+  ids:
+  - steam:1240600
+  requires: []
+- name: Mistaker
+  ids:
+  - steam:1234820
+  requires: []
+- name: Geometry Rocket
+  ids:
+  - steam:1414680
+  requires: []
+- name: Happy Summer Holiday(愉快的暑假)
+  ids:
+  - steam:1391350
+  requires: []
+- name: Wild world
+  ids:
+  - steam:1598710
+  requires: []
+- name: Express Simulator
+  ids:
+  - steam:1656650
+  requires: []
+- name: A Dog Named Mato
+  ids:
+  - steam:1635920
+  requires: []
+- name: Starveling Way
+  ids:
+  - steam:1696310
+  requires: []

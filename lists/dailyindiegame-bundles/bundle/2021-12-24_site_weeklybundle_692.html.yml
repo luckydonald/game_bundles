@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 692 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10871/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10871/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10871/source.json
+games:
+- name: Super Meat Shooter
+  ids:
+  - steam:745340
+  requires: []
+- name: Martian Potato
+  ids:
+  - steam:1317850
+  requires: []
+- name: ACIDTRIP
+  ids:
+  - unresolved:source:isthereanydeal:10871:acidtrip
+  requires: []
+- name: Jurassic Attack
+  ids:
+  - steam:1550990
+  requires: []
+- name: Cats War
+  ids:
+  - steam:1801850
+  requires: []
+- name: Zombie Maze
+  ids:
+  - unresolved:source:isthereanydeal:10871:zombie-maze
+  requires: []
+- name: Underwater World
+  ids:
+  - steam:1810810
+  requires: []
+- name: Rescue Helicopter
+  ids:
+  - steam:1819190
+  requires: []
+- name: Battle Of The Robots
+  ids:
+  - steam:1821420
+  requires: []

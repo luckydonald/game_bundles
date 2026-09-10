@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 706 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10961/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10961/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10961/source.json
+games:
+- name: CrazyDriving
+  ids:
+  - steam:929210
+  requires: []
+- name: 'Eredia: The Diary of Heroes'
+  ids:
+  - steam:713180
+  requires: []
+- name: Rescue Team
+  ids:
+  - steam:338960
+  requires: []
+- name: 'DuelVox: Max Quality'
+  ids:
+  - steam:1587940
+  requires: []
+- name: 'Shankaram: CODE REBORN'
+  ids:
+  - steam:1809420
+  requires: []
+- name: Split Tactics
+  ids:
+  - unresolved:source:isthereanydeal:10961:split-tactics
+  requires: []
+- name: F-Rank hero story
+  ids:
+  - steam:1768270
+  requires: []
+- name: Hidden Islands
+  ids:
+  - steam:1864860
+  requires: []
+- name: Hidden Map
+  ids:
+  - steam:1864850
+  requires: []

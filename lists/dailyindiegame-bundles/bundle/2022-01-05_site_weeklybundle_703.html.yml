@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 703: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10934/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10934/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10934/source.json
+games:
+- name: Total Madness
+  ids:
+  - unresolved:source:isthereanydeal:10934:total-madness
+  requires: []
+- name: Tankfight
+  ids:
+  - steam:1310470
+  requires: []
+- name: The Orb Chambers REMASTERED
+  ids:
+  - unresolved:source:isthereanydeal:10934:the-orb-chambers-remastered
+  requires: []
+- name: Finger Guessing King
+  ids:
+  - steam:1296580
+  requires: []
+- name: Juicy Memory Card
+  ids:
+  - unresolved:source:isthereanydeal:10934:juicy-memory-card
+  requires: []
+- name: Unicorn Dream
+  ids:
+  - unresolved:source:isthereanydeal:10934:unicorn-dream
+  requires: []
+- name: 'HuH?: and the Adventures of something'
+  ids:
+  - unresolved:source:isthereanydeal:10934:huh-and-the-adventures-of-something
+  requires: []
+- name: Mad Bus
+  ids:
+  - unresolved:source:isthereanydeal:10934:mad-bus
+  requires: []
+- name: Elder Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10934:elder-puzzle
+  requires: []

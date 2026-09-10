@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 657 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10713/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10713/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10713/source.json
+games:
+- name: Bassline Sinker
+  ids:
+  - steam:945100
+  requires: []
+- name: Hiking Simulator 2018
+  ids:
+  - steam:791950
+  requires: []
+- name: Sweet Thomas
+  ids:
+  - steam:1179540
+  requires: []
+- name: Police Chase
+  ids:
+  - steam:1355140
+  requires: []
+- name: Cube Shifter
+  ids:
+  - steam:1372010
+  requires: []
+- name: 'Space Fat: To the Core'
+  ids:
+  - unresolved:source:isthereanydeal:10713:space-fat-to-the-core
+  requires: []
+- name: DIERY HEAVEN
+  ids:
+  - steam:1422740
+  requires: []
+- name: Haunted Nightmares
+  ids:
+  - steam:1519650
+  requires: []
+- name: Cutie Bear
+  ids:
+  - steam:1557540
+  requires: []
