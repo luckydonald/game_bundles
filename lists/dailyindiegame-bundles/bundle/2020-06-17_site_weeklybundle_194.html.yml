@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 194 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8909/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8909/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8909/source.json
+games:
+- name: Angry Zombies
+  ids:
+  - steam:1183670
+  requires: []
+- name: Destructivator 2
+  ids:
+  - steam:1124990
+  requires: []
+- name: Bird Missions
+  ids:
+  - steam:1281530
+  requires: []
+- name: Pay Me In Colors
+  ids:
+  - steam:1280970
+  requires: []
+- name: What a Cluster Fight
+  ids:
+  - unresolved:source:isthereanydeal:8909:what-a-cluster-fight
+  requires: []
+- name: DriftZ
+  ids:
+  - steam:1322180
+  requires: []
+- name: HARTS ISLAND
+  ids:
+  - steam:1322270
+  requires: []
+- name: The Orb Chambers REMASTERED
+  ids:
+  - unresolved:source:isthereanydeal:8909:the-orb-chambers-remastered
+  requires: []
+- name: Blockicker
+  ids:
+  - steam:1337080
+  requires: []

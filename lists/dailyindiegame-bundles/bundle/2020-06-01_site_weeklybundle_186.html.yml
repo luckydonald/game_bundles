@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 186 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8846/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8846/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8846/source.json
+games:
+- name: Subway Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8846:subway-simulator
+  requires: []
+- name: Running Girl
+  ids:
+  - steam:937970
+  requires: []
+- name: Gem Master
+  ids:
+  - steam:1279620
+  requires: []
+- name: Race Maniacs
+  ids:
+  - steam:1245350
+  requires: []
+- name: Virus Kombat
+  ids:
+  - steam:1285820
+  requires: []
+- name: Boreal Tales
+  ids:
+  - unresolved:source:isthereanydeal:8846:boreal-tales
+  requires: []
+- name: 'Call of Corona: Micro Warfare'
+  ids:
+  - steam:1304290
+  requires: []
+- name: The Hostage
+  ids:
+  - steam:1306020
+  requires: []
+- name: Rogue Planet
+  ids:
+  - steam:1301380
+  requires: []

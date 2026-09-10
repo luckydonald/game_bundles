@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 209 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8973/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8973/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8973/source.json
+games:
+- name: 'Tower Tank: TD Reversal'
+  ids:
+  - unresolved:source:isthereanydeal:8973:tower-tank-td-reversal
+  requires: []
+- name: SHELL_BREAK
+  ids:
+  - steam:988590
+  requires: []
+- name: Shooting Star
+  ids:
+  - steam:1180700
+  requires: []
+- name: BOMBERX
+  ids:
+  - steam:1208900
+  requires: []
+- name: Hentai Darts
+  ids:
+  - steam:1220190
+  requires: []
+- name: 'Axizon Labs: Zombies'
+  ids:
+  - steam:1280310
+  requires: []
+- name: Coronavirus Evolution
+  ids:
+  - steam:1264770
+  requires: []
+- name: I wanna build a robot
+  ids:
+  - steam:1337210
+  requires: []
+- name: Colorize
+  ids:
+  - steam:1348220
+  requires: []

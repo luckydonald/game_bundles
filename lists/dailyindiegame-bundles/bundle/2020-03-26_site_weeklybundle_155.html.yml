@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 7 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8593/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8593/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8593/source.json
+games:
+- name: Ecchi Girls
+  ids:
+  - unresolved:source:isthereanydeal:8593:ecchi-girls
+  requires: []
+- name: Ecchi Sky
+  ids:
+  - unresolved:source:isthereanydeal:8593:ecchi-sky
+  requires: []
+- name: Red Dead Pixel Man
+  ids:
+  - unresolved:source:isthereanydeal:8593:red-dead-pixel-man
+  requires: []
+- name: Diminutive
+  ids:
+  - unresolved:source:isthereanydeal:8593:diminutive
+  requires: []
+- name: Destiny Girls
+  ids:
+  - unresolved:source:isthereanydeal:8593:destiny-girls
+  requires: []
+- name: Run Dude
+  ids:
+  - steam:1221280
+  requires: []
+- name: Fragile Box
+  ids:
+  - steam:1244210
+  requires: []
+- name: Break the Web
+  ids:
+  - steam:1245500
+  requires: []
+- name: Réel Futur
+  ids:
+  - unresolved:source:isthereanydeal:8593:reel-futur
+  requires: []

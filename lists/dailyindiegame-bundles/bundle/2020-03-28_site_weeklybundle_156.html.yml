@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 8 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8603/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8603/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8603/source.json
+games:
+- name: This Picture
+  ids:
+  - steam:1148120
+  requires: []
+- name: AZURA
+  ids:
+  - steam:709410
+  requires: []
+- name: Septerra Core
+  ids:
+  - steam:253940
+  requires: []
+- name: Gorky 17
+  ids:
+  - steam:253920
+  requires: []
+- name: Magic Siege - Defender
+  ids:
+  - unresolved:source:isthereanydeal:8603:magic-siege-defender
+  requires: []
+- name: Running Black
+  ids:
+  - unresolved:source:isthereanydeal:8603:running-black
+  requires: []
+- name: Space Hero Line
+  ids:
+  - unresolved:source:isthereanydeal:8603:space-hero-line
+  requires: []
+- name: KnightShift
+  ids:
+  - steam:254060
+  requires: []
+- name: O'Fox life
+  ids:
+  - steam:719120
+  requires: []

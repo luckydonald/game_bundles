@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 6 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8578/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8578/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8578/source.json
+games:
+- name: Charlie II - Expansion Pack
+  ids:
+  - unresolved:source:isthereanydeal:8578:charlie-ii-expansion-pack
+  requires: []
+- name: 'Doc Clock: The Toasted Sandwich of Time'
+  ids:
+  - steam:57800
+  requires: []
+- name: Range Ball
+  ids:
+  - steam:867550
+  requires: []
+- name: Tisnart Shapes
+  ids:
+  - steam:820500
+  requires: []
+- name: Crazy Belts
+  ids:
+  - steam:355510
+  requires: []
+- name: Chronology
+  ids:
+  - steam:269330
+  requires: []
+- name: Wooden Floor
+  ids:
+  - steam:348790
+  requires: []
+- name: Robo Run
+  ids:
+  - steam:1081720
+  requires: []
+- name: Three Of a Fish
+  ids:
+  - steam:1157080
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8613/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8613/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8613/source.json
+games:
+- name: Electric Circuit
+  ids:
+  - steam:1357020
+  requires: []
+- name: Permute
+  ids:
+  - steam:575630
+  requires: []
+- name: Where Are My Friends?
+  ids:
+  - steam:721350
+  requires: []
+- name: One Wish
+  ids:
+  - steam:602910
+  requires: []
+- name: Last Days of Spring Visual Novel
+  ids:
+  - steam:407680
+  requires: []
+- name: Rude Racers
+  ids:
+  - steam:1099440
+  requires: []
+- name: Operation Desert Road
+  ids:
+  - steam:727320
+  requires: []
+- name: ROGUS - Kingdom of The Lost Souls
+  ids:
+  - steam:366350
+  requires: []
+- name: Vindictive Drive
+  ids:
+  - steam:507400
+  requires: []

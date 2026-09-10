@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 174 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8751/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8751/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8751/source.json
+games:
+- name: TKKG - Die Feuerprobe
+  ids:
+  - steam:1104870
+  requires: []
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:8751:magic-chess
+  requires: []
+- name: Forep Man
+  ids:
+  - unresolved:source:isthereanydeal:8751:forep-man
+  requires: []
+- name: Bomb The Monsters
+  ids:
+  - steam:355020
+  requires: []
+- name: '999'
+  ids:
+  - steam:876840
+  requires: []
+- name: Let's Go! Skiing VR
+  ids:
+  - steam:1150310
+  requires: []
+- name: Gang District
+  ids:
+  - steam:1196170
+  requires: []
+- name: Smash / Shatter ?
+  ids:
+  - unresolved:source:isthereanydeal:8751:smash-shatter
+  requires: []
