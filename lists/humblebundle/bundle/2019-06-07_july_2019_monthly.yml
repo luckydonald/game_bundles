@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Jul 2019) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7477/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7477/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7477/source.json
+games:
+- name: 'NAIRI: Tower of Shirin'
+  ids:
+  - steam:802450
+  requires: []
+- name: Road Redemption
+  ids:
+  - steam:300380
+  requires: []
+- name: Moonlighter
+  ids:
+  - steam:606150
+  requires: []
+- name: 60 Parsecs!
+  ids:
+  - steam:646270
+  requires: []
+- name: 'Hellblade: Senua''s Sacrifice'
+  ids:
+  - steam:414340
+  requires: []
+- name: Love is Dead
+  ids:
+  - steam:453910
+  requires: []
+- name: 'Warhammer 40,000: Mechanicus'
+  ids:
+  - steam:673880
+  requires: []
+- name: Kind Words (lo fi chill beats to write to)
+  ids:
+  - steam:1070710
+  requires: []

@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Mar 2020) — Select 3 Choices For $14.99, 9 Choices For $19.99,
+  10 Choices For $12.00*
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8471/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8471/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8471/source.json
+games:
+- name: One Step From Eden
+  ids:
+  - steam:960690
+  requires: []
+- name: Planet Coaster - World's Fair Pack
+  ids:
+  - steam:953660
+  requires: []
+- name: Planet Coaster
+  ids:
+  - steam:493340
+  requires: []
+- name: EXAPUNKS
+  ids:
+  - steam:716490
+  requires: []
+- name: F1® 2019 Anniversary Edition
+  ids:
+  - unresolved:source:isthereanydeal:8471:f1-2019-anniversary-edition
+  requires: []
+- name: 'Battle Chasers: Nightwar'
+  ids:
+  - steam:451020
+  requires: []
+- name: Etherborn
+  ids:
+  - steam:812160
+  requires: []
+- name: 'Fell Seal: Arbiter''s Mark'
+  ids:
+  - steam:699170
+  requires: []
+- name: My Friend Pedro
+  ids:
+  - steam:557340
+  requires: []
+- name: AI War 2
+  ids:
+  - steam:573410
+  requires: []
+- name: Turok
+  ids:
+  - steam:405820
+  requires: []
+- name: 198X
+  ids:
+  - steam:1086010
+  requires: []
+- name: Niffelheim
+  ids:
+  - steam:351100
+  requires: []
+- name: Space Routine
+  ids:
+  - unresolved:source:isthereanydeal:8471:space-routine
+  requires: []
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+  requires: []

@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Aug 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9038/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9038/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9038/source.json
+games:
+- name: Call of Cthulhu
+  ids:
+  - steam:399810
+  requires: []
+- name: 'The Coma 2: Vicious Sisters'
+  ids:
+  - steam:1045720
+  requires: []
+- name: American Fugitive
+  ids:
+  - steam:934780
+  requires: []
+- name: Vampyr
+  ids:
+  - steam:427290
+  requires: []
+- name: Wargroove
+  ids:
+  - steam:607050
+  requires: []
+- name: We Were Here Together
+  ids:
+  - steam:865360
+  requires: []
+- name: Hello Neighbor
+  ids:
+  - steam:521890
+  requires: []
+- name: A Case of Distrust
+  ids:
+  - steam:717610
+  requires: []
+- name: Through the Darkest of Times
+  ids:
+  - steam:1003090
+  requires: []
+- name: Wildfire
+  ids:
+  - steam:431940
+  requires: []
+- name: Hello Neighbor Hide & Seek
+  ids:
+  - steam:960420
+  requires: []
+- name: Automachef
+  ids:
+  - steam:984800
+  requires: []
+- name: Little Big Workshop
+  ids:
+  - steam:574720
+  requires: []
+- name: Genesis Alpha One Deluxe Edition
+  ids:
+  - steam:712190
+  requires: []
+- name: 'Booth: A Dystopian Adventure'
+  ids:
+  - steam:761350
+  requires: []
+- name: Zodiac XX
+  ids:
+  - unresolved:source:isthereanydeal:9038:zodiac-xx
+  requires: []

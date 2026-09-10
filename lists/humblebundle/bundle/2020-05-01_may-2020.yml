@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (May 2020) — Select 3 Choices For $14.99, 9 Choices For $19.99,
+  10 Choices For $12.00*
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8742/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8742/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8742/source.json
+games:
+- name: XCOM 2
+  ids:
+  - steam:268500
+  requires: []
+- name: 'XCOM 2: Reinforcement Pack'
+  ids:
+  - steam:426321
+  requires: []
+- name: Heave Ho
+  ids:
+  - steam:905340
+  requires: []
+- name: Rise of Industry
+  ids:
+  - steam:671440
+  requires: []
+- name: Jurassic World Evolution
+  ids:
+  - steam:648350
+  requires: []
+- name: XCOM 2 - Resistance Warrior Pack
+  ids:
+  - steam:399620
+  requires: []
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+  requires: []
+- name: Chess Ultra
+  ids:
+  - steam:518060
+  requires: []
+- name: NEOVERSE
+  ids:
+  - steam:994220
+  requires: []
+- name: MO:Astray
+  ids:
+  - steam:1104660
+  requires: []
+- name: Niche - a genetics survival game
+  ids:
+  - steam:440650
+  requires: []
+- name: Horace
+  ids:
+  - steam:629090
+  requires: []
+- name: 'The Swords of Ditto: Mormo''s Curse'
+  ids:
+  - steam:619780
+  requires: []
+- name: Jurassic World Evolution - Deluxe Dinosaur Pack
+  ids:
+  - steam:817550
+  requires: []
+- name: Rainy Season
+  ids:
+  - steam:1094420
+  requires: []
+- name: Fae Tactics Sneak Peek
+  ids:
+  - unresolved:source:isthereanydeal:8742:fae-tactics-sneak-peek
+  requires: []
+- name: 'WARSAW RISING: City of Heroes'
+  ids:
+  - steam:1026420
+  requires: []
