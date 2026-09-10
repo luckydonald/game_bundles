@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lords of the Fallen Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4057/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4057/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4057/source.json
+games:
+- name: Lords of the Fallen - Lion Heart Pack
+  ids:
+  - steam:317208
+  requires: []
+- name: Lords of the Fallen - The Foundation Boost
+  ids:
+  - steam:317202
+  requires: []
+- name: Lords of the Fallen - Demonic Weapon Pack
+  ids:
+  - steam:317201
+  requires: []
+- name: Lords of the Fallen
+  ids:
+  - steam:1501750
+  requires: []
+- name: Lords of the Fallen - The Arcane Boost
+  ids:
+  - steam:317203
+  requires: []
+- name: Lords of the Fallen - Ancient Labyrinth
+  ids:
+  - steam:333800
+  requires: []
+- name: Lords of the Fallen - Monk Decipher
+  ids:
+  - steam:317200
+  requires: []

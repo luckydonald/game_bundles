@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Coffee Break Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5227/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5227/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5227/source.json
+games:
+- name: Backgammon Blitz
+  ids:
+  - steam:395900
+  requires: []
+- name: Luxor 2 HD
+  ids:
+  - steam:234350
+  requires: []
+- name: Lapland Solitaire
+  ids:
+  - unresolved:source:isthereanydeal:5227:lapland-solitaire
+  requires: []
+- name: 'Luxor: Amun Rising HD'
+  ids:
+  - steam:216930
+  requires: []
+- name: 'Gardens Inc. 2: The Road to Fame'
+  ids:
+  - steam:301260
+  requires: []
+- name: Governor of Poker 2
+  ids:
+  - unresolved:source:isthereanydeal:5227:governor-of-poker-2
+  requires: []
+- name: Discovery! A Seek & Find Adventure
+  ids:
+  - steam:16000
+  requires: []
+- name: Crazy Belts
+  ids:
+  - steam:355510
+  requires: []
+- name: Luxor HD
+  ids:
+  - steam:361020
+  requires: []
+- name: The Cooking Game
+  ids:
+  - steam:504310
+  requires: []
+- name: Dragon Kingdom War
+  ids:
+  - steam:540860
+  requires: []
+- name: 'LUXOR: Mah Jong'
+  ids:
+  - steam:32110
+  requires: []
+- name: Green Ranch
+  ids:
+  - steam:493980
+  requires: []
+- name: 7 Wonders - Magical Mystery Tour
+  ids:
+  - steam:275830
+  requires: []

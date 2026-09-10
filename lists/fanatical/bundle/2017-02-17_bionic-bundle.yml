@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bionic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4791/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4791/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4791/source.json
+games:
+- name: Electric Circuit
+  ids:
+  - steam:1357020
+  requires: []
+- name: Nanuleu
+  ids:
+  - steam:511500
+  requires: []
+- name: Where are my Internets?
+  ids:
+  - steam:521580
+  requires: []
+- name: SnakEscape
+  ids:
+  - unresolved:source:isthereanydeal:4791:snakescape
+  requires: []
+- name: BAD END
+  ids:
+  - steam:415850
+  requires: []
+- name: Settled
+  ids:
+  - steam:445750
+  requires: []
+- name: Pozzo Jello Crusade
+  ids:
+  - steam:511380
+  requires: []
+- name: Into The Gloom
+  ids:
+  - steam:342350
+  requires: []
+- name: iZBOT
+  ids:
+  - steam:388970
+  requires: []
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:4791:the-visitors
+  requires: []

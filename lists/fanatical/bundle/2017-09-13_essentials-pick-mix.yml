@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Essentials Pick & Mix Bundle — Select 2 Titles for $1.00, 6 Titles for $2.49,
+  12 Titles for $3.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5457/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5457/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5457/source.json
+games:
+- name: The Silent Age
+  ids:
+  - steam:352520
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+  requires: []
+- name: Pang Adventures
+  ids:
+  - steam:415150
+  requires: []
+- name: STANDBY
+  ids:
+  - steam:494580
+  requires: []
+- name: PONCHO
+  ids:
+  - steam:332620
+  requires: []
+- name: Riff Racer - Race Your Music!
+  ids:
+  - unresolved:source:isthereanydeal:5457:riff-racer-race-your-music
+  requires: []
+- name: Livelock
+  ids:
+  - steam:251230
+  requires: []
+- name: Super 3-D Noah's Ark
+  ids:
+  - steam:371180
+  requires: []
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+  requires: []
+- name: A Story About My Uncle
+  ids:
+  - steam:278360
+  requires: []
+- name: Planetary Annihilation
+  ids:
+  - unresolved:source:isthereanydeal:5457:planetary-annihilation
+  requires: []
+- name: 'Hegemony Rome: The Rise of Caesar'
+  ids:
+  - steam:227060
+  requires: []
+- name: Survivalist
+  ids:
+  - steam:340050
+  requires: []
+- name: Manual Samuel
+  ids:
+  - steam:504130
+  requires: []
+- name: Rise of the Triad
+  ids:
+  - steam:217140
+  requires: []
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+  requires: []
+- name: Overture
+  ids:
+  - steam:343100
+  requires: []

@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Dash Bundle 2 — Select 1 Title for $1.00, 4 Titles for $2.99, 8 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4476/source.json
+games:
+- name: Kingdom Rush
+  ids:
+  - steam:246420
+  requires: []
+- name: Safety First
+  ids:
+  - steam:497700
+  requires: []
+- name: Industry Giant 2
+  ids:
+  - steam:271360
+  requires: []
+- name: Deponia
+  ids:
+  - steam:214340
+  requires: []
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+  requires: []
+- name: Dead Effect 2
+  ids:
+  - steam:394760
+  requires: []
+- name: Pool Nation
+  ids:
+  - steam:254440
+  requires: []
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+  requires: []
+- name: Dub Dash
+  ids:
+  - steam:406940
+  requires: []
+- name: 'Broken Sword 5: The Serpent''s Curse'
+  ids:
+  - steam:262940
+  requires: []
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+  requires: []
+- name: A Story About My Uncle
+  ids:
+  - steam:278360
+  requires: []
+- name: Dead Effect
+  ids:
+  - steam:286040
+  requires: []
+- name: Shadowgate (2014)
+  ids:
+  - unresolved:source:isthereanydeal:4476:shadowgate-2014
+  requires: []
+- name: Super Sanctum TD
+  ids:
+  - steam:235250
+  requires: []

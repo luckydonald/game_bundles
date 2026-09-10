@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Legends Pick & Mix Bundle — Select 3 Titles for $2.99, 5 Titles for $3.99,
+  8 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4315/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4315/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4315/source.json
+games:
+- name: Guacamelee! Super Turbo Championship Edition
+  ids:
+  - steam:275390
+  requires: []
+- name: Kingdom Rush
+  ids:
+  - steam:246420
+  requires: []
+- name: SteamWorld Dig
+  ids:
+  - steam:252410
+  requires: []
+- name: Stronghold Crusader HD
+  ids:
+  - steam:40970
+  requires: []
+- name: Lethal League
+  ids:
+  - steam:261180
+  requires: []
+- name: INSURGENCY
+  ids:
+  - steam:222880
+  requires: []
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+  requires: []
+- name: Another World - 20th Anniversary Edition
+  ids:
+  - steam:233550
+  requires: []
+- name: Skullgirls
+  ids:
+  - unresolved:source:isthereanydeal:4315:skullgirls
+  requires: []
+- name: Anodyne
+  ids:
+  - steam:234900
+  requires: []
+- name: Freedom Planet
+  ids:
+  - steam:248310
+  requires: []
+- name: Sir, You Are Being Hunted
+  ids:
+  - steam:242880
+  requires: []
+- name: King Arthur's Gold
+  ids:
+  - steam:219830
+  requires: []
+- name: Nihilumbra
+  ids:
+  - steam:252670
+  requires: []
+- name: Super Win the Game
+  ids:
+  - steam:310700
+  requires: []

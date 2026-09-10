@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Diamond Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3956/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3956/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3956/source.json
+games:
+- name: Rebirth of Island
+  ids:
+  - steam:448620
+  requires: []
+- name: Dino Run DX
+  ids:
+  - steam:248330
+  requires: []
+- name: Laserlife
+  ids:
+  - steam:323040
+  requires: []
+- name: KWAAN
+  ids:
+  - unresolved:source:isthereanydeal:3956:kwaan
+  requires: []
+- name: There was a Caveman
+  ids:
+  - steam:407290
+  requires: []
+- name: Kiai Resonance
+  ids:
+  - steam:360450
+  requires: []
+- name: HardCube
+  ids:
+  - unresolved:source:isthereanydeal:3956:hardcube
+  requires: []
+- name: Dungeon Escape
+  ids:
+  - steam:454100
+  requires: []
+- name: Zotrix
+  ids:
+  - steam:343280
+  requires: []
+- name: Night Blights
+  ids:
+  - steam:446910
+  requires: []

@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Dash Bundle 4 — Select 1 Title for $1.00, 4 Titles for $2.99, 8 Titles
+  for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4987/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4987/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4987/source.json
+games:
+- name: Unrest
+  ids:
+  - steam:292400
+  requires: []
+- name: The Story Goes On
+  ids:
+  - steam:369560
+  requires: []
+- name: Bedlam
+  ids:
+  - unresolved:source:isthereanydeal:4987:bedlam
+  requires: []
+- name: Hidden Object Bundle 4 in 1
+  ids:
+  - steam:347610
+  requires: []
+- name: Knights & Merchants
+  ids:
+  - steam:253900
+  requires: []
+- name: King's Bounty Warriors of the North
+  ids:
+  - steam:203350
+  requires: []
+- name: The Silent Age
+  ids:
+  - steam:352520
+  requires: []
+- name: Deponia
+  ids:
+  - steam:214340
+  requires: []
+- name: Stronghold HD
+  ids:
+  - steam:40950
+  requires: []
+- name: Dead Effect 2
+  ids:
+  - steam:394760
+  requires: []
+- name: Game Corp DX
+  ids:
+  - steam:399670
+  requires: []
+- name: POSTAL 2
+  ids:
+  - steam:223470
+  requires: []
+- name: Hidden Object Bundle 5 in 1
+  ids:
+  - steam:346140
+  requires: []
+- name: 'Real Heroes: Firefighter'
+  ids:
+  - unresolved:source:isthereanydeal:4987:real-heroes-firefighter
+  requires: []
+- name: 'Sword of the Stars: The Pit'
+  ids:
+  - steam:233700
+  requires: []
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  requires: []
+- name: Shooting Stars!
+  ids:
+  - steam:415350
+  requires: []
+- name: Townsmen
+  ids:
+  - unresolved:source:isthereanydeal:4987:townsmen
+  requires: []
+- name: POSTAL
+  ids:
+  - steam:232770
+  requires: []
+- name: Dead Effect
+  ids:
+  - steam:286040
+  requires: []
+- name: Kaiju-A-GoGo
+  ids:
+  - steam:333210
+  requires: []
+- name: In Between
+  ids:
+  - steam:388420
+  requires: []
+- name: 'Two Worlds II: Velvet Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4987:two-worlds-ii-velvet-edition
+  requires: []
+- name: 'Soulless: Ray Of Hope'
+  ids:
+  - steam:528300
+  requires: []
