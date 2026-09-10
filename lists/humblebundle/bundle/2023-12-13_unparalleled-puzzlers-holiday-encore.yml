@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Unparalleled Puzzlers Bundle (Holiday Encore) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13695/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13695/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13695/source.json
+games:
+- name: Creaks
+  ids:
+  - steam:956030
+  requires: []
+- name: Baba Is You
+  ids:
+  - steam:736260
+  requires: []
+- name: The Last Campfire
+  ids:
+  - steam:990630
+  requires: []
+- name: Dorfromantik
+  ids:
+  - steam:1455840
+  requires: []
+- name: 'DARQ: Complete Edition'
+  ids:
+  - steam:433550
+  requires: []
+- name: 'Monument Valley: Panoramic Edition'
+  ids:
+  - steam:1927720
+  requires: []
+- name: 'Monument Valley 2: Panoramic Edition'
+  ids:
+  - steam:1927740
+  requires: []

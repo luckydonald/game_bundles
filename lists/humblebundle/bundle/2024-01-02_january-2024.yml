@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jan 2024) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13761/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13761/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13761/source.json
+games:
+- name: Roguebook
+  ids:
+  - steam:1076200
+  requires: []
+- name: Hell Pie
+  ids:
+  - steam:889910
+  requires: []
+- name: The Red Lantern
+  ids:
+  - steam:1053710
+  requires: []
+- name: Aragami 2
+  ids:
+  - steam:1158370
+  requires: []
+- name: Twin Mirror
+  ids:
+  - steam:1552810
+  requires: []
+- name: Two Point Campus
+  ids:
+  - steam:1649080
+  requires: []
+- name: Marvel's Midnight Suns Digital+ Edition
+  ids:
+  - steam:368260
+  requires: []
+- name: OTXO
+  ids:
+  - steam:1608640
+  requires: []
+- name: Doctor Strange Defenders Skin
+  ids:
+  - steam:1712442
+  requires: []

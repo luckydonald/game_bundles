@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Mar 2023) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13040/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13040/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13040/source.json
+games:
+- name: Monster Crown
+  ids:
+  - steam:830370
+  requires: []
+- name: Edge Of Eternity
+  ids:
+  - steam:269190
+  requires: []
+- name: BIOMUTANT
+  ids:
+  - steam:597820
+  requires: []
+- name: Golden Light
+  ids:
+  - steam:1245430
+  requires: []
+- name: Demon Turf
+  ids:
+  - unresolved:source:isthereanydeal:13040:demon-turf
+  requires: []
+- name: Rogue Lords
+  ids:
+  - steam:1069690
+  requires: []
+- name: Hero's Hour
+  ids:
+  - steam:1656780
+  requires: []
+- name: Jurassic World Evolution 2
+  ids:
+  - steam:1244460
+  requires: []

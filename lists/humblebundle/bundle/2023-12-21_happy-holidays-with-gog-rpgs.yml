@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Happy Holidays with GOG RPGs Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13720/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13720/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13720/source.json
+games:
+- name: ELEX
+  ids:
+  - steam:411300
+  requires: []
+- name: 'Kingdom Come: Deliverance'
+  ids:
+  - steam:379430
+  requires: []
+- name: 'Darksiders III: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:13720:darksiders-iii-deluxe-edition
+  requires: []
+- name: Vampyr
+  ids:
+  - steam:427290
+  requires: []
+- name: 'Thronebreaker: The Witcher Tales'
+  ids:
+  - steam:973760
+  requires: []
+- name: GreedFall - Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:13720:greedfall-gold-edition
+  requires: []
+- name: Wasteland 3 Colorado Collection
+  ids:
+  - unresolved:source:isthereanydeal:13720:wasteland-3-colorado-collection
+  requires: []

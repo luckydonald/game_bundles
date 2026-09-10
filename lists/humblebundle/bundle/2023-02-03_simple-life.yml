@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sim-ple Life Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12946/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12946/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12946/source.json
+games:
+- name: Summer in Mara
+  ids:
+  - steam:962580
+  requires: []
+- name: Garden Paws
+  ids:
+  - steam:840010
+  requires: []
+- name: 'Winkeltje: The Little Shop'
+  ids:
+  - steam:949290
+  requires: []
+- name: Staxel
+  ids:
+  - steam:405710
+  requires: []
+- name: 'Yonder: The Cloud Catcher Chronicles'
+  ids:
+  - steam:580200
+  requires: []
+- name: Lake
+  ids:
+  - steam:1118240
+  requires: []
+- name: Townscaper
+  ids:
+  - steam:1291340
+  requires: []
+- name: Luna's Fishing Garden
+  ids:
+  - steam:1477790
+  requires: []
