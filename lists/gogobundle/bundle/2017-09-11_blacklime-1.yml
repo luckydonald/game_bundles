@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Black Lime Studio Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5448/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5448/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5448/source.json
+games:
+- name: Botology - Map "Barazin" for Survival Mode
+  ids:
+  - unresolved:source:isthereanydeal:5448:botology-map-barazin-for-survival-mode
+  requires: []
+- name: Shift
+  ids:
+  - unresolved:source:isthereanydeal:5448:shift
+  requires: []
+- name: Darkness Assault - Extra guns
+  ids:
+  - steam:369610
+  requires: []
+- name: Botology - Map "Zerex" for Survival Mode
+  ids:
+  - steam:385160
+  requires: []
+- name: 'Redemption: Saints And Sinners'
+  ids:
+  - steam:364910
+  requires: []
+- name: Botology
+  ids:
+  - steam:363610
+  requires: []
+- name: Darkness Assault - New Costumes
+  ids:
+  - steam:369470
+  requires: []
+- name: The Darkness Assault
+  ids:
+  - unresolved:source:isthereanydeal:5448:the-darkness-assault
+  requires: []
+- name: Botology - Map "Targul" for Survival Mode
+  ids:
+  - steam:388670
+  requires: []
+- name: Darkness Assault - Soundtrack
+  ids:
+  - steam:339430
+  requires: []
+- name: Botology - Map "Sartilus" for Survival Mode
+  ids:
+  - unresolved:source:isthereanydeal:5448:botology-map-sartilus-for-survival-mode
+  requires: []
+- name: Office Battle - Brutal Mode
+  ids:
+  - steam:420310
+  requires: []
+- name: ROMBY
+  ids:
+  - steam:656210
+  requires: []
+- name: Office Battle
+  ids:
+  - steam:394870
+  requires: []

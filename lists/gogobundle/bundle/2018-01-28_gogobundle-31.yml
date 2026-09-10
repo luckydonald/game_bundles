@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #31 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5844/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5844/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5844/source.json
+games:
+- name: CHEXS
+  ids:
+  - steam:511810
+  requires: []
+- name: John, The Zombie
+  ids:
+  - steam:741500
+  requires: []
+- name: Swap Roles
+  ids:
+  - unresolved:source:isthereanydeal:5844:swap-roles
+  requires: []
+- name: Heroic Dungeon OST
+  ids:
+  - unresolved:source:isthereanydeal:5844:heroic-dungeon-ost
+  requires: []
+- name: Squarism
+  ids:
+  - steam:745030
+  requires: []
+- name: Shroom
+  ids:
+  - unresolved:source:isthereanydeal:5844:shroom
+  requires: []
+- name: 'Squarism: Soundtrack'
+  ids:
+  - steam:750640
+  requires: []
+- name: Galactic Storm
+  ids:
+  - steam:521990
+  requires: []
+- name: Hex-Up
+  ids:
+  - steam:765610
+  requires: []
+- name: Heroic Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:5844:heroic-dungeon
+  requires: []
+- name: PARSE
+  ids:
+  - steam:697530
+  requires: []

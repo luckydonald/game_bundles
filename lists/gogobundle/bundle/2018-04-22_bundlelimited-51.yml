@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #51 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6072/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6072/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6072/source.json
+games:
+- name: Unite Cell
+  ids:
+  - unresolved:source:isthereanydeal:6072:unite-cell
+  requires: []
+- name: Neon Void Runner
+  ids:
+  - steam:842520
+  requires: []
+- name: SpaceRoads
+  ids:
+  - steam:488480
+  requires: []
+- name: Knight Fighter
+  ids:
+  - steam:842590
+  requires: []
+- name: Police Patrol
+  ids:
+  - steam:842530
+  requires: []
+- name: Equalizer
+  ids:
+  - steam:666250
+  requires: []
+- name: NeoBalls2
+  ids:
+  - unresolved:source:isthereanydeal:6072:neoballs2
+  requires: []
+- name: NeoSticks
+  ids:
+  - unresolved:source:isthereanydeal:6072:neosticks
+  requires: []
+- name: The Shadowland
+  ids:
+  - steam:498620
+  requires: []
+- name: Dark Snow
+  ids:
+  - unresolved:source:isthereanydeal:6072:dark-snow
+  requires: []
+- name: EXIST
+  ids:
+  - steam:804130
+  requires: []

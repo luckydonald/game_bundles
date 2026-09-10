@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #18 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5617/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5617/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5617/source.json
+games:
+- name: Anki
+  ids:
+  - steam:395380
+  requires: []
+- name: GET THE GEMS
+  ids:
+  - steam:500940
+  requires: []
+- name: Triple Otakus Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:5617:triple-otakus-puzzle
+  requires: []
+- name: Puzzle Ball
+  ids:
+  - steam:402170
+  requires: []
+- name: Demon Horde Master
+  ids:
+  - unresolved:source:isthereanydeal:5617:demon-horde-master
+  requires: []
+- name: A Long Road Home
+  ids:
+  - steam:576160
+  requires: []
+- name: Immune
+  ids:
+  - unresolved:source:isthereanydeal:5617:immune
+  requires: []
+- name: Fly Destroyer
+  ids:
+  - steam:731790
+  requires: []
+- name: Dream Dealer
+  ids:
+  - steam:532030
+  requires: []
