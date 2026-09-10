@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Resist And Refuse - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1528/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1528/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1528/source.json
+games:
+- name: Resist and Refuse
+  ids:
+  - unresolved:source:isthereanydeal:1528:resist-and-refuse
+  requires: []
