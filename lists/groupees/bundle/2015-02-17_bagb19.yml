@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 19 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1630/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1630/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1630/source.json
+games:
+- name: 'No Turning Back: The Pixel Art Action-Adventure Roguelike'
+  ids:
+  - steam:358080
+  requires: []
+- name: oO
+  ids:
+  - steam:367570
+  requires: []
+- name: Unium
+  ids:
+  - steam:357600
+  requires: []
+- name: SuperLink
+  ids:
+  - unresolved:source:isthereanydeal:1630:superlink
+  requires: []
+- name: STOORM - Full Edition.
+  ids:
+  - unresolved:source:isthereanydeal:1630:stoorm-full-edition
+  requires: []
+- name: Go Home - Rage incoming
+  ids:
+  - steam:365150
+  requires: []
+- name: Dungeon Warfare
+  ids:
+  - steam:355980
+  requires: []
+- name: Zombie Zoeds
+  ids:
+  - unresolved:source:isthereanydeal:1630:zombie-zoeds
+  requires: []
+- name: East Tower - Akio
+  ids:
+  - steam:354950
+  requires: []
+- name: Super Elf Jump
+  ids:
+  - unresolved:source:isthereanydeal:1630:super-elf-jump
+  requires: []
+- name: Tompi Jones
+  ids:
+  - steam:370310
+  requires: []

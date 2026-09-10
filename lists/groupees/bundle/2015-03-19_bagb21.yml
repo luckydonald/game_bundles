@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 21 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1708/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1708/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1708/source.json
+games:
+- name: Hypt
+  ids:
+  - steam:360520
+  requires: []
+- name: Alpha Version.0
+  ids:
+  - steam:359970
+  requires: []
+- name: Orbital Cargo
+  ids:
+  - unresolved:source:isthereanydeal:1708:orbital-cargo
+  requires: []
+- name: StartBolita
+  ids:
+  - steam:364850
+  requires: []
+- name: Broken Bots
+  ids:
+  - steam:366620
+  requires: []
+- name: 'Grave Prosperity: Redux- part 1'
+  ids:
+  - unresolved:source:isthereanydeal:1708:grave-prosperity-redux-part-1
+  requires: []
+- name: Boss Wave
+  ids:
+  - unresolved:source:isthereanydeal:1708:boss-wave
+  requires: []
+- name: S.O.R.S
+  ids:
+  - unresolved:source:isthereanydeal:1708:s-o-rs
+  requires: []
+- name: Cloud Knights
+  ids:
+  - unresolved:source:isthereanydeal:1708:cloud-knights
+  requires: []
+- name: Descending
+  ids:
+  - steam:600670
+  requires: []

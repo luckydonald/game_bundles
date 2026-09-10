@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Eye for an Eye Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2314/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2314/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2314/source.json
+games:
+- name: Twistyper
+  ids:
+  - unresolved:source:isthereanydeal:2314:twistyper
+  requires: []
+- name: City of Fools
+  ids:
+  - steam:359250
+  requires: []
+- name: Predator Simulator
+  ids:
+  - steam:369100
+  requires: []
+- name: CARGO 3
+  ids:
+  - steam:318690
+  requires: []
+- name: Treasures of Arcania
+  ids:
+  - unresolved:source:isthereanydeal:2314:treasures-of-arcania
+  requires: []
+- name: Shmadow
+  ids:
+  - steam:397570
+  requires: []
