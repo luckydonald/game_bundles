@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Tower Defense Bundle — Select 3 for 4.95, 5 for 7.99, 7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15436/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15436/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15436/source.json
+games:
+- name: 'DG2: Defense Grid 2'
+  ids:
+  - steam:221540
+  requires: []
+- name: GemCraft Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15436:gemcraft-bundle
+  requires: []
+- name: LunarLux
+  ids:
+  - steam:1932680
+  requires: []
+- name: Legendary Hoplite
+  ids:
+  - steam:1479810
+  requires: []
+- name: Otherwar
+  ids:
+  - steam:1526870
+  requires: []
+- name: These Doomed Isles
+  ids:
+  - steam:1840710
+  requires: []
+- name: Gods Against Machines
+  ids:
+  - steam:2207470
+  requires: []
+- name: Hexguardian
+  ids:
+  - steam:2381740
+  requires: []
+- name: 'Rock of Ages III: Make and Break'
+  ids:
+  - steam:1101360
+  requires: []
+- name: Wall World Complete
+  ids:
+  - unresolved:source:isthereanydeal:15436:wall-world-complete
+  requires: []
+- name: Everwarder
+  ids:
+  - steam:2307170
+  requires: []
+- name: TDS - Tower Defense Strategy
+  ids:
+  - steam:2392280
+  requires: []
+- name: Vambrace Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15436:vambrace-bundle
+  requires: []
+- name: 'Compadrone: Land Wars'
+  ids:
+  - steam:3841980
+  requires: []

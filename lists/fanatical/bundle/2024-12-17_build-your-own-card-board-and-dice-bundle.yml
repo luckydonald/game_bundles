@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Card, Board and Dice Bundle — Select 3 for 4.99, 5 for 7.99,
+  7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14741/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14741/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14741/source.json
+games:
+- name: Hasbro's BATTLESHIP
+  ids:
+  - steam:893050
+  requires: []
+- name: 'SteamWorld Quest: Hand of Gilgamech'
+  ids:
+  - steam:804010
+  requires: []
+- name: 'Warhammer 40,000: Gladius - Relics of War'
+  ids:
+  - steam:489630
+  requires: []
+- name: Card City Nights 2
+  ids:
+  - steam:241300
+  requires: []
+- name: Aeon's End
+  ids:
+  - steam:1063580
+  requires: []
+- name: Cardpocalypse
+  ids:
+  - steam:904400
+  requires: []
+- name: Monster Train
+  ids:
+  - steam:1102190
+  requires: []
+- name: DungeonTop
+  ids:
+  - steam:1146230
+  requires: []
+- name: 'ARCANIUM: Rise of Akhan'
+  ids:
+  - steam:1056840
+  requires: []
+- name: The Magister
+  ids:
+  - steam:1304770
+  requires: []
+- name: 'Fury of Dracula: Digital Edition'
+  ids:
+  - steam:958530
+  requires: []
+- name: Luck be a Landlord
+  ids:
+  - steam:1404850
+  requires: []
+- name: 'Field of Glory II: Medieval'
+  ids:
+  - steam:1368870
+  requires: []
+- name: THE GAME OF LIFE 2
+  ids:
+  - steam:1455630
+  requires: []
+- name: 'Kardboard Kings: Card Shop Simulator'
+  ids:
+  - steam:1298480
+  requires: []
+- name: Mystic Vale Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:14741:mystic-vale-complete-pack
+  requires: []
+- name: Aces and Adventures
+  ids:
+  - steam:1815570
+  requires: []
+- name: Right and Down
+  ids:
+  - steam:2008050
+  requires: []
+- name: Cardboard Town
+  ids:
+  - steam:2198070
+  requires: []
+- name: Right and Down and Dice
+  ids:
+  - steam:2228010
+  requires: []
+- name: Clue/Cluedo
+  ids:
+  - steam:2506480
+  requires: []
+- name: 'Clue/Cluedo: Classic Edition'
+  ids:
+  - steam:794800
+  requires: []
+- name: THE GAME OF LIFE
+  ids:
+  - steam:403120
+  requires: []
+- name: Siberian Dawn & Mission Pack 1+2 Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:14741:siberian-dawn-and-mission-pack-1-and-2-triple-pack
+  requires: []

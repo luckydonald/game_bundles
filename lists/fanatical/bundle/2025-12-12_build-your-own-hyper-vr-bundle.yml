@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Hyper VR Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15675/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15675/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15675/source.json
+games:
+- name: Until You Fall
+  ids:
+  - steam:858260
+  requires: []
+- name: Windlands 2
+  ids:
+  - steam:458580
+  requires: []
+- name: Arizona Sunshine - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15675:arizona-sunshine-deluxe-edition
+  requires: []
+- name: Death Horizon Reloaded
+  ids:
+  - steam:1829370
+  requires: []
+- name: After the Fall - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15675:after-the-fall-deluxe-edition
+  requires: []
+- name: RUINSMAGUS
+  ids:
+  - steam:1701560
+  requires: []
+- name: Hellsweeper VR
+  ids:
+  - steam:1341490
+  requires: []
+- name: The Light Brigade
+  ids:
+  - steam:1579880
+  requires: []
+- name: The 7th Guest VR
+  ids:
+  - unresolved:source:isthereanydeal:15675:the-7th-guest-vr
+  requires: []
+- name: 'I Expect You To Die 2: The Spy and the Liar'
+  ids:
+  - steam:1499120
+  requires: []
+- name: 'Vestiges: Fallen Tribes'
+  ids:
+  - steam:2511780
+  requires: []
+- name: 'Metal: Hellsinger VR'
+  ids:
+  - steam:2878270
+  requires: []
+- name: 'Death Horizon: Cyberfusion'
+  ids:
+  - steam:2934110
+  requires: []
+- name: YUKI Space Ranger
+  ids:
+  - steam:1184500
+  requires: []
+- name: 'Z.O.N.A: Origin'
+  ids:
+  - steam:2539520
+  requires: []
+- name: Trenches VR
+  ids:
+  - steam:2687660
+  requires: []
+- name: Wolfenstein Cyberpilot & DOOM VFR Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15675:wolfenstein-cyberpilot-and-doom-vfr-double-pack
+  requires: []

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Frog Detective 1 & 2 Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14644/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14644/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14644/source.json
+games:
+- name: 'Frog Detective 2: The Case of the Invisible Wizard'
+  ids:
+  - steam:1047220
+  requires: []
+- name: 'Frog Detective 1: The Haunted Island'
+  ids:
+  - steam:963000
+  requires: []

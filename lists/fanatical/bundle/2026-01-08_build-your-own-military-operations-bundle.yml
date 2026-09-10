@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Military Operations Bundle (Jan 2026) — Select 2 for 9.99, 5
+  for 19.99, 8 for 29.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15773/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15773/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15773/source.json
+games:
+- name: Panzer Corps 2
+  ids:
+  - steam:1072040
+  requires: []
+- name: 'Combat Mission: Battle for Normandy'
+  ids:
+  - steam:2297010
+  requires: []
+- name: 'Combat Mission: Fortress Italy'
+  ids:
+  - steam:2551110
+  requires: []
+- name: 'Battle Academy 2: Eastern Front'
+  ids:
+  - steam:306640
+  requires: []
+- name: Armored Brigade
+  ids:
+  - steam:1089840
+  requires: []
+- name: 'Decisive Campaigns: The Blitzkrieg from Warsaw to Paris'
+  ids:
+  - steam:337760
+  requires: []
+- name: 'Strategic Command: World War I'
+  ids:
+  - steam:1096930
+  requires: []
+- name: 'Strategic Command WWII: War in Europe'
+  ids:
+  - steam:593030
+  requires: []
+- name: 'Strategic Command WWII: World at War'
+  ids:
+  - steam:957720
+  requires: []
+- name: 'Flashpoint Campaigns: Red Storm Player''s Edition'
+  ids:
+  - steam:330720
+  requires: []
+- name: Combat Mission Shock Force 2
+  ids:
+  - steam:1369370
+  requires: []
+- name: Combat Mission Black Sea
+  ids:
+  - steam:1502380
+  requires: []
+- name: Combat Mission Cold War
+  ids:
+  - steam:1551160
+  requires: []
+- name: Headquarters World War II
+  ids:
+  - steam:1840800
+  requires: []
+- name: 'Combat Mission: Red Thunder'
+  ids:
+  - steam:2418000
+  requires: []
+- name: 'Combat Mission: Final Blitzkrieg'
+  ids:
+  - steam:2676000
+  requires: []
+- name: 'Strategic Command WWII: War in the Pacific'
+  ids:
+  - steam:2740080
+  requires: []

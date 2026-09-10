@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Early Access Bundle — Select 2 for 14.99, 3 for 21.75, 5 for
+  34.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15013/source.json
+games:
+- name: Onirism
+  ids:
+  - steam:1057640
+  requires: []
+- name: The Coin Game
+  ids:
+  - steam:598980
+  requires: []
+- name: Research Story
+  ids:
+  - steam:1629830
+  requires: []
+- name: Havendock
+  ids:
+  - steam:2020710
+  requires: []
+- name: INCISION
+  ids:
+  - steam:1734680
+  requires: []
+- name: Supplice
+  ids:
+  - steam:1693280
+  requires: []
+- name: HumanitZ
+  ids:
+  - steam:1766060
+  requires: []
+- name: Ultimate Zombie Defense 2
+  ids:
+  - steam:1765300
+  requires: []
+- name: Knights Within
+  ids:
+  - steam:2406180
+  requires: []
+- name: Gladio Mori
+  ids:
+  - steam:2689120
+  requires: []
+- name: Forgotten Seas
+  ids:
+  - steam:2168260
+  requires: []
+- name: Streamer Life Simulator 2
+  ids:
+  - steam:2890830
+  requires: []
+- name: TDS - Tower Defense Strategy
+  ids:
+  - steam:2392280
+  requires: []
+- name: Metal Thunder
+  ids:
+  - steam:3091340
+  requires: []

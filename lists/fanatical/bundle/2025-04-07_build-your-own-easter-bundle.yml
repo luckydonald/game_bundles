@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Easter Bundle (2025) — Select 3 for 4.95, 5 for 7.99, 7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15039/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15039/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15039/source.json
+games:
+- name: Exiled Kingdoms
+  ids:
+  - steam:788270
+  requires: []
+- name: Wayward
+  ids:
+  - steam:379210
+  requires: []
+- name: Black Book
+  ids:
+  - steam:1138660
+  requires: []
+- name: Filament
+  ids:
+  - steam:1137350
+  requires: []
+- name: WOLFLAME
+  ids:
+  - steam:448160
+  requires: []
+- name: Dragon Spirits
+  ids:
+  - steam:1074190
+  requires: []
+- name: Hokko Life
+  ids:
+  - steam:824000
+  requires: []
+- name: Mosaic Chronicles
+  ids:
+  - steam:1034150
+  requires: []
+- name: Doomed to Hell
+  ids:
+  - steam:1916850
+  requires: []
+- name: Mokoko X
+  ids:
+  - steam:1785000
+  requires: []
+- name: They Came From the Sky 2
+  ids:
+  - steam:2080010
+  requires: []
+- name: 'Penny Larceny: Gig Economy Supervillain'
+  ids:
+  - steam:2227030
+  requires: []
+- name: There's No Easter Eggs
+  ids:
+  - steam:2661520
+  requires: []
+- name: Ad Fundum
+  ids:
+  - steam:2647820
+  requires: []
+- name: Keeper's Toll
+  ids:
+  - steam:2002220
+  requires: []
+- name: Circus of TimTim
+  ids:
+  - steam:2697070
+  requires: []
+- name: Rocket Rats
+  ids:
+  - steam:3069810
+  requires: []

@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Best of Indie Legends Bundle (New Year 2026) — 2+ games = 2.50
+  each; 4+ games = 2.25 each; 7+ games = 2.00 each.
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15786/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15786/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15786/source.json
+games:
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  requires: []
+- name: Dark Devotion
+  ids:
+  - steam:718590
+  requires: []
+- name: Not For Broadcast
+  ids:
+  - steam:1147550
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: EVERSPACE™ - Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:15786:everspace-ultimate-edition
+  requires: []
+- name: Party Hard 2
+  ids:
+  - steam:572430
+  requires: []
+- name: Pathologic 2
+  ids:
+  - steam:505230
+  requires: []
+- name: Hello Neighbor
+  ids:
+  - steam:521890
+  requires: []
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+  requires: []
+- name: Rampage Knights 2-Pack
+  ids:
+  - steam:314410
+  requires: []
+- name: Happy Game
+  ids:
+  - steam:1206060
+  requires: []
+- name: PlateUp!
+  ids:
+  - steam:1599600
+  requires: []
+- name: Tinykin
+  ids:
+  - steam:1599020
+  requires: []
+- name: 'Frog Detective 3: Corruption at Cowboy County'
+  ids:
+  - steam:1171320
+  requires: []
+- name: Flooded
+  ids:
+  - steam:1795470
+  requires: []
+- name: Eden Genesis
+  ids:
+  - steam:2562900
+  requires: []
+- name: 'NeoDuel: Backpack Monsters'
+  ids:
+  - steam:2693940
+  requires: []
+- name: 'Mini City: Mayhem'
+  ids:
+  - steam:2517440
+  requires: []
+- name: Hammerwatch Anniversary Edition & Hammerwatch II Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15786:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  requires: []
+- name: AMID EVIL & DUSK Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15786:amid-evil-and-dusk-double-pack
+  requires: []
+- name: Nocturnal
+  ids:
+  - steam:1634080
+  requires: []
+- name: Aeterna Metroidvania Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15786:aeterna-metroidvania-double-pack
+  requires: []

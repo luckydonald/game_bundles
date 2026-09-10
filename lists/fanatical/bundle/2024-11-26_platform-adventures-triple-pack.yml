@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Platform Adventures Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14643/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14643/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14643/source.json
+games:
+- name: Overloop
+  ids:
+  - steam:720660
+  requires: []
+- name: StrikeForce Kitty
+  ids:
+  - steam:745330
+  requires: []
+- name: 'A Tale of Paper: Refolded'
+  ids:
+  - steam:1454640
+  requires: []

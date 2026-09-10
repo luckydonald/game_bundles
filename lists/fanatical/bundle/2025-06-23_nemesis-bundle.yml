@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Nemesis Bundle (Summer 2025) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15204/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15204/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15204/source.json
+games:
+- name: Rustler
+  ids:
+  - steam:844260
+  requires: []
+- name: Bzzzt
+  ids:
+  - steam:1293170
+  requires: []
+- name: Ad Infinitum
+  ids:
+  - steam:1234430
+  requires: []
+- name: Nova Lands
+  ids:
+  - steam:1501610
+  requires: []
+- name: StormEdge
+  ids:
+  - steam:2321350
+  requires: []
+- name: Fargone
+  ids:
+  - steam:2242100
+  requires: []

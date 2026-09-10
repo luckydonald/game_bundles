@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own FMV Adventures Bundle Redux — Select 3 for 4.95, 5 for 7.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15462/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15462/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15462/source.json
+games:
+- name: Not For Broadcast
+  ids:
+  - steam:1147550
+  requires: []
+- name: The Infectious Madness of Doctor Dekker
+  ids:
+  - steam:545540
+  requires: []
+- name: The Shapeshifting Detective
+  ids:
+  - steam:898650
+  requires: []
+- name: The Bunker
+  ids:
+  - steam:481110
+  requires: []
+- name: Late Shift
+  ids:
+  - steam:584980
+  requires: []
+- name: Dark Nights with Poe and Munro
+  ids:
+  - steam:1098170
+  requires: []
+- name: She Sees Red - Interactive Movie
+  ids:
+  - steam:1081510
+  requires: []
+- name: Five Dates
+  ids:
+  - steam:1353270
+  requires: []
+- name: I Saw Black Clouds
+  ids:
+  - steam:1346830
+  requires: []
+- name: Night Book
+  ids:
+  - steam:1477920
+  requires: []
+- name: Bloodshore
+  ids:
+  - steam:1490840
+  requires: []
+- name: Who Pressed Mute on Uncle Marcus?
+  ids:
+  - steam:1628130
+  requires: []
+- name: Ten Dates
+  ids:
+  - steam:1946070
+  requires: []
+- name: Murderous Muses
+  ids:
+  - steam:1727270
+  requires: []
+- name: The Complex
+  ids:
+  - steam:1107790
+  requires: []

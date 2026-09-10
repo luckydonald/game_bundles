@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Battle, Build & Farm Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14649/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14649/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14649/source.json
+games:
+- name: Sparklite
+  ids:
+  - steam:943140
+  requires: []
+- name: Tinytopia
+  ids:
+  - steam:968550
+  requires: []
+- name: Peachleaf Pirates
+  ids:
+  - steam:1156510
+  requires: []

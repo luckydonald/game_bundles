@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Debut Bundle — Select 3 for 4.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14902/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14902/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14902/source.json
+games:
+- name: Jewel Match Solitaire Collector's Edition
+  ids:
+  - steam:1426890
+  requires: []
+- name: Papetura
+  ids:
+  - steam:593640
+  requires: []
+- name: Jewel Match Atlantis Solitaire 2 - Collector's Edition
+  ids:
+  - steam:1543750
+  requires: []
+- name: Cursed to Golf
+  ids:
+  - steam:1726120
+  requires: []
+- name: Savior of the Abyss
+  ids:
+  - steam:1590640
+  requires: []
+- name: Clutter's Greatest Hits - Collector's Edition
+  ids:
+  - steam:2153050
+  requires: []
+- name: X Invader
+  ids:
+  - steam:2090760
+  requires: []
+- name: Archaeogem
+  ids:
+  - steam:2092730
+  requires: []
+- name: Evolings
+  ids:
+  - steam:2281820
+  requires: []
+- name: Lindwyrm
+  ids:
+  - unresolved:source:isthereanydeal:14902:lindwyrm
+  requires: []
+- name: 'Sylvio: Black Waters'
+  ids:
+  - steam:2531300
+  requires: []
+- name: The Dark Cave
+  ids:
+  - steam:2758350
+  requires: []
+- name: Pancake Patrol
+  ids:
+  - steam:2587840
+  requires: []
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  requires: []

@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Nitro Bundle (Fall 2025) — Select 3 for 4.95, 5 for 7.99, 7 for
+  10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15540/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15540/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15540/source.json
+games:
+- name: 'FURIDASHI: Drift Cyber Sport'
+  ids:
+  - steam:658570
+  requires: []
+- name: New Star GP
+  ids:
+  - steam:2217580
+  requires: []
+- name: Gravel
+  ids:
+  - steam:558260
+  requires: []
+- name: RDS - The Official Drift Videogame
+  ids:
+  - steam:934930
+  requires: []
+- name: Super Indie Karts
+  ids:
+  - steam:323670
+  requires: []
+- name: OverDrift Festival
+  ids:
+  - steam:1273440
+  requires: []
+- name: WRC 10 FIA World Rally Championship
+  ids:
+  - steam:1462810
+  requires: []
+- name: Urban Trial Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15540:urban-trial-bundle
+  requires: []
+- name: Yellow Taxi Goes Vroom
+  ids:
+  - steam:2011780
+  requires: []
+- name: Sunrise GP
+  ids:
+  - steam:2670800
+  requires: []
+- name: GT Racing 1980
+  ids:
+  - steam:3037960
+  requires: []
+- name: Motorcycle Night Ride
+  ids:
+  - steam:3358360
+  requires: []
+- name: RewindApp Racing Penta Pack
+  ids:
+  - unresolved:source:isthereanydeal:15540:rewindapp-racing-penta-pack
+  requires: []
+- name: 'Big Rigs: Over the Road Racing'
+  ids:
+  - steam:3598130
+  requires: []
+- name: 3DClouds Classic Racing Pack
+  ids:
+  - unresolved:source:isthereanydeal:15540:3dclouds-classic-racing-pack
+  requires: []
+- name: Defunct 4-Pack
+  ids:
+  - unresolved:source:isthereanydeal:15540:defunct-4-pack
+  requires: []
