@@ -1,0 +1,1 @@
+Background command "Wait for the detached rewrite script process to finish, then show its output" completed (exit code 0)

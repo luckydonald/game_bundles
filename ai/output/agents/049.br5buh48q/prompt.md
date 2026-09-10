@@ -1,0 +1,1 @@
+Background command "Run the global-phase bundle history rewrite script" completed (exit code 0)

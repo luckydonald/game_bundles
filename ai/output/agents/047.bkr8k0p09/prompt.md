@@ -1,0 +1,1 @@
+Background command "Run the full bundle-history rewrite in the background" completed (exit code 0)
