@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Squad Goals — Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/squad-goals
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-07-10_squad-goals/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-07-10_squad-goals/source.json
+games:
+- name: 'TMNT: Splintered Fate'
+  ids:
+  - steam:2996040
+  requires: []
+- name: PlateUp!
+  ids:
+  - steam:1599600
+  requires: []
+- name: Murky Divers
+  ids:
+  - steam:2963880
+  requires: []
+- name: KeyWe
+  ids:
+  - steam:1242980
+  requires: []
+- name: Kitchen Wars
+  ids:
+  - steam:2955840
+  requires: []
+- name: Content Warning
+  ids:
+  - steam:2881650
+  requires: []
+- name: Human Fall Flat
+  ids:
+  - steam:477160
+  requires: []
+- name: PHOGS!
+  ids:
+  - steam:850320
+  requires: []
+- name: 'Kritter: Defend Together'
+  ids:
+  - steam:2103950
+  requires: []

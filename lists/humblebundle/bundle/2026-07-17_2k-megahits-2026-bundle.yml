@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 2K Megahits 2026 Bundle — Entire 15 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/2k-megahits-2026-bundle
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-07-17_2k-megahits-2026-bundle/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-07-17_2k-megahits-2026-bundle/source.json
+games:
+- name: Risk of Rain 2
+  ids:
+  - steam:632360
+  requires: []
+- name: Borderlands 3 Standard Edition
+  ids:
+  - steam:397540
+  requires: []
+- name: 'Mafia II: Definitive Edition'
+  ids:
+  - steam:1030830
+  requires: []
+- name: BioShock Infinite
+  ids:
+  - steam:8870
+  requires: []
+- name: Tiny Tina's Wonderlands
+  ids:
+  - steam:1286680
+  requires: []
+- name: The Quarry
+  ids:
+  - steam:1577120
+  requires: []
+- name: Tribes of Midgard Deluxe Edition
+  ids:
+  - steam:1663080
+  requires: []
+- name: Homeworld Remastered Collection
+  ids:
+  - steam:244160
+  requires: []
+- name: Tales from the Borderlands
+  ids:
+  - steam:330830
+  requires: []
+- name: Bulletstorm Full Clip Edition
+  ids:
+  - steam:501590
+  requires: []
+- name: 'Duke Nukem 3D: 20th Anniversary World Tour'
+  ids:
+  - steam:434050
+  requires: []
+- name: Hidden & Dangerous Bundle
+  ids:
+  - unresolved:source:humblebundle:hiddenanddangerous_bundle
+  requires: []
+- name: The Darkness II
+  ids:
+  - steam:67370
+  requires: []
+- name: 'X-COM: UFO Defense'
+  ids:
+  - steam:7760
+  requires: []
+- name: XCOM Enemy Unknown
+  ids:
+  - steam:200510
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Heroines: Echoes, Voids, and Visions — entire-6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15971/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15971/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15971/source.json
+games:
+- name: Eastward
+  ids:
+  - steam:977880
+  requires: []
+- name: The Medium
+  ids:
+  - steam:1293160
+  requires: []
+- name: 'ANNO: Mutationem'
+  ids:
+  - steam:1368030
+  requires: []
+- name: Sorry We're Closed
+  ids:
+  - steam:1796580
+  requires: []
+- name: 'Ereban: Shadow Legacy'
+  ids:
+  - steam:1671360
+  requires: []
+- name: Cabernet
+  ids:
+  - steam:2401410
+  requires: []
