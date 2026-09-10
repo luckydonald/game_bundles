@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Abstract Bundle 2.0 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2212/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2212/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2212/source.json
+games:
+- name: ibb & obb - Best Friends Forever Double Pack
+  ids:
+  - steam:95400
+  requires: []
+- name: Glass Wing
+  ids:
+  - unresolved:source:isthereanydeal:2212:glass-wing
+  requires: []
+- name: Reflections
+  ids:
+  - steam:352360
+  requires: []
+- name: Chime
+  ids:
+  - steam:62100
+  requires: []
+- name: Strata
+  ids:
+  - steam:286380
+  requires: []
+- name: Tomb of Tyrants
+  ids:
+  - steam:340360
+  requires: []
+- name: Khet 2.0
+  ids:
+  - steam:312720
+  requires: []
+- name: TRIP
+  ids:
+  - unresolved:source:isthereanydeal:2212:trip
+  requires: []
+- name: Fake Colours
+  ids:
+  - steam:334300
+  requires: []
+- name: Nomad
+  ids:
+  - steam:378370
+  requires: []

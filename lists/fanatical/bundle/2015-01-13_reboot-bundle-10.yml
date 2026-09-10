@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reboot Bundle 10.0 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1541/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1541/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1541/source.json
+games:
+- name: Rush for Glory
+  ids:
+  - steam:303470
+  requires: []
+- name: Jet Car Stunts
+  ids:
+  - steam:274880
+  requires: []
+- name: Xotic Temple Crypt Expansion Pack
+  ids:
+  - unresolved:source:isthereanydeal:1541:xotic-temple-crypt-expansion-pack
+  requires: []
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Vector
+  ids:
+  - steam:248970
+  requires: []
+- name: Fortix 2
+  ids:
+  - steam:45450
+  requires: []
+- name: Ignite
+  ids:
+  - steam:45410
+  requires: []
+- name: Residue
+  ids:
+  - unresolved:source:isthereanydeal:1541:residue
+  requires: []
+- name: 'SOL: Exodus'
+  ids:
+  - steam:200410
+  requires: []
+- name: 'Xotic: Warp Field Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:1541:xotic-warp-field-expansion-pack
+  requires: []
+- name: Xotic
+  ids:
+  - steam:92600
+  requires: []
+- name: 'Xotic: Pipe Works Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:1541:xotic-pipe-works-expansion-pack
+  requires: []
+- name: 8BitBoy
+  ids:
+  - steam:296910
+  requires: []

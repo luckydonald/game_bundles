@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Arctic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1133/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1133/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1133/source.json
+games:
+- name: Post Mortem
+  ids:
+  - steam:46550
+  requires: []
+- name: Still Life 2
+  ids:
+  - steam:46490
+  requires: []
+- name: Syberia
+  ids:
+  - steam:46500
+  requires: []
+- name: 'Scratches: Director''s Cut'
+  ids:
+  - steam:46460
+  requires: []
+- name: Nikopol
+  ids:
+  - unresolved:source:isthereanydeal:1133:nikopol
+  requires: []
+- name: Still Life
+  ids:
+  - steam:46480
+  requires: []
+- name: Syberia II
+  ids:
+  - steam:46510
+  requires: []

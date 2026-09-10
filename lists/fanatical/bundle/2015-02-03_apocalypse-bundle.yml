@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Apocalypse Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1597/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1597/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1597/source.json
+games:
+- name: MorphShift Wars
+  ids:
+  - unresolved:source:isthereanydeal:1597:morphshift-wars
+  requires: []
+- name: The Nightmare Cooperative
+  ids:
+  - steam:310070
+  requires: []
+- name: 'Meridian: New World'
+  ids:
+  - steam:265120
+  requires: []
+- name: Verde Station
+  ids:
+  - steam:324120
+  requires: []
+- name: 'Afterfall: Reconquest Episode I'
+  ids:
+  - unresolved:source:isthereanydeal:1597:afterfall-reconquest-episode-i
+  requires: []
+- name: Sideway™ New York
+  ids:
+  - steam:200190
+  requires: []
+- name: Madballs in Babo:Invasion
+  ids:
+  - steam:25700
+  requires: []
+- name: Claire
+  ids:
+  - steam:252830
+  requires: []
+- name: Pineview Drive
+  ids:
+  - steam:288880
+  requires: []
+- name: Evoland
+  ids:
+  - steam:233470
+  requires: []
+- name: bit Dungeon II
+  ids:
+  - steam:331440
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Deep Space Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2012/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2012/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2012/source.json
+games:
+- name: Dark Matter
+  ids:
+  - steam:251410
+  requires: []
+- name: Smugglers V
+  ids:
+  - unresolved:source:isthereanydeal:2012:smugglers-v
+  requires: []
+- name: Space Pirates and Zombies
+  ids:
+  - steam:107200
+  requires: []
+- name: Boid
+  ids:
+  - steam:314010
+  requires: []
+- name: Syder Arcade
+  ids:
+  - steam:252310
+  requires: []
+- name: Enemy Mind
+  ids:
+  - steam:285840
+  requires: []
+- name: Waves
+  ids:
+  - steam:107600
+  requires: []
+- name: Dead Effect
+  ids:
+  - steam:286040
+  requires: []
+- name: 'Q.U.B.E: Director''s Cut'
+  ids:
+  - unresolved:source:isthereanydeal:2012:q-u-b-e-directors-cut
+  requires: []
+- name: Universe Sandbox Legacy
+  ids:
+  - unresolved:source:isthereanydeal:2012:universe-sandbox-legacy
+  requires: []

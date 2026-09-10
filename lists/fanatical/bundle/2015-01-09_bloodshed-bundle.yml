@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bloodshed Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1530/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1530/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1530/source.json
+games:
+- name: To the Moon
+  ids:
+  - steam:206440
+  requires: []
+- name: 'Making History II: The War of the World'
+  ids:
+  - steam:46770
+  requires: []
+- name: 'Tales From Space: Mutant Blobs Attack'
+  ids:
+  - steam:206370
+  requires: []
+- name: Guns of Icarus Online
+  ids:
+  - steam:209080
+  requires: []
+- name: Last Inua
+  ids:
+  - steam:331980
+  requires: []
+- name: Probably Archery
+  ids:
+  - steam:263420
+  requires: []
+- name: Chronology
+  ids:
+  - steam:269330
+  requires: []
+- name: Skilltree Saga
+  ids:
+  - steam:315320
+  requires: []
+- name: Blood Knights
+  ids:
+  - steam:258220
+  requires: []
+- name: Summoner
+  ids:
+  - steam:275570
+  requires: []

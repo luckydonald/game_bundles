@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Destiny Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1291/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1291/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1291/source.json
+games:
+- name: Zoo Park
+  ids:
+  - steam:307760
+  requires: []
+- name: Post Master
+  ids:
+  - steam:275080
+  requires: []
+- name: Warring States
+  ids:
+  - steam:282680
+  requires: []
+- name: Commando Jack
+  ids:
+  - steam:299260
+  requires: []
+- name: Haegemonia Bundle
+  ids:
+  - unresolved:source:isthereanydeal:1291:haegemonia-bundle
+  requires: []
+- name: 'FATE: The Traitor Soul'
+  ids:
+  - steam:303680
+  requires: []
+- name: Nicole (Otome Version) - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:1291:nicole-otome-version-deluxe-edition
+  requires: []
+- name: 'Battleplan: American Civil War'
+  ids:
+  - steam:285130
+  requires: []

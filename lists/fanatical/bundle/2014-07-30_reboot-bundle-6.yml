@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reboot Bundle 6.0 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1036/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1036/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1036/source.json
+games:
+- name: 'Expeditions: Conquistador'
+  ids:
+  - steam:237430
+  requires: []
+- name: 'Steel Storm: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1036:steel-storm-complete-edition
+  requires: []
+- name: Knytt Underground
+  ids:
+  - steam:248190
+  requires: []
+- name: Blockland
+  ids:
+  - steam:250340
+  requires: []
+- name: Rock of Ages
+  ids:
+  - steam:22230
+  requires: []
+- name: POSTAL
+  ids:
+  - steam:232770
+  requires: []

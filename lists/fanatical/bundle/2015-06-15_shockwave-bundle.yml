@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Shockwave Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2127/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2127/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2127/source.json
+games:
+- name: Visibility
+  ids:
+  - steam:368290
+  requires: []
+- name: Lilly Looking Through
+  ids:
+  - steam:250030
+  requires: []
+- name: Frozen Synapse Prime
+  ids:
+  - unresolved:source:isthereanydeal:2127:frozen-synapse-prime
+  requires: []
+- name: Boson X
+  ids:
+  - steam:302610
+  requires: []
+- name: Riptide GP2
+  ids:
+  - steam:257790
+  requires: []
+- name: Vertical Drop Heroes HD
+  ids:
+  - steam:311480
+  requires: []
+- name: 'Smugglers 5: Invasion'
+  ids:
+  - unresolved:source:isthereanydeal:2127:smugglers-5-invasion
+  requires: []
+- name: '140'
+  ids:
+  - steam:242820
+  requires: []
+- name: Drakensang - The River of Time
+  ids:
+  - steam:33770
+  requires: []
+- name: Two Digits
+  ids:
+  - steam:371330
+  requires: []
