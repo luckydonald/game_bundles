@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Asteroid Bounty Hunter - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3117/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3117/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3117/source.json
+games:
+- name: Asteroid Bounty Hunter
+  ids:
+  - steam:444220
+  requires: []

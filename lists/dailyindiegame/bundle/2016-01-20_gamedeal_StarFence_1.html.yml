@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: StarFence - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2955/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2955/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2955/source.json
+games:
+- name: StarFence
+  ids:
+  - unresolved:source:isthereanydeal:2955:starfence
+  requires: []

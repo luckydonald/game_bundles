@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG reBundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1441/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1441/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1441/source.json
+games:
+- name: Noire
+  ids:
+  - unresolved:source:isthereanydeal:1441:noire
+  requires: []
+- name: Unhack
+  ids:
+  - steam:340800
+  requires: []
+- name: Plazma Being
+  ids:
+  - steam:346630
+  requires: []
+- name: 'RADICAL HEROES : CRIMSON CITY CRISIS'
+  ids:
+  - unresolved:source:isthereanydeal:1441:radical-heroes-crimson-city-crisis
+  requires: []
+- name: 'SBX: Invasion'
+  ids:
+  - steam:371620
+  requires: []
+- name: SickBrick
+  ids:
+  - unresolved:source:isthereanydeal:1441:sickbrick
+  requires: []
