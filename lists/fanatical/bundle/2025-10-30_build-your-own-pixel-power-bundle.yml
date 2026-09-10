@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Pixel Power Bundle (Fall 2025) — Select 3 for 4.95, 5 for 7.99,
+  7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15551/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15551/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15551/source.json
+games:
+- name: Hypnospace Outlaw
+  ids:
+  - steam:844590
+  requires: []
+- name: Move or Die
+  ids:
+  - steam:323850
+  requires: []
+- name: Paper Planet
+  ids:
+  - steam:1504250
+  requires: []
+- name: Kaze and the Wild Masks OST Bundle
+  ids:
+  - unresolved:source:isthereanydeal:15551:kaze-and-the-wild-masks-ost-bundle
+  requires: []
+- name: Oblivion Override
+  ids:
+  - steam:1952370
+  requires: []
+- name: Picayune Dreams
+  ids:
+  - steam:2088840
+  requires: []
+- name: Anomaly Agent
+  ids:
+  - steam:2378620
+  requires: []
+- name: Sodaman
+  ids:
+  - steam:2178990
+  requires: []
+- name: Charrua Soccer - Pro Edition
+  ids:
+  - steam:2283380
+  requires: []
+- name: Gorgon Shield
+  ids:
+  - steam:2446920
+  requires: []
+- name: NO-SKIN
+  ids:
+  - steam:3011030
+  requires: []
+- name: Paddle Paddle Paddle
+  ids:
+  - steam:3570070
+  requires: []
+- name: Nomad Survival x Nomad Idle
+  ids:
+  - unresolved:source:isthereanydeal:15551:nomad-survival-x-nomad-idle
+  requires: []

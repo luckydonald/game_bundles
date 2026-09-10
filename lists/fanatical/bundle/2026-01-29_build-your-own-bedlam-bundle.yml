@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Bedlam Bundle — Select 3 for 4.95 (1.65 each), 5 for 7.99 (1.60
+  each, 7 for 10.15 (1.45 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15822/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15822/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15822/source.json
+games:
+- name: 'Ambition: A Minuet in Power'
+  ids:
+  - steam:949200
+  requires: []
+- name: Dread Templar
+  ids:
+  - steam:1334730
+  requires: []
+- name: MOTHERED - A ROLE-PLAYING HORROR GAME
+  ids:
+  - steam:1830720
+  requires: []
+- name: Recursive Ruin
+  ids:
+  - steam:1561890
+  requires: []
+- name: Paper Trail
+  ids:
+  - steam:1889740
+  requires: []
+- name: Outlanders
+  ids:
+  - steam:4199480
+  requires: []
+- name: 'Operation Wolf Returns: First Mission'
+  ids:
+  - steam:1852650
+  requires: []
+- name: Forgotten Mines
+  ids:
+  - steam:2238630
+  requires: []
+- name: CLeM
+  ids:
+  - steam:1861440
+  requires: []
+- name: Spin Hero
+  ids:
+  - steam:2917350
+  requires: []
+- name: My Little Life
+  ids:
+  - steam:2834600
+  requires: []
+- name: Bees vs Zombees
+  ids:
+  - steam:3040270
+  requires: []
+- name: 'Polterguys: Possession Party'
+  ids:
+  - steam:1043520
+  requires: []
+- name: 'Heart: Future Whispers'
+  ids:
+  - steam:3441350
+  requires: []
+- name: The Dark Queen of Mortholme
+  ids:
+  - steam:3587610
+  requires: []
+- name: My Little Spider
+  ids:
+  - steam:3854330
+  requires: []
+- name: Epic City 4 & Epic Trains 4 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15822:epic-city-4-and-epic-trains-4-double-pack
+  requires: []

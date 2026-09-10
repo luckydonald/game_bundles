@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Unbreakable Bundle — Select 2 for 7.99, 4 for 14.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15248/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15248/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15248/source.json
+games:
+- name: Elite Dangerous
+  ids:
+  - steam:359320
+  requires: []
+- name: 'Bloodstained: Ritual of the Night'
+  ids:
+  - steam:692850
+  requires: []
+- name: 'Operation: Tango'
+  ids:
+  - steam:1335790
+  requires: []
+- name: 'Jurassic World Evolution 2: Deluxe Edition'
+  ids:
+  - steam:1244460
+  requires: []
+- name: FOUNTAINS
+  ids:
+  - steam:1841240
+  requires: []
+- name: Takara Cards
+  ids:
+  - steam:1932210
+  requires: []
+- name: Moonlight Pulse
+  ids:
+  - steam:2243250
+  requires: []
+- name: Once Alive
+  ids:
+  - steam:2336440
+  requires: []
+- name: Clonizer
+  ids:
+  - steam:2449450
+  requires: []
+- name: Kingdom's Deck
+  ids:
+  - steam:2655590
+  requires: []
+- name: Streamer Life Simulator 2
+  ids:
+  - steam:2890830
+  requires: []
+- name: Splodey
+  ids:
+  - steam:2204170
+  requires: []
+- name: Chernobylite Complete Edition
+  ids:
+  - steam:1016800
+  requires: []
+- name: 'Lost Lullabies: The Orphanage Chronicles'
+  ids:
+  - steam:2903710
+  requires: []

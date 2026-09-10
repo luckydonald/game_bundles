@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Oddworld Complete Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14652/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14652/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14652/source.json
+games:
+- name: 'Oddworld: Abe''s Oddysee'
+  ids:
+  - steam:15700
+  requires: []
+- name: 'Oddworld: New ''n'' Tasty'
+  ids:
+  - steam:314660
+  requires: []
+- name: 'Oddworld: New ''n'' Tasty - Alf''s Escape'
+  ids:
+  - steam:323341
+  requires: []
+- name: 'Oddworld: New ''n'' Tasty - Scrub Abe Costume'
+  ids:
+  - steam:323340
+  requires: []
+- name: 'Oddworld: Stranger''s Wrath HD'
+  ids:
+  - steam:15750
+  requires: []
+- name: 'Oddworld: Munch''s Oddysee'
+  ids:
+  - steam:15740
+  requires: []
+- name: 'Oddworld: Abe''s Exoddus'
+  ids:
+  - steam:15710
+  requires: []
+- name: 'Oddworld: Soulstorm Enhanced Edition'
+  ids:
+  - steam:619390
+  requires: []

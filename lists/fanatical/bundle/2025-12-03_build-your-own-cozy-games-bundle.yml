@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Cozy Games Bundle (BundleFestive 2025) — Select 3 for 4.95, 5
+  for 7.99, 7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15648/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15648/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15648/source.json
+games:
+- name: Papetura
+  ids:
+  - steam:593640
+  requires: []
+- name: Sophia the Traveler
+  ids:
+  - steam:1602540
+  requires: []
+- name: Paper Trail
+  ids:
+  - steam:1889740
+  requires: []
+- name: 'Monument Valley: Panoramic Edition'
+  ids:
+  - steam:1927720
+  requires: []
+- name: 'Monument Valley 2: Panoramic Edition'
+  ids:
+  - steam:1927740
+  requires: []
+- name: Chessarama
+  ids:
+  - steam:1831830
+  requires: []
+- name: Re:Fresh
+  ids:
+  - steam:2297650
+  requires: []
+- name: A Tiny Sticker Tale
+  ids:
+  - steam:2322180
+  requires: []
+- name: Hidden Cats in Rome
+  ids:
+  - steam:2560530
+  requires: []
+- name: Hidden Cats in Spooky Town
+  ids:
+  - steam:2560460
+  requires: []
+- name: Hidden Cats in Santa's Realm
+  ids:
+  - steam:1726750
+  requires: []
+- name: Hidden in my Paradise
+  ids:
+  - steam:2834330
+  requires: []
+- name: Burgie's cozy kitchen
+  ids:
+  - steam:3314340
+  requires: []
+- name: Village Tale
+  ids:
+  - steam:3447510
+  requires: []
+- name: Find My Frogs
+  ids:
+  - steam:3130800
+  requires: []
+- name: Ship, Inc.
+  ids:
+  - steam:3496000
+  requires: []
+- name: Carefully Stamped
+  ids:
+  - steam:3771390
+  requires: []

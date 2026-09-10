@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Co-op Bundle — Select 3 for 5.99, 5 for 8.98, 7 for 11.20
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15310/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15310/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15310/source.json
+games:
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+  requires: []
+- name: Blazing Sails
+  ids:
+  - steam:1158940
+  requires: []
+- name: 'Tallowmere 2: Curse of the Kittens'
+  ids:
+  - steam:655740
+  requires: []
+- name: Young Souls
+  ids:
+  - steam:985900
+  requires: []
+- name: 'Bang-On Balls: Chronicles'
+  ids:
+  - steam:1227650
+  requires: []
+- name: FOREWARNED
+  ids:
+  - steam:1562420
+  requires: []
+- name: Voltaire - The Vegan Vampire
+  ids:
+  - steam:1952540
+  requires: []
+- name: Asterogues
+  ids:
+  - steam:2083240
+  requires: []
+- name: Bish Bash Bots
+  ids:
+  - steam:1424860
+  requires: []
+- name: 'Boti: Byteland Overclocked'
+  ids:
+  - steam:2161050
+  requires: []
+- name: 'Hellbreach: Vegas'
+  ids:
+  - steam:1691320
+  requires: []
+- name: 'GI Joe: Wrath of Cobra'
+  ids:
+  - steam:2516170
+  requires: []
+- name: Bunker Invaders
+  ids:
+  - steam:2780470
+  requires: []

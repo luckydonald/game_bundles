@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Monster Hunter - Build your own Bundle (Stories Edition) — 2+ games 8.00 ea,
+  3+ games 7.65 ea, 5+ games 7.00 ea
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15779/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15779/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15779/source.json
+games:
+- name: 'Monster Hunter: World Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15779:monster-hunter-world-deluxe-edition
+  requires: []
+- name: 'Monster Hunter World: Iceborne Digital Deluxe'
+  ids:
+  - unresolved:source:isthereanydeal:15779:monster-hunter-world-iceborne-digital-deluxe
+  requires: []
+- name: MONSTER HUNTER RISE Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15779:monster-hunter-rise-deluxe-edition
+  requires: []
+- name: 'Monster Hunter Stories 2: Wings of Ruin'
+  ids:
+  - steam:1277400
+  requires: []
+- name: 'Monster Hunter Stories 2: Wings of Ruin - Deluxe Kit'
+  ids:
+  - steam:1461850
+  requires: []
+- name: Monster Hunter Stories
+  ids:
+  - steam:2356560
+  requires: []
+- name: 'Monster Hunter Rise: Sunbreak Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15779:monster-hunter-rise-sunbreak-deluxe-edition
+  requires: []

@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Untold Tales Bundle — Select 4 for 4.99, 10 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15125/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15125/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15125/source.json
+games:
+- name: Tools Up!
+  ids:
+  - steam:1004490
+  requires: []
+- name: The Hong Kong Massacre
+  ids:
+  - steam:741510
+  requires: []
+- name: Bee Simulator
+  ids:
+  - steam:914750
+  requires: []
+- name: 'ATONE: Heart of the Elder Tree'
+  ids:
+  - steam:894620
+  requires: []
+- name: Mythic Ocean
+  ids:
+  - steam:814360
+  requires: []
+- name: 'Arise: A Simple Story'
+  ids:
+  - steam:866140
+  requires: []
+- name: Arboria
+  ids:
+  - steam:924070
+  requires: []
+- name: Splatter - Zombiecalypse Now
+  ids:
+  - steam:281920
+  requires: []
+- name: Frozenheim
+  ids:
+  - steam:1134100
+  requires: []
+- name: Flame Keeper
+  ids:
+  - steam:1374230
+  requires: []
+- name: 'Aspire: Ina''s Tale'
+  ids:
+  - steam:1720090
+  requires: []
+- name: Trans Neuronica
+  ids:
+  - steam:2390520
+  requires: []
+- name: The Cub
+  ids:
+  - steam:1941410
+  requires: []
+- name: 'Operation: Polygon Storm'
+  ids:
+  - steam:2310160
+  requires: []
+- name: Ready, Steady, Ship!
+  ids:
+  - steam:2225610
+  requires: []
+- name: Son of a Gun
+  ids:
+  - steam:2288600
+  requires: []
+- name: Golf Club Nostalgia
+  ids:
+  - steam:1556870
+  requires: []
+- name: Servonauts
+  ids:
+  - steam:2514400
+  requires: []
+- name: Golf VS Zombies
+  ids:
+  - steam:2330380
+  requires: []

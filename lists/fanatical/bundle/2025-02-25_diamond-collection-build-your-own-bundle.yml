@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Diamond Collection Bundle (Feb 2025) — Select 3 for 14.99, 4
+  for 18.99, 5 for 21.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14949/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14949/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14949/source.json
+games:
+- name: 'LISA: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14949:lisa-complete-edition
+  requires: []
+- name: Necro Story
+  ids:
+  - steam:968800
+  requires: []
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  requires: []
+- name: Few Nights More
+  ids:
+  - steam:1491200
+  requires: []
+- name: Sephonie
+  ids:
+  - steam:1248840
+  requires: []
+- name: Of Blades & Tails
+  ids:
+  - steam:1768780
+  requires: []
+- name: Mr. Prepper - Anniversary Edition
+  ids:
+  - unresolved:source:isthereanydeal:14949:mr-prepper-anniversary-edition
+  requires: []
+- name: Rising Front
+  ids:
+  - steam:1560250
+  requires: []
+- name: Yellow Taxi Goes Vroom
+  ids:
+  - steam:2011780
+  requires: []
+- name: Outpath
+  ids:
+  - steam:2237970
+  requires: []
+- name: Frogun Encore
+  ids:
+  - steam:2312160
+  requires: []
+- name: Massacre At The Mirage
+  ids:
+  - steam:2794610
+  requires: []
+- name: The Land of the Magnates
+  ids:
+  - steam:2816570
+  requires: []
+- name: A Death in the Red Light
+  ids:
+  - steam:2866640
+  requires: []
+- name: StormEdge - Supporter Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14949:stormedge-supporter-bundle
+  requires: []
+- name: Winion Virus
+  ids:
+  - steam:3334660
+  requires: []

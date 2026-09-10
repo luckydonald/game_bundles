@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Arcade Bundle (Bundle Bash 2025) — Select 3 for 4.95, 5 for 7.99,
+  7 for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15266/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15266/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15266/source.json
+games:
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  requires: []
+- name: Punch Club Deluxe Edition
+  ids:
+  - steam:394310
+  requires: []
+- name: HARDCORE MECHA
+  ids:
+  - steam:746580
+  requires: []
+- name: Hell Pie
+  ids:
+  - steam:889910
+  requires: []
+- name: Pumpkin Jack
+  ids:
+  - steam:1186640
+  requires: []
+- name: 'Nickelodeon Kart Racers 2: Grand Prix'
+  ids:
+  - steam:1383960
+  requires: []
+- name: SpiderHeck
+  ids:
+  - steam:1329500
+  requires: []
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+  requires: []
+- name: 'Fight of Steel: Infinity Warrior'
+  ids:
+  - steam:1631350
+  requires: []
+- name: MARSUPILAMI - HOOBADVENTURE
+  ids:
+  - steam:1586700
+  requires: []
+- name: Turbo Golf Racing
+  ids:
+  - steam:1324350
+  requires: []
+- name: River City Girls Zero
+  ids:
+  - steam:1851020
+  requires: []
+- name: 'Nickelodeon Kart Racers 3: Slime Speedway Turbo Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15266:nickelodeon-kart-racers-3-slime-speedway-turbo-edition
+  requires: []
+- name: 'Operation Wolf Returns: First Mission'
+  ids:
+  - steam:1852650
+  requires: []
+- name: Archaeogem
+  ids:
+  - steam:2092730
+  requires: []
+- name: Quadroids
+  ids:
+  - steam:2419690
+  requires: []
+- name: DreamWorks All-Star Kart Racing
+  ids:
+  - steam:2224740
+  requires: []
+- name: Fight School Simulator
+  ids:
+  - steam:2884190
+  requires: []
+- name: Braid, Anniversary Edition
+  ids:
+  - steam:499180
+  requires: []
+- name: Cobra Kai Collection
+  ids:
+  - unresolved:source:isthereanydeal:15266:cobra-kai-collection
+  requires: []
+- name: Nocturnal
+  ids:
+  - steam:1634080
+  requires: []

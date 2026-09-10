@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Brutal Bundle — Select 3 for 13.49, 5 for 19.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15173/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15173/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15173/source.json
+games:
+- name: DOOM Eternal
+  ids:
+  - steam:782330
+  requires: []
+- name: Turbo Kid
+  ids:
+  - steam:1733250
+  requires: []
+- name: Scorn
+  ids:
+  - steam:698670
+  requires: []
+- name: Exophobia
+  ids:
+  - steam:1189220
+  requires: []
+- name: Sacre Bleu
+  ids:
+  - steam:1081300
+  requires: []
+- name: Hedon - Extra Thicc Edition
+  ids:
+  - unresolved:source:isthereanydeal:15173:hedon-extra-thicc-edition
+  requires: []
+- name: It's Only Money
+  ids:
+  - steam:1415220
+  requires: []
+- name: Knights Within
+  ids:
+  - steam:2406180
+  requires: []
+- name: Butcher's Creek
+  ids:
+  - steam:2512560
+  requires: []
+- name: Somber Echoes
+  ids:
+  - steam:1299290
+  requires: []
+- name: Cosmic Call
+  ids:
+  - steam:3060130
+  requires: []
+- name: 'Priest Simulator: Splendor Set'
+  ids:
+  - unresolved:source:isthereanydeal:15173:priest-simulator-splendor-set
+  requires: []
