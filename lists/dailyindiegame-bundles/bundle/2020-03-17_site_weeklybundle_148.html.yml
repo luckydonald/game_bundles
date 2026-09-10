@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 148 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8505/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8505/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8505/source.json
+games:
+- name: Defence to death
+  ids:
+  - steam:603150
+  requires: []
+- name: Psi Cards
+  ids:
+  - steam:815390
+  requires: []
+- name: BowmanVSZombies
+  ids:
+  - unresolved:source:isthereanydeal:8505:bowmanvszombies
+  requires: []
+- name: New Tricks for Old Gods
+  ids:
+  - steam:1165490
+  requires: []
+- name: Pixelfence
+  ids:
+  - steam:1225920
+  requires: []
+- name: Zulup
+  ids:
+  - steam:1228730
+  requires: []
+- name: Abst Clicker Farm
+  ids:
+  - steam:1235480
+  requires: []
+- name: Sheptun
+  ids:
+  - steam:1234900
+  requires: []
+- name: Sex Apartments
+  ids:
+  - steam:1233380
+  requires: []

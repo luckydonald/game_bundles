@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 138 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8449/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8449/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8449/source.json
+games:
+- name: Guacamelee! Super Turbo Championship Edition
+  ids:
+  - steam:275390
+  requires: []
+- name: The Mystery Of Woolley Mountain
+  ids:
+  - steam:521560
+  requires: []
+- name: VENDETTA - Curse of Raven's Cry
+  ids:
+  - steam:386280
+  requires: []
+- name: Two Worlds II HD - Call of the Tenebrae
+  ids:
+  - steam:626630
+  requires: []
+- name: 'Olorun: Theocracy'
+  ids:
+  - steam:692780
+  requires: []
+- name: Endless Ski
+  ids:
+  - steam:1125800
+  requires: []
+- name: Jane Westlake Adventures - The Mystery Train
+  ids:
+  - steam:1158430
+  requires: []
+- name: Tanks 2020
+  ids:
+  - unresolved:source:isthereanydeal:8449:tanks-2020
+  requires: []
+- name: Trasta
+  ids:
+  - steam:1227580
+  requires: []

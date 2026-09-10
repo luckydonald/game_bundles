@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 69: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7906/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7906/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7906/source.json
+games:
+- name: TOTOBALL
+  ids:
+  - steam:696490
+  requires: []
+- name: Amazon Rush
+  ids:
+  - unresolved:source:isthereanydeal:7906:amazon-rush
+  requires: []
+- name: Mindsight
+  ids:
+  - steam:716070
+  requires: []
+- name: Endless Horde
+  ids:
+  - steam:618610
+  requires: []
+- name: Starting The Game
+  ids:
+  - unresolved:source:isthereanydeal:7906:starting-the-game
+  requires: []
+- name: Colorcers
+  ids:
+  - unresolved:source:isthereanydeal:7906:colorcers
+  requires: []
+- name: Super president How to rule the country
+  ids:
+  - steam:995480
+  requires: []
+- name: C. Kane
+  ids:
+  - steam:385030
+  requires: []
+- name: My Desktop Alive
+  ids:
+  - steam:998330
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 59 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7768/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7768/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7768/source.json
+games:
+- name: Mahjong Classic
+  ids:
+  - unresolved:source:isthereanydeal:7768:mahjong-classic
+  requires: []
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+  requires: []
+- name: Sky Reaper
+  ids:
+  - unresolved:source:isthereanydeal:7768:sky-reaper
+  requires: []
+- name: Milly the dog
+  ids:
+  - steam:1081110
+  requires: []
+- name: Trump Vs Rocketman
+  ids:
+  - steam:1119380
+  requires: []
+- name: 酒店二 The Hotel 2
+  ids:
+  - unresolved:source:isthereanydeal:7768:jiu-dian-er-the-hotel-2
+  requires: []
+- name: 'Shadow Council: The Puppeteers'
+  ids:
+  - unresolved:source:isthereanydeal:7768:shadow-council-the-puppeteers
+  requires: []
+- name: The power of chaos
+  ids:
+  - unresolved:source:isthereanydeal:7768:the-power-of-chaos
+  requires: []
+- name: 酒店
+  ids:
+  - steam:934810
+  requires: []

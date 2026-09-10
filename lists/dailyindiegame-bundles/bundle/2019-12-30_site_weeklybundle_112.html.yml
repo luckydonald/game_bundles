@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 112 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8283/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8283/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8283/source.json
+games:
+- name: Samurai Wish
+  ids:
+  - steam:877040
+  requires: []
+- name: 'Cyborg Invasion Shooter 3: Savior Of The World'
+  ids:
+  - steam:1023150
+  requires: []
+- name: Asteroid Hideout
+  ids:
+  - unresolved:source:isthereanydeal:8283:asteroid-hideout
+  requires: []
+- name: 'Codename: Ghost Hunt'
+  ids:
+  - steam:844030
+  requires: []
+- name: Mighty Gemstones
+  ids:
+  - steam:778230
+  requires: []
+- name: Rampage Ragdoll
+  ids:
+  - steam:775790
+  requires: []
+- name: Blood Drift
+  ids:
+  - steam:798140
+  requires: []
+- name: My Desktop Alive
+  ids:
+  - steam:998330
+  requires: []
+- name: Elon Must - Road to Respect
+  ids:
+  - unresolved:source:isthereanydeal:8283:elon-must-road-to-respect
+  requires: []
