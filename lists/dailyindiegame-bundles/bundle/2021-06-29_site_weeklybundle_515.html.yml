@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 515 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10210/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10210/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10210/source.json
+games:
+- name: The Line
+  ids:
+  - steam:738760
+  requires: []
+- name: Imaginator
+  ids:
+  - unresolved:source:isthereanydeal:10210:imaginator
+  requires: []
+- name: Cube Worlds Survival
+  ids:
+  - steam:1385840
+  requires: []
+- name: The Arena Guy
+  ids:
+  - steam:1399270
+  requires: []
+- name: 'Trump VS Covid: Save The World Clicker'
+  ids:
+  - steam:1454580
+  requires: []
+- name: Parkour Game
+  ids:
+  - unresolved:source:isthereanydeal:10210:parkour-game
+  requires: []
+- name: Nature Park
+  ids:
+  - unresolved:source:isthereanydeal:10210:nature-park
+  requires: []
+- name: Miracle field
+  ids:
+  - unresolved:source:isthereanydeal:10210:miracle-field
+  requires: []
+- name: Unicorn and Sweets 2
+  ids:
+  - steam:1649820
+  requires: []

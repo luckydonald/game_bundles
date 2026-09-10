@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 513 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10203/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10203/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10203/source.json
+games:
+- name: Winexy
+  ids:
+  - steam:577740
+  requires: []
+- name: HotFloor
+  ids:
+  - steam:865190
+  requires: []
+- name: Chicken Labyrinth Puzzles
+  ids:
+  - steam:635880
+  requires: []
+- name: 'Millennium: A New Hope'
+  ids:
+  - steam:280140
+  requires: []
+- name: Cyber Gun
+  ids:
+  - steam:1065570
+  requires: []
+- name: V1RUZ
+  ids:
+  - steam:1140460
+  requires: []
+- name: Creepy Tale
+  ids:
+  - steam:1224020
+  requires: []
+- name: BISQUE DOLL
+  ids:
+  - steam:1428460
+  requires: []
+- name: 'Quest: Escape Room 3'
+  ids:
+  - steam:1543210
+  requires: []

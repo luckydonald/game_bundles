@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 457 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9984/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9984/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9984/source.json
+games:
+- name: TKKG - Die Feuerprobe
+  ids:
+  - steam:1104870
+  requires: []
+- name: DarkSpace
+  ids:
+  - steam:1122810
+  requires: []
+- name: The Governor
+  ids:
+  - unresolved:source:isthereanydeal:9984:the-governor
+  requires: []
+- name: 'LOGA: Unexpected Adventure'
+  ids:
+  - steam:1189020
+  requires: []
+- name: 'War Robots: Planet Defender'
+  ids:
+  - unresolved:source:isthereanydeal:9984:war-robots-planet-defender
+  requires: []
+- name: 'HellScape: Two Brothers'
+  ids:
+  - steam:1218090
+  requires: []
+- name: Isle Of Spirits
+  ids:
+  - steam:1237480
+  requires: []
+- name: Super Arcade Soccer 2021
+  ids:
+  - steam:1256710
+  requires: []
+- name: Stormblades
+  ids:
+  - steam:1358940
+  requires: []

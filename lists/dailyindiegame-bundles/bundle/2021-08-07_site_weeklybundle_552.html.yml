@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 552: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10333/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10333/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10333/source.json
+games:
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Vanguard Princess Online Deluxe
+  ids:
+  - steam:1083590
+  requires: []
+- name: Ignis Avis Venatio
+  ids:
+  - steam:809570
+  requires: []
+- name: Erotic Jigsaw Puzzle 2
+  ids:
+  - steam:1649960
+  requires: []
+- name: Erotic Jigsaw Puzzle 2 - ArtBook
+  ids:
+  - steam:1650630
+  requires: []
+- name: Hentai Jigsaw Girls 2
+  ids:
+  - steam:1708390
+  requires: []
+- name: Hentai Jigsaw Girls 2 - ArtBook
+  ids:
+  - steam:1708660
+  requires: []
+- name: Island of Girls Dreams
+  ids:
+  - unresolved:source:isthereanydeal:10333:island-of-girls-dreams
+  requires: []
+- name: Orenji-iro no Kumo
+  ids:
+  - unresolved:source:isthereanydeal:10333:orenji-iro-no-kumo
+  requires: []

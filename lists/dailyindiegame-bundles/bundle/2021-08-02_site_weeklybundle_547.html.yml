@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 547 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10310/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10310/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10310/source.json
+games:
+- name: Memorial Park of Hypoxia
+  ids:
+  - steam:1051630
+  requires: []
+- name: The Shenanigans of Cherry and Trix
+  ids:
+  - steam:1192840
+  requires: []
+- name: Felix The Toy
+  ids:
+  - steam:1571070
+  requires: []
+- name: Village Defender
+  ids:
+  - unresolved:source:isthereanydeal:10310:village-defender
+  requires: []
+- name: Drunken Samurai
+  ids:
+  - unresolved:source:isthereanydeal:10310:drunken-samurai
+  requires: []
+- name: Athena Trivia
+  ids:
+  - steam:1225660
+  requires: []
+- name: Athena Trivia - All Answers
+  ids:
+  - steam:1650940
+  requires: []
+- name: POG 4
+  ids:
+  - steam:1666810
+  requires: []
+- name: Golden Boy
+  ids:
+  - unresolved:source:isthereanydeal:10310:golden-boy
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 537 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10275/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10275/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10275/source.json
+games:
+- name: Cubic
+  ids:
+  - unresolved:source:isthereanydeal:10275:cubic
+  requires: []
+- name: Mushroom Challenge
+  ids:
+  - steam:1345150
+  requires: []
+- name: Gemini
+  ids:
+  - steam:1417720
+  requires: []
+- name: Kings and Pigs
+  ids:
+  - steam:1655880
+  requires: []
+- name: Hoples
+  ids:
+  - steam:1660460
+  requires: []
+- name: Mouse Hunter
+  ids:
+  - steam:1659470
+  requires: []
+- name: Salt and Sails
+  ids:
+  - steam:1662830
+  requires: []
+- name: Meteor Genocide
+  ids:
+  - unresolved:source:isthereanydeal:10275:meteor-genocide
+  requires: []
+- name: Escape from Nowhere
+  ids:
+  - steam:1680900
+  requires: []

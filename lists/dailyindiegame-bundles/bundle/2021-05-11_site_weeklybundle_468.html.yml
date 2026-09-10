@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 468 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10013/source.json
+games:
+- name: Challenging Dogfights
+  ids:
+  - unresolved:source:isthereanydeal:10013:challenging-dogfights
+  requires: []
+- name: Chibi Volleyball
+  ids:
+  - unresolved:source:isthereanydeal:10013:chibi-volleyball
+  requires: []
+- name: Shp Space
+  ids:
+  - unresolved:source:isthereanydeal:10013:shp-space
+  requires: []
+- name: Click and Manage Tycoon
+  ids:
+  - steam:919690
+  requires: []
+- name: The Warrior War
+  ids:
+  - steam:882460
+  requires: []
+- name: Marble Run 2D
+  ids:
+  - steam:807140
+  requires: []
+- name: HELLO PLAYER
+  ids:
+  - unresolved:source:isthereanydeal:10013:hello-player
+  requires: []
+- name: 'ROBOTIX: The Escape'
+  ids:
+  - unresolved:source:isthereanydeal:10013:robotix-the-escape
+  requires: []
+- name: Commissar Catlov
+  ids:
+  - steam:1379470
+  requires: []

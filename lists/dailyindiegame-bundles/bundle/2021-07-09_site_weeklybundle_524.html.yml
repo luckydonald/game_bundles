@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 524 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10242/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10242/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10242/source.json
+games:
+- name: Road Legends
+  ids:
+  - unresolved:source:isthereanydeal:10242:road-legends
+  requires: []
+- name: EscapeRoute
+  ids:
+  - unresolved:source:isthereanydeal:10242:escaperoute
+  requires: []
+- name: Hollow Head
+  ids:
+  - steam:1171260
+  requires: []
+- name: The Big SokoBang
+  ids:
+  - steam:1204210
+  requires: []
+- name: Herbalist simulator
+  ids:
+  - steam:1208090
+  requires: []
+- name: Cecil Run
+  ids:
+  - unresolved:source:isthereanydeal:10242:cecil-run
+  requires: []
+- name: The Trud
+  ids:
+  - steam:1237760
+  requires: []
+- name: Endless Void
+  ids:
+  - unresolved:source:isthereanydeal:10242:endless-void
+  requires: []
+- name: Vortex Escape
+  ids:
+  - unresolved:source:isthereanydeal:10242:vortex-escape
+  requires: []
