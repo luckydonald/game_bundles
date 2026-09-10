@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 263 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9224/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9224/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9224/source.json
+games:
+- name: Slime Quest
+  ids:
+  - steam:946400
+  requires: []
+- name: Depth Of Consciousness
+  ids:
+  - unresolved:source:isthereanydeal:9224:depth-of-consciousness
+  requires: []
+- name: Blood Island
+  ids:
+  - unresolved:source:isthereanydeal:9224:blood-island
+  requires: []
+- name: Loveless cat
+  ids:
+  - unresolved:source:isthereanydeal:9224:loveless-cat
+  requires: []
+- name: Adult Math
+  ids:
+  - unresolved:source:isthereanydeal:9224:adult-math
+  requires: []
+- name: Hentai Girl in Space
+  ids:
+  - unresolved:source:isthereanydeal:9224:hentai-girl-in-space
+  requires: []
+- name: I'm Lost
+  ids:
+  - steam:737530
+  requires: []
+- name: Alien Cat 3
+  ids:
+  - steam:1339550
+  requires: []
+- name: Sweet Tooth 2
+  ids:
+  - unresolved:source:isthereanydeal:9224:sweet-tooth-2
+  requires: []

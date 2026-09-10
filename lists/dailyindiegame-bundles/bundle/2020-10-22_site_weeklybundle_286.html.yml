@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 286 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9313/source.json
+games:
+- name: Nordic Storm Solitaire
+  ids:
+  - steam:1203050
+  requires: []
+- name: Fruit Lockers Reborn! 2
+  ids:
+  - steam:1012390
+  requires: []
+- name: Mini Golf
+  ids:
+  - unresolved:source:isthereanydeal:9313:mini-golf
+  requires: []
+- name: Juice Mania
+  ids:
+  - unresolved:source:isthereanydeal:9313:juice-mania
+  requires: []
+- name: 'Mythic Pearls: The Legend of Tirnanog'
+  ids:
+  - steam:1133530
+  requires: []
+- name: Recyclomania
+  ids:
+  - steam:1139830
+  requires: []
+- name: 'Magic Farm 2: Fairy Lands (Premium Edition)'
+  ids:
+  - steam:1054750
+  requires: []
+- name: 1912 Titanic Mystery
+  ids:
+  - steam:1114270
+  requires: []
+- name: Sweetest Thing
+  ids:
+  - steam:1363960
+  requires: []

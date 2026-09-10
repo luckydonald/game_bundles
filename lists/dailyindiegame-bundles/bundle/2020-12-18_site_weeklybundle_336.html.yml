@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 336 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9534/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9534/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9534/source.json
+games:
+- name: Snowball
+  ids:
+  - steam:546550
+  requires: []
+- name: Planets Under Attack
+  ids:
+  - steam:218510
+  requires: []
+- name: 'DreadOut: Keepers of The Dark'
+  ids:
+  - steam:418950
+  requires: []
+- name: Strange Night ll
+  ids:
+  - steam:767910
+  requires: []
+- name: Last Will
+  ids:
+  - steam:453720
+  requires: []
+- name: Filthy Hands
+  ids:
+  - steam:784050
+  requires: []
+- name: Knockout Party
+  ids:
+  - steam:1162050
+  requires: []
+- name: Zombie Road Rider
+  ids:
+  - steam:1175640
+  requires: []
+- name: Wild Russia
+  ids:
+  - steam:1287250
+  requires: []

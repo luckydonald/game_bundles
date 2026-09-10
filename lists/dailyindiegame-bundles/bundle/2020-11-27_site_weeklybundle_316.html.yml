@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 316 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9445/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9445/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9445/source.json
+games:
+- name: Hentai Mosaique Fix-IT Shoppe
+  ids:
+  - steam:1109360
+  requires: []
+- name: Seasons Girls
+  ids:
+  - steam:1146250
+  requires: []
+- name: Ecchi Girls
+  ids:
+  - unresolved:source:isthereanydeal:9445:ecchi-girls
+  requires: []
+- name: Hentai Mosaique Puzzle
+  ids:
+  - steam:993740
+  requires: []
+- name: Desktop Girls
+  ids:
+  - steam:1044500
+  requires: []
+- name: HENTAI GIRL PUZZLE
+  ids:
+  - unresolved:source:isthereanydeal:9445:hentai-girl-puzzle
+  requires: []
+- name: Hentai Hexa Mosaic
+  ids:
+  - unresolved:source:isthereanydeal:9445:hentai-hexa-mosaic
+  requires: []
+- name: Pixel Hentai Mosaic
+  ids:
+  - unresolved:source:isthereanydeal:9445:pixel-hentai-mosaic
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica
+  ids:
+  - steam:1430160
+  requires: []

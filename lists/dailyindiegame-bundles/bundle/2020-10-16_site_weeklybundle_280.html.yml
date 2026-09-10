@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 280 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9290/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9290/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9290/source.json
+games:
+- name: Seasonal Soccer
+  ids:
+  - steam:818380
+  requires: []
+- name: JOBU-KI
+  ids:
+  - unresolved:source:isthereanydeal:9290:jobu-ki
+  requires: []
+- name: The Legendary Assassin KAL
+  ids:
+  - steam:1013810
+  requires: []
+- name: Unveloped
+  ids:
+  - steam:776740
+  requires: []
+- name: '航海日記：起航(Uncharted Ocean : Set Sail)'
+  ids:
+  - unresolved:source:isthereanydeal:9290:hang-hai-ri-ji-qi-hang-uncharted-ocean-set-sail
+  requires: []
+- name: Storms
+  ids:
+  - unresolved:source:isthereanydeal:9290:storms
+  requires: []
+- name: 'War Robots: Planet Defender'
+  ids:
+  - unresolved:source:isthereanydeal:9290:war-robots-planet-defender
+  requires: []
+- name: lil' Sherman
+  ids:
+  - steam:1210620
+  requires: []
+- name: The Battle of Angels
+  ids:
+  - steam:1286210
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 312 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9421/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9421/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9421/source.json
+games:
+- name: Zombie Golf
+  ids:
+  - steam:1131270
+  requires: []
+- name: Super Minesweeper attACK
+  ids:
+  - steam:1151940
+  requires: []
+- name: Grand Pigeon's Duty
+  ids:
+  - steam:449530
+  requires: []
+- name: Gold Rush! - Classic
+  ids:
+  - steam:308000
+  requires: []
+- name: The Valley
+  ids:
+  - steam:1169500
+  requires: []
+- name: Acid Flip
+  ids:
+  - unresolved:source:isthereanydeal:9421:acid-flip
+  requires: []
+- name: Total 15
+  ids:
+  - steam:895550
+  requires: []
+- name: Jack In Town
+  ids:
+  - steam:1175500
+  requires: []
+- name: Euler Wars
+  ids:
+  - steam:1246320
+  requires: []

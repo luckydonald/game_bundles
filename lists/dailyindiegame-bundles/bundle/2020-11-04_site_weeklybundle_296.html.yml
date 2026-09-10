@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 296 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9359/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9359/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9359/source.json
+games:
+- name: Find the way
+  ids:
+  - unresolved:source:isthereanydeal:9359:find-the-way
+  requires: []
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: ★Fallalypse ★ Disconnect ❄
+  ids:
+  - steam:978610
+  requires: []
+- name: Pixel Puzzles Mosaics
+  ids:
+  - steam:359340
+  requires: []
+- name: War Trains
+  ids:
+  - steam:1173340
+  requires: []
+- name: lualu
+  ids:
+  - unresolved:source:isthereanydeal:9359:lualu
+  requires: []
+- name: be threatened by growing crises
+  ids:
+  - unresolved:source:isthereanydeal:9359:be-threatened-by-growing-crises
+  requires: []
+- name: gogogofriend
+  ids:
+  - unresolved:source:isthereanydeal:9359:gogogofriend
+  requires: []
+- name: PhotoWorld
+  ids:
+  - steam:1435020
+  requires: []

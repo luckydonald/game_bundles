@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 264 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9228/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9228/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9228/source.json
+games:
+- name: 'SPECKLE: Chill Puzzle Game'
+  ids:
+  - steam:873160
+  requires: []
+- name: Shp Space
+  ids:
+  - unresolved:source:isthereanydeal:9228:shp-space
+  requires: []
+- name: tho_maz
+  ids:
+  - unresolved:source:isthereanydeal:9228:tho_maz
+  requires: []
+- name: Call each NEW YEAR
+  ids:
+  - steam:875630
+  requires: []
+- name: Girl Rugby Dash
+  ids:
+  - unresolved:source:isthereanydeal:9228:girl-rugby-dash
+  requires: []
+- name: Rugosi
+  ids:
+  - steam:905510
+  requires: []
+- name: Trains of the Orient
+  ids:
+  - unresolved:source:isthereanydeal:9228:trains-of-the-orient
+  requires: []
+- name: Rescue Rina
+  ids:
+  - steam:1400350
+  requires: []
+- name: Viking Fight
+  ids:
+  - steam:1381290
+  requires: []

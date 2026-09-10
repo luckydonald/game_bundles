@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 333 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9508/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9508/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9508/source.json
+games:
+- name: 'Longest Monday: Unveiling'
+  ids:
+  - unresolved:source:isthereanydeal:9508:longest-monday-unveiling
+  requires: []
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+  requires: []
+- name: Super Orb Collector
+  ids:
+  - steam:1031640
+  requires: []
+- name: Voxel Bot
+  ids:
+  - steam:1095370
+  requires: []
+- name: Best Plumber
+  ids:
+  - steam:1166580
+  requires: []
+- name: The Valley of Super Flowers
+  ids:
+  - steam:1257270
+  requires: []
+- name: 'Welcome To Chichester OVN 3 : The Mysterious Affair At The Violet Hotel'
+  ids:
+  - unresolved:source:isthereanydeal:9508:welcome-to-chichester-ovn-3-the-mysterious-affair-at-the-violet-hotel
+  requires: []
+- name: Blockicker
+  ids:
+  - steam:1337080
+  requires: []
+- name: Slime Up
+  ids:
+  - steam:1340420
+  requires: []

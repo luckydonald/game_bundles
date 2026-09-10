@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 256 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9186/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9186/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9186/source.json
+games:
+- name: Mermaid Land
+  ids:
+  - unresolved:source:isthereanydeal:9186:mermaid-land
+  requires: []
+- name: Piano Cat
+  ids:
+  - unresolved:source:isthereanydeal:9186:piano-cat
+  requires: []
+- name: Master of Mutations
+  ids:
+  - unresolved:source:isthereanydeal:9186:master-of-mutations
+  requires: []
+- name: Galaxy Ball
+  ids:
+  - unresolved:source:isthereanydeal:9186:galaxy-ball
+  requires: []
+- name: Longboard Stunts and Tricks
+  ids:
+  - unresolved:source:isthereanydeal:9186:longboard-stunts-and-tricks
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:9186:magic-chess
+  requires: []
+- name: Heroes Of The Offworld Arena
+  ids:
+  - unresolved:source:isthereanydeal:9186:heroes-of-the-offworld-arena
+  requires: []
+- name: Achievement Machine
+  ids:
+  - unresolved:source:isthereanydeal:9186:achievement-machine
+  requires: []
+- name: Frozen Mystery
+  ids:
+  - unresolved:source:isthereanydeal:9186:frozen-mystery
+  requires: []

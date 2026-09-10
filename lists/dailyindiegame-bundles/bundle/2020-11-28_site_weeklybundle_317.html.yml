@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 317 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9455/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9455/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9455/source.json
+games:
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+  requires: []
+- name: GORILLA TOWN
+  ids:
+  - steam:1217560
+  requires: []
+- name: 'Football Club Simulator - FCS #20'
+  ids:
+  - unresolved:source:isthereanydeal:9455:football-club-simulator-fcs-20
+  requires: []
+- name: MOMO.EXE VR
+  ids:
+  - steam:1363600
+  requires: []
+- name: 'I''m Oh, So Busy...: A Week with Yoshimi'
+  ids:
+  - steam:1367090
+  requires: []
+- name: Hero of Not Our Time
+  ids:
+  - steam:1409730
+  requires: []
+- name: Endless Void
+  ids:
+  - unresolved:source:isthereanydeal:9455:endless-void
+  requires: []
+- name: Reality End
+  ids:
+  - steam:1417740
+  requires: []
+- name: Metu Caligine
+  ids:
+  - steam:1453200
+  requires: []
