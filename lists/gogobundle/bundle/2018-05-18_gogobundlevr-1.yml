@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle VR #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6146/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6146/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6146/source.json
+games:
+- name: PIRATADO 1
+  ids:
+  - steam:542750
+  requires: []
+- name: 'CYCOM: Cybernet Combat'
+  ids:
+  - unresolved:source:isthereanydeal:6146:cycom-cybernet-combat
+  requires: []
+- name: Disco Time 80s VR
+  ids:
+  - steam:649880
+  requires: []
+- name: Silent space VR
+  ids:
+  - unresolved:source:isthereanydeal:6146:silent-space-vr
+  requires: []
+- name: Relax Walk VR
+  ids:
+  - steam:645340
+  requires: []
+- name: Flappy Arms
+  ids:
+  - steam:764110
+  requires: []
+- name: Beach Bowling Dream VR
+  ids:
+  - steam:557960
+  requires: []
+- name: TangramsVR
+  ids:
+  - steam:700940
+  requires: []
+- name: Crystal Reign
+  ids:
+  - steam:662780
+  requires: []
+- name: Dashy Square VR
+  ids:
+  - steam:495540
+  requires: []

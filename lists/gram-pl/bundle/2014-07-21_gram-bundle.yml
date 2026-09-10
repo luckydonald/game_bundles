@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Gram Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1009/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1009/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1009/source.json
+games:
+- name: 'Dark Arcana: The Carnival'
+  ids:
+  - steam:284730
+  requires: []
+- name: 'Left in the Dark: No One on Board'
+  ids:
+  - steam:284890
+  requires: []
+- name: 'Enigmatis: Ghosts of Maple Creek'
+  ids:
+  - unresolved:source:isthereanydeal:1009:enigmatis-ghosts-of-maple-creek
+  requires: []
+- name: 'Abyss: The Wraiths of Eden'
+  ids:
+  - steam:284710
+  requires: []
+- name: 'Enigmatis 2: The Mists of Ravenwood'
+  ids:
+  - steam:284770
+  requires: []

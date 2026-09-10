@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #60 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6190/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6190/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6190/source.json
+games:
+- name: Lost
+  ids:
+  - steam:853580
+  requires: []
+- name: Block Competition
+  ids:
+  - unresolved:source:isthereanydeal:6190:block-competition
+  requires: []
+- name: Air Combat
+  ids:
+  - steam:746350
+  requires: []
+- name: XBall Champion
+  ids:
+  - steam:794570
+  requires: []
+- name: dead_file.exe
+  ids:
+  - unresolved:source:isthereanydeal:6190:dead_file-exe
+  requires: []
+- name: Knife Flipping
+  ids:
+  - steam:857510
+  requires: []
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+  requires: []
+- name: Restaurant Manager
+  ids:
+  - steam:724090
+  requires: []
+- name: MineSweeper
+  ids:
+  - steam:4335060
+  requires: []
+- name: The President
+  ids:
+  - steam:819210
+  requires: []
+- name: dead_file.mp3
+  ids:
+  - unresolved:source:isthereanydeal:6190:dead_file-mp3
+  requires: []
+- name: 'Green Game: TimeSwapper'
+  ids:
+  - steam:432990
+  requires: []
+- name: Red Game Without A Great Name
+  ids:
+  - unresolved:source:isthereanydeal:6190:red-game-without-a-great-name
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #10 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6456/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6456/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6456/source.json
+games:
+- name: Internal Light VR
+  ids:
+  - steam:765380
+  requires: []
+- name: Plastiland
+  ids:
+  - steam:421880
+  requires: []
+- name: Slap The Fly
+  ids:
+  - steam:543030
+  requires: []
+- name: Neighboring Islands
+  ids:
+  - steam:588710
+  requires: []
+- name: Project Lounge
+  ids:
+  - steam:508710
+  requires: []
+- name: SkyBoats - Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6456:skyboats-original-soundtrack
+  requires: []
+- name: Verzaken!
+  ids:
+  - steam:739800
+  requires: []
+- name: Spellbind
+  ids:
+  - steam:353600
+  requires: []
+- name: Neighboring Islands - soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6456:neighboring-islands-soundtrack
+  requires: []
+- name: Cave Brawlers
+  ids:
+  - steam:731500
+  requires: []
+- name: SkyBoats
+  ids:
+  - steam:510780
+  requires: []
+- name: Open Sorcery
+  ids:
+  - steam:585180
+  requires: []

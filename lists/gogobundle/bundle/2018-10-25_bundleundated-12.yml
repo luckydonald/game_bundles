@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #12 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6601/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6601/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6601/source.json
+games:
+- name: ROGALIK
+  ids:
+  - unresolved:source:isthereanydeal:6601:rogalik
+  requires: []
+- name: Torture Chamber
+  ids:
+  - unresolved:source:isthereanydeal:6601:torture-chamber
+  requires: []
+- name: Galactic Lords
+  ids:
+  - steam:716230
+  requires: []
+- name: Loptice
+  ids:
+  - steam:659910
+  requires: []
+- name: Max Stern
+  ids:
+  - steam:531240
+  requires: []
+- name: Galactic Lords OST
+  ids:
+  - steam:754650
+  requires: []
+- name: Craft & Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:6601:craft-and-dungeon
+  requires: []
+- name: Planet Unknown Runner
+  ids:
+  - steam:851580
+  requires: []
+- name: Rivais Em Batalha
+  ids:
+  - steam:493820
+  requires: []
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:6601:the-visitors
+  requires: []
+- name: Fallen Cube
+  ids:
+  - steam:670370
+  requires: []
+- name: Let's Split Up (A Visual Novel)
+  ids:
+  - steam:876290
+  requires: []

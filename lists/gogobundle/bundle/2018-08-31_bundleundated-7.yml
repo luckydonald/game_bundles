@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #7 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6424/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6424/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6424/source.json
+games:
+- name: Clickdraw Clicker
+  ids:
+  - steam:541370
+  requires: []
+- name: Deep Ones Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6424:deep-ones-soundtrack
+  requires: []
+- name: HOST
+  ids:
+  - steam:828240
+  requires: []
+- name: ANIMALITY
+  ids:
+  - steam:576470
+  requires: []
+- name: Molecule - a chemical challenge
+  ids:
+  - steam:796840
+  requires: []
+- name: 'Case #9'
+  ids:
+  - unresolved:source:isthereanydeal:6424:case-9
+  requires: []
+- name: Deep Ones
+  ids:
+  - unresolved:source:isthereanydeal:6424:deep-ones
+  requires: []
+- name: Phobia
+  ids:
+  - steam:649150
+  requires: []
+- name: Infernales
+  ids:
+  - steam:705060
+  requires: []
+- name: PHAT STACKS
+  ids:
+  - steam:556160
+  requires: []
+- name: 'Symploke: Legend of Gustavo Bueno (Chapter 2)'
+  ids:
+  - steam:678920
+  requires: []
+- name: One Finger Death Punch
+  ids:
+  - steam:264200
+  requires: []

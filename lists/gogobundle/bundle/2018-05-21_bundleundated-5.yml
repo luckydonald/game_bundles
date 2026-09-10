@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Undated #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6150/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6150/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6150/source.json
+games:
+- name: Post Master
+  ids:
+  - steam:275080
+  requires: []
+- name: Hyper Box
+  ids:
+  - steam:438820
+  requires: []
+- name: Empire of the Gods
+  ids:
+  - steam:436140
+  requires: []
+- name: POPixel
+  ids:
+  - steam:485560
+  requires: []
+- name: Cosmic Leap
+  ids:
+  - steam:420850
+  requires: []
+- name: Jet Buster
+  ids:
+  - steam:618070
+  requires: []
+- name: Milford Heaven - Luken's Chronicles
+  ids:
+  - steam:485570
+  requires: []
+- name: iGrow Game
+  ids:
+  - steam:489020
+  requires: []
+- name: Hero of the Kingdom II
+  ids:
+  - steam:346560
+  requires: []
+- name: Hero of the Kingdom
+  ids:
+  - steam:259550
+  requires: []

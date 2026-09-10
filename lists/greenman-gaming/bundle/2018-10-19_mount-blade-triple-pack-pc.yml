@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Mount & Blade Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6580/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6580/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6580/source.json
+games:
+- name: 'Mount and Blade: With Fire and Sword'
+  ids:
+  - steam:48720
+  requires: []
+- name: Mount & Blade
+  ids:
+  - steam:22100
+  requires: []
+- name: 'Mount & Blade: Warband'
+  ids:
+  - steam:48700
+  requires: []
