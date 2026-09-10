@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 759 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11126/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11126/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11126/source.json
+games:
+- name: Samurai Wish
+  ids:
+  - steam:877040
+  requires: []
+- name: Zombie Golf
+  ids:
+  - steam:1131270
+  requires: []
+- name: The magic storm
+  ids:
+  - steam:1292960
+  requires: []
+- name: Gangsters 1920
+  ids:
+  - steam:1163490
+  requires: []
+- name: Goofy Golf Remastered Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:11126:goofy-golf-remastered-steam-edition
+  requires: []
+- name: Axiom Alternative
+  ids:
+  - unresolved:source:isthereanydeal:11126:axiom-alternative
+  requires: []
+- name: Metu Caligine
+  ids:
+  - steam:1453200
+  requires: []
+- name: Axiom Alternative II
+  ids:
+  - steam:1645620
+  requires: []
+- name: Yellow Ballman
+  ids:
+  - unresolved:source:isthereanydeal:11126:yellow-ballman
+  requires: []

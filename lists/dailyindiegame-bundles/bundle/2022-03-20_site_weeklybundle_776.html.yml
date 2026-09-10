@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 776 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11178/source.json
+games:
+- name: Edgar
+  ids:
+  - steam:455640
+  requires: []
+- name: Santa Jump
+  ids:
+  - unresolved:source:isthereanydeal:11178:santa-jump
+  requires: []
+- name: Claus Adventure
+  ids:
+  - unresolved:source:isthereanydeal:11178:claus-adventure
+  requires: []
+- name: Nervous Granny
+  ids:
+  - unresolved:source:isthereanydeal:11178:nervous-granny
+  requires: []
+- name: POG 7
+  ids:
+  - steam:1890200
+  requires: []
+- name: Super Slinger
+  ids:
+  - steam:1903100
+  requires: []
+- name: Frog Fall Down
+  ids:
+  - steam:1913360
+  requires: []
+- name: Nea Edem
+  ids:
+  - steam:1907020
+  requires: []
+- name: Valentines Desire - Casino Slot Simulations
+  ids:
+  - unresolved:source:isthereanydeal:11178:valentines-desire-casino-slot-simulations
+  requires: []

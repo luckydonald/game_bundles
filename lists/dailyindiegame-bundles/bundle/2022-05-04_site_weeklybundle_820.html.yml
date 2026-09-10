@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 820 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11459/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11459/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11459/source.json
+games:
+- name: Space Trade Fleet 1.5
+  ids:
+  - steam:1060110
+  requires: []
+- name: Flaky Bakery
+  ids:
+  - steam:980190
+  requires: []
+- name: Handy
+  ids:
+  - steam:1113390
+  requires: []
+- name: Metori
+  ids:
+  - steam:856190
+  requires: []
+- name: Cherry Island
+  ids:
+  - unresolved:source:isthereanydeal:11459:cherry-island
+  requires: []
+- name: Lloyd the Monkey 2
+  ids:
+  - steam:1381370
+  requires: []
+- name: Space Hockey
+  ids:
+  - steam:992250
+  requires: []
+- name: Strawberry Chocolate
+  ids:
+  - steam:1300860
+  requires: []
+- name: Skattered Dream
+  ids:
+  - steam:1745410
+  requires: []

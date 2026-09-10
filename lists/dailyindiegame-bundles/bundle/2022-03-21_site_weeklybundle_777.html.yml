@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 777: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11181/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11181/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11181/source.json
+games:
+- name: Robot Chase
+  ids:
+  - unresolved:source:isthereanydeal:11181:robot-chase
+  requires: []
+- name: Half Past Impossible
+  ids:
+  - unresolved:source:isthereanydeal:11181:half-past-impossible
+  requires: []
+- name: The Quest for Achievements Remix
+  ids:
+  - unresolved:source:isthereanydeal:11181:the-quest-for-achievements-remix
+  requires: []
+- name: Call each NEW YEAR
+  ids:
+  - steam:875630
+  requires: []
+- name: Defence War
+  ids:
+  - unresolved:source:isthereanydeal:11181:defence-war
+  requires: []
+- name: Theo's World
+  ids:
+  - steam:1439710
+  requires: []
+- name: BoatMan
+  ids:
+  - unresolved:source:isthereanydeal:11181:boatman
+  requires: []
+- name: Useful Cat
+  ids:
+  - steam:1631700
+  requires: []
+- name: Infinite Brick Breaker
+  ids:
+  - steam:1646830
+  requires: []

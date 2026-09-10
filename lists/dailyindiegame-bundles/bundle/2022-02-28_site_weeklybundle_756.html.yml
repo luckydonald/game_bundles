@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 756: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11107/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11107/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11107/source.json
+games:
+- name: Destruction Paper
+  ids:
+  - steam:890200
+  requires: []
+- name: MAZE
+  ids:
+  - steam:1136770
+  requires: []
+- name: Thugsters Battle Royale
+  ids:
+  - steam:1118500
+  requires: []
+- name: Shitty Cactus
+  ids:
+  - steam:1229650
+  requires: []
+- name: '486'
+  ids:
+  - steam:1263680
+  requires: []
+- name: Ultimate Demolition
+  ids:
+  - steam:1601190
+  requires: []
+- name: Coin Dash
+  ids:
+  - steam:1606730
+  requires: []
+- name: Furious Revenge of Bolo
+  ids:
+  - steam:1650130
+  requires: []
+- name: Splash Jump
+  ids:
+  - unresolved:source:isthereanydeal:11107:splash-jump
+  requires: []

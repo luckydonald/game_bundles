@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 799: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11365/source.json
+games:
+- name: Reflex
+  ids:
+  - steam:281860
+  requires: []
+- name: MMX
+  ids:
+  - steam:1146890
+  requires: []
+- name: Rand-O-mazE
+  ids:
+  - unresolved:source:isthereanydeal:11365:rand-o-maze
+  requires: []
+- name: Corona Find Us
+  ids:
+  - unresolved:source:isthereanydeal:11365:corona-find-us
+  requires: []
+- name: Cube Shifter
+  ids:
+  - steam:1372010
+  requires: []
+- name: 'Isekai: Reincarnation in a New World'
+  ids:
+  - steam:1485860
+  requires: []
+- name: BOOTS VS PLANTS
+  ids:
+  - steam:1475170
+  requires: []
+- name: Little Big Man - Survival
+  ids:
+  - steam:1623320
+  requires: []
+- name: Space Ship Infinity
+  ids:
+  - steam:1482050
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 840: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11523/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11523/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11523/source.json
+games:
+- name: White Dandelion
+  ids:
+  - unresolved:source:isthereanydeal:11523:white-dandelion
+  requires: []
+- name: Rosy Manga
+  ids:
+  - unresolved:source:isthereanydeal:11523:rosy-manga
+  requires: []
+- name: Arcane Eyes
+  ids:
+  - unresolved:source:isthereanydeal:11523:arcane-eyes
+  requires: []
+- name: Spring Flower
+  ids:
+  - unresolved:source:isthereanydeal:11523:spring-flower
+  requires: []
+- name: Trashyard
+  ids:
+  - unresolved:source:isthereanydeal:11523:trashyard
+  requires: []
+- name: Nekomimi Nikki
+  ids:
+  - unresolved:source:isthereanydeal:11523:nekomimi-nikki
+  requires: []
+- name: Modest Eyes
+  ids:
+  - unresolved:source:isthereanydeal:11523:modest-eyes
+  requires: []
+- name: Imoto No Yume
+  ids:
+  - unresolved:source:isthereanydeal:11523:imoto-no-yume
+  requires: []
+- name: Cloud Girl
+  ids:
+  - unresolved:source:isthereanydeal:11523:cloud-girl
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 812 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11427/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11427/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11427/source.json
+games:
+- name: Wind Angel
+  ids:
+  - unresolved:source:isthereanydeal:11427:wind-angel
+  requires: []
+- name: Sky Goddess
+  ids:
+  - unresolved:source:isthereanydeal:11427:sky-goddess
+  requires: []
+- name: Goddess Of War Ashley
+  ids:
+  - unresolved:source:isthereanydeal:11427:goddess-of-war-ashley
+  requires: []
+- name: Elemental Angel
+  ids:
+  - unresolved:source:isthereanydeal:11427:elemental-angel
+  requires: []
+- name: Vitality Girl
+  ids:
+  - unresolved:source:isthereanydeal:11427:vitality-girl
+  requires: []
+- name: Hidden Water
+  ids:
+  - steam:1778460
+  requires: []
+- name: Miner of Minerals
+  ids:
+  - steam:1971820
+  requires: []
+- name: Sky Goddess II
+  ids:
+  - unresolved:source:isthereanydeal:11427:sky-goddess-ii
+  requires: []
+- name: Wind Angel II
+  ids:
+  - unresolved:source:isthereanydeal:11427:wind-angel-ii
+  requires: []
