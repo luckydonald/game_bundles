@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1047: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12794/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12794/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12794/source.json
+games:
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+  requires: []
+- name: Journey to Alien Worlds
+  ids:
+  - steam:628960
+  requires: []
+- name: Journey to the Place of Tomorrow
+  ids:
+  - unresolved:source:isthereanydeal:12794:journey-to-the-place-of-tomorrow
+  requires: []
+- name: The Surreal Imaginarium
+  ids:
+  - steam:1348980
+  requires: []
+- name: Strike VR
+  ids:
+  - steam:1394210
+  requires: []
+- name: Astrotour VR
+  ids:
+  - steam:1416850
+  requires: []
+- name: You, Calligrapher
+  ids:
+  - steam:1593700
+  requires: []
+- name: Color Connect
+  ids:
+  - steam:3779810
+  requires: []
+- name: Z-Rush Survival
+  ids:
+  - steam:1899450
+  requires: []

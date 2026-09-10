@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1003 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12388/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12388/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12388/source.json
+games:
+- name: Penguin Hunting
+  ids:
+  - unresolved:source:isthereanydeal:12388:penguin-hunting
+  requires: []
+- name: Protecting Santa
+  ids:
+  - unresolved:source:isthereanydeal:12388:protecting-santa
+  requires: []
+- name: Grimland
+  ids:
+  - unresolved:source:isthereanydeal:12388:grimland
+  requires: []
+- name: Beat The Devil
+  ids:
+  - steam:2166260
+  requires: []
+- name: Soulslinger
+  ids:
+  - steam:2154570
+  requires: []
+- name: Elemental War - 元素大戦
+  ids:
+  - steam:1855490
+  requires: []
+- name: Candy Maid
+  ids:
+  - unresolved:source:isthereanydeal:12388:candy-maid
+  requires: []
+- name: Cherry Lady
+  ids:
+  - unresolved:source:isthereanydeal:12388:cherry-lady
+  requires: []
+- name: DrugRunner
+  ids:
+  - steam:2197000
+  requires: []

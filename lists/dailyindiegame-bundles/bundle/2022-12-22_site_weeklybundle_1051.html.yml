@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1051 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12823/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12823/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12823/source.json
+games:
+- name: RollTheEarth
+  ids:
+  - steam:878300
+  requires: []
+- name: 'MEMORISE : CREATION'
+  ids:
+  - unresolved:source:isthereanydeal:12823:memorise-creation
+  requires: []
+- name: Revenge Quest
+  ids:
+  - steam:569130
+  requires: []
+- name: Decisions
+  ids:
+  - unresolved:source:isthereanydeal:12823:decisions
+  requires: []
+- name: DockYard
+  ids:
+  - unresolved:source:isthereanydeal:12823:dockyard
+  requires: []
+- name: Chronicles of Honor
+  ids:
+  - steam:1271420
+  requires: []
+- name: Top Billiards
+  ids:
+  - steam:1366160
+  requires: []
+- name: Eternal dark winter
+  ids:
+  - unresolved:source:isthereanydeal:12823:eternal-dark-winter
+  requires: []
+- name: 异数OS MR Lab
+  ids:
+  - steam:1300140
+  requires: []

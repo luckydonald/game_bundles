@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1036: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12663/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12663/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12663/source.json
+games:
+- name: Bomber Arena
+  ids:
+  - steam:971280
+  requires: []
+- name: MOE
+  ids:
+  - steam:959770
+  requires: []
+- name: Blame!
+  ids:
+  - unresolved:source:isthereanydeal:12663:blame
+  requires: []
+- name: Curse in our heads
+  ids:
+  - steam:871300
+  requires: []
+- name: Fleeting World
+  ids:
+  - steam:1365700
+  requires: []
+- name: Poly Party
+  ids:
+  - steam:1291110
+  requires: []
+- name: Hepta Beats
+  ids:
+  - steam:1157670
+  requires: []
+- name: NOREN
+  ids:
+  - steam:1595270
+  requires: []
+- name: One Way To Exit 2
+  ids:
+  - steam:1120750
+  requires: []

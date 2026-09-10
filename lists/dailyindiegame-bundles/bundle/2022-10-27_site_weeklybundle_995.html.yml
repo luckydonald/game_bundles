@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 995 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12325/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12325/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12325/source.json
+games:
+- name: The Last Train
+  ids:
+  - unresolved:source:isthereanydeal:12325:the-last-train
+  requires: []
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+  requires: []
+- name: GORILLA TOWN
+  ids:
+  - steam:1217560
+  requires: []
+- name: 'Zack 2: Celestine''s Map'
+  ids:
+  - unresolved:source:isthereanydeal:12325:zack-2-celestines-map
+  requires: []
+- name: Isle Of Spirits
+  ids:
+  - steam:1237480
+  requires: []
+- name: War Of Freedom
+  ids:
+  - steam:1574030
+  requires: []
+- name: Frisbros
+  ids:
+  - steam:1481840
+  requires: []
+- name: Medieval Arms
+  ids:
+  - steam:1681920
+  requires: []
+- name: Humans Are Useless
+  ids:
+  - steam:2081360
+  requires: []
