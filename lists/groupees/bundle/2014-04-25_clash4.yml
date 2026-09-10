@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Clash of the World Bundles: Central Europe — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/732/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/732/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/732/source.json
+games:
+- name: Realms of Arkania - Blade of Destiny
+  ids:
+  - steam:237550
+  requires: []
+- name: Where Angels Cry
+  ids:
+  - steam:277560
+  requires: []
+- name: 'Realms of Arkania: Blade of Destiny - For the Gods'
+  ids:
+  - steam:264840
+  requires: []
+- name: 'Nightmares From the Deep: The Cursed Heart'
+  ids:
+  - unresolved:source:isthereanydeal:732:nightmares-from-the-deep-the-cursed-heart
+  requires: []
+- name: 'Song of the Myrne: What Lies Beneath'
+  ids:
+  - steam:333330
+  requires: []
+- name: 'Giana Sisters: Twisted Dreams'
+  ids:
+  - steam:223220
+  requires: []

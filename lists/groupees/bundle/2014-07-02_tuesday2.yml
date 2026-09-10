@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tuesday Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/951/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/951/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/951/source.json
+games:
+- name: Revenge of the Titans
+  ids:
+  - steam:93200
+  requires: []
+- name: Night Shift
+  ids:
+  - steam:301050
+  requires: []
+- name: Shiny The Firefly
+  ids:
+  - steam:277510
+  requires: []
+- name: Sudokuball Detective
+  ids:
+  - steam:288690
+  requires: []
+- name: 'Nicolas Eymerich The Inquisitor - Book I: The Plague'
+  ids:
+  - steam:279500
+  requires: []
+- name: White Noise Online
+  ids:
+  - steam:293860
+  requires: []

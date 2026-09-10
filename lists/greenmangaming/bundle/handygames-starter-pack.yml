@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: HANDYGAMES STARTER PACK! — Certified Handy
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/handygames-starter-pack/
+- name: Crawl metadata
+  path: ../../../../archives/greenmangaming/bundle/handygames-starter-pack/metadata.json
+- name: Crawl source
+  path: ../../../../archives/greenmangaming/bundle/handygames-starter-pack/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Scarf
+  ids:
+  - steam:645320
+  requires: []
+- name: PERISH
+  ids:
+  - steam:1016360
+  requires: []
+- name: We are Football 2024
+  ids:
+  - steam:1951410
+  requires: []
+- name: 'Jagged Alliance: Rage!'
+  ids:
+  - steam:463170
+  requires: []
+- name: Little Big Workshop
+  ids:
+  - steam:574720
+  requires: []
+- name: Endling – Extinction is Forever
+  ids:
+  - steam:898890
+  requires: []
