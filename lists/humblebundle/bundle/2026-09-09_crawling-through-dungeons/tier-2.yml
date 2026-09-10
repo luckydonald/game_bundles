@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Crawling Through the Dungeons — Entire 11 Item Bundle
+tier: 2
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/crawling-through-dungeons
+- name: Crawl metadata
+  path: ../../../../archives/humblebundle/bundle/2026-09-09_crawling-through-dungeons/metadata.json
+- name: Crawl source
+  path: ../../../../archives/humblebundle/bundle/2026-09-09_crawling-through-dungeons/source.json
+crawlers:
+- humblebundle
+games:
+- name: The Bard's Tale Trilogy
+  ids:
+  - steam:843260
+  requires: []
+- name: CiniCross
+  ids:
+  - steam:3933120
+  requires: []
+- name: Dungeon Drafters
+  ids:
+  - steam:1824580
+  requires: []
+- name: Crawl
+  ids:
+  - steam:293780
+  requires: []
+- name: 'Wizardry: Labyrinth of Lost Souls'
+  ids:
+  - steam:948640
+  requires: []
+- name: Xanadu Next
+  ids:
+  - steam:312560
+  requires: []
+- name: BroomSweeper
+  ids:
+  - steam:3473250
+  requires: []
+- name: 'Cthulhu''s Reach: Devil Reef'
+  ids:
+  - steam:2412200
+  requires: []
+- name: 'Astalon: Tears of the Earth'
+  ids:
+  - steam:1046400
+  requires: []
+- name: Touhou Artificial Dream in Arcadia
+  ids:
+  - steam:2248430
+  requires: []
+- name: Dungeon Tycoon
+  ids:
+  - steam:2400770
+  requires: []
