@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 916: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11937/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11937/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11937/source.json
+games:
+- name: Dallen Clicker Ultimate
+  ids:
+  - steam:1394420
+  requires: []
+- name: Never Going Home
+  ids:
+  - unresolved:source:isthereanydeal:11937:never-going-home
+  requires: []
+- name: Gravity run
+  ids:
+  - steam:1576750
+  requires: []
+- name: Magic gems
+  ids:
+  - steam:1664090
+  requires: []
+- name: Three Hundred Bucks
+  ids:
+  - unresolved:source:isthereanydeal:11937:three-hundred-bucks
+  requires: []
+- name: Magic Time
+  ids:
+  - steam:1754380
+  requires: []
+- name: Desert Magic Adventures
+  ids:
+  - unresolved:source:isthereanydeal:11937:desert-magic-adventures
+  requires: []
+- name: Skull Bullets
+  ids:
+  - steam:1780490
+  requires: []
+- name: Hidden Magic Town
+  ids:
+  - steam:1828940
+  requires: []

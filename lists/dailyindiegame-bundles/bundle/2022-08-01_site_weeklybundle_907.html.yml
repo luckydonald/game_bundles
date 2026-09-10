@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 907 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11865/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11865/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11865/source.json
+games:
+- name: Hidden Water
+  ids:
+  - steam:1778460
+  requires: []
+- name: Hidden Western
+  ids:
+  - steam:1902260
+  requires: []
+- name: Hidden Build Top-Down 3D
+  ids:
+  - steam:1915910
+  requires: []
+- name: Hidden Post-Apocalyptic Top-Down 3D
+  ids:
+  - steam:1912710
+  requires: []
+- name: 'Golden Mine Pickaxe 2: Mummy Tombs'
+  ids:
+  - unresolved:source:isthereanydeal:11865:golden-mine-pickaxe-2-mummy-tombs
+  requires: []
+- name: Hidden Farm Top-Down 3D
+  ids:
+  - steam:1944970
+  requires: []
+- name: Hidden Harbor Top-Down 3D
+  ids:
+  - steam:1947260
+  requires: []
+- name: 3D PUZZLE - Alchemist House
+  ids:
+  - steam:1955000
+  requires: []
+- name: Miner of Minerals
+  ids:
+  - steam:1971820
+  requires: []

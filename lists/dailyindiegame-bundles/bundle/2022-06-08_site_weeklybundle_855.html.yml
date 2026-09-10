@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 855 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11577/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11577/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11577/source.json
+games:
+- name: The Last Train
+  ids:
+  - unresolved:source:isthereanydeal:11577:the-last-train
+  requires: []
+- name: 'Zack 2: Celestine''s Map'
+  ids:
+  - unresolved:source:isthereanydeal:11577:zack-2-celestines-map
+  requires: []
+- name: Frisbros
+  ids:
+  - steam:1481840
+  requires: []
+- name: Through the Kill Screen
+  ids:
+  - steam:1917760
+  requires: []
+- name: Quantum Apex
+  ids:
+  - steam:1939930
+  requires: []
+- name: Via Mortis
+  ids:
+  - steam:1987550
+  requires: []
+- name: 'Diptych: The Great War'
+  ids:
+  - steam:1951380
+  requires: []
+- name: Night Racer
+  ids:
+  - steam:1902830
+  requires: []
+- name: Hell Division
+  ids:
+  - steam:2004360
+  requires: []

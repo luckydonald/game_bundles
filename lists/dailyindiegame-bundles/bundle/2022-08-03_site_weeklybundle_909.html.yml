@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 909: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11889/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11889/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11889/source.json
+games:
+- name: Faux
+  ids:
+  - steam:1032560
+  requires: []
+- name: Catch'em
+  ids:
+  - steam:861910
+  requires: []
+- name: EscapeRoute
+  ids:
+  - unresolved:source:isthereanydeal:11889:escaperoute
+  requires: []
+- name: Fall Of The Mafia
+  ids:
+  - unresolved:source:isthereanydeal:11889:fall-of-the-mafia
+  requires: []
+- name: Taivas
+  ids:
+  - steam:1388690
+  requires: []
+- name: Zen Cube
+  ids:
+  - steam:1606670
+  requires: []
+- name: Ballistic Machines
+  ids:
+  - unresolved:source:isthereanydeal:11889:ballistic-machines
+  requires: []
+- name: Witch's Reign
+  ids:
+  - steam:1520150
+  requires: []
+- name: ILLUMI-NAUGHTY ;) - Remastered
+  ids:
+  - steam:1835220
+  requires: []

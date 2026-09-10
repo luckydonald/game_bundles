@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 872: VR — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11654/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11654/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11654/source.json
+games:
+- name: Lost in the Ocean VR
+  ids:
+  - steam:596640
+  requires: []
+- name: Sinister Halloween
+  ids:
+  - steam:747690
+  requires: []
+- name: 'Fancy Skiing: Speed'
+  ids:
+  - steam:1081910
+  requires: []
+- name: Banana Invaders
+  ids:
+  - unresolved:source:isthereanydeal:11654:banana-invaders
+  requires: []
+- name: VRAdventure
+  ids:
+  - steam:1057730
+  requires: []
+- name: Astrotour VR
+  ids:
+  - steam:1416850
+  requires: []
+- name: You, Calligrapher
+  ids:
+  - steam:1593700
+  requires: []
+- name: Color Connect
+  ids:
+  - steam:3779810
+  requires: []
+- name: Z-Rush Survival
+  ids:
+  - steam:1899450
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 884 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11749/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11749/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11749/source.json
+games:
+- name: X-Force Genesis
+  ids:
+  - steam:1686470
+  requires: []
+- name: Defence Your Organism
+  ids:
+  - unresolved:source:isthereanydeal:11749:defence-your-organism
+  requires: []
+- name: Dirty block
+  ids:
+  - unresolved:source:isthereanydeal:11749:dirty-block
+  requires: []
+- name: Flipstown
+  ids:
+  - unresolved:source:isthereanydeal:11749:flipstown
+  requires: []
+- name: Cursed Blood
+  ids:
+  - steam:3382290
+  requires: []
+- name: Chicken Coop
+  ids:
+  - unresolved:source:isthereanydeal:11749:chicken-coop
+  requires: []
+- name: Everyone Moves With You
+  ids:
+  - steam:2009220
+  requires: []
+- name: Cool Animals
+  ids:
+  - steam:1702220
+  requires: []
+- name: The Grim Nightmare of Nibras
+  ids:
+  - steam:2021170
+  requires: []

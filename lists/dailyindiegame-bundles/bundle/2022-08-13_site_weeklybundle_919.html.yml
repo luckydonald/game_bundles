@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 919 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11953/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11953/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11953/source.json
+games:
+- name: Slay The Bigies
+  ids:
+  - steam:1203810
+  requires: []
+- name: Ghostkeeper
+  ids:
+  - unresolved:source:isthereanydeal:11953:ghostkeeper
+  requires: []
+- name: Dream Stone 2
+  ids:
+  - steam:1369410
+  requires: []
+- name: 'The Adventurer - Episode 2: New Dreams'
+  ids:
+  - steam:1320110
+  requires: []
+- name: GEAR TuNNEL
+  ids:
+  - steam:1553980
+  requires: []
+- name: DRUM'N'BASS MASSACRE
+  ids:
+  - steam:1636360
+  requires: []
+- name: RUUUUUUN
+  ids:
+  - unresolved:source:isthereanydeal:11953:ruuuuuun
+  requires: []
+- name: Warrior Maiden
+  ids:
+  - steam:2096050
+  requires: []
+- name: VIRUSUM
+  ids:
+  - steam:2096040
+  requires: []
