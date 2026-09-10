@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Sep 2020) — Select 3 Choices for BASIC, 9 Choices for PREMIUM,
+  12 Choices for CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9128/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9128/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9128/source.json
+games:
+- name: Forager
+  ids:
+  - steam:751780
+  requires: []
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  requires: []
+- name: Catherine Classic
+  ids:
+  - steam:893180
+  requires: []
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+  requires: []
+- name: The Occupation
+  ids:
+  - steam:765880
+  requires: []
+- name: Golf With Your Friends
+  ids:
+  - steam:431240
+  requires: []
+- name: Strange Brigade
+  ids:
+  - steam:312670
+  requires: []
+- name: 'Vampire: The Masquerade - Coteries of New York'
+  ids:
+  - steam:1096410
+  requires: []
+- name: The Shapeshifting Detective
+  ids:
+  - steam:898650
+  requires: []
+- name: Evoland Legendary Edition
+  ids:
+  - steam:1020470
+  requires: []
+- name: Generation Zero®
+  ids:
+  - steam:704270
+  requires: []
+- name: Golf With Your Friends - OST
+  ids:
+  - steam:564170
+  requires: []
+- name: 'Fun with Ragdolls: The Game'
+  ids:
+  - steam:1142500
+  requires: []
+- name: Carto
+  ids:
+  - steam:1172450
+  requires: []
+- name: Golf With Your Friends - Caddy Pack
+  ids:
+  - steam:1277570
+  requires: []
+- name: Alt254
+  ids:
+  - steam:1341720
+  requires: []

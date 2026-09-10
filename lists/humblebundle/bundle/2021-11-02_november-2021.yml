@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Nov 2021) — entire-11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10643/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10643/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10643/source.json
+games:
+- name: 'WRATH: Aeon of Ruin'
+  ids:
+  - steam:1000410
+  requires: []
+- name: House Flipper
+  ids:
+  - steam:613100
+  requires: []
+- name: Timelie
+  ids:
+  - steam:1150950
+  requires: []
+- name: Wingspan
+  ids:
+  - steam:1054490
+  requires: []
+- name: Due Process
+  ids:
+  - steam:753650
+  requires: []
+- name: Project Wingman
+  ids:
+  - steam:895870
+  requires: []
+- name: Turnip Boy Commits Tax Evasion
+  ids:
+  - steam:1205450
+  requires: []
+- name: 'BPM: BULLETS PER MINUTE'
+  ids:
+  - steam:1286350
+  requires: []
+- name: Möbius Front '83
+  ids:
+  - steam:971160
+  requires: []
+- name: NAIAD
+  ids:
+  - steam:1813860
+  requires: []
+- name: 'Juno: New Origins'
+  ids:
+  - steam:870200
+  requires: []

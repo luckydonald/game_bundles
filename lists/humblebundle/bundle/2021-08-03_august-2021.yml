@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Aug 2021) — Select 3 Choices for BASIC, 12 Choices for PREMIUM
+  or CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10313/source.json
+games:
+- name: We Need to Go Deeper
+  ids:
+  - steam:307110
+  requires: []
+- name: Encodya
+  ids:
+  - steam:1137450
+  requires: []
+- name: Out of Space
+  ids:
+  - steam:400080
+  requires: []
+- name: Last Oasis
+  ids:
+  - steam:903950
+  requires: []
+- name: 'Bloodstained: Ritual of the Night'
+  ids:
+  - steam:692850
+  requires: []
+- name: Nowhere Prophet
+  ids:
+  - steam:681730
+  requires: []
+- name: As Far As The Eye
+  ids:
+  - steam:1119700
+  requires: []
+- name: Superliminal
+  ids:
+  - steam:1049410
+  requires: []
+- name: Cepheus Protocol
+  ids:
+  - steam:979640
+  requires: []
+- name: Carto
+  ids:
+  - steam:1172450
+  requires: []
+- name: Drake Hollow
+  ids:
+  - steam:739650
+  requires: []
+- name: Blue Fire
+  ids:
+  - steam:1220150
+  requires: []
+- name: Retired Men's Nude Beach Volleyball
+  ids:
+  - unresolved:source:isthereanydeal:10313:retired-mens-nude-beach-volleyball
+  requires: []

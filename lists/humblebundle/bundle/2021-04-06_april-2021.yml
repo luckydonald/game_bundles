@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Apr 2021) — Select 3 Choices for BASIC, 12 Choices for PREMIUM
+  or CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9908/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9908/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9908/source.json
+games:
+- name: Skully
+  ids:
+  - steam:1249110
+  requires: []
+- name: Main Assembly
+  ids:
+  - steam:1078920
+  requires: []
+- name: Popup Dungeon
+  ids:
+  - steam:349730
+  requires: []
+- name: SIMULACRA 2
+  ids:
+  - steam:1011190
+  requires: []
+- name: 'Remothered: Broken Porcelain'
+  ids:
+  - steam:1142390
+  requires: []
+- name: In Other Waters
+  ids:
+  - steam:890720
+  requires: []
+- name: SIMULACRA
+  ids:
+  - steam:712730
+  requires: []
+- name: Sniper Ghost Warrior Contracts
+  ids:
+  - steam:973580
+  requires: []
+- name: Colt Canyon
+  ids:
+  - steam:940710
+  requires: []
+- name: Aven Colony
+  ids:
+  - steam:484900
+  requires: []
+- name: F1® 2020
+  ids:
+  - unresolved:source:isthereanydeal:9908:f1-2020
+  requires: []
+- name: Shenmue III
+  ids:
+  - steam:878670
+  requires: []
+- name: 'Rock of Ages III: Make and Break'
+  ids:
+  - steam:1101360
+  requires: []
