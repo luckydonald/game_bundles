@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Feb 2019) — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6877/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6877/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6877/source.json
+games:
+- name: Bleed 2
+  ids:
+  - steam:396350
+  requires: []
+- name: Super Daryl Deluxe
+  ids:
+  - steam:361230
+  requires: []
+- name: Tom Clancy's The Division™
+  ids:
+  - steam:365590
+  requires: []
+- name: Yakuza 0
+  ids:
+  - steam:638970
+  requires: []
+- name: Full Metal Furies
+  ids:
+  - steam:416600
+  requires: []
+- name: Rapture Rejects
+  ids:
+  - unresolved:source:isthereanydeal:6877:rapture-rejects
+  requires: []
+- name: After Hours
+  ids:
+  - steam:989040
+  requires: []
+- name: Tom Clancy's The Division™ - Survival
+  ids:
+  - steam:556470
+  requires: []
+- name: Aaero
+  ids:
+  - steam:499890
+  requires: []
+- name: Sniper Elite 3
+  ids:
+  - steam:238090
+  requires: []
+- name: Rapture Rejects - Safari Outfit
+  ids:
+  - unresolved:source:isthereanydeal:6877:rapture-rejects-safari-outfit
+  requires: []
+- name: 'Rock of Ages II: Bigger & Boulder™'
+  ids:
+  - steam:434460
+  requires: []

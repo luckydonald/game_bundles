@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly - January 2019 — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6740/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6740/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6740/source.json
+games:
+- name: Regions Of Ruin
+  ids:
+  - steam:680360
+  requires: []
+- name: Just Cause™ 3 XXL Edition
+  ids:
+  - unresolved:source:isthereanydeal:6740:just-cause-3-xxl-edition
+  requires: []
+- name: 'Roombo: First Blood'
+  ids:
+  - steam:1004610
+  requires: []
+- name: Wizard of Legend
+  ids:
+  - steam:445980
+  requires: []
+- name: Project CARS 2
+  ids:
+  - unresolved:source:isthereanydeal:6740:project-cars-2
+  requires: []
+- name: 'Sundered: Eldritch Edition'
+  ids:
+  - steam:535480
+  requires: []
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+  requires: []
+- name: '>observer_'
+  ids:
+  - steam:514900
+  requires: []
+- name: Qube 2
+  ids:
+  - steam:359100
+  requires: []

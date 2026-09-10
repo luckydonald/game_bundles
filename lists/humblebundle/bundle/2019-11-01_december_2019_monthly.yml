@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Dec 2019) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8086/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8086/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8086/source.json
+games:
+- name: Regular Human Basketball
+  ids:
+  - steam:661940
+  requires: []
+- name: Fluffy Horde
+  ids:
+  - steam:777880
+  requires: []
+- name: Sword Legacy Omen
+  ids:
+  - steam:690140
+  requires: []
+- name: Yakuza Kiwami
+  ids:
+  - steam:3717330
+  requires: []
+- name: Chasm
+  ids:
+  - steam:312200
+  requires: []
+- name: My Time At Portia
+  ids:
+  - steam:666140
+  requires: []
+- name: Balconing Simulator 2020
+  ids:
+  - steam:1383010
+  requires: []
+- name: SOULCALIBUR VI
+  ids:
+  - steam:544750
+  requires: []

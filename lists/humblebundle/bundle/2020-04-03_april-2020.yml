@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Apr 2020) — Select 3 Choices For $14.99, 9 Choices For $19.99,
+  10 Choices For $12.00*
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8636/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8636/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8636/source.json
+games:
+- name: 'Turok 2: Seeds of Evil'
+  ids:
+  - steam:405830
+  requires: []
+- name: Shoppe Keep 2
+  ids:
+  - steam:684580
+  requires: []
+- name: Capitalism II
+  ids:
+  - steam:638200
+  requires: []
+- name: 'Raiden V: Director''s Cut | 雷電 V Director''s Cut | 雷電V:導演剪輯版'
+  ids:
+  - steam:570050
+  requires: []
+- name: Train Valley 2
+  ids:
+  - steam:602320
+  requires: []
+- name: GRIS
+  ids:
+  - steam:683320
+  requires: []
+- name: 'The Bard''s Tale IV: Director''s Cut'
+  ids:
+  - steam:1091980
+  requires: []
+- name: This Is the Police 2
+  ids:
+  - steam:785740
+  requires: []
+- name: 'Driftland: The Magic Revival'
+  ids:
+  - steam:718650
+  requires: []
+- name: Opus Magnum
+  ids:
+  - steam:558990
+  requires: []
+- name: HITMAN 2
+  ids:
+  - unresolved:source:isthereanydeal:8636:hitman-2
+  requires: []
+- name: Truberbrook / Trüberbrook
+  ids:
+  - steam:757300
+  requires: []
+- name: MOLEK-SYNTEZ
+  ids:
+  - steam:1168880
+  requires: []
+- name: Divinoids
+  ids:
+  - unresolved:source:isthereanydeal:8636:divinoids
+  requires: []
+- name: Ring of Pain Exclusive Sneak Peek
+  ids:
+  - unresolved:source:isthereanydeal:8636:ring-of-pain-exclusive-sneak-peek
+  requires: []

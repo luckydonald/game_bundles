@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Monthly (Oct 2019) — entire-10-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7874/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7874/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7874/source.json
+games:
+- name: Sonic Mania
+  ids:
+  - steam:584400
+  requires: []
+- name: PUSS!
+  ids:
+  - steam:719750
+  requires: []
+- name: BATTLETECH - Flashpoint
+  ids:
+  - steam:911930
+  requires: []
+- name: BATTLETECH - Shadow Hawk Pack
+  ids:
+  - steam:799751
+  requires: []
+- name: BATTLETECH
+  ids:
+  - steam:637090
+  requires: []
+- name: PLANET ALPHA
+  ids:
+  - steam:485030
+  requires: []
+- name: The Spiral Scouts
+  ids:
+  - steam:862480
+  requires: []
+- name: 'Avernum 3: Ruined World'
+  ids:
+  - steam:691830
+  requires: []
+- name: 'Override: Mech City Brawl'
+  ids:
+  - unresolved:source:isthereanydeal:7874:override-mech-city-brawl
+  requires: []
+- name: Roman Sands
+  ids:
+  - unresolved:source:isthereanydeal:7874:roman-sands
+  requires: []

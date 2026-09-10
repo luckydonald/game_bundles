@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Feb 2020) — Select 3 Choices for $14.99, 9 Choices for $19.99,
+  10 Choices for $12.00*
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8373/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8373/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8373/source.json
+games:
+- name: Eliza
+  ids:
+  - steam:716500
+  requires: []
+- name: Okami HD
+  ids:
+  - steam:587620
+  requires: []
+- name: Warstone TD
+  ids:
+  - steam:562500
+  requires: []
+- name: UnderHero
+  ids:
+  - steam:573320
+  requires: []
+- name: Frostpunk
+  ids:
+  - steam:323190
+  requires: []
+- name: The Hex
+  ids:
+  - steam:510420
+  requires: []
+- name: Night Call
+  ids:
+  - steam:680380
+  requires: []
+- name: Project Warlock
+  ids:
+  - steam:893680
+  requires: []
+- name: Book of Demons
+  ids:
+  - steam:449960
+  requires: []
+- name: SHENZHEN I/O
+  ids:
+  - steam:504210
+  requires: []
+- name: 'Frostpunk: The Rifts'
+  ids:
+  - steam:1125020
+  requires: []
+- name: CryoFall
+  ids:
+  - steam:829590
+  requires: []
+- name: Tales From Off-Peak City Vol. 1
+  ids:
+  - steam:1129920
+  requires: []
+- name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
+  ids:
+  - steam:640820
+  requires: []
