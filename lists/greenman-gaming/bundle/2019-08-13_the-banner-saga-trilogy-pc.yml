@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Banner Saga Trilogy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7747/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7747/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7747/source.json
+games:
+- name: 'The Banner Saga 2: Deluxe Edition'
+  ids:
+  - steam:281640
+  requires: []
+- name: The Banner Saga 3 Deluxe Edition
+  ids:
+  - steam:485460
+  requires: []
+- name: The Banner Saga Deluxe Edition
+  ids:
+  - steam:237990
+  requires: []

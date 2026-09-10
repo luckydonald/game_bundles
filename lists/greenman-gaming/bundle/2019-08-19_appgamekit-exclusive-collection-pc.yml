@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: AppGameKit Exclusive Collection — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7790/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7790/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7790/source.json
+games:
+- name: AppGameKit - Visual Editor
+  ids:
+  - unresolved:source:isthereanydeal:7790:appgamekit-visual-editor
+  requires: []
+- name: AppGameKit - Giant Asset Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:7790:appgamekit-giant-asset-pack-1
+  requires: []
+- name: AppGameKit - Giant Asset Pack 2
+  ids:
+  - unresolved:source:isthereanydeal:7790:appgamekit-giant-asset-pack-2
+  requires: []
+- name: 'App Game Kit: Easy Game Development'
+  ids:
+  - unresolved:source:isthereanydeal:7790:app-game-kit-easy-game-development
+  requires: []
+- name: AppGameKit - Games Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:7790:appgamekit-games-pack-1
+  requires: []

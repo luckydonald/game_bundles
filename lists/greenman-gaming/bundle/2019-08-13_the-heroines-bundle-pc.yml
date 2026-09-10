@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Heroines Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7756/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7756/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7756/source.json
+games:
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Uriel's Chasm
+  ids:
+  - steam:292630
+  requires: []
+- name: De-Void
+  ids:
+  - steam:468570
+  requires: []
+- name: Melissa K. and the Heart of Gold Collector's Edition
+  ids:
+  - steam:321150
+  requires: []
+- name: Shuyan Saga
+  ids:
+  - steam:594680
+  requires: []

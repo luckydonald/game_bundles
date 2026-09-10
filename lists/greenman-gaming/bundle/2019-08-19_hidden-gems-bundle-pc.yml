@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hidden Gems Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7792/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7792/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7792/source.json
+games:
+- name: 'Diluvion: Resubmerged'
+  ids:
+  - steam:446790
+  requires: []
+- name: Surfingers
+  ids:
+  - steam:438080
+  requires: []
+- name: Demetrios - The BIG Cynical Adventure
+  ids:
+  - steam:451570
+  requires: []
+- name: Oh...Sir! The Hollywood Roast
+  ids:
+  - steam:575330
+  requires: []
+- name: Violet Cycle
+  ids:
+  - steam:595010
+  requires: []
+- name: Press X to Not Die
+  ids:
+  - steam:402330
+  requires: []
+- name: Timberman VS
+  ids:
+  - steam:943380
+  requires: []

@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday XP Credit Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10827/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10827/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10827/source.json
+games:
+- name: Anomaly 2
+  ids:
+  - steam:236730
+  requires: []
+- name: Absolute Drift
+  ids:
+  - steam:320140
+  requires: []
+- name: 99Vidas
+  ids:
+  - steam:557040
+  requires: []
+- name: Shape of the World
+  ids:
+  - steam:642610
+  requires: []

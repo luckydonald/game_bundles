@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Akupara Collection — Collection
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16206/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16206/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16206/source.json
+games:
+- name: Chroma Squad
+  ids:
+  - steam:251130
+  requires: []
+- name: Dino Run DX
+  ids:
+  - steam:248330
+  requires: []
+- name: Last Horizon
+  ids:
+  - steam:394220
+  requires: []
+- name: GRIME
+  ids:
+  - steam:1123050
+  requires: []
+- name: Four Last Things
+  ids:
+  - steam:503400
+  requires: []
+- name: Potatoman Seeks the Troof
+  ids:
+  - steam:328500
+  requires: []
+- name: Nanomon Virtual Pet
+  ids:
+  - steam:1498060
+  requires: []
+- name: Zoeti
+  ids:
+  - steam:1434540
+  requires: []
+- name: 'Absolute Tactics: Daughters of Mercy'
+  ids:
+  - steam:1636660
+  requires: []
+- name: Escape From Lavender Island
+  ids:
+  - steam:2164310
+  requires: []

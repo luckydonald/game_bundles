@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Galactic Civilization&#39;s Recruitment Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7806/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7806/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7806/source.json
+games:
+- name: Galactic Civilizations III - Mercenaries Expansion Pack
+  ids:
+  - steam:411650
+  requires: []
+- name: Galactic Civilizations III - Revenge of the Snathi
+  ids:
+  - steam:395990
+  requires: []
+- name: Galactic Civilizations III - Mech Parts Kit
+  ids:
+  - steam:513520
+  requires: []
+- name: 'Galactic Civilizations III - Heroes of Star Control: Origins'
+  ids:
+  - steam:954810
+  requires: []
