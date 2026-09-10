@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1078: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12904/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12904/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12904/source.json
+games:
+- name: Elven Magic
+  ids:
+  - steam:923140
+  requires: []
+- name: Edgar
+  ids:
+  - steam:455640
+  requires: []
+- name: Euler Wars
+  ids:
+  - steam:1246320
+  requires: []
+- name: Slime Up
+  ids:
+  - steam:1340420
+  requires: []
+- name: 'Alzheimer''s: Memories'
+  ids:
+  - steam:1624990
+  requires: []
+- name: Historic Fighters
+  ids:
+  - unresolved:source:isthereanydeal:12904:historic-fighters
+  requires: []
+- name: 'BattleGrounds : War, Tanks And Nukes'
+  ids:
+  - steam:1703640
+  requires: []
+- name: 'Hidden Objects: Tranquil Valley'
+  ids:
+  - steam:1921210
+  requires: []
+- name: Bargain Toader
+  ids:
+  - unresolved:source:isthereanydeal:12904:bargain-toader
+  requires: []

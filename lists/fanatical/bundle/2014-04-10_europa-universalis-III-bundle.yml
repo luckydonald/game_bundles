@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Europa Universalis III Collector's Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/699/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/699/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/699/source.json
+games:
+- name: 'Europa Universalis III: Divine Wind'
+  ids:
+  - steam:25808
+  requires: []
+- name: 'Europa Universalis III: Eastern - AD 1400 Spritepack'
+  ids:
+  - steam:25809
+  requires: []
+- name: 'Europa Universalis III: Music of the World'
+  ids:
+  - steam:25817
+  requires: []
+- name: 'Europa Universalis III: Revolution II Unit Pack'
+  ids:
+  - steam:25816
+  requires: []
+- name: 'Europa Universalis III: Western - AD 1400 Spritepack'
+  ids:
+  - steam:25810
+  requires: []
+- name: 'Europa Universalis 3: Heir to the Throne'
+  ids:
+  - unresolved:source:isthereanydeal:699:europa-universalis-3-heir-to-the-throne
+  requires: []
+- name: 'Europa Universalis III: Absolutism SpritePack'
+  ids:
+  - steam:25815
+  requires: []
+- name: 'Europa Universalis III: Enlightenment Spritepack'
+  ids:
+  - steam:25811
+  requires: []
+- name: Europa Universalis III Reformation Spritepack
+  ids:
+  - steam:25812
+  requires: []
+- name: 'Europa Universalis III: Medieval SpritePack'
+  ids:
+  - steam:25813
+  requires: []
+- name: Europa Universalis 3 Complete
+  ids:
+  - unresolved:source:isthereanydeal:699:europa-universalis-3-complete
+  requires: []
+- name: Europa Universalis III Revolution Spritepack
+  ids:
+  - steam:25814
+  requires: []

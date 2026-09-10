@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1079: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12906/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12906/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12906/source.json
+games:
+- name: Bad Day
+  ids:
+  - steam:803080
+  requires: []
+- name: Outlast
+  ids:
+  - steam:238320
+  requires: []
+- name: Champions
+  ids:
+  - unresolved:source:isthereanydeal:12906:champions
+  requires: []
+- name: 'SEN: Seven Eight Nine'
+  ids:
+  - steam:1170910
+  requires: []
+- name: Floody
+  ids:
+  - steam:1162390
+  requires: []
+- name: TCSTRIKERS3
+  ids:
+  - steam:1294170
+  requires: []
+- name: Rubble Bubble
+  ids:
+  - unresolved:source:isthereanydeal:12906:rubble-bubble
+  requires: []
+- name: TCSTRIKERS2
+  ids:
+  - steam:1374410
+  requires: []
+- name: TCSTRIKERS4
+  ids:
+  - unresolved:source:isthereanydeal:12906:tcstrikers4
+  requires: []

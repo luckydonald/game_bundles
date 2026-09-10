@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1072 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12882/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12882/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12882/source.json
+games:
+- name: NOSTOI
+  ids:
+  - steam:773810
+  requires: []
+- name: Drop Out 0
+  ids:
+  - steam:517660
+  requires: []
+- name: Taste of Power
+  ids:
+  - steam:758250
+  requires: []
+- name: Chrono Project
+  ids:
+  - steam:893810
+  requires: []
+- name: Cannibal Chickens
+  ids:
+  - steam:1077390
+  requires: []
+- name: Days Gone By
+  ids:
+  - steam:1196550
+  requires: []
+- name: Concept 20
+  ids:
+  - unresolved:source:isthereanydeal:12882:concept-20
+  requires: []
+- name: One True Cuddle
+  ids:
+  - steam:1217310
+  requires: []
+- name: Unlimited Fight
+  ids:
+  - steam:1469330
+  requires: []

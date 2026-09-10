@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Ultimate Sci-Fi Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/421/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/421/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/421/source.json
+games:
+- name: Planets Under Attack
+  ids:
+  - steam:218510
+  requires: []
+- name: Project Freedom
+  ids:
+  - steam:34810
+  requires: []
+- name: Really Big Sky
+  ids:
+  - steam:201570
+  requires: []
+- name: SpaceChem
+  ids:
+  - steam:92800
+  requires: []
+- name: Sword of the Stars II Enhanced Edition
+  ids:
+  - steam:42990
+  requires: []
+- name: Ion Assault
+  ids:
+  - steam:41730
+  requires: []
+- name: 'SpaceChem: 63 Corvi'
+  ids:
+  - steam:92803
+  requires: []
+- name: 'Weird Worlds: Return to Infinite Space'
+  ids:
+  - steam:226120
+  requires: []
+- name: 'Data Jammers: FastForward'
+  ids:
+  - steam:110500
+  requires: []

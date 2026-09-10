@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Wild Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/781/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/781/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/781/source.json
+games:
+- name: 'Edna & Harvey: Harvey''s New Eyes'
+  ids:
+  - steam:219910
+  requires: []
+- name: A New Beginning - Final Cut
+  ids:
+  - steam:105000
+  requires: []
+- name: Vitrum
+  ids:
+  - steam:291270
+  requires: []
+- name: Gateways
+  ids:
+  - steam:216290
+  requires: []
+- name: Astro Tripper
+  ids:
+  - steam:110600
+  requires: []
+- name: Alien Zombie Megadeath
+  ids:
+  - steam:110610
+  requires: []
+- name: 'Mutant Storm: Reloaded'
+  ids:
+  - steam:110630
+  requires: []

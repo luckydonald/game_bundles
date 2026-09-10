@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1075 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12889/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12889/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12889/source.json
+games:
+- name: Super Toy Cars
+  ids:
+  - steam:116100
+  requires: []
+- name: 'The Detective Chapters: Part One'
+  ids:
+  - steam:981660
+  requires: []
+- name: AMazing TD
+  ids:
+  - steam:1140030
+  requires: []
+- name: SSTR
+  ids:
+  - unresolved:source:isthereanydeal:12889:sstr
+  requires: []
+- name: Orbi's chronicles
+  ids:
+  - steam:1492190
+  requires: []
+- name: SIK Space Invader Kreature
+  ids:
+  - steam:1485970
+  requires: []
+- name: The Legend of Azarias
+  ids:
+  - steam:2065820
+  requires: []
+- name: River Raid 3D
+  ids:
+  - steam:2018190
+  requires: []
+- name: L.S.S II
+  ids:
+  - steam:1056330
+  requires: []

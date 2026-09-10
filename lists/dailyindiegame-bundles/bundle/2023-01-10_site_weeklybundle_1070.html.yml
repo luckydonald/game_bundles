@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1070 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12875/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12875/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12875/source.json
+games:
+- name: Hackerman
+  ids:
+  - unresolved:source:isthereanydeal:12875:hackerman
+  requires: []
+- name: Soldier in the darkness
+  ids:
+  - steam:1526790
+  requires: []
+- name: Nether Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:12875:nether-nightmare
+  requires: []
+- name: Fuyu no Tsuma
+  ids:
+  - unresolved:source:isthereanydeal:12875:fuyu-no-tsuma
+  requires: []
+- name: Nekomimi Nikki
+  ids:
+  - unresolved:source:isthereanydeal:12875:nekomimi-nikki
+  requires: []
+- name: Aoihana
+  ids:
+  - unresolved:source:isthereanydeal:12875:aoihana
+  requires: []
+- name: Rich Taste of Ecchi
+  ids:
+  - unresolved:source:isthereanydeal:12875:rich-taste-of-ecchi
+  requires: []
+- name: Angelic Wishes
+  ids:
+  - unresolved:source:isthereanydeal:12875:angelic-wishes
+  requires: []
+- name: Waifu Museum
+  ids:
+  - unresolved:source:isthereanydeal:12875:waifu-museum
+  requires: []

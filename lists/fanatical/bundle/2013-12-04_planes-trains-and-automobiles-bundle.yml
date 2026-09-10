@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Planes, Trains & Automobiles Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/438/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/438/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/438/source.json
+games:
+- name: Pacific Storm Allies
+  ids:
+  - steam:11260
+  requires: []
+- name: Agricultural Simulator 2013 - Steam Edition
+  ids:
+  - steam:236790
+  requires: []
+- name: Race 07
+  ids:
+  - steam:8600
+  requires: []
+- name: RACE On
+  ids:
+  - unresolved:source:isthereanydeal:438:race-on
+  requires: []
+- name: STCC - The Game 1 - Expansion Pack for RACE 07
+  ids:
+  - steam:8690
+  requires: []
+- name: 'Trainz: Settle & Carlisle'
+  ids:
+  - unresolved:source:isthereanydeal:438:trainz-settle-and-carlisle
+  requires: []
+- name: STCC The Game 2 - Expansion Pack for RACE 07
+  ids:
+  - steam:44620
+  requires: []
+- name: 'Trainz: Classic Cabon City'
+  ids:
+  - unresolved:source:isthereanydeal:438:trainz-classic-cabon-city
+  requires: []
+- name: 'Combat Wings: Battle of Britain'
+  ids:
+  - steam:34820
+  requires: []
+- name: GTR 2 FIA GT Racing Game
+  ids:
+  - steam:8790
+  requires: []
+- name: "Off\x96Road Drive"
+  ids:
+  - steam:200230
+  requires: []

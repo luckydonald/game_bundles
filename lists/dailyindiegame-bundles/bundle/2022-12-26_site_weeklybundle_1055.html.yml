@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1055: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12837/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12837/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12837/source.json
+games:
+- name: Hentai Teen
+  ids:
+  - unresolved:source:isthereanydeal:12837:hentai-teen
+  requires: []
+- name: Sakura Girls
+  ids:
+  - unresolved:source:isthereanydeal:12837:sakura-girls
+  requires: []
+- name: Hentai Jigsaw Girls 4
+  ids:
+  - steam:1767910
+  requires: []
+- name: Hentai Jigsaw Girls 4 - ArtBook
+  ids:
+  - steam:1768840
+  requires: []
+- name: Adult Puzzles - Hentai Halloween
+  ids:
+  - steam:1798220
+  requires: []
+- name: Adult Puzzles - Hentai Halloween ArtBook
+  ids:
+  - steam:1798800
+  requires: []
+- name: Anime Jigsaw Girls - Christmas
+  ids:
+  - steam:1818240
+  requires: []
+- name: Anime Jigsaw Girls - Christmas ArtBook
+  ids:
+  - steam:1819270
+  requires: []
+- name: Comixxx Strip
+  ids:
+  - steam:1805970
+  requires: []

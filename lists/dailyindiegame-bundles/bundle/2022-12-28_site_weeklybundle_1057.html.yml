@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1057: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12845/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12845/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12845/source.json
+games:
+- name: Square Norm
+  ids:
+  - steam:1102890
+  requires: []
+- name: 'Cold Cable: Lifeshift'
+  ids:
+  - steam:1043610
+  requires: []
+- name: Master of ABC
+  ids:
+  - steam:673820
+  requires: []
+- name: Mage World - The Wizard's Stone
+  ids:
+  - steam:1431380
+  requires: []
+- name: Сольфеджио
+  ids:
+  - unresolved:source:isthereanydeal:12845:sol-fedzio
+  requires: []
+- name: Witch's Reign
+  ids:
+  - steam:1520150
+  requires: []
+- name: Neutron and the Tri-Spark
+  ids:
+  - unresolved:source:isthereanydeal:12845:neutron-and-the-tri-spark
+  requires: []
+- name: ILLUMI-NAUGHTY ;) - Remastered
+  ids:
+  - steam:1835220
+  requires: []
+- name: Box's Dream
+  ids:
+  - steam:1837630
+  requires: []
