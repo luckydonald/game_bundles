@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8562/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8562/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8562/source.json
+games:
+- name: Wrestlers Without Boundaries
+  ids:
+  - unresolved:source:isthereanydeal:8562:wrestlers-without-boundaries
+  requires: []
+- name: Piano Cat
+  ids:
+  - unresolved:source:isthereanydeal:8562:piano-cat
+  requires: []
+- name: Magic League
+  ids:
+  - unresolved:source:isthereanydeal:8562:magic-league
+  requires: []
+- name: Strike Cars
+  ids:
+  - unresolved:source:isthereanydeal:8562:strike-cars
+  requires: []
+- name: 'Ashley: The Story Of Survival'
+  ids:
+  - unresolved:source:isthereanydeal:8562:ashley-the-story-of-survival
+  requires: []
+- name: SALVATOR
+  ids:
+  - steam:795920
+  requires: []
+- name: time of the zombies
+  ids:
+  - steam:1004050
+  requires: []
+- name: Grab the Bottle
+  ids:
+  - steam:546410
+  requires: []
+- name: mAIn COMPetition
+  ids:
+  - steam:1107580
+  requires: []

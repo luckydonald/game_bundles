@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 80: Blender Games — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8017/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8017/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8017/source.json
+games:
+- name: BAFF 2
+  ids:
+  - steam:1104670
+  requires: []
+- name: Data mining 0
+  ids:
+  - steam:1059260
+  requires: []
+- name: GraFi 2
+  ids:
+  - steam:1092650
+  requires: []
+- name: Data mining 5
+  ids:
+  - steam:1012860
+  requires: []
+- name: GraFi
+  ids:
+  - steam:1067650
+  requires: []
+- name: Data mining 7
+  ids:
+  - steam:1042150
+  requires: []
+- name: BAFF
+  ids:
+  - steam:1081760
+  requires: []
+- name: 'Chocolate makes you happy: Lunar New Year'
+  ids:
+  - steam:1035920
+  requires: []
+- name: aMAZE Lunar
+  ids:
+  - steam:1031540
+  requires: []

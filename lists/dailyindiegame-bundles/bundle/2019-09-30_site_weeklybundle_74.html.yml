@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 74: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7963/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7963/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7963/source.json
+games:
+- name: 'Sarab: Duji Tower'
+  ids:
+  - steam:551570
+  requires: []
+- name: Five Keys to Exit
+  ids:
+  - unresolved:source:isthereanydeal:7963:five-keys-to-exit
+  requires: []
+- name: '2100'
+  ids:
+  - steam:1018090
+  requires: []
+- name: 'Haunted Jail: Alcatas'
+  ids:
+  - steam:1056650
+  requires: []
+- name: Craft & Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:7963:craft-and-dungeon
+  requires: []
+- name: Flagsplosion
+  ids:
+  - steam:652340
+  requires: []
+- name: Count Logica
+  ids:
+  - steam:928660
+  requires: []
+- name: Bonsai
+  ids:
+  - steam:444160
+  requires: []
+- name: JuBOX
+  ids:
+  - unresolved:source:isthereanydeal:7963:jubox
+  requires: []

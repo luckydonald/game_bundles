@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 99 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8162/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8162/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8162/source.json
+games:
+- name: TKKG - Die Feuerprobe
+  ids:
+  - steam:1104870
+  requires: []
+- name: Faux
+  ids:
+  - steam:1032560
+  requires: []
+- name: Chibi Volleyball
+  ids:
+  - unresolved:source:isthereanydeal:8162:chibi-volleyball
+  requires: []
+- name: 'Puss in Boots: Fear Not Hooman'
+  ids:
+  - steam:1034820
+  requires: []
+- name: Round Ways
+  ids:
+  - steam:876960
+  requires: []
+- name: Laservasion
+  ids:
+  - steam:1133310
+  requires: []
+- name: Tropia
+  ids:
+  - steam:1047810
+  requires: []
+- name: Unveloped
+  ids:
+  - steam:776740
+  requires: []
+- name: Aria Dating Simulator
+  ids:
+  - steam:1181290
+  requires: []

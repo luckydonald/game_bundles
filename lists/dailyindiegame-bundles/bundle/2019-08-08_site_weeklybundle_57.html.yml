@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 57 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7729/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7729/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7729/source.json
+games:
+- name: Best Life Simulator
+  ids:
+  - steam:949960
+  requires: []
+- name: Robot Fighting
+  ids:
+  - unresolved:source:isthereanydeal:7729:robot-fighting
+  requires: []
+- name: Wrestlers Without Boundaries
+  ids:
+  - unresolved:source:isthereanydeal:7729:wrestlers-without-boundaries
+  requires: []
+- name: 'Fancy Skiing: Speed'
+  ids:
+  - steam:1081910
+  requires: []
+- name: World Of Walking Cities
+  ids:
+  - unresolved:source:isthereanydeal:7729:world-of-walking-cities
+  requires: []
+- name: 'Pottery Crafts: Hand-Made Simulator'
+  ids:
+  - unresolved:source:isthereanydeal:7729:pottery-crafts-hand-made-simulator
+  requires: []
+- name: Sniper Squad Mission
+  ids:
+  - unresolved:source:isthereanydeal:7729:sniper-squad-mission
+  requires: []
+- name: Space BloX
+  ids:
+  - steam:1086270
+  requires: []
+- name: Heroes of Shaola
+  ids:
+  - steam:1124210
+  requires: []

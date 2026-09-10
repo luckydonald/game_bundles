@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 118 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8308/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8308/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8308/source.json
+games:
+- name: Mahjong Classic
+  ids:
+  - unresolved:source:isthereanydeal:8308:mahjong-classic
+  requires: []
+- name: Robot Fighting
+  ids:
+  - unresolved:source:isthereanydeal:8308:robot-fighting
+  requires: []
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:8308:great-ball-of-fire
+  requires: []
+- name: Bloody Faerie
+  ids:
+  - steam:811950
+  requires: []
+- name: Perhaps When We Dream
+  ids:
+  - unresolved:source:isthereanydeal:8308:perhaps-when-we-dream
+  requires: []
+- name: Die In The Dark
+  ids:
+  - steam:847860
+  requires: []
+- name: Grunt1914
+  ids:
+  - steam:1059040
+  requires: []
+- name: Tale's Casino Escape
+  ids:
+  - steam:1149930
+  requires: []
+- name: O.C.D. - On Completeness & Dissonance
+  ids:
+  - unresolved:source:isthereanydeal:8308:ocd-on-completeness-and-dissonance
+  requires: []

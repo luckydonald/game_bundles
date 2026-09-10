@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 60: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7775/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7775/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7775/source.json
+games:
+- name: Grater
+  ids:
+  - unresolved:source:isthereanydeal:7775:grater
+  requires: []
+- name: 'Countryballs: Over The World'
+  ids:
+  - unresolved:source:isthereanydeal:7775:countryballs-over-the-world
+  requires: []
+- name: Mahjong Solitaire
+  ids:
+  - steam:805400
+  requires: []
+- name: Fish's Trip
+  ids:
+  - steam:701960
+  requires: []
+- name: Sos i pie sos 2 kycb edition
+  ids:
+  - unresolved:source:isthereanydeal:7775:sos-i-pie-sos-2-kycb-edition
+  requires: []
+- name: The Sunset 2096
+  ids:
+  - steam:690820
+  requires: []
+- name: Mall Mayhem
+  ids:
+  - steam:629400
+  requires: []
+- name: High Cats
+  ids:
+  - unresolved:source:isthereanydeal:7775:high-cats
+  requires: []
+- name: Die In The Dark
+  ids:
+  - steam:847860
+  requires: []

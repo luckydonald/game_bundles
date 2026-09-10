@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 106 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8216/source.json
+games:
+- name: Intelligence Trader
+  ids:
+  - unresolved:source:isthereanydeal:8216:intelligence-trader
+  requires: []
+- name: 'Foreign Legion: Buckets of Blood'
+  ids:
+  - steam:36000
+  requires: []
+- name: DELIVERED!
+  ids:
+  - unresolved:source:isthereanydeal:8216:delivered
+  requires: []
+- name: 'ESCAPE: MOUSE GUN'
+  ids:
+  - unresolved:source:isthereanydeal:8216:escape-mouse-gun
+  requires: []
+- name: 'Foreign Legion: Multi Massacre'
+  ids:
+  - steam:205550
+  requires: []
+- name: Operation Lone Wolf
+  ids:
+  - steam:926010
+  requires: []
+- name: Lovely Heroines
+  ids:
+  - steam:1170290
+  requires: []
+- name: Stickman go
+  ids:
+  - unresolved:source:isthereanydeal:8216:stickman-go
+  requires: []
+- name: Hentai Fetish Tycoon
+  ids:
+  - unresolved:source:isthereanydeal:8216:hentai-fetish-tycoon
+  requires: []

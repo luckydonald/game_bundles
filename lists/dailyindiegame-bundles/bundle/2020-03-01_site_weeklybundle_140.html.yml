@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 140 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8454/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8454/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8454/source.json
+games:
+- name: Parkour Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8454:parkour-simulator
+  requires: []
+- name: Rage of the Pumpkins - Space Prostitutes Must Die! Again
+  ids:
+  - steam:877470
+  requires: []
+- name: Trapland
+  ids:
+  - unresolved:source:isthereanydeal:8454:trapland
+  requires: []
+- name: Bang Bang Fruit 2
+  ids:
+  - steam:703920
+  requires: []
+- name: Donald VS Martians
+  ids:
+  - steam:987740
+  requires: []
+- name: Klondike & Girls
+  ids:
+  - unresolved:source:isthereanydeal:8454:klondike-and-girls
+  requires: []
+- name: Earth 2140
+  ids:
+  - steam:253860
+  requires: []
+- name: Putinization
+  ids:
+  - steam:861000
+  requires: []
+- name: Cuckold Simulator
+  ids:
+  - unresolved:source:isthereanydeal:8454:cuckold-simulator
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 146 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8489/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8489/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8489/source.json
+games:
+- name: Lab.Gen.
+  ids:
+  - steam:920800
+  requires: []
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+  requires: []
+- name: Fury Race
+  ids:
+  - unresolved:source:isthereanydeal:8489:fury-race
+  requires: []
+- name: World Of Walking Cities
+  ids:
+  - unresolved:source:isthereanydeal:8489:world-of-walking-cities
+  requires: []
+- name: Time Splatter
+  ids:
+  - steam:949530
+  requires: []
+- name: FriendShip
+  ids:
+  - steam:542110
+  requires: []
+- name: Leviathan
+  ids:
+  - steam:882630
+  requires: []
+- name: StarBallMadNess
+  ids:
+  - steam:673050
+  requires: []
+- name: Space Flowers
+  ids:
+  - steam:821480
+  requires: []

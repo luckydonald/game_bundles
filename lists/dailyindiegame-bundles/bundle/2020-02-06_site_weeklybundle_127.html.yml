@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 127 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8371/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8371/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8371/source.json
+games:
+- name: Super Cuber
+  ids:
+  - unresolved:source:isthereanydeal:8371:super-cuber
+  requires: []
+- name: Seasons Girls
+  ids:
+  - steam:1146250
+  requires: []
+- name: Dream Pinball 3D
+  ids:
+  - steam:215790
+  requires: []
+- name: FastGo Running
+  ids:
+  - unresolved:source:isthereanydeal:8371:fastgo-running
+  requires: []
+- name: Elections Simulator 2018
+  ids:
+  - unresolved:source:isthereanydeal:8371:elections-simulator-2018
+  requires: []
+- name: Night Crisis
+  ids:
+  - steam:340190
+  requires: []
+- name: Paul's World
+  ids:
+  - steam:1160880
+  requires: []
+- name: Nostalgiarian
+  ids:
+  - steam:1192880
+  requires: []
+- name: Gjana's World
+  ids:
+  - steam:1218300
+  requires: []
