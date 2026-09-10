@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1010: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12431/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12431/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12431/source.json
+games:
+- name: Jaywalker
+  ids:
+  - unresolved:source:isthereanydeal:12431:jaywalker
+  requires: []
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+  requires: []
+- name: House Number 666
+  ids:
+  - steam:1162690
+  requires: []
+- name: Ghost In The Barn House
+  ids:
+  - steam:1219220
+  requires: []
+- name: Plataforma branca
+  ids:
+  - unresolved:source:isthereanydeal:12431:plataforma-branca
+  requires: []
+- name: Puzzle Challengers
+  ids:
+  - steam:1550810
+  requires: []
+- name: Memento Infernum
+  ids:
+  - steam:1581050
+  requires: []
+- name: Hungry Bunny
+  ids:
+  - steam:1681560
+  requires: []
+- name: The Hero of Bangaona
+  ids:
+  - steam:1727250
+  requires: []

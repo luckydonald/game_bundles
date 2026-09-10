@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 970 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12161/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12161/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12161/source.json
+games:
+- name: Fishing Maniacs (TD)
+  ids:
+  - unresolved:source:isthereanydeal:12161:fishing-maniacs-td
+  requires: []
+- name: 'A Front Too Far: Normandy'
+  ids:
+  - steam:958320
+  requires: []
+- name: 'Seven Mysteries: The Last Page'
+  ids:
+  - steam:783440
+  requires: []
+- name: Miriel Saga
+  ids:
+  - steam:1148710
+  requires: []
+- name: Solar Rogue
+  ids:
+  - steam:1301410
+  requires: []
+- name: Tusk of Spirit
+  ids:
+  - steam:1340760
+  requires: []
+- name: Dear Mom
+  ids:
+  - steam:1518140
+  requires: []
+- name: Hexfactory
+  ids:
+  - steam:1958750
+  requires: []
+- name: Night Racer
+  ids:
+  - steam:1902830
+  requires: []

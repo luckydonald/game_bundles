@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1021: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12530/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12530/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12530/source.json
+games:
+- name: Little Bunny
+  ids:
+  - steam:1285870
+  requires: []
+- name: Jumperbird
+  ids:
+  - steam:1310480
+  requires: []
+- name: Tankfight
+  ids:
+  - steam:1310470
+  requires: []
+- name: White Dandelion
+  ids:
+  - unresolved:source:isthereanydeal:12530:white-dandelion
+  requires: []
+- name: Soft Wind
+  ids:
+  - unresolved:source:isthereanydeal:12530:soft-wind
+  requires: []
+- name: Elven Truth
+  ids:
+  - unresolved:source:isthereanydeal:12530:elven-truth
+  requires: []
+- name: True Spring Love
+  ids:
+  - unresolved:source:isthereanydeal:12530:true-spring-love
+  requires: []
+- name: Cute Girls Love Books
+  ids:
+  - unresolved:source:isthereanydeal:12530:cute-girls-love-books
+  requires: []
+- name: Amazing Girl
+  ids:
+  - unresolved:source:isthereanydeal:12530:amazing-girl
+  requires: []

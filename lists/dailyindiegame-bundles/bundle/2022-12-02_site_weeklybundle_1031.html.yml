@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1031 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12620/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12620/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12620/source.json
+games:
+- name: zombie wars
+  ids:
+  - steam:1638870
+  requires: []
+- name: The Unintended Consequences of Curiosity
+  ids:
+  - steam:814660
+  requires: []
+- name: Castle Commander
+  ids:
+  - steam:1188670
+  requires: []
+- name: Future Tanks Area
+  ids:
+  - steam:1821490
+  requires: []
+- name: Goofy Golf Remastered Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:12620:goofy-golf-remastered-steam-edition
+  requires: []
+- name: Block Collide
+  ids:
+  - steam:1797250
+  requires: []
+- name: Chess crown
+  ids:
+  - steam:1815260
+  requires: []
+- name: Fantasy Fighters
+  ids:
+  - unresolved:source:isthereanydeal:12620:fantasy-fighters
+  requires: []
+- name: 'Space Maxwell: Arcade'
+  ids:
+  - unresolved:source:isthereanydeal:12620:space-maxwell-arcade
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1007: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12403/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12403/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12403/source.json
+games:
+- name: HANAMI
+  ids:
+  - unresolved:source:isthereanydeal:12403:hanami
+  requires: []
+- name: Chinese Bull
+  ids:
+  - unresolved:source:isthereanydeal:12403:chinese-bull
+  requires: []
+- name: My Sweet Ants!
+  ids:
+  - unresolved:source:isthereanydeal:12403:my-sweet-ants
+  requires: []
+- name: Sweety Little Witch
+  ids:
+  - unresolved:source:isthereanydeal:12403:sweety-little-witch
+  requires: []
+- name: Endless Love
+  ids:
+  - unresolved:source:isthereanydeal:12403:endless-love
+  requires: []
+- name: Izanami
+  ids:
+  - unresolved:source:isthereanydeal:12403:izanami
+  requires: []
+- name: Modest Eyes
+  ids:
+  - unresolved:source:isthereanydeal:12403:modest-eyes
+  requires: []
+- name: Cloud Girl
+  ids:
+  - unresolved:source:isthereanydeal:12403:cloud-girl
+  requires: []
+- name: Sokonashi No Me
+  ids:
+  - unresolved:source:isthereanydeal:12403:sokonashi-no-me
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1052 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12829/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12829/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12829/source.json
+games:
+- name: RollBall
+  ids:
+  - unresolved:source:isthereanydeal:12829:rollball
+  requires: []
+- name: jump jump
+  ids:
+  - unresolved:source:isthereanydeal:12829:jump-jump
+  requires: []
+- name: Slime Dice
+  ids:
+  - steam:1767950
+  requires: []
+- name: Helix Jump
+  ids:
+  - steam:2751330
+  requires: []
+- name: Aeolus Fighter
+  ids:
+  - unresolved:source:isthereanydeal:12829:aeolus-fighter
+  requires: []
+- name: Sky Goddess Remaking
+  ids:
+  - unresolved:source:isthereanydeal:12829:sky-goddess-remaking
+  requires: []
+- name: Robot T
+  ids:
+  - steam:2093300
+  requires: []
+- name: Blue Sky
+  ids:
+  - unresolved:source:isthereanydeal:12829:blue-sky
+  requires: []
+- name: Red Flower
+  ids:
+  - unresolved:source:isthereanydeal:12829:red-flower
+  requires: []
