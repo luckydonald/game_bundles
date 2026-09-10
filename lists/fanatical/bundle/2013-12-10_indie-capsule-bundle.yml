@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Capsule Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/449/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/449/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/449/source.json
+games:
+- name: And Yet It Moves
+  ids:
+  - steam:18700
+  requires: []
+- name: 'Slender: The Arrival'
+  ids:
+  - steam:252330
+  requires: []
+- name: Blood of the Werewolf
+  ids:
+  - steam:260250
+  requires: []
+- name: 'Doc Clock: The Toasted Sandwich of Time'
+  ids:
+  - steam:57800
+  requires: []
+- name: Insanely Twisted Shadow Planet
+  ids:
+  - steam:205730
+  requires: []
+- name: Snuggle Truck
+  ids:
+  - steam:111100
+  requires: []
+- name: Plain Sight
+  ids:
+  - steam:49900
+  requires: []

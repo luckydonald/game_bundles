@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cities in Motion Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/490/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/490/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/490/source.json
+games:
+- name: 'Cities in Motion: Design Marvels'
+  ids:
+  - steam:73013
+  requires: []
+- name: Cities In Motion Design Classics
+  ids:
+  - steam:73012
+  requires: []
+- name: 'Cities In Motion: Design Quirks'
+  ids:
+  - steam:206718
+  requires: []
+- name: Cities in Motion US Cities
+  ids:
+  - steam:73187
+  requires: []
+- name: 'Cities in Motion: Design Now'
+  ids:
+  - steam:73014
+  requires: []
+- name: 'Cities in Motion: Metro Stations'
+  ids:
+  - steam:73183
+  requires: []
+- name: 'Cities In Motion: London'
+  ids:
+  - steam:206720
+  requires: []
+- name: 'Cities in Motion: Paris'
+  ids:
+  - steam:206714
+  requires: []
+- name: Cities in Motion German Cities
+  ids:
+  - steam:73185
+  requires: []
+- name: Cities in Motion Tokyo
+  ids:
+  - steam:73181
+  requires: []
+- name: Cities in Motion
+  ids:
+  - steam:73010
+  requires: []
+- name: Cities in Motion St Petersburg
+  ids:
+  - steam:206716
+  requires: []
+- name: 'Cities in Motion: Ulm'
+  ids:
+  - steam:206712
+  requires: []
+- name: Cities in Motion Design Dreams
+  ids:
+  - steam:206710
+  requires: []

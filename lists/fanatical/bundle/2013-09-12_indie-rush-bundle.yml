@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Rush Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/210/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/210/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/210/source.json
+games:
+- name: Rush Bros
+  ids:
+  - steam:234490
+  requires: []
+- name: Velvet Assassin
+  ids:
+  - steam:16720
+  requires: []
+- name: Lunar Flight
+  ids:
+  - steam:208600
+  requires: []
+- name: Bad Bots
+  ids:
+  - steam:235070
+  requires: []
+- name: The Tiny Bang Story
+  ids:
+  - steam:96000
+  requires: []
+- name: Glowfish
+  ids:
+  - steam:60350
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Magic Number Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/213/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/213/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/213/source.json
+games:
+- name: Mata Hari
+  ids:
+  - steam:18480
+  requires: []
+- name: "Air Conflicts \x96 Secret Wars"
+  ids:
+  - steam:95900
+  requires: []
+- name: Cargo! - The Quest for Gravity
+  ids:
+  - steam:41740
+  requires: []
+- name: STORM Frontline Nation
+  ids:
+  - unresolved:source:isthereanydeal:213:storm-frontline-nation
+  requires: []
+- name: 'Crazy Machines: Elements'
+  ids:
+  - steam:206410
+  requires: []
+- name: Helldorado
+  ids:
+  - steam:18470
+  requires: []
+- name: Whispered World, The
+  ids:
+  - unresolved:source:isthereanydeal:213:whispered-world-the
+  requires: []
+- name: Crazy Machines 2
+  ids:
+  - steam:18400
+  requires: []
+- name: Alter Ego
+  ids:
+  - steam:63110
+  requires: []

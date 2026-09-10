@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Conquest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/728/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/728/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/728/source.json
+games:
+- name: A Game of Dwarves - Pets
+  ids:
+  - steam:222223
+  requires: []
+- name: Hyper Fighters
+  ids:
+  - steam:267960
+  requires: []
+- name: American Conquest
+  ids:
+  - steam:115210
+  requires: []
+- name: A Game of Dwarves - Ale DLC Pack
+  ids:
+  - unresolved:source:isthereanydeal:728:a-game-of-dwarves-ale-dlc-pack
+  requires: []
+- name: Xpand Rally Xtreme
+  ids:
+  - steam:3050
+  requires: []
+- name: Incoming Forces
+  ids:
+  - unresolved:source:isthereanydeal:728:incoming-forces
+  requires: []
+- name: 'A Game of Dwarves: Star Dwarves'
+  ids:
+  - steam:222222
+  requires: []
+- name: A Game of Dwarves
+  ids:
+  - steam:200370
+  requires: []
+- name: Call of Juarez™
+  ids:
+  - steam:3020
+  requires: []
+- name: 'Cossacks: European Wars'
+  ids:
+  - steam:4880
+  requires: []
+- name: Lucius
+  ids:
+  - steam:218640
+  requires: []
+- name: 'King Arthur II: The Role-playing Wargame'
+  ids:
+  - steam:24480
+  requires: []
+- name: Ballpoint Universe - Infinite
+  ids:
+  - steam:259390
+  requires: []
+- name: 99 Levels To Hell
+  ids:
+  - steam:264280
+  requires: []
+- name: 'Cossacks II: Napoleonic Wars'
+  ids:
+  - steam:115200
+  requires: []

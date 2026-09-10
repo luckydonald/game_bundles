@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dynamite Reloaded Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/212/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/212/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/212/source.json
+games:
+- name: 'Death Track: Resurrection'
+  ids:
+  - steam:7840
+  requires: []
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+  requires: []
+- name: 'King''s Bounty: The Legend'
+  ids:
+  - steam:25900
+  requires: []
+- name: 'Men of War: Vietnam'
+  ids:
+  - steam:63940
+  requires: []
+- name: 'Real Warfare: 1242'
+  ids:
+  - steam:46350
+  requires: []
+- name: 'Death to Spies: Moment of Truth'
+  ids:
+  - steam:34410
+  requires: []
+- name: 'Real Warfare 2: Northern Crusades'
+  ids:
+  - steam:202860
+  requires: []
+- name: Star Wolves 2
+  ids:
+  - steam:46280
+  requires: []
+- name: 'Reign: Conflict of Nations'
+  ids:
+  - steam:46380
+  requires: []
+- name: "Off\x96Road Drive"
+  ids:
+  - steam:200230
+  requires: []

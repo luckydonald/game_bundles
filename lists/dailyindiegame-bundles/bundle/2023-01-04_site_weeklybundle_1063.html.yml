@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1063: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12861/source.json
+games:
+- name: Flow
+  ids:
+  - steam:1453870
+  requires: []
+- name: Vylan
+  ids:
+  - steam:1445650
+  requires: []
+- name: Battle for Sea 3D
+  ids:
+  - steam:1584350
+  requires: []
+- name: 'Maze Art: Black'
+  ids:
+  - steam:1815860
+  requires: []
+- name: Hidden Islands
+  ids:
+  - steam:1864860
+  requires: []
+- name: Cat and Fish
+  ids:
+  - steam:1872130
+  requires: []
+- name: One By One
+  ids:
+  - steam:1780480
+  requires: []
+- name: Wet Dreams
+  ids:
+  - unresolved:source:isthereanydeal:12861:wet-dreams
+  requires: []
+- name: Dark Lady
+  ids:
+  - unresolved:source:isthereanydeal:12861:dark-lady
+  requires: []
