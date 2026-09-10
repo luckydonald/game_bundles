@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Build A Kiss Mega Bundle #3 — Select 2 to 18 Titles; $0.50 up to $4.50'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4711/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4711/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4711/source.json
+games:
+- name: Racer 8
+  ids:
+  - steam:292380
+  requires: []
+- name: Litil Divil
+  ids:
+  - steam:283430
+  requires: []
+- name: Heckabomb
+  ids:
+  - steam:344300
+  requires: []
+- name: Commando Jack
+  ids:
+  - steam:299260
+  requires: []
+- name: Eurofighter Typhoon
+  ids:
+  - steam:283350
+  requires: []
+- name: Canyon Capers
+  ids:
+  - unresolved:source:isthereanydeal:4711:canyon-capers
+  requires: []
+- name: Cataegis - The White Wind
+  ids:
+  - steam:344130
+  requires: []
+- name: Rover Rescue
+  ids:
+  - unresolved:source:isthereanydeal:4711:rover-rescue
+  requires: []
+- name: Gold Rush! - Classic
+  ids:
+  - steam:308000
+  requires: []
+- name: Tribloos 2
+  ids:
+  - steam:271550
+  requires: []
+- name: Top Trumps Turbo
+  ids:
+  - steam:343180
+  requires: []
+- name: DarkEnd
+  ids:
+  - steam:292370
+  requires: []
+- name: //SNOWFLAKE TATTOO//
+  ids:
+  - steam:355430
+  requires: []
+- name: Melissa K. and the Heart of Gold Collector's Edition
+  ids:
+  - steam:321150
+  requires: []
+- name: Psichodelya
+  ids:
+  - unresolved:source:isthereanydeal:4711:psichodelya
+  requires: []
+- name: Robowars
+  ids:
+  - steam:285090
+  requires: []
+- name: 'CT Special Forces: Fire for Effect'
+  ids:
+  - steam:283410
+  requires: []
+- name: 'Selfie: Sisters of the Amniotic Lens'
+  ids:
+  - unresolved:source:isthereanydeal:4711:selfie-sisters-of-the-amniotic-lens
+  requires: []
+- name: Desert Thunder
+  ids:
+  - steam:283330
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 26 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4549/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4549/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4549/source.json
+games:
+- name: VITATIO 2
+  ids:
+  - steam:586380
+  requires: []
+- name: Road Works Simulator
+  ids:
+  - unresolved:source:isthereanydeal:4549:road-works-simulator
+  requires: []
+- name: A Game of Changes
+  ids:
+  - steam:467090
+  requires: []
+- name: A Long Road Home
+  ids:
+  - steam:576160
+  requires: []
+- name: Germ Wars
+  ids:
+  - steam:557680
+  requires: []
+- name: Ball of Light
+  ids:
+  - unresolved:source:isthereanydeal:4549:ball-of-light
+  requires: []
+- name: Overhell
+  ids:
+  - unresolved:source:isthereanydeal:4549:overhell
+  requires: []
+- name: Forestry 2017 - The Simulation
+  ids:
+  - steam:273800
+  requires: []

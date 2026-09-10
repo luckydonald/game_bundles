@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 34 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5371/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5371/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5371/source.json
+games:
+- name: INTO THE SEA
+  ids:
+  - unresolved:source:isthereanydeal:5371:into-the-sea
+  requires: []
+- name: Black Rainbow
+  ids:
+  - steam:288500
+  requires: []
+- name: 'The Last Dream: Developer''s Edition'
+  ids:
+  - steam:395860
+  requires: []
+- name: False Shelter
+  ids:
+  - steam:621150
+  requires: []
+- name: Gelu
+  ids:
+  - steam:664610
+  requires: []
+- name: Inbetween Land
+  ids:
+  - steam:345540
+  requires: []
+- name: Red Game Without A Great Name
+  ids:
+  - unresolved:source:isthereanydeal:5371:red-game-without-a-great-name
+  requires: []
+- name: 'PlanCon: Space Conflict'
+  ids:
+  - steam:461940
+  requires: []

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Comrade Biller Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5163/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5163/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5163/source.json
+games:
+- name: Neocolonialism
+  ids:
+  - steam:333540
+  requires: []
+- name: Fog Of War
+  ids:
+  - steam:574080
+  requires: []
+- name: Slavistan
+  ids:
+  - steam:504770
+  requires: []
+- name: Survival
+  ids:
+  - steam:859170
+  requires: []
+- name: The Few
+  ids:
+  - steam:300320
+  requires: []

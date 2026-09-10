@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 56 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4826/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4826/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4826/source.json
+games:
+- name: Goblin Harvest - The Mighty Quest
+  ids:
+  - steam:604060
+  requires: []
+- name: Tiny Little Planet Saga
+  ids:
+  - unresolved:source:isthereanydeal:4826:tiny-little-planet-saga
+  requires: []
+- name: Reality Incognita
+  ids:
+  - unresolved:source:isthereanydeal:4826:reality-incognita
+  requires: []
+- name: What's under your blanket 2 !?
+  ids:
+  - unresolved:source:isthereanydeal:4826:whats-under-your-blanket-2
+  requires: []
+- name: HellStar
+  ids:
+  - unresolved:source:isthereanydeal:4826:hellstar
+  requires: []
+- name: The tale of the Black Prince
+  ids:
+  - unresolved:source:isthereanydeal:4826:the-tale-of-the-black-prince
+  requires: []
+- name: Aesthetic Melody
+  ids:
+  - steam:618360
+  requires: []
+- name: 'Shadows 2: Perfidia'
+  ids:
+  - steam:606330
+  requires: []
+- name: The Last Patient
+  ids:
+  - steam:594160
+  requires: []
+- name: Endurance
+  ids:
+  - unresolved:source:isthereanydeal:4826:endurance
+  requires: []

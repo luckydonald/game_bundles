@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Linux Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4936/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4936/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4936/source.json
+games:
+- name: SQR
+  ids:
+  - steam:3433200
+  requires: []
+- name: 'Sky to Fly: Soulless Leviathan'
+  ids:
+  - steam:457810
+  requires: []
+- name: Lion Quest
+  ids:
+  - steam:370130
+  requires: []
+- name: The Runes
+  ids:
+  - unresolved:source:isthereanydeal:4936:the-runes
+  requires: []
+- name: Crazy Pixel Streaker
+  ids:
+  - steam:393460
+  requires: []
+- name: Bridge Constructor Stunts
+  ids:
+  - steam:419080
+  requires: []
+- name: War Truck Simulator
+  ids:
+  - unresolved:source:isthereanydeal:4936:war-truck-simulator
+  requires: []
