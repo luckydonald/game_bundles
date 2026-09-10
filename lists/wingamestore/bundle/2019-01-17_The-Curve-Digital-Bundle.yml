@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Curve Digital Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6927/source.json
+games:
+- name: The Little Acre
+  ids:
+  - steam:423590
+  requires: []
+- name: Bomber Crew
+  ids:
+  - steam:537800
+  requires: []
+- name: Manual Samuel
+  ids:
+  - steam:504130
+  requires: []
+- name: Serial Cleaner
+  ids:
+  - steam:522210
+  requires: []
+- name: 'Human: Fall Flat'
+  ids:
+  - steam:477160
+  requires: []
