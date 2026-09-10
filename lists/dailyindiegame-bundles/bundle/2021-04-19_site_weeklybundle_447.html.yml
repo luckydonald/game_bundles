@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 447 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9947/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9947/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9947/source.json
+games:
+- name: Necrolance
+  ids:
+  - steam:935250
+  requires: []
+- name: Dungeon Quest
+  ids:
+  - unresolved:source:isthereanydeal:9947:dungeon-quest
+  requires: []
+- name: Beardy the Digger
+  ids:
+  - steam:1144630
+  requires: []
+- name: Curse in our heads
+  ids:
+  - steam:871300
+  requires: []
+- name: Endless Ski
+  ids:
+  - steam:1125800
+  requires: []
+- name: Blue Fox
+  ids:
+  - steam:1253720
+  requires: []
+- name: Magic Forms
+  ids:
+  - steam:1291990
+  requires: []
+- name: Obsolete
+  ids:
+  - steam:1369560
+  requires: []
+- name: AutoLand
+  ids:
+  - steam:1384090
+  requires: []

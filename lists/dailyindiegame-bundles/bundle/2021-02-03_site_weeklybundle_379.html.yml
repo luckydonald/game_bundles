@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 379 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9700/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9700/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9700/source.json
+games:
+- name: Combiner Card Game
+  ids:
+  - unresolved:source:isthereanydeal:9700:combiner-card-game
+  requires: []
+- name: Bliss Maze(极乐迷宫)
+  ids:
+  - unresolved:source:isthereanydeal:9700:bliss-maze-ji-le-mi-gong
+  requires: []
+- name: The Story of My Life
+  ids:
+  - unresolved:source:isthereanydeal:9700:the-story-of-my-life
+  requires: []
+- name: MMX
+  ids:
+  - steam:1146890
+  requires: []
+- name: Robotic Learn
+  ids:
+  - steam:1350480
+  requires: []
+- name: My Isekai After Life is an RPG!?
+  ids:
+  - steam:1353050
+  requires: []
+- name: Booobjz
+  ids:
+  - steam:1190820
+  requires: []
+- name: The Square Key
+  ids:
+  - steam:1381880
+  requires: []
+- name: Porcini
+  ids:
+  - steam:1398180
+  requires: []

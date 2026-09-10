@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 438 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9919/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9919/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9919/source.json
+games:
+- name: Bomber Arena
+  ids:
+  - steam:971280
+  requires: []
+- name: BAPTISM
+  ids:
+  - steam:747160
+  requires: []
+- name: Nightmare Game
+  ids:
+  - steam:1114110
+  requires: []
+- name: Bob Wants to Go Home
+  ids:
+  - steam:1234540
+  requires: []
+- name: Coronavirus Evolution
+  ids:
+  - steam:1264770
+  requires: []
+- name: Police Chase
+  ids:
+  - steam:1355140
+  requires: []
+- name: Divine Favor
+  ids:
+  - steam:1376640
+  requires: []
+- name: 'Space Fat: To the Core'
+  ids:
+  - unresolved:source:isthereanydeal:9919:space-fat-to-the-core
+  requires: []
+- name: Quick Square
+  ids:
+  - steam:1446980
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 381 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9710/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9710/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9710/source.json
+games:
+- name: Dongo Adventure
+  ids:
+  - steam:811450
+  requires: []
+- name: How to create a Multiplayer First Person Shooter (FPS)
+  ids:
+  - unresolved:source:isthereanydeal:9710:how-to-create-a-multiplayer-first-person-shooter-fps
+  requires: []
+- name: Inversion
+  ids:
+  - steam:212410
+  requires: []
+- name: PowBall Renaissance
+  ids:
+  - steam:654600
+  requires: []
+- name: Crushing Blow
+  ids:
+  - steam:653760
+  requires: []
+- name: Miracle Mia
+  ids:
+  - steam:608670
+  requires: []
+- name: Burst Squad
+  ids:
+  - steam:1510380
+  requires: []
+- name: Dear Mom
+  ids:
+  - steam:1518140
+  requires: []
+- name: Cick and Relax
+  ids:
+  - unresolved:source:isthereanydeal:9710:cick-and-relax
+  requires: []

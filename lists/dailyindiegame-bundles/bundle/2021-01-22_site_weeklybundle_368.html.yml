@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 368 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9652/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9652/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9652/source.json
+games:
+- name: Mekabolt
+  ids:
+  - steam:1096210
+  requires: []
+- name: Destructions
+  ids:
+  - steam:845290
+  requires: []
+- name: Tenebris
+  ids:
+  - steam:1497520
+  requires: []
+- name: Find this!
+  ids:
+  - unresolved:source:isthereanydeal:9652:find-this
+  requires: []
+- name: VENDETTA - Curse of Raven's Cry
+  ids:
+  - steam:386280
+  requires: []
+- name: Possessed
+  ids:
+  - steam:607210
+  requires: []
+- name: 'HIVESWAP: ACT 1'
+  ids:
+  - steam:623940
+  requires: []
+- name: Ghost Stories 2
+  ids:
+  - steam:1423270
+  requires: []
+- name: Variable
+  ids:
+  - unresolved:source:isthereanydeal:9652:variable
+  requires: []

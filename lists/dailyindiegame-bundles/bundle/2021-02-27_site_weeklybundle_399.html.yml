@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 399: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9790/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9790/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9790/source.json
+games:
+- name: Running Girl
+  ids:
+  - steam:937970
+  requires: []
+- name: Hentai Mosaique Vip Room
+  ids:
+  - steam:1035610
+  requires: []
+- name: Hentai Hexa Mosaic
+  ids:
+  - unresolved:source:isthereanydeal:9790:hentai-hexa-mosaic
+  requires: []
+- name: Secret Girl
+  ids:
+  - steam:946210
+  requires: []
+- name: Hentai Monster Quiz 2
+  ids:
+  - steam:1361540
+  requires: []
+- name: Angel Tears
+  ids:
+  - unresolved:source:isthereanydeal:9790:angel-tears
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica
+  ids:
+  - steam:1430160
+  requires: []
+- name: Broken Ecchi Gallery
+  ids:
+  - steam:1465200
+  requires: []
+- name: Sakura Mochi
+  ids:
+  - unresolved:source:isthereanydeal:9790:sakura-mochi
+  requires: []
