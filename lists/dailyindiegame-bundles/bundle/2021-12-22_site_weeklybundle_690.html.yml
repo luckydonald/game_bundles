@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 690 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10861/source.json
+games:
+- name: Future Tanks Area
+  ids:
+  - steam:1821490
+  requires: []
+- name: Legacy of Sin the father sacrifice
+  ids:
+  - steam:1240790
+  requires: []
+- name: Wordle
+  ids:
+  - steam:1334000
+  requires: []
+- name: Firescout
+  ids:
+  - unresolved:source:isthereanydeal:10861:firescout
+  requires: []
+- name: CuberPunk 2090
+  ids:
+  - steam:1388400
+  requires: []
+- name: One Way To Exit 2
+  ids:
+  - steam:1120750
+  requires: []
+- name: INDICTED
+  ids:
+  - steam:1463420
+  requires: []
+- name: WWII Tanks Battle Battlefield
+  ids:
+  - steam:1826290
+  requires: []
+- name: Violation
+  ids:
+  - unresolved:source:isthereanydeal:10861:violation
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 717 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10985/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10985/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10985/source.json
+games:
+- name: Type Defense
+  ids:
+  - steam:904440
+  requires: []
+- name: Angry Golf
+  ids:
+  - steam:1145780
+  requires: []
+- name: 3D Gravity Rocket
+  ids:
+  - steam:870020
+  requires: []
+- name: Fury Captain
+  ids:
+  - unresolved:source:isthereanydeal:10985:fury-captain
+  requires: []
+- name: Chipmunk's Adventures
+  ids:
+  - steam:1063300
+  requires: []
+- name: Bonegard
+  ids:
+  - unresolved:source:isthereanydeal:10985:bonegard
+  requires: []
+- name: Alchemist Memory
+  ids:
+  - unresolved:source:isthereanydeal:10985:alchemist-memory
+  requires: []
+- name: Candy Memory
+  ids:
+  - unresolved:source:isthereanydeal:10985:candy-memory
+  requires: []
+- name: Old Quarry
+  ids:
+  - unresolved:source:isthereanydeal:10985:old-quarry
+  requires: []

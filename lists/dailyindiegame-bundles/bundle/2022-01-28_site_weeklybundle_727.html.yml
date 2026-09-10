@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 727: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11013/source.json
+games:
+- name: Crafting Tycoon v0.8
+  ids:
+  - steam:757440
+  requires: []
+- name: Faux
+  ids:
+  - steam:1032560
+  requires: []
+- name: Gold Rush! 2
+  ids:
+  - steam:609100
+  requires: []
+- name: 'Cold Cable: Lifeshift'
+  ids:
+  - steam:1043610
+  requires: []
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:11013:a-d-m-angels-demons-and-men
+  requires: []
+- name: Forep Man
+  ids:
+  - unresolved:source:isthereanydeal:11013:forep-man
+  requires: []
+- name: XYLITH - Hostile Planet
+  ids:
+  - steam:1210640
+  requires: []
+- name: Mage World - The Wizard's Stone
+  ids:
+  - steam:1431380
+  requires: []
+- name: Zen Cube
+  ids:
+  - steam:1606670
+  requires: []

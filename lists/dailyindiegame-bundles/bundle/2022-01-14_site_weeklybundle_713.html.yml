@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 713 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10979/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10979/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10979/source.json
+games:
+- name: EscapeRoute
+  ids:
+  - unresolved:source:isthereanydeal:10979:escaperoute
+  requires: []
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+  requires: []
+- name: Hacker Evolution - 2019 HD remaster
+  ids:
+  - steam:1153990
+  requires: []
+- name: It's Raining Fists and Metal
+  ids:
+  - steam:1080240
+  requires: []
+- name: Castle Commander
+  ids:
+  - steam:1188670
+  requires: []
+- name: Destructivator 2
+  ids:
+  - steam:1124990
+  requires: []
+- name: Fever Cabin
+  ids:
+  - steam:1226210
+  requires: []
+- name: SWORDSHOT
+  ids:
+  - steam:1257600
+  requires: []
+- name: Traveler of Artcaster
+  ids:
+  - steam:1413260
+  requires: []

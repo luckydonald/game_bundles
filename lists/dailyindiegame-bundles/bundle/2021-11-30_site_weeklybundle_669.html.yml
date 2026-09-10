@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 669 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10769/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10769/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10769/source.json
+games:
+- name: ADM 2(WHEN WORLDS COLLIDE)
+  ids:
+  - steam:1082780
+  requires: []
+- name: Noob Squad
+  ids:
+  - steam:496550
+  requires: []
+- name: Enoki
+  ids:
+  - steam:1447050
+  requires: []
+- name: School of Horror
+  ids:
+  - unresolved:source:isthereanydeal:10769:school-of-horror
+  requires: []
+- name: Meanwhile
+  ids:
+  - unresolved:source:isthereanydeal:10769:meanwhile
+  requires: []
+- name: Grab the Bottle
+  ids:
+  - steam:546410
+  requires: []
+- name: Crazy Derby Racing
+  ids:
+  - steam:1333270
+  requires: []
+- name: Tantal
+  ids:
+  - steam:1425280
+  requires: []
+- name: Bomb Escape
+  ids:
+  - steam:1529440
+  requires: []

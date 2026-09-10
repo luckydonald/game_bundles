@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 752 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11083/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11083/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11083/source.json
+games:
+- name: Get Over Blood
+  ids:
+  - steam:1306160
+  requires: []
+- name: Flower Challenge
+  ids:
+  - steam:1390830
+  requires: []
+- name: Truck Truck
+  ids:
+  - steam:1419440
+  requires: []
+- name: Bow & Crystal Tower Defense
+  ids:
+  - steam:1537940
+  requires: []
+- name: Click and Relax
+  ids:
+  - steam:1537960
+  requires: []
+- name: GOLD IS MINE
+  ids:
+  - unresolved:source:isthereanydeal:11083:gold-is-mine
+  requires: []
+- name: Rescuer
+  ids:
+  - steam:1606610
+  requires: []
+- name: Find Match Icons
+  ids:
+  - steam:1752850
+  requires: []
+- name: Hidden Caves
+  ids:
+  - steam:1765800
+  requires: []

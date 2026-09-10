@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 660 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10718/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10718/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10718/source.json
+games:
+- name: Lizardquest-Alien waters
+  ids:
+  - steam:1018770
+  requires: []
+- name: Wall To Wall
+  ids:
+  - steam:1826640
+  requires: []
+- name: 1/2 Red Riding Hood
+  ids:
+  - steam:1782130
+  requires: []
+- name: Steel Exercise
+  ids:
+  - unresolved:source:isthereanydeal:10718:steel-exercise
+  requires: []
+- name: Only Mine
+  ids:
+  - unresolved:source:isthereanydeal:10718:only-mine
+  requires: []
+- name: Imitating Zombies
+  ids:
+  - unresolved:source:isthereanydeal:10718:imitating-zombies
+  requires: []
+- name: Serious Breakdown
+  ids:
+  - steam:1798320
+  requires: []
+- name: Mistrun
+  ids:
+  - unresolved:source:isthereanydeal:10718:mistrun
+  requires: []
+- name: 'Poly Puzzle: Cats'
+  ids:
+  - steam:1808480
+  requires: []
