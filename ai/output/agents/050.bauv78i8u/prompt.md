@@ -1,0 +1,1 @@
+Background command "Rerun the fixed global-phase rewrite script in the background" completed (exit code 0)

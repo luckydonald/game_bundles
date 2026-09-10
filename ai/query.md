@@ -2925,3 +2925,62 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 
 ❯ We can keep `--tiers {all,highest}`. Move migrate stuff into its own subfolder and subcommand.
 
+❯ clean up unpushed ai commits
+
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`47923` chars, `47 KB`)](output/compact/005.1aae81f8-df32-40ff-900b-2406cb0bd81e/result.md)
+
+❯ In the commit d9f49c3be8bd3db863b04bd1c8a935b5249da266 the bundles are all deleted and then recrated in git's eyes. Instead that should be a proper `git mv` to be able to follow along the history of the files. Therefore create a commit first which moves the "biggest" / "completest"  bundle to the new file name, and then one merging tier 1, then a commit for tier 2, etc., deleting both original tier files and adding the tier to the new file's tier list. So the initial tier shall also be a commit of it's own even if we have no file to delete, but if we do that with the move, chances are that it's no longer recognized as move.
+
+❯ Task Notification:
+> - Task `bkr8k0p09` <kbd>completed</kbd>
+> - Tool `toolu_01PkGSW8kLcDCtoKz97Jgzvw`
+> - > Background command "Run the full bundle-history rewrite in the background" completed (exit code 0)
+> - [Query (`98` chars, `98 B`)](output/agents/047.bkr8k0p09/prompt.md)
+> - [Answer (`42` chars, `42 B`)](output/agents/047.bkr8k0p09/result.md)
+> - [Raw log (`42` chars, `42 B`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/caeecf00-336c-4cfb-ae30-f61ff1fb4f46/tasks/bkr8k0p09.output)
+
+❯ 9k commits sounds wrong? Should be like 4-5...
+
+❯ Task Notification:
+> - Task `bu8l6dxxk` <kbd>completed</kbd>
+> - Tool `toolu_011acKFi34KmJsRYAtqsu6my`
+> - > Background command "Wait for the detached rewrite script process to finish, then show its output" completed (exit code 0)
+> - [Query (`121` chars, `121 B`)](output/agents/048.bu8l6dxxk/prompt.md)
+> - [Answer (`1360` chars, `1.33 KB`)](output/agents/048.bu8l6dxxk/result.md)
+> - [Raw log (`1360` chars, `1.33 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/caeecf00-336c-4cfb-ae30-f61ff1fb4f46/tasks/bu8l6dxxk.output)
+
+❯ Task Notification:
+> - Task `br5buh48q` <kbd>completed</kbd>
+> - Tool `toolu_01ER1JV53Evj8mrQPCJZJEd7`
+> - > Background command "Run the global-phase bundle history rewrite script" completed (exit code 0)
+> - [Query (`95` chars, `95 B`)](output/agents/049.br5buh48q/prompt.md)
+> - [Answer (`1531` chars, `1.5 KB`)](output/agents/049.br5buh48q/result.md)
+> - [Raw log (`1531` chars, `1.5 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/caeecf00-336c-4cfb-ae30-f61ff1fb4f46/tasks/br5buh48q.output)
+
+❯ Task Notification:
+> - Task `bauv78i8u` <kbd>completed</kbd>
+> - Tool `toolu_01TPS3eyerPLkSYzsWcNUuoe`
+> - > Background command "Rerun the fixed global-phase rewrite script in the background" completed (exit code 0)
+> - [Query (`106` chars, `106 B`)](output/agents/050.bauv78i8u/prompt.md)
+> - [Answer (`42` chars, `42 B`)](output/agents/050.bauv78i8u/result.md)
+> - [Raw log (`42` chars, `42 B`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/caeecf00-336c-4cfb-ae30-f61ff1fb4f46/tasks/bauv78i8u.output)
+
+❯ what's the state?
+
+❯ f45b6917ef5b9d96c129a113680ef3f753f5e466 is still not showing as file moves
+
+❯ Is this a limit with commiting or with later display?
+
+❯ what is the the lowest used rename limit?
+
+❯ I mean what's the commonly used smallest limit?
+
+❯ if you say it crept up, what were previous limits with older versions?
+
+❯ Alright, then split that commit in bunchs of 100 file renames, with a (1/123) - or whatever is the total of move commits in the commit title.
+
+❯ The commit messages shall be using `[lists] flatten: ` as prefix for all those commands. Also the commit messages should not add aritificial in-text linebreaks. Fix the commit message of the commit asking to get it's message fixed. Merge all those after-the-fact rebase queries into a nicely named commit. Also clean up the after-the-fact `ai: ` commits by topic/scope as usual for /commit-with-lplp-style
+
+❯ Also fix everything after 5fe4ff68558957fc55e29e00c7d8e1b558bb57c1, so 4f66f11531ca426879eb834f74b785e5b173a2f7 and later.
+
