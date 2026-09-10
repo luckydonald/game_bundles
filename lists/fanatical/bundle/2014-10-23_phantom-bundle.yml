@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Phantom Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1321/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1321/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1321/source.json
+games:
+- name: 'Doorways: Chapter 1 & 2'
+  ids:
+  - unresolved:source:isthereanydeal:1321:doorways-chapter-1-and-2
+  requires: []
+- name: Haunted
+  ids:
+  - steam:260550
+  requires: []
+- name: "Rhiannon \x96 The Curse of the Four Branches"
+  ids:
+  - unresolved:source:isthereanydeal:1321:rhiannon-the-curse-of-the-four-branches
+  requires: []
+- name: 'Them: The Summoning'
+  ids:
+  - steam:300510
+  requires: []
+- name: 'House of 1000 Doors: Family Secrets'
+  ids:
+  - steam:1151630
+  requires: []
+- name: Small Town Terrors Pilgrim's Hook Collector's Edition
+  ids:
+  - steam:302110
+  requires: []
+- name: 'Shadows: Price For Our Sins Bonus Edition'
+  ids:
+  - unresolved:source:isthereanydeal:1321:shadows-price-for-our-sins-bonus-edition
+  requires: []

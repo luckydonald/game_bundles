@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Barbaric Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2020/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2020/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2020/source.json
+games:
+- name: Droid Assault
+  ids:
+  - steam:219200
+  requires: []
+- name: 'Leviathan: The Last day of the Decade'
+  ids:
+  - steam:328270
+  requires: []
+- name: The Battle of Sol
+  ids:
+  - steam:282620
+  requires: []
+- name: HassleHeart
+  ids:
+  - unresolved:source:isthereanydeal:2020:hassleheart
+  requires: []
+- name: GRID (2019)
+  ids:
+  - unresolved:source:isthereanydeal:2020:grid-2019
+  requires: []
+- name: Drakensang
+  ids:
+  - steam:12640
+  requires: []
+- name: Bardbarian
+  ids:
+  - steam:269490
+  requires: []
+- name: Helldorado
+  ids:
+  - steam:18470
+  requires: []
+- name: Another Perspective
+  ids:
+  - steam:305920
+  requires: []
+- name: Hero of Many
+  ids:
+  - steam:297370
+  requires: []

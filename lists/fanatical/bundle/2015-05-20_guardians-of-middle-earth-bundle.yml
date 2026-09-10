@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Guardians of the Middle-Earth Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2015/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2015/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2015/source.json
+games:
+- name: 'Guardians of Middle Earth: The Defender Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-defender-bundle
+  requires: []
+- name: "Guardians of Middle\x96earth The Enchanter Bundle"
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-enchanter-bundle
+  requires: []
+- name: Guardians of Middle-earth
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth
+  requires: []
+- name: 'Guardians of Middle Earth: The Warrior Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-warrior-bundle
+  requires: []
+- name: 'Guardians of Middle Earth: The Striker Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-striker-bundle
+  requires: []
+- name: Guardians of Middle-Earth - The Company of Dwarves
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-company-of-dwarves
+  requires: []
+- name: Guardians of Middle-Earth - Smaug's Treasure
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-smaugs-treasure
+  requires: []
+- name: 'Guardians of Middle-earth: The Tactician Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:2015:guardians-of-middle-earth-the-tactician-bundle
+  requires: []

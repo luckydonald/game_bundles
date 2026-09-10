@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Titanium Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1093/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1093/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1093/source.json
+games:
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: Puddle
+  ids:
+  - steam:222140
+  requires: []
+- name: Project Root
+  ids:
+  - steam:284970
+  requires: []
+- name: Wooden Sen'SeY
+  ids:
+  - steam:259830
+  requires: []
+- name: Guacamelee! Gold Edition
+  ids:
+  - steam:214770
+  requires: []
+- name: Murder Miners 4-Pack
+  ids:
+  - steam:274900
+  requires: []
+- name: Kill Fun Yeah
+  ids:
+  - steam:301360
+  requires: []
+- name: Super Lemonade Factory
+  ids:
+  - steam:307270
+  requires: []
+- name: Spy Chameleon - RGB Agent
+  ids:
+  - steam:297490
+  requires: []
+- name: Terrorhedron
+  ids:
+  - steam:299720
+  requires: []

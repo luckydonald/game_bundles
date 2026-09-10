@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Omerta: City of Gangsters Complete Bundle (2015) — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1281/source.json
+games:
+- name: 'Omerta: The Japanese Incentive'
+  ids:
+  - steam:215374
+  requires: []
+- name: Omerta City of Gangsters
+  ids:
+  - steam:208520
+  requires: []
+- name: 'Omerta: City of Gangsters The Con Artist'
+  ids:
+  - steam:215370
+  requires: []
+- name: 'Omerta: City of Gangsters - GOLD EDITION'
+  ids:
+  - unresolved:source:isthereanydeal:1281:omerta-city-of-gangsters-gold-edition
+  requires: []
+- name: 'Omerta: City of Gangsters: The Arms Industry'
+  ids:
+  - steam:215372
+  requires: []
+- name: 'Omerta: City of Gangsters - Damsel in Distress'
+  ids:
+  - steam:215371
+  requires: []

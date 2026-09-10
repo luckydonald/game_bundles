@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Breakthrough Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1224/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1224/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1224/source.json
+games:
+- name: Bedlam
+  ids:
+  - unresolved:source:isthereanydeal:1224:bedlam
+  requires: []
+- name: Dwelvers
+  ids:
+  - steam:276870
+  requires: []
+- name: Calibre 10 Racing Series 4-Pack
+  ids:
+  - steam:266370
+  requires: []
+- name: From The Depths
+  ids:
+  - steam:268650
+  requires: []
+- name: 'Shadow Blade: Reload'
+  ids:
+  - steam:272330
+  requires: []
+- name: Gear City
+  ids:
+  - unresolved:source:isthereanydeal:1224:gear-city
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Trainz Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1137/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1137/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1137/source.json
+games:
+- name: Trainz Simulator - BR Class 14
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-br-class-14
+  requires: []
+- name: Trainz Simulator 12 - Coronation Scot
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-12-coronation-scot
+  requires: []
+- name: Trainz Simulator 12
+  ids:
+  - steam:24670
+  requires: []
+- name: 'Trainz Simulator: SS4 China Coal Heavy Haul Pack'
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-ss4-china-coal-heavy-haul-pack
+  requires: []
+- name: 'Trainz Simulator 12: PRR T1'
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-12-prr-t1
+  requires: []
+- name: 'Trainz Simulator: Aerotrain'
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-aerotrain
+  requires: []
+- name: Trainz Simulator 12 - Blue Comet
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-12-blue-comet
+  requires: []
+- name: Trainz Simulator 12 - The Duchess
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-12-the-duchess
+  requires: []
+- name: 'Trainz Simulator: Nickel Plate High Speed Freight Set'
+  ids:
+  - unresolved:source:isthereanydeal:1137:trainz-simulator-nickel-plate-high-speed-freight-set
+  requires: []
