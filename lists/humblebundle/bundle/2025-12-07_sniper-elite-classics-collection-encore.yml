@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Sniper Elite: Classics Collection Bundle Encore — entire-6-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15660/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15660/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15660/source.json
+games:
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+  requires: []
+- name: Sniper Elite 3 Season Pass
+  ids:
+  - steam:308310
+  requires: []
+- name: Sniper Elite
+  ids:
+  - steam:3700
+  requires: []
+- name: Sniper Elite 4 Deluxe Edition
+  ids:
+  - steam:312660
+  requires: []
+- name: Sniper Elite 3
+  ids:
+  - steam:238090
+  requires: []
+- name: Sniper Elite 5
+  ids:
+  - steam:1029690
+  requires: []
