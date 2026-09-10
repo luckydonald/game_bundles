@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Awesome Automation Bundle — entire-6-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16204/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16204/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16204/source.json
+games:
+- name: Factory Town
+  ids:
+  - steam:860890
+  requires: []
+- name: Time to Morp
+  ids:
+  - steam:977510
+  requires: []
+- name: Rogue Voltage
+  ids:
+  - steam:1494560
+  requires: []
+- name: Rusty's Retirement
+  ids:
+  - steam:2666510
+  requires: []
+- name: Idle Colony
+  ids:
+  - steam:2843640
+  requires: []
+- name: MR FARMBOY
+  ids:
+  - steam:2795090
+  requires: []

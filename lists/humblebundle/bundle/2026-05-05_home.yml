@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (May 2026) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16130/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16130/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16130/source.json
+games:
+- name: Crysis 3 Remastered
+  ids:
+  - steam:2096610
+  requires: []
+- name: Diablo® IV
+  ids:
+  - steam:2344520
+  requires: []
+- name: Mini Settlers
+  ids:
+  - steam:2521630
+  requires: []
+- name: 'Shin Megami Tensei V: Vengeance'
+  ids:
+  - steam:1875830
+  requires: []
+- name: Nordhold
+  ids:
+  - steam:3028310
+  requires: []
+- name: Rogue Waters
+  ids:
+  - steam:1691190
+  requires: []
+- name: Heroes of Hammerwatch II
+  ids:
+  - steam:619820
+  requires: []
+- name: Cubic Odyssey
+  ids:
+  - steam:3400000
+  requires: []

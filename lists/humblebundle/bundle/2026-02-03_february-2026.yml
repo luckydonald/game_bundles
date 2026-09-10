@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Feb 2026) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15841/source.json
+games:
+- name: Resident Evil Village
+  ids:
+  - steam:1196590
+  requires: []
+- name: Core Keeper
+  ids:
+  - steam:1621690
+  requires: []
+- name: SteamWorld Build
+  ids:
+  - steam:2134770
+  requires: []
+- name: Bus Simulator 21 Next Stop
+  ids:
+  - steam:976590
+  requires: []
+- name: Squirrel with a Gun
+  ids:
+  - steam:2067050
+  requires: []
+- name: StarVaders
+  ids:
+  - steam:2097570
+  requires: []
+- name: Big Helmet Heroes
+  ids:
+  - steam:2397250
+  requires: []
+- name: Date Everything!
+  ids:
+  - steam:2201320
+  requires: []
+- name: 'Tape 101: Liminal Descent'
+  ids:
+  - unresolved:source:isthereanydeal:15841:tape-101-liminal-descent
+  requires: []
