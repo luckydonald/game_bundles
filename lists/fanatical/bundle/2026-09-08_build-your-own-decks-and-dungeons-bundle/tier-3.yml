@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Decks & Dungeons Bundle — pick 7
+tier: 3
+pick_quota: 7
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16545/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16545/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16545/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: UnReal World
+  ids:
+  - steam:351700
+  - isthereanydeal:unreal-world
+  requires: []
+- name: The Quest
+  ids:
+  - steam:428880
+  - isthereanydeal:the-quest
+  requires: []
+- name: Astral Ascent
+  ids:
+  - steam:1280930
+  - isthereanydeal:astral-ascent
+  requires: []
+- name: 'Fuzz Force: Spook Squad'
+  ids:
+  - steam:1422190
+  - isthereanydeal:fuzz-force-spook-squad
+  requires: []
+- name: Sovereign Syndicate
+  ids:
+  - steam:1674920
+  - isthereanydeal:sovereign-syndicate
+  requires: []
+- name: OTXO
+  ids:
+  - steam:1608640
+  - isthereanydeal:otxo
+  requires: []
+- name: Duelists of Eden
+  ids:
+  - steam:1664200
+  - isthereanydeal:duelists-of-eden
+  requires: []
+- name: Isle of Swaps
+  ids:
+  - steam:2294160
+  - isthereanydeal:isle-of-swaps
+  requires: []
+- name: 'Footgun: Underground'
+  ids:
+  - steam:2206240
+  - isthereanydeal:footgun-underground
+  requires: []
+- name: DunHero
+  ids:
+  - steam:2270210
+  - isthereanydeal:dunhero
+  requires: []
+- name: Everwarder
+  ids:
+  - steam:2307170
+  - isthereanydeal:everwarder
+  requires: []
+- name: Red Pistol
+  ids:
+  - steam:3213790
+  - isthereanydeal:red-pistol
+  requires: []
+- name: Tic Tactic
+  ids:
+  - steam:3256850
+  - isthereanydeal:tic-tactic
+  requires: []
+- name: Aris Arcanum
+  ids:
+  - steam:3006080
+  - isthereanydeal:aris-arcanum
+  requires: []
+- name: Second Chances
+  ids:
+  - steam:3407990
+  - isthereanydeal:second-chances
+  requires: []
+- name: Replicat
+  ids:
+  - steam:3509430
+  - isthereanydeal:replicat
+  requires: []
+- name: 'Kritter: Defend Together'
+  ids:
+  - steam:2103950
+  - isthereanydeal:kritter-defend-together
+  requires: []
+- name: Dungeon Antiqua 2
+  ids:
+  - steam:4005090
+  - isthereanydeal:dungeon-antiqua-2
+  requires: []
+- name: Dungeons of Dreadrock 1 & 2 Pack
+  ids:
+  - unresolved:source:isthereanydeal:16545:dungeons-of-dreadrock-1-and-2-pack
+  - isthereanydeal:dungeons-of-dreadrock-1-and-2-pack
+  requires: []

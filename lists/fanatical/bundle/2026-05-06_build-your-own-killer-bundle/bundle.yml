@@ -8,85 +8,120 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16132/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16132/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16542/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16542/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16542/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: WARTILE
   ids:
   - steam:404200
+  requires: []
 - name: 'Battlezone: Combat Commander'
   ids:
   - steam:624970
+  requires: []
 - name: Copycat
   ids:
   - steam:1622350
+  requires: []
 - name: 'Baldur''s Gate II: Enhanced Edition'
   ids:
   - steam:257350
+  requires: []
 - name: 'Baldur''s Gate: Enhanced Edition'
   ids:
   - steam:228280
+  requires: []
 - name: Lords of the Realm Complete
   ids:
   - unresolved:source:isthereanydeal:16132:lords-of-the-realm-complete
+  requires: []
 - name: Sniper Elite 4 Deluxe Edition
   ids:
   - steam:312660
+  requires: []
 - name: Battlezone 98 Redux
   ids:
   - steam:301650
+  requires: []
 - name: Dark Envoy
   ids:
   - steam:945770
+  requires: []
 - name: Fearmonium
   ids:
   - steam:1068360
+  requires: []
 - name: 'Icewind Dale: Enhanced Edition'
   ids:
   - steam:321800
+  requires: []
 - name: Sniper Ghost Warrior Contracts
   ids:
   - steam:973580
+  requires: []
 - name: 'Neverwinter Nights: Enhanced Edition'
   ids:
   - steam:704450
+  requires: []
 - name: 'Moonlighter: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:16132:moonlighter-complete-edition
+  requires: []
 - name: 'Field of Glory II: Medieval'
   ids:
   - steam:1368870
+  requires: []
 - name: Sovereign Syndicate
   ids:
   - steam:1674920
+  requires: []
 - name: 'Children of Morta: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:16132:children-of-morta-complete-edition
+  requires: []
 - name: 'Killer Klowns from Outer Space: The Game'
   ids:
   - steam:1556100
+  requires: []
 - name: 'Double Dragon Gaiden: Rise Of The Dragons'
   ids:
   - steam:1967260
+  requires: []
 - name: A Void Hope
   ids:
   - steam:2438090
+  requires: []
 - name: FatalZone
   ids:
   - steam:2488510
+  requires: []
 - name: Intravenous 2
   ids:
   - steam:2608270
+  requires: []
 - name: Dawnsbury Days
   ids:
   - steam:2693730
+  requires: []
 - name: Machick
   ids:
   - steam:2811200
+  requires: []
 - name: Creatures of Ava
   ids:
   - steam:2304440
+  requires: []
 - name: Pip My Dice
   ids:
   - steam:2797650
+  requires: []
 - name: Aooni The Horror of Blueberry Onsen
   ids:
   - steam:3388870
+  requires: []
