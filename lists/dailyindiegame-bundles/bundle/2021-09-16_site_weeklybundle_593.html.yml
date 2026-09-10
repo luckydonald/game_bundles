@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 593 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10475/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10475/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10475/source.json
+games:
+- name: Vortex
+  ids:
+  - steam:383530
+  requires: []
+- name: Inversion
+  ids:
+  - steam:212410
+  requires: []
+- name: Hentai 3018
+  ids:
+  - steam:860910
+  requires: []
+- name: Neon Arena
+  ids:
+  - steam:1747940
+  requires: []
+- name: Sos i Pie Sos
+  ids:
+  - unresolved:source:isthereanydeal:10475:sos-i-pie-sos
+  requires: []
+- name: Digital Siege
+  ids:
+  - unresolved:source:isthereanydeal:10475:digital-siege
+  requires: []
+- name: Night Darkness
+  ids:
+  - steam:1731690
+  requires: []
+- name: 'Oscar & Gems: Puzzle Quest'
+  ids:
+  - steam:1505450
+  requires: []
+- name: Badlands Racer
+  ids:
+  - steam:1752500
+  requires: []

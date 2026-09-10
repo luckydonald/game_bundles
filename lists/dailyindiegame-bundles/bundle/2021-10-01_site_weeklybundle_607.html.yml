@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 607 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10537/source.json
+games:
+- name: RollingCar
+  ids:
+  - unresolved:source:isthereanydeal:10537:rollingcar
+  requires: []
+- name: Ancient Dino Runner
+  ids:
+  - steam:1671390
+  requires: []
+- name: Hungry Bunny
+  ids:
+  - steam:1681560
+  requires: []
+- name: Save The Octo
+  ids:
+  - steam:1676920
+  requires: []
+- name: CubePuzzle
+  ids:
+  - steam:1683300
+  requires: []
+- name: Hungry Fish
+  ids:
+  - steam:1683720
+  requires: []
+- name: AirFighter
+  ids:
+  - steam:1686340
+  requires: []
+- name: Match3 mania!
+  ids:
+  - steam:1686370
+  requires: []
+- name: Misha Adventures
+  ids:
+  - steam:1683240
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 652 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10692/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10692/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10692/source.json
+games:
+- name: Mermaid Land
+  ids:
+  - unresolved:source:isthereanydeal:10692:mermaid-land
+  requires: []
+- name: Tricky Cow
+  ids:
+  - steam:1120160
+  requires: []
+- name: aMAZE 3D
+  ids:
+  - steam:667300
+  requires: []
+- name: 5.84 Wing
+  ids:
+  - steam:1019060
+  requires: []
+- name: Cube Mission
+  ids:
+  - steam:1008740
+  requires: []
+- name: 3 Days in the Abyss
+  ids:
+  - steam:970180
+  requires: []
+- name: Blue Fox
+  ids:
+  - steam:1253720
+  requires: []
+- name: I wanna build a robot
+  ids:
+  - steam:1337210
+  requires: []
+- name: Dream Knights
+  ids:
+  - steam:1392570
+  requires: []

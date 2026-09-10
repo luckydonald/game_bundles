@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 583 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10422/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10422/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10422/source.json
+games:
+- name: ReignMaker
+  ids:
+  - steam:286200
+  requires: []
+- name: GOLD IS MINE
+  ids:
+  - unresolved:source:isthereanydeal:10422:gold-is-mine
+  requires: []
+- name: Stolen Eggs
+  ids:
+  - unresolved:source:isthereanydeal:10422:stolen-eggs
+  requires: []
+- name: CUBE-e
+  ids:
+  - steam:1695970
+  requires: []
+- name: Any Fish
+  ids:
+  - unresolved:source:isthereanydeal:10422:any-fish
+  requires: []
+- name: Any Candy
+  ids:
+  - unresolved:source:isthereanydeal:10422:any-candy
+  requires: []
+- name: Mummy, mummy, mummy!
+  ids:
+  - steam:1719890
+  requires: []
+- name: Bacteria Wars
+  ids:
+  - steam:1707890
+  requires: []
+- name: Witch Stone
+  ids:
+  - steam:1722780
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 560 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10352/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10352/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10352/source.json
+games:
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+  requires: []
+- name: SynthRun
+  ids:
+  - steam:893120
+  requires: []
+- name: Wilma's Dreams
+  ids:
+  - steam:1586980
+  requires: []
+- name: Yellow Ballman
+  ids:
+  - unresolved:source:isthereanydeal:10352:yellow-ballman
+  requires: []
+- name: Planet B24
+  ids:
+  - steam:1675640
+  requires: []
+- name: Pop it, Please!
+  ids:
+  - unresolved:source:isthereanydeal:10352:pop-it-please
+  requires: []
+- name: Escape from the Office
+  ids:
+  - steam:1688240
+  requires: []
+- name: LowPolyExplorer
+  ids:
+  - unresolved:source:isthereanydeal:10352:lowpolyexplorer
+  requires: []
+- name: Branches
+  ids:
+  - steam:1717420
+  requires: []
