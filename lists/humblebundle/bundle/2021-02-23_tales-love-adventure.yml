@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: Beat The Average
+- rank: 3
+  name: 7-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Reventure
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Neo Cab
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Half Past Fate
   ids:
@@ -44,6 +49,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Telltale Batman Shadows Edition
   ids:
@@ -51,18 +57,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Blacksad : Under the Skin'
   ids:
   - steam:1003890
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'HIVESWAP: Act 2'
   ids:
   - steam:1181840
   requires: []
   tiers:
+  - 3
   - 4
 - name: Indivisible
   ids:

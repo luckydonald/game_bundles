@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 3-item-bundle
+- rank: 3
+  name: 5-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Wall World
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: God Of Weapons
   ids:
@@ -37,18 +41,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Paint the Town Red
   ids:
   - steam:337320
   requires: []
   tiers:
+  - 3
   - 4
 - name: Dead Estate
   ids:
   - steam:1484720
   requires: []
   tiers:
+  - 3
   - 4
 - name: Barony
   ids:

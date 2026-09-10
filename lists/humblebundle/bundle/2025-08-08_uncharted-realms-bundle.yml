@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 8-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Alba: A Wildlife Adventure'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'FAR: Changing Tides'
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: The Forgotten City
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Under the Waves
   ids:
@@ -53,24 +59,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Journey To The Savage Planet
   ids:
   - steam:973810
   requires: []
   tiers:
+  - 3
   - 4
 - name: The Eternal Cylinder
   ids:
   - steam:865680
   requires: []
   tiers:
+  - 3
   - 4
 - name: Moon Mystery
   ids:
   - steam:1933840
   requires: []
   tiers:
+  - 3
   - 4
 - name: Fort Solis
   ids:

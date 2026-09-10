@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 7-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Bendy and the Dark Revival
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Choo-Choo Charles
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Scorn
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'STASIS: BONE TOTEM'
   ids:
@@ -53,18 +59,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: The Mortuary Assistant
   ids:
   - steam:1295920
   requires: []
   tiers:
+  - 3
   - 4
 - name: The Axis Unseen
   ids:
   - steam:1807810
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'The Thing: Remastered'
   ids:

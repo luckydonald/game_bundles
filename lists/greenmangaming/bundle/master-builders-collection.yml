@@ -6,6 +6,8 @@ tiers:
   name: Timber
 - rank: 2
   name: Stone
+- rank: 3
+  name: Iron
 - rank: 4
   name: Gold
 references:
@@ -25,6 +27,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Settlement Survival
   ids:
@@ -32,6 +35,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: SteamWorld Build
   ids:
@@ -39,24 +43,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Two Point Campus
   ids:
   - steam:1649080
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Frostpunk: Game of the Year Edition'
   ids:
   - steam:bundle/12261
   requires: []
   tiers:
+  - 3
   - 4
 - name: Fabledom
   ids:
   - steam:1651560
   requires: []
   tiers:
+  - 3
   - 4
 - name: Jurassic World Evolution 2
   ids:

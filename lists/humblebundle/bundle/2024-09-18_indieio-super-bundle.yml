@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 9-item-bundle
 - rank: 4
   name: entire-13-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: To The Rescue!
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Coromon
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Dark Deity
   ids:
@@ -44,6 +49,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: LunarLux
   ids:
@@ -51,30 +57,35 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Airborne Kingdom
   ids:
   - steam:982290
   requires: []
   tiers:
+  - 3
   - 4
 - name: Cat Cafe Manager
   ids:
   - steam:1354830
   requires: []
   tiers:
+  - 3
   - 4
 - name: One Lonely Outpost
   ids:
   - steam:1465550
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Symphony of War: The Nephilim Saga'
   ids:
   - steam:1488200
   requires: []
   tiers:
+  - 3
   - 4
 - name: Sands of Aura
   ids:

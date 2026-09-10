@@ -6,6 +6,8 @@ tiers:
   name: 2-item-bundle
 - rank: 2
   name: 4-item-bundle
+- rank: 3
+  name: 6-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'The Dark Pictures Anthology: Man of Medan'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Little Nightmares: Secrets of The Maw Expansion Pass'
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'The Dark Pictures Anthology: Little Hope'
   ids:
@@ -45,18 +50,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Little Nightmares II Deluxe Edition
   ids:
   - steam:860510
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'The Dark Pictures Anthology: House of Ashes'
   ids:
   - steam:1281590
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'The Dark Pictures Anthology: The Devil in Me'
   ids:
