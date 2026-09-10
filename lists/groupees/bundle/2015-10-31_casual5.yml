@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Casual Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2687/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2687/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2687/source.json
+games:
+- name: Energy Balance
+  ids:
+  - steam:375010
+  requires: []
+- name: Zenohell
+  ids:
+  - steam:402030
+  requires: []
+- name: Burgers
+  ids:
+  - steam:385830
+  requires: []
+- name: Miner Mayhem
+  ids:
+  - steam:402850
+  requires: []
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+  requires: []
+- name: Bridge Constructor Medieval
+  ids:
+  - steam:319850
+  requires: []
+- name: 'Save Halloween: City of Witches'
+  ids:
+  - steam:428110
+  requires: []
+- name: Rhino's Rage
+  ids:
+  - steam:433210
+  requires: []

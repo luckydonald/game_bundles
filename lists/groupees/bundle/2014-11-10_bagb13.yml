@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight Bundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1373/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1373/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1373/source.json
+games:
+- name: Hypership Out of Control
+  ids:
+  - steam:354040
+  requires: []
+- name: O3DX
+  ids:
+  - steam:363270
+  requires: []
+- name: Pig Eat Ball
+  ids:
+  - steam:339090
+  requires: []
+- name: Royal Bounty HD
+  ids:
+  - steam:337210
+  requires: []
+- name: 'Dungeon Nightmares II : The Memory'
+  ids:
+  - steam:382090
+  requires: []
+- name: 'Pahelika: Secret Legends'
+  ids:
+  - steam:336020
+  requires: []
+- name: 'Battletank: L.O.B.A.'
+  ids:
+  - unresolved:source:isthereanydeal:1373:battletank-l-o-b-a
+  requires: []
+- name: The Depths of Tolagal
+  ids:
+  - steam:340600
+  requires: []
+- name: 'Unraveled: Tale of the Shipbreaker''s Daughter'
+  ids:
+  - unresolved:source:isthereanydeal:1373:unraveled-tale-of-the-shipbreakers-daughter
+  requires: []
+- name: Vol'Talkes - The AI War
+  ids:
+  - steam:347050
+  requires: []

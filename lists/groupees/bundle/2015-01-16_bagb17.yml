@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 17 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1547/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1547/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1547/source.json
+games:
+- name: Visibility
+  ids:
+  - steam:368290
+  requires: []
+- name: ZombieRun
+  ids:
+  - steam:358840
+  requires: []
+- name: 12 Labours of Hercules
+  ids:
+  - steam:342580
+  requires: []
+- name: Platfinity
+  ids:
+  - unresolved:source:isthereanydeal:1547:platfinity
+  requires: []
+- name: Block Legend DX
+  ids:
+  - steam:345640
+  requires: []
+- name: Datswer
+  ids:
+  - steam:348000
+  requires: []
+- name: Super Mega Berry
+  ids:
+  - unresolved:source:isthereanydeal:1547:super-mega-berry
+  requires: []
+- name: Monument
+  ids:
+  - steam:376730
+  requires: []
+- name: Trigger Saint
+  ids:
+  - steam:354770
+  requires: []
+- name: R.O.O.T.S
+  ids:
+  - steam:357930
+  requires: []

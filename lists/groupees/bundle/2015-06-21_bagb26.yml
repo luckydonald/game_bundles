@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 26 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2143/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2143/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2143/source.json
+games:
+- name: Veer
+  ids:
+  - steam:405530
+  requires: []
+- name: The Secret of Tremendous Corporation
+  ids:
+  - steam:380140
+  requires: []
+- name: Job the Leprechaun
+  ids:
+  - steam:386420
+  requires: []
+- name: Volphant
+  ids:
+  - unresolved:source:isthereanydeal:2143:volphant
+  requires: []
+- name: Vortex
+  ids:
+  - steam:383530
+  requires: []
+- name: Ultimate Arena
+  ids:
+  - steam:385240
+  requires: []
+- name: SEEP Universe
+  ids:
+  - steam:383630
+  requires: []
+- name: Magician's Apprentice
+  ids:
+  - unresolved:source:isthereanydeal:2143:magicians-apprentice
+  requires: []
+- name: NANOS
+  ids:
+  - unresolved:source:isthereanydeal:2143:nanos
+  requires: []
+- name: Space Thinger
+  ids:
+  - steam:402670
+  requires: []
+- name: Melter Man
+  ids:
+  - steam:404460
+  requires: []

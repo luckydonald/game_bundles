@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indies Unite! — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2117/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2117/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2117/source.json
+games:
+- name: The Extinction
+  ids:
+  - unresolved:source:isthereanydeal:2117:the-extinction
+  requires: []
+- name: GunWorld
+  ids:
+  - steam:349950
+  requires: []
+- name: Tic-Toc-Tower
+  ids:
+  - steam:389310
+  requires: []
+- name: 'Spell Casting: Meowgically Enhanced Edition'
+  ids:
+  - steam:522990
+  requires: []
+- name: Thief Town
+  ids:
+  - steam:331220
+  requires: []
+- name: Memories of a Vagabond
+  ids:
+  - steam:307070
+  requires: []
+- name: Epilogue
+  ids:
+  - unresolved:source:isthereanydeal:2117:epilogue
+  requires: []
+- name: Baldric's Quest
+  ids:
+  - unresolved:source:isthereanydeal:2117:baldrics-quest
+  requires: []
+- name: The Makeshifter
+  ids:
+  - steam:395480
+  requires: []
+- name: On A Roll 3D
+  ids:
+  - steam:341090
+  requires: []
+- name: Rijn the Specpyre in... Manor of the Damned!
+  ids:
+  - steam:532670
+  requires: []
+- name: Evopollution
+  ids:
+  - steam:295990
+  requires: []
+- name: IslaBomba
+  ids:
+  - unresolved:source:isthereanydeal:2117:islabomba
+  requires: []
