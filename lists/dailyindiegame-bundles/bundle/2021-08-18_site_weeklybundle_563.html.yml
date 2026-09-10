@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 563 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10360/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10360/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10360/source.json
+games:
+- name: Rainyday
+  ids:
+  - steam:712980
+  requires: []
+- name: Round Rooms
+  ids:
+  - steam:1107660
+  requires: []
+- name: Elven Magic
+  ids:
+  - steam:923140
+  requires: []
+- name: PARSE ALLY
+  ids:
+  - unresolved:source:isthereanydeal:10360:parse-ally
+  requires: []
+- name: 'ATROFIL: THE KEY'
+  ids:
+  - steam:1196350
+  requires: []
+- name: Euler Wars
+  ids:
+  - steam:1246320
+  requires: []
+- name: Fire Guild
+  ids:
+  - unresolved:source:isthereanydeal:10360:fire-guild
+  requires: []
+- name: DriftZ
+  ids:
+  - steam:1322180
+  requires: []
+- name: Slime Up
+  ids:
+  - steam:1340420
+  requires: []

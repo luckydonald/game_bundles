@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 603 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10519/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10519/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10519/source.json
+games:
+- name: Destroy IT.
+  ids:
+  - steam:1546210
+  requires: []
+- name: Kick the Ball!
+  ids:
+  - unresolved:source:isthereanydeal:10519:kick-the-ball
+  requires: []
+- name: P0
+  ids:
+  - steam:1405740
+  requires: []
+- name: Endless Crawler
+  ids:
+  - unresolved:source:isthereanydeal:10519:endless-crawler
+  requires: []
+- name: Dungless 2
+  ids:
+  - unresolved:source:isthereanydeal:10519:dungless-2
+  requires: []
+- name: Kitty Adventure
+  ids:
+  - steam:1705560
+  requires: []
+- name: AirGun
+  ids:
+  - unresolved:source:isthereanydeal:10519:airgun
+  requires: []
+- name: Drowned Helicopter
+  ids:
+  - unresolved:source:isthereanydeal:10519:drowned-helicopter
+  requires: []
+- name: Plague Infection
+  ids:
+  - unresolved:source:isthereanydeal:10519:plague-infection
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 604 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10524/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10524/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10524/source.json
+games:
+- name: Space Dance
+  ids:
+  - steam:1103870
+  requires: []
+- name: Dead Dust
+  ids:
+  - steam:816990
+  requires: []
+- name: 'Pixel Traffic: Circle Rush'
+  ids:
+  - unresolved:source:isthereanydeal:10524:pixel-traffic-circle-rush
+  requires: []
+- name: Timore Inferno
+  ids:
+  - steam:486360
+  requires: []
+- name: Gold Digger Maze
+  ids:
+  - unresolved:source:isthereanydeal:10524:gold-digger-maze
+  requires: []
+- name: RedEx
+  ids:
+  - steam:1460250
+  requires: []
+- name: hexurb
+  ids:
+  - steam:1407890
+  requires: []
+- name: Tank Zombie Smasher
+  ids:
+  - steam:1682610
+  requires: []
+- name: Yoshimitsu Hatsumi
+  ids:
+  - steam:1686440
+  requires: []

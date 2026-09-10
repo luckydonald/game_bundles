@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 594 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10479/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10479/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10479/source.json
+games:
+- name: Flower Challenge
+  ids:
+  - steam:1390830
+  requires: []
+- name: Lost Dream
+  ids:
+  - unresolved:source:isthereanydeal:10479:lost-dream
+  requires: []
+- name: 'Marble Parkour 2: Roll and roll'
+  ids:
+  - steam:1674960
+  requires: []
+- name: CUBE-e 2
+  ids:
+  - steam:1705870
+  requires: []
+- name: Plumber 3
+  ids:
+  - unresolved:source:isthereanydeal:10479:plumber-3
+  requires: []
+- name: 'Traffic Command: Reborn'
+  ids:
+  - steam:1741510
+  requires: []
+- name: 'Halloween Memory: Reborn'
+  ids:
+  - unresolved:source:isthereanydeal:10479:halloween-memory-reborn
+  requires: []
+- name: Pizza Party
+  ids:
+  - unresolved:source:isthereanydeal:10479:pizza-party
+  requires: []
+- name: Sweet Match 3
+  ids:
+  - unresolved:source:isthereanydeal:10479:sweet-match-3
+  requires: []

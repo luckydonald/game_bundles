@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 555 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10339/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10339/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10339/source.json
+games:
+- name: Dungeon Arena
+  ids:
+  - steam:1705540
+  requires: []
+- name: Dungeon Arena - Arena Alien planet
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-arena-alien-planet
+  requires: []
+- name: Dungeon Arena - Class Ninja
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-class-ninja
+  requires: []
+- name: Dungeon Arena - Arena Snowy plain
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-arena-snowy-plain
+  requires: []
+- name: Dungeon Arena - Class Gnome
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-class-gnome
+  requires: []
+- name: Dungeon Arena - Class Bard
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-class-bard
+  requires: []
+- name: Dungeon Arena - Arena Pirates
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-arena-pirates
+  requires: []
+- name: Dungeon Arena - Arena King's palace
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-arena-kings-palace
+  requires: []
+- name: Dungeon Arena - Class Dancer
+  ids:
+  - unresolved:source:isthereanydeal:10339:dungeon-arena-class-dancer
+  requires: []

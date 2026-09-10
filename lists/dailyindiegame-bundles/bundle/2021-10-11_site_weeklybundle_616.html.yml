@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 616 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10561/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10561/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10561/source.json
+games:
+- name: Infected zone
+  ids:
+  - steam:1353250
+  requires: []
+- name: 无限重启
+  ids:
+  - steam:1706670
+  requires: []
+- name: Shawarma or Shaverma
+  ids:
+  - steam:1731040
+  requires: []
+- name: Try to Catch Up
+  ids:
+  - unresolved:source:isthereanydeal:10561:try-to-catch-up
+  requires: []
+- name: Gold Miner
+  ids:
+  - steam:1764010
+  requires: []
+- name: BrickOut
+  ids:
+  - steam:1761980
+  requires: []
+- name: Hidden Water
+  ids:
+  - steam:1778460
+  requires: []
+- name: Hidden Town
+  ids:
+  - steam:1778470
+  requires: []
+- name: Desert Magic Adventures
+  ids:
+  - unresolved:source:isthereanydeal:10561:desert-magic-adventures
+  requires: []
