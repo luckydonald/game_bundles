@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Capcom Legends Bundle — Select 3 for 9.99, 5 for 14.99, 7 for
+  19.95
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15131/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15131/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15131/source.json
+games:
+- name: Mega Man Legacy Collection
+  ids:
+  - steam:363440
+  requires: []
+- name: Ultra Street Fighter IV
+  ids:
+  - steam:45760
+  requires: []
+- name: Dead Rising® 2
+  ids:
+  - steam:45740
+  requires: []
+- name: 'Dead Rising® 2: Off The Record'
+  ids:
+  - steam:45770
+  requires: []
+- name: 'Resident Evil: Revelations'
+  ids:
+  - steam:222480
+  requires: []
+- name: Resident Evil 0 HD Remaster
+  ids:
+  - steam:339340
+  requires: []
+- name: Remember Me
+  ids:
+  - steam:228300
+  requires: []
+- name: Resident Evil 6 Complete
+  ids:
+  - steam:221040
+  requires: []
+- name: DMC - Devil May Cry
+  ids:
+  - steam:220440
+  requires: []
+- name: Devil May Cry® 4 Special Edition
+  ids:
+  - steam:329050
+  requires: []
+- name: Resident Evil HD Remaster
+  ids:
+  - steam:304240
+  requires: []
+- name: Lost Planet 3
+  ids:
+  - steam:226720
+  requires: []
+- name: Mega Man Legacy Collection 2
+  ids:
+  - steam:495050
+  requires: []
+- name: Dead Rising 3 Apocalypse Edition
+  ids:
+  - steam:265550
+  requires: []
+- name: 'Dragon''s Dogma: Dark Arisen'
+  ids:
+  - steam:367500
+  requires: []
+- name: Dead Rising 4
+  ids:
+  - steam:543460
+  requires: []
+- name: 'Resident Evil: Revelations 2 - Episode One: Penal Colony'
+  ids:
+  - steam:287290
+  requires: []
+- name: Resident Evil 5 GOLD Edition
+  ids:
+  - steam:21690
+  requires: []
+- name: Devil May Cry 5 + Vergil
+  ids:
+  - steam:601150
+  requires: []
+- name: Resident Evil 4 (2005)
+  ids:
+  - steam:254700
+  requires: []

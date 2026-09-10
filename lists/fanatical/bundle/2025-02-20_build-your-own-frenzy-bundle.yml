@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Frenzy Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14942/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14942/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14942/source.json
+games:
+- name: Demetrios - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14942:demetrios-deluxe-edition
+  requires: []
+- name: Stars End
+  ids:
+  - steam:623340
+  requires: []
+- name: Unity of Command Trilogy Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14942:unity-of-command-trilogy-bundle
+  requires: []
+- name: Doodle God
+  ids:
+  - steam:348360
+  requires: []
+- name: Ziggurat
+  ids:
+  - steam:308420
+  requires: []
+- name: Broken Sword Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:14942:broken-sword-trilogy
+  requires: []
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+  requires: []
+- name: Varenje - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:14942:varenje-complete-edition
+  requires: []
+- name: Burst Fighter
+  ids:
+  - steam:642600
+  requires: []
+- name: Legacy of Sin the father sacrifice
+  ids:
+  - steam:1240790
+  requires: []
+- name: Patch Quest
+  ids:
+  - steam:1347970
+  requires: []
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+  requires: []
+- name: Legacy of Sin blood oath
+  ids:
+  - steam:1969820
+  requires: []
+- name: Teslagrad 2
+  ids:
+  - steam:1698220
+  requires: []
+- name: Ruined Kingdom
+  ids:
+  - steam:2206490
+  requires: []
+- name: Cycle Chaser H-5
+  ids:
+  - steam:2274550
+  requires: []
+- name: Yet Another Climbing Game
+  ids:
+  - steam:3329220
+  requires: []
+- name: Prophecy I - The Viking Child & Dorke and Ymp Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14942:prophecy-i-the-viking-child-and-dorke-and-ymp-double-pack
+  requires: []

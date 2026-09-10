@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Quest VR Collection Bundle (Winter 2025) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15715/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15715/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15715/source.json
+games:
+- name: SculptrVR
+  ids:
+  - steam:418520
+  requires: []
+- name: 'Racket: Nx'
+  ids:
+  - steam:428080
+  requires: []
+- name: Until You Fall
+  ids:
+  - steam:858260
+  requires: []
+- name: Contractors VR
+  ids:
+  - steam:963930
+  requires: []
+- name: I Expect You To Die
+  ids:
+  - steam:587430
+  requires: []
+- name: AMID EVIL
+  ids:
+  - steam:673130
+  requires: []
+- name: 'SuchArt: Genius Artist Simulator'
+  ids:
+  - steam:1293180
+  requires: []
+- name: Death Horizon Reloaded
+  ids:
+  - steam:1829370
+  requires: []
+- name: Fruit Ninja VR 2
+  ids:
+  - steam:1575520
+  requires: []
+- name: 'Warplanes: Battles over Pacific'
+  ids:
+  - steam:1930920
+  requires: []
+- name: Hellsweeper VR
+  ids:
+  - steam:1341490
+  requires: []
+- name: The 7th Guest VR
+  ids:
+  - unresolved:source:isthereanydeal:15715:the-7th-guest-vr
+  requires: []
+- name: Swarm
+  ids:
+  - steam:1347310
+  requires: []
+- name: 'Death Horizon: Cyberfusion'
+  ids:
+  - steam:2934110
+  requires: []
+- name: SWARM 2
+  ids:
+  - steam:2929260
+  requires: []
+- name: Tiger Blade
+  ids:
+  - unresolved:source:isthereanydeal:15715:tiger-blade
+  requires: []
+- name: NEON Squad Tactics
+  ids:
+  - steam:2998650
+  requires: []
+- name: 'Contractors Showdown : ExfilZone'
+  ids:
+  - steam:2719160
+  requires: []
+- name: 'Breathedge: Cosmic Cluck'
+  ids:
+  - unresolved:source:isthereanydeal:15715:breathedge-cosmic-cluck
+  requires: []
+- name: Chronostrike
+  ids:
+  - unresolved:source:isthereanydeal:15715:chronostrike
+  requires: []
+- name: Shadow Chambers
+  ids:
+  - unresolved:source:isthereanydeal:15715:shadow-chambers
+  requires: []

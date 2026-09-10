@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Holiday Bundle (2025) — Select 1 for 1.00, 5 for 2.99, 10 for
+  4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15669/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15669/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15669/source.json
+games:
+- name: Sea Salt
+  ids:
+  - steam:983350
+  requires: []
+- name: Ancestors Legacy - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:15669:ancestors-legacy-complete-edition
+  requires: []
+- name: Cardpocalypse
+  ids:
+  - steam:904400
+  requires: []
+- name: War Mongrels
+  ids:
+  - steam:1101790
+  requires: []
+- name: Legendary Hoplite
+  ids:
+  - steam:1479810
+  requires: []
+- name: Spirited Thief
+  ids:
+  - steam:1709870
+  requires: []
+- name: Murtop
+  ids:
+  - steam:2148170
+  requires: []
+- name: Nemire
+  ids:
+  - steam:1955120
+  requires: []
+- name: Skye Tales
+  ids:
+  - steam:2138300
+  requires: []
+- name: Kingsgrave
+  ids:
+  - steam:2644360
+  requires: []
+- name: Ad Fundum
+  ids:
+  - steam:2647820
+  requires: []
+- name: 63 Days
+  ids:
+  - steam:2202120
+  requires: []
+- name: Grid Ranger
+  ids:
+  - steam:2964400
+  requires: []
+- name: Man I Just Wanna Go Home
+  ids:
+  - steam:3010070
+  requires: []
+- name: Christmas Hustle
+  ids:
+  - steam:3198530
+  requires: []
+- name: The Kangaroo Conspiracy
+  ids:
+  - steam:2231920
+  requires: []
+- name: Mars Power Industries Deluxe 2-Pack
+  ids:
+  - unresolved:source:isthereanydeal:15669:mars-power-industries-deluxe-2-pack
+  requires: []
+- name: Christmas Puzzle 1-5 Pack
+  ids:
+  - unresolved:source:isthereanydeal:15669:christmas-puzzle-1-5-pack
+  requires: []

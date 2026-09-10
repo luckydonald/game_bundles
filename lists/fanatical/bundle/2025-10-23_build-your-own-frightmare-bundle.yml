@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Frightmare Bundle (2025) — BYOB
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15526/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15526/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15526/source.json
+games:
+- name: Maid of Sker
+  ids:
+  - steam:826940
+  requires: []
+- name: Blood West
+  ids:
+  - steam:1587130
+  requires: []
+- name: Pathogen-X
+  ids:
+  - steam:2508980
+  requires: []
+- name: Withering Rooms
+  ids:
+  - steam:2006140
+  requires: []
+- name: Choo-Choo Charles
+  ids:
+  - steam:1766740
+  requires: []
+- name: CLeM
+  ids:
+  - steam:1861440
+  requires: []
+- name: 'Ghostbusters: Spirits Unleashed Ecto Edition'
+  ids:
+  - steam:2383990
+  requires: []
+- name: DEATHWATCHERS
+  ids:
+  - steam:2599370
+  requires: []
+- name: Rotten Flesh - Cosmic Horror Survival Game
+  ids:
+  - steam:2657600
+  requires: []
+- name: Massacre At The Mirage
+  ids:
+  - steam:2794610
+  requires: []
+- name: The Stairway 7 - Anomaly Hunt Loop Horror Game
+  ids:
+  - steam:2911820
+  requires: []
+- name: Painted In Blood
+  ids:
+  - steam:2954080
+  requires: []
+- name: REPOSE
+  ids:
+  - steam:3002510
+  requires: []
+- name: 'Backrooms: Partygoers'
+  ids:
+  - steam:2792450
+  requires: []
+- name: ORDER 13
+  ids:
+  - steam:2259310
+  requires: []
+- name: Iron Lung and Squirrel Stapler Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15526:iron-lung-and-squirrel-stapler-double-pack
+  requires: []
+- name: Tormented Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:15526:tormented-triple-pack
+  requires: []

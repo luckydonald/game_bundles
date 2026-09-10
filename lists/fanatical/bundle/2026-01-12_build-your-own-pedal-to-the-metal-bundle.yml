@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Pedal to the Metal Bundle - New Year Edition — Select 3 for 1.65
+  each (4.95), 5 for 1.60 each (7.99), or 7 for 1.45 (10.15)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15778/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15778/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15778/source.json
+games:
+- name: 'FURIDASHI: Drift Cyber Sport'
+  ids:
+  - steam:658570
+  requires: []
+- name: Can't Drive This
+  ids:
+  - steam:466980
+  requires: []
+- name: Touring Karts
+  ids:
+  - steam:1088950
+  requires: []
+- name: Turbo Sloths
+  ids:
+  - steam:1443630
+  requires: []
+- name: OverDrift Festival
+  ids:
+  - steam:1273440
+  requires: []
+- name: Agent Intercept
+  ids:
+  - steam:1502710
+  requires: []
+- name: Chaos on Wheels
+  ids:
+  - steam:1623120
+  requires: []
+- name: World Racing 2 Champion Edition
+  ids:
+  - steam:1301010
+  requires: []
+- name: 'Warhammer 40,000: Speed Freeks'
+  ids:
+  - steam:2078450
+  requires: []
+- name: Hot Lap Racing
+  ids:
+  - steam:2322830
+  requires: []
+- name: Star Racer
+  ids:
+  - steam:2626120
+  requires: []
+- name: Sunrise GP
+  ids:
+  - steam:2670800
+  requires: []
+- name: Crash Time - Undercover
+  ids:
+  - steam:1687700
+  requires: []
+- name: Blazing Trail
+  ids:
+  - steam:2825560
+  requires: []
+- name: 'Turbo Golf Racing: Deep Space Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:15778:turbo-golf-racing-deep-space-bundle
+  requires: []
+- name: Go Kart Island
+  ids:
+  - steam:3749790
+  requires: []
+- name: Aqua Moto & Snow Moto Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:15778:aqua-moto-and-snow-moto-double-pack
+  requires: []

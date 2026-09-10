@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Trinity Bundle (Spring 2025) — 3+ games $1.60 each, 6+ games
+  $1.50 each, 9+ games $1.30 each
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15113/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15113/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15113/source.json
+games:
+- name: Star Renegades
+  ids:
+  - steam:651670
+  requires: []
+- name: 'Chivalry: Complete Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15113:chivalry-complete-pack
+  requires: []
+- name: Lords & Villeins
+  ids:
+  - steam:1287530
+  requires: []
+- name: Narita Boy
+  ids:
+  - steam:1069530
+  requires: []
+- name: Mail Time
+  ids:
+  - steam:1607240
+  requires: []
+- name: Northend Tower Defense
+  ids:
+  - steam:1669170
+  requires: []
+- name: Steelrising - Bastille Edition
+  ids:
+  - steam:1283400
+  requires: []
+- name: This is a Ghost
+  ids:
+  - steam:1985420
+  requires: []
+- name: URBO
+  ids:
+  - steam:2141770
+  requires: []
+- name: 'The end is nahual: If I may say so'
+  ids:
+  - steam:2161110
+  requires: []
+- name: The Ouroboros King
+  ids:
+  - steam:2096510
+  requires: []
+- name: The Dead Await
+  ids:
+  - steam:2393580
+  requires: []
+- name: Pan'orama
+  ids:
+  - steam:1730250
+  requires: []
+- name: The Lies We Tell Ourselves
+  ids:
+  - steam:2176460
+  requires: []
+- name: Quadroids
+  ids:
+  - steam:2419690
+  requires: []
+- name: Siegebreaker
+  ids:
+  - steam:2146430
+  requires: []
+- name: Ingression
+  ids:
+  - steam:1966970
+  requires: []
+- name: The Cursed Legacy
+  ids:
+  - steam:2824210
+  requires: []
+- name: Teeny Tiny Trains
+  ids:
+  - steam:2825600
+  requires: []
+- name: Hunt Me
+  ids:
+  - steam:3026770
+  requires: []
+- name: Gamma Zero
+  ids:
+  - steam:3316750
+  requires: []
+- name: edco Quad Pack
+  ids:
+  - unresolved:source:isthereanydeal:15113:edco-quad-pack
+  requires: []

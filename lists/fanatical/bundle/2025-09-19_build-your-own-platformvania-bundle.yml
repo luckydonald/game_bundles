@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Platformvania Bundle — Select 2 for 7.99, 4 for 14.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15439/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15439/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15439/source.json
+games:
+- name: Exophobia
+  ids:
+  - steam:1189220
+  requires: []
+- name: Bzzzt
+  ids:
+  - steam:1293170
+  requires: []
+- name: Aeterna Noctis
+  ids:
+  - steam:1517970
+  requires: []
+- name: Sephonie
+  ids:
+  - steam:1248840
+  requires: []
+- name: Mail Time
+  ids:
+  - steam:1607240
+  requires: []
+- name: GRIME - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15439:grime-deluxe-edition
+  requires: []
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+  requires: []
+- name: Moonlight Pulse
+  ids:
+  - steam:2243250
+  requires: []
+- name: Pine Hearts
+  ids:
+  - steam:1781010
+  requires: []
+- name: Afterimage Deluxe Edition
+  ids:
+  - steam:1701520
+  requires: []
+- name: Koa and the Five Pirates of Mara
+  ids:
+  - steam:1819450
+  requires: []
+- name: Decline's Drops
+  ids:
+  - steam:1500180
+  requires: []
+- name: Cavern of Dreams
+  ids:
+  - steam:2059660
+  requires: []
+- name: Particle Hearts
+  ids:
+  - steam:2074740
+  requires: []
+- name: Eden Genesis
+  ids:
+  - steam:2562900
+  requires: []
+- name: 'Johnny Trigger: Definitive Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15439:johnny-trigger-definitive-edition
+  requires: []
+- name: Magenta Horizon - Neverending Harvest
+  ids:
+  - steam:2109060
+  requires: []

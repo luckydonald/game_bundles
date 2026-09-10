@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Crimson Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15504/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15504/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15504/source.json
+games:
+- name: Not Tonight
+  ids:
+  - steam:733790
+  requires: []
+- name: 'Broken Sword 5: The Serpent''s Curse'
+  ids:
+  - steam:262940
+  requires: []
+- name: Disjunction
+  ids:
+  - steam:979310
+  requires: []
+- name: Deathbloom Complete
+  ids:
+  - unresolved:source:isthereanydeal:15504:deathbloom-complete
+  requires: []
+- name: Jawbreaker
+  ids:
+  - steam:2137460
+  requires: []
+- name: JANITOR BLEEDS
+  ids:
+  - steam:1552310
+  requires: []
+- name: Imp of the Sun
+  ids:
+  - steam:1535780
+  requires: []
+- name: Anomalous
+  ids:
+  - steam:1435970
+  requires: []
+- name: Dreams in the Witch House
+  ids:
+  - steam:1902850
+  requires: []
+- name: DIMENSIONAL SLAUGHTER
+  ids:
+  - steam:2086060
+  requires: []
+- name: Pixelshire
+  ids:
+  - unresolved:source:isthereanydeal:15504:pixelshire
+  requires: []
+- name: Garden in!
+  ids:
+  - steam:1953860
+  requires: []
+- name: 'Little Friends: Puppy Island'
+  ids:
+  - steam:2172900
+  requires: []
+- name: 'The Repair House: Restoration Sim'
+  ids:
+  - steam:1759870
+  requires: []
+- name: Terror At Oakheart
+  ids:
+  - steam:2530430
+  requires: []
+- name: 'Samuel Sage: The Mystery at Penby Inn'
+  ids:
+  - steam:2579570
+  requires: []
+- name: Skarab
+  ids:
+  - steam:3557830
+  requires: []
+- name: Attack on Inirea
+  ids:
+  - steam:3633790
+  requires: []

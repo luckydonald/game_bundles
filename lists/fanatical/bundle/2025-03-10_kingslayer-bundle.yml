@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Kingslayer Bundle (Spring 2025) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14985/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14985/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14985/source.json
+games:
+- name: Empires in Ruins
+  ids:
+  - steam:604510
+  requires: []
+- name: 'Chivalry: Complete Pack'
+  ids:
+  - unresolved:source:isthereanydeal:14985:chivalry-complete-pack
+  requires: []
+- name: Lords & Villeins
+  ids:
+  - steam:1287530
+  requires: []
+- name: 'Siege of Avalon: Anthology'
+  ids:
+  - steam:1558990
+  requires: []
+- name: Witchaven
+  ids:
+  - unresolved:source:isthereanydeal:14985:witchaven
+  requires: []
+- name: 'Witchaven II: Blood Vengeance'
+  ids:
+  - unresolved:source:isthereanydeal:14985:witchaven-ii-blood-vengeance
+  requires: []
+- name: The Ouroboros King
+  ids:
+  - steam:2096510
+  requires: []
+- name: Hammerwatch II
+  ids:
+  - steam:1538970
+  requires: []
+- name: Windy Meadow - A Roadwarden Tale
+  ids:
+  - steam:2366430
+  requires: []
+- name: Hammerwatch Anniversary Edition
+  ids:
+  - steam:1905530
+  requires: []
+- name: Under The Yoke
+  ids:
+  - steam:2592060
+  requires: []
+- name: 'Rock of Ages III: Make and Break'
+  ids:
+  - steam:1101360
+  requires: []
