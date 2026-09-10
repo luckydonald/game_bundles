@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dark Tycoon Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14243/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14243/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14243/source.json
+games:
+- name: Yerba Mate Tycoon
+  ids:
+  - steam:1404560
+  requires: []
+- name: Joshua's Legs
+  ids:
+  - steam:1934330
+  requires: []
+- name: Ensora
+  ids:
+  - steam:2112210
+  requires: []
+- name: Street Lords
+  ids:
+  - steam:2204830
+  requires: []
+- name: 'The end is nahual: If I may say so'
+  ids:
+  - steam:2161110
+  requires: []
+- name: Endless Dark
+  ids:
+  - steam:2290890
+  requires: []

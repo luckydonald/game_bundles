@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Magic Hero Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13898/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13898/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13898/source.json
+games:
+- name: Supfly Delivery Simulator
+  ids:
+  - steam:1403350
+  requires: []
+- name: Sword of Paladin RE
+  ids:
+  - steam:1624160
+  requires: []
+- name: Iris Covenant -Song of the Forgotten Heroes
+  ids:
+  - steam:1744650
+  requires: []
+- name: RUNES Magica
+  ids:
+  - steam:1908500
+  requires: []
+- name: Starshifter
+  ids:
+  - steam:2084240
+  requires: []
+- name: Burst Hero
+  ids:
+  - steam:2220480
+  requires: []

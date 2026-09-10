@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Jewel Box Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14161/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14161/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14161/source.json
+games:
+- name: Shadow of Loot Box
+  ids:
+  - steam:764590
+  requires: []
+- name: Craft In Abyss
+  ids:
+  - steam:1255050
+  requires: []
+- name: The Excrawlers
+  ids:
+  - steam:1598910
+  requires: []
+- name: SnOut 2
+  ids:
+  - steam:1766810
+  requires: []
+- name: Polimines
+  ids:
+  - steam:1892790
+  requires: []
+- name: Dungeons & Jewels
+  ids:
+  - steam:2323980
+  requires: []

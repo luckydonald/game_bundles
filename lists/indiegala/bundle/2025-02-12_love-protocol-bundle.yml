@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Love Protocol Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14911/source.json
+games:
+- name: Splatter
+  ids:
+  - steam:1768920
+  requires: []
+- name: Interstate Drifter 2000
+  ids:
+  - steam:1280950
+  requires: []
+- name: CEO
+  ids:
+  - steam:1892620
+  requires: []
+- name: We are Eva
+  ids:
+  - steam:1490590
+  requires: []
+- name: Unwording
+  ids:
+  - steam:1974250
+  requires: []
+- name: Astra Protocol 2
+  ids:
+  - steam:2026750
+  requires: []

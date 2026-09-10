@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Chess Mess Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14145/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14145/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14145/source.json
+games:
+- name: 'Zen Chess: Mate in One'
+  ids:
+  - steam:748970
+  requires: []
+- name: 'Zen Chess: Mate in Two'
+  ids:
+  - steam:1042980
+  requires: []
+- name: 'Zen Chess: Champion''s Moves'
+  ids:
+  - steam:1108540
+  requires: []
+- name: Hang The Kings
+  ids:
+  - steam:1172500
+  requires: []
+- name: Unlock The King
+  ids:
+  - steam:1172510
+  requires: []
+- name: Knight Swap 2
+  ids:
+  - steam:1201800
+  requires: []
+- name: Knight's Retreat
+  ids:
+  - steam:1261700
+  requires: []
+- name: Shinobi's Way - a jigsaw chess tale
+  ids:
+  - steam:1593210
+  requires: []
+- name: Jessie 'Boom' James - a jigsaw chess tale
+  ids:
+  - steam:1593220
+  requires: []

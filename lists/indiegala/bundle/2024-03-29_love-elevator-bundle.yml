@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Love Elevator Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13959/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13959/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13959/source.json
+games:
+- name: 7Days Origins
+  ids:
+  - steam:1494140
+  requires: []
+- name: No Ghost in Stay Home
+  ids:
+  - steam:1645640
+  requires: []
+- name: Class of '09
+  ids:
+  - steam:1443200
+  requires: []
+- name: My Cat Girl Lover
+  ids:
+  - steam:2018640
+  requires: []
+- name: No Ghost in Sky Elevator
+  ids:
+  - steam:2412050
+  requires: []
+- name: Love Too Easily
+  ids:
+  - steam:2274500
+  requires: []
+- name: TheTravelGame
+  ids:
+  - steam:2123800
+  requires: []
+- name: 'Filthy Us: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:13959:filthy-us-complete-edition
+  requires: []
