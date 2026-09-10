@@ -1,0 +1,103 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Ruthless Bundle — Select 2 for 5.99, 3 for 7.99,  5 for 11.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14855/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14855/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14855/source.json
+games:
+- name: Mana Spark
+  ids:
+  - steam:630720
+  requires: []
+- name: Dark Devotion
+  ids:
+  - steam:718590
+  requires: []
+- name: Aura of Worlds
+  ids:
+  - steam:841600
+  requires: []
+- name: Rampage Knights
+  ids:
+  - steam:314410
+  requires: []
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14855:moonlighter-complete-edition
+  requires: []
+- name: Aeterna Noctis
+  ids:
+  - steam:1517970
+  requires: []
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14855:for-the-king-deluxe-edition
+  requires: []
+- name: Zoeti
+  ids:
+  - steam:1434540
+  requires: []
+- name: Souldiers
+  ids:
+  - steam:1419160
+  requires: []
+- name: GRIME - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14855:grime-deluxe-edition
+  requires: []
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14855:children-of-morta-complete-edition
+  requires: []
+- name: Deflector
+  ids:
+  - steam:1736550
+  requires: []
+- name: Duck Paradox
+  ids:
+  - steam:2058150
+  requires: []
+- name: The Golden Eyed Ghosts
+  ids:
+  - steam:1950930
+  requires: []
+- name: Spectator
+  ids:
+  - steam:2132450
+  requires: []
+- name: Asterogues
+  ids:
+  - steam:2083240
+  requires: []
+- name: Dwarven Realms
+  ids:
+  - steam:2015240
+  requires: []
+- name: Bosorka
+  ids:
+  - steam:2118370
+  requires: []
+- name: 'Hellbreach: Vegas'
+  ids:
+  - steam:1691320
+  requires: []
+- name: Margoq's Lair
+  ids:
+  - steam:2516550
+  requires: []
+- name: Wall World Complete
+  ids:
+  - unresolved:source:isthereanydeal:14855:wall-world-complete
+  requires: []
+- name: Arboria + Flame Keeper
+  ids:
+  - unresolved:source:isthereanydeal:14855:arboria-and-flame-keeper
+  requires: []
+- name: Nephilim Resurrection
+  ids:
+  - steam:2847830
+  requires: []

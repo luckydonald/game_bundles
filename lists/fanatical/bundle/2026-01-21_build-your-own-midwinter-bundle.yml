@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own  Midwinter Bundle — Select 1 for 1.00 (1.00 each), 5 for 2.99
+  (0.60 each), 10 for 4.99 (0.50 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15798/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15798/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15798/source.json
+games:
+- name: Stars in Shadow
+  ids:
+  - steam:464880
+  requires: []
+- name: Conarium
+  ids:
+  - steam:313780
+  requires: []
+- name: Railroad Corporation
+  ids:
+  - steam:797400
+  requires: []
+- name: Technotopia
+  ids:
+  - steam:2825110
+  requires: []
+- name: Oriental Empires
+  ids:
+  - steam:357310
+  requires: []
+- name: Vostok 2061
+  ids:
+  - steam:1463830
+  requires: []
+- name: The Adventure of NAYU
+  ids:
+  - steam:1476340
+  requires: []
+- name: Guns N' Runs
+  ids:
+  - steam:1545700
+  requires: []
+- name: Necrosmith 2
+  ids:
+  - steam:2277320
+  requires: []
+- name: Oxytone
+  ids:
+  - steam:2594020
+  requires: []
+- name: Margoq's Lair
+  ids:
+  - steam:2516550
+  requires: []
+- name: The Gunk
+  ids:
+  - steam:1087760
+  requires: []
+- name: 'GRIP: Combat Racing and GRIP: Combat Racing - Artifex Car Pack Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15798:grip-combat-racing-and-grip-combat-racing-artifex-car-pack-double-pack
+  requires: []
+- name: Necroking
+  ids:
+  - steam:2852980
+  requires: []
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  requires: []
+- name: Loop//Error
+  ids:
+  - steam:3489460
+  requires: []
+- name: Boomer Shooters Triple Pack 3
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-3
+  requires: []
+- name: Boomer Shooters Triple Pack 1
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-1
+  requires: []
+- name: Boomer Shooters Triple Pack 2
+  ids:
+  - unresolved:source:isthereanydeal:15798:boomer-shooters-triple-pack-2
+  requires: []

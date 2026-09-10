@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Chillout Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15222/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15222/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15222/source.json
+games:
+- name: Jewel Match Twilight
+  ids:
+  - steam:2177540
+  requires: []
+- name: Kaze and the Wild Masks
+  ids:
+  - steam:829280
+  requires: []
+- name: 'Clutter IX: Clutter IXtreme'
+  ids:
+  - steam:1532920
+  requires: []
+- name: 'Clutter Evolution: Beyond Xtreme'
+  ids:
+  - steam:1425120
+  requires: []
+- name: Jewel Match Origins - Palais Imperial Collector's Edition
+  ids:
+  - steam:1448780
+  requires: []
+- name: Ki11er Clutter
+  ids:
+  - steam:1700680
+  requires: []
+- name: Jewel Match Twilight 3 Collector's Edition
+  ids:
+  - steam:1747670
+  requires: []
+- name: 'Clutter 12: It''s About Time Collector''s Edition'
+  ids:
+  - steam:1776600
+  requires: []
+- name: Jewel Match Origins 2 - Bavarian Palace Collector's Edition
+  ids:
+  - steam:1930960
+  requires: []
+- name: Airoheart
+  ids:
+  - steam:1493940
+  requires: []
+- name: Jewel Match Twilight 2
+  ids:
+  - steam:2177550
+  requires: []
+- name: Clutter's Greatest Hits - Collector's Edition
+  ids:
+  - steam:2153050
+  requires: []
+- name: Jewel Match Winter Wonderland 2 Collector's Edition
+  ids:
+  - steam:2215220
+  requires: []
+- name: Jewel Match Aquascapes Collector's Edition
+  ids:
+  - steam:2313420
+  requires: []
+- name: Logic Town
+  ids:
+  - steam:2333240
+  requires: []
+- name: Cat Bait
+  ids:
+  - steam:2929730
+  requires: []

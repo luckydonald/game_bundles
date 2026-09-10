@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Creature Chronicles Bundle — Select 3 for 4.95, 5 for 7.99, 7
+  for 10.15
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14977/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14977/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14977/source.json
+games:
+- name: Disc Creatures
+  ids:
+  - steam:1083190
+  requires: []
+- name: Siralim 3
+  ids:
+  - steam:841770
+  requires: []
+- name: Coromon
+  ids:
+  - steam:1218210
+  requires: []
+- name: Animal Shelter
+  ids:
+  - steam:1239320
+  requires: []
+- name: 'Nexomon: Extinction'
+  ids:
+  - steam:1196630
+  requires: []
+- name: Super Catboy
+  ids:
+  - steam:1376910
+  requires: []
+- name: Oaken
+  ids:
+  - steam:1348690
+  requires: []
+- name: Pawsecuted
+  ids:
+  - steam:1961060
+  requires: []
+- name: 'Bingus: My Beloved'
+  ids:
+  - steam:1708990
+  requires: []
+- name: Pets Hotel
+  ids:
+  - steam:1714250
+  requires: []
+- name: 'Kādomon: Hyper Auto Battlers'
+  ids:
+  - steam:2125540
+  requires: []
+- name: Abomi Nation
+  ids:
+  - steam:1193590
+  requires: []
+- name: The Simulacrum
+  ids:
+  - steam:2263510
+  requires: []
+- name: 'Gaiadon: Eternal Quest'
+  ids:
+  - steam:3000030
+  requires: []

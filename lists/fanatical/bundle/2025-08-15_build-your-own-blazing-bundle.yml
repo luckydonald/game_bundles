@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Blazing Bundle (Summer 2025) — BYOB Choices
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15353/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15353/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15353/source.json
+games:
+- name: Rec Center Tycoon
+  ids:
+  - steam:623700
+  requires: []
+- name: 'Survivalist: Invisible Strain'
+  ids:
+  - steam:1054510
+  requires: []
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+  requires: []
+- name: Farmer's Life
+  ids:
+  - steam:1137750
+  requires: []
+- name: House Builder
+  ids:
+  - steam:1244630
+  requires: []
+- name: Aquarist
+  ids:
+  - steam:1430760
+  requires: []
+- name: Flatland Vol.1 & 2 Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:15353:flatland-vol-1-and-2-complete-pack
+  requires: []
+- name: 'Frog Detective 3: Corruption at Cowboy County'
+  ids:
+  - steam:1171320
+  requires: []
+- name: Mr. Prepper - Anniversary Edition
+  ids:
+  - unresolved:source:isthereanydeal:15353:mr-prepper-anniversary-edition
+  requires: []
+- name: 'Figment 2: Creed Valley'
+  ids:
+  - steam:1085220
+  requires: []
+- name: 'Soulstice: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15353:soulstice-deluxe-edition
+  requires: []
+- name: Oblivion Override
+  ids:
+  - steam:1952370
+  requires: []
+- name: Delivery INC
+  ids:
+  - steam:1793260
+  requires: []
+- name: Cardboard Town
+  ids:
+  - steam:2198070
+  requires: []
+- name: Ad Fundum
+  ids:
+  - steam:2647820
+  requires: []
+- name: 'Stellar Settlers: Space Base Builder'
+  ids:
+  - steam:2628570
+  requires: []
+- name: Floor 9
+  ids:
+  - steam:3106510
+  requires: []
+- name: 'HEXAROMA: Village Builder'
+  ids:
+  - steam:3056580
+  requires: []
+- name: 'Mini City: Mayhem'
+  ids:
+  - steam:2517440
+  requires: []
+- name: Dooms Hair Salon
+  ids:
+  - steam:3398870
+  requires: []

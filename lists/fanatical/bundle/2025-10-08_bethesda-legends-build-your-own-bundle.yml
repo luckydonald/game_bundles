@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Bethesda Legends Bundle — Select 2 for 6.99, 3 for 9.99, 5 for
+  14.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15479/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15479/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15479/source.json
+games:
+- name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
+  ids:
+  - steam:22320
+  requires: []
+- name: QUAKE
+  ids:
+  - steam:2310
+  requires: []
+- name: DOOM
+  ids:
+  - steam:379720
+  requires: []
+- name: RAGE 2
+  ids:
+  - steam:548570
+  requires: []
+- name: Dishonored - Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:15479:dishonored-definitive-edition
+  requires: []
+- name: 'Wolfenstein: The Old Blood'
+  ids:
+  - steam:350080
+  requires: []
+- name: The Evil Within
+  ids:
+  - steam:268050
+  requires: []
+- name: The Elder Scrolls Online
+  ids:
+  - steam:306130
+  requires: []
+- name: 'Fallout®: New Vegas™ Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:15479:fallout-new-vegas-ultimate-edition
+  requires: []
+- name: 'Wolfenstein®: The New Order'
+  ids:
+  - steam:201810
+  requires: []
+- name: 'Wolfenstein II: The New Colossus'
+  ids:
+  - steam:612880
+  requires: []
+- name: 'Wolfenstein: Youngblood'
+  ids:
+  - steam:1056960
+  requires: []
+- name: Dishonored 2
+  ids:
+  - steam:403640
+  requires: []
+- name: The Evil Within 2
+  ids:
+  - steam:601430
+  requires: []
+- name: Rage
+  ids:
+  - steam:9200
+  requires: []
+- name: 'Fallout 3: Game of the Year Edition'
+  ids:
+  - steam:22370
+  requires: []
+- name: Quake 4
+  ids:
+  - steam:2210
+  requires: []
+- name: QUAKE II
+  ids:
+  - steam:2320
+  requires: []
+- name: 'Dishonored: Death of the Outsider'
+  ids:
+  - steam:614570
+  requires: []
+- name: Fallout® Classic Collection
+  ids:
+  - unresolved:source:isthereanydeal:15479:fallout-classic-collection
+  requires: []

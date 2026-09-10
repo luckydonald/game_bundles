@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Exile Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15600/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15600/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15600/source.json
+games:
+- name: Lords of Exile
+  ids:
+  - steam:1329360
+  requires: []
+- name: 'Behind Glass: Aquarium Simulator'
+  ids:
+  - steam:1611580
+  requires: []
+- name: Wildmender
+  ids:
+  - steam:1599330
+  requires: []
+- name: Beneath Oresa
+  ids:
+  - steam:1803400
+  requires: []
+- name: ROBOBEAT
+  ids:
+  - steam:1456760
+  requires: []
+- name: INCISION
+  ids:
+  - steam:1734680
+  requires: []
+- name: Supplice
+  ids:
+  - steam:1693280
+  requires: []
+- name: New Cycle
+  ids:
+  - steam:2198510
+  requires: []
+- name: 'Diesel Legacy: The Brazen Age'
+  ids:
+  - steam:1959140
+  requires: []
+- name: Until Then
+  ids:
+  - steam:1574820
+  requires: []
+- name: DRIFT CE
+  ids:
+  - steam:520950
+  requires: []
+- name: Mahokenshi - The Samurai Deckbuilder
+  ids:
+  - steam:1717640
+  requires: []
+- name: Voidwrought
+  ids:
+  - steam:2014550
+  requires: []
+- name: KLETKA
+  ids:
+  - steam:1699480
+  requires: []
+- name: Yield! Fall of Rome
+  ids:
+  - steam:1561960
+  requires: []

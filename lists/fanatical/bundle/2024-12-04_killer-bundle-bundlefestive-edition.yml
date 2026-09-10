@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle (BundleFestive) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14681/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14681/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14681/source.json
+games:
+- name: Terraformers
+  ids:
+  - steam:1244800
+  requires: []
+- name: '77p egg: Eggwife'
+  ids:
+  - steam:1317020
+  requires: []
+- name: Mr. Prepper - Anniversary Edition
+  ids:
+  - unresolved:source:isthereanydeal:14681:mr-prepper-anniversary-edition
+  requires: []
+- name: REAVER
+  ids:
+  - steam:1890950
+  requires: []
+- name: Yellow Taxi Goes Vroom
+  ids:
+  - steam:2011780
+  requires: []
+- name: Sticky Business
+  ids:
+  - steam:2303350
+  requires: []
+- name: Frogun Encore
+  ids:
+  - steam:2312160
+  requires: []
+- name: Squirrel Stapler
+  ids:
+  - steam:2535830
+  requires: []
+- name: Dice & Fold
+  ids:
+  - steam:2693930
+  requires: []
+- name: Gungrave G.O.R.E. - Complete Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14681:gungrave-gore-complete-bundle
+  requires: []
+- name: Between Horizons - A Sci-Fi Detective Adventure
+  ids:
+  - steam:1921980
+  requires: []
