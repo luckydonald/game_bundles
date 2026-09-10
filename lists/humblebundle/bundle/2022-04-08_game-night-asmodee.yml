@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Game Night! by Asmodee Digital Bundle — entire-18-item-bundle
-tier: 3
+name: Game Night! by Asmodee Digital Bundle
+tiers:
+- rank: 3
+  name: entire-18-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11349/
@@ -13,54 +15,108 @@ games:
 - name: Love Letter
   ids:
   - steam:926520
+  requires: []
+  tiers:
+  - 3
 - name: Small World 2
   ids:
   - steam:235620
+  requires: []
+  tiers:
+  - 3
 - name: Small World - Grand Dames
   ids:
   - steam:259591
+  requires: []
+  tiers:
+  - 3
 - name: Splendor - The Strongholds
   ids:
   - steam:798250
+  requires: []
+  tiers:
+  - 3
 - name: Carcassonne - Inns & Cathedrals
   ids:
   - steam:622030
+  requires: []
+  tiers:
+  - 3
 - name: Ticket To Ride - France
   ids:
   - unresolved:source:isthereanydeal:11349:ticket-to-ride-france
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride
   ids:
   - steam:2477010
+  requires: []
+  tiers:
+  - 3
 - name: Splendor
   ids:
   - steam:376680
+  requires: []
+  tiers:
+  - 3
 - name: Carcassonne - Tiles & Tactics
   ids:
   - steam:598810
+  requires: []
+  tiers:
+  - 3
 - name: Splendor - The Cities
   ids:
   - steam:797510
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride Legendary Asia
   ids:
   - unresolved:source:isthereanydeal:11349:ticket-to-ride-legendary-asia
+  requires: []
+  tiers:
+  - 3
 - name: Terraforming Mars
   ids:
   - steam:800270
+  requires: []
+  tiers:
+  - 3
 - name: Ticket to Ride Europe
   ids:
   - unresolved:source:isthereanydeal:11349:ticket-to-ride-europe
+  requires: []
+  tiers:
+  - 3
 - name: 'The Lord of the Rings: Adventure Card Game - Definitive Edition'
   ids:
   - steam:509580
+  requires: []
+  tiers:
+  - 3
 - name: 'Blood Rage : Digital Edition'
   ids:
   - steam:1015930
+  requires: []
+  tiers:
+  - 3
 - name: Small World - Be not Afraid...
   ids:
   - steam:259592
+  requires: []
+  tiers:
+  - 3
 - name: 'A Game of Thrones: The Board Game - Digital Edition'
   ids:
   - steam:1075190
+  requires: []
+  tiers:
+  - 3
 - name: 'Arkham Horror: Mother''s Embrace'
   ids:
   - steam:840210
+  requires: []
+  tiers:
+  - 3

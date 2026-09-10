@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Short Games Showcase Bundle — Entire 14 Item Bundle
-tier: 2
+name: Short Games Showcase Bundle
+tiers:
+- rank: 2
+  name: Entire 14 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16462/
@@ -20,55 +22,97 @@ games:
   ids:
   - steam:1425350
   - isthereanydeal:botany-manor
+  requires: []
+  tiers:
+  - 2
 - name: biped
   ids:
   - steam:1071870
   - isthereanydeal:biped
+  requires: []
+  tiers:
+  - 2
 - name: 'Monster Prom 2: Monster Camp'
   ids:
   - steam:1140270
   - isthereanydeal:monster-prom-2-monster-camp
+  requires: []
+  tiers:
+  - 2
 - name: Anomaly Agent
   ids:
   - steam:2378620
   - isthereanydeal:anomaly-agent
+  requires: []
+  tiers:
+  - 2
 - name: NanoApostle
   ids:
   - steam:2400640
   - isthereanydeal:nanoapostle
+  requires: []
+  tiers:
+  - 2
 - name: Knightica
   ids:
   - steam:3093400
   - isthereanydeal:knightica
+  requires: []
+  tiers:
+  - 2
 - name: The Dark Queen of Mortholme
   ids:
   - steam:3587610
   - isthereanydeal:the-dark-queen-of-mortholme
+  requires: []
+  tiers:
+  - 2
 - name: Fill Up The Hole
   ids:
   - steam:3343160
   - isthereanydeal:fill-up-the-hole
+  requires: []
+  tiers:
+  - 2
 - name: Old Man's Journey
   ids:
   - steam:581270
   - isthereanydeal:old-mans-journey
+  requires: []
+  tiers:
+  - 2
 - name: Teacup
   ids:
   - steam:1444300
   - isthereanydeal:teacup
+  requires: []
+  tiers:
+  - 2
 - name: A Juggler's Tale
   ids:
   - steam:1252830
   - isthereanydeal:a-jugglers-tale
+  requires: []
+  tiers:
+  - 2
 - name: Scanner Sombre
   ids:
   - steam:475190
   - isthereanydeal:scanner-sombre
+  requires: []
+  tiers:
+  - 2
 - name: Astro Prospector
   ids:
   - steam:3503440
   - isthereanydeal:astro-prospector
+  requires: []
+  tiers:
+  - 2
 - name: A Tiny Sticker Tale
   ids:
   - steam:2322180
   - isthereanydeal:a-tiny-sticker-tale
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Best of Humble Bundle: D3 Waifu 4U — entire-9-item-bundle'
-tier: 4
+name: 'Best of Humble Bundle: D3 Waifu 4U'
+tiers:
+- rank: 4
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15775/
@@ -13,27 +15,54 @@ games:
 - name: 'SG/ZH: School Girl/Zombie Hunter'
   ids:
   - steam:682570
+  requires: []
+  tiers:
+  - 4
 - name: 'Onechanbara Z2: Chaos'
   ids:
   - steam:446390
+  requires: []
+  tiers:
+  - 4
 - name: 'Ed-0: Zombie Uprising'
   ids:
   - steam:1717020
+  requires: []
+  tiers:
+  - 4
 - name: Omega Labyrinth Life
   ids:
   - steam:1163600
+  requires: []
+  tiers:
+  - 4
 - name: MAGLAM LORD
   ids:
   - steam:1799380
+  requires: []
+  tiers:
+  - 4
 - name: Bullet Girls Phantasia
   ids:
   - steam:1163590
+  requires: []
+  tiers:
+  - 4
 - name: Onee Chanbara ORIGIN
   ids:
   - steam:1232460
+  requires: []
+  tiers:
+  - 4
 - name: SAMURAI MAIDEN
   ids:
   - steam:1952250
+  requires: []
+  tiers:
+  - 4
 - name: FULL METAL SCHOOLGIRL
   ids:
   - steam:3696410
+  requires: []
+  tiers:
+  - 4

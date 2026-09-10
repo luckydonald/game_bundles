@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mech & Blocks Bundle — Tier 2
-tier: 2
+name: Mech & Blocks Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6595/
@@ -13,33 +15,66 @@ games:
 - name: Aliens Are Rude!
   ids:
   - steam:819160
+  requires: []
+  tiers:
+  - 2
 - name: Rolling Sun
   ids:
   - steam:371670
+  requires: []
+  tiers:
+  - 2
 - name: Freddy's Journey
   ids:
   - steam:875520
+  requires: []
+  tiers:
+  - 2
 - name: Retro Pinball
   ids:
   - steam:581590
+  requires: []
+  tiers:
+  - 2
 - name: Quest of Vidhuraa
   ids:
   - steam:683870
+  requires: []
+  tiers:
+  - 2
 - name: Speedy Girls - Dream Team
   ids:
   - unresolved:source:isthereanydeal:6595:speedy-girls-dream-team
+  requires: []
+  tiers:
+  - 2
 - name: Pit Blocks 3D
   ids:
   - steam:792000
+  requires: []
+  tiers:
+  - 2
 - name: Medical verdict
   ids:
   - steam:891310
+  requires: []
+  tiers:
+  - 2
 - name: MechRunner
   ids:
   - steam:288100
+  requires: []
+  tiers:
+  - 2
 - name: 'Mosaic: Game of Gods II'
   ids:
   - steam:840240
+  requires: []
+  tiers:
+  - 2
 - name: Land of an Endless Journey
   ids:
   - steam:931430
+  requires: []
+  tiers:
+  - 2

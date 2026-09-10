@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Black Lives Matter Support Bundle — Tier 2
-tier: 2
+name: Black Lives Matter Support Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8871/
@@ -13,60 +15,120 @@ games:
 - name: Chambara
   ids:
   - steam:745790
+  requires: []
+  tiers:
+  - 2
 - name: Emily is Away Too
   ids:
   - steam:523780
+  requires: []
+  tiers:
+  - 2
 - name: We Met in May
   ids:
   - steam:1097780
+  requires: []
+  tiers:
+  - 2
 - name: Code Romantic
   ids:
   - steam:884980
+  requires: []
+  tiers:
+  - 2
 - name: Super Skelemania
   ids:
   - steam:730920
+  requires: []
+  tiers:
+  - 2
 - name: Byte Driver
   ids:
   - steam:944300
+  requires: []
+  tiers:
+  - 2
 - name: Narcissus
   ids:
   - steam:3189350
+  requires: []
+  tiers:
+  - 2
 - name: Radical Chess [Cracked by Vector Hat]
   ids:
   - unresolved:source:isthereanydeal:8871:radical-chess-cracked-by-vector-hat
+  requires: []
+  tiers:
+  - 2
 - name: The Night Fisherman
   ids:
   - steam:1340810
+  requires: []
+  tiers:
+  - 2
 - name: Blood Under The Bridge
   ids:
   - unresolved:source:isthereanydeal:8871:blood-under-the-bridge
+  requires: []
+  tiers:
+  - 2
 - name: Even in Arcadia
   ids:
   - unresolved:source:isthereanydeal:8871:even-in-arcadia
+  requires: []
+  tiers:
+  - 2
 - name: 'Herald: An Interactive Period Drama - Book I & II'
   ids:
   - steam:380810
+  requires: []
+  tiers:
+  - 2
 - name: Coffee Talk
   ids:
   - steam:914800
+  requires: []
+  tiers:
+  - 2
 - name: The Norwood Suite
   ids:
   - steam:696480
+  requires: []
+  tiers:
+  - 2
 - name: Shattered Planet
   ids:
   - steam:305640
+  requires: []
+  tiers:
+  - 2
 - name: Floaty Fighters
   ids:
   - steam:1130510
+  requires: []
+  tiers:
+  - 2
 - name: Moon Hunters
   ids:
   - steam:320040
+  requires: []
+  tiers:
+  - 2
 - name: Starcrossed
   ids:
   - steam:956560
+  requires: []
+  tiers:
+  - 2
 - name: 'Lucah: Born of a Dream'
   ids:
   - steam:896460
+  requires: []
+  tiers:
+  - 2
 - name: _transfer
   ids:
   - unresolved:source:isthereanydeal:8871:_transfer
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Completionist Bundle — Tier 2
-tier: 2
+name: Completionist Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5455/
@@ -13,39 +15,78 @@ games:
 - name: PHAT STACKS 2
   ids:
   - steam:655600
+  requires: []
+  tiers:
+  - 2
 - name: It Comes Around - A Kinetic Novel
   ids:
   - steam:520520
+  requires: []
+  tiers:
+  - 2
 - name: Lamp Head
   ids:
   - unresolved:source:isthereanydeal:5455:lamp-head
+  requires: []
+  tiers:
+  - 2
 - name: Z69
   ids:
   - unresolved:source:isthereanydeal:5455:z69
+  requires: []
+  tiers:
+  - 2
 - name: The Braves & Bows
   ids:
   - unresolved:source:isthereanydeal:5455:the-braves-and-bows
+  requires: []
+  tiers:
+  - 2
 - name: VITATIO
   ids:
   - steam:659560
+  requires: []
+  tiers:
+  - 2
 - name: Dungeons And Geese
   ids:
   - steam:660290
+  requires: []
+  tiers:
+  - 2
 - name: Joy Pony
   ids:
   - steam:685950
+  requires: []
+  tiers:
+  - 2
 - name: Forgotten, Not Lost - A Kinetic Novel
   ids:
   - steam:457490
+  requires: []
+  tiers:
+  - 2
 - name: Skyfall
   ids:
   - steam:1551330
+  requires: []
+  tiers:
+  - 2
 - name: Wizhood
   ids:
   - unresolved:source:isthereanydeal:5455:wizhood
+  requires: []
+  tiers:
+  - 2
 - name: Numberline 2
   ids:
   - steam:654970
+  requires: []
+  tiers:
+  - 2
 - name: 'Kumoon : Ballistic Physics Puzzle'
   ids:
   - steam:386290
+  requires: []
+  tiers:
+  - 2

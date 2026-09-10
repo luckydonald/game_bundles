@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Artifex Mundi GameBundle 2 — Beat The Average + $0.25
-tier: 3
+name: Artifex Mundi GameBundle 2
+tiers:
+- rank: 3
+  name: Beat The Average + $0.25
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4176/
@@ -13,30 +15,60 @@ games:
 - name: 'Clockwork Tales: Of Glass and Ink'
   ids:
   - steam:284830
+  requires: []
+  tiers:
+  - 3
 - name: 'Time Mysteries 2: The Ancient Spectres'
   ids:
   - steam:313650
+  requires: []
+  tiers:
+  - 3
 - name: 'Time Mysteries: Inheritance - Remastered'
   ids:
   - steam:350010
+  requires: []
+  tiers:
+  - 3
 - name: 'Queen''s Quest: Tower of Darkness'
   ids:
   - steam:390200
+  requires: []
+  tiers:
+  - 3
 - name: 'The Secret Order 2: Masked Intent'
   ids:
   - steam:399890
+  requires: []
+  tiers:
+  - 3
 - name: 'Time Mysteries 3: The Final Enigma'
   ids:
   - steam:319320
+  requires: []
+  tiers:
+  - 3
 - name: 'Mythic Wonders: The Philosopher''s Stone'
   ids:
   - steam:458480
+  requires: []
+  tiers:
+  - 3
 - name: Princess Isabella - Rise of an Heir
   ids:
   - unresolved:source:isthereanydeal:4176:princess-isabella-rise-of-an-heir
+  requires: []
+  tiers:
+  - 3
 - name: 'The Secret Order 3: Ancient Times'
   ids:
   - steam:437420
+  requires: []
+  tiers:
+  - 3
 - name: 'Tibetan Quest: Beyond the World''s End'
   ids:
   - steam:427550
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Square Enix Collective Bundle 2020 — entire-12-item-bundle
-tier: 3
+name: Humble Square Enix Collective Bundle 2020
+tiers:
+- rank: 3
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8712/
@@ -13,36 +15,72 @@ games:
 - name: 'Octahedron: Transfixed Edition'
   ids:
   - steam:434660
+  requires: []
+  tiers:
+  - 3
 - name: Goetia
   ids:
   - steam:421740
+  requires: []
+  tiers:
+  - 3
 - name: Deadbeat Heroes
   ids:
   - steam:614090
+  requires: []
+  tiers:
+  - 3
 - name: Oh My Godheads
   ids:
   - steam:522740
+  requires: []
+  tiers:
+  - 3
 - name: Forgotton Anne
   ids:
   - steam:542050
+  requires: []
+  tiers:
+  - 3
 - name: Fear Effect Sedna
   ids:
   - steam:546900
+  requires: []
+  tiers:
+  - 3
 - name: Black The Fall
   ids:
   - steam:308060
+  requires: []
+  tiers:
+  - 3
 - name: The Turing Test
   ids:
   - steam:499520
+  requires: []
+  tiers:
+  - 3
 - name: Children Of Zodiarcs
   ids:
   - steam:436290
+  requires: []
+  tiers:
+  - 3
 - name: Tokyo Dark
   ids:
   - steam:687260
+  requires: []
+  tiers:
+  - 3
 - name: Boundless
   ids:
   - steam:324510
+  requires: []
+  tiers:
+  - 3
 - name: Battalion 1944
   ids:
   - unresolved:source:isthereanydeal:8712:battalion-1944
+  requires: []
+  tiers:
+  - 3

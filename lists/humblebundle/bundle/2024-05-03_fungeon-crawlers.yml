@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: FUNgeon Crawlers Bundle — entire-7-item-bundle
-tier: 3
+name: FUNgeon Crawlers Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14028/
@@ -13,21 +15,42 @@ games:
 - name: Going Under
   ids:
   - steam:1154810
+  requires: []
+  tiers:
+  - 3
 - name: Hellslave
   ids:
   - steam:1608450
+  requires: []
+  tiers:
+  - 3
 - name: Devil Spire
   ids:
   - steam:1861290
+  requires: []
+  tiers:
+  - 3
 - name: Siralim Ultimate
   ids:
   - steam:1289810
+  requires: []
+  tiers:
+  - 3
 - name: Lunacid
   ids:
   - steam:1745510
+  requires: []
+  tiers:
+  - 3
 - name: MythForce
   ids:
   - steam:363860
+  requires: []
+  tiers:
+  - 3
 - name: 'Abalon: Roguelike Tactics CCG'
   ids:
   - steam:1681840
+  requires: []
+  tiers:
+  - 3

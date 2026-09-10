@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble GameDev Software Bundle — Pay $10 or more to also unlock!
-tier: 3
+name: Humble GameDev Software Bundle
+tiers:
+- rank: 3
+  name: Pay $10 or more to also unlock!
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4541/
@@ -13,45 +15,90 @@ games:
 - name: Spriter Pro
   ids:
   - steam:332360
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: Game Effects Pack'
   ids:
   - steam:333770
+  requires: []
+  tiers:
+  - 3
 - name: Clickteam Fusion 2.5
   ids:
   - steam:248170
+  requires: []
+  tiers:
+  - 3
 - name: Pyxel Edit
   ids:
   - unresolved:source:isthereanydeal:4541:pyxel-edit
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: Run N'' Gun Pack'
   ids:
   - steam:333773
+  requires: []
+  tiers:
+  - 3
 - name: Todoist Premium 1 year subscription
   ids:
   - unresolved:source:isthereanydeal:4541:todoist-premium-1-year-subscription
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: Basic Platformer Pack'
   ids:
   - steam:333771
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: Adventure Platformer Pack'
   ids:
   - steam:333772
+  requires: []
+  tiers:
+  - 3
 - name: Marmoset Hexels 3
   ids:
   - steam:428340
+  requires: []
+  tiers:
+  - 3
 - name: HTML5 Exporter for Clickteam Fusion 2.5
   ids:
   - steam:267652
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: Radius-Wing SHMUP Animated Art Pack'
   ids:
   - steam:543340
+  requires: []
+  tiers:
+  - 3
 - name: 'Spriter: RPG Heroes Pack'
   ids:
   - steam:418320
+  requires: []
+  tiers:
+  - 3
 - name: 1Password Families 1 year subscription
   ids:
   - unresolved:source:isthereanydeal:4541:1password-families-1-year-subscription
+  requires: []
+  tiers:
+  - 3
 - name: SpriteIlluminator Lifetime License
   ids:
   - unresolved:source:isthereanydeal:4541:spriteilluminator-lifetime-license
+  requires: []
+  tiers:
+  - 3
 - name: Voxatron
   ids:
   - unresolved:source:isthereanydeal:4541:voxatron
+  requires: []
+  tiers:
+  - 3

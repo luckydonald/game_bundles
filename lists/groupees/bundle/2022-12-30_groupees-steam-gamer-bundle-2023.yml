@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Groupees Steam Gamer Bundle 2023 — Tier 3
-tier: 3
+name: Groupees Steam Gamer Bundle 2023
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12850/
@@ -13,21 +15,42 @@ games:
 - name: A Tale for Anna
   ids:
   - steam:1521930
+  requires: []
+  tiers:
+  - 3
 - name: Acquitted
   ids:
   - steam:1954750
+  requires: []
+  tiers:
+  - 3
 - name: Airport Madness 3D
   ids:
   - steam:445770
+  requires: []
+  tiers:
+  - 3
 - name: Claire's Cruisin' Cafe
   ids:
   - steam:1442070
+  requires: []
+  tiers:
+  - 3
 - name: Airport Madness 4
   ids:
   - steam:387850
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamland Solitaire: Dark Prophecy'
   ids:
   - steam:1350850
+  requires: []
+  tiers:
+  - 3
 - name: Looking for Aliens
   ids:
   - steam:1733500
+  requires: []
+  tiers:
+  - 3

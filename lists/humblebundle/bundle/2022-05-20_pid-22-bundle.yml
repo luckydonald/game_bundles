@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Springtide Indies Bundle — entire-9-item-bundle
-tier: 3
+name: Springtide Indies Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11511/
@@ -13,27 +15,54 @@ games:
 - name: Dungeon Rushers
   ids:
   - steam:429620
+  requires: []
+  tiers:
+  - 3
 - name: Impulsion
   ids:
   - steam:811270
+  requires: []
+  tiers:
+  - 3
 - name: Out of Space
   ids:
   - steam:400080
+  requires: []
+  tiers:
+  - 3
 - name: 'Sigma Theory: Global Cold War'
   ids:
   - steam:716640
+  requires: []
+  tiers:
+  - 3
 - name: Tiny Lands
   ids:
   - steam:1354910
+  requires: []
+  tiers:
+  - 3
 - name: Recompile
   ids:
   - steam:986310
+  requires: []
+  tiers:
+  - 3
 - name: Arietta of Spirits
   ids:
   - steam:1140170
+  requires: []
+  tiers:
+  - 3
 - name: As Far As The Eye
   ids:
   - steam:1119700
+  requires: []
+  tiers:
+  - 3
 - name: Paper Beast - Folded Edition
   ids:
   - steam:1403830
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #52 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #52'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5913/
@@ -13,30 +15,60 @@ games:
 - name: Not Without My Poop
   ids:
   - steam:789730
+  requires: []
+  tiers:
+  - 2
 - name: Pipe Push Paradise
   ids:
   - steam:721390
+  requires: []
+  tiers:
+  - 2
 - name: Object "Cleaning"
   ids:
   - steam:781880
+  requires: []
+  tiers:
+  - 2
 - name: Tiny Rails
   ids:
   - steam:614630
+  requires: []
+  tiers:
+  - 2
 - name: Leap of Fate
   ids:
   - steam:363420
+  requires: []
+  tiers:
+  - 2
 - name: AngerForce - Reloaded
   ids:
   - steam:650780
+  requires: []
+  tiers:
+  - 2
 - name: Please, Don't Touch Anything
   ids:
   - steam:354240
+  requires: []
+  tiers:
+  - 2
 - name: 'Among the Innocent: A Stricken Tale'
   ids:
   - unresolved:source:isthereanydeal:5913:among-the-innocent-a-stricken-tale
+  requires: []
+  tiers:
+  - 2
 - name: Solaria Moon
   ids:
   - steam:623930
+  requires: []
+  tiers:
+  - 2
 - name: Luvocious
   ids:
   - steam:714730
+  requires: []
+  tiers:
+  - 2

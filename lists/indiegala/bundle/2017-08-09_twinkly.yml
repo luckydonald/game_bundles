@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Twinkly Twelve — Tier 2
-tier: 2
+name: Twinkly Twelve
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5382/
@@ -13,36 +15,72 @@ games:
 - name: Dream Stone
   ids:
   - steam:603090
+  requires: []
+  tiers:
+  - 2
 - name: TAP TOUCH RUN
   ids:
   - unresolved:source:isthereanydeal:5382:tap-touch-run
+  requires: []
+  tiers:
+  - 2
 - name: Died Of Fear
   ids:
   - steam:663920
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: Color Blocking'
   ids:
   - unresolved:source:isthereanydeal:5382:goocubelets-color-blocking
+  requires: []
+  tiers:
+  - 2
 - name: Ra²
   ids:
   - unresolved:source:isthereanydeal:5382:ra2
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: RGB'
   ids:
   - unresolved:source:isthereanydeal:5382:goocubelets-rgb
+  requires: []
+  tiers:
+  - 2
 - name: Urban War Defense
   ids:
   - unresolved:source:isthereanydeal:5382:urban-war-defense
+  requires: []
+  tiers:
+  - 2
 - name: Never Ending Night
   ids:
   - steam:344100
+  requires: []
+  tiers:
+  - 2
 - name: Exocomets
   ids:
   - steam:655950
+  requires: []
+  tiers:
+  - 2
 - name: Survival Tycoon
   ids:
   - steam:667920
+  requires: []
+  tiers:
+  - 2
 - name: A Goo Adventure
   ids:
   - unresolved:source:isthereanydeal:5382:a-goo-adventure
+  requires: []
+  tiers:
+  - 2
 - name: Crimson Earth
   ids:
   - unresolved:source:isthereanydeal:5382:crimson-earth
+  requires: []
+  tiers:
+  - 2

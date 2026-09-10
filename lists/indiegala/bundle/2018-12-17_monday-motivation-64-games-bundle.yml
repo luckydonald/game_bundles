@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #64 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #64'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6780/
@@ -13,27 +15,54 @@ games:
 - name: Skinny
   ids:
   - steam:977340
+  requires: []
+  tiers:
+  - 2
 - name: Stick Nightmare
   ids:
   - steam:652610
+  requires: []
+  tiers:
+  - 2
 - name: Home Sheep Home 2
   ids:
   - unresolved:source:isthereanydeal:6780:home-sheep-home-2
+  requires: []
+  tiers:
+  - 2
 - name: Tomb Towers
   ids:
   - steam:828350
+  requires: []
+  tiers:
+  - 2
 - name: MouseCraft
   ids:
   - steam:252750
+  requires: []
+  tiers:
+  - 2
 - name: Marooners
   ids:
   - steam:423810
+  requires: []
+  tiers:
+  - 2
 - name: A Story of a Band
   ids:
   - steam:856450
+  requires: []
+  tiers:
+  - 2
 - name: 13 Cycles
   ids:
   - unresolved:source:isthereanydeal:6780:13-cycles
+  requires: []
+  tiers:
+  - 2
 - name: Snooker Nation Championship
   ids:
   - steam:458830
+  requires: []
+  tiers:
+  - 2

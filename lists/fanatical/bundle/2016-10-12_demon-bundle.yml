@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Demon Bundle — Tier 3
-tier: 3
+name: Demon Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4186/
@@ -13,45 +15,90 @@ games:
 - name: This Book Is A Dungeon
   ids:
   - steam:404690
+  requires: []
+  tiers:
+  - 3
 - name: Silence of the Sleep
   ids:
   - steam:321870
+  requires: []
+  tiers:
+  - 3
 - name: 'POSTAL 2: Paradise Lost'
   ids:
   - steam:360960
+  requires: []
+  tiers:
+  - 3
 - name: Kholat
   ids:
   - steam:343710
+  requires: []
+  tiers:
+  - 3
 - name: POSTAL 2
   ids:
   - steam:223470
+  requires: []
+  tiers:
+  - 3
 - name: Lucius II
   ids:
   - steam:296830
+  requires: []
+  tiers:
+  - 3
 - name: I Shall Remain
   ids:
   - steam:293460
+  requires: []
+  tiers:
+  - 3
 - name: The Dream Machine
   ids:
   - unresolved:source:isthereanydeal:4186:the-dream-machine
+  requires: []
+  tiers:
+  - 3
 - name: The Bug Butcher
   ids:
   - steam:350740
+  requires: []
+  tiers:
+  - 3
 - name: Zombie Vikings
   ids:
   - steam:337480
+  requires: []
+  tiers:
+  - 3
 - name: 'The Dream Machine: Chapter 3'
   ids:
   - steam:94303
+  requires: []
+  tiers:
+  - 3
 - name: DISTRAINT
   ids:
   - unresolved:source:isthereanydeal:4186:distraint
+  requires: []
+  tiers:
+  - 3
 - name: 'Albino Lullaby: Episode 1'
   ids:
   - steam:355860
+  requires: []
+  tiers:
+  - 3
 - name: Lucius Demake
   ids:
   - steam:364230
+  requires: []
+  tiers:
+  - 3
 - name: The Park
   ids:
   - steam:402020
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Company of Heroes Total Command Collection Bundle — entire-74-item-bundle
-tier: 3
+name: Company of Heroes Total Command Collection Bundle
+tiers:
+- rank: 3
+  name: entire-74-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12678/
@@ -13,222 +15,444 @@ games:
 - name: 'Company of Heroes: Opposing Fronts'
   ids:
   - steam:9340
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes
   ids:
   - steam:228200
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2
   ids:
   - steam:231430
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Victory at Stalingrad Mission Pack
   ids:
   - steam:231480
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Case Blue Mission Pack
   ids:
   - steam:231479
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Ardennes Assault: Fox Company Rangers'
   ids:
   - steam:323230
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Southern Fronts Mission Pack
   ids:
   - steam:260290
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The Western Front Armies - US Forces
   ids:
   - steam:287370
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes: Tales of Valor'
   ids:
   - steam:20540
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The British Forces
   ids:
   - steam:365820
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Elite Troops Doctrine'
   ids:
   - steam:249088
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Encirclement Doctrine'
   ids:
   - steam:249094
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Spearhead Doctrine'
   ids:
   - steam:231466
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (M) Voronezh Improvised Pattern'
   ids:
   - steam:249101
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Osttruppen Doctrine'
   ids:
   - steam:249086
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Fortified Armor Doctrine'
   ids:
   - steam:231459
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Storm Doctrine'
   ids:
   - steam:231455
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - Ardennes Assault
   ids:
   - steam:317850
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (L) Stalingrad Winter Pattern'
   ids:
   - steam:249106
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Winter Whitewash Voronezh Front'
   ids:
   - steam:231489
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Three Color Leningrad Front'
   ids:
   - steam:231468
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Tank Hunter Tactics'
   ids:
   - steam:249092
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Two Tone Spring Front'
   ids:
   - steam:249114
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Armored Assault Tactics'
   ids:
   - steam:231456
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Winter Whitewash Voronezh Front'
   ids:
   - steam:231488
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Joint Operations Doctrine'
   ids:
   - steam:231464
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (H) Voronezh Improvised Pattern'
   ids:
   - steam:249102
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Three Color Northwestern Front'
   ids:
   - steam:231490
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Two Tone Bryansk Front'
   ids:
   - steam:231471
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Faceplate: Chainlink'
   ids:
   - steam:231506
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Winter Whitewash Voronezh Front'
   ids:
   - steam:231454
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (L) Voronezh Improvised Pattern'
   ids:
   - steam:249100
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Anti-Infantry Tactics'
   ids:
   - steam:231462
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Two Tone Spring Front'
   ids:
   - steam:249113
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Four Color Belorussian Front'
   ids:
   - unresolved:source:isthereanydeal:12678:company-of-heroes-2-soviet-skin-m-four-color-belorussian-front
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Three Color Northwestern Front'
   ids:
   - steam:231472
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Partisan Tactics'
   ids:
   - steam:249090
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Makeshift Sand Southern Front'
   ids:
   - steam:249116
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Makeshift Sand Southern Front'
   ids:
   - steam:249115
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Two Tone Don Front'
   ids:
   - steam:249109
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: Four Color Belorussian Front Pack'
   ids:
   - unresolved:source:isthereanydeal:12678:company-of-heroes-2-soviet-skin-four-color-belorussian-front-pack
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Three Color Leningrad Front'
   ids:
   - steam:231469
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Terror Tactics'
   ids:
   - steam:231463
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (M) Two Tone Don Front'
   ids:
   - steam:249110
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Two Tone Spring Front'
   ids:
   - steam:249112
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Faceplate: Engraved'
   ids:
   - steam:231507
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Industry Tactics'
   ids:
   - steam:249082
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (H) Stalingrad Winter Pattern'
   ids:
   - steam:249108
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The Western Front Armies - Oberkommando West
   ids:
   - steam:287371
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Mechanized Support Tactics'
   ids:
   - steam:231461
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Two Tone Don Front'
   ids:
   - steam:249111
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (M) Case Blue Summer Pattern'
   ids:
   - steam:249104
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Four Color Belorussian Front'
   ids:
   - unresolved:source:isthereanydeal:12678:company-of-heroes-2-soviet-skin-l-four-color-belorussian-front
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Skin: (H) Case Blue Summer Pattern'
   ids:
   - steam:249105
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Faceplate: Twisted Gold'
   ids:
   - steam:231505
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Makeshift Sand Southern Front'
   ids:
   - steam:249117
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Four Color Belorussian Front'
   ids:
   - steam:231482
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Lightning War Doctrine'
   ids:
   - steam:231465
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (L) Three Color Leningrad Front'
   ids:
   - steam:231467
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Winter Cobblestone West Front'
   ids:
   - steam:231470
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Faceplate: Studded'
   ids:
   - steam:231504
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Skin: (H) Three Color Northwestern Front'
   ids:
   - steam:231491
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Conscript Support Tactics'
   ids:
   - steam:231460
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Soviet Commander: Urban Defense Tactics'
   ids:
   - steam:249083
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - German Commander: Luftwaffe Supply Doctrine'
   ids:
   - steam:249087
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The British Forces - Vanguard Regiment
   ids:
   - steam:260291
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The British Forces - Support Regiment
   ids:
   - steam:260292
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes 2 - The British Forces - Special Weapons Regiment
   ids:
   - steam:260293
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Oberkommando West Commander: Elite Armor Doctrine'
   ids:
   - steam:297513
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Oberkommando West Commander: Fortifications Doctrine'
   ids:
   - steam:297515
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - Oberkommando West Commander: Scavenge Doctrine'
   ids:
   - steam:297514
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - US Forces Commander: Recon Support Company'
   ids:
   - steam:297510
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - US Forces Commander: Mechanized Company'
   ids:
   - steam:297511
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2 - US Forces Commander: Rifle Company'
   ids:
   - steam:297512
+  requires: []
+  tiers:
+  - 3

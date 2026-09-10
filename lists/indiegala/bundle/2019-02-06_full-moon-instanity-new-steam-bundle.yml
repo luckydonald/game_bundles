@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Full Moon Insanity Bundle — Tier 2
-tier: 2
+name: Full Moon Insanity Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6994/
@@ -13,27 +15,54 @@ games:
 - name: CONTAINMENT
   ids:
   - steam:771010
+  requires: []
+  tiers:
+  - 2
 - name: Slash or Die
   ids:
   - steam:480480
+  requires: []
+  tiers:
+  - 2
 - name: 'Stories of Bethem: Full Moon Edition'
   ids:
   - steam:412270
+  requires: []
+  tiers:
+  - 2
 - name: Slash or Die 2
   ids:
   - steam:644580
+  requires: []
+  tiers:
+  - 2
 - name: RepairBot
   ids:
   - steam:991620
+  requires: []
+  tiers:
+  - 2
 - name: LoveBug
   ids:
   - steam:909010
+  requires: []
+  tiers:
+  - 2
 - name: Roots of Insanity
   ids:
   - steam:598440
+  requires: []
+  tiers:
+  - 2
 - name: Trench Run
   ids:
   - steam:262100
+  requires: []
+  tiers:
+  - 2
 - name: Stellar Interface
   ids:
   - steam:517330
+  requires: []
+  tiers:
+  - 2

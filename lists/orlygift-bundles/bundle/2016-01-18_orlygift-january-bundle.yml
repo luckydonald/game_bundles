@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: January Bundle — Tier 2
-tier: 2
+name: January Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2944/
@@ -13,21 +15,42 @@ games:
 - name: Alter World
   ids:
   - steam:357280
+  requires: []
+  tiers:
+  - 2
 - name: Red Lake
   ids:
   - steam:357290
+  requires: []
+  tiers:
+  - 2
 - name: Lilly Looking Through
   ids:
   - steam:250030
+  requires: []
+  tiers:
+  - 2
 - name: Hidden Object Bundle 4 in 1
   ids:
   - steam:347610
+  requires: []
+  tiers:
+  - 2
 - name: The Archetype
   ids:
   - steam:391120
+  requires: []
+  tiers:
+  - 2
 - name: Nightmare on Azathoth
   ids:
   - steam:414470
+  requires: []
+  tiers:
+  - 2
 - name: 'Shadow Blade: Reload'
   ids:
   - steam:272330
+  requires: []
+  tiers:
+  - 2

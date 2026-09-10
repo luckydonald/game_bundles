@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Virtual Realities: Mystery & Mayhem Bundle — entire-8-item-bundle'
-tier: 4
+name: 'Virtual Realities: Mystery & Mayhem Bundle'
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13962/
@@ -13,24 +15,48 @@ games:
 - name: A Fisherman's Tale
   ids:
   - steam:559330
+  requires: []
+  tiers:
+  - 4
 - name: Arizona Sunshine - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:13962:arizona-sunshine-deluxe-edition
+  requires: []
+  tiers:
+  - 4
 - name: Broken Edge
   ids:
   - steam:1947070
+  requires: []
+  tiers:
+  - 4
 - name: After the Fall
   ids:
   - steam:751630
+  requires: []
+  tiers:
+  - 4
 - name: No More Rainbows
   ids:
   - steam:1634100
+  requires: []
+  tiers:
+  - 4
 - name: A Fisherman's Tale 2
   ids:
   - steam:2096570
+  requires: []
+  tiers:
+  - 4
 - name: Firmament
   ids:
   - steam:754890
+  requires: []
+  tiers:
+  - 4
 - name: The 7th Guest VR
   ids:
   - unresolved:source:isthereanydeal:13962:the-7th-guest-vr
+  requires: []
+  tiers:
+  - 4

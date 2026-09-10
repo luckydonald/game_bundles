@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Jurassic World Evolution Complete Bundle — entire-9-item-bundle
-tier: 3
+name: Jurassic World Evolution Complete Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/11429/
@@ -13,27 +15,54 @@ games:
 - name: Jurassic World Evolution
   ids:
   - steam:648350
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Cretaceous Dinosaur Pack'
   ids:
   - steam:979930
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Carnivore Dinosaur Pack'
   ids:
   - steam:988470
+  requires: []
+  tiers:
+  - 3
 - name: Jurassic World Evolution - Deluxe Dinosaur Pack
   ids:
   - steam:817550
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Herbivore Dinosaur Pack'
   ids:
   - steam:1107760
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Raptor Squad Skin Collection'
   ids:
   - steam:1144420
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Secrets of Dr Wu'
   ids:
   - steam:953940
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Claire''s Sanctuary'
   ids:
   - steam:1028430
+  requires: []
+  tiers:
+  - 3
 - name: 'Jurassic World Evolution: Return To Jurassic Park'
   ids:
   - steam:1144410
+  requires: []
+  tiers:
+  - 3

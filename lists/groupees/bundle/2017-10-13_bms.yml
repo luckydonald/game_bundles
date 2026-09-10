@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine S — Tier 2
-tier: 2
+name: Be Mine S
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5539/
@@ -13,21 +15,42 @@ games:
 - name: Ablepsia
   ids:
   - steam:713680
+  requires: []
+  tiers:
+  - 2
 - name: Spheroids
   ids:
   - steam:586430
+  requires: []
+  tiers:
+  - 2
 - name: Ortus Arena
   ids:
   - unresolved:source:isthereanydeal:5539:ortus-arena
+  requires: []
+  tiers:
+  - 2
 - name: Lantern
   ids:
   - steam:487630
+  requires: []
+  tiers:
+  - 2
 - name: Pocket Kingdom
   ids:
   - steam:462620
+  requires: []
+  tiers:
+  - 2
 - name: Tales
   ids:
   - steam:416250
+  requires: []
+  tiers:
+  - 2
 - name: Satellite Rush
   ids:
   - steam:429350
+  requires: []
+  tiers:
+  - 2

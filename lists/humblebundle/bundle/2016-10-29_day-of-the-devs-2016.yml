@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Day of the Devs Bundle (2016) — entire-7-item-bundle
-tier: 3
+name: Humble Day of the Devs Bundle (2016)
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4273/
@@ -13,21 +15,42 @@ games:
 - name: Titan Souls
   ids:
   - steam:297130
+  requires: []
+  tiers:
+  - 3
 - name: Lumino City
   ids:
   - steam:205020
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age
   ids:
   - steam:232790
+  requires: []
+  tiers:
+  - 3
 - name: Oxenfree
   ids:
   - steam:388880
+  requires: []
+  tiers:
+  - 3
 - name: MASSIVE CHALICE
   ids:
   - steam:246110
+  requires: []
+  tiers:
+  - 3
 - name: Grim Fandango Remastered
   ids:
   - steam:316790
+  requires: []
+  tiers:
+  - 3
 - name: Day of the Tentacle Remastered
   ids:
   - steam:388210
+  requires: []
+  tiers:
+  - 3

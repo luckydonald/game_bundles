@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #76 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #76'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6690/
@@ -13,24 +15,48 @@ games:
 - name: Super Blasting Boy
   ids:
   - steam:961860
+  requires: []
+  tiers:
+  - 2
 - name: Super Potato Bruh
   ids:
   - steam:951360
+  requires: []
+  tiers:
+  - 2
 - name: Ancient Planet
   ids:
   - steam:345090
+  requires: []
+  tiers:
+  - 2
 - name: The Signal From Tölva
   ids:
   - steam:457760
+  requires: []
+  tiers:
+  - 2
 - name: 35MM
   ids:
   - steam:466500
+  requires: []
+  tiers:
+  - 2
 - name: Exotic Matter
   ids:
   - steam:459760
+  requires: []
+  tiers:
+  - 2
 - name: Astrohazard Solutions Ltd.
   ids:
   - steam:751260
+  requires: []
+  tiers:
+  - 2
 - name: 25 Cadre of Death
   ids:
   - steam:904860
+  requires: []
+  tiers:
+  - 2

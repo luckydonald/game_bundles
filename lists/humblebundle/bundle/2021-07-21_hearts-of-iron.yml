@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Hearts of Iron IV Bundle — entire-8-item-bundle
-tier: 3
+name: Hearts of Iron IV Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10273/
@@ -13,24 +15,48 @@ games:
 - name: 'Hearts of Iron IV: Cadet Edition'
   ids:
   - unresolved:source:isthereanydeal:10273:hearts-of-iron-iv-cadet-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Radio Pack'
   ids:
   - steam:1086481
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Together for Victory'
   ids:
   - steam:530760
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Death or Dishonor'
   ids:
   - steam:584140
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Axis Armor Pack'
   ids:
   - steam:1086480
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Waking the Tiger'
   ids:
   - steam:702350
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Man the Guns'
   ids:
   - steam:815460
+  requires: []
+  tiers:
+  - 3
 - name: 'Hearts of Iron IV: Battle for the Bosporus'
   ids:
   - steam:1348660
+  requires: []
+  tiers:
+  - 3

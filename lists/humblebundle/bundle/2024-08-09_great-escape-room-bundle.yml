@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Great Escape Room Bundle — entire-7-item-bundle
-tier: 3
+name: The Great Escape Room Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14317/
@@ -13,21 +15,42 @@ games:
 - name: 'We Were Here Expeditions: The FriendShip'
   ids:
   - steam:2296990
+  requires: []
+  tiers:
+  - 3
 - name: Escape First Alchemist
   ids:
   - steam:2094320
+  requires: []
+  tiers:
+  - 3
 - name: Escape Simulator
   ids:
   - steam:1435790
+  requires: []
+  tiers:
+  - 3
 - name: We Were Here Forever
   ids:
   - steam:1341290
+  requires: []
+  tiers:
+  - 3
 - name: 'Doors: Paradox'
   ids:
   - steam:1622770
+  requires: []
+  tiers:
+  - 3
 - name: Escape Academy
   ids:
   - steam:1812090
+  requires: []
+  tiers:
+  - 3
 - name: Escape From Mystwood Mansion
   ids:
   - steam:2292650
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Crystal Anime Bundle — Tier 2
-tier: 2
+name: Crystal Anime Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5366/
@@ -13,30 +15,60 @@ games:
 - name: Games&Girls
   ids:
   - steam:610750
+  requires: []
+  tiers:
+  - 2
 - name: BAD END
   ids:
   - steam:415850
+  requires: []
+  tiers:
+  - 2
 - name: Sorry. (Entschuldigung) ~ A Psychological Horror Visual Novel
   ids:
   - unresolved:source:isthereanydeal:5366:sorry-entschuldigung-a-psychological-horror-visual-novel
+  requires: []
+  tiers:
+  - 2
 - name: Book Series - Alice in Wonderland
   ids:
   - unresolved:source:isthereanydeal:5366:book-series-alice-in-wonderland
+  requires: []
+  tiers:
+  - 2
 - name: '1931: Scheherazade at the Library of Pergamum'
   ids:
   - steam:334850
+  requires: []
+  tiers:
+  - 2
 - name: Crystal City
   ids:
   - unresolved:source:isthereanydeal:5366:crystal-city
+  requires: []
+  tiers:
+  - 2
 - name: 'The Reject Demon: Toko Chapter 0 — Prelude'
   ids:
   - steam:358770
+  requires: []
+  tiers:
+  - 2
 - name: 'Super Army of Tentacles 3: The Search for Army of Tentacles 2'
   ids:
   - steam:592200
+  requires: []
+  tiers:
+  - 2
 - name: Anime Studio Simulator
   ids:
   - steam:508230
+  requires: []
+  tiers:
+  - 2
 - name: A Foretold Affair
   ids:
   - steam:586670
+  requires: []
+  tiers:
+  - 2

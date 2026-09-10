@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Hidden Gems Bundle 2 — Tier 3
-tier: 3
+name: Hidden Gems Bundle 2
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2931/
@@ -13,30 +15,60 @@ games:
 - name: Stacks TNT
   ids:
   - unresolved:source:isthereanydeal:2931:stacks-tnt
+  requires: []
+  tiers:
+  - 3
 - name: Notrium Special Surprise Edition
   ids:
   - steam:349100
+  requires: []
+  tiers:
+  - 3
 - name: 'Fractal: Make Blooms Not War'
   ids:
   - steam:61310
+  requires: []
+  tiers:
+  - 3
 - name: Militia
   ids:
   - steam:421260
+  requires: []
+  tiers:
+  - 3
 - name: Our Love Will Grow
   ids:
   - steam:423770
+  requires: []
+  tiers:
+  - 3
 - name: stratO
   ids:
   - steam:341680
+  requires: []
+  tiers:
+  - 3
 - name: The Dwarf Run
   ids:
   - steam:395420
+  requires: []
+  tiers:
+  - 3
 - name: 'Foosball: World Tour'
   ids:
   - unresolved:source:isthereanydeal:2931:foosball-world-tour
+  requires: []
+  tiers:
+  - 3
 - name: Pixel Galaxy
   ids:
   - steam:370480
+  requires: []
+  tiers:
+  - 3
 - name: Square Brawl
   ids:
   - steam:394850
+  requires: []
+  tiers:
+  - 3

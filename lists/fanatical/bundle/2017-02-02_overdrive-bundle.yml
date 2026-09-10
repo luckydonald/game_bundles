@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Overdrive Bundle — Tier 2
-tier: 2
+name: Overdrive Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4710/
@@ -13,42 +15,84 @@ games:
 - name: InMomentum
   ids:
   - steam:110400
+  requires: []
+  tiers:
+  - 2
 - name: Vangers
   ids:
   - steam:264080
+  requires: []
+  tiers:
+  - 2
 - name: BlazeRush
   ids:
   - steam:302710
+  requires: []
+  tiers:
+  - 2
 - name: GTR Evolution Expansion Pack for RACE 07
   ids:
   - steam:8660
+  requires: []
+  tiers:
+  - 2
 - name: Mashed Drive to Survive
   ids:
   - steam:281280
+  requires: []
+  tiers:
+  - 2
 - name: HTR+ Slot Car Simulation
   ids:
   - steam:288650
+  requires: []
+  tiers:
+  - 2
 - name: RC Mini Racers
   ids:
   - steam:311820
+  requires: []
+  tiers:
+  - 2
 - name: StuntMANIA Reloaded
   ids:
   - steam:324750
+  requires: []
+  tiers:
+  - 2
 - name: Mini Motor Racing EVO
   ids:
   - unresolved:source:isthereanydeal:4710:mini-motor-racing-evo
+  requires: []
+  tiers:
+  - 2
 - name: 'Race: The WTCC Game + Caterham Expansion'
   ids:
   - unresolved:source:isthereanydeal:4710:race-the-wtcc-game-and-caterham-expansion
+  requires: []
+  tiers:
+  - 2
 - name: Jet Racing Extreme
   ids:
   - steam:385270
+  requires: []
+  tiers:
+  - 2
 - name: Race.a.bit
   ids:
   - unresolved:source:isthereanydeal:4710:race-a-bit
+  requires: []
+  tiers:
+  - 2
 - name: Little Racers STREET
   ids:
   - steam:262690
+  requires: []
+  tiers:
+  - 2
 - name: Insane 2
   ids:
   - steam:35320
+  requires: []
+  tiers:
+  - 2

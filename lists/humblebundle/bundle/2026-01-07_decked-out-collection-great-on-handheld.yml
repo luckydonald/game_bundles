@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Decked Out Collection - Great on Handheld Bundle — entire-7-item-bundle
-tier: 2
+name: Decked Out Collection - Great on Handheld Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15770/
@@ -13,21 +15,42 @@ games:
 - name: Nidhogg 2
   ids:
   - steam:535520
+  requires: []
+  tiers:
+  - 2
 - name: Vampire Survivors
   ids:
   - steam:1794680
+  requires: []
+  tiers:
+  - 2
 - name: HASTE
   ids:
   - steam:1796470
+  requires: []
+  tiers:
+  - 2
 - name: 'Deathbulge: Battle of the Bands'
   ids:
   - steam:1083790
+  requires: []
+  tiers:
+  - 2
 - name: ULTRAKILL
   ids:
   - steam:1229490
+  requires: []
+  tiers:
+  - 2
 - name: Backpack Hero
   ids:
   - steam:1970580
+  requires: []
+  tiers:
+  - 2
 - name: Creatures of Ava
   ids:
   - steam:2304440
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Electrified Bundle — Tier 3
-tier: 3
+name: Electrified Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8213/
@@ -13,33 +15,66 @@ games:
 - name: Type:Rider
   ids:
   - steam:258890
+  requires: []
+  tiers:
+  - 3
 - name: Boo! Greedy Kid
   ids:
   - steam:770630
+  requires: []
+  tiers:
+  - 3
 - name: The Next Penelope
   ids:
   - steam:332250
+  requires: []
+  tiers:
+  - 3
 - name: Satellite Rush
   ids:
   - steam:429350
+  requires: []
+  tiers:
+  - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:
   - steam:368080
+  requires: []
+  tiers:
+  - 3
 - name: 2Dark
   ids:
   - steam:435100
+  requires: []
+  tiers:
+  - 3
 - name: 'Another Lost Phone: Laura''s Story'
   ids:
   - steam:689910
+  requires: []
+  tiers:
+  - 3
 - name: Impulsion
   ids:
   - steam:811270
+  requires: []
+  tiers:
+  - 3
 - name: BAFL - Brakes Are For Losers
   ids:
   - steam:573070
+  requires: []
+  tiers:
+  - 3
 - name: White Night
   ids:
   - steam:301560
+  requires: []
+  tiers:
+  - 3
 - name: Wurm Unlimited
   ids:
   - steam:366220
+  requires: []
+  tiers:
+  - 3

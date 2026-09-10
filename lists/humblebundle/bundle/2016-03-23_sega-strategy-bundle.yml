@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Sega Strategy Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Sega Strategy Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3209/
@@ -13,42 +15,84 @@ games:
 - name: Medieval 2 Total War Collection
   ids:
   - unresolved:source:isthereanydeal:3209:medieval-2-total-war-collection
+  requires: []
+  tiers:
+  - 3
 - name: Columns
   ids:
   - unresolved:source:isthereanydeal:3209:columns
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Dawn of War - Master Collection'
   ids:
   - unresolved:source:isthereanydeal:3209:warhammer-40000-dawn-of-war-master-collection
+  requires: []
+  tiers:
+  - 3
 - name: Shining Force II
   ids:
   - unresolved:source:isthereanydeal:3209:shining-force-ii
+  requires: []
+  tiers:
+  - 3
 - name: SEGA Mega Drive and Genesis Classics
   ids:
   - unresolved:source:isthereanydeal:3209:sega-mega-drive-and-genesis-classics
+  requires: []
+  tiers:
+  - 3
 - name: 'Rome: Total War Collection'
   ids:
   - unresolved:source:isthereanydeal:3209:rome-total-war-collection
+  requires: []
+  tiers:
+  - 3
 - name: Company of Heroes Complete Pack
   ids:
   - unresolved:source:isthereanydeal:3209:company-of-heroes-complete-pack
+  requires: []
+  tiers:
+  - 3
 - name: Gain Ground
   ids:
   - unresolved:source:isthereanydeal:3209:gain-ground
+  requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Dawn of War II - Grand Master Collection'
   ids:
   - unresolved:source:isthereanydeal:3209:warhammer-40000-dawn-of-war-ii-grand-master-collection
+  requires: []
+  tiers:
+  - 3
 - name: Valkyria Chronicles™
   ids:
   - steam:294860
+  requires: []
+  tiers:
+  - 3
 - name: Eastside Hockey Manager
   ids:
   - steam:301120
+  requires: []
+  tiers:
+  - 3
 - name: "Total War: SHOGUN 2 \x96 Fall of the Samurai Collection"
   ids:
   - unresolved:source:isthereanydeal:3209:total-war-shogun-2-fall-of-the-samurai-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Company of Heroes 2: Master Collection'
   ids:
   - unresolved:source:isthereanydeal:3209:company-of-heroes-2-master-collection
+  requires: []
+  tiers:
+  - 3
 - name: 'Total War: Attila'
   ids:
   - steam:325610
+  requires: []
+  tiers:
+  - 3

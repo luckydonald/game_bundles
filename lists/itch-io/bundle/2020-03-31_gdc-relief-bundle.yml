@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: GDC Relief Bundle — Tier 2
-tier: 2
+name: GDC Relief Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8616/
@@ -13,456 +15,912 @@ games:
 - name: The Black Heart
   ids:
   - steam:1431780
+  requires: []
+  tiers:
+  - 2
 - name: Elephant Hunter Hunter
   ids:
   - unresolved:source:isthereanydeal:8616:elephant-hunter-hunter
+  requires: []
+  tiers:
+  - 2
 - name: Totem
   ids:
   - unresolved:source:isthereanydeal:8616:totem
+  requires: []
+  tiers:
+  - 2
 - name: Space Explorer
   ids:
   - unresolved:source:isthereanydeal:8616:space-explorer
+  requires: []
+  tiers:
+  - 2
 - name: NO THING
   ids:
   - steam:444800
+  requires: []
+  tiers:
+  - 2
 - name: NeoLite
   ids:
   - unresolved:source:isthereanydeal:8616:neolite
+  requires: []
+  tiers:
+  - 2
 - name: Merrily Perilly
   ids:
   - steam:818800
+  requires: []
+  tiers:
+  - 2
 - name: ARGH-P-G
   ids:
   - unresolved:source:isthereanydeal:8616:argh-p-g
+  requires: []
+  tiers:
+  - 2
 - name: WorldCraft
   ids:
   - unresolved:source:isthereanydeal:8616:worldcraft
+  requires: []
+  tiers:
+  - 2
 - name: HeroRun
   ids:
   - unresolved:source:isthereanydeal:8616:herorun
+  requires: []
+  tiers:
+  - 2
 - name: Phoenix Heavy
   ids:
   - unresolved:source:isthereanydeal:8616:phoenix-heavy
+  requires: []
+  tiers:
+  - 2
 - name: A Mortician's Tale
   ids:
   - steam:578720
+  requires: []
+  tiers:
+  - 2
 - name: Codemancer
   ids:
   - steam:1103400
+  requires: []
+  tiers:
+  - 2
 - name: Tick Tock Isle
   ids:
   - steam:418440
+  requires: []
+  tiers:
+  - 2
 - name: Tetris [GMS2]
   ids:
   - unresolved:source:isthereanydeal:8616:tetris-gms2
+  requires: []
+  tiers:
+  - 2
 - name: Duality
   ids:
   - unresolved:source:isthereanydeal:8616:duality
+  requires: []
+  tiers:
+  - 2
 - name: Stay Safe
   ids:
   - steam:818140
+  requires: []
+  tiers:
+  - 2
 - name: Fallen
   ids:
   - steam:570890
+  requires: []
+  tiers:
+  - 2
 - name: Zombies.
   ids:
   - steam:1389980
+  requires: []
+  tiers:
+  - 2
 - name: Will Glow the Wisp
   ids:
   - steam:640890
+  requires: []
+  tiers:
+  - 2
 - name: Tethered
   ids:
   - steam:431120
+  requires: []
+  tiers:
+  - 2
 - name: Good Night
   ids:
   - unresolved:source:isthereanydeal:8616:good-night
+  requires: []
+  tiers:
+  - 2
 - name: Color Jumper
   ids:
   - steam:594810
+  requires: []
+  tiers:
+  - 2
 - name: Emberlight
   ids:
   - steam:1048880
+  requires: []
+  tiers:
+  - 2
 - name: Legend of Moros
   ids:
   - steam:449770
+  requires: []
+  tiers:
+  - 2
 - name: Yi and the Thousand Moons
   ids:
   - steam:701730
+  requires: []
+  tiers:
+  - 2
 - name: PhilGood
   ids:
   - unresolved:source:isthereanydeal:8616:philgood
+  requires: []
+  tiers:
+  - 2
 - name: Paragon Infinite
   ids:
   - unresolved:source:isthereanydeal:8616:paragon-infinite
+  requires: []
+  tiers:
+  - 2
 - name: Calcul8²
   ids:
   - steam:993200
+  requires: []
+  tiers:
+  - 2
 - name: Drake
   ids:
   - unresolved:source:isthereanydeal:8616:drake
+  requires: []
+  tiers:
+  - 2
 - name: A Book of Beasts and Buddies
   ids:
   - steam:959750
+  requires: []
+  tiers:
+  - 2
 - name: Nuclear Throne
   ids:
   - steam:242680
+  requires: []
+  tiers:
+  - 2
 - name: PARAGON
   ids:
   - unresolved:source:isthereanydeal:8616:paragon
+  requires: []
+  tiers:
+  - 2
 - name: Soldier of Fortune
   ids:
   - unresolved:source:isthereanydeal:8616:soldier-of-fortune
+  requires: []
+  tiers:
+  - 2
 - name: Dodgy Rocks
   ids:
   - unresolved:source:isthereanydeal:8616:dodgy-rocks
+  requires: []
+  tiers:
+  - 2
 - name: the town of Kheta
   ids:
   - unresolved:source:isthereanydeal:8616:the-town-of-kheta
+  requires: []
+  tiers:
+  - 2
 - name: EAT GIRL
   ids:
   - unresolved:source:isthereanydeal:8616:eat-girl
+  requires: []
+  tiers:
+  - 2
 - name: Snowdown
   ids:
   - steam:2792160
+  requires: []
+  tiers:
+  - 2
 - name: 'The Curse of Tuberculosis: Story Mode'
   ids:
   - unresolved:source:isthereanydeal:8616:the-curse-of-tuberculosis-story-mode
+  requires: []
+  tiers:
+  - 2
 - name: Rebop Blasters
   ids:
   - unresolved:source:isthereanydeal:8616:rebop-blasters
+  requires: []
+  tiers:
+  - 2
 - name: Skater Frog
   ids:
   - steam:1127470
+  requires: []
+  tiers:
+  - 2
 - name: Bounty For Sharks
   ids:
   - steam:1237090
+  requires: []
+  tiers:
+  - 2
 - name: Portal Dogs
   ids:
   - steam:1183200
+  requires: []
+  tiers:
+  - 2
 - name: Salitaire!
   ids:
   - unresolved:source:isthereanydeal:8616:salitaire
+  requires: []
+  tiers:
+  - 2
 - name: Newtonian Inversion
   ids:
   - steam:1632230
+  requires: []
+  tiers:
+  - 2
 - name: Without Elevator
   ids:
   - unresolved:source:isthereanydeal:8616:without-elevator
+  requires: []
+  tiers:
+  - 2
 - name: Spanky the Fish Who Sucks at Everything - Alpha Build
   ids:
   - unresolved:source:isthereanydeal:8616:spanky-the-fish-who-sucks-at-everything-alpha-build
+  requires: []
+  tiers:
+  - 2
 - name: GARDEN FOR GATO
   ids:
   - unresolved:source:isthereanydeal:8616:garden-for-gato
+  requires: []
+  tiers:
+  - 2
 - name: With Fire Thy Affections Hold A Wing
   ids:
   - unresolved:source:isthereanydeal:8616:with-fire-thy-affections-hold-a-wing
+  requires: []
+  tiers:
+  - 2
 - name: A Vibrant Melody 0.22d
   ids:
   - unresolved:source:isthereanydeal:8616:a-vibrant-melody-0-22d
+  requires: []
+  tiers:
+  - 2
 - name: Swipe Control Widget for Clickteam Fusion 2.5
   ids:
   - unresolved:source:isthereanydeal:8616:swipe-control-widget-for-clickteam-fusion-2-5
+  requires: []
+  tiers:
+  - 2
 - name: Dynamic Touch Screen Joystick Widget
   ids:
   - unresolved:source:isthereanydeal:8616:dynamic-touch-screen-joystick-widget
+  requires: []
+  tiers:
+  - 2
 - name: Alone in Cyberspace
   ids:
   - unresolved:source:isthereanydeal:8616:alone-in-cyberspace
+  requires: []
+  tiers:
+  - 2
 - name: Lame Spirit Animals
   ids:
   - unresolved:source:isthereanydeal:8616:lame-spirit-animals
+  requires: []
+  tiers:
+  - 2
 - name: Roboat Racing
   ids:
   - unresolved:source:isthereanydeal:8616:roboat-racing
+  requires: []
+  tiers:
+  - 2
 - name: Calcul8
   ids:
   - unresolved:source:isthereanydeal:8616:calcul8
+  requires: []
+  tiers:
+  - 2
 - name: '1977: Radio Aut'
   ids:
   - unresolved:source:isthereanydeal:8616:1977-radio-aut
+  requires: []
+  tiers:
+  - 2
 - name: People Farm
   ids:
   - unresolved:source:isthereanydeal:8616:people-farm
+  requires: []
+  tiers:
+  - 2
 - name: Constellations
   ids:
   - unresolved:source:isthereanydeal:8616:constellations
+  requires: []
+  tiers:
+  - 2
 - name: Infinitroid
   ids:
   - unresolved:source:isthereanydeal:8616:infinitroid
+  requires: []
+  tiers:
+  - 2
 - name: Dreamworkers
   ids:
   - unresolved:source:isthereanydeal:8616:dreamworkers
+  requires: []
+  tiers:
+  - 2
 - name: Doctor Robot
   ids:
   - unresolved:source:isthereanydeal:8616:doctor-robot
+  requires: []
+  tiers:
+  - 2
 - name: Coup 2776
   ids:
   - unresolved:source:isthereanydeal:8616:coup-2776
+  requires: []
+  tiers:
+  - 2
 - name: Neon Snap
   ids:
   - unresolved:source:isthereanydeal:8616:neon-snap
+  requires: []
+  tiers:
+  - 2
 - name: Botanic Balcony
   ids:
   - unresolved:source:isthereanydeal:8616:botanic-balcony
+  requires: []
+  tiers:
+  - 2
 - name: Field of Heroes
   ids:
   - unresolved:source:isthereanydeal:8616:field-of-heroes
+  requires: []
+  tiers:
+  - 2
 - name: DLUR
   ids:
   - unresolved:source:isthereanydeal:8616:dlur
+  requires: []
+  tiers:
+  - 2
 - name: Main Course - Director's Cut
   ids:
   - unresolved:source:isthereanydeal:8616:main-course-directors-cut
+  requires: []
+  tiers:
+  - 2
 - name: Brick Breaker Remix
   ids:
   - unresolved:source:isthereanydeal:8616:brick-breaker-remix
+  requires: []
+  tiers:
+  - 2
 - name: CyBer//zDvAc
   ids:
   - unresolved:source:isthereanydeal:8616:cyber-zdvac
+  requires: []
+  tiers:
+  - 2
 - name: The Tops Don't Sting You
   ids:
   - unresolved:source:isthereanydeal:8616:the-tops-don-t-sting-you
+  requires: []
+  tiers:
+  - 2
 - name: Bustle
   ids:
   - unresolved:source:isthereanydeal:8616:bustle
+  requires: []
+  tiers:
+  - 2
 - name: Zen Pond Life
   ids:
   - unresolved:source:isthereanydeal:8616:zen-pond-life
+  requires: []
+  tiers:
+  - 2
 - name: Three Red Hearts - Prepare to Dev Edition
   ids:
   - unresolved:source:isthereanydeal:8616:three-red-hearts-prepare-to-dev-edition
+  requires: []
+  tiers:
+  - 2
 - name: Becky's Very Very Small and Totally Not Mundane World
   ids:
   - unresolved:source:isthereanydeal:8616:beckys-very-very-small-and-totally-not-mundane-world
+  requires: []
+  tiers:
+  - 2
 - name: Get Hoisted
   ids:
   - unresolved:source:isthereanydeal:8616:get-hoisted
+  requires: []
+  tiers:
+  - 2
 - name: Giant Family Reunion Photo-Off
   ids:
   - unresolved:source:isthereanydeal:8616:giant-family-reunion-photo-off
+  requires: []
+  tiers:
+  - 2
 - name: Current Mood
   ids:
   - unresolved:source:isthereanydeal:8616:current-mood
+  requires: []
+  tiers:
+  - 2
 - name: Jazzy Beats
   ids:
   - unresolved:source:isthereanydeal:8616:jazzy-beats
+  requires: []
+  tiers:
+  - 2
 - name: Next Sector
   ids:
   - unresolved:source:isthereanydeal:8616:next-sector
+  requires: []
+  tiers:
+  - 2
 - name: Super Sellout
   ids:
   - unresolved:source:isthereanydeal:8616:super-sellout
+  requires: []
+  tiers:
+  - 2
 - name: Covid-19 Antivirus
   ids:
   - unresolved:source:isthereanydeal:8616:covid-19-antivirus
+  requires: []
+  tiers:
+  - 2
 - name: PHN-Home
   ids:
   - unresolved:source:isthereanydeal:8616:phn-home
+  requires: []
+  tiers:
+  - 2
 - name: Snipe
   ids:
   - unresolved:source:isthereanydeal:8616:snipe
+  requires: []
+  tiers:
+  - 2
 - name: Escape Room Simulator - Alpha Access
   ids:
   - unresolved:source:isthereanydeal:8616:escape-room-simulator-alpha-access
+  requires: []
+  tiers:
+  - 2
 - name: Corona Shopper
   ids:
   - unresolved:source:isthereanydeal:8616:corona-shopper
+  requires: []
+  tiers:
+  - 2
 - name: Yan's GC Relief Pack
   ids:
   - unresolved:source:isthereanydeal:8616:yans-gc-relief-pack
+  requires: []
+  tiers:
+  - 2
 - name: 8PM
   ids:
   - unresolved:source:isthereanydeal:8616:8pm
+  requires: []
+  tiers:
+  - 2
 - name: Engrish Lag
   ids:
   - unresolved:source:isthereanydeal:8616:engrish-lag
+  requires: []
+  tiers:
+  - 2
 - name: Paper Pandemic
   ids:
   - unresolved:source:isthereanydeal:8616:paper-pandemic
+  requires: []
+  tiers:
+  - 2
 - name: Find The Letter H
   ids:
   - steam:1010290
+  requires: []
+  tiers:
+  - 2
 - name: Coulrophobiac 2
   ids:
   - unresolved:source:isthereanydeal:8616:coulrophobiac-2
+  requires: []
+  tiers:
+  - 2
 - name: Private Chef
   ids:
   - unresolved:source:isthereanydeal:8616:private-chef
+  requires: []
+  tiers:
+  - 2
 - name: ParamediCats
   ids:
   - unresolved:source:isthereanydeal:8616:paramedicats
+  requires: []
+  tiers:
+  - 2
 - name: Two Halves - Web
   ids:
   - unresolved:source:isthereanydeal:8616:two-halves-web
+  requires: []
+  tiers:
+  - 2
 - name: Catclimb
   ids:
   - unresolved:source:isthereanydeal:8616:catclimb
+  requires: []
+  tiers:
+  - 2
 - name: CollisionWars
   ids:
   - unresolved:source:isthereanydeal:8616:collisionwars
+  requires: []
+  tiers:
+  - 2
 - name: JigsawPuzzle - Epidemic Era
   ids:
   - unresolved:source:isthereanydeal:8616:jigsawpuzzle-epidemic-era
+  requires: []
+  tiers:
+  - 2
 - name: Constellation
   ids:
   - unresolved:source:isthereanydeal:8616:constellation
+  requires: []
+  tiers:
+  - 2
 - name: Helping Hues
   ids:
   - unresolved:source:isthereanydeal:8616:helping-hues
+  requires: []
+  tiers:
+  - 2
 - name: Input | Output
   ids:
   - unresolved:source:isthereanydeal:8616:input-output
+  requires: []
+  tiers:
+  - 2
 - name: Red Thread
   ids:
   - steam:2993370
+  requires: []
+  tiers:
+  - 2
 - name: Old Connection
   ids:
   - unresolved:source:isthereanydeal:8616:old-connection
+  requires: []
+  tiers:
+  - 2
 - name: A Small Garden of Connections
   ids:
   - unresolved:source:isthereanydeal:8616:a-small-garden-of-connections
+  requires: []
+  tiers:
+  - 2
 - name: Blackjack Math
   ids:
   - steam:1341220
+  requires: []
+  tiers:
+  - 2
 - name: Plague Protect
   ids:
   - unresolved:source:isthereanydeal:8616:plague-protect
+  requires: []
+  tiers:
+  - 2
 - name: Lunar Preludes
   ids:
   - unresolved:source:isthereanydeal:8616:lunar-preludes
+  requires: []
+  tiers:
+  - 2
 - name: The Mice Guys
   ids:
   - unresolved:source:isthereanydeal:8616:the-mice-guys
+  requires: []
+  tiers:
+  - 2
 - name: COVID-19 Taxi
   ids:
   - unresolved:source:isthereanydeal:8616:covid-19-taxi
+  requires: []
+  tiers:
+  - 2
 - name: Tentin Quarantino
   ids:
   - unresolved:source:isthereanydeal:8616:tentin-quarantino
+  requires: []
+  tiers:
+  - 2
 - name: Handwashing Helper
   ids:
   - unresolved:source:isthereanydeal:8616:handwashing-helper
+  requires: []
+  tiers:
+  - 2
 - name: Dark Roads
   ids:
   - unresolved:source:isthereanydeal:8616:dark-roads
+  requires: []
+  tiers:
+  - 2
 - name: Miracle Cure
   ids:
   - unresolved:source:isthereanydeal:8616:miracle-cure
+  requires: []
+  tiers:
+  - 2
 - name: Arrows Left
   ids:
   - unresolved:source:isthereanydeal:8616:arrows-left
+  requires: []
+  tiers:
+  - 2
 - name: Ascendshaft
   ids:
   - unresolved:source:isthereanydeal:8616:ascendshaft
+  requires: []
+  tiers:
+  - 2
 - name: False Positive
   ids:
   - unresolved:source:isthereanydeal:8616:false-positive
+  requires: []
+  tiers:
+  - 2
 - name: Day-Trader
   ids:
   - unresolved:source:isthereanydeal:8616:day-trader
+  requires: []
+  tiers:
+  - 2
 - name: War 1
   ids:
   - unresolved:source:isthereanydeal:8616:war-1
+  requires: []
+  tiers:
+  - 2
 - name: OddyTree
   ids:
   - unresolved:source:isthereanydeal:8616:oddytree
+  requires: []
+  tiers:
+  - 2
 - name: TDASP - The DuncanArt Shooter Project
   ids:
   - unresolved:source:isthereanydeal:8616:tdasp-the-duncanart-shooter-project
+  requires: []
+  tiers:
+  - 2
 - name: Clash of Coins
   ids:
   - unresolved:source:isthereanydeal:8616:clash-of-coins
+  requires: []
+  tiers:
+  - 2
 - name: Extreme Mining
   ids:
   - unresolved:source:isthereanydeal:8616:extreme-mining
+  requires: []
+  tiers:
+  - 2
 - name: A Precisely Fun Gamepad Tester
   ids:
   - unresolved:source:isthereanydeal:8616:a-precisely-fun-gamepad-tester
+  requires: []
+  tiers:
+  - 2
 - name: Onigami
   ids:
   - unresolved:source:isthereanydeal:8616:onigami
+  requires: []
+  tiers:
+  - 2
 - name: 'Whipped and Steamy: Cosplay Cafe'
   ids:
   - unresolved:source:isthereanydeal:8616:whipped-and-steamy-cosplay-cafe
+  requires: []
+  tiers:
+  - 2
 - name: Sqaranch!
   ids:
   - unresolved:source:isthereanydeal:8616:sqaranch
+  requires: []
+  tiers:
+  - 2
 - name: Two Halves
   ids:
   - unresolved:source:isthereanydeal:8616:two-halves
+  requires: []
+  tiers:
+  - 2
 - name: EODS Earth Orbital Defense System
   ids:
   - unresolved:source:isthereanydeal:8616:eods-earth-orbital-defense-system
+  requires: []
+  tiers:
+  - 2
 - name: Key Strokes
   ids:
   - unresolved:source:isthereanydeal:8616:key-strokes
+  requires: []
+  tiers:
+  - 2
 - name: Despina
   ids:
   - unresolved:source:isthereanydeal:8616:despina
+  requires: []
+  tiers:
+  - 2
 - name: Conversations with My Anxiety
   ids:
   - unresolved:source:isthereanydeal:8616:conversations-with-my-anxiety
+  requires: []
+  tiers:
+  - 2
 - name: Roomba Number Five
   ids:
   - unresolved:source:isthereanydeal:8616:roomba-number-five
+  requires: []
+  tiers:
+  - 2
 - name: Coulrophobiac
   ids:
   - unresolved:source:isthereanydeal:8616:coulrophobiac
+  requires: []
+  tiers:
+  - 2
 - name: Super Burning Wood
   ids:
   - unresolved:source:isthereanydeal:8616:super-burning-wood
+  requires: []
+  tiers:
+  - 2
 - name: The Fable of Fairy Glen
   ids:
   - steam:3458490
+  requires: []
+  tiers:
+  - 2
 - name: Lane Stormers
   ids:
   - unresolved:source:isthereanydeal:8616:lane-stormers
+  requires: []
+  tiers:
+  - 2
 - name: Downtown Z
   ids:
   - unresolved:source:isthereanydeal:8616:downtown-z
+  requires: []
+  tiers:
+  - 2
 - name: Cat Stranded
   ids:
   - unresolved:source:isthereanydeal:8616:cat-stranded
+  requires: []
+  tiers:
+  - 2
 - name: The Story Goes On
   ids:
   - steam:369560
+  requires: []
+  tiers:
+  - 2
 - name: AIRHEART - Tales of broken Wings
   ids:
   - steam:531180
+  requires: []
+  tiers:
+  - 2
 - name: 'Lazy Galaxy: Rebel Story'
   ids:
   - steam:533050
+  requires: []
+  tiers:
+  - 2
 - name: Fugue
   ids:
   - steam:870400
+  requires: []
+  tiers:
+  - 2
 - name: Respawn Man
   ids:
   - steam:398940
+  requires: []
+  tiers:
+  - 2
 - name: Unblock Gridlock
   ids:
   - steam:977100
+  requires: []
+  tiers:
+  - 2
 - name: Gunmetal Arcadia Zero
   ids:
   - steam:555610
+  requires: []
+  tiers:
+  - 2
 - name: Love
   ids:
   - steam:269270
+  requires: []
+  tiers:
+  - 2
 - name: Cleansuit
   ids:
   - steam:729300
+  requires: []
+  tiers:
+  - 2
 - name: CATLATERAL DAMAGE
   ids:
   - steam:329860
+  requires: []
+  tiers:
+  - 2
 - name: Long Gone Days
   ids:
   - steam:510540
+  requires: []
+  tiers:
+  - 2
 - name: Widget Satchel
   ids:
   - steam:890480
+  requires: []
+  tiers:
+  - 2
 - name: A NIGHTMARE'S TRIP
   ids:
   - steam:1156630
+  requires: []
+  tiers:
+  - 2
 - name: Stellar Commanders
   ids:
   - steam:1165400
+  requires: []
+  tiers:
+  - 2

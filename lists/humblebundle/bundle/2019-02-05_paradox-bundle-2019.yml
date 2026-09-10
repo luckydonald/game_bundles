@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Paradox Interactive Bundle 2019 — entire-11-item-bundle
-tier: 3
+name: Humble Paradox Interactive Bundle 2019
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6989/
@@ -13,33 +15,66 @@ games:
 - name: Crusader Kings II
   ids:
   - steam:203770
+  requires: []
+  tiers:
+  - 3
 - name: 'Darkest Hour: A Hearts of Iron Game'
   ids:
   - steam:73170
+  requires: []
+  tiers:
+  - 3
 - name: Magicka 2
   ids:
   - steam:238370
+  requires: []
+  tiers:
+  - 3
 - name: 'Age of Wonders II: The Wizard''s Throne'
   ids:
   - steam:61510
+  requires: []
+  tiers:
+  - 3
 - name: Crusader Kings II The Old Gods
   ids:
   - steam:210908
+  requires: []
+  tiers:
+  - 3
 - name: Europa Universalis IV
   ids:
   - steam:236850
+  requires: []
+  tiers:
+  - 3
 - name: Age of Wonders III
   ids:
   - steam:226840
+  requires: []
+  tiers:
+  - 3
 - name: Magicka 2 - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:6989:magicka-2-deluxe-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Steel Division: Normandy 44'
   ids:
   - steam:572410
+  requires: []
+  tiers:
+  - 3
 - name: 'Europa Universalis IV: El Dorado'
   ids:
   - steam:338160
+  requires: []
+  tiers:
+  - 3
 - name: Age of Wonders III - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:6989:age-of-wonders-iii-deluxe-edition
+  requires: []
+  tiers:
+  - 3

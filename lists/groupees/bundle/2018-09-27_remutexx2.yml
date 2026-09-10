@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute XX RETURN — Tier 2
-tier: 2
+name: Remute XX RETURN
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6506/
@@ -13,27 +15,54 @@ games:
 - name: Tony Tough and the Night of Roasted Moths
   ids:
   - steam:356210
+  requires: []
+  tiers:
+  - 2
 - name: Wizardry 6 and 7
   ids:
   - unresolved:source:isthereanydeal:6506:wizardry-6-and-7
+  requires: []
+  tiers:
+  - 2
 - name: 7th Guest, The
   ids:
   - unresolved:source:isthereanydeal:6506:7th-guest-the
+  requires: []
+  tiers:
+  - 2
 - name: Tender Loving Care
   ids:
   - steam:593900
+  requires: []
+  tiers:
+  - 2
 - name: 'D: The Game'
   ids:
   - steam:510590
+  requires: []
+  tiers:
+  - 2
 - name: 11th Hour, The
   ids:
   - unresolved:source:isthereanydeal:6506:11th-hour-the
+  requires: []
+  tiers:
+  - 2
 - name: Wizardry 8
   ids:
   - steam:245450
+  requires: []
+  tiers:
+  - 2
 - name: Bad Mojo Redux
   ids:
   - steam:255960
+  requires: []
+  tiers:
+  - 2
 - name: Shadow Man
   ids:
   - unresolved:source:isthereanydeal:6506:shadow-man
+  requires: []
+  tiers:
+  - 2

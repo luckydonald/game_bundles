@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Indie Squad Bundle — Tier 2
-tier: 2
+name: The Indie Squad Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6335/
@@ -13,39 +15,78 @@ games:
 - name: The Epic Bang Theory
   ids:
   - steam:858840
+  requires: []
+  tiers:
+  - 2
 - name: How to be Best Russian Game Developer
   ids:
   - steam:880550
+  requires: []
+  tiers:
+  - 2
 - name: Hearing
   ids:
   - steam:682730
+  requires: []
+  tiers:
+  - 2
 - name: Knight King Assassin
   ids:
   - steam:890590
+  requires: []
+  tiers:
+  - 2
 - name: Fractured State
   ids:
   - steam:527960
+  requires: []
+  tiers:
+  - 2
 - name: Bloody sand
   ids:
   - unresolved:source:isthereanydeal:6335:bloody-sand
+  requires: []
+  tiers:
+  - 2
 - name: Balls and Magnets
   ids:
   - steam:788320
+  requires: []
+  tiers:
+  - 2
 - name: Just Ski
   ids:
   - unresolved:source:isthereanydeal:6335:just-ski
+  requires: []
+  tiers:
+  - 2
 - name: Marvellous Inc.
   ids:
   - steam:827940
+  requires: []
+  tiers:
+  - 2
 - name: S.P.I.C.E ARENA
   ids:
   - unresolved:source:isthereanydeal:6335:s-p-i-c-e-arena
+  requires: []
+  tiers:
+  - 2
 - name: 'Pegasus-5: Gone Astray'
   ids:
   - steam:794030
+  requires: []
+  tiers:
+  - 2
 - name: Lots of Balls
   ids:
   - steam:780760
+  requires: []
+  tiers:
+  - 2
 - name: 'Story: Heaven & Hell (Complete Edition)'
   ids:
   - unresolved:source:isthereanydeal:6335:story-heaven-and-hell-complete-edition
+  requires: []
+  tiers:
+  - 2

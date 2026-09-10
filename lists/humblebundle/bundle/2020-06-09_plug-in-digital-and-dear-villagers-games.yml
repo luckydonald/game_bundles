@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Plug In Digital & Dear Villagers Bundle — entire-11-item-bundle
-tier: 3
+name: Humble Plug In Digital & Dear Villagers Bundle
+tiers:
+- rank: 3
+  name: entire-11-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8885/
@@ -13,33 +15,66 @@ games:
 - name: 'AWAY: Journey to the Unexpected'
   ids:
   - steam:573110
+  requires: []
+  tiers:
+  - 3
 - name: Splasher
   ids:
   - steam:446840
+  requires: []
+  tiers:
+  - 3
 - name: Impulsion
   ids:
   - steam:811270
+  requires: []
+  tiers:
+  - 3
 - name: Strikers Edge
   ids:
   - steam:520670
+  requires: []
+  tiers:
+  - 3
 - name: Mana Spark
   ids:
   - steam:630720
+  requires: []
+  tiers:
+  - 3
 - name: Roof Rage
   ids:
   - steam:724300
+  requires: []
+  tiers:
+  - 3
 - name: 'Streets of Red : Devil''s Dare Deluxe'
   ids:
   - steam:946650
+  requires: []
+  tiers:
+  - 3
 - name: Old School Musical
   ids:
   - steam:398030
+  requires: []
+  tiers:
+  - 3
 - name: Dead In Vinland
   ids:
   - steam:573120
+  requires: []
+  tiers:
+  - 3
 - name: 'Hover: Revolt of Gamers'
   ids:
   - steam:280180
+  requires: []
+  tiers:
+  - 3
 - name: 'Sherlock Holmes: The Devil''s Daughter'
   ids:
   - steam:350640
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rising Storm Bundle — entire-14-item-bundle
-tier: 3
+name: Rising Storm Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10055/
@@ -13,42 +15,84 @@ games:
 - name: 'Red Orchestra: Ostfront 41-45'
   ids:
   - steam:1200
+  requires: []
+  tiers:
+  - 3
 - name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm'
   ids:
   - steam:35450
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam'
   ids:
   - steam:418460
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Pulling Rank Cosmetic'
   ids:
   - steam:737270
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Uncle Ho''s Heroes Cosmetic'
   ids:
   - steam:794340
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Specialist Pack Cosmetic'
   ids:
   - steam:1074650
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Homeland Security Cosmetic'
   ids:
   - steam:794345
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Sgt Joe''s Support Bundle Cosmetic'
   ids:
   - steam:1042390
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Personalized Touch Cosmetic'
   ids:
   - steam:737272
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Rear Echelon Cosmetic'
   ids:
   - steam:794343
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Born in the USA Cosmetic'
   ids:
   - steam:794341
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Southern Style Cosmetic'
   ids:
   - steam:794344
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Man Down Under Cosmetic'
   ids:
   - steam:794342
+  requires: []
+  tiers:
+  - 3
 - name: 'Rising Storm 2: Vietnam - Green Army Men'
   ids:
   - steam:1062590
+  requires: []
+  tiers:
+  - 3

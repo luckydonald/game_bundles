@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Barbarian Taco Bundle — Tier 2
-tier: 2
+name: Barbarian Taco Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6223/
@@ -13,36 +15,72 @@ games:
 - name: Gravity Light
   ids:
   - steam:706240
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Quarantine
   ids:
   - steam:360400
+  requires: []
+  tiers:
+  - 2
 - name: Space Elite Force
   ids:
   - steam:855850
+  requires: []
+  tiers:
+  - 2
 - name: Crafting Tycoon
   ids:
   - steam:757440
+  requires: []
+  tiers:
+  - 2
 - name: AKUATICA
   ids:
   - steam:401330
+  requires: []
+  tiers:
+  - 2
 - name: Taco Gun
   ids:
   - steam:842990
+  requires: []
+  tiers:
+  - 2
 - name: 'Sentience: The Android''s Tale'
   ids:
   - steam:635850
+  requires: []
+  tiers:
+  - 2
 - name: 'The Deed: Dynasty'
   ids:
   - steam:460960
+  requires: []
+  tiers:
+  - 2
 - name: God Vs Zombies
   ids:
   - unresolved:source:isthereanydeal:6223:god-vs-zombies
+  requires: []
+  tiers:
+  - 2
 - name: 'Midnight at the Red Light : An Investigation'
   ids:
   - unresolved:source:isthereanydeal:6223:midnight-at-the-red-light-an-investigation
+  requires: []
+  tiers:
+  - 2
 - name: Jack the Barbarian
   ids:
   - steam:852160
+  requires: []
+  tiers:
+  - 2
 - name: Solenars Edge Heroes
   ids:
   - steam:847450
+  requires: []
+  tiers:
+  - 2

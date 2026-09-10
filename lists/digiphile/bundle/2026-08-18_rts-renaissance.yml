@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: RTS Renaissance — Tier 9
-tier: 9
+name: RTS Renaissance
+tiers:
+- rank: 9
+  name: Tier 9
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16491/
@@ -17,58 +19,82 @@ games:
   - steam:2607060
   - isthereanydeal:from-glory-to-goo
   requires: []
+  tiers:
+  - 9
 - name: '9-Bit Armies: A Bit Too Far'
   ids:
   - steam:1439750
   - isthereanydeal:9-bit-armies-a-bit-too-far
   requires: []
+  tiers:
+  - 9
 - name: 'Stronghold Crusader: Definitive Edition'
   ids:
   - steam:3024040
   - isthereanydeal:stronghold-crusader-definitive-edition
   requires: []
+  tiers:
+  - 9
 - name: Rogue Command
   ids:
   - steam:1461910
   - isthereanydeal:rogue-command
   requires: []
+  tiers:
+  - 9
 - name: The Scouring
   ids:
   - steam:3338950
   - isthereanydeal:the-scouring
   requires: []
+  tiers:
+  - 9
 - name: Dungeons 4
   ids:
   - steam:1643310
   - isthereanydeal:dungeons-4
   requires: []
+  tiers:
+  - 9
 - name: Godsworn
   ids:
   - steam:1328990
   - isthereanydeal:godsworn
   requires: []
+  tiers:
+  - 9
 - name: '9-Bit Armies: A Bit Too Far Soundtrack'
   ids:
   - steam:2796830
   - isthereanydeal:9-bit-armies-a-bit-too-far-soundtrack
   requires: []
+  tiers:
+  - 9
 - name: Godsworn - Original Soundtrack
   ids:
   - steam:2904500
   - isthereanydeal:godsworn-original-soundtrack
   requires: []
+  tiers:
+  - 9
 - name: Rogue Command - Official Soundtrack
   ids:
   - steam:4152240
   - isthereanydeal:rogue-command-official-soundtrack
   requires: []
+  tiers:
+  - 9
 - name: 'Stronghold Crusader: Definitive Edition - The Canary & The Trader'
   ids:
   - steam:3030340
   - isthereanydeal:stronghold-crusader-definitive-edition-the-canary-and-the-trader
   requires: []
+  tiers:
+  - 9
 - name: Dungeons 4 - The Good, the Bad and the Evil
   ids:
   - steam:2964020
   - isthereanydeal:dungeons-4-the-good-the-bad-and-the-evil
   requires: []
+  tiers:
+  - 9

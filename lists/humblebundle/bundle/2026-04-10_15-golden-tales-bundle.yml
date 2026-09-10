@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble 15: Golden Tales Bundle — entire-8-item-bundle'
-tier: 3
+name: 'Humble 15: Golden Tales Bundle'
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16040/
@@ -13,24 +15,48 @@ games:
 - name: Suzerain
   ids:
   - steam:1207650
+  requires: []
+  tiers:
+  - 3
 - name: South of the Circle
   ids:
   - steam:1811040
+  requires: []
+  tiers:
+  - 3
 - name: As Dusk Falls
   ids:
   - steam:1341820
+  requires: []
+  tiers:
+  - 3
 - name: Harold Halibut
   ids:
   - steam:924750
+  requires: []
+  tiers:
+  - 3
 - name: 'Broken Sword - Shadow of the Templars: Reforged'
   ids:
   - steam:2544110
+  requires: []
+  tiers:
+  - 3
 - name: The Invincible
   ids:
   - steam:731040
+  requires: []
+  tiers:
+  - 3
 - name: 'SEASON®: A letter to the future'
   ids:
   - steam:695330
+  requires: []
+  tiers:
+  - 3
 - name: In Stars and Time
   ids:
   - steam:1677310
+  requires: []
+  tiers:
+  - 3

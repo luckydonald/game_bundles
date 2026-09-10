@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Bundle Revelmode — entire-14-item-bundle
-tier: 3
+name: Humble Bundle Revelmode
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3722/
@@ -13,42 +15,84 @@ games:
 - name: Robot Roller-Derby Disco Dodgeball
   ids:
   - steam:270450
+  requires: []
+  tiers:
+  - 3
 - name: Nidhogg
   ids:
   - steam:94400
+  requires: []
+  tiers:
+  - 3
 - name: Choice Chamber
   ids:
   - steam:359960
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Beowulf'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-beowulf
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Robo-Fortune'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-robo-fortune
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Eliza'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-eliza
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Color Palette Bundle'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-color-palette-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Spelunky
   ids:
   - steam:239350
+  requires: []
+  tiers:
+  - 3
 - name: Golf With Your Friends
   ids:
   - steam:431240
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Big Band'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-big-band
+  requires: []
+  tiers:
+  - 3
 - name: Skullgirls
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls
+  requires: []
+  tiers:
+  - 3
 - name: Roguelands
   ids:
   - steam:364420
+  requires: []
+  tiers:
+  - 3
 - name: 'Skullgirls: Squigly'
   ids:
   - unresolved:source:isthereanydeal:3722:skullgirls-squigly
+  requires: []
+  tiers:
+  - 3
 - name: Rocket League
   ids:
   - unresolved:source:isthereanydeal:3722:rocket-league
+  requires: []
+  tiers:
+  - 3

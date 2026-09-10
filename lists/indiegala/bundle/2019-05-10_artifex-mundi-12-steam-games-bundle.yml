@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Artifex Mundi Bundle 12 — Tier 2
-tier: 2
+name: Artifex Mundi Bundle 12
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7377/
@@ -13,30 +15,60 @@ games:
 - name: 'Grim Legends 2: Song of the Dark Swan'
   ids:
   - steam:279800
+  requires: []
+  tiers:
+  - 2
 - name: 'The Secret Order 2: Masked Intent'
   ids:
   - steam:399890
+  requires: []
+  tiers:
+  - 2
 - name: 'Lost Grimoires: Stolen Kingdom'
   ids:
   - steam:536780
+  requires: []
+  tiers:
+  - 2
 - name: 'Chronicles of Magic: Divided Kingdoms'
   ids:
   - steam:746840
+  requires: []
+  tiers:
+  - 2
 - name: 'Grim Legends 3: The Dark City'
   ids:
   - steam:458470
+  requires: []
+  tiers:
+  - 2
 - name: 'Ghost Files: The Face of Guilt'
   ids:
   - steam:599560
+  requires: []
+  tiers:
+  - 2
 - name: 'Kingmaker: Rise to the Throne'
   ids:
   - steam:834390
+  requires: []
+  tiers:
+  - 2
 - name: 'Mind Snares: Alice''s Journey'
   ids:
   - steam:363330
+  requires: []
+  tiers:
+  - 2
 - name: 'Queen''s Quest 4: Sacred Truce'
   ids:
   - steam:814030
+  requires: []
+  tiers:
+  - 2
 - name: 'Crime Secrets: Crimson Lily'
   ids:
   - steam:465170
+  requires: []
+  tiers:
+  - 2

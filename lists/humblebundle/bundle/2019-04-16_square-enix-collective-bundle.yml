@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Square Enix Collective Bundle — entire-8-item-bundle
-tier: 3
+name: Humble Square Enix Collective Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7308/
@@ -13,24 +15,48 @@ games:
 - name: OCTAHEDRON
   ids:
   - unresolved:source:isthereanydeal:7308:octahedron
+  requires: []
+  tiers:
+  - 3
 - name: Goetia
   ids:
   - steam:421740
+  requires: []
+  tiers:
+  - 3
 - name: Deadbeat Heroes
   ids:
   - steam:614090
+  requires: []
+  tiers:
+  - 3
 - name: Forgotton Anne Collector's Edition
   ids:
   - unresolved:source:isthereanydeal:7308:forgotton-anne-collectors-edition
+  requires: []
+  tiers:
+  - 3
 - name: Black The Fall
   ids:
   - steam:308060
+  requires: []
+  tiers:
+  - 3
 - name: The Turing Test
   ids:
   - steam:499520
+  requires: []
+  tiers:
+  - 3
 - name: Children Of Zodiarcs
   ids:
   - steam:436290
+  requires: []
+  tiers:
+  - 3
 - name: Tokyo Dark
   ids:
   - steam:687260
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Get into the Groove Bundle — Tier 2
-tier: 2
+name: Get into the Groove Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7005/
@@ -13,30 +15,60 @@ games:
 - name: Piano Play 3D
   ids:
   - unresolved:source:isthereanydeal:7005:piano-play-3d
+  requires: []
+  tiers:
+  - 2
 - name: Piano Cat
   ids:
   - unresolved:source:isthereanydeal:7005:piano-cat
+  requires: []
+  tiers:
+  - 2
 - name: Drum Simulator
   ids:
   - unresolved:source:isthereanydeal:7005:drum-simulator
+  requires: []
+  tiers:
+  - 2
 - name: Groove Studio
   ids:
   - unresolved:source:isthereanydeal:7005:groove-studio
+  requires: []
+  tiers:
+  - 2
 - name: Piano Bar
   ids:
   - unresolved:source:isthereanydeal:7005:piano-bar
+  requires: []
+  tiers:
+  - 2
 - name: Nature Relax
   ids:
   - unresolved:source:isthereanydeal:7005:nature-relax
+  requires: []
+  tiers:
+  - 2
 - name: 'Oscillatron: Alien Frequency'
   ids:
   - unresolved:source:isthereanydeal:7005:oscillatron-alien-frequency
+  requires: []
+  tiers:
+  - 2
 - name: Poly World
   ids:
   - unresolved:source:isthereanydeal:7005:poly-world
+  requires: []
+  tiers:
+  - 2
 - name: Club Lighting
   ids:
   - unresolved:source:isthereanydeal:7005:club-lighting
+  requires: []
+  tiers:
+  - 2
 - name: Zenesthetic
   ids:
   - unresolved:source:isthereanydeal:7005:zenesthetic
+  requires: []
+  tiers:
+  - 2

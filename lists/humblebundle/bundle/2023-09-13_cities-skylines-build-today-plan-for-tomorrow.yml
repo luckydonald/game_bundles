@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Cities Skylines: Build Today, Plan for Tomorrow Bundle — entire-21-item-bundle'
-tier: 3
+name: 'Cities Skylines: Build Today, Plan for Tomorrow Bundle'
+tiers:
+- rank: 3
+  name: entire-21-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13471/
@@ -13,63 +15,126 @@ games:
 - name: 'Cities: Skylines - Deluxe Edition Upgrade Pack'
   ids:
   - steam:346791
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines'
   ids:
   - steam:255710
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Natural Disasters'
   ids:
   - steam:515191
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - JADIA Radio'
   ids:
   - steam:2148902
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines Snowfall'
   ids:
   - steam:420610
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Map Pack'
   ids:
   - steam:1726382
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Vehicles of the World'
   ids:
   - steam:1726381
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Mid-Century Modern'
   ids:
   - steam:1992290
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Seaside Resorts'
   ids:
   - steam:1992291
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Heart of Korea'
   ids:
   - steam:2144480
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Mass Transit'
   ids:
   - steam:547502
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Airports'
   ids:
   - steam:1726380
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Plazas & Promenades'
   ids:
   - steam:2008400
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Financial Districts'
   ids:
   - steam:2148901
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Skyscrapers'
   ids:
   - steam:2144481
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - K-pop Station'
   ids:
   - steam:2144482
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Map Pack 2'
   ids:
   - steam:2148903
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - African Vibes'
   ids:
   - steam:2148904
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Africa in Miniature'
   ids:
   - steam:2148900
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Shopping Malls'
   ids:
   - steam:2224691
+  requires: []
+  tiers:
+  - 3
 - name: 'Cities: Skylines - Content Creator Pack: Sports Venues'
   ids:
   - steam:2224690
+  requires: []
+  tiers:
+  - 3

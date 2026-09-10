@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Neon Cubic Bundle — Tier 2
-tier: 2
+name: Neon Cubic Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3673/
@@ -13,24 +15,48 @@ games:
 - name: Reversion - The Meeting (2nd Chapter)
   ids:
   - steam:281060
+  requires: []
+  tiers:
+  - 2
 - name: 'OCEAN CITY RACING: Redux'
   ids:
   - unresolved:source:isthereanydeal:3673:ocean-city-racing-redux
+  requires: []
+  tiers:
+  - 2
 - name: Power-Up
   ids:
   - unresolved:source:isthereanydeal:3673:power-up
+  requires: []
+  tiers:
+  - 2
 - name: 'Cyber City 2157: The Visual Novel'
   ids:
   - steam:454690
+  requires: []
+  tiers:
+  - 2
 - name: Hyposphere
   ids:
   - steam:461880
+  requires: []
+  tiers:
+  - 2
 - name: The Lost Souls
   ids:
   - steam:453670
+  requires: []
+  tiers:
+  - 2
 - name: Beasts Battle
   ids:
   - steam:487030
+  requires: []
+  tiers:
+  - 2
 - name: Wasteland Angel
   ids:
   - steam:46520
+  requires: []
+  tiers:
+  - 2

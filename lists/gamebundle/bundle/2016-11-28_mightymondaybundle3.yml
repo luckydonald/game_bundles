@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mighty Monday GameBundle 3 — Beat The Average + $0.20
-tier: 3
+name: The Mighty Monday GameBundle 3
+tiers:
+- rank: 3
+  name: Beat The Average + $0.20
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4415/
@@ -13,24 +15,48 @@ games:
 - name: Sleeping Valley
   ids:
   - steam:538590
+  requires: []
+  tiers:
+  - 3
 - name: Nightork Adventures - Beyond the Moons of Shadalee
   ids:
   - steam:493780
+  requires: []
+  tiers:
+  - 3
 - name: Ballistick
   ids:
   - steam:518620
+  requires: []
+  tiers:
+  - 3
 - name: Rescue Team 5
   ids:
   - steam:416320
+  requires: []
+  tiers:
+  - 3
 - name: Jane Angel Templar Mystery
   ids:
   - steam:323270
+  requires: []
+  tiers:
+  - 3
 - name: Orbital X
   ids:
   - steam:514650
+  requires: []
+  tiers:
+  - 3
 - name: Wasps!
   ids:
   - steam:514820
+  requires: []
+  tiers:
+  - 3
 - name: 'Incredible Dracula: Chasing Love Collector''s Edition'
   ids:
   - steam:435040
+  requires: []
+  tiers:
+  - 3

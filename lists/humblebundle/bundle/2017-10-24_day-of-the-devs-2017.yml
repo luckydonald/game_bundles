@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Day of the Devs Bundle (2017) — entire-9-item-bundle
-tier: 3
+name: Humble Day of the Devs Bundle (2017)
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5564/
@@ -13,27 +15,54 @@ games:
 - name: Loot Rascals
   ids:
   - steam:443880
+  requires: []
+  tiers:
+  - 3
 - name: TumbleSeed
   ids:
   - steam:457890
+  requires: []
+  tiers:
+  - 3
 - name: Grim Fandango Remastered
   ids:
   - steam:316790
+  requires: []
+  tiers:
+  - 3
 - name: Loot Rascals Soundtrack
   ids:
   - unresolved:source:isthereanydeal:5564:loot-rascals-soundtrack
+  requires: []
+  tiers:
+  - 3
 - name: ABZU
   ids:
   - steam:384190
+  requires: []
+  tiers:
+  - 3
 - name: Flinthook
   ids:
   - steam:401710
+  requires: []
+  tiers:
+  - 3
 - name: Day of the Tentacle Remastered
   ids:
   - steam:388210
+  requires: []
+  tiers:
+  - 3
 - name: EVERYTHING
   ids:
   - steam:582270
+  requires: []
+  tiers:
+  - 3
 - name: Full Throttle Remastered
   ids:
   - steam:228360
+  requires: []
+  tiers:
+  - 3

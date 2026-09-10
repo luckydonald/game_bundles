@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality XIX Bundle — Tier 2
-tier: 2
+name: Virtual Reality XIX Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5816/
@@ -13,30 +15,60 @@ games:
 - name: Just VR Slingshot Target Practice
   ids:
   - steam:586990
+  requires: []
+  tiers:
+  - 2
 - name: airRevo VR
   ids:
   - steam:594150
+  requires: []
+  tiers:
+  - 2
 - name: Journey to Alien Worlds
   ids:
   - steam:628960
+  requires: []
+  tiers:
+  - 2
 - name: Bits n Bullets
   ids:
   - steam:730180
+  requires: []
+  tiers:
+  - 2
 - name: 'Sword and Shield: Arena VR'
   ids:
   - unresolved:source:isthereanydeal:5816:sword-and-shield-arena-vr
+  requires: []
+  tiers:
+  - 2
 - name: Bullet VR
   ids:
   - steam:649510
+  requires: []
+  tiers:
+  - 2
 - name: Balls! Virtual Reality Cricket
   ids:
   - steam:517220
+  requires: []
+  tiers:
+  - 2
 - name: VR Crane Master
   ids:
   - steam:678100
+  requires: []
+  tiers:
+  - 2
 - name: TimeLock VR
   ids:
   - unresolved:source:isthereanydeal:5816:timelock-vr
+  requires: []
+  tiers:
+  - 2
 - name: The Broken Seal
   ids:
   - steam:710170
+  requires: []
+  tiers:
+  - 2

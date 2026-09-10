@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 8 — Tier 2
-tier: 2
+name: Be Mine 8
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/201/
@@ -13,42 +15,84 @@ games:
 - name: Patrician IV
   ids:
   - steam:57620
+  requires: []
+  tiers:
+  - 2
 - name: Eleusis
   ids:
   - steam:251310
+  requires: []
+  tiers:
+  - 2
 - name: 'Patrician IV: Rise of a Dynasty'
   ids:
   - steam:57730
+  requires: []
+  tiers:
+  - 2
 - name: Paranautical Activity
   ids:
   - steam:250580
+  requires: []
+  tiers:
+  - 2
 - name: Primordia
   ids:
   - steam:227000
+  requires: []
+  tiers:
+  - 2
 - name: Karateka
   ids:
   - steam:217270
+  requires: []
+  tiers:
+  - 2
 - name: Fairy Bloom Freesia
   ids:
   - steam:214590
+  requires: []
+  tiers:
+  - 2
 - name: RADical ROACH
   ids:
   - unresolved:source:isthereanydeal:201:radical-roach
+  requires: []
+  tiers:
+  - 2
 - name: Slam Bolt Scrappers
   ids:
   - steam:96900
+  requires: []
+  tiers:
+  - 2
 - name: Guncraft
   ids:
   - steam:241720
+  requires: []
+  tiers:
+  - 2
 - name: Drakensang
   ids:
   - steam:12640
+  requires: []
+  tiers:
+  - 2
 - name: Constant C
   ids:
   - steam:251510
+  requires: []
+  tiers:
+  - 2
 - name: Blades of Time Limited Edition
   ids:
   - unresolved:source:isthereanydeal:201:blades-of-time-limited-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'Blood Bowl: Legendary Edition'
   ids:
   - unresolved:source:isthereanydeal:201:blood-bowl-legendary-edition
+  requires: []
+  tiers:
+  - 2

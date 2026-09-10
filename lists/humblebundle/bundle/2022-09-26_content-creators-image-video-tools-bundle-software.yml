@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Content Creators: Image & Video Tools Bundle — entire-12-item-bundle'
-tier: 2
+name: 'Content Creators: Image & Video Tools Bundle'
+tiers:
+- rank: 2
+  name: entire-12-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12127/
@@ -13,36 +15,72 @@ games:
 - name: Movavi Slideshow Maker 8 - Travel Set
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-slideshow-maker-8-travel-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Slideshow Maker 8 - Education Set
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-slideshow-maker-8-education-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Slideshow Maker 8
   ids:
   - steam:1420930
+  requires: []
+  tiers:
+  - 2
 - name: Gecata by Movavi 5 - Game Recording Software
   ids:
   - steam:769670
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Converter Premium 2020
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-converter-premium-2020
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Photo Editor
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-photo-editor
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020 - Cinematic Set
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020-cinematic-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020 - Mystical Galaxy Pack
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020-mystical-galaxy-pack
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020 - Technology Set
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020-technology-set
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020 - Pixel Age Pack
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020-pixel-age-pack
+  requires: []
+  tiers:
+  - 2
 - name: Movavi Video Editor Plus 2020 - Halloween Pack
   ids:
   - unresolved:source:isthereanydeal:12127:movavi-video-editor-plus-2020-halloween-pack
+  requires: []
+  tiers:
+  - 2

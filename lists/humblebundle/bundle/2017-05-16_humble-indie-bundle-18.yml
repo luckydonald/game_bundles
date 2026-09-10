@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Indie Bundle 18 — entire-9-item-bundle
-tier: 3
+name: Humble Indie Bundle 18
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5105/
@@ -13,27 +15,54 @@ games:
 - name: Ziggurat
   ids:
   - steam:308420
+  requires: []
+  tiers:
+  - 3
 - name: SteamWorld Heist
   ids:
   - steam:322190
+  requires: []
+  tiers:
+  - 3
 - name: Windward
   ids:
   - steam:326410
+  requires: []
+  tiers:
+  - 3
 - name: Neon Drive
   ids:
   - steam:433910
+  requires: []
+  tiers:
+  - 3
 - name: A Story About My Uncle
   ids:
   - steam:278360
+  requires: []
+  tiers:
+  - 3
 - name: Beholder
   ids:
   - steam:475550
+  requires: []
+  tiers:
+  - 3
 - name: 'Goat Simulator: GOATY'
   ids:
   - unresolved:source:isthereanydeal:5105:goat-simulator-goaty
+  requires: []
+  tiers:
+  - 3
 - name: 'Kentucky Route Zero: PC Edition'
   ids:
   - steam:231200
+  requires: []
+  tiers:
+  - 3
 - name: Owlboy
   ids:
   - steam:115800
+  requires: []
+  tiers:
+  - 3

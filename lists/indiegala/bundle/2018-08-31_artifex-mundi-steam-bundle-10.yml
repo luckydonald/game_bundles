@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Artifex Mundi Bundle 10 — Tier 2
-tier: 2
+name: Artifex Mundi Bundle 10
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6425/
@@ -13,30 +15,60 @@ games:
 - name: 'Enigmatis: Ghosts of Maple Creek'
   ids:
   - unresolved:source:isthereanydeal:6425:enigmatis-ghosts-of-maple-creek
+  requires: []
+  tiers:
+  - 2
 - name: 'Clockwork Tales: Of Glass and Ink'
   ids:
   - steam:284830
+  requires: []
+  tiers:
+  - 2
 - name: 'Enigmatis 2: The Mists of Ravenwood'
   ids:
   - steam:284770
+  requires: []
+  tiers:
+  - 2
 - name: 'Endless Fables: The Minotaur''s Curse'
   ids:
   - steam:504000
+  requires: []
+  tiers:
+  - 2
 - name: 'Scarlett Mysteries: Cursed Child'
   ids:
   - steam:615350
+  requires: []
+  tiers:
+  - 2
 - name: 'Queen''s Quest 2: Stories of Forgotten Past'
   ids:
   - steam:558790
+  requires: []
+  tiers:
+  - 2
 - name: 'The Secret Order 4: Beyond Time'
   ids:
   - steam:517360
+  requires: []
+  tiers:
+  - 2
 - name: 'Modern Tales: Age Of Invention'
   ids:
   - steam:678970
+  requires: []
+  tiers:
+  - 2
 - name: 'Endless Fables 2: Frozen Path'
   ids:
   - steam:699780
+  requires: []
+  tiers:
+  - 2
 - name: 'Vampire Legends: The True Story of Kisilova'
   ids:
   - steam:414660
+  requires: []
+  tiers:
+  - 2

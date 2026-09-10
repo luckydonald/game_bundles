@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Frictional Games: Amnesia, SOMA, Penumbra Bundle — entire-6-item-bundle'
-tier: 2
+name: 'Frictional Games: Amnesia, SOMA, Penumbra Bundle'
+tiers:
+- rank: 2
+  name: entire-6-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15949/
@@ -13,18 +15,36 @@ games:
 - name: Penumbra Collectors Pack
   ids:
   - unresolved:source:isthereanydeal:15949:penumbra-collectors-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Amnesia: The Dark Descent'
   ids:
   - steam:57300
+  requires: []
+  tiers:
+  - 2
 - name: 'Amnesia: A Machine For Pigs'
   ids:
   - steam:239200
+  requires: []
+  tiers:
+  - 2
 - name: 'Amnesia: Rebirth'
   ids:
   - steam:999220
+  requires: []
+  tiers:
+  - 2
 - name: SOMA
   ids:
   - steam:282140
+  requires: []
+  tiers:
+  - 2
 - name: 'Amnesia: The Bunker'
   ids:
   - steam:1944430
+  requires: []
+  tiers:
+  - 2

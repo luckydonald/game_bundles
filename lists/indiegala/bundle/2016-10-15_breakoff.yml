@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Break Off Bundle — Tier 2
-tier: 2
+name: Indie Break Off Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4200/
@@ -13,36 +15,72 @@ games:
 - name: The Extinction
   ids:
   - unresolved:source:isthereanydeal:4200:the-extinction
+  requires: []
+  tiers:
+  - 2
 - name: Farnham Fables
   ids:
   - steam:463110
+  requires: []
+  tiers:
+  - 2
 - name: Torch Cave
   ids:
   - unresolved:source:isthereanydeal:4200:torch-cave
+  requires: []
+  tiers:
+  - 2
 - name: Farnham Fables Tape 1 Episode 2
   ids:
   - steam:524360
+  requires: []
+  tiers:
+  - 2
 - name: Day of the Trumplings
   ids:
   - steam:517060
+  requires: []
+  tiers:
+  - 2
 - name: Finque
   ids:
   - steam:532700
+  requires: []
+  tiers:
+  - 2
 - name: Bus Tycoon ND (Night and Day)
   ids:
   - unresolved:source:isthereanydeal:4200:bus-tycoon-nd-night-and-day
+  requires: []
+  tiers:
+  - 2
 - name: Starship Annihilator
   ids:
   - steam:525300
+  requires: []
+  tiers:
+  - 2
 - name: The Tower
   ids:
   - steam:310870
+  requires: []
+  tiers:
+  - 2
 - name: Cursor Challenge
   ids:
   - steam:458700
+  requires: []
+  tiers:
+  - 2
 - name: Kubz VR
   ids:
   - steam:519940
+  requires: []
+  tiers:
+  - 2
 - name: Lectrovolt II
   ids:
   - steam:518140
+  requires: []
+  tiers:
+  - 2

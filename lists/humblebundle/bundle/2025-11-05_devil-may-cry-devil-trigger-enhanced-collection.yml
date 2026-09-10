@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Devil May Cry: Devil Trigger Enhanced Collection Bundle — entire-4-item-bundle'
-tier: 2
+name: 'Devil May Cry: Devil Trigger Enhanced Collection Bundle'
+tiers:
+- rank: 2
+  name: entire-4-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15576/
@@ -13,12 +15,24 @@ games:
 - name: DMC - Devil May Cry
   ids:
   - steam:220440
+  requires: []
+  tiers:
+  - 2
 - name: Devil May Cry HD Collection
   ids:
   - steam:631510
+  requires: []
+  tiers:
+  - 2
 - name: Devil May Cry® 4 Special Edition
   ids:
   - steam:329050
+  requires: []
+  tiers:
+  - 2
 - name: Devil May Cry 5 Deluxe + Vergil
   ids:
   - steam:601150
+  requires: []
+  tiers:
+  - 2

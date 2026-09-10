@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Trading Cards Bundle 2 — Tier 2
-tier: 2
+name: Trading Cards Bundle 2
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1005/
@@ -13,42 +15,84 @@ games:
 - name: Whispering Willows
   ids:
   - steam:288060
+  requires: []
+  tiers:
+  - 2
 - name: Love
   ids:
   - steam:269270
+  requires: []
+  tiers:
+  - 2
 - name: 'Ring Runner: Flight of the Sages'
   ids:
   - steam:258010
+  requires: []
+  tiers:
+  - 2
 - name: Not The Robots
   ids:
   - steam:257120
+  requires: []
+  tiers:
+  - 2
 - name: A Virus Named TOM
   ids:
   - steam:207650
+  requires: []
+  tiers:
+  - 2
 - name: Canyon Capers - Rio Fever
   ids:
   - steam:307390
+  requires: []
+  tiers:
+  - 2
 - name: Circuits
   ids:
   - steam:282760
+  requires: []
+  tiers:
+  - 2
 - name: Secret of the Magic Crystals - The Race
   ids:
   - steam:305570
+  requires: []
+  tiers:
+  - 2
 - name: Canyon Capers
   ids:
   - unresolved:source:isthereanydeal:1005:canyon-capers
+  requires: []
+  tiers:
+  - 2
 - name: Retro/Grade
   ids:
   - steam:222660
+  requires: []
+  tiers:
+  - 2
 - name: FATE
   ids:
   - steam:246840
+  requires: []
+  tiers:
+  - 2
 - name: Secret of the Magic Crystals
   ids:
   - steam:45100
+  requires: []
+  tiers:
+  - 2
 - name: Chip
   ids:
   - steam:275470
+  requires: []
+  tiers:
+  - 2
 - name: Go Home Dinosaurs!
   ids:
   - steam:216090
+  requires: []
+  tiers:
+  - 2

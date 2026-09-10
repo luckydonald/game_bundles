@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #64 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #64'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5965/
@@ -13,36 +15,72 @@ games:
 - name: Temple Escape
   ids:
   - unresolved:source:isthereanydeal:5965:temple-escape
+  requires: []
+  tiers:
+  - 2
 - name: Super Samurai Rampage
   ids:
   - steam:675030
+  requires: []
+  tiers:
+  - 2
 - name: Click&Fight
   ids:
   - steam:769200
+  requires: []
+  tiers:
+  - 2
 - name: 'Dark Train: Soundtrack'
   ids:
   - steam:645040
+  requires: []
+  tiers:
+  - 2
 - name: Elementium
   ids:
   - steam:783420
+  requires: []
+  tiers:
+  - 2
 - name: Light of the Mountain
   ids:
   - steam:674230
+  requires: []
+  tiers:
+  - 2
 - name: 'Rex: Another Island'
   ids:
   - steam:699150
+  requires: []
+  tiers:
+  - 2
 - name: Chronicle of Innsmouth
   ids:
   - steam:420180
+  requires: []
+  tiers:
+  - 2
 - name: 'Forgotten Places: Regained Castle'
   ids:
   - steam:777160
+  requires: []
+  tiers:
+  - 2
 - name: Bonbon
   ids:
   - steam:734120
+  requires: []
+  tiers:
+  - 2
 - name: Snake 3D Adventures
   ids:
   - steam:572240
+  requires: []
+  tiers:
+  - 2
 - name: Dark Train
   ids:
   - steam:532290
+  requires: []
+  tiers:
+  - 2

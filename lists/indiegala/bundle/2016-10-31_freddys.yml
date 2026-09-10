@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Freddy's Halloween Bundle — Tier 2
-tier: 2
+name: Freddy's Halloween Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4281/
@@ -13,39 +15,78 @@ games:
 - name: Gynophobia
   ids:
   - steam:365020
+  requires: []
+  tiers:
+  - 2
 - name: Shutter
   ids:
   - steam:359560
+  requires: []
+  tiers:
+  - 2
 - name: Spectre
   ids:
   - steam:314950
+  requires: []
+  tiers:
+  - 2
 - name: You Deserve
   ids:
   - steam:502240
+  requires: []
+  tiers:
+  - 2
 - name: Cluck Yegger in Escape From The Planet of The Poultroid
   ids:
   - steam:416800
+  requires: []
+  tiers:
+  - 2
 - name: Room 404
   ids:
   - steam:2873810
+  requires: []
+  tiers:
+  - 2
 - name: Bulb Boy
   ids:
   - steam:390290
+  requires: []
+  tiers:
+  - 2
 - name: Fear Equation
   ids:
   - steam:428350
+  requires: []
+  tiers:
+  - 2
 - name: Vernon's Legacy
   ids:
   - steam:367010
+  requires: []
+  tiers:
+  - 2
 - name: Breathing Fear
   ids:
   - steam:1440840
+  requires: []
+  tiers:
+  - 2
 - name: Graveyard Shift
   ids:
   - steam:511190
+  requires: []
+  tiers:
+  - 2
 - name: Curse
   ids:
   - steam:510570
+  requires: []
+  tiers:
+  - 2
 - name: Five Nights at Freddy's 2
   ids:
   - steam:332800
+  requires: []
+  tiers:
+  - 2

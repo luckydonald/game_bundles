@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble 15 for $15 Bundle (Apr 2026) — entire-15-item-bundle
-tier: 2
+name: Humble 15 for $15 Bundle (Apr 2026)
+tiers:
+- rank: 2
+  name: entire-15-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16054/
@@ -13,45 +15,90 @@ games:
 - name: Streets of Rogue
   ids:
   - steam:512900
+  requires: []
+  tiers:
+  - 2
 - name: 'An Elder Scrolls Legend: Battlespire'
   ids:
   - steam:1812420
+  requires: []
+  tiers:
+  - 2
 - name: Embr
   ids:
   - steam:1062830
+  requires: []
+  tiers:
+  - 2
 - name: Yaga
   ids:
   - steam:888530
+  requires: []
+  tiers:
+  - 2
 - name: Patch Quest
   ids:
   - steam:1347970
+  requires: []
+  tiers:
+  - 2
 - name: 'UFO: Unidentified Falling Objects'
   ids:
   - steam:2087610
+  requires: []
+  tiers:
+  - 2
 - name: Dragon Eclipse
   ids:
   - steam:2626860
+  requires: []
+  tiers:
+  - 2
 - name: Gun Frog
   ids:
   - steam:3173130
+  requires: []
+  tiers:
+  - 2
 - name: 'Blacksmith: Ignite the Forge'
   ids:
   - steam:2651220
+  requires: []
+  tiers:
+  - 2
 - name: The Dark Queen of Mortholme
   ids:
   - steam:3587610
+  requires: []
+  tiers:
+  - 2
 - name: Black Skylands
   ids:
   - steam:1143810
+  requires: []
+  tiers:
+  - 2
 - name: Hello Neighbor Hide & Seek
   ids:
   - steam:960420
+  requires: []
+  tiers:
+  - 2
 - name: UnMetal
   ids:
   - steam:1203710
+  requires: []
+  tiers:
+  - 2
 - name: Pinball Spire
   ids:
   - steam:2601940
+  requires: []
+  tiers:
+  - 2
 - name: CHIP ‘N CLAWZ vs. THE BRAINIOIDS
   ids:
   - steam:1332430
+  requires: []
+  tiers:
+  - 2

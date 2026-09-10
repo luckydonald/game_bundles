@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: SNEG Video Game Classics (GOG) — 23 Item Bundle
-tier: 2
+name: SNEG Video Game Classics (GOG)
+tiers:
+- rank: 2
+  name: 23 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14509/
@@ -13,69 +15,138 @@ games:
 - name: 'War Wind II: Human Onslaught'
   ids:
   - steam:1741150
+  requires: []
+  tiers:
+  - 2
 - name: Star Command
   ids:
   - steam:2702090
+  requires: []
+  tiers:
+  - 2
 - name: Witchaven
   ids:
   - unresolved:source:isthereanydeal:14509:witchaven
+  requires: []
+  tiers:
+  - 2
 - name: 'Witchaven II: Blood Vengeance'
   ids:
   - unresolved:source:isthereanydeal:14509:witchaven-ii-blood-vengeance
+  requires: []
+  tiers:
+  - 2
 - name: Necrodome
   ids:
   - steam:2464680
+  requires: []
+  tiers:
+  - 2
 - name: CyClones
   ids:
   - steam:2464690
+  requires: []
+  tiers:
+  - 2
 - name: Prophecy of the Shadow
   ids:
   - steam:2702110
+  requires: []
+  tiers:
+  - 2
 - name: 'Renegade: Battle for Jacob''s Star'
   ids:
   - steam:2702130
+  requires: []
+  tiers:
+  - 2
 - name: Dark Legions
   ids:
   - steam:2414360
+  requires: []
+  tiers:
+  - 2
 - name: The Summoning
   ids:
   - steam:2414350
+  requires: []
+  tiers:
+  - 2
 - name: Fantasy General
   ids:
   - steam:1741120
+  requires: []
+  tiers:
+  - 2
 - name: Blade of Darkness
   ids:
   - steam:1710170
+  requires: []
+  tiers:
+  - 2
 - name: Pacific General
   ids:
   - steam:1741130
+  requires: []
+  tiers:
+  - 2
 - name: 'Warlords III: Darklords Rising'
   ids:
   - steam:2916220
+  requires: []
+  tiers:
+  - 2
 - name: Warlords I + II
   ids:
   - steam:2916210
+  requires: []
+  tiers:
+  - 2
 - name: 'Diggles: The Myth of Fenris'
   ids:
   - steam:1478650
+  requires: []
+  tiers:
+  - 2
 - name: 'Siege of Avalon: Anthology'
   ids:
   - steam:1558990
+  requires: []
+  tiers:
+  - 2
 - name: 'Chasm: The Rift'
   ids:
   - steam:2061230
+  requires: []
+  tiers:
+  - 2
 - name: Veil of Darkness
   ids:
   - steam:2414320
+  requires: []
+  tiers:
+  - 2
 - name: Star General
   ids:
   - steam:2414340
+  requires: []
+  tiers:
+  - 2
 - name: 'Great Naval Battles: The Final Fury'
   ids:
   - steam:2702080
+  requires: []
+  tiers:
+  - 2
 - name: Phantasie Memorial Set
   ids:
   - steam:2702050
+  requires: []
+  tiers:
+  - 2
 - name: Wargame Construction Set Pack
   ids:
   - unresolved:source:isthereanydeal:14509:wargame-construction-set-pack
+  requires: []
+  tiers:
+  - 2

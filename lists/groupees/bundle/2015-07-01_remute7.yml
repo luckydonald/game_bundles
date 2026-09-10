@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute's BADASS BANANA BUNDLE — Tier 2
-tier: 2
+name: Remute's BADASS BANANA BUNDLE
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2185/
@@ -13,27 +15,54 @@ games:
 - name: Stranded In Time
   ids:
   - steam:385150
+  requires: []
+  tiers:
+  - 2
 - name: Vangers
   ids:
   - steam:264080
+  requires: []
+  tiers:
+  - 2
 - name: 'Detective Ross - Episode 1: A PI in Paris'
   ids:
   - unresolved:source:isthereanydeal:2185:detective-ross-episode-1-a-pi-in-paris
+  requires: []
+  tiers:
+  - 2
 - name: The Music Machine
   ids:
   - steam:359040
+  requires: []
+  tiers:
+  - 2
 - name: You Are Not A Banana
   ids:
   - unresolved:source:isthereanydeal:2185:you-are-not-a-banana
+  requires: []
+  tiers:
+  - 2
 - name: Vampire of the Sands
   ids:
   - steam:386160
+  requires: []
+  tiers:
+  - 2
 - name: Pongo
   ids:
   - steam:369000
+  requires: []
+  tiers:
+  - 2
 - name: Space Sleuth
   ids:
   - unresolved:source:isthereanydeal:2185:space-sleuth
+  requires: []
+  tiers:
+  - 2
 - name: 'MadSpace: To Hell and Beyond'
   ids:
   - steam:351810
+  requires: []
+  tiers:
+  - 2

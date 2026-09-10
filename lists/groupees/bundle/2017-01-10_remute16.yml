@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute's Retrofuturism Flashback Bundle Part 2 — Tier 2
-tier: 2
+name: Remute's Retrofuturism Flashback Bundle Part 2
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4606/
@@ -13,24 +15,48 @@ games:
 - name: TransHuman
   ids:
   - unresolved:source:isthereanydeal:4606:transhuman
+  requires: []
+  tiers:
+  - 2
 - name: Its Magic
   ids:
   - unresolved:source:isthereanydeal:4606:its-magic
+  requires: []
+  tiers:
+  - 2
 - name: SLG Remix
   ids:
   - steam:454230
+  requires: []
+  tiers:
+  - 2
 - name: Jim Slim
   ids:
   - unresolved:source:isthereanydeal:4606:jim-slim
+  requires: []
+  tiers:
+  - 2
 - name: Baby Eater
   ids:
   - unresolved:source:isthereanydeal:4606:baby-eater
+  requires: []
+  tiers:
+  - 2
 - name: 'Damage: Sadistic Butchering of Humanity'
   ids:
   - steam:544220
+  requires: []
+  tiers:
+  - 2
 - name: Swarmonian Explorer
   ids:
   - unresolved:source:isthereanydeal:4606:swarmonian-explorer
+  requires: []
+  tiers:
+  - 2
 - name: Ultra Vleurette (2016 Version)
   ids:
   - unresolved:source:isthereanydeal:4606:ultra-vleurette-2016-version
+  requires: []
+  tiers:
+  - 2

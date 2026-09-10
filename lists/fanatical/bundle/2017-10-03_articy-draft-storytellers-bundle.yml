@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Articy Draft Storytellers Bundle — Tier 3
-tier: 3
+name: Articy Draft Storytellers Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5516/
@@ -13,24 +15,48 @@ games:
 - name: articy:draft 2 SE
   ids:
   - unresolved:source:isthereanydeal:5516:articy-draft-2-se
+  requires: []
+  tiers:
+  - 3
 - name: The Detail Episode 3 - Devil in The Detail
   ids:
   - steam:436430
+  requires: []
+  tiers:
+  - 3
 - name: 'Nightmares From the Deep: The Cursed Heart'
   ids:
   - unresolved:source:isthereanydeal:5516:nightmares-from-the-deep-the-cursed-heart
+  requires: []
+  tiers:
+  - 3
 - name: The Descendant - Complete Season (Episodes 1 - 5)
   ids:
   - unresolved:source:isthereanydeal:5516:the-descendant-complete-season-episodes-1-5
+  requires: []
+  tiers:
+  - 3
 - name: "The Detail Episode 1 \x96 Where the Dead Lie"
   ids:
   - steam:319970
+  requires: []
+  tiers:
+  - 3
 - name: The Detail Episode 2 - From The Ashes
   ids:
   - steam:358120
+  requires: []
+  tiers:
+  - 3
 - name: Gloria Victis
   ids:
   - unresolved:source:isthereanydeal:5516:gloria-victis
+  requires: []
+  tiers:
+  - 3
 - name: articy:draft 2 SE - Commercial Use Upgrade
   ids:
   - unresolved:source:isthereanydeal:5516:articy-draft-2-se-commercial-use-upgrade
+  requires: []
+  tiers:
+  - 3

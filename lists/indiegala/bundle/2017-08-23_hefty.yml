@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Hefty Indie Bundle — Tier 2
-tier: 2
+name: The Hefty Indie Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5411/
@@ -13,36 +15,72 @@ games:
 - name: Western FPS
   ids:
   - unresolved:source:isthereanydeal:5411:western-fps
+  requires: []
+  tiers:
+  - 2
 - name: ArmyCraft
   ids:
   - unresolved:source:isthereanydeal:5411:armycraft
+  requires: []
+  tiers:
+  - 2
 - name: Starving
   ids:
   - unresolved:source:isthereanydeal:5411:starving
+  requires: []
+  tiers:
+  - 2
 - name: Hexagon Defense
   ids:
   - unresolved:source:isthereanydeal:5411:hexagon-defense
+  requires: []
+  tiers:
+  - 2
 - name: Heavily Armed
   ids:
   - steam:554770
+  requires: []
+  tiers:
+  - 2
 - name: ProviAnt
   ids:
   - unresolved:source:isthereanydeal:5411:proviant
+  requires: []
+  tiers:
+  - 2
 - name: 'Forgotten Faces, Episode One: Strange Day'
   ids:
   - steam:664870
+  requires: []
+  tiers:
+  - 2
 - name: 'Mission: Escape from Island'
   ids:
   - unresolved:source:isthereanydeal:5411:mission-escape-from-island
+  requires: []
+  tiers:
+  - 2
 - name: Glasswinged Ascension
   ids:
   - steam:668670
+  requires: []
+  tiers:
+  - 2
 - name: Virus Z
   ids:
   - steam:666290
+  requires: []
+  tiers:
+  - 2
 - name: SINISTRY SILINIUM
   ids:
   - unresolved:source:isthereanydeal:5411:sinistry-silinium
+  requires: []
+  tiers:
+  - 2
 - name: Insane Road
   ids:
   - unresolved:source:isthereanydeal:5411:insane-road
+  requires: []
+  tiers:
+  - 2

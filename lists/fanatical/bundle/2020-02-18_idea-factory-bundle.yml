@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Idea Factory Bundle — Tier 3
-tier: 3
+name: Idea Factory Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8413/
@@ -13,24 +15,48 @@ games:
 - name: Monster Monpiece
   ids:
   - steam:415300
+  requires: []
+  tiers:
+  - 3
 - name: Moero Chronicle
   ids:
   - steam:638160
+  requires: []
+  tiers:
+  - 3
 - name: Fairy Fencer F
   ids:
   - steam:347830
+  requires: []
+  tiers:
+  - 3
 - name: Fairy Fencer F Advent Dark Force
   ids:
   - steam:524580
+  requires: []
+  tiers:
+  - 3
 - name: 'Hyperdevotion Noire: Goddess Black Heart (Neptunia)'
   ids:
   - steam:415480
+  requires: []
+  tiers:
+  - 3
 - name: Megadimension Neptunia VII Digital Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:8413:megadimension-neptunia-vii-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 3
 - name: Record of Agarest War Mariage Deluxe Bundle
   ids:
   - unresolved:source:isthereanydeal:8413:record-of-agarest-war-mariage-deluxe-bundle
+  requires: []
+  tiers:
+  - 3
 - name: MegaTagmension Blanc Deluxe Edition Bundle
   ids:
   - unresolved:source:isthereanydeal:8413:megatagmension-blanc-deluxe-edition-bundle
+  requires: []
+  tiers:
+  - 3

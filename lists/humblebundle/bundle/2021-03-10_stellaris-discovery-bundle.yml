@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Stellaris Discovery Bundle — entire-8-item-bundle
-tier: 3
+name: Humble Stellaris Discovery Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9823/
@@ -13,24 +15,48 @@ games:
 - name: Stellaris
   ids:
   - steam:281990
+  requires: []
+  tiers:
+  - 3
 - name: Stellaris Plantoids Species Pack
   ids:
   - steam:498870
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: Leviathans Story Pack'
   ids:
   - steam:518910
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: Utopia'
   ids:
   - unresolved:source:isthereanydeal:9823:stellaris-utopia
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: Apocalypse'
   ids:
   - steam:716670
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: MegaCorp'
   ids:
   - steam:944290
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: Ancient Relics Story Pack'
   ids:
   - steam:1045980
+  requires: []
+  tiers:
+  - 3
 - name: 'Stellaris: Synthetic Dawn'
   ids:
   - unresolved:source:isthereanydeal:9823:stellaris-synthetic-dawn
+  requires: []
+  tiers:
+  - 3

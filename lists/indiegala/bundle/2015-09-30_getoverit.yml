@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Get Over It Bundle — Tier 2
-tier: 2
+name: Get Over It Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2539/
@@ -13,36 +15,72 @@ games:
 - name: Zeno Clash
   ids:
   - steam:22200
+  requires: []
+  tiers:
+  - 2
 - name: Realms of Arkania - Blade of Destiny
   ids:
   - steam:237550
+  requires: []
+  tiers:
+  - 2
 - name: Pixel Piracy
   ids:
   - steam:264140
+  requires: []
+  tiers:
+  - 2
 - name: Dino D-Day
   ids:
   - steam:70000
+  requires: []
+  tiers:
+  - 2
 - name: Pressure
   ids:
   - unresolved:source:isthereanydeal:2539:pressure
+  requires: []
+  tiers:
+  - 2
 - name: 'Weird Worlds: Return to Infinite Space'
   ids:
   - steam:226120
+  requires: []
+  tiers:
+  - 2
 - name: Knights & Merchants
   ids:
   - steam:253900
+  requires: []
+  tiers:
+  - 2
 - name: HOARD Complete Pack
   ids:
   - unresolved:source:isthereanydeal:2539:hoard-complete-pack
+  requires: []
+  tiers:
+  - 2
 - name: Frozen Synapse Prime
   ids:
   - unresolved:source:isthereanydeal:2539:frozen-synapse-prime
+  requires: []
+  tiers:
+  - 2
 - name: Betrayer
   ids:
   - unresolved:source:isthereanydeal:2539:betrayer
+  requires: []
+  tiers:
+  - 2
 - name: Rune Classic
   ids:
   - steam:210950
+  requires: []
+  tiers:
+  - 2
 - name: bit Dungeon II
   ids:
   - steam:331440
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indiestructible Bundle — Tier 2
-tier: 2
+name: Indiestructible Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5101/
@@ -13,33 +15,66 @@ games:
 - name: 'Cannons-Defenders: Steam Edition'
   ids:
   - steam:617710
+  requires: []
+  tiers:
+  - 2
 - name: On The Path Remastered
   ids:
   - unresolved:source:isthereanydeal:5101:on-the-path-remastered
+  requires: []
+  tiers:
+  - 2
 - name: Game Tycoon 2
   ids:
   - steam:404640
+  requires: []
+  tiers:
+  - 2
 - name: Astervoid 2000 Soundtrack
   ids:
   - unresolved:source:isthereanydeal:5101:astervoid-2000-soundtrack
+  requires: []
+  tiers:
+  - 2
 - name: MakeThatMoney
   ids:
   - steam:600600
+  requires: []
+  tiers:
+  - 2
 - name: Crazy Buggy Racing
   ids:
   - steam:610780
+  requires: []
+  tiers:
+  - 2
 - name: Satellite Repairman
   ids:
   - steam:567780
+  requires: []
+  tiers:
+  - 2
 - name: Kalaban
   ids:
   - steam:571520
+  requires: []
+  tiers:
+  - 2
 - name: Defence to death
   ids:
   - steam:603150
+  requires: []
+  tiers:
+  - 2
 - name: Runaway
   ids:
   - unresolved:source:isthereanydeal:5101:runaway
+  requires: []
+  tiers:
+  - 2
 - name: AsterVoid 2000
   ids:
   - steam:423870
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Life Bundle — Tier 2
-tier: 2
+name: Indie Life Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3560/
@@ -13,33 +15,66 @@ games:
 - name: Disillusions Manga Horror
   ids:
   - steam:343270
+  requires: []
+  tiers:
+  - 2
 - name: Project Pulsation
   ids:
   - steam:424000
+  requires: []
+  tiers:
+  - 2
 - name: Find Out
   ids:
   - steam:444410
+  requires: []
+  tiers:
+  - 2
 - name: Crowman & Wolfboy
   ids:
   - steam:339590
+  requires: []
+  tiers:
+  - 2
 - name: Home Sheep Home 2
   ids:
   - unresolved:source:isthereanydeal:3560:home-sheep-home-2
+  requires: []
+  tiers:
+  - 2
 - name: 'Scourge: Outbreak Ambrosia Bundle'
   ids:
   - steam:227560
+  requires: []
+  tiers:
+  - 2
 - name: Bullet Life 2010
   ids:
   - unresolved:source:isthereanydeal:3560:bullet-life-2010
+  requires: []
+  tiers:
+  - 2
 - name: Evertown
   ids:
   - steam:432500
+  requires: []
+  tiers:
+  - 2
 - name: 'Sky To Fly: Faster Than Wind'
   ids:
   - steam:403850
+  requires: []
+  tiers:
+  - 2
 - name: Remnants of a Beautiful Day
   ids:
   - unresolved:source:isthereanydeal:3560:remnants-of-a-beautiful-day
+  requires: []
+  tiers:
+  - 2
 - name: Z.I.O.N.
   ids:
   - steam:466890
+  requires: []
+  tiers:
+  - 2

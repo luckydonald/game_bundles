@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The BIG GameBundle — Beat The Average
-tier: 2
+name: The BIG GameBundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3677/
@@ -13,48 +15,96 @@ games:
 - name: Why So Evil
   ids:
   - unresolved:source:isthereanydeal:3677:why-so-evil
+  requires: []
+  tiers:
+  - 2
 - name: Sixtieth Kilometer
   ids:
   - steam:448780
+  requires: []
+  tiers:
+  - 2
 - name: Paradigm Shift
   ids:
   - steam:299820
+  requires: []
+  tiers:
+  - 2
 - name: Red Lake
   ids:
   - steam:357290
+  requires: []
+  tiers:
+  - 2
 - name: Absconding Zatwor
   ids:
   - unresolved:source:isthereanydeal:3677:absconding-zatwor
+  requires: []
+  tiers:
+  - 2
 - name: Goo Cubelets
   ids:
   - unresolved:source:isthereanydeal:3677:goo-cubelets
+  requires: []
+  tiers:
+  - 2
 - name: Fiends Of Imprisonment
   ids:
   - unresolved:source:isthereanydeal:3677:fiends-of-imprisonment
+  requires: []
+  tiers:
+  - 2
 - name: They Came from The Moon
   ids:
   - unresolved:source:isthereanydeal:3677:they-came-from-the-moon
+  requires: []
+  tiers:
+  - 2
 - name: Break Into Zatwor
   ids:
   - unresolved:source:isthereanydeal:3677:break-into-zatwor
+  requires: []
+  tiers:
+  - 2
 - name: Brilliant Bob
   ids:
   - unresolved:source:isthereanydeal:3677:brilliant-bob
+  requires: []
+  tiers:
+  - 2
 - name: 'Why So Evil 2: Dystopia'
   ids:
   - unresolved:source:isthereanydeal:3677:why-so-evil-2-dystopia
+  requires: []
+  tiers:
+  - 2
 - name: Project Pulsation
   ids:
   - steam:424000
+  requires: []
+  tiers:
+  - 2
 - name: GooCubelets 2
   ids:
   - unresolved:source:isthereanydeal:3677:goocubelets-2
+  requires: []
+  tiers:
+  - 2
 - name: Not without my donuts
   ids:
   - steam:366610
+  requires: []
+  tiers:
+  - 2
 - name: 'GooCubelets: The Algoorithm'
   ids:
   - unresolved:source:isthereanydeal:3677:goocubelets-the-algoorithm
+  requires: []
+  tiers:
+  - 2
 - name: Z.I.O.N.
   ids:
   - steam:466890
+  requires: []
+  tiers:
+  - 2

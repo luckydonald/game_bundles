@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Virtual Reality — Tier 2
-tier: 2
+name: Virtual Reality
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3382/
@@ -13,30 +15,60 @@ games:
 - name: Heaven Island - VR MMO
   ids:
   - steam:400250
+  requires: []
+  tiers:
+  - 2
 - name: Dungeon Hero
   ids:
   - unresolved:source:isthereanydeal:3382:dungeon-hero
+  requires: []
+  tiers:
+  - 2
 - name: 'Doorways: Chapter 1 to 3 Collection'
   ids:
   - unresolved:source:isthereanydeal:3382:doorways-chapter-1-to-3-collection
+  requires: []
+  tiers:
+  - 2
 - name: Cat Interstellar
   ids:
   - steam:384740
+  requires: []
+  tiers:
+  - 2
 - name: Reflections
   ids:
   - steam:352360
+  requires: []
+  tiers:
+  - 2
 - name: Gon' E-Choo!
   ids:
   - steam:384990
+  requires: []
+  tiers:
+  - 2
 - name: Spells 'n' Stuff
   ids:
   - steam:448880
+  requires: []
+  tiers:
+  - 2
 - name: Tea Party Simulator 2015™
   ids:
   - steam:363620
+  requires: []
+  tiers:
+  - 2
 - name: 'Nighttime Terror VR: Dessert Defender'
   ids:
   - steam:451870
+  requires: []
+  tiers:
+  - 2
 - name: DREAMFLIGHT VR
   ids:
   - steam:365140
+  requires: []
+  tiers:
+  - 2

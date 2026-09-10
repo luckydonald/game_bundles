@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Time Killer Bundle — Tier 2
-tier: 2
+name: Time Killer Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7290/
@@ -13,24 +15,48 @@ games:
 - name: Bryan Audley's Numbers
   ids:
   - unresolved:source:isthereanydeal:7290:bryan-audleys-numbers
+  requires: []
+  tiers:
+  - 2
 - name: Best Time Kill
   ids:
   - unresolved:source:isthereanydeal:7290:best-time-kill
+  requires: []
+  tiers:
+  - 2
 - name: Zero G Arena
   ids:
   - steam:467820
+  requires: []
+  tiers:
+  - 2
 - name: 'The Last Dawn : The first invasion'
   ids:
   - unresolved:source:isthereanydeal:7290:the-last-dawn-the-first-invasion
+  requires: []
+  tiers:
+  - 2
 - name: HEVN
   ids:
   - steam:588800
+  requires: []
+  tiers:
+  - 2
 - name: 'Eredia: The Diary of Heroes'
   ids:
   - steam:713180
+  requires: []
+  tiers:
+  - 2
 - name: The Abbey - Director's cut
   ids:
   - steam:1019020
+  requires: []
+  tiers:
+  - 2
 - name: Heart and Axe
   ids:
   - steam:1014840
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #79 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #79'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6929/
@@ -13,24 +15,48 @@ games:
 - name: Wings of Virtus
   ids:
   - steam:978920
+  requires: []
+  tiers:
+  - 2
 - name: Goinund
   ids:
   - steam:874770
+  requires: []
+  tiers:
+  - 2
 - name: Reflection of Mine
   ids:
   - steam:476020
+  requires: []
+  tiers:
+  - 2
 - name: 'Ashi: Lake of Light'
   ids:
   - steam:819040
+  requires: []
+  tiers:
+  - 2
 - name: Memoranda
   ids:
   - steam:430410
+  requires: []
+  tiers:
+  - 2
 - name: Riddled Corpses
   ids:
   - steam:369890
+  requires: []
+  tiers:
+  - 2
 - name: Great eSports Manager
   ids:
   - steam:671170
+  requires: []
+  tiers:
+  - 2
 - name: Shuyan Saga
   ids:
   - steam:594680
+  requires: []
+  tiers:
+  - 2

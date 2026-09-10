@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Capcom X Sega X Atlus Bundle — Pay $12 or more to also unlock!
-tier: 3
+name: Capcom X Sega X Atlus Bundle
+tiers:
+- rank: 3
+  name: Pay $12 or more to also unlock!
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5452/
@@ -13,36 +15,72 @@ games:
 - name: "Sonic Adventure\x99 2"
   ids:
   - steam:213610
+  requires: []
+  tiers:
+  - 3
 - name: Rollers of the Realm
   ids:
   - steam:262470
+  requires: []
+  tiers:
+  - 3
 - name: Zeno Clash 2
   ids:
   - steam:215690
+  requires: []
+  tiers:
+  - 3
 - name: Citizens of Earth
   ids:
   - unresolved:source:isthereanydeal:5452:citizens-of-earth
+  requires: []
+  tiers:
+  - 3
 - name: Bionic Commando
   ids:
   - steam:21670
+  requires: []
+  tiers:
+  - 3
 - name: Renegade Ops Collection
   ids:
   - unresolved:source:isthereanydeal:5452:renegade-ops-collection
+  requires: []
+  tiers:
+  - 3
 - name: Sonic Generations Collection
   ids:
   - steam:71340
+  requires: []
+  tiers:
+  - 3
 - name: Dead Rising
   ids:
   - steam:427190
+  requires: []
+  tiers:
+  - 3
 - name: 'Tesla Effect: A Tex Murphy Adventure'
   ids:
   - steam:261510
+  requires: []
+  tiers:
+  - 3
 - name: Resident Evil 4 (2005)
   ids:
   - steam:254700
+  requires: []
+  tiers:
+  - 3
 - name: Motorsport Manager
   ids:
   - steam:415200
+  requires: []
+  tiers:
+  - 3
 - name: Devil May Cry® 4 Special Edition
   ids:
   - steam:329050
+  requires: []
+  tiers:
+  - 3

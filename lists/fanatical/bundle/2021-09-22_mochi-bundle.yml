@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mochi Bundle — Tier 3
-tier: 3
+name: Mochi Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10493/
@@ -13,37 +15,70 @@ games:
 - name: Sacred Tears TRUE
   ids:
   - unresolved:source:isthereanydeal:10493:sacred-tears-true
+  requires: []
+  tiers:
+  - 3
 - name: AIdol
   ids:
   - steam:829210
+  requires: []
+  tiers:
+  - 3
 - name: Nusakana
   ids:
   - steam:401290
+  requires: []
+  tiers:
+  - 3
 - name: The Letter - Horror Visual Novel
   ids:
   - steam:460430
+  requires: []
+  tiers:
+  - 3
 - name: Panty Party
   ids:
   - steam:562410
+  requires: []
+  tiers:
+  - 3
 - name: GIGA WRECKER
   ids:
   - steam:454410
+  requires: []
+  tiers:
+  - 3
 - name: 'Harvest Moon: Light of Hope Special Edition - Doc''s & Melanie''s Special
     Episodes'
   ids:
   - steam:867220
+  requires: []
+  tiers:
+  - 3
 - name: 'Harvest Moon: Light of Hope Special Edition - New Marriageable Characters
     Pack'
   ids:
   - steam:867200
+  requires: []
+  tiers:
+  - 3
 - name: 'Harvest Moon: Light of Hope Special Edition - Divine Marriageable Characters
     Pack'
   ids:
   - steam:867230
+  requires: []
+  tiers:
+  - 3
 - name: 'Harvest Moon: Light of Hope Special Edition'
   ids:
   - steam:585900
+  requires: []
+  tiers:
+  - 3
 - name: 'Harvest Moon: Light of Hope Special Edition - Decorations & Tool Upgrade
     Pack'
   ids:
   - steam:852000
+  requires: []
+  tiers:
+  - 3

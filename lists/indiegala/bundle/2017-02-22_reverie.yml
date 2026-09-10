@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Reverie Bundle — Tier 2
-tier: 2
+name: Reverie Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4816/
@@ -13,36 +15,72 @@ games:
 - name: Little Jack's Adventures
   ids:
   - steam:571870
+  requires: []
+  tiers:
+  - 2
 - name: Jumping Tank
   ids:
   - unresolved:source:isthereanydeal:4816:jumping-tank
+  requires: []
+  tiers:
+  - 2
 - name: Riot of the numbers
   ids:
   - steam:579150
+  requires: []
+  tiers:
+  - 2
 - name: A Week of Circus Terror
   ids:
   - steam:498450
+  requires: []
+  tiers:
+  - 2
 - name: Monster RPG 2
   ids:
   - unresolved:source:isthereanydeal:4816:monster-rpg-2
+  requires: []
+  tiers:
+  - 2
 - name: Nanobots
   ids:
   - steam:449120
+  requires: []
+  tiers:
+  - 2
 - name: Winexy
   ids:
   - steam:577740
+  requires: []
+  tiers:
+  - 2
 - name: Just Bones
   ids:
   - unresolved:source:isthereanydeal:4816:just-bones
+  requires: []
+  tiers:
+  - 2
 - name: Tourists Kidnapped a Little Bear
   ids:
   - steam:580420
+  requires: []
+  tiers:
+  - 2
 - name: Highway to the Moon
   ids:
   - steam:488330
+  requires: []
+  tiers:
+  - 2
 - name: Shiny Gauntlet
   ids:
   - steam:454700
+  requires: []
+  tiers:
+  - 2
 - name: Judas
   ids:
   - steam:581820
+  requires: []
+  tiers:
+  - 2

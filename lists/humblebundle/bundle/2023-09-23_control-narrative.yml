@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Control The Narrative Bundle — entire-8-item-bundle
-tier: 3
+name: Control The Narrative Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13500/
@@ -13,24 +15,48 @@ games:
 - name: Tales from the Borderlands
   ids:
   - steam:330830
+  requires: []
+  tiers:
+  - 3
 - name: Impostor Factory
   ids:
   - steam:1182620
+  requires: []
+  tiers:
+  - 3
 - name: Before Your Eyes
   ids:
   - steam:1082430
+  requires: []
+  tiers:
+  - 3
 - name: Beyond Two Souls
   ids:
   - steam:960990
+  requires: []
+  tiers:
+  - 3
 - name: Beyond a Steel Sky
   ids:
   - steam:1146310
+  requires: []
+  tiers:
+  - 3
 - name: Twin Mirror
   ids:
   - steam:1552810
+  requires: []
+  tiers:
+  - 3
 - name: New Tales from the Borderlands
   ids:
   - steam:1454970
+  requires: []
+  tiers:
+  - 3
 - name: 'OPUS: Echo of Starsong - Full Bloom Edition'
   ids:
   - steam:1504500
+  requires: []
+  tiers:
+  - 3

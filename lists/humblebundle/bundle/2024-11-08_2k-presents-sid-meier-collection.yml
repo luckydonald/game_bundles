@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: '2k Presents: The Sid Meier Collection Bundle — entire-20-item-bundle'
-tier: 4
+name: '2k Presents: The Sid Meier Collection Bundle'
+tiers:
+- rank: 4
+  name: entire-20-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/14603/
@@ -13,62 +15,122 @@ games:
 - name: "Sid Meier\x92s Railroads!"
   ids:
   - steam:7600
+  requires: []
+  tiers:
+  - 4
 - name: Sid Meier's Ace Patrol
   ids:
   - steam:244070
+  requires: []
+  tiers:
+  - 4
 - name: Sid Meier's Starships
   ids:
   - steam:282210
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® III: Complete'
   ids:
   - steam:3910
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Ace Patrol: Pacific Skies'
   ids:
   - steam:244090
+  requires: []
+  tiers:
+  - 4
 - name: Sid Meier's Pirates!
   ids:
   - steam:3920
+  requires: []
+  tiers:
+  - 4
 - name: Sid Meier's Civilization® VI
   ids:
   - steam:289070
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization V: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-v-the-complete-edition
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization®: Beyond Earth™ - The Collection'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-beyond-earth-the-collection
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization IV: The Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:14603:sid-meiers-civilization-iv-the-complete-edition
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Nubia Civilization & Scenario Pack'
   ids:
   - steam:645400
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Rise and Fall'
   ids:
   - steam:645402
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Poland Civilization and Scenario Pack'
   ids:
   - steam:512033
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Gathering Storm'
   ids:
   - steam:947510
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Vikings Scenario Pack'
   ids:
   - steam:512032
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Persia and Macedon Civilization & Scenario
     Pack'
   ids:
   - steam:512035
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Australia Civilization & Scenario Pack'
   ids:
   - steam:512034
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Khmer and Indonesia Civilization & Scenario
     Pack'
   ids:
   - steam:645401
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: New Frontier Pass'
   ids:
   - steam:1308090
+  requires: []
+  tiers:
+  - 4
 - name: 'Sid Meier''s Civilization® VI: Leader Pass'
   ids:
   - steam:2158250
+  requires: []
+  tiers:
+  - 4

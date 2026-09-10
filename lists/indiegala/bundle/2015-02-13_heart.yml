@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Heart Attack Bundle — Tier 3
-tier: 3
+name: Heart Attack Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1622/
@@ -13,36 +15,72 @@ games:
 - name: Bionic Heart
   ids:
   - steam:314200
+  requires: []
+  tiers:
+  - 3
 - name: 'Flower Shop: Summer In Fairbrook'
   ids:
   - steam:290990
+  requires: []
+  tiers:
+  - 3
 - name: 'Heileen 1: Sail Away'
   ids:
   - steam:302950
+  requires: []
+  tiers:
+  - 3
 - name: 'Heileen 2: The Hands Of Fate'
   ids:
   - steam:305480
+  requires: []
+  tiers:
+  - 3
 - name: 'Flower Shop: Winter In Fairbrook'
   ids:
   - steam:311680
+  requires: []
+  tiers:
+  - 3
 - name: 'Heileen 3: New Horizons Deluxe Edition'
   ids:
   - steam:305490
+  requires: []
+  tiers:
+  - 3
 - name: Spirited Heart Deluxe
   ids:
   - steam:293920
+  requires: []
+  tiers:
+  - 3
 - name: Always Remember Me - Deluxe Edition
   ids:
   - steam:291030
+  requires: []
+  tiers:
+  - 3
 - name: Bionic Heart 2 - Deluxe Edition
   ids:
   - steam:317290
+  requires: []
+  tiers:
+  - 3
 - name: Planet Stronghold - Deluxe Edition
   ids:
   - steam:291050
+  requires: []
+  tiers:
+  - 3
 - name: Nicole
   ids:
   - steam:307190
+  requires: []
+  tiers:
+  - 3
 - name: Loren The Amazon Princess
   ids:
   - steam:257970
+  requires: []
+  tiers:
+  - 3

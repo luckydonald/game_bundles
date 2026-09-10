@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Holiday in Space Bundle — entire-8-item-bundle
-tier: 4
+name: Humble Holiday in Space Bundle
+tiers:
+- rank: 4
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9568/
@@ -13,24 +15,48 @@ games:
 - name: Space Run
   ids:
   - steam:275670
+  requires: []
+  tiers:
+  - 4
 - name: Tacoma
   ids:
   - steam:343860
+  requires: []
+  tiers:
+  - 4
 - name: Rover Mechanic Simulator
   ids:
   - steam:864680
+  requires: []
+  tiers:
+  - 4
 - name: Siege of Centauri
   ids:
   - steam:524010
+  requires: []
+  tiers:
+  - 4
 - name: Deep Sky Derelicts
   ids:
   - steam:698640
+  requires: []
+  tiers:
+  - 4
 - name: AVICII Invector
   ids:
   - steam:986800
+  requires: []
+  tiers:
+  - 4
 - name: Moons of Madness
   ids:
   - steam:1012840
+  requires: []
+  tiers:
+  - 4
 - name: Breathedge
   ids:
   - steam:738520
+  requires: []
+  tiers:
+  - 4

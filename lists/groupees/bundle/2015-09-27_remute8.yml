@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Remute's The Psychic Pixel Party Bundle — Tier 2
-tier: 2
+name: Remute's The Psychic Pixel Party Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2527/
@@ -13,27 +15,54 @@ games:
 - name: Synonymy
   ids:
   - steam:342890
+  requires: []
+  tiers:
+  - 2
 - name: A Matter Of Caos
   ids:
   - unresolved:source:isthereanydeal:2527:a-matter-of-caos
+  requires: []
+  tiers:
+  - 2
 - name: Alice's Mom's Rescue
   ids:
   - steam:399260
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Poetry: A Film About Games, Art, Society, and Culture'
   ids:
   - unresolved:source:isthereanydeal:2527:pixel-poetry-a-film-about-games-art-society-and-culture
+  requires: []
+  tiers:
+  - 2
 - name: Sword of the Samurai
   ids:
   - steam:327950
+  requires: []
+  tiers:
+  - 2
 - name: Naninights
   ids:
   - unresolved:source:isthereanydeal:2527:naninights
+  requires: []
+  tiers:
+  - 2
 - name: Lucas the Game
   ids:
   - unresolved:source:isthereanydeal:2527:lucas-the-game
+  requires: []
+  tiers:
+  - 2
 - name: Subterrarium
   ids:
   - steam:467170
+  requires: []
+  tiers:
+  - 2
 - name: HYPERCRONIUS
   ids:
   - unresolved:source:isthereanydeal:2527:hypercronius
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: METROIDVANIA MADNESS — Gold
-tier: 3
+name: METROIDVANIA MADNESS
+tiers:
+- rank: 3
+  name: Gold
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/metroidvania-madness/
@@ -16,23 +18,35 @@ games:
   ids:
   - steam:1701520
   requires: []
+  tiers:
+  - 3
 - name: Vomitoreum
   ids:
   - steam:1549750
   requires: []
+  tiers:
+  - 3
 - name: GRIME
   ids:
   - steam:1123050
   requires: []
+  tiers:
+  - 3
 - name: Islets
   ids:
   - steam:1669420
   requires: []
+  tiers:
+  - 3
 - name: 'Laika: Aged Through Blood'
   ids:
   - unresolved:source:greenmangaming:346
   requires: []
+  tiers:
+  - 3
 - name: 'Bō: Path of the Teal Lotus'
   ids:
   - steam:1614440
   requires: []
+  tiers:
+  - 3

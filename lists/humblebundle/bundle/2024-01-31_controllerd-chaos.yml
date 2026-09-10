@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Controller'd Chaos Bundle — entire-7-item-bundle
-tier: 2
+name: Controller'd Chaos Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13807/
@@ -13,21 +15,42 @@ games:
 - name: 'Ghostbusters: The Video Game Remastered'
   ids:
   - steam:1449280
+  requires: []
+  tiers:
+  - 2
 - name: Sunset Overdrive
   ids:
   - steam:847370
+  requires: []
+  tiers:
+  - 2
 - name: Destroy All Humans
   ids:
   - steam:803330
+  requires: []
+  tiers:
+  - 2
 - name: Rain on Your Parade
   ids:
   - steam:1213230
+  requires: []
+  tiers:
+  - 2
 - name: Maneater
   ids:
   - steam:629820
+  requires: []
+  tiers:
+  - 2
 - name: No More Heroes
   ids:
   - steam:1420290
+  requires: []
+  tiers:
+  - 2
 - name: Orcs Must Die! 3 Complete Bundle
   ids:
   - unresolved:source:isthereanydeal:13807:orcs-must-die-3-complete-bundle
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Gravity Bundle — Tier 2
-tier: 2
+name: Indie Gravity Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5061/
@@ -13,36 +15,72 @@ games:
 - name: Devade
   ids:
   - steam:614900
+  requires: []
+  tiers:
+  - 2
 - name: The Last Photon
   ids:
   - unresolved:source:isthereanydeal:5061:the-last-photon
+  requires: []
+  tiers:
+  - 2
 - name: LaserCat
   ids:
   - steam:496120
+  requires: []
+  tiers:
+  - 2
 - name: Narborion Saga
   ids:
   - steam:581340
+  requires: []
+  tiers:
+  - 2
 - name: The Morgue Fissure Between Worlds
   ids:
   - steam:547150
+  requires: []
+  tiers:
+  - 2
 - name: PuppyStory
   ids:
   - unresolved:source:isthereanydeal:5061:puppystory
+  requires: []
+  tiers:
+  - 2
 - name: SmashZombies
   ids:
   - unresolved:source:isthereanydeal:5061:smashzombies
+  requires: []
+  tiers:
+  - 2
 - name: 'Ant-gravity: Tiny''s Adventure'
   ids:
   - steam:522890
+  requires: []
+  tiers:
+  - 2
 - name: 28 Waves Later
   ids:
   - unresolved:source:isthereanydeal:5061:28-waves-later
+  requires: []
+  tiers:
+  - 2
 - name: Armored Gear
   ids:
   - unresolved:source:isthereanydeal:5061:armored-gear
+  requires: []
+  tiers:
+  - 2
 - name: Jump Like A Pirate
   ids:
   - unresolved:source:isthereanydeal:5061:jump-like-a-pirate
+  requires: []
+  tiers:
+  - 2
 - name: 'Barclay: The Marrowdale Murder'
   ids:
   - unresolved:source:isthereanydeal:5061:barclay-the-marrowdale-murder
+  requires: []
+  tiers:
+  - 2

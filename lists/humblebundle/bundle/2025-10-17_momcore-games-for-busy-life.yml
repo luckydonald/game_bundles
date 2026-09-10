@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: MomCore Games for a Busy Life Game Bundle — 12 Item Bundle
-tier: 3
+name: MomCore Games for a Busy Life Game Bundle
+tiers:
+- rank: 3
+  name: 12 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15502/
@@ -13,36 +15,72 @@ games:
 - name: Bombfest
   ids:
   - steam:729640
+  requires: []
+  tiers:
+  - 3
 - name: 'Beans: The Coffee Shop Simulator'
   ids:
   - steam:549240
+  requires: []
+  tiers:
+  - 3
 - name: Where the Bees Make Honey
   ids:
   - steam:1001640
+  requires: []
+  tiers:
+  - 3
 - name: We should talk.
   ids:
   - steam:1255990
+  requires: []
+  tiers:
+  - 3
 - name: Beasts of Maravilla Island
   ids:
   - steam:1378020
+  requires: []
+  tiers:
+  - 3
 - name: Kana Quest
   ids:
   - steam:725850
+  requires: []
+  tiers:
+  - 3
 - name: Onsen Master
   ids:
   - steam:1334780
+  requires: []
+  tiers:
+  - 3
 - name: Calico
   ids:
   - steam:1112890
+  requires: []
+  tiers:
+  - 3
 - name: Lake
   ids:
   - steam:1118240
+  requires: []
+  tiers:
+  - 3
 - name: APICO
   ids:
   - steam:1390190
+  requires: []
+  tiers:
+  - 3
 - name: Lake - Season's Greetings
   ids:
   - steam:2450860
+  requires: []
+  tiers:
+  - 3
 - name: Calico - Neat Things
   ids:
   - steam:3298220
+  requires: []
+  tiers:
+  - 3

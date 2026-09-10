@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Best of Humble Bundle - Sci-Fi Shooters 2.0 — entire-7-item-bundle
-tier: 2
+name: Best of Humble Bundle - Sci-Fi Shooters 2.0
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15837/
@@ -13,21 +15,42 @@ games:
 - name: DOOM Eternal
   ids:
   - steam:782330
+  requires: []
+  tiers:
+  - 2
 - name: Black Mesa
   ids:
   - steam:362890
+  requires: []
+  tiers:
+  - 2
 - name: Prey Digital Deluxe
   ids:
   - unresolved:source:isthereanydeal:15837:prey-digital-deluxe
+  requires: []
+  tiers:
+  - 2
 - name: Battle Shapers
   ids:
   - steam:1421290
+  requires: []
+  tiers:
+  - 2
 - name: 'Starship Troopers: Extermination'
   ids:
   - steam:1268750
+  requires: []
+  tiers:
+  - 2
 - name: 'Star Wars: Dark Forces Remaster'
   ids:
   - steam:2292260
+  requires: []
+  tiers:
+  - 2
 - name: 'System Shock 2: 25th Anniversary Remaster'
   ids:
   - steam:866570
+  requires: []
+  tiers:
+  - 2

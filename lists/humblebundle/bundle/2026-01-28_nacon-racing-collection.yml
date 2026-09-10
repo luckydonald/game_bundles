@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Nacon Racing Collection 2026 — 8 game bundle
-tier: 3
+name: Nacon Racing Collection 2026
+tiers:
+- rank: 3
+  name: 8 game bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15815/
@@ -13,24 +15,48 @@ games:
 - name: WRC 8 FIA World Rally Championship
   ids:
   - steam:1004750
+  requires: []
+  tiers:
+  - 3
 - name: V-Rally 4
   ids:
   - steam:658700
+  requires: []
+  tiers:
+  - 3
 - name: WRC 7 FIA World Rally Championship
   ids:
   - steam:621830
+  requires: []
+  tiers:
+  - 3
 - name: TT Isle of Man Ride on the Edge 2
   ids:
   - steam:1082180
+  requires: []
+  tiers:
+  - 3
 - name: WRC 9 FIA World Rally Championship
   ids:
   - steam:1267540
+  requires: []
+  tiers:
+  - 3
 - name: WRC Generations - The FIA WRC Official Game
   ids:
   - steam:1953520
+  requires: []
+  tiers:
+  - 3
 - name: WRC 10 FIA World Rally Championship
   ids:
   - steam:1462810
+  requires: []
+  tiers:
+  - 3
 - name: 'TT Isle of Man: Ride on the Edge 3'
   ids:
   - steam:1924170
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Mixcellaneous Bundle — Tier 2
-tier: 2
+name: Mixcellaneous Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2846/
@@ -13,36 +15,72 @@ games:
 - name: Cubetractor
   ids:
   - steam:235720
+  requires: []
+  tiers:
+  - 2
 - name: Spoiler Alert
   ids:
   - steam:283230
+  requires: []
+  tiers:
+  - 2
 - name: Vertical Drop Heroes HD
   ids:
   - steam:311480
+  requires: []
+  tiers:
+  - 2
 - name: Fearless Fantasy
   ids:
   - steam:282100
+  requires: []
+  tiers:
+  - 2
 - name: Days Under Custody
   ids:
   - steam:412730
+  requires: []
+  tiers:
+  - 2
 - name: Memories of a Vagabond
   ids:
   - steam:307070
+  requires: []
+  tiers:
+  - 2
 - name: Agent Awesome
   ids:
   - steam:345220
+  requires: []
+  tiers:
+  - 2
 - name: 'Broadsword : Age of Chivalry'
   ids:
   - unresolved:source:isthereanydeal:2846:broadsword-age-of-chivalry
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Puzzles 2: Birds'
   ids:
   - steam:344230
+  requires: []
+  tiers:
+  - 2
 - name: Kraven Manor
   ids:
   - steam:296630
+  requires: []
+  tiers:
+  - 2
 - name: Bloop Reloaded
   ids:
   - unresolved:source:isthereanydeal:2846:bloop-reloaded
+  requires: []
+  tiers:
+  - 2
 - name: 'Pixel Puzzles 2: Anime'
   ids:
   - steam:350810
+  requires: []
+  tiers:
+  - 2

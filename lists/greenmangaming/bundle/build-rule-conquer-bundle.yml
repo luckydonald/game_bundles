@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: BUILD, RULE, CONQUER — Empires
-tier: 3
+name: BUILD, RULE, CONQUER
+tiers:
+- rank: 3
+  name: Empires
 references:
 - name: Green Man Gaming bundle
   url: https://www.greenmangamingbundles.com/bundles/build-rule-conquer-bundle/
@@ -16,18 +18,26 @@ games:
   ids:
   - steam:463530
   requires: []
+  tiers:
+  - 3
 - name: Mechabellum
   ids:
   - steam:669330
   requires: []
+  tiers:
+  - 3
 - name: 'Warhammer 40,000: Chaos Gate - Daemonhunters'
   ids:
   - steam:1611910
   requires: []
+  tiers:
+  - 3
 - name: Knights of the Crusades
   ids:
   - steam:3440120
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire
   ids:
   - steam:503940
@@ -35,6 +45,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - MExico
   ids:
   - steam:820930
@@ -42,6 +54,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - The great lakes
   ids:
   - steam:873880
@@ -49,6 +63,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - crossing the andes
   ids:
   - steam:884140
@@ -56,6 +72,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - great britain & Ireland
   ids:
   - steam:884141
@@ -63,6 +81,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - France
   ids:
   - steam:884142
@@ -70,6 +90,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - Germany
   ids:
   - steam:884143
@@ -77,6 +99,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - Nothern Europe
   ids:
   - steam:1161420
@@ -84,6 +108,8 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: Railway Empire - Down Under
   ids:
   - steam:1161421
@@ -91,7 +117,11 @@ games:
     id: '110'
     name: 'Railway Empire: Complete Collection'
   requires: []
+  tiers:
+  - 3
 - name: 'Pharaoh: A New Era'
   ids:
   - steam:1351080
   requires: []
+  tiers:
+  - 3

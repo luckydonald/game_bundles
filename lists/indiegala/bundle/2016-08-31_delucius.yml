@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The DeLucius Bundle — Tier 2
-tier: 2
+name: The DeLucius Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3982/
@@ -13,33 +15,66 @@ games:
 - name: Plazma Being
   ids:
   - steam:346630
+  requires: []
+  tiers:
+  - 2
 - name: Fantasy Kingdom Simulator
   ids:
   - steam:482890
+  requires: []
+  tiers:
+  - 2
 - name: Linea, the Game
   ids:
   - steam:428900
+  requires: []
+  tiers:
+  - 2
 - name: Haven
   ids:
   - steam:983970
+  requires: []
+  tiers:
+  - 2
 - name: The Dark Legions
   ids:
   - steam:492530
+  requires: []
+  tiers:
+  - 2
 - name: Sky Valley
   ids:
   - steam:506590
+  requires: []
+  tiers:
+  - 2
 - name: Systematic Immunity
   ids:
   - steam:395100
+  requires: []
+  tiers:
+  - 2
 - name: Mibibli's Quest
   ids:
   - steam:453990
+  requires: []
+  tiers:
+  - 2
 - name: Night Vigil
   ids:
   - steam:509910
+  requires: []
+  tiers:
+  - 2
 - name: Lucius Demake
   ids:
   - steam:364230
+  requires: []
+  tiers:
+  - 2
 - name: Hiiro
   ids:
   - steam:464960
+  requires: []
+  tiers:
+  - 2

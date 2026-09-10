@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Cozy Nightmare Bundle — Forbidden Knowledge
-tier: 3
+name: Cozy Nightmare Bundle
+tiers:
+- rank: 3
+  name: Forbidden Knowledge
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16527/
@@ -17,28 +19,40 @@ games:
   - steam:521890
   - isthereanydeal:hello-neighbor
   requires: []
+  tiers:
+  - 3
 - name: Graveyard Keeper
   ids:
   - steam:599140
   - isthereanydeal:graveyard-keeper
   requires: []
+  tiers:
+  - 3
 - name: Cultist Simulator
   ids:
   - steam:718670
   - isthereanydeal:cultist-simulator
   requires: []
+  tiers:
+  - 3
 - name: Hello Neighbor 2
   ids:
   - steam:1321680
   - isthereanydeal:hello-neighbor-2
   requires: []
+  tiers:
+  - 3
 - name: BOOK OF HOURS
   ids:
   - steam:1028310
   - isthereanydeal:book-of-hours
   requires: []
+  tiers:
+  - 3
 - name: 'Potion Craft: Alchemist Simulator'
   ids:
   - steam:1210320
   - isthereanydeal:potion-craft-alchemist-simulator
   requires: []
+  tiers:
+  - 3

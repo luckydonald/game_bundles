@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'You Pick: Adventure Bundle — Tier 2'
-tier: 2
+name: 'You Pick: Adventure Bundle'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6937/
@@ -13,21 +15,42 @@ games:
 - name: War Of Spells
   ids:
   - unresolved:source:isthereanydeal:6937:war-of-spells
+  requires: []
+  tiers:
+  - 2
 - name: Morphine
   ids:
   - steam:410430
+  requires: []
+  tiers:
+  - 2
 - name: 'Trulon: The Shadow Engine'
   ids:
   - steam:433840
+  requires: []
+  tiers:
+  - 2
 - name: Crazy Science Long Run
   ids:
   - unresolved:source:isthereanydeal:6937:crazy-science-long-run
+  requires: []
+  tiers:
+  - 2
 - name: The Warriorlock™
   ids:
   - steam:340500
+  requires: []
+  tiers:
+  - 2
 - name: The Amazonian Dread
   ids:
   - steam:933900
+  requires: []
+  tiers:
+  - 2
 - name: Armored Train
   ids:
   - steam:879620
+  requires: []
+  tiers:
+  - 2

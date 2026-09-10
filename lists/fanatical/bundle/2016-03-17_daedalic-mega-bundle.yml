@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Daedalic Mega Bundle — Tier 3
-tier: 3
+name: Daedalic Mega Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3186/
@@ -13,36 +15,72 @@ games:
 - name: Deponia
   ids:
   - steam:214340
+  requires: []
+  tiers:
+  - 3
 - name: 'Cultures: 8th Wonder of the World'
   ids:
   - steam:351870
+  requires: []
+  tiers:
+  - 3
 - name: 'Cultures: Northland'
   ids:
   - steam:351860
+  requires: []
+  tiers:
+  - 3
 - name: Goodbye Deponia
   ids:
   - steam:241910
+  requires: []
+  tiers:
+  - 3
 - name: Blackguards
   ids:
   - steam:249650
+  requires: []
+  tiers:
+  - 3
 - name: Chaos on Deponia
   ids:
   - steam:220740
+  requires: []
+  tiers:
+  - 3
 - name: 'The Last Tinker™: City of Colors'
   ids:
   - steam:260160
+  requires: []
+  tiers:
+  - 3
 - name: Anna's Quest
   ids:
   - steam:327220
+  requires: []
+  tiers:
+  - 3
 - name: Shooting Stars!
   ids:
   - steam:415350
+  requires: []
+  tiers:
+  - 3
 - name: Randal's Monday
   ids:
   - steam:314810
+  requires: []
+  tiers:
+  - 3
 - name: 'Dead Synchronicity: Tomorrow Comes Today'
   ids:
   - steam:339190
+  requires: []
+  tiers:
+  - 3
 - name: Blackguards 2
   ids:
   - steam:314830
+  requires: []
+  tiers:
+  - 3

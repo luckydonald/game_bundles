@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: ESA Foundation All-Star Alliance Bundle — entire-8-item-bundle
-tier: 2
+name: ESA Foundation All-Star Alliance Bundle
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15941/
@@ -13,24 +15,48 @@ games:
 - name: Far Cry Primal
   ids:
   - steam:371660
+  requires: []
+  tiers:
+  - 2
 - name: Dishonored 2
   ids:
   - steam:403640
+  requires: []
+  tiers:
+  - 2
 - name: 'State of Decay 2: Juggernaut Edition'
   ids:
   - steam:495420
+  requires: []
+  tiers:
+  - 2
 - name: 'Harry Potter: Quidditch Champions'
   ids:
   - steam:2878600
+  requires: []
+  tiers:
+  - 2
 - name: 'Mafia: Trilogy'
   ids:
   - unresolved:source:isthereanydeal:15941:mafia-trilogy
+  requires: []
+  tiers:
+  - 2
 - name: Pentiment
   ids:
   - steam:1205520
+  requires: []
+  tiers:
+  - 2
 - name: Horizon Chase 2
   ids:
   - unresolved:source:isthereanydeal:15941:horizon-chase-2
+  requires: []
+  tiers:
+  - 2
 - name: Tetris® Forever
   ids:
   - steam:3180240
+  requires: []
+  tiers:
+  - 2

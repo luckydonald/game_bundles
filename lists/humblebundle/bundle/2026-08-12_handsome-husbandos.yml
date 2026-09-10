@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Handsome Husbandos — Entire 10 Item Bundle
-tier: 3
+name: Handsome Husbandos
+tiers:
+- rank: 3
+  name: Entire 10 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16476/
@@ -24,77 +26,95 @@ games:
   - steam:512180
   - isthereanydeal:nightshade-bai-hua-bai-lang
   requires: []
+  tiers:
+  - 3
 - name: Steam Prison
   ids:
   - steam:977460
   - isthereanydeal:steam-prison
   requires: []
+  tiers:
+  - 3
 - name: '​Our Life: Beginnings & Always - Cove Wedding Story'
   ids:
   - steam:1854710
   - isthereanydeal:our-life-beginnings-and-always-cove-wedding-story
   requires: []
+  tiers:
+  - 3
 - name: 'Our Life: Beginnings & Always - Baxter''s Story'
   ids:
   - steam:2365280
   - isthereanydeal:our-life-beginnings-and-always-baxters-story
   requires: []
+  tiers:
+  - 3
 - name: 'Our Life: Beginnings & Always - Derek''s Story'
   ids:
   - steam:2015100
   - isthereanydeal:our-life-beginnings-and-always-dereks-story
   requires: []
+  tiers:
+  - 3
 - name: '​Our Life: Beginnings & Always - Step 3 Expansion'
   ids:
   - steam:1464062
   - isthereanydeal:our-life-beginnings-and-always-step-3-expansion
   requires: []
+  tiers:
+  - 3
 - name: '​Our Life: Beginnings & Always - Step 2 Expansion'
   ids:
   - steam:1464061
   - isthereanydeal:our-life-beginnings-and-always-step-2-expansion
   requires: []
+  tiers:
+  - 3
 - name: '​Our Life: Beginnings & Always - Step 1 Expansion'
   ids:
   - steam:1464060
   - isthereanydeal:our-life-beginnings-and-always-step-1-expansion
   requires: []
+  tiers:
+  - 3
 - name: OZMAFIA!!
   ids:
   - steam:303290
   - isthereanydeal:ozmafia
   requires: []
+  tiers:
+  - 3
 - name: DesperaDrops
   ids:
   - steam:3291080
   - isthereanydeal:desperadrops
   requires: []
+  tiers:
+  - 3
 - name: Fashioning Little Miss Lonesome
   ids:
   - steam:640990
   - isthereanydeal:fashioning-little-miss-lonesome
   requires: []
+  tiers:
+  - 3
 - name: A Date with Death Deluxe DLC Pack
   ids:
   - unresolved:source:humblebundle:adatewithdeathdeluxedlcpack
   requires: []
+  tiers:
+  - 3
 - name: MAMIYA
   ids:
   - steam:1394930
   - isthereanydeal:mamiya
   requires: []
+  tiers:
+  - 3
 - name: Bakumatsu Renka SHINSENGUMI
   ids:
   - steam:1451160
   - isthereanydeal:bakumatsu-renka-shinsengumi
   requires: []
-invalid:
-- name: 'Our Life: Beginnings & Always: DLC Pack'
-  ids:
-  - unresolved:source:humblebundle:ourlife_beginningsandalways_dlcpack
-  requires: []
-- name: A Date with Death Deluxe Edition
-  ids:
-  - unresolved:source:isthereanydeal:16476:a-date-with-death-deluxe-edition
-  - isthereanydeal:a-date-with-death-deluxe-edition
-  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Wired's Safe in our World Anniversary Bundle — entire-13-item-bundle
-tier: 3
+name: Wired's Safe in our World Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15478/
@@ -13,39 +15,78 @@ games:
 - name: Those Who Remain
   ids:
   - steam:715380
+  requires: []
+  tiers:
+  - 3
 - name: Tin Hearts
   ids:
   - steam:1831700
+  requires: []
+  tiers:
+  - 3
 - name: Fractured Minds
   ids:
   - steam:688740
+  requires: []
+  tiers:
+  - 3
 - name: 'Tiny Troopers: Global Ops'
   ids:
   - steam:1374350
+  requires: []
+  tiers:
+  - 3
 - name: The Last Worker
   ids:
   - steam:1579280
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing'
   ids:
   - steam:396900
+  requires: []
+  tiers:
+  - 3
 - name: The Falconeer
   ids:
   - unresolved:source:isthereanydeal:15478:the-falconeer
+  requires: []
+  tiers:
+  - 3
 - name: Arcade Paradise
   ids:
   - steam:1388870
+  requires: []
+  tiers:
+  - 3
 - name: Aaero2
   ids:
   - steam:3010090
+  requires: []
+  tiers:
+  - 3
 - name: Deliver Us The Moon
   ids:
   - steam:428660
+  requires: []
+  tiers:
+  - 3
 - name: Martha is Dead
   ids:
   - steam:515960
+  requires: []
+  tiers:
+  - 3
 - name: 'Gori: Cuddly Carnage'
   ids:
   - steam:1299690
+  requires: []
+  tiers:
+  - 3
 - name: 'Bulwark Evolution: Falconeer Chronicles'
   ids:
   - steam:290100
+  requires: []
+  tiers:
+  - 3

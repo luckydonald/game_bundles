@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Akupara 5 Year Anniversary Bundle — entire-14-item-bundle
-tier: 3
+name: Akupara 5 Year Anniversary Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10748/
@@ -13,42 +15,84 @@ games:
 - name: 'Keep in Mind: Remastered'
   ids:
   - steam:643200
+  requires: []
+  tiers:
+  - 3
 - name: 'Chicken Assassin: Reloaded'
   ids:
   - steam:489610
+  requires: []
+  tiers:
+  - 3
 - name: The Metronomicon - The End Records Challenge Pack
   ids:
   - steam:674670
+  requires: []
+  tiers:
+  - 3
 - name: The Metronomicon
   ids:
   - steam:416790
+  requires: []
+  tiers:
+  - 3
 - name: 'The Metronomicon: Chiptune Challenge Pack 2'
   ids:
   - steam:522652
+  requires: []
+  tiers:
+  - 3
 - name: The Crow's Eye
   ids:
   - steam:449510
+  requires: []
+  tiers:
+  - 3
 - name: The Metronomicon - J-Punch Challenge Pack
   ids:
   - steam:558290
+  requires: []
+  tiers:
+  - 3
 - name: Whispering Willows
   ids:
   - steam:288060
+  requires: []
+  tiers:
+  - 3
 - name: 'The Metronomicon: IndieGame Challenge Pack 1'
   ids:
   - unresolved:source:isthereanydeal:10748:the-metronomicon-indiegame-challenge-pack-1
+  requires: []
+  tiers:
+  - 3
 - name: 'The Metronomicon: Chiptune Challenge Pack 1'
   ids:
   - steam:522650
+  requires: []
+  tiers:
+  - 3
 - name: Gone Viral
   ids:
   - steam:680030
+  requires: []
+  tiers:
+  - 3
 - name: Spinch
   ids:
   - steam:794240
+  requires: []
+  tiers:
+  - 3
 - name: The Darkside Detective
   ids:
   - steam:368390
+  requires: []
+  tiers:
+  - 3
 - name: Mutazione
   ids:
   - steam:1080750
+  requires: []
+  tiers:
+  - 3

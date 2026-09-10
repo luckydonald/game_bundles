@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Neptunia Bundle — entire-14-item-bundle
-tier: 3
+name: Humble Neptunia Bundle
+tiers:
+- rank: 3
+  name: entire-14-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7087/
@@ -13,42 +15,84 @@ games:
 - name: Hyperdimension Neptunia Re;Birth1
   ids:
   - steam:282900
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth 1 - Colosseum + Characters
   ids:
   - unresolved:source:isthereanydeal:7087:hyperdimension-neptunia-re-birth-1-colosseum-and-characters
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth2 Sisters Generation
   ids:
   - steam:351710
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth2 Deluxe Pack
   ids:
   - steam:532720
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth1 Deluxe Pack
   ids:
   - steam:513730
+  requires: []
+  tiers:
+  - 3
 - name: 'Amnesia™: Memories'
   ids:
   - steam:359390
+  requires: []
+  tiers:
+  - 3
 - name: 'Hyperdimension Neptunia U: Action Unleashed'
   ids:
   - steam:387340
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth3 V Generation
   ids:
   - steam:353270
+  requires: []
+  tiers:
+  - 3
 - name: 'Cyberdimension Neptunia: 4 Goddesses Online - Deluxe Pack'
   ids:
   - steam:730720
+  requires: []
+  tiers:
+  - 3
 - name: Hyperdimension Neptunia Re;Birth3 Deluxe Pack
   ids:
   - steam:545020
+  requires: []
+  tiers:
+  - 3
 - name: Megadimension Neptunia VIIR - Deluxe Pack
   ids:
   - steam:847423
+  requires: []
+  tiers:
+  - 3
 - name: Megadimension Neptunia VII R
   ids:
   - unresolved:source:isthereanydeal:7087:megadimension-neptunia-vii-r
+  requires: []
+  tiers:
+  - 3
 - name: Megadimension Neptunia VII
   ids:
   - steam:460120
+  requires: []
+  tiers:
+  - 3
 - name: Megadimension Neptunia VII Deluxe Set
   ids:
   - steam:488340
+  requires: []
+  tiers:
+  - 3

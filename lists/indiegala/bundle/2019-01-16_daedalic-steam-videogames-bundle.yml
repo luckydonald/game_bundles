@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Daedalic Entertainment Bundle — Tier 3
-tier: 3
+name: Daedalic Entertainment Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6921/
@@ -13,30 +15,60 @@ games:
 - name: The Whispered World Special Edition
   ids:
   - steam:268540
+  requires: []
+  tiers:
+  - 3
 - name: A New Beginning - Final Cut
   ids:
   - steam:105000
+  requires: []
+  tiers:
+  - 3
 - name: Caravan
   ids:
   - steam:352890
+  requires: []
+  tiers:
+  - 3
 - name: The Franz Kafka Videogame
   ids:
   - steam:392280
+  requires: []
+  tiers:
+  - 3
 - name: Blackguards
   ids:
   - steam:249650
+  requires: []
+  tiers:
+  - 3
 - name: Deponia
   ids:
   - steam:214340
+  requires: []
+  tiers:
+  - 3
 - name: 'The Dark Eye: Chains of Satinav'
   ids:
   - steam:203830
+  requires: []
+  tiers:
+  - 3
 - name: Crazy Machines 3
   ids:
   - steam:351920
+  requires: []
+  tiers:
+  - 3
 - name: Anna's Quest
   ids:
   - steam:327220
+  requires: []
+  tiers:
+  - 3
 - name: Candle
   ids:
   - steam:420060
+  requires: []
+  tiers:
+  - 3

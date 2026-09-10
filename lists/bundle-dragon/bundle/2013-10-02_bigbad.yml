@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Big Bad Bundle — Tier 3
-tier: 3
+name: Big Bad Bundle
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/335/
@@ -13,18 +15,36 @@ games:
 - name: Hamlet
   ids:
   - steam:673580
+  requires: []
+  tiers:
+  - 3
 - name: Hack, Slash, Loot
   ids:
   - steam:207430
+  requires: []
+  tiers:
+  - 3
 - name: Tobe's Vertical Adventure
   ids:
   - steam:105700
+  requires: []
+  tiers:
+  - 3
 - name: Adventures of Shuggy
   ids:
   - steam:211440
+  requires: []
+  tiers:
+  - 3
 - name: Cargo Commander
   ids:
   - steam:220460
+  requires: []
+  tiers:
+  - 3
 - name: Vessel
   ids:
   - steam:108500
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Gems Bundle 2 — entire-10-item-bundle
-tier: 3
+name: Humble Gems Bundle 2
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5509/
@@ -13,30 +15,60 @@ games:
 - name: Tattletail
   ids:
   - steam:568090
+  requires: []
+  tiers:
+  - 3
 - name: Hustle Cat
   ids:
   - steam:453340
+  requires: []
+  tiers:
+  - 3
 - name: The Count Lucanor
   ids:
   - steam:440880
+  requires: []
+  tiers:
+  - 3
 - name: Apotheon
   ids:
   - steam:208750
+  requires: []
+  tiers:
+  - 3
 - name: Pinstripe Original Soundtrack
   ids:
   - steam:332740
+  requires: []
+  tiers:
+  - 3
 - name: Pinstripe
   ids:
   - steam:331480
+  requires: []
+  tiers:
+  - 3
 - name: Slayaway Camp
   ids:
   - steam:530390
+  requires: []
+  tiers:
+  - 3
 - name: Has-Been Heroes
   ids:
   - steam:492290
+  requires: []
+  tiers:
+  - 3
 - name: Cryptark Soundtrack
   ids:
   - steam:424120
+  requires: []
+  tiers:
+  - 3
 - name: Cryptark
   ids:
   - steam:344740
+  requires: []
+  tiers:
+  - 3

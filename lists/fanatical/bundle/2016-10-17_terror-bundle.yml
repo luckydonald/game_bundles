@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Terror Bundle — Tier 2
-tier: 2
+name: Terror Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4208/
@@ -13,24 +15,48 @@ games:
 - name: Lucius
   ids:
   - steam:218640
+  requires: []
+  tiers:
+  - 2
 - name: Dead But Alive! Southern England
   ids:
   - unresolved:source:isthereanydeal:4208:dead-but-alive-southern-england
+  requires: []
+  tiers:
+  - 2
 - name: Apartment 666
   ids:
   - steam:375680
+  requires: []
+  tiers:
+  - 2
 - name: The Lady
   ids:
   - steam:341060
+  requires: []
+  tiers:
+  - 2
 - name: '"The Grandfather"'
   ids:
   - steam:433750
+  requires: []
+  tiers:
+  - 2
 - name: Existentia
   ids:
   - unresolved:source:isthereanydeal:4208:existentia
+  requires: []
+  tiers:
+  - 2
 - name: In Between
   ids:
   - steam:388420
+  requires: []
+  tiers:
+  - 2
 - name: 'Trapped Dead: Lockdown'
   ids:
   - steam:305500
+  requires: []
+  tiers:
+  - 2

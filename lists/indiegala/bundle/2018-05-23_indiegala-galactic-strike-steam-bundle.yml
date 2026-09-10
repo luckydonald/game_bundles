@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Galactic Strike Bundle — Tier 2
-tier: 2
+name: Galactic Strike Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6162/
@@ -13,30 +15,60 @@ games:
 - name: Sudoku
   ids:
   - unresolved:source:isthereanydeal:6162:sudoku
+  requires: []
+  tiers:
+  - 2
 - name: 'Reroll: Back to the throne'
   ids:
   - unresolved:source:isthereanydeal:6162:reroll-back-to-the-throne
+  requires: []
+  tiers:
+  - 2
 - name: The Battle for the Hut
   ids:
   - unresolved:source:isthereanydeal:6162:the-battle-for-the-hut
+  requires: []
+  tiers:
+  - 2
 - name: The Mooseman
   ids:
   - steam:574310
+  requires: []
+  tiers:
+  - 2
 - name: Galactic Crew
   ids:
   - unresolved:source:isthereanydeal:6162:galactic-crew
+  requires: []
+  tiers:
+  - 2
 - name: The Adventurous Four
   ids:
   - steam:815070
+  requires: []
+  tiers:
+  - 2
 - name: Strike Team Hydra
   ids:
   - steam:716050
+  requires: []
+  tiers:
+  - 2
 - name: Poly Towns
   ids:
   - steam:438730
+  requires: []
+  tiers:
+  - 2
 - name: Lobster Empire
   ids:
   - steam:665960
+  requires: []
+  tiers:
+  - 2
 - name: Bernackels' Shoggoth
   ids:
   - steam:737690
+  requires: []
+  tiers:
+  - 2

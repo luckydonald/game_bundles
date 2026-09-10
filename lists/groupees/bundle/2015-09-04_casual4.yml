@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Casual Bundle 4 — Tier 2
-tier: 2
+name: Casual Bundle 4
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2412/
@@ -13,30 +15,60 @@ games:
 - name: Streets of Chaos
   ids:
   - unresolved:source:isthereanydeal:2412:streets-of-chaos
+  requires: []
+  tiers:
+  - 2
 - name: TeraBlaster
   ids:
   - steam:384150
+  requires: []
+  tiers:
+  - 2
 - name: Gnomes Garden
   ids:
   - steam:415830
+  requires: []
+  tiers:
+  - 2
 - name: Hospital Manager
   ids:
   - steam:348290
+  requires: []
+  tiers:
+  - 2
 - name: Streets of Chaos - Conspiracy Expansion Pack
   ids:
   - unresolved:source:isthereanydeal:2412:streets-of-chaos-conspiracy-expansion-pack
+  requires: []
+  tiers:
+  - 2
 - name: 'Day D: Tower Rush'
   ids:
   - steam:423550
+  requires: []
+  tiers:
+  - 2
 - name: Hills of Glory 3D
   ids:
   - steam:317920
+  requires: []
+  tiers:
+  - 2
 - name: School Bus Fun
   ids:
   - steam:301990
+  requires: []
+  tiers:
+  - 2
 - name: 'Playing History: The Plague'
   ids:
   - steam:395920
+  requires: []
+  tiers:
+  - 2
 - name: Prehistorik
   ids:
   - steam:745870
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Panzer Corps Bundle — Tier 4
-tier: 4
+name: Panzer Corps Bundle
+tiers:
+- rank: 4
+  name: Tier 4
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6899/
@@ -13,48 +15,96 @@ games:
 - name: Panzer Corps
   ids:
   - unresolved:source:isthereanydeal:6899:panzer-corps
+  requires: []
+  tiers:
+  - 4
 - name: 'Panzer Corps: Grand Campaign ''39'
   ids:
   - steam:276550
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '42
   ids:
   - steam:279962
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '42-'43
   ids:
   - steam:279963
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '40
   ids:
   - steam:279960
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '41
   ids:
   - steam:279961
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '43
   ids:
   - steam:279964
+  requires: []
+  tiers:
+  - 4
 - name: 'Panzer Corps: Afrika Korps'
   ids:
   - steam:276551
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '45 West
   ids:
   - steam:279968
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '44 West
   ids:
   - steam:279966
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '44 East
   ids:
   - steam:279965
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Grand Campaign '45 East
   ids:
   - steam:279967
+  requires: []
+  tiers:
+  - 4
 - name: 'Panzer Corps: U.S. Corps ''44-''45'
   ids:
   - steam:452982
+  requires: []
+  tiers:
+  - 4
 - name: 'Panzer Corps: U.S. Corps ''42'
   ids:
   - steam:452980
+  requires: []
+  tiers:
+  - 4
 - name: Panzer Corps Sea Lion
   ids:
   - steam:389420
+  requires: []
+  tiers:
+  - 4
 - name: 'Panzer Corps: U.S. Corps ''43'
   ids:
   - steam:452981
+  requires: []
+  tiers:
+  - 4

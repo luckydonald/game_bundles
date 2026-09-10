@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: '11 Bit Studios: The Complete Collection Bundle — entire-21-item-bundle'
-tier: 3
+name: '11 Bit Studios: The Complete Collection Bundle'
+tiers:
+- rank: 3
+  name: entire-21-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12393/
@@ -13,63 +15,126 @@ games:
 - name: Anomaly 2
   ids:
   - steam:236730
+  requires: []
+  tiers:
+  - 3
 - name: SPACECOM
   ids:
   - steam:263860
+  requires: []
+  tiers:
+  - 3
 - name: Anomaly Defenders
   ids:
   - steam:294750
+  requires: []
+  tiers:
+  - 3
 - name: Anomaly Warzone Earth
   ids:
   - steam:91200
+  requires: []
+  tiers:
+  - 3
 - name: Anomaly Korea
   ids:
   - steam:251530
+  requires: []
+  tiers:
+  - 3
 - name: 'This War of Mine: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:12393:this-war-of-mine-complete-edition
+  requires: []
+  tiers:
+  - 3
 - name: Beat Cop
   ids:
   - steam:461950
+  requires: []
+  tiers:
+  - 3
 - name: Tower 57
   ids:
   - steam:530950
+  requires: []
+  tiers:
+  - 3
 - name: Children of Morta
   ids:
   - steam:330020
+  requires: []
+  tiers:
+  - 3
 - name: Moonlighter
   ids:
   - steam:606150
+  requires: []
+  tiers:
+  - 3
 - name: Frostpunk
   ids:
   - steam:323190
+  requires: []
+  tiers:
+  - 3
 - name: Moonlighter - Between Dimensions
   ids:
   - steam:1121580
+  requires: []
+  tiers:
+  - 3
 - name: 'Frostpunk: The Last Autumn'
   ids:
   - steam:1146960
+  requires: []
+  tiers:
+  - 3
 - name: 'Frostpunk: The Rifts'
   ids:
   - steam:1125020
+  requires: []
+  tiers:
+  - 3
 - name: 'Frostpunk: Digital Artbook'
   ids:
   - steam:1103840
+  requires: []
+  tiers:
+  - 3
 - name: Frostpunk Original Soundtrack
   ids:
   - steam:966350
+  requires: []
+  tiers:
+  - 3
 - name: 'Frostpunk: On The Edge'
   ids:
   - steam:1147010
+  requires: []
+  tiers:
+  - 3
 - name: 'Children of Morta: Paws and Claws'
   ids:
   - steam:1317160
+  requires: []
+  tiers:
+  - 3
 - name: 'Children of Morta: Family Fireside Fables'
   ids:
   - steam:1556830
+  requires: []
+  tiers:
+  - 3
 - name: 'Children of Morta: Ancient Spirits'
   ids:
   - steam:1648880
+  requires: []
+  tiers:
+  - 3
 - name: South of the Circle
   ids:
   - steam:1811040
+  requires: []
+  tiers:
+  - 3

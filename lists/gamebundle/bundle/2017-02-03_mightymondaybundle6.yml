@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mighty Monday GameBundle 6 — Beat The Average + $0.40
-tier: 3
+name: The Mighty Monday GameBundle 6
+tiers:
+- rank: 3
+  name: Beat The Average + $0.40
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4718/
@@ -13,27 +15,54 @@ games:
 - name: Run Rabbit Run
   ids:
   - steam:409560
+  requires: []
+  tiers:
+  - 3
 - name: 'Chopper: Lethal darkness'
   ids:
   - unresolved:source:isthereanydeal:4718:chopper-lethal-darkness
+  requires: []
+  tiers:
+  - 3
 - name: 'Defense of Egypt: Cleopatra Mission'
   ids:
   - steam:534010
+  requires: []
+  tiers:
+  - 3
 - name: Platformica
   ids:
   - unresolved:source:isthereanydeal:4718:platformica
+  requires: []
+  tiers:
+  - 3
 - name: Haven
   ids:
   - steam:983970
+  requires: []
+  tiers:
+  - 3
 - name: CHEXS
   ids:
   - steam:511810
+  requires: []
+  tiers:
+  - 3
 - name: Kings under the hill
   ids:
   - unresolved:source:isthereanydeal:4718:kings-under-the-hill
+  requires: []
+  tiers:
+  - 3
 - name: Space Journey
   ids:
   - steam:1010520
+  requires: []
+  tiers:
+  - 3
 - name: SLG Remix
   ids:
   - steam:454230
+  requires: []
+  tiers:
+  - 3

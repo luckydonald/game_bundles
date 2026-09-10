@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Metro Mania: Planes, Trains, and Automobiles! Bundle — entire-8-item-bundle'
-tier: 2
+name: 'Metro Mania: Planes, Trains, and Automobiles! Bundle'
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15977/
@@ -13,24 +15,48 @@ games:
 - name: SimplePlanes
   ids:
   - steam:397340
+  requires: []
+  tiers:
+  - 2
 - name: 'Juno: New Origins'
   ids:
   - steam:870200
+  requires: []
+  tiers:
+  - 2
 - name: The Slaverian Trucker
   ids:
   - steam:1822450
+  requires: []
+  tiers:
+  - 2
 - name: Super Loco World - Cozy Train Automation
   ids:
   - steam:3109280
+  requires: []
+  tiers:
+  - 2
 - name: Railroads Online
   ids:
   - steam:1696810
+  requires: []
+  tiers:
+  - 2
 - name: Railbound
   ids:
   - steam:1967510
+  requires: []
+  tiers:
+  - 2
 - name: 'Expeditions: A MudRunner Game'
   ids:
   - steam:2477340
+  requires: []
+  tiers:
+  - 2
 - name: You Suck at Parking Complete Edition
   ids:
   - steam:837880
+  requires: []
+  tiers:
+  - 2

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Seven Deadly Sims Bundle — entire-7-item-bundle
-tier: 3
+name: Seven Deadly Sims Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10359/
@@ -13,21 +15,42 @@ games:
 - name: Bridge Constructor Portal
   ids:
   - steam:684410
+  requires: []
+  tiers:
+  - 3
 - name: Total Tank Simulator
   ids:
   - steam:674500
+  requires: []
+  tiers:
+  - 3
 - name: Police Stories
   ids:
   - steam:539470
+  requires: []
+  tiers:
+  - 3
 - name: 'theHunter™: Call of the Wild'
   ids:
   - steam:518790
+  requires: []
+  tiers:
+  - 3
 - name: Lobotomy Corporation | Monster Management Simulation
   ids:
   - steam:568220
+  requires: []
+  tiers:
+  - 3
 - name: 'Ancestors: The Humankind Odyssey'
   ids:
   - steam:536270
+  requires: []
+  tiers:
+  - 3
 - name: Tank Mechanic Simulator
   ids:
   - steam:407130
+  requires: []
+  tiers:
+  - 3

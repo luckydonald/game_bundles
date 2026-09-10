@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Warfare Bundle — Tier 2
-tier: 2
+name: Indie Warfare Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7172/
@@ -13,27 +15,54 @@ games:
 - name: You Deserve
   ids:
   - steam:502240
+  requires: []
+  tiers:
+  - 2
 - name: Puzlogic
   ids:
   - steam:865220
+  requires: []
+  tiers:
+  - 2
 - name: Red Tractor Tycoon
   ids:
   - steam:984250
+  requires: []
+  tiers:
+  - 2
 - name: Zombie Playground
   ids:
   - steam:215550
+  requires: []
+  tiers:
+  - 2
 - name: Vox Populi Vox Dei 2
   ids:
   - steam:345120
+  requires: []
+  tiers:
+  - 2
 - name: We Are The Dwarves
   ids:
   - steam:395570
+  requires: []
+  tiers:
+  - 2
 - name: Voxel Warfare Online
   ids:
   - unresolved:source:isthereanydeal:7172:voxel-warfare-online
+  requires: []
+  tiers:
+  - 2
 - name: Bully Beatdown
   ids:
   - steam:793600
+  requires: []
+  tiers:
+  - 2
 - name: Subsideria
   ids:
   - steam:797610
+  requires: []
+  tiers:
+  - 2

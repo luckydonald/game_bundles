@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Monday Motivation Bundle #45 — Tier 2'
-tier: 2
+name: 'Monday Motivation Bundle #45'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6006/
@@ -13,36 +15,72 @@ games:
 - name: Razerwire:Nanowars
   ids:
   - steam:788930
+  requires: []
+  tiers:
+  - 2
 - name: Lost in Space
   ids:
   - steam:1731940
+  requires: []
+  tiers:
+  - 2
 - name: I'm Lost
   ids:
   - steam:737530
+  requires: []
+  tiers:
+  - 2
 - name: Domino Dungeon
   ids:
   - steam:718140
+  requires: []
+  tiers:
+  - 2
 - name: Food Hunter
   ids:
   - unresolved:source:isthereanydeal:6006:food-hunter
+  requires: []
+  tiers:
+  - 2
 - name: WizardCraft
   ids:
   - steam:451900
+  requires: []
+  tiers:
+  - 2
 - name: Alien Hallway 2
   ids:
   - steam:656450
+  requires: []
+  tiers:
+  - 2
 - name: Toon War
   ids:
   - steam:803780
+  requires: []
+  tiers:
+  - 2
 - name: The Lone Chameleon
   ids:
   - steam:808580
+  requires: []
+  tiers:
+  - 2
 - name: Invert
   ids:
   - steam:1774700
+  requires: []
+  tiers:
+  - 2
 - name: Live
   ids:
   - steam:696060
+  requires: []
+  tiers:
+  - 2
 - name: The Monk and the Warrior. The Heart of the King.
   ids:
   - steam:732060
+  requires: []
+  tiers:
+  - 2

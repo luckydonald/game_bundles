@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Classics Return Bundle — entire-10-item-bundle
-tier: 3
+name: Humble Classics Return Bundle
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5912/
@@ -13,30 +15,60 @@ games:
 - name: 'Shadowrun: Dragonfall - Director''s Cut'
   ids:
   - steam:300550
+  requires: []
+  tiers:
+  - 3
 - name: 'Broken Sword 5: The Serpent''s Curse'
   ids:
   - steam:262940
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Returns
   ids:
   - steam:234650
+  requires: []
+  tiers:
+  - 3
 - name: 'Tesla Effect: A Tex Murphy Adventure'
   ids:
   - steam:261510
+  requires: []
+  tiers:
+  - 3
 - name: Xenonauts
   ids:
   - steam:223830
+  requires: []
+  tiers:
+  - 3
 - name: 'Wasteland 2: Director''s Cut'
   ids:
   - steam:240760
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Hong Kong - Extended Edition
   ids:
   - steam:346940
+  requires: []
+  tiers:
+  - 3
 - name: Age of Wonders III
   ids:
   - steam:226840
+  requires: []
+  tiers:
+  - 3
 - name: 'Torment: Tides of Numenera'
   ids:
   - steam:272270
+  requires: []
+  tiers:
+  - 3
 - name: 'Dreamfall Chapters: The Final Cut'
   ids:
   - steam:237850
+  requires: []
+  tiers:
+  - 3

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Retro Bundle 4 — Tier 2
-tier: 2
+name: Retro Bundle 4
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1621/
@@ -13,24 +15,48 @@ games:
 - name: RAMMHEART
   ids:
   - unresolved:source:isthereanydeal:1621:rammheart
+  requires: []
+  tiers:
+  - 2
 - name: Mighty Retro Zero
   ids:
   - unresolved:source:isthereanydeal:1621:mighty-retro-zero
+  requires: []
+  tiers:
+  - 2
 - name: Organ Biker
   ids:
   - unresolved:source:isthereanydeal:1621:organ-biker
+  requires: []
+  tiers:
+  - 2
 - name: Biology Battle
   ids:
   - unresolved:source:isthereanydeal:1621:biology-battle
+  requires: []
+  tiers:
+  - 2
 - name: MacVenture Series Collection
   ids:
   - unresolved:source:isthereanydeal:1621:macventure-series-collection
+  requires: []
+  tiers:
+  - 2
 - name: 'Earthworm Jim 1 + 2: The Whole Can ''O Worms'
   ids:
   - unresolved:source:isthereanydeal:1621:earthworm-jim-1-and-2-the-whole-can-o-worms
+  requires: []
+  tiers:
+  - 2
 - name: 'Tex Murphy: Under a Killing Moon'
   ids:
   - steam:302350
+  requires: []
+  tiers:
+  - 2
 - name: 'Aveyond: Gates of Night'
   ids:
   - steam:278490
+  requires: []
+  tiers:
+  - 2

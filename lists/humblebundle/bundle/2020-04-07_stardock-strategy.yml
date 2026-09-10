@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Stardock Strategy Bundle — entire-13-item-bundle
-tier: 3
+name: Humble Stardock Strategy Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8653/
@@ -13,39 +15,78 @@ games:
 - name: Dead Man's Draw
   ids:
   - steam:262450
+  requires: []
+  tiers:
+  - 3
 - name: 'Sorcerer King: Rivals'
   ids:
   - steam:496730
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Civilizations III - Mega Events
   ids:
   - steam:389930
+  requires: []
+  tiers:
+  - 3
 - name: Galactic Civilizations III
   ids:
   - steam:226860
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Crusade Expansion Pack'
   ids:
   - steam:527070
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Retribution Expansion'
   ids:
   - steam:976210
+  requires: []
+  tiers:
+  - 3
 - name: Star Control 3
   ids:
   - unresolved:source:isthereanydeal:8653:star-control-3
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Control: Origins - Original Soundtrack'
   ids:
   - steam:940010
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Control: Origins - Earth Rising Expansion'
   ids:
   - steam:961150
+  requires: []
+  tiers:
+  - 3
 - name: 'Galactic Civilizations III: Intrigue Expansion'
   ids:
   - steam:747060
+  requires: []
+  tiers:
+  - 3
 - name: Star Control I & II
   ids:
   - steam:358920
+  requires: []
+  tiers:
+  - 3
 - name: 'Star Control: Origins'
   ids:
   - steam:271260
+  requires: []
+  tiers:
+  - 3
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
+  requires: []
+  tiers:
+  - 3

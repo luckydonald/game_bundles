@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Endless RPG Lands Bundle — Pay $10 or more
-tier: 3
+name: Humble Endless RPG Lands Bundle
+tiers:
+- rank: 3
+  name: Pay $10 or more
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5532/
@@ -13,33 +15,66 @@ games:
 - name: Borderlands Game of the Year Edition
   ids:
   - steam:8980
+  requires: []
+  tiers:
+  - 3
 - name: The Incredible Adventures of Van Helsing Final Cut
   ids:
   - steam:400170
+  requires: []
+  tiers:
+  - 3
 - name: Wurm Unlimited
   ids:
   - steam:366220
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands 2: Mechromancer Pack'
   ids:
   - steam:213230
+  requires: []
+  tiers:
+  - 3
 - name: Borderlands 2
   ids:
   - steam:49520
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands 2: Ultimate Vault Hunters Upgrade Pack'
   ids:
   - steam:224200
+  requires: []
+  tiers:
+  - 3
 - name: Guild of Dungeoneering
   ids:
   - unresolved:source:isthereanydeal:5532:guild-of-dungeoneering
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands 2: Psycho Pack'
   ids:
   - steam:230090
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands 2: Ultimate Vault Hunter Upgrade Pack 2: Digistruct Peak Challenge'
   ids:
   - steam:224180
+  requires: []
+  tiers:
+  - 3
 - name: Endless Legend - Classic Edition
   ids:
   - unresolved:source:isthereanydeal:5532:endless-legend-classic-edition
+  requires: []
+  tiers:
+  - 3
 - name: 'Borderlands: The Pre-Sequel'
   ids:
   - steam:261640
+  requires: []
+  tiers:
+  - 3

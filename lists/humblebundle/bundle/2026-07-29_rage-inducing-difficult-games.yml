@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rage 🤬️ Inducing Difficult Games — 10 Item Bundle
-tier: 2
+name: Rage 🤬️ Inducing Difficult Games
+tiers:
+- rank: 2
+  name: 10 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16434/
@@ -14,39 +16,69 @@ games:
   ids:
   - steam:240720
   - isthereanydeal:getting-over-it-with-bennett-foddy
+  requires: []
+  tiers:
+  - 2
 - name: 'Pogostuck: Rage With Your Friends'
   ids:
   - steam:688130
   - isthereanydeal:pogostuck-rage-with-your-friends
+  requires: []
+  tiers:
+  - 2
 - name: Never Give Up
   ids:
   - steam:609420
   - isthereanydeal:never-give-up--1
+  requires: []
+  tiers:
+  - 2
 - name: Splodey
   ids:
   - steam:2204170
   - isthereanydeal:splodey
+  requires: []
+  tiers:
+  - 2
 - name: Ghostrunner
   ids:
   - steam:1139900
   - isthereanydeal:ghostrunner
+  requires: []
+  tiers:
+  - 2
 - name: Jump King
   ids:
   - steam:1061090
   - isthereanydeal:jump-king
+  requires: []
+  tiers:
+  - 2
 - name: Lorn's Lure
   ids:
   - steam:1417930
   - isthereanydeal:lorns-lure
+  requires: []
+  tiers:
+  - 2
 - name: GRIME - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:16434:grime-deluxe-edition
   - isthereanydeal:grime-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'Aeterna: Darkness Megapack'
   ids:
   - unresolved:source:isthereanydeal:16434:aeterna-darkness-megapack
   - isthereanydeal:aeterna-darkness-megapack
+  requires: []
+  tiers:
+  - 2
 - name: Egging On
   ids:
   - steam:2897610
   - isthereanydeal:egging-on
+  requires: []
+  tiers:
+  - 2

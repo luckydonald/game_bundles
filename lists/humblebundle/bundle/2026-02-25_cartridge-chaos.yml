@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Cartridge Chaos Bundle — entire-8-item-bundle
-tier: 2
+name: Cartridge Chaos Bundle
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/15913/
@@ -13,24 +15,48 @@ games:
 - name: 'Anodyne 2: Return to Dust'
   ids:
   - steam:877810
+  requires: []
+  tiers:
+  - 2
 - name: Super Indie Karts
   ids:
   - steam:323670
+  requires: []
+  tiers:
+  - 2
 - name: Super Magbot
   ids:
   - steam:1205170
+  requires: []
+  tiers:
+  - 2
 - name: Astrodogs
   ids:
   - steam:1301230
+  requires: []
+  tiers:
+  - 2
 - name: Shantae and the Pirate's Curse
   ids:
   - steam:345820
+  requires: []
+  tiers:
+  - 2
 - name: Vengeful Guardian Moonrider
   ids:
   - steam:1942010
+  requires: []
+  tiers:
+  - 2
 - name: Corn Kidz 64
   ids:
   - steam:2575900
+  requires: []
+  tiers:
+  - 2
 - name: 'Mighty Morphin Power Rangers: Rita''s Rewind'
   ids:
   - steam:2816870
+  requires: []
+  tiers:
+  - 2

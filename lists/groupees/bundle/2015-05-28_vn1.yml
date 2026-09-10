@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Doujin Visual Novel #1 — Tier 3'
-tier: 3
+name: 'Doujin Visual Novel #1'
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2060/
@@ -13,18 +15,36 @@ games:
 - name: Nicole
   ids:
   - steam:307190
+  requires: []
+  tiers:
+  - 3
 - name: Go! Go! Nippon! ~My First Trip to Japan~
   ids:
   - steam:251870
+  requires: []
+  tiers:
+  - 3
 - name: Deus Machina Demonbane
   ids:
   - unresolved:source:isthereanydeal:2060:deus-machina-demonbane
+  requires: []
+  tiers:
+  - 3
 - name: Aselia the Eternal
   ids:
   - unresolved:source:isthereanydeal:2060:aselia-the-eternal
+  requires: []
+  tiers:
+  - 3
 - name: Edelweiss
   ids:
   - steam:2379730
+  requires: []
+  tiers:
+  - 3
 - name: Obscene Medical Records of a Married Nurse
   ids:
   - steam:2222890
+  requires: []
+  tiers:
+  - 3

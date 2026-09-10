@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Shantae & Heroic Heroines — Entire 10 Item Bundle
-tier: 3
+name: Shantae & Heroic Heroines
+tiers:
+- rank: 3
+  name: Entire 10 Item Bundle
 references:
 - name: Humble Bundle offer
   url: https://www.humblebundle.com/games/shantae-heroic-heroines
@@ -24,43 +26,61 @@ games:
   - steam:764300
   - isthereanydeal:shantae-half-genie-hero-ultimate-edition
   requires: []
+  tiers:
+  - 3
 - name: Shantae and the Seven Sirens
   ids:
   - steam:1191630
   - isthereanydeal:shantae-and-the-seven-sirens
   requires: []
+  tiers:
+  - 3
 - name: River City Girls
   ids:
   - steam:1049320
   - isthereanydeal:river-city-girls
   requires: []
+  tiers:
+  - 3
 - name: Shantae and the Pirate's Curse
   ids:
   - steam:345820
   - isthereanydeal:shantae-and-the-pirates-curse
   requires: []
+  tiers:
+  - 3
 - name: 'RWBY: Arrowfell'
   ids:
   - steam:1982150
   - isthereanydeal:rwby-arrowfell
   requires: []
+  tiers:
+  - 3
 - name: Mighty Switch Force! Collection
   ids:
   - steam:832320
   - isthereanydeal:mighty-switch-force-collection
   requires: []
+  tiers:
+  - 3
 - name: 'Shantae: Risky''s Revenge - Director''s Cut'
   ids:
   - steam:277890
   - isthereanydeal:shantae-riskys-revenge-directors-cut
   requires: []
+  tiers:
+  - 3
 - name: Spidersaurs
   ids:
   - steam:1191620
   - isthereanydeal:spidersaurs
   requires: []
+  tiers:
+  - 3
 - name: Mighty Switch Force! Hose It Down
   ids:
   - steam:375310
   - isthereanydeal:mighty-switch-force-hose-it-down
   requires: []
+  tiers:
+  - 3

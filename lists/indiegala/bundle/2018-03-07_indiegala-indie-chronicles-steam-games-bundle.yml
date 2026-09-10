@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Chronicles Bundle — Tier 2
-tier: 2
+name: Indie Chronicles Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5958/
@@ -13,36 +15,72 @@ games:
 - name: Clash of Castle
   ids:
   - steam:787250
+  requires: []
+  tiers:
+  - 2
 - name: SurvivalZ
   ids:
   - steam:799500
+  requires: []
+  tiers:
+  - 2
 - name: AltCoin
   ids:
   - unresolved:source:isthereanydeal:5958:altcoin
+  requires: []
+  tiers:
+  - 2
 - name: Planet Ancyra Chronicles
   ids:
   - unresolved:source:isthereanydeal:5958:planet-ancyra-chronicles
+  requires: []
+  tiers:
+  - 2
 - name: Dab, Dance & Twerk
   ids:
   - unresolved:source:isthereanydeal:5958:dab-dance-and-twerk
+  requires: []
+  tiers:
+  - 2
 - name: Gates of Horizon 4 Pack
   ids:
   - unresolved:source:isthereanydeal:5958:gates-of-horizon-4-pack
+  requires: []
+  tiers:
+  - 2
 - name: Whispering Willows
   ids:
   - steam:288060
+  requires: []
+  tiers:
+  - 2
 - name: OSES
   ids:
   - steam:704990
+  requires: []
+  tiers:
+  - 2
 - name: Tyde Pod Challenge
   ids:
   - unresolved:source:isthereanydeal:5958:tyde-pod-challenge
+  requires: []
+  tiers:
+  - 2
 - name: The Lost Gardens
   ids:
   - steam:734700
+  requires: []
+  tiers:
+  - 2
 - name: Project Velocity
   ids:
   - steam:776440
+  requires: []
+  tiers:
+  - 2
 - name: Star Tactics Redux
   ids:
   - steam:503950
+  requires: []
+  tiers:
+  - 2

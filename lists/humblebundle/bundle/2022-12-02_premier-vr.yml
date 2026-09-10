@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Premiere VR Bundle — entire-7-item-bundle
-tier: 2
+name: Premiere VR Bundle
+tiers:
+- rank: 2
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/12619/
@@ -13,21 +15,42 @@ games:
 - name: DOOM VFR
   ids:
   - steam:650000
+  requires: []
+  tiers:
+  - 2
 - name: Arizona Sunshine
   ids:
   - unresolved:source:isthereanydeal:12619:arizona-sunshine
+  requires: []
+  tiers:
+  - 2
 - name: 'Cave Digger 2: Dig Harder'
   ids:
   - steam:1523510
+  requires: []
+  tiers:
+  - 2
 - name: Bean Stalker
   ids:
   - steam:1704080
+  requires: []
+  tiers:
+  - 2
 - name: Vox Machinae
   ids:
   - steam:334540
+  requires: []
+  tiers:
+  - 2
 - name: After the Fall® - Launch Edition
   ids:
   - unresolved:source:isthereanydeal:12619:after-the-fall-launch-edition
+  requires: []
+  tiers:
+  - 2
 - name: Cosmonious High
   ids:
   - steam:1491490
+  requires: []
+  tiers:
+  - 2

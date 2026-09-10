@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Assassin's Creed Bundle — $15 Tier
-tier: 3
+name: Humble Assassin's Creed Bundle
+tiers:
+- rank: 3
+  name: $15 Tier
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4575/
@@ -13,30 +15,60 @@ games:
 - name: 'Assassin''s Creed® Chronicles: China'
   ids:
   - steam:354380
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed™ Director's Cut Edition
   ids:
   - steam:15100
+  requires: []
+  tiers:
+  - 3
 - name: 'Assassin''s Creed® Chronicles: Russia'
   ids:
   - steam:359600
+  requires: []
+  tiers:
+  - 3
 - name: 'Assassin''s Creed® Chronicles: India'
   ids:
   - steam:359610
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed® III
   ids:
   - unresolved:source:isthereanydeal:4575:assassins-creed-iii
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed Liberation HD
   ids:
   - steam:260210
+  requires: []
+  tiers:
+  - 3
 - name: 'Assassin''s Creed® III: The Tyranny of King Washington Part 1 - The Infamy'
   ids:
   - unresolved:source:isthereanydeal:4575:assassins-creed-iii-the-tyranny-of-king-washington-part-1-the-infamy
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed 2 Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:4575:assassins-creed-2-deluxe-edition
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed Unity
   ids:
   - steam:289650
+  requires: []
+  tiers:
+  - 3
 - name: Assassin's Creed Brotherhood
   ids:
   - steam:48190
+  requires: []
+  tiers:
+  - 3

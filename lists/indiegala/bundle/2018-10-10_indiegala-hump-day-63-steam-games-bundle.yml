@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #63 — Includes Tier 1'
-tier: 2
+name: 'Hump Day Bundle #63'
+tiers:
+- rank: 2
+  name: Includes Tier 1
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6564/
@@ -13,30 +15,60 @@ games:
 - name: Forever Home
   ids:
   - steam:718200
+  requires: []
+  tiers:
+  - 2
 - name: Captive
   ids:
   - steam:802040
+  requires: []
+  tiers:
+  - 2
 - name: Hentai Hexa Mosaic
   ids:
   - unresolved:source:isthereanydeal:6564:hentai-hexa-mosaic
+  requires: []
+  tiers:
+  - 2
 - name: Tunnels of Despair
   ids:
   - steam:635900
+  requires: []
+  tiers:
+  - 2
 - name: 'Cube Life: Island Survival'
   ids:
   - steam:760800
+  requires: []
+  tiers:
+  - 2
 - name: Puzzle Chambers
   ids:
   - steam:740410
+  requires: []
+  tiers:
+  - 2
 - name: DEBUFF
   ids:
   - steam:759850
+  requires: []
+  tiers:
+  - 2
 - name: Endless Road
   ids:
   - unresolved:source:isthereanydeal:6564:endless-road
+  requires: []
+  tiers:
+  - 2
 - name: Blink
   ids:
   - steam:447210
+  requires: []
+  tiers:
+  - 2
 - name: Squirrel Sphere
   ids:
   - steam:776790
+  requires: []
+  tiers:
+  - 2

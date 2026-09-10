@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie League Bundle — Tier 2
-tier: 2
+name: Indie League Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7243/
@@ -13,36 +15,72 @@ games:
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:
   - steam:431710
+  requires: []
+  tiers:
+  - 2
 - name: Puzzle Chambers
   ids:
   - steam:740410
+  requires: []
+  tiers:
+  - 2
 - name: Defend your Crypt
   ids:
   - steam:457450
+  requires: []
+  tiers:
+  - 2
 - name: 'Squareboy vs Bullies: Arena Edition'
   ids:
   - steam:709620
+  requires: []
+  tiers:
+  - 2
 - name: League of Evil
   ids:
   - steam:491060
+  requires: []
+  tiers:
+  - 2
 - name: 'The Deed: Dynasty'
   ids:
   - steam:460960
+  requires: []
+  tiers:
+  - 2
 - name: Jack N' Jill DX
   ids:
   - steam:873560
+  requires: []
+  tiers:
+  - 2
 - name: Death Fungeon
   ids:
   - steam:897630
+  requires: []
+  tiers:
+  - 2
 - name: 'Crown Champion: Legends of the Arena'
   ids:
   - steam:527710
+  requires: []
+  tiers:
+  - 2
 - name: AtmaSphere
   ids:
   - steam:753660
+  requires: []
+  tiers:
+  - 2
 - name: Super Destronaut DX
   ids:
   - steam:848520
+  requires: []
+  tiers:
+  - 2
 - name: TETRA's Escape
   ids:
   - steam:827460
+  requires: []
+  tiers:
+  - 2

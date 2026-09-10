@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Mighty Monday GameBundle 5 — Beat The Average + $0.40
-tier: 3
+name: The Mighty Monday GameBundle 5
+tiers:
+- rank: 3
+  name: Beat The Average + $0.40
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4717/
@@ -13,27 +15,54 @@ games:
 - name: Evertown
   ids:
   - steam:432500
+  requires: []
+  tiers:
+  - 3
 - name: Egyptian Senet
   ids:
   - steam:391580
+  requires: []
+  tiers:
+  - 3
 - name: Existentia
   ids:
   - unresolved:source:isthereanydeal:4717:existentia
+  requires: []
+  tiers:
+  - 3
 - name: Dear RED - Extended
   ids:
   - steam:453850
+  requires: []
+  tiers:
+  - 3
 - name: 'Steamalot: Epoch''s Journey'
   ids:
   - steam:361160
+  requires: []
+  tiers:
+  - 3
 - name: A Week of Circus Terror
   ids:
   - steam:498450
+  requires: []
+  tiers:
+  - 3
 - name: Wrath of Anna
   ids:
   - steam:458520
+  requires: []
+  tiers:
+  - 3
 - name: The Tower
   ids:
   - steam:310870
+  requires: []
+  tiers:
+  - 3
 - name: 'Cyber City 2157: The Visual Novel'
   ids:
   - steam:454690
+  requires: []
+  tiers:
+  - 3

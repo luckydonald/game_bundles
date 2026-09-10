@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'The VR Bundle #2 — Tier 2'
-tier: 2
+name: 'The VR Bundle #2'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6460/
@@ -13,27 +15,54 @@ games:
 - name: Fat Foods
   ids:
   - steam:779580
+  requires: []
+  tiers:
+  - 2
 - name: Tengutana
   ids:
   - steam:630070
+  requires: []
+  tiers:
+  - 2
 - name: Renzo Racer
   ids:
   - steam:605100
+  requires: []
+  tiers:
+  - 2
 - name: Lair of the Titans
   ids:
   - unresolved:source:isthereanydeal:6460:lair-of-the-titans
+  requires: []
+  tiers:
+  - 2
 - name: Let's Kill Zombies VR
   ids:
   - unresolved:source:isthereanydeal:6460:lets-kill-zombies-vr
+  requires: []
+  tiers:
+  - 2
 - name: A Story of Distress
   ids:
   - steam:791760
+  requires: []
+  tiers:
+  - 2
 - name: Diorama Worlds
   ids:
   - steam:602630
+  requires: []
+  tiers:
+  - 2
 - name: KryptCrawler
   ids:
   - steam:691590
+  requires: []
+  tiers:
+  - 2
 - name: Wonfourn
   ids:
   - steam:655980
+  requires: []
+  tiers:
+  - 2

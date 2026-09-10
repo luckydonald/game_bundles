@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble Weekly Bundle: Zen Studios 3 — Tier 2'
-tier: 2
+name: 'Humble Weekly Bundle: Zen Studios 3'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3125/
@@ -13,30 +15,60 @@ games:
 - name: Pinball FX2 - Guardians of the Galaxy Table
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-guardians-of-the-galaxy-table
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - Super League - Zen Studios F.C. Table
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-super-league-zen-studios-f-c-table
+  requires: []
+  tiers:
+  - 2
 - name: 'Pinball FX2 - Star Wars™ Pinball: Balance of the Force Pack'
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-star-wars-pinball-balance-of-the-force-pack
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - Iron & Steel Pack
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-iron-and-steel-pack
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - Venom Table
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-venom-table
+  requires: []
+  tiers:
+  - 2
 - name: 'Pinball FX2 - Marvel''s Avengers: Age of Ultron'
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-marvels-avengers-age-of-ultron
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - The Walking Dead Table
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-the-walking-dead-table
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - Marvel's Ant-Man
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-marvels-ant-man
+  requires: []
+  tiers:
+  - 2
 - name: 'Pinball FX2 - Star Wars™ Pinball: Star Wars Rebels™'
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-star-wars-pinball-star-wars-rebels
+  requires: []
+  tiers:
+  - 2
 - name: Pinball FX2 - Civil War Table
   ids:
   - unresolved:source:isthereanydeal:3125:pinball-fx2-civil-war-table
+  requires: []
+  tiers:
+  - 2

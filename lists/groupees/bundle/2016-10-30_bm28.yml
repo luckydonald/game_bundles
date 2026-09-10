@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 28 — Tier 2
-tier: 2
+name: Be Mine 28
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4276/
@@ -13,21 +15,42 @@ games:
 - name: Planet Alcatraz 2
   ids:
   - steam:389250
+  requires: []
+  tiers:
+  - 2
 - name: 'MC Lars: The Video Game'
   ids:
   - steam:541160
+  requires: []
+  tiers:
+  - 2
 - name: Save the Ninja Clan
   ids:
   - steam:566670
+  requires: []
+  tiers:
+  - 2
 - name: Midsummer Night
   ids:
   - steam:1289690
+  requires: []
+  tiers:
+  - 2
 - name: 'Strategy & Tactics: Wargame Collection'
   ids:
   - steam:338130
+  requires: []
+  tiers:
+  - 2
 - name: Blacksea Odyssey
   ids:
   - steam:369550
+  requires: []
+  tiers:
+  - 2
 - name: 'The Last Door: Season 2 - Collector''s Edition'
   ids:
   - steam:402530
+  requires: []
+  tiers:
+  - 2

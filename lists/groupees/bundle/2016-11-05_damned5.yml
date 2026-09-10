@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Bundle of the Damned 5 — Tier 2
-tier: 2
+name: Bundle of the Damned 5
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/4307/
@@ -13,15 +15,30 @@ games:
 - name: Cubium Dreams
   ids:
   - unresolved:source:isthereanydeal:4307:cubium-dreams
+  requires: []
+  tiers:
+  - 2
 - name: Trouble In The Manor
   ids:
   - steam:338530
+  requires: []
+  tiers:
+  - 2
 - name: The Shadowland
   ids:
   - steam:498620
+  requires: []
+  tiers:
+  - 2
 - name: Just Bones
   ids:
   - unresolved:source:isthereanydeal:4307:just-bones
+  requires: []
+  tiers:
+  - 2
 - name: Lucius Demake
   ids:
   - steam:364230
+  requires: []
+  tiers:
+  - 2

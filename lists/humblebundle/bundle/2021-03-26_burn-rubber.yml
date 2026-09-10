@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Burn Rubber Bundle — entire-15-item-bundle
-tier: 3
+name: Humble Burn Rubber Bundle
+tiers:
+- rank: 3
+  name: entire-15-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9875/
@@ -13,45 +15,90 @@ games:
 - name: Absolute Drift
   ids:
   - steam:320140
+  requires: []
+  tiers:
+  - 3
 - name: DiRT Rally 2.0
   ids:
   - steam:690790
+  requires: []
+  tiers:
+  - 3
 - name: 'GRIP: Combat Racing'
   ids:
   - steam:396900
+  requires: []
+  tiers:
+  - 3
 - name: Pacer
   ids:
   - steam:389670
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa
   ids:
   - steam:244210
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Ferrari 70th Anniversary Pack
   ids:
   - steam:675590
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 1
   ids:
   - steam:347990
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 3
   ids:
   - steam:423630
+  requires: []
+  tiers:
+  - 3
 - name: KartKraft
   ids:
   - steam:406350
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Dream Pack 2
   ids:
   - steam:404430
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa - Ready to Race Pack
   ids:
   - steam:619680
+  requires: []
+  tiers:
+  - 3
 - name: Assetto Corsa -Tripl3 Pack
   ids:
   - steam:509350
+  requires: []
+  tiers:
+  - 3
 - name: Monster Truck Championship
   ids:
   - steam:1209360
+  requires: []
+  tiers:
+  - 3
 - name: NASCAR Heat 5
   ids:
   - unresolved:source:isthereanydeal:9875:nascar-heat-5
+  requires: []
+  tiers:
+  - 3
 - name: NASCAR Heat 5 - Playoff Pack
   ids:
   - unresolved:source:isthereanydeal:9875:nascar-heat-5-playoff-pack
+  requires: []
+  tiers:
+  - 3

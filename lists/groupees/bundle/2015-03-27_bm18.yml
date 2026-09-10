@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 18 — Tier 2
-tier: 2
+name: Be Mine 18
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/1746/
@@ -13,27 +15,54 @@ games:
 - name: "Nicolas Eymerich Inquisitor \x96 Book 2: The Village"
   ids:
   - unresolved:source:isthereanydeal:1746:nicolas-eymerich-inquisitor-book-2-the-village
+  requires: []
+  tiers:
+  - 2
 - name: The Barbarian
   ids:
   - unresolved:source:isthereanydeal:1746:the-barbarian
+  requires: []
+  tiers:
+  - 2
 - name: Dark Scavenger
   ids:
   - steam:293880
+  requires: []
+  tiers:
+  - 2
 - name: Fabula Mortis 4 Pack
   ids:
   - steam:320790
+  requires: []
+  tiers:
+  - 2
 - name: The Forest of Doom
   ids:
   - steam:856950
+  requires: []
+  tiers:
+  - 2
 - name: Aaru's Awakening
   ids:
   - steam:294060
+  requires: []
+  tiers:
+  - 2
 - name: Relica Online RPG
   ids:
   - unresolved:source:isthereanydeal:1746:relica-online-rpg
+  requires: []
+  tiers:
+  - 2
 - name: Run or Die
   ids:
   - steam:325150
+  requires: []
+  tiers:
+  - 2
 - name: Drakensang - The River of Time
   ids:
   - steam:33770
+  requires: []
+  tiers:
+  - 2

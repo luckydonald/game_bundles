@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Narrative Bundle — entire-7-item-bundle
-tier: 3
+name: Humble Narrative Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3516/
@@ -13,21 +15,42 @@ games:
 - name: '2064: Read Only Memories'
   ids:
   - steam:330820
+  requires: []
+  tiers:
+  - 3
 - name: Her Story
   ids:
   - steam:368370
+  requires: []
+  tiers:
+  - 3
 - name: Cibele
   ids:
   - steam:408120
+  requires: []
+  tiers:
+  - 3
 - name: Broken Age
   ids:
   - steam:232790
+  requires: []
+  tiers:
+  - 3
 - name: Sorcery! Parts 1 & 2
   ids:
   - steam:411000
+  requires: []
+  tiers:
+  - 3
 - name: 80 days
   ids:
   - steam:381780
+  requires: []
+  tiers:
+  - 3
 - name: Shadowrun Hong Kong - Extended Edition
   ids:
   - steam:346940
+  requires: []
+  tiers:
+  - 3

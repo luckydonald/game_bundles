@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Brainbuster Bundle 2 — Tier 2
-tier: 2
+name: Brainbuster Bundle 2
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5584/
@@ -13,30 +15,60 @@ games:
 - name: Puzzle Cube
   ids:
   - steam:539460
+  requires: []
+  tiers:
+  - 2
 - name: Void
   ids:
   - steam:503710
+  requires: []
+  tiers:
+  - 2
 - name: Dwarflings
   ids:
   - steam:562330
+  requires: []
+  tiers:
+  - 2
 - name: Attempt[42]
   ids:
   - steam:562520
+  requires: []
+  tiers:
+  - 2
 - name: 'Construct: Escape the System'
   ids:
   - steam:497080
+  requires: []
+  tiers:
+  - 2
 - name: BeeFense
   ids:
   - unresolved:source:isthereanydeal:5584:beefense
+  requires: []
+  tiers:
+  - 2
 - name: Akin
   ids:
   - steam:487370
+  requires: []
+  tiers:
+  - 2
 - name: BoomTown! Deluxe
   ids:
   - steam:536750
+  requires: []
+  tiers:
+  - 2
 - name: Breezeblox
   ids:
   - steam:370080
+  requires: []
+  tiers:
+  - 2
 - name: Ultimate Solid
   ids:
   - steam:534200
+  requires: []
+  tiers:
+  - 2

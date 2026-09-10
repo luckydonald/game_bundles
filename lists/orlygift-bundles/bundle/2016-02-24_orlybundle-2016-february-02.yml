@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'February Bundle #2 — Tier 2'
-tier: 2
+name: 'February Bundle #2'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/3098/
@@ -13,18 +15,36 @@ games:
 - name: Memories of a Vagabond
   ids:
   - steam:307070
+  requires: []
+  tiers:
+  - 2
 - name: Botology
   ids:
   - steam:363610
+  requires: []
+  tiers:
+  - 2
 - name: Hare In The Hat
   ids:
   - steam:359810
+  requires: []
+  tiers:
+  - 2
 - name: Big Fish Legend
   ids:
   - steam:376560
+  requires: []
+  tiers:
+  - 2
 - name: 'Pre-Civilization: Marble Age'
   ids:
   - unresolved:source:isthereanydeal:3098:pre-civilization-marble-age
+  requires: []
+  tiers:
+  - 2
 - name: Princess.Loot.Pixel.Again
   ids:
   - unresolved:source:isthereanydeal:3098:princess-loot-pixel-again
+  requires: []
+  tiers:
+  - 2

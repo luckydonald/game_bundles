@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Creative Sandbox Bundle — entire-8-item-bundle
-tier: 2
+name: The Creative Sandbox Bundle
+tiers:
+- rank: 2
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/13879/
@@ -13,24 +15,48 @@ games:
 - name: From The Depths
   ids:
   - steam:268650
+  requires: []
+  tiers:
+  - 2
 - name: TerraTech Deluxe Edition
   ids:
   - steam:285920
+  requires: []
+  tiers:
+  - 2
 - name: Necesse
   ids:
   - steam:1169040
+  requires: []
+  tiers:
+  - 2
 - name: Trailmakers Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:13879:trailmakers-deluxe-edition
+  requires: []
+  tiers:
+  - 2
 - name: 'TerraTech: R&D Labs'
   ids:
   - steam:331930
+  requires: []
+  tiers:
+  - 2
 - name: My Little Universe
   ids:
   - steam:2328750
+  requires: []
+  tiers:
+  - 2
 - name: The Universim
   ids:
   - steam:352720
+  requires: []
+  tiers:
+  - 2
 - name: Above Snakes
   ids:
   - steam:1589120
+  requires: []
+  tiers:
+  - 2

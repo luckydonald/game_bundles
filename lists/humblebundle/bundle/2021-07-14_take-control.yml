@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Take Control Bundle — entire-9-item-bundle
-tier: 3
+name: Humble Take Control Bundle
+tiers:
+- rank: 3
+  name: entire-9-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10253/
@@ -13,27 +15,54 @@ games:
 - name: SimplePlanes
   ids:
   - steam:397340
+  requires: []
+  tiers:
+  - 3
 - name: Elite Dangerous
   ids:
   - steam:359320
+  requires: []
+  tiers:
+  - 3
 - name: Overload
   ids:
   - steam:448850
+  requires: []
+  tiers:
+  - 3
 - name: Rebel Galaxy Outlaw
   ids:
   - steam:910830
+  requires: []
+  tiers:
+  - 3
 - name: Heliborne
   ids:
   - unresolved:source:isthereanydeal:10253:heliborne
+  requires: []
+  tiers:
+  - 3
 - name: 'EVE: Valkyrie - Warzone'
   ids:
   - unresolved:source:isthereanydeal:10253:eve-valkyrie-warzone
+  requires: []
+  tiers:
+  - 3
 - name: War Thunder - Japanese Pacific Campaign
   ids:
   - unresolved:source:isthereanydeal:10253:war-thunder-japanese-pacific-campaign
+  requires: []
+  tiers:
+  - 3
 - name: Heliborne - Enhanced Edition
   ids:
   - steam:433530
+  requires: []
+  tiers:
+  - 3
 - name: War Thunder - USA Pacific Campaign (YP-38)
   ids:
   - unresolved:source:isthereanydeal:10253:war-thunder-usa-pacific-campaign-yp-38
+  requires: []
+  tiers:
+  - 3

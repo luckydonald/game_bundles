@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Arma 2018 Bundle — entire-13-item-bundle
-tier: 4
+name: Humble Arma 2018 Bundle
+tiers:
+- rank: 4
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6194/
@@ -13,39 +15,78 @@ games:
 - name: 'Arma: Cold War Assault'
   ids:
   - steam:65790
+  requires: []
+  tiers:
+  - 4
 - name: ArmA Gold Edition
   ids:
   - steam:65780
+  requires: []
+  tiers:
+  - 4
 - name: Arma Tactics
   ids:
   - steam:224860
+  requires: []
+  tiers:
+  - 4
 - name: ArmA 2 Operation Arrowhead
   ids:
   - steam:33930
+  requires: []
+  tiers:
+  - 4
 - name: 'Arma 2: Private Military Company'
   ids:
   - steam:65720
+  requires: []
+  tiers:
+  - 4
 - name: ArmA 2 British Armed Forces
   ids:
   - steam:65700
+  requires: []
+  tiers:
+  - 4
 - name: 'ArmA 2: Army of the Czech Republic'
   ids:
   - steam:33934
+  requires: []
+  tiers:
+  - 4
 - name: ArmA 2
   ids:
   - steam:33900
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Marksmen
   ids:
   - steam:332350
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Helicopters
   ids:
   - steam:304380
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3
   ids:
   - steam:107410
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Karts
   ids:
   - steam:288520
+  requires: []
+  tiers:
+  - 4
 - name: Arma 3 Apex Edition
   ids:
   - unresolved:source:isthereanydeal:6194:arma-3-apex-edition
+  requires: []
+  tiers:
+  - 4

@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Survive or Die Bundle — entire-7-item-bundle
-tier: 3
+name: Survive or Die Bundle
+tiers:
+- rank: 3
+  name: entire-7-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10648/
@@ -13,21 +15,42 @@ games:
 - name: How to Survive 2
   ids:
   - steam:360170
+  requires: []
+  tiers:
+  - 3
 - name: Dead In Vinland
   ids:
   - steam:573120
+  requires: []
+  tiers:
+  - 3
 - name: Die Young
   ids:
   - steam:433170
+  requires: []
+  tiers:
+  - 3
 - name: Empyrion - Galactic Survival
   ids:
   - steam:383120
+  requires: []
+  tiers:
+  - 3
 - name: The Wild Eight
   ids:
   - steam:526160
+  requires: []
+  tiers:
+  - 3
 - name: Breathedge
   ids:
   - steam:738520
+  requires: []
+  tiers:
+  - 3
 - name: SCUM
   ids:
   - steam:513710
+  requires: []
+  tiers:
+  - 3

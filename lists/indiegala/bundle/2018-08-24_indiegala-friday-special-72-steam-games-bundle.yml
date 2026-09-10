@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #72 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #72'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6407/
@@ -13,33 +15,66 @@ games:
 - name: Accurate Segmentation
   ids:
   - unresolved:source:isthereanydeal:6407:accurate-segmentation
+  requires: []
+  tiers:
+  - 2
 - name: Kenshō
   ids:
   - steam:766000
+  requires: []
+  tiers:
+  - 2
 - name: MIND TWINS - The Twisted Co-op Platformer
   ids:
   - unresolved:source:isthereanydeal:6407:mind-twins-the-twisted-co-op-platformer
+  requires: []
+  tiers:
+  - 2
 - name: Revolution 25th Anniversary Documentary
   ids:
   - unresolved:source:isthereanydeal:6407:revolution-25th-anniversary-documentary
+  requires: []
+  tiers:
+  - 2
 - name: Hive
   ids:
   - steam:251210
+  requires: []
+  tiers:
+  - 2
 - name: 'Broken Sword 5: The Serpent''s Curse'
   ids:
   - steam:262940
+  requires: []
+  tiers:
+  - 2
 - name: 5 Minutes Rage
   ids:
   - unresolved:source:isthereanydeal:6407:5-minutes-rage
+  requires: []
+  tiers:
+  - 2
 - name: Catch the Thief, If you can!
   ids:
   - steam:717760
+  requires: []
+  tiers:
+  - 2
 - name: 'Broken Sword - Shadow of the Templars: The Directors Cut'
   ids:
   - unresolved:source:isthereanydeal:6407:broken-sword-shadow-of-the-templars-the-directors-cut
+  requires: []
+  tiers:
+  - 2
 - name: Drosoph Hotel
   ids:
   - steam:717020
+  requires: []
+  tiers:
+  - 2
 - name: Dark Grim Mariupolis
   ids:
   - steam:597730
+  requires: []
+  tiers:
+  - 2

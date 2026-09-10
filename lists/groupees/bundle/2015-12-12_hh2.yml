@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Holiday Helpings 2 — For a Minimum of $3 You Also Get
-tier: 2
+name: Holiday Helpings 2
+tiers:
+- rank: 2
+  name: For a Minimum of $3 You Also Get
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2849/
@@ -13,30 +15,60 @@ games:
 - name: Manyland
   ids:
   - unresolved:source:isthereanydeal:2849:manyland
+  requires: []
+  tiers:
+  - 2
 - name: What the Dark Keeps
   ids:
   - unresolved:source:isthereanydeal:2849:what-the-dark-keeps
+  requires: []
+  tiers:
+  - 2
 - name: Steel Rain
   ids:
   - steam:387240
+  requires: []
+  tiers:
+  - 2
 - name: Lolly Joe
   ids:
   - unresolved:source:isthereanydeal:2849:lolly-joe
+  requires: []
+  tiers:
+  - 2
 - name: Cluck Yegger in Escape From The Planet of The Poultroid
   ids:
   - steam:416800
+  requires: []
+  tiers:
+  - 2
 - name: Kings of Israel
   ids:
   - steam:428460
+  requires: []
+  tiers:
+  - 2
 - name: Spirits of Xanadu
   ids:
   - steam:312230
+  requires: []
+  tiers:
+  - 2
 - name: 'Viscera Cleanup Detail: Santa''s Rampage'
   ids:
   - steam:265210
+  requires: []
+  tiers:
+  - 2
 - name: Gunnheim
   ids:
   - steam:371510
+  requires: []
+  tiers:
+  - 2
 - name: 'Dead Synchronicity: Tomorrow Comes Today'
   ids:
   - steam:339190
+  requires: []
+  tiers:
+  - 2

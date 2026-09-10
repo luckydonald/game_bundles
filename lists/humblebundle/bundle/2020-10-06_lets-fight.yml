@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Let&#39;s Fight Bundle — entire-8-item-bundle
-tier: 3
+name: Humble Let&#39;s Fight Bundle
+tiers:
+- rank: 3
+  name: entire-8-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/9254/
@@ -13,24 +15,48 @@ games:
 - name: Divekick
   ids:
   - steam:244730
+  requires: []
+  tiers:
+  - 3
 - name: 'Stick Fight: The Game OST'
   ids:
   - steam:726050
+  requires: []
+  tiers:
+  - 3
 - name: Nidhogg
   ids:
   - steam:94400
+  requires: []
+  tiers:
+  - 3
 - name: 'Stick Fight: The Game'
   ids:
   - steam:674940
+  requires: []
+  tiers:
+  - 3
 - name: Overgrowth
   ids:
   - steam:25000
+  requires: []
+  tiers:
+  - 3
 - name: Absolver
   ids:
   - steam:473690
+  requires: []
+  tiers:
+  - 3
 - name: 'RWBY: Grimm Eclipse'
   ids:
   - steam:418340
+  requires: []
+  tiers:
+  - 3
 - name: Injustice 2
   ids:
   - steam:627270
+  requires: []
+  tiers:
+  - 3

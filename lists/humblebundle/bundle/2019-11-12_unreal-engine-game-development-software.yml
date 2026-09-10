@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Unreal Engine Game Development Bundle — Beat The Average
-tier: 2
+name: Humble Unreal Engine Game Development Bundle
+tiers:
+- rank: 2
+  name: Beat The Average
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/8121/
@@ -13,6 +15,12 @@ games:
 - name: 'Q.U.B.E: Director''s Cut'
   ids:
   - unresolved:source:isthereanydeal:8121:q-u-b-e-directors-cut
+  requires: []
+  tiers:
+  - 2
 - name: Qube 2
   ids:
   - steam:359100
+  requires: []
+  tiers:
+  - 2

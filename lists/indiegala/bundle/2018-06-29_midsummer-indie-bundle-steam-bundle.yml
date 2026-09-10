@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Midsummer Indie Bundle — Tier 2
-tier: 2
+name: Midsummer Indie Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6281/
@@ -13,36 +15,72 @@ games:
 - name: 15 seconds
   ids:
   - steam:856350
+  requires: []
+  tiers:
+  - 2
 - name: Geometry Rush
   ids:
   - steam:861710
+  requires: []
+  tiers:
+  - 2
 - name: Dead Noir the Heart
   ids:
   - steam:718920
+  requires: []
+  tiers:
+  - 2
 - name: The Bad Gravedigger
   ids:
   - steam:870120
+  requires: []
+  tiers:
+  - 2
 - name: InkSplosion
   ids:
   - steam:827450
+  requires: []
+  tiers:
+  - 2
 - name: iterform
   ids:
   - steam:873210
+  requires: []
+  tiers:
+  - 2
 - name: Blood Harvest 3
   ids:
   - steam:851180
+  requires: []
+  tiers:
+  - 2
 - name: Magic Siege - Defender
   ids:
   - unresolved:source:isthereanydeal:6281:magic-siege-defender
+  requires: []
+  tiers:
+  - 2
 - name: 'Pottery Crafts: Hand-Made Simulator'
   ids:
   - unresolved:source:isthereanydeal:6281:pottery-crafts-hand-made-simulator
+  requires: []
+  tiers:
+  - 2
 - name: TD Ultimate (Restocked)
   ids:
   - unresolved:source:isthereanydeal:6281:td-ultimate-restocked
+  requires: []
+  tiers:
+  - 2
 - name: Another Brick in Space
   ids:
   - unresolved:source:isthereanydeal:6281:another-brick-in-space
+  requires: []
+  tiers:
+  - 2
 - name: Let's Go Nuts!
   ids:
   - steam:848230
+  requires: []
+  tiers:
+  - 2

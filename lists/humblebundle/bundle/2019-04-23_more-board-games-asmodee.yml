@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Humble More Board Games Bundle: Asmodee Digital — entire-13-item-bundle'
-tier: 3
+name: 'Humble More Board Games Bundle: Asmodee Digital'
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7330/
@@ -13,39 +15,78 @@ games:
 - name: 'Gloom: Digital Edition'
   ids:
   - steam:766040
+  requires: []
+  tiers:
+  - 3
 - name: Twilight Struggle
   ids:
   - steam:406290
+  requires: []
+  tiers:
+  - 3
 - name: Love Letter
   ids:
   - steam:926520
+  requires: []
+  tiers:
+  - 3
 - name: 'Ticket to Ride: First Journey'
   ids:
   - unresolved:source:isthereanydeal:7330:ticket-to-ride-first-journey
+  requires: []
+  tiers:
+  - 3
 - name: Mysterium - Hidden Signs
   ids:
   - steam:563300
+  requires: []
+  tiers:
+  - 3
 - name: Carcassonne - Inns & Cathedrals
   ids:
   - steam:622030
+  requires: []
+  tiers:
+  - 3
 - name: 'Mysterium: a Psychic Clue Game'
   ids:
   - steam:556180
+  requires: []
+  tiers:
+  - 3
 - name: 'Ascension: Deckbuilding Game'
   ids:
   - steam:320430
+  requires: []
+  tiers:
+  - 3
 - name: Mysterium - Secrets & Lies
   ids:
   - steam:563780
+  requires: []
+  tiers:
+  - 3
 - name: 'Pandemic: The Board Game'
   ids:
   - unresolved:source:isthereanydeal:7330:pandemic-the-board-game
+  requires: []
+  tiers:
+  - 3
 - name: Carcassonne - Tiles & Tactics
   ids:
   - steam:598810
+  requires: []
+  tiers:
+  - 3
 - name: Pathfinder Adventures - Obsidian Edition
   ids:
   - steam:480640
+  requires: []
+  tiers:
+  - 3
 - name: 'Scythe: Digital Edition'
   ids:
   - steam:718560
+  requires: []
+  tiers:
+  - 3

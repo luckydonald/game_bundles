@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Hump Day Bundle #54 — Tier 2'
-tier: 2
+name: 'Hump Day Bundle #54'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6032/
@@ -13,30 +15,60 @@ games:
 - name: Space Shaft
   ids:
   - steam:747700
+  requires: []
+  tiers:
+  - 2
 - name: Disparity
   ids:
   - steam:715460
+  requires: []
+  tiers:
+  - 2
 - name: Joy Climb
   ids:
   - steam:792350
+  requires: []
+  tiers:
+  - 2
 - name: Has-Been Heroes
   ids:
   - steam:492290
+  requires: []
+  tiers:
+  - 2
 - name: Hide The Body
   ids:
   - unresolved:source:isthereanydeal:6032:hide-the-body
+  requires: []
+  tiers:
+  - 2
 - name: 'Tuebor: I Will Defend'
   ids:
   - unresolved:source:isthereanydeal:6032:tuebor-i-will-defend
+  requires: []
+  tiers:
+  - 2
 - name: 'Icycle: On Thin Ice'
   ids:
   - steam:658990
+  requires: []
+  tiers:
+  - 2
 - name: Armored Kitten
   ids:
   - steam:713530
+  requires: []
+  tiers:
+  - 2
 - name: Beat The Game
   ids:
   - steam:543100
+  requires: []
+  tiers:
+  - 2
 - name: ARENA GODS
   ids:
   - steam:410830
+  requires: []
+  tiers:
+  - 2

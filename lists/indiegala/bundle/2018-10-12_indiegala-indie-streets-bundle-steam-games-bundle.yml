@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Indie Streets Bundle — Includes Tier 1
-tier: 2
+name: Indie Streets Bundle
+tiers:
+- rank: 2
+  name: Includes Tier 1
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6568/
@@ -13,33 +15,66 @@ games:
 - name: BingoBango
   ids:
   - steam:924280
+  requires: []
+  tiers:
+  - 2
 - name: 'Smash Halloween Pumpkins: The Challenge'
   ids:
   - steam:886010
+  requires: []
+  tiers:
+  - 2
 - name: 'Street Level: Windows Edition'
   ids:
   - steam:861670
+  requires: []
+  tiers:
+  - 2
 - name: FAN'CIE VEER! (Fish Are Nasty, Cake Is Excellent Vektor Evading Emblazed Rapture)
   ids:
   - steam:892640
+  requires: []
+  tiers:
+  - 2
 - name: Curse of the Old Gods
   ids:
   - steam:756100
+  requires: []
+  tiers:
+  - 2
 - name: 'Zombie Town : Online'
   ids:
   - unresolved:source:isthereanydeal:6568:zombie-town-online
+  requires: []
+  tiers:
+  - 2
 - name: Darkest Wave
   ids:
   - steam:653920
+  requires: []
+  tiers:
+  - 2
 - name: Burning Instinct
   ids:
   - steam:927050
+  requires: []
+  tiers:
+  - 2
 - name: Strike Cars
   ids:
   - unresolved:source:isthereanydeal:6568:strike-cars
+  requires: []
+  tiers:
+  - 2
 - name: Megacity Builder
   ids:
   - steam:630360
+  requires: []
+  tiers:
+  - 2
 - name: Ninja Midori
   ids:
   - steam:858440
+  requires: []
+  tiers:
+  - 2

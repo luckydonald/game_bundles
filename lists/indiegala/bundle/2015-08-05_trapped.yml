@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Trapped Souls Bundle — Tier 2
-tier: 2
+name: Trapped Souls Bundle
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2301/
@@ -13,27 +15,54 @@ games:
 - name: Shiny The Firefly
   ids:
   - steam:277510
+  requires: []
+  tiers:
+  - 2
 - name: "Greed \x96 Black Border"
   ids:
   - steam:46400
+  requires: []
+  tiers:
+  - 2
 - name: Skilltree Saga
   ids:
   - steam:315320
+  requires: []
+  tiers:
+  - 2
 - name: Deadly 30
   ids:
   - steam:264730
+  requires: []
+  tiers:
+  - 2
 - name: SoulCraft
   ids:
   - steam:369180
+  requires: []
+  tiers:
+  - 2
 - name: TRISTOY
   ids:
   - steam:303260
+  requires: []
+  tiers:
+  - 2
 - name: 'Trapped Dead: Lockdown'
   ids:
   - steam:305500
+  requires: []
+  tiers:
+  - 2
 - name: Bridge Constructor Medieval
   ids:
   - steam:319850
+  requires: []
+  tiers:
+  - 2
 - name: The Inner World Bundle
   ids:
   - unresolved:source:isthereanydeal:2301:the-inner-world-bundle
+  requires: []
+  tiers:
+  - 2

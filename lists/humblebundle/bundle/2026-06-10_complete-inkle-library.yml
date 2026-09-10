@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: The Complete Inkle Library Bundle — entire-10-item-bundle
-tier: 2
+name: The Complete Inkle Library Bundle
+tiers:
+- rank: 2
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16256/
@@ -13,30 +15,60 @@ games:
 - name: Sorcery! Part 4
   ids:
   - steam:504800
+  requires: []
+  tiers:
+  - 2
 - name: Heaven's Vault
   ids:
   - steam:774201
+  requires: []
+  tiers:
+  - 2
 - name: Sorcery! Parts 1 & 2
   ids:
   - steam:411000
+  requires: []
+  tiers:
+  - 2
 - name: Sorcery! Part 3
   ids:
   - steam:445040
+  requires: []
+  tiers:
+  - 2
 - name: 80 days
   ids:
   - steam:381780
+  requires: []
+  tiers:
+  - 2
 - name: Overboard!
   ids:
   - steam:1546920
+  requires: []
+  tiers:
+  - 2
 - name: 'Pendragon: Narrative Tactics'
   ids:
   - steam:1240050
+  requires: []
+  tiers:
+  - 2
 - name: A Highland Song
   ids:
   - steam:1240060
+  requires: []
+  tiers:
+  - 2
 - name: Expelled!
   ids:
   - steam:2963890
+  requires: []
+  tiers:
+  - 2
 - name: TR-49
   ids:
   - steam:3838370
+  requires: []
+  tiers:
+  - 2

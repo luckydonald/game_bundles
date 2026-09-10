@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Wild Frontier Bundle — Pay $13 or more to also unlock!
-tier: 3
+name: Humble Wild Frontier Bundle
+tiers:
+- rank: 3
+  name: Pay $13 or more to also unlock!
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5015/
@@ -13,21 +15,42 @@ games:
 - name: Gods Will Be Watching
   ids:
   - steam:274290
+  requires: []
+  tiers:
+  - 3
 - name: FRONTIERS
   ids:
   - steam:293480
+  requires: []
+  tiers:
+  - 3
 - name: Ice Lakes
   ids:
   - steam:393430
+  requires: []
+  tiers:
+  - 3
 - name: 'Renowned Explorers: International Society'
   ids:
   - steam:296970
+  requires: []
+  tiers:
+  - 3
 - name: Hard West
   ids:
   - steam:307670
+  requires: []
+  tiers:
+  - 3
 - name: SPINTIRES
   ids:
   - unresolved:source:isthereanydeal:5015:spintires
+  requires: []
+  tiers:
+  - 3
 - name: Slime Rancher
   ids:
   - steam:433340
+  requires: []
+  tiers:
+  - 3

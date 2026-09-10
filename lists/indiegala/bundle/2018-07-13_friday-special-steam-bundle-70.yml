@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: 'Friday Special Bundle #70 — Tier 2'
-tier: 2
+name: 'Friday Special Bundle #70'
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6302/
@@ -13,30 +15,60 @@ games:
 - name: Lepur
   ids:
   - unresolved:source:isthereanydeal:6302:lepur
+  requires: []
+  tiers:
+  - 2
 - name: BattleStar Mazay
   ids:
   - unresolved:source:isthereanydeal:6302:battlestar-mazay
+  requires: []
+  tiers:
+  - 2
 - name: mr.Vegan
   ids:
   - steam:873610
+  requires: []
+  tiers:
+  - 2
 - name: Watchlist
   ids:
   - steam:652760
+  requires: []
+  tiers:
+  - 2
 - name: Goblins of Elderstone
   ids:
   - steam:693580
+  requires: []
+  tiers:
+  - 2
 - name: DEAD DOZEN
   ids:
   - unresolved:source:isthereanydeal:6302:dead-dozen
+  requires: []
+  tiers:
+  - 2
 - name: Spermination
   ids:
   - steam:363460
+  requires: []
+  tiers:
+  - 2
 - name: Season's Beatings
   ids:
   - steam:749410
+  requires: []
+  tiers:
+  - 2
 - name: Sniper Fodder
   ids:
   - steam:880840
+  requires: []
+  tiers:
+  - 2
 - name: Rencounter
   ids:
   - steam:431810
+  requires: []
+  tiers:
+  - 2

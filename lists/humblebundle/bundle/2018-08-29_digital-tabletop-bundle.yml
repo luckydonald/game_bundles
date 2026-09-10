@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Humble Digital Tabletop Bundle 1 — entire-10-item-bundle
-tier: 3
+name: Humble Digital Tabletop Bundle 1
+tiers:
+- rank: 3
+  name: entire-10-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/6411/
@@ -13,30 +15,60 @@ games:
 - name: Ticket to Ride - Complete Bundle
   ids:
   - unresolved:source:isthereanydeal:6411:ticket-to-ride-complete-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Sentinels of the Multiverse
   ids:
   - steam:337150
+  requires: []
+  tiers:
+  - 3
 - name: Mysterium
   ids:
   - steam:556180
+  requires: []
+  tiers:
+  - 3
 - name: Pathfinder Adventures
   ids:
   - steam:480640
+  requires: []
+  tiers:
+  - 3
 - name: Sentinels of the Multiverse - Shattered Timelines
   ids:
   - steam:429110
+  requires: []
+  tiers:
+  - 3
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:6411:talisman-digital-edition
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Highland Expansion
   ids:
   - steam:267780
+  requires: []
+  tiers:
+  - 3
 - name: Talisman - The Dungeon Expansion
   ids:
   - steam:267775
+  requires: []
+  tiers:
+  - 3
 - name: Carcassonne - Tiles & Tactics
   ids:
   - steam:598810
+  requires: []
+  tiers:
+  - 3
 - name: Armello
   ids:
   - steam:290340
+  requires: []
+  tiers:
+  - 3

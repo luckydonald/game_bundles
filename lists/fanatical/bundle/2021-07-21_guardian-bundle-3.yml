@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Guardian Bundle 3 — Tier 3
-tier: 3
+name: Guardian Bundle 3
+tiers:
+- rank: 3
+  name: Tier 3
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/10271/
@@ -13,36 +15,72 @@ games:
 - name: Shift Happens
   ids:
   - steam:359840
+  requires: []
+  tiers:
+  - 3
 - name: Comedy Night
   ids:
   - steam:665360
+  requires: []
+  tiers:
+  - 3
 - name: Papo & Yo
   ids:
   - steam:227080
+  requires: []
+  tiers:
+  - 3
 - name: 'INSOMNIA: The Ark'
   ids:
   - steam:783170
+  requires: []
+  tiers:
+  - 3
 - name: Dungeons 3
   ids:
   - steam:493900
+  requires: []
+  tiers:
+  - 3
 - name: We. The Revolution
   ids:
   - steam:736850
+  requires: []
+  tiers:
+  - 3
 - name: 'The Uncertain: Light At The End'
   ids:
   - steam:925570
+  requires: []
+  tiers:
+  - 3
 - name: 3000th Duel
   ids:
   - steam:1098080
+  requires: []
+  tiers:
+  - 3
 - name: 'Fallback: Uprising'
   ids:
   - steam:864540
+  requires: []
+  tiers:
+  - 3
 - name: 'Sense - 不祥的预感: A Cyberpunk Ghost Story'
   ids:
   - steam:1120560
+  requires: []
+  tiers:
+  - 3
 - name: Book of Demons
   ids:
   - steam:449960
+  requires: []
+  tiers:
+  - 3
 - name: Afterparty
   ids:
   - steam:762220
+  requires: []
+  tiers:
+  - 3

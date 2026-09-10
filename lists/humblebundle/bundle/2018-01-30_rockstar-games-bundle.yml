@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Rockstar Games Humble Bundle — entire-13-item-bundle
-tier: 3
+name: Rockstar Games Humble Bundle
+tiers:
+- rank: 3
+  name: entire-13-item-bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/5847/
@@ -13,39 +15,78 @@ games:
 - name: Grand Theft Auto - Vice City
   ids:
   - unresolved:source:isthereanydeal:5847:grand-theft-auto-vice-city
+  requires: []
+  tiers:
+  - 3
 - name: Max Payne
   ids:
   - steam:202570
+  requires: []
+  tiers:
+  - 3
 - name: Grand Theft Auto III
   ids:
   - unresolved:source:isthereanydeal:5847:grand-theft-auto-iii
+  requires: []
+  tiers:
+  - 3
 - name: Manhunt
   ids:
   - steam:12130
+  requires: []
+  tiers:
+  - 3
 - name: Grand Theft Auto - San Andreas
   ids:
   - unresolved:source:isthereanydeal:5847:grand-theft-auto-san-andreas
+  requires: []
+  tiers:
+  - 3
 - name: 'Bully: Scholarship Edition'
   ids:
   - steam:12200
+  requires: []
+  tiers:
+  - 3
 - name: 'Max Payne 2: The Fall of Max Payne'
   ids:
   - steam:12150
+  requires: []
+  tiers:
+  - 3
 - name: L.A. Noire
   ids:
   - steam:110800
+  requires: []
+  tiers:
+  - 3
 - name: 'Grand Theft Auto: Episodes from Liberty City'
   ids:
   - steam:12220
+  requires: []
+  tiers:
+  - 3
 - name: L.A. Noire DLC Bundle
   ids:
   - unresolved:source:isthereanydeal:5847:l-a-noire-dlc-bundle
+  requires: []
+  tiers:
+  - 3
 - name: Grand Theft Auto IV
   ids:
   - unresolved:source:isthereanydeal:5847:grand-theft-auto-iv
+  requires: []
+  tiers:
+  - 3
 - name: Max Payne 3 - Rockstar Pass
   ids:
   - unresolved:source:isthereanydeal:5847:max-payne-3-rockstar-pass
+  requires: []
+  tiers:
+  - 3
 - name: Max Payne 3
   ids:
   - steam:204100
+  requires: []
+  tiers:
+  - 3

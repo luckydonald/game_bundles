@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Jonny's Jams — Tier 2
-tier: 2
+name: Jonny's Jams
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/2059/
@@ -13,24 +15,48 @@ games:
 - name: 'GROUPEES: The Visual Novel'
   ids:
   - unresolved:source:isthereanydeal:2059:groupees-the-visual-novel
+  requires: []
+  tiers:
+  - 2
 - name: Gun Rocket
   ids:
   - steam:391420
+  requires: []
+  tiers:
+  - 2
 - name: Yury
   ids:
   - steam:321950
+  requires: []
+  tiers:
+  - 2
 - name: Proto Raider
   ids:
   - steam:386050
+  requires: []
+  tiers:
+  - 2
 - name: Jamsouls
   ids:
   - steam:314460
+  requires: []
+  tiers:
+  - 2
 - name: Dustoff Heli Rescue
   ids:
   - steam:341730
+  requires: []
+  tiers:
+  - 2
 - name: Flix The Flea
   ids:
   - steam:371390
+  requires: []
+  tiers:
+  - 2
 - name: Aces of the Luftwaffe
   ids:
   - steam:353940
+  requires: []
+  tiers:
+  - 2

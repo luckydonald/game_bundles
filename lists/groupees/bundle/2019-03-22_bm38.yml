@@ -1,7 +1,9 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
-name: Be Mine 38 — Tier 2
-tier: 2
+name: Be Mine 38
+tiers:
+- rank: 2
+  name: Tier 2
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/7213/
@@ -13,27 +15,54 @@ games:
 - name: 'Secrets of Magic 2: Witches and Wizards'
   ids:
   - steam:713430
+  requires: []
+  tiers:
+  - 2
 - name: 'Torn Tales: Rebound Edition'
   ids:
   - steam:865720
+  requires: []
+  tiers:
+  - 2
 - name: A Rite from the Stars
   ids:
   - steam:792370
+  requires: []
+  tiers:
+  - 2
 - name: 'DYE: Original Soundtrack'
   ids:
   - steam:589600
+  requires: []
+  tiers:
+  - 2
 - name: 'Nusantara: Legend of The Winged Ones'
   ids:
   - steam:986710
+  requires: []
+  tiers:
+  - 2
 - name: 'JackQuest: The Tale of The Sword'
   ids:
   - steam:937050
+  requires: []
+  tiers:
+  - 2
 - name: Jade's Dungeon Descent
   ids:
   - steam:864600
+  requires: []
+  tiers:
+  - 2
 - name: Coldfall
   ids:
   - steam:960660
+  requires: []
+  tiers:
+  - 2
 - name: DYE
   ids:
   - steam:503550
+  requires: []
+  tiers:
+  - 2
