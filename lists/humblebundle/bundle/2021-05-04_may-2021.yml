@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (May 2021) — Select 3 Choices for BASIC, 12 Choices for PREMIUM
+  or CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9998/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9998/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9998/source.json
+games:
+- name: Hellpoint
+  ids:
+  - steam:628670
+  requires: []
+- name: Size Matters
+  ids:
+  - steam:976700
+  requires: []
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+  requires: []
+- name: Levelhead
+  ids:
+  - steam:792710
+  requires: []
+- name: Family Man
+  ids:
+  - steam:904360
+  requires: []
+- name: Relicta
+  ids:
+  - steam:941570
+  requires: []
+- name: Metro Exodus
+  ids:
+  - steam:412020
+  requires: []
+- name: Vane
+  ids:
+  - steam:1063310
+  requires: []
+- name: Retimed
+  ids:
+  - steam:760810
+  requires: []
+- name: Darksiders Genesis
+  ids:
+  - steam:710920
+  requires: []
+- name: Fury Unleashed
+  ids:
+  - steam:465200
+  requires: []
+- name: Summertime Madness
+  ids:
+  - steam:1360550
+  requires: []
+- name: Morkredd
+  ids:
+  - steam:1331910
+  requires: []

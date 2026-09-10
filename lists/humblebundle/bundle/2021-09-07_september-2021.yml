@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Sep 2021) — Select 3 Choices for BASIC, 12 Choices for PREMIUM
+  or CLASSIC
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10427/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10427/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10427/source.json
+games:
+- name: Not For Broadcast
+  ids:
+  - steam:1147550
+  requires: []
+- name: FRAMED Collection
+  ids:
+  - steam:322450
+  requires: []
+- name: 'Orwell: Ignorance is Strength'
+  ids:
+  - steam:633060
+  requires: []
+- name: Swag and Sorcery
+  ids:
+  - steam:929010
+  requires: []
+- name: Fort Triumph
+  ids:
+  - steam:612570
+  requires: []
+- name: Heaven's Vault
+  ids:
+  - steam:774201
+  requires: []
+- name: Neon Abyss
+  ids:
+  - steam:788100
+  requires: []
+- name: Atomicrops
+  ids:
+  - steam:757320
+  requires: []
+- name: Röki
+  ids:
+  - steam:1067540
+  requires: []
+- name: West of Dead
+  ids:
+  - steam:1016790
+  requires: []
+- name: PGA TOUR 2K21
+  ids:
+  - unresolved:source:isthereanydeal:10427:pga-tour-2k21
+  requires: []
+- name: Narita Boy
+  ids:
+  - steam:1069530
+  requires: []
+- name: 'Sluggish Morss: Pattern Circus'
+  ids:
+  - unresolved:source:isthereanydeal:10427:sluggish-morss-pattern-circus
+  requires: []
