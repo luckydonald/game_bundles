@@ -2,6 +2,8 @@
 schema: 1
 name: Honor & Blade Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1005630
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Paper Shakespeare: Stick Julius Caesar (with a dagger)'
   ids:
   - unresolved:source:isthereanydeal:7332:paper-shakespeare-stick-julius-caesar-with-a-dagger
   requires: []
   tiers:
+  - 1
   - 2
 - name: Static
   ids:

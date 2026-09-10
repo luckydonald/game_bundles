@@ -2,6 +2,8 @@
 schema: 1
 name: Doodle Heroes Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:759750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Find this!
   ids:
   - unresolved:source:isthereanydeal:5946:find-this
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bloody Mice
   ids:
   - steam:676000
   requires: []
   tiers:
+  - 1
   - 2
 - name: AIDEN
   ids:

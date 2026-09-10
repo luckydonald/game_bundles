@@ -2,6 +2,8 @@
 schema: 1
 name: The Steamy Android Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6760:stickman-fighting
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cross And Crush
   ids:
   - unresolved:source:isthereanydeal:6760:cross-and-crush
   requires: []
   tiers:
+  - 1
   - 2
 - name: Achievement Machine
   ids:
   - unresolved:source:isthereanydeal:6760:achievement-machine
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Normal Lost Phone
   ids:

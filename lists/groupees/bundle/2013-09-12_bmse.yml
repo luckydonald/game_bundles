@@ -2,6 +2,8 @@
 schema: 1
 name: 'Be Mine: Special Edition'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:214360
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Star Wolves 3: Civil War'
   ids:
   - steam:46260
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fortix
   ids:
   - steam:45400
   requires: []
   tiers:
+  - 1
   - 2
 - name: MacGuffin's Curse
   ids:
   - steam:58230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ravaged Zombie Apocalypse
   ids:
   - unresolved:source:isthereanydeal:176:ravaged-zombie-apocalypse
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Hamilton''s Great Adventure: Retro Fever'
   ids:

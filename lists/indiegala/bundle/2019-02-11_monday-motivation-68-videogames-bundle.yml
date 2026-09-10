@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #68'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:809850
   requires: []
   tiers:
+  - 1
   - 2
 - name: '03.04'
   ids:
   - steam:952950
   requires: []
   tiers:
+  - 1
   - 2
 - name: Earth Muncher
   ids:

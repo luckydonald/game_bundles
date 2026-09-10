@@ -2,6 +2,8 @@
 schema: 1
 name: Articy Draft Storytellers Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:5516:articy-draft-2-se
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Detail Episode 3 - Devil in The Detail
   ids:

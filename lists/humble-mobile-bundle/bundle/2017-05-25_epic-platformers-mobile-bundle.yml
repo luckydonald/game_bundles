@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Mobile Bundle: Epic Platformers'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1059880
   requires: []
   tiers:
+  - 1
   - 3
 - name: Eggggg - The platform puker
   ids:
   - steam:638470
   requires: []
   tiers:
+  - 1
   - 3
 - name: Devious Dungeon 2
   ids:
   - steam:1059890
   requires: []
   tiers:
+  - 1
   - 3
 - name: RETSNOM
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Retro Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - unresolved:source:isthereanydeal:705:retro-racer-combat
   requires: []
   tiers:
+  - 1
   - 2
 - name: Noir Syndrome
   ids:
   - steam:299780
   requires: []
   tiers:
+  - 1
   - 2
 - name: 6180 the moon Deluxe Edition
   ids:
   - steam:299660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Don't Move
   ids:
   - unresolved:source:isthereanydeal:705:don-t-move
   requires: []
   tiers:
+  - 1
   - 2
 - name: Another Perspective
   ids:
   - steam:305920
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Sugar Cube: Bittersweet Factory'
   ids:
   - steam:212110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nosferatu - The Wrath Of Malachi
   ids:
   - steam:283290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Droid Assault
   ids:

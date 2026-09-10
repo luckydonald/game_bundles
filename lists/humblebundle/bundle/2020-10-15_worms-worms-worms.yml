@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Worms! Worms! Worms! Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 4
   name: entire-19-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:70620
   requires: []
   tiers:
+  - 1
   - 4
 - name: Worms Blast
   ids:
   - steam:70650
   requires: []
   tiers:
+  - 1
   - 4
 - name: Worms Pinball
   ids:
   - steam:70660
   requires: []
   tiers:
+  - 1
   - 4
 - name: Worms
   ids:
   - steam:70640
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Worms Reloaded: Puzzle Pack'
   ids:

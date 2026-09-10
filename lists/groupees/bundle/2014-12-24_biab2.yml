@@ -2,6 +2,8 @@
 schema: 1
 name: Bundle In A Box 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:1504:keen-dreams
   requires: []
   tiers:
+  - 1
   - 2
 - name: Porradaria Upgrade
   ids:
   - unresolved:source:isthereanydeal:1504:porradaria-upgrade
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gorky 17
   ids:
   - steam:253920
   requires: []
   tiers:
+  - 1
   - 2
 - name: TriBlaster
   ids:
   - steam:303880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jagged Alliance 2 Wildfire
   ids:

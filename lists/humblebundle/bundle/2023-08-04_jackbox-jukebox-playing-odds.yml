@@ -2,6 +2,8 @@
 schema: 1
 name: 'Jackbox Jukebox: Playing The Odds Bundle'
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 5
   name: entire-8-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:448080
   requires: []
   tiers:
+  - 1
   - 5
 - name: Quiplash
   ids:

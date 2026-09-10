@@ -2,6 +2,8 @@
 schema: 1
 name: Lords of the Fallen Complete Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,6 +19,7 @@ games:
   - steam:1501750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lords of the Fallen - Lion Heart Pack
   ids:

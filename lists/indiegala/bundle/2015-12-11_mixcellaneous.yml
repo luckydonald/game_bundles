@@ -2,6 +2,8 @@
 schema: 1
 name: Mixcellaneous Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:235720
   requires: []
   tiers:
+  - 1
   - 2
 - name: Spoiler Alert
   ids:
   - steam:283230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vertical Drop Heroes HD
   ids:
   - steam:311480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fearless Fantasy
   ids:

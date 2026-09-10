@@ -2,6 +2,8 @@
 schema: 1
 name: Spaced Out Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:614460
   requires: []
   tiers:
+  - 1
   - 2
 - name: MAD DAGGER
   ids:
   - unresolved:source:isthereanydeal:5085:mad-dagger
   requires: []
   tiers:
+  - 1
   - 2
 - name: Last Tale
   ids:
   - unresolved:source:isthereanydeal:5085:last-tale
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Glorch''s Great Escape: Walking is for Chumps'
   ids:

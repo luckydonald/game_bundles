@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #56'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:816990
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Shape of America: Episode One'
   ids:
   - steam:752330
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Big Journey
   ids:
   - steam:742480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Far from Noise
   ids:

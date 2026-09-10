@@ -2,6 +2,8 @@
 schema: 1
 name: The Escapists Breakout Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:408730
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Escapists - Alcatraz
   ids:
   - steam:349350
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Escapists
   ids:
   - steam:298630
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Escapists - Fhurst Peak Correctional Facility
   ids:
   - steam:349310
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Escapists - Escape Team
   ids:

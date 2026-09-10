@@ -2,6 +2,8 @@
 schema: 1
 name: Uncharted Realms Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1055540
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Alba: A Wildlife Adventure'
   ids:
   - steam:1337010
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'FAR: Changing Tides'
   ids:
   - steam:1570010
   requires: []
   tiers:
+  - 1
   - 4
 - name: The Forgotten City
   ids:

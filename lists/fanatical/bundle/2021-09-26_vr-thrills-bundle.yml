@@ -2,6 +2,8 @@
 schema: 1
 name: VR Thrills Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:386690
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Starbear: Taxi'
   ids:
   - steam:702030
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'XING: The Land Beyond'
   ids:
   - steam:299400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Skyworld
   ids:

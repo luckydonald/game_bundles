@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi GameBundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Beat The Average + $0.25
 references:
@@ -17,12 +19,14 @@ games:
   - steam:284830
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Time Mysteries 2: The Ancient Spectres'
   ids:
   - steam:313650
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Time Mysteries: Inheritance - Remastered'
   ids:

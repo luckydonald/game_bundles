@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #71'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:7221:pew-pew-rocket
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Behind -- The Beyond
   ids:
   - unresolved:source:isthereanydeal:7221:the-behind-the-beyond
   requires: []
   tiers:
+  - 1
   - 2
 - name: Marble Skies
   ids:

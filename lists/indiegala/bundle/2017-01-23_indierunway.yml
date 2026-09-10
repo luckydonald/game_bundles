@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Runway Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:12670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Freddi Fish and Luther's Water Worries
   ids:
   - steam:294580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Knights of the Sky
   ids:
   - steam:347270
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sword of the Samurai
   ids:

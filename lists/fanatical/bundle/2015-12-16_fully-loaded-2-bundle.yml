@@ -2,6 +2,8 @@
 schema: 1
 name: Fully Loaded 2 Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:383750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombie Office Politics
   ids:
   - unresolved:source:isthereanydeal:2857:zombie-office-politics
   requires: []
   tiers:
+  - 1
   - 2
 - name: Black Sails - The Ghost Ship
   ids:
   - steam:373240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Supreme Ruler 1936
   ids:

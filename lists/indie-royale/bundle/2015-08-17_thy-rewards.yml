@@ -2,6 +2,8 @@
 schema: 1
 name: Thy Rewards
 tiers:
+- rank: 1
+  name: 10 Bundles Purchased
 - rank: 5
   name: 30 Bundles Purchased
 references:
@@ -17,6 +19,7 @@ games:
   - unresolved:source:isthereanydeal:2337:super-space-rubbish
   requires: []
   tiers:
+  - 1
   - 5
 - name: Fireball
   ids:

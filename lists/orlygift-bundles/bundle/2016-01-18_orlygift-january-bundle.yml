@@ -2,6 +2,8 @@
 schema: 1
 name: January Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:357280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Red Lake
   ids:
   - steam:357290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lilly Looking Through
   ids:

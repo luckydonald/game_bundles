@@ -2,6 +2,8 @@
 schema: 1
 name: Daedalic Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:214340
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Cultures: 8th Wonder of the World'
   ids:
   - steam:351870
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Cultures: Northland'
   ids:
   - steam:351860
   requires: []
   tiers:
+  - 1
   - 3
 - name: Goodbye Deponia
   ids:

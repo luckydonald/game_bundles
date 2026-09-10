@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Just Drive Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-14-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:256370
   requires: []
   tiers:
+  - 1
   - 3
 - name: MotoGP™15
   ids:
   - steam:355130
   requires: []
   tiers:
+  - 1
   - 3
 - name: WRC 7 FIA World Rally Championship
   ids:
   - steam:621830
   requires: []
   tiers:
+  - 1
   - 3
 - name: Project CARS
   ids:

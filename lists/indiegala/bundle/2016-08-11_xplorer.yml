@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Xplorer Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3889:heavenly-battle
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sixtieth Kilometer
   ids:
   - steam:448780
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cavernus
   ids:
   - steam:475080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Conan the mighty pig
   ids:

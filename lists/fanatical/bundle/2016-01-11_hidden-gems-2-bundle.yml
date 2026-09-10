@@ -2,6 +2,8 @@
 schema: 1
 name: Hidden Gems Bundle 2
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:2931:stacks-tnt
   requires: []
   tiers:
+  - 1
   - 3
 - name: Notrium Special Surprise Edition
   ids:
   - steam:349100
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Fractal: Make Blooms Not War'
   ids:
   - steam:61310
   requires: []
   tiers:
+  - 1
   - 3
 - name: Militia
   ids:

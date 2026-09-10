@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special #60 Bundle'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:752500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Transcend
   ids:
   - steam:760860
   requires: []
   tiers:
+  - 1
   - 2
 - name: ZOMBIE CAR MASSACRE
   ids:
   - unresolved:source:isthereanydeal:5730:zombie-car-massacre
   requires: []
   tiers:
+  - 1
   - 2
 - name: Little Lords of Twilight®
   ids:

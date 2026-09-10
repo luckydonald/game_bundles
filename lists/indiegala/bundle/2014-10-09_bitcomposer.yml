@@ -2,6 +2,8 @@
 schema: 1
 name: bitComposer Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:212010
   requires: []
   tiers:
+  - 1
   - 2
 - name: "Air Conflicts \x96 Secret Wars"
   ids:
   - steam:95900
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wildlife Park 3
   ids:
   - steam:287200
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Disciples 3: Reincarnation'
   ids:

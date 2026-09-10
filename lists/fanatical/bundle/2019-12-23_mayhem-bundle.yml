@@ -2,6 +2,8 @@
 schema: 1
 name: Mayhem Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,48 +19,56 @@ games:
   - steam:332530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Laserlife
   ids:
   - steam:323040
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dragon Fantasy: The Black Tome of Ice'
   ids:
   - steam:328000
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tharsis
   ids:
   - steam:323060
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Dragon Fantasy: The Volumes of Westeria'
   ids:
   - steam:327980
   requires: []
   tiers:
+  - 1
   - 2
 - name: Drive!Drive!Drive!
   ids:
   - steam:356460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Destructamundo
   ids:
   - steam:323020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Woah Dave!
   ids:
   - steam:315110
   requires: []
   tiers:
+  - 1
   - 2
 - name: Runner3
   ids:

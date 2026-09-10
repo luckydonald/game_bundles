@@ -2,6 +2,8 @@
 schema: 1
 name: Power Rage Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:509600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rainbow Rage Squad
   ids:
   - steam:549780
   requires: []
   tiers:
+  - 1
   - 2
 - name: PHAT STACKS
   ids:
   - steam:556160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dawn's Light 2
   ids:

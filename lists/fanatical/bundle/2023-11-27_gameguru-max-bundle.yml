@@ -2,6 +2,8 @@
 schema: 1
 name: GameGuru MAX Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-mini-kit-sci-fi-portals
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru MAX Low Poly Mini Kit - Fantasy Portals
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-mini-kit-fantasy-portals
   requires: []
   tiers:
+  - 1
   - 3
 - name: GameGuru MAX Aztec Game Kit
   ids:

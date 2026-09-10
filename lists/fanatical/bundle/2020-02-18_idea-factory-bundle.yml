@@ -2,6 +2,8 @@
 schema: 1
 name: Idea Factory Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:415300
   requires: []
   tiers:
+  - 1
   - 3
 - name: Moero Chronicle
   ids:
   - steam:638160
   requires: []
   tiers:
+  - 1
   - 3
 - name: Fairy Fencer F
   ids:
   - steam:347830
   requires: []
   tiers:
+  - 1
   - 3
 - name: Fairy Fencer F Advent Dark Force
   ids:

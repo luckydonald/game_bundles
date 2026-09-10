@@ -2,6 +2,9 @@
 schema: 1
 name: Build Your Own Discoveries Bundle
 tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -21,6 +24,7 @@ games:
   - isthereanydeal:diary-of-lucie
   requires: []
   tiers:
+  - 1
   - 3
 - name: Smilemo
   ids:
@@ -28,6 +32,7 @@ games:
   - isthereanydeal:smilemo
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Rocco''s Island: Ring to End the Pain'
   ids:
@@ -35,6 +40,7 @@ games:
   - isthereanydeal:roccos-island-ring-to-end-the-pain
   requires: []
   tiers:
+  - 1
   - 3
 - name: Blue Wednesday
   ids:
@@ -42,6 +48,7 @@ games:
   - isthereanydeal:blue-wednesday
   requires: []
   tiers:
+  - 1
   - 3
 - name: Cats Are Money
   ids:
@@ -49,6 +56,7 @@ games:
   - isthereanydeal:cats-are-money
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Deadseat
   ids:
@@ -56,6 +64,7 @@ games:
   - isthereanydeal:the-deadseat
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shooty Shooty Robot Invasion
   ids:
@@ -63,6 +72,7 @@ games:
   - isthereanydeal:shooty-shooty-robot-invasion
   requires: []
   tiers:
+  - 1
   - 3
 - name: LUCKROT
   ids:
@@ -70,6 +80,7 @@ games:
   - isthereanydeal:luckrot
   requires: []
   tiers:
+  - 1
   - 3
 - name: Coincidences?
   ids:
@@ -77,6 +88,7 @@ games:
   - isthereanydeal:coincidences
   requires: []
   tiers:
+  - 1
   - 3
 - name: Marble's Marbles
   ids:
@@ -84,6 +96,7 @@ games:
   - isthereanydeal:marbles-marbles
   requires: []
   tiers:
+  - 1
   - 3
 - name: BACK*SPACE
   ids:
@@ -91,6 +104,7 @@ games:
   - isthereanydeal:back-space
   requires: []
   tiers:
+  - 1
   - 3
 - name: Soy Boy Double Pack
   ids:
@@ -98,4 +112,5 @@ games:
   - isthereanydeal:soy-boy-double-pack
   requires: []
   tiers:
+  - 1
   - 3

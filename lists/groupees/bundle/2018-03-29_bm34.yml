@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 34
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:736430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ghostship Bundle
   ids:
   - unresolved:source:isthereanydeal:6015:ghostship-bundle
   requires: []
   tiers:
+  - 1
   - 2
 - name: Drift Into Eternity
   ids:

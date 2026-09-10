@@ -2,6 +2,8 @@
 schema: 1
 name: Parallel Worlds Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:538590
   requires: []
   tiers:
+  - 1
   - 2
 - name: Swiftly
   ids:
   - steam:418610
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wooden House
   ids:
   - steam:513570
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bye-Bye, Wacky Planet
   ids:

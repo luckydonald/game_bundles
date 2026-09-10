@@ -2,6 +2,8 @@
 schema: 1
 name: Enter The Mysterium Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 5
   name: entire-13-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:63620
   requires: []
   tiers:
+  - 1
   - 5
 - name: 'The Manhole: Masterpiece Edition'
   ids:
   - steam:63630
   requires: []
   tiers:
+  - 1
   - 5
 - name: Spelunx and the Caves of Mr. Seudo
   ids:
   - steam:63640
   requires: []
   tiers:
+  - 1
   - 5
 - name: 'Uru: Complete Chronicles'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Idea Factory Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1037590
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Trillion: God of Destruction'
   ids:
   - steam:451780
   requires: []
   tiers:
+  - 1
   - 3
 - name: Moero Chronicle
   ids:
   - steam:638160
   requires: []
   tiers:
+  - 1
   - 3
 - name: MegaTagmension Blanc Deluxe Edition Bundle
   ids:

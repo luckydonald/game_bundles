@@ -2,6 +2,8 @@
 schema: 1
 name: The DeLucius Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:346630
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fantasy Kingdom Simulator
   ids:
   - steam:482890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Linea, the Game
   ids:
   - steam:428900
   requires: []
   tiers:
+  - 1
   - 2
 - name: Haven
   ids:

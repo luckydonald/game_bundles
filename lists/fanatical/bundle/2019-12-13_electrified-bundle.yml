@@ -2,6 +2,8 @@
 schema: 1
 name: Electrified Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:258890
   requires: []
   tiers:
+  - 1
   - 3
 - name: Boo! Greedy Kid
   ids:
   - steam:770630
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Next Penelope
   ids:
   - steam:332250
   requires: []
   tiers:
+  - 1
   - 3
 - name: Satellite Rush
   ids:
   - steam:429350
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:

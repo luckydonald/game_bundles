@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - steam:15700
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Red Orchestra: Ostfront 41-45'
   ids:
   - steam:1200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Syberia
   ids:
   - steam:46500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Avernum Trilogy Bundle
   ids:
   - unresolved:source:isthereanydeal:180:avernum-trilogy-bundle
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hamilton's Great Adventure
   ids:
   - steam:42140
   requires: []
   tiers:
+  - 1
   - 2
 - name: POSTAL 2
   ids:
   - steam:223470
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Oddworld: Abe''s Exoddus'
   ids:
   - steam:15710
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Garshasp: The Monster Slayer'
   ids:

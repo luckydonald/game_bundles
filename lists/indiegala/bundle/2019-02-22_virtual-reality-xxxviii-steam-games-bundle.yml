@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXXVIII Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:7077:yanone-letter-splatter
   requires: []
   tiers:
+  - 1
   - 2
 - name: Battle Ion
   ids:
   - unresolved:source:isthereanydeal:7077:battle-ion
   requires: []
   tiers:
+  - 1
   - 2
 - name: Virtual Islands
   ids:

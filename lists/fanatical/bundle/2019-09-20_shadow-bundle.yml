@@ -2,6 +2,8 @@
 schema: 1
 name: Shadow Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:772480
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tales from Candlekeep: Tomb of Annihilation'
   ids:
   - unresolved:source:isthereanydeal:7934:tales-from-candlekeep-tomb-of-annihilation
   requires: []
   tiers:
+  - 1
   - 3
 - name: Infinite Air with Mark McMorris
   ids:
   - unresolved:source:isthereanydeal:7934:infinite-air-with-mark-mcmorris
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'LEGRAND LEGACY: Tale of the Fatebounds'
   ids:

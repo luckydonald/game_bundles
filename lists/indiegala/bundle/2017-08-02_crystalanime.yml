@@ -2,6 +2,8 @@
 schema: 1
 name: Crystal Anime Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:610750
   requires: []
   tiers:
+  - 1
   - 2
 - name: BAD END
   ids:
   - steam:415850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sorry. (Entschuldigung) ~ A Psychological Horror Visual Novel
   ids:
   - unresolved:source:isthereanydeal:5366:sorry-entschuldigung-a-psychological-horror-visual-novel
   requires: []
   tiers:
+  - 1
   - 2
 - name: Book Series - Alice in Wonderland
   ids:

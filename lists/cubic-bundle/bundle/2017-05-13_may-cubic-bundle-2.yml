@@ -2,6 +2,8 @@
 schema: 1
 name: 'May Cubic Bundle #2'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:5089:jacks-gang
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Defense of Egypt: Cleopatra Mission'
   ids:
   - steam:534010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Spheroid
   ids:
   - unresolved:source:isthereanydeal:5089:spheroid
   requires: []
   tiers:
+  - 1
   - 2
 - name: Doomed Kingdoms
   ids:
   - unresolved:source:isthereanydeal:5089:doomed-kingdoms
   requires: []
   tiers:
+  - 1
   - 2
 - name: Alchemist
   ids:

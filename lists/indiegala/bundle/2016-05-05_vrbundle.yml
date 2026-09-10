@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:400250
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dungeon Hero
   ids:
   - unresolved:source:isthereanydeal:3382:dungeon-hero
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Doorways: Chapter 1 to 3 Collection'
   ids:
   - unresolved:source:isthereanydeal:3382:doorways-chapter-1-to-3-collection
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cat Interstellar
   ids:

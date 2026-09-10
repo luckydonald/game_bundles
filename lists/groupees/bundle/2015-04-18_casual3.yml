@@ -2,6 +2,8 @@
 schema: 1
 name: Casual Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:235720
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zombie Solitaire
   ids:
   - steam:311850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Toilet Tycoon
   ids:
   - steam:390220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rush on Rome
   ids:
   - steam:710460
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Mega Berry
   ids:
   - unresolved:source:isthereanydeal:1800:super-mega-berry
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Matter
   ids:

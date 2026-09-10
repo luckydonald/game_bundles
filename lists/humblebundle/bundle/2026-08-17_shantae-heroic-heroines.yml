@@ -2,6 +2,8 @@
 schema: 1
 name: Shantae & Heroic Heroines
 tiers:
+- rank: 1
+  name: 4 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -21,6 +23,30 @@ crawlers:
 - isthereanydeal
 - humblebundle
 games:
+- name: 'Shantae: Risky''s Revenge - Director''s Cut'
+  ids:
+  - steam:277890
+  - isthereanydeal:shantae-riskys-revenge-directors-cut
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Spidersaurs
+  ids:
+  - steam:1191620
+  - isthereanydeal:spidersaurs
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Mighty Switch Force! Hose It Down
+  ids:
+  - steam:375310
+  - isthereanydeal:mighty-switch-force-hose-it-down
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Shantae: Half-Genie Hero Ultimate Edition'
   ids:
   - steam:764300
@@ -60,27 +86,6 @@ games:
   ids:
   - steam:832320
   - isthereanydeal:mighty-switch-force-collection
-  requires: []
-  tiers:
-  - 3
-- name: 'Shantae: Risky''s Revenge - Director''s Cut'
-  ids:
-  - steam:277890
-  - isthereanydeal:shantae-riskys-revenge-directors-cut
-  requires: []
-  tiers:
-  - 3
-- name: Spidersaurs
-  ids:
-  - steam:1191620
-  - isthereanydeal:spidersaurs
-  requires: []
-  tiers:
-  - 3
-- name: Mighty Switch Force! Hose It Down
-  ids:
-  - steam:375310
-  - isthereanydeal:mighty-switch-force-hose-it-down
   requires: []
   tiers:
   - 3

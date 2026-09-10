@@ -2,6 +2,9 @@
 schema: 1
 name: Build Your Own Best of Cozy Bundle
 tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -19,6 +22,7 @@ games:
   - isthereanydeal:button-city
   requires: []
   tiers:
+  - 1
   - 3
 - name: A Tale for Anna
   ids:
@@ -26,6 +30,7 @@ games:
   - isthereanydeal:a-tale-for-anna
   requires: []
   tiers:
+  - 1
   - 3
 - name: Paper Trail
   ids:
@@ -33,6 +38,7 @@ games:
   - isthereanydeal:paper-trail
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'TOEM: A Photo Adventure'
   ids:
@@ -40,6 +46,7 @@ games:
   - isthereanydeal:toem-a-photo-adventure
   requires: []
   tiers:
+  - 1
   - 3
 - name: Henry Halfhead
   ids:
@@ -47,6 +54,7 @@ games:
   - isthereanydeal:henry-halfhead
   requires: []
   tiers:
+  - 1
   - 3
 - name: A Tiny Sticker Tale
   ids:
@@ -54,6 +62,7 @@ games:
   - isthereanydeal:a-tiny-sticker-tale
   requires: []
   tiers:
+  - 1
   - 3
 - name: Simpler Times
   ids:
@@ -61,6 +70,7 @@ games:
   - isthereanydeal:simpler-times
   requires: []
   tiers:
+  - 1
   - 3
 - name: Chillquarium
   ids:
@@ -68,6 +78,7 @@ games:
   - isthereanydeal:chillquarium
   requires: []
   tiers:
+  - 1
   - 3
 - name: Logic Town
   ids:
@@ -75,6 +86,7 @@ games:
   - isthereanydeal:logic-town
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hidden Cats in Rome
   ids:
@@ -82,6 +94,7 @@ games:
   - isthereanydeal:hidden-cats-in-rome
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hidden Cats in Spooky Town
   ids:
@@ -89,6 +102,7 @@ games:
   - isthereanydeal:hidden-cats-in-spooky-town
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hidden Cats in Santa's Realm
   ids:
@@ -96,6 +110,7 @@ games:
   - isthereanydeal:hidden-cats-in-santas-realm
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hidden in my Paradise
   ids:
@@ -103,6 +118,7 @@ games:
   - isthereanydeal:hidden-in-my-paradise
   requires: []
   tiers:
+  - 1
   - 3
 - name: My Little Life
   ids:
@@ -110,6 +126,7 @@ games:
   - isthereanydeal:my-little-life
   requires: []
   tiers:
+  - 1
   - 3
 - name: Love is...
   ids:
@@ -117,6 +134,7 @@ games:
   - isthereanydeal:love-is
   requires: []
   tiers:
+  - 1
   - 3
 - name: Find My Frogs
   ids:
@@ -124,6 +142,7 @@ games:
   - isthereanydeal:find-my-frogs
   requires: []
   tiers:
+  - 1
   - 3
 - name: Rekindled Trails
   ids:
@@ -131,6 +150,7 @@ games:
   - isthereanydeal:rekindled-trails
   requires: []
   tiers:
+  - 1
   - 3
 - name: Unboxathon
   ids:
@@ -138,6 +158,7 @@ games:
   - isthereanydeal:unboxathon
   requires: []
   tiers:
+  - 1
   - 3
 - name: Twinkleby
   ids:
@@ -145,6 +166,7 @@ games:
   - isthereanydeal:twinkleby
   requires: []
   tiers:
+  - 1
   - 3
 - name: My Little Cafe Nightmare
   ids:
@@ -152,6 +174,7 @@ games:
   - isthereanydeal:my-little-cafe-nightmare
   requires: []
   tiers:
+  - 1
   - 3
 - name: My Little Spider
   ids:
@@ -159,6 +182,7 @@ games:
   - isthereanydeal:my-little-spider
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dogpile
   ids:
@@ -166,4 +190,5 @@ games:
   - isthereanydeal:dogpile
   requires: []
   tiers:
+  - 1
   - 3

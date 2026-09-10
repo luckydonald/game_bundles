@@ -2,6 +2,8 @@
 schema: 1
 name: The Paradoxical Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:1473:leviathan-warships
   requires: []
   tiers:
+  - 1
   - 2
 - name: A Game of Dwarves
   ids:
   - steam:200370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sword of the Stars Complete Collection
   ids:

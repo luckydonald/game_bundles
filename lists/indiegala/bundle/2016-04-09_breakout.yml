@@ -2,6 +2,8 @@
 schema: 1
 name: Breakout Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:284020
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dr. Daisy Pet Vet
   ids:
   - steam:12580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Moorhuhn (Crazy Chicken)
   ids:
   - unresolved:source:isthereanydeal:3282:moorhuhn-crazy-chicken
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prison Tycoon 3 Lockdown
   ids:

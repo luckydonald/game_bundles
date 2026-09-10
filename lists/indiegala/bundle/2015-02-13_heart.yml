@@ -2,6 +2,8 @@
 schema: 1
 name: Heart Attack Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:314200
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Flower Shop: Summer In Fairbrook'
   ids:
   - steam:290990
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Heileen 1: Sail Away'
   ids:
   - steam:302950
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Heileen 2: The Hands Of Fate'
   ids:
   - steam:305480
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Flower Shop: Winter In Fairbrook'
   ids:

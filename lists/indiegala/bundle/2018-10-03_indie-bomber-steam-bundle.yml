@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Bomber Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - steam:877360
   requires: []
   tiers:
+  - 1
   - 2
 - name: Trash Story
   ids:
   - steam:827640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Resistance
   ids:
   - unresolved:source:isthereanydeal:6537:resistance
   requires: []
   tiers:
+  - 1
   - 2
 - name: 21+
   ids:

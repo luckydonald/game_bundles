@@ -2,6 +2,8 @@
 schema: 1
 name: Lost & Found Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:758100
   requires: []
   tiers:
+  - 1
   - 2
 - name: ClickBit
   ids:
   - steam:674220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pukan Bye Bye
   ids:
   - steam:822530
   requires: []
   tiers:
+  - 1
   - 2
 - name: Amelon
   ids:

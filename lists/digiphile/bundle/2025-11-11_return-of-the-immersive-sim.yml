@@ -2,6 +2,8 @@
 schema: 1
 name: Return of the Immersive Sim
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 5
   name: Extra items
 references:
@@ -17,12 +19,14 @@ games:
   - steam:1571940
   requires: []
   tiers:
+  - 1
   - 5
 - name: Blood West
   ids:
   - steam:1587130
   requires: []
   tiers:
+  - 1
   - 5
 - name: Shadows of Doubt
   ids:

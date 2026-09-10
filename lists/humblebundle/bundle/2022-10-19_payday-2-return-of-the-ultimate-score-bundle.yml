@@ -2,6 +2,8 @@
 schema: 1
 name: 'Payday 2: Return of The Ultimate Score Bundle'
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 4
   name: entire-62-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:218620
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'PAYDAY 2: The Point Break Heists'
   ids:

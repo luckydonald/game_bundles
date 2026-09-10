@@ -2,6 +2,8 @@
 schema: 1
 name: Puzzle Pizzazz Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:1467920
   requires: []
   tiers:
+  - 1
   - 2
 - name: Paper Trail
   ids:
   - steam:1889740
   requires: []
   tiers:
+  - 1
   - 2
 - name: Homebody
   ids:
   - steam:1959350
   requires: []
   tiers:
+  - 1
   - 2
 - name: Kingsgrave
   ids:
   - steam:2644360
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Behind the Frame: The Finest Scenery'
   ids:

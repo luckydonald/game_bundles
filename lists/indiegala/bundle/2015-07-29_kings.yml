@@ -2,6 +2,8 @@
 schema: 1
 name: Kings & Knights Mega Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,12 +19,14 @@ games:
   - steam:231740
   requires: []
   tiers:
+  - 1
   - 3
 - name: Arsenal of Democracy
   ids:
   - steam:42850
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ancient Space
   ids:

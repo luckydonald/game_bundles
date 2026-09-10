@@ -2,6 +2,8 @@
 schema: 1
 name: Nemesis Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:382050
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shoppe Keep
   ids:
   - steam:381120
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shadowrun Returns
   ids:
   - steam:234650
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'S.T.A.L.K.E.R.: Clear Sky'
   ids:
   - steam:20510
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Styx: Master of Shadows'
   ids:

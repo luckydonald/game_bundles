@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #63'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - steam:718200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Captive
   ids:
   - steam:802040
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hentai Hexa Mosaic
   ids:
   - unresolved:source:isthereanydeal:6564:hentai-hexa-mosaic
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tunnels of Despair
   ids:

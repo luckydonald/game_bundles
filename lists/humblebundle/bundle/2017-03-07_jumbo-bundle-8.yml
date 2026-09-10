@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Jumbo Bundle 8
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4872:the-journey-down-1-and-2-bundle
   requires: []
   tiers:
+  - 1
   - 3
 - name: Valhalla Hills
   ids:
   - steam:351910
   requires: []
   tiers:
+  - 1
   - 3
 - name: Legends of Eisenwald
   ids:
   - steam:246760
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'If You Build It: Cities & More Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:700600
   requires: []
   tiers:
+  - 1
   - 3
 - name: Frozenheim
   ids:
   - steam:1134100
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Tenants
   ids:

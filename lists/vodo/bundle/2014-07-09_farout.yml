@@ -2,6 +2,8 @@
 schema: 1
 name: The Mindblowingest Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,6 +19,7 @@ games:
   - steam:289090
   requires: []
   tiers:
+  - 1
   - 3
 - name: Q.U.B.E.
   ids:

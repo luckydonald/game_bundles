@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Chronicles Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:787250
   requires: []
   tiers:
+  - 1
   - 2
 - name: SurvivalZ
   ids:
   - steam:799500
   requires: []
   tiers:
+  - 1
   - 2
 - name: AltCoin
   ids:
   - unresolved:source:isthereanydeal:5958:altcoin
   requires: []
   tiers:
+  - 1
   - 2
 - name: Planet Ancyra Chronicles
   ids:

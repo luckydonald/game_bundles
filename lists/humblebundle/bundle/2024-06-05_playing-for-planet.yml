@@ -2,6 +2,8 @@
 schema: 1
 name: Playing for the Planet Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:295790
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Never Alone: Foxtales'
   ids:
   - steam:355740
   requires: []
   tiers:
+  - 1
   - 2
 - name: Before We Leave
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Hooligans
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1983330
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ezy
   ids:
   - unresolved:source:isthereanydeal:5442:ezy
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hooligan Vasja - Christmas Edition
   ids:
   - unresolved:source:isthereanydeal:5442:hooligan-vasja-christmas-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Catacombs 1: Demon War'
   ids:

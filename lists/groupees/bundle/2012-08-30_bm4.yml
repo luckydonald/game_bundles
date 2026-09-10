@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 4
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - steam:32200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Laxius Force
   ids:
   - unresolved:source:isthereanydeal:182:laxius-force
   requires: []
   tiers:
+  - 1
   - 2
 - name: Zero Gear
   ids:
   - steam:18820
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Kaptain Brawe: A Brawe New World'
   ids:
   - steam:65080
   requires: []
   tiers:
+  - 1
   - 2
 - name: Guns of Icarus
   ids:
   - unresolved:source:isthereanydeal:182:guns-of-icarus
   requires: []
   tiers:
+  - 1
   - 2
 - name: Revelations 2012
   ids:
   - steam:201070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Battlemass
   ids:
   - unresolved:source:isthereanydeal:182:battlemass
   requires: []
   tiers:
+  - 1
   - 2
 - name: Guns of Icarus Online
   ids:

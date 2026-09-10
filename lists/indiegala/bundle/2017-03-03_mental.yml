@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Mental
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:6600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Switch
   ids:
   - steam:521430
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nuclear Contingency
   ids:
   - steam:540900
   requires: []
   tiers:
+  - 1
   - 2
 - name: WayOut
   ids:

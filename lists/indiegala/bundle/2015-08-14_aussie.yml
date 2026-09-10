@@ -2,6 +2,8 @@
 schema: 1
 name: The Downunder Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:340800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Once Bitten, Twice Dead!
   ids:
   - unresolved:source:isthereanydeal:2333:once-bitten-twice-dead
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Zafehouse: Diaries'
   ids:
   - steam:249360
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deadnaut
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Royalty-Free 001 Game Creator STEM Bundle
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 2
   name: entire-6-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:347400
   requires: []
   tiers:
+  - 1
   - 2
 - name: 001 Game Creator - Visual Novel Kit
   ids:

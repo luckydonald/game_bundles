@@ -2,6 +2,8 @@
 schema: 1
 name: Kawaii Anime Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:873200
   requires: []
   tiers:
+  - 1
   - 2
 - name: NALOGI
   ids:
   - steam:810670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gothicc Breaker
   ids:
   - steam:819230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Panzer Hearts - War Visual Novel
   ids:

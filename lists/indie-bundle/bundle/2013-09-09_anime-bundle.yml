@@ -2,6 +2,8 @@
 schema: 1
 name: Anime Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - steam:291050
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'BANZAI PECAN: Last Hope for the Young Century'
   ids:
   - unresolved:source:isthereanydeal:101:banzai-pecan-last-hope-for-the-young-century
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Alpha Kimori: Great Doubt'
   ids:
   - unresolved:source:isthereanydeal:101:alpha-kimori-great-doubt
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fatal Theory
   ids:

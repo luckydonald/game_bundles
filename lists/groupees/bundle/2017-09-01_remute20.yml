@@ -2,6 +2,8 @@
 schema: 1
 name: Remute XX
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:5425:no-ammo
   requires: []
   tiers:
+  - 1
   - 2
 - name: Giusto Intonation Training
   ids:
   - unresolved:source:isthereanydeal:5425:giusto-intonation-training
   requires: []
   tiers:
+  - 1
   - 2
 - name: '8-Bit Adventures: The Forgotten Journey Remastered Edition'
   ids:
   - steam:370300
   requires: []
   tiers:
+  - 1
   - 2
 - name: Space Rogue Classic
   ids:

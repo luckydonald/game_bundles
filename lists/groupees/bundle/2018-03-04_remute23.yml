@@ -2,6 +2,8 @@
 schema: 1
 name: Legend Of Remute Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1423010
   requires: []
   tiers:
+  - 1
   - 2
 - name: Geograph
   ids:
   - unresolved:source:isthereanydeal:5952:geograph
   requires: []
   tiers:
+  - 1
   - 2
 - name: Icky
   ids:
   - steam:791160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Close the Window!
   ids:

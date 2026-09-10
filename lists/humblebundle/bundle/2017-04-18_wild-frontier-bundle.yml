@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Wild Frontier Bundle
 tiers:
+- rank: 1
+  name: Pay what you want!
 - rank: 3
   name: Pay $13 or more to also unlock!
 references:
@@ -17,18 +19,21 @@ games:
   - steam:274290
   requires: []
   tiers:
+  - 1
   - 3
 - name: FRONTIERS
   ids:
   - steam:293480
   requires: []
   tiers:
+  - 1
   - 3
 - name: Ice Lakes
   ids:
   - steam:393430
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Renowned Explorers: International Society'
   ids:

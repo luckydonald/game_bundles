@@ -2,6 +2,9 @@
 schema: 1
 name: Build Your Own Decks & Dungeons Bundle
 tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -21,6 +24,7 @@ games:
   - isthereanydeal:unreal-world
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Quest
   ids:
@@ -28,6 +32,7 @@ games:
   - isthereanydeal:the-quest
   requires: []
   tiers:
+  - 1
   - 3
 - name: Astral Ascent
   ids:
@@ -35,6 +40,7 @@ games:
   - isthereanydeal:astral-ascent
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Fuzz Force: Spook Squad'
   ids:
@@ -42,6 +48,7 @@ games:
   - isthereanydeal:fuzz-force-spook-squad
   requires: []
   tiers:
+  - 1
   - 3
 - name: Sovereign Syndicate
   ids:
@@ -49,6 +56,7 @@ games:
   - isthereanydeal:sovereign-syndicate
   requires: []
   tiers:
+  - 1
   - 3
 - name: OTXO
   ids:
@@ -56,6 +64,7 @@ games:
   - isthereanydeal:otxo
   requires: []
   tiers:
+  - 1
   - 3
 - name: Duelists of Eden
   ids:
@@ -63,6 +72,7 @@ games:
   - isthereanydeal:duelists-of-eden
   requires: []
   tiers:
+  - 1
   - 3
 - name: Isle of Swaps
   ids:
@@ -70,6 +80,7 @@ games:
   - isthereanydeal:isle-of-swaps
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Footgun: Underground'
   ids:
@@ -77,6 +88,7 @@ games:
   - isthereanydeal:footgun-underground
   requires: []
   tiers:
+  - 1
   - 3
 - name: DunHero
   ids:
@@ -84,6 +96,7 @@ games:
   - isthereanydeal:dunhero
   requires: []
   tiers:
+  - 1
   - 3
 - name: Everwarder
   ids:
@@ -91,6 +104,7 @@ games:
   - isthereanydeal:everwarder
   requires: []
   tiers:
+  - 1
   - 3
 - name: Red Pistol
   ids:
@@ -98,6 +112,7 @@ games:
   - isthereanydeal:red-pistol
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tic Tactic
   ids:
@@ -105,6 +120,7 @@ games:
   - isthereanydeal:tic-tactic
   requires: []
   tiers:
+  - 1
   - 3
 - name: Aris Arcanum
   ids:
@@ -112,6 +128,7 @@ games:
   - isthereanydeal:aris-arcanum
   requires: []
   tiers:
+  - 1
   - 3
 - name: Second Chances
   ids:
@@ -119,6 +136,7 @@ games:
   - isthereanydeal:second-chances
   requires: []
   tiers:
+  - 1
   - 3
 - name: Replicat
   ids:
@@ -126,6 +144,7 @@ games:
   - isthereanydeal:replicat
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Kritter: Defend Together'
   ids:
@@ -133,6 +152,7 @@ games:
   - isthereanydeal:kritter-defend-together
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeon Antiqua 2
   ids:
@@ -140,6 +160,7 @@ games:
   - isthereanydeal:dungeon-antiqua-2
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dungeons of Dreadrock 1 & 2 Pack
   ids:
@@ -147,4 +168,5 @@ games:
   - isthereanydeal:dungeons-of-dreadrock-1-and-2-pack
   requires: []
   tiers:
+  - 1
   - 3

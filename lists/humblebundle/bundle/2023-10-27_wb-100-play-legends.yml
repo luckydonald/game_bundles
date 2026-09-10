@@ -2,6 +2,8 @@
 schema: 1
 name: 'WB 100: Play The Legends Bundle'
 tiers:
+- rank: 1
+  name: 5-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -17,30 +19,35 @@ games:
   - unresolved:source:isthereanydeal:13576:middle-earth-shadow-of-mordor-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Batman: Arkham Asylum Game of the Year Edition'
   ids:
   - steam:35140
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mad Max
   ids:
   - steam:234140
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mortal Kombat XL
   ids:
   - unresolved:source:isthereanydeal:13576:mortal-kombat-xl
   requires: []
   tiers:
+  - 1
   - 3
 - name: Batman Arkham City Game of the Year Edition
   ids:
   - steam:200260
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Batman™: Arkham Knight Premium Edition'
   ids:

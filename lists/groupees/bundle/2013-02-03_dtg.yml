@@ -2,6 +2,8 @@
 schema: 1
 name: Digital Tribe Groupee
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:190:monster-madness-battle-for-suburbia
   requires: []
   tiers:
+  - 1
   - 2
 - name: Roogoo
   ids:
   - steam:38210
   requires: []
   tiers:
+  - 1
   - 2
 - name: Section 8
   ids:
   - unresolved:source:isthereanydeal:190:section-8
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hotel Giant 2
   ids:

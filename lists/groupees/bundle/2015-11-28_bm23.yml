@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine 23
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:2778:goatpunks-party
   requires: []
   tiers:
+  - 1
   - 2
 - name: Turbo Pug
   ids:
   - steam:418070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nightside
   ids:
   - steam:360390
   requires: []
   tiers:
+  - 1
   - 2
 - name: Days Under Custody
   ids:

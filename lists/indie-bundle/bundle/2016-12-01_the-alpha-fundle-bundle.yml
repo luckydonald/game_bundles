@@ -2,6 +2,8 @@
 schema: 1
 name: Alpha Fundle Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:4428:super-tower-rush
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gravi
   ids:
   - steam:247310
   requires: []
   tiers:
+  - 1
   - 2
 - name: Monsters!
   ids:
   - steam:336160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Samphi
   ids:

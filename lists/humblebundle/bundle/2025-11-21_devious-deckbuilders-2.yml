@@ -2,6 +2,8 @@
 schema: 1
 name: Devious Deckbuilders 2 Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:998740
   requires: []
   tiers:
+  - 1
   - 4
 - name: Evolings
   ids:
   - steam:2281820
   requires: []
   tiers:
+  - 1
   - 4
 - name: Roguebook
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Very Positive Bundle 2
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:278100
   requires: []
   tiers:
+  - 1
   - 4
 - name: Dungeon Souls
   ids:
   - steam:383230
   requires: []
   tiers:
+  - 1
   - 4
 - name: Neon Chrome
   ids:
   - steam:428750
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
   ids:

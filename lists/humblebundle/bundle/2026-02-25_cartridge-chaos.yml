@@ -2,6 +2,8 @@
 schema: 1
 name: Cartridge Chaos Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:877810
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Indie Karts
   ids:
   - steam:323670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Super Magbot
   ids:
   - steam:1205170
   requires: []
   tiers:
+  - 1
   - 2
 - name: Astrodogs
   ids:
   - steam:1301230
   requires: []
   tiers:
+  - 1
   - 2
 - name: Shantae and the Pirate's Curse
   ids:

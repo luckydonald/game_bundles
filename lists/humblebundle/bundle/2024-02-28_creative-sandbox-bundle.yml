@@ -2,6 +2,8 @@
 schema: 1
 name: The Creative Sandbox Bundle
 tiers:
+- rank: 1
+  name: 6-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,36 +19,42 @@ games:
   - steam:268650
   requires: []
   tiers:
+  - 1
   - 2
 - name: TerraTech Deluxe Edition
   ids:
   - steam:285920
   requires: []
   tiers:
+  - 1
   - 2
 - name: Necesse
   ids:
   - steam:1169040
   requires: []
   tiers:
+  - 1
   - 2
 - name: Trailmakers Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:13879:trailmakers-deluxe-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'TerraTech: R&D Labs'
   ids:
   - steam:331930
   requires: []
   tiers:
+  - 1
   - 2
 - name: My Little Universe
   ids:
   - steam:2328750
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Universim
   ids:

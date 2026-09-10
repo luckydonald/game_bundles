@@ -2,6 +2,8 @@
 schema: 1
 name: Beyond the Metroidverse Bundle
 tiers:
+- rank: 1
+  name: 2 Item Bundle
 - rank: 2
   name: Entire 7 Item Bundle
 references:
@@ -21,6 +23,22 @@ crawlers:
 - isthereanydeal
 - humblebundle
 games:
+- name: Salt and Sanctuary
+  ids:
+  - steam:283640
+  - isthereanydeal:salt-and-sanctuary
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Salt and Sacrifice
+  ids:
+  - steam:1437400
+  - isthereanydeal:salt-and-sacrifice
+  requires: []
+  tiers:
+  - 1
+  - 2
 - name: Supraland Six Inches Under
   ids:
   - steam:1522870
@@ -53,20 +71,6 @@ games:
   ids:
   - steam:1918450
   - isthereanydeal:hunterx
-  requires: []
-  tiers:
-  - 2
-- name: Salt and Sanctuary
-  ids:
-  - steam:283640
-  - isthereanydeal:salt-and-sanctuary
-  requires: []
-  tiers:
-  - 2
-- name: Salt and Sacrifice
-  ids:
-  - steam:1437400
-  - isthereanydeal:salt-and-sacrifice
   requires: []
   tiers:
   - 2

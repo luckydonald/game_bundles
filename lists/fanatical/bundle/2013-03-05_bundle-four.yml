@@ -2,6 +2,8 @@
 schema: 1
 name: Fire & Ice Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:214:tiny-troopers
   requires: []
   tiers:
+  - 1
   - 2
 - name: Airport Control Simulator
   ids:
   - unresolved:source:isthereanydeal:214:airport-control-simulator
   requires: []
   tiers:
+  - 1
   - 2
 - name: Armada 2526
   ids:

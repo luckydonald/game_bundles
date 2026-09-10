@@ -2,6 +2,8 @@
 schema: 1
 name: The Uber Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,66 +19,77 @@ games:
   - steam:357070
   requires: []
   tiers:
+  - 1
   - 2
 - name: TTV3
   ids:
   - steam:1114530
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH:SANTICIDE
   ids:
   - steam:898450
   requires: []
   tiers:
+  - 1
   - 2
 - name: TTV2
   ids:
   - steam:701470
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH Vol.5
   ids:
   - steam:640380
   requires: []
   tiers:
+  - 1
   - 2
 - name: Trip to Vinelands
   ids:
   - steam:546090
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH:WRAITH
   ids:
   - steam:586350
   requires: []
   tiers:
+  - 1
   - 2
 - name: SWARMRIDER OMEGA
   ids:
   - steam:714240
   requires: []
   tiers:
+  - 1
   - 2
 - name: WARPZONE DRIFTER
   ids:
   - steam:976120
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH:BLACK
   ids:
   - steam:444940
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH Vol.3
   ids:
   - steam:515570
   requires: []
   tiers:
+  - 1
   - 2
 - name: UBERMOSH Vol.7
   ids:

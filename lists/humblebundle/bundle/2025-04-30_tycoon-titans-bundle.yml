@@ -2,6 +2,8 @@
 schema: 1
 name: Tycoon Titans Bundle
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 2
   name: entire-8-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - steam:446800
   requires: []
   tiers:
+  - 1
   - 2
 - name: Frostpunk
   ids:
   - steam:323190
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'RollerCoaster Tycoon® 3: Complete Edition'
   ids:
   - steam:1368820
   requires: []
   tiers:
+  - 1
   - 2
 - name: PlateUp!
   ids:
   - steam:1599600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mad Games Tycoon 2
   ids:

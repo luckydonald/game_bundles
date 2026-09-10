@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Sports Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6354:grid-2
   requires: []
   tiers:
+  - 1
   - 3
 - name: Eastside Hockey Manager
   ids:
   - steam:301120
   requires: []
   tiers:
+  - 1
   - 3
 - name: SEGA Bass Fishing
   ids:
   - unresolved:source:isthereanydeal:6354:sega-bass-fishing
   requires: []
   tiers:
+  - 1
   - 3
 - name: Motorsport Manager
   ids:

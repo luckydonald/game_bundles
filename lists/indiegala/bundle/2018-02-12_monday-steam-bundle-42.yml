@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #42'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:456160
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hangover
   ids:
   - unresolved:source:isthereanydeal:5888:hangover
   requires: []
   tiers:
+  - 1
   - 2
 - name: BAE 2
   ids:
   - unresolved:source:isthereanydeal:5888:bae-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Singularity Roller
   ids:

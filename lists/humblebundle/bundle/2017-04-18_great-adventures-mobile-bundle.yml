@@ -2,6 +2,8 @@
 schema: 1
 name: 'Humble Mobile Bundle: Great Adventures'
 tiers:
+- rank: 1
+  name: $1+
 - rank: 3
   name: $6+
 references:
@@ -17,18 +19,21 @@ games:
   - steam:40700
   requires: []
   tiers:
+  - 1
   - 3
 - name: Kathy Rain
   ids:
   - steam:370910
   requires: []
   tiers:
+  - 1
   - 3
 - name: Grim Fandango Remastered
   ids:
   - steam:316790
   requires: []
   tiers:
+  - 1
   - 3
 - name: Burly Men at Sea
   ids:

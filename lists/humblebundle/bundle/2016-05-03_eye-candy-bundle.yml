@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Eye Candy Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:281200
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Shantae: Risky''s Revenge - Director''s Cut'
   ids:
   - steam:277890
   requires: []
   tiers:
+  - 1
   - 3
 - name: Human Resource Machine
   ids:
   - steam:375820
   requires: []
   tiers:
+  - 1
   - 3
 - name: Mini Metro
   ids:

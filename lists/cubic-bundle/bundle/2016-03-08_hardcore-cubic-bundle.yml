@@ -2,6 +2,8 @@
 schema: 1
 name: Hardcore Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:263140
   requires: []
   tiers:
+  - 1
   - 2
 - name: Nature Defenders
   ids:
   - steam:430280
   requires: []
   tiers:
+  - 1
   - 2
 - name: Taimumari
   ids:
   - unresolved:source:isthereanydeal:3141:taimumari
   requires: []
   tiers:
+  - 1
   - 2
 - name: Princess.Loot.Pixel.Again
   ids:
   - unresolved:source:isthereanydeal:3141:princess-loot-pixel-again
   requires: []
   tiers:
+  - 1
   - 2
 - name: Yet Another World
   ids:

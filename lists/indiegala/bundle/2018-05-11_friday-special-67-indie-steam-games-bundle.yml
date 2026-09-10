@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #67'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:745940
   requires: []
   tiers:
+  - 1
   - 2
 - name: Drop The Bomb
   ids:
   - unresolved:source:isthereanydeal:6129:drop-the-bomb
   requires: []
   tiers:
+  - 1
   - 2
 - name: EXIST
   ids:
   - steam:804130
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mutant Fighting Cup 2
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: February Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:251710
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tisnart Tiles
   ids:
   - steam:398920
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Chronicles of a Dark Lord Episode II: War of the Abyss'
   ids:
   - unresolved:source:isthereanydeal:3050:chronicles-of-a-dark-lord-episode-ii-war-of-the-abyss
   requires: []
   tiers:
+  - 1
   - 2
 - name: R.O.O.T.S
   ids:
   - steam:357930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rush for Glory
   ids:

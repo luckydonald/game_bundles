@@ -2,6 +2,8 @@
 schema: 1
 name: Bros Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,42 +19,49 @@ games:
   - steam:485870
   requires: []
   tiers:
+  - 1
   - 3
 - name: Luke Sidewalker
   ids:
   - steam:545860
   requires: []
   tiers:
+  - 1
   - 3
 - name: Frisky Business
   ids:
   - steam:588240
   requires: []
   tiers:
+  - 1
   - 3
 - name: There's Poop In My Soup
   ids:
   - steam:449540
   requires: []
   tiers:
+  - 1
   - 3
 - name: Toadled
   ids:
   - steam:521630
   requires: []
   tiers:
+  - 1
   - 3
 - name: Albert and Otto
   ids:
   - steam:368590
   requires: []
   tiers:
+  - 1
   - 3
 - name: Flix and Chill
   ids:
   - steam:595460
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tanks vs Aliens
   ids:

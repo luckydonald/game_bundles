@@ -2,6 +2,8 @@
 schema: 1
 name: Let's Get Tactical - Kalypso Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-26-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:612520
   requires: []
   tiers:
+  - 1
   - 4
 - name: Sudden Strike Gold
   ids:
   - steam:612300
   requires: []
   tiers:
+  - 1
   - 4
 - name: Sudden Strike 3
   ids:
   - steam:612540
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Dungeons: Into the Dark'
   ids:

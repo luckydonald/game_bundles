@@ -2,6 +2,8 @@
 schema: 1
 name: Feel The Rhythm Bundle
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:13130:project-arrhythmia
   requires: []
   tiers:
+  - 1
   - 3
 - name: Disaster Band
   ids:
   - steam:2216360
   requires: []
   tiers:
+  - 1
   - 3
 - name: Trombone Champ
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Neon Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:281060
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'OCEAN CITY RACING: Redux'
   ids:
   - unresolved:source:isthereanydeal:3673:ocean-city-racing-redux
   requires: []
   tiers:
+  - 1
   - 2
 - name: Power-Up
   ids:
   - unresolved:source:isthereanydeal:3673:power-up
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Cyber City 2157: The Visual Novel'
   ids:
   - steam:454690
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hyposphere
   ids:

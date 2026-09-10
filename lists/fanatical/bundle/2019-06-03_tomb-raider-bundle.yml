@@ -2,6 +2,8 @@
 schema: 1
 name: Tomb Raider Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:224960
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tomb Raider II (1997)
   ids:
   - steam:225300
   requires: []
   tiers:
+  - 1
   - 3
 - name: Tomb Raider III (1998)
   ids:
   - steam:225320
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Tomb Raider: Underworld'
   ids:

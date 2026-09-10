@@ -2,6 +2,8 @@
 schema: 1
 name: The Pizza Bundle (Remute 18)
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:5057:ragaba
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Adventures Of Fatman
   ids:
   - steam:395250
   requires: []
   tiers:
+  - 1
   - 2
 - name: PushGo
   ids:
   - unresolved:source:isthereanydeal:5057:pushgo
   requires: []
   tiers:
+  - 1
   - 2
 - name: ALEA
   ids:
   - steam:799770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Macbat 64
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #61'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:748970
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cubrick
   ids:
   - steam:620340
   requires: []
   tiers:
+  - 1
   - 2
 - name: Take Care of the Paperwork
   ids:
   - steam:882290
   requires: []
   tiers:
+  - 1
   - 2
 - name: Unleashed
   ids:

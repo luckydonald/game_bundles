@@ -2,6 +2,8 @@
 schema: 1
 name: Remute's Cyberpunk Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:448480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Box Life
   ids:
   - steam:314370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Potato Thriller Steamed Potato Edition
   ids:
   - steam:486650
   requires: []
   tiers:
+  - 1
   - 2
 - name: NO THING
   ids:

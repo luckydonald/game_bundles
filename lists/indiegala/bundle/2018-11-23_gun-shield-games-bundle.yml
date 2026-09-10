@@ -2,6 +2,8 @@
 schema: 1
 name: The Gun Shield Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:771680
   requires: []
   tiers:
+  - 1
   - 2
 - name: LOOT BOX ACHIEVEMENT SIMULATOR
   ids:
   - unresolved:source:isthereanydeal:6707:loot-box-achievement-simulator
   requires: []
   tiers:
+  - 1
   - 2
 - name: monstercakes
   ids:
   - steam:614910
   requires: []
   tiers:
+  - 1
   - 2
 - name: All Episodes (Episodes 1-4)
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:284890
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Grim Legends: The Forsaken Bride'
   ids:
   - steam:284850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Enigmatis 2: The Mists of Ravenwood'
   ids:
   - steam:284770
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Enigmatis: Ghosts of Maple Creek'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Galactic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:385980
   requires: []
   tiers:
+  - 1
   - 2
 - name: TeraBlaster
   ids:
   - steam:384150
   requires: []
   tiers:
+  - 1
   - 2
 - name: Skyflower
   ids:
   - steam:364670
   requires: []
   tiers:
+  - 1
   - 2
 - name: Void Invaders
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'CRPG Pack: Isometric Immersion'
 tiers:
+- rank: 1
+  name: 5 Item Bundle
 - rank: 3
   name: Entire 11 Item Bundle
 references:
@@ -21,6 +23,46 @@ crawlers:
 - humblebundle
 - isthereanydeal
 games:
+- name: 'Torment: Tides of Numenera'
+  ids:
+  - steam:272270
+  - isthereanydeal:torment-tides-of-numenera
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Gamedec - Definitive Edition
+  ids:
+  - steam:917720
+  - isthereanydeal:gamedec-definitive-edition
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Disco Elysium
+  ids:
+  - steam:632470
+  - isthereanydeal:disco-elysium-the-final-cut
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: UnderRail
+  ids:
+  - steam:250520
+  - isthereanydeal:underrail
+  requires: []
+  tiers:
+  - 1
+  - 3
+- name: Balrum
+  ids:
+  - steam:424250
+  - isthereanydeal:balrum
+  requires: []
+  tiers:
+  - 1
+  - 3
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:
   - steam:2186680
@@ -160,41 +202,6 @@ games:
   ids:
   - steam:3909990
   - isthereanydeal:black-geyser-couriers-of-darkness-tales-of-the-moon-cult
-  requires: []
-  tiers:
-  - 3
-- name: 'Torment: Tides of Numenera'
-  ids:
-  - steam:272270
-  - isthereanydeal:torment-tides-of-numenera
-  requires: []
-  tiers:
-  - 3
-- name: Gamedec - Definitive Edition
-  ids:
-  - steam:917720
-  - isthereanydeal:gamedec-definitive-edition
-  requires: []
-  tiers:
-  - 3
-- name: Disco Elysium
-  ids:
-  - steam:632470
-  - isthereanydeal:disco-elysium-the-final-cut
-  requires: []
-  tiers:
-  - 3
-- name: UnderRail
-  ids:
-  - steam:250520
-  - isthereanydeal:underrail
-  requires: []
-  tiers:
-  - 3
-- name: Balrum
-  ids:
-  - steam:424250
-  - isthereanydeal:balrum
   requires: []
   tiers:
   - 3

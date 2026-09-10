@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XX Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:667930
   requires: []
   tiers:
+  - 1
   - 2
 - name: Wrath of Loki VR Adventure
   ids:
   - steam:650860
   requires: []
   tiers:
+  - 1
   - 2
 - name: Top Secret
   ids:
   - steam:613980
   requires: []
   tiers:
+  - 1
   - 2
 - name: Temple Raid VR
   ids:

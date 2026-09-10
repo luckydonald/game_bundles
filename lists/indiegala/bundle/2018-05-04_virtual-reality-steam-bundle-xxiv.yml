@@ -2,6 +2,8 @@
 schema: 1
 name: Virtual Reality XXIV Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:640250
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Moriarty: Endgame VR'
   ids:
   - steam:611050
   requires: []
   tiers:
+  - 1
   - 2
 - name: VR Fun World
   ids:
   - steam:535750
   requires: []
   tiers:
+  - 1
   - 2
 - name: Chainless
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Award Winners Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,6 +19,7 @@ games:
   - steam:282070
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'OPUS: Rocket of Whispers'
   ids:

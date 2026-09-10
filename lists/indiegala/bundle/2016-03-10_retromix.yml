@@ -2,6 +2,8 @@
 schema: 1
 name: Retro Mix Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:410540
   requires: []
   tiers:
+  - 1
   - 2
 - name: Silent Service
   ids:
   - steam:329660
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pajama Sam's Sock Works
   ids:
   - steam:292840
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tycoon City New York
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Winter Indie Mix Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - steam:266010
   requires: []
   tiers:
+  - 1
   - 3
 - name: Deponia - The Complete Journey
   ids:
   - steam:292910
   requires: []
   tiers:
+  - 1
   - 3
 - name: Butcher
   ids:
   - steam:474210
   requires: []
   tiers:
+  - 1
   - 3
 - name: Felix The Reaper
   ids:

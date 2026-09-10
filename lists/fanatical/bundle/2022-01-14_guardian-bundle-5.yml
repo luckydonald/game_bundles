@@ -2,6 +2,8 @@
 schema: 1
 name: Guardian Bundle 5
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:1018850
   requires: []
   tiers:
+  - 1
   - 3
 - name: Gone Home Soundtrack
   ids:
   - steam:298720
   requires: []
   tiers:
+  - 1
   - 3
 - name: Gone Home
   ids:
   - steam:232430
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Battle of Polytopia
   ids:

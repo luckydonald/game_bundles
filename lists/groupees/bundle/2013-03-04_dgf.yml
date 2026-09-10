@@ -2,6 +2,8 @@
 schema: 1
 name: Digital Game Factory Groupee
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:33600
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Commandos: Beyond the Call of Duty'
   ids:
   - steam:6810
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Commandos: Strike Force'
   ids:
   - unresolved:source:isthereanydeal:192:commandos-strike-force
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Commandos 2: Men of Courage'
   ids:
   - steam:6830
   requires: []
   tiers:
+  - 1
   - 2
 - name: Imperial Glory
   ids:
   - steam:277450
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Commandos: Behind Enemy Lines'
   ids:
   - steam:6800
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Commandos 3: Destination Berlin'
   ids:

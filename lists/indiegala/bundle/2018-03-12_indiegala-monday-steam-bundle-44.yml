@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #44'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:704700
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crazy Alien
   ids:
   - unresolved:source:isthereanydeal:5968:crazy-alien
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Vindicator: Uprising'
   ids:
   - steam:367050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Ragna Maya
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #78'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:6850:i-f-o
   requires: []
   tiers:
+  - 1
   - 2
 - name: ORCS
   ids:
   - steam:475240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crashday Redline Edition
   ids:

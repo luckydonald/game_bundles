@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #61'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:2384850
   requires: []
   tiers:
+  - 1
   - 2
 - name: Dark Days
   ids:
   - steam:422020
   requires: []
   tiers:
+  - 1
   - 2
 - name: DeathMetal
   ids:
   - steam:553820
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Space Merchants: Arena'
   ids:

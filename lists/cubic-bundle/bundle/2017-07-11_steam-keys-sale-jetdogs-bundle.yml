@@ -2,6 +2,8 @@
 schema: 1
 name: Jetdogs Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:509600
   requires: []
   tiers:
+  - 1
   - 2
 - name: Galaxy Admirals
   ids:
   - steam:411120
   requires: []
   tiers:
+  - 1
   - 2
 - name: 12 Labours of Hercules
   ids:
   - steam:342580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Among the Heavens
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Management Material Tropico And More From Kalypso Bundle
 tiers:
+- rank: 1
+  name: 3-item-bundle
 - rank: 4
   name: entire-24-item-bundle
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:14244:tropico-3-gold-edition
   requires: []
   tiers:
+  - 1
   - 4
 - name: Tropico 4 Collectors Bundle
   ids:
   - unresolved:source:isthereanydeal:14244:tropico-4-collectors-bundle
   requires: []
   tiers:
+  - 1
   - 4
 - name: 'Port Royale 3: Gold Edition'
   ids:
   - unresolved:source:isthereanydeal:14244:port-royale-3-gold-edition
   requires: []
   tiers:
+  - 1
   - 4
 - name: Spacebase Startopia
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Tuesday Turmoil Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - steam:635900
   requires: []
   tiers:
+  - 1
   - 2
 - name: Gone Fireflies
   ids:
   - steam:784100
   requires: []
   tiers:
+  - 1
   - 2
 - name: I Shall Remain
   ids:

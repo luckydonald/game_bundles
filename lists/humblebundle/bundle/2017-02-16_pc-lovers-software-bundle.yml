@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Software Bundle for PC Lovers
 tiers:
+- rank: 1
+  name: Beat The Average
 - rank: 2
   name: entire-3-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:223850
   requires: []
   tiers:
+  - 1
   - 2
 - name: PCMark 8
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine X
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,42 +19,49 @@ games:
   - unresolved:source:isthereanydeal:390:project-night
   requires: []
   tiers:
+  - 1
   - 2
 - name: Last Knight
   ids:
   - steam:1132620
   requires: []
   tiers:
+  - 1
   - 2
 - name: Electronic Super Joy
   ids:
   - steam:244870
   requires: []
   tiers:
+  - 1
   - 2
 - name: King's Bounty Warriors of the North Valhalla Edition
   ids:
   - steam:203350
   requires: []
   tiers:
+  - 1
   - 2
 - name: One Finger Death Punch
   ids:
   - steam:264200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Little Gardens
   ids:
   - unresolved:source:isthereanydeal:390:little-gardens
   requires: []
   tiers:
+  - 1
   - 2
 - name: Shelter
   ids:
   - unresolved:source:isthereanydeal:390:shelter
   requires: []
   tiers:
+  - 1
   - 2
 - name: Face Noir
   ids:

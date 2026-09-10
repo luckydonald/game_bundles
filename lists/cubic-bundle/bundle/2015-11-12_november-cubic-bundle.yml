@@ -2,6 +2,8 @@
 schema: 1
 name: November Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,36 +19,42 @@ games:
   - steam:41100
   requires: []
   tiers:
+  - 1
   - 2
 - name: Sacraboar
   ids:
   - steam:40500
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bernie Needs Love
   ids:
   - steam:373120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Escape Goat
   ids:
   - steam:251370
   requires: []
   tiers:
+  - 1
   - 2
 - name: Invasion
   ids:
   - steam:503630
   requires: []
   tiers:
+  - 1
   - 2
 - name: 500 Years Act 1
   ids:
   - steam:357200
   requires: []
   tiers:
+  - 1
   - 2
 - name: Alien Shooter 2 Conscription
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Artifex Mundi Bundle 13
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:330990
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Time Mysteries 3: The Final Enigma'
   ids:
   - steam:319320
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Grim Legends: The Forsaken Bride'
   ids:
   - steam:284850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Endless Fables 3: Dark Moor'
   ids:

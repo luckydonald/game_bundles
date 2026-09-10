@@ -2,6 +2,8 @@
 schema: 1
 name: Indie Gravity Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:614900
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Last Photon
   ids:
   - unresolved:source:isthereanydeal:5061:the-last-photon
   requires: []
   tiers:
+  - 1
   - 2
 - name: LaserCat
   ids:
   - steam:496120
   requires: []
   tiers:
+  - 1
   - 2
 - name: Narborion Saga
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #74'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Includes Tier 1
 references:
@@ -17,18 +19,21 @@ games:
   - steam:876890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bars and Balance
   ids:
   - steam:731940
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'BATTLE ZOMBIE SHOOTER: SURVIVAL OF THE DEAD'
   ids:
   - unresolved:source:isthereanydeal:6550:battle-zombie-shooter-survival-of-the-dead
   requires: []
   tiers:
+  - 1
   - 2
 - name: Earth Muncher
   ids:

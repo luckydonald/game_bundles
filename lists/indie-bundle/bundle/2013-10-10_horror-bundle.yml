@@ -2,6 +2,8 @@
 schema: 1
 name: Horror Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Beat The Average
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:350:the-horror-at-ms-aurora
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Into the Dark: Ultimate Trash Edition'
   ids:
   - steam:266050
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Grave Digger
   ids:
   - steam:345340
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Into the Ice: Nazis of Neuschwabenland'
   ids:

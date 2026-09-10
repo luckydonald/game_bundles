@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #62'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:586880
   requires: []
   tiers:
+  - 1
   - 2
 - name: Hentai Sokoban
   ids:
   - unresolved:source:isthereanydeal:6481:hentai-sokoban
   requires: []
   tiers:
+  - 1
   - 2
 - name: Pixel Hentai Mosaic
   ids:
   - unresolved:source:isthereanydeal:6481:pixel-hentai-mosaic
   requires: []
   tiers:
+  - 1
   - 2
 - name: Q-YO Blaster
   ids:

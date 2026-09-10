@@ -2,6 +2,8 @@
 schema: 1
 name: 'Monday Motivation Bundle #41'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:727640
   requires: []
   tiers:
+  - 1
   - 2
 - name: Snake Eyes Dungeon
   ids:
   - steam:740240
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lost in the tomb
   ids:
   - steam:732070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Fantasy Defense
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: Killer Bundle 22
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,30 +19,35 @@ games:
   - steam:774361
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cook, Serve, Delicious! 3?!
   ids:
   - steam:1000030
   requires: []
   tiers:
+  - 1
   - 2
 - name: RIOT- Civil Unrest
   ids:
   - steam:342310
   requires: []
   tiers:
+  - 1
   - 2
 - name: My Time At Portia
   ids:
   - steam:666140
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Morbid: The Seven Acolytes'
   ids:
   - steam:1140890
   requires: []
   tiers:
+  - 1
   - 2
 - name: Severed Steel
   ids:

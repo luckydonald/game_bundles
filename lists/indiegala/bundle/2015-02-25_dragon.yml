@@ -2,6 +2,8 @@
 schema: 1
 name: Dragon Rock Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:296050
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Scourge: Outbreak Ambrosia Bundle'
   ids:
   - steam:227560
   requires: []
   tiers:
+  - 1
   - 2
 - name: Muffin Knight
   ids:
   - steam:263700
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'BloodRayne: Betrayal'
   ids:

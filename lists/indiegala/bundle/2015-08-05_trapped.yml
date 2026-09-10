@@ -2,6 +2,8 @@
 schema: 1
 name: Trapped Souls Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:277510
   requires: []
   tiers:
+  - 1
   - 2
 - name: "Greed \x96 Black Border"
   ids:
   - steam:46400
   requires: []
   tiers:
+  - 1
   - 2
 - name: Skilltree Saga
   ids:
   - steam:315320
   requires: []
   tiers:
+  - 1
   - 2
 - name: Deadly 30
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Friday Special Bundle #75'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:828590
   requires: []
   tiers:
+  - 1
   - 2
 - name: Accurate Segmentation 2
   ids:
   - unresolved:source:isthereanydeal:6610:accurate-segmentation-2
   requires: []
   tiers:
+  - 1
   - 2
 - name: Jorji and Impossible Forest
   ids:
   - steam:883190
   requires: []
   tiers:
+  - 1
   - 2
 - name: TACTICAL
   ids:

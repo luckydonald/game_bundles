@@ -2,6 +2,8 @@
 schema: 1
 name: 'THE 2K COLLECTION: BLOCKBUSTERS & BEYOND'
 tiers:
+- rank: 1
+  name: Campfire
 - rank: 3
   name: Invasion
 references:
@@ -19,12 +21,14 @@ games:
   - steam:1577120
   requires: []
   tiers:
+  - 1
   - 3
 - name: Rollerdrome
   ids:
   - steam:1294420
   requires: []
   tiers:
+  - 1
   - 3
 - name: Topspin 2K25 Deluxe Edition
   ids:

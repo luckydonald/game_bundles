@@ -2,6 +2,8 @@
 schema: 1
 name: The HH-Games Casual Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,12 +19,14 @@ games:
   - unresolved:source:isthereanydeal:7366:mini-golf
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Enthralling Realms: An Alchemist''s Tale'
   ids:
   - steam:1016850
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'The Far Kingdoms: Age Of Solitaire'
   ids:

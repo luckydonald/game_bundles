@@ -2,6 +2,8 @@
 schema: 1
 name: Depths of Fear Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:294770
   requires: []
   tiers:
+  - 1
   - 2
 - name: Streets of Chaos
   ids:
   - unresolved:source:isthereanydeal:1311:streets-of-chaos
   requires: []
   tiers:
+  - 1
   - 2
 - name: Bermuda
   ids:
   - steam:337630
   requires: []
   tiers:
+  - 1
   - 2
 - name: Haegemonia - The Solon Heritage
   ids:
   - steam:294790
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Book of Unwritten Tales Digital Deluxe Edition
   ids:

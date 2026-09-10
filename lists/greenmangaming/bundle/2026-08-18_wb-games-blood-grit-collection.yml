@@ -2,6 +2,8 @@
 schema: 1
 name: 'WB Games: Blood & Grit Collection'
 tiers:
+- rank: 1
+  name: Survive
 - rank: 2
   name: Dominate
 references:
@@ -20,6 +22,7 @@ games:
   - isthereanydeal:middle-earth-shadow-of-mordor-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mad Max
   ids:
@@ -27,6 +30,7 @@ games:
   - isthereanydeal:mad-max
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mortal Kombat XL
   ids:
@@ -34,6 +38,7 @@ games:
   - isthereanydeal:mortal-kombat-xl
   requires: []
   tiers:
+  - 1
   - 2
 - name: Mortal Kombat 11 Ultimate
   ids:

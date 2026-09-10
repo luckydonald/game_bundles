@@ -2,6 +2,8 @@
 schema: 1
 name: Be Mine Anniversary 3
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:3054:kunoi
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vektor Wars
   ids:
   - steam:365760
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Shadow Blade: Reload'
   ids:
   - steam:272330
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Hive
   ids:

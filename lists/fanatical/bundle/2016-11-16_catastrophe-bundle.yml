@@ -2,6 +2,8 @@
 schema: 1
 name: CATastrophe Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,24 +19,28 @@ games:
   - steam:447890
   requires: []
   tiers:
+  - 1
   - 3
 - name: Shooting Stars!
   ids:
   - steam:415350
   requires: []
   tiers:
+  - 1
   - 3
 - name: Samudai
   ids:
   - unresolved:source:isthereanydeal:4351:samudai
   requires: []
   tiers:
+  - 1
   - 3
 - name: Pix the Cat
   ids:
   - steam:330180
   requires: []
   tiers:
+  - 1
   - 3
 - name: Hot Tin Roof
   ids:

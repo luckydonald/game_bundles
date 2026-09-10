@@ -2,6 +2,8 @@
 schema: 1
 name: Smackdown Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:264220
   requires: []
   tiers:
+  - 1
   - 2
 - name: Phoenix Force
   ids:
   - steam:332480
   requires: []
   tiers:
+  - 1
   - 2
 - name: Daedalus - No Escape 4 Pack
   ids:
   - unresolved:source:isthereanydeal:3191:daedalus-no-escape-4-pack
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Space Pilgrim Episode II: Epsilon Indi'
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: 'Devil May Cry: Devil Trigger Collection Bundle'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-4-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:220440
   requires: []
   tiers:
+  - 1
   - 2
 - name: Devil May Cry HD Collection
   ids:
   - steam:631510
   requires: []
   tiers:
+  - 1
   - 2
 - name: Devil May Cry® 4 Special Edition
   ids:

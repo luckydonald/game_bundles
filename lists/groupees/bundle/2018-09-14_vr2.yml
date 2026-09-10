@@ -2,6 +2,8 @@
 schema: 1
 name: 'The VR Bundle #2'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:779580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Tengutana
   ids:
   - steam:630070
   requires: []
   tiers:
+  - 1
   - 2
 - name: Renzo Racer
   ids:
   - steam:605100
   requires: []
   tiers:
+  - 1
   - 2
 - name: Lair of the Titans
   ids:

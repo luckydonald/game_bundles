@@ -2,6 +2,8 @@
 schema: 1
 name: Humble Warhammer Bundle 2020
 tiers:
+- rank: 1
+  name: 4-item-bundle
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -17,24 +19,28 @@ games:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-kill-team
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Warhammer® 40,000: Dawn of War® - Game of the Year Edition'
   ids:
   - unresolved:source:isthereanydeal:8977:warhammer-40000-dawn-of-war-game-of-the-year-edition
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Legacy of Dorn: Herald of Oblivion'
   ids:
   - steam:389850
   requires: []
   tiers:
+  - 1
   - 3
 - name: "Warhammer® 40,000\x99: Dawn of War® II"
   ids:

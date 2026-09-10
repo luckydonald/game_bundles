@@ -2,6 +2,8 @@
 schema: 1
 name: RPG Maker Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,18 +19,21 @@ games:
   - steam:235900
   requires: []
   tiers:
+  - 1
   - 3
 - name: The Last Word
   ids:
   - unresolved:source:isthereanydeal:11123:the-last-word
   requires: []
   tiers:
+  - 1
   - 3
 - name: Edolie
   ids:
   - steam:349240
   requires: []
   tiers:
+  - 1
   - 3
 - name: RPG Maker VX Ace
   ids:

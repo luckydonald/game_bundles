@@ -2,6 +2,8 @@
 schema: 1
 name: Blitz Cubic Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,24 +19,28 @@ games:
   - steam:326180
   requires: []
   tiers:
+  - 1
   - 2
 - name: CosmoLands | Space-Adventure
   ids:
   - unresolved:source:isthereanydeal:5221:cosmolands-space-adventure
   requires: []
   tiers:
+  - 1
   - 2
 - name: Cubic complex
   ids:
   - unresolved:source:isthereanydeal:5221:cubic-complex
   requires: []
   tiers:
+  - 1
   - 2
 - name: Trouble In The Manor
   ids:
   - steam:338530
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Wanderland: Advanced Adventurer Pack'
   ids:

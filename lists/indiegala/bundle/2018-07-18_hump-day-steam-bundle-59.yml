@@ -2,6 +2,8 @@
 schema: 1
 name: 'Hump Day Bundle #59'
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - unresolved:source:isthereanydeal:6312:toxic-townsmen
   requires: []
   tiers:
+  - 1
   - 2
 - name: LAST WAR 2044
   ids:
   - steam:804460
   requires: []
   tiers:
+  - 1
   - 2
 - name: MIND BLOX
   ids:
   - unresolved:source:isthereanydeal:6312:mind-blox
   requires: []
   tiers:
+  - 1
   - 2
 - name: Crashday Redline Edition
   ids:

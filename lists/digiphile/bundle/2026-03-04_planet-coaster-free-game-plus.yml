@@ -2,6 +2,8 @@
 schema: 1
 name: Planet Coaster "Free Game+" collection bundle
 tiers:
+- rank: 1
+  name: Free Base Game
 - rank: 4
   name: Tier 4
 references:
@@ -17,6 +19,7 @@ games:
   - steam:493340
   requires: []
   tiers:
+  - 1
   - 4
 - name: Planet Coaster - World's Fair Pack
   ids:

@@ -2,6 +2,8 @@
 schema: 1
 name: NRG Reloaded
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 3
   name: Tier 3
 references:
@@ -17,42 +19,49 @@ games:
   - steam:311860
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'AI: Rampage'
   ids:
   - steam:438020
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Invasion: Brain Craving'
   ids:
   - steam:423710
   requires: []
   tiers:
+  - 1
   - 3
 - name: So Many Cubes
   ids:
   - steam:513590
   requires: []
   tiers:
+  - 1
   - 3
 - name: State of Anarchy
   ids:
   - steam:463210
   requires: []
   tiers:
+  - 1
   - 3
 - name: Dreamlord
   ids:
   - unresolved:source:isthereanydeal:4845:dreamlord
   requires: []
   tiers:
+  - 1
   - 3
 - name: Incitement 3
   ids:
   - steam:391660
   requires: []
   tiers:
+  - 1
   - 3
 - name: 'Atonement 2: Ruptured by Despair'
   ids:

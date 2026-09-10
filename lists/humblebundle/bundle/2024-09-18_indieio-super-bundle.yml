@@ -2,6 +2,8 @@
 schema: 1
 name: indie.io Super Bundle
 tiers:
+- rank: 1
+  name: 1-item-bundle
 - rank: 4
   name: entire-13-item-bundle
 references:
@@ -17,6 +19,7 @@ games:
   - steam:1739880
   requires: []
   tiers:
+  - 1
   - 4
 - name: To The Rescue!
   ids:

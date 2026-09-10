@@ -2,6 +2,8 @@
 schema: 1
 name: Overload Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:673580
   requires: []
   tiers:
+  - 1
   - 2
 - name: Rats - Time is running out!
   ids:
   - unresolved:source:isthereanydeal:2442:rats-time-is-running-out
   requires: []
   tiers:
+  - 1
   - 2
 - name: Moonlight Minions
   ids:
   - steam:311170
   requires: []
   tiers:
+  - 1
   - 2
 - name: The Protocol
   ids:

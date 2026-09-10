@@ -2,6 +2,8 @@
 schema: 1
 name: Happy New Year 2016 Bundle
 tiers:
+- rank: 1
+  name: Tier 1
 - rank: 2
   name: Tier 2
 references:
@@ -17,18 +19,21 @@ games:
   - steam:375010
   requires: []
   tiers:
+  - 1
   - 2
 - name: 'Into the Dark: Ultimate Trash Edition'
   ids:
   - steam:266050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Prism
   ids:
   - unresolved:source:isthereanydeal:2903:prism
   requires: []
   tiers:
+  - 1
   - 2
 - name: Vox Populi Vox Dei 2
   ids:

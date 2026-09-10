@@ -2,6 +2,8 @@
 schema: 1
 name: 'Devil May Cry: Devil Trigger Reloaded Collection 2026'
 tiers:
+- rank: 1
+  name: 2-item-bundle
 - rank: 2
   name: entire-4-item-bundle
 references:
@@ -17,12 +19,14 @@ games:
   - steam:329050
   requires: []
   tiers:
+  - 1
   - 2
 - name: Devil May Cry 5 + Vergil
   ids:
   - steam:601150
   requires: []
   tiers:
+  - 1
   - 2
 - name: DMC - Devil May Cry
   ids:
