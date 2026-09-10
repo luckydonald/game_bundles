@@ -1,14 +1,25 @@
 # yaml-language-server: $schema=../../schemas/game-list.schema.json
 schema: 1
 name: The Orange Box
+references: []
 games:
-  - name: Half-Life 2
-    ids: [steam:220]
-  - name: "Half-Life 2: Episode One"
-    ids: [steam:380]
-  - name: "Half-Life 2: Episode Two"
-    ids: [steam:420]
-  - name: Portal
-    ids: [steam:400]
-  - name: Team Fortress 2
-    ids: [steam:440]
+- name: Half-Life 2
+  ids:
+  - steam:220
+  requires: []
+- name: 'Half-Life 2: Episode One'
+  ids:
+  - steam:380
+  requires: []
+- name: 'Half-Life 2: Episode Two'
+  ids:
+  - steam:420
+  requires: []
+- name: Portal
+  ids:
+  - steam:400
+  requires: []
+- name: Team Fortress 2
+  ids:
+  - steam:440
+  requires: []
