@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8940/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8940/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8940/source.json
+games:
+- name: Phantasmata
+  ids:
+  - steam:1048790
+  requires: []
+- name: The Legendary Assassin KAL
+  ids:
+  - steam:1013810
+  requires: []
+- name: Pirates Treasure II
+  ids:
+  - unresolved:source:isthereanydeal:8940:pirates-treasure-ii
+  requires: []
+- name: Spooky Spins Remastered - Steam Edition
+  ids:
+  - steam:1220680
+  requires: []
+- name: Valentines Desire - Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:8940:valentines-desire-steam-edition
+  requires: []
+- name: Colorful 3D II
+  ids:
+  - steam:1251760
+  requires: []
+- name: Goofy Golf Remastered Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:8940:goofy-golf-remastered-steam-edition
+  requires: []
+- name: Halloween Horrors Deluxe Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:8940:halloween-horrors-deluxe-steam-edition
+  requires: []
+- name: Spooky Spins Deluxe Steam Edition
+  ids:
+  - steam:1312510
+  requires: []

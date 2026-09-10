@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 219: AtomicFabrik — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9017/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9017/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9017/source.json
+games:
+- name: Find the Oil Racing Edition
+  ids:
+  - steam:1039570
+  requires: []
+- name: Corrupt
+  ids:
+  - unresolved:source:isthereanydeal:9017:corrupt
+  requires: []
+- name: Cutie Paws
+  ids:
+  - unresolved:source:isthereanydeal:9017:cutie-paws
+  requires: []
+- name: Top Burger
+  ids:
+  - steam:1058930
+  requires: []
+- name: 'Need for Spirit: Off-Road Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9017:need-for-spirit-off-road-edition
+  requires: []
+- name: The Hunt in the Forest
+  ids:
+  - steam:1050810
+  requires: []
+- name: 'The Last Hope: Atomic Bomb - Crypto War'
+  ids:
+  - unresolved:source:isthereanydeal:9017:the-last-hope-atomic-bomb-crypto-war
+  requires: []
+- name: Muscle Car Robot
+  ids:
+  - steam:1058500
+  requires: []
+- name: Extreme Offroad Monster Simulator
+  ids:
+  - steam:1164440
+  requires: []

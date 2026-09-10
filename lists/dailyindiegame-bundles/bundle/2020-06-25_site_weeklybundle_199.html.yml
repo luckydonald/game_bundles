@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8937/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8937/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8937/source.json
+games:
+- name: Hentai Mosaique Fix-IT Shoppe
+  ids:
+  - steam:1109360
+  requires: []
+- name: DELIVERED!
+  ids:
+  - unresolved:source:isthereanydeal:8937:delivered
+  requires: []
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: Hentai Mosaique Puzzle
+  ids:
+  - steam:993740
+  requires: []
+- name: Hentai Mosaique Vip Room
+  ids:
+  - steam:1035610
+  requires: []
+- name: Wildland
+  ids:
+  - steam:1112960
+  requires: []
+- name: Drift Alone
+  ids:
+  - steam:1179310
+  requires: []
+- name: '486'
+  ids:
+  - steam:1263680
+  requires: []
+- name: Corona Find Us
+  ids:
+  - unresolved:source:isthereanydeal:8937:corona-find-us
+  requires: []
+- name: Slime Up
+  ids:
+  - steam:1340420
+  requires: []

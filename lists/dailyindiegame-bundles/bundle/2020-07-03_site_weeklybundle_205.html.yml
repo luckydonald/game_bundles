@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Summer Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8955/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8955/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8955/source.json
+games:
+- name: Balloon Girl
+  ids:
+  - unresolved:source:isthereanydeal:8955:balloon-girl
+  requires: []
+- name: CuberPunk 2089
+  ids:
+  - steam:938300
+  requires: []
+- name: Gordon Streaman
+  ids:
+  - steam:1131810
+  requires: []
+- name: 5.84 Wing
+  ids:
+  - steam:1019060
+  requires: []
+- name: Road Legends
+  ids:
+  - unresolved:source:isthereanydeal:8955:road-legends
+  requires: []
+- name: PARSE ALLY
+  ids:
+  - unresolved:source:isthereanydeal:8955:parse-ally
+  requires: []
+- name: Kingdom-Heroes
+  ids:
+  - unresolved:source:isthereanydeal:8955:kingdom-heroes
+  requires: []
+- name: 异世界的无厘头生活
+  ids:
+  - unresolved:source:isthereanydeal:8955:yi-shi-jie-de-wu-li-tou-sheng-huo
+  requires: []
+- name: Proxy Air Force
+  ids:
+  - steam:1303000
+  requires: []

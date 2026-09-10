@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 216 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9003/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9003/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9003/source.json
+games:
+- name: Without Within 3
+  ids:
+  - steam:676130
+  requires: []
+- name: Without Within 2
+  ids:
+  - steam:398980
+  requires: []
+- name: Cursed Sight
+  ids:
+  - steam:360550
+  requires: []
+- name: Ritbone
+  ids:
+  - unresolved:source:isthereanydeal:9003:ritbone
+  requires: []
+- name: Symphony of Stars
+  ids:
+  - steam:973310
+  requires: []
+- name: Apple Pop
+  ids:
+  - unresolved:source:isthereanydeal:9003:apple-pop
+  requires: []
+- name: Unhack 2
+  ids:
+  - steam:444170
+  requires: []
+- name: The Horrors at Castle Wülhein
+  ids:
+  - unresolved:source:isthereanydeal:9003:the-horrors-at-castle-wulhein
+  requires: []
+- name: Killer Dog
+  ids:
+  - steam:1359170
+  requires: []

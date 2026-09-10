@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Spring Bundle 9 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8604/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8604/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8604/source.json
+games:
+- name: ReignMaker
+  ids:
+  - steam:286200
+  requires: []
+- name: Battle vs Chess
+  ids:
+  - steam:211050
+  requires: []
+- name: Marble Run
+  ids:
+  - steam:726720
+  requires: []
+- name: Project VR Wild Hunt
+  ids:
+  - steam:872630
+  requires: []
+- name: Polywar
+  ids:
+  - steam:444490
+  requires: []
+- name: Blue Fox
+  ids:
+  - steam:1253720
+  requires: []
+- name: Malus
+  ids:
+  - unresolved:source:isthereanydeal:8604:malus
+  requires: []
+- name: Little machines world
+  ids:
+  - steam:1258620
+  requires: []
+- name: My psychedelic world
+  ids:
+  - unresolved:source:isthereanydeal:8604:my-psychedelic-world
+  requires: []

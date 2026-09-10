@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 215 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8995/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8995/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8995/source.json
+games:
+- name: Samurai Wish
+  ids:
+  - steam:877040
+  requires: []
+- name: Tricky Cat
+  ids:
+  - steam:1042330
+  requires: []
+- name: 武儒绘卷 - 启示录
+  ids:
+  - steam:1204490
+  requires: []
+- name: Little Bunny
+  ids:
+  - steam:1285870
+  requires: []
+- name: Danger Zombies
+  ids:
+  - steam:1284150
+  requires: []
+- name: Jumperbird
+  ids:
+  - steam:1310480
+  requires: []
+- name: Tankfight
+  ids:
+  - steam:1310470
+  requires: []
+- name: Cemetery War
+  ids:
+  - steam:1306860
+  requires: []
+- name: Color Buster!
+  ids:
+  - unresolved:source:isthereanydeal:8995:color-buster
+  requires: []

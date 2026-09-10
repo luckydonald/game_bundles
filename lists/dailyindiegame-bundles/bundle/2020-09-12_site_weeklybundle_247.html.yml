@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 247 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9150/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9150/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9150/source.json
+games:
+- name: Jaywalker
+  ids:
+  - unresolved:source:isthereanydeal:9150:jaywalker
+  requires: []
+- name: VirtuaCreature
+  ids:
+  - unresolved:source:isthereanydeal:9150:virtuacreature
+  requires: []
+- name: Griefer
+  ids:
+  - steam:823040
+  requires: []
+- name: Zombow
+  ids:
+  - steam:823650
+  requires: []
+- name: Daedalic Complex
+  ids:
+  - unresolved:source:isthereanydeal:9150:daedalic-complex
+  requires: []
+- name: Finger Guessing King
+  ids:
+  - steam:1296580
+  requires: []
+- name: Zball
+  ids:
+  - unresolved:source:isthereanydeal:9150:zball
+  requires: []
+- name: Sweet Tooth 3
+  ids:
+  - unresolved:source:isthereanydeal:9150:sweet-tooth-3
+  requires: []
+- name: Zball II
+  ids:
+  - unresolved:source:isthereanydeal:9150:zball-ii
+  requires: []

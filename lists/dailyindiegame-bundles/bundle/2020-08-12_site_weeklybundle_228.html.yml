@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 228 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9050/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9050/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9050/source.json
+games:
+- name: Bassline Sinker
+  ids:
+  - steam:945100
+  requires: []
+- name: CastleGuard
+  ids:
+  - steam:961240
+  requires: []
+- name: Robotic Learn
+  ids:
+  - steam:1350480
+  requires: []
+- name: Over'n Over
+  ids:
+  - steam:1358730
+  requires: []
+- name: Arcadium
+  ids:
+  - steam:1336100
+  requires: []
+- name: InMaze
+  ids:
+  - steam:1371160
+  requires: []
+- name: Ice Star
+  ids:
+  - unresolved:source:isthereanydeal:9050:ice-star
+  requires: []
+- name: Korean Adventures in Russia
+  ids:
+  - steam:1375970
+  requires: []
+- name: Power Tester
+  ids:
+  - steam:1350390
+  requires: []

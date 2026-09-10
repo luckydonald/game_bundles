@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 233 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9076/source.json
+games:
+- name: Space Wars
+  ids:
+  - steam:892910
+  requires: []
+- name: Ancient Evil
+  ids:
+  - steam:1341620
+  requires: []
+- name: Hard Driver
+  ids:
+  - steam:1341640
+  requires: []
+- name: Hard Driver 2
+  ids:
+  - steam:1341650
+  requires: []
+- name: Go, Go Cowboy
+  ids:
+  - steam:1341630
+  requires: []
+- name: ClickMonster
+  ids:
+  - steam:1341660
+  requires: []
+- name: Star Puzzle
+  ids:
+  - steam:1371600
+  requires: []
+- name: Apple Hopper
+  ids:
+  - steam:1371610
+  requires: []
+- name: Clash Memory Game
+  ids:
+  - steam:1371620
+  requires: []

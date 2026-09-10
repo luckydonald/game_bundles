@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 252 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9165/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9165/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9165/source.json
+games:
+- name: Power of Love
+  ids:
+  - steam:368710
+  requires: []
+- name: Just a Game
+  ids:
+  - unresolved:source:isthereanydeal:9165:just-a-game
+  requires: []
+- name: Abrix for kids
+  ids:
+  - unresolved:source:isthereanydeal:9165:abrix-for-kids
+  requires: []
+- name: Incandescent 2
+  ids:
+  - steam:889790
+  requires: []
+- name: 'Elysium: Blood Games'
+  ids:
+  - steam:430080
+  requires: []
+- name: Incandescent
+  ids:
+  - steam:380550
+  requires: []
+- name: Blackjack Math
+  ids:
+  - steam:1341220
+  requires: []
+- name: Randomlands
+  ids:
+  - steam:1399760
+  requires: []
+- name: LIFESPAWN
+  ids:
+  - steam:1410790
+  requires: []

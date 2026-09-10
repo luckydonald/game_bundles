@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 164 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8670/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8670/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8670/source.json
+games:
+- name: Grater
+  ids:
+  - unresolved:source:isthereanydeal:8670:grater
+  requires: []
+- name: 'Sea Battle: Through the Ages'
+  ids:
+  - unresolved:source:isthereanydeal:8670:sea-battle-through-the-ages
+  requires: []
+- name: Dragon Chase
+  ids:
+  - steam:1011240
+  requires: []
+- name: Psychiatrist Simulator
+  ids:
+  - steam:791590
+  requires: []
+- name: Lots of Balls
+  ids:
+  - steam:780760
+  requires: []
+- name: Empires
+  ids:
+  - unresolved:source:isthereanydeal:8670:empires
+  requires: []
+- name: Square Head Zombies 2 - FPS Game
+  ids:
+  - steam:841140
+  requires: []
+- name: Bonsai
+  ids:
+  - steam:444160
+  requires: []
+- name: 'Gangsta Sniper 3: Final Parody'
+  ids:
+  - steam:1173260
+  requires: []

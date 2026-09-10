@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 244 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9139/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9139/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9139/source.json
+games:
+- name: Super Jet Juck
+  ids:
+  - steam:774121
+  requires: []
+- name: Parking Cop Simulator
+  ids:
+  - steam:706030
+  requires: []
+- name: Hiking Simulator 2018
+  ids:
+  - steam:791950
+  requires: []
+- name: SAMS
+  ids:
+  - steam:971540
+  requires: []
+- name: Brainmelter Deluxe
+  ids:
+  - steam:964060
+  requires: []
+- name: BalloonBoyBob
+  ids:
+  - steam:1223110
+  requires: []
+- name: Naked Warrior
+  ids:
+  - steam:1385810
+  requires: []
+- name: 'Space Fat: To the Core'
+  ids:
+  - unresolved:source:isthereanydeal:9139:space-fat-to-the-core
+  requires: []
+- name: Porcini
+  ids:
+  - steam:1398180
+  requires: []

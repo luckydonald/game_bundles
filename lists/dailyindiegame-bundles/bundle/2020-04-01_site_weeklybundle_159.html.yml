@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 159 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8621/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8621/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8621/source.json
+games:
+- name: I LIKE THE FLOWERS
+  ids:
+  - steam:1138300
+  requires: []
+- name: THE ART - Metamorphosis
+  ids:
+  - steam:1139470
+  requires: []
+- name: Deep Ocean Rush
+  ids:
+  - steam:1162730
+  requires: []
+- name: 33 Rounds
+  ids:
+  - steam:1194620
+  requires: []
+- name: Next Hand Master
+  ids:
+  - unresolved:source:isthereanydeal:8621:next-hand-master
+  requires: []
+- name: Web Spice Purple World
+  ids:
+  - steam:1091190
+  requires: []
+- name: Skull Rogue
+  ids:
+  - steam:1210700
+  requires: []
+- name: Great Alhcemist
+  ids:
+  - steam:1237550
+  requires: []
+- name: Hot steel
+  ids:
+  - steam:1237560
+  requires: []
