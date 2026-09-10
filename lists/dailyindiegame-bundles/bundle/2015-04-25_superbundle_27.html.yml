@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 27 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1818/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1818/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1818/source.json
+games:
+- name: Chaos Domain
+  ids:
+  - steam:287100
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: Escape Machines
+  ids:
+  - steam:363490
+  requires: []
+- name: 'The Defenders: The Second Wave'
+  ids:
+  - steam:351400
+  requires: []
+- name: Cobi Treasure Deluxe
+  ids:
+  - steam:301690
+  requires: []
+- name: Red Lake
+  ids:
+  - steam:357290
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Desura Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1550/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1550/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1550/source.json
+games:
+- name: Easy St. Tycoon
+  ids:
+  - unresolved:source:isthereanydeal:1550:easy-st-tycoon
+  requires: []
+- name: 'Red Goblin: Cursed Forest'
+  ids:
+  - unresolved:source:isthereanydeal:1550:red-goblin-cursed-forest
+  requires: []
+- name: Jane Croft
+  ids:
+  - unresolved:source:isthereanydeal:1550:jane-croft
+  requires: []
+- name: Resist and Refuse
+  ids:
+  - unresolved:source:isthereanydeal:1550:resist-and-refuse
+  requires: []
+- name: Aquarius
+  ids:
+  - steam:1202570
+  requires: []
+- name: Blocked Street
+  ids:
+  - unresolved:source:isthereanydeal:1550:blocked-street
+  requires: []

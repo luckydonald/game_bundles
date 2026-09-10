@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG SUPER BUNDLE 73 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4110/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4110/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4110/source.json
+games:
+- name: Drop Out 0
+  ids:
+  - steam:517660
+  requires: []
+- name: 'Liveza: Death of the Earth'
+  ids:
+  - steam:463100
+  requires: []
+- name: Dawn's Light
+  ids:
+  - unresolved:source:isthereanydeal:4110:dawns-light
+  requires: []
+- name: 'StarFringe: Adversus'
+  ids:
+  - steam:458030
+  requires: []
+- name: Jet Racing Extreme
+  ids:
+  - steam:385270
+  requires: []
+- name: Tales of Destruction
+  ids:
+  - steam:486480
+  requires: []

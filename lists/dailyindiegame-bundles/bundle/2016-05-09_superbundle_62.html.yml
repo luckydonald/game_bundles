@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 62 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3403/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3403/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3403/source.json
+games:
+- name: Slipstream 5000
+  ids:
+  - steam:306350
+  requires: []
+- name: Crab Cakes Rescue
+  ids:
+  - steam:328680
+  requires: []
+- name: Abrix the robot
+  ids:
+  - steam:461850
+  requires: []
+- name: Nightside
+  ids:
+  - steam:360390
+  requires: []
+- name: 'Army of Tentacles: (Not) A Cthulhu Dating Sim'
+  ids:
+  - steam:427930
+  requires: []
+- name: Bibou
+  ids:
+  - unresolved:source:isthereanydeal:3403:bibou
+  requires: []

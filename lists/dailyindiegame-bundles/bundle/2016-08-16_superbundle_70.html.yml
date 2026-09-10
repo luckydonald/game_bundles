@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 70 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3919/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3919/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3919/source.json
+games:
+- name: Paper Dungeons
+  ids:
+  - steam:283040
+  requires: []
+- name: Elves Adventure
+  ids:
+  - steam:504980
+  requires: []
+- name: Sapper's bad dream
+  ids:
+  - steam:497590
+  requires: []
+- name: Moonstone Tavern - A Fantasy Tavern Sim!
+  ids:
+  - steam:461780
+  requires: []
+- name: 'Adam and Eve: The Game - Chapter 1'
+  ids:
+  - steam:443530
+  requires: []
+- name: Shape Shifter
+  ids:
+  - steam:497050
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 29 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2003/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2003/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2003/source.json
+games:
+- name: 'Pahelika: Revelations HD'
+  ids:
+  - steam:333650
+  requires: []
+- name: Space Farmers
+  ids:
+  - steam:271570
+  requires: []
+- name: 'Pahelika: Secret Legends HD'
+  ids:
+  - unresolved:source:isthereanydeal:2003:pahelika-secret-legends-hd
+  requires: []
+- name: Numba Deluxe
+  ids:
+  - steam:301700
+  requires: []
+- name: Psichodelya
+  ids:
+  - unresolved:source:isthereanydeal:2003:psichodelya
+  requires: []
+- name: Humanity Asset
+  ids:
+  - steam:271640
+  requires: []

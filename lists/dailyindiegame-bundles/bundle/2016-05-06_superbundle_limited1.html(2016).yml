@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Limited Bundle 1 (2016) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3386/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3386/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3386/source.json
+games:
+- name: Turbo Pug
+  ids:
+  - steam:418070
+  requires: []
+- name: Lup
+  ids:
+  - steam:412600
+  requires: []
+- name: 'Terra Incognita ~ Chapter One: The Descendant'
+  ids:
+  - steam:347560
+  requires: []
+- name: Flesh Eaters
+  ids:
+  - steam:383580
+  requires: []
+- name: Neon Hardcorps
+  ids:
+  - steam:454200
+  requires: []
+- name: Calcu-Late
+  ids:
+  - steam:449200
+  requires: []

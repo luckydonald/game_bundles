@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 42 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2552/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2552/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2552/source.json
+games:
+- name: Heli Heroes
+  ids:
+  - steam:259320
+  requires: []
+- name: Dead Bits
+  ids:
+  - steam:303390
+  requires: []
+- name: Raywin
+  ids:
+  - steam:386110
+  requires: []
+- name: TRIP
+  ids:
+  - unresolved:source:isthereanydeal:2552:trip
+  requires: []
+- name: 500 Years Act 1
+  ids:
+  - steam:357200
+  requires: []
+- name: Overcast - Walden and the Werewolf
+  ids:
+  - steam:293180
+  requires: []

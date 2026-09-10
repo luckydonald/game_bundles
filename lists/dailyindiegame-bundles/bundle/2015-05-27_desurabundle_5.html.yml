@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Desura Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2050/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2050/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2050/source.json
+games:
+- name: 'Lilly and Sasha: Guardian Angels'
+  ids:
+  - unresolved:source:isthereanydeal:2050:lilly-and-sasha-guardian-angels
+  requires: []
+- name: Porradaria Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:2050:porradaria-upgrade
+  requires: []
+- name: Ted by Dawn
+  ids:
+  - unresolved:source:isthereanydeal:2050:ted-by-dawn
+  requires: []
+- name: 'Ferrum''s secrets: where is grandpa?'
+  ids:
+  - steam:391340
+  requires: []
+- name: Black Dreams
+  ids:
+  - unresolved:source:isthereanydeal:2050:black-dreams
+  requires: []
+- name: Sapper's bad dream
+  ids:
+  - steam:497590
+  requires: []

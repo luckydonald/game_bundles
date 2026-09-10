@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 31 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2064/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2064/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2064/source.json
+games:
+- name: Portal of Evil Stolen Runes Collector's Edition
+  ids:
+  - steam:361850
+  requires: []
+- name: Fine Sweeper
+  ids:
+  - steam:367000
+  requires: []
+- name: Tiamat X
+  ids:
+  - steam:343340
+  requires: []
+- name: 'Lilly and Sasha: Nexus of Souls'
+  ids:
+  - steam:370040
+  requires: []
+- name: Fort Defense
+  ids:
+  - steam:343930
+  requires: []
+- name: Schein
+  ids:
+  - steam:321920
+  requires: []
