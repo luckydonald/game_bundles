@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 606 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10533/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10533/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10533/source.json
+games:
+- name: Aerial Destruction
+  ids:
+  - steam:592730
+  requires: []
+- name: House of Evil
+  ids:
+  - steam:759610
+  requires: []
+- name: League of Mermaids
+  ids:
+  - steam:383950
+  requires: []
+- name: Boom Blaster
+  ids:
+  - steam:1246230
+  requires: []
+- name: Bob Help Them
+  ids:
+  - steam:1471490
+  requires: []
+- name: Wolflord - Werewolf Online
+  ids:
+  - unresolved:source:isthereanydeal:10533:wolflord-werewolf-online
+  requires: []
+- name: Vector Race
+  ids:
+  - unresolved:source:isthereanydeal:10533:vector-race
+  requires: []
+- name: RAKETENWASCHMACHINE
+  ids:
+  - steam:1556120
+  requires: []
+- name: Anime Memory 0
+  ids:
+  - unresolved:source:isthereanydeal:10533:anime-memory-0
+  requires: []

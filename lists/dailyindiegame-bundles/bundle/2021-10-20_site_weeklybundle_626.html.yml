@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 626 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10593/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10593/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10593/source.json
+games:
+- name: Mission 1545
+  ids:
+  - steam:691600
+  requires: []
+- name: Bliss Maze(极乐迷宫)
+  ids:
+  - unresolved:source:isthereanydeal:10593:bliss-maze-ji-le-mi-gong
+  requires: []
+- name: Mino Saga
+  ids:
+  - steam:669520
+  requires: []
+- name: Infinity Imperium
+  ids:
+  - unresolved:source:isthereanydeal:10593:infinity-imperium
+  requires: []
+- name: Fuzzy's Quest
+  ids:
+  - steam:676600
+  requires: []
+- name: The Ball Adventure
+  ids:
+  - steam:1274060
+  requires: []
+- name: Tusk of Spirit
+  ids:
+  - steam:1340760
+  requires: []
+- name: 6 Feet Behind
+  ids:
+  - steam:1557760
+  requires: []
+- name: Jumping Knight
+  ids:
+  - steam:1463870
+  requires: []

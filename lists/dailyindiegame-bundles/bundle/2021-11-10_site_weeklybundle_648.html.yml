@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 648 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10684/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10684/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10684/source.json
+games:
+- name: Flow
+  ids:
+  - steam:1453870
+  requires: []
+- name: Dallen Clicker Ultimate
+  ids:
+  - steam:1394420
+  requires: []
+- name: Rhythm Knights
+  ids:
+  - unresolved:source:isthereanydeal:10684:rhythm-knights
+  requires: []
+- name: War Of Gold
+  ids:
+  - steam:1688200
+  requires: []
+- name: Super Drag Race
+  ids:
+  - steam:1710870
+  requires: []
+- name: KSTG
+  ids:
+  - steam:1775740
+  requires: []
+- name: 'Lawnmower Game: Space Fight'
+  ids:
+  - steam:1740990
+  requires: []
+- name: Frog Ball Rerolled
+  ids:
+  - steam:1774160
+  requires: []
+- name: Hidden Ghost Town
+  ids:
+  - steam:1810310
+  requires: []

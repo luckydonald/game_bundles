@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 574 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10393/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10393/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10393/source.json
+games:
+- name: Padak
+  ids:
+  - unresolved:source:isthereanydeal:10393:padak
+  requires: []
+- name: Rand-O-mazE
+  ids:
+  - unresolved:source:isthereanydeal:10393:rand-o-maze
+  requires: []
+- name: Eggys Games Flash Collection
+  ids:
+  - steam:1002520
+  requires: []
+- name: Die In The Dark
+  ids:
+  - steam:847860
+  requires: []
+- name: Aurora - Hidden Colors
+  ids:
+  - steam:1184530
+  requires: []
+- name: Contract Killers
+  ids:
+  - steam:1176360
+  requires: []
+- name: Corona Find Us
+  ids:
+  - unresolved:source:isthereanydeal:10393:corona-find-us
+  requires: []
+- name: 'Isekai: Reincarnation in a New World'
+  ids:
+  - steam:1485860
+  requires: []
+- name: BOOTS VS PLANTS
+  ids:
+  - steam:1475170
+  requires: []

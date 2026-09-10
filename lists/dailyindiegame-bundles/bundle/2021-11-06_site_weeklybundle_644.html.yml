@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 644: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10661/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10661/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10661/source.json
+games:
+- name: Sweet fantasy
+  ids:
+  - steam:612110
+  requires: []
+- name: Hentai Brick Breaker 2 - ArtBook
+  ids:
+  - unresolved:source:isthereanydeal:10661:hentai-brick-breaker-2-artbook
+  requires: []
+- name: Hentai Brick Breaker 2
+  ids:
+  - unresolved:source:isthereanydeal:10661:hentai-brick-breaker-2
+  requires: []
+- name: Louder Than Words ~The Story of a Field Trip~
+  ids:
+  - steam:1766830
+  requires: []
+- name: Fantasy Sliding Puzzle 5
+  ids:
+  - steam:1805340
+  requires: []
+- name: Fantasy Sliding Puzzle 5 - ArtBook
+  ids:
+  - steam:1806180
+  requires: []
+- name: Anime Jigsaw Girls - Office ArtBook
+  ids:
+  - steam:1810910
+  requires: []
+- name: Anime Jigsaw Girls - Office
+  ids:
+  - steam:1810600
+  requires: []
+- name: Sex Clicker
+  ids:
+  - steam:1798480
+  requires: []

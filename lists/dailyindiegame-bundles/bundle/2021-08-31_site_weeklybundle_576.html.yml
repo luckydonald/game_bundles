@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 576: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10402/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10402/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10402/source.json
+games:
+- name: MOMO.EXE - Official Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:10402:momo-exe-official-soundtrack
+  requires: []
+- name: OSES - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:10402:oses-soundtrack
+  requires: []
+- name: 'Button Tales: Way Home'
+  ids:
+  - steam:1114750
+  requires: []
+- name: Button Tales - Original Soundtrack
+  ids:
+  - steam:565310
+  requires: []
+- name: MOMO.EXE 2 - Official Soundtrack
+  ids:
+  - steam:952480
+  requires: []
+- name: Throne of Fate - HELL DEMON
+  ids:
+  - unresolved:source:isthereanydeal:10402:throne-of-fate-hell-demon
+  requires: []
+- name: SPACE Craft - Improvement
+  ids:
+  - unresolved:source:isthereanydeal:10402:space-craft-improvement
+  requires: []
+- name: Little adventure 2 - Different phases
+  ids:
+  - steam:1698580
+  requires: []
+- name: Throne of Fate - HELL DEMON [DUP?]
+  ids:
+  - unresolved:source:isthereanydeal:10402:throne-of-fate-hell-demon-dup
+  requires: []

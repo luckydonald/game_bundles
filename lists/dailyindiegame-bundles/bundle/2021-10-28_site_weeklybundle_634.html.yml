@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 634: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10622/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10622/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10622/source.json
+games:
+- name: MOE
+  ids:
+  - steam:959770
+  requires: []
+- name: BomberZone
+  ids:
+  - steam:473140
+  requires: []
+- name: 幻世情缘 FANTASY LOVE STORY
+  ids:
+  - steam:869660
+  requires: []
+- name: Tower Blitz
+  ids:
+  - steam:1237820
+  requires: []
+- name: Sea Explorer
+  ids:
+  - steam:846210
+  requires: []
+- name: Digital Siege
+  ids:
+  - unresolved:source:isthereanydeal:10622:digital-siege
+  requires: []
+- name: Coronavirus Evolution
+  ids:
+  - steam:1264770
+  requires: []
+- name: Leaper
+  ids:
+  - steam:1495670
+  requires: []
+- name: Grey Bones
+  ids:
+  - steam:1559960
+  requires: []

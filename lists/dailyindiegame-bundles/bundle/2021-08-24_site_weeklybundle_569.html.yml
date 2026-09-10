@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 569 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10376/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10376/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10376/source.json
+games:
+- name: Invasion
+  ids:
+  - steam:503630
+  requires: []
+- name: Big Fish
+  ids:
+  - steam:1689530
+  requires: []
+- name: Korean Adventures in Russia
+  ids:
+  - steam:1375970
+  requires: []
+- name: Yummy Mahjong
+  ids:
+  - steam:1689980
+  requires: []
+- name: Jigsaw With Animals
+  ids:
+  - steam:1711160
+  requires: []
+- name: Awesome Puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10376:awesome-puzzle
+  requires: []
+- name: Medieval Wars
+  ids:
+  - steam:1715530
+  requires: []
+- name: 'Magic Defense 2: The Return of the Legend'
+  ids:
+  - steam:1721130
+  requires: []
+- name: Secrets of the Middle Ages
+  ids:
+  - steam:1727450
+  requires: []

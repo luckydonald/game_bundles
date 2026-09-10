@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 620 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10571/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10571/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10571/source.json
+games:
+- name: Pull Ball
+  ids:
+  - steam:1006920
+  requires: []
+- name: Power of Love
+  ids:
+  - steam:368710
+  requires: []
+- name: Fall Down
+  ids:
+  - steam:765530
+  requires: []
+- name: Dispersion
+  ids:
+  - steam:1388150
+  requires: []
+- name: Arthur's Revenge
+  ids:
+  - unresolved:source:isthereanydeal:10571:arthurs-revenge
+  requires: []
+- name: Among Ass
+  ids:
+  - steam:1477060
+  requires: []
+- name: 'Hollywood Hero: Comeback'
+  ids:
+  - unresolved:source:isthereanydeal:10571:hollywood-hero-comeback
+  requires: []
+- name: Cavebound
+  ids:
+  - steam:1522980
+  requires: []
+- name: Dubstep Bird
+  ids:
+  - unresolved:source:isthereanydeal:10571:dubstep-bird
+  requires: []
