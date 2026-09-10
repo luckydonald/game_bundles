@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1050: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12802/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12802/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12802/source.json
+games:
+- name: CrazyDriving
+  ids:
+  - steam:929210
+  requires: []
+- name: AirShock
+  ids:
+  - unresolved:source:isthereanydeal:12802:airshock
+  requires: []
+- name: Forep Man
+  ids:
+  - unresolved:source:isthereanydeal:12802:forep-man
+  requires: []
+- name: XYLITH - Hostile Planet
+  ids:
+  - steam:1210640
+  requires: []
+- name: Knockdown the Ball Twice
+  ids:
+  - steam:1268280
+  requires: []
+- name: Taivas
+  ids:
+  - steam:1388690
+  requires: []
+- name: Vortex Escape
+  ids:
+  - unresolved:source:isthereanydeal:12802:vortex-escape
+  requires: []
+- name: Zen Cube
+  ids:
+  - steam:1606670
+  requires: []
+- name: Slime Factory
+  ids:
+  - steam:1733860
+  requires: []

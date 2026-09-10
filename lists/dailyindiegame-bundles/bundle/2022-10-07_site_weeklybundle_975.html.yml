@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 975 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12185/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12185/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12185/source.json
+games:
+- name: FireTry
+  ids:
+  - unresolved:source:isthereanydeal:12185:firetry
+  requires: []
+- name: Detective March Forward - The Missing Will
+  ids:
+  - steam:1265680
+  requires: []
+- name: 街机捕鱼
+  ids:
+  - unresolved:source:isthereanydeal:12185:jie-ji-bu-yu
+  requires: []
+- name: Capsule Rush
+  ids:
+  - steam:2138480
+  requires: []
+- name: Darkest Witchcraft
+  ids:
+  - steam:1945850
+  requires: []
+- name: Finger Soccer
+  ids:
+  - steam:3509060
+  requires: []
+- name: Death in the Night
+  ids:
+  - steam:2093270
+  requires: []
+- name: Look Find Find
+  ids:
+  - unresolved:source:isthereanydeal:12185:look-find-find
+  requires: []
+- name: Magic Kingdom War
+  ids:
+  - unresolved:source:isthereanydeal:12185:magic-kingdom-war
+  requires: []

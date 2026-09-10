@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 981 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12237/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12237/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12237/source.json
+games:
+- name: Septerra Core
+  ids:
+  - steam:253940
+  requires: []
+- name: The President
+  ids:
+  - steam:819210
+  requires: []
+- name: Fast Food Mania 3D
+  ids:
+  - steam:1647070
+  requires: []
+- name: Cat and Fish
+  ids:
+  - steam:1872130
+  requires: []
+- name: Flipstown
+  ids:
+  - unresolved:source:isthereanydeal:12237:flipstown
+  requires: []
+- name: Wild Adventures
+  ids:
+  - steam:1928940
+  requires: []
+- name: Cursed Blood
+  ids:
+  - steam:3382290
+  requires: []
+- name: Agent 01
+  ids:
+  - steam:1932490
+  requires: []
+- name: Spyer
+  ids:
+  - steam:1957560
+  requires: []

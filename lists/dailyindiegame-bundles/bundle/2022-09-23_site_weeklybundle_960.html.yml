@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 960 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12118/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12118/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12118/source.json
+games:
+- name: Abyss
+  ids:
+  - unresolved:source:isthereanydeal:12118:abyss
+  requires: []
+- name: Defense Of Greece TD
+  ids:
+  - steam:537200
+  requires: []
+- name: Round Rooms
+  ids:
+  - steam:1107660
+  requires: []
+- name: Elven Magic
+  ids:
+  - steam:923140
+  requires: []
+- name: Crisis of the Middle Ages
+  ids:
+  - steam:1081260
+  requires: []
+- name: 'ATROFIL: THE KEY'
+  ids:
+  - steam:1196350
+  requires: []
+- name: Connected Towers
+  ids:
+  - steam:1500240
+  requires: []
+- name: Historic Fighters
+  ids:
+  - unresolved:source:isthereanydeal:12118:historic-fighters
+  requires: []
+- name: Strawberry Chocolate
+  ids:
+  - steam:1300860
+  requires: []

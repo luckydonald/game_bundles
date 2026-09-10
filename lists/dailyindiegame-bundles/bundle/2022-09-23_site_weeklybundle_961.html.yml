@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 961 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12120/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12120/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12120/source.json
+games:
+- name: Hammer 2 - Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:12120:hammer-2-reloaded
+  requires: []
+- name: GUILT
+  ids:
+  - steam:2108990
+  requires: []
+- name: Spinner Invaders
+  ids:
+  - unresolved:source:isthereanydeal:12120:spinner-invaders
+  requires: []
+- name: Goddess Of Card War 2
+  ids:
+  - unresolved:source:isthereanydeal:12120:goddess-of-card-war-2
+  requires: []
+- name: Winter's Ankh
+  ids:
+  - unresolved:source:isthereanydeal:12120:winters-ankh
+  requires: []
+- name: Pocket Tank
+  ids:
+  - unresolved:source:isthereanydeal:12120:pocket-tank
+  requires: []
+- name: Cross the Hell master
+  ids:
+  - unresolved:source:isthereanydeal:12120:cross-the-hell-master
+  requires: []
+- name: Military Attack
+  ids:
+  - steam:2026290
+  requires: []
+- name: Goddess Of War Essa II
+  ids:
+  - unresolved:source:isthereanydeal:12120:goddess-of-war-essa-ii
+  requires: []

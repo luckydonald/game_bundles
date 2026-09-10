@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 973 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12178/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12178/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12178/source.json
+games:
+- name: Robbotto
+  ids:
+  - steam:881190
+  requires: []
+- name: Handy
+  ids:
+  - steam:1113390
+  requires: []
+- name: Lumen
+  ids:
+  - steam:520040
+  requires: []
+- name: Cherry Island
+  ids:
+  - unresolved:source:isthereanydeal:12178:cherry-island
+  requires: []
+- name: Valletine against Darkne
+  ids:
+  - steam:1375000
+  requires: []
+- name: Battle Sweeper
+  ids:
+  - steam:1380360
+  requires: []
+- name: Ultimate Battle
+  ids:
+  - steam:1487160
+  requires: []
+- name: Towards The Stars
+  ids:
+  - steam:1491980
+  requires: []
+- name: Match3 mania!
+  ids:
+  - steam:1686370
+  requires: []
