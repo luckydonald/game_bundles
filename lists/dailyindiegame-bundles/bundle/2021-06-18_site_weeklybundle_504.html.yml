@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 504 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10157/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10157/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10157/source.json
+games:
+- name: Crash Race
+  ids:
+  - steam:1572050
+  requires: []
+- name: Planetary Defense
+  ids:
+  - unresolved:source:isthereanydeal:10157:planetary-defense
+  requires: []
+- name: Loner
+  ids:
+  - steam:1566490
+  requires: []
+- name: White Rabbit
+  ids:
+  - steam:1475150
+  requires: []
+- name: VikingStory
+  ids:
+  - unresolved:source:isthereanydeal:10157:vikingstory
+  requires: []
+- name: Nightmare Survival
+  ids:
+  - unresolved:source:isthereanydeal:10157:nightmare-survival
+  requires: []
+- name: Contrast Tunnel
+  ids:
+  - steam:1566370
+  requires: []
+- name: Magic Balls
+  ids:
+  - unresolved:source:isthereanydeal:10157:magic-balls
+  requires: []
+- name: Cube Space
+  ids:
+  - steam:1590260
+  requires: []

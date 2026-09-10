@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 481 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10043/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10043/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10043/source.json
+games:
+- name: Crazzers
+  ids:
+  - steam:816380
+  requires: []
+- name: EXTREME RACING
+  ids:
+  - unresolved:source:isthereanydeal:10043:extreme-racing
+  requires: []
+- name: 'Lawnmower Game: Racing'
+  ids:
+  - steam:1433890
+  requires: []
+- name: Halloween Memory
+  ids:
+  - unresolved:source:isthereanydeal:10043:halloween-memory
+  requires: []
+- name: Traffic V
+  ids:
+  - unresolved:source:isthereanydeal:10043:traffic-v
+  requires: []
+- name: Throw Knives
+  ids:
+  - steam:1610660
+  requires: []
+- name: 'PhotoWorld: Smooth Сorners'
+  ids:
+  - steam:1616510
+  requires: []
+- name: Space Memory
+  ids:
+  - unresolved:source:isthereanydeal:10043:space-memory
+  requires: []
+- name: Water Ball
+  ids:
+  - steam:1622090
+  requires: []

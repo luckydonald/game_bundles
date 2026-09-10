@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 489 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10085/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10085/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10085/source.json
+games:
+- name: Seasonal Soccer
+  ids:
+  - steam:818380
+  requires: []
+- name: What A Trash Game!
+  ids:
+  - unresolved:source:isthereanydeal:10085:what-a-trash-game
+  requires: []
+- name: 'Raccoon: The Orc Invasion'
+  ids:
+  - steam:1199150
+  requires: []
+- name: JEF
+  ids:
+  - steam:1188760
+  requires: []
+- name: SafeHome
+  ids:
+  - steam:1169920
+  requires: []
+- name: Sunrise7
+  ids:
+  - unresolved:source:isthereanydeal:10085:sunrise7
+  requires: []
+- name: Beat Me If You Can
+  ids:
+  - steam:1385540
+  requires: []
+- name: a Story of Merchant
+  ids:
+  - unresolved:source:isthereanydeal:10085:a-story-of-merchant
+  requires: []
+- name: Traveler of Artcaster
+  ids:
+  - steam:1413260
+  requires: []

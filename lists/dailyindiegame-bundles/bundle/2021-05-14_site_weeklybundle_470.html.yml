@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 470 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10021/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10021/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10021/source.json
+games:
+- name: 'Zack 2: Celestine''s Map'
+  ids:
+  - unresolved:source:isthereanydeal:10021:zack-2-celestines-map
+  requires: []
+- name: Prince Of Wallachia
+  ids:
+  - steam:1428030
+  requires: []
+- name: Towards The Stars
+  ids:
+  - steam:1491980
+  requires: []
+- name: Island Domination
+  ids:
+  - steam:1561020
+  requires: []
+- name: I'm a King
+  ids:
+  - steam:1556670
+  requires: []
+- name: In Marte - The First Moon
+  ids:
+  - steam:1583370
+  requires: []
+- name: COINS BATTLE
+  ids:
+  - steam:1622270
+  requires: []
+- name: Model Building Restoration
+  ids:
+  - steam:1623300
+  requires: []
+- name: Athena Trivia
+  ids:
+  - steam:1225660
+  requires: []

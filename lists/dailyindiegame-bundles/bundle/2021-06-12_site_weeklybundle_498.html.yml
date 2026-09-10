@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 498 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10129/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10129/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10129/source.json
+games:
+- name: Forep Man
+  ids:
+  - unresolved:source:isthereanydeal:10129:forep-man
+  requires: []
+- name: FISHERY
+  ids:
+  - steam:809730
+  requires: []
+- name: Sideral
+  ids:
+  - steam:1095070
+  requires: []
+- name: Ailment
+  ids:
+  - steam:1167530
+  requires: []
+- name: Storms
+  ids:
+  - unresolved:source:isthereanydeal:10129:storms
+  requires: []
+- name: Zerowood
+  ids:
+  - unresolved:source:isthereanydeal:10129:zerowood
+  requires: []
+- name: Fly Fish
+  ids:
+  - steam:1346790
+  requires: []
+- name: Shattering Obsidian
+  ids:
+  - steam:1383920
+  requires: []
+- name: Cheat or Die
+  ids:
+  - steam:1381280
+  requires: []

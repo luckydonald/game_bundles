@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 522 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10235/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10235/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10235/source.json
+games:
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:10235:airplane-sky-voyage
+  requires: []
+- name: 'Kabitis 2: Fire Sword'
+  ids:
+  - unresolved:source:isthereanydeal:10235:kabitis-2-fire-sword
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:10235:magic-chess
+  requires: []
+- name: Lumen
+  ids:
+  - steam:520040
+  requires: []
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+  requires: []
+- name: Uncharted Ocean
+  ids:
+  - steam:1158690
+  requires: []
+- name: Reek
+  ids:
+  - steam:1212300
+  requires: []
+- name: SWORDSHOT
+  ids:
+  - steam:1257600
+  requires: []
+- name: VIY
+  ids:
+  - steam:1264310
+  requires: []

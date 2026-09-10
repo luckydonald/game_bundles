@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 538 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10281/source.json
+games:
+- name: Hookshot
+  ids:
+  - steam:1031570
+  requires: []
+- name: Phantasmata
+  ids:
+  - steam:1048790
+  requires: []
+- name: Grand Pigeon's Duty
+  ids:
+  - steam:449530
+  requires: []
+- name: Heroes Of The Offworld Arena
+  ids:
+  - unresolved:source:isthereanydeal:10281:heroes-of-the-offworld-arena
+  requires: []
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+  requires: []
+- name: Thugsters Battle Royale
+  ids:
+  - steam:1118500
+  requires: []
+- name: Alien Invasion 3D part 2
+  ids:
+  - unresolved:source:isthereanydeal:10281:alien-invasion-3d-part-2
+  requires: []
+- name: Asteroad
+  ids:
+  - unresolved:source:isthereanydeal:10281:asteroad
+  requires: []
+- name: Metu Caligine
+  ids:
+  - steam:1453200
+  requires: []

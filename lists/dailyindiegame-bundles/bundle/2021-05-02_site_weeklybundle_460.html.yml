@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 460 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9990/source.json
+games:
+- name: Z.A.R.
+  ids:
+  - unresolved:source:isthereanydeal:9990:z-a-r
+  requires: []
+- name: 'Lawnmower Game: Next Generation'
+  ids:
+  - steam:1346980
+  requires: []
+- name: Marble Parkour
+  ids:
+  - steam:1463170
+  requires: []
+- name: Key Escape
+  ids:
+  - steam:1501100
+  requires: []
+- name: Super Clown Adventures
+  ids:
+  - steam:1537820
+  requires: []
+- name: Lab BreakOut
+  ids:
+  - steam:1569760
+  requires: []
+- name: Alchemist Memory
+  ids:
+  - unresolved:source:isthereanydeal:9990:alchemist-memory
+  requires: []
+- name: Candy Memory
+  ids:
+  - unresolved:source:isthereanydeal:9990:candy-memory
+  requires: []
+- name: Anime Memory 0
+  ids:
+  - unresolved:source:isthereanydeal:9990:anime-memory-0
+  requires: []
