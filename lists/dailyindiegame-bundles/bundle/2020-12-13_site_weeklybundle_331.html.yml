@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 331 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9501/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9501/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9501/source.json
+games:
+- name: Airport Madness World Edition
+  ids:
+  - steam:369290
+  requires: []
+- name: RepairBot
+  ids:
+  - steam:991620
+  requires: []
+- name: Splatter - Zombie Apocalypse
+  ids:
+  - unresolved:source:isthereanydeal:9501:splatter-zombie-apocalypse
+  requires: []
+- name: 123 Slaughter Me Street 2
+  ids:
+  - steam:551190
+  requires: []
+- name: ❂ Hexaluga ❂ Witch Hunter's Travelling Castle ♉
+  ids:
+  - steam:809450
+  requires: []
+- name: 'Airport Madness 3D: Volume 2'
+  ids:
+  - steam:748610
+  requires: []
+- name: Concrete Jungle
+  ids:
+  - steam:400160
+  requires: []
+- name: 'Forgotten Places: Regained Castle'
+  ids:
+  - steam:777160
+  requires: []
+- name: World War 2 Zombie Attack VR Simulator
+  ids:
+  - steam:1215690
+  requires: []

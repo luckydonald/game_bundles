@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 353: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9608/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9608/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9608/source.json
+games:
+- name: RGB RUN Original Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9608:rgb-run-original-soundtrack
+  requires: []
+- name: 'Welcome To... Chichester OVN : The Project'
+  ids:
+  - unresolved:source:isthereanydeal:9608:welcome-to-chichester-ovn-the-project
+  requires: []
+- name: Imaginator - Official Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9608:imaginator-official-soundtrack
+  requires: []
+- name: 'Achievement Collector: Dog - Doggy: Expansion Pack'
+  ids:
+  - unresolved:source:isthereanydeal:9608:achievement-collector-dog-doggy-expansion-pack
+  requires: []
+- name: 'Achievement Collector: Dog Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:9608:achievement-collector-dog-soundtrack
+  requires: []
+- name: Beat Rush - Original Game Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9608:beat-rush-original-game-soundtrack
+  requires: []
+- name: Hero of Not Our Time Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9608:hero-of-not-our-time-soundtrack
+  requires: []
+- name: arcade games collection-New games
+  ids:
+  - unresolved:source:isthereanydeal:9608:arcade-games-collection-new-games
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica Christmas ArtBook
+  ids:
+  - steam:1513850
+  requires: []

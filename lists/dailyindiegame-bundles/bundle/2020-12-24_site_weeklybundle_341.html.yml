@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 341 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9565/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9565/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9565/source.json
+games:
+- name: Flaky Bakery
+  ids:
+  - steam:980190
+  requires: []
+- name: Rand-O-mazE
+  ids:
+  - unresolved:source:isthereanydeal:9565:rand-o-maze
+  requires: []
+- name: 'Pax Romana: Romulus'
+  ids:
+  - steam:1034810
+  requires: []
+- name: 'ATROFIL: THE KEY'
+  ids:
+  - steam:1196350
+  requires: []
+- name: Snake In The Cube
+  ids:
+  - steam:1358510
+  requires: []
+- name: Lynium
+  ids:
+  - steam:1415010
+  requires: []
+- name: White Rabbit
+  ids:
+  - steam:1475150
+  requires: []
+- name: Moi Mei 2
+  ids:
+  - steam:1475160
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica Christmas
+  ids:
+  - steam:1502240
+  requires: []

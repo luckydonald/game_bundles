@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 255 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9182/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9182/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9182/source.json
+games:
+- name: Bomber Arena
+  ids:
+  - steam:971280
+  requires: []
+- name: Ripple
+  ids:
+  - steam:601240
+  requires: []
+- name: Doggo Dig Down
+  ids:
+  - steam:905130
+  requires: []
+- name: Subway Simulator
+  ids:
+  - unresolved:source:isthereanydeal:9182:subway-simulator
+  requires: []
+- name: Road Legends
+  ids:
+  - unresolved:source:isthereanydeal:9182:road-legends
+  requires: []
+- name: SynthRun
+  ids:
+  - steam:893120
+  requires: []
+- name: Obsolete
+  ids:
+  - steam:1369560
+  requires: []
+- name: Electronic World Z
+  ids:
+  - steam:1389830
+  requires: []
+- name: Landing
+  ids:
+  - steam:1407240
+  requires: []

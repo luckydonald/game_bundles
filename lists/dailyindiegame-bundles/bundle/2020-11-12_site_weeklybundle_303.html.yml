@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 303 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9391/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9391/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9391/source.json
+games:
+- name: Herbalist simulator
+  ids:
+  - steam:1208090
+  requires: []
+- name: 'Slaughter 3: The Rebels'
+  ids:
+  - steam:1214920
+  requires: []
+- name: XYLITH - Hostile Planet
+  ids:
+  - steam:1210640
+  requires: []
+- name: Beyond The Underworld
+  ids:
+  - steam:1223380
+  requires: []
+- name: Fly Fish
+  ids:
+  - steam:1346790
+  requires: []
+- name: LP
+  ids:
+  - steam:1440850
+  requires: []
+- name: Hentai Nureta Puzzle Student Edition
+  ids:
+  - unresolved:source:isthereanydeal:9391:hentai-nureta-puzzle-student-edition
+  requires: []
+- name: Hentai Nureta Puzzle Power Girls
+  ids:
+  - steam:1432330
+  requires: []
+- name: Tarek
+  ids:
+  - steam:1447090
+  requires: []

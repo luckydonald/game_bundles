@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 344 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9577/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9577/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9577/source.json
+games:
+- name: Rusty Runner
+  ids:
+  - steam:891990
+  requires: []
+- name: Rescue Team 7
+  ids:
+  - steam:666050
+  requires: []
+- name: Snowball Rush
+  ids:
+  - steam:1051160
+  requires: []
+- name: Little hidden city
+  ids:
+  - steam:706490
+  requires: []
+- name: FastGo Running
+  ids:
+  - unresolved:source:isthereanydeal:9577:fastgo-running
+  requires: []
+- name: Kingdom-Heroes
+  ids:
+  - unresolved:source:isthereanydeal:9577:kingdom-heroes
+  requires: []
+- name: Gem Master
+  ids:
+  - steam:1279620
+  requires: []
+- name: Pixelfence
+  ids:
+  - steam:1225920
+  requires: []
+- name: Bat of Dead
+  ids:
+  - steam:1270370
+  requires: []

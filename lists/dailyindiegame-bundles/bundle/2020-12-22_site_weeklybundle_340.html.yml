@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 340 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9554/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9554/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9554/source.json
+games:
+- name: Lost in the Forest
+  ids:
+  - steam:715060
+  requires: []
+- name: Last Knight
+  ids:
+  - steam:1132620
+  requires: []
+- name: The Last Hope
+  ids:
+  - steam:522570
+  requires: []
+- name: LocoSoccer
+  ids:
+  - unresolved:source:isthereanydeal:9554:locosoccer
+  requires: []
+- name: 70 Seconds! Adventure
+  ids:
+  - steam:1143420
+  requires: []
+- name: Hooligan Vasja - Christmas Edition
+  ids:
+  - unresolved:source:isthereanydeal:9554:hooligan-vasja-christmas-edition
+  requires: []
+- name: Extreme Racing on Highway
+  ids:
+  - steam:1034160
+  requires: []
+- name: Rary
+  ids:
+  - steam:1287710
+  requires: []
+- name: ANIME WORLD
+  ids:
+  - unresolved:source:isthereanydeal:9554:anime-world
+  requires: []

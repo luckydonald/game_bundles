@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 348 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9594/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9594/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9594/source.json
+games:
+- name: Devious Dungeon
+  ids:
+  - steam:1059880
+  requires: []
+- name: Waves of the Atlantide
+  ids:
+  - steam:992210
+  requires: []
+- name: Aerial Destruction
+  ids:
+  - steam:592730
+  requires: []
+- name: Starblazer
+  ids:
+  - unresolved:source:isthereanydeal:9594:starblazer
+  requires: []
+- name: Harvested
+  ids:
+  - steam:893420
+  requires: []
+- name: Kastle Krush
+  ids:
+  - steam:1145590
+  requires: []
+- name: Naturalist Stories
+  ids:
+  - steam:1260340
+  requires: []
+- name: Hexia
+  ids:
+  - steam:1173730
+  requires: []
+- name: Street Football
+  ids:
+  - steam:1502730
+  requires: []

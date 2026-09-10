@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 292 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9339/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9339/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9339/source.json
+games:
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+  requires: []
+- name: Heroes of Hexaluga
+  ids:
+  - steam:728050
+  requires: []
+- name: Falnarion Tactics II
+  ids:
+  - steam:1078450
+  requires: []
+- name: Airport Madness 3D
+  ids:
+  - steam:445770
+  requires: []
+- name: Kontrakt
+  ids:
+  - steam:924370
+  requires: []
+- name: The Challenge
+  ids:
+  - steam:496440
+  requires: []
+- name: Eggness
+  ids:
+  - unresolved:source:isthereanydeal:9339:eggness
+  requires: []
+- name: ★ Fallalypse ★ Death or Cress ♝
+  ids:
+  - steam:789220
+  requires: []
+- name: Energysaber Masta VR
+  ids:
+  - steam:1326870
+  requires: []

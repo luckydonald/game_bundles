@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 320 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9463/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9463/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9463/source.json
+games:
+- name: Round Rooms
+  ids:
+  - steam:1107660
+  requires: []
+- name: Square Norm
+  ids:
+  - steam:1102890
+  requires: []
+- name: Quilly
+  ids:
+  - unresolved:source:isthereanydeal:9463:quilly
+  requires: []
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:9463:the-visitors
+  requires: []
+- name: Badland Caravan
+  ids:
+  - steam:1052420
+  requires: []
+- name: Alien Invasion 3D part 2
+  ids:
+  - unresolved:source:isthereanydeal:9463:alien-invasion-3d-part-2
+  requires: []
+- name: The Big SokoBang
+  ids:
+  - steam:1204210
+  requires: []
+- name: Dungeon of Rikka
+  ids:
+  - steam:1183840
+  requires: []
+- name: Arcade games collection
+  ids:
+  - steam:1441850
+  requires: []

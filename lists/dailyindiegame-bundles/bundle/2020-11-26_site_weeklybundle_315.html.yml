@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 315 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9434/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9434/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9434/source.json
+games:
+- name: Destiny Hunter
+  ids:
+  - steam:1028830
+  requires: []
+- name: Touhou Multi Scroll Shooting
+  ids:
+  - steam:1125000
+  requires: []
+- name: Mr. Barrel
+  ids:
+  - steam:713380
+  requires: []
+- name: Alien Invasion 3d
+  ids:
+  - steam:818640
+  requires: []
+- name: Super Grower
+  ids:
+  - steam:991750
+  requires: []
+- name: Spacecraft
+  ids:
+  - unresolved:source:isthereanydeal:9434:spacecraft
+  requires: []
+- name: ZeroZone2020
+  ids:
+  - steam:1128100
+  requires: []
+- name: Thugsters Battle Royale
+  ids:
+  - steam:1118500
+  requires: []
+- name: Shitty Cactus
+  ids:
+  - steam:1229650
+  requires: []

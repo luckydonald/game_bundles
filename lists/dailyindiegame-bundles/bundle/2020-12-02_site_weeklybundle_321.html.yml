@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 321 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9468/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9468/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9468/source.json
+games:
+- name: Bloody sand
+  ids:
+  - unresolved:source:isthereanydeal:9468:bloody-sand
+  requires: []
+- name: Teddy Floppy Ear - Kayaking
+  ids:
+  - unresolved:source:isthereanydeal:9468:teddy-floppy-ear-kayaking
+  requires: []
+- name: Teddy Floppy Ear - The Race
+  ids:
+  - unresolved:source:isthereanydeal:9468:teddy-floppy-ear-the-race
+  requires: []
+- name: Teddy Floppy Ear - Mountain Adventure
+  ids:
+  - unresolved:source:isthereanydeal:9468:teddy-floppy-ear-mountain-adventure
+  requires: []
+- name: Super Space Jump Man
+  ids:
+  - steam:1035860
+  requires: []
+- name: Samosbor
+  ids:
+  - steam:1034060
+  requires: []
+- name: Cecil Run
+  ids:
+  - unresolved:source:isthereanydeal:9468:cecil-run
+  requires: []
+- name: '486'
+  ids:
+  - steam:1263680
+  requires: []
+- name: DriftZ
+  ids:
+  - steam:1322180
+  requires: []

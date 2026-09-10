@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 302 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9386/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9386/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9386/source.json
+games:
+- name: Spacebase DF-9
+  ids:
+  - steam:246090
+  requires: []
+- name: Neon Prism
+  ids:
+  - steam:556280
+  requires: []
+- name: Immersion
+  ids:
+  - unresolved:source:isthereanydeal:9386:immersion
+  requires: []
+- name: Fly and destroy
+  ids:
+  - steam:508180
+  requires: []
+- name: Snake Pass
+  ids:
+  - steam:544330
+  requires: []
+- name: VVVVV
+  ids:
+  - steam:1153250
+  requires: []
+- name: ILY
+  ids:
+  - steam:1217720
+  requires: []
+- name: Cyborg Arena UE4
+  ids:
+  - unresolved:source:isthereanydeal:9386:cyborg-arena-ue4
+  requires: []
+- name: Cybercube battle
+  ids:
+  - steam:1431620
+  requires: []

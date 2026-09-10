@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 287 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9317/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9317/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9317/source.json
+games:
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+  requires: []
+- name: Mimic Hunter
+  ids:
+  - steam:657400
+  requires: []
+- name: 'Freedom March: Rebel Leader'
+  ids:
+  - unresolved:source:isthereanydeal:9317:freedom-march-rebel-leader
+  requires: []
+- name: Kalaban
+  ids:
+  - steam:571520
+  requires: []
+- name: Digital Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:9317:digital-dungeon
+  requires: []
+- name: Grab the Bottle
+  ids:
+  - steam:546410
+  requires: []
+- name: JEF
+  ids:
+  - steam:1188760
+  requires: []
+- name: 'Dish Life: The Game'
+  ids:
+  - steam:1223270
+  requires: []
+- name: 'Call of Corona: Micro Warfare'
+  ids:
+  - steam:1304290
+  requires: []

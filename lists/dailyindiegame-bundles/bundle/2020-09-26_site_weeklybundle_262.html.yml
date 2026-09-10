@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 262 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9222/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9222/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9222/source.json
+games:
+- name: PowerUp Elevation
+  ids:
+  - steam:879390
+  requires: []
+- name: Robbotto
+  ids:
+  - steam:881190
+  requires: []
+- name: Akihabara - Feel the Rhythm Remixed
+  ids:
+  - steam:636740
+  requires: []
+- name: Blame!
+  ids:
+  - unresolved:source:isthereanydeal:9222:blame
+  requires: []
+- name: What A Trash Game!
+  ids:
+  - unresolved:source:isthereanydeal:9222:what-a-trash-game
+  requires: []
+- name: Curse in our heads
+  ids:
+  - steam:871300
+  requires: []
+- name: 'Texas Holdem Poker: Solo King'
+  ids:
+  - steam:1213420
+  requires: []
+- name: Gangsta Magic
+  ids:
+  - steam:1412040
+  requires: []
+- name: Among School Girls
+  ids:
+  - unresolved:source:isthereanydeal:9222:among-school-girls
+  requires: []
