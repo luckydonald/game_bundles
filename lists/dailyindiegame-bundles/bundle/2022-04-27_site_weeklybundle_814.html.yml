@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 814: Adult — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11430/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11430/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11430/source.json
+games:
+- name: Hentai Coloring Game
+  ids:
+  - steam:1493720
+  requires: []
+- name: Lunar War
+  ids:
+  - unresolved:source:isthereanydeal:11430:lunar-war
+  requires: []
+- name: Sweety Little Witch
+  ids:
+  - unresolved:source:isthereanydeal:11430:sweety-little-witch
+  requires: []
+- name: Hentai Jigsaw Girls - ArtBook
+  ids:
+  - steam:1698050
+  requires: []
+- name: Hentai Jigsaw Girls
+  ids:
+  - steam:1683410
+  requires: []
+- name: Fantasy Jigsaw Puzzle
+  ids:
+  - steam:1723490
+  requires: []
+- name: Fantasy Jigsaw Puzzle - ArtBook
+  ids:
+  - steam:1725140
+  requires: []
+- name: Fantasy Sliding Puzzle 4
+  ids:
+  - steam:1795080
+  requires: []
+- name: Fantasy Sliding Puzzle 4 - ArtBook
+  ids:
+  - steam:1795650
+  requires: []

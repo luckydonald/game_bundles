@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 843 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11539/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11539/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11539/source.json
+games:
+- name: Dream Stone
+  ids:
+  - steam:603090
+  requires: []
+- name: Infommi
+  ids:
+  - steam:916910
+  requires: []
+- name: Crows - 乌鸦
+  ids:
+  - steam:870100
+  requires: []
+- name: Again?
+  ids:
+  - steam:906850
+  requires: []
+- name: 'The Lost Battalion: All Out Warfare'
+  ids:
+  - steam:364890
+  requires: []
+- name: Vacuum Ball
+  ids:
+  - steam:1897140
+  requires: []
+- name: 王子斗恶龙
+  ids:
+  - steam:1892470
+  requires: []
+- name: The Orb of Darkness
+  ids:
+  - unresolved:source:isthereanydeal:11539:the-orb-of-darkness
+  requires: []
+- name: Hexfactory
+  ids:
+  - steam:1958750
+  requires: []

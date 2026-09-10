@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 838 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11516/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11516/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11516/source.json
+games:
+- name: Septerra Core
+  ids:
+  - steam:253940
+  requires: []
+- name: Tisnart Shapes
+  ids:
+  - steam:820500
+  requires: []
+- name: Crazy Belts
+  ids:
+  - steam:355510
+  requires: []
+- name: Angry Golf
+  ids:
+  - steam:1145780
+  requires: []
+- name: Awe
+  ids:
+  - steam:371450
+  requires: []
+- name: Totally Mayhem
+  ids:
+  - steam:679740
+  requires: []
+- name: Out of Oblivion
+  ids:
+  - steam:1370950
+  requires: []
+- name: SIDE
+  ids:
+  - steam:1440680
+  requires: []
+- name: Elon's Dream 2
+  ids:
+  - unresolved:source:isthereanydeal:11516:elons-dream-2
+  requires: []

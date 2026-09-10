@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 846: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11547/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11547/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11547/source.json
+games:
+- name: Sea Explorer
+  ids:
+  - steam:846210
+  requires: []
+- name: Hiking Simulator 2018
+  ids:
+  - steam:791950
+  requires: []
+- name: Sideral
+  ids:
+  - steam:1095070
+  requires: []
+- name: Resistance TD
+  ids:
+  - steam:1257540
+  requires: []
+- name: Electronic World Z
+  ids:
+  - steam:1389830
+  requires: []
+- name: Bomb Escape
+  ids:
+  - steam:1529440
+  requires: []
+- name: Nonestory
+  ids:
+  - steam:1530290
+  requires: []
+- name: Memento Infernum
+  ids:
+  - steam:1581050
+  requires: []
+- name: EyeRoll
+  ids:
+  - unresolved:source:isthereanydeal:11547:eyeroll
+  requires: []

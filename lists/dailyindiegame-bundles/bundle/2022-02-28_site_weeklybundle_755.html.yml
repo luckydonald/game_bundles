@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 755 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11104/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11104/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11104/source.json
+games:
+- name: Colo Grid Zation
+  ids:
+  - unresolved:source:isthereanydeal:11104:colo-grid-zation
+  requires: []
+- name: Second Chance
+  ids:
+  - steam:908960
+  requires: []
+- name: Ancient Anathema
+  ids:
+  - steam:1010540
+  requires: []
+- name: Poly Towns
+  ids:
+  - steam:438730
+  requires: []
+- name: Gold Rush! Anniversary
+  ids:
+  - steam:319230
+  requires: []
+- name: Asteroad
+  ids:
+  - unresolved:source:isthereanydeal:11104:asteroad
+  requires: []
+- name: Librarian
+  ids:
+  - steam:1505390
+  requires: []
+- name: Ballistic Machines
+  ids:
+  - unresolved:source:isthereanydeal:11104:ballistic-machines
+  requires: []
+- name: Run and Jump Little Vico
+  ids:
+  - steam:1614500
+  requires: []
