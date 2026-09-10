@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hallows Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9299/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9299/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9299/source.json
+games:
+- name: 'NecroVisioN + NecroVisioN: Lost Company'
+  ids:
+  - unresolved:source:isthereanydeal:9299:necrovision-and-necrovision-lost-company
+  requires: []
+- name: DreadOut
+  ids:
+  - steam:269790
+  requires: []
+- name: Richard & Alice
+  ids:
+  - steam:279260
+  requires: []
+- name: 'DreadOut: Keepers of The Dark'
+  ids:
+  - steam:418950
+  requires: []
+- name: The Void
+  ids:
+  - steam:37000
+  requires: []
+- name: The Charnel House Trilogy
+  ids:
+  - steam:288930
+  requires: []
+- name: Suite 776
+  ids:
+  - steam:1197370
+  requires: []

@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Roguelike Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9428/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9428/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9428/source.json
+games:
+- name: A Valley Without Wind 1 and 2 Dual Pack
+  ids:
+  - unresolved:source:isthereanydeal:9428:a-valley-without-wind-1-and-2-dual-pack
+  requires: []
+- name: Shütshimi
+  ids:
+  - steam:332530
+  requires: []
+- name: 'The Pit: Infinity'
+  ids:
+  - steam:577410
+  requires: []
+- name: 'Sword of the Stars: The Pit - Osmium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:9428:sword-of-the-stars-the-pit-osmium-edition
+  requires: []
+- name: Leap of Fate
+  ids:
+  - steam:363420
+  requires: []
+- name: A Robot Named Fight
+  ids:
+  - steam:603530
+  requires: []
+- name: bit Dungeon+
+  ids:
+  - unresolved:source:isthereanydeal:9428:bit-dungeon_plus
+  requires: []
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+  requires: []
+- name: bit Dungeon III
+  ids:
+  - steam:856210
+  requires: []
+- name: bit Dungeon II
+  ids:
+  - steam:331440
+  requires: []

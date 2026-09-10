@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Epic Quests Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10294/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10294/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10294/source.json
+games:
+- name: 'Disciples 3: Reincarnation'
+  ids:
+  - unresolved:source:isthereanydeal:10294:disciples-3-reincarnation
+  requires: []
+- name: Dungeon Rushers
+  ids:
+  - steam:429620
+  requires: []
+- name: Demonicon - The Dark Eye
+  ids:
+  - steam:215630
+  requires: []
+- name: 'Aarklash: Legacy'
+  ids:
+  - steam:222640
+  requires: []
+- name: 'King''s Bounty: The Legend'
+  ids:
+  - steam:25900
+  requires: []
+- name: Shadwen
+  ids:
+  - steam:425210
+  requires: []
+- name: Lorelai
+  ids:
+  - steam:593960
+  requires: []
+- name: 'Robothorium: Cyberpunk Dungeon Crawler'
+  ids:
+  - unresolved:source:isthereanydeal:10294:robothorium-cyberpunk-dungeon-crawler
+  requires: []
+- name: Outcast - Second Contact
+  ids:
+  - steam:618970
+  requires: []
+- name: World's Dawn
+  ids:
+  - steam:432010
+  requires: []
+- name: 'Lichdom: Battlemage'
+  ids:
+  - steam:261760
+  requires: []
+- name: Eternity - The Last Unicorn
+  ids:
+  - steam:714250
+  requires: []
+- name: Dex
+  ids:
+  - steam:269650
+  requires: []
+- name: 'Perseverance: Part 1'
+  ids:
+  - steam:854870
+  requires: []
+- name: Super Chibi Knight
+  ids:
+  - steam:283080
+  requires: []
+- name: Dungeons 2 Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:10294:dungeons-2-complete-edition
+  requires: []
+- name: Swag and Sorcery
+  ids:
+  - steam:929010
+  requires: []
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+  requires: []
+- name: bit Dungeon III
+  ids:
+  - steam:856210
+  requires: []
+- name: bit Dungeon II
+  ids:
+  - steam:331440
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Very Positive Bundle 5 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9315/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9315/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9315/source.json
+games:
+- name: 'Out of Reach: Treasure Royale'
+  ids:
+  - steam:867400
+  requires: []
+- name: 'Detective Di: The Silk Rose Murders'
+  ids:
+  - steam:792040
+  requires: []
+- name: Haimrik
+  ids:
+  - steam:492180
+  requires: []
+- name: Chariot
+  ids:
+  - steam:319450
+  requires: []
+- name: Alchemy Garden
+  ids:
+  - steam:935400
+  requires: []
+- name: Juanito Arcade Mayhem
+  ids:
+  - steam:617440
+  requires: []
+- name: Action Henk
+  ids:
+  - steam:285820
+  requires: []
+- name: 'Rain of Reflections: Set Free'
+  ids:
+  - steam:695050
+  requires: []

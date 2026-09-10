@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Paradox Interactive Bundle — Select 3 Titles for $9.99, 4 Titles
+  for $12.99, 5 Titles for $14.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9880/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9880/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9880/source.json
+games:
+- name: Hearts of Iron III Collection
+  ids:
+  - unresolved:source:isthereanydeal:9880:hearts-of-iron-iii-collection
+  requires: []
+- name: Surviving Mars
+  ids:
+  - unresolved:source:isthereanydeal:9880:surviving-mars
+  requires: []
+- name: 'Necropolis: Brutal Edition'
+  ids:
+  - steam:384490
+  requires: []
+- name: Stellaris Galaxy Edition
+  ids:
+  - unresolved:source:isthereanydeal:9880:stellaris-galaxy-edition
+  requires: []
+- name: Victoria II
+  ids:
+  - steam:42960
+  requires: []
+- name: 'Cities: Skylines'
+  ids:
+  - steam:255710
+  requires: []
+- name: 'Shadowrun: Dragonfall - Director''s Cut'
+  ids:
+  - steam:300550
+  requires: []
+- name: Prison Architect
+  ids:
+  - steam:233450
+  requires: []
+- name: Pillars of Eternity Hero Edition
+  ids:
+  - unresolved:source:isthereanydeal:9880:pillars-of-eternity-hero-edition
+  requires: []
+- name: BATTLETECH
+  ids:
+  - steam:637090
+  requires: []
+- name: Europa Universalis IV
+  ids:
+  - steam:236850
+  requires: []
+- name: 'Steel Division: Normandy 44'
+  ids:
+  - steam:572410
+  requires: []
+- name: Tyranny
+  ids:
+  - steam:362960
+  requires: []
+- name: Shadowrun Hong Kong - Extended Edition
+  ids:
+  - steam:346940
+  requires: []
+- name: Magicka 2
+  ids:
+  - steam:238370
+  requires: []
+- name: Age of Wonders III
+  ids:
+  - steam:226840
+  requires: []

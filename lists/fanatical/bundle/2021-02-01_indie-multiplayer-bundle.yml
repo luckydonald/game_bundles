@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Multiplayer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9687/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9687/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9687/source.json
+games:
+- name: Death Squared
+  ids:
+  - steam:471810
+  requires: []
+- name: Extreme Exorcism
+  ids:
+  - steam:334100
+  requires: []
+- name: Sky Noon
+  ids:
+  - steam:569530
+  requires: []
+- name: What The Box?
+  ids:
+  - steam:527340
+  requires: []
+- name: Bloodsports.TV
+  ids:
+  - steam:336420
+  requires: []
+- name: 'Kingdom Wars 2: Definitive Edition'
+  ids:
+  - steam:1036440
+  requires: []
+- name: Tinker Racers
+  ids:
+  - steam:1234620
+  requires: []

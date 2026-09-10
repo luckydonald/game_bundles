@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 13 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9470/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9470/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9470/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+  requires: []
+- name: V-Rally 4
+  ids:
+  - steam:658700
+  requires: []
+- name: Guilty Gear X2 Reload
+  ids:
+  - steam:314030
+  requires: []
+- name: American Fugitive
+  ids:
+  - steam:934780
+  requires: []
+- name: 'Overlord: Ultimate Evil Collection'
+  ids:
+  - unresolved:source:isthereanydeal:9470:overlord-ultimate-evil-collection
+  requires: []
+- name: 'Sniper: Ghost Warrior Trilogy'
+  ids:
+  - unresolved:source:isthereanydeal:9470:sniper-ghost-warrior-trilogy
+  requires: []
+- name: 'Narcos: Rise of the Cartels'
+  ids:
+  - unresolved:source:isthereanydeal:9470:narcos-rise-of-the-cartels
+  requires: []
