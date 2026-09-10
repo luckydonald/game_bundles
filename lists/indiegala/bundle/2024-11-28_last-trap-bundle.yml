@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Last Trap Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14659/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14659/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14659/source.json
+games:
+- name: Task is to Survive
+  ids:
+  - steam:735410
+  requires: []
+- name: Last Day of FEAR
+  ids:
+  - steam:767050
+  requires: []
+- name: The guard of dungeon
+  ids:
+  - steam:601640
+  requires: []
+- name: 30 days to survive
+  ids:
+  - steam:645270
+  requires: []
+- name: Trap Arena
+  ids:
+  - steam:1559660
+  requires: []
+- name: Dangerous Lands
+  ids:
+  - steam:1563030
+  requires: []
+- name: Cemetery Warrior V
+  ids:
+  - steam:1609440
+  requires: []
+- name: Deep Dark Dungeon of Anglaus
+  ids:
+  - steam:2372080
+  requires: []

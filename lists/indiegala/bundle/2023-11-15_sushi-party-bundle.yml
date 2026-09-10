@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sushi Party Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13620/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13620/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13620/source.json
+games:
+- name: ELMIA
+  ids:
+  - steam:738020
+  requires: []
+- name: URO
+  ids:
+  - steam:895850
+  requires: []
+- name: WitchAction
+  ids:
+  - steam:895860
+  requires: []
+- name: SushiParty
+  ids:
+  - steam:817410
+  requires: []
+- name: Flan
+  ids:
+  - steam:974850
+  requires: []
+- name: URO2
+  ids:
+  - steam:1161800
+  requires: []
+- name: SushiParty2
+  ids:
+  - steam:1161810
+  requires: []
+- name: Tower of the Approval
+  ids:
+  - steam:1242800
+  requires: []
+- name: FoxVoltex
+  ids:
+  - steam:1367130
+  requires: []
+- name: Approval
+  ids:
+  - steam:2099880
+  requires: []

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Artsy Pixel Puzzles Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15665/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15665/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15665/source.json
+games:
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Sci-Fi'
+  ids:
+  - steam:1534124
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Space'
+  ids:
+  - steam:1534126
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Cyberpunk'
+  ids:
+  - unresolved:source:isthereanydeal:15665:pixel-puzzles-illustrations-and-anime-jigsaw-pack-cyberpunk
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Musix'
+  ids:
+  - steam:1534120
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Aliens'
+  ids:
+  - steam:1577781
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Mechs'
+  ids:
+  - steam:1577786
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Distant Worlds'
+  ids:
+  - steam:1534129
+  requires: []
+- name: 'Pixel Puzzles Illustrations & Anime - Jigsaw Pack: Variety Pack XL'
+  ids:
+  - unresolved:source:isthereanydeal:15665:pixel-puzzles-illustrations-and-anime-jigsaw-pack-variety-pack-xl
+  requires: []

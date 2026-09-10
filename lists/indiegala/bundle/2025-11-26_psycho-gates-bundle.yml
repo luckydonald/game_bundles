@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Psycho Gates Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15631/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15631/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15631/source.json
+games:
+- name: The Guard
+  ids:
+  - steam:2320620
+  requires: []
+- name: Spooky Shelter
+  ids:
+  - steam:2343720
+  requires: []
+- name: Psychiatric Hospital
+  ids:
+  - steam:2377490
+  requires: []
+- name: Night of Horror
+  ids:
+  - steam:2399770
+  requires: []
+- name: Gate of Souls
+  ids:
+  - steam:2460050
+  requires: []
+- name: A Night in Prison
+  ids:
+  - steam:2515300
+  requires: []
+- name: Siberian experiment
+  ids:
+  - steam:3627950
+  requires: []
+- name: Dark Resolve
+  ids:
+  - steam:3810030
+  requires: []
+- name: Echo of the Walls
+  ids:
+  - steam:4159670
+  requires: []

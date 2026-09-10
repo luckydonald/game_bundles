@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Match III Snow Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13772/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13772/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13772/source.json
+games:
+- name: Jewel Legends Atlantis
+  ids:
+  - steam:2670770
+  requires: []
+- name: Arcanika
+  ids:
+  - steam:2364390
+  requires: []
+- name: 'Engineering: Mystery of the Ancient Clock'
+  ids:
+  - unresolved:source:isthereanydeal:13772:engineering-mystery-of-the-ancient-clock
+  requires: []
+- name: Quadrium
+  ids:
+  - steam:2376070
+  requires: []
+- name: Snow Jewels
+  ids:
+  - steam:1083430
+  requires: []
+- name: Season Match 4
+  ids:
+  - steam:1243240
+  requires: []
+- name: Animal Drop Safari
+  ids:
+  - steam:1541530
+  requires: []
+- name: Helga the Viking Warrior
+  ids:
+  - steam:1897330
+  requires: []
+- name: Crystal of Atlantis
+  ids:
+  - steam:2397700
+  requires: []

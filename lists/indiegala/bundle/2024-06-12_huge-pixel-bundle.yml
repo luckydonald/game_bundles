@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Huge Pixel Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14127/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14127/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14127/source.json
+games:
+- name: Toadomination
+  ids:
+  - steam:1687040
+  requires: []
+- name: Circus Pocus
+  ids:
+  - steam:1796270
+  requires: []
+- name: Gav-Gav Odyssey
+  ids:
+  - steam:1856020
+  requires: []
+- name: Lord of the Click 3
+  ids:
+  - steam:1916350
+  requires: []
+- name: Road Stones
+  ids:
+  - steam:2069580
+  requires: []
+- name: Super Geisha Neon
+  ids:
+  - steam:2075390
+  requires: []
+- name: Old Tunnel
+  ids:
+  - steam:2075370
+  requires: []
+- name: Words of Wisdom
+  ids:
+  - steam:2316590
+  requires: []
+- name: Deathly Dangerous
+  ids:
+  - steam:2318550
+  requires: []

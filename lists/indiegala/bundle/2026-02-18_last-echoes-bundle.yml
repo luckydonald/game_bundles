@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Last Echoes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15886/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15886/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15886/source.json
+games:
+- name: 'Octahedron: Transfixed Edition'
+  ids:
+  - steam:434660
+  requires: []
+- name: The Last Tater
+  ids:
+  - steam:1959490
+  requires: []
+- name: Absinthia
+  ids:
+  - steam:1848070
+  requires: []
+- name: Umbral
+  ids:
+  - steam:2639950
+  requires: []
+- name: Rogue Girl
+  ids:
+  - steam:2877790
+  requires: []
+- name: Echoes of Dread
+  ids:
+  - steam:3015350
+  requires: []
