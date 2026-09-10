@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Larva Mortus - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2292/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2292/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2292/source.json
+games:
+- name: Larva Mortus
+  ids:
+  - steam:11340
+  requires: []

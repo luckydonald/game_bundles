@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Pixel Puzzles: UndeadZ - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1670/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1670/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1670/source.json
+games:
+- name: 'Pixel Puzzles: UndeadZ'
+  ids:
+  - steam:285010
+  requires: []

@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Numba Deluxe - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2204/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2204/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2204/source.json
+games:
+- name: Numba Deluxe
+  ids:
+  - steam:301700
+  requires: []
