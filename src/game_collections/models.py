@@ -8,7 +8,11 @@ from typing import Annotated, Literal, Self
 from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 
-LIST_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._/%&'()+/-]*[A-Za-z0-9]$")
+# The trailing character class matches the middle one minus "/" (never end a path
+# segment in a separator) rather than being alnum-only, since flattening a bundle
+# directory into `<key>.yml` can leave any of its other allowed punctuation
+# (e.g. a scraped key ending in ")") as the new final character.
+LIST_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._/%&'()+/-]*[A-Za-z0-9._%&'()+-]$")
 PROVIDER_PATTERN = re.compile(r"^[a-z][a-z0-9-]*$")
 
 NonEmptyString = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
@@ -69,6 +73,12 @@ class Game(StrictModel):
     # Qualified IDs of other games that must be owned/present for this entry to make sense,
     # e.g. the free base game a DLC entry needs. Purely data, no launcher-specific behavior.
     requires: list[NonEmptyString] = Field(default_factory=list)
+    # Ranks (from the enclosing GameList's `tiers`) this game is included in. Empty when
+    # the list has no `tiers` (not a multi-variation bundle). Stored as a full membership
+    # list rather than just the lowest rank so a non-cumulative bundle (e.g. a
+    # build-your-own-bundle tier that shares one game pool across every rank) is
+    # representable, not just cumulative tiers where membership is contiguous.
+    tiers: list[Annotated[int, Field(ge=1)]] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def validate_ids(self) -> Self:
@@ -126,6 +136,16 @@ class Reference(StrictModel):
 # end class Reference
 
 
+class TierDefinition(StrictModel):
+    """One purchase variation ("tier") of a bundle list."""
+
+    rank: Annotated[int, Field(ge=1)]
+    name: NonEmptyString
+    pick_quota: Annotated[int, Field(ge=1)] | None = None
+
+# end class TierDefinition
+
+
 def duplicate_qualified_ids(games: list[Game]) -> list[str]:
     """Return compact qualified IDs that appear on more than one game, if any."""
     identities = [identifier.compact() for game in games for identifier in game.qualified_ids]
@@ -146,7 +166,10 @@ class GameList(StrictModel):
 
     schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     name: NonEmptyString
-    tier: Annotated[int, Field(ge=1)] | None = None
+    # Purchase variations ("tiers") this bundle offers, ordered by rank. Empty for lists
+    # that aren't a multi-variation bundle. When present, every Game.tiers value must
+    # reference one of these ranks (see validate_games below).
+    tiers: list[TierDefinition] = Field(default_factory=list)
     pick_quota: Annotated[int, Field(ge=1)] | None = None
     references: list[Reference] = Field(default_factory=list)
     # Crawler module slugs (e.g. "humblebundle", "isthereanydeal") that have
@@ -186,6 +209,22 @@ class GameList(StrictModel):
         if self.pick_quota is not None and self.pick_quota > len(self.games):
             raise ValueError(f"pick_quota {self.pick_quota} exceeds the list's {len(self.games)} game(s)")
         # end if
+
+        ranks = [tier.rank for tier in self.tiers]
+        if len(ranks) != len(set(ranks)):
+            raise ValueError("list contains duplicate tier ranks")
+        # end if
+
+        known_ranks = set(ranks)
+        for game in self.games:
+            if not self.tiers and game.tiers:
+                raise ValueError(f"game {game.name!r} has tiers but the list defines none")
+            # end if
+            unknown = [rank for rank in game.tiers if rank not in known_ranks]
+            if unknown:
+                raise ValueError(f"game {game.name!r} references unknown tier rank(s) {unknown}")
+            # end if
+        # end for
         return self
     # end def validate_games
 

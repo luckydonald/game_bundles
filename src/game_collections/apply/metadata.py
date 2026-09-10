@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from game_collections.lists import LoadedGameList
+from game_collections.lists import LoadedGameList, split_tier_suffix
 
 
 DATE_SEGMENT_PATTERN = re.compile(r"^(?P<date>\d{4}-\d{2}(?:-\d{2})?)(?:_.+)?$")
@@ -58,7 +58,7 @@ def load_bundle_metadata(game_lists: list[LoadedGameList]) -> list[BundleMetadat
                 bundle_kind=bundle_kind,
                 item_count=len(game_list.data.games),
                 date=_extract_date(game_list.id),
-                tier=game_list.data.tier,
+                tier=split_tier_suffix(game_list.id)[1],
                 name=game_list.data.name,
             )
         )

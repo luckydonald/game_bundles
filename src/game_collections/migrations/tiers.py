@@ -1,11 +1,13 @@
-"""One-time migration: rename tier-shaped bundle lists and populate ``tier``.
+"""One-time migration: rename tier-shaped bundle lists onto the numbered convention.
 
 Renames every already-generated ``lists/<provider>/bundle/<key>/*.yml`` bundle
-directory to the current writer convention (a lone tier becomes ``bundle.yml``
-with no ``tier`` field; sibling tiers become ``tier-<rank>.yml`` with an
-explicit ``tier: <rank>`` field), so on-disk lists match what the crawlers in
-``sources/*/crawler.py`` write going forward and the Steam adapter's tier
-selection no longer depends on any file predating that convention.
+directory whose files don't yet follow the current ``bundle.yml``/``tier-N.yml``
+naming convention onto it, so `migrations.bundle_variations` (which merges
+each such directory into one flattened file) can rely on that naming/ranking
+uniformly. Superseded by that later migration for anything beyond the rename
+itself: this module no longer writes a per-file ``tier`` field (the schema
+replaced it with `GameList.tiers`/`Game.tiers`), so an already-conventional
+file it finds needs no rewrite at all.
 """
 
 from __future__ import annotations
@@ -15,7 +17,10 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+import yaml
+
 from game_collections.lists import load_game_list
+from game_collections.models import GameList
 from game_collections.sources.common import atomic_write, render_game_list_yaml
 
 
@@ -40,12 +45,13 @@ class TierMigrationStep:
 # end class TierMigrationStep
 
 
-def step_would_change(step: TierMigrationStep, lists_root: Path) -> bool:
-    """Whether applying ``step`` would actually rewrite or rename anything."""
-    if step.new_path != step.old_path:
-        return True
-    # end if
-    return load_game_list(step.old_path, lists_root).data.tier != step.tier
+def step_would_change(step: TierMigrationStep) -> bool:
+    """Whether applying ``step`` would actually rename anything.
+
+    The schema no longer has a per-file ``tier`` field to reconcile (see the
+    module docstring), so a step whose path is unchanged is always a no-op.
+    """
+    return step.new_path != step.old_path
 # end def step_would_change
 
 
@@ -155,16 +161,20 @@ def plan_migration(lists_root: Path) -> list[TierMigrationStep]:
 
 
 def apply_migration_step(step: TierMigrationStep, lists_root: Path, repository_root: Path) -> None:
-    """Rewrite (and rename, if needed) one list file, validating the result."""
-    loaded = load_game_list(step.old_path, lists_root)
-    if step.new_path == step.old_path and loaded.data.tier == step.tier:
+    """Rename one list file onto the numbered convention, validating the result.
+
+    Reads via raw YAML rather than `load_game_list` since a genuinely
+    pre-convention file may still carry no `tier` concept at all yet; nothing
+    here writes one back (see the module docstring).
+    """
+    if step.new_path == step.old_path:
         return
     # end if
-    updated = loaded.data.model_copy(update={"tier": step.tier})
-    content = render_game_list_yaml(updated, step.new_path, repository_root)
+    raw = yaml.safe_load(step.old_path.read_text(encoding="utf-8"))
+    raw.pop("tier", None)
+    data = GameList.model_validate(raw)
+    content = render_game_list_yaml(data, step.new_path, repository_root)
     atomic_write(step.new_path, content)
     load_game_list(step.new_path, lists_root)
-    if step.new_path != step.old_path:
-        step.old_path.unlink()
-    # end if
+    step.old_path.unlink()
 # end def apply_migration_step

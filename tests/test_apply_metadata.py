@@ -13,17 +13,17 @@ def _list(list_id: str, *, tier: int | None = None) -> LoadedGameList:
         "name": list_id,
         "games": [{"name": "One", "ids": ["steam:440"]}, {"name": "Two", "ids": ["steam:441"]}],
     }
-    if tier is not None:
-        payload["tier"] = tier
-    # end if
     data = GameList.model_validate(payload)
-    return LoadedGameList(id=list_id, path=Path(f"lists/{list_id}.yml"), data=data)
+    # Mirrors what `expand_list_tiers` produces for a real multi-variation bundle:
+    # tier/grouping come from this synthetic id suffix (see `lists.split_tier_suffix`).
+    full_id = list_id if tier is None else f"{list_id}#tier-{tier}"
+    return LoadedGameList(id=full_id, path=Path(f"lists/{list_id}.yml"), data=data)
 # end def _list
 
 
 def test_humble_bundle_tier_shape() -> None:
     bundles = load_bundle_metadata(
-        [_list("humblebundle/bundle/2026-07-01_sample-bundle/tier-2", tier=2)]
+        [_list("humblebundle/bundle/2026-07-01_sample-bundle", tier=2)]
     )
 
     assert bundles[0].source == "humblebundle"

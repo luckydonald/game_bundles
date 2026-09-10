@@ -5,9 +5,8 @@ from pathlib import Path
 
 import pytest
 
-from game_collections.lists import discover_game_lists, load_game_list
-from game_collections.launchers.steam.adapter import SteamAdapter, SteamOptions
-from game_collections.migrate_tiers import (
+from game_collections.lists import load_game_list
+from game_collections.migrations.tiers import (
     TierMigrationError,
     apply_migration_step,
     plan_migration,
@@ -30,7 +29,7 @@ def _write_list(path: Path, name: str, *, metadata_ref: str | None = None) -> No
 
 def _apply_all(lists_root: Path, repository_root: Path) -> None:
     for step in plan_migration(lists_root):
-        if step_would_change(step, lists_root):
+        if step_would_change(step):
             apply_migration_step(step, lists_root, repository_root)
         # end if
     # end for
@@ -47,22 +46,24 @@ def test_single_tier_directory_is_renamed_to_bundle_yml(tmp_path: Path) -> None:
     assert new_path.exists()
     assert not (lists_root / "testprovider/bundle/single-offer/tier-1.yml").exists()
     loaded = load_game_list(new_path, lists_root)
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
 # end def test_single_tier_directory_is_renamed_to_bundle_yml
 
 
-def test_multi_numeric_tier_directory_keeps_names_and_gets_tier_field(tmp_path: Path) -> None:
+def test_multi_numeric_tier_directory_is_left_unchanged(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     _write_list(lists_root / "testprovider/bundle/multi-offer/tier-1.yml", "Multi Offer — Tier 1")
     _write_list(lists_root / "testprovider/bundle/multi-offer/tier-2.yml", "Multi Offer — Tier 2")
 
     _apply_all(lists_root, tmp_path)
 
+    # Already on the numbered convention: nothing left for this migration to do
+    # (rank/`Game.tiers` now come from `migrations.bundle_variations` instead).
     first = load_game_list(lists_root / "testprovider/bundle/multi-offer/tier-1.yml", lists_root)
     second = load_game_list(lists_root / "testprovider/bundle/multi-offer/tier-2.yml", lists_root)
-    assert first.data.tier == 1
-    assert second.data.tier == 2
-# end def test_multi_numeric_tier_directory_keeps_names_and_gets_tier_field
+    assert first.data.name == "Multi Offer — Tier 1"
+    assert second.data.name == "Multi Offer — Tier 2"
+# end def test_multi_numeric_tier_directory_is_left_unchanged
 
 
 def test_legacy_humble_item_bundle_naming_is_renumbered_by_item_count(tmp_path: Path) -> None:
@@ -78,9 +79,7 @@ def test_legacy_humble_item_bundle_naming_is_renumbered_by_item_count(tmp_path: 
     small = load_game_list(bundle_dir / "tier-1.yml", lists_root)
     entire = load_game_list(bundle_dir / "tier-2.yml", lists_root)
     assert small.data.name == "Legacy — Small"
-    assert small.data.tier == 1
     assert entire.data.name == "Legacy — Entire"
-    assert entire.data.tier == 2
 # end def test_legacy_humble_item_bundle_naming_is_renumbered_by_item_count
 
 
@@ -112,9 +111,7 @@ def test_legacy_gmg_identifier_naming_is_renumbered_via_archive_metadata(tmp_pat
     bronze = load_game_list(bundle_dir / "tier-1.yml", lists_root)
     gold = load_game_list(bundle_dir / "tier-2.yml", lists_root)
     assert bronze.data.name == "Legacy — Bronze"
-    assert bronze.data.tier == 1
     assert gold.data.name == "Legacy — Gold"
-    assert gold.data.tier == 2
 # end def test_legacy_gmg_identifier_naming_is_renumbered_via_archive_metadata
 
 
@@ -143,32 +140,3 @@ def test_migration_is_idempotent(tmp_path: Path) -> None:
 
     assert first_snapshot == second_snapshot
 # end def test_migration_is_idempotent
-
-
-def test_migration_makes_highest_tier_selection_work_again(tmp_path: Path) -> None:
-    """Before migration, un-tiered legacy files are always-included (no tier field to rank
-    by); migration is what lets `--tiers highest` correctly drop the lower tier again.
-    """
-    lists_root = tmp_path / "lists"
-    _write_list(lists_root / "testprovider/bundle/multi-offer/tier-1.yml", "Multi Offer — Tier 1")
-    _write_list(lists_root / "testprovider/bundle/multi-offer/tier-2.yml", "Multi Offer — Tier 2")
-
-    def selected_ids() -> set[str]:
-        adapter = SteamAdapter(
-            SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
-            owned_app_ids_source=lambda: {440},  # type: ignore[arg-type]
-        )
-        game_lists = discover_game_lists(lists_root)
-        plan = adapter.plan(game_lists)
-        return {change.list_id for change in plan.changes}
-    # end def selected_ids
-
-    assert selected_ids() == {
-        "testprovider/bundle/multi-offer/tier-1",
-        "testprovider/bundle/multi-offer/tier-2",
-    }
-
-    _apply_all(lists_root, tmp_path)
-
-    assert selected_ids() == {"testprovider/bundle/multi-offer/tier-2"}
-# end def test_migration_makes_highest_tier_selection_work_again

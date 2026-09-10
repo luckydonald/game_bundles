@@ -22,7 +22,7 @@ from game_collections.launchers.steam.io import (
     steam_collection_id,
 )
 from game_collections.launchers.steam.local_ownership import get_installed_app_ids
-from game_collections.lists import LoadedGameList
+from game_collections.lists import LoadedGameList, split_tier_suffix
 
 
 # Resolves the set of owned (or approximately-owned) Steam app IDs. Kept as a
@@ -163,7 +163,7 @@ class SteamAdapter(LauncherAdapter):
                     CollectionEligibility(
                         list_id=game_list.id,
                         name=game_list.data.name,
-                        tier=game_list.data.tier,
+                        tier=split_tier_suffix(game_list.id)[1],
                         eligible=True,
                         owned_ids=completion.missing_ids,
                         missing_ids=[],
@@ -204,7 +204,7 @@ class SteamAdapter(LauncherAdapter):
                 CollectionEligibility(
                     list_id=game_list.id,
                     name=game_list.data.name,
-                    tier=game_list.data.tier,
+                    tier=split_tier_suffix(game_list.id)[1],
                     eligible=eligible,
                     owned_ids=completion.owned_ids,
                     missing_ids=completion.missing_ids,
@@ -256,7 +256,7 @@ class SteamAdapter(LauncherAdapter):
                 # end if
                 continue
             # end if
-            parent = result.list_id.rpartition("/")[0]
+            parent = split_tier_suffix(result.list_id)[0]
             rank = result.tier
             key = (parent, rank)
             previous = tiers.get(key)
