@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 103: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8191/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8191/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8191/source.json
+games:
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:8191:airplane-sky-voyage
+  requires: []
+- name: Planet Jump 2
+  ids:
+  - unresolved:source:isthereanydeal:8191:planet-jump-2
+  requires: []
+- name: 'Mermaid Adventures: The Frozen Time'
+  ids:
+  - steam:798610
+  requires: []
+- name: 'Lawnmower Game 4: The Final Cut'
+  ids:
+  - steam:1064090
+  requires: []
+- name: 酒店二 The Hotel 2
+  ids:
+  - unresolved:source:isthereanydeal:8191:jiu-dian-er-the-hotel-2
+  requires: []
+- name: Space BloX
+  ids:
+  - steam:1086270
+  requires: []
+- name: Awesome Metal Detecting
+  ids:
+  - steam:582810
+  requires: []
+- name: Skywriter
+  ids:
+  - steam:919040
+  requires: []
+- name: Unbroken Warrior
+  ids:
+  - unresolved:source:isthereanydeal:8191:unbroken-warrior
+  requires: []

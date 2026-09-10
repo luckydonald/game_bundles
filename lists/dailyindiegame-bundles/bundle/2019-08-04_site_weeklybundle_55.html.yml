@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 55 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7714/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7714/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7714/source.json
+games:
+- name: Moto Racing 3D
+  ids:
+  - unresolved:source:isthereanydeal:7714:moto-racing-3d
+  requires: []
+- name: Eidolon adventure
+  ids:
+  - unresolved:source:isthereanydeal:7714:eidolon-adventure
+  requires: []
+- name: Stroke Fill
+  ids:
+  - steam:1089140
+  requires: []
+- name: Interregnum-Alpha
+  ids:
+  - unresolved:source:isthereanydeal:7714:interregnum-alpha
+  requires: []
+- name: The Risers
+  ids:
+  - steam:857770
+  requires: []
+- name: Orc Raid
+  ids:
+  - steam:1061160
+  requires: []
+- name: Unbroken Warrior
+  ids:
+  - unresolved:source:isthereanydeal:7714:unbroken-warrior
+  requires: []
+- name: After The Suns
+  ids:
+  - steam:1101200
+  requires: []

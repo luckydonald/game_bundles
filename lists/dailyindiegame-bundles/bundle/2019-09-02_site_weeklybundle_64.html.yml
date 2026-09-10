@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 64: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7863/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7863/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7863/source.json
+games:
+- name: Mayhem ZX
+  ids:
+  - steam:522950
+  requires: []
+- name: Impossible Quest
+  ids:
+  - steam:485860
+  requires: []
+- name: Money Maker
+  ids:
+  - steam:977430
+  requires: []
+- name: Lots of Balls
+  ids:
+  - steam:780760
+  requires: []
+- name: Snake, snake, snake!
+  ids:
+  - steam:857140
+  requires: []
+- name: 'Battle Arena: Euro Wars'
+  ids:
+  - unresolved:source:isthereanydeal:7863:battle-arena-euro-wars
+  requires: []
+- name: Visceral Cubes
+  ids:
+  - steam:846010
+  requires: []
+- name: Grab the Bottle
+  ids:
+  - steam:546410
+  requires: []
+- name: Ninja Midori
+  ids:
+  - steam:858440
+  requires: []

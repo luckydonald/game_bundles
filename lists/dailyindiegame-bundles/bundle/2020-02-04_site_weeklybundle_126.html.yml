@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 126 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8363/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8363/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8363/source.json
+games:
+- name: Last warrior
+  ids:
+  - steam:1107440
+  requires: []
+- name: Terra Incognita
+  ids:
+  - unresolved:source:isthereanydeal:8363:terra-incognita
+  requires: []
+- name: HENTAI GIRL PUZZLE
+  ids:
+  - unresolved:source:isthereanydeal:8363:hentai-girl-puzzle
+  requires: []
+- name: mr.Vegan
+  ids:
+  - steam:873610
+  requires: []
+- name: Lighthouse of guiding flames
+  ids:
+  - steam:1107060
+  requires: []
+- name: My Haunted Doll
+  ids:
+  - steam:1181470
+  requires: []
+- name: '30km survival zone: Chernobyl'
+  ids:
+  - unresolved:source:isthereanydeal:8363:30km-survival-zone-chernobyl
+  requires: []
+- name: Christmas Cats Revenge
+  ids:
+  - steam:1201500
+  requires: []
+- name: Hentai Cyberpunk Sci-Fi
+  ids:
+  - unresolved:source:isthereanydeal:8363:hentai-cyberpunk-sci-fi
+  requires: []

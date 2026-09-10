@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 114 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8294/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8294/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8294/source.json
+games:
+- name: Post Soviet Zombies
+  ids:
+  - steam:1113310
+  requires: []
+- name: Mystic RUS-files
+  ids:
+  - unresolved:source:isthereanydeal:8294:mystic-rus-files
+  requires: []
+- name: Magician of Fire
+  ids:
+  - steam:984830
+  requires: []
+- name: Workhard
+  ids:
+  - steam:1138280
+  requires: []
+- name: City Defense
+  ids:
+  - steam:997870
+  requires: []
+- name: HUNTER BRICK BALL
+  ids:
+  - steam:874130
+  requires: []
+- name: Micro Car Crash Online Le Go!
+  ids:
+  - steam:1150480
+  requires: []
+- name: Play with NEKO
+  ids:
+  - steam:1181130
+  requires: []
+- name: Cyber Pussy 2020
+  ids:
+  - steam:1197280
+  requires: []

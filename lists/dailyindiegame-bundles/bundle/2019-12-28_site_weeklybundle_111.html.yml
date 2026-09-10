@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 111 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8274/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8274/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8274/source.json
+games:
+- name: Barbarian Souls
+  ids:
+  - steam:769110
+  requires: []
+- name: 'Gangsta Sniper 2: Revenge'
+  ids:
+  - steam:998480
+  requires: []
+- name: Mayhem ZX
+  ids:
+  - steam:522950
+  requires: []
+- name: Build Bridges
+  ids:
+  - unresolved:source:isthereanydeal:8274:build-bridges
+  requires: []
+- name: Sniper Squad Mission
+  ids:
+  - unresolved:source:isthereanydeal:8274:sniper-squad-mission
+  requires: []
+- name: Snake, snake, snake!
+  ids:
+  - steam:857140
+  requires: []
+- name: C. Kane
+  ids:
+  - steam:385030
+  requires: []
+- name: Power Brain Trainer
+  ids:
+  - steam:1070300
+  requires: []
+- name: Tupã
+  ids:
+  - steam:664630
+  requires: []

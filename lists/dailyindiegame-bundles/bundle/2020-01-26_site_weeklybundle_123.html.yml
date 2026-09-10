@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 123 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8350/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8350/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8350/source.json
+games:
+- name: 'AXYOS: Battlecards'
+  ids:
+  - steam:730450
+  requires: []
+- name: Skull Rush
+  ids:
+  - unresolved:source:isthereanydeal:8350:skull-rush
+  requires: []
+- name: The God's Chain
+  ids:
+  - steam:504490
+  requires: []
+- name: Iesabel
+  ids:
+  - steam:248710
+  requires: []
+- name: Mumps
+  ids:
+  - steam:777020
+  requires: []
+- name: Hentai Shooter 3D
+  ids:
+  - steam:914690
+  requires: []
+- name: Save Daddy Trump
+  ids:
+  - steam:1084080
+  requires: []
+- name: Angry Bunny
+  ids:
+  - steam:1168650
+  requires: []
+- name: Alone K.W.
+  ids:
+  - steam:442000
+  requires: []
