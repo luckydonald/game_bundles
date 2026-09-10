@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Enigma Bundle 2 — Select 1 for 1.00, 5 for 3.99, 10 for 7.49
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14216/source.json
+games:
+- name: 'Persian Nights: Sands of Wonders'
+  ids:
+  - steam:621080
+  requires: []
+- name: 'Faces of Illusion: The Twin Phantoms'
+  ids:
+  - steam:558340
+  requires: []
+- name: 'Left in the Dark: No One on Board'
+  ids:
+  - steam:284890
+  requires: []
+- name: 'Fairy Tale Mysteries: The Puppet Thief'
+  ids:
+  - steam:429600
+  requires: []
+- name: 'Fairy Tale Mysteries 2: The Beanstalk'
+  ids:
+  - steam:403510
+  requires: []
+- name: 'Grim Legends 3: The Dark City'
+  ids:
+  - steam:458470
+  requires: []
+- name: 'Ghost Files: The Face of Guilt'
+  ids:
+  - steam:599560
+  requires: []
+- name: 'Skyland: Heart of the Mountain'
+  ids:
+  - steam:949800
+  requires: []
+- name: 'Grim Legends 2: Song of the Dark Swan'
+  ids:
+  - steam:279800
+  requires: []
+- name: 'Eventide 3: Legacy of Legends'
+  ids:
+  - steam:677020
+  requires: []
+- name: 'Eventide 2: The Sorcerers Mirror'
+  ids:
+  - steam:510650
+  requires: []
+- name: 'Grim Legends: The Forsaken Bride'
+  ids:
+  - steam:284850
+  requires: []
+- name: 'King''s Heir: Rise to the Throne'
+  ids:
+  - steam:834390
+  requires: []
+- name: 'Ghost Files 2: Memory of a Crime'
+  ids:
+  - steam:1159500
+  requires: []
+- name: 'Family Mysteries: Poisonous Promises'
+  ids:
+  - steam:1225070
+  requires: []
+- name: 'Family Mysteries 2: Echoes of Tomorrow'
+  ids:
+  - steam:1247190
+  requires: []
+- name: 'Persian Nights 2: The Moonlight Veil'
+  ids:
+  - steam:1276540
+  requires: []
+- name: 'Family Mysteries 3: Criminal Mindset'
+  ids:
+  - steam:1309860
+  requires: []

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Complete Dread X Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13329/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13329/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13329/source.json
+games:
+- name: Dread X Collection
+  ids:
+  - steam:1296510
+  requires: []
+- name: Dread X Collection 2
+  ids:
+  - steam:1380390
+  requires: []
+- name: Dread X Collection 3
+  ids:
+  - steam:1437500
+  requires: []
+- name: Dread X Collection 5
+  ids:
+  - steam:1899810
+  requires: []
+- name: 'Dread X Collection 4: The Hunt'
+  ids:
+  - steam:1569550
+  requires: []

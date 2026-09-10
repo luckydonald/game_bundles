@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Super Summer Bundle — Select 1 Title for $1.00, 5 Titles for
+  $2.99, 10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13403/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13403/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13403/source.json
+games:
+- name: Dad Quest
+  ids:
+  - steam:524250
+  requires: []
+- name: Lair of the Clockwork God
+  ids:
+  - steam:1060600
+  requires: []
+- name: Constructor Classic 1997
+  ids:
+  - steam:599600
+  requires: []
+- name: Deep Space Battle Simulator
+  ids:
+  - steam:1055610
+  requires: []
+- name: Afterparty
+  ids:
+  - steam:762220
+  requires: []
+- name: Ary and the secret of seasons
+  ids:
+  - steam:935570
+  requires: []
+- name: Monstrum 2
+  ids:
+  - unresolved:source:isthereanydeal:13403:monstrum-2
+  requires: []
+- name: Mob Rule Classic
+  ids:
+  - steam:600420
+  requires: []
+- name: 'FAR: Lone Sails'
+  ids:
+  - steam:609320
+  requires: []
+- name: 'Northmark: Hour of the Wolf'
+  ids:
+  - steam:307010
+  requires: []
+- name: 'Lost Words: Beyond the Page'
+  ids:
+  - steam:599610
+  requires: []
+- name: Ludus
+  ids:
+  - steam:1200230
+  requires: []
+- name: Dust to End
+  ids:
+  - steam:1074070
+  requires: []
+- name: Toy Tinker Simulator
+  ids:
+  - steam:1510580
+  requires: []
+- name: Sunblaze
+  ids:
+  - steam:1525660
+  requires: []
+- name: JANITOR BLEEDS
+  ids:
+  - steam:1552310
+  requires: []
+- name: Blood And Zombies
+  ids:
+  - steam:1739880
+  requires: []
+- name: Smart Factory Tycoon
+  ids:
+  - steam:1755300
+  requires: []
+- name: Nomad Survival
+  ids:
+  - steam:1929870
+  requires: []
+- name: 'Superbugs: Awaken'
+  ids:
+  - steam:1393570
+  requires: []

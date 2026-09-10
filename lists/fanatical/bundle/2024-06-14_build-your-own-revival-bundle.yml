@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Revival Bundle — 3 for 4.99,  5 for 6.99, 8 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14132/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14132/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14132/source.json
+games:
+- name: Exiled Kingdoms
+  ids:
+  - steam:788270
+  requires: []
+- name: 'Encased: a sci-fi post-apocalyptic RPG'
+  ids:
+  - steam:921800
+  requires: []
+- name: Roundguard
+  ids:
+  - steam:848030
+  requires: []
+- name: Terror of Hemasaurus
+  ids:
+  - steam:1016180
+  requires: []
+- name: MELTY BLOOD Actress Again Current Code
+  ids:
+  - steam:411370
+  requires: []
+- name: Devilated
+  ids:
+  - steam:570950
+  requires: []
+- name: Super Blood Hockey
+  ids:
+  - steam:532190
+  requires: []
+- name: Super Indie Karts
+  ids:
+  - steam:323670
+  requires: []
+- name: Alwa's Legacy
+  ids:
+  - steam:1205900
+  requires: []
+- name: Sir Lovelot
+  ids:
+  - steam:1055170
+  requires: []
+- name: UnMetal
+  ids:
+  - steam:1203710
+  requires: []
+- name: Alex Kidd in Miracle World DX
+  ids:
+  - steam:1333470
+  requires: []
+- name: Dread Templar
+  ids:
+  - steam:1334730
+  requires: []
+- name: Switchball HD
+  ids:
+  - steam:1588760
+  requires: []
+- name: Deflector
+  ids:
+  - steam:1736550
+  requires: []
+- name: Donut Dodo
+  ids:
+  - steam:1779560
+  requires: []
+- name: Hello Goodboy
+  ids:
+  - steam:1789090
+  requires: []
+- name: 'Pixel Survivors: Roguelike'
+  ids:
+  - steam:1995870
+  requires: []
+- name: Cash Cow DX
+  ids:
+  - steam:2225830
+  requires: []

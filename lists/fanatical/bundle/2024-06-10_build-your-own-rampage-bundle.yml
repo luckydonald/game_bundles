@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Rampage Bundle — 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14124/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14124/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14124/source.json
+games:
+- name: 'Rogue Empire: Dungeon Crawler RPG'
+  ids:
+  - steam:650940
+  requires: []
+- name: Yaga
+  ids:
+  - steam:888530
+  requires: []
+- name: One More Dungeon 2
+  ids:
+  - steam:1483100
+  requires: []
+- name: The Legend of Tianding
+  ids:
+  - steam:1406850
+  requires: []
+- name: Forgive me Father
+  ids:
+  - steam:1590910
+  requires: []
+- name: Summum Aeterna
+  ids:
+  - steam:1815230
+  requires: []
+- name: NecroBouncer
+  ids:
+  - steam:1786830
+  requires: []
+- name: Dwarven Realms
+  ids:
+  - steam:2015240
+  requires: []
+- name: Metal Mutation
+  ids:
+  - steam:1840790
+  requires: []
+- name: The Ouroboros King
+  ids:
+  - steam:2096510
+  requires: []
+- name: Crafty Survivors
+  ids:
+  - steam:2137760
+  requires: []
+- name: TROUBLE JUICE
+  ids:
+  - steam:2065840
+  requires: []
+- name: Shadowkin
+  ids:
+  - steam:2212410
+  requires: []
+- name: Praise Dead
+  ids:
+  - steam:2459180
+  requires: []
+- name: Margoq's Lair
+  ids:
+  - steam:2516550
+  requires: []
+- name: 'Nadir: A Grimdark Deckbuilder'
+  ids:
+  - steam:1535100
+  requires: []

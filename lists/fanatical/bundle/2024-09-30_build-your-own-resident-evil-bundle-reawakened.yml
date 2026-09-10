@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Build Your Own Resident Evil Bundle: Reawakened — 2 Items $8.00 ea, 3+ Items
+  $7.33 ea'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14488/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14488/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14488/source.json
+games:
+- name: RESIDENT EVIL 7 biohazard
+  ids:
+  - steam:418370
+  requires: []
+- name: Resident Evil 6 Complete
+  ids:
+  - steam:221040
+  requires: []
+- name: Resident Evil Village
+  ids:
+  - steam:1196590
+  requires: []
+- name: RESIDENT EVIL 2 (2019)
+  ids:
+  - steam:883710
+  requires: []
+- name: RESIDENT EVIL 3 (2020)
+  ids:
+  - steam:952060
+  requires: []
+- name: Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14488:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
+  requires: []
+- name: 'Resident Evil: Revelations 1 & 2 Deluxe Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:14488:resident-evil-revelations-1-and-2-deluxe-double-pack
+  requires: []
+- name: Resident Evil & Resident Evil 0 Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:14488:resident-evil-and-resident-evil-0-double-pack
+  requires: []

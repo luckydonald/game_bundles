@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Expeditions Bundle — Select 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13908/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13908/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13908/source.json
+games:
+- name: Summer in Mara
+  ids:
+  - steam:962580
+  requires: []
+- name: Hellpoint
+  ids:
+  - steam:628670
+  requires: []
+- name: Cathedral
+  ids:
+  - steam:1056180
+  requires: []
+- name: 'Call of Juarez: Gunslinger'
+  ids:
+  - steam:204450
+  requires: []
+- name: 'SINNER: Sacrifice for Redemption'
+  ids:
+  - steam:691280
+  requires: []
+- name: UnDungeon
+  ids:
+  - steam:928990
+  requires: []
+- name: BEAUTIFUL DESOLATION
+  ids:
+  - steam:912570
+  requires: []
+- name: STASIS
+  ids:
+  - steam:380150
+  requires: []
+- name: Röki
+  ids:
+  - steam:1067540
+  requires: []
+- name: Eldest Souls
+  ids:
+  - steam:1108590
+  requires: []
+- name: SONG OF HORROR Complete Edition
+  ids:
+  - steam:1096570
+  requires: []
+- name: 'BPM: BULLETS PER MINUTE'
+  ids:
+  - steam:1286350
+  requires: []
+- name: Broken Pieces
+  ids:
+  - steam:1293730
+  requires: []
+- name: They Always Run
+  ids:
+  - steam:1585440
+  requires: []
+- name: One True Hero
+  ids:
+  - steam:1596170
+  requires: []
+- name: Soundfall
+  ids:
+  - steam:1608700
+  requires: []
+- name: Crime O'Clock
+  ids:
+  - steam:1736290
+  requires: []
+- name: Teslagrad Remastered
+  ids:
+  - steam:2168150
+  requires: []
+- name: Guardians of Holme
+  ids:
+  - steam:2086850
+  requires: []
+- name: 'Pilfer: Story of Light'
+  ids:
+  - steam:2153020
+  requires: []
+- name: Red Line
+  ids:
+  - steam:2143050
+  requires: []

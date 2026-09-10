@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Jubilant Bundle — Select 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14228/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14228/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14228/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+  requires: []
+- name: The Hive
+  ids:
+  - steam:325730
+  requires: []
+- name: Gedonia
+  ids:
+  - steam:1114220
+  requires: []
+- name: Spinch
+  ids:
+  - steam:794240
+  requires: []
+- name: Tunche
+  ids:
+  - steam:887450
+  requires: []
+- name: Ittle Dew
+  ids:
+  - steam:241320
+  requires: []
+- name: Valfaris
+  ids:
+  - steam:600130
+  requires: []
+- name: Autonauts
+  ids:
+  - steam:979120
+  requires: []
+- name: Ittle Dew 2+
+  ids:
+  - steam:395620
+  requires: []
+- name: GoNNER
+  ids:
+  - steam:437570
+  requires: []
+- name: Tormentor X Punisher
+  ids:
+  - steam:500670
+  requires: []
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+  requires: []
+- name: Mutazione
+  ids:
+  - steam:1080750
+  requires: []
+- name: Trifox
+  ids:
+  - steam:1211240
+  requires: []
+- name: 'The Darkside Detective: A Fumble in the Dark'
+  ids:
+  - steam:795420
+  requires: []
+- name: Don't Touch this Button!
+  ids:
+  - steam:1593950
+  requires: []
+- name: From Space
+  ids:
+  - steam:1502190
+  requires: []
+- name: I Am Fish
+  ids:
+  - steam:1472560
+  requires: []
+- name: Forests, Fields and Fortresses
+  ids:
+  - steam:2113450
+  requires: []
+- name: 'Access Denied: Escape'
+  ids:
+  - steam:2317300
+  requires: []
+- name: Labrys
+  ids:
+  - steam:2330210
+  requires: []
+- name: You Suck at Parking Complete Edition
+  ids:
+  - steam:837880
+  requires: []

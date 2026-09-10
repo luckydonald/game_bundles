@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Fall Bundle (2024) — Select 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14532/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14532/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14532/source.json
+games:
+- name: 'Elementals: The Magic Key'
+  ids:
+  - steam:2076240
+  requires: []
+- name: Finding Paradise
+  ids:
+  - steam:337340
+  requires: []
+- name: 'DG2: Defense Grid 2'
+  ids:
+  - steam:221540
+  requires: []
+- name: Aeterna Noctis
+  ids:
+  - steam:1517970
+  requires: []
+- name: Internet Cafe Simulator 2
+  ids:
+  - steam:1563180
+  requires: []
+- name: Frogun
+  ids:
+  - steam:1575470
+  requires: []
+- name: Fall of Porcupine
+  ids:
+  - steam:1710540
+  requires: []
+- name: Beyond the Long Night
+  ids:
+  - steam:1730080
+  requires: []
+- name: Backfirewall_
+  ids:
+  - steam:1920100
+  requires: []
+- name: Summum Aeterna
+  ids:
+  - steam:1815230
+  requires: []
+- name: Garfield Lasagna Party
+  ids:
+  - steam:2008410
+  requires: []
+- name: Cozy Space Survivors
+  ids:
+  - steam:2657850
+  requires: []
+- name: Nyran Survivors
+  ids:
+  - steam:2540810
+  requires: []
+- name: Xeno Runners
+  ids:
+  - steam:2696850
+  requires: []
+- name: Long Way
+  ids:
+  - steam:2455070
+  requires: []

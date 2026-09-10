@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Triple Pack (Fall 2023) — Select 3 for $2.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13533/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13533/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13533/source.json
+games:
+- name: The Wild Eight
+  ids:
+  - steam:526160
+  requires: []
+- name: Lamentum
+  ids:
+  - steam:1033950
+  requires: []
+- name: Lair of the Clockwork God
+  ids:
+  - steam:1060600
+  requires: []
+- name: Tunche
+  ids:
+  - steam:887450
+  requires: []
+- name: Black Paradox
+  ids:
+  - steam:858680
+  requires: []
+- name: The Metronomicon Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13533:the-metronomicon-deluxe-edition
+  requires: []
+- name: Warborn
+  ids:
+  - steam:918950
+  requires: []
+- name: Hacknet
+  ids:
+  - steam:365450
+  requires: []
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+  requires: []
+- name: Shred! 2 - ft Sam Pilgrim
+  ids:
+  - steam:853200
+  requires: []
+- name: Sword of the Necromancer
+  ids:
+  - steam:1243890
+  requires: []
+- name: Lawn Mowing Simulator
+  ids:
+  - steam:1480560
+  requires: []
+- name: I Am Fish
+  ids:
+  - steam:1472560
+  requires: []
+- name: Smart Factory Tycoon
+  ids:
+  - steam:1755300
+  requires: []

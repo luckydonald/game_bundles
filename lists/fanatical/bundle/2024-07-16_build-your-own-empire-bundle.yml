@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Empire Bundle — Select 3 for 4.99, 5 for 7.99, 7 for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14237/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14237/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14237/source.json
+games:
+- name: Medieval Kingdom Wars
+  ids:
+  - steam:499660
+  requires: []
+- name: Rec Center Tycoon
+  ids:
+  - steam:623700
+  requires: []
+- name: Coffee Shop Tycoon
+  ids:
+  - steam:370060
+  requires: []
+- name: Airborne Kingdom
+  ids:
+  - steam:982290
+  requires: []
+- name: 'Kingdom Wars 2: Definitive Edition'
+  ids:
+  - steam:1036440
+  requires: []
+- name: Animal Shelter
+  ids:
+  - steam:1239320
+  requires: []
+- name: APICO
+  ids:
+  - steam:1390190
+  requires: []
+- name: Car Detailing Simulator
+  ids:
+  - steam:1433570
+  requires: []
+- name: Arcade Paradise
+  ids:
+  - steam:1388870
+  requires: []
+- name: Paleon
+  ids:
+  - steam:1554220
+  requires: []
+- name: Fresh Start Cleaning Simulator
+  ids:
+  - steam:1856030
+  requires: []
+- name: Pets Hotel
+  ids:
+  - steam:1714250
+  requires: []
+- name: URBO
+  ids:
+  - steam:2141770
+  requires: []
+- name: Computer Repair Shop
+  ids:
+  - steam:2479290
+  requires: []
+- name: Kingdom Wars 4
+  ids:
+  - steam:1300700
+  requires: []
