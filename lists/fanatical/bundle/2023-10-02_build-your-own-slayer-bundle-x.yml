@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Slayer Bundle X — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13515/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13515/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13515/source.json
+games:
+- name: Metro Last Light Redux
+  ids:
+  - steam:287390
+  requires: []
+- name: Tannenberg
+  ids:
+  - steam:633460
+  requires: []
+- name: Dead Island Riptide Definitive Edition
+  ids:
+  - steam:383180
+  requires: []
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+  requires: []
+- name: Metro 2033 Redux
+  ids:
+  - steam:286690
+  requires: []
+- name: Moonlighter
+  ids:
+  - steam:606150
+  requires: []
+- name: Turmoil
+  ids:
+  - steam:361280
+  requires: []
+- name: Fates of Ort
+  ids:
+  - steam:895480
+  requires: []
+- name: Verdun
+  ids:
+  - steam:242860
+  requires: []
+- name: Röki
+  ids:
+  - steam:1067540
+  requires: []
+- name: Eldest Souls
+  ids:
+  - steam:1108590
+  requires: []
+- name: Just Die Already
+  ids:
+  - steam:979070
+  requires: []
+- name: Patch Quest
+  ids:
+  - steam:1347970
+  requires: []
+- name: From Space
+  ids:
+  - steam:1502190
+  requires: []
+- name: Void Scrappers
+  ids:
+  - steam:2005210
+  requires: []

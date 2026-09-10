@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Wonder Bundle — 1 for 1.00, 5 for 2.99, 10 for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13989/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13989/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13989/source.json
+games:
+- name: Pumped BMX Pro
+  ids:
+  - steam:966720
+  requires: []
+- name: 'Space Rangers HD: A War Apart'
+  ids:
+  - steam:214730
+  requires: []
+- name: Unity of Command Trilogy Bundle
+  ids:
+  - unresolved:source:isthereanydeal:13989:unity-of-command-trilogy-bundle
+  requires: []
+- name: Monster Slayers - Advanced Classes Unlocker
+  ids:
+  - steam:621840
+  requires: []
+- name: Monster Slayers - Complete Edition
+  ids:
+  - unresolved:source:isthereanydeal:13989:monster-slayers-complete-edition
+  requires: []
+- name: Unity of Command - Black Turn
+  ids:
+  - steam:258420
+  requires: []
+- name: Whispering Willows
+  ids:
+  - steam:288060
+  requires: []
+- name: Monster Slayers
+  ids:
+  - steam:496620
+  requires: []
+- name: Valfaris
+  ids:
+  - steam:600130
+  requires: []
+- name: Unity of Command - Red Turn
+  ids:
+  - steam:218100
+  requires: []
+- name: 12 is Better Than 6
+  ids:
+  - steam:410110
+  requires: []
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+  requires: []
+- name: 'Unity of Command: Stalingrad Campaign'
+  ids:
+  - steam:218090
+  requires: []
+- name: Monster Slayers - Fire & Steel Expansion
+  ids:
+  - steam:634030
+  requires: []
+- name: Dreamscaper
+  ids:
+  - steam:1040420
+  requires: []
+- name: Golden Light
+  ids:
+  - steam:1245430
+  requires: []
+- name: Karma City Police
+  ids:
+  - steam:1270850
+  requires: []
+- name: Monorail Stories
+  ids:
+  - steam:1267070
+  requires: []
+- name: Wordle
+  ids:
+  - steam:1334000
+  requires: []
+- name: Wordle 2
+  ids:
+  - steam:1386730
+  requires: []
+- name: Wordle 3
+  ids:
+  - steam:1428820
+  requires: []
+- name: Wordle 4
+  ids:
+  - steam:1477020
+  requires: []
+- name: Lawn Mowing Simulator
+  ids:
+  - steam:1480560
+  requires: []
+- name: From Space
+  ids:
+  - steam:1502190
+  requires: []
+- name: 'RICO: London'
+  ids:
+  - steam:1265720
+  requires: []
+- name: Blood And Zombies
+  ids:
+  - steam:1739880
+  requires: []
+- name: 'Oddworld: Soulstorm Enhanced Edition'
+  ids:
+  - steam:619390
+  requires: []
+- name: UNDETECTED
+  ids:
+  - steam:1715350
+  requires: []
+- name: 'A Tale of Paper: Refolded'
+  ids:
+  - steam:1454640
+  requires: []
+- name: Wordle 5
+  ids:
+  - steam:1867190
+  requires: []
+- name: You Suck at Parking Complete Edition
+  ids:
+  - steam:837880
+  requires: []
+- name: Wordle 1-5 Quintology Pack
+  ids:
+  - unresolved:source:isthereanydeal:13989:wordle-1-5-quintology-pack
+  requires: []

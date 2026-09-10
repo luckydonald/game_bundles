@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Neverwinter Nights + Icewind Dale Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14639/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14639/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14639/source.json
+games:
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+  requires: []
+- name: 'Neverwinter Nights: Enhanced Edition'
+  ids:
+  - steam:704450
+  requires: []

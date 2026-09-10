@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Infernal Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13563/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13563/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13563/source.json
+games:
+- name: Graveyard Keeper
+  ids:
+  - steam:599140
+  requires: []
+- name: 'Nine Witches: Family Disruption'
+  ids:
+  - steam:1272580
+  requires: []
+- name: The Horror Of Salazar House
+  ids:
+  - steam:1405440
+  requires: []
+- name: 'SEARCH PARTY: Director''s Cut'
+  ids:
+  - steam:1418540
+  requires: []
+- name: SPOOKWARE
+  ids:
+  - steam:1574250
+  requires: []
+- name: 'Sucker for Love: First Date'
+  ids:
+  - steam:1574270
+  requires: []

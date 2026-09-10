@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Stygian & Through the Woods Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13228/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13228/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13228/source.json
+games:
+- name: 'Stygian: Reign of the Old Ones'
+  ids:
+  - steam:779290
+  requires: []
+- name: Through the Woods
+  ids:
+  - steam:368430
+  requires: []

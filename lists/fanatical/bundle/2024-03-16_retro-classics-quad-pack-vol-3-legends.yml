@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Retro Classics Quad Pack: Vol. 3 - Legends — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13927/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13927/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13927/source.json
+games:
+- name: The Gadget Twins
+  ids:
+  - steam:1136090
+  requires: []
+- name: Impossamole
+  ids:
+  - steam:1137660
+  requires: []
+- name: Legends
+  ids:
+  - steam:1134130
+  requires: []
+- name: Attack of the Mutant Penguins
+  ids:
+  - steam:1539090
+  requires: []

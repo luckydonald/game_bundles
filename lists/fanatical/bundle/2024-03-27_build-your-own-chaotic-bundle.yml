@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Chaotic Bundle — Select 3 for 4.99, 5 for 7.99, 7 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13954/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13954/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13954/source.json
+games:
+- name: Wand Wars
+  ids:
+  - steam:422110
+  requires: []
+- name: Cavity Busters
+  ids:
+  - steam:1084220
+  requires: []
+- name: Rising Hell
+  ids:
+  - steam:657000
+  requires: []
+- name: Orbital Bullet
+  ids:
+  - steam:1167680
+  requires: []
+- name: Nigate Tale
+  ids:
+  - steam:1048350
+  requires: []
+- name: 'RHYTHM SPROUT: Sick Beats & Bad Sweets'
+  ids:
+  - steam:1475840
+  requires: []
+- name: Dead Estate
+  ids:
+  - steam:1484720
+  requires: []
+- name: One More Dungeon 2
+  ids:
+  - steam:1483100
+  requires: []
+- name: 'ARRIVAL: ZERO EARTH'
+  ids:
+  - steam:1613580
+  requires: []
+- name: Anomalous
+  ids:
+  - steam:1435970
+  requires: []
+- name: LunarLux
+  ids:
+  - steam:1932680
+  requires: []
+- name: Gunlocked
+  ids:
+  - steam:1512480
+  requires: []
+- name: Wall World
+  ids:
+  - steam:2187290
+  requires: []
+- name: Gunlocked - The 2nd Gunning
+  ids:
+  - steam:2293690
+  requires: []
+- name: TROUBLE JUICE
+  ids:
+  - steam:2065840
+  requires: []
+- name: Magenta Horizon
+  ids:
+  - unresolved:source:isthereanydeal:13954:magenta-horizon
+  requires: []
+- name: Shadowkin
+  ids:
+  - steam:2212410
+  requires: []
+- name: Good Knight - One-Button Bullet-Hell
+  ids:
+  - steam:1281400
+  requires: []

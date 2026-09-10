@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Supreme Collection (Winter 2024) — Select 2 for 24.99, 3 for
+  35.99, 5 for 54.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14579/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14579/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14579/source.json
+games:
+- name: Diplomacy is Not an Option
+  ids:
+  - steam:1272320
+  requires: []
+- name: Bears In Space
+  ids:
+  - steam:1309620
+  requires: []
+- name: Distant Worlds 2
+  ids:
+  - steam:1531540
+  requires: []
+- name: 'RoboCop: Rogue City'
+  ids:
+  - steam:1681430
+  requires: []
+- name: Sovereign Syndicate
+  ids:
+  - steam:1674920
+  requires: []
+- name: Star Wars - Bounty Hunter
+  ids:
+  - steam:2419090
+  requires: []
+- name: Ghostwire Tokyo Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14579:ghostwire-tokyo-deluxe-edition
+  requires: []
+- name: PAYDAY 3
+  ids:
+  - steam:1272080
+  requires: []
+- name: Dungeons of Hinterberg
+  ids:
+  - steam:1983260
+  requires: []
+- name: Another Crab's Treasure
+  ids:
+  - steam:1887840
+  requires: []
+- name: Squirrel with a Gun
+  ids:
+  - steam:2067050
+  requires: []
+- name: It's Only Money
+  ids:
+  - steam:1415220
+  requires: []
+- name: 'Dune: Imperium'
+  ids:
+  - steam:1689500
+  requires: []
+- name: Sledders
+  ids:
+  - steam:2486740
+  requires: []
+- name: 'High On Life: DLC Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:14579:high-on-life-dlc-bundle
+  requires: []
+- name: Wild Bastards
+  ids:
+  - steam:1660840
+  requires: []
+- name: Crab God
+  ids:
+  - steam:2289390
+  requires: []
+- name: Akimbot
+  ids:
+  - steam:1843540
+  requires: []

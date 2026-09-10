@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Play on the Go Bundle Premium (Fall 2024) — Select 2 for 6.99,
+  3 for 9.99, 5 for 14.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14536/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14536/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14536/source.json
+games:
+- name: 'Arise: A Simple Story'
+  ids:
+  - steam:866140
+  requires: []
+- name: Cat Cafe Manager
+  ids:
+  - steam:1354830
+  requires: []
+- name: 'Bang-On Balls: Chronicles'
+  ids:
+  - steam:1227650
+  requires: []
+- name: Zoeti
+  ids:
+  - steam:1434540
+  requires: []
+- name: Tails of Iron
+  ids:
+  - steam:1283410
+  requires: []
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+  requires: []
+- name: Soundfall
+  ids:
+  - steam:1608700
+  requires: []
+- name: Hello Goodboy
+  ids:
+  - steam:1789090
+  requires: []
+- name: Night Loops
+  ids:
+  - steam:1826060
+  requires: []
+- name: 'Blossom Tales II: The Minotaur Prince'
+  ids:
+  - steam:1747830
+  requires: []
+- name: Ready, Steady, Ship!
+  ids:
+  - steam:2225610
+  requires: []
+- name: Coromon Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14536:coromon-deluxe-edition
+  requires: []
+- name: 'Demon Turf: Queens Edition'
+  ids:
+  - steam:1325900
+  requires: []
+- name: Slash Quest
+  ids:
+  - steam:2718010
+  requires: []
+- name: From Space - Resistance Bundle
+  ids:
+  - unresolved:source:isthereanydeal:14536:from-space-resistance-bundle
+  requires: []

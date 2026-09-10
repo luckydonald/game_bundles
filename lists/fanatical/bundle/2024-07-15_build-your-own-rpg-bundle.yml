@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own RPG Bundle (Bundle Bash Edition) — Select 3 for 4.99, 5 for 6.99,
+  8 for 9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14232/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14232/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14232/source.json
+games:
+- name: 'Encased: a sci-fi post-apocalyptic RPG'
+  ids:
+  - steam:921800
+  requires: []
+- name: 'Fallout 2: A Post Nuclear Role Playing Game'
+  ids:
+  - steam:38410
+  requires: []
+- name: 'Ash of Gods: Redemption'
+  ids:
+  - steam:691690
+  requires: []
+- name: 'An Elder Scrolls Legend: Battlespire'
+  ids:
+  - steam:1812420
+  requires: []
+- name: 'Gurumin: A Monstrous Adventure'
+  ids:
+  - steam:322290
+  requires: []
+- name: 'Fallout: A Post Nuclear Role Playing Game'
+  ids:
+  - steam:38400
+  requires: []
+- name: King's Bounty II
+  ids:
+  - steam:1135300
+  requires: []
+- name: The Quest
+  ids:
+  - steam:428880
+  requires: []
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14232:moonlighter-complete-edition
+  requires: []
+- name: Unsouled
+  ids:
+  - steam:1042920
+  requires: []
+- name: Mortal Shell
+  ids:
+  - steam:1110910
+  requires: []
+- name: ATOM RPG Trudograd
+  ids:
+  - steam:1139940
+  requires: []
+- name: Raiders! Forsaken Earth
+  ids:
+  - steam:972010
+  requires: []
+- name: 'Warhammer: Chaosbane - Slayer Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14232:warhammer-chaosbane-slayer-edition
+  requires: []
+- name: For The King - Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:14232:for-the-king-deluxe-edition
+  requires: []
+- name: Untamed Tactics
+  ids:
+  - steam:1538900
+  requires: []
+- name: Hunchback's Dungeon
+  ids:
+  - steam:2369520
+  requires: []
+- name: 'Disciples III: Reincarnation'
+  ids:
+  - steam:10270
+  requires: []
+- name: 'The Elder Scrolls Adventures: Redguard'
+  ids:
+  - steam:1812410
+  requires: []
+- name: 'The Ascent: Cyber Edition Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:14232:the-ascent-cyber-edition-bundle
+  requires: []

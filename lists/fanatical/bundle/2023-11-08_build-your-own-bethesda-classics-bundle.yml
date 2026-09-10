@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Bethesda Classics Bundle — Select 3 for $5.99, 5 for $8.99, 10
+  for $11.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13605/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13605/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13605/source.json
+games:
+- name: 'The Elder Scrolls III: Morrowind® Game of the Year Edition'
+  ids:
+  - steam:22320
+  requires: []
+- name: Arx Fatalis
+  ids:
+  - steam:1700
+  requires: []
+- name: Dishonored
+  ids:
+  - steam:217980
+  requires: []
+- name: Wolfenstein 3D
+  ids:
+  - steam:2270
+  requires: []
+- name: 'Fallout Tactics: Brotherhood of Steel'
+  ids:
+  - steam:38420
+  requires: []
+- name: QUAKE
+  ids:
+  - steam:2310
+  requires: []
+- name: 'Fallout 2: A Post Nuclear Role Playing Game'
+  ids:
+  - steam:38410
+  requires: []
+- name: 'An Elder Scrolls Legend: Battlespire'
+  ids:
+  - steam:1812420
+  requires: []
+- name: Return to Castle Wolfenstein
+  ids:
+  - steam:9010
+  requires: []
+- name: 'Call of Cthulhu®: Dark Corners of the Earth'
+  ids:
+  - steam:22340
+  requires: []
+- name: DOOM II
+  ids:
+  - unresolved:source:isthereanydeal:13605:doom-ii
+  requires: []
+- name: 'Fallout: A Post Nuclear Role Playing Game'
+  ids:
+  - steam:38400
+  requires: []
+- name: Rage
+  ids:
+  - steam:9200
+  requires: []
+- name: Rogue Warrior
+  ids:
+  - steam:22310
+  requires: []
+- name: QUAKE III Arena
+  ids:
+  - steam:2200
+  requires: []
+- name: 'Hunted: The Demon''s Forge™'
+  ids:
+  - steam:22450
+  requires: []
+- name: Quake Live
+  ids:
+  - steam:282440
+  requires: []
+- name: DOOM 64
+  ids:
+  - steam:1148590
+  requires: []
+- name: DOOM (1993)
+  ids:
+  - unresolved:source:isthereanydeal:13605:doom-1993
+  requires: []
+- name: 'The Elder Scrolls Adventures: Redguard'
+  ids:
+  - steam:1812410
+  requires: []
+- name: 'The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)'
+  ids:
+  - steam:22330
+  requires: []

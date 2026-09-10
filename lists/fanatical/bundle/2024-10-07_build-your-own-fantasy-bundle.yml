@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Fantasy Bundle (Fall 2024) — Select 1 for 1.00, 5 for 2.99, 10
+  for 4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14501/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14501/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14501/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+  requires: []
+- name: 'King''s Bounty: Dark Side'
+  ids:
+  - steam:289520
+  requires: []
+- name: Gedonia
+  ids:
+  - steam:1114220
+  requires: []
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+  requires: []
+- name: Tunche
+  ids:
+  - steam:887450
+  requires: []
+- name: Elven Legacy Collection
+  ids:
+  - unresolved:source:isthereanydeal:14501:elven-legacy-collection
+  requires: []
+- name: 'Styx: Shards of Darkness'
+  ids:
+  - steam:355790
+  requires: []
+- name: Blazing Beaks
+  ids:
+  - steam:585710
+  requires: []
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+  requires: []
+- name: Of Orcs and Men
+  ids:
+  - steam:216910
+  requires: []
+- name: Arboria
+  ids:
+  - steam:924070
+  requires: []
+- name: Eldest Souls
+  ids:
+  - steam:1108590
+  requires: []
+- name: Mists of Noyah
+  ids:
+  - steam:1168870
+  requires: []
+- name: Sword of the Necromancer
+  ids:
+  - steam:1243890
+  requires: []
+- name: Dark Deity
+  ids:
+  - steam:1374840
+  requires: []
+- name: Hands of Necromancy
+  ids:
+  - steam:1898610
+  requires: []
+- name: Scarlet Tower
+  ids:
+  - steam:2181720
+  requires: []
+- name: Otherwar
+  ids:
+  - steam:1526870
+  requires: []
+- name: The Cub
+  ids:
+  - steam:1941410
+  requires: []
+- name: Hunchback's Dungeon
+  ids:
+  - steam:2369520
+  requires: []
+- name: Vagneria
+  ids:
+  - steam:2517150
+  requires: []
