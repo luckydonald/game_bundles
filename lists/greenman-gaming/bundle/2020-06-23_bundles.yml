@@ -8,6 +8,8 @@ tiers:
   name: Pack 02 (Each Pack Sold Separately)
 - rank: 3
   name: Pack 03 (Each Pack Sold Separately)
+- rank: 4
+  name: Pack 04 (Each Pack Sold Separately)
 - rank: 16
   name: Pack 16 (Each Pack Sold Separately)
 references:
@@ -26,6 +28,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 16
 - name: Canyon Capers
   ids:
@@ -35,6 +38,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 16
 - name: Biozone
   ids:
@@ -43,6 +47,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 16
 - name: Huntsman:The Orphanage
   ids:
@@ -51,6 +56,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 16
 - name: Rocket Knight
   ids:
@@ -58,6 +64,7 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 16
 - name: Tower 57
   ids:
@@ -65,18 +72,21 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 16
 - name: Beat Cop
   ids:
   - steam:461950
   requires: []
   tiers:
+  - 4
   - 16
 - name: Corporate Lifestyle Simulator
   ids:
   - unresolved:source:isthereanydeal:8927:corporate-lifestyle-simulator
   requires: []
   tiers:
+  - 4
   - 16
 - name: Puzzle Chronicles
   ids:
