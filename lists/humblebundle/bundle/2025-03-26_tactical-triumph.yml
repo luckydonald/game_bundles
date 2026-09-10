@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Tactical Triumph Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15016/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15016/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15016/source.json
+games:
+- name: The Iron Oath
+  ids:
+  - steam:699330
+  requires: []
+- name: Popup Dungeon
+  ids:
+  - steam:349730
+  requires: []
+- name: Fae Tactics
+  ids:
+  - steam:995980
+  requires: []
+- name: Pawnbarian
+  ids:
+  - steam:1142080
+  requires: []
+- name: Siralim Ultimate
+  ids:
+  - steam:1289810
+  requires: []
+- name: Dungeon Drafters
+  ids:
+  - steam:1824580
+  requires: []
+- name: 'Abalon: Roguelike Tactics CCG'
+  ids:
+  - steam:1681840
+  requires: []

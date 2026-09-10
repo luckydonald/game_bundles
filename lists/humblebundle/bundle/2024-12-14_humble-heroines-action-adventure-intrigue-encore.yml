@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Humble Heroines: Action, Adventure, & Intrigue Bundle Encore — 7 Items'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14737/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14737/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14737/source.json
+games:
+- name: 'LISA: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14737:lisa-complete-edition
+  requires: []
+- name: Eastward
+  ids:
+  - steam:977880
+  requires: []
+- name: 'A Plague Tale: Innocence'
+  ids:
+  - steam:752590
+  requires: []
+- name: Chorus
+  ids:
+  - steam:1153640
+  requires: []
+- name: 'Metal: Hellsinger'
+  ids:
+  - steam:1061910
+  requires: []
+- name: 'Wanted: Dead'
+  ids:
+  - steam:1981610
+  requires: []
+- name: Scars Above
+  ids:
+  - steam:1196090
+  requires: []

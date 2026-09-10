@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Mind-Bending Masterpieces Bundle Encore — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14738/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14738/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14738/source.json
+games:
+- name: The Witness
+  ids:
+  - steam:210970
+  requires: []
+- name: Manifold Garden
+  ids:
+  - steam:473950
+  requires: []
+- name: The Pedestrian
+  ids:
+  - steam:466630
+  requires: []
+- name: Superliminal
+  ids:
+  - steam:1049410
+  requires: []
+- name: Taiji
+  ids:
+  - steam:1141580
+  requires: []
+- name: Patrick's Parabox
+  ids:
+  - steam:1260520
+  requires: []
+- name: 'Doors: Paradox'
+  ids:
+  - steam:1622770
+  requires: []

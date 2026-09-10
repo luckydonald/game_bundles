@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Jul 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14184/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14184/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14184/source.json
+games:
+- name: Starship Troopers - Terran Command
+  ids:
+  - steam:1202130
+  requires: []
+- name: HYPERVIOLENT
+  ids:
+  - steam:1409200
+  requires: []
+- name: Zoeti
+  ids:
+  - steam:1434540
+  requires: []
+- name: 'A Plague Tale: Requiem'
+  ids:
+  - steam:1182900
+  requires: []
+- name: 'Figment 2: Creed Valley'
+  ids:
+  - steam:1085220
+  requires: []
+- name: Ghostrunner 2
+  ids:
+  - steam:2144740
+  requires: []
+- name: Heretic's Fork
+  ids:
+  - steam:2181610
+  requires: []
+- name: Sticky Business
+  ids:
+  - steam:2303350
+  requires: []

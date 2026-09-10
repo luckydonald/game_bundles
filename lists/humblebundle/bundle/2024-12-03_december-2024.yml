@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Dec 2024) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14677/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14677/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14677/source.json
+games:
+- name: Inkulinati
+  ids:
+  - steam:957960
+  requires: []
+- name: Old World
+  ids:
+  - steam:597180
+  requires: []
+- name: Bomb Rush Cyberfunk
+  ids:
+  - steam:1353230
+  requires: []
+- name: The Invincible
+  ids:
+  - steam:731040
+  requires: []
+- name: Venba
+  ids:
+  - steam:1491670
+  requires: []
+- name: Moonstone Island
+  ids:
+  - steam:1658150
+  requires: []
+- name: 'Monster Prom 3: Monster Roadtrip'
+  ids:
+  - steam:1665190
+  requires: []
+- name: Atlas Fallen Reign Of Sand
+  ids:
+  - steam:1230530
+  requires: []
+- name: 'Crime Boss: Rockay City - First Month Edition'
+  ids:
+  - unresolved:source:isthereanydeal:14677:crime-boss-rockay-city-first-month-edition
+  requires: []

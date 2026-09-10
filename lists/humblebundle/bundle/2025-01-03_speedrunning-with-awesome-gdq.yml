@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Speedrunning with Awesome GDQ Bundle — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14814/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14814/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14814/source.json
+games:
+- name: 'Condemned: Criminal Origins'
+  ids:
+  - unresolved:source:isthereanydeal:14814:condemned-criminal-origins
+  requires: []
+- name: Shenmue I & II
+  ids:
+  - steam:758330
+  requires: []
+- name: 'Ori and the Blind Forest: Definitive Edition'
+  ids:
+  - steam:387290
+  requires: []
+- name: Sonic Lost World
+  ids:
+  - steam:329440
+  requires: []
+- name: Ori and the Blind Forest
+  ids:
+  - steam:261570
+  requires: []
+- name: 'BPM: BULLETS PER MINUTE'
+  ids:
+  - steam:1286350
+  requires: []
+- name: New Super Lucky's Tale
+  ids:
+  - steam:1038300
+  requires: []
+- name: Have a Nice Death
+  ids:
+  - steam:1740720
+  requires: []
