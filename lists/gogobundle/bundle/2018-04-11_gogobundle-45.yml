@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #45 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6050/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6050/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6050/source.json
+games:
+- name: Bullet VR
+  ids:
+  - steam:649510
+  requires: []
+- name: Where's My Helmet?
+  ids:
+  - steam:470450
+  requires: []
+- name: Art of Guile
+  ids:
+  - steam:600250
+  requires: []
+- name: Vapour
+  ids:
+  - steam:345440
+  requires: []
+- name: Restoration
+  ids:
+  - steam:688380
+  requires: []
+- name: Seek Not a Lighthouse
+  ids:
+  - unresolved:source:isthereanydeal:6050:seek-not-a-lighthouse
+  requires: []
+- name: The Light
+  ids:
+  - steam:1077520
+  requires: []
+- name: Green Slaughter
+  ids:
+  - unresolved:source:isthereanydeal:6050:green-slaughter
+  requires: []
+- name: 'Vapour: Part 1 (Soundtrack)'
+  ids:
+  - steam:378061
+  requires: []
+- name: Analemma
+  ids:
+  - steam:707920
+  requires: []
+- name: Pigmentone
+  ids:
+  - steam:496530
+  requires: []

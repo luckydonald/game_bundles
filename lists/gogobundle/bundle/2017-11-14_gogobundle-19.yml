@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #19 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5623/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5623/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5623/source.json
+games:
+- name: Mover
+  ids:
+  - steam:733250
+  requires: []
+- name: Unearthing Colossal
+  ids:
+  - steam:428590
+  requires: []
+- name: Salvation in Corruption
+  ids:
+  - unresolved:source:isthereanydeal:5623:salvation-in-corruption
+  requires: []
+- name: FIGHTING BOX
+  ids:
+  - steam:721420
+  requires: []
+- name: FreeFly Burning
+  ids:
+  - steam:683530
+  requires: []
+- name: Space Hit
+  ids:
+  - steam:656910
+  requires: []
+- name: Unearthing Colossal - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5623:unearthing-colossal-soundtrack
+  requires: []
+- name: Izanami's Dream Battle
+  ids:
+  - steam:547730
+  requires: []
+- name: Escape from here
+  ids:
+  - unresolved:source:isthereanydeal:5623:escape-from-here
+  requires: []

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Limited Bundle #41 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5976/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5976/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5976/source.json
+games:
+- name: Ablepsia
+  ids:
+  - steam:713680
+  requires: []
+- name: Inferno Puzzle
+  ids:
+  - steam:654980
+  requires: []
+- name: The Big Elk
+  ids:
+  - unresolved:source:isthereanydeal:5976:the-big-elk
+  requires: []
+- name: Alchemist
+  ids:
+  - steam:1942050
+  requires: []
+- name: Labyrinth Escape
+  ids:
+  - steam:654950
+  requires: []
+- name: Woodlands
+  ids:
+  - steam:646100
+  requires: []
+- name: Nash Racing
+  ids:
+  - steam:581200
+  requires: []
+- name: The Magical Silence
+  ids:
+  - unresolved:source:isthereanydeal:5976:the-magical-silence
+  requires: []
+- name: Iron Impact
+  ids:
+  - unresolved:source:isthereanydeal:5976:iron-impact
+  requires: []
+- name: The Last Error
+  ids:
+  - unresolved:source:isthereanydeal:5976:the-last-error
+  requires: []
+- name: Copter and Sky
+  ids:
+  - steam:499610
+  requires: []

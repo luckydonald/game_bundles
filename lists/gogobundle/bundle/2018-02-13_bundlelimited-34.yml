@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #34 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5893/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5893/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5893/source.json
+games:
+- name: OHOTA KREPKOE
+  ids:
+  - unresolved:source:isthereanydeal:5893:ohota-krepkoe
+  requires: []
+- name: Archangel
+  ids:
+  - steam:661520
+  requires: []
+- name: OHOTA KREPKOE - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5893:ohota-krepkoe-soundtrack
+  requires: []
+- name: The Game of Life™
+  ids:
+  - unresolved:source:isthereanydeal:5893:the-game-of-life
+  requires: []
+- name: 'Visitors: Marine Invasion'
+  ids:
+  - steam:661240
+  requires: []
+- name: Caves!
+  ids:
+  - unresolved:source:isthereanydeal:5893:caves
+  requires: []
+- name: Ping
+  ids:
+  - unresolved:source:isthereanydeal:5893:ping
+  requires: []
+- name: 3D Tower
+  ids:
+  - unresolved:source:isthereanydeal:5893:3d-tower
+  requires: []
+- name: Legends of Persia
+  ids:
+  - steam:301220
+  requires: []
+- name: Cubic
+  ids:
+  - unresolved:source:isthereanydeal:5893:cubic
+  requires: []
+- name: Strange Things
+  ids:
+  - unresolved:source:isthereanydeal:5893:strange-things
+  requires: []
+- name: Janken Cards
+  ids:
+  - steam:527210
+  requires: []

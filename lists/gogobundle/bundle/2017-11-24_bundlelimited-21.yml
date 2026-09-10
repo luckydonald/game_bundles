@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #21 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5653/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5653/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5653/source.json
+games:
+- name: Loot Hero - DX
+  ids:
+  - steam:294040
+  requires: []
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+  requires: []
+- name: Tap Heroes
+  ids:
+  - steam:371570
+  requires: []
+- name: Simulator gas station
+  ids:
+  - unresolved:source:isthereanydeal:5653:simulator-gas-station
+  requires: []
+- name: Loot Hero DX (Original Soundtrack)
+  ids:
+  - steam:385670
+  requires: []
+- name: Tap Heroes - Original Soundtrack
+  ids:
+  - steam:715970
+  requires: []
+- name: ORB - The Ball
+  ids:
+  - steam:711450
+  requires: []
+- name: Orblitz
+  ids:
+  - steam:746360
+  requires: []
+- name: iGrow Game
+  ids:
+  - steam:489020
+  requires: []
+- name: Fields XY
+  ids:
+  - steam:552900
+  requires: []

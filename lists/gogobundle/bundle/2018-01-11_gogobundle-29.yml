@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #29 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5797/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5797/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5797/source.json
+games:
+- name: HardBall Soundtracks
+  ids:
+  - unresolved:source:isthereanydeal:5797:hardball-soundtracks
+  requires: []
+- name: Dolphins-Cyborgs and open space
+  ids:
+  - steam:767170
+  requires: []
+- name: Mindsight
+  ids:
+  - steam:716070
+  requires: []
+- name: Grand Pskov Story
+  ids:
+  - unresolved:source:isthereanydeal:5797:grand-pskov-story
+  requires: []
+- name: Adventure Rage
+  ids:
+  - unresolved:source:isthereanydeal:5797:adventure-rage
+  requires: []
+- name: Galaxy 3D Space Defender
+  ids:
+  - unresolved:source:isthereanydeal:5797:galaxy-3d-space-defender
+  requires: []
+- name: Twine3D
+  ids:
+  - steam:769030
+  requires: []
+- name: HardBall
+  ids:
+  - unresolved:source:isthereanydeal:5797:hardball
+  requires: []
+- name: Robot Warriors
+  ids:
+  - steam:756560
+  requires: []
+- name: The Village
+  ids:
+  - steam:632050
+  requires: []
+- name: Adventure Rage Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:5797:adventure-rage-soundtrack
+  requires: []

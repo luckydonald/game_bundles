@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #50 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6068/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6068/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6068/source.json
+games:
+- name: 'ASCII Game Series: Pinball'
+  ids:
+  - unresolved:source:isthereanydeal:6068:ascii-game-series-pinball
+  requires: []
+- name: PooSky - Halloween
+  ids:
+  - unresolved:source:isthereanydeal:6068:poosky-halloween
+  requires: []
+- name: The Orphan Dreams
+  ids:
+  - steam:456440
+  requires: []
+- name: 'Bounty Hunter: Space Detective'
+  ids:
+  - steam:827270
+  requires: []
+- name: 'RollingBall: Unlimited World'
+  ids:
+  - steam:834420
+  requires: []
+- name: Hooligan Vasja - Christmas Edition
+  ids:
+  - unresolved:source:isthereanydeal:6068:hooligan-vasja-christmas-edition
+  requires: []
+- name: 'Bounty Hunter: Stampede'
+  ids:
+  - steam:827900
+  requires: []
+- name: 'ASCII Achievement Mania: Space Shooter'
+  ids:
+  - unresolved:source:isthereanydeal:6068:ascii-achievement-mania-space-shooter
+  requires: []
+- name: Space Escape
+  ids:
+  - steam:815830
+  requires: []
+- name: 'ASCII Game Series: Maze'
+  ids:
+  - unresolved:source:isthereanydeal:6068:ascii-game-series-maze
+  requires: []
+- name: PooSky - Artbook "Great statements by Capitain Pooper"
+  ids:
+  - unresolved:source:isthereanydeal:6068:poosky-artbook-great-statements-by-capitain-pooper
+  requires: []
+- name: 'Bounty Hunter: Ocean Diver'
+  ids:
+  - steam:830510
+  requires: []
+- name: PooSky
+  ids:
+  - steam:715840
+  requires: []
+- name: Hooligan Vasja - Halloween Edition
+  ids:
+  - unresolved:source:isthereanydeal:6068:hooligan-vasja-halloween-edition
+  requires: []

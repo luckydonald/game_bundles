@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #52 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6077/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6077/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6077/source.json
+games:
+- name: SQR
+  ids:
+  - steam:3433200
+  requires: []
+- name: Blind Mind
+  ids:
+  - steam:837290
+  requires: []
+- name: Knockdown the Ball
+  ids:
+  - steam:841020
+  requires: []
+- name: Plane War
+  ids:
+  - unresolved:source:isthereanydeal:6077:plane-war
+  requires: []
+- name: Walls in Dead
+  ids:
+  - unresolved:source:isthereanydeal:6077:walls-in-dead
+  requires: []
+- name: Haven
+  ids:
+  - steam:983970
+  requires: []
+- name: Funny Yo 2
+  ids:
+  - unresolved:source:isthereanydeal:6077:funny-yo-2
+  requires: []
+- name: Funny Yo
+  ids:
+  - steam:842620
+  requires: []
+- name: Boat Adventure
+  ids:
+  - unresolved:source:isthereanydeal:6077:boat-adventure
+  requires: []
+- name: My Name is Addiction
+  ids:
+  - steam:713860
+  requires: []
+- name: Finger Ninja
+  ids:
+  - unresolved:source:isthereanydeal:6077:finger-ninja
+  requires: []
+- name: Funny Yo 3
+  ids:
+  - unresolved:source:isthereanydeal:6077:funny-yo-3
+  requires: []

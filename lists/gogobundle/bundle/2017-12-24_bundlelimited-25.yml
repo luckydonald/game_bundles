@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle Limited #25 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5763/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5763/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5763/source.json
+games:
+- name: Johnny Graves—The Unchosen One
+  ids:
+  - steam:476030
+  requires: []
+- name: Gravity puzzles
+  ids:
+  - unresolved:source:isthereanydeal:5763:gravity-puzzles
+  requires: []
+- name: NeonGalaxy Wars
+  ids:
+  - unresolved:source:isthereanydeal:5763:neongalaxy-wars
+  requires: []
+- name: SPACE CHAOS
+  ids:
+  - steam:2819410
+  requires: []
+- name: Pixel War
+  ids:
+  - unresolved:source:isthereanydeal:5763:pixel-war
+  requires: []
+- name: Business clicker
+  ids:
+  - unresolved:source:isthereanydeal:5763:business-clicker
+  requires: []
+- name: johns.game
+  ids:
+  - unresolved:source:isthereanydeal:5763:johns-game
+  requires: []
+- name: TangramsVR
+  ids:
+  - steam:700940
+  requires: []
+- name: JUMP STOP
+  ids:
+  - unresolved:source:isthereanydeal:5763:jump-stop
+  requires: []
