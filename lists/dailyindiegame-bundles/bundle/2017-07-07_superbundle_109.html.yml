@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 109 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5300/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5300/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5300/source.json
+games:
+- name: Cosmic Pioneer
+  ids:
+  - steam:629380
+  requires: []
+- name: Alien Hostage
+  ids:
+  - steam:562430
+  requires: []
+- name: Alpacapaca Dash
+  ids:
+  - steam:579230
+  requires: []
+- name: OddEven
+  ids:
+  - unresolved:source:isthereanydeal:5300:oddeven
+  requires: []
+- name: 'Cargo Cult: Shoot''n''Loot VR'
+  ids:
+  - steam:565380
+  requires: []
+- name: Tourists Kidnapped a Little Bear
+  ids:
+  - steam:580420
+  requires: []

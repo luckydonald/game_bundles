@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG 1C RTS Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4503/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4503/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4503/source.json
+games:
+- name: World War 1
+  ids:
+  - unresolved:source:isthereanydeal:4503:world-war-1
+  requires: []
+- name: Desert Law
+  ids:
+  - steam:356280
+  requires: []
+- name: Cuban Missile Crisis
+  ids:
+  - steam:356270
+  requires: []
+- name: 'Cuban Missile Crisis: Ice Crusade'
+  ids:
+  - steam:356290
+  requires: []
+- name: Stalingrad
+  ids:
+  - steam:356260
+  requires: []
+- name: 'Soldiers: Heroes of World War II - Enhanced Edition'
+  ids:
+  - unresolved:source:isthereanydeal:4503:soldiers-heroes-of-world-war-ii-enhanced-edition
+  requires: []

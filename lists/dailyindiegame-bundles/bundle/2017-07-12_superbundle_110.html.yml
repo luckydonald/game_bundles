@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Super Bundle 110: Immanitas — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5318/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5318/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5318/source.json
+games:
+- name: VRog
+  ids:
+  - steam:589380
+  requires: []
+- name: Bunnyrama
+  ids:
+  - steam:567210
+  requires: []
+- name: BeeFense
+  ids:
+  - unresolved:source:isthereanydeal:5318:beefense
+  requires: []
+- name: Dwarflings
+  ids:
+  - steam:562330
+  requires: []
+- name: Tank Assault X
+  ids:
+  - steam:585970
+  requires: []
+- name: Dots eXtreme
+  ids:
+  - steam:521130
+  requires: []

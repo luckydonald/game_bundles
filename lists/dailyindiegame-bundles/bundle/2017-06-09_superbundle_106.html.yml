@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Super Bundle 106: Kiss — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5207/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5207/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5207/source.json
+games:
+- name: Platypus
+  ids:
+  - steam:307340
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+  requires: []
+- name: De-Void
+  ids:
+  - steam:468570
+  requires: []
+- name: Tribloos 2
+  ids:
+  - steam:271550
+  requires: []
+- name: Solarix
+  ids:
+  - steam:284990
+  requires: []

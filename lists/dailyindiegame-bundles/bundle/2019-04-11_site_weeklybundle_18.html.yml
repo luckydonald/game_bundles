@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 18 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7296/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7296/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7296/source.json
+games:
+- name: Close the Window!
+  ids:
+  - unresolved:source:isthereanydeal:7296:close-the-window
+  requires: []
+- name: ARENA 8
+  ids:
+  - steam:856730
+  requires: []
+- name: Hentai puzzle ? Not again....
+  ids:
+  - steam:1048710
+  requires: []
+- name: Gangsta Sniper
+  ids:
+  - steam:951640
+  requires: []
+- name: Craft & Dungeon
+  ids:
+  - unresolved:source:isthereanydeal:7296:craft-and-dungeon
+  requires: []
+- name: Aliens Don't Exist
+  ids:
+  - unresolved:source:isthereanydeal:7296:aliens-don-t-exist
+  requires: []
+- name: High Cats
+  ids:
+  - unresolved:source:isthereanydeal:7296:high-cats
+  requires: []
+- name: CMD 2048
+  ids:
+  - steam:922090
+  requires: []
+- name: oldbI tyt ?
+  ids:
+  - steam:1006270
+  requires: []

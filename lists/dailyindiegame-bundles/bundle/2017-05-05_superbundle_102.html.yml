@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 102 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5067/source.json
+games:
+- name: 'Dark Heritage: Guardians of Hope'
+  ids:
+  - steam:394280
+  requires: []
+- name: 'Enigmatis: Ghosts of Maple Creek'
+  ids:
+  - unresolved:source:isthereanydeal:5067:enigmatis-ghosts-of-maple-creek
+  requires: []
+- name: 'Fairy Tale Mysteries 2: The Beanstalk'
+  ids:
+  - steam:403510
+  requires: []
+- name: 'Enigmatis 3: The Shadow of Karkhala'
+  ids:
+  - steam:495110
+  requires: []
+- name: 'Mythic Wonders: The Philosopher''s Stone'
+  ids:
+  - steam:458480
+  requires: []
+- name: 'Enigmatis 2: The Mists of Ravenwood'
+  ids:
+  - steam:284770
+  requires: []

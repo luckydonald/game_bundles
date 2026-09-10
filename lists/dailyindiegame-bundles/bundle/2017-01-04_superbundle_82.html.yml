@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 82 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4579/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4579/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4579/source.json
+games:
+- name: Gem Forge
+  ids:
+  - steam:546170
+  requires: []
+- name: Kombine
+  ids:
+  - steam:539750
+  requires: []
+- name: Black Sand Drift
+  ids:
+  - steam:507380
+  requires: []
+- name: Flying Pengy
+  ids:
+  - steam:519870
+  requires: []
+- name: NightmareZ
+  ids:
+  - steam:509930
+  requires: []
+- name: Just Hero
+  ids:
+  - steam:527760
+  requires: []

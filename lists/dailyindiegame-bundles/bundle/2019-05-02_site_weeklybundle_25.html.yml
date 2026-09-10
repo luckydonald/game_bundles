@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 25 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7358/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7358/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7358/source.json
+games:
+- name: Bus Driver Simulator 2019 - Hungarian Legend
+  ids:
+  - unresolved:source:isthereanydeal:7358:bus-driver-simulator-2019-hungarian-legend
+  requires: []
+- name: Finque
+  ids:
+  - steam:532700
+  requires: []
+- name: Phantasmata
+  ids:
+  - steam:1048790
+  requires: []
+- name: The Book of Regrets
+  ids:
+  - steam:869500
+  requires: []
+- name: Great Ball of Fire
+  ids:
+  - unresolved:source:isthereanydeal:7358:great-ball-of-fire
+  requires: []
+- name: Full Body Workout
+  ids:
+  - unresolved:source:isthereanydeal:7358:full-body-workout
+  requires: []
+- name: Hyper Sentinel
+  ids:
+  - steam:640880
+  requires: []
+- name: Bus Driver Simulator - Soviet Legend
+  ids:
+  - unresolved:source:isthereanydeal:7358:bus-driver-simulator-soviet-legend
+  requires: []
+- name: 'Paper Shakespeare: Loves Labor(s) Lost'
+  ids:
+  - unresolved:source:isthereanydeal:7358:paper-shakespeare-loves-labors-lost
+  requires: []

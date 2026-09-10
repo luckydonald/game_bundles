@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 118 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5501/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5501/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5501/source.json
+games:
+- name: Gryphon Knight Epic
+  ids:
+  - steam:358650
+  requires: []
+- name: Porradaria 2 Pagode of the Night
+  ids:
+  - unresolved:source:isthereanydeal:5501:porradaria-2-pagode-of-the-night
+  requires: []
+- name: Plankton
+  ids:
+  - steam:542550
+  requires: []
+- name: Dark Passenger
+  ids:
+  - steam:611140
+  requires: []
+- name: Conjuntalia
+  ids:
+  - steam:619340
+  requires: []
+- name: Flower Design
+  ids:
+  - steam:546070
+  requires: []

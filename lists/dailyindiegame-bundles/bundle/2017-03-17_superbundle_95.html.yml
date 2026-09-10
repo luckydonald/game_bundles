@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 95 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4915/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4915/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4915/source.json
+games:
+- name: 1000 Heads Among the Trees
+  ids:
+  - steam:406730
+  requires: []
+- name: Only One Hope
+  ids:
+  - unresolved:source:isthereanydeal:4915:only-one-hope
+  requires: []
+- name: Itineris
+  ids:
+  - unresolved:source:isthereanydeal:4915:itineris
+  requires: []
+- name: Hexoscope
+  ids:
+  - steam:495780
+  requires: []
+- name: Nuclear Contingency
+  ids:
+  - steam:540900
+  requires: []
+- name: Vindictive Drive
+  ids:
+  - steam:507400
+  requires: []

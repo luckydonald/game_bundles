@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 92 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4822/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4822/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4822/source.json
+games:
+- name: The Juicer
+  ids:
+  - steam:400790
+  requires: []
+- name: 'Night Mysteries: The Amphora Prisoner'
+  ids:
+  - steam:348870
+  requires: []
+- name: Button Tales
+  ids:
+  - steam:545590
+  requires: []
+- name: Cavern Escape Extremely Hard game!!!
+  ids:
+  - steam:546400
+  requires: []
+- name: Zeus vs Monsters - Math Game for kids
+  ids:
+  - steam:444430
+  requires: []
+- name: Tomato Way
+  ids:
+  - steam:565860
+  requires: []

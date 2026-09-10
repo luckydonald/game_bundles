@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG 1C Action Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4515/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4515/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4515/source.json
+games:
+- name: Death to Spies
+  ids:
+  - steam:9800
+  requires: []
+- name: "7.62 \x96 High Calibre"
+  ids:
+  - steam:289890
+  requires: []
+- name: NecroVision
+  ids:
+  - steam:7860
+  requires: []
+- name: 'Death to Spies: Moment of Truth'
+  ids:
+  - steam:34410
+  requires: []
+- name: El Matador
+  ids:
+  - steam:289280
+  requires: []
+- name: NecroVisioN Lost Company
+  ids:
+  - steam:46250
+  requires: []

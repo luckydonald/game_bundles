@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 20: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7322/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7322/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7322/source.json
+games:
+- name: Zombie Desperation
+  ids:
+  - steam:818570
+  requires: []
+- name: 'Away From Earth: Mars'
+  ids:
+  - unresolved:source:isthereanydeal:7322:away-from-earth-mars
+  requires: []
+- name: TOTOBALL
+  ids:
+  - steam:696490
+  requires: []
+- name: Super Strawberry Man
+  ids:
+  - steam:914900
+  requires: []
+- name: Easy Red
+  ids:
+  - steam:741670
+  requires: []
+- name: The Mystery of Devils House
+  ids:
+  - steam:825970
+  requires: []
+- name: Alien Revival - Episode 1 - Duty Calls
+  ids:
+  - unresolved:source:isthereanydeal:7322:alien-revival-episode-1-duty-calls
+  requires: []
+- name: Gaze At Maze
+  ids:
+  - steam:861210
+  requires: []

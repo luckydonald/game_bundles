@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 101 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5041/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5041/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5041/source.json
+games:
+- name: Heaven Forest VR MMO
+  ids:
+  - steam:476480
+  requires: []
+- name: Fluffy Creatures VS The World
+  ids:
+  - steam:619400
+  requires: []
+- name: Tomb Joe
+  ids:
+  - steam:575860
+  requires: []
+- name: Introvert Quest
+  ids:
+  - steam:562640
+  requires: []
+- name: Jumping Tank
+  ids:
+  - unresolved:source:isthereanydeal:5041:jumping-tank
+  requires: []
+- name: False Shelter
+  ids:
+  - steam:621150
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 108 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5230/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5230/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5230/source.json
+games:
+- name: Grind Zones
+  ids:
+  - unresolved:source:isthereanydeal:5230:grind-zones
+  requires: []
+- name: Attempt[42]
+  ids:
+  - steam:562520
+  requires: []
+- name: Nux
+  ids:
+  - steam:307350
+  requires: []
+- name: Linked
+  ids:
+  - steam:596590
+  requires: []
+- name: Square n Fair
+  ids:
+  - steam:575680
+  requires: []
+- name: Fergus The Fly
+  ids:
+  - unresolved:source:isthereanydeal:5230:fergus-the-fly
+  requires: []

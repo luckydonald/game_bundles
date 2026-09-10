@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7151/source.json
+games:
+- name: The Legacy of Music
+  ids:
+  - steam:1006470
+  requires: []
+- name: Captain The Runner
+  ids:
+  - steam:878500
+  requires: []
+- name: Fish's Trip
+  ids:
+  - steam:701960
+  requires: []
+- name: Robbotto
+  ids:
+  - steam:881190
+  requires: []
+- name: Akihabara - Feel the Rhythm Remixed
+  ids:
+  - steam:636740
+  requires: []
+- name: Unfinished Battle
+  ids:
+  - steam:799180
+  requires: []
+- name: Space Force
+  ids:
+  - steam:864010
+  requires: []
+- name: Bomb Royale
+  ids:
+  - steam:604150
+  requires: []
+- name: 'Smash Halloween Pumpkins: The Challenge'
+  ids:
+  - steam:886010
+  requires: []
