@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 1
 name: 'The Pocket-Size Bundle #4 — Tier 1'
 references:
@@ -12,9 +12,12 @@ games:
 - name: Finding Paradise
   ids:
   - steam:337340
+  requires: []
 - name: IS Defense
   ids:
   - steam:448370
+  requires: []
 - name: ChromaGun
   ids:
   - steam:408650
+  requires: []
