@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Horror Fest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12/source.json
+games:
+- name: 'Vigil: Blood Bitterness™'
+  ids:
+  - unresolved:source:isthereanydeal:12:vigil-blood-bitterness
+  requires: []
+- name: 'Scratches: Director''s Cut'
+  ids:
+  - steam:46460
+  requires: []
+- name: 'Avencast: Rise of the Mage'
+  ids:
+  - steam:46410
+  requires: []

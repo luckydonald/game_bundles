@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Wars of Ages Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/455/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/455/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/455/source.json
+games:
+- name: Men of War
+  ids:
+  - steam:7830
+  requires: []
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+  requires: []
+- name: 'King''s Bounty: The Legend'
+  ids:
+  - steam:25900
+  requires: []
+- name: Death to Spies Gold Edition
+  ids:
+  - unresolved:source:isthereanydeal:455:death-to-spies-gold-edition
+  requires: []
+- name: XIII Century Gold Edition
+  ids:
+  - steam:34420
+  requires: []
+- name: 'Real Warfare 2: Northern Crusades'
+  ids:
+  - steam:202860
+  requires: []
+- name: Earth 2140
+  ids:
+  - steam:253860
+  requires: []
+- name: Theatre of War
+  ids:
+  - steam:46290
+  requires: []

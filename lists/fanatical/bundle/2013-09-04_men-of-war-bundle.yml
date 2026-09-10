@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Men of War Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/93/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/93/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/93/source.json
+games:
+- name: Men of War
+  ids:
+  - steam:7830
+  requires: []
+- name: 'Men of War: Vietnam Special Edition'
+  ids:
+  - steam:63940
+  requires: []
+- name: Men of War Condemned Heroes
+  ids:
+  - steam:204860
+  requires: []
+- name: Men of War Red Tide
+  ids:
+  - steam:3130
+  requires: []
+- name: Men of War Assault Squad Game of the Year edition
+  ids:
+  - unresolved:source:isthereanydeal:93:men-of-war-assault-squad-game-of-the-year-edition
+  requires: []

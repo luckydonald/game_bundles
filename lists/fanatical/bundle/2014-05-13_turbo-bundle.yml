@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Turbo Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/777/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/777/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/777/source.json
+games:
+- name: GTR Evolution
+  ids:
+  - unresolved:source:isthereanydeal:777:gtr-evolution
+  requires: []
+- name: RACE On
+  ids:
+  - unresolved:source:isthereanydeal:777:race-on
+  requires: []
+- name: GT Legends
+  ids:
+  - steam:44690
+  requires: []
+- name: Race Injection
+  ids:
+  - steam:44680
+  requires: []
+- name: 'Race: The WTCC Game + Caterham Expansion'
+  ids:
+  - unresolved:source:isthereanydeal:777:race-the-wtcc-game-and-caterham-expansion
+  requires: []
+- name: GTR - FIA GT Racing Game
+  ids:
+  - steam:44600
+  requires: []
+- name: GTR 2 FIA GT Racing Game
+  ids:
+  - steam:8790
+  requires: []

@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie ImSim Spotlight — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15611/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15611/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15611/source.json
+games:
+- name: Ad Infernum
+  ids:
+  - steam:1390070
+  requires: []
+- name: Filcher
+  ids:
+  - steam:1355650
+  requires: []
+- name: Corpus Edax
+  ids:
+  - steam:2017610
+  requires: []
+- name: Envelope
+  ids:
+  - steam:2717480
+  requires: []

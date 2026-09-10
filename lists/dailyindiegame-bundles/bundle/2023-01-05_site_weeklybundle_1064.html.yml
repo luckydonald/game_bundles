@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1064: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12866/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12866/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12866/source.json
+games:
+- name: Crushing Blow
+  ids:
+  - steam:653760
+  requires: []
+- name: Jubeez
+  ids:
+  - steam:1352300
+  requires: []
+- name: Over'n Over
+  ids:
+  - steam:1358730
+  requires: []
+- name: Asteroad
+  ids:
+  - unresolved:source:isthereanydeal:12866:asteroad
+  requires: []
+- name: Yellow Ballman
+  ids:
+  - unresolved:source:isthereanydeal:12866:yellow-ballman
+  requires: []
+- name: Chezzle
+  ids:
+  - steam:1765960
+  requires: []
+- name: Ducky
+  ids:
+  - steam:1737130
+  requires: []
+- name: DownTheDead
+  ids:
+  - steam:1936250
+  requires: []
+- name: Canterz Paranormies
+  ids:
+  - steam:1998470
+  requires: []
