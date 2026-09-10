@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lewd Crew Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13287/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13287/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13287/source.json
+games:
+- name: LONGING RING OF ESCA
+  ids:
+  - unresolved:source:isthereanydeal:13287:longing-ring-of-esca
+  requires: []
+- name: Lust of the Apartment Wives
+  ids:
+  - steam:1201950
+  requires: []
+- name: Flower FairY
+  ids:
+  - unresolved:source:isthereanydeal:13287:flower-fairy
+  requires: []
+- name: Nakadashi Banzai 4
+  ids:
+  - steam:1528800
+  requires: []
+- name: The Tale of the Lewd Kunoichi Sisters
+  ids:
+  - unresolved:source:isthereanydeal:13287:the-tale-of-the-lewd-kunoichi-sisters
+  requires: []
+- name: Blood price
+  ids:
+  - steam:1300270
+  requires: []

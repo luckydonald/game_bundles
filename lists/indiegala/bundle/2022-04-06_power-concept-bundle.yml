@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Power Concept Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11313/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11313/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11313/source.json
+games:
+- name: Mekabolt
+  ids:
+  - steam:1096210
+  requires: []
+- name: Devious Dungeon 2
+  ids:
+  - steam:1059890
+  requires: []
+- name: Concept Destruction
+  ids:
+  - steam:1153540
+  requires: []
+- name: 'Suits: Absolute Power'
+  ids:
+  - steam:1210230
+  requires: []
+- name: 'Random Heroes: Gold Edition'
+  ids:
+  - steam:1233350
+  requires: []
+- name: Dead Event
+  ids:
+  - steam:1333490
+  requires: []

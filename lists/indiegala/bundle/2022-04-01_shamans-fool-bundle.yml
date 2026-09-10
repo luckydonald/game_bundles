@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Shaman&#39;s Fool Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11276/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11276/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11276/source.json
+games:
+- name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
+  ids:
+  - steam:342630
+  requires: []
+- name: Robin's Island Adventure
+  ids:
+  - steam:323260
+  requires: []
+- name: 'Namariel Legends: The Iron Lord Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:11276:namariel-legends-the-iron-lord-premium-edition
+  requires: []
+- name: 'Sea Legends: Phantasmal Light Collector''s Edition'
+  ids:
+  - steam:323280
+  requires: []
+- name: 'Dreamscapes: The Sandman'
+  ids:
+  - steam:289260
+  requires: []
+- name: 'Kingdom of Aurelia: Mystery of the Poisoned Dagger'
+  ids:
+  - steam:550390
+  requires: []
+- name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
+  ids:
+  - steam:353110
+  requires: []
+- name: Fall of the New Age Premium Edition
+  ids:
+  - steam:314510
+  requires: []
+- name: 'Hiddenverse: Ominous Opus'
+  ids:
+  - steam:1486870
+  requires: []

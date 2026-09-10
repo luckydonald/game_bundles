@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Summer Breeze Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11905/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11905/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11905/source.json
+games:
+- name: Omni Link
+  ids:
+  - steam:529100
+  requires: []
+- name: Crypterion
+  ids:
+  - steam:1048860
+  requires: []
+- name: The Seance
+  ids:
+  - unresolved:source:isthereanydeal:11905:the-seance
+  requires: []
+- name: Winter With You
+  ids:
+  - steam:1870580
+  requires: []
+- name: Summer With You
+  ids:
+  - steam:1916450
+  requires: []
+- name: Sky in your eyes
+  ids:
+  - steam:1980890
+  requires: []

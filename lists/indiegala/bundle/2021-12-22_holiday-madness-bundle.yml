@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Holiday Madness Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10859/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10859/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10859/source.json
+games:
+- name: Dark Forest
+  ids:
+  - steam:1043870
+  requires: []
+- name: ExtraGalactica
+  ids:
+  - unresolved:source:isthereanydeal:10859:extragalactica
+  requires: []
+- name: Rebellion Gaia
+  ids:
+  - steam:1519550
+  requires: []
+- name: Converter
+  ids:
+  - steam:1574390
+  requires: []
+- name: OkunoKA
+  ids:
+  - steam:969200
+  requires: []
+- name: Russian Drunken Boxers 2
+  ids:
+  - unresolved:source:isthereanydeal:10859:russian-drunken-boxers-2
+  requires: []
