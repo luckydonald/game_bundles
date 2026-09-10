@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 462 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9997/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9997/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9997/source.json
+games:
+- name: 'Squareboy vs Bullies: Arena Edition'
+  ids:
+  - steam:709620
+  requires: []
+- name: 'Spandex Force: Champion Rising'
+  ids:
+  - steam:380560
+  requires: []
+- name: Super GTR Racing
+  ids:
+  - unresolved:source:isthereanydeal:9997:super-gtr-racing
+  requires: []
+- name: Painted Memories
+  ids:
+  - steam:542930
+  requires: []
+- name: Cubicle Quest
+  ids:
+  - steam:349500
+  requires: []
+- name: The Next Door
+  ids:
+  - steam:447850
+  requires: []
+- name: 'The Adventurer - Episode 1: Beginning of the End'
+  ids:
+  - steam:628760
+  requires: []
+- name: 'VCB: Why City 4k'
+  ids:
+  - unresolved:source:isthereanydeal:9997:vcb-why-city-4k
+  requires: []
+- name: Domino killer
+  ids:
+  - steam:1549950
+  requires: []

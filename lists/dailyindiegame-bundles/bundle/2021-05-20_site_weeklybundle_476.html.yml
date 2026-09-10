@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 476 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10034/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10034/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10034/source.json
+games:
+- name: Avoid
+  ids:
+  - steam:1539890
+  requires: []
+- name: Pew Pew?
+  ids:
+  - unresolved:source:isthereanydeal:10034:pew-pew
+  requires: []
+- name: Tarek
+  ids:
+  - steam:1447090
+  requires: []
+- name: Reach the Summit
+  ids:
+  - steam:1512790
+  requires: []
+- name: Detective Story
+  ids:
+  - steam:1515280
+  requires: []
+- name: ZombieVan Drive
+  ids:
+  - steam:1521050
+  requires: []
+- name: Starship Tunnel
+  ids:
+  - unresolved:source:isthereanydeal:10034:starship-tunnel
+  requires: []
+- name: STRAY KITTEN
+  ids:
+  - steam:1534520
+  requires: []
+- name: Garetto
+  ids:
+  - steam:1545280
+  requires: []

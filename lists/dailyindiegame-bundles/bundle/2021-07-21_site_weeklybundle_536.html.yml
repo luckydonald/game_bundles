@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 536: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10274/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10274/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10274/source.json
+games:
+- name: Shuyan Saga - Soundtrack
+  ids:
+  - steam:678080
+  requires: []
+- name: 'Street Warriors Online: Premium Pack'
+  ids:
+  - steam:559860
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf - Exceptional Card Pack'
+  ids:
+  - unresolved:source:isthereanydeal:10274:warhammer-40000-space-wolf-exceptional-card-pack
+  requires: []
+- name: Gold Rush! Anniversary Special Edition Upgrade
+  ids:
+  - steam:328690
+  requires: []
+- name: Medieval Hero - Grim Pack
+  ids:
+  - unresolved:source:isthereanydeal:10274:medieval-hero-grim-pack
+  requires: []
+- name: Medieval Hero - Spectacular Pack
+  ids:
+  - unresolved:source:isthereanydeal:10274:medieval-hero-spectacular-pack
+  requires: []
+- name: Swift Elf - Fantasy characters
+  ids:
+  - unresolved:source:isthereanydeal:10274:swift-elf-fantasy-characters
+  requires: []
+- name: Axiom Alternative II Script
+  ids:
+  - unresolved:source:isthereanydeal:10274:axiom-alternative-ii-script
+  requires: []
+- name: Axion Alternative II Project
+  ids:
+  - unresolved:source:isthereanydeal:10274:axion-alternative-ii-project
+  requires: []

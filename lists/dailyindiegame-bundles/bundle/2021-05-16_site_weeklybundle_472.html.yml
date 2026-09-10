@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 472 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10026/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10026/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10026/source.json
+games:
+- name: Ostrich Runner
+  ids:
+  - steam:1481810
+  requires: []
+- name: The Binding Of YOU
+  ids:
+  - unresolved:source:isthereanydeal:10026:the-binding-of-you
+  requires: []
+- name: Move Forward
+  ids:
+  - steam:1481360
+  requires: []
+- name: Retro Tank Party
+  ids:
+  - steam:1568570
+  requires: []
+- name: NOREN
+  ids:
+  - steam:1595270
+  requires: []
+- name: EyeRoll
+  ids:
+  - unresolved:source:isthereanydeal:10026:eyeroll
+  requires: []
+- name: Bus stop in the fog
+  ids:
+  - steam:1602150
+  requires: []
+- name: Squeaky Clean
+  ids:
+  - steam:1606950
+  requires: []
+- name: A Strange City
+  ids:
+  - steam:1564940
+  requires: []

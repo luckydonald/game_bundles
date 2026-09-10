@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 509 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10180/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10180/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10180/source.json
+games:
+- name: Ace of Space
+  ids:
+  - steam:1304310
+  requires: []
+- name: Active Mummy
+  ids:
+  - steam:1547900
+  requires: []
+- name: Plasma Attack
+  ids:
+  - steam:1547910
+  requires: []
+- name: Dark Confrontation
+  ids:
+  - unresolved:source:isthereanydeal:10180:dark-confrontation
+  requires: []
+- name: Pilot's Misadventures
+  ids:
+  - unresolved:source:isthereanydeal:10180:pilots-misadventures
+  requires: []
+- name: Apocalyptic World
+  ids:
+  - unresolved:source:isthereanydeal:10180:apocalyptic-world
+  requires: []
+- name: THE FANGS HUNTRESS
+  ids:
+  - steam:1624460
+  requires: []
+- name: Anime puzzle
+  ids:
+  - unresolved:source:isthereanydeal:10180:anime-puzzle
+  requires: []
+- name: Anime Cards
+  ids:
+  - unresolved:source:isthereanydeal:10180:anime-cards
+  requires: []

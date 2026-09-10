@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 545 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10308/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10308/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10308/source.json
+games:
+- name: TRAGO
+  ids:
+  - steam:869080
+  requires: []
+- name: Mad Cat's World
+  ids:
+  - steam:954860
+  requires: []
+- name: The Risers
+  ids:
+  - steam:857770
+  requires: []
+- name: Traffix
+  ids:
+  - steam:1102580
+  requires: []
+- name: Gangsters 1920
+  ids:
+  - steam:1163490
+  requires: []
+- name: Pirates Treasure II
+  ids:
+  - unresolved:source:isthereanydeal:10308:pirates-treasure-ii
+  requires: []
+- name: Valentines Desire - Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:10308:valentines-desire-steam-edition
+  requires: []
+- name: Goofy Golf Remastered Steam Edition
+  ids:
+  - unresolved:source:isthereanydeal:10308:goofy-golf-remastered-steam-edition
+  requires: []
+- name: Lynium
+  ids:
+  - steam:1415010
+  requires: []

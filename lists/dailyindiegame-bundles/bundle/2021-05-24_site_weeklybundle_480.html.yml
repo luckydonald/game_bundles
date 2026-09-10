@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 480: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10042/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10042/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10042/source.json
+games:
+- name: 'SPECKLE: Chill Puzzle Game'
+  ids:
+  - steam:873160
+  requires: []
+- name: Chocolate makes you happy 6
+  ids:
+  - steam:864570
+  requires: []
+- name: Nin! Nin! Ninja!!!
+  ids:
+  - unresolved:source:isthereanydeal:10042:nin-nin-ninja
+  requires: []
+- name: 酒店
+  ids:
+  - steam:934810
+  requires: []
+- name: Find Your Way
+  ids:
+  - unresolved:source:isthereanydeal:10042:find-your-way
+  requires: []
+- name: Curse of the dungeon
+  ids:
+  - steam:1174810
+  requires: []
+- name: Fourthy
+  ids:
+  - steam:1212470
+  requires: []
+- name: WildIsland
+  ids:
+  - steam:1141340
+  requires: []
+- name: Clicker Age
+  ids:
+  - steam:1215660
+  requires: []

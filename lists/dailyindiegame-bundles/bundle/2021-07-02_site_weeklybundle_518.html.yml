@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 518 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10224/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10224/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10224/source.json
+games:
+- name: Commando Jack
+  ids:
+  - steam:299260
+  requires: []
+- name: TECHNOSPHERE RELOAD
+  ids:
+  - steam:1054090
+  requires: []
+- name: Super Golf 2018
+  ids:
+  - unresolved:source:isthereanydeal:10224:super-golf-2018
+  requires: []
+- name: Underneath
+  ids:
+  - steam:1186940
+  requires: []
+- name: Picklock
+  ids:
+  - steam:1243220
+  requires: []
+- name: Naturalist Stories
+  ids:
+  - steam:1260340
+  requires: []
+- name: DESOLATIUM - PROLOGUE
+  ids:
+  - steam:1640540
+  requires: []
+- name: Toru
+  ids:
+  - steam:1547350
+  requires: []
+- name: Little adventure
+  ids:
+  - steam:1599530
+  requires: []

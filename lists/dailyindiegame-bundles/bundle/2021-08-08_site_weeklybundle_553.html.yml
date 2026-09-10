@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 553 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10334/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10334/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10334/source.json
+games:
+- name: Half Past Impossible
+  ids:
+  - unresolved:source:isthereanydeal:10334:half-past-impossible
+  requires: []
+- name: Round Ways
+  ids:
+  - steam:876960
+  requires: []
+- name: GAME TUBE ♛
+  ids:
+  - steam:763300
+  requires: []
+- name: The Occluder
+  ids:
+  - steam:897880
+  requires: []
+- name: Zimbo
+  ids:
+  - unresolved:source:isthereanydeal:10334:zimbo
+  requires: []
+- name: HARTS ISLAND
+  ids:
+  - steam:1322270
+  requires: []
+- name: Zball IV
+  ids:
+  - unresolved:source:isthereanydeal:10334:zball-iv
+  requires: []
+- name: Hollywood Hero
+  ids:
+  - unresolved:source:isthereanydeal:10334:hollywood-hero
+  requires: []
+- name: 'Hieroglyph: Prologue'
+  ids:
+  - unresolved:source:isthereanydeal:10334:hieroglyph-prologue
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 516 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10213/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10213/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10213/source.json
+games:
+- name: Colo Grid Zation
+  ids:
+  - unresolved:source:isthereanydeal:10213:colo-grid-zation
+  requires: []
+- name: Easy Red
+  ids:
+  - steam:741670
+  requires: []
+- name: AirShock
+  ids:
+  - unresolved:source:isthereanydeal:10213:airshock
+  requires: []
+- name: Destruction Paper
+  ids:
+  - steam:890200
+  requires: []
+- name: MAZE
+  ids:
+  - steam:1136770
+  requires: []
+- name: 'Green: An Orc''s Life'
+  ids:
+  - steam:1208810
+  requires: []
+- name: PUZZL
+  ids:
+  - steam:1282880
+  requires: []
+- name: Path Maker
+  ids:
+  - steam:1412250
+  requires: []
+- name: Theo's World
+  ids:
+  - steam:1439710
+  requires: []
