@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Overwhelmingly Positive Game Bundle — 8 Items
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15875/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15875/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15875/source.json
+games:
+- name: The Henry Stickmin Collection
+  ids:
+  - steam:1089980
+  requires: []
+- name: Heavenly Bodies
+  ids:
+  - steam:1138850
+  requires: []
+- name: Later Alligator
+  ids:
+  - steam:966320
+  requires: []
+- name: 'Bug Fables: The Everlasting Sapling'
+  ids:
+  - steam:1082710
+  requires: []
+- name: 'LISA: The Painful'
+  ids:
+  - steam:335670
+  requires: []
+- name: Monster Train
+  ids:
+  - steam:1102190
+  requires: []
+- name: 'Monster Prom 4: Monster Con'
+  ids:
+  - steam:2869860
+  requires: []
+- name: Nubby's Number Factory
+  ids:
+  - steam:3191030
+  requires: []

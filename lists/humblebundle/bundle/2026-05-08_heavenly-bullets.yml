@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Heavenly Bullets Bundle — entire-11-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16144/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16144/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16144/source.json
+games:
+- name: AK-xolotl
+  ids:
+  - steam:1479140
+  requires: []
+- name: Army of Ruin
+  ids:
+  - steam:1918040
+  requires: []
+- name: God Of Weapons
+  ids:
+  - steam:2342950
+  requires: []
+- name: Greedland
+  ids:
+  - steam:2218400
+  requires: []
+- name: Pesticide Not Required
+  ids:
+  - steam:2479320
+  requires: []
+- name: Entropy Survivors
+  ids:
+  - steam:2602030
+  requires: []
+- name: Keeper's Toll
+  ids:
+  - steam:2002220
+  requires: []
+- name: Sodaman
+  ids:
+  - steam:2178990
+  requires: []
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  requires: []
+- name: 'I Am Legion: Stand Survivors'
+  ids:
+  - steam:3109580
+  requires: []
+- name: 'God of Weapons: Eternal Nightmare'
+  ids:
+  - steam:3282270
+  requires: []
