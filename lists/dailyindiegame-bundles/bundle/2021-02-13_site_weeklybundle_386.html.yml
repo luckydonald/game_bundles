@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 386 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9740/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9740/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9740/source.json
+games:
+- name: Mission 1545
+  ids:
+  - steam:691600
+  requires: []
+- name: Blood of Patriots
+  ids:
+  - steam:775310
+  requires: []
+- name: Evil Glitch
+  ids:
+  - steam:619890
+  requires: []
+- name: Escape from the Cosmic Abyss
+  ids:
+  - steam:1315250
+  requires: []
+- name: Theo's World
+  ids:
+  - steam:1439710
+  requires: []
+- name: 'Fortuito: Lost History'
+  ids:
+  - steam:1489400
+  requires: []
+- name: Robot Robert
+  ids:
+  - steam:1505400
+  requires: []
+- name: Sprint Racer
+  ids:
+  - steam:1501340
+  requires: []
+- name: Neon Warrior
+  ids:
+  - steam:1505440
+  requires: []

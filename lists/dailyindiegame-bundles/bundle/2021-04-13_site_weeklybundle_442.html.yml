@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 442 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9925/source.json
+games:
+- name: The Lost Valley
+  ids:
+  - steam:360890
+  requires: []
+- name: Paradise Lost
+  ids:
+  - steam:982720
+  requires: []
+- name: Super Robolom
+  ids:
+  - steam:783330
+  requires: []
+- name: Hail To The King
+  ids:
+  - steam:998730
+  requires: []
+- name: Chipmunk's Adventures
+  ids:
+  - steam:1063300
+  requires: []
+- name: Bob Help Them
+  ids:
+  - steam:1471490
+  requires: []
+- name: Chinese mother in law
+  ids:
+  - unresolved:source:isthereanydeal:9925:chinese-mother-in-law
+  requires: []
+- name: The Last Place
+  ids:
+  - unresolved:source:isthereanydeal:9925:the-last-place
+  requires: []
+- name: How does it work!?
+  ids:
+  - steam:1553690
+  requires: []

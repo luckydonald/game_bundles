@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 384 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9728/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9728/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9728/source.json
+games:
+- name: Check vs Mate
+  ids:
+  - steam:211070
+  requires: []
+- name: 'Lemuria: Lost in Space'
+  ids:
+  - steam:563250
+  requires: []
+- name: Cybercube
+  ids:
+  - steam:656880
+  requires: []
+- name: ❂ Hexaluga ❂ Dungeons and Hunting ☠
+  ids:
+  - steam:860670
+  requires: []
+- name: Zombie Apocalypse Survivor
+  ids:
+  - unresolved:source:isthereanydeal:9728:zombie-apocalypse-survivor
+  requires: []
+- name: ★ Fallalypse ★ Death or Cress ♝
+  ids:
+  - steam:789220
+  requires: []
+- name: HEDE Game Engine
+  ids:
+  - steam:1313330
+  requires: []
+- name: Edge of Dreams
+  ids:
+  - steam:1261020
+  requires: []
+- name: Poly Party
+  ids:
+  - steam:1291110
+  requires: []

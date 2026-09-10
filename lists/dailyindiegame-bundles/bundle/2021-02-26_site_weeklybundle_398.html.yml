@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 398: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9789/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9789/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9789/source.json
+games:
+- name: 'Welcome To... Chichester 1 : Test Project Files'
+  ids:
+  - unresolved:source:isthereanydeal:9789:welcome-to-chichester-1-test-project-files
+  requires: []
+- name: The Mystery Of Woolley Mountain Soundtrack
+  ids:
+  - steam:1223950
+  requires: []
+- name: 'Hellscape: Two Brothers Original Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:9789:hellscape-two-brothers-original-soundtrack
+  requires: []
+- name: The Mystery Of Woolley Mountain - Art Book
+  ids:
+  - steam:1264780
+  requires: []
+- name: Green Dragon Super Retro
+  ids:
+  - unresolved:source:isthereanydeal:9789:green-dragon-super-retro
+  requires: []
+- name: arcade games collection-New games
+  ids:
+  - unresolved:source:isthereanydeal:9789:arcade-games-collection-new-games
+  requires: []
+- name: Haunted Nightmares Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9789:haunted-nightmares-soundtrack
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica ArtBook
+  ids:
+  - steam:1538660
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 3 ArtBook
+  ids:
+  - steam:1559950
+  requires: []

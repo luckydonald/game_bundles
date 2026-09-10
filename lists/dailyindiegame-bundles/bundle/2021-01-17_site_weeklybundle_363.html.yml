@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 363 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9637/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9637/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9637/source.json
+games:
+- name: Save Jesus
+  ids:
+  - steam:509220
+  requires: []
+- name: Once in Yaissor
+  ids:
+  - steam:553790
+  requires: []
+- name: Be a pirate
+  ids:
+  - steam:1453220
+  requires: []
+- name: Hello From Darkness
+  ids:
+  - steam:1465380
+  requires: []
+- name: Wolflord - Werewolf Online
+  ids:
+  - unresolved:source:isthereanydeal:9637:wolflord-werewolf-online
+  requires: []
+- name: Super tanks RPG
+  ids:
+  - steam:1477880
+  requires: []
+- name: MINI Wars
+  ids:
+  - unresolved:source:isthereanydeal:9637:mini-wars
+  requires: []
+- name: LineVox
+  ids:
+  - steam:1495250
+  requires: []
+- name: Damned Hand
+  ids:
+  - steam:1367860
+  requires: []

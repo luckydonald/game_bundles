@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 376 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9686/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9686/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9686/source.json
+games:
+- name: 'Sacra Terra: Kiss of Death Collector''s Edition'
+  ids:
+  - steam:560760
+  requires: []
+- name: Dark Sauce
+  ids:
+  - steam:995790
+  requires: []
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+  requires: []
+- name: ♞ The Tactics of War ♞
+  ids:
+  - steam:937780
+  requires: []
+- name: The Challenge
+  ids:
+  - steam:496440
+  requires: []
+- name: Position
+  ids:
+  - steam:1206180
+  requires: []
+- name: Street Racing 2020
+  ids:
+  - steam:1233120
+  requires: []
+- name: TYPICAL RUSSIAN QUARANTINE
+  ids:
+  - unresolved:source:isthereanydeal:9686:typical-russian-quarantine
+  requires: []
+- name: Craft сity
+  ids:
+  - unresolved:source:isthereanydeal:9686:craft-sity
+  requires: []
