@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: VR Pick & Mix Bundle — Select 1 Title for $2.99, 3 Titles for $7.99, 5 Titles
+  for $12.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8269/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8269/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8269/source.json
+games:
+- name: Drone Hunter VR
+  ids:
+  - steam:466520
+  requires: []
+- name: VRog
+  ids:
+  - steam:589380
+  requires: []
+- name: Evil Robot Traffic Jam HD
+  ids:
+  - steam:404390
+  requires: []
+- name: ALICE VR
+  ids:
+  - steam:513320
+  requires: []
+- name: Sky Jac
+  ids:
+  - steam:518190
+  requires: []
+- name: Ascent Spirit
+  ids:
+  - steam:790800
+  requires: []
+- name: Dick Wilde
+  ids:
+  - steam:585500
+  requires: []
+- name: 'Tower Island: Explore, Discover and Disassemble'
+  ids:
+  - unresolved:source:isthereanydeal:8269:tower-island-explore-discover-and-disassemble
+  requires: []
+- name: Pyro VR
+  ids:
+  - steam:586360
+  requires: []
+- name: Panzer Panic VR
+  ids:
+  - steam:589170
+  requires: []
+- name: Smoots Tennis Survival Zombie
+  ids:
+  - steam:564920
+  requires: []
+- name: Stunt Kite Masters VR
+  ids:
+  - steam:589280
+  requires: []
+- name: Devil and the Fairy VR
+  ids:
+  - unresolved:source:isthereanydeal:8269:devil-and-the-fairy-vr
+  requires: []
+- name: UNTITLED
+  ids:
+  - steam:639770
+  requires: []
+- name: Dimensional
+  ids:
+  - steam:457340
+  requires: []
+- name: Craft Keep VR
+  ids:
+  - steam:546350
+  requires: []
+- name: Let's Go! Skiing VR
+  ids:
+  - steam:1150310
+  requires: []
+- name: Galactic Rangers VR
+  ids:
+  - steam:1151680
+  requires: []

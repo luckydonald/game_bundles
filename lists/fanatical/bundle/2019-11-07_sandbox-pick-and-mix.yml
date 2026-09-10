@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Sandbox Pick & Mix Bundle — Select 3 Titles for $2.49, 5 Titles for $3.49, 10
+  Titles for $5.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8108/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8108/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8108/source.json
+games:
+- name: Super Inefficient Golf
+  ids:
+  - steam:772480
+  requires: []
+- name: Jalopy
+  ids:
+  - steam:446020
+  requires: []
+- name: Who's Your Daddy
+  ids:
+  - steam:427730
+  requires: []
+- name: 'Enforcer: Police Crime Action'
+  ids:
+  - steam:318220
+  requires: []
+- name: CastleMiner Z
+  ids:
+  - steam:253430
+  requires: []
+- name: FarSky
+  ids:
+  - unresolved:source:isthereanydeal:8108:farsky
+  requires: []
+- name: VoidExpanse
+  ids:
+  - steam:324260
+  requires: []
+- name: Savage Lands
+  ids:
+  - steam:307880
+  requires: []
+- name: FortressCraft Evolved!
+  ids:
+  - steam:254200
+  requires: []
+- name: The Last Leviathan
+  ids:
+  - unresolved:source:isthereanydeal:8108:the-last-leviathan
+  requires: []
+- name: Shoppe Keep
+  ids:
+  - steam:381120
+  requires: []
+- name: Blockland
+  ids:
+  - steam:250340
+  requires: []
+- name: Valnir Rok Survival RPG
+  ids:
+  - steam:658980
+  requires: []
+- name: Better Late Than Dead
+  ids:
+  - steam:352950
+  requires: []
+- name: The Mims Beginning
+  ids:
+  - steam:337820
+  requires: []

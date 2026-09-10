@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Runes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8083/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8083/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8083/source.json
+games:
+- name: 'Luxor: Quest for the Afterlife'
+  ids:
+  - steam:16040
+  requires: []
+- name: Luxor 2 HD
+  ids:
+  - steam:234350
+  requires: []
+- name: '7 Wonders: Ancient Alien Makeover'
+  ids:
+  - steam:223000
+  requires: []
+- name: 'Luxor: Amun Rising HD'
+  ids:
+  - steam:216930
+  requires: []
+- name: Luxor Evolved
+  ids:
+  - steam:205830
+  requires: []
+- name: 'Gardens Inc: From Rakes to Riches'
+  ids:
+  - steam:279420
+  requires: []
+- name: 7 Wonders of the Ancient World
+  ids:
+  - steam:275810
+  requires: []
+- name: 'LUXOR: Mah Jong'
+  ids:
+  - steam:32110
+  requires: []
+- name: Glowfish
+  ids:
+  - steam:60350
+  requires: []
+- name: 'Chainz 2: Relinked'
+  ids:
+  - steam:32120
+  requires: []

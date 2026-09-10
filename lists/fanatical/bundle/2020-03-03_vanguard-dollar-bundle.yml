@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Vanguard Dollar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8458/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8458/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8458/source.json
+games:
+- name: Vanguard Princess
+  ids:
+  - steam:262150
+  requires: []
+- name: Vanguard Princess Artwork and Soundtrack
+  ids:
+  - steam:511170
+  requires: []
+- name: Vanguard Princess Digital Comic Series
+  ids:
+  - steam:857390
+  requires: []
+- name: Vanguard Princess Lilith
+  ids:
+  - steam:329150
+  requires: []
+- name: Vanguard Princess Kurumi
+  ids:
+  - steam:406440
+  requires: []
+- name: Vanguard Princess Hilda Rize
+  ids:
+  - steam:311500
+  requires: []
