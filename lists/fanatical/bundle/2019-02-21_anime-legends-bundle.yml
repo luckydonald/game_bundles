@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Legends Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7057/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7057/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7057/source.json
+games:
+- name: MegaTagmension Blanc + Neptune VS Zombies (Neptunia)
+  ids:
+  - steam:496810
+  requires: []
+- name: Fairy Fencer F Advent Dark Force
+  ids:
+  - steam:524580
+  requires: []
+- name: Dark Rose Valkyrie
+  ids:
+  - steam:726950
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Born 2 Race 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7270/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7270/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7270/source.json
+games:
+- name: RACE On
+  ids:
+  - unresolved:source:isthereanydeal:7270:race-on
+  requires: []
+- name: Race Injection
+  ids:
+  - steam:44680
+  requires: []
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+  requires: []
+- name: Pressure
+  ids:
+  - unresolved:source:isthereanydeal:7270:pressure
+  requires: []
+- name: Mini Motor Racing EVO
+  ids:
+  - unresolved:source:isthereanydeal:7270:mini-motor-racing-evo
+  requires: []
+- name: 'Race: The WTCC Game + Caterham Expansion'
+  ids:
+  - unresolved:source:isthereanydeal:7270:race-the-wtcc-game-and-caterham-expansion
+  requires: []
+- name: Little Racers STREET
+  ids:
+  - steam:262690
+  requires: []
