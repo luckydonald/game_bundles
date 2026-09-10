@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Weekend Getaway Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2175/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2175/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2175/source.json
+games:
+- name: 'Terrian Saga: KR-17'
+  ids:
+  - steam:278640
+  requires: []
+- name: 'Qbeh-1: The Atlas Cube'
+  ids:
+  - steam:252550
+  requires: []
+- name: FortressCraft Evolved!
+  ids:
+  - steam:254200
+  requires: []
+- name: Return NULL - Episode 1
+  ids:
+  - steam:357370
+  requires: []

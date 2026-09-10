@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: SciFi Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/22/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/22/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/22/source.json
+games:
+- name: Star Saviors
+  ids:
+  - steam:314450
+  requires: []
+- name: Quick Slick Deadly
+  ids:
+  - unresolved:source:isthereanydeal:22:quick-slick-deadly
+  requires: []
+- name: 'Exodus Wars: Fractured Empire'
+  ids:
+  - unresolved:source:isthereanydeal:22:exodus-wars-fractured-empire
+  requires: []
+- name: Constant C
+  ids:
+  - steam:251510
+  requires: []
+- name: Beyond Beyaan
+  ids:
+  - unresolved:source:isthereanydeal:22:beyond-beyaan
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Central Command Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2841/source.json
+games:
+- name: '1942: The Pacific Air War'
+  ids:
+  - steam:347230
+  requires: []
+- name: Sword of the Samurai
+  ids:
+  - steam:327950
+  requires: []
+- name: Across The Rhine
+  ids:
+  - steam:329620
+  requires: []
+- name: Marine Park Empire
+  ids:
+  - steam:294730
+  requires: []
+- name: Shadow Ops - Red Mercury
+  ids:
+  - steam:286770
+  requires: []
+- name: 'Deadlock: Planetary Conquest'
+  ids:
+  - steam:328440
+  requires: []
+- name: 'B-17 Flying Fortress: The Mighty 8th'
+  ids:
+  - steam:328900
+  requires: []
+- name: Hyperspeed
+  ids:
+  - steam:347260
+  requires: []
+- name: 'Task Force 1942: Surface Naval Action in the South Pacific'
+  ids:
+  - steam:329680
+  requires: []
+- name: Command H.Q.
+  ids:
+  - unresolved:source:isthereanydeal:2841:command-h-q
+  requires: []
+- name: Hunting Unlimited™ 2008
+  ids:
+  - steam:12530
+  requires: []
+- name: 'Pajama Sam: Games to Play on Any Day'
+  ids:
+  - steam:317020
+  requires: []
