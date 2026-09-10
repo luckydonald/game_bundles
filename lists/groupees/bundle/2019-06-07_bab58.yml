@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 58 — Select 2 to 8 Titles for $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7476/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7476/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7476/source.json
+games:
+- name: 'Great Hunt: North America'
+  ids:
+  - unresolved:source:isthereanydeal:7476:great-hunt-north-america
+  requires: []
+- name: Boobserman
+  ids:
+  - unresolved:source:isthereanydeal:7476:boobserman
+  requires: []
+- name: 'Rules of The Mafia: Trade & Blood'
+  ids:
+  - unresolved:source:isthereanydeal:7476:rules-of-the-mafia-trade-and-blood
+  requires: []
+- name: TTV2
+  ids:
+  - steam:701470
+  requires: []
+- name: Stick Spartans
+  ids:
+  - steam:868040
+  requires: []
+- name: Death Fungeon
+  ids:
+  - steam:897630
+  requires: []
+- name: WARPZONE DRIFTER
+  ids:
+  - steam:976120
+  requires: []
+- name: Monovert DX
+  ids:
+  - steam:1033130
+  requires: []
+- name: Xtreme League
+  ids:
+  - unresolved:source:isthereanydeal:7476:xtreme-league
+  requires: []

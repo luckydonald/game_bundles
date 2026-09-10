@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Adventurous Itch.io Bundle — Select 3 to 10 titles; $0.99 up to $2.50
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6669/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6669/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6669/source.json
+games:
+- name: 'Legionwood 2: Rise of the Eternal''s Realm'
+  ids:
+  - steam:290460
+  requires: []
+- name: Little Kite
+  ids:
+  - steam:610120
+  requires: []
+- name: Weeping Skies
+  ids:
+  - steam:650730
+  requires: []
+- name: 'Whispered Stories: Sandman'
+  ids:
+  - unresolved:source:isthereanydeal:6669:whispered-stories-sandman
+  requires: []
+- name: Riddles Of The Past
+  ids:
+  - steam:500870
+  requires: []
+- name: Caveman Rudi
+  ids:
+  - unresolved:source:isthereanydeal:6669:caveman-rudi
+  requires: []
+- name: The Secret Legacy - A Kate Brooks Adventure
+  ids:
+  - unresolved:source:isthereanydeal:6669:the-secret-legacy-a-kate-brooks-adventure
+  requires: []
+- name: Press X to Not Die
+  ids:
+  - steam:402330
+  requires: []
+- name: 'Witchcraft: The Lotus Elixir'
+  ids:
+  - unresolved:source:isthereanydeal:6669:witchcraft-the-lotus-elixir
+  requires: []
+- name: 'Mythos: The Beginning'
+  ids:
+  - unresolved:source:isthereanydeal:6669:mythos-the-beginning
+  requires: []

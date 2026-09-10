@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 39 — Select 2 to 8 Titles; $0.75 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6078/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6078/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6078/source.json
+games:
+- name: Grab Bag
+  ids:
+  - unresolved:source:isthereanydeal:6078:grab-bag
+  requires: []
+- name: Frank the Miner
+  ids:
+  - steam:807340
+  requires: []
+- name: 'Rex: Another Island'
+  ids:
+  - steam:699150
+  requires: []
+- name: 'A Tale of Caos: Overture'
+  ids:
+  - steam:500320
+  requires: []
+- name: Clicker bAdventure
+  ids:
+  - steam:736430
+  requires: []
+- name: 'Fairyland: Chronicle'
+  ids:
+  - unresolved:source:isthereanydeal:6078:fairyland-chronicle
+  requires: []
+- name: Bonbon
+  ids:
+  - steam:734120
+  requires: []
