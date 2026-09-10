@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 34 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2198/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2198/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2198/source.json
+games:
+- name: Streets of Chaos
+  ids:
+  - unresolved:source:isthereanydeal:2198:streets-of-chaos
+  requires: []
+- name: Bloop
+  ids:
+  - steam:340200
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: Uriel's Chasm
+  ids:
+  - steam:292630
+  requires: []
+- name: Pitiri 1977
+  ids:
+  - steam:305740
+  requires: []
+- name: Storm in a Teacup
+  ids:
+  - steam:104020
+  requires: []

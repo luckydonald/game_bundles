@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 44 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2617/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2617/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2617/source.json
+games:
+- name: RC Mini Racers
+  ids:
+  - steam:311820
+  requires: []
+- name: It's time to get out from the solar system
+  ids:
+  - steam:399090
+  requires: []
+- name: International Snooker
+  ids:
+  - unresolved:source:isthereanydeal:2617:international-snooker
+  requires: []
+- name: DarkEnd
+  ids:
+  - steam:292370
+  requires: []
+- name: Egyptian Senet
+  ids:
+  - steam:391580
+  requires: []
+- name: Showtime!
+  ids:
+  - unresolved:source:isthereanydeal:2617:showtime
+  requires: []

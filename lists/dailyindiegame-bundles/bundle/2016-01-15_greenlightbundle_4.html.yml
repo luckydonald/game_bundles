@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Greenlight Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2941/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2941/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2941/source.json
+games:
+- name: Klabi
+  ids:
+  - unresolved:source:isthereanydeal:2941:klabi
+  requires: []
+- name: Abrix the robot
+  ids:
+  - steam:461850
+  requires: []
+- name: 'Love is Blind: Mutants'
+  ids:
+  - unresolved:source:isthereanydeal:2941:love-is-blind-mutants
+  requires: []
+- name: Zone X
+  ids:
+  - unresolved:source:isthereanydeal:2941:zone-x
+  requires: []
+- name: Neon Space Battle
+  ids:
+  - unresolved:source:isthereanydeal:2941:neon-space-battle
+  requires: []
+- name: Bonsai
+  ids:
+  - steam:444160
+  requires: []
+- name: Forbidden planet
+  ids:
+  - steam:434610
+  requires: []
+- name: Dead6hot
+  ids:
+  - steam:438030
+  requires: []

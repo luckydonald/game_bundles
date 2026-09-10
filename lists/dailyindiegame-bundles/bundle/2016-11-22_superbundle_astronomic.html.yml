@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Astronomic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4379/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4379/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4379/source.json
+games:
+- name: 'Atonement 2: Ruptured by Despair'
+  ids:
+  - steam:533820
+  requires: []
+- name: Outrage
+  ids:
+  - steam:457820
+  requires: []
+- name: Insincere
+  ids:
+  - steam:467000
+  requires: []
+- name: 'Atonement: Scourge of Time'
+  ids:
+  - steam:385070
+  requires: []
+- name: City of Chains
+  ids:
+  - steam:412170
+  requires: []
+- name: Incitement 3
+  ids:
+  - steam:391660
+  requires: []

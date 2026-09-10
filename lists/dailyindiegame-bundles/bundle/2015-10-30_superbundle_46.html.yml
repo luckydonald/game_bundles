@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 46 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2678/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2678/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2678/source.json
+games:
+- name: Macabre™
+  ids:
+  - unresolved:source:isthereanydeal:2678:macabre
+  requires: []
+- name: 'Gunspell: Steam Edition'
+  ids:
+  - steam:328100
+  requires: []
+- name: The Dreamatorium of Dr. Magnus 2
+  ids:
+  - steam:393150
+  requires: []
+- name: CortexGear:AngryDroids
+  ids:
+  - steam:375620
+  requires: []
+- name: Lup
+  ids:
+  - steam:412600
+  requires: []
+- name: Star Gazer
+  ids:
+  - unresolved:source:isthereanydeal:2678:star-gazer
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 28 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1841/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1841/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1841/source.json
+games:
+- name: Project Night
+  ids:
+  - unresolved:source:isthereanydeal:1841:project-night
+  requires: []
+- name: Racer 8
+  ids:
+  - steam:292380
+  requires: []
+- name: 'Lilly and Sasha: Curse of the Immortals'
+  ids:
+  - unresolved:source:isthereanydeal:1841:lilly-and-sasha-curse-of-the-immortals
+  requires: []
+- name: 'Ionball 2 : Ionstorm'
+  ids:
+  - steam:287120
+  requires: []
+- name: The Culling Of The Cows
+  ids:
+  - steam:297020
+  requires: []
+- name: Dark Shadows - Army of Evil
+  ids:
+  - steam:280640
+  requires: []

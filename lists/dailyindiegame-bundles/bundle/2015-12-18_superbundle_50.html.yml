@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 50 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2869/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2869/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2869/source.json
+games:
+- name: Motorama
+  ids:
+  - steam:327010
+  requires: []
+- name: Agent Awesome
+  ids:
+  - steam:345220
+  requires: []
+- name: Inside The Gear
+  ids:
+  - steam:333120
+  requires: []
+- name: 'Broadsword : Age of Chivalry'
+  ids:
+  - unresolved:source:isthereanydeal:2869:broadsword-age-of-chivalry
+  requires: []
+- name: Bloop Reloaded
+  ids:
+  - unresolved:source:isthereanydeal:2869:bloop-reloaded
+  requires: []
+- name: Steam Heroes
+  ids:
+  - steam:341160
+  requires: []
