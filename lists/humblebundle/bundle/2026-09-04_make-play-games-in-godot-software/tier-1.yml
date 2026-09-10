@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Make & Play Games in Godot Bundle — 1 Item Bundle
+tier: 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16539/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16539/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16539/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Godot Character Controller
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-character-controller
+  - isthereanydeal:godot-character-controller
+  requires: []

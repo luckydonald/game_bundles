@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../../schemas/game-list.schema.json
+schema: 1
+name: Make & Play Games in Godot Bundle — Entire 13 Item Bundle
+tier: 3
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16539/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16539/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16539/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Godot Character Controller
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-character-controller
+  - isthereanydeal:godot-character-controller
+  requires: []
+- name: 'Godot 4: Create and Master Plugins Course'
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-4-create-and-master-plugins-course
+  - isthereanydeal:godot-4-create-and-master-plugins-course
+  requires: []
+- name: 'From Blender to Godot Course: Game-Ready Assets'
+  ids:
+  - unresolved:source:isthereanydeal:16539:from-blender-to-godot-course-game-ready-assets
+  - isthereanydeal:from-blender-to-godot-course-game-ready-assets
+  requires: []
+- name: 'Godot 4 Shaders Course: Craft Stunning Visuals'
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-4-shaders-course-craft-stunning-visuals
+  - isthereanydeal:godot-4-shaders-course-craft-stunning-visuals
+  requires: []
+- name: windowkill
+  ids:
+  - steam:2726450
+  - isthereanydeal:windowkill
+  requires: []
+- name: Buckshot Roulette
+  ids:
+  - steam:2835570
+  - isthereanydeal:buckshot-roulette
+  requires: []
+- name: 'The Electrifying Incident: A Monster Mini-Expedition'
+  ids:
+  - steam:3352300
+  - isthereanydeal:the-electrifying-incident-a-monster-mini-expedition
+  requires: []
+- name: Level Design Fundamentals
+  ids:
+  - unresolved:source:isthereanydeal:16539:level-design-fundamentals
+  - isthereanydeal:level-design-fundamentals
+  requires: []
+- name: 'Godot 4: Build a 2D Action-Adventure Game Course'
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-4-build-a-2d-action-adventure-game-course
+  - isthereanydeal:godot-4-build-a-2d-action-adventure-game-course
+  requires: []
+- name: 'Godot 4: Build an Action Combat RPG Course'
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-4-build-an-action-combat-rpg-course
+  - isthereanydeal:godot-4-build-an-action-combat-rpg-course
+  requires: []
+- name: 'Godot 4 C# Action Adventure Course: Build your own 2.5D RPG'
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-4-c-action-adventure-course-build-your-own-2-5d-rpg
+  - isthereanydeal:godot-4-c-action-adventure-course-build-your-own-2-5d-rpg
+  requires: []
+- name: 'Complete Godot 3D Course: Develop your own 3D Games'
+  ids:
+  - unresolved:source:isthereanydeal:16539:complete-godot-3d-course-develop-your-own-3d-games
+  - isthereanydeal:complete-godot-3d-course-develop-your-own-3d-games
+  requires: []
+- name: Godot UI
+  ids:
+  - unresolved:source:isthereanydeal:16539:godot-ui
+  - isthereanydeal:godot-ui
+  requires: []

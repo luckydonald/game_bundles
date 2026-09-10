@@ -9,54 +9,73 @@ references:
   path: ../../../../archives/greenmangaming/bundle/armor-games-flashback-bundle/metadata.json
 - name: Crawl source
   path: ../../../../archives/greenmangaming/bundle/armor-games-flashback-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16544/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16544/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16544/source.json
 crawlers:
 - greenmangaming
+- isthereanydeal
 games:
 - name: Sushi Cat Legacy Collection
   ids:
   - steam:3620940
+  - isthereanydeal:sushi-cat-legacy-collection
   requires: []
 - name: Chaos Faction Legacy Collection
   ids:
   - steam:3038340
+  - isthereanydeal:chaos-faction-legacy-collection
   requires: []
 - name: The Last Stand Legacy Collection
   ids:
   - steam:1615100
+  - isthereanydeal:the-last-stand-legacy-collection
   requires: []
 - name: Crush the Castle Legacy Collection
   ids:
   - steam:1838970
+  - isthereanydeal:crush-the-castle-legacy-collection
   requires: []
 - name: 'Shift: Legacy Collection'
   ids:
   - steam:2764830
+  - isthereanydeal:shift-legacy-collection
   requires: []
 - name: Deep Sleep Trilogy
   ids:
   - steam:1146510
+  - isthereanydeal:deep-sleep-trilogy
   requires: []
 - name: Don't Escape Trilogy
   ids:
   - steam:1070550
+  - isthereanydeal:don-t-escape-trilogy
   requires: []
 - name: Swords & Souls Legacy
   ids:
   - steam:3189440
+  - isthereanydeal:swords-and-souls-legacy-collection
   requires: []
 - name: Warfare Legacy Collection
   ids:
   - steam:2745870
+  - isthereanydeal:warfare-legacy-collection
   requires: []
 - name: The Elephant Collection
   ids:
   - steam:2274110
+  - isthereanydeal:the-elephant-collection
   requires: []
 - name: Decision Legacy Collection
   ids:
   - steam:3015510
+  - isthereanydeal:decision-legacy-collection
   requires: []
 - name: Sonny Legacy Collection
   ids:
   - steam:2757720
+  - isthereanydeal:sonny-legacy-collection
   requires: []

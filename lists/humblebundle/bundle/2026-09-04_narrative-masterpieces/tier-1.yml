@@ -9,18 +9,28 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-09-04_narrative-masterpieces/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16538/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16538/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16538/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Along the Edge
   ids:
   - steam:504390
+  - isthereanydeal:along-the-edge
   requires: []
 - name: We. The Revolution
   ids:
   - steam:736850
+  - isthereanydeal:we-the-revolution
   requires: []
 - name: 'Crowns and Pawns: Kingdom of Deceit'
   ids:
   - steam:1125910
+  - isthereanydeal:crowns-and-pawns-kingdom-of-deceit
   requires: []
