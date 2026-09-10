@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Astro Saga Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7716/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7716/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7716/source.json
+games:
+- name: ARMED SEVEN
+  ids:
+  - steam:349690
+  requires: []
+- name: ZANGEKI WARP
+  ids:
+  - steam:564040
+  requires: []
+- name: Satazius
+  ids:
+  - steam:203990
+  requires: []
+- name: GIGANTIC ARMY
+  ids:
+  - steam:278930
+  requires: []
+- name: WOLFLAME
+  ids:
+  - steam:448160
+  requires: []
+- name: Supercharged Robot VULKAISER
+  ids:
+  - steam:349680
+  requires: []
+- name: STEEL STRIDER
+  ids:
+  - steam:404100
+  requires: []

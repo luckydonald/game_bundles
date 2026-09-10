@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Curve Quest Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7911/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7911/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7911/source.json
+games:
+- name: The Little Acre
+  ids:
+  - steam:423590
+  requires: []
+- name: Hue
+  ids:
+  - steam:383270
+  requires: []
+- name: Smoke and Sacrifice
+  ids:
+  - steam:695100
+  requires: []
+- name: Manual Samuel
+  ids:
+  - steam:504130
+  requires: []
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+  requires: []
+- name: The Flame in the Flood
+  ids:
+  - steam:318600
+  requires: []
+- name: Snake Pass
+  ids:
+  - steam:544330
+  requires: []
+- name: 10 Second Ninja X
+  ids:
+  - steam:435790
+  requires: []

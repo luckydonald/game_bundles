@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dragon Star Varnir - DLC Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7990/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7990/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7990/source.json
+games:
+- name: Dragon Star Varnir
+  ids:
+  - steam:1062040
+  requires: []
+- name: Dragon Star Varnir Level Limit Breach 2
+  ids:
+  - steam:1064191
+  requires: []
+- name: Dragon Star Varnir Ultimate Weapon Collection
+  ids:
+  - steam:1064210
+  requires: []
+- name: Dragon Star Varnir Ultimate Armor Set Trio
+  ids:
+  - steam:1064211
+  requires: []
+- name: Dragon Star Varnir Ultimate Accessory Set Trio
+  ids:
+  - steam:1064212
+  requires: []
+- name: Dragon Star Varnir Level Limit Breach 3
+  ids:
+  - steam:1064213
+  requires: []

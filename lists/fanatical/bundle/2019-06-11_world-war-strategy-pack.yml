@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: World War Strategy Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7490/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7490/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7490/source.json
+games:
+- name: Battle Academy
+  ids:
+  - steam:287070
+  requires: []
+- name: Battle of the Bulge
+  ids:
+  - steam:365560
+  requires: []
+- name: 'Battle Academy 2: Eastern Front'
+  ids:
+  - steam:306640
+  requires: []

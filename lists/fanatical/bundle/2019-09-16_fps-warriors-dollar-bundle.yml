@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: FPS Warriors Dollar Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7901/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7901/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7901/source.json
+games:
+- name: 'Sniper: Ghost Warrior Trilogy'
+  ids:
+  - unresolved:source:isthereanydeal:7901:sniper-ghost-warrior-trilogy
+  requires: []
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+  requires: []
+- name: Royal Marines Commando
+  ids:
+  - unresolved:source:isthereanydeal:7901:royal-marines-commando
+  requires: []
+- name: Operation Thunderstorm
+  ids:
+  - steam:837590
+  requires: []

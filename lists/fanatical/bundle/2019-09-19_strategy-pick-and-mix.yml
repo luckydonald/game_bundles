@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Strategy Pick & Mix Bundle — Select 5 Titles for $1.99, 10 Titles for $3.79,
+  15 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7928/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7928/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7928/source.json
+games:
+- name: 'Men of War: Assault Squad'
+  ids:
+  - steam:64000
+  requires: []
+- name: Summer Resort Mogul
+  ids:
+  - steam:1061120
+  requires: []
+- name: Fantasy Wars
+  ids:
+  - steam:63900
+  requires: []
+- name: Faces of War
+  ids:
+  - steam:289300
+  requires: []
+- name: Heroes of Normandie
+  ids:
+  - steam:365890
+  requires: []
+- name: 'Men of War: Vietnam'
+  ids:
+  - steam:63940
+  requires: []
+- name: 'Hotel Mogul: Las Vegas'
+  ids:
+  - steam:1061850
+  requires: []
+- name: Men of War Condemned Heroes
+  ids:
+  - steam:204860
+  requires: []
+- name: 'Strategy & Tactics: Dark Ages'
+  ids:
+  - steam:508300
+  requires: []
+- name: Ascension to the Throne
+  ids:
+  - steam:289200
+  requires: []
+- name: Stalingrad
+  ids:
+  - steam:356260
+  requires: []
+- name: Star Wolves
+  ids:
+  - steam:46270
+  requires: []
+- name: Men of War Red Tide
+  ids:
+  - steam:3130
+  requires: []
+- name: Rise of Prussia Gold
+  ids:
+  - steam:292760
+  requires: []
+- name: 'Pandora : First Contact'
+  ids:
+  - steam:287580
+  requires: []
+- name: 'Soldiers: Heroes of World War II - Enhanced Edition'
+  ids:
+  - unresolved:source:isthereanydeal:7928:soldiers-heroes-of-world-war-ii-enhanced-edition
+  requires: []

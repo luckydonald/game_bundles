@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Redemption Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7701/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7701/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7701/source.json
+games:
+- name: Brawlout
+  ids:
+  - steam:263720
+  requires: []
+- name: Lust for Darkness
+  ids:
+  - steam:523650
+  requires: []
+- name: 'River City Ransom: Underground'
+  ids:
+  - steam:422810
+  requires: []
+- name: 'Ash of Gods: Redemption'
+  ids:
+  - steam:691690
+  requires: []
+- name: Fantasy Versus
+  ids:
+  - steam:787400
+  requires: []
+- name: The Town Of Light
+  ids:
+  - steam:433100
+  requires: []
+- name: Chaos Reborn
+  ids:
+  - steam:319050
+  requires: []
