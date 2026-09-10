@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Horror Triple Pack — Select 3 Titles
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12318/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12318/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12318/source.json
+games:
+- name: DISTRAINT 2
+  ids:
+  - steam:743390
+  requires: []
+- name: Tesla vs Lovecraft
+  ids:
+  - steam:636100
+  requires: []
+- name: 'DISTRAINT: Deluxe Edition'
+  ids:
+  - steam:395170
+  requires: []
+- name: DEADLIGHT
+  ids:
+  - steam:211400
+  requires: []
+- name: The Final Station
+  ids:
+  - steam:435530
+  requires: []
+- name: 'GARAGE: Bad Trip'
+  ids:
+  - steam:878580
+  requires: []
+- name: The Cat Lady
+  ids:
+  - steam:253110
+  requires: []
+- name: STASIS
+  ids:
+  - steam:380150
+  requires: []
+- name: Let Them Come
+  ids:
+  - steam:505630
+  requires: []
+- name: Monstrum
+  ids:
+  - steam:296710
+  requires: []
+- name: The Music Machine
+  ids:
+  - steam:359040
+  requires: []
+- name: 'Intruders: Hide and Seek'
+  ids:
+  - steam:1045840
+  requires: []
+- name: The Innsmouth Case
+  ids:
+  - steam:1231950
+  requires: []
+- name: Savage Halloween
+  ids:
+  - steam:1232810
+  requires: []
+- name: JANITOR BLEEDS
+  ids:
+  - steam:1552310
+  requires: []
+- name: Subway Midnight
+  ids:
+  - steam:1750570
+  requires: []
+- name: Nomad Survival
+  ids:
+  - steam:1929870
+  requires: []

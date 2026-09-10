@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Savior Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12135/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12135/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12135/source.json
+games:
+- name: Tower of Time
+  ids:
+  - steam:617480
+  requires: []
+- name: 'Survivalist: Invisible Strain'
+  ids:
+  - steam:1054510
+  requires: []
+- name: Cook, Serve, Delicious! 3?!
+  ids:
+  - steam:1000030
+  requires: []
+- name: Those Who Remain
+  ids:
+  - steam:715380
+  requires: []
+- name: Danger Scavenger
+  ids:
+  - steam:1169740
+  requires: []
+- name: 'AVICII Invector: Encore Edition'
+  ids:
+  - unresolved:source:isthereanydeal:12135:avicii-invector-encore-edition
+  requires: []
+- name: 'Nobodies: Murder Cleaner'
+  ids:
+  - steam:1038280
+  requires: []
+- name: Terrain of Magical Expertise
+  ids:
+  - steam:1543430
+  requires: []

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Starpoint Gemini Warlords Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12883/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12883/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12883/source.json
+games:
+- name: Starpoint Gemini Warlords - Digital Deluxe Upgrade
+  ids:
+  - unresolved:source:isthereanydeal:12883:starpoint-gemini-warlords-digital-deluxe-upgrade
+  requires: []
+- name: 'Starpoint Gemini Warlords: Deadly Dozen'
+  ids:
+  - steam:649280
+  requires: []
+- name: Starpoint Gemini Warlords
+  ids:
+  - steam:419480
+  requires: []
+- name: 'Starpoint Gemini Warlords: Rise of Numibia'
+  ids:
+  - steam:715940
+  requires: []
+- name: 'Starpoint Gemini Warlords: Cycle of Warfare'
+  ids:
+  - steam:715920
+  requires: []
+- name: 'Starpoint Gemini Warlords: Titans Return'
+  ids:
+  - steam:677900
+  requires: []
+- name: 'Starpoint Gemini Warlords: Endpoint'
+  ids:
+  - steam:899130
+  requires: []

@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Play On The Go Bundle (New Year 2023) — Select 3 Titles for $4.99,
+  5 Titles for $6.99, 8 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12873/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12873/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12873/source.json
+games:
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  requires: []
+- name: HELLBOUND
+  ids:
+  - steam:753590
+  requires: []
+- name: Roundguard
+  ids:
+  - steam:848030
+  requires: []
+- name: 'Blacksad : Under the Skin'
+  ids:
+  - steam:1003890
+  requires: []
+- name: 3000th Duel
+  ids:
+  - steam:1098080
+  requires: []
+- name: 'Daymare: 1998'
+  ids:
+  - steam:842100
+  requires: []
+- name: PAYDAY 2
+  ids:
+  - steam:218620
+  requires: []
+- name: Caveblazers
+  ids:
+  - steam:452060
+  requires: []
+- name: Neon Abyss
+  ids:
+  - steam:788100
+  requires: []
+- name: Kill It With Fire
+  ids:
+  - steam:1179210
+  requires: []
+- name: Everhood
+  ids:
+  - steam:1229380
+  requires: []
+- name: Time Loader
+  ids:
+  - steam:1301950
+  requires: []
+- name: Toodee and Topdee
+  ids:
+  - steam:1303950
+  requires: []
+- name: Tesla Force
+  ids:
+  - steam:1149710
+  requires: []
+- name: 'Nongunz: Doppelganger Edition'
+  ids:
+  - steam:1304780
+  requires: []
+- name: Lacuna - A Sci-Fi Noir Adventure
+  ids:
+  - steam:1364100
+  requires: []
+- name: Lawn Mowing Simulator
+  ids:
+  - steam:1480560
+  requires: []
+- name: Cats in Time
+  ids:
+  - steam:1599880
+  requires: []
+- name: 'Golf Club: Wasteland'
+  ids:
+  - unresolved:source:isthereanydeal:12873:golf-club-wasteland
+  requires: []

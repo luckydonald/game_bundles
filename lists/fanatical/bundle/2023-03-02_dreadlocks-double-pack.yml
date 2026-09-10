@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dreadlocks Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13029/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13029/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13029/source.json
+games:
+- name: Dex
+  ids:
+  - steam:269650
+  requires: []
+- name: 'Mimpi: Deluxe Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:13029:mimpi-deluxe-bundle
+  requires: []

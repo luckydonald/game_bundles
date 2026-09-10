@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Monkey Island Special Edition Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12013/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12013/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12013/source.json
+games:
+- name: 'Monkey Island 2 Special Edition: LeChuck''s Revenge'
+  ids:
+  - steam:32460
+  requires: []
+- name: 'The Secret of Monkey Island(R): Special Edition'
+  ids:
+  - steam:32360
+  requires: []

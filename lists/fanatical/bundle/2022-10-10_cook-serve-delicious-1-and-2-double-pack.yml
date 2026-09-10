@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cook, Serve, Delicious! 1&2!! Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12196/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12196/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12196/source.json
+games:
+- name: Cook, Serve, Delicious!
+  ids:
+  - steam:247020
+  requires: []
+- name: Cook, Serve, Delicious! 2!!
+  ids:
+  - steam:386620
+  requires: []

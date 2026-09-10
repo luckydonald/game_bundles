@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Anime Bounty Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12669/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12669/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12669/source.json
+games:
+- name: This World Unknown
+  ids:
+  - steam:521540
+  requires: []
+- name: Graze Counter
+  ids:
+  - steam:629440
+  requires: []
+- name: Strawberry Vinegar
+  ids:
+  - steam:407340
+  requires: []
+- name: ProjectNimbus
+  ids:
+  - unresolved:source:isthereanydeal:12669:projectnimbus
+  requires: []
+- name: Big Dipper
+  ids:
+  - steam:984470
+  requires: []
+- name: Synergia
+  ids:
+  - steam:1047010
+  requires: []
+- name: Kawaii Deathu Desu
+  ids:
+  - steam:1102880
+  requires: []
+- name: Tenta Shooter
+  ids:
+  - steam:704910
+  requires: []
+- name: ROCKETRON
+  ids:
+  - steam:1177640
+  requires: []
+- name: Sumire
+  ids:
+  - steam:1335230
+  requires: []
