@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Saga Bundle — Select 3 Titles for $4.99, 5 Titles for $7.99,
+  7 Titles for $9.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13044/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13044/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13044/source.json
+games:
+- name: Ancient Enemy
+  ids:
+  - steam:993790
+  requires: []
+- name: Windscape
+  ids:
+  - steam:363950
+  requires: []
+- name: The Wild Eight
+  ids:
+  - steam:526160
+  requires: []
+- name: The Enchanted Cave 2
+  ids:
+  - steam:368610
+  requires: []
+- name: Encodya
+  ids:
+  - steam:1137450
+  requires: []
+- name: The House
+  ids:
+  - unresolved:source:isthereanydeal:13044:the-house
+  requires: []
+- name: Rage In Peace
+  ids:
+  - steam:658690
+  requires: []
+- name: 'Gurumin: A Monstrous Adventure'
+  ids:
+  - steam:322290
+  requires: []
+- name: Mayhem In Single Valley
+  ids:
+  - steam:622680
+  requires: []
+- name: Dark Nights with Poe and Munro
+  ids:
+  - steam:1098170
+  requires: []
+- name: Everhood
+  ids:
+  - steam:1229380
+  requires: []
+- name: Cardaclysm
+  ids:
+  - steam:1252710
+  requires: []
+- name: HordeCore
+  ids:
+  - steam:980210
+  requires: []
+- name: 'Asterix & Obelix XXL : Romastered'
+  ids:
+  - steam:1261520
+  requires: []
+- name: Everybody Wham Wham
+  ids:
+  - steam:1510630
+  requires: []
+- name: Wife Quest
+  ids:
+  - steam:1554600
+  requires: []

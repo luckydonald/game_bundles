@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Quad Pack — Select 4 Titles for $3.49 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11974/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11974/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11974/source.json
+games:
+- name: Monster Slayers - Advanced Classes Unlocker
+  ids:
+  - steam:621840
+  requires: []
+- name: American Fugitive
+  ids:
+  - steam:934780
+  requires: []
+- name: Victor Vran ARPG
+  ids:
+  - steam:345180
+  requires: []
+- name: Dustforce DX
+  ids:
+  - steam:65300
+  requires: []
+- name: Those Who Remain
+  ids:
+  - steam:715380
+  requires: []
+- name: Game Dev Studio
+  ids:
+  - steam:773580
+  requires: []
+- name: Monster Slayers
+  ids:
+  - steam:496620
+  requires: []
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+  requires: []
+- name: 'The Textorcist: The Story of Ray Bibbia'
+  ids:
+  - steam:940680
+  requires: []
+- name: Silver Chains
+  ids:
+  - steam:975470
+  requires: []
+- name: RIOT- Civil Unrest
+  ids:
+  - steam:342310
+  requires: []
+- name: Grotto
+  ids:
+  - steam:1538850
+  requires: []
+- name: 'Iratus: Lord of the Dead'
+  ids:
+  - steam:807120
+  requires: []
+- name: Monster Slayers - Fire & Steel Expansion
+  ids:
+  - steam:634030
+  requires: []

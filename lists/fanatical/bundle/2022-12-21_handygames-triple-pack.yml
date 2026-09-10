@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: HandyGames Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12805/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12805/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12805/source.json
+games:
+- name: Giana Sisters 2D
+  ids:
+  - steam:350770
+  requires: []
+- name: Bang Bang Racing
+  ids:
+  - steam:207020
+  requires: []
+- name: Stunt Kite Party
+  ids:
+  - steam:960240
+  requires: []

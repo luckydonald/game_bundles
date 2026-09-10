@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Hextones Triple Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12558/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12558/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12558/source.json
+games:
+- name: Hextones
+  ids:
+  - steam:1570750
+  requires: []
+- name: 'Hextones: Spacetime'
+  ids:
+  - steam:1652720
+  requires: []
+- name: 'Hextones: Spacetime Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:12558:hextones-spacetime-soundtrack
+  requires: []

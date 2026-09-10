@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Strategy Bundle 3 — Select 3 Titles for $4.99, 5 Titles for $7.90,
+  7 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12036/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12036/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12036/source.json
+games:
+- name: Rebel Galaxy Outlaw
+  ids:
+  - steam:910830
+  requires: []
+- name: Monster Sanctuary
+  ids:
+  - steam:814370
+  requires: []
+- name: Dead In Vinland
+  ids:
+  - steam:573120
+  requires: []
+- name: The Battle of Polytopia
+  ids:
+  - steam:874390
+  requires: []
+- name: Creeper World 2 Anniversary Edition
+  ids:
+  - steam:422920
+  requires: []
+- name: Iron Marines
+  ids:
+  - steam:931280
+  requires: []
+- name: Train Valley 2
+  ids:
+  - steam:602320
+  requires: []
+- name: Fantasy General II
+  ids:
+  - steam:1025440
+  requires: []
+- name: Creeper World Anniversary Edition
+  ids:
+  - steam:422910
+  requires: []
+- name: 'Unity of Command: Stalingrad Campaign'
+  ids:
+  - steam:218090
+  requires: []
+- name: Ultimate Zombie Defense
+  ids:
+  - steam:1035510
+  requires: []
+- name: Astronarch
+  ids:
+  - steam:1234940
+  requires: []
+- name: Garbage
+  ids:
+  - steam:1253710
+  requires: []
+- name: 'Peaky Blinders: Mastermind'
+  ids:
+  - unresolved:source:isthereanydeal:12036:peaky-blinders-mastermind
+  requires: []
+- name: Red Ronin
+  ids:
+  - steam:1222570
+  requires: []
+- name: Dust to End
+  ids:
+  - steam:1074070
+  requires: []
+- name: Recon Control
+  ids:
+  - steam:1491510
+  requires: []

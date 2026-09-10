@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reventure  & Xlarn Adventure RPG Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13168/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13168/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13168/source.json
+games:
+- name: Reventure
+  ids:
+  - steam:900270
+  requires: []
+- name: XLarn
+  ids:
+  - steam:360030
+  requires: []

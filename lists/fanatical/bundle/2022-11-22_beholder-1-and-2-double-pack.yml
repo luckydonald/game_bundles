@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Beholder 1 & 2 Double Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12559/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12559/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12559/source.json
+games:
+- name: Beholder 2
+  ids:
+  - steam:761620
+  requires: []
+- name: Beholder
+  ids:
+  - steam:475550
+  requires: []
