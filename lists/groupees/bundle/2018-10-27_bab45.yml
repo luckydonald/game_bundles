@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 45 — Select 2 to 10 titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6614/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6614/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6614/source.json
+games:
+- name: RapStar Tycoon
+  ids:
+  - steam:869280
+  requires: []
+- name: illie
+  ids:
+  - steam:740570
+  requires: []
+- name: AmazeD 3D - Platinum Edition
+  ids:
+  - unresolved:source:isthereanydeal:6614:amazed-3d-platinum-edition
+  requires: []
+- name: Galactic Fighters + Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:6614:galactic-fighters-and-soundtrack
+  requires: []
+- name: Nightingale Downs
+  ids:
+  - steam:727220
+  requires: []
+- name: In The Dark
+  ids:
+  - unresolved:source:isthereanydeal:6614:in-the-dark
+  requires: []
+- name: Tales
+  ids:
+  - steam:416250
+  requires: []
+- name: The Orphaned Soul
+  ids:
+  - steam:911690
+  requires: []
+- name: 'Keyhole Spy: Teachers'
+  ids:
+  - unresolved:source:isthereanydeal:6614:keyhole-spy-teachers
+  requires: []

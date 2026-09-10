@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Magical Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7820/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7820/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7820/source.json
+games:
+- name: Once Upon A Death
+  ids:
+  - unresolved:source:isthereanydeal:7820:once-upon-a-death
+  requires: []
+- name: Recursive Dragon
+  ids:
+  - unresolved:source:isthereanydeal:7820:recursive-dragon
+  requires: []
+- name: Magic Chess
+  ids:
+  - unresolved:source:isthereanydeal:7820:magic-chess
+  requires: []
+- name: Magic League
+  ids:
+  - unresolved:source:isthereanydeal:7820:magic-league
+  requires: []
+- name: 'Ashi: Lake of Light'
+  ids:
+  - steam:819040
+  requires: []

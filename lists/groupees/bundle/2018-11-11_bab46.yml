@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 46 — Select 2 to 10 titles; $1.00 up to $1.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6673/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6673/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6673/source.json
+games:
+- name: 'City Of Jade: Imperial Frontier'
+  ids:
+  - unresolved:source:isthereanydeal:6673:city-of-jade-imperial-frontier
+  requires: []
+- name: ALIENS INVADED OUR PLANET
+  ids:
+  - steam:873930
+  requires: []
+- name: Castle of Venia
+  ids:
+  - steam:918680
+  requires: []
+- name: Puzzle Chambers
+  ids:
+  - steam:740410
+  requires: []
+- name: 'Crown Champion: Legends of the Arena'
+  ids:
+  - steam:527710
+  requires: []
+- name: Minaurs
+  ids:
+  - steam:763750
+  requires: []
+- name: 'Smash Halloween Pumpkins: The Challenge'
+  ids:
+  - steam:886010
+  requires: []
+- name: Rencounter
+  ids:
+  - steam:431810
+  requires: []
+- name: Ninja Midori
+  ids:
+  - steam:858440
+  requires: []
