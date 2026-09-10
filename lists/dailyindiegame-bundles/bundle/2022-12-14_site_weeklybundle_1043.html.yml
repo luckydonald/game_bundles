@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1043: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12760/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12760/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12760/source.json
+games:
+- name: Crafting Tycoon v0.8
+  ids:
+  - steam:757440
+  requires: []
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+  requires: []
+- name: Formula X
+  ids:
+  - unresolved:source:isthereanydeal:12760:formula-x
+  requires: []
+- name: Destiny Hunter
+  ids:
+  - steam:1028830
+  requires: []
+- name: 'Raccoon: The Orc Invasion'
+  ids:
+  - steam:1199150
+  requires: []
+- name: Zerowood
+  ids:
+  - unresolved:source:isthereanydeal:12760:zerowood
+  requires: []
+- name: travelsolar
+  ids:
+  - steam:1411880
+  requires: []
+- name: Sphere Game Epic
+  ids:
+  - steam:1843750
+  requires: []
+- name: Augmented Future
+  ids:
+  - unresolved:source:isthereanydeal:12760:augmented-future
+  requires: []

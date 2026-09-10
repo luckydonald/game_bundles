@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1033 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12640/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12640/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12640/source.json
+games:
+- name: Noob Squad
+  ids:
+  - steam:496550
+  requires: []
+- name: Rescue Team
+  ids:
+  - steam:338960
+  requires: []
+- name: Dash Hale
+  ids:
+  - steam:1485730
+  requires: []
+- name: Retro Tank Party
+  ids:
+  - steam:1568570
+  requires: []
+- name: INDICTED
+  ids:
+  - steam:1463420
+  requires: []
+- name: I NEED A NAME
+  ids:
+  - steam:1894990
+  requires: []
+- name: Second Thoughts
+  ids:
+  - steam:1998170
+  requires: []
+- name: The Solar Ring
+  ids:
+  - unresolved:source:isthereanydeal:12640:the-solar-ring
+  requires: []
+- name: Toggle Cube
+  ids:
+  - steam:2063890
+  requires: []

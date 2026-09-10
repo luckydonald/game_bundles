@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1035: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12646/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12646/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12646/source.json
+games:
+- name: Paug
+  ids:
+  - unresolved:source:isthereanydeal:12646:paug
+  requires: []
+- name: Snowboard
+  ids:
+  - steam:1547500
+  requires: []
+- name: GOLD IS MINE
+  ids:
+  - unresolved:source:isthereanydeal:12646:gold-is-mine
+  requires: []
+- name: Space Ship DRIFT
+  ids:
+  - unresolved:source:isthereanydeal:12646:space-ship-drift
+  requires: []
+- name: LineArt Jigsaw Puzzle - Airplanes
+  ids:
+  - steam:1616230
+  requires: []
+- name: LineArt Jigsaw Puzzle - Airplanes ArtBook
+  ids:
+  - steam:1617730
+  requires: []
+- name: Hidden Western
+  ids:
+  - steam:1902260
+  requires: []
+- name: Horror In Valkeala
+  ids:
+  - steam:1886850
+  requires: []
+- name: Hidden Post-Apocalyptic Top-Down 3D
+  ids:
+  - steam:1912710
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 957: Adult Discount — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12109/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12109/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12109/source.json
+games:
+- name: Redemption Girls
+  ids:
+  - unresolved:source:isthereanydeal:12109:redemption-girls
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 3
+  ids:
+  - steam:1532150
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 3 ArtBook
+  ids:
+  - steam:1559950
+  requires: []
+- name: Flirtatious
+  ids:
+  - steam:1565970
+  requires: []
+- name: Anime Jigsaw Girls - Office ArtBook
+  ids:
+  - steam:1810910
+  requires: []
+- name: Anime Jigsaw Girls - Office
+  ids:
+  - steam:1810600
+  requires: []
+- name: Anime Jigsaw Girls - Christmas
+  ids:
+  - steam:1818240
+  requires: []
+- name: Anime Jigsaw Girls - Christmas ArtBook
+  ids:
+  - steam:1819270
+  requires: []
+- name: Comixxx Desires
+  ids:
+  - steam:1859500
+  requires: []

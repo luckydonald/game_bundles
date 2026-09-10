@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1016 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12484/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12484/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12484/source.json
+games:
+- name: Voltage
+  ids:
+  - steam:798710
+  requires: []
+- name: GameLibBooster
+  ids:
+  - steam:809270
+  requires: []
+- name: 5.84 Wing
+  ids:
+  - steam:1019060
+  requires: []
+- name: JOBU-KI
+  ids:
+  - unresolved:source:isthereanydeal:12484:jobu-ki
+  requires: []
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+  requires: []
+- name: AMID THE LINES
+  ids:
+  - steam:1611110
+  requires: []
+- name: Hardcore Trivia
+  ids:
+  - steam:1698910
+  requires: []
+- name: Sumy Shelltris - ICEBLOCKS 1
+  ids:
+  - steam:1780960
+  requires: []
+- name: Collapse Relapse
+  ids:
+  - steam:2005750
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 993: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12283/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12283/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12283/source.json
+games:
+- name: The Reflection
+  ids:
+  - steam:1922540
+  requires: []
+- name: Nether Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:12283:nether-nightmare
+  requires: []
+- name: FPS Tactics
+  ids:
+  - steam:1576790
+  requires: []
+- name: Hidden Water
+  ids:
+  - steam:1778460
+  requires: []
+- name: Fears of Glasses o-o
+  ids:
+  - steam:1794740
+  requires: []
+- name: Hidden Floating City Top-Down 3D
+  ids:
+  - steam:1902210
+  requires: []
+- name: Ancient Medieval Empire
+  ids:
+  - steam:1914460
+  requires: []
+- name: 'Golden Mine Pickaxe 2: Mummy Tombs'
+  ids:
+  - unresolved:source:isthereanydeal:12283:golden-mine-pickaxe-2-mummy-tombs
+  requires: []
+- name: 3D PUZZLE - Alchemist House
+  ids:
+  - steam:1955000
+  requires: []

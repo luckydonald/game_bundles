@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1002 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12363/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12363/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12363/source.json
+games:
+- name: Defence Your Organism
+  ids:
+  - unresolved:source:isthereanydeal:12363:defence-your-organism
+  requires: []
+- name: 'Puzzle Art: Primates'
+  ids:
+  - steam:1786280
+  requires: []
+- name: Dirty block
+  ids:
+  - unresolved:source:isthereanydeal:12363:dirty-block
+  requires: []
+- name: Funny Street Football
+  ids:
+  - unresolved:source:isthereanydeal:12363:funny-street-football
+  requires: []
+- name: Mighty Castles
+  ids:
+  - steam:1900820
+  requires: []
+- name: DRUNKKNIGHT
+  ids:
+  - unresolved:source:isthereanydeal:12363:drunkknight
+  requires: []
+- name: City Things
+  ids:
+  - unresolved:source:isthereanydeal:12363:city-things
+  requires: []
+- name: 武儒绘卷 - 天地奇缘
+  ids:
+  - steam:1967830
+  requires: []
+- name: Slime Rule!
+  ids:
+  - steam:2069550
+  requires: []

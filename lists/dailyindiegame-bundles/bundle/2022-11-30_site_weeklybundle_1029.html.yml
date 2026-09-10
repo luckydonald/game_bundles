@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 1029: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12600/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12600/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12600/source.json
+games:
+- name: BomberZone
+  ids:
+  - steam:473140
+  requires: []
+- name: Cotropitorii
+  ids:
+  - steam:992420
+  requires: []
+- name: Cube Defender
+  ids:
+  - steam:733040
+  requires: []
+- name: CuBB
+  ids:
+  - unresolved:source:isthereanydeal:12600:cubb
+  requires: []
+- name: Gun Skaters
+  ids:
+  - steam:1062130
+  requires: []
+- name: Plataforma branca
+  ids:
+  - unresolved:source:isthereanydeal:12600:plataforma-branca
+  requires: []
+- name: Urizen Frosty Plus
+  ids:
+  - unresolved:source:isthereanydeal:12600:urizen-frosty-plus
+  requires: []
+- name: Evolution of War
+  ids:
+  - steam:1728960
+  requires: []
+- name: Sweet Hero
+  ids:
+  - unresolved:source:isthereanydeal:12600:sweet-hero
+  requires: []

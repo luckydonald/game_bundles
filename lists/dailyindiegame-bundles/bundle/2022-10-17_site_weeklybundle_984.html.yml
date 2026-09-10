@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 984 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12241/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12241/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12241/source.json
+games:
+- name: Hacker Series
+  ids:
+  - steam:536510
+  requires: []
+- name: Mino Saga
+  ids:
+  - steam:669520
+  requires: []
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:12241:orbs
+  requires: []
+- name: Malvin`s Prehistoric Adventures
+  ids:
+  - steam:1228670
+  requires: []
+- name: Kyo's Routine
+  ids:
+  - steam:1264140
+  requires: []
+- name: My Isekai After Life is an RPG game!?
+  ids:
+  - unresolved:source:isthereanydeal:12241:my-isekai-after-life-is-an-rpg-game
+  requires: []
+- name: Dragonborne
+  ids:
+  - unresolved:source:isthereanydeal:12241:dragonborne
+  requires: []
+- name: Demon Runner The Forsaken
+  ids:
+  - unresolved:source:isthereanydeal:12241:demon-runner-the-forsaken
+  requires: []
+- name: Vacuum Ball
+  ids:
+  - steam:1897140
+  requires: []

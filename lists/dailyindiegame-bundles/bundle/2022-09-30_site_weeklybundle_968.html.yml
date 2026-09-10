@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 968 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12151/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12151/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12151/source.json
+games:
+- name: Aircraft War
+  ids:
+  - steam:1094630
+  requires: []
+- name: Psycho
+  ids:
+  - steam:1440290
+  requires: []
+- name: All Hit All Her
+  ids:
+  - steam:1404630
+  requires: []
+- name: Last Threshold
+  ids:
+  - steam:1840770
+  requires: []
+- name: 遗忘之地
+  ids:
+  - unresolved:source:isthereanydeal:12151:yi-wang-zhi-de
+  requires: []
+- name: Bots Crusher Arena
+  ids:
+  - steam:2013970
+  requires: []
+- name: Rise Of A Hero
+  ids:
+  - steam:2122010
+  requires: []
+- name: 'Witch Schools: Love Potions'
+  ids:
+  - steam:2093250
+  requires: []
+- name: 'WTC : Relentless Protagonist [Sxs]'
+  ids:
+  - unresolved:source:isthereanydeal:12151:wtc-relentless-protagonist-sxs--1
+  requires: []

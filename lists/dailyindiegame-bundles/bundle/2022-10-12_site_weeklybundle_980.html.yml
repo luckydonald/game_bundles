@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 980 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12216/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12216/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12216/source.json
+games:
+- name: ColorCube
+  ids:
+  - steam:2066920
+  requires: []
+- name: Bunny Mania 2
+  ids:
+  - steam:746770
+  requires: []
+- name: AEGYPTUS
+  ids:
+  - steam:675130
+  requires: []
+- name: Infinity Imperium
+  ids:
+  - unresolved:source:isthereanydeal:12216:infinity-imperium
+  requires: []
+- name: Shivering Hearts
+  ids:
+  - steam:1351820
+  requires: []
+- name: Robotic Learn
+  ids:
+  - steam:1350480
+  requires: []
+- name: Sprint Racer
+  ids:
+  - steam:1501340
+  requires: []
+- name: Survive after hell
+  ids:
+  - steam:1524990
+  requires: []
+- name: The Orb of Darkness
+  ids:
+  - unresolved:source:isthereanydeal:12216:the-orb-of-darkness
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 1017 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12500/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12500/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12500/source.json
+games:
+- name: Conduct Deluxe!
+  ids:
+  - steam:737870
+  requires: []
+- name: 'Trapped Dead: Lockdown'
+  ids:
+  - steam:305500
+  requires: []
+- name: Blind Boris
+  ids:
+  - steam:789930
+  requires: []
+- name: Brain Break
+  ids:
+  - steam:1459360
+  requires: []
+- name: Deep Despair 2
+  ids:
+  - steam:1686130
+  requires: []
+- name: Lord of the Click 2
+  ids:
+  - steam:1687060
+  requires: []
+- name: Shinobi Shift
+  ids:
+  - steam:1718660
+  requires: []
+- name: Project Medved
+  ids:
+  - steam:1904590
+  requires: []
+- name: 'Bug Dolls: Soviet Project'
+  ids:
+  - steam:1998030
+  requires: []
