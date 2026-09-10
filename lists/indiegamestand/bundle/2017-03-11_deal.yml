@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Six Sides Of The World — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4891/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4891/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4891/source.json
+games:
+- name: Six Sides of the World
+  ids:
+  - steam:384480
+  requires: []

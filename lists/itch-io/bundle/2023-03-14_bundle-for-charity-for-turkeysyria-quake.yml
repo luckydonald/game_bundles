@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle for Charity for Turkey/Syria Quake — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13052/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13052/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13052/source.json
+games:
+- name: King Of Mazes
+  ids:
+  - steam:802360
+  requires: []
+- name: A Long Way Home
+  ids:
+  - steam:461030
+  requires: []
+- name: Perpetuum Mobile
+  ids:
+  - unresolved:source:isthereanydeal:13052:perpetuum-mobile
+  requires: []
+- name: 'Beyond Horror: Episode One, A Father''s Journey'
+  ids:
+  - steam:1516950
+  requires: []
+- name: Romeo Must Live
+  ids:
+  - steam:1547930
+  requires: []
+- name: Endowed
+  ids:
+  - unresolved:source:isthereanydeal:13052:endowed
+  requires: []
+- name: Erisa's Summer
+  ids:
+  - unresolved:source:isthereanydeal:13052:erisas-summer
+  requires: []
+- name: Finding Felicia Portland Edition
+  ids:
+  - unresolved:source:isthereanydeal:13052:finding-felicia-portland-edition
+  requires: []
+- name: 'Inheritance: Ladeina''s Path - Nude Mod Expansion Pack'
+  ids:
+  - steam:2212240
+  requires: []
+- name: 'Inheritance: Ladeina''s Path'
+  ids:
+  - steam:2204040
+  requires: []
+- name: Artificial Awakening
+  ids:
+  - unresolved:source:isthereanydeal:13052:artificial-awakening
+  requires: []
+- name: Bell Master
+  ids:
+  - unresolved:source:isthereanydeal:13052:bell-master
+  requires: []
+- name: Maids & Masters
+  ids:
+  - unresolved:source:isthereanydeal:13052:maids-and-masters
+  requires: []
+- name: Effervescent Fantasy
+  ids:
+  - unresolved:source:isthereanydeal:13052:effervescent-fantasy
+  requires: []
+- name: Goblin Layer
+  ids:
+  - unresolved:source:isthereanydeal:13052:goblin-layer
+  requires: []

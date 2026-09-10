@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Horror Games Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13272/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13272/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13272/source.json
+games:
+- name: Witch
+  ids:
+  - steam:2871370
+  requires: []
+- name: 'Dimensional Prophecy of Zohar Redux Layer 1: Essence'
+  ids:
+  - unresolved:source:isthereanydeal:13272:dimensional-prophecy-of-zohar-redux-layer-1-essence
+  requires: []
+- name: Groceries And JumpScares
+  ids:
+  - unresolved:source:isthereanydeal:13272:groceries-and-jumpscares
+  requires: []
+- name: The nine figures
+  ids:
+  - unresolved:source:isthereanydeal:13272:the-nine-figures
+  requires: []
+- name: 'Other London: Tales of Terror'
+  ids:
+  - unresolved:source:isthereanydeal:13272:other-london-tales-of-terror
+  requires: []
+- name: 'Other London: Desk17'
+  ids:
+  - unresolved:source:isthereanydeal:13272:other-london-desk17
+  requires: []
+- name: Maldito/Cursed
+  ids:
+  - unresolved:source:isthereanydeal:13272:maldito-cursed
+  requires: []

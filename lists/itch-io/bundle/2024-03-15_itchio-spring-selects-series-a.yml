@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: itch.io Spring Selects Series A — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13920/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13920/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13920/source.json
+games:
+- name: Cardinal Chains
+  ids:
+  - steam:1422220
+  requires: []
+- name: Dicey Dungeons
+  ids:
+  - steam:861540
+  requires: []
+- name: 'Catlateral Damage: Remeowstered'
+  ids:
+  - steam:1237730
+  requires: []
+- name: The Librarian (Special Edition)
+  ids:
+  - unresolved:source:isthereanydeal:13920:the-librarian-special-edition
+  requires: []
+- name: An Outcry
+  ids:
+  - steam:1817470
+  requires: []
+- name: Beyond the Chiron Gate
+  ids:
+  - steam:2960700
+  requires: []
+- name: 'Crystal Story: Dawn of Dusk'
+  ids:
+  - steam:1746590
+  requires: []
+- name: Eigengrau
+  ids:
+  - steam:1624320
+  requires: []
+- name: Hellgineers
+  ids:
+  - steam:2587030
+  requires: []
+- name: windowkill
+  ids:
+  - steam:2726450
+  requires: []

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Spring Sale 2024 - Horror & Metroidvenia Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13935/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13935/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13935/source.json
+games:
+- name: Amaya's Lost Soul
+  ids:
+  - steam:2119380
+  requires: []
+- name: The Willow Man
+  ids:
+  - steam:2334060
+  requires: []
