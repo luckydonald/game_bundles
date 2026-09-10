@@ -2872,3 +2872,54 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 > - [Raw log (`341182` chars, `333 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/b035d49b-3f05-4bb8-9033-094ed0c389b3/tasks/ac3774bc4c7097683.output)
 > - `24` tools, `50791` tokens, `2.39653 s`
 
+❯ /plan I want to merge the bundle variation files into one, grouping the apps inside, flattening the folder stucture by a level and D.R.Y.ing duplicated data into a single file. So for the bundle with variations, a game shall list in which variation the game is included in.
+
+❯ Task Notification:
+> - Task `a86f426913489b953` <kbd>completed</kbd>
+> - Tool `toolu_01Y5nCULFJ7UCEQRjBQAYLQx`
+> - > Agent "Find bundle variation file structure" finished
+> - [Query (`2191` chars, `2.16 KB`)](output/agents/046.a86f426913489b953/prompt.md)
+> - [Answer (`18084` chars, `17.8 KB`)](output/agents/046.a86f426913489b953/result.md)
+> - [Raw log (`377989` chars, `370 KB`)](/tmp/claude-1000/-home-user-git-luckydonald-game-collections/caeecf00-336c-4cfb-ae30-f61ff1fb4f46/tasks/a86f426913489b953.output)
+> - `33` tools, `62139` tokens, `2.17965 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Confirmed: bundle tier files are cumulative (tier-2.yml already contains every game from tier-1.yml plus new ones), so a merged file can record each game's *lowest* tier and that fully implies higher-tier membership. Should the new per-game field just be that single lowest-tier number, or a full list of every tier the game appears in (future-proofing against a non-cumulative bundle, even though none exist today)?
+>> 2. Should the merge+flatten apply to every bundle directory (including ones that already have just a single bundle.yml), or only to bundle directories that currently have multiple sibling tier files?
+>> 3. Today each tier file becomes its own Steam collection, so `sync steam --tiers all` can create e.g. both a "Bronze" and a "Gold" collection for one bundle, and `--tiers highest` keeps only the highest owned one. After merging into one file, how should Steam sync behave?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Field shape** (1/3) <kbd>Single Select</kbd><br>
+>> Confirmed: bundle tier files are cumulative (tier-2.yml already contains every game from tier-1.yml plus new ones), so a merged file can record each game's *lowest* tier and that fully implies higher-tier membership. Should the new per-game field just be that single lowest-tier number, or a full list of every tier the game appears in (future-proofing against a non-cumulative bundle, even though none exist today)?
+> - [ ] 1\. Single lowest-tier number (Recommended)
+>   - _e.g. `tier: 2` on Game — matches observed data, simplest schema and migration_
+> - [ ] 2\. Full list of tiers
+>   - _e.g. `tiers: [1, 2, 3]` — more defensive but stores redundant info given the cumulative invariant_
+> - [x] 3\. _Type something:_
+>   - > Full tier list, so we can show you the "most completed" one in your library.
+>
+>> **Merge scope** (2/3) <kbd>Single Select</kbd><br>
+>> Should the merge+flatten apply to every bundle directory (including ones that already have just a single bundle.yml), or only to bundle directories that currently have multiple sibling tier files?
+> - [x] 1\. All bundle directories (Recommended)
+>   - _lists/<provider>/bundle/<key>/bundle.yml also becomes lists/<provider>/bundle/<key>.yml — every bundle folder flattens uniformly, single migration pass_
+> - [ ] 2\. Only multi-tier bundles
+>   - _Single-file bundle.yml directories are left as-is; only directories with tier-1.yml, tier-2.yml, ... get merged and flattened_
+> - [ ] 3\. _Type something._
+>
+>> **Steam sync** (3/3) <kbd>Single Select</kbd><br>
+>> Today each tier file becomes its own Steam collection, so `sync steam --tiers all` can create e.g. both a "Bronze" and a "Gold" collection for one bundle, and `--tiers highest` keeps only the highest owned one. After merging into one file, how should Steam sync behave?
+> - [ ] 1\. Keep current behavior (Recommended)
+>   - _Adapter is updated to derive the same per-tier collections from the merged file's per-game tier field — no change in what Steam collections end up looking like_
+> - [ ] 2\. Collapse to one collection per bundle
+>   - _Simplify: one Steam collection per bundle listing whichever games are eligible given the owned tier; drops the ability to see separate per-tier collections_
+> - [x] 3\. _Type something:_
+>   - > Makee `--highest` the default but allow `--include-lower-tiers` instead.
+>
+> </details>
+>
+
