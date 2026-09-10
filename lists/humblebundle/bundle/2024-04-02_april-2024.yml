@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Apr 2024) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13969/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13969/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13969/source.json
+games:
+- name: Coromon
+  ids:
+  - steam:1218210
+  requires: []
+- name: Fashion Police Squad
+  ids:
+  - steam:1319460
+  requires: []
+- name: Terraformers
+  ids:
+  - steam:1244800
+  requires: []
+- name: Victoria 3
+  ids:
+  - steam:529340
+  requires: []
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+  requires: []
+- name: The Callisto Protocol
+  ids:
+  - steam:1544020
+  requires: []
+- name: The Excavation of Hob's Barrow
+  ids:
+  - steam:1182310
+  requires: []
+- name: HUMANKIND™ - Definitive Edition
+  ids:
+  - unresolved:source:isthereanydeal:13969:humankind-definitive-edition
+  requires: []

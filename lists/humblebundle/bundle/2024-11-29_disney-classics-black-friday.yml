@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Disney Classics Black Friday Bundle — entire-17-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14667/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14667/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14667/source.json
+games:
+- name: 'Star Wars: Jedi Knight: Jedi Academy'
+  ids:
+  - steam:6020
+  requires: []
+- name: 'Star Wars: Knights of the Old Republic'
+  ids:
+  - steam:32370
+  requires: []
+- name: 'Star Wars: The Force Unleashed: Ultimate Sith Edition'
+  ids:
+  - steam:32430
+  requires: []
+- name: 'LEGO Indiana Jones: The Original Adventures'
+  ids:
+  - steam:32330
+  requires: []
+- name: 'LEGO Indiana Jones 2: The Adventure Continues'
+  ids:
+  - steam:32450
+  requires: []
+- name: STAR WARS™ Knights of the Old Republic™ II - The Sith Lords™
+  ids:
+  - steam:208580
+  requires: []
+- name: 'Monkey Island 2 Special Edition: LeChuck''s Revenge'
+  ids:
+  - steam:32460
+  requires: []
+- name: 'The Secret of Monkey Island(R): Special Edition'
+  ids:
+  - steam:32360
+  requires: []
+- name: 'LEGO Star Wars III: The Clone Wars'
+  ids:
+  - steam:32510
+  requires: []
+- name: STAR WARS™ Rebellion
+  ids:
+  - unresolved:source:isthereanydeal:14667:star-wars-rebellion
+  requires: []
+- name: 'LEGO Star Wars: The Complete Saga'
+  ids:
+  - steam:32440
+  requires: []
+- name: Star Wars Republic Commando™
+  ids:
+  - steam:6000
+  requires: []
+- name: Indiana Jones® and the Emperor's Tomb™
+  ids:
+  - steam:560430
+  requires: []
+- name: 'LEGO Pirates of the Caribbean: The Video Game'
+  ids:
+  - steam:311770
+  requires: []
+- name: The Curse of Monkey Island
+  ids:
+  - steam:730820
+  requires: []
+- name: 'Star Wars® Empire at War™: Gold Pack'
+  ids:
+  - steam:32470
+  requires: []
+- name: STAR WARS™ Galactic Battlegrounds Saga
+  ids:
+  - steam:356500
+  requires: []

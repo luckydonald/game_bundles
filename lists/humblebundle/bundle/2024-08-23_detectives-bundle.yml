@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Detectives Bundle — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14351/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14351/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14351/source.json
+games:
+- name: Call of Cthulhu
+  ids:
+  - steam:399810
+  requires: []
+- name: Immortality
+  ids:
+  - steam:1350200
+  requires: []
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+  requires: []
+- name: Paradise Killer
+  ids:
+  - steam:1160220
+  requires: []
+- name: 'The Darkside Detective: A Fumble in the Dark'
+  ids:
+  - steam:795420
+  requires: []
+- name: Killer Frequency
+  ids:
+  - steam:1903620
+  requires: []
+- name: Overboard!
+  ids:
+  - steam:1546920
+  requires: []

@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Mar 2025) — entire-13-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14969/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14969/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14969/source.json
+games:
+- name: Gravity Circuit
+  ids:
+  - steam:858710
+  requires: []
+- name: Super Dungeon Maker
+  ids:
+  - steam:1622800
+  requires: []
+- name: Racine
+  ids:
+  - steam:1793170
+  requires: []
+- name: Homeworld 3
+  ids:
+  - steam:1840080
+  requires: []
+- name: 'Sir Whoopass™: Immortal Death'
+  ids:
+  - steam:1240590
+  requires: []
+- name: WILD HEARTS™
+  ids:
+  - steam:1938010
+  requires: []
+- name: Pacific Drive
+  ids:
+  - steam:1458140
+  requires: []
+- name: Cavern of Dreams
+  ids:
+  - steam:2059660
+  requires: []
+- name: 'Tales of Kenzera™: ZAU'
+  ids:
+  - steam:2316580
+  requires: []
+- name: 'Pacific Drive: We Have Liftoff Customization Pack'
+  ids:
+  - steam:2646730
+  requires: []
+- name: 'Pacific Drive: Friendly Dumpster Customization Pack'
+  ids:
+  - steam:2935180
+  requires: []
+- name: 'Pacific Drive: Anomalous Customization Pack'
+  ids:
+  - steam:3073780
+  requires: []
+- name: 'Pacific Drive: Frosted Customization Pack'
+  ids:
+  - steam:3242220
+  requires: []
