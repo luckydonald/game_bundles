@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 25th Anniversary Build Your Own Bundle — Select 1 Title for $1.00, 5 Titles
+  for $2.99, 10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9365/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9365/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9365/source.json
+games:
+- name: God's Trigger
+  ids:
+  - steam:488730
+  requires: []
+- name: ibb & obb
+  ids:
+  - steam:95400
+  requires: []
+- name: Omerta City of Gangsters
+  ids:
+  - steam:208520
+  requires: []
+- name: 'Warhammer 40,000: Space Wolf'
+  ids:
+  - unresolved:source:isthereanydeal:9365:warhammer-40000-space-wolf
+  requires: []
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+  requires: []
+- name: Port Royale 3
+  ids:
+  - steam:205610
+  requires: []
+- name: Train Valley
+  ids:
+  - steam:353640
+  requires: []
+- name: Hero Defense
+  ids:
+  - steam:423620
+  requires: []
+- name: Guns, Gore & Cannoli
+  ids:
+  - steam:322210
+  requires: []
+- name: Syberia 3
+  ids:
+  - steam:464340
+  requires: []
+- name: King of Dragon Pass
+  ids:
+  - steam:352220
+  requires: []
+- name: Call of Juarez™
+  ids:
+  - steam:3020
+  requires: []
+- name: DiRT 4
+  ids:
+  - unresolved:source:isthereanydeal:9365:dirt-4
+  requires: []
+- name: SpeedRunners
+  ids:
+  - steam:207140
+  requires: []
+- name: Skullgirls
+  ids:
+  - unresolved:source:isthereanydeal:9365:skullgirls
+  requires: []
+- name: Livelock
+  ids:
+  - steam:251230
+  requires: []
+- name: 'Tempest: Pirate Action RPG'
+  ids:
+  - steam:418180
+  requires: []
+- name: Enemy Front
+  ids:
+  - steam:256190
+  requires: []
+- name: Dry Drowning
+  ids:
+  - steam:1077970
+  requires: []
+- name: Agatha Christie - The ABC Murders
+  ids:
+  - steam:374900
+  requires: []
+- name: Shadowgrounds Pack
+  ids:
+  - unresolved:source:isthereanydeal:9365:shadowgrounds-pack
+  requires: []
+- name: When Ski Lifts Go Wrong
+  ids:
+  - steam:638000
+  requires: []
+- name: F1 2018
+  ids:
+  - unresolved:source:isthereanydeal:9365:f1-2018
+  requires: []
+- name: 'Days of War: Definitive Edition'
+  ids:
+  - steam:454350
+  requires: []
+- name: Flashback (2018)
+  ids:
+  - steam:961620
+  requires: []

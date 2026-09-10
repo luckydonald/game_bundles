@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Super VR Bundle — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10305/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10305/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10305/source.json
+games:
+- name: Duckpocalypse
+  ids:
+  - steam:512240
+  requires: []
+- name: VESTIGE
+  ids:
+  - steam:975410
+  requires: []
+- name: Knee Deep
+  ids:
+  - steam:371300
+  requires: []
+- name: Singularity 5
+  ids:
+  - steam:987770
+  requires: []
+- name: HoloBall
+  ids:
+  - steam:457320
+  requires: []
+- name: Emily Wants To Play
+  ids:
+  - steam:416590
+  requires: []
+- name: Hoops VR
+  ids:
+  - steam:487770
+  requires: []
+- name: Lethal VR
+  ids:
+  - steam:532270
+  requires: []
+- name: Visionarium
+  ids:
+  - steam:928300
+  requires: []
+- name: Viking Rage
+  ids:
+  - steam:589150
+  requires: []
+- name: 'Chained: A Victorian Nightmare'
+  ids:
+  - steam:1198700
+  requires: []
+- name: Ayahuasca
+  ids:
+  - steam:1212940
+  requires: []
+- name: Gloomy Eyes
+  ids:
+  - steam:2667950
+  requires: []
+- name: 'War Remains: Dan Carlin Presents an Immersive Memory'
+  ids:
+  - steam:1198050
+  requires: []
+- name: Vetrix
+  ids:
+  - steam:1307070
+  requires: []
+- name: Maskmaker
+  ids:
+  - steam:1337530
+  requires: []
+- name: 'BATTLESCAR: Punk Was Invented By Girls'
+  ids:
+  - steam:1367270
+  requires: []

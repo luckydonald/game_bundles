@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: All Stars 14 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10258/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10258/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10258/source.json
+games:
+- name: Reventure
+  ids:
+  - steam:900270
+  requires: []
+- name: 'Mordheim: City of the Damned'
+  ids:
+  - steam:276810
+  requires: []
+- name: Rebel Galaxy
+  ids:
+  - steam:290300
+  requires: []
+- name: Crookz - The Big Heist
+  ids:
+  - steam:310490
+  requires: []
+- name: Iron Fisticle
+  ids:
+  - steam:306700
+  requires: []
+- name: Blood Bowl 2
+  ids:
+  - steam:236690
+  requires: []
+- name: XIII - Classic
+  ids:
+  - steam:1170760
+  requires: []

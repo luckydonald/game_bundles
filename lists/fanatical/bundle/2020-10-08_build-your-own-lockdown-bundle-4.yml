@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Lockdown Bundle 4 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9260/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9260/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9260/source.json
+games:
+- name: "Safecracker \x96 The Ultimate Puzzle Adventure"
+  ids:
+  - steam:3260
+  requires: []
+- name: Stick it to The Man!
+  ids:
+  - steam:251830
+  requires: []
+- name: The Moment of Silence
+  ids:
+  - steam:339840
+  requires: []
+- name: Wulverblade
+  ids:
+  - steam:587180
+  requires: []
+- name: Out Of The Box
+  ids:
+  - steam:576960
+  requires: []
+- name: The King's Bird
+  ids:
+  - steam:812550
+  requires: []
+- name: Party Hard
+  ids:
+  - steam:356570
+  requires: []
+- name: FATE
+  ids:
+  - steam:246840
+  requires: []
+- name: Ittle Dew
+  ids:
+  - steam:241320
+  requires: []
+- name: Bang Bang Racing
+  ids:
+  - steam:207020
+  requires: []
+- name: Kyn
+  ids:
+  - steam:314560
+  requires: []
+- name: Guts and Glory
+  ids:
+  - steam:537340
+  requires: []
+- name: Deep Sixed
+  ids:
+  - steam:591000
+  requires: []
+- name: Mystic Melee
+  ids:
+  - steam:454770
+  requires: []
+- name: Space Robinson
+  ids:
+  - steam:953870
+  requires: []
+- name: Wrongworld
+  ids:
+  - steam:664750
+  requires: []
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090
+  requires: []
+- name: 'Override: Mech City Brawl'
+  ids:
+  - unresolved:source:isthereanydeal:9260:override-mech-city-brawl
+  requires: []

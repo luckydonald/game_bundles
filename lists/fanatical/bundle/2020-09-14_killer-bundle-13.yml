@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 13 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9153/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9153/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9153/source.json
+games:
+- name: Torchlight
+  ids:
+  - steam:41500
+  requires: []
+- name: One Finger Death Punch 2
+  ids:
+  - steam:980300
+  requires: []
+- name: Act of Aggression - Reboot Edition
+  ids:
+  - steam:318020
+  requires: []
+- name: Torchlight II
+  ids:
+  - steam:200710
+  requires: []
+- name: 'Shadows: Awakening'
+  ids:
+  - steam:585450
+  requires: []
+- name: F1® 2019
+  ids:
+  - unresolved:source:isthereanydeal:9153:f1-2019
+  requires: []

@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Lockdown Bundle 3 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9058/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9058/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9058/source.json
+games:
+- name: Medieval Kingdom Wars
+  ids:
+  - steam:499660
+  requires: []
+- name: Wings of Vi
+  ids:
+  - steam:318530
+  requires: []
+- name: Brawlout
+  ids:
+  - steam:263720
+  requires: []
+- name: 'Omen Exitio: Plague'
+  ids:
+  - steam:668590
+  requires: []
+- name: Guards
+  ids:
+  - steam:460340
+  requires: []
+- name: Ninja Shodown
+  ids:
+  - steam:598840
+  requires: []
+- name: Jet Set Knights
+  ids:
+  - steam:405550
+  requires: []
+- name: Convoy
+  ids:
+  - steam:318230
+  requires: []
+- name: Savage Lands
+  ids:
+  - steam:307880
+  requires: []
+- name: Book of Demons
+  ids:
+  - steam:449960
+  requires: []
+- name: Dog Sled Saga
+  ids:
+  - steam:286240
+  requires: []
+- name: Re-Legion
+  ids:
+  - steam:782140
+  requires: []
+- name: 'Combat Wings: Battle of Britain'
+  ids:
+  - steam:34820
+  requires: []
+- name: 2Dark
+  ids:
+  - steam:435100
+  requires: []
+- name: Through the Woods
+  ids:
+  - steam:368430
+  requires: []
+- name: Dogfight 1942
+  ids:
+  - steam:217790
+  requires: []
+- name: GIBZ
+  ids:
+  - steam:448320
+  requires: []
+- name: Dungeon Rats
+  ids:
+  - steam:531930
+  requires: []
+- name: The Spatials
+  ids:
+  - steam:346420
+  requires: []
+- name: Gunman Tales
+  ids:
+  - steam:760320
+  requires: []

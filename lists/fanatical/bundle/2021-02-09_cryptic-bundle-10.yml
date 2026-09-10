@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Cryptic Bundle 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9718/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9718/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9718/source.json
+games:
+- name: 'Demon Hunter 5: Ascendance'
+  ids:
+  - steam:1020270
+  requires: []
+- name: 'Uncharted Tides: Port Royal'
+  ids:
+  - steam:1113780
+  requires: []
+- name: 'The Secret Order 7: Shadow Breach'
+  ids:
+  - steam:1004860
+  requires: []
+- name: 'The Myth Seekers 2: The Sunken City'
+  ids:
+  - steam:1055310
+  requires: []
+- name: 'Endless Fables 4: Shadow Within'
+  ids:
+  - steam:1129030
+  requires: []
+- name: 'Ghost Files 2: Memory of a Crime'
+  ids:
+  - steam:1159500
+  requires: []
+- name: 'The Secret Order 8: Return to the Buried Kingdom'
+  ids:
+  - steam:1198450
+  requires: []
+- name: 'Family Mysteries: Poisonous Promises'
+  ids:
+  - steam:1225070
+  requires: []
+- name: 'Persian Nights 2: The Moonlight Veil'
+  ids:
+  - steam:1276540
+  requires: []
+- name: 'Family Mysteries 3: Criminal Mindset'
+  ids:
+  - steam:1309860
+  requires: []

@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own All Stars Bundle 2 — Select 1 Title for $1.00, 5 Titles for $2.99,
+  10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10067/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10067/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10067/source.json
+games:
+- name: 'Styx: Master of Shadows'
+  ids:
+  - steam:242640
+  requires: []
+- name: Internet Cafe Simulator
+  ids:
+  - steam:1136160
+  requires: []
+- name: Sniper Ghost Warrior 2
+  ids:
+  - steam:34870
+  requires: []
+- name: Detention
+  ids:
+  - steam:555220
+  requires: []
+- name: Who's Your Daddy
+  ids:
+  - steam:427730
+  requires: []
+- name: GemCraft - Chasing Shadows
+  ids:
+  - steam:296490
+  requires: []
+- name: DiRT 4
+  ids:
+  - unresolved:source:isthereanydeal:10067:dirt-4
+  requires: []
+- name: Game Corp DX
+  ids:
+  - steam:399670
+  requires: []
+- name: Enemy Front
+  ids:
+  - steam:256190
+  requires: []
+- name: 'Angry Video Game Nerd II: ASSimilation'
+  ids:
+  - steam:409660
+  requires: []
+- name: Dex
+  ids:
+  - steam:269650
+  requires: []
+- name: Blueprint Tycoon
+  ids:
+  - steam:454060
+  requires: []
+- name: Angry Video Game Nerd Adventures
+  ids:
+  - steam:237740
+  requires: []
+- name: "Alien Rage \x96 Unlimited"
+  ids:
+  - steam:217920
+  requires: []
+- name: 'GRIP: Combat Racing'
+  ids:
+  - steam:396900
+  requires: []
+- name: Among the Sleep - Enhanced Edition
+  ids:
+  - steam:250620
+  requires: []
+- name: Close to the Sun
+  ids:
+  - steam:968870
+  requires: []
+- name: F1 2018
+  ids:
+  - unresolved:source:isthereanydeal:10067:f1-2018
+  requires: []
+- name: 'Narcos: Rise of the Cartels'
+  ids:
+  - unresolved:source:isthereanydeal:10067:narcos-rise-of-the-cartels
+  requires: []
+- name: Table Manners
+  ids:
+  - steam:1019450
+  requires: []
