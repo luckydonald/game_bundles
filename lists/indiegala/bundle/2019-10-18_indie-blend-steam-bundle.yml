@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Blend Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8023/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8023/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8023/source.json
+games:
+- name: 'Last Anime boy: Saving loli'
+  ids:
+  - steam:750210
+  requires: []
+- name: Chibi Volleyball
+  ids:
+  - unresolved:source:isthereanydeal:8023:chibi-volleyball
+  requires: []
+- name: My Personal Angel
+  ids:
+  - steam:664570
+  requires: []
+- name: Senpai Teaches Me Japanese Part 1
+  ids:
+  - steam:1037330
+  requires: []
+- name: Lovely Heroines
+  ids:
+  - steam:1170290
+  requires: []

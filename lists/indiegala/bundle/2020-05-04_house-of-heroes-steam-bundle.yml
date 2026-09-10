@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: House of Heroes Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8749/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8749/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8749/source.json
+games:
+- name: 'Animals Memory: Dogs'
+  ids:
+  - steam:778340
+  requires: []
+- name: Fantasy of Eden
+  ids:
+  - steam:735010
+  requires: []
+- name: Who Is This Man
+  ids:
+  - steam:1008510
+  requires: []
+- name: Satan's Castle
+  ids:
+  - steam:805720
+  requires: []
+- name: 'Animals Memory: Cats'
+  ids:
+  - steam:799800
+  requires: []
+- name: Thing-in-Itself
+  ids:
+  - steam:569340
+  requires: []
+- name: Traffix
+  ids:
+  - steam:1102580
+  requires: []
+- name: 'Hero Generations: ReGen'
+  ids:
+  - steam:443260
+  requires: []

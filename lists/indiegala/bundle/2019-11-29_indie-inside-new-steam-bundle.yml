@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Indie Inside Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8165/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8165/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8165/source.json
+games:
+- name: SoTo
+  ids:
+  - steam:717960
+  requires: []
+- name: Super Demon Boy
+  ids:
+  - steam:1118700
+  requires: []
+- name: Blood Harvest 3 Soundtrack
+  ids:
+  - steam:927900
+  requires: []
+- name: Blood Harvest 3
+  ids:
+  - steam:851180
+  requires: []
+- name: Ded Inside
+  ids:
+  - steam:1120240
+  requires: []
+- name: VVVVV
+  ids:
+  - steam:1153250
+  requires: []
+- name: D3D INSIDE
+  ids:
+  - steam:1181330
+  requires: []
+- name: Paul's World
+  ids:
+  - steam:1160880
+  requires: []
+- name: 'VVVVV: Soundtrack'
+  ids:
+  - unresolved:source:isthereanydeal:8165:vvvvv-soundtrack
+  requires: []

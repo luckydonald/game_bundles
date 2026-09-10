@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Match III Bundle 1 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7618/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7618/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7618/source.json
+games:
+- name: 'The Chronicles of King Arthur: Episode 2 - Knights of the Round Table'
+  ids:
+  - steam:1065680
+  requires: []
+- name: 'The Trials of Olympus III: King of the World'
+  ids:
+  - steam:1043380
+  requires: []
+- name: The Adventures of Jason and the Argonauts
+  ids:
+  - steam:1022840
+  requires: []
+- name: The Adventures of Perseus
+  ids:
+  - steam:1031590
+  requires: []
+- name: The Voice from Heaven
+  ids:
+  - steam:1013350
+  requires: []
+- name: Eleven Islands
+  ids:
+  - steam:1030530
+  requires: []
+- name: 'The Trials of Olympus II: Wrath of the Gods'
+  ids:
+  - steam:1008610
+  requires: []
+- name: Mundus - Impossible Universe 2
+  ids:
+  - unresolved:source:isthereanydeal:7618:mundus-impossible-universe-2
+  requires: []
+- name: 'The Far Kingdoms: Elements'
+  ids:
+  - steam:1002280
+  requires: []

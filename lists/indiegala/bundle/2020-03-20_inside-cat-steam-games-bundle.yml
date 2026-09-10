@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Inside Cat Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8559/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8559/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8559/source.json
+games:
+- name: Brewer
+  ids:
+  - steam:1064200
+  requires: []
+- name: Make War
+  ids:
+  - steam:1120210
+  requires: []
+- name: StrikeForce Kitty
+  ids:
+  - steam:745330
+  requires: []
+- name: Return Of The Zombie King
+  ids:
+  - steam:1152020
+  requires: []
+- name: Death in the Water
+  ids:
+  - steam:770490
+  requires: []
+- name: Space Redemption
+  ids:
+  - steam:1250960
+  requires: []
