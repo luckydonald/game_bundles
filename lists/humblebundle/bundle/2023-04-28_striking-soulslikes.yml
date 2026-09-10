@@ -4,6 +4,8 @@ name: Striking Soulslikes Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 3-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Blade of Darkness
   ids:
   - steam:1710170
   requires: []
   tiers:
+  - 2
   - 4
 - name: Mortal Shell
   ids:
   - steam:1110910
   requires: []
   tiers:
+  - 2
   - 4
 - name: Aeterna Noctis
   ids:

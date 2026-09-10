@@ -4,6 +4,8 @@ name: Humble CI Games Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Sniper: Ghost Warrior Gold Edition'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Chronicles of Mystery: The Scorpio Ritual'
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Sniper: Ghost Warrior 2 Collector''s Edition'
   ids:
   - unresolved:source:isthereanydeal:6311:sniper-ghost-warrior-2-collectors-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Sniper: Ghost Warrior 2: World Hunter Pack'
   ids:
   - steam:232647
   requires: []
   tiers:
+  - 2
   - 3
 - name: Lords of the Fallen™ (2014) Game of the Year Edition
   ids:
   - unresolved:source:isthereanydeal:6311:lords-of-the-fallen-2014-game-of-the-year-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sniper Ghost Warrior 3 - Multiplayer Map Pack
   ids:

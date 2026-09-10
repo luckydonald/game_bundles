@@ -4,6 +4,8 @@ name: Curve Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Stealth Bastard Deluxe
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Velocity®Ultra
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Stikbold! A Dodgeball Adventure
   ids:
   - steam:429330
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Stealth Inc. 2: A Game of Clones'
   ids:
   - steam:329380
   requires: []
   tiers:
+  - 2
   - 3
 - name: Pumped BMX +
   ids:
   - steam:392070
   requires: []
   tiers:
+  - 2
   - 3
 - name: Porcunipine
   ids:
   - steam:352620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Qora
   ids:
   - steam:304460
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hue
   ids:

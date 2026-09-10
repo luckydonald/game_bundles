@@ -4,6 +4,8 @@ name: 'Black Friday Score: Walking Dead & More Bundle'
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 7-item-bundle
 - rank: 5
   name: entire-15-item-bundle
 references:
@@ -20,42 +22,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: 'The Walking Dead: 400 Days'
   ids:
   - steam:207620
   requires: []
   tiers:
+  - 2
   - 5
 - name: The Walking Dead Season 2
   ids:
   - unresolved:source:isthereanydeal:13650:the-walking-dead-season-2
   requires: []
   tiers:
+  - 2
   - 5
 - name: The Big Con
   ids:
   - steam:1139280
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Thief of Thieves: Season One'
   ids:
   - steam:635390
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Rainbow Billy: The Curse of the Leviathan'
   ids:
   - steam:1106830
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Renfield: Bring Your Own Blood'
   ids:
   - steam:2354600
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'The Walking Dead: The Final Season'
   ids:

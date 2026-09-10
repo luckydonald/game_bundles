@@ -4,6 +4,8 @@ name: Have a Warhammer Day Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer 40,000: Dakka Squadron - Flyboyz Edition'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer 40,000: Inquisitor - Martyr'
   ids:
   - steam:527430
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Shootas, Blood & Teef'
   ids:
   - steam:1324530
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Battlesector'
   ids:

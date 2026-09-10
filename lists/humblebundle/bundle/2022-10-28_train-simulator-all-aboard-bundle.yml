@@ -4,6 +4,8 @@ name: Train Simulator All Aboard! Bundle
 tiers:
 - rank: 1
   name: 6-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-19-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DB BR 648 Loco Add-On
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: Class 170 ‘Turbostar'' DMU Add-On'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Thompson Class B1 Add-On
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Peninsula Corridor: San Francisco - San Jose'
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Train Simulator Classic
   ids:
@@ -55,18 +62,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Train Simulator: DB BR 605 ICE TD Add-On'
   ids:
   - steam:277755
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Amtrak E8 Loco Add-On'
   ids:
   - steam:678002
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Mittenwaldbahn: Garmisch-Partenkirchen - Innsbruck Route
     Add-On'
@@ -74,12 +84,14 @@ games:
   - steam:448192
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Fife Circle Line: Edinburgh - Dunfermline Route Add-On'
   ids:
   - steam:1211470
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Train Simulator: Hudson Line: New York - Croton-Harmon Route Add-On'
   ids:

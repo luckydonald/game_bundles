@@ -4,6 +4,8 @@ name: The Mighty Monday GameBundle 4
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.40
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: IACTURA
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Dreamscapes: Nightmare''s Heir - Premium Edition'
   ids:
   - steam:353110
   requires: []
   tiers:
+  - 2
   - 3
 - name: Grey phobia
   ids:
   - steam:465050
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Shadow Ninja: endless runner'
   ids:
   - steam:420050
   requires: []
   tiers:
+  - 2
   - 3
 - name: Veilia
   ids:

@@ -4,6 +4,8 @@ name: Humble Clickteam Fusion Bundle
 tiers:
 - rank: 1
   name: Pay $1 or more
+- rank: 2
+  name: Pay $7 or more to also unlock
 - rank: 3
   name: Pay $15 or more to also unlock
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Plantera
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tick Tock Isle
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Oniken: Unstoppable Edition'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Clickteam Fusion 2.5
   ids:
@@ -48,36 +54,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: UWP Exporter for Clickteam Fusion 2.5
   ids:
   - unresolved:source:isthereanydeal:4126:uwp-exporter-for-clickteam-fusion-2-5
   requires: []
   tiers:
+  - 2
   - 3
 - name: Quadle
   ids:
   - unresolved:source:isthereanydeal:4126:quadle
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Yawhg
   ids:
   - steam:269030
   requires: []
   tiers:
+  - 2
   - 3
 - name: Five Nights at Freddy's 3
   ids:
   - steam:354140
   requires: []
   tiers:
+  - 2
   - 3
 - name: room13
   ids:
   - steam:314590
   requires: []
   tiers:
+  - 2
   - 3
 - name: iOS Exporter for Clickteam Fusion 2.5
   ids:

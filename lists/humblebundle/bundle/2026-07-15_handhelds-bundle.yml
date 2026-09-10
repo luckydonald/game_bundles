@@ -4,6 +4,8 @@ name: Humble Handhelds Bundle
 tiers:
 - rank: 1
   name: 2 Item Bundle
+- rank: 2
+  name: 4 Item Bundle
 - rank: 3
   name: Entire 7 Item Bundle
 references:
@@ -21,6 +23,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Children of Morta: Complete Edition'
   ids:
@@ -29,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Nova Drift
   ids:
@@ -36,6 +40,7 @@ games:
   - isthereanydeal:nova-drift
   requires: []
   tiers:
+  - 2
   - 3
 - name: Manifold Garden
   ids:
@@ -43,6 +48,7 @@ games:
   - isthereanydeal:manifold-garden
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sable
   ids:

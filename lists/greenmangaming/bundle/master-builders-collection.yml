@@ -4,6 +4,8 @@ name: MASTER BUILDERS COLLECTION
 tiers:
 - rank: 1
   name: Timber
+- rank: 2
+  name: Stone
 - rank: 4
   name: Gold
 references:
@@ -22,18 +24,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Settlement Survival
   ids:
   - steam:1509510
   requires: []
   tiers:
+  - 2
   - 4
 - name: SteamWorld Build
   ids:
   - steam:2134770
   requires: []
   tiers:
+  - 2
   - 4
 - name: Two Point Campus
   ids:

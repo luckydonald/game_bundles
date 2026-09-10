@@ -4,6 +4,8 @@ name: Let's Get Tactical - Kalypso Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 8-item-bundle
 - rank: 4
   name: entire-26-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Sudden Strike Gold
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Sudden Strike 3
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Dungeons: Into the Dark'
   ids:
   - steam:57655
   requires: []
   tiers:
+  - 2
   - 4
 - name: Dungeons
   ids:
   - steam:57650
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Commandos: Behind Enemy Lines'
   ids:
   - steam:6800
   requires: []
   tiers:
+  - 2
   - 4
 - name: Dungeons - The Dark Lord
   ids:
   - steam:200550
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Dungeons: Map Pack'
   ids:
   - steam:57656
   requires: []
   tiers:
+  - 2
   - 4
 - name: Commandos 2 - HD Remaster
   ids:

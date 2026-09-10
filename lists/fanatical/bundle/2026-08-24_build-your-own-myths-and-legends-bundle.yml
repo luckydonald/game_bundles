@@ -5,6 +5,9 @@ tiers:
 - rank: 1
   name: pick 3
   pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -25,6 +28,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ancestors Legacy - Complete Edition
   ids:
@@ -33,6 +37,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Omen of Sorrow
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'The Lord of the Rings™: Gollum™'
   ids:
@@ -49,6 +55,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Achilles: Legends Untold'
   ids:
@@ -57,6 +64,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Soulstice: Deluxe Edition'
   ids:
@@ -65,6 +73,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hammerwatch II
   ids:
@@ -73,6 +82,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Deliverance & Reign
   ids:
@@ -81,6 +91,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Decline's Drops
   ids:
@@ -89,6 +100,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ludus Mortis
   ids:
@@ -97,6 +109,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Death Relives
   ids:
@@ -105,6 +118,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Black Dragon Mage
   ids:
@@ -113,6 +127,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hammerwatch Anniversary Edition
   ids:
@@ -121,6 +136,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Haunted Lands
   ids:
@@ -129,6 +145,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Achilles: Survivor'
   ids:
@@ -137,6 +154,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Villages & Dungeons
   ids:
@@ -145,6 +163,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Auridia
   ids:
@@ -153,6 +172,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Dark Fairy Tale: Dreamland Survivors'
   ids:
@@ -161,4 +181,5 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3

@@ -4,6 +4,8 @@ name: NRG Reloaded
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'AI: Rampage'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Invasion: Brain Craving'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: So Many Cubes
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: State of Anarchy
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dreamlord
   ids:
@@ -55,6 +62,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Incitement 3
   ids:
@@ -62,48 +70,56 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Atonement 2: Ruptured by Despair'
   ids:
   - steam:533820
   requires: []
   tiers:
+  - 2
   - 3
 - name: purgatory
   ids:
   - steam:473470
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Desolate Wastes: Vendor Chronicles'
   ids:
   - steam:563120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Fall of Civilization
   ids:
   - unresolved:source:isthereanydeal:4845:fall-of-civilization
   requires: []
   tiers:
+  - 2
   - 3
 - name: Project Starship
   ids:
   - steam:454890
   requires: []
   tiers:
+  - 2
   - 3
 - name: Broken Dreams
   ids:
   - steam:444480
   requires: []
   tiers:
+  - 2
   - 3
 - name: Reset 1-1
   ids:
   - steam:491650
   requires: []
   tiers:
+  - 2
   - 3
 - name: New Reality Studio Pack
   ids:

@@ -4,6 +4,8 @@ name: Humble Square Enix Collective Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Goetia
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Deadbeat Heroes
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Forgotton Anne Collector's Edition
   ids:
   - unresolved:source:isthereanydeal:7308:forgotton-anne-collectors-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Black The Fall
   ids:
   - steam:308060
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Turing Test
   ids:
   - steam:499520
   requires: []
   tiers:
+  - 2
   - 3
 - name: Children Of Zodiarcs
   ids:

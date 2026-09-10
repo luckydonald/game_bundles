@@ -4,6 +4,8 @@ name: Build, Rule, Conquer Bundle
 tiers:
 - rank: 1
   name: Kingdoms
+- rank: 2
+  name: Dynasties
 - rank: 3
   name: Empires
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Mechabellum
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer 40,000: Chaos Gate - Daemonhunters'
   ids:
   - steam:1611910
   requires: []
   tiers:
+  - 2
   - 3
 - name: Knights of the Crusades
   ids:
   - steam:3440120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Railway Empire - Complete Collection
   ids:

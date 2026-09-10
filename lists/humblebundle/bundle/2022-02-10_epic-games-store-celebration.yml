@@ -4,6 +4,8 @@ name: Epic Games Store Celebration Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: WHAT THE GOLF?
   ids:
   - steam:785790
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Last Campfire
   ids:
   - steam:990630
   requires: []
   tiers:
+  - 2
   - 3
 - name: SCARF
   ids:

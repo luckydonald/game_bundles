@@ -4,6 +4,8 @@ name: Gold Medal Games Summer 2024 Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Session: Skate Sim'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: PGA Tour 2K23
   ids:
   - unresolved:source:isthereanydeal:14264:pga-tour-2k23
   requires: []
   tiers:
+  - 2
   - 3
 - name: NBA 2K24 Kobe Bryant Edition
   ids:
   - unresolved:source:isthereanydeal:14264:nba-2k24-kobe-bryant-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Skater XL - The Ultimate Skateboarding Game
   ids:

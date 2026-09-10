@@ -4,6 +4,8 @@ name: Thy Rewards
 tiers:
 - rank: 1
   name: 10 Bundles Purchased
+- rank: 2
+  name: 15 Bundles Purchased
 - rank: 5
   name: 30 Bundles Purchased
 references:
@@ -20,12 +22,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Fireball
   ids:
   - steam:3017070
   requires: []
   tiers:
+  - 2
   - 5
 - name: Corril Slayer
   ids:

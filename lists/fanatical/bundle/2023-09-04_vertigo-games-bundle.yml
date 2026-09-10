@@ -4,6 +4,8 @@ name: Vertigo Games Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Traffic Jams
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Arizona Sunshine
   ids:
   - unresolved:source:isthereanydeal:13452:arizona-sunshine
   requires: []
   tiers:
+  - 2
   - 3
 - name: Arizona Sunshine - Deluxe Upgrade
   ids:
   - steam:1325790
   requires: []
   tiers:
+  - 2
   - 3
 - name: After the Fall
   ids:

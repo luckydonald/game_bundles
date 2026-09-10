@@ -4,6 +4,8 @@ name: AppGameKit Bundle 2
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AppGameKit - 3D Asset Pack
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AppGameKit Sound Library
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AppGameKit - Shader Pack
   ids:
@@ -41,30 +46,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AppGameKit - Giant Asset Pack 1
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-giant-asset-pack-1
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit - Giant Asset Pack 2
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-giant-asset-pack-2
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit VR
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-vr
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit Classic
   ids:
   - unresolved:source:isthereanydeal:10708:appgamekit-classic
   requires: []
   tiers:
+  - 2
   - 3
 - name: AppGameKit Studio
   ids:

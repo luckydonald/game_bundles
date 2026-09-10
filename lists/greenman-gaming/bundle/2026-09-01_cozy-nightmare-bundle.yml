@@ -4,6 +4,8 @@ name: Cozy Nightmare Bundle
 tiers:
 - rank: 1
   name: Buried Lore
+- rank: 2
+  name: Dark Secrets
 - rank: 3
   name: Forbidden Knowledge
 references:
@@ -23,6 +25,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Graveyard Keeper
   ids:
@@ -31,6 +34,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Cultist Simulator
   ids:
@@ -38,6 +42,7 @@ games:
   - isthereanydeal:cultist-simulator
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hello Neighbor 2
   ids:
@@ -45,6 +50,7 @@ games:
   - isthereanydeal:hello-neighbor-2
   requires: []
   tiers:
+  - 2
   - 3
 - name: BOOK OF HOURS
   ids:

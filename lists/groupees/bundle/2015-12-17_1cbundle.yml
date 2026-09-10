@@ -4,6 +4,8 @@ name: 1C End Year Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A.I.M. 2 - Clan Wars
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'UFO: Aftermath'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Real Warfare: 1242'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Parkan 2
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: RignRoll
   ids:
@@ -55,42 +62,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Cuban Missile Crisis + Ice Crusade Pack
   ids:
   - unresolved:source:isthereanydeal:2864:cuban-missile-crisis-and-ice-crusade-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: Death to Spies
   ids:
   - steam:9800
   requires: []
   tiers:
+  - 2
   - 3
 - name: Elven Legacy
   ids:
   - steam:25850
   requires: []
   tiers:
+  - 2
   - 3
 - name: El Matador
   ids:
   - steam:289280
   requires: []
   tiers:
+  - 2
   - 3
 - name: NecroVisioN Lost Company
   ids:
   - steam:46250
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Theatre of War 2: Africa 1943'
   ids:
   - steam:46340
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Tomorrow War
   ids:

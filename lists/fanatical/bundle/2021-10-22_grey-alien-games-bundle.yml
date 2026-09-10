@@ -4,6 +4,8 @@ name: Grey Alien Games Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Spring Bonus
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Holiday Bonus GOLD
   ids:
   - steam:572760
   requires: []
   tiers:
+  - 2
   - 3
 - name: Spooky Bonus
   ids:
   - steam:388450
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jewel Match Solitaire L'amour
   ids:
   - steam:1009700
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jewel Match Twilight Solitaire
   ids:
   - steam:918670
   requires: []
   tiers:
+  - 2
   - 3
 - name: Regency Solitaire
   ids:

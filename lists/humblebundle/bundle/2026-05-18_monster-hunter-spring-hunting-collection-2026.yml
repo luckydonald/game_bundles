@@ -4,6 +4,8 @@ name: 'Monster Hunter: Spring Hunting Collection 2026'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 5
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: Monster Hunter Stories
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: 'Monster Hunter: World - Deluxe Kit'
   ids:
   - steam:891730
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Monster Hunter: World'
   ids:
   - steam:582010
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Monster Hunter World: Iceborne'
   ids:

@@ -4,6 +4,8 @@ name: Abyss Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Main Assembly
   ids:
@@ -27,36 +30,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Oddworld: Stranger''s Wrath HD'
   ids:
   - steam:15750
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Gladius - Relics of War'
   ids:
   - steam:489630
   requires: []
   tiers:
+  - 2
   - 3
 - name: Fling to the Finish
   ids:
   - steam:1054430
   requires: []
   tiers:
+  - 2
   - 3
 - name: Verdun
   ids:
   - steam:242860
   requires: []
   tiers:
+  - 2
   - 3
 - name: Warpips
   ids:
   - steam:1291010
   requires: []
   tiers:
+  - 2
   - 3
 - name: Barotrauma
   ids:

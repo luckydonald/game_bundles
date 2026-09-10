@@ -4,6 +4,8 @@ name: The Leadership Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Grand Ages Rome
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Imperium Romanum: Gold Edition'
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tropico 3
   ids:
   - steam:23490
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jagged Alliance - Back in Action
   ids:
   - steam:57740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tropico 4
   ids:

@@ -4,6 +4,8 @@ name: RPG Maker Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Last Word
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Edolie
   ids:
@@ -34,54 +38,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: RPG Maker VX Ace
   ids:
   - steam:220700
   requires: []
   tiers:
+  - 2
   - 3
 - name: RPG Maker VX Ace - Modern Day Tiles Resource Pack
   ids:
   - steam:229752
   requires: []
   tiers:
+  - 2
   - 3
 - name: RPG Maker VX Ace - Old School Modern 2 Resource Pack
   ids:
   - unresolved:source:isthereanydeal:11123:rpg-maker-vx-ace-old-school-modern-2-resource-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'RPG Maker: Zombie Survival Graphic Pack'
   ids:
   - unresolved:source:isthereanydeal:11123:rpg-maker-zombie-survival-graphic-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: Game Character Hub
   ids:
   - steam:292230
   requires: []
   tiers:
+  - 2
   - 3
 - name: RPG Maker VX Ace - DS+ Resource Pack
   ids:
   - steam:258743
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'RPG Maker VX Ace - POP!: Horror City'
   ids:
   - steam:297644
   requires: []
   tiers:
+  - 2
   - 3
 - name: RPG Maker VX Ace - Always Sometimes Monsters Asset Pack
   ids:
   - steam:321100
   requires: []
   tiers:
+  - 2
   - 3
 - name: RPG Maker VX Ace - Winter Wonderland Tiles
   ids:

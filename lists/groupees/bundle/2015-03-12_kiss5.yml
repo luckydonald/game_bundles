@@ -4,6 +4,8 @@ name: Kiss Bundle 5
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gold Rush! - Classic
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Fist of Jesus
   ids:
   - unresolved:source:isthereanydeal:1693:fist-of-jesus
   requires: []
   tiers:
+  - 2
   - 3
 - name: DarkEnd
   ids:
   - steam:292370
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Z: The Game'
   ids:
   - steam:275530
   requires: []
   tiers:
+  - 2
   - 3
 - name: Blackbay Asylum
   ids:

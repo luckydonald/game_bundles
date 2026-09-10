@@ -4,6 +4,8 @@ name: Be Mine 5
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: NEO Scavenger
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'King''s Bounty: The Legend'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Kung Fu Strike: The Warrior''s Rise'
   ids:
@@ -41,24 +46,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Oddworld: Stranger''s Wrath HD'
   ids:
   - steam:15750
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tropico 3
   ids:
   - steam:23490
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dreamscape
   ids:
   - steam:271990
   requires: []
   tiers:
+  - 2
   - 3
 - name: Earth 2150 Trilogy
   ids:

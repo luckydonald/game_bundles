@@ -4,6 +4,8 @@ name: 'Dungeon Defenders II: Complete DLC Chest Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dungeon Defenders II - Adventurer's Arsenal Pack
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dungeon Defenders II - Bundle of the Beast
   ids:
   - steam:726190
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeon Defenders II - Imperial Cache Pack
   ids:
   - steam:2950520
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeon Defenders II - Treasure Trove Pack
   ids:
   - steam:2950510
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeon Defenders II - Ethereal Trove Pack
   ids:

@@ -4,6 +4,8 @@ name: Colossus Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: SOLD OUT - Tier Removed From Bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Chaos Reborn
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'S.T.A.L.K.E.R.: Clear Sky'
   ids:
@@ -34,54 +38,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Epistory - Typing Chronicles
   ids:
   - steam:398850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Heliborne
   ids:
   - unresolved:source:isthereanydeal:7039:heliborne
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ash of Gods: Redemption'
   ids:
   - steam:691690
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Last Leviathan
   ids:
   - unresolved:source:isthereanydeal:7039:the-last-leviathan
   requires: []
   tiers:
+  - 2
   - 3
 - name: Moon Hunters
   ids:
   - steam:320040
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 2
   - 3
 - name: Invisigun Reloaded
   ids:
   - steam:375750
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Town Of Light
   ids:
   - steam:433100
   requires: []
   tiers:
+  - 2
   - 3
 - name: Mafia III
   ids:

@@ -4,6 +4,8 @@ name: Dread and Dark Fantasies RPG Collection
 tiers:
 - rank: 1
   name: 2 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -33,6 +35,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Steelrising - Discus Chain
   ids:
@@ -43,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Steelrising - Cagliostro's Secrets
   ids:
@@ -53,6 +57,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Axis Unseen
   ids:
@@ -61,6 +66,31 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: Darksiders Genesis
+  ids:
+  - steam:710920
+  - isthereanydeal:darksiders-genesis
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Dread Delusion
+  ids:
+  - steam:1574240
+  - isthereanydeal:dread-delusion
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Ashen
+  ids:
+  - steam:649950
+  - isthereanydeal:ashen
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: 'Pillars of Eternity II: Deadfire'
   ids:
@@ -91,27 +121,6 @@ games:
   ids:
   - steam:1206410
   - isthereanydeal:kristala
-  requires: []
-  tiers:
-  - 3
-- name: Darksiders Genesis
-  ids:
-  - steam:710920
-  - isthereanydeal:darksiders-genesis
-  requires: []
-  tiers:
-  - 3
-- name: Dread Delusion
-  ids:
-  - steam:1574240
-  - isthereanydeal:dread-delusion
-  requires: []
-  tiers:
-  - 3
-- name: Ashen
-  ids:
-  - steam:649950
-  - isthereanydeal:ashen
   requires: []
   tiers:
   - 3

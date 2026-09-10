@@ -4,6 +4,8 @@ name: Survive or Die Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dead In Vinland
   ids:
   - steam:573120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Die Young
   ids:
   - steam:433170
   requires: []
   tiers:
+  - 2
   - 3
 - name: Empyrion - Galactic Survival
   ids:
   - steam:383120
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Wild Eight
   ids:

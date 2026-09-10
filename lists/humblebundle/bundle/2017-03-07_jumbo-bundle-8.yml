@@ -4,6 +4,8 @@ name: Humble Jumbo Bundle 8
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Valhalla Hills
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Legends of Eisenwald
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:
   - steam:368080
   requires: []
   tiers:
+  - 2
   - 3
 - name: Void Destroyer
   ids:
   - steam:259660
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Jotun: Valhalla Edition'
   ids:
   - steam:323580
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
   - steam:235540
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Interactive Adventures of Dog Mendonça & Pizzaboy®
   ids:
   - steam:330420
   requires: []
   tiers:
+  - 2
   - 3
 - name: Turmoil
   ids:
   - steam:361280
   requires: []
   tiers:
+  - 2
   - 3
 - name: Verdun
   ids:

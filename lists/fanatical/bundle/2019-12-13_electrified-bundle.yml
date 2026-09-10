@@ -4,6 +4,8 @@ name: Electrified Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Boo! Greedy Kid
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Next Penelope
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Satellite Rush
   ids:
@@ -41,42 +46,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Aurion, legacy of the Kori-Odan
   ids:
   - steam:368080
   requires: []
   tiers:
+  - 2
   - 3
 - name: 2Dark
   ids:
   - steam:435100
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Another Lost Phone: Laura''s Story'
   ids:
   - steam:689910
   requires: []
   tiers:
+  - 2
   - 3
 - name: Impulsion
   ids:
   - steam:811270
   requires: []
   tiers:
+  - 2
   - 3
 - name: BAFL - Brakes Are For Losers
   ids:
   - steam:573070
   requires: []
   tiers:
+  - 2
   - 3
 - name: White Night
   ids:
   - steam:301560
   requires: []
   tiers:
+  - 2
   - 3
 - name: Wurm Unlimited
   ids:

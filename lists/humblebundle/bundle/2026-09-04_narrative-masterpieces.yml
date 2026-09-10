@@ -4,6 +4,8 @@ name: Narrative Masterpieces
 tiers:
 - rank: 1
   name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
 - rank: 3
   name: Entire 12 Item Bundle
 references:
@@ -30,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: We. The Revolution
   ids:
@@ -38,6 +41,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Crowns and Pawns: Kingdom of Deceit'
   ids:
@@ -46,6 +50,31 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: The Pale Beyond
+  ids:
+  - steam:1266030
+  - isthereanydeal:the-pale-beyond
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: SUNLESS SKIES
+  ids:
+  - steam:596970
+  - isthereanydeal:sunless-skies-sovereign-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Eliza
+  ids:
+  - steam:716500
+  - isthereanydeal:eliza
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: IMMORTALITY
   ids:
@@ -87,27 +116,6 @@ games:
   ids:
   - steam:1687960
   - isthereanydeal:the-wreck
-  requires: []
-  tiers:
-  - 3
-- name: The Pale Beyond
-  ids:
-  - steam:1266030
-  - isthereanydeal:the-pale-beyond
-  requires: []
-  tiers:
-  - 3
-- name: SUNLESS SKIES
-  ids:
-  - steam:596970
-  - isthereanydeal:sunless-skies-sovereign-edition
-  requires: []
-  tiers:
-  - 3
-- name: Eliza
-  ids:
-  - steam:716500
-  - isthereanydeal:eliza
   requires: []
   tiers:
   - 3

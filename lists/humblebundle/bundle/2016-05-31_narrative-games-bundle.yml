@@ -4,6 +4,8 @@ name: Humble Narrative Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Her Story
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Cibele
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Broken Age
   ids:
   - steam:232790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sorcery! Parts 1 & 2
   ids:
   - steam:411000
   requires: []
   tiers:
+  - 2
   - 3
 - name: 80 days
   ids:
   - steam:381780
   requires: []
   tiers:
+  - 2
   - 3
 - name: Shadowrun Hong Kong - Extended Edition
   ids:

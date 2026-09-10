@@ -4,6 +4,8 @@ name: 'Ticket to Ride: World Tour Collection'
 tiers:
 - rank: 1
   name: All Aboard
+- rank: 2
+  name: Express
 - rank: 3
   name: First Class
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - USA 1910 Ticket Pack
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride® - Winter Wonderland bundle
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Ticket to Ride: San Francisco City Expansion'
   ids:
@@ -41,24 +46,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - Nordic Expansion
   ids:
   - steam:2856300
   requires: []
   tiers:
+  - 2
   - 3
 - name: Ticket to Ride® - Switzerland Expansion
   ids:
   - steam:3366230
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ticket to Ride: Europe Expansion + Europa 1912 Ticket Pack'
   ids:
   - steam:2608220
   requires: []
   tiers:
+  - 2
   - 3
 - name: Ticket to Ride - India Expansion
   ids:

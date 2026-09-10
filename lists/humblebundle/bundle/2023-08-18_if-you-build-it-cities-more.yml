@@ -4,6 +4,8 @@ name: 'If You Build It: Cities & More Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Frozenheim
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Tenants
   ids:
   - steam:1009560
   requires: []
   tiers:
+  - 2
   - 3
 - name: Airborne Kingdom
   ids:
   - steam:982290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Pan'orama
   ids:
   - steam:1730250
   requires: []
   tiers:
+  - 2
   - 3
 - name: Prehistoric Kingdom
   ids:

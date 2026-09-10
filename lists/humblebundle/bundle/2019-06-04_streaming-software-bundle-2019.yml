@@ -4,6 +4,8 @@ name: 'Humble Software Bundle: Streaming 2019'
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Darwin Project: Hunter Pack'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: XSplit VCAM
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: FaceRig
   ids:
   - unresolved:source:isthereanydeal:7467:facerig
   requires: []
   tiers:
+  - 2
   - 3
 - name: Aaero
   ids:
   - steam:499890
   requires: []
   tiers:
+  - 2
   - 3
 - name: Action! - Gameplay Recording & Streaming
   ids:

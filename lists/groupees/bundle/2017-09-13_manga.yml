@@ -4,6 +4,8 @@ name: eigoManga
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Vanguard Princess Artwork and Soundtrack
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DEMIAN
   ids:
   - unresolved:source:isthereanydeal:5456:demian
   requires: []
   tiers:
+  - 2
   - 3
 - name: Vanguard Princess Lilith
   ids:
   - steam:329150
   requires: []
   tiers:
+  - 2
   - 3
 - name: Vanguard Princess Hilda Rize
   ids:
   - steam:311500
   requires: []
   tiers:
+  - 2
   - 3
 - name: Padak
   ids:

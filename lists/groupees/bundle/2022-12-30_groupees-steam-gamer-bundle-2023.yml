@@ -4,6 +4,8 @@ name: Groupees Steam Gamer Bundle 2023
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Acquitted
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Airport Madness 3D
   ids:
   - steam:445770
   requires: []
   tiers:
+  - 2
   - 3
 - name: Claire's Cruisin' Cafe
   ids:
   - steam:1442070
   requires: []
   tiers:
+  - 2
   - 3
 - name: Airport Madness 4
   ids:

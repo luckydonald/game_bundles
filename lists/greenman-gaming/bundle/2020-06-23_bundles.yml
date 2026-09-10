@@ -4,6 +4,8 @@ name: Green Man Gaming Packs 1-16
 tiers:
 - rank: 1
   name: Pack 01 (Each Pack Sold Separately)
+- rank: 2
+  name: Pack 02 (Each Pack Sold Separately)
 - rank: 16
   name: Pack 16 (Each Pack Sold Separately)
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 16
 - name: Canyon Capers
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 16
 - name: Biozone
   ids:
   - steam:19080
   requires: []
   tiers:
+  - 2
   - 16
 - name: Huntsman:The Orphanage
   ids:
   - steam:246740
   requires: []
   tiers:
+  - 2
   - 16
 - name: Rocket Knight
   ids:

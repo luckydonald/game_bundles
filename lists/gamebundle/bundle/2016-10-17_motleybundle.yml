@@ -4,6 +4,8 @@ name: The Motley GameBundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.20
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Squirbs
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Witch''s Pranks: Frog''s Fortune Collector''s Edition'
   ids:
   - steam:342630
   requires: []
   tiers:
+  - 2
   - 3
 - name: 35MM
   ids:
   - steam:466500
   requires: []
   tiers:
+  - 2
   - 3
 - name: Death Stair
   ids:

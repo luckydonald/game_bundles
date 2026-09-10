@@ -4,6 +4,8 @@ name: Kingdom Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Rad Rodgers Radical Edition
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Kill to Collect
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Giana Sisters: Twisted Dreams - Rise of the Owlverlord'
   ids:
   - steam:246960
   requires: []
   tiers:
+  - 2
   - 3
 - name: SPITLINGS
   ids:
   - steam:1002000
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sine Mora EX
   ids:
   - steam:606730
   requires: []
   tiers:
+  - 2
   - 3
 - name: Bang Bang Racing
   ids:
   - steam:207020
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Giana Sisters: Twisted Dreams'
   ids:
   - steam:223220
   requires: []
   tiers:
+  - 2
   - 3
 - name: SkyDrift
   ids:
   - steam:91100
   requires: []
   tiers:
+  - 2
   - 3
 - name: Aces of the Luftwaffe - Squadron
   ids:

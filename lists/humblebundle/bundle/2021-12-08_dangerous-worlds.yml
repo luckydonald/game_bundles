@@ -4,6 +4,8 @@ name: Dangerous Worlds Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Among Us
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Kingdom: Two Crowns'
   ids:
   - steam:701160
   requires: []
   tiers:
+  - 2
   - 3
 - name: Generation Zero®
   ids:
   - steam:704270
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEMNIS GATE
   ids:

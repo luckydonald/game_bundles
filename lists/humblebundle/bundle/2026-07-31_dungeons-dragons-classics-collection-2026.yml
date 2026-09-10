@@ -4,6 +4,8 @@ name: 'Dungeons & Dragons: Classics Collection 2026'
 tiers:
 - rank: 1
   name: 7 Item Bundle
+- rank: 2
+  name: 13 Item Bundle
 - rank: 3
   name: Entire 17 Item Bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Al-Qadim: The Genie''s Curse'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Dungeons & Dragons - Stronghold: Kingdom Simulator'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DragonStrike
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DeathKeep
   ids:
@@ -48,6 +54,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: 'Dungeons & Dragons: Krynn Series'
+  ids:
+  - steam:1904610
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dungeons & Dragons: Dark Sun Series'
+  ids:
+  - steam:1904580
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dungeons & Dragons: Ravenloft Series'
+  ids:
+  - steam:1904560
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Fantasy Empires
+  ids:
+  - steam:2350530
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Spelljammer: Pirates of Realmspace'
+  ids:
+  - steam:2350550
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Silver Box Classics
+  ids:
+  - steam:2344020
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: 'Forgotten Realms: Demon Stone'
   ids:
@@ -70,42 +119,6 @@ games:
 - name: 'Forgotten Realms: The Archives - Collection Two'
   ids:
   - steam:1882280
-  requires: []
-  tiers:
-  - 3
-- name: 'Dungeons & Dragons: Krynn Series'
-  ids:
-  - steam:1904610
-  requires: []
-  tiers:
-  - 3
-- name: 'Dungeons & Dragons: Dark Sun Series'
-  ids:
-  - steam:1904580
-  requires: []
-  tiers:
-  - 3
-- name: 'Dungeons & Dragons: Ravenloft Series'
-  ids:
-  - steam:1904560
-  requires: []
-  tiers:
-  - 3
-- name: Fantasy Empires
-  ids:
-  - steam:2350530
-  requires: []
-  tiers:
-  - 3
-- name: 'Spelljammer: Pirates of Realmspace'
-  ids:
-  - steam:2350550
-  requires: []
-  tiers:
-  - 3
-- name: Silver Box Classics
-  ids:
-  - steam:2344020
   requires: []
   tiers:
   - 3

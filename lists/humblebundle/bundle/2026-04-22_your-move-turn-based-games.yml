@@ -4,6 +4,8 @@ name: 'Your Move: Turn Based Games Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Legends of Kingdom Rush
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Battle Chasers: Nightwar'
   ids:
   - steam:451020
   requires: []
   tiers:
+  - 2
   - 3
 - name: For The King II
   ids:
   - steam:1676840
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeons of Aether
   ids:
   - steam:1668290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Moonbreaker
   ids:

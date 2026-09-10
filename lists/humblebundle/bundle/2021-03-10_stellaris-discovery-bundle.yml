@@ -4,6 +4,8 @@ name: Humble Stellaris Discovery Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Stellaris Plantoids Species Pack
   ids:
   - steam:498870
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Stellaris: Leviathans Story Pack'
   ids:
   - steam:518910
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Stellaris: Utopia'
   ids:
   - unresolved:source:isthereanydeal:9823:stellaris-utopia
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Stellaris: Apocalypse'
   ids:

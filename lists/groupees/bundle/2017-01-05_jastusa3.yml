@@ -4,6 +4,8 @@ name: 'JAST USA Bundle #3'
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Kana ~ Little Sister
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Figures of Happiness
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Heart de Roommate
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Snow Drop
   ids:
@@ -48,18 +54,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Yumina the Ethereal
   ids:
   - unresolved:source:isthereanydeal:4581:yumina-the-ethereal
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Yukkuri Panic: Escalation'
   ids:
   - unresolved:source:isthereanydeal:4581:yukkuri-panic-escalation
   requires: []
   tiers:
+  - 2
   - 3
 - name: Kana ~ Okaeri
   ids:

@@ -4,6 +4,8 @@ name: Extra life
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Jazzpunk: Director''s Cut'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: How To Survive
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'How To Survive: Third Person Standalone'
   ids:
   - steam:360150
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Shadowgate: MacVenture Series'
   ids:
   - steam:343800
   requires: []
   tiers:
+  - 2
   - 3
 - name: Overlord II
   ids:
   - steam:12810
   requires: []
   tiers:
+  - 2
   - 3
 - name: Shadowgate
   ids:
   - steam:294440
   requires: []
   tiers:
+  - 2
   - 3
 - name: it came from space and ate our brains
   ids:
   - steam:342620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Secret Ponchos
   ids:

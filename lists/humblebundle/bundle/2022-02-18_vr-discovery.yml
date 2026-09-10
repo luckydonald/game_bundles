@@ -4,6 +4,8 @@ name: VR Discovery Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: Beat The Average
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tower Tag Soundtrack
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Red Matter
   ids:
   - steam:966680
   requires: []
   tiers:
+  - 2
   - 3
 - name: Trover Saves the Universe
   ids:
   - steam:1051200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Panoptic
   ids:
   - steam:541930
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cook-Out
   ids:
   - steam:1523720
   requires: []
   tiers:
+  - 2
   - 3
 - name: Synth Riders
   ids:

@@ -4,6 +4,8 @@ name: 'Built Differently: Builder Games'
 tiers:
 - rank: 1
   name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -30,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gourdlets
   ids:
@@ -38,6 +41,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: URBO
   ids:
@@ -46,6 +50,31 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: Per Aspera Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16484:per-aspera-deluxe-edition
+  - isthereanydeal:per-aspera-deluxe-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: SteamWorld Build
+  ids:
+  - steam:2134770
+  - isthereanydeal:steamworld-build
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Endzone 2: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16484:endzone-2-deluxe-edition
+  - isthereanydeal:endzone-2-deluxe-edition
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: 'Frostpunk: Game of the Year edition'
   ids:
@@ -72,27 +101,6 @@ games:
   ids:
   - steam:2821800
   - isthereanydeal:drill-core
-  requires: []
-  tiers:
-  - 3
-- name: Per Aspera Deluxe Edition
-  ids:
-  - unresolved:source:isthereanydeal:16484:per-aspera-deluxe-edition
-  - isthereanydeal:per-aspera-deluxe-edition
-  requires: []
-  tiers:
-  - 3
-- name: SteamWorld Build
-  ids:
-  - steam:2134770
-  - isthereanydeal:steamworld-build
-  requires: []
-  tiers:
-  - 3
-- name: 'Endzone 2: Deluxe Edition'
-  ids:
-  - unresolved:source:isthereanydeal:16484:endzone-2-deluxe-edition
-  - isthereanydeal:endzone-2-deluxe-edition
   requires: []
   tiers:
   - 3

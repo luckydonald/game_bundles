@@ -4,6 +4,8 @@ name: Big Brain Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'I am not a Monster: First Contact'
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Battle of Polytopia
   ids:
   - steam:874390
   requires: []
   tiers:
+  - 2
   - 3
 - name: 7 Billion Humans
   ids:
   - steam:792100
   requires: []
   tiers:
+  - 2
   - 3
 - name: 5D Chess With Multiverse Time Travel
   ids:
   - steam:1349230
   requires: []
   tiers:
+  - 2
   - 3
 - name: XCOM 2
   ids:
