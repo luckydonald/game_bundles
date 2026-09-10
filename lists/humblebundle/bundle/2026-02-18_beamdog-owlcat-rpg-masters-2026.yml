@@ -8,6 +8,8 @@ tiers:
   name: 6-item-bundle
 - rank: 3
   name: 8-item-bundle
+- rank: 4
+  name: 11-item-bundle
 - rank: 5
   name: entire-12-item-bundle
 references:
@@ -26,6 +28,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 5
 - name: 'Planescape: Torment: Enhanced Edition'
   ids:
@@ -35,6 +38,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 5
 - name: MythForce
   ids:
@@ -44,6 +48,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 5
 - name: 'Baldur''s Gate II: Enhanced Edition'
   ids:
@@ -52,6 +57,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 5
 - name: 'Pathfinder: Kingmaker - Enhanced Plus Edition'
   ids:
@@ -60,6 +66,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 5
 - name: 'Baldur''s Gate: Deluxe Edition'
   ids:
@@ -68,6 +75,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 5
 - name: 'Neverwinter Nights: Complete Adventures'
   ids:
@@ -75,6 +83,7 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 5
 - name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
   ids:
@@ -82,24 +91,28 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 5
 - name: 'Pathfinder: Kingmaker - Season Pass'
   ids:
   - unresolved:source:isthereanydeal:15885:pathfinder-kingmaker-season-pass
   requires: []
   tiers:
+  - 4
   - 5
 - name: 'Pathfinder: Wrath of the Righteous - Season Pass'
   ids:
   - steam:1694801
   requires: []
   tiers:
+  - 4
   - 5
 - name: 'Pathfinder: Wrath of the Righteous - Season Pass 2'
   ids:
   - steam:2145870
   requires: []
   tiers:
+  - 4
   - 5
 - name: 'Warhammer 40,000: Rogue Trader'
   ids:

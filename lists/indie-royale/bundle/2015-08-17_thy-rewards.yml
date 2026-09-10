@@ -8,6 +8,8 @@ tiers:
   name: 15 Bundles Purchased
 - rank: 3
   name: 20 Bundles Purchased
+- rank: 4
+  name: 25 Bundles Purchased
 - rank: 5
   name: 30 Bundles Purchased
 references:
@@ -26,6 +28,7 @@ games:
   - 1
   - 2
   - 3
+  - 4
   - 5
 - name: Fireball
   ids:
@@ -34,6 +37,7 @@ games:
   tiers:
   - 2
   - 3
+  - 4
   - 5
 - name: Corril Slayer
   ids:
@@ -41,12 +45,14 @@ games:
   requires: []
   tiers:
   - 3
+  - 4
   - 5
 - name: Pushcat
   ids:
   - steam:308440
   requires: []
   tiers:
+  - 4
   - 5
 - name: 'Dino Run: Marathon of Doom'
   ids:
