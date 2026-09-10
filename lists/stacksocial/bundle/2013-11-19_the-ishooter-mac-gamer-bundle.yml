@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The iShooter Gamer Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/409/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/409/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/409/source.json
+games:
+- name: Tower Wars
+  ids:
+  - steam:214360
+  requires: []
+- name: Sanctum
+  ids:
+  - steam:91600
+  requires: []
+- name: Cubemen 2-Pack
+  ids:
+  - steam:207250
+  requires: []
+- name: Bleed
+  ids:
+  - steam:239800
+  requires: []

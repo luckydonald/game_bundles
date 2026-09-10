@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 1C Entertainment Mega Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7560/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7560/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7560/source.json
+games:
+- name: 'Death Track: Resurrection'
+  ids:
+  - steam:7840
+  requires: []
+- name: RENOIR
+  ids:
+  - steam:496400
+  requires: []
+- name: Desert Law
+  ids:
+  - steam:356280
+  requires: []
+- name: NecroVision
+  ids:
+  - steam:7860
+  requires: []
+- name: 'Men of War: Vietnam'
+  ids:
+  - steam:63940
+  requires: []
+- name: Cuban Missile Crisis
+  ids:
+  - steam:356270
+  requires: []
+- name: Parkan 2
+  ids:
+  - steam:289400
+  requires: []
+- name: El Matador
+  ids:
+  - steam:289280
+  requires: []
+- name: A.I.M Racing
+  ids:
+  - unresolved:source:isthereanydeal:7560:a-i-m-racing
+  requires: []
+- name: RignRoll
+  ids:
+  - unresolved:source:isthereanydeal:7560:rignroll
+  requires: []
+- name: Freight Tycoon Inc.
+  ids:
+  - steam:289340
+  requires: []
+- name: "Off\x96Road Drive"
+  ids:
+  - steam:200230
+  requires: []

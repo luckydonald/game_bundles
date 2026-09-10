@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Otaku Bundle #36 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6668/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6668/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6668/source.json
+games:
+- name: 'STE: Save the Earth'
+  ids:
+  - steam:823280
+  requires: []
+- name: DeepWeb
+  ids:
+  - steam:904780
+  requires: []
+- name: The Cat and the Coup (4K Remaster)
+  ids:
+  - unresolved:source:isthereanydeal:6668:the-cat-and-the-coup-4k-remaster
+  requires: []
+- name: Skipper
+  ids:
+  - steam:674440
+  requires: []
+- name: Typical Nightmare
+  ids:
+  - steam:822650
+  requires: []
+- name: Outside
+  ids:
+  - steam:746760
+  requires: []
+- name: Jack the Barbarian
+  ids:
+  - steam:852160
+  requires: []
+- name: Globe Geography 3D
+  ids:
+  - unresolved:source:isthereanydeal:6668:globe-geography-3d
+  requires: []
+- name: Became The Hunted
+  ids:
+  - steam:917600
+  requires: []
+- name: Not My Day!
+  ids:
+  - steam:951320
+  requires: []
+- name: DotX
+  ids:
+  - steam:954420
+  requires: []
+- name: Survive in Angaria 2
+  ids:
+  - steam:912820
+  requires: []

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'ThinkOfGames Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5033/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5033/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5033/source.json
+games:
+- name: Attempt[42]
+  ids:
+  - steam:562520
+  requires: []
+- name: Puzzle Cube
+  ids:
+  - steam:539460
+  requires: []
+- name: Linked
+  ids:
+  - steam:596590
+  requires: []
+- name: Square n Fair
+  ids:
+  - steam:575680
+  requires: []
+- name: Felix Jumpman
+  ids:
+  - steam:575920
+  requires: []
+- name: Akin
+  ids:
+  - steam:487370
+  requires: []

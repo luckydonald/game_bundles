@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Sun and Moon — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1659/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1659/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1659/source.json
+games:
+- name: The Sun & Moon
+  ids:
+  - steam:321560
+  requires: []

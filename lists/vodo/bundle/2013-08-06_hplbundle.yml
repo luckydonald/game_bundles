@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: H.P. Lovecraft Bundle — Beat The Average
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11/source.json
+games:
+- name: Sherlock Holmes - The Awakened
+  ids:
+  - steam:1949030
+  requires: []
+- name: 'Call Of Cthulhu: The Wasted Land'
+  ids:
+  - unresolved:source:isthereanydeal:11:call-of-cthulhu-the-wasted-land
+  requires: []
+- name: Cthulhu Saves the World
+  ids:
+  - steam:107310
+  requires: []

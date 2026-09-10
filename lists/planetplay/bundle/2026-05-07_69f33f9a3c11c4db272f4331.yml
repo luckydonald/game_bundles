@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Capcom Retro Collection — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16138/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16138/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16138/source.json
+games:
+- name: 'Street Fighter V: Champion Edition + Season 5 Premium Pass Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:16138:street-fighter-v-champion-edition-and-season-5-premium-pass-bundle
+  requires: []
+- name: Capcom Fighting Collection
+  ids:
+  - steam:1685750
+  requires: []
+- name: Capcom Arcade Stadium Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:16138:capcom-arcade-stadium-complete-pack
+  requires: []
