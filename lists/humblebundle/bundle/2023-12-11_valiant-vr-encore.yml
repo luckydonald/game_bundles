@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Valiant VR Bundle (Holiday Encore) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13690/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13690/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13690/source.json
+games:
+- name: VTOL VR
+  ids:
+  - steam:667970
+  requires: []
+- name: Into the Radius VR
+  ids:
+  - steam:1012790
+  requires: []
+- name: 'Budget Cuts 2: Mission Insolvency'
+  ids:
+  - steam:1092430
+  requires: []
+- name: Contractors VR
+  ids:
+  - steam:963930
+  requires: []
+- name: Takelings House Party
+  ids:
+  - steam:868150
+  requires: []
+- name: Hard Bullet
+  ids:
+  - steam:1294760
+  requires: []
+- name: 'Dragon Fist: VR Kung Fu'
+  ids:
+  - steam:1481780
+  requires: []

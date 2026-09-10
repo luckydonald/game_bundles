@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Oct 2023) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13518/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13518/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13518/source.json
+games:
+- name: Mr. Prepper
+  ids:
+  - steam:761830
+  requires: []
+- name: 'Rebel Inc: Escalation'
+  ids:
+  - steam:1088790
+  requires: []
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+  requires: []
+- name: Lords & Villeins
+  ids:
+  - steam:1287530
+  requires: []
+- name: 'Metal: Hellsinger'
+  ids:
+  - steam:1061910
+  requires: []
+- name: Spirit Of The Island
+  ids:
+  - steam:1592110
+  requires: []
+- name: 'The Dark Pictures Anthology: House of Ashes'
+  ids:
+  - steam:1281590
+  requires: []
+- name: The Quarry Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:13518:the-quarry-deluxe-edition
+  requires: []

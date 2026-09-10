@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Apr 2023) — entire-9-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13090/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13090/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13090/source.json
+games:
+- name: Founders' Fortune
+  ids:
+  - steam:1104330
+  requires: []
+- name: Life is Strange 2
+  ids:
+  - steam:532210
+  requires: []
+- name: 'Monster Prom 2: Monster Camp'
+  ids:
+  - steam:1140270
+  requires: []
+- name: Life is Strange 2 Complete Season
+  ids:
+  - unresolved:source:isthereanydeal:13090:life-is-strange-2-complete-season
+  requires: []
+- name: The Life and Suffering of Sir Brante
+  ids:
+  - steam:1272160
+  requires: []
+- name: Revita
+  ids:
+  - steam:1175460
+  requires: []
+- name: 'Aliens: Fireteam Elite'
+  ids:
+  - steam:1549970
+  requires: []
+- name: DEATH STRANDING DIRECTOR'S CUT
+  ids:
+  - steam:1850570
+  requires: []
+- name: Rollerdrome
+  ids:
+  - steam:1294420
+  requires: []
