@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: War Child Charity Bundle 2026 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16537/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16537/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16537/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Boyfriend Dungeon
+  ids:
+  - steam:674930
+  - isthereanydeal:boyfriend-dungeon
+  requires: []
+- name: 'Thea: The Awakening'
+  ids:
+  - steam:378720
+  - isthereanydeal:thea-the-awakening
+  requires: []
+- name: Production Line
+  ids:
+  - steam:591370
+  - isthereanydeal:production-line
+  requires: []
+- name: Airport CEO
+  ids:
+  - steam:673610
+  - isthereanydeal:airport-ceo
+  requires: []
+- name: This War of Mine
+  ids:
+  - steam:282070
+  - isthereanydeal:this-war-of-mine
+  requires: []
+- name: A Space For The Unbound
+  ids:
+  - steam:1201270
+  - isthereanydeal:a-space-for-the-unbound
+  requires: []
+- name: Webbed
+  ids:
+  - steam:1390350
+  - isthereanydeal:webbed
+  requires: []
+- name: shapez
+  ids:
+  - steam:1318690
+  - isthereanydeal:shapez
+  requires: []
+- name: 'Suicide Squad: Kill the Justice League'
+  ids:
+  - steam:315210
+  - isthereanydeal:suicide-squad-kill-the-justice-league
+  requires: []
+- name: Seafrog
+  ids:
+  - steam:2107540
+  - isthereanydeal:seafrog
+  requires: []
+- name: Wirm
+  ids:
+  - steam:1934870
+  - isthereanydeal:wirm
+  requires: []

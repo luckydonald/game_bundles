@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Dagestan Technology Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5303/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5303/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5303/source.json
+games:
+- name: Absoloot
+  ids:
+  - unresolved:source:isthereanydeal:5303:absoloot
+  requires: []
+- name: Platro
+  ids:
+  - unresolved:source:isthereanydeal:5303:platro
+  requires: []
+- name: Triangle
+  ids:
+  - steam:574690
+  requires: []
+- name: Golden Swords
+  ids:
+  - unresolved:source:isthereanydeal:5303:golden-swords
+  requires: []
+- name: One Star
+  ids:
+  - unresolved:source:isthereanydeal:5303:one-star
+  requires: []
+- name: Castle Werewolf 3D
+  ids:
+  - unresolved:source:isthereanydeal:5303:castle-werewolf-3d
+  requires: []
+- name: Altar Guardian
+  ids:
+  - unresolved:source:isthereanydeal:5303:altar-guardian
+  requires: []
+- name: Galactic Fighter
+  ids:
+  - unresolved:source:isthereanydeal:5303:galactic-fighter
+  requires: []
+- name: Hell`S Little Story
+  ids:
+  - unresolved:source:isthereanydeal:5303:hells-little-story
+  requires: []
+- name: Mars Industries
+  ids:
+  - unresolved:source:isthereanydeal:5303:mars-industries
+  requires: []
+- name: Armored Gear
+  ids:
+  - unresolved:source:isthereanydeal:5303:armored-gear
+  requires: []
+- name: Other Tanks
+  ids:
+  - unresolved:source:isthereanydeal:5303:other-tanks
+  requires: []

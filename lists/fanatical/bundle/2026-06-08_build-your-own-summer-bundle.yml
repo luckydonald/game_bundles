@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Summer Bundle (2026) — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16250/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16250/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16250/source.json
+games:
+- name: 'FURIDASHI: Drift Cyber Sport'
+  ids:
+  - steam:658570
+  requires: []
+- name: King of Retail
+  ids:
+  - steam:968250
+  requires: []
+- name: RDS - The Official Drift Videogame
+  ids:
+  - steam:934930
+  requires: []
+- name: Can't Drive This
+  ids:
+  - steam:466980
+  requires: []
+- name: OverDrift Festival
+  ids:
+  - steam:1273440
+  requires: []
+- name: 'Fight of Steel: Infinity Warrior'
+  ids:
+  - steam:1631350
+  requires: []
+- name: 'Rustler: Complete Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16250:rustler-complete-edition
+  requires: []
+- name: FOUNTAINS
+  ids:
+  - steam:1841240
+  requires: []
+- name: Ten Dates
+  ids:
+  - steam:1946070
+  requires: []
+- name: The Spirit of the Samurai
+  ids:
+  - steam:1507120
+  requires: []
+- name: The Isle Tide Hotel
+  ids:
+  - steam:2000090
+  requires: []
+- name: CLeM
+  ids:
+  - steam:1861440
+  requires: []
+- name: Decline's Drops
+  ids:
+  - steam:1500180
+  requires: []
+- name: Knock'Em Out
+  ids:
+  - steam:2192900
+  requires: []
+- name: Charrua Soccer - Pro Edition
+  ids:
+  - steam:2283380
+  requires: []
+- name: KitHack Model Club
+  ids:
+  - steam:2107090
+  requires: []
+- name: The Stairway 7 - Anomaly Hunt Loop Horror Game
+  ids:
+  - steam:2911820
+  requires: []
+- name: Fight School Simulator
+  ids:
+  - steam:2884190
+  requires: []
+- name: 'Backrooms: Partygoers'
+  ids:
+  - steam:2792450
+  requires: []
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
+  requires: []

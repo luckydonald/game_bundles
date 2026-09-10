@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #8 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5260/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5260/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5260/source.json
+games:
+- name: Sleeping Valley
+  ids:
+  - steam:538590
+  requires: []
+- name: The Construct
+  ids:
+  - steam:525190
+  requires: []
+- name: Worst Case Z
+  ids:
+  - unresolved:source:isthereanydeal:5260:worst-case-z
+  requires: []
+- name: Power of Love - Chapter 2 Solution
+  ids:
+  - steam:516621
+  requires: []
+- name: Crystal Cosmos
+  ids:
+  - steam:496590
+  requires: []
+- name: Power of Love
+  ids:
+  - steam:368710
+  requires: []
+- name: Power of Love - Chapter 3 Solution
+  ids:
+  - unresolved:source:isthereanydeal:5260:power-of-love-chapter-3-solution
+  requires: []
+- name: Cavern Escape Extremely Hard game!!!
+  ids:
+  - steam:546400
+  requires: []
+- name: David.
+  ids:
+  - steam:346180
+  requires: []
+- name: Magic Tavern
+  ids:
+  - steam:560960
+  requires: []
+- name: Power of Love - Chapter 1 Solution
+  ids:
+  - steam:516620
+  requires: []
+- name: Dynamic Very, Very, Hard game!!
+  ids:
+  - steam:546340
+  requires: []

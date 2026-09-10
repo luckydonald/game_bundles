@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Go Go Bundle #12 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5381/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5381/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5381/source.json
+games:
+- name: Uncompromising Trash
+  ids:
+  - unresolved:source:isthereanydeal:5381:uncompromising-trash
+  requires: []
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+  requires: []
+- name: Defense Of Greece TD
+  ids:
+  - steam:537200
+  requires: []
+- name: Permute
+  ids:
+  - steam:575630
+  requires: []
+- name: 'Destroyer: Invasion'
+  ids:
+  - steam:678240
+  requires: []
+- name: Phobia
+  ids:
+  - steam:649150
+  requires: []
+- name: Running Sausage
+  ids:
+  - unresolved:source:isthereanydeal:5381:running-sausage
+  requires: []
+- name: SQR 2
+  ids:
+  - unresolved:source:isthereanydeal:5381:sqr-2
+  requires: []
+- name: The Visitors
+  ids:
+  - unresolved:source:isthereanydeal:5381:the-visitors
+  requires: []

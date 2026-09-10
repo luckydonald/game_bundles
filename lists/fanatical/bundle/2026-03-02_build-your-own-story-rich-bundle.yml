@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Story Rich Adventures Bundle — Select 3 for 4.95 (1.65 each),
+  5 for 7.99 (1.60 each), 7 for 10.15 (1.45 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15922/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15922/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15922/source.json
+games:
+- name: Maid of Sker
+  ids:
+  - steam:826940
+  requires: []
+- name: We. The Revolution
+  ids:
+  - steam:736850
+  requires: []
+- name: 'CHANGE: A Homeless Survival Experience'
+  ids:
+  - steam:926140
+  requires: []
+- name: Paradise Killer
+  ids:
+  - steam:1160220
+  requires: []
+- name: For the People
+  ids:
+  - steam:1146600
+  requires: []
+- name: Chicken Police - Paint it RED
+  ids:
+  - steam:1084640
+  requires: []
+- name: 'The Lord of the Rings™: Gollum™'
+  ids:
+  - steam:1265780
+  requires: []
+- name: 'Tainted Grail: Conquest'
+  ids:
+  - steam:1199030
+  requires: []
+- name: Mondealy
+  ids:
+  - steam:1620520
+  requires: []
+- name: Flower in Us
+  ids:
+  - steam:2482920
+  requires: []
+- name: 'Staffer Case: A Supernatural Mystery Adventure'
+  ids:
+  - steam:2128480
+  requires: []
+- name: Staffer Reborn
+  ids:
+  - steam:2658920
+  requires: []
+- name: 'BrokenLore: LOW'
+  ids:
+  - steam:3014520
+  requires: []
+- name: Many Nights a Whisper
+  ids:
+  - steam:3541130
+  requires: []
+- name: 'Heavy Rain & Beyond: Two Souls Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15922:heavy-rain-and-beyond-two-souls-double-pack
+  requires: []
+- name: 'Old Man''s Journey & Gibbon: Beyond the Trees Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15922:old-mans-journey-and-gibbon-beyond-the-trees-double-pack
+  requires: []
+- name: Time Loader 4-Pack
+  ids:
+  - unresolved:source:isthereanydeal:15922:time-loader-4-pack
+  requires: []

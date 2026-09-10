@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Capcom Masters Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16101/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16101/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16101/source.json
+games:
+- name: 'Monster Hunter World: Iceborne Master Edition Digital Deluxe'
+  ids:
+  - unresolved:source:isthereanydeal:16101:monster-hunter-world-iceborne-master-edition-digital-deluxe
+  requires: []
+- name: 'Monster Hunter Stories 2: Wings of Ruin Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16101:monster-hunter-stories-2-wings-of-ruin-deluxe-edition
+  requires: []
+- name: Monster Hunter Rise + Sunbreak Deluxe
+  ids:
+  - unresolved:source:isthereanydeal:16101:monster-hunter-rise-and-sunbreak-deluxe
+  requires: []
+- name: Resident Evil Village Gold Edition
+  ids:
+  - steam:1196590
+  requires: []
+- name: Onimusha 2 - Samurai's Destiny
+  ids:
+  - steam:3046600
+  requires: []
+- name: Capcom Arcade Stadium Complete Pack
+  ids:
+  - unresolved:source:isthereanydeal:16101:capcom-arcade-stadium-complete-pack
+  requires: []
+- name: Resident Evil 4 (2023)
+  ids:
+  - steam:2050650
+  requires: []
+- name: 'Apollo Justice: Ace Attorney Trilogy'
+  ids:
+  - steam:2187220
+  requires: []
+- name: 'Kunitsu-Gami: Path of the Goddess'
+  ids:
+  - steam:2510710
+  requires: []
+- name: Ace Attorney Investigations Collection
+  ids:
+  - steam:2401970
+  requires: []
+- name: Dead Rising Deluxe Remaster
+  ids:
+  - steam:2527390
+  requires: []

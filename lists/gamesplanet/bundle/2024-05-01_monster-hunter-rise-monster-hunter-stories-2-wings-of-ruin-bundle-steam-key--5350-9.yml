@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Monster Hunter Rise & Stories 2: Wings of Ruin Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/14018/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/14018/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/14018/source.json
+games:
+- name: MONSTER HUNTER RISE
+  ids:
+  - steam:1446780
+  requires: []
+- name: 'Monster Hunter Stories 2: Wings of Ruin'
+  ids:
+  - steam:1277400
+  requires: []

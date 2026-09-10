@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build  Your Own RPG & Strategy Bundle — Select 3 for 4.95 (1.65 each), 5 for
+  7.99 (1.60 each), 7 for 10.15 (1.45 each)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15925/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15925/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15925/source.json
+games:
+- name: Juicy Realm
+  ids:
+  - steam:732370
+  requires: []
+- name: Starpoint Gemini 2 Gold Pack
+  ids:
+  - unresolved:source:isthereanydeal:15925:starpoint-gemini-2-gold-pack
+  requires: []
+- name: AI War Collection
+  ids:
+  - unresolved:source:isthereanydeal:15925:ai-war-collection
+  requires: []
+- name: Balrum
+  ids:
+  - steam:424250
+  requires: []
+- name: 'Starpoint Gemini 3: Supporter Bundle'
+  ids:
+  - unresolved:source:isthereanydeal:15925:starpoint-gemini-3-supporter-bundle
+  requires: []
+- name: 'The Dungeon Of Naheulbeuk: The Amulet Of Chaos'
+  ids:
+  - steam:970830
+  requires: []
+- name: Terraformers
+  ids:
+  - steam:1244800
+  requires: []
+- name: Tyrant's Blessing
+  ids:
+  - steam:1520760
+  requires: []
+- name: LunarLux
+  ids:
+  - steam:1932680
+  requires: []
+- name: Noob - The Factionless
+  ids:
+  - steam:1623880
+  requires: []
+- name: 'Winter Falling: Battle Tactics'
+  ids:
+  - steam:1285060
+  requires: []
+- name: Quilts and Cats of Calico
+  ids:
+  - steam:1993180
+  requires: []
+- name: 'Lysfanga: The Time Shift Warrior'
+  ids:
+  - steam:2161620
+  requires: []
+- name: EcoGnomix
+  ids:
+  - steam:2473640
+  requires: []
+- name: 'Subterrain: Mines of Titan'
+  ids:
+  - steam:1573100
+  requires: []
+- name: Coromon Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:15925:coromon-deluxe-edition
+  requires: []
+- name: 'Sin Slayers: Reign of The 8th'
+  ids:
+  - steam:2790000
+  requires: []
+- name: 'Talisman: Digital 5th Edition'
+  ids:
+  - steam:908060
+  requires: []
+- name: 'Symphony of War: The Nephilim Saga + Legends DLC Double Pack'
+  ids:
+  - unresolved:source:isthereanydeal:15925:symphony-of-war-the-nephilim-saga-and-legends-dlc-double-pack
+  requires: []
+- name: Journey of Greed Complete
+  ids:
+  - unresolved:source:isthereanydeal:15925:journey-of-greed-complete
+  requires: []

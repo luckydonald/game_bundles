@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Field of Glory Bundle — Make a pick
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16361/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16361/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16361/source.json
+games:
+- name: 'Field of Glory: Empires'
+  ids:
+  - steam:1011390
+  requires: []
+- name: 'Field of Glory II: Rise of Persia'
+  ids:
+  - steam:876360
+  requires: []
+- name: Field of Glory II
+  ids:
+  - steam:660160
+  requires: []
+- name: 'Field of Glory II: Immortal Fire'
+  ids:
+  - steam:737740
+  requires: []
+- name: 'Field of Glory II: Legions Triumphant'
+  ids:
+  - steam:754790
+  requires: []
+- name: 'Field of Glory II: Wolves at the Gate'
+  ids:
+  - steam:1004260
+  requires: []
+- name: 'Field of Glory II: Age of Belisarius'
+  ids:
+  - steam:801920
+  requires: []
+- name: 'Field of Glory: Empires - Persia 550 - 330 BCE'
+  ids:
+  - steam:1257440
+  requires: []
+- name: 'Field of Glory II: Medieval'
+  ids:
+  - steam:1368870
+  requires: []
+- name: 'Field of Glory II: Medieval - Reconquista'
+  ids:
+  - steam:1548770
+  requires: []
+- name: 'Field of Glory II: Medieval - Swords and Scimitars'
+  ids:
+  - steam:1651570
+  requires: []
+- name: 'Field of Glory II: Medieval - Storm of Arrows'
+  ids:
+  - steam:1736340
+  requires: []
+- name: 'Field of Glory II: Medieval - Rise of the Swiss'
+  ids:
+  - steam:1882110
+  requires: []
+- name: 'Field of Glory: Kingdoms'
+  ids:
+  - steam:1985050
+  requires: []
+- name: 'Field of Glory II: Medieval - Sublime Porte'
+  ids:
+  - steam:2009600
+  requires: []
+- name: 'Field of Glory II: Swifter than Eagles'
+  ids:
+  - steam:2110620
+  requires: []
+- name: 'Field of Glory: Kingdoms - Rajas and Tribes'
+  ids:
+  - steam:3297820
+  requires: []
+- name: 'Field of Glory: Kingdoms - Burghers and Bombards'
+  ids:
+  - steam:4056900
+  requires: []
