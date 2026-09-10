@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Nov 2023) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13601/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13601/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13601/source.json
+games:
+- name: Prodeus
+  ids:
+  - steam:964800
+  requires: []
+- name: Unpacking
+  ids:
+  - steam:1135690
+  requires: []
+- name: 'Hardspace: Shipbreaker'
+  ids:
+  - steam:1161580
+  requires: []
+- name: Souldiers
+  ids:
+  - steam:1419160
+  requires: []
+- name: The Legend of Tianding
+  ids:
+  - steam:1406850
+  requires: []
+- name: 'SCP : Secret Files'
+  ids:
+  - steam:1718130
+  requires: []
+- name: Friends vs Friends
+  ids:
+  - steam:1785150
+  requires: []
+- name: WWE 2K23
+  ids:
+  - unresolved:source:isthereanydeal:13601:wwe-2k23
+  requires: []

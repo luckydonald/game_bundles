@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: IGN Fan Fest Bundle (2024) — entire-7-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13853/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13853/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13853/source.json
+games:
+- name: Black Book
+  ids:
+  - steam:1138660
+  requires: []
+- name: Shantae and the Seven Sirens
+  ids:
+  - steam:1191630
+  requires: []
+- name: Wobbledogs
+  ids:
+  - steam:1424330
+  requires: []
+- name: Loop Hero
+  ids:
+  - steam:1282730
+  requires: []
+- name: A Little To The Left
+  ids:
+  - steam:1629520
+  requires: []
+- name: Tinykin
+  ids:
+  - steam:1599020
+  requires: []
+- name: Islets
+  ids:
+  - steam:1669420
+  requires: []

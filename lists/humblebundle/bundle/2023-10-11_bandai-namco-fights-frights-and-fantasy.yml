@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Bandai Namco: Fights, Frights and Fantasy Bundle — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/13532/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/13532/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/13532/source.json
+games:
+- name: TEKKEN 7
+  ids:
+  - steam:389730
+  requires: []
+- name: Katamari Damacy REROLL
+  ids:
+  - steam:848350
+  requires: []
+- name: 'Tales of Vesperia: Definitive Edition'
+  ids:
+  - steam:738540
+  requires: []
+- name: Code Vein
+  ids:
+  - steam:678960
+  requires: []
+- name: .hack//G.U. Last Recode
+  ids:
+  - steam:525480
+  requires: []
+- name: GOD EATER 3
+  ids:
+  - steam:899440
+  requires: []
+- name: PAC-MAN MUSEUM+
+  ids:
+  - steam:1665130
+  requires: []
