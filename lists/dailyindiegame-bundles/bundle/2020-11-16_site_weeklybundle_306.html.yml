@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 306 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9403/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9403/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9403/source.json
+games:
+- name: Gallows Choice
+  ids:
+  - steam:915960
+  requires: []
+- name: '3'
+  ids:
+  - steam:1675150
+  requires: []
+- name: BBlocks
+  ids:
+  - steam:940330
+  requires: []
+- name: Checkmate
+  ids:
+  - steam:917550
+  requires: []
+- name: The Warrior War
+  ids:
+  - steam:882460
+  requires: []
+- name: Color Guardian
+  ids:
+  - steam:937130
+  requires: []
+- name: Snakest
+  ids:
+  - steam:940350
+  requires: []
+- name: Falling Blocks
+  ids:
+  - steam:891470
+  requires: []
+- name: Ladies
+  ids:
+  - unresolved:source:isthereanydeal:9403:ladies
+  requires: []

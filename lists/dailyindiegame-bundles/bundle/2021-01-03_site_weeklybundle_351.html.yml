@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 351 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9600/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9600/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9600/source.json
+games:
+- name: Robot Fighting
+  ids:
+  - unresolved:source:isthereanydeal:9600:robot-fighting
+  requires: []
+- name: Voltage
+  ids:
+  - steam:798710
+  requires: []
+- name: Trainpunk Run
+  ids:
+  - unresolved:source:isthereanydeal:9600:trainpunk-run
+  requires: []
+- name: Shuyan Saga
+  ids:
+  - steam:594680
+  requires: []
+- name: Relow
+  ids:
+  - steam:966070
+  requires: []
+- name: Mushroom Challenge
+  ids:
+  - steam:1345150
+  requires: []
+- name: Korean Adventures in Russia
+  ids:
+  - steam:1375970
+  requires: []
+- name: Berries Challenge
+  ids:
+  - steam:1391990
+  requires: []
+- name: Spaace - Box Nation [ ]
+  ids:
+  - steam:1270420
+  requires: []

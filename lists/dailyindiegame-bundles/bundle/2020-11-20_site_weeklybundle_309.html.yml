@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 309 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9412/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9412/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9412/source.json
+games:
+- name: Animal Fight Club
+  ids:
+  - steam:1022780
+  requires: []
+- name: 'A Front Too Far: Normandy'
+  ids:
+  - steam:958320
+  requires: []
+- name: Easy Red
+  ids:
+  - steam:741670
+  requires: []
+- name: It's Raining Fists and Metal
+  ids:
+  - steam:1080240
+  requires: []
+- name: Castle Commander
+  ids:
+  - steam:1188670
+  requires: []
+- name: The Trud
+  ids:
+  - steam:1237760
+  requires: []
+- name: 'Jack Hayes: The Lazarus Sign'
+  ids:
+  - steam:1295750
+  requires: []
+- name: Shattering Obsidian
+  ids:
+  - steam:1383920
+  requires: []
+- name: Asteroad
+  ids:
+  - unresolved:source:isthereanydeal:9412:asteroad
+  requires: []

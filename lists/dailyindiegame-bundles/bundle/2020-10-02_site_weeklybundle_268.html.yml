@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 268 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9240/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9240/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9240/source.json
+games:
+- name: Dark Sauce
+  ids:
+  - steam:995790
+  requires: []
+- name: Cybercube
+  ids:
+  - steam:656880
+  requires: []
+- name: Russian Roads
+  ids:
+  - steam:610660
+  requires: []
+- name: 'Behind These Eyes: A Short Horror Story'
+  ids:
+  - steam:666620
+  requires: []
+- name: A letter to you!
+  ids:
+  - steam:1275450
+  requires: []
+- name: Craft сity
+  ids:
+  - unresolved:source:isthereanydeal:9240:craft-sity
+  requires: []
+- name: Gravity_Kid
+  ids:
+  - steam:1415750
+  requires: []
+- name: Spinning_Kid
+  ids:
+  - steam:1420950
+  requires: []
+- name: NECROSIS
+  ids:
+  - steam:1415830
+  requires: []

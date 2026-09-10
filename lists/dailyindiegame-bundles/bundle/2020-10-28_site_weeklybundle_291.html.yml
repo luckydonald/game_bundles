@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 291: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9334/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9334/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9334/source.json
+games:
+- name: Charlie II - Expansion Pack
+  ids:
+  - unresolved:source:isthereanydeal:9334:charlie-ii-expansion-pack
+  requires: []
+- name: Glass Masquerade - Halloween Puzzle Pack
+  ids:
+  - steam:969270
+  requires: []
+- name: Mighty Gemstones - Skins
+  ids:
+  - steam:883250
+  requires: []
+- name: Dangerous Lands - Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9334:dangerous-lands-soundtrack
+  requires: []
+- name: PBT - GOLD
+  ids:
+  - steam:1131910
+  requires: []
+- name: Glass Masquerade - Inceptions Puzzle Pack
+  ids:
+  - steam:938030
+  requires: []
+- name: Glass Masquerade - Heritages Puzzle Pack
+  ids:
+  - steam:1105630
+  requires: []
+- name: 'Glass Masquerade 2: Illusions - Temptations Puzzle Pack'
+  ids:
+  - steam:1179830
+  requires: []
+- name: 'Glass Masquerade 2: Illusions - Revelations Puzzle Pack'
+  ids:
+  - steam:1269840
+  requires: []
+- name: Battle of Angels Soundtrack
+  ids:
+  - unresolved:source:isthereanydeal:9334:battle-of-angels-soundtrack
+  requires: []
+- name: O.C.D. - Comorbidity Pack
+  ids:
+  - unresolved:source:isthereanydeal:9334:ocd-comorbidity-pack
+  requires: []

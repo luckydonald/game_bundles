@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 350 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9599/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9599/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9599/source.json
+games:
+- name: Stone Flower
+  ids:
+  - unresolved:source:isthereanydeal:9599:stone-flower
+  requires: []
+- name: Pranky Cat
+  ids:
+  - steam:913280
+  requires: []
+- name: Guns Boy
+  ids:
+  - unresolved:source:isthereanydeal:9599:guns-boy
+  requires: []
+- name: Gold Dust
+  ids:
+  - steam:1447900
+  requires: []
+- name: Russian Reality
+  ids:
+  - steam:1470730
+  requires: []
+- name: Among Ass
+  ids:
+  - steam:1477060
+  requires: []
+- name: Hollywood Hero
+  ids:
+  - unresolved:source:isthereanydeal:9599:hollywood-hero
+  requires: []
+- name: Space Abyss
+  ids:
+  - steam:1484740
+  requires: []
+- name: Something Strange in the Woods
+  ids:
+  - unresolved:source:isthereanydeal:9599:something-strange-in-the-woods
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 311 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9420/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9420/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9420/source.json
+games:
+- name: 立方杀阵（Cubic Kill Array）
+  ids:
+  - steam:898090
+  requires: []
+- name: 'Defense of Egypt: Cleopatra Mission'
+  ids:
+  - steam:534010
+  requires: []
+- name: 'Kabitis 2: Fire Sword'
+  ids:
+  - unresolved:source:isthereanydeal:9420:kabitis-2-fire-sword
+  requires: []
+- name: Lots of Balls
+  ids:
+  - steam:780760
+  requires: []
+- name: NeonCode
+  ids:
+  - steam:976780
+  requires: []
+- name: FISHERY
+  ids:
+  - steam:809730
+  requires: []
+- name: Hexa Path
+  ids:
+  - steam:1052760
+  requires: []
+- name: Find Your Way
+  ids:
+  - unresolved:source:isthereanydeal:9420:find-your-way
+  requires: []
+- name: Rogue Planet
+  ids:
+  - steam:1301380
+  requires: []

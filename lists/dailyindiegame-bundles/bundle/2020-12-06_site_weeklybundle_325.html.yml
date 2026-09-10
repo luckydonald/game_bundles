@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 325 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9485/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9485/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9485/source.json
+games:
+- name: 'Steel Arena: Robot War'
+  ids:
+  - unresolved:source:isthereanydeal:9485:steel-arena-robot-war
+  requires: []
+- name: Fish's Trip
+  ids:
+  - steam:701960
+  requires: []
+- name: Build Bridges
+  ids:
+  - unresolved:source:isthereanydeal:9485:build-bridges
+  requires: []
+- name: Fading Visage
+  ids:
+  - unresolved:source:isthereanydeal:9485:fading-visage
+  requires: []
+- name: Rampage Ragdoll
+  ids:
+  - steam:775790
+  requires: []
+- name: Bonsai
+  ids:
+  - steam:444160
+  requires: []
+- name: Rude Racers
+  ids:
+  - steam:1099440
+  requires: []
+- name: Ninja Run!
+  ids:
+  - steam:1201250
+  requires: []
+- name: PiLKO
+  ids:
+  - steam:1287420
+  requires: []
