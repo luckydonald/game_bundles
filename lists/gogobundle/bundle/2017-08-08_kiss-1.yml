@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'KISS Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5377/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5377/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5377/source.json
+games:
+- name: Hyper Fighters
+  ids:
+  - steam:267960
+  requires: []
+- name: Gun Metal
+  ids:
+  - steam:267920
+  requires: []
+- name: The 39 Steps
+  ids:
+  - steam:234940
+  requires: []
+- name: 'Hostile Waters: Antaeus Rising'
+  ids:
+  - steam:267980
+  requires: []
+- name: Incoming Forces
+  ids:
+  - unresolved:source:isthereanydeal:5377:incoming-forces
+  requires: []
+- name: Glacier 3 The Meltdown
+  ids:
+  - steam:267940
+  requires: []
+- name: 'Super Killer Hornet: Resurrection'
+  ids:
+  - steam:271860
+  requires: []
+- name: '//N.P.P.D. RUSH// : THE MILK OF ULTRA VIOLET'
+  ids:
+  - unresolved:source:isthereanydeal:5377:n-p-p-d-rush-the-milk-of-ultra-violet
+  requires: []
+- name: Darkout
+  ids:
+  - steam:257050
+  requires: []
+- name: Tribloos 2
+  ids:
+  - steam:271550
+  requires: []
+- name: Game Tycoon 1.5
+  ids:
+  - steam:273770
+  requires: []
+- name: Humanity Asset
+  ids:
+  - steam:271640
+  requires: []

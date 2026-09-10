@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Sigma Team Bundle #1 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5288/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5288/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5288/source.json
+games:
+- name: Alien Shooter Revisited
+  ids:
+  - steam:33110
+  requires: []
+- name: Alien Shooter
+  ids:
+  - steam:33100
+  requires: []
+- name: Alien Shooter 2 Reloaded
+  ids:
+  - steam:33120
+  requires: []
+- name: Zombie Shooter
+  ids:
+  - steam:33130
+  requires: []
+- name: Alien Shooter 2 Conscription
+  ids:
+  - steam:211010
+  requires: []
+- name: Zombie Shooter 2
+  ids:
+  - steam:33180
+  requires: []
+- name: Alien Hallway
+  ids:
+  - steam:98900
+  requires: []

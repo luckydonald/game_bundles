@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Legendary Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16085/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16085/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16085/source.json
+games:
+- name: Desperados III - Digital Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16085:desperados-iii-digital-deluxe-edition
+  requires: []
+- name: Gloomwood
+  ids:
+  - steam:1150760
+  requires: []
+- name: Frostpunk 2
+  ids:
+  - steam:1601580
+  requires: []
+- name: Hello Neighbor 2 - Deluxe Edition
+  ids:
+  - steam:1321680
+  requires: []
+- name: The Alters
+  ids:
+  - steam:1601570
+  requires: []
+- name: Bye Sweet Carole
+  ids:
+  - steam:2428980
+  requires: []
+- name: Killing Floor 3
+  ids:
+  - steam:1430190
+  requires: []
+- name: 'The Invincible: Deluxe Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16085:the-invincible-deluxe-edition
+  requires: []
+- name: Warhammer 40000 Rogue Trader Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:16085:warhammer-40000-rogue-trader-deluxe-edition
+  requires: []
+- name: Remnant II
+  ids:
+  - steam:1282100
+  requires: []
+- name: The Berlin Apartment
+  ids:
+  - steam:2280430
+  requires: []
+- name: Alone in the Dark (2024)
+  ids:
+  - steam:1310410
+  requires: []
+- name: Strange Antiquities
+  ids:
+  - steam:2885870
+  requires: []
+- name: 'Chernobylite 2: Exclusion Zone'
+  ids:
+  - steam:2075100
+  requires: []
+- name: Hell Clock
+  ids:
+  - steam:1782460
+  requires: []
+- name: Firefighting Simulator Ignite
+  ids:
+  - steam:1669480
+  requires: []
+- name: Formula Legends
+  ids:
+  - steam:3194360
+  requires: []

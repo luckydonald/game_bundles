@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Exodus Bundle (Spring 2026) — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16060/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16060/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16060/source.json
+games:
+- name: Zombasite
+  ids:
+  - steam:408960
+  requires: []
+- name: King of Retail
+  ids:
+  - steam:968250
+  requires: []
+- name: 'Agatha Christie: Murder on the Orient Express'
+  ids:
+  - steam:1904790
+  requires: []
+- name: Beyond a Steel Sky
+  ids:
+  - steam:1146310
+  requires: []
+- name: KINGDOM of the DEAD
+  ids:
+  - steam:1547380
+  requires: []
+- name: 'Fight of Steel: Infinity Warrior'
+  ids:
+  - steam:1631350
+  requires: []
+- name: Souldiers
+  ids:
+  - steam:1419160
+  requires: []
+- name: Disco Elysium - The Final Cut
+  ids:
+  - steam:632470
+  requires: []
+- name: South of the Circle
+  ids:
+  - steam:1811040
+  requires: []
+- name: Oblivion Override
+  ids:
+  - steam:1952370
+  requires: []
+- name: Heretic's Fork
+  ids:
+  - steam:2181610
+  requires: []
+- name: Decline's Drops
+  ids:
+  - steam:1500180
+  requires: []
+- name: Death Relives
+  ids:
+  - steam:1987400
+  requires: []
+- name: Charrua Soccer - Pro Edition
+  ids:
+  - steam:2283380
+  requires: []
+- name: KitHack Model Club
+  ids:
+  - steam:2107090
+  requires: []
+- name: Fight School Simulator
+  ids:
+  - steam:2884190
+  requires: []
+- name: Love is...
+  ids:
+  - steam:3034130
+  requires: []
+- name: Siberian Dawn & Mission Pack 1+2 Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:16060:siberian-dawn-and-mission-pack-1-and-2-triple-pack
+  requires: []
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
+  requires: []

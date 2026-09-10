@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Cute and Cozy Bundle — 3+ Games 1.65 ea, 5+ Games 1.60 ea, 7+
+  Games 1.45 ea
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15985/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15985/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15985/source.json
+games:
+- name: Button City
+  ids:
+  - steam:1273750
+  requires: []
+- name: Webbed
+  ids:
+  - steam:1390350
+  requires: []
+- name: Haven Park
+  ids:
+  - steam:1549550
+  requires: []
+- name: 'Doors: Paradox'
+  ids:
+  - steam:1622770
+  requires: []
+- name: Paper Trail
+  ids:
+  - steam:1889740
+  requires: []
+- name: Garden in!
+  ids:
+  - steam:1953860
+  requires: []
+- name: Everholm
+  ids:
+  - steam:2312520
+  requires: []
+- name: A Tiny Sticker Tale
+  ids:
+  - steam:2322180
+  requires: []
+- name: Growth
+  ids:
+  - steam:2300300
+  requires: []
+- name: Simpler Times
+  ids:
+  - steam:1812210
+  requires: []
+- name: Chillquarium
+  ids:
+  - steam:2276930
+  requires: []
+- name: Logic Town
+  ids:
+  - steam:2333240
+  requires: []
+- name: Teeny Tiny Trains
+  ids:
+  - steam:2825600
+  requires: []
+- name: Mega Mosaic
+  ids:
+  - steam:2915950
+  requires: []
+- name: Lost But Found
+  ids:
+  - steam:3204250
+  requires: []
+- name: 'Shop Simulator: Pet Shop'
+  ids:
+  - steam:3194510
+  requires: []
+- name: 'Mini Cozy Room : Lo-Fi'
+  ids:
+  - steam:3511030
+  requires: []
+- name: Carefully Stamped
+  ids:
+  - steam:3771390
+  requires: []
