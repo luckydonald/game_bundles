@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 98 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4985/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4985/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4985/source.json
+games:
+- name: SkyTime
+  ids:
+  - steam:513620
+  requires: []
+- name: Lucid
+  ids:
+  - steam:61100
+  requires: []
+- name: Survival Driver
+  ids:
+  - steam:586130
+  requires: []
+- name: Puzzle Station 15th Anniversary Retro Release
+  ids:
+  - steam:366990
+  requires: []
+- name: Cranium Conundrum
+  ids:
+  - steam:527790
+  requires: []
+- name: Shuttle Siege
+  ids:
+  - steam:519020
+  requires: []

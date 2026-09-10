@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 39: Encore — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7503/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7503/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7503/source.json
+games:
+- name: Grater
+  ids:
+  - unresolved:source:isthereanydeal:7503:grater
+  requires: []
+- name: Lab.Gen.
+  ids:
+  - steam:920800
+  requires: []
+- name: The Bad Gravedigger
+  ids:
+  - steam:870120
+  requires: []
+- name: Alien Revival
+  ids:
+  - unresolved:source:isthereanydeal:7503:alien-revival
+  requires: []
+- name: Fish's Trip
+  ids:
+  - steam:701960
+  requires: []
+- name: The Mystery of Devils House
+  ids:
+  - steam:825970
+  requires: []
+- name: Lots of Balls
+  ids:
+  - steam:780760
+  requires: []
+- name: Conjuntalia
+  ids:
+  - steam:619340
+  requires: []
+- name: Neon Warp
+  ids:
+  - steam:485920
+  requires: []

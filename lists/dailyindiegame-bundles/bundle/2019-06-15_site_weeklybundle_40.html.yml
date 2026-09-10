@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 40 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7526/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7526/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7526/source.json
+games:
+- name: Airplane Sky Voyage
+  ids:
+  - unresolved:source:isthereanydeal:7526:airplane-sky-voyage
+  requires: []
+- name: final m00n - Defender of Cubes
+  ids:
+  - unresolved:source:isthereanydeal:7526:final-m00n-defender-of-cubes
+  requires: []
+- name: Mimic Hunter
+  ids:
+  - steam:657400
+  requires: []
+- name: Rail Adventures
+  ids:
+  - steam:272920
+  requires: []
+- name: Ultimate Space Commando
+  ids:
+  - steam:341910
+  requires: []
+- name: PlanTechtor
+  ids:
+  - steam:560600
+  requires: []
+- name: Shuyan Saga Original Soundtrack
+  ids:
+  - steam:678080
+  requires: []
+- name: Hacker Evolution Source Code
+  ids:
+  - steam:364750
+  requires: []
+- name: Shuyan Saga
+  ids:
+  - steam:594680
+  requires: []

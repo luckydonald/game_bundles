@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Super Bundle 96 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4942/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4942/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4942/source.json
+games:
+- name: Interstellar Logistics Inc.
+  ids:
+  - steam:502150
+  requires: []
+- name: Finnish Roller
+  ids:
+  - unresolved:source:isthereanydeal:4942:finnish-roller
+  requires: []
+- name: The Pasture
+  ids:
+  - steam:567680
+  requires: []
+- name: Street Racing Syndicate
+  ids:
+  - steam:292410
+  requires: []
+- name: 'Z: The Game'
+  ids:
+  - steam:275530
+  requires: []
+- name: 'The Last Hope: Trump vs Mafia'
+  ids:
+  - steam:581030
+  requires: []

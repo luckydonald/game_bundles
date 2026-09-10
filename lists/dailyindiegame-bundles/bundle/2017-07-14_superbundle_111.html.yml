@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Super Bundle 111: 1C — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5323/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5323/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5323/source.json
+games:
+- name: The Book of Desires
+  ids:
+  - steam:428260
+  requires: []
+- name: Jane Angel Templar Mystery
+  ids:
+  - steam:323270
+  requires: []
+- name: 'Twilight City: Love as a Cure'
+  ids:
+  - steam:428270
+  requires: []
+- name: 'Mystery of Unicorn Castle: The Beastmaster'
+  ids:
+  - steam:428280
+  requires: []
+- name: 'Sister''s Secrecy: Arcanum Bloodlines - Premium Edition'
+  ids:
+  - steam:373870
+  requires: []
+- name: 'Mystery Castle: The Mirror''s Secret'
+  ids:
+  - steam:428250
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 34 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7452/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7452/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7452/source.json
+games:
+- name: Kitten Life Simulator
+  ids:
+  - unresolved:source:isthereanydeal:7452:kitten-life-simulator
+  requires: []
+- name: Voltage
+  ids:
+  - steam:798710
+  requires: []
+- name: Where Are My Friends?
+  ids:
+  - steam:721350
+  requires: []
+- name: 'Freedom March: Rebel Leader'
+  ids:
+  - unresolved:source:isthereanydeal:7452:freedom-march-rebel-leader
+  requires: []
+- name: Chronicles of Vinland
+  ids:
+  - unresolved:source:isthereanydeal:7452:chronicles-of-vinland
+  requires: []
+- name: 'Ashley: The Story Of Survival'
+  ids:
+  - unresolved:source:isthereanydeal:7452:ashley-the-story-of-survival
+  requires: []
+- name: Skywalk
+  ids:
+  - steam:1075370
+  requires: []
+- name: C. Kane
+  ids:
+  - steam:385030
+  requires: []
+- name: 'RTS Commander: Smash the Rebels'
+  ids:
+  - steam:765370
+  requires: []

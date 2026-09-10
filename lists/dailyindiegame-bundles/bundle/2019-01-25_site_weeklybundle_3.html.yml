@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 3 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6957/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6957/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6957/source.json
+games:
+- name: Lords of Strife
+  ids:
+  - steam:842870
+  requires: []
+- name: Lab.Gen.
+  ids:
+  - steam:920800
+  requires: []
+- name: 'Defense: Abominations'
+  ids:
+  - steam:904130
+  requires: []
+- name: Bleeding Knife
+  ids:
+  - steam:788520
+  requires: []
+- name: Escape From The Dragons
+  ids:
+  - steam:975770
+  requires: []
+- name: A Story of Distress
+  ids:
+  - steam:791760
+  requires: []
+- name: The Sky Climber
+  ids:
+  - steam:958690
+  requires: []
+- name: A.D.M(Angels,Demons And Men)
+  ids:
+  - unresolved:source:isthereanydeal:6957:a-d-m-angels-demons-and-men
+  requires: []
+- name: Eat Your Words
+  ids:
+  - steam:803680
+  requires: []

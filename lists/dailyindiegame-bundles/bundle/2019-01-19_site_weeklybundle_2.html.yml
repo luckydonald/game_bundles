@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 2 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6933/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6933/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6933/source.json
+games:
+- name: Deadly Escape
+  ids:
+  - steam:649450
+  requires: []
+- name: The Bad Gravedigger
+  ids:
+  - steam:870120
+  requires: []
+- name: Dojini
+  ids:
+  - unresolved:source:isthereanydeal:6933:dojini
+  requires: []
+- name: Quest of Vidhuraa
+  ids:
+  - steam:683870
+  requires: []
+- name: Stary
+  ids:
+  - steam:995280
+  requires: []
+- name: Time Splatter
+  ids:
+  - steam:949530
+  requires: []
+- name: Lots of Balls
+  ids:
+  - steam:780760
+  requires: []
+- name: Skywriter
+  ids:
+  - steam:919040
+  requires: []
+- name: Blood Drift
+  ids:
+  - steam:798140
+  requires: []
