@@ -4,6 +4,8 @@ name: Doom & Wolfenstein MAYhem Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 7-item-bundle
 - rank: 3
   name: entire-12-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DOOM 64
   ids:
@@ -27,36 +30,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DOOM
   ids:
   - steam:379720
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Wolfenstein: The Old Blood'
   ids:
   - steam:350080
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Wolfenstein®: The New Order'
   ids:
   - steam:201810
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Wolfenstein: Youngblood'
   ids:
   - steam:1056960
   requires: []
   tiers:
+  - 2
   - 3
 - name: DOOM + DOOM II
   ids:
   - steam:2280
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'WOLFENSTEIN: Cyberpilot'
   ids:

@@ -4,6 +4,8 @@ name: Humble LEGO Built To Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,30 +22,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: LEGO® Batman 2™ DC Super Heroes
   ids:
   - steam:213330
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO Marvel Super Heroes 2 - Deluxe Edition
   ids:
   - steam:647830
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO® MARVEL's Avengers
   ids:
   - steam:405310
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO® Worlds
   ids:
   - steam:332310
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO® DC Super-Villains Deluxe Edition
   ids:

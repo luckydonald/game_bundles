@@ -4,6 +4,8 @@ name: Guardian Bundle 3
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Comedy Night
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Papo & Yo
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'INSOMNIA: The Ark'
   ids:
   - steam:783170
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeons 3
   ids:
   - steam:493900
   requires: []
   tiers:
+  - 2
   - 3
 - name: We. The Revolution
   ids:
   - steam:736850
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Uncertain: Light At The End'
   ids:
   - steam:925570
   requires: []
   tiers:
+  - 2
   - 3
 - name: 3000th Duel
   ids:
   - steam:1098080
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Fallback: Uprising'
   ids:
   - steam:864540
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Sense - 不祥的预感: A Cyberpunk Ghost Story'
   ids:

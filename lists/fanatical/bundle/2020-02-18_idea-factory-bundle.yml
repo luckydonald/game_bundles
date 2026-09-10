@@ -4,6 +4,8 @@ name: Idea Factory Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Moero Chronicle
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Fairy Fencer F
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Fairy Fencer F Advent Dark Force
   ids:
   - steam:524580
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Hyperdevotion Noire: Goddess Black Heart (Neptunia)'
   ids:
   - steam:415480
   requires: []
   tiers:
+  - 2
   - 3
 - name: Megadimension Neptunia VII Digital Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:8413:megadimension-neptunia-vii-digital-deluxe-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Record of Agarest War Mariage Deluxe Bundle
   ids:

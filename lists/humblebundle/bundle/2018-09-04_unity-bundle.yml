@@ -4,6 +4,8 @@ name: Humble Unity Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: AER Memories of Old
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Wasteland 2: Director''s Cut'
   ids:
   - steam:240760
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Final Station
   ids:
   - steam:435530
   requires: []
   tiers:
+  - 2
   - 3
 - name: Last Day of June
   ids:
   - steam:635320
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Torment: Tides of Numenera'
   ids:

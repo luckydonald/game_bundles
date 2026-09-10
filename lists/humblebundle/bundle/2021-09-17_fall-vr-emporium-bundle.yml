@@ -4,6 +4,8 @@ name: Fall VR Emporium Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A Fisherman's Tale
   ids:
   - steam:559330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Zero Caliber VR
   ids:
   - steam:877200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Paper Beast
   ids:
   - steam:1232570
   requires: []
   tiers:
+  - 2
   - 3
 - name: Until You Fall
   ids:

@@ -5,6 +5,9 @@ tiers:
 - rank: 1
   name: pick 3
   pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -25,6 +28,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride
   ids:
@@ -33,6 +37,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: THE GAME OF LIFE 2
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Clue/Cluedo
   ids:
@@ -49,6 +55,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Clue/Cluedo - Tropical Pack
   ids:
@@ -57,6 +64,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - Europe Expansion
   ids:
@@ -65,6 +73,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Clue/Cluedo: Classic Edition'
   ids:
@@ -73,6 +82,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: THE GAME OF LIFE
   ids:
@@ -81,6 +91,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - Nordic Expansion
   ids:
@@ -89,6 +100,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - USA 1910 Ticket Pack
   ids:
@@ -97,6 +109,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Exploding Kittens 2
   ids:
@@ -105,6 +118,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride - India Expansion
   ids:
@@ -113,6 +127,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Exploding Kittens® 2 - Explosive Expansions Pass
   ids:
@@ -121,6 +136,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ticket to Ride® - Switzerland Expansion
   ids:
@@ -129,6 +145,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Ticket to Ride: San Francisco City Expansion'
   ids:
@@ -137,6 +154,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Clue/Cluedo: 2016 Suspect Pack'
   ids:
@@ -145,6 +163,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Clue/Cluedo: Whispering Pines Retreat Crime Scene'
   ids:
@@ -153,6 +172,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Clue/Cluedo: Polar Research Station Crime Scene Bundle'
   ids:
@@ -161,6 +181,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Exploding Kittens 2: Beach Day Pack'
   ids:
@@ -169,6 +190,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'THE GAME OF LIFE 2: Ultimate Life Collection'
   ids:
@@ -177,6 +199,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Ticket to Ride: Legendary Asia Expansion'
   ids:
@@ -185,6 +208,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Clue/Cluedo: Noir Crime Scene'
   ids:
@@ -193,4 +217,5 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3

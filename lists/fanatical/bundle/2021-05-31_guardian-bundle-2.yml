@@ -4,6 +4,8 @@ name: Guardian Bundle 2
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Company of Crime
   ids:
@@ -27,42 +30,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: WarriOrb
   ids:
   - steam:790360
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Stygian: Reign of the Old Ones'
   ids:
   - steam:779290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beholder 2
   ids:
   - steam:761620
   requires: []
   tiers:
+  - 2
   - 3
 - name: MindSeize
   ids:
   - steam:851280
   requires: []
   tiers:
+  - 2
   - 3
 - name: Moon Hunters
   ids:
   - steam:320040
   requires: []
   tiers:
+  - 2
   - 3
 - name: Seeds of Resilience
   ids:
   - steam:877080
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Trine 4: The Nightmare Prince'
   ids:

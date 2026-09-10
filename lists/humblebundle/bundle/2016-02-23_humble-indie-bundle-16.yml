@@ -4,6 +4,8 @@ name: Humble Indie Bundle 16
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: BTA + $2
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Retro City Rampage™ DX
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Never Alone: Foxtales'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Outlast
   ids:
@@ -41,30 +46,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Trine 3: The Artifacts of Power'
   ids:
   - steam:319910
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'FORCED: Slightly Better Edition'
   ids:
   - steam:249990
   requires: []
   tiers:
+  - 2
   - 3
 - name: Door Kickers
   ids:
   - steam:248610
   requires: []
   tiers:
+  - 2
   - 3
 - name: Duet
   ids:
   - steam:292600
   requires: []
   tiers:
+  - 2
   - 3
 - name: Else Heart.Break()
   ids:

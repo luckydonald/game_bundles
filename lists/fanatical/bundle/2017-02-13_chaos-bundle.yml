@@ -4,6 +4,8 @@ name: Chaos Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Precursors
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tricky Towers
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 12 is Better Than 6
   ids:
@@ -41,54 +46,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Starward Rogue
   ids:
   - steam:410820
   requires: []
   tiers:
+  - 2
   - 3
 - name: Shu
   ids:
   - steam:528720
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'C.A.S.E: Animatronics'
   ids:
   - unresolved:source:isthereanydeal:4767:c-as-e-animatronics
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Dungelot : Shattered Lands'
   ids:
   - steam:403940
   requires: []
   tiers:
+  - 2
   - 3
 - name: Grappledrome
   ids:
   - unresolved:source:isthereanydeal:4767:grappledrome
   requires: []
   tiers:
+  - 2
   - 3
 - name: I am Bread
   ids:
   - steam:327890
   requires: []
   tiers:
+  - 2
   - 3
 - name: CONTRAST
   ids:
   - steam:224460
   requires: []
   tiers:
+  - 2
   - 3
 - name: CATLATERAL DAMAGE
   ids:
   - steam:329860
   requires: []
   tiers:
+  - 2
   - 3
 - name: Convoy
   ids:

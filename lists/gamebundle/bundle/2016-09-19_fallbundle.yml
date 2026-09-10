@@ -4,6 +4,8 @@ name: The Fall GameBundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.25
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: ONE DAY for Ched
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: CONTASION 2
   ids:
   - steam:428940
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rover The Dragonslayer
   ids:
   - unresolved:source:isthereanydeal:4098:rover-the-dragonslayer
   requires: []
   tiers:
+  - 2
   - 3
 - name: Envy the Dead
   ids:
   - steam:453960
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Sky To Fly: Faster Than Wind'
   ids:
   - steam:403850
   requires: []
   tiers:
+  - 2
   - 3
 - name: BattleStorm
   ids:

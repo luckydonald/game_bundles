@@ -4,6 +4,8 @@ name: Shantae & Heroic Heroines
 tiers:
 - rank: 1
   name: 4 Item Bundle
+- rank: 2
+  name: 7 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -30,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Spidersaurs
   ids:
@@ -38,6 +41,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Mighty Switch Force! Hose It Down
   ids:
@@ -46,6 +50,31 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: Shantae and the Pirate's Curse
+  ids:
+  - steam:345820
+  - isthereanydeal:shantae-and-the-pirates-curse
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'RWBY: Arrowfell'
+  ids:
+  - steam:1982150
+  - isthereanydeal:rwby-arrowfell
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Mighty Switch Force! Collection
+  ids:
+  - steam:832320
+  - isthereanydeal:mighty-switch-force-collection
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: 'Shantae: Half-Genie Hero Ultimate Edition'
   ids:
@@ -65,27 +94,6 @@ games:
   ids:
   - steam:1049320
   - isthereanydeal:river-city-girls
-  requires: []
-  tiers:
-  - 3
-- name: Shantae and the Pirate's Curse
-  ids:
-  - steam:345820
-  - isthereanydeal:shantae-and-the-pirates-curse
-  requires: []
-  tiers:
-  - 3
-- name: 'RWBY: Arrowfell'
-  ids:
-  - steam:1982150
-  - isthereanydeal:rwby-arrowfell
-  requires: []
-  tiers:
-  - 3
-- name: Mighty Switch Force! Collection
-  ids:
-  - steam:832320
-  - isthereanydeal:mighty-switch-force-collection
   requires: []
   tiers:
   - 3

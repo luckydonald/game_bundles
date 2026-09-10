@@ -4,6 +4,8 @@ name: TEAM17 COLLECTION
 tiers:
 - rank: 1
   name: Rogues
+- rank: 2
+  name: Partners
 - rank: 3
   name: Heroes
 references:
@@ -22,6 +24,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Warcana
   ids:
@@ -29,24 +32,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Operation: Tango'
   ids:
   - steam:1335790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Conscript Directors Cut
   ids:
   - steam:1286990
   requires: []
   tiers:
+  - 2
   - 3
 - name: Heavenly Bodies
   ids:
   - steam:1138850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Amber Isle
   ids:

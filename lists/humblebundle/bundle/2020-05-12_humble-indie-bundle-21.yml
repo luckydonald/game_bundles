@@ -4,6 +4,8 @@ name: Humble Indie Bundle 21
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Beat Cop
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hotline Miami
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Downwell
   ids:
   - steam:360740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Gato Roboto
   ids:
   - steam:916730
   requires: []
   tiers:
+  - 2
   - 3
 - name: Moonlighter
   ids:
   - steam:606150
   requires: []
   tiers:
+  - 2
   - 3
 - name: Starbound
   ids:

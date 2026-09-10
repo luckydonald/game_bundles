@@ -4,6 +4,8 @@ name: Worms Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Worms Ultimate Mayhem
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Worms Blast
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Worms Pinball
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Worms
   ids:
@@ -48,30 +54,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Worms Ultimate Mayhem - Customisation Pack
   ids:
   - unresolved:source:isthereanydeal:7921:worms-ultimate-mayhem-customisation-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: Worms Ultimate Mayhem - Multiplayer Pack
   ids:
   - steam:70616
   requires: []
   tiers:
+  - 2
   - 3
 - name: Worms Armageddon
   ids:
   - steam:217200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Worms Reloaded
   ids:
   - steam:22600
   requires: []
   tiers:
+  - 2
   - 3
 - name: Worms World Party Remastered
   ids:

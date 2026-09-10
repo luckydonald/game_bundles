@@ -4,6 +4,8 @@ name: Narrative Arc Bundle
 tiers:
 - rank: 1
   name: 3 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
 - rank: 3
   name: 7 Item Bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Venba
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Frank and Drake
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dustborn
   ids:
   - steam:721180
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'SEASON®: A letter to the future'
   ids:
   - steam:695330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Harold Halibut
   ids:

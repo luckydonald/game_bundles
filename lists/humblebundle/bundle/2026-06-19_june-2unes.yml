@@ -4,6 +4,8 @@ name: June 2unes Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Kill The Music
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Thumper
   ids:
   - steam:356400
   requires: []
   tiers:
+  - 2
   - 3
 - name: Spin Rhythm XD
   ids:
   - steam:1058830
   requires: []
   tiers:
+  - 2
   - 3
 - name: Trombone Champ
   ids:
   - steam:1059990
   requires: []
   tiers:
+  - 2
   - 3
 - name: NOISZ
   ids:

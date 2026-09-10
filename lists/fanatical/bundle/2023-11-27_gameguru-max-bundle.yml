@@ -4,6 +4,8 @@ name: GameGuru MAX Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru MAX Low Poly Mini Kit - Fantasy Portals
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GameGuru MAX Aztec Game Kit
   ids:
   - steam:1962060
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru MAX Low Poly Asset Pack - Arctic Ruins
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-arctic-ruins
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru MAX Low Poly Asset Pack - Mechanist's Settlement
   ids:
   - unresolved:source:isthereanydeal:13655:gameguru-max-low-poly-asset-pack-mechanists-settlement
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru MAX 3D Models Booster Pack
   ids:
   - steam:1928630
   requires: []
   tiers:
+  - 2
   - 3
 - name: GameGuru MAX
   ids:

@@ -4,6 +4,8 @@ name: Uncharted Realms Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Alba: A Wildlife Adventure'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'FAR: Changing Tides'
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: The Forgotten City
   ids:
   - steam:874260
   requires: []
   tiers:
+  - 2
   - 4
 - name: Under the Waves
   ids:
   - steam:1975440
   requires: []
   tiers:
+  - 2
   - 4
 - name: Journey To The Savage Planet
   ids:

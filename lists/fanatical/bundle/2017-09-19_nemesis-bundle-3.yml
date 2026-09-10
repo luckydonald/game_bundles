@@ -4,6 +4,8 @@ name: Nemesis Bundle 3
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shoppe Keep
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shadowrun Returns
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'S.T.A.L.K.E.R.: Clear Sky'
   ids:
@@ -41,60 +46,70 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Styx: Master of Shadows'
   ids:
   - steam:242640
   requires: []
   tiers:
+  - 2
   - 3
 - name: Phantaruk
   ids:
   - steam:468930
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Slain: Back from Hell'
   ids:
   - steam:369070
   requires: []
   tiers:
+  - 2
   - 3
 - name: SpellForce 2 - Anniversary Edition
   ids:
   - steam:39550
   requires: []
   tiers:
+  - 2
   - 3
 - name: FaceRig
   ids:
   - unresolved:source:isthereanydeal:5481:facerig
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Planetary Annihilation: TITANS'
   ids:
   - steam:386070
   requires: []
   tiers:
+  - 2
   - 3
 - name: S.T.A.L.K.E.R. Shadow of Chernobyl
   ids:
   - steam:4500
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tropico 5
   ids:
   - steam:245620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Blood (One Unit Whole Blood)
   ids:
   - unresolved:source:isthereanydeal:5481:blood-one-unit-whole-blood
   requires: []
   tiers:
+  - 2
   - 3
 - name: FaceRig Pro Upgrade
   ids:

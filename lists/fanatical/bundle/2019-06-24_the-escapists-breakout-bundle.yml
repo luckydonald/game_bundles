@@ -4,6 +4,8 @@ name: The Escapists Breakout Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Escapists - Alcatraz
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Escapists
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Escapists - Fhurst Peak Correctional Facility
   ids:
@@ -41,18 +46,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Escapists - Escape Team
   ids:
   - steam:376700
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Escapists: The Walking Dead'
   ids:
   - steam:388060
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Escapists 2
   ids:

@@ -4,6 +4,8 @@ name: Humble Indie Bundle 18
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SteamWorld Heist
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Windward
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Neon Drive
   ids:
   - steam:433910
   requires: []
   tiers:
+  - 2
   - 3
 - name: A Story About My Uncle
   ids:
   - steam:278360
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beholder
   ids:
   - steam:475550
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Goat Simulator: GOATY'
   ids:
   - unresolved:source:isthereanydeal:5105:goat-simulator-goaty
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Kentucky Route Zero: PC Edition'
   ids:
   - steam:231200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Owlboy
   ids:

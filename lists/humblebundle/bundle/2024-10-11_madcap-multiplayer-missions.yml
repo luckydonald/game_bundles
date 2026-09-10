@@ -4,6 +4,8 @@ name: Madcap Multiplayer Missions Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Perfect Heist 2
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Murky Divers
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tower Unite
   ids:
   - steam:394690
   requires: []
   tiers:
+  - 2
   - 3
 - name: Blazing Sails
   ids:
   - steam:1158940
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Greatest Penguin Heist of All Time
   ids:
   - steam:1451480
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Break-In
   ids:

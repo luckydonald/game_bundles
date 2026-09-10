@@ -4,6 +4,8 @@ name: Humble GameMaker ReBundle
 tiers:
 - rank: 1
   name: 9-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-18-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shep Hard
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'GameMaker: Studio 1.4 Pro'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Angry Chicken: Egg Madness!'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Cook, Serve, Delicious!
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Freeway Mutant
   ids:
@@ -55,6 +62,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Extreme Burger Defense
   ids:
@@ -62,6 +70,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: INK - Deluxe Edition
   ids:
@@ -69,6 +78,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 10 Second Ninja
   ids:
@@ -76,36 +86,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Home
   ids:
   - steam:215670
   requires: []
   tiers:
+  - 2
   - 3
 - name: Galactic Missile Defense
   ids:
   - steam:388550
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'GameMaker: Studio HTML5 Module'
   ids:
   - unresolved:source:isthereanydeal:5367:gamemaker-studio-html5-module
   requires: []
   tiers:
+  - 2
   - 3
 - name: Solstice
   ids:
   - steam:317280
   requires: []
   tiers:
+  - 2
   - 3
 - name: 10 Second Ninja X GameMaker Edition
   ids:
   - unresolved:source:isthereanydeal:5367:10-second-ninja-x-gamemaker-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'GameMaker: Studio UWP Module'
   ids:

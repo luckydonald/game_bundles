@@ -4,6 +4,8 @@ name: Nemesis Bundle 8
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Awe
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A.R.E.S. Extinction Agenda EX
   ids:
@@ -34,54 +38,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Super Mutant Alien Assault
   ids:
   - steam:368680
   requires: []
   tiers:
+  - 2
   - 3
 - name: Original Journey
   ids:
   - steam:639470
   requires: []
   tiers:
+  - 2
   - 3
 - name: Nightmare Boy
   ids:
   - steam:597860
   requires: []
   tiers:
+  - 2
   - 3
 - name: FIM Speedway Grand Prix 4
   ids:
   - unresolved:source:isthereanydeal:6313:fim-speedway-grand-prix-4
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeon Souls
   ids:
   - steam:383230
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'True Fear: Forsaken Souls'
   ids:
   - steam:440420
   requires: []
   tiers:
+  - 2
   - 3
 - name: Windward
   ids:
   - steam:326410
   requires: []
   tiers:
+  - 2
   - 3
 - name: Deployment
   ids:
   - steam:755980
   requires: []
   tiers:
+  - 2
   - 3
 - name: DreadOut Soundtrack & Manga
   ids:

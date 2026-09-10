@@ -4,6 +4,8 @@ name: Seven Deadly Sims Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Total Tank Simulator
   ids:
   - steam:674500
   requires: []
   tiers:
+  - 2
   - 3
 - name: Police Stories
   ids:
   - steam:539470
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'theHunter™: Call of the Wild'
   ids:
   - steam:518790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Lobotomy Corporation | Monster Management Simulation
   ids:

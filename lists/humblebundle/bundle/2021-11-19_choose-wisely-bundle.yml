@@ -4,6 +4,8 @@ name: Choose Wisely Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: We Were Here Together
   ids:
   - steam:865360
   requires: []
   tiers:
+  - 2
   - 3
 - name: Between the Stars
   ids:
   - steam:727130
   requires: []
   tiers:
+  - 2
   - 3
 - name: On Your Tail - Digital Artbook
   ids:
   - unresolved:source:isthereanydeal:10712:on-your-tail-digital-artbook
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beyond Two Souls
   ids:

@@ -4,6 +4,8 @@ name: Best of Stealth Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: ECHO
   ids:
   - steam:551770
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Styx: Shards of Darkness'
   ids:
   - steam:355790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Heat Signature
   ids:
   - steam:268130
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hitman Game of the Year Edition
   ids:

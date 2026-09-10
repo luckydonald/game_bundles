@@ -4,6 +4,8 @@ name: Armor Games Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 7-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SOLAS 128
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: LumbearJack
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Swords & Souls: Neverseen'
   ids:
   - steam:679900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Bear and Breakfast
   ids:
   - steam:1136370
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Tartarus Key
   ids:
   - steam:1431850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sonny Legacy Collection
   ids:
   - steam:2757720
   requires: []
   tiers:
+  - 2
   - 3
 - name: Baladins
   ids:

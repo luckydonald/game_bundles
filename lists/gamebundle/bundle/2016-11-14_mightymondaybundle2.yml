@@ -4,6 +4,8 @@ name: The Mighty Monday GameBundle 2
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.20
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Castle Chaos
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Stronghold 3 Gold Edition
   ids:
   - unresolved:source:isthereanydeal:4345:stronghold-3-gold-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: House of Snark 6-in-1 Bundle
   ids:
   - steam:486810
   requires: []
   tiers:
+  - 2
   - 3
 - name: Robin's Island Adventure
   ids:

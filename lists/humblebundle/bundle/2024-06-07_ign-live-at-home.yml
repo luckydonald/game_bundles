@@ -4,6 +4,8 @@ name: IGN Live At Home Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Grindstone
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'MechWarrior 5: Mercenaries'
   ids:
   - steam:784080
   requires: []
   tiers:
+  - 2
   - 3
 - name: Soulslinger - Envoy of Death
   ids:
   - steam:2429240
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Revival: Recolonization'
   ids:

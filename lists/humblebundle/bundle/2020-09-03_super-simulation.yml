@@ -4,6 +4,8 @@ name: Humble Super Simulation Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Treasure Hunter Simulator
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: We. The Revolution
   ids:
   - steam:736850
   requires: []
   tiers:
+  - 2
   - 3
 - name: Elite Dangerous
   ids:
   - steam:359320
   requires: []
   tiers:
+  - 2
   - 3
 - name: Radio Commander
   ids:
   - steam:871530
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'theHunter™: Call of the Wild'
   ids:
   - steam:518790
   requires: []
   tiers:
+  - 2
   - 3
 - name: PC Building Simulator
   ids:

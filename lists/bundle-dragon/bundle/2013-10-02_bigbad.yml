@@ -4,6 +4,8 @@ name: Big Bad Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hack, Slash, Loot
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tobe's Vertical Adventure
   ids:
   - steam:105700
   requires: []
   tiers:
+  - 2
   - 3
 - name: Adventures of Shuggy
   ids:
   - steam:211440
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cargo Commander
   ids:

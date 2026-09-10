@@ -4,6 +4,8 @@ name: tinyBuild x Versus Evil Smashup Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Guts and Glory
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Let Them Come
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: HitchHiker - A Mystery Game
   ids:
   - steam:1003120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Wintermoor Tactics Club
   ids:
   - steam:917840
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cardpocalypse
   ids:
   - steam:904400
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Hand of Merlin
   ids:

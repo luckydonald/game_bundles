@@ -4,6 +4,8 @@ name: Extreme VR Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'PROZE: Enlightenment'
   ids:
@@ -27,36 +30,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SculptrVR
   ids:
   - steam:418520
   requires: []
   tiers:
+  - 2
   - 3
 - name: Gadgeteer
   ids:
   - steam:746560
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sprint Vector
   ids:
   - steam:590690
   requires: []
   tiers:
+  - 2
   - 3
 - name: Moose Life
   ids:
   - steam:1342740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Summoner The Ruined Village
   ids:
   - unresolved:source:isthereanydeal:10064:summoner-the-ruined-village
   requires: []
   tiers:
+  - 2
   - 3
 - name: Operation Warcade VR
   ids:

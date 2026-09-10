@@ -4,6 +4,8 @@ name: Bandai Namco - Dark Pictures & Little Nightmares Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'The Dark Pictures Anthology: Little Hope'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Little Nightmares: Secrets of The Maw Expansion Pass'
   ids:
   - steam:640920
   requires: []
   tiers:
+  - 2
   - 4
 - name: Little Nightmares
   ids:
   - steam:424840
   requires: []
   tiers:
+  - 2
   - 4
 - name: Little Nightmares II Deluxe Edition
   ids:

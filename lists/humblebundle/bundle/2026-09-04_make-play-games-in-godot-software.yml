@@ -4,6 +4,8 @@ name: Make & Play Games in Godot Bundle
 tiers:
 - rank: 1
   name: 1 Item Bundle
+- rank: 2
+  name: 4 Item Bundle
 - rank: 3
   name: Entire 13 Item Bundle
 references:
@@ -23,6 +25,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Godot 4: Create and Master Plugins Course'
   ids:
@@ -30,6 +33,7 @@ games:
   - isthereanydeal:godot-4-create-and-master-plugins-course
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'From Blender to Godot Course: Game-Ready Assets'
   ids:
@@ -37,6 +41,7 @@ games:
   - isthereanydeal:from-blender-to-godot-course-game-ready-assets
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Godot 4 Shaders Course: Craft Stunning Visuals'
   ids:
@@ -44,6 +49,7 @@ games:
   - isthereanydeal:godot-4-shaders-course-craft-stunning-visuals
   requires: []
   tiers:
+  - 2
   - 3
 - name: windowkill
   ids:

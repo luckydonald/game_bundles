@@ -4,6 +4,8 @@ name: Ultimate Strategy Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Tank Operations: European Campaign'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Patrician III
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Patrician IV Gold Edition
   ids:
   - unresolved:source:isthereanydeal:3213:patrician-iv-gold-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Grand Ages: Rome Gold Edition'
   ids:
   - unresolved:source:isthereanydeal:3213:grand-ages-rome-gold-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Mechs & Mercs - Black Talons
   ids:
   - steam:273960
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Port Royale 3: Gold Edition'
   ids:
   - unresolved:source:isthereanydeal:3213:port-royale-3-gold-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Omerta: City of Gangsters - GOLD EDITION'
   ids:

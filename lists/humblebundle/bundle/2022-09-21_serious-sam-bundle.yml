@@ -4,6 +4,8 @@ name: Serious Sam Bundle
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: 14-item-bundle
 - rank: 3
   name: entire-17-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Serious Sam: The Random Encounter'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Serious Sam: Kamikaze Attack'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Serious Sam Classics: Revolution'
   ids:
@@ -41,66 +46,77 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Serious Sam HD: The Second Encounter'
   ids:
   - steam:41014
   requires: []
   tiers:
+  - 2
   - 3
 - name: Serious Sam 2
   ids:
   - steam:204340
   requires: []
   tiers:
+  - 2
   - 3
 - name: Serious Sam 3 Jewel of the Nile
   ids:
   - steam:41074
   requires: []
   tiers:
+  - 2
   - 3
 - name: Serious Sam 3 Bonus Content
   ids:
   - unresolved:source:isthereanydeal:12107:serious-sam-3-bonus-content
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Serious Sam 3: BFE'
   ids:
   - steam:41070
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Serious Sam HD: The First Encounter'
   ids:
   - steam:41000
   requires: []
   tiers:
+  - 2
   - 3
 - name: Serious Sam's Bogus Detour
   ids:
   - steam:272620
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Serious Sam HD: The Second Encounter - Legend of the Beast'
   ids:
   - steam:41019
   requires: []
   tiers:
+  - 2
   - 3
 - name: I Hate Running Backwards
   ids:
   - steam:575820
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Serious Sam HD: The Second Encounter - Serious 8'
   ids:
   - unresolved:source:isthereanydeal:12107:serious-sam-hd-the-second-encounter-serious-8
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Serious Sam: Tormental'
   ids:

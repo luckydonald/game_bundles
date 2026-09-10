@@ -4,6 +4,8 @@ name: Heart Attack Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Flower Shop: Summer In Fairbrook'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Heileen 1: Sail Away'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Heileen 2: The Hands Of Fate'
   ids:
@@ -41,36 +46,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Flower Shop: Winter In Fairbrook'
   ids:
   - steam:311680
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Heileen 3: New Horizons Deluxe Edition'
   ids:
   - steam:305490
   requires: []
   tiers:
+  - 2
   - 3
 - name: Spirited Heart Deluxe
   ids:
   - steam:293920
   requires: []
   tiers:
+  - 2
   - 3
 - name: Always Remember Me - Deluxe Edition
   ids:
   - steam:291030
   requires: []
   tiers:
+  - 2
   - 3
 - name: Bionic Heart 2 - Deluxe Edition
   ids:
   - steam:317290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Planet Stronghold - Deluxe Edition
   ids:

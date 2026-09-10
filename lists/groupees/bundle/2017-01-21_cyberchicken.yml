@@ -4,6 +4,8 @@ name: Chicken in a Box
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,12 +22,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Fast and Curious
   ids:
   - unresolved:source:isthereanydeal:4664:fast-and-curious
   requires: []
   tiers:
+  - 2
   - 4
 - name: Cyber-Chicken
   ids:

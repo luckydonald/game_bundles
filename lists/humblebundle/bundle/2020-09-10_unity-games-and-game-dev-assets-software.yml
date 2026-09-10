@@ -4,6 +4,8 @@ name: Humble Unity Games and Game Dev Assets Bundle
 tiers:
 - rank: 1
   name: Beat The Average
+- rank: 2
+  name: 3-item-bundle
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: One Deck Dungeon
   ids:
   - steam:770100
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Aeronautica Imperialis: Flight Command'
   ids:
   - unresolved:source:isthereanydeal:9141:aeronautica-imperialis-flight-command
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'MarZ: Tactical Base Defense'
   ids:

@@ -4,6 +4,8 @@ name: Focus Entertainment Bundle 2026
 tiers:
 - rank: 1
   name: 2 Item bundle
+- rank: 2
+  name: 4 Item bundle
 - rank: 3
   name: 6 item bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Curse of the Dead Gods
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'A Plague Tale: Innocence'
   ids:
   - steam:752590
   requires: []
   tiers:
+  - 2
   - 3
 - name: Evil West
   ids:
   - steam:1065310
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'A Plague Tale: Requiem'
   ids:

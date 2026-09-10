@@ -4,6 +4,8 @@ name: The Big Time Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Bang Bang Racing
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sine Mora
   ids:
   - steam:207040
   requires: []
   tiers:
+  - 2
   - 3
 - name: Ceville
   ids:
   - steam:23460
   requires: []
   tiers:
+  - 2
   - 3
 - name: Anna Extended Edition
   ids:
   - steam:217690
   requires: []
   tiers:
+  - 2
   - 3
 - name: Crash Time 3
   ids:

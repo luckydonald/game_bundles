@@ -4,6 +4,8 @@ name: The Mighty Monday GameBundle 5
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.40
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Egyptian Senet
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Existentia
   ids:
   - unresolved:source:isthereanydeal:4717:existentia
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dear RED - Extended
   ids:
   - steam:453850
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Steamalot: Epoch''s Journey'
   ids:
   - steam:361160
   requires: []
   tiers:
+  - 2
   - 3
 - name: A Week of Circus Terror
   ids:

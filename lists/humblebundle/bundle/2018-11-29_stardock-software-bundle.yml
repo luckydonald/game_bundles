@@ -4,6 +4,8 @@ name: Best Of Stardock Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Start8
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: WindowBlinds
   ids:
   - unresolved:source:isthereanydeal:6718:windowblinds
   requires: []
   tiers:
+  - 2
   - 3
 - name: Start10
   ids:
   - unresolved:source:isthereanydeal:6718:start10
   requires: []
   tiers:
+  - 2
   - 3
 - name: SpaceMonger
   ids:
   - unresolved:source:isthereanydeal:6718:spacemonger
   requires: []
   tiers:
+  - 2
   - 3
 - name: Groupy
   ids:

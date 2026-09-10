@@ -4,6 +4,8 @@ name: Devolver Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: RONIN
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: A Fistful of Gun
   ids:
@@ -34,36 +38,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shadow Warrior
   ids:
   - steam:233130
   requires: []
   tiers:
+  - 2
   - 3
 - name: Not A Hero
   ids:
   - steam:274270
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'OlliOlli2: Welcome to Olliwood'
   ids:
   - steam:365660
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dropsy
   ids:
   - steam:274350
   requires: []
   tiers:
+  - 2
   - 3
 - name: Noct
   ids:
   - unresolved:source:isthereanydeal:3319:noct
   requires: []
   tiers:
+  - 2
   - 3
 - name: Titan Souls
   ids:

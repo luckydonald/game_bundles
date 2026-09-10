@@ -4,6 +4,8 @@ name: Hello Kitty, Hello Doggy
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: ApoCatlypse
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Reigning Cats
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Jerry Rice & Nitus' Dog Football
   ids:
   - steam:438660
   requires: []
   tiers:
+  - 2
   - 3
 - name: Poöf vs The Cursed Kitty
   ids:
   - steam:243280
   requires: []
   tiers:
+  - 2
   - 3
 - name: Vox Populi Vox Dei 2
   ids:
   - steam:345120
   requires: []
   tiers:
+  - 2
   - 3
 - name: WonderCat Adventures
   ids:
   - steam:384120
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hello Kitty and Sanrio Friends Racing
   ids:
