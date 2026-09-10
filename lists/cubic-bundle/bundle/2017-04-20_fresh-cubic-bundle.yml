@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fresh Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5018/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5018/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5018/source.json
+games:
+- name: Spectrubes
+  ids:
+  - steam:447990
+  requires: []
+- name: Citalis
+  ids:
+  - steam:539440
+  requires: []
+- name: VoxreD
+  ids:
+  - unresolved:source:isthereanydeal:5018:voxred
+  requires: []
+- name: Bullet Life 2010
+  ids:
+  - unresolved:source:isthereanydeal:5018:bullet-life-2010
+  requires: []
+- name: Cuties
+  ids:
+  - steam:2506860
+  requires: []
+- name: Black Sand Drift
+  ids:
+  - steam:507380
+  requires: []
+- name: Neon Space ULTRA
+  ids:
+  - unresolved:source:isthereanydeal:5018:neon-space-ultra
+  requires: []
+- name: NightmareZ
+  ids:
+  - steam:509930
+  requires: []

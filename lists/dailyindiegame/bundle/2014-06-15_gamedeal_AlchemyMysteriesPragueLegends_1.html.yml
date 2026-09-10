@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Alchemy Mysteries: Prague Legends - Game Deal — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/897/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/897/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/897/source.json
+games:
+- name: 'Alchemy Mysteries: Prague Legends'
+  ids:
+  - steam:326190
+  requires: []

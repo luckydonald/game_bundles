@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle Of Cards — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5369/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5369/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5369/source.json
+games:
+- name: Shoot Paint
+  ids:
+  - unresolved:source:isthereanydeal:5369:shoot-paint
+  requires: []
+- name: Bunny & Piggy
+  ids:
+  - unresolved:source:isthereanydeal:5369:bunny-and-piggy
+  requires: []
+- name: Soul of the Devil
+  ids:
+  - unresolved:source:isthereanydeal:5369:soul-of-the-devil
+  requires: []
+- name: Blaite
+  ids:
+  - steam:461730
+  requires: []
+- name: Kings under the hill
+  ids:
+  - unresolved:source:isthereanydeal:5369:kings-under-the-hill
+  requires: []
+- name: Random Journey
+  ids:
+  - unresolved:source:isthereanydeal:5369:random-journey
+  requires: []
+- name: Max Stern
+  ids:
+  - steam:531240
+  requires: []
+- name: Wordlase
+  ids:
+  - steam:602930
+  requires: []
+- name: Tales of Destruction
+  ids:
+  - steam:486480
+  requires: []
+- name: Tourists Kidnapped a Little Bear
+  ids:
+  - steam:580420
+  requires: []
+- name: Village Story
+  ids:
+  - unresolved:source:isthereanydeal:5369:village-story
+  requires: []
