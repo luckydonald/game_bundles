@@ -4,6 +4,8 @@ name: Devolver Digital Films Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Motivational Growth
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Magnetic
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gaming In Color
   ids:
   - unresolved:source:isthereanydeal:3558:gaming-in-color
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Angry Video Game Nerd: The Movie'
   ids:
   - unresolved:source:isthereanydeal:3558:angry-video-game-nerd-the-movie
   requires: []
   tiers:
+  - 2
   - 3
 - name: A Line in the Sand
   ids:
   - unresolved:source:isthereanydeal:3558:a-line-in-the-sand
   requires: []
   tiers:
+  - 2
   - 3
 - name: Game Changers
   ids:
   - unresolved:source:isthereanydeal:3558:game-changers
   requires: []
   tiers:
+  - 2
   - 3
 - name: ENEMY EMPIRE
   ids:

@@ -4,6 +4,8 @@ name: 'Humble Software Bundle: Organize Your PC'
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Iconpackager
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: CursorFX
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DeskScapes
   ids:
   - steam:1027220
   requires: []
   tiers:
+  - 2
   - 3
 - name: Start10
   ids:
   - unresolved:source:isthereanydeal:9591:start10
   requires: []
   tiers:
+  - 2
   - 3
 - name: SpaceMonger
   ids:
   - unresolved:source:isthereanydeal:9591:spacemonger
   requires: []
   tiers:
+  - 2
   - 3
 - name: WindowFX
   ids:
   - unresolved:source:isthereanydeal:9591:windowfx
   requires: []
   tiers:
+  - 2
   - 3
 - name: Groupy
   ids:

@@ -4,6 +4,8 @@ name: Monster Hunter Series Collection Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 5
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: MONSTER HUNTER RISE Deluxe Kit
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 5
 - name: 'Monster Hunter Rise: Sunbreak'
   ids:
   - steam:1880360
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Monster Hunter Rise: Sunbreak Deluxe Kit'
   ids:
   - steam:1913711
   requires: []
   tiers:
+  - 2
   - 5
 - name: 'Monster Hunter: World - Deluxe Kit'
   ids:

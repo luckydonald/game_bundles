@@ -4,6 +4,8 @@ name: Nemesis Bundle 6
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Slice Dice & Rice
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Kathy Rain
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'TASTEE: Lethal Tactics'
   ids:
@@ -41,54 +46,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Panzer Corps
   ids:
   - unresolved:source:isthereanydeal:5941:panzer-corps
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dungeon Rushers
   ids:
   - steam:429620
   requires: []
   tiers:
+  - 2
   - 3
 - name: Killing Room
   ids:
   - steam:407560
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Metronomicon: Slay The Dance Floor'
   ids:
   - steam:416790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Phoning Home
   ids:
   - steam:431650
   requires: []
   tiers:
+  - 2
   - 3
 - name: Seraph
   ids:
   - steam:425670
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Table Top Racing: World Tour'
   ids:
   - unresolved:source:isthereanydeal:5941:table-top-racing-world-tour
   requires: []
   tiers:
+  - 2
   - 3
 - name: Juanito Arcade Mayhem
   ids:
   - steam:617440
   requires: []
   tiers:
+  - 2
   - 3
 - name: Beholder - Blissful Sleep
   ids:

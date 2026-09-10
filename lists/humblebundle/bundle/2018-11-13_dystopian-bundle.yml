@@ -4,6 +4,8 @@ name: Dystopian Bundle
 tiers:
 - rank: 1
   name: 4-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tokyo 42
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Orwell: Keeping an Eye On You'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Beholder
   ids:
@@ -41,24 +46,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 60 Seconds!
   ids:
   - steam:368360
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Orwell: Ignorance is Strength'
   ids:
   - steam:633060
   requires: []
   tiers:
+  - 2
   - 3
 - name: Rain World
   ids:
   - steam:312520
   requires: []
   tiers:
+  - 2
   - 3
 - name: Observer
   ids:

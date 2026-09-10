@@ -4,6 +4,8 @@ name: Little Nightmares Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ridge Racer Unbounded Bundle
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DeadCore
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: "Ace Combat\x99 Assault Horizon Enhanced Edition"
   ids:
   - unresolved:source:isthereanydeal:5042:ace-combat-assault-horizon-enhanced-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Enslaved: Odyssey to the West Premium Edition'
   ids:
   - steam:245280
   requires: []
   tiers:
+  - 2
   - 3
 - name: PAC-MAN 256
   ids:
   - steam:455400
   requires: []
   tiers:
+  - 2
   - 3
 - name: Platformines
   ids:
   - steam:264540
   requires: []
   tiers:
+  - 2
   - 3
 - name: Little Nightmares
   ids:

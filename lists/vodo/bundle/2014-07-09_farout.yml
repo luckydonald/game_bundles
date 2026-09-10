@@ -4,6 +4,8 @@ name: The Mindblowingest Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Tier 3
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Q.U.B.E.
   ids:
   - unresolved:source:isthereanydeal:971:q-u-b-e
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Q.U.B.E: Director''s Cut'
   ids:
   - unresolved:source:isthereanydeal:971:q-u-b-e-directors-cut
   requires: []
   tiers:
+  - 2
   - 3
 - name: Cubetractor
   ids:

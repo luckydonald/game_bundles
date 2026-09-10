@@ -4,6 +4,8 @@ name: 'VR Games Showcase: The New Essentials'
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 7
   name: Charity tier, 100% goes to charity
 references:
@@ -21,6 +23,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 7
 - name: CONVRGENCE
   ids:
@@ -28,6 +31,7 @@ games:
   - isthereanydeal:convrgence
   requires: []
   tiers:
+  - 2
   - 7
 - name: Arizona Sunshine® VR 2
   ids:
@@ -35,6 +39,7 @@ games:
   - isthereanydeal:arizona-sunshine-vr-2
   requires: []
   tiers:
+  - 2
   - 7
 - name: Bootstrap Island
   ids:

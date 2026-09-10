@@ -4,6 +4,8 @@ name: Slitherine Strategy Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Buzz Aldrin's Space Program Manager
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Distant Worlds: Universe'
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Master of Magic
   ids:
   - steam:1623070
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Gladius - Relics of War'
   ids:
   - steam:489630
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Flashpoint Campaigns: Red Storm Player''s Edition'
   ids:
   - steam:330720
   requires: []
   tiers:
+  - 2
   - 3
 - name: WarPlan
   ids:
   - steam:1084790
   requires: []
   tiers:
+  - 2
   - 3
 - name: Panzer Corps 2
   ids:

@@ -4,6 +4,8 @@ name: Kings & Queens Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Zen Chess: Mate in Four'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Zen Chess: Mate in Three'
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Zen Chess: Mate in Two'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Zen Chess: Champion''s Moves'
   ids:
@@ -48,42 +54,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Knight Swap
   ids:
   - steam:1145410
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hang The Kings
   ids:
   - steam:1172500
   requires: []
   tiers:
+  - 2
   - 3
 - name: Unlock The King
   ids:
   - steam:1172510
   requires: []
   tiers:
+  - 2
   - 3
 - name: Unlock The King 2
   ids:
   - steam:1201810
   requires: []
   tiers:
+  - 2
   - 3
 - name: Unlock The King 3
   ids:
   - steam:1255130
   requires: []
   tiers:
+  - 2
   - 3
 - name: Knight's Retreat
   ids:
   - steam:1261700
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Zen Chess: Blindfold Masters'
   ids:

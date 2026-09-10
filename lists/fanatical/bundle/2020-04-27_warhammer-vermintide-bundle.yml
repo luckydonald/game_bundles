@@ -4,6 +4,8 @@ name: 'Warhammer: Vermintide Bundle'
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer: End Times - Vermintide'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Warhammer: Vermintide 2 - Shadows Over Bögenhafen'
   ids:
   - steam:828790
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer: Vermintide 2 - Back to Ubersreik'
   ids:
   - steam:975400
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer: Vermintide 2 - Winds of Magic'
   ids:

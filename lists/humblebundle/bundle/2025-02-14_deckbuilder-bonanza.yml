@@ -4,6 +4,8 @@ name: DeckBuilder Bonanza Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-6-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Death Roads: Tournament'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Hadean Tactics
   ids:
   - steam:1260590
   requires: []
   tiers:
+  - 2
   - 3
 - name: Backpack Hero
   ids:
   - steam:1970580
   requires: []
   tiers:
+  - 2
   - 3
 - name: HELLCARD
   ids:

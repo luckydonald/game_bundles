@@ -4,6 +4,8 @@ name: Humble GameDev Software Bundle
 tiers:
 - rank: 1
   name: Pay $1 or more!
+- rank: 2
+  name: Pay more than the average
 - rank: 3
   name: Pay $10 or more to also unlock!
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Spriter: Game Effects Pack'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Clickteam Fusion 2.5
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Pyxel Edit
   ids:
@@ -41,42 +46,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Spriter: Run N'' Gun Pack'
   ids:
   - steam:333773
   requires: []
   tiers:
+  - 2
   - 3
 - name: Todoist Premium 1 year subscription
   ids:
   - unresolved:source:isthereanydeal:4541:todoist-premium-1-year-subscription
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Spriter: Basic Platformer Pack'
   ids:
   - steam:333771
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Spriter: Adventure Platformer Pack'
   ids:
   - steam:333772
   requires: []
   tiers:
+  - 2
   - 3
 - name: Marmoset Hexels 3
   ids:
   - steam:428340
   requires: []
   tiers:
+  - 2
   - 3
 - name: HTML5 Exporter for Clickteam Fusion 2.5
   ids:
   - steam:267652
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Spriter: Radius-Wing SHMUP Animated Art Pack'
   ids:

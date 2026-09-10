@@ -4,6 +4,8 @@ name: Digitized Tabletop Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 4
   name: entire-20-item-bundle
 references:
@@ -20,36 +22,42 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: WARTILE
   ids:
   - steam:404200
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:10784:talisman-digital-edition
   requires: []
   tiers:
+  - 2
   - 4
 - name: Talisman - The City Expansion
   ids:
   - steam:267784
   requires: []
   tiers:
+  - 2
   - 4
 - name: Talisman - The Sacred Pool Expansion
   ids:
   - steam:267781
   requires: []
   tiers:
+  - 2
   - 4
 - name: Talisman - The Frostmarch Expansion
   ids:
   - steam:267772
   requires: []
   tiers:
+  - 2
   - 4
 - name: 100% Orange Juice - Mixed Booster Pack
   ids:

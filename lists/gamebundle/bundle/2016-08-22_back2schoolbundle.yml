@@ -4,6 +4,8 @@ name: Back 2 School GameBundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.25
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 3DRPG
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Taimumari
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Re-Volt
   ids:
   - steam:287310
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Chef Solitaire: USA'
   ids:
   - steam:432190
   requires: []
   tiers:
+  - 2
   - 3
 - name: Chowderchu
   ids:
   - steam:431740
   requires: []
   tiers:
+  - 2
   - 3
 - name: Big Action Mega Fight!
   ids:
   - steam:357120
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Sky to Fly: Soulless Leviathan'
   ids:

@@ -4,6 +4,8 @@ name: Humble Jumbo Bundle 7
 tiers:
 - rank: 1
   name: Pay $1 or more for Steam keys
+- rank: 2
+  name: BTA
 - rank: 3
   name: Pay $9.99 or more to also unlock
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Devil Daggers
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Runestone Keeper
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Road to Ballhalla
   ids:
   - steam:425410
   requires: []
   tiers:
+  - 2
   - 3
 - name: Stronghold Crusader 2
   ids:
   - steam:232890
   requires: []
   tiers:
+  - 2
   - 3
 - name: Prison Architect
   ids:
   - steam:233450
   requires: []
   tiers:
+  - 2
   - 3
 - name: Elegy for a Dead World
   ids:
   - unresolved:source:isthereanydeal:4103:elegy-for-a-dead-world
   requires: []
   tiers:
+  - 2
   - 3
 - name: Punch Club
   ids:
   - steam:394310
   requires: []
   tiers:
+  - 2
   - 3
 - name: Agatha Christie - The ABC Murders
   ids:
   - steam:374900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Miscreated
   ids:

@@ -4,6 +4,8 @@ name: Deus Ex Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Deus Ex: Game of the Year Edition'
   ids:
@@ -27,12 +30,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
   ids:
   - steam:238010
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Deus Ex: Mankind Divided - Digital Deluxe Edition'
   ids:

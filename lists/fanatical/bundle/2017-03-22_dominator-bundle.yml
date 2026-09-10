@@ -4,6 +4,8 @@ name: Dominator Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Euclidean
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: JumpJet Rex
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Void & Meddler - Soundtrack Ep. 1
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 10 Second Ninja X
   ids:
@@ -48,54 +54,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Scrap Garden
   ids:
   - steam:465760
   requires: []
   tiers:
+  - 2
   - 4
 - name: Goliath
   ids:
   - steam:363520
   requires: []
   tiers:
+  - 2
   - 4
 - name: The Little Acre
   ids:
   - steam:423590
   requires: []
   tiers:
+  - 2
   - 4
 - name: Master Spy Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:4934:master-spy-deluxe-edition
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Out There: Ω Edition + Soundtrack'
   ids:
   - steam:334420
   requires: []
   tiers:
+  - 2
   - 4
 - name: Holy Potatoes! A Weapon Shop?!
   ids:
   - steam:363600
   requires: []
   tiers:
+  - 2
   - 4
 - name: Western 1849 Reloaded
   ids:
   - steam:576980
   requires: []
   tiers:
+  - 2
   - 4
 - name: Nevermind
   ids:
   - steam:342260
   requires: []
   tiers:
+  - 2
   - 4
 - name: 8-Bit Armies - Soundtrack
   ids:

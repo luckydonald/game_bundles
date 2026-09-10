@@ -4,6 +4,8 @@ name: Humble Digital Tabletop Bundle 1
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 9-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sentinels of the Multiverse
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Mysterium
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Pathfinder Adventures
   ids:
   - steam:480640
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sentinels of the Multiverse - Shattered Timelines
   ids:
   - steam:429110
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Talisman: Digital Edition'
   ids:
   - unresolved:source:isthereanydeal:6411:talisman-digital-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Talisman - The Highland Expansion
   ids:
   - steam:267780
   requires: []
   tiers:
+  - 2
   - 3
 - name: Talisman - The Dungeon Expansion
   ids:
   - steam:267775
   requires: []
   tiers:
+  - 2
   - 3
 - name: Carcassonne - Tiles & Tactics
   ids:
   - steam:598810
   requires: []
   tiers:
+  - 2
   - 3
 - name: Armello
   ids:

@@ -4,6 +4,8 @@ name: VR Discovery Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DreadEye VR
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Conscious Existence - A Journey Within
   ids:
   - steam:1093330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Republique VR
   ids:
   - steam:915200
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Morrigan
   ids:

@@ -4,6 +4,8 @@ name: Play With Pride Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Monster Prom
   ids:
   - steam:743450
   requires: []
   tiers:
+  - 2
   - 3
 - name: '2064: Read Only Memories'
   ids:
   - steam:330820
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Monster Prom: Second Term'
   ids:
   - steam:958370
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Monster Prom 2: Monster Camp'
   ids:

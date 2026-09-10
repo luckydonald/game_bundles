@@ -4,6 +4,8 @@ name: Flashback Classics Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Super Meat Boy
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Super Fancy Pants Adventure
   ids:
   - steam:668210
   requires: []
   tiers:
+  - 2
   - 3
 - name: Worms W.M.D
   ids:
   - steam:327030
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Last Stand Legacy Collection
   ids:
   - steam:1615100
   requires: []
   tiers:
+  - 2
   - 3
 - name: Epic Battle Fantasy Collection
   ids:
   - steam:1469620
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Submachine: Legacy'
   ids:

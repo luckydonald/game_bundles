@@ -4,6 +4,8 @@ name: Humble Stardock Wayfarers Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Sins of a Solar Empire: Rebellion'
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Siege of Centauri
   ids:
   - steam:524010
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Political Machine 2020
   ids:
   - unresolved:source:isthereanydeal:9785:the-political-machine-2020
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Star Control: Origins - Galactic Edition'
   ids:

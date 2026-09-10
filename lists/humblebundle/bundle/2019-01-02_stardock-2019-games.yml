@@ -4,6 +4,8 @@ name: Humble Stardock Bundle 2019
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-11-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Galactic Civilizations I: Ultimate Edition'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Galactic Civilizations II: Ultimate Edition'
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Galactic Civilizations III - Mega Events
   ids:
   - steam:389930
   requires: []
   tiers:
+  - 2
   - 3
 - name: Galactic Civilizations III
   ids:
   - steam:226860
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Galactic Civilizations III: Crusade Expansion Pack'
   ids:
   - steam:527070
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ashes of the Singularity: Escalation'
   ids:
   - steam:507490
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ashes of the Singularity: Escalation - Epic Map Pack'
   ids:

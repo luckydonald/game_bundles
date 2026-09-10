@@ -4,6 +4,8 @@ name: Cyberpunk Playground Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 4-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Voltage High Society
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ghostrunner
   ids:
   - steam:1139900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Severed Steel
   ids:
   - steam:1227690
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'ANNO: Mutationem'
   ids:

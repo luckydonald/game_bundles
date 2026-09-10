@@ -4,6 +4,8 @@ name: Fruitbat Factory Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 100% Orange Juice - Acceleration Pack
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 100% Orange Juice
   ids:
@@ -34,54 +38,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 100% Orange Juice - Mixed Booster Pack
   ids:
   - steam:338360
   requires: []
   tiers:
+  - 2
   - 4
 - name: 100% Orange Juice - Nath & Tomato+Mimyuu Character Pack
   ids:
   - steam:573180
   requires: []
   tiers:
+  - 2
   - 4
 - name: "100% Orange Juice \x96 Syura & Nanako Character Pack"
   ids:
   - steam:327340
   requires: []
   tiers:
+  - 2
   - 4
 - name: 200% Mixed Juice!
   ids:
   - steam:335190
   requires: []
   tiers:
+  - 2
   - 4
 - name: 100% Orange Juice - Saki & Kyousuke Character Pack
   ids:
   - steam:334080
   requires: []
   tiers:
+  - 2
   - 4
 - name: 100% Orange Juice - Krila & Kae Character Pack
   ids:
   - steam:376200
   requires: []
   tiers:
+  - 2
   - 4
 - name: 100% Orange Juice - Alte & Kyoko Character Pack
   ids:
   - steam:388790
   requires: []
   tiers:
+  - 2
   - 4
 - name: ManaCollect
   ids:
   - steam:335200
   requires: []
   tiers:
+  - 2
   - 4
 - name: Neko Navy
   ids:

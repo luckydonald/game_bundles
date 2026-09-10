@@ -4,6 +4,8 @@ name: 'Virtual Realities: Mystery & Mayhem Bundle'
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 3-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Arizona Sunshine - Deluxe Edition
   ids:
   - unresolved:source:isthereanydeal:13962:arizona-sunshine-deluxe-edition
   requires: []
   tiers:
+  - 2
   - 4
 - name: Broken Edge
   ids:
   - steam:1947070
   requires: []
   tiers:
+  - 2
   - 4
 - name: After the Fall
   ids:

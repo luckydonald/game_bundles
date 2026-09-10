@@ -4,6 +4,8 @@ name: Badass Brawlers Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Full Metal Furies
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Final Vendetta
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: River City Girls
   ids:
   - steam:1049320
   requires: []
   tiers:
+  - 2
   - 3
 - name: Young Souls
   ids:
   - steam:985900
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dawn of the Monsters
   ids:

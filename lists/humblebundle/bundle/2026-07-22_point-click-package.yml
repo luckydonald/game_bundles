@@ -4,6 +4,8 @@ name: Point Click Package
 tiers:
 - rank: 1
   name: 4 Item Bundle
+- rank: 2
+  name: 7 Item Bundle
 - rank: 3
   name: Entire 10 Item Bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sunday Gold
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'STASIS: BONE TOTEM'
   ids:
@@ -34,6 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 3
+- name: 'Syberia: The World Before Deluxe Edition'
+  ids:
+  - unresolved:source:humblebundle:syberiatheworldbeforedeluxe
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Lil' Guardsman
+  ids:
+  - steam:1924360
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Unavowed
+  ids:
+  - unresolved:source:humblebundle:unavowed
+  requires: []
+  tiers:
+  - 2
   - 3
 - name: Syberia Remastered
   ids:
@@ -50,24 +76,6 @@ games:
 - name: 'Agatha Christie: Death on the Nile'
   ids:
   - steam:3150480
-  requires: []
-  tiers:
-  - 3
-- name: 'Syberia: The World Before Deluxe Edition'
-  ids:
-  - unresolved:source:humblebundle:syberiatheworldbeforedeluxe
-  requires: []
-  tiers:
-  - 3
-- name: Lil' Guardsman
-  ids:
-  - steam:1924360
-  requires: []
-  tiers:
-  - 3
-- name: Unavowed
-  ids:
-  - unresolved:source:humblebundle:unavowed
   requires: []
   tiers:
   - 3

@@ -4,6 +4,8 @@ name: Guardian Bundle 5
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gone Home Soundtrack
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gone Home
   ids:
@@ -34,60 +38,70 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Battle of Polytopia
   ids:
   - steam:874390
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Battle of Polytopia - Aquarion Tribe
   ids:
   - steam:982200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Die for Valhalla!
   ids:
   - steam:606000
   requires: []
   tiers:
+  - 2
   - 3
 - name: Highrisers
   ids:
   - steam:733820
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Innsmouth Case
   ids:
   - steam:1231950
   requires: []
   tiers:
+  - 2
   - 3
 - name: Jessika
   ids:
   - steam:1251980
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Battle of Polytopia - Polaris Tribe
   ids:
   - steam:1237430
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Battle of Polytopia - Elyrion Tribe
   ids:
   - steam:982201
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Battle of Polytopia - Cymanti Tribe
   ids:
   - steam:1529660
   requires: []
   tiers:
+  - 2
   - 3
 - name: Blue Fire
   ids:

@@ -4,6 +4,8 @@ name: Deep Silver Bundle 2
 tiers:
 - rank: 1
   name: 5-item-bundle
+- rank: 2
+  name: 8-item-bundle
 - rank: 3
   name: entire-10-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Risen 2: Dark Waters Gold Edition'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dead Island Game of the Year Edition
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sacred 3 Gold Edition
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Saints Row 2
   ids:
@@ -48,24 +54,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Saints Row: The Third - The Full Package'
   ids:
   - unresolved:source:isthereanydeal:3441:saints-row-the-third-the-full-package
   requires: []
   tiers:
+  - 2
   - 3
 - name: Dead Island Riptide Complete Edition
   ids:
   - unresolved:source:isthereanydeal:3441:dead-island-riptide-complete-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Killer is Dead - Nightmare Edition
   ids:
   - steam:261110
   requires: []
   tiers:
+  - 2
   - 3
 - name: Saints Row IV
   ids:

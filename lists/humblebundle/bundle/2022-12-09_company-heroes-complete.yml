@@ -4,6 +4,8 @@ name: Company of Heroes Total Command Collection Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 10-item-bundle
 - rank: 3
   name: entire-74-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Company of Heroes
   ids:
@@ -27,54 +30,63 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Company of Heroes 2
   ids:
   - steam:231430
   requires: []
   tiers:
+  - 2
   - 3
 - name: Company of Heroes 2 - Victory at Stalingrad Mission Pack
   ids:
   - steam:231480
   requires: []
   tiers:
+  - 2
   - 3
 - name: Company of Heroes 2 - Case Blue Mission Pack
   ids:
   - steam:231479
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Company of Heroes 2 - Ardennes Assault: Fox Company Rangers'
   ids:
   - steam:323230
   requires: []
   tiers:
+  - 2
   - 3
 - name: Company of Heroes 2 - Southern Fronts Mission Pack
   ids:
   - steam:260290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Company of Heroes 2 - The Western Front Armies - US Forces
   ids:
   - steam:287370
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Company of Heroes: Tales of Valor'
   ids:
   - steam:20540
   requires: []
   tiers:
+  - 2
   - 3
 - name: Company of Heroes 2 - The British Forces
   ids:
   - steam:365820
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Company of Heroes 2 - German Commander: Elite Troops Doctrine'
   ids:

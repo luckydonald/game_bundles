@@ -4,6 +4,8 @@ name: Overwhelmingly Positive Gems Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Huntdown
   ids:
   - steam:598550
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'There is no game : Wrong dimension'
   ids:
   - steam:1240210
   requires: []
   tiers:
+  - 2
   - 3
 - name: Clone Drone in the Danger Zone
   ids:

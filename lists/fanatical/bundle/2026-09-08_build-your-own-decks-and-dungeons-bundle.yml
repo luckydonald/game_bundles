@@ -5,6 +5,9 @@ tiers:
 - rank: 1
   name: pick 3
   pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -25,6 +28,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Quest
   ids:
@@ -33,6 +37,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Astral Ascent
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Fuzz Force: Spook Squad'
   ids:
@@ -49,6 +55,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sovereign Syndicate
   ids:
@@ -57,6 +64,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: OTXO
   ids:
@@ -65,6 +73,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Duelists of Eden
   ids:
@@ -73,6 +82,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Isle of Swaps
   ids:
@@ -81,6 +91,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Footgun: Underground'
   ids:
@@ -89,6 +100,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: DunHero
   ids:
@@ -97,6 +109,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Everwarder
   ids:
@@ -105,6 +118,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Red Pistol
   ids:
@@ -113,6 +127,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tic Tactic
   ids:
@@ -121,6 +136,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Aris Arcanum
   ids:
@@ -129,6 +145,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Second Chances
   ids:
@@ -137,6 +154,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Replicat
   ids:
@@ -145,6 +163,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Kritter: Defend Together'
   ids:
@@ -153,6 +172,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dungeon Antiqua 2
   ids:
@@ -161,6 +181,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dungeons of Dreadrock 1 & 2 Pack
   ids:
@@ -169,4 +190,5 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3

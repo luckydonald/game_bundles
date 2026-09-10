@@ -4,6 +4,8 @@ name: The Tactician&#39;s Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Phantom Doctrine
   ids:
   - steam:559100
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Warhammer 40,000: Mechanicus'
   ids:
   - steam:673880
   requires: []
   tiers:
+  - 2
   - 3
 - name: Star Renegades
   ids:

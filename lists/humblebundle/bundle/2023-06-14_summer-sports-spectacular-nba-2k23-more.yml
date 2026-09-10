@@ -4,6 +4,8 @@ name: 'Summer Sports Spectacular: NBA2K23 & More Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: WWE 2K Battlegrounds
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Lethal League Blaze
   ids:
   - steam:553310
   requires: []
   tiers:
+  - 2
   - 3
 - name: Wave Break
   ids:
   - steam:761010
   requires: []
   tiers:
+  - 2
   - 3
 - name: OlliOlli World
   ids:
   - steam:1190170
   requires: []
   tiers:
+  - 2
   - 3
 - name: NBA 2K23
   ids:
   - unresolved:source:isthereanydeal:13278:nba-2k23
   requires: []
   tiers:
+  - 2
   - 3
 - name: Tape to Tape
   ids:

@@ -4,6 +4,8 @@ name: Indie Adventures Bundle
 tiers:
 - rank: 1
   name: Adventurer
+- rank: 2
+  name: Tactician
 - rank: 3
   name: Legend
 references:
@@ -20,24 +22,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Disco Elysium - The Final Cut
   ids:
   - steam:632470
   requires: []
   tiers:
+  - 2
   - 3
 - name: For The King II
   ids:
   - steam:1676840
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Shadow Gambit: The Cursed Crew'
   ids:
   - steam:1545560
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Flintlock: The Siege of Dawn'
   ids:

@@ -5,6 +5,9 @@ tiers:
 - rank: 1
   name: pick 5
   pick_quota: 5
+- rank: 2
+  name: pick 10
+  pick_quota: 10
 - rank: 3
   name: pick 20
   pick_quota: 20
@@ -23,6 +26,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Beyond Two Souls
   ids:
@@ -31,6 +35,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Heavy Rain
   ids:
@@ -39,6 +44,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Zombie Army Trilogy
   ids:
@@ -47,6 +53,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sniper Elite 4 Deluxe Edition
   ids:
@@ -55,6 +62,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dark Envoy
   ids:
@@ -63,6 +71,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Zombie Army 4: Dead War'
   ids:
@@ -71,6 +80,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Strange Brigade Deluxe Edition
   ids:
@@ -79,6 +89,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Moonlighter: Complete Edition'
   ids:
@@ -87,6 +98,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'POSTAL 4: No Regerts'
   ids:
@@ -95,6 +107,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Gori: Cuddly Carnage'
   ids:
@@ -103,6 +116,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'POSTAL: Brain Damaged'
   ids:
@@ -111,6 +125,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Evil Genius 2: World Domination Deluxe Edition'
   ids:
@@ -119,6 +134,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Bramble: The Mountain King'
   ids:
@@ -127,6 +143,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Children of Morta: Complete Edition'
   ids:
@@ -135,6 +152,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sniper Elite 5
   ids:
@@ -143,6 +161,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Redout 2
   ids:
@@ -151,6 +170,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Chant
   ids:
@@ -159,6 +179,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Choo-Choo Charles
   ids:
@@ -167,6 +188,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Everholm
   ids:
@@ -175,6 +197,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Stray Path
   ids:
@@ -183,6 +206,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dawnsbury Days
   ids:
@@ -191,6 +215,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Creatures of Ava
   ids:
@@ -199,6 +224,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Chernobylite Premium Edition
   ids:
@@ -207,4 +233,5 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3

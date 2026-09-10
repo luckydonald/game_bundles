@@ -4,6 +4,8 @@ name: Movavi Photo & Video Editor Bundle 2
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Gecata by Movavi 5 - Game Recording Software
   ids:
   - steam:769670
   requires: []
   tiers:
+  - 2
   - 3
 - name: Movavi Slideshow Maker 8
   ids:
   - steam:1420930
   requires: []
   tiers:
+  - 2
   - 3
 - name: Movavi Video Editor Plus 2021 - Trendy Intro Set
   ids:

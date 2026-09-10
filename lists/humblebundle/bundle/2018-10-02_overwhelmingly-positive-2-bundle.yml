@@ -4,6 +4,8 @@ name: Humble Overwhelmingly Positive Bundle 2
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat The Average - Includes Tier 1
 - rank: 3
   name: Includes Tiers 1 & 2
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Wuppo
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SIMULACRA
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SOMA
   ids:
   - steam:282140
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'LISA: Complete Edition'
   ids:
   - unresolved:source:isthereanydeal:6533:lisa-complete-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Momodora: Reverie Under the Moonlight'
   ids:
   - steam:428550
   requires: []
   tiers:
+  - 2
   - 3
 - name: Nuclear Throne
   ids:
   - steam:242680
   requires: []
   tiers:
+  - 2
   - 3
 - name: Opus Magnum
   ids:

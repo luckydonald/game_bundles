@@ -4,6 +4,8 @@ name: 'Humble Mobile Bundle: Great Adventures'
 tiers:
 - rank: 1
   name: $1+
+- rank: 2
+  name: $4+
 - rank: 3
   name: $6+
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Kathy Rain
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Grim Fandango Remastered
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Burly Men at Sea
   ids:
   - steam:403290
   requires: []
   tiers:
+  - 2
   - 3
 - name: Her Story
   ids:
   - steam:368370
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sorcery! Part 4
   ids:
   - steam:504800
   requires: []
   tiers:
+  - 2
   - 3
 - name: Lumino City
   ids:

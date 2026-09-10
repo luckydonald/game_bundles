@@ -4,6 +4,8 @@ name: IGN Live Bundle 2026
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'TOEM: A Photo Adventure'
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Blair Witch
   ids:
   - steam:1092660
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Paradise Killer: Perfect 25 Edition'
   ids:
   - unresolved:source:isthereanydeal:16236:paradise-killer-perfect-25-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: Fear the Spotlight
   ids:
   - steam:1959390
   requires: []
   tiers:
+  - 2
   - 3
 - name: Control Ultimate Edition
   ids:

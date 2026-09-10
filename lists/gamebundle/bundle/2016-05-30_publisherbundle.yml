@@ -4,6 +4,8 @@ name: Artifex Mundi GameBundle 1
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: Beat The Average + $0.10
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Nightmares from the Deep 2: The Siren`s Call'
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Nightmares From the Deep: The Cursed Heart'
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Dark Arcana: The Carnival'
   ids:
   - steam:284730
   requires: []
   tiers:
+  - 2
   - 3
 - name: '9 Clues: The Secret Of Serpent Creek'
   ids:
   - steam:284870
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Mind Snares: Alice''s Journey'
   ids:
   - steam:363330
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Fairy Tale Mysteries 2: The Beanstalk'
   ids:

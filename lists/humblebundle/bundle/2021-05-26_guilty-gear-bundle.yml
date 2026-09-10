@@ -4,6 +4,8 @@ name: Guilty Gear Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Guilty Gear X2 Reload
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GUILTY GEAR XX ACCENT CORE PLUS R
   ids:
   - steam:348550
   requires: []
   tiers:
+  - 2
   - 3
 - name: GUILTY GEAR 2 -OVERTURE
   ids:
   - steam:437000
   requires: []
   tiers:
+  - 2
   - 3
 - name: GUILTY GEAR
   ids:
   - steam:850980
   requires: []
   tiers:
+  - 2
   - 3
 - name: GUILTY GEAR Xrd -SIGN- Big Blast Bundle
   ids:

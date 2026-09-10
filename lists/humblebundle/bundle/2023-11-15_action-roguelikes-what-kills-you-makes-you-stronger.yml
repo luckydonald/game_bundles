@@ -4,6 +4,8 @@ name: 'Action Roguelikes: What Kills You Makes You Stronger Bundle'
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 3-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -20,18 +22,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Wall World
   ids:
   - steam:2187290
   requires: []
   tiers:
+  - 2
   - 4
 - name: God Of Weapons
   ids:
   - steam:2342950
   requires: []
   tiers:
+  - 2
   - 4
 - name: Paint the Town Red
   ids:

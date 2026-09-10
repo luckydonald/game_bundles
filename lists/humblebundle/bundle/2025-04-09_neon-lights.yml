@@ -4,6 +4,8 @@ name: Neon Lights Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Black Future '88
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Neon Abyss
   ids:
@@ -34,18 +38,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ghostrunner
   ids:
   - steam:1139900
   requires: []
   tiers:
+  - 2
   - 3
 - name: RKGK / Rakugaki
   ids:
   - steam:2146570
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'ANNO: Mutationem'
   ids:

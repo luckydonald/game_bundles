@@ -4,6 +4,8 @@ name: Deep Simulator
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Truck Mechanic Simulator 2015
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Construction Machines Simulator 2016
   ids:
   - unresolved:source:isthereanydeal:2545:construction-machines-simulator-2016
   requires: []
   tiers:
+  - 2
   - 3
 - name: Farm Mechanic Simulator 2015
   ids:
   - unresolved:source:isthereanydeal:2545:farm-mechanic-simulator-2015
   requires: []
   tiers:
+  - 2
   - 3
 - name: Farm Expert 2016
   ids:
   - unresolved:source:isthereanydeal:2545:farm-expert-2016
   requires: []
   tiers:
+  - 2
   - 3
 - name: Helicopter 2015 - Natural Disasters
   ids:

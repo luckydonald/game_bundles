@@ -4,6 +4,8 @@ name: Neverwinter Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 4
   name: Tier 4
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Neverwinter - Offensive Starter Pack
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Neverwinter - Endurance Starter Pack
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Neverwinter Trove of Elemental Evil
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-trove-of-elemental-evil
   requires: []
   tiers:
+  - 2
   - 4
 - name: Neverwinter - Gelatinous Cube Companion
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-gelatinous-cube-companion
   requires: []
   tiers:
+  - 2
   - 4
 - name: Neverwinter Storm Rider Companion
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-storm-rider-companion
   requires: []
   tiers:
+  - 2
   - 4
 - name: Neverwinter - Stormraider Horse Mount
   ids:

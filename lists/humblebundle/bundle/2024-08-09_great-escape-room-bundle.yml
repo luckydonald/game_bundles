@@ -4,6 +4,8 @@ name: The Great Escape Room Bundle
 tiers:
 - rank: 1
   name: 1-item-bundle
+- rank: 2
+  name: 2-item-bundle
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,12 +22,14 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Escape First Alchemist
   ids:
   - steam:2094320
   requires: []
   tiers:
+  - 2
   - 3
 - name: Escape Simulator
   ids:

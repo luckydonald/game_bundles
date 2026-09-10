@@ -5,6 +5,9 @@ tiers:
 - rank: 1
   name: pick 3
   pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
 - rank: 3
   name: pick 7
   pick_quota: 7
@@ -25,6 +28,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Smilemo
   ids:
@@ -33,6 +37,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'Rocco''s Island: Ring to End the Pain'
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Blue Wednesday
   ids:
@@ -49,6 +55,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Cats Are Money
   ids:
@@ -57,6 +64,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The Deadseat
   ids:
@@ -65,6 +73,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shooty Shooty Robot Invasion
   ids:
@@ -73,6 +82,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: LUCKROT
   ids:
@@ -81,6 +91,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Coincidences?
   ids:
@@ -89,6 +100,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Marble's Marbles
   ids:
@@ -97,6 +109,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: BACK*SPACE
   ids:
@@ -105,6 +118,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Soy Boy Double Pack
   ids:
@@ -113,4 +127,5 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3

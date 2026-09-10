@@ -4,6 +4,8 @@ name: Battles of Yore Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: 'CROSSBOW: Bloodnight'
   ids:
@@ -27,18 +30,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ember
   ids:
   - steam:339580
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Plebby Quest: The Crusades'
   ids:
   - steam:334310
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Pathfinder: Kingmaker - The Wildcards'
   ids:

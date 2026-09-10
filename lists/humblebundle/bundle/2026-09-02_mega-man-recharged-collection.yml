@@ -4,6 +4,8 @@ name: 'Mega Man: Recharged Collection'
 tiers:
 - rank: 1
   name: 3 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
 - rank: 4
   name: Entire 9 Item Bundle
 references:
@@ -30,6 +32,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: Mega Man Battle Network Legacy Collection Vol.1
   ids:
@@ -38,6 +41,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: MEGA MAN X DiVE Offline
   ids:
@@ -46,6 +50,23 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
+  - 4
+- name: Mega Man Zero/ZX Legacy Collection
+  ids:
+  - steam:999020
+  - isthereanydeal:mega-man-zero-zx-legacy-collection
+  requires: []
+  tiers:
+  - 2
+  - 4
+- name: Mega Man 11
+  ids:
+  - steam:742300
+  - isthereanydeal:mega-man-11
+  requires: []
+  tiers:
+  - 2
   - 4
 - name: Mega Man Legacy Collection
   ids:
@@ -72,20 +93,6 @@ games:
   ids:
   - steam:743900
   - isthereanydeal:mega-man-x-legacy-collection-2
-  requires: []
-  tiers:
-  - 4
-- name: Mega Man Zero/ZX Legacy Collection
-  ids:
-  - steam:999020
-  - isthereanydeal:mega-man-zero-zx-legacy-collection
-  requires: []
-  tiers:
-  - 4
-- name: Mega Man 11
-  ids:
-  - steam:742300
-  - isthereanydeal:mega-man-11
   requires: []
   tiers:
   - 4

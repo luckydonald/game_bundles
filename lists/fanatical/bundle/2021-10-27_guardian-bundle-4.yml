@@ -4,6 +4,8 @@ name: Guardian Bundle 4
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Sumoman
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Shape of the World
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Ministry of Broadcast
   ids:
   - steam:874040
   requires: []
   tiers:
+  - 2
   - 3
 - name: Evan's Remains
   ids:
   - steam:1110050
   requires: []
   tiers:
+  - 2
   - 3
 - name: A Long Way Down
   ids:
   - steam:856990
   requires: []
   tiers:
+  - 2
   - 3
 - name: Depraved
   ids:
   - steam:762650
   requires: []
   tiers:
+  - 2
   - 3
 - name: She Sees Red - Interactive Movie
   ids:
   - steam:1081510
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'GTTOD: Get To The Orange Door'
   ids:
   - steam:541200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Helheim Hassle
   ids:

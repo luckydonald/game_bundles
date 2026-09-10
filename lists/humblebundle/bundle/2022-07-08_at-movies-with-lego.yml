@@ -4,6 +4,8 @@ name: At The Movies with LEGO Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: Beat The Average
 - rank: 3
   name: entire-9-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The LEGO Movie Videogame
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: LEGO® MARVEL's Avengers
   ids:
   - steam:405310
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO® Jurassic World™
   ids:
   - steam:352400
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO Marvel Super Heroes 2
   ids:
   - steam:647830
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO The Incredibles
   ids:

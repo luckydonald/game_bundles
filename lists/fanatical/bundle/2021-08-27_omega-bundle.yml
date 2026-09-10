@@ -4,6 +4,8 @@ name: Omega Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: JumpJet Rex
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Caveblazers
   ids:
@@ -34,42 +38,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Drink More Glurp
   ids:
   - steam:1056690
   requires: []
   tiers:
+  - 2
   - 3
 - name: Vectronom
   ids:
   - steam:925460
   requires: []
   tiers:
+  - 2
   - 3
 - name: Verlet Swing
   ids:
   - steam:811870
   requires: []
   tiers:
+  - 2
   - 3
 - name: Hyper Knights
   ids:
   - steam:597150
   requires: []
   tiers:
+  - 2
   - 3
 - name: Fictorum
   ids:
   - steam:503620
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Wanderer: Frankenstein''s Creature'
   ids:
   - steam:966670
   requires: []
   tiers:
+  - 2
   - 3
 - name: Sea Salt
   ids:

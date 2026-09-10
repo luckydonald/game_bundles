@@ -4,6 +4,8 @@ name: LEGO AT THE MOVIES
 tiers:
 - rank: 1
   name: Starter Brick
+- rank: 2
+  name: Master Builder
 - rank: 3
   name: Grand Architect
 references:
@@ -22,6 +24,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The LEGO NINJAGO Movie Video Game
   ids:
@@ -29,42 +32,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: The LEGO Movie Videogame
   ids:
   - steam:267530
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO The Incredibles
   ids:
   - steam:818320
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO Jurassic World
   ids:
   - steam:352400
   requires: []
   tiers:
+  - 2
   - 3
 - name: LEGO Jurassic World DLC Pack
   ids:
   - unresolved:source:greenmangaming:337
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'LEGO Jurassic World: Jurassic Park Trilogy DLC Pack 1'
   ids:
   - steam:367871
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'LEGO Jurassic World: Jurassic Park Trilogy DLC Pack 2'
   ids:
   - steam:367872
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'LEGO Star Wars: The Skywalker Saga Galactic Edition'
   ids:

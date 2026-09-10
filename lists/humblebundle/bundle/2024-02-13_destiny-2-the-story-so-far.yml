@@ -4,6 +4,8 @@ name: 'Destiny 2: The Story So Far Bundle'
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 5-item-bundle
 - rank: 4
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Destiny 2: Forsaken Pack'
   ids:
@@ -27,24 +30,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 4
 - name: 'Destiny 2: Beyond Light'
   ids:
   - steam:1314563
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Destiny 2: Bungie 30th Anniversary Pack'
   ids:
   - steam:1656370
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Destiny 2: The Witch Queen'
   ids:
   - steam:1656330
   requires: []
   tiers:
+  - 2
   - 4
 - name: 'Destiny 2: Lightfall'
   ids:

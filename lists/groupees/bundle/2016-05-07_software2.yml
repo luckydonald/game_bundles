@@ -4,6 +4,8 @@ name: The Software Bundle 2
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Circuit Craft
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Jessie The A.I. Robotic Companion
   ids:
@@ -34,30 +38,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: RaySupreme 3D
   ids:
   - steam:262650
   requires: []
   tiers:
+  - 2
   - 3
 - name: VoiceBot
   ids:
   - steam:374400
   requires: []
   tiers:
+  - 2
   - 3
 - name: '"Zoom Player 13 : Steam Edition" and "Zoom Player 14 : Steam Edition"'
   ids:
   - unresolved:source:isthereanydeal:3396:zoom-player-13-steam-edition-and-zoom-player-14-steam-edition
   requires: []
   tiers:
+  - 2
   - 3
 - name: EasyAudioTools Company Pack
   ids:
   - unresolved:source:isthereanydeal:3396:easyaudiotools-company-pack
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Dimmdrive :: Gaming Ramdrive @ 10,000+ MB/s'
   ids:

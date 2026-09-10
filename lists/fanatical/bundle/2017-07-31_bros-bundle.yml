@@ -4,6 +4,8 @@ name: Bros Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Luke Sidewalker
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Frisky Business
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: There's Poop In My Soup
   ids:
@@ -41,6 +46,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Toadled
   ids:
@@ -48,6 +54,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Albert and Otto
   ids:
@@ -55,6 +62,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Flix and Chill
   ids:
@@ -62,18 +70,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Tanks vs Aliens
   ids:
   - steam:634200
   requires: []
   tiers:
+  - 2
   - 3
 - name: Evil Glitch
   ids:
   - steam:619890
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Flix & Chill 2: Millennials'
   ids:

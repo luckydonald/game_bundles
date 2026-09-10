@@ -4,6 +4,8 @@ name: METROIDVANIA MADNESS
 tiers:
 - rank: 1
   name: Bronze
+- rank: 2
+  name: Silver
 - rank: 3
   name: Gold
 references:
@@ -22,6 +24,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Vomitoreum
   ids:
@@ -29,18 +32,21 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: GRIME
   ids:
   - steam:1123050
   requires: []
   tiers:
+  - 2
   - 3
 - name: Islets
   ids:
   - steam:1669420
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Laika: Aged Through Blood'
   ids:

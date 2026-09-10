@@ -4,6 +4,8 @@ name: Eroge Bundle 12
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Grayscale Memories
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: NinNinDays2
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Meria and The Island of Orcs
   ids:
   - unresolved:source:isthereanydeal:13010:meria-and-the-island-of-orcs
   requires: []
   tiers:
+  - 2
   - 3
 - name: Selobus Fantasy
   ids:
   - steam:1747300
   requires: []
   tiers:
+  - 2
   - 3
 - name: Playing with My Brother' Wife
   ids:
   - steam:2013440
   requires: []
   tiers:
+  - 2
   - 3
 - name: Atelier Agnes
   ids:

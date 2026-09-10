@@ -4,6 +4,8 @@ name: Down on the Farm Bundle
 tiers:
 - rank: 1
   name: 2-item-bundle
+- rank: 2
+  name: 6-item-bundle
 - rank: 3
   name: entire-8-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: No Place Like Home
   ids:
@@ -27,30 +30,35 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Everdream Valley
   ids:
   - steam:1403650
   requires: []
   tiers:
+  - 2
   - 3
 - name: Immortal Life
   ids:
   - steam:1201230
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Ikonei Island: An Earthlock Adventure'
   ids:
   - steam:1550730
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'Cattails: Wildwood Story'
   ids:
   - steam:1882500
   requires: []
   tiers:
+  - 2
   - 3
 - name: The Witch of Fern Island
   ids:

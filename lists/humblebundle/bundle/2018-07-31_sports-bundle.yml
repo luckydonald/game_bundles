@@ -4,6 +4,8 @@ name: Humble Sports Bundle
 tiers:
 - rank: 1
   name: 3-item-bundle
+- rank: 2
+  name: Beat the Average
 - rank: 3
   name: entire-7-item-bundle
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Eastside Hockey Manager
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: SEGA Bass Fishing
   ids:
@@ -34,24 +38,28 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Motorsport Manager
   ids:
   - steam:415200
   requires: []
   tiers:
+  - 2
   - 3
 - name: DiRT Rally
   ids:
   - unresolved:source:isthereanydeal:6354:dirt-rally
   requires: []
   tiers:
+  - 2
   - 3
 - name: Super Blood Hockey
   ids:
   - steam:532190
   requires: []
   tiers:
+  - 2
   - 3
 - name: F1 2017
   ids:

@@ -4,6 +4,8 @@ name: Revenant Bundle
 tiers:
 - rank: 1
   name: Tier 1
+- rank: 2
+  name: Tier 2
 - rank: 3
   name: Tier 3
 references:
@@ -20,6 +22,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dead Effect 2
   ids:
@@ -27,6 +30,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dead Age
   ids:
@@ -34,6 +38,7 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Dispatcher
   ids:
@@ -41,42 +46,49 @@ games:
   requires: []
   tiers:
   - 1
+  - 2
   - 3
 - name: Neverending Nightmares
   ids:
   - steam:253330
   requires: []
   tiers:
+  - 2
   - 3
 - name: Bulb Boy
   ids:
   - steam:390290
   requires: []
   tiers:
+  - 2
   - 3
 - name: 'The Last Door: Season 2 - Collector''s Edition'
   ids:
   - steam:402530
   requires: []
   tiers:
+  - 2
   - 3
 - name: Emily Wants To Play
   ids:
   - steam:416590
   requires: []
   tiers:
+  - 2
   - 3
 - name: Black Sails - The Ghost Ship
   ids:
   - steam:373240
   requires: []
   tiers:
+  - 2
   - 3
 - name: Nevermind
   ids:
   - steam:342260
   requires: []
   tiers:
+  - 2
   - 3
 - name: Viscera Cleanup Detail
   ids:
