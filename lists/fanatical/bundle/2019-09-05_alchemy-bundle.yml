@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Alchemy Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7872/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7872/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7872/source.json
+games:
+- name: 'The Fog: Trap for Moths'
+  ids:
+  - steam:1048900
+  requires: []
+- name: 'Eternal Journey: New Atlantis'
+  ids:
+  - steam:1038630
+  requires: []
+- name: 'House of 1000 Doors: Serpent Flame'
+  ids:
+  - steam:1090390
+  requires: []
+- name: Joan Jade and the Gates of Xibalba
+  ids:
+  - steam:1038640
+  requires: []
+- name: 'House of 1000 Doors: Evil Inside'
+  ids:
+  - steam:1038620
+  requires: []
+- name: 'Love Alchemy: A Heart In Winter'
+  ids:
+  - steam:1038650
+  requires: []
+- name: 'Mind''s Eye: Secrets of the Forgotten'
+  ids:
+  - steam:1038670
+  requires: []
+- name: 'Magic Encyclopedia: Moon Light'
+  ids:
+  - steam:1059830
+  requires: []
+- name: 'Dark Strokes: The Legend of the Snow Kingdom Collector''s Edition'
+  ids:
+  - steam:765690
+  requires: []
+- name: 'Forest Legends: The Call of Love Collector''s Edition'
+  ids:
+  - steam:765770
+  requires: []

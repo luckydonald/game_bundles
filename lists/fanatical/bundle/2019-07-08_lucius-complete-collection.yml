@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Lucius Complete Collection Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7609/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7609/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7609/source.json
+games:
+- name: Lucius
+  ids:
+  - steam:218640
+  requires: []
+- name: Lucius II
+  ids:
+  - steam:296830
+  requires: []
+- name: Lucius Demake - Soundtrack
+  ids:
+  - steam:538460
+  requires: []
+- name: Lucius III
+  ids:
+  - steam:513290
+  requires: []
+- name: Lucius II - Soundtrack
+  ids:
+  - steam:821030
+  requires: []
+- name: Lucius III Soundtrack
+  ids:
+  - steam:985190
+  requires: []
+- name: Lucius Demake
+  ids:
+  - steam:364230
+  requires: []

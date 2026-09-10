@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Standoff Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7298/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7298/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7298/source.json
+games:
+- name: A Normal Lost Phone
+  ids:
+  - steam:523210
+  requires: []
+- name: Type:Rider
+  ids:
+  - steam:258890
+  requires: []
+- name: Dungeon Rushers
+  ids:
+  - steam:429620
+  requires: []
+- name: Aurion, legacy of the Kori-Odan
+  ids:
+  - steam:368080
+  requires: []
+- name: Crewsaders
+  ids:
+  - steam:540870
+  requires: []
+- name: Pankapu - Complete Edition
+  ids:
+  - steam:418670
+  requires: []
+- name: Kill The Bad Guy
+  ids:
+  - steam:293940
+  requires: []
+- name: Pocket Kingdom
+  ids:
+  - steam:462620
+  requires: []
+- name: Satellite Rush
+  ids:
+  - steam:429350
+  requires: []
+- name: Boiling Bolt
+  ids:
+  - steam:462250
+  requires: []

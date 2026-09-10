@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Distraint 2 + Distraint 1 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7741/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7741/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7741/source.json
+games:
+- name: DISTRAINT 2
+  ids:
+  - steam:743390
+  requires: []
+- name: 'DISTRAINT: Deluxe Edition'
+  ids:
+  - steam:395170
+  requires: []

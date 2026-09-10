@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Virtual Battlemap Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7980/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7980/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7980/source.json
+games:
+- name: Virtual Battlemap DLC - Landscapes Pack
+  ids:
+  - steam:497520
+  requires: []
+- name: Virtual Battlemap Commercial License
+  ids:
+  - unresolved:source:isthereanydeal:7980:virtual-battlemap-commercial-license
+  requires: []
+- name: Virtual Battlemap
+  ids:
+  - steam:496490
+  requires: []
+- name: Virtual Battlemap DLC - Overworld
+  ids:
+  - steam:833860
+  requires: []

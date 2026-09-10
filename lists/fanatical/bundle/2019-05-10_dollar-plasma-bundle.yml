@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Plasma Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7379/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7379/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7379/source.json
+games:
+- name: BEEP
+  ids:
+  - steam:104200
+  requires: []
+- name: Storm Of Spears RPG
+  ids:
+  - steam:463350
+  requires: []
+- name: Out There Somewhere
+  ids:
+  - steam:263980
+  requires: []
+- name: LocoSoccer
+  ids:
+  - unresolved:source:isthereanydeal:7379:locosoccer
+  requires: []
+- name: Destiny Warriors RPG
+  ids:
+  - steam:399790
+  requires: []
+- name: Gun Rocket
+  ids:
+  - steam:391420
+  requires: []
+- name: 'Sun Blast: Star Fighter'
+  ids:
+  - steam:344910
+  requires: []
+- name: Labyronia RPG
+  ids:
+  - steam:391260
+  requires: []
+- name: Labyronia RPG 2
+  ids:
+  - steam:397500
+  requires: []
+- name: 'DRAGON: A Game About a Dragon'
+  ids:
+  - steam:351150
+  requires: []
+- name: Subterra
+  ids:
+  - steam:521590
+  requires: []
+- name: Three Heroes
+  ids:
+  - steam:380020
+  requires: []
+- name: 'Tiny Bridge: Ratventure'
+  ids:
+  - steam:360380
+  requires: []
+- name: 'The Odyssey: Winds of Athena'
+  ids:
+  - steam:416080
+  requires: []
