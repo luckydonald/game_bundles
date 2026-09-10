@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: January Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5809/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5809/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5809/source.json
+games:
+- name: Unite Cell
+  ids:
+  - unresolved:source:isthereanydeal:5809:unite-cell
+  requires: []
+- name: Barbarian Souls
+  ids:
+  - steam:769110
+  requires: []
+- name: Brutal Runner
+  ids:
+  - steam:697930
+  requires: []
+- name: Synonymy
+  ids:
+  - steam:342890
+  requires: []
+- name: Mighty Action RPG
+  ids:
+  - unresolved:source:isthereanydeal:5809:mighty-action-rpg
+  requires: []
+- name: My Name is Addiction
+  ids:
+  - steam:713860
+  requires: []
+- name: Mankind Defender (Restocked)
+  ids:
+  - unresolved:source:isthereanydeal:5809:mankind-defender-restocked
+  requires: []
+- name: Hardcore Survival
+  ids:
+  - unresolved:source:isthereanydeal:5809:hardcore-survival
+  requires: []
+- name: TrES-2b
+  ids:
+  - steam:737730
+  requires: []
+- name: Apez
+  ids:
+  - steam:683210
+  requires: []

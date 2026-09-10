@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Christmas Cubic Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5736/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5736/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5736/source.json
+games:
+- name: The Archetype
+  ids:
+  - steam:391120
+  requires: []
+- name: Depopulation
+  ids:
+  - steam:718210
+  requires: []
+- name: ClickBit
+  ids:
+  - steam:674220
+  requires: []
+- name: Hiking Simulator 2017
+  ids:
+  - steam:668890
+  requires: []
+- name: Restaurant Tycoon
+  ids:
+  - steam:753670
+  requires: []
+- name: Expert Rifleman - Reloaded
+  ids:
+  - steam:383590
+  requires: []
+- name: Bloo Kid 2
+  ids:
+  - steam:379640
+  requires: []
+- name: Space of Darkness
+  ids:
+  - steam:666310
+  requires: []
+- name: Mark After Dark
+  ids:
+  - steam:713980
+  requires: []

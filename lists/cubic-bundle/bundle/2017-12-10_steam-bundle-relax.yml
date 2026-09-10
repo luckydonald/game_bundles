@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Relax Cubic Bundle #3 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5708/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5708/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5708/source.json
+games:
+- name: Restoration
+  ids:
+  - steam:688380
+  requires: []
+- name: Seek Not a Lighthouse
+  ids:
+  - unresolved:source:isthereanydeal:5708:seek-not-a-lighthouse
+  requires: []
+- name: Glasswinged Ascension
+  ids:
+  - steam:668670
+  requires: []
+- name: Solenars Edge Rebirth
+  ids:
+  - steam:679470
+  requires: []
+- name: Online Circle Pong
+  ids:
+  - steam:737930
+  requires: []
+- name: Little Walker
+  ids:
+  - steam:448500
+  requires: []
+- name: The Sacred Stone
+  ids:
+  - steam:432410
+  requires: []
+- name: X-17
+  ids:
+  - steam:448060
+  requires: []
+- name: Super Meat Shooter
+  ids:
+  - steam:745340
+  requires: []
+- name: Skyraine
+  ids:
+  - steam:679430
+  requires: []

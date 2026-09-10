@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: A Valley Without Wind - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1065/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1065/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1065/source.json
+games:
+- name: A Valley Without Wind 1 and 2 Dual Pack
+  ids:
+  - unresolved:source:isthereanydeal:1065:a-valley-without-wind-1-and-2-dual-pack
+  requires: []
+- name: A Valley Without Wind 2
+  ids:
+  - steam:228320
+  requires: []

@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Wooden Floor - Game Deal — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/1214/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/1214/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/1214/source.json
+games:
+- name: Wooden Floor
+  ids:
+  - steam:348790
+  requires: []

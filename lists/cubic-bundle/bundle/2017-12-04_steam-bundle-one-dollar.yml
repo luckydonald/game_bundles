@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'One Dollar Bundle #5 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5684/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5684/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5684/source.json
+games:
+- name: Adventures of Heroes
+  ids:
+  - unresolved:source:isthereanydeal:5684:adventures-of-heroes
+  requires: []
+- name: Rest House
+  ids:
+  - steam:582290
+  requires: []
+- name: '- Occult preRaise'
+  ids:
+  - unresolved:source:isthereanydeal:5684:occult-preraise
+  requires: []
+- name: Steel punk Ball
+  ids:
+  - steam:679510
+  requires: []
+- name: Immortal Heroes
+  ids:
+  - steam:741450
+  requires: []
+- name: Eternal Maze
+  ids:
+  - steam:652990
+  requires: []
+- name: idleBeer
+  ids:
+  - unresolved:source:isthereanydeal:5684:idlebeer
+  requires: []
+- name: The Last Patient
+  ids:
+  - steam:594160
+  requires: []
+- name: German fortress 3D
+  ids:
+  - steam:664350
+  requires: []
+- name: PooSky
+  ids:
+  - steam:715840
+  requires: []
