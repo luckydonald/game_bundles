@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Rimworld with all Expansions Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11631/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11631/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11631/source.json
+games:
+- name: RimWorld
+  ids:
+  - steam:294100
+  requires: []
+- name: RimWorld - Royalty
+  ids:
+  - steam:1149640
+  requires: []
+- name: RimWorld - Ideology
+  ids:
+  - steam:1392840
+  requires: []
+- name: RimWorld - Biotech
+  ids:
+  - steam:1826140
+  requires: []

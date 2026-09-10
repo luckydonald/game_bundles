@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Abe's Exoddus + Munch's Oddysee Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10688/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10688/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10688/source.json
+games:
+- name: 'Oddworld: Munch''s Oddysee'
+  ids:
+  - steam:15740
+  requires: []
+- name: 'Oddworld: Abe''s Exoddus'
+  ids:
+  - steam:15710
+  requires: []

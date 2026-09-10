@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Summer Bundle (2022) — Select 1 Title for $1.00, 5 Titles for
+  $2.99, 10 Titles for $4.99
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/11869/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/11869/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/11869/source.json
+games:
+- name: Deadly Days
+  ids:
+  - steam:740080
+  requires: []
+- name: 'Monsters'' Den: Godfall'
+  ids:
+  - steam:469720
+  requires: []
+- name: Internet Cafe Simulator
+  ids:
+  - steam:1136160
+  requires: []
+- name: Yooka-Laylee and the Impossible Lair
+  ids:
+  - steam:846870
+  requires: []
+- name: Conglomerate 451
+  ids:
+  - steam:1022710
+  requires: []
+- name: Secret Government
+  ids:
+  - steam:946990
+  requires: []
+- name: Haimrik
+  ids:
+  - steam:492180
+  requires: []
+- name: Through the Woods
+  ids:
+  - steam:368430
+  requires: []
+- name: Learn Japanese To Survive! Trilogy
+  ids:
+  - unresolved:source:isthereanydeal:11869:learn-japanese-to-survive-trilogy
+  requires: []
+- name: 'Interplanetary: Enhanced Edition'
+  ids:
+  - steam:650220
+  requires: []
+- name: Automachef
+  ids:
+  - steam:984800
+  requires: []
+- name: Neversong
+  ids:
+  - steam:733210
+  requires: []
+- name: Dread X Collection
+  ids:
+  - steam:1296510
+  requires: []
+- name: Warpips
+  ids:
+  - steam:1291010
+  requires: []
+- name: Unmemory
+  ids:
+  - steam:1388860
+  requires: []
+- name: 'Machinika: Museum'
+  ids:
+  - steam:1507190
+  requires: []

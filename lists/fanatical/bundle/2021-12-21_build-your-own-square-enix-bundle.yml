@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build Your Own Square Enix Bundle — Select 5 Titles for $9.99 (USD)
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10854/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10854/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10854/source.json
+games:
+- name: Dungeon Siege
+  ids:
+  - steam:39190
+  requires: []
+- name: Dungeon Siege II
+  ids:
+  - steam:39200
+  requires: []
+- name: THIEF
+  ids:
+  - steam:239160
+  requires: []
+- name: Dungeon Siege III
+  ids:
+  - steam:39160
+  requires: []
+- name: Just Cause 2
+  ids:
+  - steam:8190
+  requires: []
+- name: Mini Ninjas
+  ids:
+  - steam:35000
+  requires: []
+- name: Sleeping Dogs™ Definitive Edition
+  ids:
+  - steam:307690
+  requires: []
+- name: 'Legacy of Kain: Soul Reaver 2'
+  ids:
+  - steam:224940
+  requires: []
+- name: "Deus Ex: Human Revolution™ \x96 Director's Cut"
+  ids:
+  - steam:238010
+  requires: []
+- name: 'Deus Ex: Invisible War'
+  ids:
+  - steam:6920
+  requires: []
+- name: Fear Effect Sedna
+  ids:
+  - steam:546900
+  requires: []
+- name: 'Tomb Raider: Underworld'
+  ids:
+  - steam:8140
+  requires: []
+- name: Lara Croft and the Guardian of Light
+  ids:
+  - steam:35130
+  requires: []
+- name: Just Cause™ 3
+  ids:
+  - steam:225540
+  requires: []
+- name: 'Legacy of Kain: Defiance'
+  ids:
+  - steam:224300
+  requires: []
+- name: 'Deus Ex: Game of the Year Edition'
+  ids:
+  - steam:6910
+  requires: []
+- name: 'Tomb Raider IV: The Last Revelation (1999)'
+  ids:
+  - steam:224980
+  requires: []
+- name: 'Tomb Raider VI: The Angel of Darkness (2003)'
+  ids:
+  - steam:225020
+  requires: []
+- name: 'Tomb Raider V: Chronicles (2000)'
+  ids:
+  - steam:225000
+  requires: []
