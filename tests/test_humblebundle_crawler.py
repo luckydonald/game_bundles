@@ -97,14 +97,14 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     paths = write_humble_offer(_offer(), lists_root, archive_root, tmp_path)
 
     bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
-    list_path = lists_root / bundle_root / "bundle.yml"
+    list_path = lists_root / f"{bundle_root}.yml"
     metadata_path = archive_root / bundle_root / "metadata.json"
     source_path = archive_root / bundle_root / "source.json"
     assert set(paths) == {list_path, metadata_path, source_path}
     loaded = load_game_list(list_path, lists_root)
-    assert loaded.id == f"{bundle_root}/bundle"
+    assert loaded.id == bundle_root
     assert loaded.data.name == "Sample Bundle — Entire 2 Item Bundle"
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
     assert loaded.data.crawlers == ["humblebundle"]
     assert [reference.name for reference in loaded.data.references] == [
         "Humble Bundle offer",
@@ -112,8 +112,8 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
         "Crawl source",
     ]
     assert str(loaded.data.references[0].url) == "https://www.humblebundle.com/games/sample-bundle"
-    assert loaded.data.references[1].path == "../../../../archives/" + bundle_root + "/metadata.json"
-    assert loaded.data.references[2].path == "../../../../archives/" + bundle_root + "/source.json"
+    assert loaded.data.references[1].path == "../../../archives/" + bundle_root + "/metadata.json"
+    assert loaded.data.references[2].path == "../../../archives/" + bundle_root + "/source.json"
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Sample Game", ["steam:42"])]
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     assert [item["title"] for item in metadata["tiers"][0]["items"]] == [
@@ -163,7 +163,7 @@ def test_writer_splits_a_dlc_pack_item_into_grouped_games(tmp_path: Path) -> Non
 
     paths = write_humble_offer(offer, tmp_path / "lists", tmp_path / "archives", tmp_path)
 
-    list_path = tmp_path / "lists/humblebundle/bundle/2026-07-01_sample-bundle/bundle.yml"
+    list_path = tmp_path / "lists/humblebundle/bundle/2026-07-01_sample-bundle.yml"
     assert list_path in paths
     loaded = load_game_list(list_path, tmp_path / "lists")
     games = loaded.data.games
@@ -294,11 +294,13 @@ def test_writer_numbers_multiple_tiers(tmp_path: Path) -> None:
 
     bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
     lists_root = tmp_path / "lists"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
-    assert load_game_list(first_path, lists_root).data.tier == 1
-    assert load_game_list(second_path, lists_root).data.tier == 2
+    list_path = lists_root / f"{bundle_root}.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {list_path}
+    loaded = load_game_list(list_path, lists_root)
+    assert [tier.rank for tier in loaded.data.tiers] == [1, 2]
+    games_by_name = {game.name: game for game in loaded.data.games}
+    assert games_by_name["Sample Game"].tiers == [1, 2]
+    assert games_by_name["Sample Game Two"].tiers == [2]
 # end def test_writer_numbers_multiple_tiers
 
 
@@ -338,14 +340,13 @@ def test_writer_sorts_tiers_ascending_by_item_count_regardless_of_source_order(t
 
     bundle_root = "humblebundle/bundle/2026-07-01_sample-bundle"
     lists_root = tmp_path / "lists"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {path for path in paths if path.suffix == ".yml"} == {first_path, second_path}
-    assert [game.name for game in load_game_list(first_path, lists_root).data.games] == ["Sample Game"]
-    assert [game.name for game in load_game_list(second_path, lists_root).data.games] == [
-        "Sample Game",
-        "Sample Game Two",
-    ]
+    list_path = lists_root / f"{bundle_root}.yml"
+    assert {path for path in paths if path.suffix == ".yml"} == {list_path}
+    loaded = load_game_list(list_path, lists_root)
+    assert [tier.rank for tier in loaded.data.tiers] == [1, 2]
+    games_by_name = {game.name: game for game in loaded.data.games}
+    assert games_by_name["Sample Game"].tiers == [1, 2]
+    assert games_by_name["Sample Game Two"].tiers == [2]
 # end def test_writer_sorts_tiers_ascending_by_item_count_regardless_of_source_order
 
 
@@ -362,11 +363,11 @@ def test_writer_choice_with_pick_options_writes_one_list_per_option(tmp_path: Pa
         CrawledHumbleOffer(archive=archive, source={}), tmp_path / "lists", tmp_path / "archives", tmp_path
     )
 
-    path = tmp_path / "lists/humblebundle/choice/2026-07/bundle.yml"
+    path = tmp_path / "lists/humblebundle/choice/2026-07.yml"
     assert {p for p in paths if p.suffix == ".yml"} == {path}
     loaded = load_game_list(path, tmp_path / "lists")
     assert loaded.data.pick_quota == 1
-    assert loaded.data.tier is None
+    assert loaded.data.tiers == []
     assert loaded.data.crawlers == ["humblebundle"]
     assert loaded.data.games == [Game(name="Sample Game", ids=["steam:42"])]
 # end def test_writer_choice_with_pick_options_writes_one_list_per_option
@@ -404,15 +405,13 @@ def test_writer_choice_with_multiple_pick_options_numbers_tiers(tmp_path: Path) 
 
     lists_root = tmp_path / "lists"
     bundle_root = "humblebundle/choice/2026-07"
-    first_path = lists_root / bundle_root / "tier-1.yml"
-    second_path = lists_root / bundle_root / "tier-2.yml"
-    assert {p for p in paths if p.suffix == ".yml"} == {first_path, second_path}
-    first = load_game_list(first_path, lists_root)
-    second = load_game_list(second_path, lists_root)
-    assert first.data.pick_quota == 1
-    assert first.data.tier == 1
-    assert second.data.pick_quota == 2
-    assert second.data.tier == 2
+    list_path = lists_root / f"{bundle_root}.yml"
+    assert {p for p in paths if p.suffix == ".yml"} == {list_path}
+    loaded = load_game_list(list_path, lists_root)
+    assert [(tier.rank, tier.pick_quota) for tier in loaded.data.tiers] == [(1, 1), (2, 2)]
+    # The pool is identical across pick options (a build-your-own-bundle shape), so
+    # every game belongs to every rank.
+    assert all(game.tiers == [1, 2] for game in loaded.data.games)
 # end def test_writer_choice_with_multiple_pick_options_numbers_tiers
 
 

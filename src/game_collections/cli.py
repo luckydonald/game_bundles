@@ -16,8 +16,9 @@ import typer
 import yaml
 
 from game_collections.apply.config import ApplySelection, DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
-from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists
-from game_collections.migrate_tiers import (
+from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists, expand_list_tiers
+from game_collections.migrations import bundle_variations
+from game_collections.migrations.tiers import (
     TierMigrationError,
     apply_migration_step,
     plan_migration,
@@ -113,6 +114,8 @@ sys.stdout.reconfigure(line_buffering=True)
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
+migrate_app = typer.Typer(no_args_is_help=True)
+app.add_typer(migrate_app, name="migrate")
 
 
 @scrape_app.callback()
@@ -159,10 +162,12 @@ def _discover_selected_game_lists(
     selection_config: Path,
     on_progress: Callable[[int, int, Path], None] | None = None,
 ) -> list[LoadedGameList]:
-    """Discover lists, dropping any explicitly excluded by a saved selection config."""
+    """Discover lists (expanded to one entry per bundle tier), dropping any explicitly excluded by a saved selection config."""
     selection = load_selection(selection_config)
     excluded = excluded_list_ids(selection)
-    game_lists = discover_game_lists(lists_root, on_progress=on_progress)
+    game_lists = [
+        expanded for game_list in discover_game_lists(lists_root, on_progress=on_progress) for expanded in expand_list_tiers(game_list)
+    ]
     if not excluded:
         return game_lists
     # end if
@@ -207,12 +212,12 @@ def list_command(
 # end def list_command
 
 
-@app.command("migrate-tiers")
+@migrate_app.command("tiers")
 def migrate_tiers_command(
     path: Annotated[Path | None, typer.Option("--lists-root")] = None,
     apply: Annotated[bool, typer.Option("--apply", help="Write changes; default is dry-run.")] = False,
 ) -> None:
-    """Rename tier-shaped bundle lists to `bundle.yml`/`tier-N.yml` and set `tier`."""
+    """Rename legacy tier-shaped bundle lists onto the `bundle.yml`/`tier-N.yml` convention."""
     lists_root = _lists_root(path)
     repository_root = Path.cwd().resolve()
     try:
@@ -225,7 +230,7 @@ def migrate_tiers_command(
     changed = 0
     for step in steps:
         try:
-            if not step_would_change(step, lists_root):
+            if not step_would_change(step):
                 continue
             # end if
             changed += 1
@@ -249,6 +254,49 @@ def migrate_tiers_command(
         typer.echo(f"Dry run only: {changed} list(s) would change. Pass --apply to write.")
     # end if
 # end def migrate_tiers_command
+
+
+@migrate_app.command("bundle-variations")
+def migrate_bundle_variations_command(
+    path: Annotated[Path | None, typer.Option("--lists-root")] = None,
+    apply: Annotated[bool, typer.Option("--apply", help="Write changes; default is dry-run.")] = False,
+) -> None:
+    """Merge per-tier bundle/pick-option files into one flattened `<key>.yml` each."""
+    lists_root = _lists_root(path)
+    repository_root = Path.cwd().resolve()
+    try:
+        steps = bundle_variations.plan_migration(lists_root)
+    except (OSError, ValueError, bundle_variations.BundleVariationMigrationError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    # end try
+
+    changed = 0
+    for step in steps:
+        try:
+            if not bundle_variations.step_would_change(step):
+                continue
+            # end if
+            changed += 1
+            relative_old = ", ".join(str(old_path.relative_to(lists_root)) for old_path in step.old_paths)
+            relative_new = step.new_path.relative_to(lists_root)
+            if apply:
+                bundle_variations.apply_migration_step(step, lists_root, repository_root)
+                typer.echo(f"merged: {relative_old} -> {relative_new}")
+            else:
+                typer.echo(f"would merge: {relative_old} -> {relative_new}")
+            # end if
+        except (OSError, ValueError, ListLoadError, bundle_variations.BundleVariationMigrationError) as error:
+            typer.echo(str(error), err=True)
+            raise typer.Exit(1) from error
+        # end try
+    # end for
+    if apply:
+        typer.echo(f"Merged {changed} bundle director(y/ies).")
+    else:
+        typer.echo(f"Dry run only: {changed} bundle director(y/ies) would merge. Pass --apply to write.")
+    # end if
+# end def migrate_bundle_variations_command
 
 
 @app.command("schema")

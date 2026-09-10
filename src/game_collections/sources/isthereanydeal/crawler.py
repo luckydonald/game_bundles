@@ -15,7 +15,7 @@ import httpx
 import yaml
 from pydantic import ValidationError
 
-from game_collections.models import Game, GameList, Reference
+from game_collections.models import Game, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     dump_json,
@@ -23,6 +23,7 @@ from game_collections.sources.common import (
     load_cached_archive,
     merge_crawlers,
     merge_references,
+    merge_tiered_games,
     render_game_list_yaml,
 )
 from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadListSummary, ItadTier
@@ -562,32 +563,40 @@ def write_itad_offer(
     date_prefix = _bundle_date_prefix(offer.summary, archive.provider_slug, archive.dates.start or archive.dates.crawled)
     list_directory = lists_root / archive.provider_slug / "bundle" / f"{date_prefix}_{archive.real_slug}"
 
+    path = list_directory.parent / f"{list_directory.name}.yml"
     if archive.byob_tiers:
         pool_games = _flatten_itad_games(archive)
-        for rank, byob_tier in enumerate(archive.byob_tiers, start=1):
-            if len(archive.byob_tiers) == 1:
-                path = list_directory / "bundle.yml"
-                list_tier = None
-            else:
-                path = list_directory / f"tier-{rank}.yml"
-                list_tier = rank
-            # end if
-            game_list = GameList(
-                schema=1,
-                name=f"{archive.title} — pick {byob_tier.count}",
-                tier=list_tier,
-                pick_quota=byob_tier.count,
-                references=[
-                    Reference(name="isthereanydeal.com bundle", url=archive.url),
-                    Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
-                    Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
-                ],
-                crawlers=["isthereanydeal"],
-                games=pool_games,
+        pick_quota: int | None = None
+        if len(archive.byob_tiers) == 1:
+            byob_tier = archive.byob_tiers[0]
+            name = f"{archive.title} — pick {byob_tier.count}"
+            tier_definitions: list[TierDefinition] = []
+            games = pool_games
+            pick_quota = byob_tier.count
+        else:
+            name = archive.title
+            tier_definitions, games = merge_tiered_games(
+                [
+                    (rank, f"pick {byob_tier.count}", pool_games, byob_tier.count)
+                    for rank, byob_tier in enumerate(archive.byob_tiers, start=1)
+                ]
             )
-            atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
-            written.append(path)
-        # end for
+        # end if
+        game_list = GameList(
+            schema=1,
+            name=name,
+            tiers=tier_definitions,
+            pick_quota=pick_quota,
+            references=[
+                Reference(name="isthereanydeal.com bundle", url=archive.url),
+                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+            ],
+            crawlers=["isthereanydeal"],
+            games=games,
+        )
+        atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+        written.append(path)
         return tuple(written)
     # end if
 
@@ -606,28 +615,29 @@ def write_itad_offer(
             tiers_with_games.append((tier, games))
         # end if
     # end for
-    for rank, (tier, games) in enumerate(tiers_with_games, start=1):
-        if len(tiers_with_games) == 1:
-            path = list_directory / "bundle.yml"
-            list_tier = None
-        else:
-            path = list_directory / f"tier-{rank}.yml"
-            list_tier = rank
-        # end if
-        game_list = GameList(
-            schema=1,
-            name=f"{archive.title} — {tier.name}",
-            tier=list_tier,
-            references=[
-                Reference(name="isthereanydeal.com bundle", url=archive.url),
-                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
-                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
-            ],
-            crawlers=["isthereanydeal"],
-            games=games,
+    if len(tiers_with_games) == 1:
+        name = f"{archive.title} — {tiers_with_games[0][0].name}"
+        tier_definitions = []
+        games = tiers_with_games[0][1]
+    else:
+        name = archive.title
+        tier_definitions, games = merge_tiered_games(
+            [(rank, tier.name, tier_games, None) for rank, (tier, tier_games) in enumerate(tiers_with_games, start=1)]
         )
-        atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
-        written.append(path)
-    # end for
+    # end if
+    game_list = GameList(
+        schema=1,
+        name=name,
+        tiers=tier_definitions,
+        references=[
+            Reference(name="isthereanydeal.com bundle", url=archive.url),
+            Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+            Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+        ],
+        crawlers=["isthereanydeal"],
+        games=games,
+    )
+    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    written.append(path)
     return tuple(written)
 # end def write_itad_offer

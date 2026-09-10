@@ -5,7 +5,14 @@ from pathlib import Path
 import pytest
 import yaml
 
-from game_collections.lists import ListLoadError, derive_list_id, discover_game_lists, load_game_list
+from game_collections.lists import (
+    ListLoadError,
+    derive_list_id,
+    discover_game_lists,
+    expand_list_tiers,
+    load_game_list,
+    split_tier_suffix,
+)
 
 
 REPO_ROOT = Path(__file__).parents[1]
@@ -183,7 +190,7 @@ def test_inconsistent_group_names_are_rejected(tmp_path: Path) -> None:
 # end def test_inconsistent_group_names_are_rejected
 
 
-def test_tier_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:
+def test_tiers_field_is_optional_and_defaults_to_empty(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
     path = lists_root / "bundle.yml"
@@ -191,23 +198,85 @@ def test_tier_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:
 
     loaded = load_game_list(path, lists_root)
 
-    assert loaded.data.tier is None
-# end def test_tier_field_is_optional_and_defaults_to_none
+    assert loaded.data.tiers == []
+    assert loaded.data.games[0].tiers == []
+# end def test_tiers_field_is_optional_and_defaults_to_empty
 
 
-def test_tier_field_round_trips_when_set(tmp_path: Path) -> None:
+def test_tiers_and_game_tiers_round_trip_when_set(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     lists_root.mkdir()
-    path = lists_root / "tier-2.yml"
+    path = lists_root / "bundle.yml"
     path.write_text(
-        "schema: 1\nname: Tier 2\ntier: 2\ngames:\n  - name: One\n    ids: [steam:440]\n",
+        "schema: 1\nname: Bundle\n"
+        "tiers:\n  - {rank: 1, name: Bronze}\n  - {rank: 2, name: Gold}\n"
+        "games:\n  - {name: One, ids: [steam:440], tiers: [1, 2]}\n"
+        "  - {name: Two, ids: [steam:441], tiers: [2]}\n",
         encoding="utf-8",
     )
 
     loaded = load_game_list(path, lists_root)
 
-    assert loaded.data.tier == 2
-# end def test_tier_field_round_trips_when_set
+    assert [tier.rank for tier in loaded.data.tiers] == [1, 2]
+    assert loaded.data.games[0].tiers == [1, 2]
+    assert loaded.data.games[1].tiers == [2]
+# end def test_tiers_and_game_tiers_round_trip_when_set
+
+
+def test_game_tiers_referencing_unknown_rank_is_rejected(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "invalid.yml"
+    path.write_text(
+        "schema: 1\nname: Invalid\n"
+        "tiers:\n  - {rank: 1, name: Bronze}\n"
+        "games:\n  - {name: One, ids: [steam:440], tiers: [2]}\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ListLoadError, match="unknown tier rank"):
+        load_game_list(path, lists_root)
+    # end with
+# end def test_game_tiers_referencing_unknown_rank_is_rejected
+
+
+def test_expand_list_tiers_splits_a_multi_variation_bundle(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(
+        "schema: 1\nname: Bundle\n"
+        "tiers:\n  - {rank: 1, name: Bronze}\n  - {rank: 2, name: Gold}\n"
+        "games:\n  - {name: One, ids: [steam:440], tiers: [1, 2]}\n"
+        "  - {name: Two, ids: [steam:441], tiers: [2]}\n",
+        encoding="utf-8",
+    )
+    loaded = load_game_list(path, lists_root)
+
+    expanded = expand_list_tiers(loaded)
+
+    assert [item.id for item in expanded] == ["bundle#tier-1", "bundle#tier-2"]
+    assert [game.name for game in expanded[0].data.games] == ["One"]
+    assert [game.name for game in expanded[1].data.games] == ["One", "Two"]
+    assert expanded[0].data.tiers == []
+    assert expanded[0].data.games[0].tiers == []
+    assert split_tier_suffix(expanded[0].id) == ("bundle", 1)
+    assert split_tier_suffix(expanded[1].id) == ("bundle", 2)
+# end def test_expand_list_tiers_splits_a_multi_variation_bundle
+
+
+def test_expand_list_tiers_leaves_a_plain_list_unchanged(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text("schema: 1\nname: Bundle\ngames:\n  - name: One\n    ids: [steam:440]\n", encoding="utf-8")
+    loaded = load_game_list(path, lists_root)
+
+    expanded = expand_list_tiers(loaded)
+
+    assert expanded == [loaded]
+    assert split_tier_suffix(loaded.id) == ("bundle", None)
+# end def test_expand_list_tiers_leaves_a_plain_list_unchanged
 
 
 def test_pick_quota_field_is_optional_and_defaults_to_none(tmp_path: Path) -> None:

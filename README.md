@@ -61,7 +61,7 @@ Humble embeds its catalog data in the public HTML. The importer converts descrip
 - normalized metadata below `archives/humblebundle/`;
 - a sorted two-space `source.json` containing the relevant embedded Humble payloads.
 
-Bundle directories begin with their UTC start date and fall back to the end date when the listing is unavailable. Each advertised cumulative tier becomes a list; coupons and bonuses remain in metadata but are excluded from the standard game list. Choice uses `humblebundle/choice/YYYY-MM`.
+Bundle file names begin with their UTC start date and fall back to the end date when the listing is unavailable. Each advertised cumulative tier is recorded on the one merged bundle list (its `tiers`/`Game.tiers` fields, see `lists/README.md`); coupons and bonuses remain in metadata but are excluded from the standard game list. Choice uses `humblebundle/choice/YYYY-MM`.
 
 Only a unique normalized title match is accepted automatically. Ambiguous searches show the storefront's ranked candidates and allow a canonical store URL or direct ID to be pasted. Leaving the manual value blank stores `unresolved:humblebundle:<machine-name>`. Reviewed decisions are kept in `config/humblebundle-store-ids.yml`; remove or edit an entry to resolve it again. `--non-interactive` records unresolved identities without prompting.
 

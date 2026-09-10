@@ -26,6 +26,24 @@ An optional `crawlers` list names which crawler module(s) (e.g. `humblebundle`, 
 
 An optional `invalid` list, shaped exactly like `games`, may follow it. It holds games an authoritative re-crawl (currently only `scrape humblebundle`) no longer lists - quarantined there instead of being deleted, and moved back into `games` automatically if a later crawl lists them again. `invalid` entries are never treated as owned, eligible, or synced; nothing reads them except the next merge. Hand-authored lists normally omit this field entirely.
 
+A bundle offering several purchase variations (e.g. Bronze/Silver/Gold tiers, or "pick 1"/"pick 2" pools) is one list with an optional `tiers` array naming each variation by rank, and each affected `Game` carries a matching `tiers` list of the ranks it's included in:
+
+```yaml
+name: Example Bundle
+tiers:
+  - {rank: 1, name: Bronze}
+  - {rank: 2, name: Gold}
+games:
+  - name: In every tier
+    ids: [steam:1]
+    tiers: [1, 2]
+  - name: Gold-only
+    ids: [steam:2]
+    tiers: [2]
+```
+
+A single-variation bundle omits `tiers` entirely (same as a plain list). Launcher sync/`apply` treat each tier as its own logical collection - see `--tiers` in the root `README.md`.
+
 Validate all lists with:
 
 ```console
@@ -52,9 +70,9 @@ game-collections schema
 
 ## Generated Humble lists
 
-`game-collections scrape humblebundle` writes current Choice to `humblebundle/choice/YYYY-MM.yml` and active bundle tiers below `humblebundle/bundle/YYYY-MM-DD_<bundle>/`.
+`game-collections scrape humblebundle` writes current Choice to `humblebundle/choice/YYYY-MM.yml` and each active bundle to `humblebundle/bundle/YYYY-MM-DD_<bundle>.yml`.
 
-Tier counts and names follow Humble's advertised cumulative tiers, while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:source:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.
+Tier counts and names follow Humble's advertised cumulative tiers (see the `tiers`/`Game.tiers` shape above), while the standard list contains games only. Coupons, subscription perks, and other bonuses are retained in the matching `archives/humblebundle/` metadata. A game whose storefront identity could not be selected uses `unresolved:source:humblebundle:<machine-name>` and remains ineligible for launcher synchronization until the reviewed mapping is updated.
 
 Each generated Humble list references its offer URL plus the matching normalized metadata and raw source archive files; references are appended across re-crawls, never overwritten, so a reference another source previously added (e.g. an isthereanydeal mirror URL) survives a later Humble crawl.
 

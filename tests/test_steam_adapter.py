@@ -50,15 +50,17 @@ def _list(
     if unsupported:
         games.append({"name": "Other Store Game", "ids": ["gog:other"]})
     # end if
-    payload: dict[str, object] = {"schema": 1, "name": list_id, "games": games}
-    if tier is not None:
-        payload["tier"] = tier
-    # end if
+    name = list_id if tier is None else f"{list_id} — tier {tier}"
+    payload: dict[str, object] = {"schema": 1, "name": name, "games": games}
     if pick_quota is not None:
         payload["pick_quota"] = pick_quota
     # end if
     data = GameList.model_validate(payload)
-    return LoadedGameList(id=list_id, path=Path(f"lists/{list_id}.yml"), data=data)
+    # Mirrors what `expand_list_tiers` produces for a real multi-variation bundle
+    # (see `lists.split_tier_suffix`): the adapter derives rank/grouping from this
+    # synthetic id suffix, not from any field on `data` any more.
+    full_id = list_id if tier is None else f"{list_id}#tier-{tier}"
+    return LoadedGameList(id=full_id, path=Path(f"lists/{list_id}.yml"), data=data)
 # end def _list
 
 
@@ -308,8 +310,8 @@ def test_pick_quota_not_met_is_ineligible_even_with_min_owned_one() -> None:
 
 def test_pick_quota_combines_with_highest_tier_selection() -> None:
     game_lists = [
-        _list("example/byob/tier-1", [10, 20, 30], tier=1, pick_quota=1),
-        _list("example/byob/tier-2", [10, 20, 30], tier=2, pick_quota=2),
+        _list("example/byob", [10, 20, 30], tier=1, pick_quota=1),
+        _list("example/byob", [10, 20, 30], tier=2, pick_quota=2),
     ]
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
@@ -318,16 +320,16 @@ def test_pick_quota_combines_with_highest_tier_selection() -> None:
 
     plan = adapter.plan(game_lists)
 
-    assert [change.list_id for change in plan.changes] == ["example/byob/tier-2"]
+    assert [change.list_id for change in plan.changes] == ["example/byob#tier-2"]
 # end def test_pick_quota_combines_with_highest_tier_selection
 
 
-def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories() -> None:
+def test_highest_tier_uses_the_synthetic_tier_suffix_across_sibling_bundles() -> None:
     game_lists = [
-        _list("provider/bundle/ordinal/tier-1", [10], tier=1),
-        _list("provider/bundle/ordinal/tier-3", [10, 20], tier=3),
-        _list("humblebundle/bundle/items/tier-1", [10], tier=1),
-        _list("humblebundle/bundle/items/tier-2", [10, 20], tier=2),
+        _list("provider/bundle/ordinal", [10], tier=1),
+        _list("provider/bundle/ordinal", [10, 20], tier=3),
+        _list("humblebundle/bundle/items", [10], tier=1),
+        _list("humblebundle/bundle/items", [10, 20], tier=2),
         _list("provider/choice/standalone", [10]),
     ]
     adapter = SteamAdapter(
@@ -338,17 +340,17 @@ def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories() ->
     plan = adapter.plan(game_lists)
 
     assert [change.list_id for change in plan.changes] == [
-        "provider/bundle/ordinal/tier-3",
-        "humblebundle/bundle/items/tier-2",
+        "provider/bundle/ordinal#tier-3",
+        "humblebundle/bundle/items#tier-2",
         "provider/choice/standalone",
     ]
-# end def test_highest_tier_uses_the_tier_field_across_sibling_bundle_directories
+# end def test_highest_tier_uses_the_synthetic_tier_suffix_across_sibling_bundles
 
 
 def test_all_tiers_keeps_every_matching_tier() -> None:
     game_lists = [
-        _list("provider/bundle/example/tier-1", [10], tier=1),
-        _list("provider/bundle/example/tier-2", [10, 20], tier=2),
+        _list("provider/bundle/example", [10], tier=1),
+        _list("provider/bundle/example", [10, 20], tier=2),
     ]
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919", tier_mode="all"),
@@ -358,16 +360,19 @@ def test_all_tiers_keeps_every_matching_tier() -> None:
     plan = adapter.plan(game_lists)
 
     assert [change.list_id for change in plan.changes] == [
-        "provider/bundle/example/tier-1",
-        "provider/bundle/example/tier-2",
+        "provider/bundle/example#tier-1",
+        "provider/bundle/example#tier-2",
     ]
 # end def test_all_tiers_keeps_every_matching_tier
 
 
 def test_highest_tier_rejects_ambiguous_numeric_rank() -> None:
+    # Two entries sharing the same base id and rank - can't arise from a real
+    # `expand_list_tiers` result (ranks are unique within one bundle's `tiers`),
+    # but the adapter still guards against a caller feeding duplicate entries.
     game_lists = [
-        _list("provider/bundle/example/tier-3", [10], tier=3),
-        _list("provider/bundle/example/other-3", [10], tier=3),
+        _list("provider/bundle/example", [10], tier=3),
+        _list("provider/bundle/example", [10, 20], tier=3),
     ]
     adapter = SteamAdapter(
         SteamOptions(steam_id="76561198044975919", tier_mode="highest"),
@@ -429,8 +434,8 @@ def test_reconciliation_deletes_superseded_lower_tier(tmp_path: Path) -> None:
     steam_root = build_fake_steam(tmp_path)
     gateway = SteamFileGateway(steam_root, STEAM_ID)
     game_lists = [
-        _list("provider/bundle/example/tier-1", [10], tier=1),
-        _list("provider/bundle/example/tier-2", [10, 20], tier=2),
+        _list("provider/bundle/example", [10], tier=1),
+        _list("provider/bundle/example", [10, 20], tier=2),
     ]
     creator = SteamAdapter(
         SteamOptions(steam_id=STEAM_ID, tier_mode="all"),
@@ -448,8 +453,8 @@ def test_reconciliation_deletes_superseded_lower_tier(tmp_path: Path) -> None:
     plan = reconciler.plan(game_lists)
 
     assert [(change.action, change.list_id) for change in plan.changes] == [
-        ("create-or-update", "provider/bundle/example/tier-2"),
-        ("delete", "provider/bundle/example/tier-1"),
+        ("create-or-update", "provider/bundle/example#tier-2"),
+        ("delete", "provider/bundle/example#tier-1"),
     ]
 # end def test_reconciliation_deletes_superseded_lower_tier
 
