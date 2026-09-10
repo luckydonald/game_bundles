@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Reaper Bundle 4 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/8981/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/8981/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/8981/source.json
+games:
+- name: Do Not Feed the Monkeys
+  ids:
+  - steam:658850
+  requires: []
+- name: Beholder 2
+  ids:
+  - steam:761620
+  requires: []
+- name: Shadwen
+  ids:
+  - steam:425210
+  requires: []
+- name: The Technomancer
+  ids:
+  - steam:338390
+  requires: []
+- name: Guns, Gore and Cannoli 2
+  ids:
+  - steam:525510
+  requires: []
+- name: 'Redout: Enhanced Edition'
+  ids:
+  - steam:517710
+  requires: []
+- name: Syndrome
+  ids:
+  - steam:409320
+  requires: []
+- name: 'The Textorcist: The Story of Ray Bibbia'
+  ids:
+  - steam:940680
+  requires: []
+- name: Rain World
+  ids:
+  - steam:312520
+  requires: []
+- name: Kingdom Under Fire 2 - Basic Edition
+  ids:
+  - unresolved:source:isthereanydeal:8981:kingdom-under-fire-2-basic-edition
+  requires: []

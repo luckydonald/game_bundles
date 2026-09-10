@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Killer Bundle 14 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9357/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9357/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9357/source.json
+games:
+- name: 'Talisman: Origins'
+  ids:
+  - steam:1033170
+  requires: []
+- name: Rec Center Tycoon
+  ids:
+  - steam:623700
+  requires: []
+- name: Chris Sawyer's Locomotion
+  ids:
+  - steam:356430
+  requires: []
+- name: "Project CARS \x96 Game of the Year Edition"
+  ids:
+  - unresolved:source:isthereanydeal:9357:project-cars-game-of-the-year-edition
+  requires: []
+- name: RollerCoaster Tycoon Deluxe
+  ids:
+  - steam:285310
+  requires: []
+- name: Autonauts
+  ids:
+  - steam:979120
+  requires: []
+- name: Close to the Sun
+  ids:
+  - steam:968870
+  requires: []
+- name: Table Manners
+  ids:
+  - steam:1019450
+  requires: []
+- name: 'Peaky Blinders: Mastermind'
+  ids:
+  - unresolved:source:isthereanydeal:9357:peaky-blinders-mastermind
+  requires: []

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Platinum Sci-Fi Pack — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9697/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9697/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9697/source.json
+games:
+- name: 'Everreach: Project Eden'
+  ids:
+  - steam:915670
+  requires: []
+- name: EVERSPACE™
+  ids:
+  - steam:396750
+  requires: []
+- name: The Long Journey Home
+  ids:
+  - steam:366910
+  requires: []
