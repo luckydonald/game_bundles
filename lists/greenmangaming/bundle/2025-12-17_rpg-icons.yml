@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: RPG Icons Bundle — Barbarian
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/15687/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/15687/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/15687/source.json
+games:
+- name: 'Baldur''s Gate II: Enhanced Edition'
+  ids:
+  - steam:257350
+  requires: []
+- name: 'Baldur''s Gate: Enhanced Edition'
+  ids:
+  - steam:228280
+  requires: []
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+  requires: []
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300
+  requires: []
+- name: 'Neverwinter Nights: Complete Adventures'
+  ids:
+  - unresolved:source:isthereanydeal:15687:neverwinter-nights-complete-adventures
+  requires: []
+- name: MythForce
+  ids:
+  - steam:363860
+  requires: []
+- name: 'Pathfinder: Wrath of the Righteous - Enhanced Edition'
+  ids:
+  - steam:1184370
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The Horrific Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7757/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7757/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7757/source.json
+games:
+- name: Uriel's Chasm
+  ids:
+  - steam:292630
+  requires: []
+- name: Lucius
+  ids:
+  - steam:218640
+  requires: []
+- name: Hard West
+  ids:
+  - steam:307670
+  requires: []
+- name: Lucius II
+  ids:
+  - steam:296830
+  requires: []
+- name: Reframed
+  ids:
+  - steam:815860
+  requires: []
+- name: Pathologic Classic HD
+  ids:
+  - steam:384110
+  requires: []
+- name: Solarix
+  ids:
+  - steam:284990
+  requires: []
+- name: Beholder
+  ids:
+  - steam:475550
+  requires: []
+- name: Lucius Demake
+  ids:
+  - steam:364230
+  requires: []

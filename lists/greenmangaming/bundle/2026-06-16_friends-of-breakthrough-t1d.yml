@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Friends of Breakthrough T1D — Breakthrough
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16266/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/16266/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/16266/source.json
+games:
+- name: Unavowed
+  ids:
+  - steam:336140
+  requires: []
+- name: The Survivalists
+  ids:
+  - steam:897450
+  requires: []
+- name: Time Loader
+  ids:
+  - steam:1301950
+  requires: []
+- name: Pocket Bravery
+  ids:
+  - steam:1555150
+  requires: []
+- name: Cross Blitz
+  ids:
+  - steam:1619520
+  requires: []
+- name: American Arcadia
+  ids:
+  - steam:1249040
+  requires: []
+- name: Atlas Fallen Reign Of Sand
+  ids:
+  - steam:1230530
+  requires: []
