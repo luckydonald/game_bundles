@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Remute's Odyssey Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3726/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3726/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3726/source.json
+games:
+- name: Bitcoin Miner
+  ids:
+  - unresolved:source:isthereanydeal:3726:bitcoin-miner
+  requires: []
+- name: Minuteman
+  ids:
+  - unresolved:source:isthereanydeal:3726:minuteman
+  requires: []
+- name: Heavenly Battle
+  ids:
+  - unresolved:source:isthereanydeal:3726:heavenly-battle
+  requires: []
+- name: Flute Master
+  ids:
+  - steam:380100
+  requires: []
+- name: illumine
+  ids:
+  - steam:518650
+  requires: []
+- name: Redder
+  ids:
+  - unresolved:source:isthereanydeal:3726:redder
+  requires: []
+- name: Black Sand Drift
+  ids:
+  - steam:507380
+  requires: []
+- name: Crypto
+  ids:
+  - unresolved:source:isthereanydeal:3726:crypto
+  requires: []
+- name: 'Afterlife: The Game'
+  ids:
+  - unresolved:source:isthereanydeal:3726:afterlife-the-game
+  requires: []
+- name: Mu Cartographer
+  ids:
+  - steam:513360
+  requires: []
+- name: The Wizard's Lair
+  ids:
+  - unresolved:source:isthereanydeal:3726:the-wizards-lair
+  requires: []
+- name: 'Rad Jokes: Curtain Call'
+  ids:
+  - unresolved:source:isthereanydeal:3726:rad-jokes-curtain-call
+  requires: []
+- name: Evo Explores
+  ids:
+  - steam:467210
+  requires: []

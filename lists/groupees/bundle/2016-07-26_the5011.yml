@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Chronicles — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3803/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3803/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3803/source.json
+games:
+- name: Erusal
+  ids:
+  - steam:509230
+  requires: []
+- name: Oknytt
+  ids:
+  - steam:286320
+  requires: []
+- name: Doodle God
+  ids:
+  - steam:348360
+  requires: []
+- name: 'Farm Life: Natures Adventure'
+  ids:
+  - steam:511330
+  requires: []
+- name: Professional Lumberjack 2015
+  ids:
+  - steam:316240
+  requires: []
+- name: 'Voodoo Chronicles: The First Sign HD - Director''s Cut Edition'
+  ids:
+  - steam:304750
+  requires: []

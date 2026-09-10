@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 21 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4161/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4161/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4161/source.json
+games:
+- name: Spirit of War
+  ids:
+  - steam:352190
+  requires: []
+- name: Warriors' Wrath
+  ids:
+  - steam:466420
+  requires: []
+- name: Galactic Inheritors
+  ids:
+  - steam:322540
+  requires: []
+- name: 'Cornerstone : The song of Tyrim'
+  ids:
+  - steam:284410
+  requires: []
+- name: Tick's Tales
+  ids:
+  - steam:411610
+  requires: []
+- name: Hover Hazard
+  ids:
+  - steam:545470
+  requires: []
+- name: Drive Megapolis
+  ids:
+  - unresolved:source:isthereanydeal:4161:drive-megapolis
+  requires: []
+- name: Mystic Defense
+  ids:
+  - steam:553910
+  requires: []

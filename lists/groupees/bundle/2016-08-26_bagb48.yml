@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 48 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3962/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3962/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3962/source.json
+games:
+- name: Creature Clicker - Capture, Train, Ascend!
+  ids:
+  - steam:529240
+  requires: []
+- name: Merger 3D
+  ids:
+  - steam:527750
+  requires: []
+- name: 'Strike Force: Arctic Storm'
+  ids:
+  - steam:527520
+  requires: []
+- name: Mirrors of Grimaldi
+  ids:
+  - unresolved:source:isthereanydeal:3962:mirrors-of-grimaldi
+  requires: []
+- name: Leviathan Starblade
+  ids:
+  - steam:549900
+  requires: []
+- name: Russian SuperHero Dead Ivan
+  ids:
+  - steam:527770
+  requires: []
+- name: The legions of Rome
+  ids:
+  - steam:527510
+  requires: []
+- name: Bad Sector HDD
+  ids:
+  - steam:531910
+  requires: []
+- name: Inner Voices
+  ids:
+  - steam:559130
+  requires: []
+- name: Just Hero
+  ids:
+  - steam:527760
+  requires: []

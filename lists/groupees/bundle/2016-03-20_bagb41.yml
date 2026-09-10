@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 41 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3201/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3201/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3201/source.json
+games:
+- name: Project G
+  ids:
+  - steam:465670
+  requires: []
+- name: Longshot Universe
+  ids:
+  - unresolved:source:isthereanydeal:3201:longshot-universe
+  requires: []
+- name: Ninja Stealth
+  ids:
+  - steam:485450
+  requires: []
+- name: Hyposphere
+  ids:
+  - steam:461880
+  requires: []
+- name: Puzzle Galaxies
+  ids:
+  - steam:463710
+  requires: []
+- name: Return of Bantara
+  ids:
+  - unresolved:source:isthereanydeal:3201:return-of-bantara
+  requires: []
+- name: Reptilian Rebellion
+  ids:
+  - steam:461760
+  requires: []
+- name: Mogwash
+  ids:
+  - unresolved:source:isthereanydeal:3201:mogwash
+  requires: []
+- name: 'Boundel: The Second Era'
+  ids:
+  - steam:454070
+  requires: []
+- name: NORTH
+  ids:
+  - steam:461890
+  requires: []
+- name: Derelict - Redux Edition
+  ids:
+  - unresolved:source:isthereanydeal:3201:derelict-redux-edition
+  requires: []

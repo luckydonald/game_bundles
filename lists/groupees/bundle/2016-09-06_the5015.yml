@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Trapped Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4006/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4006/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4006/source.json
+games:
+- name: Captain The Runner
+  ids:
+  - steam:878500
+  requires: []
+- name: Trapped Dead
+  ids:
+  - steam:46540
+  requires: []
+- name: Redactem
+  ids:
+  - steam:502400
+  requires: []
+- name: "Greed \x96 Black Border"
+  ids:
+  - steam:46400
+  requires: []
+- name: KnightShift
+  ids:
+  - steam:254060
+  requires: []

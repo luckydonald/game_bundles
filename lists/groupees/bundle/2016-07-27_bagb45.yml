@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 45 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3809/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3809/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3809/source.json
+games:
+- name: Funfair Ride Simulator 3 - Ride Pack 2
+  ids:
+  - steam:499570
+  requires: []
+- name: 'Momento Temporis: Light from the Deep'
+  ids:
+  - steam:496310
+  requires: []
+- name: Graveyard Smash
+  ids:
+  - unresolved:source:isthereanydeal:3809:graveyard-smash
+  requires: []
+- name: Funfair Ride Simulator 3
+  ids:
+  - steam:497720
+  requires: []
+- name: Adventures On The Polluted Islands
+  ids:
+  - steam:496690
+  requires: []
+- name: Typing with Jester
+  ids:
+  - steam:496520
+  requires: []
+- name: Hexoscope
+  ids:
+  - steam:495780
+  requires: []
+- name: Wrong Dimension - The One Dimensional Platformer
+  ids:
+  - steam:497280
+  requires: []
+- name: Lord Mayor
+  ids:
+  - steam:499330
+  requires: []
+- name: Funfair Ride Simulator 3 - Ride Pack 3
+  ids:
+  - steam:499571
+  requires: []
+- name: Funfair Ride Simulator 3 - Ride Pack 1
+  ids:
+  - steam:498410
+  requires: []
+- name: Torch Cave
+  ids:
+  - unresolved:source:isthereanydeal:3809:torch-cave
+  requires: []
+- name: Shape Shifter
+  ids:
+  - steam:497050
+  requires: []

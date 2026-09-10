@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 20 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4094/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4094/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4094/source.json
+games:
+- name: Hard Counting
+  ids:
+  - unresolved:source:isthereanydeal:4094:hard-counting
+  requires: []
+- name: Fantastic Checkers 2
+  ids:
+  - steam:514480
+  requires: []
+- name: 'Pay2Win: The Tricks Exposed'
+  ids:
+  - steam:416760
+  requires: []
+- name: Havoc Runner
+  ids:
+  - steam:552480
+  requires: []
+- name: Realms of Arkania Trilogy Classic Bundle
+  ids:
+  - unresolved:source:isthereanydeal:4094:realms-of-arkania-trilogy-classic-bundle
+  requires: []
+- name: 'Bathory: The Bloody Countess'
+  ids:
+  - steam:486170
+  requires: []
+- name: Barnyard Mahjong 3
+  ids:
+  - steam:498030
+  requires: []
+- name: Fabulous Food Truck
+  ids:
+  - steam:497260
+  requires: []
