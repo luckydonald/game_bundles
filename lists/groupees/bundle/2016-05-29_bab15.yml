@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 15 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3500/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3500/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3500/source.json
+games:
+- name: 'Zombie Apocalypse: Escape The Undead City'
+  ids:
+  - steam:492490
+  requires: []
+- name: 'Rush for gold: Alaska'
+  ids:
+  - steam:435140
+  requires: []
+- name: Sunny Hillride
+  ids:
+  - steam:378490
+  requires: []
+- name: Bear Naked Rampage
+  ids:
+  - unresolved:source:isthereanydeal:3500:bear-naked-rampage
+  requires: []
+- name: Fantasy Mall
+  ids:
+  - unresolved:source:isthereanydeal:3500:fantasy-mall
+  requires: []
+- name: Stalingrad
+  ids:
+  - steam:356260
+  requires: []
+- name: Sim Junta
+  ids:
+  - steam:390510
+  requires: []
+- name: Crash Landing
+  ids:
+  - steam:433120
+  requires: []
+- name: Star Ball Galaxy
+  ids:
+  - unresolved:source:isthereanydeal:3500:star-ball-galaxy
+  requires: []

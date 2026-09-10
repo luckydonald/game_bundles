@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'The Sci-fi Bundle #2 — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3937/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3937/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3937/source.json
+games:
+- name: Dangerous skies
+  ids:
+  - unresolved:source:isthereanydeal:3937:dangerous-skies
+  requires: []
+- name: Zenodyne R
+  ids:
+  - steam:466820
+  requires: []
+- name: Lew Pulsipher's Doomstar
+  ids:
+  - steam:504750
+  requires: []
+- name: Gal-X-E
+  ids:
+  - steam:473510
+  requires: []
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:3937:orbs
+  requires: []

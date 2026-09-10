@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 12 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3025/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3025/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3025/source.json
+games:
+- name: 'Rush for gold: California'
+  ids:
+  - steam:449520
+  requires: []
+- name: Garden Rescue Christmas edition
+  ids:
+  - steam:418160
+  requires: []
+- name: Dreadnought Pack
+  ids:
+  - unresolved:source:isthereanydeal:3025:dreadnought-pack
+  requires: []
+- name: The Deer
+  ids:
+  - steam:400240
+  requires: []
+- name: 'Cultures: Northland and 8th Wonder of the World'
+  ids:
+  - unresolved:source:isthereanydeal:3025:cultures-northland-and-8th-wonder-of-the-world
+  requires: []
+- name: 'Global Ops: Commando Libya'
+  ids:
+  - steam:200020
+  requires: []
+- name: Viktor
+  ids:
+  - steam:296730
+  requires: []
+- name: Nightmare on Azathoth
+  ids:
+  - steam:414470
+  requires: []

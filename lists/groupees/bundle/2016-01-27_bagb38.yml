@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 38 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/2987/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/2987/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/2987/source.json
+games:
+- name: Kronos
+  ids:
+  - steam:562090
+  requires: []
+- name: HeartBeat
+  ids:
+  - steam:984560
+  requires: []
+- name: Dyno Adventure
+  ids:
+  - steam:525600
+  requires: []
+- name: Space Hole 2016
+  ids:
+  - steam:477310
+  requires: []
+- name: 'Desert Thunder: Strike Force'
+  ids:
+  - steam:444210
+  requires: []
+- name: 'Mystica: The Ninth Society'
+  ids:
+  - steam:448150
+  requires: []
+- name: Bacteria
+  ids:
+  - steam:448470
+  requires: []
+- name: FAR STARS
+  ids:
+  - unresolved:source:isthereanydeal:2987:far-stars
+  requires: []
+- name: Mini's Magic World
+  ids:
+  - steam:449420
+  requires: []
+- name: Calcu-Late
+  ids:
+  - steam:449200
+  requires: []

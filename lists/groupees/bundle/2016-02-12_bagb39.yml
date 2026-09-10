@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 39 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3051/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3051/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3051/source.json
+games:
+- name: Spectrubes
+  ids:
+  - steam:447990
+  requires: []
+- name: Land it Rocket
+  ids:
+  - steam:449160
+  requires: []
+- name: Atriage
+  ids:
+  - steam:454780
+  requires: []
+- name: Sophie's curse
+  ids:
+  - steam:446380
+  requires: []
+- name: Varenje
+  ids:
+  - steam:460060
+  requires: []
+- name: DAMAGE CONTROL
+  ids:
+  - steam:450020
+  requires: []
+- name: Amaranthine
+  ids:
+  - steam:454900
+  requires: []
+- name: Cubic complex
+  ids:
+  - unresolved:source:isthereanydeal:3051:cubic-complex
+  requires: []
+- name: Totem Troubles
+  ids:
+  - unresolved:source:isthereanydeal:3051:totem-troubles
+  requires: []
+- name: 'CounterAttack: Uprising'
+  ids:
+  - steam:451600
+  requires: []

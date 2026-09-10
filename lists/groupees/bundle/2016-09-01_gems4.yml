@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Jamesbuc''s Gaming Gems #4 — Build-A-Bundle, Two Game Minimum'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3984/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3984/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3984/source.json
+games:
+- name: The Planet of the Vicious Creatures
+  ids:
+  - steam:530290
+  requires: []
+- name: ClawMegaUltra
+  ids:
+  - unresolved:source:isthereanydeal:3984:clawmegaultra
+  requires: []
+- name: Hexderity
+  ids:
+  - unresolved:source:isthereanydeal:3984:hexderity
+  requires: []
+- name: The Crow
+  ids:
+  - unresolved:source:isthereanydeal:3984:the-crow
+  requires: []
+- name: Rooftop Cop
+  ids:
+  - steam:353300
+  requires: []
+- name: Archimedes
+  ids:
+  - steam:530920
+  requires: []
+- name: The Epsilon Outcome
+  ids:
+  - steam:1234020
+  requires: []
+- name: 'Sally Face, Episode One: Strange Neighbors'
+  ids:
+  - steam:541570
+  requires: []
+- name: Defenstar
+  ids:
+  - unresolved:source:isthereanydeal:3984:defenstar
+  requires: []
+- name: Battles of Norghan
+  ids:
+  - steam:531110
+  requires: []

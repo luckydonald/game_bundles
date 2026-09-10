@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Hidden Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4093/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4093/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4093/source.json
+games:
+- name: The Rebel
+  ids:
+  - steam:452650
+  requires: []
+- name: 'Ultimate Word Search 2: Letter Boxed'
+  ids:
+  - steam:514490
+  requires: []
+- name: The Hidden Dragon
+  ids:
+  - steam:498040
+  requires: []
+- name: Fantastic 4 In A Row 2
+  ids:
+  - steam:514470
+  requires: []
+- name: Mystery Of Rivenhallows
+  ids:
+  - steam:498050
+  requires: []

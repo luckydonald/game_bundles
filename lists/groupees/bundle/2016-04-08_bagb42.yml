@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Greenlight 42 — Build Your Own Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/3281/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/3281/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/3281/source.json
+games:
+- name: Dreamcatcher
+  ids:
+  - unresolved:source:isthereanydeal:3281:dreamcatcher
+  requires: []
+- name: White Lands
+  ids:
+  - unresolved:source:isthereanydeal:3281:white-lands
+  requires: []
+- name: Elems
+  ids:
+  - steam:528670
+  requires: []
+- name: 'Liveza: Death of the Earth'
+  ids:
+  - steam:463100
+  requires: []
+- name: Magma Chamber
+  ids:
+  - unresolved:source:isthereanydeal:3281:magma-chamber
+  requires: []
+- name: Tales Across Time
+  ids:
+  - steam:461710
+  requires: []
+- name: Izeriya
+  ids:
+  - steam:463830
+  requires: []
+- name: Dwarves Legacy
+  ids:
+  - unresolved:source:isthereanydeal:3281:dwarves-legacy
+  requires: []
+- name: Hiiro
+  ids:
+  - steam:464960
+  requires: []
