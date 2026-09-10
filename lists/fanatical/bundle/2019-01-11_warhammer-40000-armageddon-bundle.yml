@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Warhammer 40,000: Armageddon Bundle — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6900/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6900/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6900/source.json
+games:
+- name: 'Warhammer 40,000: Armageddon - Vulkan''s Wrath'
+  ids:
+  - unresolved:source:isthereanydeal:6900:warhammer-40000-armageddon-vulkans-wrath
+  requires: []
+- name: 'Warhammer 40,000 : Armageddon - Ork Hunters'
+  ids:
+  - steam:405520
+  requires: []
+- name: 'Warhammer 40,000: Armageddon - Glory of Macragge'
+  ids:
+  - steam:353770
+  requires: []
+- name: 'Warhammer 40,000: Armageddon - Soundtrack'
+  ids:
+  - steam:437110
+  requires: []
+- name: 'Warhammer 40,000 : Armageddon'
+  ids:
+  - steam:312370
+  requires: []
+- name: 'Warhammer 40,000: Armageddon - Angels of Death'
+  ids:
+  - steam:353761
+  requires: []
+- name: 'Warhammer 40,000: Armageddon - Golgotha'
+  ids:
+  - steam:437140
+  requires: []

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Showdown Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6928/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6928/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6928/source.json
+games:
+- name: Joggernauts
+  ids:
+  - steam:747620
+  requires: []
+- name: Forced Showdown
+  ids:
+  - steam:265000
+  requires: []
+- name: STARWHAL
+  ids:
+  - steam:263020
+  requires: []
+- name: Eon Altar - 1 & 2
+  ids:
+  - unresolved:source:isthereanydeal:6928:eon-altar-1-and-2
+  requires: []
+- name: 'Scribblenauts Unmasked: A DC Comics Adventure'
+  ids:
+  - steam:249870
+  requires: []

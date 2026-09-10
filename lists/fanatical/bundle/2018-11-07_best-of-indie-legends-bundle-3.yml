@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Best of Indie Legends 3 Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6662/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6662/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6662/source.json
+games:
+- name: FarSky
+  ids:
+  - unresolved:source:isthereanydeal:6662:farsky
+  requires: []
+- name: Convoy
+  ids:
+  - steam:318230
+  requires: []
+- name: King Arthur's Gold
+  ids:
+  - steam:219830
+  requires: []
+- name: Among the Sleep - Enhanced Edition
+  ids:
+  - steam:250620
+  requires: []
+- name: Action Henk
+  ids:
+  - steam:285820
+  requires: []
+- name: 'Bad Dream: Coma'
+  ids:
+  - steam:538070
+  requires: []
+- name: Unbox
+  ids:
+  - steam:512300
+  requires: []
+- name: The Count Lucanor + Original Soundtrack
+  ids:
+  - steam:440880
+  requires: []

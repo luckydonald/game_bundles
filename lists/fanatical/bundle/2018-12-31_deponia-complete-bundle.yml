@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Deponia Complete Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6861/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6861/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6861/source.json
+games:
+- name: Goodbye Deponia
+  ids:
+  - steam:241910
+  requires: []
+- name: Deponia
+  ids:
+  - steam:214340
+  requires: []
+- name: Deponia Doomsday
+  ids:
+  - steam:421050
+  requires: []
+- name: Chaos on Deponia
+  ids:
+  - steam:220740
+  requires: []

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Redout Deluxe Edition Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7076/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7076/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7076/source.json
+games:
+- name: Redout - Soundtrack
+  ids:
+  - steam:570930
+  requires: []
+- name: 'Redout: Enhanced Edition'
+  ids:
+  - steam:517710
+  requires: []
+- name: Redout - Digital Artbook
+  ids:
+  - steam:573350
+  requires: []

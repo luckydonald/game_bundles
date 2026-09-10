@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Dollar Masquerade Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/7082/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/7082/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/7082/source.json
+games:
+- name: Glass Masquerade - Halloween Puzzle Pack
+  ids:
+  - steam:969270
+  requires: []
+- name: Glass Masquerade - Inceptions Puzzle Pack
+  ids:
+  - steam:938030
+  requires: []
+- name: Glass Masquerade
+  ids:
+  - steam:511470
+  requires: []

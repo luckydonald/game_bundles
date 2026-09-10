@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Raining Bullets Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6952/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6952/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6952/source.json
+games:
+- name: Maidens of a Hollow Dream / 虚夢の乙女
+  ids:
+  - unresolved:source:isthereanydeal:6952:maidens-of-a-hollow-dream-xu-mengno-yi-nu
+  requires: []
+- name: Metal Slug 3
+  ids:
+  - steam:250180
+  requires: []
+- name: Sora
+  ids:
+  - steam:390730
+  requires: []
+- name: SHOCK TROOPERS
+  ids:
+  - steam:366270
+  requires: []
+- name: Tenta Shooter
+  ids:
+  - steam:704910
+  requires: []

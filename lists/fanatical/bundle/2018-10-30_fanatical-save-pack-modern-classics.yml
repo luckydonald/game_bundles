@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Fanatical Save Pack - Modern Classics — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/6630/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/6630/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/6630/source.json
+games:
+- name: Yakuza 0
+  ids:
+  - steam:638970
+  requires: []
+- name: Bayonetta
+  ids:
+  - steam:460790
+  requires: []
+- name: Vanquish
+  ids:
+  - steam:460810
+  requires: []
