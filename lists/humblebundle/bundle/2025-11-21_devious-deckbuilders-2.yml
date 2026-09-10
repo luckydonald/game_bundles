@@ -6,6 +6,8 @@ tiers:
   name: 2-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: ms
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Evolings
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Roguebook
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Heretic's Fork
   ids:
@@ -45,6 +50,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Deepest Chamber: Resurrection'
   ids:
@@ -52,18 +58,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Vault of the Void
   ids:
   - steam:1135810
   requires: []
   tiers:
+  - 3
   - 4
 - name: Breach Wanderers
   ids:
   - steam:1394130
   requires: []
   tiers:
+  - 3
   - 4
 - name: Demonic Mahjong
   ids:

@@ -6,6 +6,8 @@ tiers:
   name: 10 Bundles Purchased
 - rank: 2
   name: 15 Bundles Purchased
+- rank: 3
+  name: 20 Bundles Purchased
 - rank: 5
   name: 30 Bundles Purchased
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Fireball
   ids:
@@ -30,12 +33,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: Corril Slayer
   ids:
   - unresolved:source:isthereanydeal:2337:corril-slayer
   requires: []
   tiers:
+  - 3
   - 5
 - name: Pushcat
   ids:

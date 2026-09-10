@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 7-item-bundle
 - rank: 4
   name: entire-8-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Golf With Your Friends
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: The Escapists 2
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Worms W.M.D
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Neon Abyss Deluxe Edition
   ids:
@@ -53,18 +59,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Gord
   ids:
   - steam:1351210
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Headbangers: Rhythm Royale'
   ids:
   - steam:1761620
   requires: []
   tiers:
+  - 3
   - 4
 - name: Trepang2
   ids:

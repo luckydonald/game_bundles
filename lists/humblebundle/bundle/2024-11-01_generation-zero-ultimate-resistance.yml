@@ -6,6 +6,8 @@ tiers:
   name: 1-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 12-item-bundle
 - rank: 4
   name: entire-19-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Generation Zero® - Schweet Vanity Pack
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Generation Zero® - US Weapons Pack
   ids:
@@ -37,6 +41,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Generation Zero® - Soviet Weapons Pack
   ids:
@@ -44,6 +49,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Generation Zero® - US Weapons Pack 2
   ids:
@@ -51,48 +57,56 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Generation Zero® - Base Defense Pack
   ids:
   - steam:1610720
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Base Support Pack
   ids:
   - steam:1850670
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Resistance Weapons Pack
   ids:
   - steam:1771050
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Tactical Equipment Pack
   ids:
   - steam:2009530
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Camo Weapon Skins Pack
   ids:
   - steam:2144760
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Eastern European Weapons Pack
   ids:
   - steam:2200740
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Advanced Intelligence Cosmetics Pack
   ids:
   - steam:2591100
   requires: []
   tiers:
+  - 3
   - 4
 - name: Generation Zero® - Alpine Unrest
   ids:

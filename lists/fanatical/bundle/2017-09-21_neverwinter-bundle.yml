@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 4
   name: Tier 4
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Neverwinter - Offensive Starter Pack
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Neverwinter - Endurance Starter Pack
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Neverwinter Trove of Elemental Evil
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Neverwinter - Gelatinous Cube Companion
   ids:
@@ -53,6 +59,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Neverwinter Storm Rider Companion
   ids:
@@ -60,12 +67,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Neverwinter - Stormraider Horse Mount
   ids:
   - unresolved:source:isthereanydeal:5488:neverwinter-stormraider-horse-mount
   requires: []
   tiers:
+  - 3
   - 4
 - name: Neverwinter Knight of the Feywild Supplies Pack
   ids:

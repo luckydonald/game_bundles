@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: 7-item-bundle
 - rank: 4
   name: entire-9-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Mega Man Battle Network Legacy Collection Vol. 2
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: MEGA MAN X DiVE Offline
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Mega Man 11
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Mega Man Zero/ZX Legacy Collection
   ids:
@@ -53,18 +59,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Mega Man X Legacy Collection 2
   ids:
   - steam:743900
   requires: []
   tiers:
+  - 3
   - 4
 - name: Mega Man Legacy Collection 2
   ids:
   - steam:495050
   requires: []
   tiers:
+  - 3
   - 4
 - name: Mega Man Legacy Collection
   ids:

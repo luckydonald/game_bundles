@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: Beat The Average
+- rank: 3
+  name: 12-item-bundle
 - rank: 4
   name: entire-13-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: ArmA Gold Edition
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Arma Tactics
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: ArmA 2 Operation Arrowhead
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Arma 2: Private Military Company'
   ids:
@@ -53,6 +59,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: ArmA 2 British Armed Forces
   ids:
@@ -60,6 +67,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'ArmA 2: Army of the Czech Republic'
   ids:
@@ -67,6 +75,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: ArmA 2
   ids:
@@ -74,30 +83,35 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Arma 3 Marksmen
   ids:
   - steam:332350
   requires: []
   tiers:
+  - 3
   - 4
 - name: Arma 3 Helicopters
   ids:
   - steam:304380
   requires: []
   tiers:
+  - 3
   - 4
 - name: Arma 3
   ids:
   - steam:107410
   requires: []
   tiers:
+  - 3
   - 4
 - name: Arma 3 Karts
   ids:
   - steam:288520
   requires: []
   tiers:
+  - 3
   - 4
 - name: Arma 3 Apex Edition
   ids:

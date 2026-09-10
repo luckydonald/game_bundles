@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 4
   name: Tier 4
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Panzer Corps: Grand Campaign ''39'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '42
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '42-'43
   ids:
@@ -45,6 +50,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '40
   ids:
@@ -52,6 +58,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '41
   ids:
@@ -59,6 +66,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '43
   ids:
@@ -66,36 +74,42 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Panzer Corps: Afrika Korps'
   ids:
   - steam:276551
   requires: []
   tiers:
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '45 West
   ids:
   - steam:279968
   requires: []
   tiers:
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '44 West
   ids:
   - steam:279966
   requires: []
   tiers:
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '44 East
   ids:
   - steam:279965
   requires: []
   tiers:
+  - 3
   - 4
 - name: Panzer Corps Grand Campaign '45 East
   ids:
   - steam:279967
   requires: []
   tiers:
+  - 3
   - 4
 - name: 'Panzer Corps: U.S. Corps ''44-''45'
   ids:

@@ -6,6 +6,8 @@ tiers:
   name: 1 Items
 - rank: 2
   name: 3 Items
+- rank: 3
+  name: 4 Items
 - rank: 9
   name: Add-on to any tier (3)
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 9
 - name: INCISION
   ids:
@@ -30,6 +33,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 9
 - name: 'Warhammer 40,000: Boltgun'
   ids:
@@ -37,12 +41,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 9
 - name: Beyond Citadel
   ids:
   - steam:3371240
   requires: []
   tiers:
+  - 3
   - 9
 - name: MULLET MADJACK
   ids:

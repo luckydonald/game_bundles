@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 5
   name: Charity
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Going Under
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Subway Midnight
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Totally Accurate Battle Simulator
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: Content Warning
   ids:
@@ -53,6 +59,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: PEAK
   ids:
@@ -60,12 +67,14 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: HASTE
   ids:
   - steam:1796470
   requires: []
   tiers:
+  - 3
   - 5
 - name: Another Crab's Treasure
   ids:

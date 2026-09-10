@@ -6,6 +6,8 @@ tiers:
   name: Tier 1
 - rank: 2
   name: Tier 2
+- rank: 3
+  name: Tier 3
 - rank: 9
   name: Tier 9
 references:
@@ -26,6 +28,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 9
 - name: '9-Bit Armies: A Bit Too Far'
   ids:
@@ -34,6 +37,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 9
 - name: 'Stronghold Crusader: Definitive Edition'
   ids:
@@ -41,6 +45,7 @@ games:
   - isthereanydeal:stronghold-crusader-definitive-edition
   requires: []
   tiers:
+  - 3
   - 9
 - name: Rogue Command
   ids:

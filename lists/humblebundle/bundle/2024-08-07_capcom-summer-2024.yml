@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 6-item-bundle
+- rank: 3
+  name: 9-item-bundle
 - rank: 4
   name: entire-12-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Dead Rising® 2: Off The Record'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Dragon''s Dogma: Dark Arisen'
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Dead Rising 3 Apocalypse Edition
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Street Fighter 30th Anniversary Collection
   ids:
@@ -53,6 +59,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Street Fighter V - Champion Edition
   ids:
@@ -60,24 +67,28 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: 'Phoenix Wright: Ace Attorney Trilogy'
   ids:
   - steam:787480
   requires: []
   tiers:
+  - 3
   - 4
 - name: Capcom Beat 'Em Up Bundle
   ids:
   - steam:885150
   requires: []
   tiers:
+  - 3
   - 4
 - name: Dead Rising 4 Frank's Big Package
   ids:
   - unresolved:source:isthereanydeal:14306:dead-rising-4-franks-big-package
   requires: []
   tiers:
+  - 3
   - 4
 - name: The Great Ace Attorney Chronicles
   ids:

@@ -6,6 +6,8 @@ tiers:
   name: 2-item-bundle
 - rank: 2
   name: 5-item-bundle
+- rank: 3
+  name: Beat The Average
 - rank: 4
   name: entire-10-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: 'Commandos: Behind Enemy Lines'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 4
 - name: Commandos 2 - HD Remaster
   ids:
@@ -38,6 +42,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Dungeons 3
   ids:
@@ -45,6 +50,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Tropico 5
   ids:
@@ -52,18 +58,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 4
 - name: Sudden Strike 4
   ids:
   - steam:373930
   requires: []
   tiers:
+  - 3
   - 4
 - name: Dungeons 2
   ids:
   - steam:262280
   requires: []
   tiers:
+  - 3
   - 4
 - name: Spacebase Startopia
   ids:

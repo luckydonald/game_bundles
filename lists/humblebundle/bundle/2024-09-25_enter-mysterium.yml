@@ -6,6 +6,8 @@ tiers:
   name: 3-item-bundle
 - rank: 2
   name: 6-item-bundle
+- rank: 3
+  name: 8-item-bundle
 - rank: 5
   name: entire-13-item-bundle
 references:
@@ -23,6 +25,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: 'The Manhole: Masterpiece Edition'
   ids:
@@ -31,6 +34,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: Spelunx and the Caves of Mr. Seudo
   ids:
@@ -39,6 +43,7 @@ games:
   tiers:
   - 1
   - 2
+  - 3
   - 5
 - name: 'Uru: Complete Chronicles'
   ids:
@@ -46,6 +51,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: 'Myst V: End of Ages'
   ids:
@@ -53,6 +59,7 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: Riven (1997)
   ids:
@@ -60,18 +67,21 @@ games:
   requires: []
   tiers:
   - 2
+  - 3
   - 5
 - name: 'Myst IV: Revelation'
   ids:
   - steam:925940
   requires: []
   tiers:
+  - 3
   - 5
 - name: 'Myst: Masterpiece Edition'
   ids:
   - steam:63660
   requires: []
   tiers:
+  - 3
   - 5
 - name: Obduction
   ids:
