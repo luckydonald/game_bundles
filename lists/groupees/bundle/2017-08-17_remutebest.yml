@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Best Of Remute — Select 2 to 11 Titles; $1.00 up to $4.40
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5400/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5400/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5400/source.json
+games:
+- name: A.W.A.
+  ids:
+  - unresolved:source:isthereanydeal:5400:a-w-a
+  requires: []
+- name: GunWorld
+  ids:
+  - steam:349950
+  requires: []
+- name: Vector Strain
+  ids:
+  - steam:419090
+  requires: []
+- name: Chester One
+  ids:
+  - steam:348800
+  requires: []
+- name: 'You Are Not A Banana: Better Edition'
+  ids:
+  - steam:340470
+  requires: []
+- name: Carrie's Order Up
+  ids:
+  - steam:522490
+  requires: []
+- name: Labyrinth of Time, The
+  ids:
+  - unresolved:source:isthereanydeal:5400:labyrinth-of-time-the
+  requires: []
+- name: 'Inherit the Earth: Quest for the Orb'
+  ids:
+  - steam:257260
+  requires: []
+- name: Mu Cartographer
+  ids:
+  - steam:513360
+  requires: []
+- name: Mondrian - Abstraction in Beauty
+  ids:
+  - steam:392780
+  requires: []
+- name: The Music Machine
+  ids:
+  - steam:359040
+  requires: []

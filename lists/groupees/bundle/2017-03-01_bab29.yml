@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 29 — Select 2 to 8 Titles; $1.00 up to $3.00
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4843/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4843/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4843/source.json
+games:
+- name: Black Viper Sophia's Fate
+  ids:
+  - steam:322990
+  requires: []
+- name: In Between - Deluxe
+  ids:
+  - steam:388420
+  requires: []
+- name: No Way Out
+  ids:
+  - steam:572010
+  requires: []
+- name: Call to 10
+  ids:
+  - unresolved:source:isthereanydeal:4843:call-to-10
+  requires: []
+- name: The Descendant
+  ids:
+  - steam:351940
+  requires: []
+- name: TERROR LAB
+  ids:
+  - steam:448540
+  requires: []
+- name: FPS - Fun Puzzle Shooter
+  ids:
+  - steam:697850
+  requires: []
+- name: 'Hidden Mysteries: Titanic'
+  ids:
+  - steam:369280
+  requires: []

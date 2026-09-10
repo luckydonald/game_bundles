@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Bundle in a Box 10 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/5180/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/5180/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/5180/source.json
+games:
+- name: Squareface
+  ids:
+  - steam:517350
+  requires: []
+- name: Asteroid Shooter
+  ids:
+  - unresolved:source:isthereanydeal:5180:asteroid-shooter
+  requires: []
+- name: Death's Life
+  ids:
+  - steam:502100
+  requires: []
+- name: Among Thorns
+  ids:
+  - unresolved:source:isthereanydeal:5180:among-thorns
+  requires: []
+- name: Plumber 3D
+  ids:
+  - unresolved:source:isthereanydeal:5180:plumber-3d
+  requires: []
+- name: Ara Fell
+  ids:
+  - unresolved:source:isthereanydeal:5180:ara-fell
+  requires: []

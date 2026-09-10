@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build a Bundle 22 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4243/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4243/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4243/source.json
+games:
+- name: Mines of Mars
+  ids:
+  - steam:413740
+  requires: []
+- name: Blood is Red
+  ids:
+  - unresolved:source:isthereanydeal:4243:blood-is-red
+  requires: []
+- name: Bunker Constructor
+  ids:
+  - steam:364980
+  requires: []
+- name: 'Postmortem: One Must Die (Extended Cut)'
+  ids:
+  - steam:263140
+  requires: []
+- name: Sky Mercenaries
+  ids:
+  - steam:336090
+  requires: []
+- name: Race.a.bit
+  ids:
+  - unresolved:source:isthereanydeal:4243:race-a-bit
+  requires: []
+- name: Neon Shadow
+  ids:
+  - steam:296890
+  requires: []
+- name: Lazer Cops
+  ids:
+  - steam:624050
+  requires: []

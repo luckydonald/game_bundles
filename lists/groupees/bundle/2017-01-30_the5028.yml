@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: The 50 - Rescue Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/4693/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/4693/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/4693/source.json
+games:
+- name: Garden Rescue
+  ids:
+  - steam:346210
+  requires: []
+- name: Develop Telekinesis!
+  ids:
+  - unresolved:source:isthereanydeal:4693:develop-telekinesis
+  requires: []
+- name: Pro Skater 2D
+  ids:
+  - unresolved:source:isthereanydeal:4693:pro-skater-2d
+  requires: []
+- name: The Life Of Greather
+  ids:
+  - steam:503830
+  requires: []
+- name: Nightmare
+  ids:
+  - unresolved:source:isthereanydeal:4693:nightmare
+  requires: []
