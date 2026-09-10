@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'Ultimate Racing Sim Bundle: Holiday Encore — entire-7-item-bundle'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12752/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12752/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12752/source.json
+games:
+- name: Assetto Corsa Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:12752:assetto-corsa-ultimate-edition
+  requires: []
+- name: rFactor 2
+  ids:
+  - steam:365960
+  requires: []
+- name: Automobilista
+  ids:
+  - steam:431600
+  requires: []
+- name: Automobilista 2
+  ids:
+  - steam:1066890
+  requires: []
+- name: Assetto Corsa Competizione
+  ids:
+  - steam:805550
+  requires: []
+- name: DRIFT21
+  ids:
+  - unresolved:source:isthereanydeal:12752:drift21
+  requires: []
+- name: NASCAR Heat 5 - Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:12752:nascar-heat-5-ultimate-edition
+  requires: []

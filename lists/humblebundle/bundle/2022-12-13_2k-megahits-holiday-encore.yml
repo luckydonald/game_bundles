@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 2k Megahits Holiday Encore Bundle — entire-20-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12749/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12749/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12749/source.json
+games:
+- name: 'X-COM: Enforcer'
+  ids:
+  - steam:7770
+  requires: []
+- name: 'X-COM: Terror From the Deep'
+  ids:
+  - steam:7650
+  requires: []
+- name: 'BioShock: The Collection'
+  ids:
+  - unresolved:source:isthereanydeal:12749:bioshock-the-collection
+  requires: []
+- name: "Sid Meier\x92s Railroads!"
+  ids:
+  - steam:7600
+  requires: []
+- name: 'X-COM: Apocalypse'
+  ids:
+  - steam:7660
+  requires: []
+- name: Sid Meier's Civilization® VI
+  ids:
+  - steam:289070
+  requires: []
+- name: 'CivCity: Rome'
+  ids:
+  - steam:3980
+  requires: []
+- name: Army Men RTS
+  ids:
+  - steam:694500
+  requires: []
+- name: Borderlands 3 Super Deluxe Edition
+  ids:
+  - unresolved:source:isthereanydeal:12749:borderlands-3-super-deluxe-edition
+  requires: []
+- name: 'X-Com: Interceptor'
+  ids:
+  - steam:7730
+  requires: []
+- name: 'X-Com: UFO Defense'
+  ids:
+  - steam:7760
+  requires: []
+- name: Railroad Tycoon II Platinum
+  ids:
+  - steam:7620
+  requires: []
+- name: 'Hidden & Dangerous 2: Courage Under Fire'
+  ids:
+  - steam:703320
+  requires: []
+- name: Railroad Tycoon 3
+  ids:
+  - steam:7610
+  requires: []
+- name: Hidden & Dangerous Action Pack
+  ids:
+  - steam:703310
+  requires: []
+- name: Duke Nukem Forever Collection
+  ids:
+  - unresolved:source:isthereanydeal:12749:duke-nukem-forever-collection
+  requires: []
+- name: 'Mafia: Definitive Edition'
+  ids:
+  - steam:1030840
+  requires: []
+- name: WWE 2K Battlegrounds
+  ids:
+  - unresolved:source:isthereanydeal:12749:wwe-2k-battlegrounds
+  requires: []
+- name: 'XCOM: Ultimate Collection'
+  ids:
+  - unresolved:source:isthereanydeal:12749:xcom-ultimate-collection
+  requires: []
+- name: 'WWE 2K Battlegrounds: Ultimate Brawlers Pass'
+  ids:
+  - unresolved:source:isthereanydeal:12749:wwe-2k-battlegrounds-ultimate-brawlers-pass
+  requires: []

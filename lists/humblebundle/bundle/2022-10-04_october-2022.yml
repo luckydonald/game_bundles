@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Oct 2022) — entire-8-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/12166/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/12166/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/12166/source.json
+games:
+- name: Maid of Sker
+  ids:
+  - steam:826940
+  requires: []
+- name: Railroad Corporation
+  ids:
+  - steam:797400
+  requires: []
+- name: Monster Train
+  ids:
+  - steam:1102190
+  requires: []
+- name: Epic Chef
+  ids:
+  - steam:1312960
+  requires: []
+- name: 'The Dark Pictures Anthology: Little Hope'
+  ids:
+  - steam:1194630
+  requires: []
+- name: DEATHLOOP
+  ids:
+  - steam:1252330
+  requires: []
+- name: Golf Gang
+  ids:
+  - steam:1151050
+  requires: []
+- name: 'Disciples: Liberation'
+  ids:
+  - steam:1287840
+  requires: []

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Humble Choice (Dec 2021) — entire-12-item-bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/10794/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/10794/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/10794/source.json
+games:
+- name: Maneater
+  ids:
+  - steam:629820
+  requires: []
+- name: Mordhau
+  ids:
+  - steam:629760
+  requires: []
+- name: TOHU
+  ids:
+  - steam:1075200
+  requires: []
+- name: Fling to the Finish
+  ids:
+  - steam:1054430
+  requires: []
+- name: Endzone - A World Apart
+  ids:
+  - steam:933820
+  requires: []
+- name: The Survivalists
+  ids:
+  - steam:897450
+  requires: []
+- name: Partisans 1941
+  ids:
+  - steam:1227530
+  requires: []
+- name: Beyond The Wire
+  ids:
+  - steam:1058650
+  requires: []
+- name: '8Doors: Arum''s Afterlife Adventure'
+  ids:
+  - steam:668550
+  requires: []
+- name: 'Greak: Memories of Azur'
+  ids:
+  - steam:1311070
+  requires: []
+- name: Voidigo
+  ids:
+  - steam:1304680
+  requires: []
+- name: Lacuna - A Sci-Fi Noir Adventure
+  ids:
+  - steam:1364100
+  requires: []
