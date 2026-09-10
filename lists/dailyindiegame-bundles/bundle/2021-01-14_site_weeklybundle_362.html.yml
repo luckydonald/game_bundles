@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 362 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9632/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9632/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9632/source.json
+games:
+- name: BALLOON Saga
+  ids:
+  - steam:1413820
+  requires: []
+- name: ❂ Hexaluga ❂ Weapon and Shield ☯
+  ids:
+  - steam:845200
+  requires: []
+- name: Apple Pop
+  ids:
+  - unresolved:source:isthereanydeal:9632:apple-pop
+  requires: []
+- name: Thomas Scott
+  ids:
+  - steam:1279480
+  requires: []
+- name: Whiskey.Mafia. Leo's Family
+  ids:
+  - steam:1300430
+  requires: []
+- name: Get Over Blood
+  ids:
+  - steam:1306160
+  requires: []
+- name: Out of Oblivion
+  ids:
+  - steam:1370950
+  requires: []
+- name: Flower Challenge
+  ids:
+  - steam:1390830
+  requires: []
+- name: Truck Truck
+  ids:
+  - steam:1419440
+  requires: []

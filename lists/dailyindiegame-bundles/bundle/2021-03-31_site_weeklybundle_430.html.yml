@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 430 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9887/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9887/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9887/source.json
+games:
+- name: Frog Demon
+  ids:
+  - steam:810770
+  requires: []
+- name: Super Arcade Soccer
+  ids:
+  - steam:1024430
+  requires: []
+- name: Akihabara - Feel the Rhythm Remixed
+  ids:
+  - steam:636740
+  requires: []
+- name: Moss Destruction
+  ids:
+  - steam:876220
+  requires: []
+- name: The Battle of Angels
+  ids:
+  - steam:1286210
+  requires: []
+- name: Rocky Ride
+  ids:
+  - steam:1297890
+  requires: []
+- name: Shivering Hearts
+  ids:
+  - steam:1351820
+  requires: []
+- name: Electronic World Z
+  ids:
+  - steam:1389830
+  requires: []
+- name: Starship Renata
+  ids:
+  - steam:1398990
+  requires: []

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 453 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9972/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9972/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9972/source.json
+games:
+- name: '1812: Napoleon Wars'
+  ids:
+  - steam:1166230
+  requires: []
+- name: Underwater Life
+  ids:
+  - steam:1595630
+  requires: []
+- name: Jetpack astronaut
+  ids:
+  - steam:1554140
+  requires: []
+- name: Maya Treasures
+  ids:
+  - steam:1565940
+  requires: []
+- name: Hyposphere Z
+  ids:
+  - steam:1572190
+  requires: []
+- name: Neon Dimension
+  ids:
+  - steam:1575240
+  requires: []
+- name: Aero Battle
+  ids:
+  - steam:1578550
+  requires: []
+- name: Fruit Juice
+  ids:
+  - steam:1589040
+  requires: []
+- name: Traffic Command
+  ids:
+  - unresolved:source:isthereanydeal:9972:traffic-command
+  requires: []

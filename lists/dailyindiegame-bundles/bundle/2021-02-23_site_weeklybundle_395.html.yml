@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 395 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9772/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9772/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9772/source.json
+games:
+- name: 'Sentience: The Android''s Tale'
+  ids:
+  - steam:635850
+  requires: []
+- name: Temple Escape
+  ids:
+  - unresolved:source:isthereanydeal:9772:temple-escape
+  requires: []
+- name: Dice Tower Defense
+  ids:
+  - unresolved:source:isthereanydeal:9772:dice-tower-defense
+  requires: []
+- name: Dracula's Legacy
+  ids:
+  - steam:396790
+  requires: []
+- name: Jack N' Jill DX
+  ids:
+  - steam:873560
+  requires: []
+- name: Dead Drop
+  ids:
+  - steam:587970
+  requires: []
+- name: Z Runaway
+  ids:
+  - unresolved:source:isthereanydeal:9772:z-runaway
+  requires: []
+- name: Super Destronaut DX
+  ids:
+  - steam:848520
+  requires: []
+- name: Instant Death
+  ids:
+  - steam:779360
+  requires: []

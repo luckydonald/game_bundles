@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 450 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9963/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9963/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9963/source.json
+games:
+- name: Ghouls Underground
+  ids:
+  - steam:1156470
+  requires: []
+- name: The Botanist
+  ids:
+  - unresolved:source:isthereanydeal:9963:the-botanist
+  requires: []
+- name: 'Glass Masquerade 2: Illusions'
+  ids:
+  - steam:935880
+  requires: []
+- name: Orbs
+  ids:
+  - unresolved:source:isthereanydeal:9963:orbs
+  requires: []
+- name: AMazing TD
+  ids:
+  - steam:1140030
+  requires: []
+- name: Mystic Escape - Diary of a Prisoner
+  ids:
+  - steam:1251520
+  requires: []
+- name: Colorful 3D II
+  ids:
+  - steam:1251760
+  requires: []
+- name: Solar Rogue
+  ids:
+  - steam:1301410
+  requires: []
+- name: Rogue Bots
+  ids:
+  - unresolved:source:isthereanydeal:9963:rogue-bots
+  requires: []

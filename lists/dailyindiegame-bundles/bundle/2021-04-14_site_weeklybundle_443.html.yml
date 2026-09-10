@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 443: Bargain — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9928/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9928/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9928/source.json
+games:
+- name: Easy Racing
+  ids:
+  - steam:891290
+  requires: []
+- name: Last Soldier
+  ids:
+  - unresolved:source:isthereanydeal:9928:last-soldier
+  requires: []
+- name: Press F to pay respects
+  ids:
+  - steam:1033880
+  requires: []
+- name: 'Cold Cable: Lifeshift'
+  ids:
+  - steam:1043610
+  requires: []
+- name: Gravitycers
+  ids:
+  - unresolved:source:isthereanydeal:9928:gravitycers
+  requires: []
+- name: Silent Tweets
+  ids:
+  - steam:809320
+  requires: []
+- name: Beach anime day
+  ids:
+  - steam:1240600
+  requires: []
+- name: Mistaker
+  ids:
+  - steam:1234820
+  requires: []
+- name: EMBERZONE
+  ids:
+  - steam:1362460
+  requires: []

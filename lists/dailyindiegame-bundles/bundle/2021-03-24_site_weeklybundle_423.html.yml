@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'DIG Weekly Bundle 423: DLCs — Tier 1'
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9867/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9867/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9867/source.json
+games:
+- name: One Manga Day - Bonus Content
+  ids:
+  - steam:367380
+  requires: []
+- name: Kontrakt OST
+  ids:
+  - steam:962120
+  requires: []
+- name: My Desktop Alive - Aesthetic
+  ids:
+  - unresolved:source:isthereanydeal:9867:my-desktop-alive-aesthetic
+  requires: []
+- name: GRID 2 - Spa-Francorchamps Track Pack
+  ids:
+  - unresolved:source:isthereanydeal:9867:grid-2-spa-francorchamps-track-pack
+  requires: []
+- name: Danger Gazers OST
+  ids:
+  - steam:1055410
+  requires: []
+- name: Planet Bounce Vengeance DLC Pack
+  ids:
+  - steam:1270250
+  requires: []
+- name: arcade games collection-Strange games
+  ids:
+  - unresolved:source:isthereanydeal:9867:arcade-games-collection-strange-games
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica Valentines ArtBook
+  ids:
+  - steam:1565300
+  requires: []
+- name: LineArt Jigsaw Puzzle - Erotica 4 ArtBook
+  ids:
+  - steam:1584880
+  requires: []

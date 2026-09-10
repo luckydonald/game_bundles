@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: DIG Weekly Bundle 400 — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/9791/
+- name: Crawl metadata
+  path: ../../../../archives/isthereanydeal/bundle/9791/metadata.json
+- name: Crawl source
+  path: ../../../../archives/isthereanydeal/bundle/9791/source.json
+games:
+- name: RRRR3
+  ids:
+  - steam:1146880
+  requires: []
+- name: Mino Saga
+  ids:
+  - steam:669520
+  requires: []
+- name: My Name is Addiction
+  ids:
+  - steam:713860
+  requires: []
+- name: Balloon
+  ids:
+  - steam:792810
+  requires: []
+- name: SAMS
+  ids:
+  - steam:971540
+  requires: []
+- name: ShapeNeon Wars
+  ids:
+  - unresolved:source:isthereanydeal:9791:shapeneon-wars
+  requires: []
+- name: Nonestory P1
+  ids:
+  - steam:1530290
+  requires: []
+- name: High Smileson
+  ids:
+  - steam:1536870
+  requires: []
+- name: Push The Box 3D
+  ids:
+  - steam:1549620
+  requires: []
