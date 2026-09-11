@@ -1,0 +1,328 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Killer Bundle (Fall 2026)
+tiers:
+- rank: 1
+  name: pick 5
+  pick_quota: 5
+- rank: 2
+  name: pick 10
+  pick_quota: 10
+- rank: 3
+  name: pick 15
+  pick_quota: 15
+- rank: 4
+  name: pick 25
+  pick_quota: 25
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-killer-bundle-fall-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-killer-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-killer-bundle-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-killer-bundle-fall-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Rain World
+  ids:
+  - steam:312520
+  - dekudeals:rain-world
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Panzer Dragoon: Remake'
+  ids:
+  - steam:1178880
+  - dekudeals:panzer-dragoon-remake
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Operencia: The Stolen Sun'
+  ids:
+  - steam:985950
+  - dekudeals:operencia-the-stolen-sun
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Dwarf Journey
+  ids:
+  - steam:1501410
+  - dekudeals:dwarf-journey
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Edge Of Eternity
+  ids:
+  - steam:269190
+  - dekudeals:edge-of-eternity
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Super Mombo Quest
+  ids:
+  - steam:1262040
+  - dekudeals:super-mombo-quest
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Clash: Artifacts of Chaos'
+  ids:
+  - steam:1430680
+  - dekudeals:clash-artifacts-of-chaos
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'RoboCop: Rogue City'
+  ids:
+  - steam:1681430
+  - dekudeals:robocop-rogue-city
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Under The Waves
+  ids:
+  - steam:1975440
+  - dekudeals:under-the-waves
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Nobody Wants to Die
+  ids:
+  - steam:1939970
+  - dekudeals:nobody-wants-to-die
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Axis & Allies 1942 Online
+  ids:
+  - steam:898920
+  - dekudeals:axis-and-allies-1942-online
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Don't Die, Collect Loot
+  ids:
+  - steam:2052160
+  - dekudeals:dont-die-collect-loot
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Zefyr: A Thief''s Melody'
+  ids:
+  - steam:1344990
+  - dekudeals:zefyr-a-thiefs-melody
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Nordhold
+  ids:
+  - steam:3028310
+  - dekudeals:nordhold
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Planescape: Torment: Enhanced Edition'
+  ids:
+  - steam:466300
+  - dekudeals:planescape-torment-enhanced-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Drug Dealer Simulator
+  ids:
+  - steam:682990
+  - dekudeals:drug-dealer-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: FUR Squadron Phoenix
+  ids:
+  - steam:2674650
+  - dekudeals:fur-squadron-phoenix
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Golf Gambit
+  ids:
+  - steam:2761350
+  - dekudeals:golf-gambit
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Netherguild
+  ids:
+  - steam:1464220
+  - dekudeals:netherguild
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Tavern Master
+  ids:
+  - steam:1525700
+  - dekudeals:tavern-master
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Heading Out
+  ids:
+  - steam:1640630
+  - dekudeals:heading-out
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Beyond Sunset
+  ids:
+  - steam:1665260
+  - dekudeals:beyond-sunset
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Letifer
+  ids:
+  - steam:2294640
+  - dekudeals:letifer
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Troublemaker 2: Beyond Dream'
+  ids:
+  - steam:2479770
+  - dekudeals:troublemaker-2-beyond-dream
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Streamer Life Simulator 2
+  ids:
+  - steam:2890830
+  - dekudeals:streamer-life-simulator-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Bloodshed
+  ids:
+  - steam:2747550
+  - dekudeals:bloodshed
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Wall World 2
+  ids:
+  - steam:3467710
+  - dekudeals:wall-world-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Heroes Against Time
+  ids:
+  - steam:3667720
+  - dekudeals:heroes-against-time
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Lia: Hacking Destiny'
+  ids:
+  - steam:3740360
+  - dekudeals:lia-hacking-destiny
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Luna's Room
+  ids:
+  - steam:4522280
+  - dekudeals:lunas-room
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
