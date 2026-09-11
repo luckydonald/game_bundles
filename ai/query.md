@@ -3270,3 +3270,5 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
   - The commit message for the date-versioned raw stuff would be `[lists] metadata: Migrating Model \`2026-09-11 23:40:24\` → \`2026-09-12\`.`
   - Remember the trailing dot in the commit headline.
 
+❯ /plan there's still named `game-collections migrate [command]` entries, those shall be merged into the automatic stuff, and there shall be only `game-collection migrate --<flags>`, as written in the last few `query.md` updates.
+
