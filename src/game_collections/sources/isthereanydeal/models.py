@@ -8,6 +8,15 @@ from typing import Literal, Self
 from pydantic import Field, HttpUrl, model_validator
 
 from game_collections.models import NonEmptyString, StrictModel
+from game_collections.sources.timestamps import ScrapedTimestamp
+from game_collections.versioning import LEGACY_VERSION, SchemaDateVersion, Versioned
+
+
+ITAD_V1 = SchemaDateVersion(2026, 7, 13)
+ITAD_V2 = SchemaDateVersion(2026, 9, 11, 14, 30)
+ItadVersions = Literal[LEGACY_VERSION, ITAD_V1, ITAD_V2]
+ItadCurrentVersion = Literal[ITAD_V2]
+CURRENT_VERSION: ItadCurrentVersion = ITAD_V2
 
 
 class ItadPrice(StrictModel):
@@ -83,15 +92,22 @@ class ItadByobTier(StrictModel):
 
 
 class ItadDates(StrictModel):
-    """Offer availability and observation timestamps."""
+    """Offer availability and observation timestamps.
 
-    start: datetime | None = None
-    expiry: datetime | None = None
+    `start`/`expiry` carry a confidence + provenance alongside the value itself (see
+    `ScrapedTimestamp`) - both come from the discovery-list API's own `start`/`expiry`
+    fields, confidence 1.0, whenever present. `first_seen` is set once, the first time
+    this bundle is ever archived, and never overwritten afterward.
+    """
+
+    start: ScrapedTimestamp | None = None
+    expiry: ScrapedTimestamp | None = None
+    first_seen: datetime | None = None
     crawled: datetime
 
     @model_validator(mode="after")
     def validate_aware(self) -> Self:
-        for value in (self.start, self.expiry, self.crawled):
+        for value in (self.first_seen, self.crawled):
             if value is not None and value.tzinfo is None:
                 raise ValueError("ITAD timestamps must include a timezone")
             # end if
@@ -105,7 +121,6 @@ class ItadDates(StrictModel):
 class ItadArchive(StrictModel):
     """Normalized metadata for one ITAD bundle offer."""
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     id: int = Field(gt=0)
     title: NonEmptyString
     provider_name: NonEmptyString
@@ -119,6 +134,9 @@ class ItadArchive(StrictModel):
 # end class ItadArchive
 
 
+VersionedItadArchive = Versioned[ItadCurrentVersion, ItadArchive]
+
+
 class ItadGameArchive(StrictModel):
     """Normalized metadata for one ITAD per-game detail page (`/game/<slug>/info/`).
 
@@ -129,7 +147,6 @@ class ItadGameArchive(StrictModel):
     including `isthereanydeal:<slug>` itself.
     """
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     slug: NonEmptyString
     title: NonEmptyString
     appid: int | None = Field(default=None, gt=0)
@@ -138,6 +155,9 @@ class ItadGameArchive(StrictModel):
     dates: ItadDates
 
 # end class ItadGameArchive
+
+
+VersionedItadGameArchive = Versioned[ItadCurrentVersion, ItadGameArchive]
 
 
 class ItadPageInfo(StrictModel):

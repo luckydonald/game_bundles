@@ -95,9 +95,10 @@ PRODUCT_FRAGMENT = """
 
 
 def test_parse_bundle_index_page_only_returns_video_games_slugs() -> None:
-    slugs = parse_bundle_index_page(INDEX_PAGE)
+    entries = parse_bundle_index_page(INDEX_PAGE)
 
-    assert slugs == ["metroidvania-madness"]
+    assert [entry.slug for entry in entries] == ["metroidvania-madness"]
+    assert entries[0].end == datetime(2026, 7, 21, 18, 0, tzinfo=UTC)
 # end def test_parse_bundle_index_page_only_returns_video_games_slugs
 
 

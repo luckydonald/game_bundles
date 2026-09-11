@@ -8,6 +8,15 @@ from typing import Literal, Self
 from pydantic import Field, HttpUrl, model_validator
 
 from game_collections.models import NonEmptyString, StrictModel
+from game_collections.sources.timestamps import ScrapedTimestamp
+from game_collections.versioning import LEGACY_VERSION, SchemaDateVersion, Versioned
+
+
+HUMBLE_V1 = SchemaDateVersion(2026, 6, 1)
+HUMBLE_V2 = SchemaDateVersion(2026, 9, 11, 14, 30)
+HumbleVersions = Literal[LEGACY_VERSION, HUMBLE_V1, HUMBLE_V2]
+HumbleCurrentVersion = Literal[HUMBLE_V2]
+CURRENT_VERSION: HumbleCurrentVersion = HUMBLE_V2
 
 
 class HumblePrice(StrictModel):
@@ -123,15 +132,22 @@ class HumbleCharity(StrictModel):
 
 
 class HumbleDates(StrictModel):
-    """Offer availability and observation timestamps."""
+    """Offer availability and observation timestamps.
 
-    start: datetime | None = None
-    end: datetime | None = None
+    `start`/`end` carry a confidence + provenance alongside the value itself (see
+    `ScrapedTimestamp`) - both come straight from the bundle/Choice detail page's own
+    fields, confidence 1.0, whenever present. `first_seen` is set once, the first time
+    this bundle is ever archived, and never overwritten afterward.
+    """
+
+    start: ScrapedTimestamp | None = None
+    end: ScrapedTimestamp | None = None
+    first_seen: datetime | None = None
     crawled: datetime
 
     @model_validator(mode="after")
     def validate_aware(self) -> Self:
-        for value in (self.start, self.end, self.crawled):
+        for value in (self.first_seen, self.crawled):
             if value is not None and value.tzinfo is None:
                 raise ValueError("Humble timestamps must include a timezone")
             # end if
@@ -165,7 +181,6 @@ class HumbleChoicePickOption(StrictModel):
 class HumbleArchive(StrictModel):
     """Normalized metadata for one Choice month or game bundle."""
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     kind: Literal["choice", "bundle"]
     machine_name: NonEmptyString
     url: HttpUrl
@@ -180,3 +195,6 @@ class HumbleArchive(StrictModel):
     choice_pick_options: list[HumbleChoicePickOption] = Field(default_factory=list)
 
 # end class HumbleArchive
+
+
+VersionedHumbleArchive = Versioned[HumbleCurrentVersion, HumbleArchive]

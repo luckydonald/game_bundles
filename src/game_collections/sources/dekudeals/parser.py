@@ -62,19 +62,34 @@ def bundle_slug(url: str) -> str:
 # end def bundle_slug
 
 
+def _unix_ts(value: Any) -> datetime | None:
+    return datetime.fromtimestamp(value, tz=UTC) if isinstance(value, int) else None
+# end def _unix_ts
+
+
 @dataclass(frozen=True, slots=True)
 class DekuIndexEntry:
     """One bundle summary on the bundles index page.
 
-    `created_at` (confirmed live: a unix timestamp, e.g. when a bundle was
-    first listed) is the closest thing DekuDeals gives to a bundle's start
-    date - the bundle detail page itself never reports one - so it's kept
-    here for the crawler to use as `DekuDates.start`. `None` if a summary
-    entry is missing it.
+    Fields confirmed live against a real fetch of `https://www.dekudeals.com/bundles`
+    (`props.bundles[i]`, see the confidence-scored-dates plan). `created_at`/`ends_at`
+    (unix timestamps) are the closest thing DekuDeals gives to a bundle's start/end
+    date - the bundle detail page itself never reports a start date at all, and its own
+    `ends_at` matches this same index value, so this doubles as a cross-check. `image`,
+    `top_items`, `created_at_formatted`, and `ends_at_formatted` are known live fields,
+    intentionally left unmodeled here (decorative/redundant, not needed for archiving).
     """
 
     slug: str
+    name: str | None
+    store: str | None
+    tiering_style: str | None
+    price: int | None
+    price_formatted: str | None
+    size: int | None
     created_at: datetime | None
+    ends_at: datetime | None
+    ends_at_label: str | None
 
 # end class DekuIndexEntry
 
@@ -94,11 +109,18 @@ def parse_bundle_index_page(html_text: str) -> list[DekuIndexEntry]:
             continue
         # end if
         seen.add(slug)
-        created_at = entry.get("created_at")
         entries.append(
             DekuIndexEntry(
                 slug=slug,
-                created_at=datetime.fromtimestamp(created_at, tz=UTC) if isinstance(created_at, int) else None,
+                name=entry.get("name") if isinstance(entry.get("name"), str) else None,
+                store=entry.get("store") if isinstance(entry.get("store"), str) else None,
+                tiering_style=entry.get("tiering_style") if isinstance(entry.get("tiering_style"), str) else None,
+                price=entry.get("price") if isinstance(entry.get("price"), int) else None,
+                price_formatted=entry.get("price_formatted") if isinstance(entry.get("price_formatted"), str) else None,
+                size=entry.get("size") if isinstance(entry.get("size"), int) else None,
+                created_at=_unix_ts(entry.get("created_at")),
+                ends_at=_unix_ts(entry.get("ends_at")),
+                ends_at_label=entry.get("ends_at_label") if isinstance(entry.get("ends_at_label"), str) else None,
             )
         )
     # end for

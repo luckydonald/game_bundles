@@ -16,13 +16,13 @@ from game_collections.models import Game, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     backfill_existing_lists,
-    dump_json,
+    dump_versioned_json,
     existing_list_match,
     load_cached_archive,
     merge_tiered_games,
     render_game_list_yaml,
 )
-from game_collections.sources.dekudeals.models import DekuArchive, DekuDates, DekuItem, DekuTier
+from game_collections.sources.dekudeals.models import CURRENT_VERSION, DekuArchive, DekuDates, DekuItem, DekuTier
 from game_collections.sources.dekudeals.parser import (
     DEKU_ROOT,
     DekuParseError,
@@ -33,7 +33,9 @@ from game_collections.sources.dekudeals.parser import (
 )
 from game_collections.sources.dekudeals.provider_config import DekuProviderConfig, resolve_provider_slug
 from game_collections.sources.dekudeals.resolver import DekuResolutionMap
+from game_collections.sources.names import SourceName
 from game_collections.sources.storefronts import qualified_ids_from_urls
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 LogFn = Callable[[str], None]
@@ -127,7 +129,10 @@ def _bundle_date_prefix(archive: DekuArchive) -> str:
     `--url` crawl has no index summary to read it from), mirroring
     isthereanydeal's own `start or crawled` fallback.
     """
-    return (archive.dates.start or archive.dates.crawled).date().isoformat()
+    effective_start = (
+        datetime.fromtimestamp(archive.dates.start.timestamp, tz=UTC) if archive.dates.start else archive.dates.crawled
+    )
+    return effective_start.date().isoformat()
 # end def _bundle_date_prefix
 
 
@@ -210,7 +215,7 @@ def crawl_deku_offers(
         try:
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, slug)
-                cached = load_cached_archive(DekuArchive, metadata_path, source_path)
+                cached = load_cached_archive(DekuArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
                 if cached is not None:
                     log(f"Bundle {index}/{total}: {slug} (cached)")
                     archive, source = cached
@@ -248,7 +253,6 @@ def crawl_deku_offers(
                 for tier in draft.tiers
             ]
             archive = DekuArchive(
-                schema=1,
                 machine_name=draft.machine_name,
                 url=draft.url,
                 name=draft.name,
@@ -256,7 +260,13 @@ def crawl_deku_offers(
                 provider_slug=provider_slug,
                 tiering_style=draft.tiering_style,
                 real_url=draft.real_url,
-                dates=DekuDates(start=created_at_by_slug.get(slug), end=draft.end, crawled=observed),
+                dates=DekuDates(
+                    start=build_scraped_timestamp(created_at_by_slug[slug], SourceName.DEKUDEALS, 1.0)
+                    if slug in created_at_by_slug
+                    else None,
+                    end=build_scraped_timestamp(draft.end, SourceName.DEKUDEALS, 1.0) if draft.end else None,
+                    crawled=observed,
+                ),
                 tiers=tiers,
             )
             offer = CrawledDekuOffer(archive=archive, source=source)
@@ -299,11 +309,12 @@ def write_deku_offer(
     """Atomically write the archive record, plus one list unless already covered elsewhere."""
     archive = offer.archive
     metadata_path, source_path = _archive_paths(archive_root, archive.machine_name)
-    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(offer.source))
+    atomic_write(metadata_path, dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(source_path, dump_versioned_json(CURRENT_VERSION, offer.source))
     written: list[Path] = [metadata_path, source_path]
 
-    existing = existing_list_match(lists_root, archive.provider_slug, archive.machine_name)
+    pool_games_for_match = _flatten_deku_games(archive)
+    existing = existing_list_match(lists_root, archive.provider_slug, archive.machine_name, pool_games_for_match)
     if existing is not None:
         backfill_existing_lists(
             _flatten_deku_games(archive),

@@ -2,7 +2,7 @@
   "$defs": {
     "GmgDates": {
       "additionalProperties": false,
-      "description": "Offer availability and observation timestamps.\n\nThe bundles index only exposes `data-end-date=\"YYYY-MM-DDTHH:MM\"` with no\nUTC offset. That's assumed to already be UTC (unconfirmed against the\nserver) rather than silently guessing a different offset - end is kept\noptional so a future value that doesn't parse this way fails loudly\ninstead of being coerced.",
+      "description": "Offer availability and observation timestamps.\n\n`start`: no known source on GMG's pages - left `None`, never fabricated. `end`\ncomes from the bundles index page's own `data-end-date=\"YYYY-MM-DDTHH:MM\"` (no\nexplicit UTC offset - assumed to already be UTC, unconfirmed against the server,\nhence a confidence below 1.0 rather than 1.0). `first_seen` is set once, the first\ntime this bundle is ever archived, and never overwritten afterward.",
       "properties": {
         "crawled": {
           "format": "date-time",
@@ -10,6 +10,17 @@
           "type": "string"
         },
         "end": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "first_seen": {
           "anyOf": [
             {
               "format": "date-time",
@@ -20,7 +31,18 @@
             }
           ],
           "default": null,
-          "title": "End"
+          "title": "First Seen"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -269,6 +291,50 @@
       ],
       "title": "GmgTier",
       "type": "object"
+    },
+    "ScrapedTimestamp": {
+      "additionalProperties": false,
+      "description": "One `start`/`end` value as actually derived from a source, plus how sure we are.\n\n`iso` preserves whatever precision the source gave us (date-only, or date+time\ndown to minute/second/fraction, always with an explicit UTC offset unless it's\ndate-only); `timestamp` is the same instant as a unix epoch float, cross-checked\nagainst `iso` on construction so the two can never silently drift apart.",
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "iso": {
+          "minLength": 1,
+          "title": "Iso",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceName"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "number"
+        }
+      },
+      "required": [
+        "iso",
+        "timestamp",
+        "confidence",
+        "source"
+      ],
+      "title": "ScrapedTimestamp",
+      "type": "object"
+    },
+    "SourceName": {
+      "description": "One entry per `sources/<name>/` crawler package.",
+      "enum": [
+        "humblebundle",
+        "greenmangaming",
+        "dailyindiegame",
+        "isthereanydeal",
+        "dekudeals"
+      ],
+      "title": "SourceName",
+      "type": "string"
     }
   },
   "additionalProperties": false,
@@ -286,11 +352,6 @@
       "minLength": 1,
       "title": "Name",
       "type": "string"
-    },
-    "schema": {
-      "const": 1,
-      "title": "Schema",
-      "type": "integer"
     },
     "slug": {
       "minLength": 1,
@@ -314,7 +375,6 @@
     }
   },
   "required": [
-    "schema",
     "slug",
     "url",
     "name",

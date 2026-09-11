@@ -3,15 +3,14 @@ from __future__ import annotations
 from pathlib import Path
 
 from game_collections.models import Game, GameGroup, GameList, Reference
-from game_collections.sources.common import dump_json, load_cached_archive, merge_game_list
-from game_collections.sources.dailyindiegame.models import DigArchive, DigDates, DigItem, DigPrice
+from game_collections.sources.common import dump_json, dump_versioned_json, load_cached_archive, merge_game_list
+from game_collections.sources.dailyindiegame.models import CURRENT_VERSION, DIG_V1, DigArchive, DigDates, DigItem, DigPrice
 from datetime import UTC, datetime
 
 
 def _archive() -> DigArchive:
     price = DigPrice(raw="$0.99", value=0.99, currency="$", currency_code="USD")
     return DigArchive(
-        schema=1,
         machine_name="2351",
         url="https://www.dailyindiegame.com/site_weeklybundle_2351.html",
         name="DIG Bundle 2351",
@@ -36,8 +35,10 @@ def _archive() -> DigArchive:
 def _write(tmp_path: Path, archive: DigArchive, source: dict) -> tuple[Path, Path]:
     metadata_path = tmp_path / "metadata.json"
     source_path = tmp_path / "source.json"
-    metadata_path.write_text(dump_json(archive.model_dump(by_alias=True, mode="json")), encoding="utf-8")
-    source_path.write_text(dump_json(source), encoding="utf-8")
+    metadata_path.write_text(
+        dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")), encoding="utf-8"
+    )
+    source_path.write_text(dump_versioned_json(CURRENT_VERSION, source), encoding="utf-8")
     return metadata_path, source_path
 # end def _write
 
@@ -46,7 +47,7 @@ def test_load_cached_archive_round_trips(tmp_path: Path) -> None:
     archive = _archive()
     metadata_path, source_path = _write(tmp_path, archive, {"alpha": 1})
 
-    result = load_cached_archive(DigArchive, metadata_path, source_path)
+    result = load_cached_archive(DigArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
 
     assert result is not None
     loaded_archive, loaded_source = result
@@ -56,17 +57,20 @@ def test_load_cached_archive_round_trips(tmp_path: Path) -> None:
 
 
 def test_load_cached_archive_returns_none_when_missing(tmp_path: Path) -> None:
-    assert load_cached_archive(DigArchive, tmp_path / "metadata.json", tmp_path / "source.json") is None
+    assert (
+        load_cached_archive(
+            DigArchive, tmp_path / "metadata.json", tmp_path / "source.json", current_version=CURRENT_VERSION
+        )
+        is None
+    )
 # end def test_load_cached_archive_returns_none_when_missing
 
 
 def test_load_cached_archive_returns_none_on_schema_mismatch(tmp_path: Path) -> None:
     archive = _archive()
     metadata_path, source_path = _write(tmp_path, archive, {})
-    corrupted = metadata_path.read_text(encoding="utf-8").replace('"schema": 1', '"schema": 2')
-    metadata_path.write_text(corrupted, encoding="utf-8")
 
-    assert load_cached_archive(DigArchive, metadata_path, source_path) is None
+    assert load_cached_archive(DigArchive, metadata_path, source_path, current_version=DIG_V1) is None
 # end def test_load_cached_archive_returns_none_on_schema_mismatch
 
 
@@ -76,7 +80,7 @@ def test_load_cached_archive_returns_none_on_invalid_json(tmp_path: Path) -> Non
     metadata_path.write_text("not json", encoding="utf-8")
     source_path.write_text("{}", encoding="utf-8")
 
-    assert load_cached_archive(DigArchive, metadata_path, source_path) is None
+    assert load_cached_archive(DigArchive, metadata_path, source_path, current_version=CURRENT_VERSION) is None
 # end def test_load_cached_archive_returns_none_on_invalid_json
 
 

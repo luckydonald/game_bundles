@@ -17,13 +17,22 @@ from game_collections.models import Game, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     backfill_existing_lists,
-    dump_json,
+    dump_versioned_json,
     existing_list_match,
     load_cached_archive,
     merge_tiered_games,
     render_game_list_yaml,
 )
-from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadListSummary, ItadTier
+from game_collections.sources.isthereanydeal.models import (
+    CURRENT_VERSION,
+    ItadArchive,
+    ItadByobTier,
+    ItadDates,
+    ItadListSummary,
+    ItadTier,
+)
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 from game_collections.sources.isthereanydeal.parser import (
     ItadParseError,
     parse_bootstrap_page,
@@ -303,7 +312,7 @@ def crawl_itad_offers(
         try:
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, summary.id)
-                cached = load_cached_archive(ItadArchive, metadata_path, source_path)
+                cached = load_cached_archive(ItadArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
                 if cached is not None:
                     log(f"Bundle {index}/{total}: {summary.title} (cached)")
                     archive, source = cached
@@ -348,7 +357,6 @@ def crawl_itad_offers(
             # end if
             slug = real_provider_slug(summary.url)
             archive = ItadArchive(
-                schema=1,
                 id=summary.id,
                 title=summary.title,
                 provider_name=summary.page.name,
@@ -356,8 +364,16 @@ def crawl_itad_offers(
                 real_slug=slug,
                 url=detail_url,
                 dates=ItadDates(
-                    start=datetime.fromtimestamp(summary.start, tz=UTC) if summary.start is not None else None,
-                    expiry=datetime.fromtimestamp(summary.expiry, tz=UTC) if summary.expiry is not None else None,
+                    start=build_scraped_timestamp(
+                        datetime.fromtimestamp(summary.start, tz=UTC), SourceName.ISTHEREANYDEAL, 1.0
+                    )
+                    if summary.start is not None
+                    else None,
+                    expiry=build_scraped_timestamp(
+                        datetime.fromtimestamp(summary.expiry, tz=UTC), SourceName.ISTHEREANYDEAL, 1.0
+                    )
+                    if summary.expiry is not None
+                    else None,
                     crawled=observed,
                 ),
                 tiers=tiers,
@@ -434,12 +450,14 @@ def write_itad_offer(
     """Atomically write the archive record, plus one list per tier unless already covered."""
     archive = offer.archive
     metadata_path, source_path = _archive_paths(archive_root, archive.id)
-    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(offer.summary.model_dump(by_alias=True, mode="json")))
+    atomic_write(metadata_path, dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(
+        source_path, dump_versioned_json(CURRENT_VERSION, offer.summary.model_dump(by_alias=True, mode="json"))
+    )
     written: list[Path] = [metadata_path, source_path]
 
     existing = _existing_choice_match(lists_root, archive.provider_slug, offer.summary) or existing_list_match(
-        lists_root, archive.provider_slug, archive.real_slug
+        lists_root, archive.provider_slug, archive.real_slug, _flatten_itad_games(archive)
     )
     if existing is not None:
         backfill_existing_lists(
@@ -456,7 +474,10 @@ def write_itad_offer(
         return tuple(written)
     # end if
 
-    date_prefix = _bundle_date_prefix(offer.summary, archive.provider_slug, archive.dates.start or archive.dates.crawled)
+    effective_start = (
+        datetime.fromtimestamp(archive.dates.start.timestamp, tz=UTC) if archive.dates.start else archive.dates.crawled
+    )
+    date_prefix = _bundle_date_prefix(offer.summary, archive.provider_slug, effective_start)
     list_directory = lists_root / archive.provider_slug / "bundle" / f"{date_prefix}_{archive.real_slug}"
 
     path = list_directory.parent / f"{list_directory.name}.yml"

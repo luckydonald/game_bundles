@@ -18,13 +18,13 @@ from game_collections.lists import load_game_list
 from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
-    dump_json,
+    dump_versioned_json,
     load_cached_archive,
     merge_game_list,
     merge_tiered_games,
     render_game_list_yaml,
 )
-from game_collections.sources.humblebundle.models import HumbleArchive, HumbleItem, HumbleTier
+from game_collections.sources.humblebundle.models import CURRENT_VERSION, HumbleArchive, HumbleItem, HumbleTier
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
     parse_bundle_index,
@@ -192,7 +192,7 @@ def crawl_humble_offers(
             cached = None
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, archive)
-                cached = load_cached_archive(HumbleArchive, metadata_path, source_path)
+                cached = load_cached_archive(HumbleArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
             # end if
             if cached is not None:
                 log(f"Offer {index}/{total}: {url} (cached, skipping resolution)")
@@ -224,10 +224,11 @@ def _offer_key(archive: HumbleArchive) -> str:
         # end if
         return f"{int(match.group(2)):04d}-{MONTHS[match.group(1)]:02d}"
     # end if
-    date = archive.dates.start or archive.dates.end
-    if date is None:
+    timestamp = archive.dates.start or archive.dates.end
+    if timestamp is None:
         raise HumbleCrawlError(f"bundle has neither a start nor end date: {archive.url}")
     # end if
+    date = datetime.fromtimestamp(timestamp.timestamp, tz=UTC)
     slug = Path(urlparse(str(archive.url)).path).name
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", slug):
         raise HumbleCrawlError(f"bundle URL has an unsafe slug: {archive.url}")
@@ -302,8 +303,8 @@ def write_humble_offer(
     # end if
     written: list[Path] = []
     metadata_path, source_path = _archive_paths(archive_root, archive)
-    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(offer.source))
+    atomic_write(metadata_path, dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(source_path, dump_versioned_json(CURRENT_VERSION, offer.source))
     written.extend((metadata_path, source_path))
 
     if archive.kind == "choice" and archive.choice_pick_options:

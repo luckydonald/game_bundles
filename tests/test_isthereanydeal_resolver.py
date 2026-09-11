@@ -193,6 +193,6 @@ def test_write_itad_game_archive_round_trip(tmp_path: Path) -> None:
     metadata_path, source_path = write_itad_game_archive(resolution, tmp_path)
     assert metadata_path == tmp_path / "isthereanydeal/game/sample-game/metadata.json"
     assert source_path == tmp_path / "isthereanydeal/game/sample-game/source.json"
-    assert json.loads(metadata_path.read_text(encoding="utf-8"))["slug"] == "sample-game"
-    assert json.loads(source_path.read_text(encoding="utf-8"))["page"]["game"]["title"] == "Sample Game"
+    assert json.loads(metadata_path.read_text(encoding="utf-8"))["data"]["slug"] == "sample-game"
+    assert json.loads(source_path.read_text(encoding="utf-8"))["data"]["page"]["game"]["title"] == "Sample Game"
 # end def test_write_itad_game_archive_round_trip

@@ -70,7 +70,8 @@ def test_bundle_page_normalizes_metadata_adult_flag_and_games() -> None:
     assert archive.savings_percent == 100
     assert archive.savings_amount.value == 104.92
     assert archive.dates.crawled == CRAWLED
-    assert archive.dates.end == datetime(2026, 8, 1, 3, 9, 13, tzinfo=UTC)
+    assert archive.dates.end is not None
+    assert archive.dates.end.timestamp == datetime(2026, 8, 1, 3, 9, 13, tzinfo=UTC).timestamp()
     assert [(item.title, item.ids) for item in archive.items] == [
         ("The Office: Dirty Affairs", ["steam:4543360"]),
         ("Hentai Jigsaw Puzzle Collection", ["steam:2248470"]),

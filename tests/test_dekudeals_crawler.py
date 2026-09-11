@@ -226,7 +226,8 @@ def test_discovery_mode_uses_index_created_at_as_bundle_start_date(tmp_path: Pat
 
     assert report.errors == ()
     archive = report.offers[0].archive
-    assert archive.dates.start == datetime(2026, 9, 9, 18, 10, 21, tzinfo=UTC)
+    assert archive.dates.start is not None
+    assert archive.dates.start.timestamp == datetime(2026, 9, 9, 18, 10, 21, tzinfo=UTC).timestamp()
 
     paths = write_deku_offer(report.offers[0], lists_root, archive_root, tmp_path)
     expected = lists_root / "humblebundle/bundle/2026-09-09_crawling-through-the-dungeons.yml"

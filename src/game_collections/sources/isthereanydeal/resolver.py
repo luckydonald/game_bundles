@@ -9,8 +9,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from game_collections.sources.common import atomic_write, dump_json
-from game_collections.sources.isthereanydeal.models import ItadDates, ItadGameArchive
+from game_collections.sources.common import atomic_write, dump_versioned_json
+from game_collections.sources.isthereanydeal.models import CURRENT_VERSION, ItadDates, ItadGameArchive
 from game_collections.sources.isthereanydeal.parser import parse_game_detail_json
 from game_collections.sources.storefronts import qualified_ids_from_urls
 
@@ -97,7 +97,6 @@ def resolve_game(
     ids = list(dict.fromkeys(ids))
 
     archive = ItadGameArchive(
-        schema=1,
         slug=slug,
         title=detail.title,
         appid=detail.appid,
@@ -176,7 +175,9 @@ def _archive_paths(archive_root: Path, slug: str) -> tuple[Path, Path]:
 def write_itad_game_archive(resolution: ItadGameResolution, archive_root: Path) -> tuple[Path, Path]:
     """Atomically write `archives/isthereanydeal/game/<slug>/{metadata.json,source.json}`."""
     metadata_path, source_path = _archive_paths(archive_root, resolution.archive.slug)
-    atomic_write(metadata_path, dump_json(resolution.archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(resolution.source))
+    atomic_write(
+        metadata_path, dump_versioned_json(CURRENT_VERSION, resolution.archive.model_dump(by_alias=True, mode="json"))
+    )
+    atomic_write(source_path, dump_versioned_json(CURRENT_VERSION, resolution.source))
     return metadata_path, source_path
 # end def write_itad_game_archive

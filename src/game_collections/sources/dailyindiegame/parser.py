@@ -15,6 +15,8 @@ from game_collections.sources.dailyindiegame.models import (
     DigItem,
     DigPrice,
 )
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 DIG_ROOT = "https://www.dailyindiegame.com/"
@@ -229,12 +231,14 @@ def parse_bundle_page(html: str, url: str, crawled: datetime) -> tuple[DigArchiv
         for title, steam_id in games_parser.games
     ]
     archive = DigArchive(
-        schema=1,
         machine_name=machine_name,
         url=url,
         name=name,
         is_adult=is_adult,
-        dates=DigDates(end=end, crawled=crawled),
+        dates=DigDates(
+            end=build_scraped_timestamp(end, SourceName.DAILYINDIEGAME, 0.5) if end is not None else None,
+            crawled=crawled,
+        ),
         game_count=len(items),
         total_value=_dig_price(summary_match.group(2), "bundle total value"),
         bundle_price=_dig_price(summary_match.group(3), "bundle price"),

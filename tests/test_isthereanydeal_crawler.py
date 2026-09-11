@@ -14,6 +14,8 @@ from game_collections.sources.isthereanydeal.crawler import (
 from game_collections.sources.isthereanydeal.models import ItadArchive, ItadByobTier, ItadDates, ItadItem, ItadPrice, ItadTier
 from game_collections.sources.isthereanydeal.parser import parse_list_page
 from game_collections.sources.isthereanydeal.provider_config import ItadProviderConfig, ItadProviderMapping
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 def _summary(bundle_id: int = 1, byob: bool = False, is_mature: bool = False, title: str = "Metroidvania Madness") -> dict:
@@ -247,14 +249,16 @@ def test_crawl_falls_back_to_slugified_name_for_unreviewed_provider() -> None:
 
 def _offer(bundle_id: int = 1) -> CrawledItadOffer:
     archive = ItadArchive(
-        schema=1,
         id=bundle_id,
         title="Metroidvania Madness",
         provider_name="GreenManGaming",
         provider_slug="greenmangaming",
         real_slug="metroidvania-madness",
         url=f"https://isthereanydeal.com/bundles/{bundle_id}/",
-        dates=ItadDates(start=datetime(2026, 7, 10, tzinfo=UTC), crawled=datetime(2026, 7, 12, tzinfo=UTC)),
+        dates=ItadDates(
+            start=build_scraped_timestamp(datetime(2026, 7, 10, tzinfo=UTC), SourceName.ISTHEREANYDEAL, 1.0),
+            crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        ),
         tiers=[
             ItadTier(
                 identifier="tier-1",
@@ -287,7 +291,7 @@ def test_write_itad_offer_creates_archive_and_list(tmp_path: Path) -> None:
     assert loaded.data.tiers == []
     assert loaded.data.crawlers == ["isthereanydeal"]
     assert loaded.data.games == [Game(name="GRIME", ids=["steam:1123050"])]
-    source = json.loads(source_path.read_text(encoding="utf-8"))
+    source = json.loads(source_path.read_text(encoding="utf-8"))["data"]
     assert source["title"] == "Metroidvania Madness"
     assert "tiers" not in source
 # end def test_write_itad_offer_creates_archive_and_list
