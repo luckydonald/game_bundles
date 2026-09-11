@@ -3188,3 +3188,85 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
   VersionedDekuArchive = DateVersioned[DekuArchive]
   ```
 
+❯ Notes:
+- Can we extract the crawler name type globally somewhere? I think we're using typer, so this could be used for the subcommand and for such `source` fields, too.
+- `SchemaDateVersion` should be nullable after the date part, and enforce that the "bigger" unit is present if the "smaller" is given, too.
+  - I.e. `ymd`, `ymd,hm`, `ymd,hms`, `ymd,hmsf`
+  - I.e. **not** `ymd,m`, `ymd,f`, `ymd,msf`
+  - Special case: Needs minutes if you have hours
+    - aka. minute-accurate time (or finer) or no time.
+    - So not `ymd,h`
+- Start with having a `DEKU_VERSIONS = Literal[\n…,\n]`, we can always make it general if it becomes too many entries to the Literal. But it's good for checking that we have thought about migrations.
+- The peek should be `version` + `data` and otherwise assume the full object is the `data`, and the version is `(1970,1,1, 0,0,0,0.0)`.
+  - or did we have some `version: int` stuff there already?
+- Do that for all the other `source.json` stuff, too, as a separate first migration, written in a separate commit per source/crawler.
+- Versioning:
+  - Yes, the `DekuArchiveV1` versioning is overkill for website data I don't control.
+  - Yes, autodiscovery is unwanted, I rather have a file I can click on references in my IDE cleanly.
+  - Your example does not really address the dry run issue either, it's just moving the `if …: …` stuff to `dict(…=…)`…
+  - Your example also does 1 -> 4, instead 1 -> 2, 2 -> 3, 3 -> 4, which should be seperated commits.
+  - The return type shall be a named tuple, not a dict.
+    - Lol, actually we could abuse `Versioned` as return type here:
+      ```py
+      DICT_OR_ITEMS[KEY: Hashable, VALUE: Any] = list[tuple[KEY, VALUE]] | dict[KEY, VALUE]
+     
+      def migrate_to_latest[
+        VERSION: int | SchemaDateVersion,  # better: Literal[1, 2, 3] or Literal[SchemaDateVersion(2026,9,9, 6,9,6,.9069), …]
+        JSON_DATA: JsonType,
+        PARSED_DATA: BaseArchive,
+      ](
+        raw: JSON_DATA, # already `json.parse(…)`d.
+        current_version: VERSION,
+        steps: LIST_OR_ITEMS[VERSION, Callable[[JSON_DATA], PARSED_DATA]],
+      ) -> Versioned[VERSION, list[PARSED_DATA, ...]]
+      ```
+  - Not sure if I want to specify the `CURRENT_VERSION` like that.
+    - I mean the migrations should generally run from lowest to highest available, anyways, so it's a pretty useless parameter anyways.
+    - Can we specifically do `DekuArchiveCurrentVersion = Literal[CURRENT_VERSION]`; `VersionedDekuArchive = Versioned[DekuArchiveCurrentVersion, DekuArchive]`?
+      - will that fill the default value?
+      - Or do we need like `DekuArchiveCurrentVersion = Annotated[Literal[CURRENT_VERSION], Field(default=CURRENT_VERSION)]`?
+  - Also, `) -> list[Versioned[VERSION, PARSED_DATA]]` (sorted, because it needs to be sorted before running the for loop anyways) would allow to get the newest version by `returned_list_without_good_name_yet[-1].version`, and build commits based on the version, and the diff.
+  - Should we store the `Versioned` as `DataMigrationVersion`, adding `PathMigrationVersion`, where `DATA = Path`, which would handle the file movements?
+  - That way I guess we could do all file operations & diffs via just the returned list of what to change.
+    - And dry run would be just as easy.
+    - you may only need to go through the list for every file and group together the same versions for every file.
+    - However we should think about memory usage, I guess that could sky rocket if we build a in-memory list of say 20 pending migration versions for 5k files, or whatever.
+    - Can we make that better by using `yield`?
+    - My idea for an algorithem then would be the following, is that possible? 
+      1. "start" the migration for every file (we should look at
+         - **(1)** Either a given `list[Path]` (e.g. the files we know we wanna touch when scraping),
+         - **(2)** Or `None` for migrating all of them (Dedicated `migrate` command)
+           - which collects them and calls itself now with the collected `list[Path]`, returning the result.
+      2. group by `version`
+      3. pick earliest `version` (i.e. the earliest migration execution)
+      4. apply them to the local files
+         - **(A)** `Path`: do a rename
+         - **(B)** `DATA`: overwrite content
+      5. commit that version
+         - **(A)** `Path`: commit in batches of 100, with the commit-counter as outlined before.
+         - **(B)** `DATA`: commit in one.
+      6. For all files in our `earliest_version` group, get `next(…)` version (`yield`ed from that migration function)
+      7. In our groups, replace the just processed earliest version group with those newer version ones, following the grouping of **2.** (merging into existing groups)
+      8. If we still have groups/versions left, continue at **3.**.
+         - Otherwise break out to **9.**
+      9. 
+    - Step **4.** and **5.** can be an outer function, and the loop above just yields the group with that version (`earliest_version`).
+    - Basically the processing of a `Path` = rename and `DATA` = overwrite can be adapted for the parsers as well, so it would be the same function, just with a different commit message (_migration_ vs. _crawl_).
+    - For that, would it make sense to actually really reuse the `Versioned` for crawls? Where there'd be a `is_migration: bool` or something like that, therefore giving the outer function the information if it's done with the migrations now.
+      - in that case it must wait to finish up all other remaining migrations first, if any.
+      - but then, again, only the wording in the commit message would be different.
+    - Huh, that kinda sounds like a plan. Please critique and think about this, if this makes sense, and give me feedback where it doesn't.
+- **4. Fuzzy + content-similarity dedub**: In case of fuzzy merging, ask the user again. In non-tty situations allow only if very similar.
+- **5. Wiring … per source**: `crawled` is fine.
+- **6. Auto-migration wired into every write path (…)**:
+  - This is where the `yield`ed files of the current migrated versions are processed.
+  - I'm not sure how we can detect changed files before writing.
+  - Or do we just already have the new crawl as this new non-_migration_ but _crawl_ type, and only then start to work our way back to which file we should touch? That sounds a bit difficult…
+- **7. Standalone migrate schema CLI command (…)**:
+  - `--git` implies `--apply`.
+  - Dry run with ``--dry-run` or without `--apply` or `--git`.
+- **8. Commit shape rules**: 
+  - The zero-padded is just as long as the total is long. No `(01/03)`, but `(1/3)` or `(03/22)`.
+  - The commit message for the date-versioned raw stuff would be `[lists] metadata: Migrating Model \`2026-09-11 23:40:24\` → \`2026-09-12\`.`
+  - Remember the trailing dot in the commit headline.
+
