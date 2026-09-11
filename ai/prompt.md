@@ -3175,3 +3175,16 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ **model_version shape**: but the reporting example of _Report only_ above looks nice, keep that; add `(older)` and `(newer)` before the actual dates for quickly spotting the important information.
 
+❯ **Conflict resolution**:
+- Do tuples support being in `Literal[…]`?
+- Also `model_version` and `schema_version` is the same, keep the old name and the new format.
+- Wrap all those `*Archive` all in a `version` + `data` wrapper:
+- ```py
+  class Versioned[VERSION, DATA](BaseModel):
+    version: VERSION
+    data: DATA
+
+  DateVersioned[DATA] = DateVersion[ModelVersion (rename to SchemaDateVersion)]
+  VersionedDekuArchive = DateVersioned[DekuArchive]
+  ```
+
