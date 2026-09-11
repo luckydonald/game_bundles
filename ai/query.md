@@ -3016,3 +3016,5 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 > </details>
 >
 
+❯ Fix the bundles to have the date in front as usual.
+
