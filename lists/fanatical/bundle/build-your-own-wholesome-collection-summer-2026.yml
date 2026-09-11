@@ -1,0 +1,214 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Wholesome Collection (Summer 2026)
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-wholesome-collection-summer-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-wholesome-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-wholesome-collection-summer-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-wholesome-collection-summer-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Lonesome Village
+  ids:
+  - steam:1418360
+  - dekudeals:lonesome-village
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mika and the Witch's Mountain
+  ids:
+  - steam:1819460
+  - dekudeals:mika-and-the-witchs-mountain
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Swords 'n Magic and Stuff
+  ids:
+  - steam:810040
+  - dekudeals:swords-n-magic-and-stuff
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pieces of the Past
+  ids:
+  - steam:2786650
+  - dekudeals:pieces-of-the-past
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Inn Tycoon
+  ids:
+  - steam:2749000
+  - dekudeals:inn-tycoon
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Above Snakes
+  ids:
+  - steam:1589120
+  - dekudeals:above-snakes
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Havendock
+  ids:
+  - steam:2020710
+  - dekudeals:havendock
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'VORON: Raven’s Story'
+  ids:
+  - steam:2245180
+  - dekudeals:voron
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Folklands
+  ids:
+  - steam:2282890
+  - dekudeals:folklands
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Escape From Mystwood Mansion
+  ids:
+  - steam:2292650
+  - dekudeals:escape-from-mystwood-mansion
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Toy Shire
+  ids:
+  - steam:2361460
+  - dekudeals:toy-shire
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Little Problems: A Cozy Detective Game'
+  ids:
+  - steam:2653470
+  - dekudeals:little-problems-a-cozy-detective-game
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The August Before
+  ids:
+  - steam:2736840
+  - dekudeals:the-august-before
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: My Jigsaw Adventures Collection
+  ids:
+  - steam:bundle/16543
+  - dekudeals:my-jigsaw-adventures-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Walk The Frog
+  ids:
+  - steam:3336240
+  - dekudeals:walk-the-frog
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Witchy Business
+  ids:
+  - steam:3415230
+  - dekudeals:witchy-business
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ship, Inc.
+  ids:
+  - steam:3496000
+  - dekudeals:ship-inc
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pakinpaks
+  ids:
+  - steam:2707950
+  - dekudeals:pakinpaks
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Vending Machine Co.
+  ids:
+  - steam:3622640
+  - dekudeals:vending-machine-co
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Tidehaven: Ale & Trade'
+  ids:
+  - steam:3691420
+  - dekudeals:tidehaven-ale-and-trade
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Last Cat in the Universe
+  ids:
+  - steam:4197890
+  - dekudeals:the-last-cat-in-the-universe
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
