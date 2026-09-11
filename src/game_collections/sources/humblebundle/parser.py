@@ -23,6 +23,8 @@ from game_collections.sources.humblebundle.models import (
     HumbleResolution,
     HumbleTier,
 )
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import ScrapedTimestamp, build_scraped_timestamp
 
 
 HUMBLE_ROOT = "https://www.humblebundle.com/"
@@ -361,6 +363,12 @@ def _datetime(value: object, label: str) -> datetime | None:
 # end def _datetime
 
 
+def _confidence(value: datetime | None) -> ScrapedTimestamp | None:
+    """Wrap a parsed Humble page date as a confidence-1.0 `ScrapedTimestamp` - a real field, always."""
+    return build_scraped_timestamp(value, SourceName.HUMBLEBUNDLE, 1.0) if value is not None else None
+# end def _confidence
+
+
 def _price(value: object, raw: str | None = None) -> HumblePrice | None:
     if value is None:
         return None
@@ -592,7 +600,6 @@ def parse_bundle_page(
         # end for
     # end if
     archive = HumbleArchive(
-        schema=1,
         kind="bundle",
         machine_name=_required_string(bundle.get("machine_name"), "bundle machine_name"),
         url=urljoin(HUMBLE_ROOT, page_url),
@@ -603,10 +610,12 @@ def parse_bundle_page(
         ),
         description=description,
         dates=HumbleDates(
-            start=_datetime(listing_data.get("start_date|datetime"), "bundle start date"),
-            end=_datetime(
-                listing_data.get("end_date|datetime") or basic.get("end_time|datetime"),
-                "bundle end date",
+            start=_confidence(_datetime(listing_data.get("start_date|datetime"), "bundle start date")),
+            end=_confidence(
+                _datetime(
+                    listing_data.get("end_date|datetime") or basic.get("end_time|datetime"),
+                    "bundle end date",
+                )
             ),
             crawled=crawled.astimezone(UTC),
         ),
@@ -737,7 +746,6 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
     game_count = sum(1 for item in items if item.is_game)
     pick_options = _choice_pick_options(marketing.get("tierInfo"), game_count)
     archive = HumbleArchive(
-        schema=1,
         kind="choice",
         machine_name=_required_string(
             marketing.get("activeContentMachineName") or product.get("sku"),
@@ -748,8 +756,8 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
         headline=tier_name,
         description=description,
         dates=HumbleDates(
-            start=_datetime(offers.get("validFrom"), "Choice start date"),
-            end=_datetime(offers.get("validThrough"), "Choice end date"),
+            start=_confidence(_datetime(offers.get("validFrom"), "Choice start date")),
+            end=_confidence(_datetime(offers.get("validThrough"), "Choice end date")),
             crawled=crawled.astimezone(UTC),
         ),
         charities=charities,

@@ -242,7 +242,6 @@ def test_success_removes_source_unresolved_marker() -> None:
 
 def _itad_resolution(slug: str, appid: int) -> ItadGameResolution:
     archive = ItadGameArchive(
-        schema=1,
         slug=slug,
         title=slug,
         appid=appid,

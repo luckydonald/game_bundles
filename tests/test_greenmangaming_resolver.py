@@ -27,7 +27,6 @@ def _item(product_id: str = "346") -> GmgItem:
 
 def _archive(item: GmgItem) -> GmgArchive:
     return GmgArchive(
-        schema=1,
         slug="sample-bundle",
         url="https://www.greenmangamingbundles.com/bundles/sample-bundle/",
         name="Sample Bundle",
@@ -205,7 +204,6 @@ def test_resolve_archive_known_names_excludes_current_item_but_includes_others()
     item_a = GmgItem(product_id="1", title="Alpha", drm="Steam", redeem_on=["steam"], resolution=GmgResolution())
     item_b = GmgItem(product_id="2", title="Beta", drm="Steam", redeem_on=["steam"], resolution=GmgResolution())
     archive = GmgArchive(
-        schema=1,
         slug="sample-bundle",
         url="https://www.greenmangamingbundles.com/bundles/sample-bundle/",
         name="Sample Bundle",

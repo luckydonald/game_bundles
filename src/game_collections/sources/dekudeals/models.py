@@ -8,6 +8,15 @@ from typing import Literal, Self
 from pydantic import Field, HttpUrl, model_validator
 
 from game_collections.models import NonEmptyString, StrictModel
+from game_collections.sources.timestamps import ScrapedTimestamp
+from game_collections.versioning import LEGACY_VERSION, SchemaDateVersion, Versioned
+
+
+DEKU_V1 = SchemaDateVersion(2026, 7, 20)
+DEKU_V2 = SchemaDateVersion(2026, 9, 11, 14, 30)
+DekuVersions = Literal[LEGACY_VERSION, DEKU_V1, DEKU_V2]
+DekuCurrentVersion = Literal[DEKU_V2]
+CURRENT_VERSION: DekuCurrentVersion = DEKU_V2
 
 
 class DekuPrice(StrictModel):
@@ -61,20 +70,22 @@ class DekuTier(StrictModel):
 class DekuDates(StrictModel):
     """Offer availability and observation timestamps.
 
-    `start` comes from the bundles index page's own `created_at` (when
-    known - only available in discovery mode, not an explicit `--url`
-    crawl) rather than the bundle detail page itself, which never reports
-    it. Falling back to `crawled` when `start` is unknown mirrors
-    isthereanydeal's own `ItadDates`.
+    `start`/`end` carry a confidence + provenance alongside the value itself (see
+    `ScrapedTimestamp`). `start` comes from the bundles index page's own `created_at`
+    (only available in discovery mode, not an explicit `--url` crawl); `end` comes from
+    the bundle detail page's `ends_at` (also cross-checkable against the index's own
+    `ends_at`). `first_seen` is set once, the first time this bundle is ever archived,
+    and never overwritten afterward.
     """
 
-    start: datetime | None = None
-    end: datetime | None = None
+    start: ScrapedTimestamp | None = None
+    end: ScrapedTimestamp | None = None
+    first_seen: datetime | None = None
     crawled: datetime
 
     @model_validator(mode="after")
     def validate_aware(self) -> Self:
-        for value in (self.start, self.end, self.crawled):
+        for value in (self.first_seen, self.crawled):
             if value is not None and value.tzinfo is None:
                 raise ValueError("DekuDeals timestamps must include a timezone")
             # end if
@@ -88,7 +99,6 @@ class DekuDates(StrictModel):
 class DekuArchive(StrictModel):
     """Normalized metadata for one DekuDeals bundle offer."""
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     machine_name: NonEmptyString
     url: HttpUrl
     name: NonEmptyString
@@ -100,3 +110,6 @@ class DekuArchive(StrictModel):
     tiers: list[DekuTier] = Field(min_length=1)
 
 # end class DekuArchive
+
+
+VersionedDekuArchive = Versioned[DekuCurrentVersion, DekuArchive]

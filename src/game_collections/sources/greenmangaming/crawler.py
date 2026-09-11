@@ -16,12 +16,12 @@ import httpx
 from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
-    dump_json,
+    dump_versioned_json,
     load_cached_archive,
     merge_tiered_games,
     render_game_list_yaml,
 )
-from game_collections.sources.greenmangaming.models import GmgArchive, GmgItem, GmgTier
+from game_collections.sources.greenmangaming.models import CURRENT_VERSION, GmgArchive, GmgItem, GmgTier
 from game_collections.sources.greenmangaming.parser import (
     GMG_ROOT,
     bundle_url,
@@ -170,12 +170,18 @@ def crawl_gmg_offers(
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     errors: list[str] = []
     explicit = list(urls or [])
+    # `end` (this bundle's true end date) is only known from the index page's own
+    # `data-end-date` per card - an explicit `--url` crawl has no such summary, so
+    # `GmgDates.end` is simply left unknown for those (see `GmgDates`).
+    end_by_slug: dict[str, datetime] = {}
     if explicit:
         slugs = [_validated_explicit_url(url) for url in explicit]
     else:
         slugs = []
         try:
-            slugs = parse_bundle_index_page(fetch(BUNDLES_INDEX_URL))
+            entries = parse_bundle_index_page(fetch(BUNDLES_INDEX_URL))
+            slugs = [entry.slug for entry in entries]
+            end_by_slug = {entry.slug: entry.end for entry in entries if entry.end is not None}
         except (OSError, ValueError, GmgCrawlError) as error:
             errors.append(f"{BUNDLES_INDEX_URL}: {error}")
         # end try
@@ -187,7 +193,7 @@ def crawl_gmg_offers(
         try:
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, slug)
-                cached = load_cached_archive(GmgArchive, metadata_path, source_path)
+                cached = load_cached_archive(GmgArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
                 if cached is not None:
                     log(f"Bundle {index}/{total}: {slug} (cached)")
                     archive, source = cached
@@ -200,7 +206,7 @@ def crawl_gmg_offers(
                 # end if
             # end if
             page = fetch(bundle_url(slug))
-            archive, source = parse_bundle_page(page, slug, observed)
+            archive, source = parse_bundle_page(page, slug, observed, end_by_slug.get(slug))
             distinct_items: dict[str, GmgItem] = {}
             for tier in archive.tiers:
                 for item in tier.items:
@@ -260,8 +266,8 @@ def write_gmg_offer(
     archive = offer.archive
     list_directory = lists_root / "greenmangaming/bundle" / archive.slug
     metadata_path, source_path = _archive_paths(archive_root, archive.slug)
-    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(offer.source))
+    atomic_write(metadata_path, dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(source_path, dump_versioned_json(CURRENT_VERSION, offer.source))
     written: list[Path] = [metadata_path, source_path]
 
     tiers_with_games: list[tuple[GmgTier, list[Game]]] = []

@@ -272,6 +272,7 @@ def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
     monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         "game_collections.cli.crawl_humble_offers",
         lambda *args, **kwargs: calls.append("scrape") or HumbleCrawlReport(offers=(), errors=()),
@@ -309,6 +310,7 @@ def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
     monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
 
     def raising_crawl(*args: object, **kwargs: object) -> object:
         calls.append("scrape")
@@ -350,6 +352,7 @@ def test_scrape_greenmangaming_git_flag_stashes_scrapes_commits_then_restores(
         "game_collections.cli.load_gmg_resolution_map", lambda path: GmgResolutionMap(schema=1, games={})
     )
     monkeypatch.setattr("game_collections.cli.GmgStorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         "game_collections.cli.crawl_gmg_offers",
         lambda *args, **kwargs: calls.append("scrape") or GmgCrawlReport(offers=(), errors=()),
@@ -381,6 +384,7 @@ def test_scrape_greenmangaming_persists_resolution_map_before_a_failed_offer_wri
         lambda path: GmgResolutionMap(schema=1, games={"1": ["steam:1"]}),
     )
     monkeypatch.setattr("game_collections.cli.GmgStorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         "game_collections.cli.write_gmg_resolution_map", lambda path, mapping: calls.append("write_map")
     )
@@ -429,6 +433,7 @@ def test_scrape_dailyindiegame_git_flag_stashes_scrapes_commits_then_restores(
         "game_collections.cli.DigBrowserClient",
         lambda: SimpleNamespace(close=lambda: None, fetch=lambda url: ""),
     )
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         "game_collections.cli.crawl_dig_offers",
         lambda *args, **kwargs: calls.append("scrape") or DigCrawlReport(offers=(), errors=()),
@@ -505,6 +510,7 @@ def test_scrape_humblebundle_git_style_defaults_to_manual_wording(monkeypatch: M
         "game_collections.cli.load_resolution_map", lambda path: HumbleResolutionMap(schema=1, games={})
     )
     monkeypatch.setattr("game_collections.cli.StorefrontResolver", lambda fetch, choose, **_kwargs: object())
+    monkeypatch.setattr("game_collections.cli._migrate_source_archives", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         "game_collections.cli.crawl_humble_offers",
         lambda *args, **kwargs: HumbleCrawlReport(offers=(), errors=()),

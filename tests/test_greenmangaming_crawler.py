@@ -11,6 +11,7 @@ from game_collections.sources.greenmangaming.crawler import (
     write_gmg_offer,
 )
 from game_collections.sources.greenmangaming.models import (
+    GMG_V1,
     GmgArchive,
     GmgDates,
     GmgItem,
@@ -42,7 +43,6 @@ def _offer() -> CrawledGmgOffer:
         resolution=GmgResolution(ids=["steam:1235140"]),
     )
     archive = GmgArchive(
-        schema=1,
         slug="metroidvania-madness",
         url="https://www.greenmangamingbundles.com/bundles/metroidvania-madness/",
         name="METROIDVANIA MADNESS",
@@ -81,7 +81,7 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
         "Crawl source",
     ]
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    assert metadata["slug"] == "metroidvania-madness"
+    assert metadata["data"]["slug"] == "metroidvania-madness"
 # end def test_writer_creates_archive_and_dedupes_shared_steam_ids
 
 
@@ -274,10 +274,9 @@ def test_crawl_refetches_when_cached_schema_is_stale(tmp_path: Path) -> None:
     archive_root = tmp_path / "archives"
     write_gmg_offer(_offer(), tmp_path / "lists", archive_root, tmp_path)
     metadata_path = archive_root / "greenmangaming/bundle/metroidvania-madness/metadata.json"
-    metadata_path.write_text(
-        metadata_path.read_text(encoding="utf-8").replace('"schema": 1', '"schema": 2'),
-        encoding="utf-8",
-    )
+    stale = json.loads(metadata_path.read_text(encoding="utf-8"))
+    stale["version"] = list(GMG_V1)
+    metadata_path.write_text(json.dumps(stale), encoding="utf-8")
     pages = {
         "https://www.greenmangamingbundles.com/bundles/metroidvania-madness/": BUNDLE_PAGE,
         "https://www.greenmangamingbundles.com/bundles/metroidvania-madness/product/343/": PRODUCT_FRAGMENT,
