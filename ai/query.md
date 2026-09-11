@@ -2984,3 +2984,35 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 
 ❯ Also fix everything after 5fe4ff68558957fc55e29e00c7d8e1b558bb57c1, so 4f66f11531ca426879eb834f74b785e5b173a2f7 and later.
 
+❯ /plan Add a new bundle parser/scraper for https://www.dekudeals.com/bundles , too.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. DekuDeals bundle pages don't link to Steam/GOG/etc directly — each game routes through DekuDeals' own /items/<slug> detail page, which lists per-storefront links (Steam, Switch eShop, PlayStation, Xbox, Amazon). Should the crawler fetch every item page during the crawl (like DailyIndieGame's per-game enrichment) and resolve real storefront IDs immediately, or use ITAD's two-phase approach (write `unresolved:source:dekudeals:...` markers first, resolve later via `complete --provider dekudeals`)?
+>> 2. DekuDeals bundles frequently re-list bundles from Humble, Fanatical, itch.io, IndieGala etc. (the 'crawling-through-the-dungeons' example was actually a Humble Bundle). Should the new source skip/cross-check bundles already covered by an existing dedicated scraper, the way isthereanydeal does?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Resolution strategy** (1/2) <kbd>Single Select</kbd><br>
+>> DekuDeals bundle pages don't link to Steam/GOG/etc directly — each game routes through DekuDeals' own /items/<slug> detail page, which lists per-storefront links (Steam, Switch eShop, PlayStation, Xbox, Amazon). Should the crawler fetch every item page during the crawl (like DailyIndieGame's per-game enrichment) and resolve real storefront IDs immediately, or use ITAD's two-phase approach (write `unresolved:source:dekudeals:...` markers first, resolve later via `complete --provider dekudeals`)?
+> - [ ] 1\. Immediate per-item fetch (Recommended)
+>   - _Simpler, one-pass crawl like dailyindiegame/greenmangaming. Fetch each /items/<slug> page inline while crawling, extract ids via storefronts.qualified_ids_from_urls. No new 'complete --provider' plumbing needed._
+> - [ ] 2\. Two-phase like ITAD
+>   - _Write unresolved markers during the bundle crawl, resolve item pages later via a new complete --provider dekudeals path. More scalable/resumable for large bundles but significantly more code (mirrors isthereanydeal's resolver.py + CLI wiring)._
+> - [x] 3\. _Type something:_
+>   - > immediate, but record a dekudeals id, too. Also store it to the lookup file for next run.
+>
+>> **Overlap with other sources** (2/2) <kbd>Single Select</kbd><br>
+>> DekuDeals bundles frequently re-list bundles from Humble, Fanatical, itch.io, IndieGala etc. (the 'crawling-through-the-dungeons' example was actually a Humble Bundle). Should the new source skip/cross-check bundles already covered by an existing dedicated scraper, the way isthereanydeal does?
+> - [x] 1\. Yes, replicate ITAD's dedup/backfill logic (Recommended)
+>   - _Reuse the substring-match-on-existing-lists dedup pattern so DekuDeals doesn't create duplicate bundle list files for Humble/GMG/DIG bundles it also displays, backfilling missing storefront ids into the existing list instead._
+> - [ ] 2\. No, just skip only exact duplicate scrapes
+>   - _Simpler: only avoid re-writing a bundle DekuDeals itself already wrote before (via load_cached_archive), and accept that some bundles get list files in both lists/dekudeals/... and e.g. lists/humblebundle/..._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
