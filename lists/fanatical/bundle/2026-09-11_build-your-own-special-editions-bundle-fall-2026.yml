@@ -1,0 +1,210 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Special Editions Bundle (Fall 2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-special-editions-bundle-fall-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-special-editions-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-special-editions-bundle-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-special-editions-bundle-fall-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: 'Eight-Minute Empire: Complete Edition'
+  ids:
+  - steam:656590
+  - dekudeals:eight-minute-empire
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: WRC 9 The Official Game Deluxe Edition
+  ids:
+  - steam:bundle/21971
+  - dekudeals:wrc-9-deluxe-edition-fia-world-rally-championship
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Metro Exodus: Gold Edition'
+  ids:
+  - dekudeals:metro-exodus-gold-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Steelrising - Bastille Edition
+  ids:
+  - steam:1283400
+  - dekudeals:steelrising-bastille-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Alfred Hitchcock - Vertigo - DELUXE EDITION
+  ids:
+  - steam:bundle/22355
+  - dekudeals:alfred-hitchcock-vertigo-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Insurmountable Supporter Bundle
+  ids:
+  - steam:bundle/25589
+  - dekudeals:insurmountable-supporter-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Godlike Burger Supporter Bundle
+  ids:
+  - steam:bundle/25623
+  - dekudeals:godlike-burger-supporter-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Tails of Iron - Complete Edition
+  ids:
+  - steam:bundle/38846
+  - dekudeals:tails-of-iron-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Melobot - A Last Song - Digital Deluxe Edition
+  ids:
+  - steam:bundle/49514
+  - dekudeals:melobot-a-last-song-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Coromon Deluxe Edition
+  ids:
+  - dekudeals:coromon-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Perfume Atelier × Nothing To Declare Bundle
+  ids:
+  - steam:bundle/82209
+  - dekudeals:perfume-atelier-nothing-to-declare-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Alt F-4 Pack
+  ids:
+  - dekudeals:alt-f-4-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Balrum + Deepest Chamber: Resurrection Pack'
+  ids:
+  - dekudeals:balrum-plus-deepest-chamber-resurrection-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Burning Rubber Bundle
+  ids:
+  - dekudeals:burning-rubber-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cats Collection Bundle
+  ids:
+  - dekudeals:cats-collection-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: DOSMan Triple Pack
+  ids:
+  - dekudeals:dosman-triple-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Grab The Games Triple Pack No.1
+  ids:
+  - dekudeals:grab-the-games-triple-pack-no1
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Grab The Games Triple Pack No.2
+  ids:
+  - dekudeals:grab-the-games-triple-pack-no2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Point and Click Premium Bundle
+  ids:
+  - dekudeals:point-and-click-premium-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: There May Be Zombies Bundle
+  ids:
+  - dekudeals:there-may-be-zombies-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Top Down Mayhem Bundle
+  ids:
+  - dekudeals:top-down-mayhem-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: War! What Is It Good 4 Pack
+  ids:
+  - dekudeals:war-what-is-it-good-4-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
