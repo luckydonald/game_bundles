@@ -113,6 +113,10 @@ def load_game_list(path: Path, lists_root: Path) -> LoadedGameList:
     if not isinstance(raw, dict):
         raise ListLoadError(f"YAML list must contain an object: {path}")
     # end if
+    # `schema` is a migration-engine concern (see `migrations/list_versions.py`), not part
+    # of the runtime-validated `GameList` shape - discarded here regardless of its value
+    # (1 or 2) so ordinary reads keep working on both sides of a not-yet-run migration.
+    raw = {key: value for key, value in raw.items() if key != "schema"}
     try:
         data = GameList.model_validate(raw)
     except ValidationError as error:

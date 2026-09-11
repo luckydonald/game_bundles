@@ -361,7 +361,6 @@ def write_deku_offer(
     # end if
 
     game_list = GameList(
-        schema=1,
         name=archive.name,
         tiers=tier_definitions,
         pick_quota=pick_quota if archive.tiering_style == "price_per_item" else None,

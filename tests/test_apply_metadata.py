@@ -9,7 +9,6 @@ from game_collections.models import GameList
 
 def _list(list_id: str, *, tier: int | None = None) -> LoadedGameList:
     payload: dict[str, object] = {
-        "schema": 1,
         "name": list_id,
         "games": [{"name": "One", "ids": ["steam:440"]}, {"name": "Two", "ids": ["steam:441"]}],
     }

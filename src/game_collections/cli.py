@@ -17,7 +17,12 @@ import yaml
 
 from game_collections.apply.config import ApplySelection, DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
 from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists, expand_list_tiers
-from game_collections.migrations import bundle_variations
+from game_collections.migrations.list_versions import (
+    apply_bundle_migration_group,
+    bundle_commit_message,
+    discover_list_units,
+    plan_bundle_migrations,
+)
 from game_collections.migrations.schema_versions import (
     FileKind,
     apply_migration_group,
@@ -25,12 +30,6 @@ from game_collections.migrations.schema_versions import (
     commit_message,
     discover_archive_paths,
     plan_migrations,
-)
-from game_collections.migrations.tiers import (
-    TierMigrationError,
-    apply_migration_step,
-    plan_migration,
-    step_would_change,
 )
 from game_collections.completion import MissingHandling
 from game_collections import git_ops
@@ -135,8 +134,6 @@ sys.stdout.reconfigure(line_buffering=True)
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
-migrate_app = typer.Typer(no_args_is_help=True)
-app.add_typer(migrate_app, name="migrate")
 
 
 def _migrate_source_archives(source: SourceName, archive_root: Path, repository_root: Path, git_session: "git_ops.ScrapeGitSession") -> None:
@@ -256,116 +253,42 @@ def list_command(
 # end def list_command
 
 
-@migrate_app.command("tiers")
-def migrate_tiers_command(
-    path: Annotated[Path | None, typer.Option("--lists-root")] = None,
-    apply: Annotated[bool, typer.Option("--apply", help="Write changes; default is dry-run.")] = False,
-) -> None:
-    """Rename legacy tier-shaped bundle lists onto the `bundle.yml`/`tier-N.yml` convention."""
-    lists_root = _lists_root(path)
-    repository_root = Path.cwd().resolve()
-    try:
-        steps = plan_migration(lists_root)
-    except (OSError, ValueError, TierMigrationError) as error:
-        typer.echo(str(error), err=True)
-        raise typer.Exit(1) from error
-    # end try
-
-    changed = 0
-    for step in steps:
-        try:
-            if not step_would_change(step):
-                continue
-            # end if
-            changed += 1
-            relative_old = step.old_path.relative_to(lists_root)
-            relative_new = step.new_path.relative_to(lists_root)
-            tier_note = f"tier={step.tier}" if step.tier is not None else "tier=(none)"
-            if apply:
-                apply_migration_step(step, lists_root, repository_root)
-                typer.echo(f"migrated: {relative_old} -> {relative_new} ({tier_note})")
-            else:
-                typer.echo(f"would migrate: {relative_old} -> {relative_new} ({tier_note})")
-            # end if
-        except (OSError, ValueError, ListLoadError, TierMigrationError) as error:
-            typer.echo(str(error), err=True)
-            raise typer.Exit(1) from error
-        # end try
+def _commit_paths_in_batches(repository_root: Path, paths: list[str], subject: str, batch_size: int = 100) -> None:
+    """Commit `paths` in chunks of at most `batch_size`, each prefixed with a zero-padded
+    `(i/total)` counter matching the width of `total` (`(1/3)`, `(03/22)` - never `(01/3)`)."""
+    batches = [paths[index : index + batch_size] for index in range(0, len(paths), batch_size)]
+    total = len(batches)
+    width = len(str(total))
+    for index, batch in enumerate(batches, start=1):
+        git_ops.commit_changed_paths(repository_root, batch, f"({index:0{width}d}/{total}) {subject}")
     # end for
-    if apply:
-        typer.echo(f"Migrated {changed} list(s).")
-    else:
-        typer.echo(f"Dry run only: {changed} list(s) would change. Pass --apply to write.")
-    # end if
-# end def migrate_tiers_command
+# end def _commit_paths_in_batches
 
 
-@migrate_app.command("bundle-variations")
-def migrate_bundle_variations_command(
-    path: Annotated[Path | None, typer.Option("--lists-root")] = None,
-    apply: Annotated[bool, typer.Option("--apply", help="Write changes; default is dry-run.")] = False,
-) -> None:
-    """Merge per-tier bundle/pick-option files into one flattened `<key>.yml` each."""
-    lists_root = _lists_root(path)
-    repository_root = Path.cwd().resolve()
-    try:
-        steps = bundle_variations.plan_migration(lists_root)
-    except (OSError, ValueError, bundle_variations.BundleVariationMigrationError) as error:
-        typer.echo(str(error), err=True)
-        raise typer.Exit(1) from error
-    # end try
-
-    changed = 0
-    for step in steps:
-        try:
-            if not bundle_variations.step_would_change(step):
-                continue
-            # end if
-            changed += 1
-            relative_old = ", ".join(str(old_path.relative_to(lists_root)) for old_path in step.old_paths)
-            relative_new = step.new_path.relative_to(lists_root)
-            if apply:
-                bundle_variations.apply_migration_step(step, lists_root, repository_root)
-                typer.echo(f"merged: {relative_old} -> {relative_new}")
-            else:
-                typer.echo(f"would merge: {relative_old} -> {relative_new}")
-            # end if
-        except (OSError, ValueError, ListLoadError, bundle_variations.BundleVariationMigrationError) as error:
-            typer.echo(str(error), err=True)
-            raise typer.Exit(1) from error
-        # end try
-    # end for
-    if apply:
-        typer.echo(f"Merged {changed} bundle director(y/ies).")
-    else:
-        typer.echo(f"Dry run only: {changed} bundle director(y/ies) would merge. Pass --apply to write.")
-    # end if
-# end def migrate_bundle_variations_command
-
-
-@migrate_app.command("schema")
-def migrate_schema_command(
+@app.command("migrate")
+def migrate_command(
+    lists_root_path: Annotated[Path | None, typer.Option("--lists-root")] = None,
     path: Annotated[
         list[Path] | None,
-        typer.Option("--path", help="A directory (recursed) or file to migrate; repeatable. Defaults to ./archives."),
+        typer.Option("--path", help="An archives directory (recursed) or file to migrate; repeatable. Defaults to ./archives."),
     ] = None,
-    file_type: Annotated[
+    kind: Annotated[
         list[str] | None,
-        typer.Option("--type", help="metadata|source|bundle; repeatable (AND'd). Defaults to metadata+source."),
+        typer.Option("--type", help="bundle|metadata|source; repeatable. Defaults to all three."),
     ] = None,
     source: Annotated[
         list[SourceName] | None,
-        typer.Option("--source", help="Restrict to one or more crawlers; repeatable (AND'd, i.e. any of these)."),
+        typer.Option("--source", help="Restrict metadata/source scanning to these crawlers; repeatable."),
     ] = None,
     apply: Annotated[bool, typer.Option("--apply", help="Write changes without committing.")] = False,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Explicit dry-run; the default, invalid with --apply/--git.")] = False,
     git: Annotated[
         bool,
-        typer.Option("--git", help="Write and commit changes, batched per version step (implies --apply)."),
+        typer.Option("--git", help="Write and commit changes, batched per the usual rules (implies --apply)."),
     ] = False,
     git_style: Annotated[str, typer.Option("--git-style")] = "manual",
 ) -> None:
-    """Migrate every outstanding archive to its current version envelope/shape."""
+    """Migrate every outstanding bundle list and/or archived metadata/source to its current version."""
     if dry_run and (apply or git):
         typer.echo("--dry-run is invalid together with --apply/--git", err=True)
         raise typer.Exit(2)
@@ -375,45 +298,84 @@ def migrate_schema_command(
         raise typer.Exit(2)
     # end if
     apply = apply or git
-
-    allowed_kinds: set[FileKind] = {kind for kind in (file_type or ["metadata", "source"]) if kind in ("metadata", "source")}
-    allowed_sources = set(source) if source else None
-    roots = path or [Path.cwd() / "archives"]
+    kinds = set(kind) if kind else {"bundle", "metadata", "source"}
+    unknown_kinds = kinds - {"bundle", "metadata", "source"}
+    if unknown_kinds:
+        typer.echo(f"--type must be one of bundle, metadata, source (got {sorted(unknown_kinds)})", err=True)
+        raise typer.Exit(2)
+    # end if
 
     repository_root = Path.cwd().resolve()
     git_session = git_ops.begin_scrape_git_session(repository_root, git, git_style)
     try:
-        candidates = discover_archive_paths(roots, allowed_kinds)
-        if allowed_sources is not None:
-            candidates = [
-                candidate
-                for candidate in candidates
-                if (classified := classify_path(candidate)) is not None and classified[0] in allowed_sources
-            ]
+        total_bundle_units = 0
+        if "bundle" in kinds:
+            lists_root = _lists_root(lists_root_path)
+            units = discover_list_units(lists_root)
+            for bundle_group, bundle_snapshots in plan_bundle_migrations(units, lists_root):
+                total_bundle_units += len(bundle_group.units)
+                message = bundle_commit_message(bundle_group)
+                if not apply:
+                    typer.echo(f"would migrate ({len(bundle_group.units)} unit(s)): {message}")
+                    for unit in bundle_group.units:
+                        typer.echo(f"  {unit.relative_to(repository_root) if unit.is_relative_to(repository_root) else unit}")
+                    # end for
+                    continue
+                # end if
+                apply_bundle_migration_group(bundle_group, bundle_snapshots, repository_root)
+                typer.echo(f"migrated ({len(bundle_group.units)} unit(s)): {message}")
+                if git:
+                    affected: list[str] = []
+                    for unit in bundle_group.units:
+                        state = bundle_snapshots[unit].data
+                        affected.append(str(state.primary_path.relative_to(repository_root)))
+                        affected.extend(str(consumed_path.relative_to(repository_root)) for consumed_path in state.consumed)
+                    # end for
+                    _commit_paths_in_batches(repository_root, affected, message)
+                # end if
+            # end for
         # end if
 
-        total_files = 0
-        for group, snapshots in plan_migrations(candidates):
-            total_files += len(group.paths)
-            message = commit_message(group)
-            if not apply:
-                typer.echo(f"would migrate ({len(group.paths)} file(s)): {message}")
-                for group_path in group.paths:
-                    typer.echo(f"  {group_path.relative_to(repository_root) if group_path.is_relative_to(repository_root) else group_path}")
-                # end for
-                continue
+        allowed_kinds: set[FileKind] = {value for value in kinds if value in ("metadata", "source")}
+        total_archive_files = 0
+        if allowed_kinds:
+            allowed_sources = set(source) if source else None
+            roots = path or [Path.cwd() / "archives"]
+            candidates = discover_archive_paths(roots, allowed_kinds)
+            if allowed_sources is not None:
+                candidates = [
+                    candidate
+                    for candidate in candidates
+                    if (classified := classify_path(candidate)) is not None and classified[0] in allowed_sources
+                ]
             # end if
-            apply_migration_group(group, snapshots)
-            typer.echo(f"migrated ({len(group.paths)} file(s)): {message}")
-            if git:
-                relative_paths = [str(group_path.relative_to(repository_root)) for group_path in group.paths]
-                git_ops.commit_changed_paths(repository_root, relative_paths, message)
-            # end if
-        # end for
+
+            for archive_group, archive_snapshots in plan_migrations(candidates):
+                total_archive_files += len(archive_group.paths)
+                message = commit_message(archive_group)
+                if not apply:
+                    typer.echo(f"would migrate ({len(archive_group.paths)} file(s)): {message}")
+                    for group_path in archive_group.paths:
+                        typer.echo(f"  {group_path.relative_to(repository_root) if group_path.is_relative_to(repository_root) else group_path}")
+                    # end for
+                    continue
+                # end if
+                apply_migration_group(archive_group, archive_snapshots)
+                typer.echo(f"migrated ({len(archive_group.paths)} file(s)): {message}")
+                if git:
+                    relative_paths = [str(group_path.relative_to(repository_root)) for group_path in archive_group.paths]
+                    git_ops.commit_changed_paths(repository_root, relative_paths, message)
+                # end if
+            # end for
+        # end if
+
         if apply:
-            typer.echo(f"Migrated {total_files} file(s).")
+            typer.echo(f"Migrated {total_bundle_units} bundle unit(s) and {total_archive_files} archive file(s).")
         else:
-            typer.echo(f"Dry run only: {total_files} file(s) would migrate. Pass --apply to write.")
+            typer.echo(
+                f"Dry run only: {total_bundle_units} bundle unit(s) and {total_archive_files} archive file(s) "
+                "would migrate. Pass --apply to write."
+            )
         # end if
     finally:
         if git_session.enabled and git_session.stashed:
@@ -421,7 +383,7 @@ def migrate_schema_command(
             git_ops.restore_autostash(repository_root, git_session.pre_crawl_head)
         # end if
     # end try
-# end def migrate_schema_command
+# end def migrate_command
 
 
 @app.command("schema")
