@@ -3272,3 +3272,68 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ /plan there's still named `game-collections migrate [command]` entries, those shall be merged into the automatic stuff, and there shall be only `game-collection migrate --<flags>`, as written in the last few `query.md` updates.
 
+❯ I don't think tiers and bundle-variations are separate kinds, I think those are two versions of `bundles` kind.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. "bundle" as one `--type` covering both steps (tiers-rename, then bundle-variations-merge) makes sense to me. Should those two steps stay as today's separate bespoke engines (`migrations/tiers.py`'s `plan_migration`/`apply_migration_step`, then `migrations/bundle_variations.py`'s equivalent), just run back-to-back under one `--type bundle` flag - or do you want list files to actually get real version tracking too, reusing the same `SchemaDateVersion`/`Versioned`/`trajectory` machinery built for metadata/source (which would mean adding a version field to every `lists/**/*.yml` file, a bigger change)?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Bundle migration depth** (1/1) <kbd>Single Select</kbd><br>
+>> "bundle" as one `--type` covering both steps (tiers-rename, then bundle-variations-merge) makes sense to me. Should those two steps stay as today's separate bespoke engines (`migrations/tiers.py`'s `plan_migration`/`apply_migration_step`, then `migrations/bundle_variations.py`'s equivalent), just run back-to-back under one `--type bundle` flag - or do you want list files to actually get real version tracking too, reusing the same `SchemaDateVersion`/`Versioned`/`trajectory` machinery built for metadata/source (which would mean adding a version field to every `lists/**/*.yml` file, a bigger change)?
+> - [ ] 1\. Keep existing engines, just grouped under `--type bundle` (Recommended)
+>   - _No changes to tiers.py/bundle_variations.py internals or to the public list YAML schema - just run tiers-step then bundle-variations-step in sequence when `bundle` is selected. Smaller, safer change; list files stay exactly as they are today (no new version field)._
+> - [x] 2\. Fully unify via the SchemaDateVersion/trajectory engine
+>   - _Add a real version envelope to lists/**/*.yml too (mirroring metadata.json/source.json), and reimplement tiers-rename/bundle-variations-merge as two versioned trajectory steps for the 'bundle' kind - a bigger, more invasive change to the public list format._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. One consequence of full unification: `GameList.schema` currently sits as a plain `schema: 1` at the top of every single `lists/**/*.yml` file (thousands of them, hand-authored/git-committed, unlike metadata.json/source.json which are machine-only caches nobody hand-edits). Matching metadata/source exactly would mean every list file's version becomes a `SchemaDateVersion` tuple like `schema: [2026, 9, 12, null, null, null, null]` instead of a bare int - a much more visually disruptive change to human-facing files than to internal caches. Given that, which on-disk shape do you want for list files specifically?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **List version format** (1/1) <kbd>Single Select</kbd><br>
+>> One consequence of full unification: `GameList.schema` currently sits as a plain `schema: 1` at the top of every single `lists/**/*.yml` file (thousands of them, hand-authored/git-committed, unlike metadata.json/source.json which are machine-only caches nobody hand-edits). Matching metadata/source exactly would mean every list file's version becomes a `SchemaDateVersion` tuple like `schema: [2026, 9, 12, null, null, null, null]` instead of a bare int - a much more visually disruptive change to human-facing files than to internal caches. Given that, which on-disk shape do you want for list files specifically?
+> - [x] 1\. Keep `schema:` a plain int, still trajectory-driven (Recommended)
+>   - _versioning.trajectory/plan_migrations stay fully reusable (they're already generic over the version type) - list files just use plain incrementing ints (1=legacy, 2=tier-renamed, 3=bundle-variations-merged) as their VERSION type instead of SchemaDateVersion, keeping `schema: 1`/`schema: 2`/`schema: 3` human-readable like today. Every currently-committed file still needs its `schema:` value bumped to whatever's current, just as a small int change, not a 7-element array._
+> - [ ] 2\. Full SchemaDateVersion tuple, exactly like metadata/source
+>   - _`schema: [2026, 9, 12, null, null, null, null]` in every list file, for total mechanical consistency across the whole codebase, at the cost of a much less readable version marker in every hand-edited file._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ whoa, I didn't mean to click, re-ask please.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Re-asking since the last click was accidental: one consequence of full unification is that `GameList.schema` currently sits as a plain `schema: 1` at the top of every single `lists/**/*.yml` file (thousands of them, hand-authored/git-committed, unlike metadata.json/source.json which are machine-only caches nobody hand-edits). Matching metadata/source exactly would mean every list file's version becomes a `SchemaDateVersion` tuple like `schema: [2026, 9, 12, null, null, null, null]` instead of a bare int. Which on-disk shape do you want for list files specifically?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **List version format** (1/1) <kbd>Single Select</kbd><br>
+>> Re-asking since the last click was accidental: one consequence of full unification is that `GameList.schema` currently sits as a plain `schema: 1` at the top of every single `lists/**/*.yml` file (thousands of them, hand-authored/git-committed, unlike metadata.json/source.json which are machine-only caches nobody hand-edits). Matching metadata/source exactly would mean every list file's version becomes a `SchemaDateVersion` tuple like `schema: [2026, 9, 12, null, null, null, null]` instead of a bare int. Which on-disk shape do you want for list files specifically?
+> - [ ] 1\. Keep `schema:` a plain int, still trajectory-driven (Recommended)
+>   - _versioning.trajectory/plan_migrations stay fully reusable (they're already generic over the version type) - list files just use plain incrementing ints (1=legacy, 2=tier-renamed, 3=bundle-variations-merged) as their VERSION type instead of SchemaDateVersion, keeping `schema: 1`/`schema: 2`/`schema: 3` human-readable like today._
+> - [ ] 2\. Full SchemaDateVersion tuple, exactly like metadata/source
+>   - _`schema: [2026, 9, 12, null, null, null, null]` in every list file, for total mechanical consistency across the whole codebase, at the cost of a much less readable version marker in every hand-edited file._
+> - [x] 3\. _Type something:_
+>   - > It can be handled as `SchemaIntVersion`, right? So `*.yml` → `dict[str, Any]` → _`<current data model>`_ → _`<datamodel with version pulled out>`_ and wrapped by the `Versioned`. For that basically the current model would be some kind of base, and then there's the one for the yml files, which does extend the model and adds `version: Literal[1, 2]`, and if needed models for v1 and v2,… so class name being `…V1`. A bit what we thought to do with the Metadata for a bit, before we switched _those_ to migrations + date-version-wrap. But that's stuff is kinda not read back from disk, but bundles are. Therefore each version needs a proper schema version, even with it having the migrations.
+>
+> </details>
+>
+
