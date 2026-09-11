@@ -122,7 +122,7 @@ def test_write_deku_offer_creates_list_and_archive(tmp_path: Path) -> None:
 
     paths = write_deku_offer(report.offers[0], lists_root, archive_root, tmp_path)
 
-    list_path = lists_root / "humblebundle/bundle/crawling-through-the-dungeons.yml"
+    list_path = lists_root / "humblebundle/bundle/2026-07-12_crawling-through-the-dungeons.yml"
     assert list_path in paths
     loaded = load_game_list(list_path, lists_root)
     assert loaded.data.name == "Crawling Through the Dungeons"
