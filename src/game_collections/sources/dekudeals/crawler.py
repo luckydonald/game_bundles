@@ -118,6 +118,17 @@ def _archive_paths(archive_root: Path, slug: str) -> tuple[Path, Path]:
 # end def _archive_paths
 
 
+def _bundle_date_prefix(archive: DekuArchive) -> str:
+    """Date prefix for this bundle's list filename, matching every other source's convention.
+
+    DekuDeals never reports when a bundle actually started, so - like
+    isthereanydeal's own fallback for a bundle with no `start` date - the
+    date it was first crawled stands in for it.
+    """
+    return archive.dates.crawled.date().isoformat()
+# end def _bundle_date_prefix
+
+
 def _resolve_item_ids(
     slug: str,
     title: str,
@@ -300,8 +311,9 @@ def write_deku_offer(
         return tuple(written)
     # end if
 
+    date_prefix = _bundle_date_prefix(archive)
     list_directory = lists_root / archive.provider_slug / "bundle"
-    path = list_directory / f"{archive.machine_name}.yml"
+    path = list_directory / f"{date_prefix}_{archive.machine_name}.yml"
 
     pool_games = _flatten_deku_games(archive)
     if archive.tiering_style == "price_per_item":
