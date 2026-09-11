@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Armor Games Flashback Bundle
+tiers:
+- rank: 1
+  name: €5,00
+- rank: 2
+  name: €10,00
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/armor-games-flashback-bundle
+- name: Green Man Gaming Bundles bundle
+  url: https://greenmangaming.sjv.io/c/5782768/1219987/15105?u=https%3A%2F%2Fwww.greenmangamingbundles.com%2Fbundles%2Farmor-games-flashback-bundle%2F
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/armor-games-flashback-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/armor-games-flashback-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Don't Escape Trilogy
+  ids:
+  - steam:1070550
+  - dekudeals:dont-escape-trilogy
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Deep Sleep Trilogy
+  ids:
+  - steam:1146510
+  - dekudeals:deep-sleep-trilogy
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Last Stand Legacy Collection
+  ids:
+  - steam:1615100
+  - dekudeals:the-last-stand-legacy-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Crush the Castle Legacy Collection
+  ids:
+  - steam:1838970
+  - dekudeals:crush-the-castle-legacy-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Shift Legacy Collection
+  ids:
+  - steam:2764830
+  - dekudeals:shift-legacy-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Chaos Faction Legacy Collection
+  ids:
+  - steam:3038340
+  - dekudeals:chaos-faction-legacy-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Sushi Cat Legacy Collection
+  ids:
+  - steam:3620940
+  - dekudeals:sushi-cat-legacy-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Elephant Collection
+  ids:
+  - steam:2274110
+  - dekudeals:the-elephant-collection
+  requires: []
+  tiers:
+  - 2
+- name: Warfare Legacy Collection
+  ids:
+  - steam:2745870
+  - dekudeals:warfare-legacy-collection
+  requires: []
+  tiers:
+  - 2
+- name: Sonny Legacy Collection
+  ids:
+  - steam:2757720
+  - dekudeals:sonny-legacy-collection
+  requires: []
+  tiers:
+  - 2
+- name: Decision Legacy Collection
+  ids:
+  - steam:3015510
+  - dekudeals:decision-legacy-collection
+  requires: []
+  tiers:
+  - 2
+- name: Swords & Souls Legacy Collection
+  ids:
+  - steam:3189440
+  - dekudeals:swords-and-souls-legacy-collection
+  requires: []
+  tiers:
+  - 2

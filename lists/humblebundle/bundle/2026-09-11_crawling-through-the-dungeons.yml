@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Crawling Through the Dungeons
+tiers:
+- rank: 1
+  name: €10,23
+- rank: 2
+  name: €14,32
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/crawling-through-the-dungeons
+- name: Humble bundle
+  url: https://humblebundleinc.sjv.io/c/5782768/2059850/25796?u=https%3A%2F%2Fwww.humblebundle.com%2Fgames%2Fcrawling-through-dungeons
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/crawling-through-the-dungeons/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/crawling-through-the-dungeons/source.json
+crawlers:
+- dekudeals
+games:
+- name: Crawl
+  ids:
+  - steam:293780
+  - dekudeals:crawl
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Astalon: Tears of the Earth'
+  ids:
+  - steam:1046400
+  - dekudeals:astalon-tears-of-the-earth
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Xanadu Next
+  ids:
+  - steam:312560
+  - dekudeals:xanadu-next
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Wizardry: Labyrinth of Lost Souls'
+  ids:
+  - steam:948640
+  - dekudeals:wizardry-labyrinth-of-lost-souls
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Dungeon Tycoon
+  ids:
+  - steam:2400770
+  - dekudeals:dungeon-tycoon
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Touhou Artificial Dream in Arcadia
+  ids:
+  - steam:2248430
+  - dekudeals:touhou-artificial-dream-in-arcadia
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Cthulhu''s Reach: Devil Reef'
+  ids:
+  - steam:2412200
+  - dekudeals:cthulhus-reach-devil-reef
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: BroomSweeper
+  ids:
+  - steam:3473250
+  - dekudeals:broomsweeper
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Bard's Tale Trilogy
+  ids:
+  - steam:843260
+  - dekudeals:the-bards-tale-trilogy
+  requires: []
+  tiers:
+  - 2
+- name: Dungeon Drafters
+  ids:
+  - steam:1824580
+  - dekudeals:dungeon-drafters
+  requires: []
+  tiers:
+  - 2
+- name: CiniCross
+  ids:
+  - steam:3933120
+  - dekudeals:cinicross
+  requires: []
+  tiers:
+  - 2
