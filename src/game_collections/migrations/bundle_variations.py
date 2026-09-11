@@ -86,6 +86,7 @@ def _load_legacy_list(path: Path) -> tuple[GameList, int | None]:
     """
     raw = yaml.safe_load(path.read_text(encoding="utf-8"))
     tier = raw.pop("tier", None)
+    raw.pop("schema", None)
     return GameList.model_validate(raw), tier
 # end def _load_legacy_list
 
@@ -148,7 +149,6 @@ def plan_variation_directory(variation_dir: Path) -> BundleVariationMigrationSte
     # end for
 
     merged = GameList(
-        schema=1,
         name=bundle_name,
         tiers=tier_definitions,
         references=accumulated.references,

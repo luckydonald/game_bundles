@@ -299,7 +299,6 @@ def write_gmg_offer(
         )
     # end if
     game_list = GameList(
-        schema=1,
         name=name,
         tiers=tier_definitions,
         references=[

@@ -86,7 +86,6 @@ def test_load_cached_archive_returns_none_on_invalid_json(tmp_path: Path) -> Non
 
 def _list(*games: Game, name: str = "Bundle", invalid: list[Game] | None = None) -> GameList:
     return GameList(
-        schema=1,
         name=name,
         references=[Reference(name="ref", url="https://example.com")],
         games=list(games),
@@ -147,13 +146,11 @@ def test_merge_game_list_appends_references_instead_of_overwriting() -> None:
     itad_reference = Reference(name="isthereanydeal.com bundle", url="https://isthereanydeal.com/bundle/x/")
     humble_reference = Reference(name="Humble Bundle offer", url="https://www.humblebundle.com/games/x")
     existing = GameList(
-        schema=1,
         name="Bundle",
         references=[itad_reference],
         games=[Game(name="One", ids=["steam:1"])],
     )
     fresh = GameList(
-        schema=1,
         name="Bundle",
         references=[humble_reference],
         games=[Game(name="One", ids=["steam:1"])],
@@ -325,13 +322,11 @@ def test_merge_game_list_non_authoritative_never_removes_or_quarantines() -> Non
 def test_merge_game_list_does_not_duplicate_identical_references() -> None:
     reference = Reference(name="Humble Bundle offer", url="https://www.humblebundle.com/games/x")
     existing = GameList(
-        schema=1,
         name="Bundle",
         references=[reference],
         games=[Game(name="One", ids=["steam:1"])],
     )
     fresh = GameList(
-        schema=1,
         name="Bundle",
         references=[reference],
         games=[Game(name="One", ids=["steam:1"])],

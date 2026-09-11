@@ -275,7 +275,6 @@ def write_dig_offer(
     # end for
     path = list_directory / f"{archive.machine_name}.yml"
     game_list = GameList(
-        schema=1,
         name=archive.name,
         references=[
             Reference(name="DailyIndieGame bundle", url=archive.url),

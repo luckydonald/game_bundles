@@ -261,7 +261,6 @@ def backfill_month(
     # end for
 
     game_list = GameList(
-        schema=1,
         name=f"{_month_slug(month_key).replace('-', ' ').title()} Humble Choice",
         references=references,
         games=games,

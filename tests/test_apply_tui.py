@@ -37,7 +37,7 @@ def _write_list(lists_root: Path, list_id: str, *, item_count: int, tier: int | 
         document["tiers"].append({"rank": tier, "name": name})
         document["games"].extend(games)
     else:
-        document = {"schema": 1, "name": name, "games": games}
+        document = {"name": name, "games": games}
         if tier is not None:
             document["tiers"] = [{"rank": tier, "name": name}]
         # end if
