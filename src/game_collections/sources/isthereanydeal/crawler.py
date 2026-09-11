@@ -12,17 +12,14 @@ from pathlib import Path
 from typing import Any
 
 import httpx
-import yaml
-from pydantic import ValidationError
 
 from game_collections.models import Game, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
+    backfill_existing_lists,
     dump_json,
-    find_matching_game,
+    existing_list_match,
     load_cached_archive,
-    merge_crawlers,
-    merge_references,
     merge_tiered_games,
     render_game_list_yaml,
 )
@@ -405,26 +402,6 @@ def _existing_choice_match(lists_root: Path, provider_slug: str, summary: ItadLi
 # end def _existing_choice_match
 
 
-def _existing_list_match(lists_root: Path, provider_slug: str, real_slug: str) -> Path | None:
-    """Best-effort dedup check: is this bundle already covered by a dedicated scraper?
-
-    Matches by substring, not exact path, since e.g. Humble's own directories
-    are date-prefixed (`2026-07-10_squad-goals`) rather than the bare slug.
-    """
-    provider_root = lists_root / provider_slug
-    if not provider_root.is_dir():
-        return None
-    # end if
-    needle = real_slug.casefold()
-    for path in sorted(provider_root.rglob("*")):
-        if needle and needle in path.name.casefold():
-            return path
-        # end if
-    # end for
-    return None
-# end def _existing_list_match
-
-
 def _flatten_itad_games(archive: ItadArchive) -> list[Game]:
     """Flatten every tier's items into one game pool for the whole bundle, deduped by id.
 
@@ -447,97 +424,6 @@ def _flatten_itad_games(archive: ItadArchive) -> list[Game]:
 # end def _flatten_itad_games
 
 
-def _backfill_existing_lists(
-    archive: ItadArchive,
-    existing: Path,
-    metadata_path: Path,
-    source_path: Path,
-    repository_root: Path,
-    log: LogFn,
-) -> None:
-    """Cross-check an already-covered bundle instead of skipping it outright.
-
-    A dedicated scraper's list "covering" this bundle only means a matching
-    filename exists - it says nothing about whether isthereanydeal has ever
-    actually looked at that list's games. The first time through, add any
-    storefront IDs ITAD resolved for a provider the existing game doesn't
-    already have, record isthereanydeal as a contributing crawler, and only
-    then treat the bundle as fully done on every later run.
-    """
-    list_paths = sorted(existing.glob("*.yml")) if existing.is_dir() else [existing]
-    loaded: list[tuple[Path, GameList]] = []
-    for path in list_paths:
-        try:
-            loaded.append((path, GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8")))))
-        except (OSError, ValueError, ValidationError):
-            continue
-        # end try
-    # end for
-    if not loaded or all("isthereanydeal" in game_list.crawlers for _, game_list in loaded):
-        log(f"  Skipped {archive.real_slug}: already covered by {existing}")
-        return
-    # end if
-
-    itad_pool = _flatten_itad_games(archive)
-    itad_references = [
-        Reference(name="isthereanydeal.com bundle", url=archive.url),
-    ]
-    for path, game_list in loaded:
-        if "isthereanydeal" in game_list.crawlers:
-            continue
-        # end if
-        added_ids = 0
-        updated_games: list[Game] = []
-        for game in game_list.games:
-            match = find_matching_game(game, itad_pool)
-            if match is None:
-                updated_games.append(game)
-                continue
-            # end if
-            existing_providers = {identifier.provider for identifier in game.qualified_ids}
-            new_ids = list(game.ids)
-            for identifier in match.qualified_ids:
-                if identifier.provider != "unresolved" and identifier.provider in existing_providers:
-                    continue
-                # end if
-                compact = identifier.compact()
-                if compact in new_ids:
-                    continue
-                # end if
-                new_ids.append(compact)
-                added_ids += 1
-            # end for
-            updated_games.append(game if new_ids == game.ids else game.model_copy(update={"ids": new_ids}))
-        # end for
-
-        fresh_stub = GameList(
-            schema=1,
-            name=game_list.name,
-            references=[
-                *itad_references,
-                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
-                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
-            ],
-            crawlers=["isthereanydeal"],
-            games=game_list.games,
-        )
-        updated_list = game_list.model_copy(
-            update={
-                "games": updated_games,
-                "references": merge_references(game_list, fresh_stub),
-                "crawlers": merge_crawlers(game_list, fresh_stub),
-            }
-        )
-        atomic_write(path, render_game_list_yaml(updated_list, path, repository_root))
-        if added_ids:
-            log(f"  Backfilled {added_ids} id(s) into {path} from isthereanydeal")
-        else:
-            log(f"  Cross-checked {path} against isthereanydeal (no new ids)")
-        # end if
-    # end for
-# end def _backfill_existing_lists
-
-
 def write_itad_offer(
     offer: CrawledItadOffer,
     lists_root: Path,
@@ -552,11 +438,21 @@ def write_itad_offer(
     atomic_write(source_path, dump_json(offer.summary.model_dump(by_alias=True, mode="json")))
     written: list[Path] = [metadata_path, source_path]
 
-    existing = _existing_choice_match(lists_root, archive.provider_slug, offer.summary) or _existing_list_match(
+    existing = _existing_choice_match(lists_root, archive.provider_slug, offer.summary) or existing_list_match(
         lists_root, archive.provider_slug, archive.real_slug
     )
     if existing is not None:
-        _backfill_existing_lists(archive, existing, metadata_path, source_path, repository_root, log)
+        backfill_existing_lists(
+            _flatten_itad_games(archive),
+            existing,
+            "isthereanydeal",
+            archive.real_slug,
+            Reference(name="isthereanydeal.com bundle", url=archive.url),
+            metadata_path,
+            source_path,
+            repository_root,
+            log,
+        )
         return tuple(written)
     # end if
 

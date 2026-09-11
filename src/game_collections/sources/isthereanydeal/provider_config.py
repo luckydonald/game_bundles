@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import re
 from collections.abc import Callable
 from pathlib import Path
 from typing import Literal
@@ -12,6 +11,7 @@ from pydantic import Field
 
 from game_collections.models import StrictModel
 from game_collections.sources.isthereanydeal.models import ItadPageInfo
+from game_collections.sources.storefronts import slugify_provider_name
 
 
 LogFn = Callable[[str], None]
@@ -44,17 +44,6 @@ def load_provider_config(path: Path) -> ItadProviderConfig:
     raw = yaml.safe_load(path.read_text(encoding="utf-8"))
     return ItadProviderConfig.model_validate(raw)
 # end def load_provider_config
-
-
-def slugify_provider_name(name: str) -> str:
-    """Best-effort kebab-case fallback for a provider with no reviewed mapping."""
-    lowered = name.strip().casefold()
-    slug = re.sub(r"[^a-z0-9]+", "-", lowered).strip("-")
-    if not slug:
-        raise ValueError(f"could not derive a slug from provider name: {name!r}")
-    # end if
-    return slug
-# end def slugify_provider_name
 
 
 def resolve_provider_slug(page: ItadPageInfo, config: ItadProviderConfig, log: LogFn = _NO_LOG) -> str:

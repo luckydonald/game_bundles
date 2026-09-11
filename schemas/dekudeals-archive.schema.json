@@ -1,0 +1,224 @@
+{
+  "$defs": {
+    "DekuDates": {
+      "additionalProperties": false,
+      "description": "Offer observation timestamp and its estimated expiry.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "DekuDates",
+      "type": "object"
+    },
+    "DekuItem": {
+      "additionalProperties": false,
+      "description": "One game advertised within a DekuDeals bundle.\n\nDekuDeals bundle pages never link straight to a storefront - every game\nroutes through DekuDeals' own `/items/<slug>` page, which is resolved\nseparately (immediately, during the same crawl - see `crawler.py`) into\n`ids`. `ids` always includes `dekudeals:<slug>` itself, plus every\nstorefront `sources.storefronts.qualified_ids_from_urls` recognized on\nthat item page.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "slug": {
+          "minLength": 1,
+          "title": "Slug",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "title",
+        "ids"
+      ],
+      "title": "DekuItem",
+      "type": "object"
+    },
+    "DekuPrice": {
+      "additionalProperties": false,
+      "description": "A localized tier/pick price as shown on a DekuDeals bundle page.",
+      "properties": {
+        "currency": {
+          "minLength": 1,
+          "title": "Currency",
+          "type": "string"
+        },
+        "raw": {
+          "minLength": 1,
+          "title": "Raw",
+          "type": "string"
+        },
+        "value": {
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "raw",
+        "value",
+        "currency"
+      ],
+      "title": "DekuPrice",
+      "type": "object"
+    },
+    "DekuTier": {
+      "additionalProperties": false,
+      "description": "One purchase tier/pick-option on a DekuDeals bundle.\n\nCovers both real `tiering_style` values seen live: `price_per_tier`\n(cumulative price breakpoints, e.g. \"Crawling Through the Dungeons\" -\neach tier's own `price` is fixed and `items` is that tier's full,\ncumulative unlock list) and `price_per_item` (a Build Your Own bundle -\neach tier instead fixes an `item_minimum` pick count over one shared\npool, with `price` being the per-item price at that count; see\n`DekuArchive.tiering_style`).",
+      "properties": {
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "item_minimum": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Minimum"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/DekuItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DekuPrice"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "identifier",
+        "items"
+      ],
+      "title": "DekuTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one DekuDeals bundle offer.",
+  "properties": {
+    "dates": {
+      "$ref": "#/$defs/DekuDates"
+    },
+    "machine_name": {
+      "minLength": 1,
+      "title": "Machine Name",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "provider_slug": {
+      "minLength": 1,
+      "title": "Provider Slug",
+      "type": "string"
+    },
+    "real_url": {
+      "anyOf": [
+        {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Real Url"
+    },
+    "schema": {
+      "const": 1,
+      "title": "Schema",
+      "type": "integer"
+    },
+    "store_name": {
+      "minLength": 1,
+      "title": "Store Name",
+      "type": "string"
+    },
+    "tiering_style": {
+      "enum": [
+        "price_per_tier",
+        "price_per_item"
+      ],
+      "title": "Tiering Style",
+      "type": "string"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/DekuTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "machine_name",
+    "url",
+    "name",
+    "store_name",
+    "provider_slug",
+    "tiering_style",
+    "dates",
+    "tiers"
+  ],
+  "title": "DekuArchive",
+  "type": "object"
+}

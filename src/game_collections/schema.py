@@ -7,6 +7,7 @@ from pathlib import Path
 
 from game_collections.models import GameList
 from game_collections.sources.dailyindiegame.models import DigArchive
+from game_collections.sources.dekudeals.models import DekuArchive
 from game_collections.sources.greenmangaming.models import GmgArchive
 from game_collections.sources.humblebundle.models import HumbleArchive
 from game_collections.sources.isthereanydeal.models import ItadArchive, ItadGameArchive
@@ -149,3 +150,27 @@ def write_isthereanydeal_game_schema(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(render_isthereanydeal_game_schema(), encoding="utf-8")
 # end def write_isthereanydeal_game_schema
+
+
+def generate_dekudeals_schema() -> dict[str, object]:
+    """Generate the normalized DekuDeals archive schema."""
+    return DekuArchive.model_json_schema(by_alias=True, mode="validation")
+# end def generate_dekudeals_schema
+
+
+def render_dekudeals_schema() -> str:
+    """Render the DekuDeals archive schema deterministically."""
+    return json.dumps(
+        generate_dekudeals_schema(),
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=True,
+    ) + "\n"
+# end def render_dekudeals_schema
+
+
+def write_dekudeals_schema(path: Path) -> None:
+    """Write the normalized DekuDeals archive schema."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render_dekudeals_schema(), encoding="utf-8")
+# end def write_dekudeals_schema
