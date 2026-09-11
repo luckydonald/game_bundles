@@ -14,11 +14,11 @@ from urllib.parse import urlparse
 from game_collections.models import Game, GameList, Reference
 from game_collections.sources.common import (
     atomic_write,
-    dump_json,
+    dump_versioned_json,
     load_cached_archive,
     render_game_list_yaml,
 )
-from game_collections.sources.dailyindiegame.models import DigArchive, DigItem
+from game_collections.sources.dailyindiegame.models import CURRENT_VERSION, DigArchive, DigItem
 from game_collections.sources.dailyindiegame.parser import (
     DIG_ROOT,
     BUNDLE_LINK_PATTERN,
@@ -217,7 +217,7 @@ def crawl_dig_offers(
         try:
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, number)
-                cached = load_cached_archive(DigArchive, metadata_path, source_path)
+                cached = load_cached_archive(DigArchive, metadata_path, source_path, current_version=CURRENT_VERSION)
                 if cached is not None:
                     log(f"Bundle {index}/{total}: {number} (cached)")
                     archive, source = cached
@@ -260,8 +260,8 @@ def write_dig_offer(
     archive = offer.archive
     list_directory = lists_root / "dailyindiegame/bundle"
     metadata_path, source_path = _archive_paths(archive_root, archive.machine_name)
-    atomic_write(metadata_path, dump_json(archive.model_dump(by_alias=True, mode="json")))
-    atomic_write(source_path, dump_json(offer.source))
+    atomic_write(metadata_path, dump_versioned_json(CURRENT_VERSION, archive.model_dump(by_alias=True, mode="json")))
+    atomic_write(source_path, dump_versioned_json(CURRENT_VERSION, offer.source))
     written: list[Path] = [metadata_path, source_path]
 
     games: list[Game] = []

@@ -5,16 +5,20 @@ from __future__ import annotations
 import json
 import os
 import re
-from collections.abc import Callable
+import sys
+from collections.abc import Callable, Sequence
+from datetime import datetime
 from pathlib import Path
-from typing import TypeVar
+from typing import Any, TypeVar
 
 import yaml
 from pydantic import BaseModel, ValidationError
 from rapidfuzz import fuzz
 
 from game_collections.models import Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
+from game_collections.sources.names import SourceName
 from game_collections.sources.storefronts import normalized_title
+from game_collections.versioning import SchemaDateVersion, Versioned, peek_version
 
 
 LogFn = Callable[[str], None]
@@ -51,29 +55,74 @@ def load_cached_archive(
     model_cls: type[ArchiveT],
     metadata_path: Path,
     source_path: Path,
+    *,
+    current_version: SchemaDateVersion,
 ) -> tuple[ArchiveT, dict[str, object]] | None:
-    """Read back a previously written archive, or None if absent/stale/corrupt.
+    """Read back a previously written, fully-migrated archive, or None if absent/stale/corrupt.
 
-    Used to resume a crawl without re-fetching: any failure here (missing
-    file, invalid JSON, or a `model_cls` validation error - notably including
-    a `schema_version` mismatch after a schema bump) is treated as a cache
-    miss rather than an error, so callers can silently fall back to a real
-    fetch.
+    Used to resume a crawl without re-fetching: any failure here (missing file, invalid
+    JSON, a `model_cls` validation error, or the file's own `version` envelope not being
+    exactly `current_version`) is treated as a cache miss rather than an error, so
+    callers fall back to a real fetch. This function never migrates a stale file itself
+    - see `versioning.trajectory`/the migration wavefront, which runs *before* any of a
+    crawl's own fetch/write calls and is what actually brings a file up to
+    `current_version` - so by the time this runs, a hit is either already current or it
+    isn't a hit at all.
     """
     if not metadata_path.exists() or not source_path.exists():
         return None
     # end if
     try:
-        # model_validate_json (not model_validate on a json.loads'd dict)
-        # because StrictModel's strict=True otherwise rejects datetimes
-        # round-tripped as ISO strings - JSON-mode validation accepts them.
-        archive = model_cls.model_validate_json(metadata_path.read_text(encoding="utf-8"))
-        source = json.loads(source_path.read_text(encoding="utf-8"))
+        raw_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        version, data = peek_version(raw_metadata)
+        if version.sort_key() != current_version.sort_key():
+            return None
+        # end if
+        # model_validate_json (not model_validate on a plain dict) because
+        # StrictModel's strict=True otherwise rejects datetimes round-tripped
+        # as ISO strings - JSON-mode validation accepts them.
+        archive = model_cls.model_validate_json(json.dumps(data))
+        raw_source = json.loads(source_path.read_text(encoding="utf-8"))
+        _source_version, source = peek_version(raw_source)
     except (OSError, ValueError, ValidationError):
         return None
     # end try
     return archive, source
 # end def load_cached_archive
+
+
+def dump_versioned_json(version: SchemaDateVersion, data: object) -> str:
+    """Render one `{"version": ..., "data": ...}` envelope as deterministic JSON."""
+    return dump_json(Versioned[SchemaDateVersion, Any](version=version, data=data).model_dump(mode="json"))
+# end def dump_versioned_json
+
+
+def migrate_dates_to_confidence(dates: dict[str, Any], source: SourceName, fields: Sequence[str] = ("start", "end")) -> dict[str, Any]:
+    """Migrate a legacy `*Dates` dict's bare-ISO-string `fields` into confidence-scored ones.
+
+    Every legacy value gets confidence `0.0` unconditionally - it was never tracked
+    before, so it's treated as unverified rather than assumed to have been a real 1.0
+    (see the confidence-scored-dates plan). `first_seen` is backfilled from the
+    pre-migration `crawled` value, the only timestamp available for "when did we first
+    see this" - documented as a proxy, not the true first-seen date.
+    """
+    migrated = dict(dates)
+    for field in fields:
+        value = migrated.get(field)
+        if isinstance(value, str) and value:
+            migrated[field] = {
+                "iso": value,
+                "timestamp": datetime.fromisoformat(value).timestamp(),
+                "confidence": 0.0,
+                "source": source.value,
+            }
+        elif not isinstance(value, dict):
+            migrated[field] = None
+        # end if
+    # end for
+    migrated.setdefault("first_seen", migrated.get("crawled"))
+    return migrated
+# end def migrate_dates_to_confidence
 
 
 def merge_references(existing: GameList, fresh: GameList) -> list[Reference]:
@@ -335,24 +384,120 @@ def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path
 # end def render_game_list_yaml
 
 
-def existing_list_match(lists_root: Path, provider_slug: str, slug: str) -> Path | None:
+_DATE_PREFIX_PATTERN = re.compile(r"^\d{4}-\d{2}(?:-\d{2})?_")
+# Baseline thresholds to even *consider* a fuzzy-name candidate for the content check.
+FUZZY_SLUG_THRESHOLD = 90.0
+FUZZY_CONTENT_OVERLAP = 0.5
+# Stricter thresholds required to auto-accept a fuzzy match non-interactively (no TTY,
+# e.g. `--git`/CI runs) without ever asking - a real person isn't there to confirm it.
+FUZZY_SLUG_AUTO_THRESHOLD = 97.0
+FUZZY_CONTENT_AUTO_OVERLAP = 0.9
+
+
+def _strip_list_name(path: Path) -> str:
+    stem = path.stem if path.is_file() else path.name
+    return _DATE_PREFIX_PATTERN.sub("", stem).replace("-", " ")
+# end def _strip_list_name
+
+
+def _content_overlap(fresh_games: list[Game], candidate: Path) -> float:
+    """Fraction of `fresh_games` that resolve against `candidate`'s own roster."""
+    list_paths = sorted(candidate.glob("*.yml")) if candidate.is_dir() else [candidate]
+    roster: list[Game] = []
+    for path in list_paths:
+        try:
+            roster.extend(GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8"))).games)
+        except (OSError, ValueError, ValidationError):
+            continue
+        # end try
+    # end for
+    if not fresh_games or not roster:
+        return 0.0
+    # end if
+    matched = sum(1 for game in fresh_games if find_matching_game(game, roster) is not None)
+    return matched / len(fresh_games)
+# end def _content_overlap
+
+
+def _prompt_fuzzy_match(slug: str, candidate: Path, score: float, overlap: float) -> bool:
+    print(f"FUZZY MATCH for {slug!r}: {candidate}")
+    print(f"  name similarity: {score:.1f}, content overlap: {overlap:.0%}")
+    while True:
+        choice = input("Treat as the same bundle? [y/n]: ").strip().casefold()
+        if choice in ("y", "yes"):
+            return True
+        # end if
+        if choice in ("n", "no"):
+            return False
+        # end if
+    # end while
+# end def _prompt_fuzzy_match
+
+
+def existing_list_match(
+    lists_root: Path,
+    provider_slug: str,
+    slug: str,
+    fresh_games: list[Game] | None = None,
+    *,
+    interactive: bool | None = None,
+) -> Path | None:
     """Best-effort dedup check: is this bundle already covered by a dedicated scraper?
 
-    Matches by substring, not exact path, since e.g. Humble's own directories
-    are date-prefixed (`2026-07-10_squad-goals`) rather than the bare slug.
-    Shared by every bundle-aggregator source (isthereanydeal, dekudeals) that
-    re-lists offers a dedicated scraper already covers.
+    Two tiers: an exact **substring** match (e.g. Humble's date-prefixed
+    `2026-07-10_squad-goals` containing a plain `squad-goals` slug) is trusted
+    immediately, no content check needed. Failing that, when `fresh_games` is given, a
+    **fuzzy** name match (e.g. DekuDeals' `crawling-through-the-dungeons` against the
+    real `2026-09-09_crawling-through-dungeons.yml`) is only accepted once the
+    candidate's own game roster actually overlaps `fresh_games` (`find_matching_game`
+    cascade) - name similarity alone is never enough, to avoid backfilling an unrelated
+    bundle that merely has a similar-sounding name. A fuzzy-only match is always
+    confirmed interactively on a TTY; non-interactively (`--git`/CI) it's only accepted
+    automatically when both the name score and the content overlap clear a stricter
+    threshold than the baseline, and otherwise treated as a genuinely new bundle.
+    Shared by every bundle-aggregator source (isthereanydeal, dekudeals) that re-lists
+    offers a dedicated scraper already covers.
     """
     provider_root = lists_root / provider_slug
     if not provider_root.is_dir():
         return None
     # end if
     needle = slug.casefold()
-    for path in sorted(provider_root.rglob("*")):
+    candidates = sorted(provider_root.rglob("*"))
+    for path in candidates:
         if needle and needle in path.name.casefold():
             return path
         # end if
     # end for
+    if not fresh_games:
+        return None
+    # end if
+    slug_text = slug.replace("-", " ")
+    best_path: Path | None = None
+    best_score = FUZZY_SLUG_THRESHOLD
+    for path in candidates:
+        if not (path.is_file() and path.suffix == ".yml") and not path.is_dir():
+            continue
+        # end if
+        score = fuzz.WRatio(slug_text, _strip_list_name(path))
+        if score >= best_score:
+            best_path, best_score = path, score
+        # end if
+    # end for
+    if best_path is None:
+        return None
+    # end if
+    overlap = _content_overlap(fresh_games, best_path)
+    if overlap < FUZZY_CONTENT_OVERLAP:
+        return None
+    # end if
+    is_tty = sys.stdin.isatty() if interactive is None else interactive
+    if is_tty:
+        return best_path if _prompt_fuzzy_match(slug, best_path, best_score, overlap) else None
+    # end if
+    if best_score >= FUZZY_SLUG_AUTO_THRESHOLD and overlap >= FUZZY_CONTENT_AUTO_OVERLAP:
+        return best_path
+    # end if
     return None
 # end def existing_list_match
 

@@ -42,7 +42,6 @@ def _item(machine_name: str = "sample_game") -> HumbleItem:
 
 def _archive(item: HumbleItem) -> HumbleArchive:
     return HumbleArchive(
-        schema=1,
         kind="bundle",
         machine_name="sample_bundle",
         url="https://www.humblebundle.com/games/sample",

@@ -8,6 +8,15 @@ from typing import Literal, Self
 from pydantic import Field, HttpUrl, model_validator
 
 from game_collections.models import NonEmptyString, StrictModel
+from game_collections.sources.timestamps import ScrapedTimestamp
+from game_collections.versioning import LEGACY_VERSION, SchemaDateVersion, Versioned
+
+
+GMG_V1 = SchemaDateVersion(2026, 7, 6)
+GMG_V2 = SchemaDateVersion(2026, 9, 11, 14, 30)
+GmgVersions = Literal[LEGACY_VERSION, GMG_V1, GMG_V2]
+GmgCurrentVersion = Literal[GMG_V2]
+CURRENT_VERSION: GmgCurrentVersion = GMG_V2
 
 
 class GmgPrice(StrictModel):
@@ -86,19 +95,21 @@ class GmgTier(StrictModel):
 class GmgDates(StrictModel):
     """Offer availability and observation timestamps.
 
-    The bundles index only exposes `data-end-date="YYYY-MM-DDTHH:MM"` with no
-    UTC offset. That's assumed to already be UTC (unconfirmed against the
-    server) rather than silently guessing a different offset - end is kept
-    optional so a future value that doesn't parse this way fails loudly
-    instead of being coerced.
+    `start`: no known source on GMG's pages - left `None`, never fabricated. `end`
+    comes from the bundles index page's own `data-end-date="YYYY-MM-DDTHH:MM"` (no
+    explicit UTC offset - assumed to already be UTC, unconfirmed against the server,
+    hence a confidence below 1.0 rather than 1.0). `first_seen` is set once, the first
+    time this bundle is ever archived, and never overwritten afterward.
     """
 
-    end: datetime | None = None
+    start: ScrapedTimestamp | None = None
+    end: ScrapedTimestamp | None = None
+    first_seen: datetime | None = None
     crawled: datetime
 
     @model_validator(mode="after")
     def validate_aware(self) -> Self:
-        for value in (self.end, self.crawled):
+        for value in (self.first_seen, self.crawled):
             if value is not None and value.tzinfo is None:
                 raise ValueError("Green Man Gaming timestamps must include a timezone")
             # end if
@@ -112,7 +123,6 @@ class GmgDates(StrictModel):
 class GmgArchive(StrictModel):
     """Normalized metadata for one Green Man Gaming bundle offer."""
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     slug: NonEmptyString
     url: HttpUrl
     name: NonEmptyString
@@ -121,3 +131,6 @@ class GmgArchive(StrictModel):
     tiers: list[GmgTier] = Field(min_length=1)
 
 # end class GmgArchive
+
+
+VersionedGmgArchive = Versioned[GmgCurrentVersion, GmgArchive]

@@ -270,3 +270,16 @@ One place naming every crawler, reused for: `ScrapedTimestamp.source` (§1), the
 - `uv run game-collections schema` then `git diff --stat schemas/` to confirm every archive schema (plus the new shared envelope/timestamp schema) regenerates cleanly; `tests/test_schema.py` also catches drift.
 - `uv run game-collections migrate schema` (dry-run, no filters) against the real repo to sanity-check the reported plan/grouping/commit-message rendering before ever passing `--apply`/`--git`.
 - Manually run one real `scrape dekudeals --git --url <a currently-archived bundle>` against a scratch clone to confirm the commit shape: legacy-envelope commit(s) for the touched files, then the ordinary crawl-content commit, in that order.
+
+## Todos
+
+- [x] Add SourceName shared enum
+- [x] Add versioning.py (SchemaDateVersion, Versioned, trajectory)
+- [x] Add ScrapedTimestamp + merge_scraped_timestamp
+- [x] Wire per-source models to envelope + confidence dates
+- [x] Update load_cached_archive + write helpers for envelope
+- [x] Fuzzy + content-similarity dedup in existing_list_match
+- [x] Wire migration wavefront into scrape commands + git_ops
+- [x] Add standalone `migrate schema` CLI command
+- [x] Regenerate schemas + update docs
+- [x] Write/adjust tests and run full suite

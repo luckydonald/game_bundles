@@ -11,11 +11,15 @@ from game_collections.sources.dailyindiegame.crawler import (
     write_dig_offer,
 )
 from game_collections.sources.dailyindiegame.models import (
+    CURRENT_VERSION,
+    DIG_V1,
     DigArchive,
     DigDates,
     DigItem,
     DigPrice,
 )
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 def _price(value: float) -> DigPrice:
@@ -25,13 +29,12 @@ def _price(value: float) -> DigPrice:
 
 def _offer() -> CrawledDigOffer:
     archive = DigArchive(
-        schema=1,
         machine_name="2351",
         url="https://www.dailyindiegame.com/site_weeklybundle_2351.html",
         name="DIG Bundle 2351 - ADULT",
         is_adult=True,
         dates=DigDates(
-            end=datetime(2026, 8, 1, 3, 9, 13, tzinfo=UTC),
+            end=build_scraped_timestamp(datetime(2026, 8, 1, 3, 9, 13, tzinfo=UTC), SourceName.DAILYINDIEGAME, 0.5),
             crawled=datetime(2026, 7, 12, tzinfo=UTC),
         ),
         game_count=2,
@@ -84,8 +87,8 @@ def test_writer_creates_archive_and_dedupes_shared_steam_ids(tmp_path: Path) -> 
     ]
     assert str(loaded.data.references[0].url) == "https://www.dailyindiegame.com/site_weeklybundle_2351.html"
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    assert metadata["machine_name"] == "2351"
-    assert source_path.read_text(encoding="utf-8").startswith('{\n  "alpha": 1,')
+    assert metadata["data"]["machine_name"] == "2351"
+    assert json.loads(source_path.read_text(encoding="utf-8"))["data"] == {"alpha": 1, "zeta": 2}
 # end def test_writer_creates_archive_and_dedupes_shared_steam_ids
 
 
@@ -210,10 +213,9 @@ def test_crawl_refetches_when_cached_schema_is_stale(tmp_path: Path) -> None:
     archive_root = tmp_path / "archives"
     write_dig_offer(_offer(), tmp_path / "lists", archive_root, tmp_path)
     metadata_path = archive_root / "dailyindiegame/bundle/2351/metadata.json"
-    metadata_path.write_text(
-        metadata_path.read_text(encoding="utf-8").replace('"schema": 1', '"schema": 2'),
-        encoding="utf-8",
-    )
+    stale = json.loads(metadata_path.read_text(encoding="utf-8"))
+    stale["version"] = list(DIG_V1)
+    metadata_path.write_text(json.dumps(stale), encoding="utf-8")
     pages = {
         "https://www.dailyindiegame.com/site_weeklybundle_2351.html": BUNDLE_PAGE,
         "https://www.dailyindiegame.com/site_gamelisting_4543360.html": GAME_LISTING_PAGE,

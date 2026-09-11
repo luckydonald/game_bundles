@@ -2,7 +2,7 @@
   "$defs": {
     "DigDates": {
       "additionalProperties": false,
-      "description": "Offer observation timestamp and its estimated expiry.",
+      "description": "Offer observation timestamp and its estimated expiry.\n\n`start`: no known source on DIG's pages - left `None`, never fabricated. `end` is\n*computed* (`crawled + parsed \"ends in Xd:Xh:Xm:Xs\"` countdown) - real countdown\ntext, but a derived, second-precision-drifting estimate, hence a confidence well\nbelow 1.0. `first_seen` is set once, the first time this bundle is ever archived,\nand never overwritten afterward.",
       "properties": {
         "crawled": {
           "format": "date-time",
@@ -10,6 +10,17 @@
           "type": "string"
         },
         "end": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "first_seen": {
           "anyOf": [
             {
               "format": "date-time",
@@ -20,7 +31,18 @@
             }
           ],
           "default": null,
-          "title": "End"
+          "title": "First Seen"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -140,6 +162,50 @@
       ],
       "title": "DigPrice",
       "type": "object"
+    },
+    "ScrapedTimestamp": {
+      "additionalProperties": false,
+      "description": "One `start`/`end` value as actually derived from a source, plus how sure we are.\n\n`iso` preserves whatever precision the source gave us (date-only, or date+time\ndown to minute/second/fraction, always with an explicit UTC offset unless it's\ndate-only); `timestamp` is the same instant as a unix epoch float, cross-checked\nagainst `iso` on construction so the two can never silently drift apart.",
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "iso": {
+          "minLength": 1,
+          "title": "Iso",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceName"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "number"
+        }
+      },
+      "required": [
+        "iso",
+        "timestamp",
+        "confidence",
+        "source"
+      ],
+      "title": "ScrapedTimestamp",
+      "type": "object"
+    },
+    "SourceName": {
+      "description": "One entry per `sources/<name>/` crawler package.",
+      "enum": [
+        "humblebundle",
+        "greenmangaming",
+        "dailyindiegame",
+        "isthereanydeal",
+        "dekudeals"
+      ],
+      "title": "SourceName",
+      "type": "string"
     }
   },
   "additionalProperties": false,
@@ -193,11 +259,6 @@
       "title": "Savings Percent",
       "type": "integer"
     },
-    "schema": {
-      "const": 1,
-      "title": "Schema",
-      "type": "integer"
-    },
     "total_value": {
       "$ref": "#/$defs/DigPrice"
     },
@@ -210,7 +271,6 @@
     }
   },
   "required": [
-    "schema",
     "machine_name",
     "url",
     "name",

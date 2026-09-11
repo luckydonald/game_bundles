@@ -18,6 +18,14 @@ import yaml
 from game_collections.apply.config import ApplySelection, DEFAULT_SELECTION_CONFIG_PATH, SelectionLoadError, excluded_list_ids, load_selection, save_selection
 from game_collections.lists import ListLoadError, LoadedGameList, discover_game_lists, expand_list_tiers
 from game_collections.migrations import bundle_variations
+from game_collections.migrations.schema_versions import (
+    FileKind,
+    apply_migration_group,
+    classify_path,
+    commit_message,
+    discover_archive_paths,
+    plan_migrations,
+)
 from game_collections.migrations.tiers import (
     TierMigrationError,
     apply_migration_step,
@@ -55,6 +63,7 @@ from game_collections.schema import write_isthereanydeal_schema
 from game_collections.schema import write_isthereanydeal_game_schema
 from game_collections.schema import write_dekudeals_schema
 from game_collections.search import CompletionMode, Provider, complete_game_list, completion_mode, selected_providers
+from game_collections.sources.names import SourceName
 from game_collections.sources.dailyindiegame.crawler import (
     CrawledDigOffer,
     DigBrowserClient,
@@ -128,6 +137,29 @@ scrape_app = typer.Typer(no_args_is_help=True)
 app.add_typer(scrape_app, name="scrape")
 migrate_app = typer.Typer(no_args_is_help=True)
 app.add_typer(migrate_app, name="migrate")
+
+
+def _migrate_source_archives(source: SourceName, archive_root: Path, repository_root: Path, git_session: "git_ops.ScrapeGitSession") -> None:
+    """Bring every archived `metadata.json`/`source.json` for `source` up to its current version.
+
+    Run once at the top of every `scrape` command, before any of the crawl's own
+    fetch/write calls - see "Confidence-scored dates and the version envelope" in
+    `sources/README.md`. Produces zero or more schema-migration commits (one per
+    version step actually applied, unbatched - see the commit-shape rules there) ahead
+    of the run's own single crawl-content commit; a no-op, no-commit pass when every
+    archive is already current.
+    """
+    candidates = discover_archive_paths([archive_root / source.value])
+    for group, snapshots in plan_migrations(candidates):
+        apply_migration_group(group, snapshots)
+        message = commit_message(group)
+        typer.echo(f"{message} ({len(group.paths)} file(s))")
+        if git_session.enabled:
+            relative_paths = [str(group_path.relative_to(repository_root)) for group_path in group.paths]
+            git_ops.commit_changed_paths(repository_root, relative_paths, message)
+        # end if
+    # end for
+# end def _migrate_source_archives
 
 
 @scrape_app.callback()
@@ -309,6 +341,87 @@ def migrate_bundle_variations_command(
         typer.echo(f"Dry run only: {changed} bundle director(y/ies) would merge. Pass --apply to write.")
     # end if
 # end def migrate_bundle_variations_command
+
+
+@migrate_app.command("schema")
+def migrate_schema_command(
+    path: Annotated[
+        list[Path] | None,
+        typer.Option("--path", help="A directory (recursed) or file to migrate; repeatable. Defaults to ./archives."),
+    ] = None,
+    file_type: Annotated[
+        list[str] | None,
+        typer.Option("--type", help="metadata|source|bundle; repeatable (AND'd). Defaults to metadata+source."),
+    ] = None,
+    source: Annotated[
+        list[SourceName] | None,
+        typer.Option("--source", help="Restrict to one or more crawlers; repeatable (AND'd, i.e. any of these)."),
+    ] = None,
+    apply: Annotated[bool, typer.Option("--apply", help="Write changes without committing.")] = False,
+    dry_run: Annotated[bool, typer.Option("--dry-run", help="Explicit dry-run; the default, invalid with --apply/--git.")] = False,
+    git: Annotated[
+        bool,
+        typer.Option("--git", help="Write and commit changes, batched per version step (implies --apply)."),
+    ] = False,
+    git_style: Annotated[str, typer.Option("--git-style")] = "manual",
+) -> None:
+    """Migrate every outstanding archive to its current version envelope/shape."""
+    if dry_run and (apply or git):
+        typer.echo("--dry-run is invalid together with --apply/--git", err=True)
+        raise typer.Exit(2)
+    # end if
+    if git_style not in {"auto", "manual"}:
+        typer.echo("--git-style must be 'auto' or 'manual'", err=True)
+        raise typer.Exit(2)
+    # end if
+    apply = apply or git
+
+    allowed_kinds: set[FileKind] = {kind for kind in (file_type or ["metadata", "source"]) if kind in ("metadata", "source")}
+    allowed_sources = set(source) if source else None
+    roots = path or [Path.cwd() / "archives"]
+
+    repository_root = Path.cwd().resolve()
+    git_session = git_ops.begin_scrape_git_session(repository_root, git, git_style)
+    try:
+        candidates = discover_archive_paths(roots, allowed_kinds)
+        if allowed_sources is not None:
+            candidates = [
+                candidate
+                for candidate in candidates
+                if (classified := classify_path(candidate)) is not None and classified[0] in allowed_sources
+            ]
+        # end if
+
+        total_files = 0
+        for group, snapshots in plan_migrations(candidates):
+            total_files += len(group.paths)
+            message = commit_message(group)
+            if not apply:
+                typer.echo(f"would migrate ({len(group.paths)} file(s)): {message}")
+                for group_path in group.paths:
+                    typer.echo(f"  {group_path.relative_to(repository_root) if group_path.is_relative_to(repository_root) else group_path}")
+                # end for
+                continue
+            # end if
+            apply_migration_group(group, snapshots)
+            typer.echo(f"migrated ({len(group.paths)} file(s)): {message}")
+            if git:
+                relative_paths = [str(group_path.relative_to(repository_root)) for group_path in group.paths]
+                git_ops.commit_changed_paths(repository_root, relative_paths, message)
+            # end if
+        # end for
+        if apply:
+            typer.echo(f"Migrated {total_files} file(s).")
+        else:
+            typer.echo(f"Dry run only: {total_files} file(s) would migrate. Pass --apply to write.")
+        # end if
+    finally:
+        if git_session.enabled and git_session.stashed:
+            assert git_session.pre_crawl_head is not None
+            git_ops.restore_autostash(repository_root, git_session.pre_crawl_head)
+        # end if
+    # end try
+# end def migrate_schema_command
 
 
 @app.command("schema")
@@ -726,6 +839,7 @@ def scrape_humblebundle_command(
     """Archive current Humble Choice and active Games bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.HUMBLEBUNDLE, archive_root, repository_root, git_session)
     client = HumbleHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
@@ -827,6 +941,7 @@ def scrape_dailyindiegame_command(
     """Archive currently listed DailyIndieGame Steam bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.DAILYINDIEGAME, archive_root, repository_root, git_session)
     client = DigBrowserClient()
     written_count = 0
 
@@ -900,6 +1015,7 @@ def scrape_greenmangaming_command(
     """Archive currently listed Green Man Gaming video-games bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.GREENMANGAMING, archive_root, repository_root, git_session)
     client = GmgHttpClient()
     steamdb_fetcher = _LazySteamDbFetcher()
     choose = (
@@ -1005,6 +1121,7 @@ def scrape_isthereanydeal_command(
     """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.ISTHEREANYDEAL, archive_root, repository_root, git_session)
     client = ItadHttpClient()
     written_count = 0
     unresolved_count = 0
@@ -1096,6 +1213,7 @@ def scrape_dekudeals_command(
     """Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.DEKUDEALS, archive_root, repository_root, git_session)
     client = DekuHttpClient()
     written_count = 0
 

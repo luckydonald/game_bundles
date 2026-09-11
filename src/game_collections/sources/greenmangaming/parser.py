@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import json
 import re
+from dataclasses import dataclass
 from datetime import UTC, datetime
 from html.parser import HTMLParser
 from typing import Any
@@ -19,6 +20,8 @@ from game_collections.sources.greenmangaming.models import (
     GmgTier,
 )
 from game_collections.sources.greenmangaming.resolver import redeem_on_for_drm
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 GMG_ROOT = "https://www.greenmangaming.com/"
@@ -60,14 +63,15 @@ def _strip_tags(value: str) -> str:
 
 
 class _ProductCardParser(HTMLParser):
-    """Collect (category, detail_url) pairs from the bundles index page."""
+    """Collect (category, end_date, detail_url) triples from the bundles index page."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self.cards: list[tuple[str, str]] = []
+        self.cards: list[tuple[str, str | None, str]] = []
         self._depth = 0
         self._card_depth: int | None = None
         self._category: str | None = None
+        self._end_date: str | None = None
         self._href: str | None = None
     # end def __init__
 
@@ -79,6 +83,7 @@ class _ProductCardParser(HTMLParser):
             if self._card_depth is None and "product-card" in classes:
                 self._card_depth = self._depth
                 self._category = values.get("data-category")
+                self._end_date = values.get("data-end-date")
                 self._href = None
             # end if
         # end if
@@ -96,10 +101,11 @@ class _ProductCardParser(HTMLParser):
         # end if
         if self._card_depth is not None and self._depth == self._card_depth:
             if self._category is not None and self._href is not None:
-                self.cards.append((self._category, self._href))
+                self.cards.append((self._category, self._end_date, self._href))
             # end if
             self._card_depth = None
             self._category = None
+            self._end_date = None
             self._href = None
         # end if
         self._depth -= 1
@@ -108,16 +114,32 @@ class _ProductCardParser(HTMLParser):
 # end class _ProductCardParser
 
 
-def parse_bundle_index_page(html: str) -> list[str]:
-    """Return the video-games bundle slugs currently listed on the index."""
+@dataclass(frozen=True, slots=True)
+class GmgIndexEntry:
+    """One bundle summary on the bundles index page.
+
+    `end` is the index page's own `data-end-date="YYYY-MM-DDTHH:MM"` (no explicit UTC
+    offset - assumed to already be UTC, unconfirmed against the server), parsed here so
+    the crawler can use it as `GmgDates.end` - the bundle detail page itself never
+    reports an end date at all.
+    """
+
+    slug: str
+    end: datetime | None
+
+# end class GmgIndexEntry
+
+
+def parse_bundle_index_page(html: str) -> list[GmgIndexEntry]:
+    """Return every video-games bundle summary currently listed on the index."""
     parser = _ProductCardParser()
     parser.feed(html)
     if not parser.cards:
         raise GmgParseError("bundles index page has no product cards")
     # end if
-    slugs: list[str] = []
+    entries: list[GmgIndexEntry] = []
     seen: set[str] = set()
-    for category, href in parser.cards:
+    for category, end_date, href in parser.cards:
         if category != RELEVANT_CATEGORY:
             continue
         # end if
@@ -131,9 +153,10 @@ def parse_bundle_index_page(html: str) -> list[str]:
             continue
         # end if
         seen.add(slug)
-        slugs.append(slug)
+        end = datetime.fromisoformat(end_date).replace(tzinfo=UTC) if end_date else None
+        entries.append(GmgIndexEntry(slug=slug, end=end))
     # end for
-    return slugs
+    return entries
 # end def parse_bundle_index_page
 
 
@@ -159,8 +182,14 @@ def _tier_price(raw: str, currency_code: str, label: str) -> GmgPrice:
 # end def _tier_price
 
 
-def parse_bundle_page(html: str, slug: str, crawled: datetime) -> tuple[GmgArchive, dict[str, Any]]:
+def parse_bundle_page(
+    html: str, slug: str, crawled: datetime, end: datetime | None = None
+) -> tuple[GmgArchive, dict[str, Any]]:
     """Normalize one Green Man Gaming bundle detail page.
+
+    `end` (when known - from the bundles index page's own `data-end-date`, since the
+    detail page itself never reports one) becomes `GmgDates.end` at the wired-in
+    confidence for this source.
 
     Every item on the default render is shown "unlocked", tagged with the
     `tier_name` (from its `hx-vals`) it originally belongs to - so tiers are
@@ -266,12 +295,14 @@ def parse_bundle_page(html: str, slug: str, crawled: datetime) -> tuple[GmgArchi
     # end if
 
     archive = GmgArchive(
-        schema=1,
         slug=slug,
         url=bundle_url(slug),
         name=name,
         currency_code=currency_code,
-        dates=GmgDates(end=None, crawled=crawled.astimezone(UTC)),
+        dates=GmgDates(
+            end=build_scraped_timestamp(end, SourceName.GREENMANGAMING, 0.7) if end is not None else None,
+            crawled=crawled.astimezone(UTC),
+        ),
         tiers=tiers,
     )
     return archive, {"title_text": title_match.group(0)}

@@ -2,7 +2,7 @@
   "$defs": {
     "ItadDates": {
       "additionalProperties": false,
-      "description": "Offer availability and observation timestamps.",
+      "description": "Offer availability and observation timestamps.\n\n`start`/`expiry` carry a confidence + provenance alongside the value itself (see\n`ScrapedTimestamp`) - both come from the discovery-list API's own `start`/`expiry`\nfields, confidence 1.0, whenever present. `first_seen` is set once, the first time\nthis bundle is ever archived, and never overwritten afterward.",
       "properties": {
         "crawled": {
           "format": "date-time",
@@ -12,17 +12,15 @@
         "expiry": {
           "anyOf": [
             {
-              "format": "date-time",
-              "type": "string"
+              "$ref": "#/$defs/ScrapedTimestamp"
             },
             {
               "type": "null"
             }
           ],
-          "default": null,
-          "title": "Expiry"
+          "default": null
         },
-        "start": {
+        "first_seen": {
           "anyOf": [
             {
               "format": "date-time",
@@ -33,7 +31,18 @@
             }
           ],
           "default": null,
-          "title": "Start"
+          "title": "First Seen"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         }
       },
       "required": [
@@ -41,6 +50,50 @@
       ],
       "title": "ItadDates",
       "type": "object"
+    },
+    "ScrapedTimestamp": {
+      "additionalProperties": false,
+      "description": "One `start`/`end` value as actually derived from a source, plus how sure we are.\n\n`iso` preserves whatever precision the source gave us (date-only, or date+time\ndown to minute/second/fraction, always with an explicit UTC offset unless it's\ndate-only); `timestamp` is the same instant as a unix epoch float, cross-checked\nagainst `iso` on construction so the two can never silently drift apart.",
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "iso": {
+          "minLength": 1,
+          "title": "Iso",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceName"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "number"
+        }
+      },
+      "required": [
+        "iso",
+        "timestamp",
+        "confidence",
+        "source"
+      ],
+      "title": "ScrapedTimestamp",
+      "type": "object"
+    },
+    "SourceName": {
+      "description": "One entry per `sources/<name>/` crawler package.",
+      "enum": [
+        "humblebundle",
+        "greenmangaming",
+        "dailyindiegame",
+        "isthereanydeal",
+        "dekudeals"
+      ],
+      "title": "SourceName",
+      "type": "string"
     }
   },
   "additionalProperties": false,
@@ -71,11 +124,6 @@
       "title": "Ids",
       "type": "array"
     },
-    "schema": {
-      "const": 1,
-      "title": "Schema",
-      "type": "integer"
-    },
     "slug": {
       "minLength": 1,
       "title": "Slug",
@@ -95,7 +143,6 @@
     }
   },
   "required": [
-    "schema",
     "slug",
     "title",
     "ids",

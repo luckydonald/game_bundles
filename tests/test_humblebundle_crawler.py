@@ -13,6 +13,7 @@ from game_collections.sources.humblebundle.crawler import (
     write_humble_offer,
 )
 from game_collections.sources.humblebundle.models import (
+    HUMBLE_V1,
     HumbleArchive,
     HumbleChoicePickOption,
     HumbleDates,
@@ -22,6 +23,8 @@ from game_collections.sources.humblebundle.models import (
     HumbleTier,
 )
 from game_collections.sources.humblebundle.resolver import HumbleResolutionMap, StorefrontResolver
+from game_collections.sources.names import SourceName
+from game_collections.sources.timestamps import build_scraped_timestamp
 
 
 def _offer(kind: str = "bundle") -> CrawledHumbleOffer:
@@ -42,7 +45,6 @@ def _offer(kind: str = "bundle") -> CrawledHumbleOffer:
     )
     if kind == "choice":
         archive = HumbleArchive(
-            schema=1,
             kind="choice",
             machine_name="july_2026_choice",
             url="https://www.humblebundle.com/membership",
@@ -61,7 +63,6 @@ def _offer(kind: str = "bundle") -> CrawledHumbleOffer:
         )
     else:
         archive = HumbleArchive(
-            schema=1,
             kind="bundle",
             machine_name="sample_bundle",
             url="https://www.humblebundle.com/games/sample-bundle",
@@ -69,8 +70,8 @@ def _offer(kind: str = "bundle") -> CrawledHumbleOffer:
             headline="Play games.",
             description="Bundle.",
             dates=HumbleDates(
-                start=datetime(2026, 7, 1, 18, tzinfo=UTC),
-                end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+                start=build_scraped_timestamp(datetime(2026, 7, 1, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
+                end=build_scraped_timestamp(datetime(2026, 7, 22, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
                 crawled=datetime(2026, 7, 12, tzinfo=UTC),
             ),
             tiers=[
@@ -116,11 +117,11 @@ def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> No
     assert loaded.data.references[2].path == "../../../archives/" + bundle_root + "/source.json"
     assert [(game.name, game.ids) for game in loaded.data.games] == [("Sample Game", ["steam:42"])]
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    assert [item["title"] for item in metadata["tiers"][0]["items"]] == [
+    assert [item["title"] for item in metadata["data"]["tiers"][0]["items"]] == [
         "Sample Game",
         "Sample Coupon",
     ]
-    assert source_path.read_text(encoding="utf-8").startswith('{\n  "alpha": 1,')
+    assert json.loads(source_path.read_text(encoding="utf-8"))["data"] == {"alpha": 1, "zeta": 2}
 # end def test_writer_creates_archive_and_games_only_bundle_list
 
 
@@ -143,7 +144,6 @@ def test_writer_splits_a_dlc_pack_item_into_grouped_games(tmp_path: Path) -> Non
         ),
     )
     archive = HumbleArchive(
-        schema=1,
         kind="bundle",
         machine_name="sample_bundle",
         url="https://www.humblebundle.com/games/sample-bundle",
@@ -151,8 +151,8 @@ def test_writer_splits_a_dlc_pack_item_into_grouped_games(tmp_path: Path) -> Non
         headline="Play games.",
         description="Bundle.",
         dates=HumbleDates(
-            start=datetime(2026, 7, 1, 18, tzinfo=UTC),
-            end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+            start=build_scraped_timestamp(datetime(2026, 7, 1, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
+            end=build_scraped_timestamp(datetime(2026, 7, 22, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
             crawled=datetime(2026, 7, 12, tzinfo=UTC),
         ),
         tiers=[
@@ -462,7 +462,7 @@ def test_writer_falls_back_to_bundle_end_date(tmp_path: Path) -> None:
     archive = offer.archive.model_copy(
         update={
             "dates": HumbleDates(
-                end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+                end=build_scraped_timestamp(datetime(2026, 7, 22, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
                 crawled=datetime(2026, 7, 12, tzinfo=UTC),
             )
         }
@@ -566,7 +566,7 @@ def test_crawl_skips_resolution_for_a_cached_offer(tmp_path: Path) -> None:
     cached_archive = offer.archive.model_copy(
         update={
             "dates": HumbleDates(
-                end=datetime(2026, 7, 22, 18, tzinfo=UTC),
+                end=build_scraped_timestamp(datetime(2026, 7, 22, 18, tzinfo=UTC), SourceName.HUMBLEBUNDLE, 1.0),
                 crawled=datetime(2026, 7, 12, tzinfo=UTC),
             )
         }

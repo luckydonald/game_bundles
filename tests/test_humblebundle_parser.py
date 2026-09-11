@@ -132,7 +132,8 @@ def test_bundle_page_normalizes_metadata_and_cumulative_tiers() -> None:
     assert archive.headline == "Play games. Help people."
     assert archive.description.startswith("A *bundle* description.")
     assert archive.key_expiration_text == "Keys expire. Please redeem before July 17th, 2027."
-    assert archive.dates.start == datetime(2026, 7, 1, 18, tzinfo=UTC)
+    assert archive.dates.start is not None
+    assert archive.dates.start.timestamp == datetime(2026, 7, 1, 18, tzinfo=UTC).timestamp()
     assert [tier.name for tier in archive.tiers] == ["Entire 2 Item Bundle", "1 Item Bundle"]
     assert archive.tiers[0].minimum_price is not None
     assert archive.tiers[0].minimum_price.model_dump() == {
