@@ -55,7 +55,28 @@ class SchemaDateVersion(NamedTuple):
         return (self.year, self.month, self.day, self.hour or 0, self.minute or 0, self.second or 0, self.fraction or 0.0)
     # end def sort_key
 
+    def __lt__(self, other: object) -> bool:
+        if not isinstance(other, SchemaDateVersion):
+            return NotImplemented
+        # end if
+        return self.sort_key() < other.sort_key()
+    # end def __lt__
+
+    def __le__(self, other: object) -> bool:
+        if not isinstance(other, SchemaDateVersion):
+            return NotImplemented
+        # end if
+        return self.sort_key() <= other.sort_key()
+    # end def __le__
+
 # end class SchemaDateVersion
+
+
+# The version type for files that never need date-based precision - human-edited
+# `lists/**/*.yml` files, whose `schema:` field stays a plain, readable int (1, 2, ...)
+# rather than a `SchemaDateVersion` tuple. Plain `int` already supports `<`/`>=`
+# natively, so it plugs straight into `trajectory()`/the wavefront driver below.
+SchemaIntVersion = int
 
 
 def _validate_precision(value: SchemaDateVersion) -> SchemaDateVersion:
@@ -120,27 +141,31 @@ def peek_version(raw: Mapping[str, Any]) -> tuple[SchemaDateVersion, Any]:
 MigrationStep = tuple[SchemaDateVersion, Callable[[Any], Any]]
 
 
-def trajectory(
-    initial_version: SchemaDateVersion,
-    initial_data: Any,
-    steps: Sequence[MigrationStep],
-) -> Iterator[Versioned[SchemaDateVersion, Any]]:
-    """Yield one `Versioned` snapshot per outstanding migration step for one file, lazily.
+def trajectory[VERSION, DATA](
+    initial_version: VERSION,
+    initial_data: DATA,
+    steps: Sequence[tuple[VERSION, Callable[[DATA], DATA]]],
+) -> Iterator[Versioned[VERSION, DATA]]:
+    """Yield one `Versioned` snapshot per outstanding migration step for one unit, lazily.
 
-    `steps` must be sorted ascending by target version. No `current_version` parameter:
-    every step whose target is ahead of the file's own version runs, in the list's own
-    order, and "latest" is simply the list's last entry. Returning a generator (rather
-    than the single collapsed end state) lets an outer wavefront driver advance many
-    files exactly one step at a time and group them by "which step they're on" for
-    commit purposes, without ever materializing a file's whole future trajectory.
+    Generic over any `VERSION` type supporting `<`/`>=` (both `SchemaDateVersion` and
+    plain `SchemaIntVersion` qualify) and any `DATA` type - a unit need not be "one
+    file"; see `migrations/list_versions.py`'s `BundleUnitState` for a unit whose DATA
+    both renames and grows over several steps. `steps` must be sorted ascending by
+    target version. No `current_version` parameter: every step whose target is ahead of
+    the unit's own version runs, in the list's own order, and "latest" is simply the
+    list's last entry. Returning a generator (rather than the single collapsed end
+    state) lets an outer wavefront driver advance many units exactly one step at a time
+    and group them by "which step they're on" for commit purposes, without ever
+    materializing a unit's whole future trajectory.
     """
     version, data = initial_version, initial_data
     for target_version, migrate_fn in steps:
-        if version.sort_key() >= target_version.sort_key():
+        if version >= target_version:
             continue
         # end if
         data = migrate_fn(data)
         version = target_version
-        yield Versioned[SchemaDateVersion, Any](version=version, data=data)
+        yield Versioned[VERSION, DATA](version=version, data=data)
     # end for
 # end def trajectory

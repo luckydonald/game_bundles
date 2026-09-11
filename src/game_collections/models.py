@@ -7,6 +7,15 @@ from typing import Annotated, Literal, Self
 
 from pydantic import AnyHttpUrl, BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
+from game_collections.versioning import SchemaIntVersion, Versioned
+
+
+GAMELIST_V1: SchemaIntVersion = 1
+GAMELIST_V2: SchemaIntVersion = 2
+GameListVersions = Literal[GAMELIST_V1, GAMELIST_V2]
+GameListCurrentVersion = Literal[GAMELIST_V2]
+CURRENT_GAMELIST_VERSION: GameListCurrentVersion = GAMELIST_V2
+
 
 # The trailing character class matches the middle one minus "/" (never end a path
 # segment in a separator) rather than being alnum-only, since flattening a bundle
@@ -162,9 +171,13 @@ def duplicate_qualified_ids(games: list[Game]) -> list[str]:
 
 
 class GameList(StrictModel):
-    """The complete contents of one ``lists/**/*.yml`` file."""
+    """The complete, current-shape (v2) contents of one ``lists/**/*.yml`` file.
 
-    schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
+    Versioning lives outside this model - see `GAMELIST_V1`/`GAMELIST_V2`/`GameListV1`/
+    `VersionedGameList` above and `migrations/list_versions.py` - a v1 file (one
+    not-yet-merged tier/pick-variation) validates as `GameListV1` instead, never as this.
+    """
+
     name: NonEmptyString
     # Purchase variations ("tiers") this bundle offers, ordered by rank. Empty for lists
     # that aren't a multi-variation bundle. When present, every Game.tiers value must
@@ -229,6 +242,29 @@ class GameList(StrictModel):
     # end def validate_games
 
 # end class GameList
+
+
+VersionedGameList = Versioned[GameListCurrentVersion, GameList]
+
+
+class GameListV1(StrictModel):
+    """The legacy (v1) shape of *one* not-yet-merged tier/pick-variation file.
+
+    One file among possibly several siblings in an unmigrated bundle/choice directory
+    (see `migrations/list_versions.py`) validates as this, not `GameList` - it's never
+    itself multi-tier (no `tiers`/`pick_quota`), and may still carry the legacy scalar
+    `tier` field `GameList` no longer accepts, recording which purchase variation this
+    file represents before the directory's siblings are merged into one v2 file.
+    """
+
+    name: NonEmptyString
+    tier: Annotated[int, Field(ge=1)] | None = None
+    references: list[Reference] = Field(default_factory=list)
+    crawlers: list[NonEmptyString] = Field(default_factory=list)
+    games: list[Game] = Field(min_length=1)
+    invalid: list[Game] = Field(default_factory=list)
+
+# end class GameListV1
 
 
 def validate_list_id(value: str) -> str:

@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, ValidationError
 from rapidfuzz import fuzz
 
-from game_collections.models import Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
+from game_collections.models import CURRENT_GAMELIST_VERSION, Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
 from game_collections.sources.names import SourceName
 from game_collections.sources.storefronts import normalized_title
 from game_collections.versioning import SchemaDateVersion, Versioned, peek_version
@@ -360,9 +360,15 @@ def merge_tiered_games(
 
 
 def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path) -> str:
-    """Render one game list with a relative IDE schema reference comment."""
+    """Render one game list with a relative IDE schema reference comment.
+
+    `schema` is stamped as `CURRENT_GAMELIST_VERSION` - it's no longer a `GameList`
+    field (see `models.py`'s "Confidence-scored dates and the version envelope"-style
+    versioning for list files), just a flat key reinserted at the front of the dumped
+    mapping so on-disk files keep looking exactly like they always have.
+    """
     schema_path = os.path.relpath(repository_root / "schemas/game-list.schema.json", path.parent)
-    value = game_list.model_dump(by_alias=True, mode="json", exclude_none=True)
+    value: dict[str, Any] = {"schema": CURRENT_GAMELIST_VERSION, **game_list.model_dump(by_alias=True, mode="json", exclude_none=True)}
     if not value.get("invalid"):
         value.pop("invalid", None)
     # end if
@@ -400,13 +406,28 @@ def _strip_list_name(path: Path) -> str:
 # end def _strip_list_name
 
 
+def _load_raw_game_list(path: Path) -> GameList:
+    """Validate one list file's raw YAML as `GameList`, discarding its `schema` key.
+
+    `schema` is a migration-engine concern (see `models.py`/`migrations/list_versions.py`),
+    not part of the runtime-validated shape - mirrors `lists.load_game_list`'s own
+    tolerance so a not-yet-migrated (schema 1) file still reads fine here too.
+    """
+    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if isinstance(raw, dict):
+        raw = {key: value for key, value in raw.items() if key != "schema"}
+    # end if
+    return GameList.model_validate(raw)
+# end def _load_raw_game_list
+
+
 def _content_overlap(fresh_games: list[Game], candidate: Path) -> float:
     """Fraction of `fresh_games` that resolve against `candidate`'s own roster."""
     list_paths = sorted(candidate.glob("*.yml")) if candidate.is_dir() else [candidate]
     roster: list[Game] = []
     for path in list_paths:
         try:
-            roster.extend(GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8"))).games)
+            roster.extend(_load_raw_game_list(path).games)
         except (OSError, ValueError, ValidationError):
             continue
         # end try
@@ -530,7 +551,7 @@ def backfill_existing_lists(
     loaded: list[tuple[Path, GameList]] = []
     for path in list_paths:
         try:
-            loaded.append((path, GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8")))))
+            loaded.append((path, _load_raw_game_list(path)))
         except (OSError, ValueError, ValidationError):
             continue
         # end try
@@ -569,7 +590,6 @@ def backfill_existing_lists(
         # end for
 
         fresh_stub = GameList(
-            schema=1,
             name=game_list.name,
             references=[
                 bundle_reference,

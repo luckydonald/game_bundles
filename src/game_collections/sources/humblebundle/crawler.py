@@ -336,7 +336,6 @@ def write_humble_offer(
             )
         # end if
         game_list = GameList(
-            schema=1,
             name=name,
             tiers=tier_definitions,
             pick_quota=pick_quota,
@@ -392,7 +391,6 @@ def write_humble_offer(
         )
     # end if
     game_list = GameList(
-        schema=1,
         name=name,
         tiers=tier_definitions,
         references=[

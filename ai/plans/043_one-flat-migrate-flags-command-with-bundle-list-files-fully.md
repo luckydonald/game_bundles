@@ -80,3 +80,23 @@ Every `GameList(schema=1, ...)` construction across every crawler/resolver/migra
 - New tests: `GameListV1`/`GameList` round-trip through the full step sequence for (a) a single already-conventional `bundle.yml` (rename step is a no-op, one tag-step, no merge steps), (b) a multi-tier directory needing both rename and several merge steps, verifying each intermediate `BundleUnitState` along the way (not just the final result), (c) a `choice/<key>/` directory (no rename step involved, merge steps still apply), (d) a flat non-directory list file (schema-bump-only, single trivial step) - each against real fixture content mirroring `tests/test_migrations_tiers.py`/`test_migrations_bundle_variations.py`'s existing cases, not synthetic new shapes.
 - `uv run pytest -q` stays green; existing `tests/test_migrations_tiers.py`/`test_migrations_bundle_variations.py` either keep passing against the preserved internal functions or get folded into the new combined-unit tests without losing any covered case.
 - As with the earlier `metadata`/`source` migration: build and verify the tooling (dry-run against the real repo), but do **not** run `--apply`/`--git` to bulk-rewrite the thousands of real `lists/**/*.yml` files' `schema:` value without explicit separate go-ahead.
+
+## Todos
+
+- [x] Add SourceName shared enum
+- [x] Add versioning.py (SchemaDateVersion, Versioned, trajectory)
+- [x] Add ScrapedTimestamp + merge_scraped_timestamp
+- [x] Wire per-source models to envelope + confidence dates
+- [x] Update load_cached_archive + write helpers for envelope
+- [x] Fuzzy + content-similarity dedup in existing_list_match
+- [x] Wire migration wavefront into scrape commands + git_ops
+- [x] Add standalone `migrate schema` CLI command
+- [x] Regenerate schemas + update docs
+- [x] Write/adjust tests and run full suite
+- [x] Generalize versioning.trajectory to any comparable VERSION
+- [x] Add versioned GameList/GameListV1 models
+- [x] Build BundleUnitState + step-sequence migration engine
+- [x] Wire bundle-kind into generic wavefront + commit batching
+- [x] Merge migrate CLI into one flat `migrate` command
+- [x] Mechanical GameList(schema=1,...) cleanup + versioned YAML writer
+- [x] Update docs + tests, run full suite

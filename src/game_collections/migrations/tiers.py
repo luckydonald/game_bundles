@@ -172,6 +172,7 @@ def apply_migration_step(step: TierMigrationStep, lists_root: Path, repository_r
     # end if
     raw = yaml.safe_load(step.old_path.read_text(encoding="utf-8"))
     raw.pop("tier", None)
+    raw.pop("schema", None)
     data = GameList.model_validate(raw)
     content = render_game_list_yaml(data, step.new_path, repository_root)
     atomic_write(step.new_path, content)

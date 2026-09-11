@@ -156,7 +156,7 @@
     }
   },
   "additionalProperties": false,
-  "description": "The complete contents of one ``lists/**/*.yml`` file.",
+  "description": "The complete, current-shape (v2) contents of one ``lists/**/*.yml`` file.\n\nVersioning lives outside this model - see `GAMELIST_V1`/`GAMELIST_V2`/`GameListV1`/\n`VersionedGameList` above and `migrations/list_versions.py` - a v1 file (one\nnot-yet-merged tier/pick-variation) validates as `GameListV1` instead, never as this.",
   "properties": {
     "crawlers": {
       "items": {
@@ -206,11 +206,6 @@
       "title": "References",
       "type": "array"
     },
-    "schema": {
-      "const": 1,
-      "title": "Schema",
-      "type": "integer"
-    },
     "tiers": {
       "items": {
         "$ref": "#/$defs/TierDefinition"
@@ -220,7 +215,6 @@
     }
   },
   "required": [
-    "schema",
     "name",
     "games"
   ],

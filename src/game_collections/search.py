@@ -281,6 +281,9 @@ def complete_game_list(
         games_out.append(game)
     # end for
     completed["games"] = games_out
-    GameList.model_validate(completed)
+    # `schema` is a migration-engine concern (see `models.py`), not part of the
+    # runtime-validated `GameList` shape - validated here only to catch a completion
+    # bug producing an otherwise-malformed list, so it's excluded rather than enforced.
+    GameList.model_validate({key: value for key, value in completed.items() if key != "schema"})
     return completed, unresolved
 # end def complete_game_list

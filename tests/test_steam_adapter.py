@@ -51,7 +51,7 @@ def _list(
         games.append({"name": "Other Store Game", "ids": ["gog:other"]})
     # end if
     name = list_id if tier is None else f"{list_id} — tier {tier}"
-    payload: dict[str, object] = {"schema": 1, "name": name, "games": games}
+    payload: dict[str, object] = {"name": name, "games": games}
     if pick_quota is not None:
         payload["pick_quota"] = pick_quota
     # end if
