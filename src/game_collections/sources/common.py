@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from collections.abc import Callable
 from pathlib import Path
 from typing import TypeVar
 
@@ -14,6 +15,9 @@ from rapidfuzz import fuzz
 
 from game_collections.models import Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
 from game_collections.sources.storefronts import normalized_title
+
+
+LogFn = Callable[[str], None]
 
 
 ArchiveT = TypeVar("ArchiveT", bound=BaseModel)
@@ -329,3 +333,119 @@ def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path
         + yaml.safe_dump(value, sort_keys=False, allow_unicode=True)
     )
 # end def render_game_list_yaml
+
+
+def existing_list_match(lists_root: Path, provider_slug: str, slug: str) -> Path | None:
+    """Best-effort dedup check: is this bundle already covered by a dedicated scraper?
+
+    Matches by substring, not exact path, since e.g. Humble's own directories
+    are date-prefixed (`2026-07-10_squad-goals`) rather than the bare slug.
+    Shared by every bundle-aggregator source (isthereanydeal, dekudeals) that
+    re-lists offers a dedicated scraper already covers.
+    """
+    provider_root = lists_root / provider_slug
+    if not provider_root.is_dir():
+        return None
+    # end if
+    needle = slug.casefold()
+    for path in sorted(provider_root.rglob("*")):
+        if needle and needle in path.name.casefold():
+            return path
+        # end if
+    # end for
+    return None
+# end def existing_list_match
+
+
+def backfill_existing_lists(
+    pool: list[Game],
+    existing: Path,
+    crawler_name: str,
+    slug: str,
+    bundle_reference: Reference,
+    metadata_path: Path,
+    source_path: Path,
+    repository_root: Path,
+    log: LogFn,
+) -> None:
+    """Cross-check an already-covered bundle instead of writing a duplicate list for it.
+
+    A dedicated scraper's list "covering" this bundle only means a matching
+    filename exists - it says nothing about whether `crawler_name` has ever
+    actually looked at that list's games. The first time through, add any
+    storefront IDs `pool` resolved for a provider the existing game doesn't
+    already have, record `crawler_name` as a contributing crawler, and only
+    then treat the bundle as fully done on every later run. `pool` is the
+    aggregator's full flattened, deduped game roster for the bundle
+    (regardless of tier); `bundle_reference` plus `metadata_path`/`source_path`
+    (resolved relative to each backfilled list's own directory) become that
+    list's newly merged-in references.
+    """
+    list_paths = sorted(existing.glob("*.yml")) if existing.is_dir() else [existing]
+    loaded: list[tuple[Path, GameList]] = []
+    for path in list_paths:
+        try:
+            loaded.append((path, GameList.model_validate(yaml.safe_load(path.read_text(encoding="utf-8")))))
+        except (OSError, ValueError, ValidationError):
+            continue
+        # end try
+    # end for
+    if not loaded or all(crawler_name in game_list.crawlers for _, game_list in loaded):
+        log(f"  Skipped {slug}: already covered by {existing}")
+        return
+    # end if
+
+    for path, game_list in loaded:
+        if crawler_name in game_list.crawlers:
+            continue
+        # end if
+        added_ids = 0
+        updated_games: list[Game] = []
+        for game in game_list.games:
+            match = find_matching_game(game, pool)
+            if match is None:
+                updated_games.append(game)
+                continue
+            # end if
+            existing_providers = {identifier.provider for identifier in game.qualified_ids}
+            new_ids = list(game.ids)
+            for identifier in match.qualified_ids:
+                if identifier.provider != "unresolved" and identifier.provider in existing_providers:
+                    continue
+                # end if
+                compact = identifier.compact()
+                if compact in new_ids:
+                    continue
+                # end if
+                new_ids.append(compact)
+                added_ids += 1
+            # end for
+            updated_games.append(game if new_ids == game.ids else game.model_copy(update={"ids": new_ids}))
+        # end for
+
+        fresh_stub = GameList(
+            schema=1,
+            name=game_list.name,
+            references=[
+                bundle_reference,
+                Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
+                Reference(name="Crawl source", path=os.path.relpath(source_path, path.parent)),
+            ],
+            crawlers=[crawler_name],
+            games=game_list.games,
+        )
+        updated_list = game_list.model_copy(
+            update={
+                "games": updated_games,
+                "references": merge_references(game_list, fresh_stub),
+                "crawlers": merge_crawlers(game_list, fresh_stub),
+            }
+        )
+        atomic_write(path, render_game_list_yaml(updated_list, path, repository_root))
+        if added_ids:
+            log(f"  Backfilled {added_ids} id(s) into {path} from {crawler_name}")
+        else:
+            log(f"  Cross-checked {path} against {crawler_name} (no new ids)")
+        # end if
+    # end for
+# end def backfill_existing_lists

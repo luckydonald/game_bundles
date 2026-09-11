@@ -53,12 +53,24 @@ from game_collections.schema import write_greenmangaming_schema
 from game_collections.schema import write_humblebundle_schema
 from game_collections.schema import write_isthereanydeal_schema
 from game_collections.schema import write_isthereanydeal_game_schema
+from game_collections.schema import write_dekudeals_schema
 from game_collections.search import CompletionMode, Provider, complete_game_list, completion_mode, selected_providers
 from game_collections.sources.dailyindiegame.crawler import (
     CrawledDigOffer,
     DigBrowserClient,
     crawl_dig_offers,
     write_dig_offer,
+)
+from game_collections.sources.dekudeals.crawler import (
+    CrawledDekuOffer,
+    DekuHttpClient,
+    crawl_deku_offers,
+    write_deku_offer,
+)
+from game_collections.sources.dekudeals.provider_config import load_provider_config as load_deku_provider_config
+from game_collections.sources.dekudeals.resolver import (
+    load_resolution_map as load_deku_resolution_map,
+    write_resolution_map as write_deku_resolution_map,
 )
 from game_collections.sources.greenmangaming.crawler import (
     CrawledGmgOffer,
@@ -328,6 +340,10 @@ def schema_command(
             help="Generated isthereanydeal.com per-game archive JSON Schema path.",
         ),
     ] = Path("schemas/isthereanydeal-game-archive.schema.json"),
+    dekudeals_output: Annotated[
+        Path,
+        typer.Option("--dekudeals-output", help="Generated DekuDeals archive JSON Schema path."),
+    ] = Path("schemas/dekudeals-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
@@ -336,12 +352,14 @@ def schema_command(
     write_greenmangaming_schema(greenmangaming_output)
     write_isthereanydeal_schema(isthereanydeal_output)
     write_isthereanydeal_game_schema(isthereanydeal_game_output)
+    write_dekudeals_schema(dekudeals_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
     typer.echo(dailyindiegame_output)
     typer.echo(greenmangaming_output)
     typer.echo(isthereanydeal_output)
     typer.echo(isthereanydeal_game_output)
+    typer.echo(dekudeals_output)
 # end def schema_command
 
 
@@ -1053,6 +1071,87 @@ def scrape_isthereanydeal_command(
         git_ops.finish_scrape_git_session(git_session, ["lists", "archives/isthereanydeal"], message)
     # end try
 # end def scrape_isthereanydeal_command
+
+
+@scrape_app.command("dekudeals")
+def scrape_dekudeals_command(
+    ctx: typer.Context,
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="Crawl only this bundle detail URL; repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path("config/dekudeals-store-ids.yml"),
+    provider_config_path: Annotated[Path, typer.Option("--provider-config")] = Path(
+        "config/dekudeals-providers.yml"
+    ),
+    refresh: Annotated[
+        bool,
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
+        ),
+    ] = False,
+) -> None:
+    """Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
+    client = DekuHttpClient()
+    written_count = 0
+
+    def on_offer(offer: CrawledDekuOffer) -> None:
+        nonlocal written_count
+        # Persist every newly-resolved item id before attempting the final GameList
+        # write below - resolution is already fully done by this point, so a
+        # downstream validation failure must not risk losing it.
+        write_deku_resolution_map(resolution_map, mapping)
+        paths = write_deku_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+            log=typer.echo,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+    # end def on_offer
+
+    try:
+        mapping = load_deku_resolution_map(resolution_map)
+        provider_config = load_deku_provider_config(provider_config_path)
+        report = crawl_deku_offers(
+            client.fetch,
+            provider_config,
+            mapping,
+            urls,
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(f"Wrote {written_count} file(s) for {len(report.offers)} offer(s).")
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+        message = _git_commit_message(
+            "dekudeals",
+            git_session.style,
+            "Archived this week's DekuDeals bundles",
+            "game-collections scrape --git dekudeals",
+            "No manual resolution needed for this source.",
+        )
+        git_ops.finish_scrape_git_session(
+            git_session, ["lists", "archives/dekudeals", str(resolution_map)], message
+        )
+    # end try
+# end def scrape_dekudeals_command
 
 
 def _maybe_refresh_dynamicstore_dump(dynamicstore_dump: Path | None, force: bool | None) -> None:

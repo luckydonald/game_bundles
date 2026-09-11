@@ -43,6 +43,21 @@ class StoreCandidate(StrictModel):
 # end class StoreCandidate
 
 
+def slugify_provider_name(name: str) -> str:
+    """Best-effort kebab-case fallback for a provider/store with no reviewed mapping.
+
+    Shared by every source that maps a free-text store/provider display name
+    onto a `lists/<slug>/` directory (isthereanydeal, dekudeals).
+    """
+    lowered = name.strip().casefold()
+    slug = re.sub(r"[^a-z0-9]+", "-", lowered).strip("-")
+    if not slug:
+        raise ValueError(f"could not derive a slug from provider name: {name!r}")
+    # end if
+    return slug
+# end def slugify_provider_name
+
+
 def normalized_title(value: str) -> str:
     """Normalize storefront punctuation and spacing for exact title comparison."""
     without_marks = value.translate(str.maketrans({"™": "", "®": "", "©": ""}))
