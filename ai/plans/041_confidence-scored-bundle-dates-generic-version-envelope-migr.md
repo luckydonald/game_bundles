@@ -100,6 +100,8 @@ class Versioned[VERSION, DATA](BaseModel):
 DateVersioned = Versioned[SchemaDateVersion, DATA]  # generic alias, DATA bound per use
 ```
 
+(`Literal[...]` technically accepts tuple *values* as parameters, but every new version would then have to be added to a growing `Literal[(2026,9,11,...), (2026,9,12,...), ...]` union just to type-check — unworkable for a value that's meant to be bumped freely by hand. `version: SchemaDateVersion` as a plain (non-`Literal`) field sidesteps that entirely: any tuple of the right shape is valid, and "is this current" is answered by comparing against each source's own `CURRENT_VERSION` constant, not by the type system.)
+
 Each source declares, next to its Archive model, a hand-bumped constant and a concrete alias, e.g. in `dekudeals/models.py`:
 
 ```python
