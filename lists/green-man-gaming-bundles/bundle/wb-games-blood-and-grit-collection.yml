@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: 'WB Games: Blood & Grit Collection'
+tiers:
+- rank: 1
+  name: €5,00
+- rank: 2
+  name: €10,00
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/wb-games-blood-and-grit-collection
+- name: Green Man Gaming Bundles bundle
+  url: https://greenmangaming.sjv.io/c/5782768/1219987/15105?u=https%3A%2F%2Fwww.greenmangamingbundles.com%2Fbundles%2Fwb-games-blood-grit-collection%2F
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/wb-games-blood-and-grit-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/wb-games-blood-and-grit-collection/source.json
+crawlers:
+- dekudeals
+games:
+- name: Mad Max
+  ids:
+  - steam:234140
+  - dekudeals:mad-max
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Middle-earth: Shadow of Mordor - Game of the Year Edition'
+  ids:
+  - dekudeals:middle-earth-shadow-of-mordor-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Mortal Kombat XL
+  ids:
+  - dekudeals:mortal-kombat-xl
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Mortal Kombat 11 Ultimate
+  ids:
+  - dekudeals:mortal-kombat11-ultimate
+  requires: []
+  tiers:
+  - 2
+- name: 'Middle-earth: Shadow of War Definitive Edition'
+  ids:
+  - dekudeals:middle-earth-shadow-of-war-definitive-edition
+  requires: []
+  tiers:
+  - 2
+- name: 'Back 4 Blood: Deluxe Edition'
+  ids:
+  - steam:924970
+  - dekudeals:back-4-blood-deluxe-edition
+  requires: []
+  tiers:
+  - 2
+- name: FEAR Collection
+  ids:
+  - dekudeals:fear-complete-pack
+  requires: []
+  tiers:
+  - 2
