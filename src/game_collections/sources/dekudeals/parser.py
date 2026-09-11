@@ -62,26 +62,50 @@ def bundle_slug(url: str) -> str:
 # end def bundle_slug
 
 
-def parse_bundle_index_page(html_text: str) -> list[str]:
-    """Return every bundle slug currently listed on the bundles index page."""
+@dataclass(frozen=True, slots=True)
+class DekuIndexEntry:
+    """One bundle summary on the bundles index page.
+
+    `created_at` (confirmed live: a unix timestamp, e.g. when a bundle was
+    first listed) is the closest thing DekuDeals gives to a bundle's start
+    date - the bundle detail page itself never reports one - so it's kept
+    here for the crawler to use as `DekuDates.start`. `None` if a summary
+    entry is missing it.
+    """
+
+    slug: str
+    created_at: datetime | None
+
+# end class DekuIndexEntry
+
+
+def parse_bundle_index_page(html_text: str) -> list[DekuIndexEntry]:
+    """Return every bundle summary currently listed on the bundles index page."""
     props = _inertia_props(html_text, "bundles index page")
     bundles = props.get("bundles")
     if not isinstance(bundles, list) or not bundles:
         raise DekuParseError("bundles index page has no bundles list")
     # end if
-    slugs: list[str] = []
+    entries: list[DekuIndexEntry] = []
     seen: set[str] = set()
     for entry in bundles:
         slug = entry.get("slug") if isinstance(entry, dict) else None
-        if isinstance(slug, str) and slug and slug not in seen:
-            seen.add(slug)
-            slugs.append(slug)
+        if not isinstance(slug, str) or not slug or slug in seen:
+            continue
         # end if
+        seen.add(slug)
+        created_at = entry.get("created_at")
+        entries.append(
+            DekuIndexEntry(
+                slug=slug,
+                created_at=datetime.fromtimestamp(created_at, tz=UTC) if isinstance(created_at, int) else None,
+            )
+        )
     # end for
-    if not slugs:
+    if not entries:
         raise DekuParseError("bundles index page's bundles list has no slugs")
     # end if
-    return slugs
+    return entries
 # end def parse_bundle_index_page
 
 

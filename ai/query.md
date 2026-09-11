@@ -3018,3 +3018,7 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 
 ❯ Fix the bundles to have the date in front as usual.
 
+❯ The date is wrong, e.g. newly created 2026-09-11_crawling-through-the-dungeons.yml vs existing 2026-09-09_crawling-through-dungeons.yml - is it just using "today"?
+
+❯ squash ai commits
+

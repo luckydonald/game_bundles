@@ -59,14 +59,22 @@ class DekuTier(StrictModel):
 
 
 class DekuDates(StrictModel):
-    """Offer observation timestamp and its estimated expiry."""
+    """Offer availability and observation timestamps.
 
+    `start` comes from the bundles index page's own `created_at` (when
+    known - only available in discovery mode, not an explicit `--url`
+    crawl) rather than the bundle detail page itself, which never reports
+    it. Falling back to `crawled` when `start` is unknown mirrors
+    isthereanydeal's own `ItadDates`.
+    """
+
+    start: datetime | None = None
     end: datetime | None = None
     crawled: datetime
 
     @model_validator(mode="after")
     def validate_aware(self) -> Self:
-        for value in (self.end, self.crawled):
+        for value in (self.start, self.end, self.crawled):
             if value is not None and value.tzinfo is None:
                 raise ValueError("DekuDeals timestamps must include a timezone")
             # end if
