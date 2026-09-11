@@ -3028,3 +3028,150 @@ game-collections scrape --git greenmangaming 2>&1 | tee ./ai/errors/7.txt
 
 ❯ /plan It should be searching for existing bundles matching the same-ish name, and check if the contents are similar. Basically we need to store start and end in the crawled data, and if the start actually scraped was null, like in this case, every other scraper which has it would then need to rename that file, too. However the rename shall be (a) separate commit(s), and in a bulk size of 100 files per commit, including `(01/N)` commit counter in the message.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Humble and ITAD already fetch `start` directly from the same page/API call that produces the rest of the bundle data, so they never end up with a null `start` on an already-archived bundle. DekuDeals is the one source where `start` only comes from a separate index-page fetch (discovery mode) and can be missing on an explicit `--url` crawl or an older archive predating this fix. Given that, should the rename-migration tool be built generically (so any future source with a similar gap slots in) or scoped specifically to DekuDeals for now?
+>> 2. Green Man Gaming and DailyIndieGame bundle pages have no confirmed live source for a bundle's start date (GMG's `GmgDates.end` is actually hardcoded to `None` today despite the model's docstring mentioning `data-end-date`; DIG only derives `end` from a countdown timer, never a start). Per this repo's 'verify, don't guess' convention I don't want to fabricate a start value. What should happen to their `Dates` models?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Migration scope** (1/2) <kbd>Single Select</kbd><br>
+>> Humble and ITAD already fetch `start` directly from the same page/API call that produces the rest of the bundle data, so they never end up with a null `start` on an already-archived bundle. DekuDeals is the one source where `start` only comes from a separate index-page fetch (discovery mode) and can be missing on an explicit `--url` crawl or an older archive predating this fix. Given that, should the rename-migration tool be built generically (so any future source with a similar gap slots in) or scoped specifically to DekuDeals for now?
+> - [ ] 1\. Generic tool, DekuDeals wired first (Recommended)
+>   - _Build a source-agnostic 'find archives with null start that can now be re-derived, rename their list file' tool, but only actually implement/wire the re-derivation logic for DekuDeals since it's the only source with a known gap today._
+> - [ ] 2\. DekuDeals-only script
+>   - _A narrower one-off script just for DekuDeals archives/list files; simpler, but would need rewriting if another source develops the same gap later._
+> - [x] 3\. _Type something:_
+>   - > Generic tool, which does the write given the filled in pydantic model, then does that duplicate checking & merging & moving and stuff.
+Explain me how it's currently doing the time retrival, because to me it still seems like a `date.now()`
+>
+>> **GMG/DIG dates** (2/2) <kbd>Single Select</kbd><br>
+>> Green Man Gaming and DailyIndieGame bundle pages have no confirmed live source for a bundle's start date (GMG's `GmgDates.end` is actually hardcoded to `None` today despite the model's docstring mentioning `data-end-date`; DIG only derives `end` from a countdown timer, never a start). Per this repo's 'verify, don't guess' convention I don't want to fabricate a start value. What should happen to their `Dates` models?
+> - [ ] 1\. Add nullable `start` field now, always None (Recommended)
+>   - _Makes all 5 sources' Dates models shape-consistent (start/end/crawled) for future-proofing, documented as currently unpopulated pending a verified page source. No behavior change._
+> - [ ] 2\. Leave GMG/DIG models as-is
+>   - _Don't touch GmgDates/DigDates at all this round; only add/confirm start on sources that already have a real source for it (Humble, ITAD, DekuDeals)._
+> - [x] 3\. _Type something:_
+>   - > Check if we can add it, otherwise None as well, and the same logic applies. A scraper should have a confidence level between 0.0 and 1.0 for both start & end date, denoting how sure we are it is correct (1.0 = yep sure, 0.0 = it's wrong, > 0.0 = maybe?, < 1.0 probably?). This should be stored with the final data, so we can update and rename if we have a higher confidency. If we already have 1.0 and we wanna add 1.0 again, there's the case of missing time (i.e. date only) so prefer the more detailed one (hope it's that one, lol). If they don't match at all, the user needs to solve that, so show the available URLs.
+Probably the start/end times should be
+```json
+{
+  iso: 'YYYY-MM-DD',  // possible formats: date-only, date + time, date + time and more precision (ms etc), date + time (+ precision) + timezone/offset),
+  timestamp: int | float,  // unix epoch
+  confidence: 0.0 - 1.0,  // so we know when to replace it
+  source: 'humblebundle' | …,  // the scrapers
+}
+```
+That way we can decide properly. This needs a schema change + migration.
+Add a migration folder, with a file for this schema, and a function migrating based on the `version` field (here 1 -> 2). This needs to be done initial for files which would be touched by the tool (and all files if `--migrate` is set), again with the usual 100 items-per-commit batches. Those shall be commited before the content changes are written.
+Figure out which services are how comfident, gimme a table in the plan.
+For updating, the current value is `0.0`, so it would be replaced by any non-null value; however a warning with old and new will be printed in the end summary if the 0.0 value got replaced by something different. Obviously it still can be `null` instead of the above model.
+>
+> </details>
+>
+
+❯ Changes:
+- Next to `crawled_at` which should be updated on the next crawl touching that file; add a `first_seen` to v2 which can be backfilled from that `crawl_date`.
+- ~~I don't believe we have _DekuDeals_ `start`…~~
+  - ah yes, found https://www.dekudeals.com/bundles to have `JSON.parse(document.getElementById('inertia-app').getAttribute('data-page')).props.bundles[i].created_at`
+- `merge_scraped_timestamp(…)`, case **e.**: Ask user witch to take; no-ttl mode: use older one.
+- give example for _Exact substring match_ and generally all items in _**3. Fuzzy + content-similarity dedup**_.
+- I don't want the need for dedicated migration commands any more. Touched files should be auto-migrated before writing new data to them, which should be intelligently be collected to a first commit.
+  - So if `10` files changes not `10 * 2 = 20` commits, but rather `~2` commits: 
+    - `1`. the migration from v1 to v2.
+    - `2`. the migration form v2 to v3.
+    - `⋮`. … possibly more migrations …
+    - `N`. The changes from the crawl itself.
+- Have a general `migrate` command, which run all outstanding migrations for all files, allowing to filter by:
+  - the file's path (dir: processed recursively, file: just that file), multiple times settable
+  - the type of files to migrate: `metadata`, `source` (unlikely), `bundle`, again you can set this flag more than once to have them with _AND_.
+  - has the typical `--git` stuff like the scrapers.
+- `/commit-with-lplp-style` is relevant for your implementation (you writing the code), not for the final script (it still follows those principles though)
+- The migrations should be just "to latest version", and no longer "by topic", to make applying them easy peasy.
+- One idea i used in other projects is to basically have one long file with all the migrations in one big `if v1`; `if v2`; `if v3` block:
+  - ```py
+    old_version = data.version
+    if old_version < 2:
+      data = do_stuff_to_migrate_v1_to_v2(data)
+      assert data.version == 2
+      magic_to_add_this_to_the_commit_which_needs_naming_and_probably_be_done_completely_different_instead_of_in_this_block_idk(from=old_version, to=data.version)
+      old_version = data.version
+    if data.version < 3:
+      data = do_stuff_to_migrate_v2_to_v3(data)
+      assert data.version == 3
+      magic_to_add_this_to_the_commit_which_needs_naming_and_probably_be_done_completely_different_instead_of_in_this_block_idk(from=old_version, to=data.version)
+    …
+    ```
+  - Check that approach throuruohgly, and give at least 3 better approches.
+- _**1.** Schema-migration commits first_: This needs no `(01/N)`, but instead _[lists (or what fits)] `metadata` files: Migrating `v1 → `v2`._
+- _**2.** Then rename/content commits_: This needs the `(01/NN)` count now, as renames always need to be batched with max `100` files per commit.
+- Test a few files for that migration working.
+- Make sure the pydantic model for https://www.dekudeals.com/bundles > `JSON.parse(document.getElementById('inertia-app').getAttribute('data-page')).props.bundles[i].created_at` is correct and has all fields findable.
+- Generally, add a version field to all `sources.json`,
+  - being the current iso date hardcoded as of writing/updating the model **definition**
+  - A `NamedTuple` of the ISO date, e.g. `(2026, 1, 31, 23, 59, 59, 0.1234…)`
+  - similar to like it's a numeric 1 or 2 being incremented in other places,
+    - however it's not only bumped when there's a breaking change requiring a migration,
+    - but on every change,
+    - instead not every change has a migration action.
+  - With being a tuple it should be easy to compare without need to parse the string back or anything, and still be very human readable.
+- Default dry run of the `migrate` command displaying diffs and file operations (grouped by the commits) sounds useful.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. For `merge_scraped_timestamp` conflicts (two non-zero-confidence values disagreeing) you said "ask user which to take." Should that literally be an interactive terminal prompt during the `scrape`/`migrate` run (blocking until answered), or should the run just proceed non-interactively and dump every conflict into the end-of-run report (with both values + source URLs) for you to resolve by hand afterward (e.g. editing the archive or re-running with a flag)?
+>> 2. For the new `model_version` stamp (a hardcoded NamedTuple date/time constant per source model, bumped by hand on every model/parser edit, separate from the migration-driving integer `schema_version`) - does this match what you had in mind, or would a plain incrementing integer (bumped on every change, migrations still keyed off a separate `schema_version`) serve the same purpose more simply?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Conflict resolution** (1/2) <kbd>Single Select</kbd><br>
+>> For `merge_scraped_timestamp` conflicts (two non-zero-confidence values disagreeing) you said "ask user which to take." Should that literally be an interactive terminal prompt during the `scrape`/`migrate` run (blocking until answered), or should the run just proceed non-interactively and dump every conflict into the end-of-run report (with both values + source URLs) for you to resolve by hand afterward (e.g. editing the archive or re-running with a flag)?
+> - [ ] 1\. Report only, never blocks (Recommended)
+>   - _The run always keeps the existing value on conflict (never guesses), logs a clear warning with both candidates and their URLs, and finishes. You resolve it by hand afterward, at your own pace. Matches how --git unattended runs (CI) already need to work._
+>   - ```
+>       CONFLICT crawling-through-the-dungeons.start:
+>         existing: 2026-09-09T18:10:21Z (confidence 1.0, source=humblebundle)
+>         fresh:    2026-09-08T00:00:00Z (confidence 1.0, source=dekudeals)
+>         kept: existing (unresolved - edit archives/dekudeals/.../metadata.json by hand if wrong)
+>         urls: https://humblebundle.com/... , https://dekudeals.com/bundles/...
+>     ```
+> - [x] 2\. Interactive TTY prompt, older on non-TTY
+>   - _When run at an interactive terminal, actually stop and ask which value to keep via a prompt; when not attached to a TTY (CI/--git unattended), silently keep the chronologically older of the two and just log it._
+> - [ ] 3\. _Notes: Add notes on this design._
+>
+>> **model_version shape** (2/2) <kbd>Single Select</kbd><br>
+>> For the new `model_version` stamp (a hardcoded NamedTuple date/time constant per source model, bumped by hand on every model/parser edit, separate from the migration-driving integer `schema_version`) - does this match what you had in mind, or would a plain incrementing integer (bumped on every change, migrations still keyed off a separate `schema_version`) serve the same purpose more simply?
+> - [x] 1\. NamedTuple date/time constant, as described (Recommended)
+>   - _e.g. ModelVersion(2026, 9, 11, 14, 30, 0, 0.0) hardcoded in the model file and bumped to "now" whenever that file changes - human-readable at a glance, sortable/comparable with no string parsing, and doubles as a changelog timestamp._
+>   - ```
+>     class ModelVersion(NamedTuple):
+>         year: int
+>         month: int
+>         day: int
+>         hour: int
+>         minute: int
+>         second: int
+>         fraction: float
+>
+>     MODEL_VERSION = ModelVersion(2026, 9, 11, 14, 30, 0, 0.0)
+>
+>     class DekuArchive(StrictModel):
+>         schema_version: Literal[2] = ...
+>         model_version: ModelVersion = MODEL_VERSION
+>         ...
+>     ```
+> - [ ] 2\. Plain incrementing integer instead
+>   - _model_revision: int, bumped by one on every edit regardless of whether it's breaking. Simpler to bump correctly (no need to remember today's exact timestamp) but loses the human-readable "when was this last touched" info the tuple gives for free._
+> - [ ] 3\. _Notes: Add notes on this design._
+>
+> </details>
+>
+
+❯ **model_version shape**: but the reporting example of _Report only_ above looks nice, keep that; add `(older)` and `(newer)` before the actual dates for quickly spotting the important information.
+
