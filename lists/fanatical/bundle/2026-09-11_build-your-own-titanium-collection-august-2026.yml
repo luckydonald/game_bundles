@@ -1,0 +1,167 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Titanium Collection (August 2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-titanium-collection-august-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-titanium-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-titanium-collection-august-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-titanium-collection-august-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Moonscars
+  ids:
+  - steam:1374970
+  - dekudeals:moonscars
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Miasma Chronicles
+  ids:
+  - steam:1649010
+  - dekudeals:miasma-chronicles
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Thy Creature
+  ids:
+  - steam:1603720
+  - dekudeals:thy-creature
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Techno Banter
+  ids:
+  - steam:2348400
+  - dekudeals:techno-banter
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'SCP: Fragmented Minds'
+  ids:
+  - steam:1184790
+  - dekudeals:scp-fragmented-minds
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Those Who Rule
+  ids:
+  - steam:1822060
+  - dekudeals:those-who-rule
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: One-Eyed Likho
+  ids:
+  - steam:2346840
+  - dekudeals:one-eyed-likho
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ale & Tale Tavern
+  ids:
+  - steam:2683150
+  - dekudeals:ale-and-tale-tavern
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Static Dread: The Lighthouse'
+  ids:
+  - steam:3298940
+  - dekudeals:static-dread
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Dread X Collections Bundle
+  ids:
+  - steam:bundle/47590
+  - dekudeals:the-dread-x-collections
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Kinny and the Cosmic Cauldron
+  ids:
+  - steam:3330210
+  - dekudeals:kinny-and-the-cosmic-cauldron
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pawsome Resort
+  ids:
+  - steam:3759220
+  - dekudeals:pawsome-resort
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ugoku Sushi Bar
+  ids:
+  - steam:3938640
+  - dekudeals:ugoku-sushi-bar
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Virtual Rides 3 - Funfair Simulator + Northstar
+  ids:
+  - dekudeals:virtual-rides-3-funfair-simulator-plus-northstar
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Idle Chapel + Slots & Diapers Bundle
+  ids:
+  - steam:bundle/79082
+  - dekudeals:idle-chapel-plus-slots-and-diapers-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sticky Business + 3 DLC Pack
+  ids:
+  - dekudeals:sticky-business-plus-3-dlc-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

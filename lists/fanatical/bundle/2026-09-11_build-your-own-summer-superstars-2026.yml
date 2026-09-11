@@ -1,0 +1,258 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 1
+name: Build your own Summer Superstars (2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-summer-superstars-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-summer-superstars-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-summer-superstars-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-summer-superstars-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: DEATH STRANDING DIRECTOR’S CUT
+  ids:
+  - steam:1850570
+  - dekudeals:death-stranding-directors-cut
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Eiyuden Chronicle: Hundred Heroes'
+  ids:
+  - steam:1658280
+  - dekudeals:eiyuden-chronicle-hundred-heroes
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sker Ritual
+  ids:
+  - dekudeals:sker-ritual
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Biped 2
+  ids:
+  - steam:2560240
+  - dekudeals:biped-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Planet Zoo
+  ids:
+  - steam:703080
+  - dekudeals:planet-zoo
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: MULLET MADJACK
+  ids:
+  - steam:2111190
+  - dekudeals:mullet-madjack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Kaku - Ancient Seal
+  ids:
+  - steam:1179580
+  - dekudeals:kaku-ancient-seal
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Coridden
+  ids:
+  - steam:1656930
+  - dekudeals:coridden
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Edge of Allegoria
+  ids:
+  - steam:1870700
+  - dekudeals:the-edge-of-allegoria
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Caribbean Legend
+  ids:
+  - steam:2230980
+  - dekudeals:caribbean-legend
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Citadelum
+  ids:
+  - steam:2603020
+  - dekudeals:citadelum
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Zoria: Age of Shattering'
+  ids:
+  - steam:1159090
+  - dekudeals:zoria-age-of-shattering
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: ULTRAKILL
+  ids:
+  - steam:1229490
+  - dekudeals:ultrakill
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Diplomacy is Not an Option
+  ids:
+  - steam:1272320
+  - dekudeals:diplomacy-is-not-an-option
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mortal Sin
+  ids:
+  - steam:1494810
+  - dekudeals:mortal-sin
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Moros Protocol
+  ids:
+  - steam:1605250
+  - dekudeals:darkverse-rogue
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: HumanitZ
+  ids:
+  - steam:1766060
+  - dekudeals:humanitz
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: MISERY
+  ids:
+  - steam:2119830
+  - dekudeals:misery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dark Deity 2
+  ids:
+  - steam:2446600
+  - dekudeals:dark-deity-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cabernet
+  ids:
+  - steam:2401410
+  - dekudeals:cabernet
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Blood Rush
+  ids:
+  - steam:2435870
+  - dekudeals:blood-rush
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bloodgrounds
+  ids:
+  - steam:2507820
+  - dekudeals:bloodgrounds
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'SKALD: Against the Black Priory - Deluxe Bundle'
+  ids:
+  - steam:bundle/40001
+  - dekudeals:skald-against-the-black-priory-deluxe-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'HELL OF FEAR: Mind Breach'
+  ids:
+  - steam:3372090
+  - dekudeals:hell-of-fear-mind-breach
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Flesh Made Fear
+  ids:
+  - steam:3316350
+  - dekudeals:flesh-made-fear
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Puzzle Quest: Immortal Edition'
+  ids:
+  - steam:3236710
+  - dekudeals:puzzle-quest-immortal-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
