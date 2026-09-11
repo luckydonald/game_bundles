@@ -6,7 +6,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from game_collections.lists import load_game_list
-from game_collections.sources.dekudeals.crawler import crawl_deku_offers, write_deku_offer
+from game_collections.sources.dekudeals.crawler import BUNDLES_INDEX_URL, crawl_deku_offers, write_deku_offer
 from game_collections.sources.dekudeals.provider_config import DekuProviderConfig
 from game_collections.sources.dekudeals.resolver import DekuResolutionMap
 
@@ -200,3 +200,35 @@ def test_write_deku_offer_skips_second_backfill_pass_once_marked(tmp_path: Path)
     assert existing.read_text(encoding="utf-8") == before
     assert any("Skipped" in message for message in messages)
 # end def test_write_deku_offer_skips_second_backfill_pass_once_marked
+
+
+def test_discovery_mode_uses_index_created_at_as_bundle_start_date(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    index_page = _inertia_page(
+        {"bundles": [{"slug": "crawling-through-the-dungeons", "name": "x", "created_at": 1788977421}]}
+    )
+    pages = {
+        BUNDLES_INDEX_URL: index_page,
+        BUNDLE_URL: _inertia_page(_bundle_props()),
+        "https://www.dekudeals.com/items/crawl?platform=all": _item_page(3157),
+        "https://www.dekudeals.com/items/dungeon-drafters?platform=all": _item_page(1824580),
+    }
+    mapping = DekuResolutionMap(schema=1, games={})
+    provider_config = DekuProviderConfig(schema=1, providers={"Humble": "humblebundle"})
+
+    # `crawled` is deliberately a much later date than the index's `created_at`,
+    # simulating the scraper running well after the bundle actually went live.
+    report = crawl_deku_offers(lambda url: pages[url], provider_config, mapping, crawled=CRAWLED)
+
+    assert report.errors == ()
+    archive = report.offers[0].archive
+    assert archive.dates.start == datetime(2026, 9, 9, 18, 10, 21, tzinfo=UTC)
+
+    paths = write_deku_offer(report.offers[0], lists_root, archive_root, tmp_path)
+    expected = lists_root / "humblebundle/bundle/2026-09-09_crawling-through-the-dungeons.yml"
+    assert expected in paths
+# end def test_discovery_mode_uses_index_created_at_as_bundle_start_date

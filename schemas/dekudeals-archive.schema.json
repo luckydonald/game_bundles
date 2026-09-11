@@ -2,7 +2,7 @@
   "$defs": {
     "DekuDates": {
       "additionalProperties": false,
-      "description": "Offer observation timestamp and its estimated expiry.",
+      "description": "Offer availability and observation timestamps.\n\n`start` comes from the bundles index page's own `created_at` (when\nknown - only available in discovery mode, not an explicit `--url`\ncrawl) rather than the bundle detail page itself, which never reports\nit. Falling back to `crawled` when `start` is unknown mirrors\nisthereanydeal's own `ItadDates`.",
       "properties": {
         "crawled": {
           "format": "date-time",
@@ -21,6 +21,19 @@
           ],
           "default": null,
           "title": "End"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
         }
       },
       "required": [

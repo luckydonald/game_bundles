@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import json
+from datetime import UTC, datetime
 
 from game_collections.sources.dekudeals.parser import (
     DekuParseError,
@@ -23,17 +24,21 @@ def test_bundle_index_returns_distinct_slugs_in_order() -> None:
     html_text = _inertia_page(
         {
             "bundles": [
-                {"slug": "crawling-through-the-dungeons", "name": "Crawling"},
-                {"slug": "build-your-own-killer-bundle", "name": "Killer"},
-                {"slug": "crawling-through-the-dungeons", "name": "Crawling (dup)"},
+                {"slug": "crawling-through-the-dungeons", "name": "Crawling", "created_at": 1788977421},
+                {"slug": "build-your-own-killer-bundle", "name": "Killer", "created_at": None},
+                {"slug": "crawling-through-the-dungeons", "name": "Crawling (dup)", "created_at": 1},
             ]
         }
     )
 
-    assert parse_bundle_index_page(html_text) == [
+    entries = parse_bundle_index_page(html_text)
+
+    assert [entry.slug for entry in entries] == [
         "crawling-through-the-dungeons",
         "build-your-own-killer-bundle",
     ]
+    assert entries[0].created_at == datetime(2026, 9, 9, 18, 10, 21, tzinfo=UTC)
+    assert entries[1].created_at is None
 # end def test_bundle_index_returns_distinct_slugs_in_order
 
 

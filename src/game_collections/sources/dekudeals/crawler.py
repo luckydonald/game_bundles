@@ -121,11 +121,13 @@ def _archive_paths(archive_root: Path, slug: str) -> tuple[Path, Path]:
 def _bundle_date_prefix(archive: DekuArchive) -> str:
     """Date prefix for this bundle's list filename, matching every other source's convention.
 
-    DekuDeals never reports when a bundle actually started, so - like
-    isthereanydeal's own fallback for a bundle with no `start` date - the
-    date it was first crawled stands in for it.
+    Prefers `dates.start` (the index page's own `created_at`, this bundle's
+    true first-listed date) and only falls back to `dates.crawled` - the day
+    we happened to run the scraper - when `start` isn't known (an explicit
+    `--url` crawl has no index summary to read it from), mirroring
+    isthereanydeal's own `start or crawled` fallback.
     """
-    return archive.dates.crawled.date().isoformat()
+    return (archive.dates.start or archive.dates.crawled).date().isoformat()
 # end def _bundle_date_prefix
 
 
@@ -184,12 +186,18 @@ def crawl_deku_offers(
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     errors: list[str] = []
     explicit = list(urls or [])
+    # `created_at` (this bundle's true start date) is only known from the index
+    # page's own summary entries - an explicit `--url` crawl has no such summary,
+    # so `DekuDates.start` falls back to `crawled` for those (see `DekuDates`).
+    created_at_by_slug: dict[str, datetime] = {}
     if explicit:
         slugs = [bundle_slug(url) for url in explicit]
     else:
         slugs = []
         try:
-            slugs = parse_bundle_index_page(fetch(BUNDLES_INDEX_URL))
+            entries = parse_bundle_index_page(fetch(BUNDLES_INDEX_URL))
+            slugs = [entry.slug for entry in entries]
+            created_at_by_slug = {entry.slug: entry.created_at for entry in entries if entry.created_at is not None}
         except (OSError, ValueError, DekuCrawlError) as error:
             errors.append(f"{BUNDLES_INDEX_URL}: {error}")
         # end try
@@ -248,7 +256,7 @@ def crawl_deku_offers(
                 provider_slug=provider_slug,
                 tiering_style=draft.tiering_style,
                 real_url=draft.real_url,
-                dates=DekuDates(end=draft.end, crawled=observed),
+                dates=DekuDates(start=created_at_by_slug.get(slug), end=draft.end, crawled=observed),
                 tiers=tiers,
             )
             offer = CrawledDekuOffer(archive=archive, source=source)
