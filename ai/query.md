@@ -3337,3 +3337,16 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 > </details>
 >
 
+❯ Regarding
+> migration unit is a whole bundle/choice directory
+- That is kinda correct, still the plan is to touch only one file of a bundle at once. 
+  1. Rename the highest tiers,
+  2. add the highest tier tier info into the yml,
+  3. merge the next tier into it.
+- That's basically version 1-3 already there.
+- Possibly the not-highest tiers would not yielding a migration 1-3
+  - but in theory only 4+
+  - but the already renamed highest tier would keep yielding moves & codes
+- but yeah, that's convoluted and kinda shitty.
+- please tell me how you're planing that, where it doesn't make the current migration for loop ugly.
+
