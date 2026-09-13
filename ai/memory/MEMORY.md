@@ -1,2 +1,16 @@
 # Memory
 - [Repo commit hooks](repo_commit_hooks.md) — pre-commit hook rejects Co-Authored-By/Claude-Session commit trailers; `allowCoAuthoredEtc: false` in `ai/tool-settings/settings.json` suppresses Claude Code's own footer.
+- [end comment bare form](feedback_end_comment_bare_form.md) — TODO: summarize this file.
+- [full range commit cleanup scope](feedback_full_range_commit_cleanup_scope.md) — TODO: summarize this file.
+- [live validation runs fix bugs found](feedback_live_validation_runs_fix_bugs_found.md) — TODO: summarize this file.
+- [no private prefix split modules](feedback_no_private_prefix_split_modules.md) — TODO: summarize this file.
+- [plan prose formatting](feedback_plan_prose_formatting.md) — TODO: summarize this file.
+- [real examples not placeholders](feedback_real_examples_not_placeholders.md) — TODO: summarize this file.
+- [rebase todo script needs arg1](feedback_rebase_todo_script_needs_arg1.md) — TODO: summarize this file.
+- [reuse existing prefixes](feedback_reuse_existing_prefixes.md) — TODO: summarize this file.
+- [verify dont guess external shapes](feedback_verify_dont_guess_external_shapes.md) — TODO: summarize this file.
+- [project isthereanydeal source expansion](project_isthereanydeal_source_expansion.md) — TODO: summarize this file.
+- [project steam collection ownership source](project_steam_collection_ownership_source.md) — TODO: summarize this file.
+- [project todo md evolves mid session](project_todo_md_evolves_mid_session.md) — TODO: summarize this file.
+- [reference typer optional value flag limitation](reference_typer_optional_value_flag_limitation.md) — TODO: summarize this file.
+- [user isthereanydeal domain expertise](user_isthereanydeal_domain_expertise.md) — TODO: summarize this file.
