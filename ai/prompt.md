@@ -3384,3 +3384,52 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 > </details>
 >
 
+❯ Rebase this `mane` branch onto `base/base`. Make sure our `./README.md` does stay in the repo root, and is not moved into `/docs/README.md` (the `base/base` one tried to move theirs out of the way, but the `git mv` seems to affect us too.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. mane is 440 commits ahead of / 34 behind base/base, and this repo already has a purpose-built `scripts/°base/git/split.py merge-base` command that merges base/base into the current branch and auto-resolves the exact README.md/.gitignore conflict you described (this is the documented, already-tested workflow per ai/°base/query.md for 'advancing mane' with base's updates). A literal `git rebase base/base` would replay all 440 mane commits on top of base's tip and is not how this repo's tooling folds base/base updates in. Which do you want?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Rebase vs merge-base** (1/1) <kbd>Single Select</kbd><br>
+>> mane is 440 commits ahead of / 34 behind base/base, and this repo already has a purpose-built `scripts/°base/git/split.py merge-base` command that merges base/base into the current branch and auto-resolves the exact README.md/.gitignore conflict you described (this is the documented, already-tested workflow per ai/°base/query.md for 'advancing mane' with base's updates). A literal `git rebase base/base` would replay all 440 mane commits on top of base's tip and is not how this repo's tooling folds base/base updates in. Which do you want?
+> - [ ] 1\. Use split.py merge-base (Recommended)
+>   - _Runs the existing tested tool: `git fetch base` + merge base/base into mane, auto-keeping our root README.md and resolving .gitignore/.gitattributes safely. Produces one merge commit, matches the established workflow._
+> - [x] 2\. Literal git rebase mane onto base/base
+>   - _Replays all 440 mane-only commits on top of base/base's tip via `git rebase base/base`. Rewrites all 440 commit hashes, no established tooling handles the README.md rename-detection conflict for this path — I'll need to resolve it manually, likely per-commit._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The literal rebase conflicts immediately on unrelated .idea/.run files (not README), because mane already contains ~406 previously-synced [base] commits that a raw rebase would replay against base/base's independently-evolved versions of those same files — a cascading-conflict situation, not a one-file fix. How do you want to proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **How to proceed** (1/1) <kbd>Single Select</kbd><br>
+>> The literal rebase conflicts immediately on unrelated .idea/.run files (not README), because mane already contains ~406 previously-synced [base] commits that a raw rebase would replay against base/base's independently-evolved versions of those same files — a cascading-conflict situation, not a one-file fix. How do you want to proceed?
+> - [ ] 1\. Switch to split.py merge-base (Recommended)
+>   - _Use the existing tested tool to fold base/base into mane as one merge commit, auto-resolving README.md/.gitignore/.gitattributes safely. Avoids replaying the 406 already-synced [base] commits against themselves._
+> - [ ] 2\. Keep trying literal rebase, resolve conflicts one by one
+>   - _I continue `git rebase base/base` and manually resolve each conflict as it comes, commit by commit, across all 442 commits. Slow and high-risk given the first conflict already surfaced this cascading issue._
+> - [ ] 3\. Stop here, let me look first
+>   - _Leave the rebase aborted (already done) and don't take further action until you've inspected the situation yourself._
+> - [x] 4\. _Type something:_
+>   - > the .run files can be overwritten by base version.
+>
+> </details>
+>
+
+❯ Include from-base, to base, from mane, ~~to mane~~
+
+❯ yeah, give it a proper message, including the commit hashes of the before/after.
+
