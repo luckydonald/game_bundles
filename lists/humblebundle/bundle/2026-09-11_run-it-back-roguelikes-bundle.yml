@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Run It Back - Roguelikes Bundle
+tiers:
+- rank: 1
+  name: 2 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: Entire 9 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/run-it-back-roguelikes-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-11_run-it-back-roguelikes-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-11_run-it-back-roguelikes-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Spellmasons
+  ids:
+  - steam:1618380
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Source of Madness
+  ids:
+  - steam:1315610
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dome Keeper
+  ids:
+  - steam:1637320
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Battle Shapers
+  ids:
+  - steam:1421290
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Dungeons of Blood and Dream
+  ids:
+  - steam:2488590
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: OTXO
+  ids:
+  - steam:1608640
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Rabbit and Steel
+  ids:
+  - steam:2132850
+  requires: []
+  tiers:
+  - 3
+- name: Chrono Ark
+  ids:
+  - steam:1188930
+  requires: []
+  tiers:
+  - 3
+- name: 'Lost in Random: The Eternal Die'
+  ids:
+  - steam:2564520
+  requires: []
+  tiers:
+  - 3
