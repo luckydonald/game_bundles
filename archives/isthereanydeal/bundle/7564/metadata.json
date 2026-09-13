@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2020-02-01T09:00:00Z",
-      "start": "2019-06-25T01:30:43Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2020-02-01T09:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1580547600.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2019-06-25T01:30:43Z",
+        "source": "isthereanydeal",
+        "timestamp": 1561426243.0
+      }
     },
     "id": 7564,
     "provider_name": "WinGameStore",
@@ -43,10 +54,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

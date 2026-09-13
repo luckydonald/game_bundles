@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2019-07-02T21:30:00Z",
-      "start": "2019-06-03T15:45:26Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2019-07-02T21:30:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1562103000.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2019-06-03T15:45:26Z",
+        "source": "isthereanydeal",
+        "timestamp": 1559576726.0
+      }
     },
     "id": 7455,
     "provider_name": "Bunch of Keys",
@@ -169,10 +180,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

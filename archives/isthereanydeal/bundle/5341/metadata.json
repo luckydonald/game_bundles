@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2017-08-18T17:00:00Z",
-      "start": "2017-07-21T05:31:20Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2017-08-18T17:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1503075600.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2017-07-21T05:31:20Z",
+        "source": "isthereanydeal",
+        "timestamp": 1500615080.0
+      }
     },
     "id": 5341,
     "provider_name": "Cubic Bundle",
@@ -106,10 +117,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

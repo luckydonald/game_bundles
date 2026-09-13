@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2021-12-10T14:55:00Z",
-      "start": "2021-12-03T20:47:18Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2021-12-10T14:55:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1639148100.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2021-12-03T20:47:18Z",
+        "source": "isthereanydeal",
+        "timestamp": 1638564438.0
+      }
     },
     "id": 10783,
     "provider_name": "Itch.io",
@@ -484,10 +495,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

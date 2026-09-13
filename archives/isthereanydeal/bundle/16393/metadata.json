@@ -28,8 +28,19 @@
     ],
     "dates": {
       "crawled": "2026-08-07T08:08:44.975584Z",
-      "expiry": "2026-08-18T17:51:47Z",
-      "start": "2026-07-15T17:45:32Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2026-08-18T17:51:47Z",
+        "source": "isthereanydeal",
+        "timestamp": 1787075507.0
+      },
+      "first_seen": "2026-08-07T08:08:44.975584Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2026-07-15T17:45:32Z",
+        "source": "isthereanydeal",
+        "timestamp": 1784137532.0
+      }
     },
     "id": 16393,
     "provider_name": "Fanatical",
@@ -258,10 +269,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]
