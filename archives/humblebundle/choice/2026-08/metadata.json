@@ -21,8 +21,19 @@
     ],
     "dates": {
       "crawled": "2026-08-18T09:26:15.075137Z",
-      "end": "2026-09-01T17:00:00Z",
-      "start": "2026-08-04T17:00:00Z"
+      "end": {
+        "confidence": 0.0,
+        "iso": "2026-09-01T17:00:00Z",
+        "source": "humblebundle",
+        "timestamp": 1788282000.0
+      },
+      "first_seen": "2026-08-18T09:26:15.075137Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2026-08-04T17:00:00Z",
+        "source": "humblebundle",
+        "timestamp": 1785862800.0
+      }
     },
     "description": "Get August 2026 Humble Choice and more when you subscribe for just $14.99 per month!",
     "headline": "August 2026 Humble Choice",
@@ -545,10 +556,10 @@
   },
   "version": [
     2026,
-    6,
-    1,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]
