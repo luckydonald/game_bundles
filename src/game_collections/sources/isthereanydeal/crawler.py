@@ -200,8 +200,16 @@ class ItadHttpClient:
 
         Uses GET, not HEAD - some destination stores (confirmed: Microsoft
         Store) reject HEAD requests with a 403 even though GET succeeds.
+        A 404 means the deal itself is stale (confirmed live: an affiliate
+        link into a now-dead product page) - not this run's problem to fail
+        on, since the caller already treats an unresolved deal URL as a
+        silent no-match (`sources.storefronts.qualified_ids_from_urls`); the
+        original `itad.link` URL is returned as-is so it stays unresolved.
         """
         response = self._send(lambda: self._client.get(url))
+        if response.status_code == 404:
+            return url
+        # end if
         response.raise_for_status()
         return str(response.url)
     # end def resolve_redirect
