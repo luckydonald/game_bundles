@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'WB GAMES: BLOOD & GRIT COLLECTION'
+tiers:
+- rank: 1
+  name: Survive
+- rank: 2
+  name: Dominate
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/wb-games-blood-grit-collection/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/wb-games-blood-grit-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/wb-games-blood-grit-collection/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Middle Earth: Shadow of Mordor GOTY'
+  ids:
+  - steam:318550
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Mad Max
+  ids:
+  - steam:234140
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Mortal Kombat XL
+  ids:
+  - steam:sub/128345
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Middle Earth: Shadow of War Definitive Edition'
+  ids:
+  - steam:sub/281112
+  requires: []
+  tiers:
+  - 2
+- name: F.E.A.R. Ultimate Shooter
+  ids:
+  - steam:sub/4384
+  group:
+    id: '411'
+    name: F.E.A.R. Collection
+  requires: []
+  tiers:
+  - 2
+- name: 'F.E.A.R. 2: Project Origin'
+  ids:
+  - steam:16450
+  group:
+    id: '411'
+    name: F.E.A.R. Collection
+  requires: []
+  tiers:
+  - 2
+- name: F.E.A.R. 3
+  ids:
+  - steam:21100
+  group:
+    id: '411'
+    name: F.E.A.R. Collection
+  requires: []
+  tiers:
+  - 2
+- name: 'Back 4 Blood - Expansion 1: Tunnels of Terror'
+  ids:
+  - steam:1840320
+  group:
+    id: '412'
+    name: Back 4 Blood Deluxe Edition
+  requires: []
+  tiers:
+  - 2
+- name: 'Back 4 Blood - Expansion 2: Children of the Worm'
+  ids:
+  - steam:2015180
+  group:
+    id: '412'
+    name: Back 4 Blood Deluxe Edition
+  requires: []
+  tiers:
+  - 2
+- name: 'Back 4 Blood - Expansion 3: River of Blood'
+  ids:
+  - steam:2101940
+  group:
+    id: '412'
+    name: Back 4 Blood Deluxe Edition
+  requires: []
+  tiers:
+  - 2
+- name: Back 4 Blood Annual Pass
+  ids:
+  - steam:1598441
+  group:
+    id: '412'
+    name: Back 4 Blood Deluxe Edition
+  requires: []
+  tiers:
+  - 2
+- name: Mortal Kombat 11
+  ids:
+  - steam:976310
+  group:
+    id: '413'
+    name: Mortal Kombat 11 Ultimate
+  requires: []
+  tiers:
+  - 2
+- name: Mortal Kombat 11 Kombat Pack 1
+  ids:
+  - steam:1054480
+  group:
+    id: '413'
+    name: Mortal Kombat 11 Ultimate
+  requires: []
+  tiers:
+  - 2
+- name: Mortal Kombat 11 Kombat Pack 2
+  ids:
+  - steam:1449880
+  group:
+    id: '413'
+    name: Mortal Kombat 11 Ultimate
+  requires: []
+  tiers:
+  - 2
+- name: 'Mortal Kombat 11: Aftermath Expansion'
+  ids:
+  - steam:1273971
+  group:
+    id: '413'
+    name: Mortal Kombat 11 Ultimate
+  requires: []
+  tiers:
+  - 2
