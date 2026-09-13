@@ -1,4 +1,3 @@
-# yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 2
 name: 'WB Games: Blood & Grit Collection'
 tiers:
@@ -16,11 +15,26 @@ references:
 crawlers:
 - isthereanydeal
 games:
-- name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+- name: 'Middle-earth: Shadow of Mordor'
   ids:
-  - unresolved:source:isthereanydeal:16489:middle-earth-shadow-of-mordor-game-of-the-year-edition
-  - isthereanydeal:middle-earth-shadow-of-mordor-game-of-the-year-edition
-  requires: []
+  - steam:241930
+  - isthereanydeal:middle-earth-shadow-of-mordor
+  group:
+    id: multiple:middle-earth™:-shadow-of-mordor™-game-of-the-year-edition
+    name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+  tiers:
+  - 1
+  - 2
+- name: 'Middle-earth: Shadow of Mordor - Upgrade to the GOTY Edition'
+  ids:
+  - steam:318550
+  - isthereanydeal:middle-earth-shadow-of-mordor-upgrade-to-the-goty-edition
+  group:
+    id: multiple:middle-earth™:-shadow-of-mordor™-game-of-the-year-edition
+    name: 'Middle-earth™: Shadow of Mordor™ Game of the Year Edition'
+  requires:
+  - steam:241930
+  - isthereanydeal:middle-earth-shadow-of-mordor
   tiers:
   - 1
   - 2
@@ -32,19 +46,91 @@ games:
   tiers:
   - 1
   - 2
-- name: Mortal Kombat XL
+- name: Mortal Kombat X
   ids:
-  - unresolved:source:isthereanydeal:16489:mortal-kombat-xl
-  - isthereanydeal:mortal-kombat-xl
-  requires: []
+  - steam:307780
+  - isthereanydeal:mortal-kombat-x
+  group:
+    id: multiple:mortal-kombat-xl
+    name: Mortal Kombat XL
   tiers:
   - 1
   - 2
-- name: Mortal Kombat 11 Ultimate
+- name: 'Mortal Kombat X: Kombat Pack'
   ids:
-  - unresolved:source:isthereanydeal:16489:mortal-kombat-11-ultimate
-  - isthereanydeal:mortal-kombat-11-ultimate
-  requires: []
+  - steam:347880
+  - isthereanydeal:mortal-kombat-x-kombat-pack
+  group:
+    id: multiple:mortal-kombat-xl
+    name: Mortal Kombat XL
+  requires:
+  - steam:307780
+  - isthereanydeal:mortal-kombat-x
+  tiers:
+  - 1
+  - 2
+- name: Mortal Kombat X - Kombat Pack 2
+  ids:
+  - steam:524620
+  - isthereanydeal:mortal-kombat-x-kombat-pack-2
+  group:
+    id: multiple:mortal-kombat-xl
+    name: Mortal Kombat XL
+  requires:
+  - steam:307780
+  - isthereanydeal:mortal-kombat-x
+  tiers:
+  - 1
+  - 2
+- name: Mortal Kombat 11 Kombat Pack 1
+  ids:
+  - steam:1054480
+  - humble:mortal-kombat-11-kombat-pack-1
+  - isthereanydeal:mortal-kombat-11-kombat-pack-1
+  group:
+    id: multiple:mortal-kombat-11-ultimate
+    name: Mortal Kombat 11 Ultimate
+  requires:
+  - steam:976310
+  - humble:mortal-kombat-11
+  - isthereanydeal:mortal-kombat-11
+  tiers:
+  - 2
+- name: 'Mortal Kombat 11: Aftermath Expansion'
+  ids:
+  - steam:1273971
+  - humble:mortal-kombat11-aftermath-expansion
+  - isthereanydeal:mortal-kombat-11-aftermath-expansion
+  group:
+    id: multiple:mortal-kombat-11-ultimate
+    name: Mortal Kombat 11 Ultimate
+  requires:
+  - steam:976310
+  - humble:mortal-kombat-11
+  - isthereanydeal:mortal-kombat-11
+  tiers:
+  - 2
+- name: Mortal Kombat 11 - Kombat Pack 2
+  ids:
+  - steam:1449880
+  - isthereanydeal:mortal-kombat-11-kombat-pack-2
+  group:
+    id: multiple:mortal-kombat-11-ultimate
+    name: Mortal Kombat 11 Ultimate
+  requires:
+  - steam:976310
+  - humble:mortal-kombat-11
+  - isthereanydeal:mortal-kombat-11
+  tiers:
+  - 2
+- name: MORTAL KOMBAT 11
+  ids:
+  - steam:976310
+  - humble:mortal-kombat-11
+  - isthereanydeal:mortal-kombat-11
+  group:
+    id: multiple:mortal-kombat-11-ultimate
+    name: Mortal Kombat 11 Ultimate
   tiers:
   - 2
 - name: 'Back 4 Blood: Deluxe Edition'
@@ -54,17 +140,143 @@ games:
   requires: []
   tiers:
   - 2
-- name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+- name: 'Middle-earth: Shadow of War'
   ids:
-  - unresolved:source:isthereanydeal:16489:middle-earth-shadow-of-war-definitive-edition
-  - isthereanydeal:middle-earth-shadow-of-war-definitive-edition
-  requires: []
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
   tiers:
   - 2
-- name: FEAR Collection
+- name: The Desolation of Mordor Story Expansion
   ids:
-  - unresolved:source:isthereanydeal:16489:fear-collection
-  - isthereanydeal:fear-collection
-  requires: []
+  - steam:533110
+  - isthereanydeal:the-desolation-of-mordor-story-expansion
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  requires:
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  tiers:
+  - 2
+- name: Slaughter Tribe Nemesis Expansion
+  ids:
+  - steam:561630
+  - isthereanydeal:slaughter-tribe-nemesis-expansion
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  requires:
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  tiers:
+  - 2
+- name: Outlaw Tribe Nemesis Expansion
+  ids:
+  - steam:561631
+  - isthereanydeal:outlaw-tribe-nemesis-expansion
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  requires:
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  tiers:
+  - 2
+- name: The Blade of Galadriel Story Expansion
+  ids:
+  - steam:561650
+  - isthereanydeal:the-blade-of-galadriel-story-expansion
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  requires:
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  tiers:
+  - 2
+- name: 'Middle-earth™: Shadow of War™ Story Expansion Pass'
+  ids:
+  - steam:784070
+  - isthereanydeal:middle-earth-shadow-of-war-story-expansion-pass
+  group:
+    id: multiple:middle-earth™:-shadow-of-war™-definitive-edition
+    name: 'Middle-earth™: Shadow of War™ Definitive Edition'
+  requires:
+  - steam:356190
+  - humble:middleearth-shadow-of-war
+  - gog:middleearth_shadow_of_war
+  - isthereanydeal:middle-earth-shadow-of-war
+  tiers:
+  - 2
+- name: F.E.A.R. 2 Project Origin
+  ids:
+  - steam:16450
+  - humble:fear-2-project-origin
+  - isthereanydeal:fear-2-project-origin
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
+  tiers:
+  - 2
+- name: 'FEAR 2: Reborn'
+  ids:
+  - steam:16465
+  - isthereanydeal:fear-2-reborn
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
+  requires:
+  - steam:16450
+  - humble:fear-2-project-origin
+  - isthereanydeal:fear-2-project-origin
+  tiers:
+  - 2
+- name: FEAR Ultimate Shooter Edition
+  ids:
+  - steam:21090
+  - isthereanydeal:fear-ultimate-shooter-edition
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
+  tiers:
+  - 2
+- name: FEAR 3
+  ids:
+  - steam:21100
+  - humble:fear-3
+  - gog:fear_3
+  - isthereanydeal:fear-3
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
+  tiers:
+  - 2
+- name: 'F.E.A.R.: Extraction Point'
+  ids:
+  - isthereanydeal:fear-extraction-point
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
+  tiers:
+  - 2
+- name: 'F.E.A.R.: Perseus Mandate'
+  ids:
+  - isthereanydeal:f-e-a-r-perseus-mandate
+  group:
+    id: multiple:fear-collection
+    name: FEAR Collection
   tiers:
   - 2
