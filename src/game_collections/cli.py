@@ -396,7 +396,7 @@ def migrate_command(
         else:
             typer.echo(
                 f"Dry run only: {total_bundle_units} bundle unit(s) and {total_archive_files} archive file(s) "
-                "would migrate. Pass --apply to write."
+                "would migrate. Pass --apply to write and --git to autocommit the migrated files."
             )
         # end if
     finally:

@@ -3354,6 +3354,5 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ Do better logging for the migration command, telling the user what's going on.
 
-❯ Conversation compacted <kbd>manual</kbd>:
-> - [Result (`46798` chars, `45.8 KB`)](output/compact/007.ff8eb4b4-9b6a-4f9a-b1a7-90a6b1c1694d/result.md)
+❯ Have it say `Pass --apply to write and --git to autocommit the migrated files.` at the end of the dry run. Implement the autocommit feature like for the scraping.
 
