@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2014-04-13T23:59:56Z",
-      "start": "2014-03-26T18:11:56Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2014-04-13T23:59:56Z",
+        "source": "isthereanydeal",
+        "timestamp": 1397433596.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2014-03-26T18:11:56Z",
+        "source": "isthereanydeal",
+        "timestamp": 1395857516.0
+      }
     },
     "id": 663,
     "provider_name": "Bundle Bandits",
@@ -85,10 +96,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

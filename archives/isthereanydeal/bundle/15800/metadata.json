@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2026-02-19T02:00:00Z",
-      "start": "2026-01-21T19:14:47Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2026-02-19T02:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1771466400.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2026-01-21T19:14:47Z",
+        "source": "isthereanydeal",
+        "timestamp": 1769022887.0
+      }
     },
     "id": 15800,
     "provider_name": "Humble Bundle",
@@ -529,10 +540,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

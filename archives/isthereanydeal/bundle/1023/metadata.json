@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2014-07-31T18:00:00Z",
-      "start": "2014-07-24T18:06:02Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2014-07-31T18:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1406829600.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2014-07-24T18:06:02Z",
+        "source": "isthereanydeal",
+        "timestamp": 1406225162.0
+      }
     },
     "id": 1023,
     "provider_name": "Humble Weekly Bundle",
@@ -179,10 +190,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

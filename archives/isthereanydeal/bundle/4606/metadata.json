@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2017-01-24T17:30:00Z",
-      "start": "2017-01-10T23:58:10Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2017-01-24T17:30:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1485279000.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2017-01-10T23:58:10Z",
+        "source": "isthereanydeal",
+        "timestamp": 1484092690.0
+      }
     },
     "id": 4606,
     "provider_name": "Groupees",
@@ -132,10 +143,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]
