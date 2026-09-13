@@ -3356,3 +3356,31 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ Have it say `Pass --apply to write and --git to autocommit the migrated files.` at the end of the dry run. Implement the autocommit feature like for the scraping.
 
+❯ I ran `game-collections migrate --git`, but my computer crashed in the middle. Now I am not able to run it again to continue. Btw, if possible it should continue the commit batch counter.
+
+❯ Actually, let's just revert to before the migration, then I can run it again.
+
+❯ No hard reset; do --keep so whatever is in my repo without git status can stay.
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The ~4,958 "modified" files are actually zero-byte garbage from the crash, not real migrated work. Given that, how should I proceed?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Recovery method** (1/1) <kbd>Single Select</kbd><br>
+>> The ~4,958 "modified" files are actually zero-byte garbage from the crash, not real migrated work. Given that, how should I proceed?
+> - [ ] 1\. Hard reset to pre-migration (Recommended)
+>   - _git reset --hard 504da9cd... restores every tracked file's correct content from git history as it was before the migration ever ran. Discards nothing real — the zeroed files have nothing worth keeping._
+> - [x] 2\. Restore only the zero-byte files
+>   - _Checkout only the ~4,958 zero-byte paths from 504da9cd (pre-migration) or 655efc0c (post-batch-10) as appropriate, leaving any other untouched working-tree state alone._
+> - [ ] 3\. Stop, let me inspect first
+>   - _Don't change anything further; I'll look at the situation myself before you act._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
