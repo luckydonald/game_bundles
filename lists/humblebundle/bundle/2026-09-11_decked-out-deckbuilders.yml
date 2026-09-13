@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Decked Out Deckbuilders
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/decked-out-deckbuilders
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-11_decked-out-deckbuilders/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-11_decked-out-deckbuilders/source.json
+crawlers:
+- humblebundle
+games:
+- name: Hexarchy
+  ids:
+  - steam:1356810
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cross Blitz
+  ids:
+  - steam:1619520
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'SteamWorld Quest: Hand of Gilgamech'
+  ids:
+  - steam:804010
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: WingSpan
+  ids:
+  - steam:1054490
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Tainted Grail: Conquest'
+  ids:
+  - steam:1199030
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Dream Tactics
+  ids:
+  - steam:1897650
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Cultist Simulator: Anthology Edition'
+  ids:
+  - steam:bundle/10931
+  requires: []
+  tiers:
+  - 3
+- name: Menace from the Deep
+  ids:
+  - steam:2644610
+  requires: []
+  tiers:
+  - 3
+- name: Monster Train
+  ids:
+  - steam:1102190
+  requires: []
+  tiers:
+  - 3
+- name: 'A new clan, the Wurmkin  *Note: the Wurmkin clan unlocks upon completing
+    Covenant level 1.*'
+  ids:
+  - steam:1359320
+  group:
+    id: monstertrain_thelastdivinitydlc
+    name: 'Monster Train: The Last Divinity DLC'
+  requires: []
+  tiers:
+  - 3
+- name: 'Hadean Tactics: Deluxe Edition'
+  ids:
+  - steam:bundle/74506
+  requires: []
+  tiers:
+  - 3
