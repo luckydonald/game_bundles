@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2015-07-01T04:00:00Z",
-      "start": "2015-06-25T18:54:50Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2015-07-01T04:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1435723200.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2015-06-25T18:54:50Z",
+        "source": "isthereanydeal",
+        "timestamp": 1435258490.0
+      }
     },
     "id": 2166,
     "provider_name": "IndieGameStand",
@@ -62,10 +73,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

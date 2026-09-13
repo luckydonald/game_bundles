@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2019-03-17T22:00:00Z",
-      "start": "2019-03-12T15:42:46Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2019-03-17T22:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1552860000.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2019-03-12T15:42:46Z",
+        "source": "isthereanydeal",
+        "timestamp": 1552405366.0
+      }
     },
     "id": 7161,
     "provider_name": "Voidu",
@@ -43,10 +54,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

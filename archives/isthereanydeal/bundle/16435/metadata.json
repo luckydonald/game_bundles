@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-08-07T08:08:44.975584Z",
-      "expiry": "2026-08-31T12:30:45Z",
-      "start": "2026-07-30T03:11:48Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2026-08-31T12:30:45Z",
+        "source": "isthereanydeal",
+        "timestamp": 1788179445.0
+      },
+      "first_seen": "2026-08-07T08:08:44.975584Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2026-07-30T03:11:48Z",
+        "source": "isthereanydeal",
+        "timestamp": 1785381108.0
+      }
     },
     "id": 16435,
     "provider_name": "IndieGala",
@@ -157,10 +168,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]

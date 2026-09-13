@@ -3,8 +3,19 @@
     "byob_tiers": [],
     "dates": {
       "crawled": "2026-07-13T00:25:54.908329Z",
-      "expiry": "2020-07-01T07:00:00Z",
-      "start": "2019-09-17T19:38:59Z"
+      "expiry": {
+        "confidence": 0.0,
+        "iso": "2020-07-01T07:00:00Z",
+        "source": "isthereanydeal",
+        "timestamp": 1593586800.0
+      },
+      "first_seen": "2026-07-13T00:25:54.908329Z",
+      "start": {
+        "confidence": 0.0,
+        "iso": "2019-09-17T19:38:59Z",
+        "source": "isthereanydeal",
+        "timestamp": 1568749139.0
+      }
     },
     "id": 7914,
     "provider_name": "Fanatical",
@@ -99,10 +110,10 @@
   },
   "version": [
     2026,
-    7,
-    13,
-    null,
-    null,
+    9,
+    11,
+    14,
+    30,
     null,
     null
   ]
