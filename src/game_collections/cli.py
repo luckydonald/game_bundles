@@ -260,7 +260,9 @@ def _commit_paths_in_batches(repository_root: Path, paths: list[str], subject: s
     total = len(batches)
     width = len(str(total))
     for index, batch in enumerate(batches, start=1):
-        git_ops.commit_changed_paths(repository_root, batch, f"({index:0{width}d}/{total}) {subject}")
+        label = f"({index:0{width}d}/{total})"
+        typer.echo(f"    [git] committing {label} - {len(batch)} path(s)...")
+        git_ops.commit_changed_paths(repository_root, batch, f"{label} {subject}")
     # end for
 # end def _commit_paths_in_batches
 
@@ -305,25 +307,35 @@ def migrate_command(
         raise typer.Exit(2)
     # end if
 
+    def _display(target: Path) -> Path:
+        return target.relative_to(repository_root) if target.is_relative_to(repository_root) else target
+    # end def _display
+
+    mode_label = "git" if git else "apply" if apply else "dry-run"
     repository_root = Path.cwd().resolve()
     git_session = git_ops.begin_scrape_git_session(repository_root, git, git_style)
     try:
         total_bundle_units = 0
         if "bundle" in kinds:
             lists_root = _lists_root(lists_root_path)
+            typer.echo(f"[bundle] scanning {_display(lists_root)} for list units ({mode_label})...")
             units = discover_list_units(lists_root)
+            typer.echo(f"[bundle] found {len(units)} unit(s) to check.")
+            group_index = 0
             for bundle_group, bundle_snapshots in plan_bundle_migrations(units, lists_root):
+                group_index += 1
                 total_bundle_units += len(bundle_group.units)
                 message = bundle_commit_message(bundle_group)
+                typer.echo(f"[bundle] group {group_index} - schema {bundle_group.version}: {len(bundle_group.units)} unit(s)")
                 if not apply:
-                    typer.echo(f"would migrate ({len(bundle_group.units)} unit(s)): {message}")
+                    typer.echo(f"  would migrate: {message}")
                     for unit in bundle_group.units:
-                        typer.echo(f"  {unit.relative_to(repository_root) if unit.is_relative_to(repository_root) else unit}")
+                        typer.echo(f"    {_display(unit)}")
                     # end for
                     continue
                 # end if
                 apply_bundle_migration_group(bundle_group, bundle_snapshots, repository_root)
-                typer.echo(f"migrated ({len(bundle_group.units)} unit(s)): {message}")
+                typer.echo(f"  migrated: {message}")
                 if git:
                     affected: list[str] = []
                     for unit in bundle_group.units:
@@ -334,6 +346,7 @@ def migrate_command(
                     _commit_paths_in_batches(repository_root, affected, message)
                 # end if
             # end for
+            typer.echo(f"[bundle] done - {group_index} group(s), {total_bundle_units} unit(s) total.")
         # end if
 
         allowed_kinds: set[FileKind] = {value for value in kinds if value in ("metadata", "source")}
@@ -341,6 +354,9 @@ def migrate_command(
         if allowed_kinds:
             allowed_sources = set(source) if source else None
             roots = path or [Path.cwd() / "archives"]
+            root_label = ", ".join(str(_display(root)) for root in roots)
+            type_label = "/".join(sorted(allowed_kinds))
+            typer.echo(f"[{type_label}] scanning {root_label} for archive files ({mode_label})...")
             candidates = discover_archive_paths(roots, allowed_kinds)
             if allowed_sources is not None:
                 candidates = [
@@ -349,24 +365,30 @@ def migrate_command(
                     if (classified := classify_path(candidate)) is not None and classified[0] in allowed_sources
                 ]
             # end if
+            typer.echo(f"[{type_label}] found {len(candidates)} candidate file(s) to check.")
 
+            group_index = 0
             for archive_group, archive_snapshots in plan_migrations(candidates):
+                group_index += 1
                 total_archive_files += len(archive_group.paths)
                 message = commit_message(archive_group)
+                typer.echo(f"[{type_label}] group {group_index} - {len(archive_group.paths)} file(s)")
                 if not apply:
-                    typer.echo(f"would migrate ({len(archive_group.paths)} file(s)): {message}")
+                    typer.echo(f"  would migrate: {message}")
                     for group_path in archive_group.paths:
-                        typer.echo(f"  {group_path.relative_to(repository_root) if group_path.is_relative_to(repository_root) else group_path}")
+                        typer.echo(f"    {_display(group_path)}")
                     # end for
                     continue
                 # end if
                 apply_migration_group(archive_group, archive_snapshots)
-                typer.echo(f"migrated ({len(archive_group.paths)} file(s)): {message}")
+                typer.echo(f"  migrated: {message}")
                 if git:
                     relative_paths = [str(group_path.relative_to(repository_root)) for group_path in archive_group.paths]
+                    typer.echo(f"    [git] committing {len(relative_paths)} path(s)...")
                     git_ops.commit_changed_paths(repository_root, relative_paths, message)
                 # end if
             # end for
+            typer.echo(f"[{type_label}] done - {group_index} group(s), {total_archive_files} file(s) total.")
         # end if
 
         if apply:
