@@ -144,7 +144,11 @@ def parse_store_identity(provider: StoreName, value: str) -> str:
         if host not in STORE_HOSTS["humble"]:
             raise ValueError("Humble Store URLs must use humblebundle.com")
         # end if
-        slug = _canonical_slug(path, "store")
+        # A mature product's link often goes through Humble's own age-gate interstitial
+        # first (`/store/agecheck/<real-slug>` - confirmed live via an ITAD-resolved
+        # "FEAR 3" deal redirect), not straight to `/store/<real-slug>` - the real slug
+        # is the segment after "agecheck", not "agecheck" itself.
+        slug = _canonical_slug(path, "agecheck") or _canonical_slug(path, "store")
     # end if
     if not slug:
         raise ValueError(f"could not derive a {provider} product ID from URL")

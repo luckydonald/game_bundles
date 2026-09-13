@@ -165,7 +165,10 @@ def complete_game_list(
     ``"isthereanydeal"`` in ``providers`` resolves
     ``unresolved:source:isthereanydeal:*`` markers via `itad_resolve` (see
     `sources.isthereanydeal.resolver.resolve_isthereanydeal_markers`)
-    instead of the title-search flow every other provider uses.
+    instead of the title-search flow every other provider uses. A marker that
+    turns out to be an ITAD "collection" package bundling several
+    separately-sold games (e.g. "FEAR Collection") is split into one `Game`
+    per constituent the same way a title-search "Multiple..." choice is.
     """
     if "isthereanydeal" in providers and itad_resolve is None:
         raise ValueError("provider 'isthereanydeal' requires itad_resolve")
@@ -216,7 +219,15 @@ def complete_game_list(
                 # end if
                 searched = True
                 assert itad_resolve is not None  # checked up front
-                current = resolve_isthereanydeal_markers(current, itad_resolve)
+                itad_result = resolve_isthereanydeal_markers(current, itad_resolve)
+                if itad_result.splits is not None:
+                    # This game entry turned out to be an ITAD "collection" package (e.g. "FEAR
+                    # Collection") bundling several separately-sold games - split it the same
+                    # way a title-search "Multiple..." choice does below.
+                    split = itad_result.splits
+                    break
+                # end if
+                current = itad_result.ids
                 if any(value.startswith(ITAD_UNRESOLVED_PREFIX) for value in current):
                     failed = True
                 # end if
@@ -261,10 +272,18 @@ def complete_game_list(
         # end for
         if split is not None:
             group_id = f"multiple:{'-'.join(name.casefold().split())}"
+            original_tiers = game.get("tiers")
             for entry in split:
                 slug = "-".join(entry.name.casefold().split())
                 ids = list(dict.fromkeys(entry.ids)) or [f"unresolved:source:complete:{slug}"]
-                games_out.append({"name": entry.name, "ids": ids, "group": {"id": group_id, "name": name}})
+                split_game: dict[str, Any] = {"name": entry.name, "ids": ids, "group": {"id": group_id, "name": name}}
+                if entry.requires:
+                    split_game["requires"] = list(dict.fromkeys(entry.requires))
+                # end if
+                if isinstance(original_tiers, list) and original_tiers:
+                    split_game["tiers"] = list(original_tiers)
+                # end if
+                games_out.append(split_game)
                 if ids[0].startswith("unresolved:"):
                     unresolved.append(entry.name)
                 # end if

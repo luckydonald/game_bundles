@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from game_collections.sources.common import atomic_write, dump_versioned_json
+from game_collections.sources.humblebundle.resolver import ResolvedGame
 from game_collections.sources.isthereanydeal.models import CURRENT_VERSION, ItadDates, ItadGameArchive
 from game_collections.sources.isthereanydeal.parser import parse_game_detail_json
 from game_collections.sources.storefronts import qualified_ids_from_urls
@@ -37,10 +38,17 @@ def parse_unresolved_marker(value: str) -> tuple[int, str] | None:
 
 @dataclass(frozen=True, slots=True)
 class ItadGameResolution:
-    """One resolved ITAD game, paired with its raw payloads for archiving."""
+    """One resolved ITAD game, paired with its raw payloads for archiving.
+
+    `splits` is non-empty when this game is itself a "collection" packaging
+    several separately-sold games with no storefront release of its own (see
+    `resolve_game`) - each entry is a full resolution of one constituent game,
+    ready to be archived (`write_itad_game_archive`) the same as any other.
+    """
 
     archive: ItadGameArchive
     source: dict[str, Any]
+    splits: tuple[ItadGameResolution, ...] = ()
 
 # end class ItadGameResolution
 
@@ -70,12 +78,58 @@ def _deal_urls(
 # end def _deal_urls
 
 
+def _package_contents(deals_payload: dict[str, Any]) -> list[str]:
+    """Return the constituent game slugs of a "collection"/pack product, if any.
+
+    ITAD's own `api/game/info/` response nests these under
+    `games.packageContents` (confirmed live: the ITAD "FEAR Collection"
+    entry - `appid: null`, no `deals` of its own for the pack itself - lists
+    six separately-sold real Steam games this way, e.g. "FEAR 3" and "FEAR 2:
+    Reborn"). Present whenever the queried game has no single storefront
+    release of its own but bundles several separately-sold games together.
+    """
+    games = deals_payload.get("games")
+    if not isinstance(games, dict):
+        return []
+    # end if
+    entries = games.get("packageContents")
+    if not isinstance(entries, list):
+        return []
+    # end if
+    return [
+        entry["slug"]
+        for entry in entries
+        if isinstance(entry, dict) and isinstance(entry.get("slug"), str) and entry["slug"]
+    ]
+# end def _package_contents
+
+
+def _dlc_parent_slugs(deals_payload: dict[str, Any]) -> list[str]:
+    """Return the slugs ITAD lists as this game's own DLC parent(s), if any."""
+    games = deals_payload.get("games")
+    if not isinstance(games, dict):
+        return []
+    # end if
+    parents = games.get("dlcParents")
+    if not isinstance(parents, list):
+        return []
+    # end if
+    return [
+        parent["slug"]
+        for parent in parents
+        if isinstance(parent, dict) and isinstance(parent.get("slug"), str) and parent["slug"]
+    ]
+# end def _dlc_parent_slugs
+
+
 def resolve_game(
     slug: str,
     fetch_detail_page: FetchDetailPage,
     fetch_deals: FetchDeals,
     resolve_redirect: ResolveRedirect,
     crawled: datetime,
+    *,
+    _seen: frozenset[str] = frozenset(),
 ) -> ItadGameResolution:
     """Resolve one ITAD game slug into an `ItadGameArchive`, using its own detail page and deals.
 
@@ -84,6 +138,12 @@ def resolve_game(
     storefront resolved from the game's `deals` (see
     `sources.storefronts.qualified_ids_from_urls` - shops with no verified
     URL-parsing rule yet are silently skipped there, not guessed).
+
+    When the game is itself a "collection" packaging several separately-sold
+    games (`_package_contents`), each constituent slug is resolved the same
+    way (recursively, guarded by `_seen` against a slug re-appearing in its
+    own package) and returned via `splits` instead of `ids` - see
+    `package_split_games` for turning that into launcher-neutral games.
     """
     url = GAME_DETAIL_URL.format(slug=slug)
     detail = parse_game_detail_json(fetch_detail_page(url), slug)
@@ -105,8 +165,43 @@ def resolve_game(
         dates=ItadDates(start=None, expiry=None, crawled=crawled),
     )
     source = {"page": detail.payload, "deals": deals_payload, "deals_resolved": deals_resolved}
-    return ItadGameResolution(archive=archive, source=source)
+
+    splits: tuple[ItadGameResolution, ...] = ()
+    seen = _seen | {slug}
+    package_slugs = [entry for entry in _package_contents(deals_payload) if entry not in seen]
+    if package_slugs:
+        splits = tuple(
+            resolve_game(entry_slug, fetch_detail_page, fetch_deals, resolve_redirect, crawled, _seen=seen)
+            for entry_slug in package_slugs
+        )
+    # end if
+    return ItadGameResolution(archive=archive, source=source, splits=splits)
 # end def resolve_game
+
+
+def package_split_games(resolution: ItadGameResolution) -> list[ResolvedGame]:
+    """Turn a package's resolved `splits` into launcher-neutral `ResolvedGame`s.
+
+    A split component ITAD's own `dlcParents` marks as a DLC of a sibling
+    component gets that sibling's ids as `requires` - mirroring how Humble's
+    "DLC pack"/"Edition" splits declare their base-game dependency
+    (`humblebundle.resolver`; confirmed live for the FEAR Collection's own
+    "FEAR 2: Reborn" DLC / "F.E.A.R. 2 Project Origin" base-game pair).
+    """
+    slug_to_ids = {split.archive.slug: split.archive.ids for split in resolution.splits}
+    result: list[ResolvedGame] = []
+    for split in resolution.splits:
+        requires: list[str] = []
+        for parent_slug in _dlc_parent_slugs(split.source.get("deals", {})):
+            if parent_slug in slug_to_ids and parent_slug != split.archive.slug:
+                requires = slug_to_ids[parent_slug]
+                break
+            # end if
+        # end for
+        result.append(ResolvedGame(name=split.archive.title, ids=split.archive.ids, requires=requires))
+    # end for
+    return result
+# end def package_split_games
 
 
 def resolve_game_with_aliases(
@@ -135,16 +230,32 @@ def resolve_game_with_aliases(
             # end if
         # end for
     # end for
-    return ItadGameResolution(archive=own.archive.model_copy(update={"ids": merged_ids}), source=own.source)
+    return ItadGameResolution(
+        archive=own.archive.model_copy(update={"ids": merged_ids}), source=own.source, splits=own.splits
+    )
 # end def resolve_game_with_aliases
+
+
+@dataclass(frozen=True, slots=True)
+class ItadMarkerResolution:
+    """Result of resolving every ITAD unresolved marker found in one game's `ids`."""
+
+    ids: list[str]
+    # Non-`None` when a marker turned out to be a "collection" package: this game entry
+    # isn't one game after all, and `ids` should be discarded in favor of these instead
+    # (mirrors the title-search "Multiple..." split path in `search.complete_game_list`).
+    splits: list[ResolvedGame] | None = None
+
+# end class ItadMarkerResolution
 
 
 def resolve_isthereanydeal_markers(
     current: list[str],
     resolve: Callable[[str], ItadGameResolution],
-) -> list[str]:
+) -> ItadMarkerResolution:
     """Resolve every ITAD unresolved marker in `current`, merging in ids and dropping solved markers."""
     result = list(current)
+    splits: list[ResolvedGame] | None = None
     for value in current:
         parsed = parse_unresolved_marker(value)
         if parsed is None:
@@ -152,6 +263,10 @@ def resolve_isthereanydeal_markers(
         # end if
         _bundle_id, slug = parsed
         resolution = resolve(slug)
+        if resolution.splits:
+            splits = package_split_games(resolution)
+            continue
+        # end if
         for new_id in resolution.archive.ids:
             if new_id not in result:
                 result.append(new_id)
@@ -162,7 +277,7 @@ def resolve_isthereanydeal_markers(
             result = [item for item in result if item != value]
         # end if
     # end for
-    return result
+    return ItadMarkerResolution(ids=result, splits=splits)
 # end def resolve_isthereanydeal_markers
 
 
@@ -173,7 +288,14 @@ def _archive_paths(archive_root: Path, slug: str) -> tuple[Path, Path]:
 
 
 def write_itad_game_archive(resolution: ItadGameResolution, archive_root: Path) -> tuple[Path, Path]:
-    """Atomically write `archives/isthereanydeal/game/<slug>/{metadata.json,source.json}`."""
+    """Atomically write `archives/isthereanydeal/game/<slug>/{metadata.json,source.json}`.
+
+    Recurses into `resolution.splits` first, so a "collection" package's
+    constituent games (see `resolve_game`) each get their own archive too.
+    """
+    for split in resolution.splits:
+        write_itad_game_archive(split, archive_root)
+    # end for
     metadata_path, source_path = _archive_paths(archive_root, resolution.archive.slug)
     atomic_write(
         metadata_path, dump_versioned_json(CURRENT_VERSION, resolution.archive.model_dump(by_alias=True, mode="json"))

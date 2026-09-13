@@ -48,6 +48,12 @@ def test_product_url_round_trips_steam_bundle_identity() -> None:
 # end def test_product_url_round_trips_steam_bundle_identity
 
 
+def test_parse_store_identity_skips_humble_agecheck_gate() -> None:
+    url = "https://www.humblebundle.com/store/agecheck/fear-3?irclickid=abc123"
+    assert parse_store_identity("humble", url) == "humble:fear-3"
+# end def test_parse_store_identity_skips_humble_agecheck_gate
+
+
 def test_product_url_unknown_provider_returns_none() -> None:
     assert product_url("unresolved", "whatever") is None
     assert product_url("isthereanydeal", "whatever") is None

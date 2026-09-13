@@ -7,6 +7,7 @@ from pathlib import Path
 from game_collections.sources.isthereanydeal.resolver import (
     ItadGameResolution,
     UNRESOLVED_PREFIX,
+    package_split_games,
     parse_unresolved_marker,
     resolve_game,
     resolve_game_with_aliases,
@@ -87,6 +88,128 @@ def test_resolve_game_no_match_keeps_only_own_id() -> None:
 # end def test_resolve_game_no_match_keeps_only_own_id
 
 
+def _package_content_entry(slug: str, title: str) -> dict[str, object]:
+    return {"id": f"id-{slug}", "slug": slug, "title": title, "type": 1, "mature": False, "assets": {}}
+# end def _package_content_entry
+
+
+def _slug_from_detail_url(url: str) -> str:
+    return url.rstrip("/").rsplit("/", 2)[-2]
+# end def _slug_from_detail_url
+
+
+def test_resolve_game_splits_a_collection_package_into_its_constituent_games() -> None:
+    """Live-confirmed shape: ITAD's "FEAR Collection" has `appid: null` and no `deals` of its
+    own for the pack, but `games.packageContents` lists its real, separately-sold games -
+    including "FEAR 2: Reborn", a DLC of "F.E.A.R. 2 Project Origin" per `games.dlcParents`.
+    """
+    htmls = {
+        "fear-collection": _detail_html("gid-collection", "FEAR Collection", None),
+        "fear-2-project-origin": _detail_html("gid-base", "F.E.A.R. 2 Project Origin", 21090),
+        "fear-2-reborn": _detail_html("gid-dlc", "FEAR 2: Reborn", None),
+    }
+    deals_by_slug = {
+        "fear-collection": {
+            "deals": [],
+            "games": {
+                "packageContents": [
+                    _package_content_entry("fear-2-project-origin", "F.E.A.R. 2 Project Origin"),
+                    _package_content_entry("fear-2-reborn", "FEAR 2: Reborn"),
+                ]
+            },
+        },
+        "fear-2-project-origin": {"deals": [], "games": {}},
+        "fear-2-reborn": {
+            "deals": [],
+            "games": {"dlcParents": [{"slug": "fear-2-project-origin", "title": "F.E.A.R. 2 Project Origin"}]},
+        },
+    }
+    gid_to_slug = {
+        "gid-collection": "fear-collection",
+        "gid-base": "fear-2-project-origin",
+        "gid-dlc": "fear-2-reborn",
+    }
+
+    resolution = resolve_game(
+        "fear-collection",
+        fetch_detail_page=lambda url: htmls[_slug_from_detail_url(url)],
+        fetch_deals=lambda gid: deals_by_slug[gid_to_slug[gid]],
+        resolve_redirect=lambda url: url,
+        crawled=CRAWLED,
+    )
+
+    assert resolution.archive.ids == ["isthereanydeal:fear-collection"]
+    assert {split.archive.slug for split in resolution.splits} == {"fear-2-project-origin", "fear-2-reborn"}
+
+    split_games = package_split_games(resolution)
+    by_name = {game.name: game for game in split_games}
+    assert by_name["F.E.A.R. 2 Project Origin"].ids == ["steam:21090", "isthereanydeal:fear-2-project-origin"]
+    assert by_name["F.E.A.R. 2 Project Origin"].requires == []
+    assert by_name["FEAR 2: Reborn"].requires == ["steam:21090", "isthereanydeal:fear-2-project-origin"]
+# end def test_resolve_game_splits_a_collection_package_into_its_constituent_games
+
+
+def test_resolve_isthereanydeal_markers_splits_a_collection_package() -> None:
+    htmls = {
+        "fear-collection": _detail_html("gid-collection", "FEAR Collection", None),
+        "fear-3": _detail_html("gid-fear-3", "FEAR 3", 21110),
+    }
+    deals_by_slug = {
+        "fear-collection": {
+            "deals": [],
+            "games": {"packageContents": [_package_content_entry("fear-3", "FEAR 3")]},
+        },
+        "fear-3": {"deals": [], "games": {}},
+    }
+    gid_to_slug = {"gid-collection": "fear-collection", "gid-fear-3": "fear-3"}
+
+    def resolve(slug: str) -> ItadGameResolution:
+        return resolve_game(
+            slug,
+            fetch_detail_page=lambda url: htmls[_slug_from_detail_url(url)],
+            fetch_deals=lambda gid: deals_by_slug[gid_to_slug[gid]],
+            resolve_redirect=lambda url: url,
+            crawled=CRAWLED,
+        )
+    # end def resolve
+
+    result = resolve_isthereanydeal_markers(
+        ["unresolved:source:isthereanydeal:16489:fear-collection"], resolve
+    )
+    assert result.splits is not None
+    assert [game.ids for game in result.splits] == [["steam:21110", "isthereanydeal:fear-3"]]
+# end def test_resolve_isthereanydeal_markers_splits_a_collection_package
+
+
+def test_write_itad_game_archive_recurses_into_splits(tmp_path: Path) -> None:
+    inner = ItadGameResolution(
+        archive=resolve_game(
+            "fear-3",
+            fetch_detail_page=lambda _url: _detail_html("gid-fear-3", "FEAR 3", 21110),
+            fetch_deals=lambda _gid: {"deals": []},
+            resolve_redirect=lambda url: url,
+            crawled=CRAWLED,
+        ).archive,
+        source={},
+    )
+    outer = ItadGameResolution(
+        archive=resolve_game(
+            "fear-collection",
+            fetch_detail_page=lambda _url: _detail_html("gid-collection", "FEAR Collection", None),
+            fetch_deals=lambda _gid: {"deals": []},
+            resolve_redirect=lambda url: url,
+            crawled=CRAWLED,
+        ).archive,
+        source={},
+        splits=(inner,),
+    )
+
+    write_itad_game_archive(outer, tmp_path)
+    assert (tmp_path / "isthereanydeal/game/fear-collection/metadata.json").exists()
+    assert (tmp_path / "isthereanydeal/game/fear-3/metadata.json").exists()
+# end def test_write_itad_game_archive_recurses_into_splits
+
+
 def test_resolve_game_with_aliases_merges_group_ids() -> None:
     htmls = {
         "pinball-fx-my-little-pony-pinball": _detail_html("gid-steam", "Pinball FX - MLP Pinball", 2351841),
@@ -156,10 +279,11 @@ def test_resolve_isthereanydeal_markers_strips_solved_and_merges_ids() -> None:
     # end def resolve
 
     result = resolve_isthereanydeal_markers(current, resolve)
-    assert "unresolved:source:isthereanydeal:2126:wildstar" not in result
-    assert "steam:376870" in result
-    assert "isthereanydeal:wildstar" in result
-    assert "some:other-id" in result
+    assert result.splits is None
+    assert "unresolved:source:isthereanydeal:2126:wildstar" not in result.ids
+    assert "steam:376870" in result.ids
+    assert "isthereanydeal:wildstar" in result.ids
+    assert "some:other-id" in result.ids
 # end def test_resolve_isthereanydeal_markers_strips_solved_and_merges_ids
 
 
@@ -177,8 +301,9 @@ def test_resolve_isthereanydeal_markers_keeps_marker_when_unsolved() -> None:
     # end def resolve
 
     result = resolve_isthereanydeal_markers(current, resolve)
-    assert "unresolved:source:isthereanydeal:1:untraceable-game" in result
-    assert "isthereanydeal:untraceable-game" in result
+    assert result.splits is None
+    assert "unresolved:source:isthereanydeal:1:untraceable-game" in result.ids
+    assert "isthereanydeal:untraceable-game" in result.ids
 # end def test_resolve_isthereanydeal_markers_keeps_marker_when_unsolved
 
 
