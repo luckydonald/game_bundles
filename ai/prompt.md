@@ -3080,7 +3080,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 - `merge_scraped_timestamp(…)`, case **e.**: Ask user witch to take; no-ttl mode: use older one.
 - give example for _Exact substring match_ and generally all items in _**3. Fuzzy + content-similarity dedup**_.
 - I don't want the need for dedicated migration commands any more. Touched files should be auto-migrated before writing new data to them, which should be intelligently be collected to a first commit.
-  - So if `10` files changes not `10 * 2 = 20` commits, but rather `~2` commits: 
+  - So if `10` files changes not `10 * 2 = 20` commits, but rather `~2` commits:
     - `1`. the migration from v1 to v2.
     - `2`. the migration form v2 to v3.
     - `⋮`. … possibly more migrations …
@@ -3209,7 +3209,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
     - Lol, actually we could abuse `Versioned` as return type here:
       ```py
       DICT_OR_ITEMS[KEY: Hashable, VALUE: Any] = list[tuple[KEY, VALUE]] | dict[KEY, VALUE]
-     
+
       def migrate_to_latest[
         VERSION: int | SchemaDateVersion,  # better: Literal[1, 2, 3] or Literal[SchemaDateVersion(2026,9,9, 6,9,6,.9069), …]
         JSON_DATA: JsonType,
@@ -3232,7 +3232,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
     - you may only need to go through the list for every file and group together the same versions for every file.
     - However we should think about memory usage, I guess that could sky rocket if we build a in-memory list of say 20 pending migration versions for 5k files, or whatever.
     - Can we make that better by using `yield`?
-    - My idea for an algorithem then would be the following, is that possible? 
+    - My idea for an algorithem then would be the following, is that possible?
       1. "start" the migration for every file (we should look at
          - **(1)** Either a given `list[Path]` (e.g. the files we know we wanna touch when scraping),
          - **(2)** Or `None` for migrating all of them (Dedicated `migrate` command)
@@ -3249,7 +3249,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
       7. In our groups, replace the just processed earliest version group with those newer version ones, following the grouping of **2.** (merging into existing groups)
       8. If we still have groups/versions left, continue at **3.**.
          - Otherwise break out to **9.**
-      9. 
+      9.
     - Step **4.** and **5.** can be an outer function, and the loop above just yields the group with that version (`earliest_version`).
     - Basically the processing of a `Path` = rename and `DATA` = overwrite can be adapted for the parsers as well, so it would be the same function, just with a different commit message (_migration_ vs. _crawl_).
     - For that, would it make sense to actually really reuse the `Versioned` for crawls? Where there'd be a `is_migration: bool` or something like that, therefore giving the outer function the information if it's done with the migrations now.
@@ -3265,7 +3265,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 - **7. Standalone migrate schema CLI command (…)**:
   - `--git` implies `--apply`.
   - Dry run with ``--dry-run` or without `--apply` or `--git`.
-- **8. Commit shape rules**: 
+- **8. Commit shape rules**:
   - The zero-padded is just as long as the total is long. No `(01/03)`, but `(1/3)` or `(03/22)`.
   - The commit message for the date-versioned raw stuff would be `[lists] metadata: Migrating Model \`2026-09-11 23:40:24\` → \`2026-09-12\`.`
   - Remember the trailing dot in the commit headline.
@@ -3339,7 +3339,7 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ Regarding
 > migration unit is a whole bundle/choice directory
-- That is kinda correct, still the plan is to touch only one file of a bundle at once. 
+- That is kinda correct, still the plan is to touch only one file of a bundle at once.
   1. Rename the highest tiers,
   2. add the highest tier tier info into the yml,
   3. merge the next tier into it.
@@ -3351,4 +3351,9 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 - please tell me how you're planing that, where it doesn't make the current migration for loop ugly.
 
 ❯ CONTINUE
+
+❯ Do better logging for the migration command, telling the user what's going on.
+
+❯ Conversation compacted <kbd>manual</kbd>:
+> - [Result (`46798` chars, `45.8 KB`)](output/compact/007.ff8eb4b4-9b6a-4f9a-b1a7-90a6b1c1694d/result.md)
 
