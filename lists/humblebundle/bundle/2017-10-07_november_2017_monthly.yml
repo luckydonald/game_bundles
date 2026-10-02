@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/5526/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/5526/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16595/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16595/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16595/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Wilmot's Warehouse
   ids:
@@ -16,6 +24,8 @@ games:
 - name: 'The Elder Scrolls Online: Tamriel Unlimited'
   ids:
   - unresolved:source:isthereanydeal:5526:the-elder-scrolls-online-tamriel-unlimited
+  - steam:306130
+  - isthereanydeal:the-elder-scrolls-online
   requires: []
 - name: Dead Rising® 2
   ids:

@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/13720/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/13720/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16595/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16595/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16595/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: ELEX
   ids:
@@ -28,6 +36,7 @@ games:
 - name: 'Thronebreaker: The Witcher Tales'
   ids:
   - steam:973760
+  - isthereanydeal:thronebreaker-the-witcher-tales
   requires: []
 - name: GreedFall - Gold Edition
   ids:

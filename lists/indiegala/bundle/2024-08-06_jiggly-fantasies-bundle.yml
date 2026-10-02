@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/14299/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/14299/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16616/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16616/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16616/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Hentai Jigsaw Puzzle
   ids:
@@ -36,6 +44,7 @@ games:
 - name: Project Mirror
   ids:
   - steam:1429730
+  - isthereanydeal:project-mirror--1
   requires: []
 - name: Let's Turn Pick-Up Beach to a Nudist Fucking Beach!!
   ids:
