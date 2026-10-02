@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Gear & Glory Action RPG's Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
+- rank: 3
+  name: Entire 9 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16606/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16606/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16606/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'Clash: Artifacts of Chaos'
+  ids:
+  - steam:1430680
+  - isthereanydeal:clash-artifacts-of-chaos
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Achilles: Legends Untold'
+  ids:
+  - steam:1314000
+  - isthereanydeal:achilles-legends-untold
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Into the Necrovale
+  ids:
+  - steam:1717090
+  - isthereanydeal:into-the-necrovale
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sands of Aura
+  ids:
+  - steam:1119840
+  - isthereanydeal:sands-of-aura
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Tower of Babel: Survivors Of Chaos'
+  ids:
+  - steam:2665680
+  - isthereanydeal:tower-of-babel-survivors-of-chaos
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Coridden
+  ids:
+  - steam:1656930
+  - isthereanydeal:coridden
+  requires: []
+  tiers:
+  - 3
+- name: Ghostlore
+  ids:
+  - steam:1783280
+  - isthereanydeal:ghostlore
+  requires: []
+  tiers:
+  - 3
+- name: Tower of Kalemonvo
+  ids:
+  - steam:2351860
+  - isthereanydeal:tower-of-kalemonvo
+  requires: []
+  tiers:
+  - 3
+- name: Wayfinder
+  ids:
+  - steam:1171690
+  - isthereanydeal:wayfinder
+  requires: []
+  tiers:
+  - 3

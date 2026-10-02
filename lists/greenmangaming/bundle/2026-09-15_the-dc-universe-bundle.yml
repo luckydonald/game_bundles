@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: The DC Universe Bundle
+tiers:
+- rank: 1
+  name: Recruit
+- rank: 2
+  name: Operative
+- rank: 3
+  name: Legend
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16568/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16568/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16568/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'Batman: Arkham Asylum Game of the Year Edition'
+  ids:
+  - steam:35140
+  - isthereanydeal:batman-arkham-asylum-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Injustice: Gods Among Us - Ultimate Edition'
+  ids:
+  - steam:242700
+  - isthereanydeal:injustice-gods-among-us-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Batman Arkham City Game of the Year Edition
+  ids:
+  - steam:200260
+  - isthereanydeal:batman-arkham-city-game-of-the-year-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Gotham Knights
+  ids:
+  - steam:1496790
+  - isthereanydeal:gotham-knights
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Suicide Squad: Kill the Justice League - Digital Deluxe Edition'
+  ids:
+  - steam:315210
+  - isthereanydeal:suicide-squad-kill-the-justice-league-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Batman™: Arkham Knight Premium Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16568:batman-arkham-knight-premium-edition
+  - isthereanydeal:batman-arkham-knight-premium-edition
+  requires: []
+  tiers:
+  - 3
+- name: 'Batman: Arkham Origins'
+  ids:
+  - steam:209000
+  - isthereanydeal:batman-arkham-origins
+  requires: []
+  tiers:
+  - 3
+- name: Injustice 2 Legendary Edition
+  ids:
+  - unresolved:source:isthereanydeal:16568:injustice-2-legendary-edition
+  - isthereanydeal:injustice-2-legendary-edition
+  requires: []
+  tiers:
+  - 3

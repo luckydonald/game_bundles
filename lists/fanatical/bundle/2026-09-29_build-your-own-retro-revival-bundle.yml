@@ -1,0 +1,239 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build Your Own Retro Revival Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16613/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16613/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16613/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Wild Guns Reloaded
+  ids:
+  - steam:585910
+  - isthereanydeal:wild-guns-reloaded
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Fearmonium
+  ids:
+  - steam:1068360
+  - isthereanydeal:fearmonium
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hearthlands
+  ids:
+  - steam:336300
+  - isthereanydeal:hearthlands
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Steam™: Rails to Riches - Golden Train Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16613:steam-rails-to-riches-golden-train-edition
+  - isthereanydeal:steam-rails-to-riches-golden-train-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ex-Zodiac
+  ids:
+  - steam:1249480
+  - isthereanydeal:ex-zodiac
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'STASIS: BONE TOTEM'
+  ids:
+  - steam:1426010
+  - isthereanydeal:stasis-bone-totem
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bloodless
+  ids:
+  - steam:1592490
+  - isthereanydeal:bloodless
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Blood West
+  ids:
+  - steam:1587130
+  - isthereanydeal:blood-west
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Redout: Ultimate Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16613:redout-ultimate-edition
+  - isthereanydeal:redout-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Final Vendetta
+  ids:
+  - steam:1891090
+  - isthereanydeal:final-vendetta
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mika and The Witch's Mountain
+  ids:
+  - steam:1819460
+  - isthereanydeal:mika-and-the-witchs-mountain
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Koa and the Five Pirates of Mara
+  ids:
+  - steam:1819450
+  - isthereanydeal:koa-and-the-five-pirates-of-mara
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: FACEMINER
+  ids:
+  - steam:2276980
+  - isthereanydeal:faceminer
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Grapple Dogs: Cosmic Canines'
+  ids:
+  - steam:2278790
+  - isthereanydeal:grapple-dogs-cosmic-canines
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Pixel Pulps Collection
+  ids:
+  - unresolved:source:isthereanydeal:16613:the-pixel-pulps-collection
+  - isthereanydeal:the-pixel-pulps-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: BioGun
+  ids:
+  - steam:1219240
+  - isthereanydeal:biogun
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Utopia Must Fall
+  ids:
+  - steam:2849680
+  - isthereanydeal:utopia-must-fall
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Talisman: Digital 5th Edition'
+  ids:
+  - steam:908060
+  - isthereanydeal:talisman-digital-5th-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Caput Mortum
+  ids:
+  - steam:3555980
+  - isthereanydeal:caput-mortum
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Driveloop: Survivors'
+  ids:
+  - steam:3183730
+  - isthereanydeal:driveloop-survivors
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: AMID EVIL & DUSK Double Pack
+  ids:
+  - unresolved:source:isthereanydeal:16613:amid-evil-and-dusk-double-pack
+  - isthereanydeal:amid-evil-and-dusk-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Open The Gate: Just A Little'
+  ids:
+  - steam:4244210
+  - isthereanydeal:open-the-gate-just-a-little
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Gods & Gore
+  ids:
+  - steam:4300870
+  - isthereanydeal:gods-and-gore
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Rogue Trooper, AvP Classic 2000 & Dredd Triple Pack
+  ids:
+  - unresolved:source:isthereanydeal:16613:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  - isthereanydeal:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

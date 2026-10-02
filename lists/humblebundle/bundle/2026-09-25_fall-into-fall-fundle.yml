@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Fall into Fall Fun-dle
+tiers:
+- rank: 1
+  name: 5 Item Bundle
+- rank: 2
+  name: Entire 8 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16605/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16605/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16605/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Witch It
+  ids:
+  - steam:559650
+  - isthereanydeal:witch-it
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Alchemy Story
+  ids:
+  - steam:1040630
+  - isthereanydeal:alchemy-story
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Bunny Park
+  ids:
+  - steam:1208600
+  - isthereanydeal:bunny-park
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Sugar Shack
+  ids:
+  - steam:1813130
+  - isthereanydeal:sugar-shack
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Outlanders
+  ids:
+  - steam:1766720
+  - isthereanydeal:outlanders
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Witchtastic
+  ids:
+  - steam:1080010
+  - isthereanydeal:witchtastic
+  requires: []
+  tiers:
+  - 2
+- name: Mika and The Witch's Mountain
+  ids:
+  - steam:1819460
+  - isthereanydeal:mika-and-the-witchs-mountain
+  requires: []
+  tiers:
+  - 2
+- name: Alchemist Shop Simulator
+  ids:
+  - steam:3043310
+  - isthereanydeal:alchemist-shop-simulator
+  requires: []
+  tiers:
+  - 2

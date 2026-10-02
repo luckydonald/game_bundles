@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Dying Light 2 Stay Human Complete DLC Bundle
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 9 Item Bundle
+- rank: 3
+  name: Entire 13 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16617/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16617/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16617/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'Dying Light 2 Stay Human: Dying Laugh Bundle'
+  ids:
+  - steam:2156750
+  - isthereanydeal:dying-light-2-stay-human-dying-laugh-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Rais Bundle'
+  ids:
+  - steam:2269810
+  - isthereanydeal:dying-light-2-stay-human-rais-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Brecken Bundle'
+  ids:
+  - steam:2269820
+  - isthereanydeal:dying-light-2-stay-human-brecken-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Chicken Bundle'
+  ids:
+  - steam:2330980
+  - isthereanydeal:dying-light-2-stay-human-chicken-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Rahim Bundle'
+  ids:
+  - steam:2370460
+  - isthereanydeal:dying-light-2-stay-human-rahim-bundle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Post-apo Bundle'
+  ids:
+  - steam:2370700
+  - isthereanydeal:dying-light-2-stay-human-post-apo-bundle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Nightrunner Bundle'
+  ids:
+  - steam:2370710
+  - isthereanydeal:dying-light-2-stay-human-nightrunner-bundle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Gunslinger Bundle'
+  ids:
+  - steam:2370480
+  - isthereanydeal:dying-light-2-stay-human-gunslinger-bundle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Hakon Bundle'
+  ids:
+  - steam:2456710
+  - isthereanydeal:dying-light-2-stay-human-hakon-bundle
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dying Light 2 Stay Human: Bloody Ties'
+  ids:
+  - steam:1537624
+  - isthereanydeal:dying-light-2-stay-human-bloody-ties
+  requires: []
+  tiers:
+  - 3
+- name: Dying Light 2 - Soundtrack
+  ids:
+  - steam:1888510
+  - isthereanydeal:dying-light-2-soundtrack
+  requires: []
+  tiers:
+  - 3
+- name: 'Dying Light 2 Stay Human: G.R.E. Hazmat Bundle'
+  ids:
+  - steam:3453200
+  - isthereanydeal:dying-light-2-stay-human-gre-hazmat-bundle
+  requires: []
+  tiers:
+  - 3
+- name: 'Dying Light 2 Stay Human - Welcome Offer: Essential Starter Kit'
+  ids:
+  - steam:4612850
+  - isthereanydeal:dying-light-2-stay-human-welcome-offer-essential-starter-kit
+  requires: []
+  tiers:
+  - 3

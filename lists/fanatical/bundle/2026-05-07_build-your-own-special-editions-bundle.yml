@@ -9,6 +9,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16137/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16137/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16555/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16555/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16555/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: RAGE 2 Deluxe Edition
   ids:
@@ -33,6 +41,8 @@ games:
 - name: Tails of Iron - Complete Edition
   ids:
   - unresolved:source:isthereanydeal:16137:tails-of-iron-complete-edition
+  - unresolved:source:isthereanydeal:16555:tails-of-iron-complete-edition
+  - isthereanydeal:tails-of-iron-complete-edition
   requires: []
 - name: Braid Anniversary + The Witness Bundle
   ids:

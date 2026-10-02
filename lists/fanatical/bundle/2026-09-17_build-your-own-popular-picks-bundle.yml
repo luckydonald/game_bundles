@@ -1,0 +1,104 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build Your Own Popular Picks Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16586/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16586/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16586/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Tower Defense Strategy Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:tower-defense-strategy-double-pack
+  - isthereanydeal:tower-defense-strategy-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Master the Skies Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:master-the-skies-double-pack
+  - isthereanydeal:master-the-skies-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dark Metroidvania Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:dark-metroidvania-double-pack
+  - isthereanydeal:dark-metroidvania-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Medieval RTS & Tactics Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:medieval-rts-and-tactics-double-pack
+  - isthereanydeal:medieval-rts-and-tactics-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cozy & Chill Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:cozy-and-chill-double-pack
+  - isthereanydeal:cozy-and-chill-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Quirky Narrative Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:quirky-narrative-double-pack
+  - isthereanydeal:quirky-narrative-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Tactical RPG & Deckbuilder Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:tactical-rpg-and-deckbuilder-double-pack
+  - isthereanydeal:tactical-rpg-and-deckbuilder-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Action-Roguelike Fantasy Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:action-roguelike-fantasy-double-pack
+  - isthereanydeal:action-roguelike-fantasy-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Charming Story Rich Double-Pack
+  ids:
+  - unresolved:source:isthereanydeal:16586:charming-story-rich-double-pack
+  - isthereanydeal:charming-story-rich-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
