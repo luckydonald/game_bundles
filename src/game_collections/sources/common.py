@@ -591,6 +591,9 @@ def backfill_existing_lists(
 
         fresh_stub = GameList(
             name=game_list.name,
+            # The stub reuses the existing games, which may reference tier ranks, so it
+            # must carry the existing list's tier definitions to pass validation.
+            tiers=game_list.tiers,
             references=[
                 bundle_reference,
                 Reference(name="Crawl metadata", path=os.path.relpath(metadata_path, path.parent)),
