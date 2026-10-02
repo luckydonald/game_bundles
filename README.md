@@ -51,6 +51,12 @@ uv run game-collections restore steam ~/Desktop/game-collections-steam-<timestam
 
 Set `STEAM_WEB_API_KEY` for ownership lookup. By default, the most recently used account in Steam's `loginusers.vdf` is selected. `--steam-id`, `--steam-root`, `--lists-root`, and `--output-dir` provide explicit overrides.
 
+##### As tool
+```shell
+uv tool install .
+uv tool run --from game-collections patchright install chromium
+```
+
 ## Humble Bundle imports
 
 `game-collections scrape humblebundle` discovers the current Humble Choice and every active Games bundle. Books and Software are ignored. Repeat `--url` to crawl only specific Choice or Games pages.
