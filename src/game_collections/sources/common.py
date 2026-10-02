@@ -440,6 +440,25 @@ def _content_overlap(fresh_games: list[Game], candidate: Path) -> float:
 # end def _content_overlap
 
 
+def _already_confirmed_by(candidate: Path, crawler_name: str) -> bool:
+    """Whether every readable list under `candidate` already records `crawler_name`.
+
+    `backfill_existing_lists` stamps `crawler_name` into `crawlers` only after a match was
+    accepted, so its presence is the persisted "yes, same bundle" answer.
+    """
+    list_paths = sorted(candidate.glob("*.yml")) if candidate.is_dir() else [candidate]
+    loaded: list[GameList] = []
+    for path in list_paths:
+        try:
+            loaded.append(_load_raw_game_list(path))
+        except (OSError, ValueError, ValidationError):
+            continue
+        # end try
+    # end for
+    return bool(loaded) and all(crawler_name in game_list.crawlers for game_list in loaded)
+# end def _already_confirmed_by
+
+
 def _prompt_fuzzy_match(slug: str, candidate: Path, score: float, overlap: float) -> bool:
     print(f"FUZZY MATCH for {slug!r}: {candidate}")
     print(f"  name similarity: {score:.1f}, content overlap: {overlap:.0%}")
@@ -462,6 +481,7 @@ def existing_list_match(
     fresh_games: list[Game] | None = None,
     *,
     interactive: bool | None = None,
+    crawler_name: str | None = None,
 ) -> Path | None:
     """Best-effort dedup check: is this bundle already covered by a dedicated scraper?
 
@@ -476,6 +496,9 @@ def existing_list_match(
     confirmed interactively on a TTY; non-interactively (`--git`/CI) it's only accepted
     automatically when both the name score and the content overlap clear a stricter
     threshold than the baseline, and otherwise treated as a genuinely new bundle.
+    The confirmation is persisted in the matched list(s) themselves: once
+    `backfill_existing_lists` has recorded `crawler_name` in their `crawlers` field, a
+    later run's fuzzy match against those same list(s) is accepted without asking again.
     Shared by every bundle-aggregator source (isthereanydeal, dekudeals) that re-lists
     offers a dedicated scraper already covers.
     """
@@ -507,6 +530,9 @@ def existing_list_match(
     # end for
     if best_path is None:
         return None
+    # end if
+    if crawler_name is not None and _already_confirmed_by(best_path, crawler_name):
+        return best_path
     # end if
     overlap = _content_overlap(fresh_games, best_path)
     if overlap < FUZZY_CONTENT_OVERLAP:

@@ -3435,3 +3435,19 @@ For updating, the current value is `0.0`, so it would be replaced by any non-nul
 
 ❯ Fix @ai/errors/8.txt
 
+❯ I get to enter
+```txt
+
+
+<pasted_content id="0841">
+Bundle 17/37: IGN 30th Anniversary Bundle (Humble Bundle)
+Bundle 17/37: IGN 30th Anniversary Bundle (cached)
+FUZZY MATCH for 'ign-30th-anniversary-bundle': lists/humblebundle/bundle
+  name similarity: 90.0, content overlap: 62%
+Treat as the same bundle? [y/n]: y
+</pasted_content id="0841">
+
+```
+on every `game-collections scrape --git isthereanydeal` run.
+Can this decision be persisted in the bundle, please?
+

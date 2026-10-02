@@ -314,7 +314,7 @@ def write_deku_offer(
     written: list[Path] = [metadata_path, source_path]
 
     pool_games_for_match = _flatten_deku_games(archive)
-    existing = existing_list_match(lists_root, archive.provider_slug, archive.machine_name, pool_games_for_match)
+    existing = existing_list_match(lists_root, archive.provider_slug, archive.machine_name, pool_games_for_match, crawler_name="dekudeals")
     if existing is not None:
         backfill_existing_lists(
             _flatten_deku_games(archive),
