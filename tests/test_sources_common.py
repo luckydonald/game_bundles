@@ -2,8 +2,17 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
+
 from game_collections.models import Game, GameGroup, GameList, Reference
-from game_collections.sources.common import dump_json, dump_versioned_json, load_cached_archive, merge_game_list
+from game_collections.sources.common import (
+    dump_json,
+    dump_versioned_json,
+    existing_list_match,
+    load_cached_archive,
+    merge_game_list,
+    render_game_list_yaml,
+)
 from game_collections.sources.dailyindiegame.models import CURRENT_VERSION, DIG_V1, DigArchive, DigDates, DigItem, DigPrice
 from datetime import UTC, datetime
 
@@ -336,3 +345,34 @@ def test_merge_game_list_does_not_duplicate_identical_references() -> None:
 
     assert merged.references == [reference]
 # end def test_merge_game_list_does_not_duplicate_identical_references
+
+
+def test_existing_list_match_skips_the_prompt_once_the_crawler_is_recorded_on_the_list(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "humblebundle" / "bundle" / "2026-01-01_ign-30th-anniversary-bundle.yml"
+    path.parent.mkdir(parents=True)
+    fresh = [Game(name="One", ids=["steam:1"])]
+    prompts: list[str] = []
+    monkeypatch.setattr("builtins.input", lambda prompt="": prompts.append(prompt) or "y")
+
+    def write(crawlers: list[str]) -> None:
+        game_list = GameList(name="IGN", crawlers=crawlers, games=fresh)
+        path.write_text(render_game_list_yaml(game_list, path, tmp_path), encoding="utf-8")
+    # end def write
+
+    write(["humblebundle"])
+    match = existing_list_match(
+        lists_root, "humblebundle", "ign-30th-anniversary-bundles", fresh, interactive=True, crawler_name="isthereanydeal"
+    )
+    assert match == path
+    assert len(prompts) == 1
+
+    write(["humblebundle", "isthereanydeal"])
+    match = existing_list_match(
+        lists_root, "humblebundle", "ign-30th-anniversary-bundles", fresh, interactive=True, crawler_name="isthereanydeal"
+    )
+    assert match == path
+    assert len(prompts) == 1
+# end def test_existing_list_match_skips_the_prompt_once_the_crawler_is_recorded_on_the_list

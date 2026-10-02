@@ -457,7 +457,7 @@ def write_itad_offer(
     written: list[Path] = [metadata_path, source_path]
 
     existing = _existing_choice_match(lists_root, archive.provider_slug, offer.summary) or existing_list_match(
-        lists_root, archive.provider_slug, archive.real_slug, _flatten_itad_games(archive)
+        lists_root, archive.provider_slug, archive.real_slug, _flatten_itad_games(archive), crawler_name="isthereanydeal"
     )
     if existing is not None:
         backfill_existing_lists(
