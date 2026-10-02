@@ -3451,3 +3451,5 @@ Treat as the same bundle? [y/n]: y
 on every `game-collections scrape --git isthereanydeal` run.
 Can this decision be persisted in the bundle, please?
 
+❯ Scrapers like `game-collections scrape --git humblebundle` keep spamming `patchright install` notices and not opening up the browser.
+
