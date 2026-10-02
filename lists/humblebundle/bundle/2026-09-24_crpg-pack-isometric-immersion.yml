@@ -15,8 +15,15 @@ references:
   path: ../../../../archives/humblebundle/bundle/2026-09-24_crpg-pack-isometric-immersion/metadata.json
 - name: Crawl source
   path: ../../../../archives/humblebundle/bundle/2026-09-24_crpg-pack-isometric-immersion/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16595/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16595/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16595/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: 'Torment: Tides of Numenera'
   ids:

@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/13122/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/13122/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16616/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16616/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16616/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Nagikota - feel the pleasure of a woman in your own body!
   ids:
@@ -24,6 +32,7 @@ games:
 - name: beat refle
   ids:
   - steam:1947940
+  - isthereanydeal:beat-refle
   requires: []
 - name: Stolen Wife ~Cucked On A Hot Spring Company Trip~
   ids:

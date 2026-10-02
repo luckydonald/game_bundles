@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15357/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15357/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16616/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16616/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16616/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: NinNinDays
   ids:
@@ -28,6 +36,7 @@ games:
 - name: Virtual Maid Streamer Ramie
   ids:
   - steam:1770830
+  - isthereanydeal:virtual-maid-streamer-ramie
   requires: []
 - name: NinNinDays2
   ids:

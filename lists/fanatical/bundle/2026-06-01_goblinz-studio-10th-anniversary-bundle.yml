@@ -15,10 +15,19 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16227/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16227/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16592/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16592/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16592/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: Synergy
   ids:
   - steam:1989070
+  - isthereanydeal:synergy
   requires: []
   tiers:
   - 1
@@ -27,6 +36,7 @@ games:
 - name: Luxman Moonlit Market
   ids:
   - steam:3642440
+  - isthereanydeal:luxman-moonlit-market
   requires: []
   tiers:
   - 1
@@ -35,6 +45,7 @@ games:
 - name: Microtopia
   ids:
   - steam:2750000
+  - isthereanydeal:microtopia
   requires: []
   tiers:
   - 2
@@ -42,6 +53,7 @@ games:
 - name: Day of the Shell
   ids:
   - steam:3008340
+  - isthereanydeal:day-of-the-shell
   requires: []
   tiers:
   - 2
@@ -49,6 +61,7 @@ games:
 - name: Knightica
   ids:
   - steam:3093400
+  - isthereanydeal:knightica
   requires: []
   tiers:
   - 2
@@ -56,6 +69,7 @@ games:
 - name: Runeborn
   ids:
   - steam:3073990
+  - isthereanydeal:runeborn
   requires: []
   tiers:
   - 2
@@ -63,6 +77,7 @@ games:
 - name: Repel The Rifts
   ids:
   - steam:3686580
+  - isthereanydeal:repel-the-rifts
   requires: []
   tiers:
   - 2
@@ -70,18 +85,21 @@ games:
 - name: Sol Cesto
   ids:
   - steam:2738490
+  - isthereanydeal:sol-cesto
   requires: []
   tiers:
   - 3
 - name: Smash It Wild
   ids:
   - steam:2432240
+  - isthereanydeal:smash-it-wild
   requires: []
   tiers:
   - 3
 - name: Hold The Mine
   ids:
   - steam:3164960
+  - isthereanydeal:hold-the-mine
   requires: []
   tiers:
   - 3
