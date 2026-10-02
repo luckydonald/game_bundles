@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Programming Puzzles Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
+- rank: 3
+  name: 6 Item Bundle
+- rank: 4
+  name: Entire 7 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16611/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16611/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16611/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'while True: learn()'
+  ids:
+  - steam:619150
+  - isthereanydeal:while-true-learn
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: SOLAS 128
+  ids:
+  - steam:1257850
+  - isthereanydeal:solas-128
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Replicube
+  ids:
+  - steam:3401490
+  - isthereanydeal:replicube
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: The Signal State
+  ids:
+  - steam:1577620
+  - isthereanydeal:the-signal-state
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+- name: Linkito
+  ids:
+  - steam:2312770
+  - isthereanydeal:linkito
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+- name: Quantum Odyssey
+  ids:
+  - steam:2802710
+  - isthereanydeal:quantum-odyssey
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Retro Gadgets
+  ids:
+  - steam:1730260
+  - isthereanydeal:retro-gadgets
+  requires: []
+  tiers:
+  - 4

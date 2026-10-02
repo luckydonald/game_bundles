@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: '2D Rewind Collection: S2 Games Bundle'
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 7 Item Bundle
+- rank: 3
+  name: Entire 13 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16618/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16618/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16618/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: CHUCHEL
+  ids:
+  - steam:711660
+  - isthereanydeal:chuchel
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Not Tonight
+  ids:
+  - steam:733790
+  - isthereanydeal:not-tonight
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Freedom Planet
+  ids:
+  - steam:248310
+  - isthereanydeal:freedom-planet
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Samorost 3
+  ids:
+  - steam:421120
+  - isthereanydeal:samorost-3
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Luck be a Landlord
+  ids:
+  - steam:1404850
+  - isthereanydeal:luck-be-a-landlord
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: NORCO
+  ids:
+  - steam:1221250
+  - isthereanydeal:norco
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  - isthereanydeal:karate-survivor
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Nova Drift
+  ids:
+  - steam:858210
+  - isthereanydeal:nova-drift
+  requires: []
+  tiers:
+  - 3
+- name: Freedom Planet 2
+  ids:
+  - steam:595500
+  - isthereanydeal:freedom-planet-2
+  requires: []
+  tiers:
+  - 3
+- name: River City Girls
+  ids:
+  - steam:1049320
+  - isthereanydeal:river-city-girls
+  requires: []
+  tiers:
+  - 3
+- name: River City Girls 2
+  ids:
+  - steam:1920480
+  - isthereanydeal:river-city-girls-2
+  requires: []
+  tiers:
+  - 3
+- name: Folklands
+  ids:
+  - steam:2282890
+  - isthereanydeal:folklands
+  requires: []
+  tiers:
+  - 3
+- name: Rainbow Legends
+  ids:
+  - steam:3470370
+  - isthereanydeal:rainbow-legends
+  requires: []
+  tiers:
+  - 3

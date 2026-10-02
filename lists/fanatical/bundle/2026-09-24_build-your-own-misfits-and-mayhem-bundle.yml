@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build Your Own Misfits and Mayhem Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16603/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16603/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16603/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'Gori: Cuddly Carnage'
+  ids:
+  - steam:1299690
+  - isthereanydeal:gori-cuddly-carnage
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Perennial Order
+  ids:
+  - steam:1411020
+  - isthereanydeal:perennial-order
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Bang-On Balls: Chronicles'
+  ids:
+  - steam:1227650
+  - isthereanydeal:bang-on-balls-chronicles
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Chickenauts
+  ids:
+  - steam:2350460
+  - isthereanydeal:chickenauts
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Boomerang Jack
+  ids:
+  - steam:2010010
+  - isthereanydeal:boomerang-jack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Servonauts
+  ids:
+  - steam:2514400
+  - isthereanydeal:servonauts
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Squirrel Stapler
+  ids:
+  - steam:2535830
+  - isthereanydeal:squirrel-stapler
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Tools Up! Ultimate Edition
+  ids:
+  - steam:2551920
+  - isthereanydeal:tools-up-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dark Hunting Ground
+  ids:
+  - steam:2494810
+  - isthereanydeal:dark-hunting-ground
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hymer 2000
+  ids:
+  - steam:3255860
+  - isthereanydeal:hymer-2000
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mashina
+  ids:
+  - steam:3395930
+  - isthereanydeal:mashina
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pih
+  ids:
+  - steam:2870710
+  - isthereanydeal:pih
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Treasure Tiger
+  ids:
+  - steam:3805710
+  - isthereanydeal:treasure-tiger
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Abyss Veil
+  ids:
+  - steam:3668430
+  - isthereanydeal:abyss-veil
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dead Finger Dice
+  ids:
+  - steam:3512300
+  - isthereanydeal:dead-finger-dice
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Misty Land
+  ids:
+  - steam:4279880
+  - isthereanydeal:misty-land
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Elemental Witches
+  ids:
+  - unresolved:source:isthereanydeal:16603:elemental-witches
+  - isthereanydeal:elemental-witches
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Assemble Entertainment: Cozy Games Collection Bundle'
+tiers:
+- rank: 1
+  name: 6 Item Bundle
+- rank: 2
+  name: Entire 15 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16584/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16584/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16584/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Bound By Blades
+  ids:
+  - steam:973070
+  - isthereanydeal:bound-by-blades
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: ITORAH
+  ids:
+  - steam:1132910
+  - isthereanydeal:itorah
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: A Juggler's Tale
+  ids:
+  - steam:1252830
+  - isthereanydeal:a-jugglers-tale
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Beyond The Edge Of Owlsgard
+  ids:
+  - steam:1709730
+  - isthereanydeal:beyond-the-edge-of-owlsgard
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Fall of Porcupine
+  ids:
+  - steam:1710540
+  - isthereanydeal:fall-of-porcupine
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Growth
+  ids:
+  - steam:2300300
+  - isthereanydeal:growth
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Sticky Business
+  ids:
+  - steam:2303350
+  - isthereanydeal:sticky-business
+  requires: []
+  tiers:
+  - 2
+- name: Beacon Patrol
+  ids:
+  - steam:2273850
+  - isthereanydeal:beacon-patrol
+  requires: []
+  tiers:
+  - 2
+- name: 'Sticky Business: Plan With Me'
+  ids:
+  - steam:2667860
+  - isthereanydeal:sticky-business-plan-with-me
+  requires: []
+  tiers:
+  - 2
+- name: 'Sticky Business: Camp Zinnias'
+  ids:
+  - steam:3100090
+  - isthereanydeal:sticky-business-camp-zinnias
+  requires: []
+  tiers:
+  - 2
+- name: 'Kioku: Last Summer'
+  ids:
+  - steam:3283310
+  - isthereanydeal:kioku-last-summer
+  requires: []
+  tiers:
+  - 2
+- name: 'Origament: A Paper Adventure'
+  ids:
+  - steam:3448430
+  - isthereanydeal:origament-a-paper-adventure
+  requires: []
+  tiers:
+  - 2
+- name: 'Sticky Business: Book of Shadows'
+  ids:
+  - steam:3639630
+  - isthereanydeal:sticky-business-book-of-shadows
+  requires: []
+  tiers:
+  - 2
+- name: Verde
+  ids:
+  - steam:3164310
+  - isthereanydeal:verde
+  requires: []
+  tiers:
+  - 2
+- name: 'Sticky Business: Seaside Tales'
+  ids:
+  - steam:4556920
+  - isthereanydeal:sticky-business-seaside-tales
+  requires: []
+  tiers:
+  - 2

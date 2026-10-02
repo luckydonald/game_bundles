@@ -8,6 +8,14 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/10506/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/10506/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16598/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16598/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16598/source.json
+crawlers:
+- isthereanydeal
 games:
 - name: GEESE vs CTHULHU
   ids:
@@ -16,18 +24,22 @@ games:
 - name: 100 hidden snails
   ids:
   - steam:1446330
+  - isthereanydeal:100-hidden-snails
   requires: []
 - name: 100 hidden birds
   ids:
   - steam:1473050
+  - isthereanydeal:100-hidden-birds
   requires: []
 - name: 100 hidden eternals
   ids:
   - steam:1480120
+  - isthereanydeal:100-hidden-eternals
   requires: []
 - name: 100 hidden aliens
   ids:
   - steam:1493300
+  - isthereanydeal:100-hidden-aliens
   requires: []
 - name: 100 hidden cupcakes
   ids:
@@ -36,24 +48,30 @@ games:
 - name: 100 hidden mice
   ids:
   - steam:1522560
+  - isthereanydeal:100-hidden-mice
   requires: []
 - name: 100 hidden snails 2
   ids:
   - steam:1549030
+  - isthereanydeal:100-hidden-snails-2
   requires: []
 - name: 100 hidden mushrooms
   ids:
   - steam:1573750
+  - isthereanydeal:100-hidden-mushrooms
   requires: []
 - name: 100 hidden cats
   ids:
   - steam:1587560
+  - isthereanydeal:100-hidden-cats
   requires: []
 - name: 100 hidden cats 2
   ids:
   - steam:1679320
+  - isthereanydeal:100-hidden-cats-2
   requires: []
 - name: 100 hidden rams
   ids:
   - steam:1708190
+  - isthereanydeal:100-hidden-rams
   requires: []

@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Indies in Space
+tiers:
+- rank: 1
+  name: 2 Item Bundle
+- rank: 2
+  name: 4 Item Bundle
+- rank: 3
+  name: 8 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16583/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16583/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16583/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: EVERSPACE™ - Ultimate Edition
+  ids:
+  - unresolved:source:isthereanydeal:16583:everspace-ultimate-edition
+  - isthereanydeal:everspace-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Breathedge
+  ids:
+  - steam:738520
+  - isthereanydeal:breathedge
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Between the Stars
+  ids:
+  - steam:727130
+  - isthereanydeal:between-the-stars
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Wildgate - Renegade Edition
+  ids:
+  - unresolved:source:isthereanydeal:16583:wildgate-renegade-edition
+  - isthereanydeal:wildgate-renegade-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Starship Troopers - Terran Command
+  ids:
+  - steam:1202130
+  - isthereanydeal:starship-troopers-terran-command
+  requires: []
+  tiers:
+  - 3
+- name: 'Starship Troopers: Extermination'
+  ids:
+  - steam:1268750
+  - isthereanydeal:starship-troopers-extermination
+  requires: []
+  tiers:
+  - 3
+- name: Reality Break
+  ids:
+  - steam:1473060
+  - isthereanydeal:reality-break
+  requires: []
+  tiers:
+  - 3
+- name: The Crust
+  ids:
+  - steam:1465470
+  - isthereanydeal:the-crust
+  requires: []
+  tiers:
+  - 3

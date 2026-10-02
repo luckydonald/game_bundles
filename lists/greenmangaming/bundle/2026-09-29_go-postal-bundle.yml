@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Go Postal Bundle — Regret Nothing
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16612/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16612/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16612/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  - isthereanydeal:postal-redux
+  requires: []
+- name: The POSTAL 2 Collection
+  ids:
+  - unresolved:source:isthereanydeal:16612:the-postal-2-collection
+  - isthereanydeal:the-postal-2-collection
+  requires: []
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  - isthereanydeal:postal-4-no-regerts
+  requires: []
+- name: 'POSTAL: Brain Damaged - Connoisseur Edition'
+  ids:
+  - unresolved:source:isthereanydeal:16612:postal-brain-damaged-connoisseur-edition
+  - isthereanydeal:postal-brain-damaged-connoisseur-edition
+  requires: []
+- name: 'POSTAL: Brain Damaged - These Sunny Daze'
+  ids:
+  - steam:3768390
+  - isthereanydeal:postal-brain-damaged-these-sunny-daze
+  requires: []
