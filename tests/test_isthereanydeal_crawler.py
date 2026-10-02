@@ -440,6 +440,32 @@ def test_write_itad_offer_backfills_ids_into_already_covered_list(tmp_path: Path
 # end def test_write_itad_offer_backfills_ids_into_already_covered_list
 
 
+def test_write_itad_offer_backfills_into_an_already_covered_tiered_list(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    archive_root = tmp_path / "archives"
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+
+    existing = lists_root / "greenmangaming/bundle/2026-07-10_metroidvania-madness/bundle.yml"
+    existing.parent.mkdir(parents=True)
+    existing.write_text(
+        "schema: 2\nname: existing\ncrawlers: [greenmangaming]\n"
+        "tiers:\n  - rank: 1\n    name: Tier 1\n  - rank: 2\n    name: Tier 2\n"
+        "games:\n  - name: GRIME\n    ids: [gog:123]\n    tiers: [2]\n",
+        encoding="utf-8",
+    )
+
+    messages: list[str] = []
+    write_itad_offer(_offer(), lists_root, archive_root, tmp_path, log=messages.append)
+
+    assert any("Backfilled 1 id(s)" in message for message in messages)
+    updated = load_game_list(existing, lists_root)
+    assert [tier.rank for tier in updated.data.tiers] == [1, 2]
+    assert updated.data.games[0].tiers == [2]
+    assert updated.data.crawlers == ["greenmangaming", "isthereanydeal"]
+# end def test_write_itad_offer_backfills_into_an_already_covered_tiered_list
+
+
 def test_write_itad_offer_does_not_duplicate_or_override_an_existing_provider_id(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     archive_root = tmp_path / "archives"
