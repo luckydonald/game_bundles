@@ -3453,3 +3453,19 @@ Can this decision be persisted in the bundle, please?
 
 ❯ Scrapers like `game-collections scrape --git humblebundle` keep spamming `patchright install` notices and not opening up the browser.
 
+❯ Fix
+```txt
+error: https://www.humblebundle.com/games/2d-rewind-collection-from-s2-games: 1 validation error for HumbleLink
+url
+  Input should be a valid URL, relative URL without a base [type=url_parsing, input_value='www.starlight.org', input_type=str]
+```
+
+❯ Task Notification:
+> - Task `a070643c5e5ace1fd` <kbd>completed</kbd>
+> - Tool `toolu_016zrSLWUmP128JrDyPGrAAm`
+> - > Agent "Find HumbleLink model and URL validation" finished
+> - [Query (`599` chars, `599 B`)](output/agents/051.a070643c5e5ace1fd/prompt.md)
+> - [Answer (`3852` chars, `3.76 KB`)](output/agents/051.a070643c5e5ace1fd/result.md)
+> - [Raw log (`148061` chars, `145 KB`)](/private/tmp/claude-501/-Users-user-Documents-programming-Python-game-bundles/637dc46e-93ee-4181-a01a-21fd720ca174/tasks/a070643c5e5ace1fd.output)
+> - `5` tools, `24270` tokens, `0.499233 s`
+
