@@ -6,6 +6,7 @@ from datetime import UTC, datetime
 
 from game_collections.sources.humblebundle.parser import (
     _parse_dlc_pack_details,
+    _optional_url,
     _parse_edition_bundle_components,
     parse_bundle_index,
     parse_bundle_page,
@@ -595,3 +596,11 @@ def test_choice_page_builds_pick_options_from_tier_info_clamped_to_pool_size() -
         ("premium", 2),
     ]
 # end def test_choice_page_builds_pick_options_from_tier_info_clamped_to_pool_size
+
+
+def test_optional_url_adds_a_scheme_to_bare_hostnames() -> None:
+    assert _optional_url("www.starlight.org") == "https://www.starlight.org"
+    assert _optional_url(" //cdn.example/logo.png ") == "https://cdn.example/logo.png"
+    assert _optional_url("http://dev.example/") == "http://dev.example/"
+    assert _optional_url("   ") is None
+# end def test_optional_url_adds_a_scheme_to_bare_hostnames
