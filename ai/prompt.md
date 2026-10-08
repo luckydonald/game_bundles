@@ -3469,3 +3469,18 @@ url
 > - [Raw log (`148061` chars, `145 KB`)](/private/tmp/claude-501/-Users-user-Documents-programming-Python-game-bundles/637dc46e-93ee-4181-a01a-21fd720ca174/tasks/a070643c5e5ace1fd.output)
 > - `5` tools, `24270` tokens, `0.499233 s`
 
+❯ Also add a recovery mode, where failed-to-pydantic json is still written to disk, and attempted to be parsed and written the next time, so it doesn't need to be rescraped just because storing failed.
+
+❯ Task Notification:
+> - Task `a166f9ffd6e3facf4` <kbd>completed</kbd>
+> - Tool `toolu_01QbbwqoPhNZ3L5qZqH3u4MV`
+> - > Agent "Trace Humble scrape archive/resume flow" finished
+> - [Query (`978` chars, `978 B`)](output/agents/052.a166f9ffd6e3facf4/prompt.md)
+> - [Answer (`8691` chars, `8.49 KB`)](output/agents/052.a166f9ffd6e3facf4/result.md)
+> - [Raw log (`318889` chars, `312 KB`)](/private/tmp/claude-501/-Users-user-Documents-programming-Python-game-bundles/637dc46e-93ee-4181-a01a-21fd720ca174/tasks/a166f9ffd6e3facf4.output)
+> - `10` tools, `56890` tokens, `0.728 s`
+
+❯ So it'd be in like a different location/dir until successfully parsed and written where it belongs. It should include also the error and such for easier fixing.
+
+❯ Use `md.md` /code-style
+
