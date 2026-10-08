@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 2
-name: Gear & Glory Action RPG's Bundle
+name: Gear & Glory Action RPGs
 tiers:
 - rank: 1
   name: 3 Item Bundle
@@ -15,8 +15,15 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16606/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16606/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/gear-glory-action-rpgs
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-25_gear-glory-action-rpgs/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-25_gear-glory-action-rpgs/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
 - name: 'Clash: Artifacts of Chaos'
   ids:
@@ -45,14 +52,6 @@ games:
   - 1
   - 2
   - 3
-- name: Sands of Aura
-  ids:
-  - steam:1119840
-  - isthereanydeal:sands-of-aura
-  requires: []
-  tiers:
-  - 2
-  - 3
 - name: 'Tower of Babel: Survivors Of Chaos'
   ids:
   - steam:2665680
@@ -61,17 +60,25 @@ games:
   tiers:
   - 2
   - 3
+- name: Sands of Aura
+  ids:
+  - steam:1119840
+  - isthereanydeal:sands-of-aura
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Wayfinder
+  ids:
+  - steam:1171690
+  - isthereanydeal:wayfinder
+  requires: []
+  tiers:
+  - 3
 - name: Coridden
   ids:
   - steam:1656930
   - isthereanydeal:coridden
-  requires: []
-  tiers:
-  - 3
-- name: Ghostlore
-  ids:
-  - steam:1783280
-  - isthereanydeal:ghostlore
   requires: []
   tiers:
   - 3
@@ -82,10 +89,10 @@ games:
   requires: []
   tiers:
   - 3
-- name: Wayfinder
+- name: Ghostlore
   ids:
-  - steam:1171690
-  - isthereanydeal:wayfinder
+  - steam:1783280
+  - isthereanydeal:ghostlore
   requires: []
   tiers:
   - 3

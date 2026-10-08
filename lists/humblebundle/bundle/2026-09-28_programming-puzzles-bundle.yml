@@ -17,9 +17,26 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16611/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16611/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/programming-puzzles-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-28_programming-puzzles-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-28_programming-puzzles-bundle/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
+- name: Replicube
+  ids:
+  - steam:3401490
+  - isthereanydeal:replicube
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
 - name: 'while True: learn()'
   ids:
   - steam:619150
@@ -40,13 +57,12 @@ games:
   - 2
   - 3
   - 4
-- name: Replicube
+- name: Linkito
   ids:
-  - steam:3401490
-  - isthereanydeal:replicube
+  - steam:2312770
+  - isthereanydeal:linkito
   requires: []
   tiers:
-  - 1
   - 2
   - 3
   - 4
@@ -54,15 +70,6 @@ games:
   ids:
   - steam:1577620
   - isthereanydeal:the-signal-state
-  requires: []
-  tiers:
-  - 2
-  - 3
-  - 4
-- name: Linkito
-  ids:
-  - steam:2312770
-  - isthereanydeal:linkito
   requires: []
   tiers:
   - 2

@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 2
-name: Almighty God Games Bundle
+name: The Almighty God Games Bundle
 tiers:
 - rank: 1
-  name: 3 Item Bundle
+  name: 2 Item Bundle
 - rank: 2
-  name: Entire 7 Item Bundle
+  name: Entire 6 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16597/
@@ -13,8 +13,15 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16597/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16597/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/almighty-god-games-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-21_almighty-god-games-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-21_almighty-god-games-bundle/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
 - name: Equilinox
   ids:
@@ -32,18 +39,10 @@ games:
   tiers:
   - 1
   - 2
-- name: Warbox Sandbox
+- name: The Universim
   ids:
-  - steam:2050680
-  - isthereanydeal:warbox-sandbox
-  requires: []
-  tiers:
-  - 1
-  - 2
-- name: Deisim
-  ids:
-  - steam:525680
-  - isthereanydeal:deisim
+  - steam:352720
+  - isthereanydeal:the-universim
   requires: []
   tiers:
   - 2
@@ -54,17 +53,26 @@ games:
   requires: []
   tiers:
   - 2
-- name: The Universim
-  ids:
-  - steam:352720
-  - isthereanydeal:the-universim
-  requires: []
-  tiers:
-  - 2
 - name: Shadows of Forbidden Gods
   ids:
   - steam:1741640
   - isthereanydeal:shadows-of-forbidden-gods
   requires: []
   tiers:
+  - 2
+- name: Deisim
+  ids:
+  - steam:525680
+  - isthereanydeal:deisim
+  requires: []
+  tiers:
+  - 2
+invalid:
+- name: Warbox Sandbox
+  ids:
+  - steam:2050680
+  - isthereanydeal:warbox-sandbox
+  requires: []
+  tiers:
+  - 1
   - 2

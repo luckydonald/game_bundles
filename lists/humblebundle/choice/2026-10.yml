@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: October 2026 Humble Choice
+tiers:
+- rank: 1
+  name: Basic
+  pick_quota: 3
+- rank: 2
+  name: Premium
+  pick_quota: 8
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2026-10/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2026-10/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Like a Dragon: Pirate Yakuza in Hawaii'
+  ids:
+  - steam:3061810
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Prince of Persia: The Lost Crown'
+  ids:
+  - steam:2751000
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Psychonauts 2
+  ids:
+  - steam:607080
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Deep Rock Galactic: Survivor'
+  ids:
+  - steam:2321470
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Cataclismo
+  ids:
+  - steam:1422440
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Dungeons & Degenerate Gamblers
+  ids:
+  - steam:2400510
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Toy Shire
+  ids:
+  - steam:2361460
+  requires: []
+  tiers:
+  - 1
+  - 2

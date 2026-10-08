@@ -13,33 +13,16 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16605/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16605/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/fall-into-fall-fundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-25_fall-into-fall-fundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-25_fall-into-fall-fundle/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
-- name: Witch It
-  ids:
-  - steam:559650
-  - isthereanydeal:witch-it
-  requires: []
-  tiers:
-  - 1
-  - 2
-- name: Alchemy Story
-  ids:
-  - steam:1040630
-  - isthereanydeal:alchemy-story
-  requires: []
-  tiers:
-  - 1
-  - 2
-- name: Bunny Park
-  ids:
-  - steam:1208600
-  - isthereanydeal:bunny-park
-  requires: []
-  tiers:
-  - 1
-  - 2
 - name: Sugar Shack
   ids:
   - steam:1813130
@@ -52,6 +35,30 @@ games:
   ids:
   - steam:1766720
   - isthereanydeal:outlanders
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Witch It
+  ids:
+  - steam:559650
+  - isthereanydeal:witch-it
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Bunny Park
+  ids:
+  - steam:1208600
+  - isthereanydeal:bunny-park
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Alchemy Story
+  ids:
+  - steam:1040630
+  - isthereanydeal:alchemy-story
   requires: []
   tiers:
   - 1
