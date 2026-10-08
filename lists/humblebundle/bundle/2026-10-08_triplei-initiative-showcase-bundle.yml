@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: The Triple-i Initiative Showcase Bundle
+tiers:
+- rank: 1
+  name: 2 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
+- rank: 3
+  name: Entire 8 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/triplei-initiative-showcase-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-08_triplei-initiative-showcase-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-08_triplei-initiative-showcase-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Gestalt: Steam & Cinder'
+  ids:
+  - steam:1231990
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: WHAT THE CAR?
+  ids:
+  - steam:2727650
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cat Quest III
+  ids:
+  - steam:2305840
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 33 Immortals
+  ids:
+  - steam:958520
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Endzone 2
+  ids:
+  - steam:2144640
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'X4: Foundations'
+  ids:
+  - steam:392160
+  requires: []
+  tiers:
+  - 3
+- name: The Last Spell - Complete Edition
+  ids:
+  - steam:sub/1520362
+  requires: []
+  tiers:
+  - 3
+- name: My Time at Sandrock
+  ids:
+  - steam:1084600
+  requires: []
+  tiers:
+  - 3

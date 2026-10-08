@@ -1,6 +1,13 @@
 # yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 2
-name: TrineVerse Triple Co-op Pack — Receive 1 copy of each game
+name: Trineverse Triple Co-Op Pack
+tiers:
+- rank: 1
+  name: 5 Item Bundle
+- rank: 2
+  name: 10 Item Bundle
+- rank: 3
+  name: Entire 15 Item Bundle
 references:
 - name: isthereanydeal.com bundle
   url: https://isthereanydeal.com/bundles/16599/
@@ -8,31 +15,58 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16599/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16599/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/trineverse-triple-coop-pack
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-23_trineverse-triple-coop-pack/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-23_trineverse-triple-coop-pack/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
-- name: 'Trine 2: Complete Story'
-  ids:
-  - steam:35720
-  - isthereanydeal:trine-2-complete-story
-  requires: []
 - name: 'Trine 4: The Nightmare Prince'
   ids:
   - steam:690640
   - isthereanydeal:trine-4-the-nightmare-prince
   requires: []
-- name: 'Trine 3: The Artifacts of Power'
-  ids:
-  - steam:319910
-  - isthereanydeal:trine-3-the-artifacts-of-power
-  requires: []
-- name: Trine Enchanted Edition
-  ids:
-  - steam:35700
-  - isthereanydeal:trine-enchanted-edition
-  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
 - name: Nine Parchments
   ids:
   - steam:471550
   - isthereanydeal:nine-parchments
   requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Trine 3: The Artifacts of Power'
+  ids:
+  - steam:319910
+  - isthereanydeal:trine-3-the-artifacts-of-power
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Trine 2: Complete Story'
+  ids:
+  - steam:35720
+  - isthereanydeal:trine-2-complete-story
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Trine Enchanted Edition
+  ids:
+  - steam:35700
+  - isthereanydeal:trine-enchanted-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

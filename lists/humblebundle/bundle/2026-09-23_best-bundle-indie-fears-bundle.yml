@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Best of Humble Bundle - Indie Fears Bundle — Entire 14 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/best-bundle-indie-fears-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-23_best-bundle-indie-fears-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-23_best-bundle-indie-fears-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Mouthwashing
+  ids:
+  - steam:2475490
+  requires: []
+- name: The Headliners
+  ids:
+  - steam:3059070
+  requires: []
+- name: Buckshot Roulette
+  ids:
+  - steam:2835570
+  requires: []
+- name: PANICORE
+  ids:
+  - steam:2695940
+  requires: []
+- name: Arctic Eggs
+  ids:
+  - steam:2763670
+  requires: []
+- name: Who's Lila?
+  ids:
+  - steam:1697700
+  requires: []
+- name: ORDER 13
+  ids:
+  - steam:2259310
+  requires: []
+- name: Mama's Sleeping Angels
+  ids:
+  - steam:2918310
+  requires: []
+- name: THRESHOLD
+  ids:
+  - steam:2580020
+  requires: []
+- name: s.p.l.i.t
+  ids:
+  - steam:3684610
+  requires: []
+- name: NO-SKIN
+  ids:
+  - steam:3011030
+  requires: []
+- name: Kiosk
+  ids:
+  - steam:3126330
+  requires: []
+- name: The Skin Stapler
+  ids:
+  - steam:4310610
+  requires: []
+- name: Flesh Made Fear
+  ids:
+  - steam:3316350
+  requires: []

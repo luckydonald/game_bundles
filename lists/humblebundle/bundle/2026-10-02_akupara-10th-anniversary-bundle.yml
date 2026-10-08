@@ -1,0 +1,106 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Akupara 10th Anniversary Bundle
+tiers:
+- rank: 1
+  name: 5 Item Bundle
+- rank: 2
+  name: 9 Item Bundle
+- rank: 3
+  name: Entire 12 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/akupara-10th-anniversary-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-02_akupara-10th-anniversary-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-02_akupara-10th-anniversary-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Behind the Frame: The Finest Scenery'
+  ids:
+  - steam:1634150
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mutazione
+  ids:
+  - steam:1080750
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: REPOSE
+  ids:
+  - steam:3002510
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Darkside Detective
+  ids:
+  - steam:368390
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Whispering Willows
+  ids:
+  - steam:288060
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Rain World
+  ids:
+  - steam:312520
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Rain World: Downpour'
+  ids:
+  - steam:1933390
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Gigasword
+  ids:
+  - steam:1885930
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Grime
+  ids:
+  - steam:1123050
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Cryptmaster
+  ids:
+  - steam:1885110
+  requires: []
+  tiers:
+  - 3
+- name: 'Astrea: Six-Sided Oracles'
+  ids:
+  - steam:1755830
+  requires: []
+  tiers:
+  - 3
+- name: 'Dead Pets: A Punk Rock Slice of Life Sim'
+  ids:
+  - steam:1851720
+  requires: []
+  tiers:
+  - 3

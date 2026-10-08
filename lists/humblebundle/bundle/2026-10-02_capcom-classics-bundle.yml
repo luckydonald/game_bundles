@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Capcom Classics Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: Entire 6 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/capcom-classics-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-02_capcom-classics-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-02_capcom-classics-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Resident Evil 3 Nemesis (1999)
+  ids:
+  - steam:4249120
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Resident Evil 2 (1998)
+  ids:
+  - steam:4249110
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Resident Evil (1996)
+  ids:
+  - steam:4249100
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Breath of Fire IV
+  ids:
+  - steam:4249150
+  requires: []
+  tiers:
+  - 2
+- name: Dino Crisis 2
+  ids:
+  - steam:4249140
+  requires: []
+  tiers:
+  - 2
+- name: Dino Crisis
+  ids:
+  - steam:4249130
+  requires: []
+  tiers:
+  - 2
