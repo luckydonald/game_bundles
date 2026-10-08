@@ -3486,3 +3486,10 @@ url
 
 ❯ Add the end summary, `Wrote 48 file(s) for 17 offer(s); 105 unresolved game(s).`, include the errors written to disk, too
 
+❯ Write `Wrote N file(s) for M offer(s); K unresolved game(s); L game(s) with parsing errors.`, too.
+
+❯ Regarding
+> L counts failed offers, not games. A build failure is only recorded per offer, so "game(s)" in the line is misleading when one offer fails. To make it
+  count real games, I'd have to inspect each failed payload.
+Yes, reword to `offer(s)` then, yes.
+
