@@ -308,7 +308,18 @@ def _optional_url(value: object) -> str | None:
         return None
     # end if
     stripped = value.strip()
-    return stripped or None
+    if not stripped:
+        return None
+    # end if
+    # Humble vendors type bare hostnames (e.g. "www.starlight.org") into their store pages,
+    # which the strict HttpUrl fields reject, so default to https like a browser would.
+    if stripped.startswith("//"):
+        return f"https:{stripped}"
+    # end if
+    if "://" not in stripped:
+        return f"https://{stripped}"
+    # end if
+    return stripped
 # end def _optional_url
 
 
@@ -520,12 +531,12 @@ def parse_bundle_index(html: str) -> list[dict[str, Any]]:
 # end def parse_bundle_index
 
 
-def parse_bundle_page(
-    html: str,
-    listing: Mapping[str, Any] | None,
-    crawled: datetime,
-) -> tuple[HumbleArchive, dict[str, Any]]:
-    """Normalize one Games bundle detail page and its optional index record."""
+def extract_bundle_payload(html: str, listing: Mapping[str, Any] | None) -> dict[str, Any]:
+    """Pull the embedded JSON a Games bundle archive is built from out of its HTML.
+
+    The result is plain JSON, so a failed `build_bundle_archive` can persist it
+    (see `sources/recovery.py`) and retry later without re-fetching the page.
+    """
     parser = _embedded(html)
     raw = parser.scripts.get("webpack-bundle-page-data")
     if raw is None:
@@ -533,6 +544,24 @@ def parse_bundle_page(
     # end if
     root = _json_object(raw, "bundle page")
     bundle = _required_mapping(root.get("bundleData"), "bundleData")
+    return {"kind": "bundle", "bundle_data": bundle, "listing": dict(listing) if listing is not None else {}}
+# end def extract_bundle_payload
+
+
+def parse_bundle_page(
+    html: str,
+    listing: Mapping[str, Any] | None,
+    crawled: datetime,
+) -> tuple[HumbleArchive, dict[str, Any]]:
+    """Normalize one Games bundle detail page and its optional index record."""
+    return build_bundle_archive(extract_bundle_payload(html, listing), crawled)
+# end def parse_bundle_page
+
+
+def build_bundle_archive(payload: Mapping[str, Any], crawled: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
+    """Build the normalized archive and source dict from an `extract_bundle_payload` result."""
+    bundle = _required_mapping(payload.get("bundle_data"), "bundleData")
+    listing = _required_mapping(payload.get("listing"), "bundle listing")
     basic = _required_mapping(bundle.get("basic_data"), "bundle basic_data")
     page_url = _required_string(bundle.get("page_url"), "bundle page_url")
     description = _markdown(basic.get("detailed_marketing_blurb") or basic.get("description"))
@@ -576,7 +605,7 @@ def parse_bundle_page(
             )
         )
     # end for
-    listing_data = dict(listing) if listing is not None else {}
+    listing_data = dict(listing)
     charities: list[HumbleCharity] = []
     charity_data = bundle.get("charity_data")
     if isinstance(charity_data, dict) and isinstance(charity_data.get("charity_items"), dict):
@@ -624,7 +653,7 @@ def parse_bundle_page(
         tiers=tiers,
     )
     return archive, {"bundle_data": bundle, "listing": listing_data}
-# end def parse_bundle_page
+# end def build_bundle_archive
 
 
 def _product_json_ld(parser: _EmbeddedDataParser) -> dict[str, Any]:
@@ -668,8 +697,12 @@ def _choice_pick_options(tier_info: Any, game_count: int) -> list[HumbleChoicePi
 # end def _choice_pick_options
 
 
-def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
-    """Normalize the active Humble Choice page."""
+def extract_choice_payload(html: str) -> dict[str, Any]:
+    """Pull the embedded JSON the Choice archive is built from out of its HTML.
+
+    Plain JSON on purpose, see `extract_bundle_payload`. `machine_names` keeps the
+    page's own item order, which lives in the HTML rather than the JSON blobs.
+    """
     parser = _embedded(html)
     content_raw = parser.attributes.get("data-content-choice-data")
     marketing_raw = parser.scripts.get("webpack-choice-marketing-data")
@@ -684,8 +717,35 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
     if charity_raw is not None:
         charity = _json_object(charity_raw, "Choice charity")
     # end if
+    return {
+        "kind": "choice",
+        "machine_names": list(parser.machine_names),
+        "charity": charity,
+        "choice_content": content,
+        "choice_marketing": marketing,
+        "product_json_ld": product,
+    }
+# end def extract_choice_payload
+
+
+def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
+    """Normalize the active Humble Choice page."""
+    return build_choice_archive(extract_choice_payload(html), crawled)
+# end def parse_choice_page
+
+
+def build_choice_archive(payload: Mapping[str, Any], crawled: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
+    """Build the normalized archive and source dict from an `extract_choice_payload` result."""
+    content = _required_mapping(payload.get("choice_content"), "Choice content")
+    marketing = _required_mapping(payload.get("choice_marketing"), "Choice marketing")
+    product = _required_mapping(payload.get("product_json_ld"), "Choice product")
+    charity = _required_mapping(payload.get("charity"), "Choice charity")
+    machine_names = payload.get("machine_names")
+    if not isinstance(machine_names, list):
+        raise HumbleParseError("Choice machine_names must contain a list")
+    # end if
     items: list[HumbleItem] = []
-    ordered_names = [name for name in parser.machine_names if name in content]
+    ordered_names = [name for name in machine_names if name in content]
     ordered_names.extend(name for name in content if name not in ordered_names)
     for machine_name in ordered_names:
         raw = _required_mapping(content[machine_name], f"Choice item {machine_name}")
@@ -779,4 +839,4 @@ def parse_choice_page(html: str, crawled: datetime) -> tuple[HumbleArchive, dict
         "choice_marketing": marketing,
         "product_json_ld": product,
     }
-# end def parse_choice_page
+# end def build_choice_archive

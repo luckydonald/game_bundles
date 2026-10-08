@@ -861,6 +861,8 @@ def scrape_humblebundle_command(
             archive_root=None if refresh else archive_root,
             log=typer.echo,
             on_offer=on_offer,
+            recovery_root=archive_root / "humblebundle/recovery",
+            reuse_recovery=not refresh,
         )
         unresolved = sorted(
             machine_name

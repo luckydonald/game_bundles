@@ -27,15 +27,18 @@ from game_collections.sources.common import (
 from game_collections.sources.humblebundle.models import CURRENT_VERSION, HumbleArchive, HumbleItem, HumbleTier
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
+    build_bundle_archive,
+    build_choice_archive,
+    extract_bundle_payload,
+    extract_choice_payload,
     parse_bundle_index,
-    parse_bundle_page,
-    parse_choice_page,
 )
 from game_collections.sources.humblebundle.resolver import (
     HumbleResolutionMap,
     StorefrontResolver,
     render_resolution_map,
 )
+from game_collections.sources.recovery import clear_recovery, load_recovery, write_recovery
 
 
 LogFn = Callable[[str], None]
@@ -153,6 +156,8 @@ def crawl_humble_offers(
     archive_root: Path | None = None,
     log: LogFn = _NO_LOG,
     on_offer: Callable[[CrawledHumbleOffer], None] | None = None,
+    recovery_root: Path | None = None,
+    reuse_recovery: bool = True,
 ) -> HumbleCrawlReport:
     """Crawl explicit offers or discover current Choice and active Games bundles.
 
@@ -162,6 +167,11 @@ def crawl_humble_offers(
     game) `resolver.resolve_archive` call is skipped in favor of the cached,
     already-resolved archive. Pass `on_offer` to write each offer to disk as
     soon as it's ready, rather than waiting for the whole crawl to finish.
+
+    When building an offer's models fails, its extracted payload and the error are
+    parked under `recovery_root` (see `sources/recovery.py`) and the next run
+    builds from that instead of fetching again, deleting the record on success.
+    `reuse_recovery=False` (`--refresh`) fetches anew and overwrites it.
     """
     observed = (crawled or datetime.now(UTC)).astimezone(UTC)
     targets: list[tuple[str, dict[str, Any] | None]] = []
@@ -183,12 +193,31 @@ def crawl_humble_offers(
     for index, (url, listing) in enumerate(targets, start=1):
         log(f"Offer {index}/{total}: {url}")
         try:
-            page = fetch(url)
-            if urlparse(url).path == "/membership":
-                archive, source = parse_choice_page(page, observed)
-            else:
-                archive, source = parse_bundle_page(page, listing, observed)
+            payload = _recovered_payload(recovery_root, url, reuse_recovery, log)
+            if payload is None:
+                page = fetch(url)
+                if urlparse(url).path == "/membership":
+                    payload = extract_choice_payload(page)
+                else:
+                    payload = extract_bundle_payload(page, listing)
+                # end if
             # end if
+            try:
+                archive, source = (
+                    build_choice_archive(payload, observed)
+                    if payload.get("kind") == "choice"
+                    else build_bundle_archive(payload, observed)
+                )
+            except ValueError as error:
+                # Park the already-fetched payload so the next run can retry the build offline.
+                if recovery_root is not None:
+                    parked = write_recovery(
+                        recovery_root, url, payload, error, version=CURRENT_VERSION, observed_at=observed
+                    )
+                    log(f"Offer {index}/{total}: {url} (build failed, payload and error saved to {parked})")
+                # end if
+                raise
+            # end try
             cached = None
             if archive_root is not None:
                 metadata_path, source_path = _archive_paths(archive_root, archive)
@@ -208,12 +237,28 @@ def crawl_humble_offers(
             if on_offer is not None:
                 on_offer(offer)
             # end if
+            if recovery_root is not None:
+                clear_recovery(recovery_root, url)
+            # end if
         except (OSError, ValueError, HumbleCrawlError) as error:
             errors.append(f"{url}: {error}")
         # end try
     # end for
     return HumbleCrawlReport(offers=tuple(offers), errors=tuple(errors))
 # end def crawl_humble_offers
+
+
+def _recovered_payload(recovery_root: Path | None, url: str, reuse: bool, log: LogFn) -> dict[str, Any] | None:
+    if recovery_root is None or not reuse:
+        return None
+    # end if
+    record = load_recovery(recovery_root, url, version=CURRENT_VERSION)
+    if record is None:
+        return None
+    # end if
+    log(f"  Using recovered payload for {url} (previous error: {record.error.type})")
+    return record.payload
+# end def _recovered_payload
 
 
 def _offer_key(archive: HumbleArchive) -> str:

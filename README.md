@@ -59,7 +59,7 @@ uv tool run --from game-collections patchright install chromium
 
 ## Humble Bundle imports
 
-`game-collections scrape humblebundle` discovers the current Humble Choice and every active Games bundle. Books and Software are ignored. Repeat `--url` to crawl only specific Choice or Games pages.
+`game-collections scrape humblebundle` discovers the current Humble Choice and every active Games bundle. Books and Software are ignored. Repeat `--url` to crawl only specific Choice or Games pages. If building an offer fails, its extracted payload and the error details are parked in `archives/humblebundle/recovery/` and reused on the next run instead of re-fetching the page (`--refresh` discards them).
 
 Humble embeds its catalog data in the public HTML. The importer converts descriptions to Markdown, resolves real games against the advertised storefronts, and writes:
 

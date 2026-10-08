@@ -624,3 +624,61 @@ def test_crawl_logs_progress_and_invokes_on_offer_per_offer() -> None:
     assert any("Game 1/1" in message for message in messages)
     assert offers == list(report.offers)
 # end def test_crawl_logs_progress_and_invokes_on_offer_per_offer
+
+
+def test_crawl_parks_a_failed_build_and_retries_it_without_fetching(tmp_path: Path) -> None:
+    recovery_root = tmp_path / "archives/humblebundle/recovery"
+    url = "https://www.humblebundle.com/games/sample-bundle"
+    # A vendor URL that is not a URL at all stays a hard build error.
+    broken_page = _bundle_page_payload().replace('"item_content_type"', '"developers": [{"developer-name": "Dev", "developer-url": "not a url"}], "item_content_type"')
+
+    def broken_fetch(url: str) -> str:
+        return broken_page
+    # end def broken_fetch
+
+    resolver = StorefrontResolver(broken_fetch, lambda _item, _provider, _candidates, **_kwargs: None)
+    first = crawl_humble_offers(
+        broken_fetch,
+        resolver,
+        HumbleResolutionMap(schema=1, games={}),
+        urls=[url],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        recovery_root=recovery_root,
+    )
+
+    assert len(first.errors) == 1
+    parked = json.loads((recovery_root / "sample-bundle.json").read_text(encoding="utf-8"))["data"]
+    assert parked["url"] == url
+    assert parked["error"]["type"] == "ValidationError"
+    assert parked["error"]["details"][0]["input"] == "https://not a url"
+    assert parked["payload"]["kind"] == "bundle"
+
+    # Fix the payload on disk the way a parser fix would, then retry: no page fetch may happen.
+    path = recovery_root / "sample-bundle.json"
+    envelope = json.loads(path.read_text(encoding="utf-8"))
+    for item in envelope["data"]["payload"]["bundle_data"]["tier_item_data"].values():
+        item["developers"] = []
+    # end for
+    path.write_text(json.dumps(envelope), encoding="utf-8")
+
+    def unreachable_fetch(url: str) -> str:
+        if "humblebundle.com" in url:
+            raise AssertionError(f"recovered payload should skip fetching the page: {url}")
+        # end if
+        return '<a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>'
+    # end def unreachable_fetch
+
+    resolver = StorefrontResolver(unreachable_fetch, lambda _item, _provider, _candidates, **_kwargs: None)
+    second = crawl_humble_offers(
+        unreachable_fetch,
+        resolver,
+        HumbleResolutionMap(schema=1, games={}),
+        urls=[url],
+        crawled=datetime(2026, 7, 12, tzinfo=UTC),
+        recovery_root=recovery_root,
+    )
+
+    assert second.errors == ()
+    assert len(second.offers) == 1
+    assert not path.exists()
+# end def test_crawl_parks_a_failed_build_and_retries_it_without_fetching
