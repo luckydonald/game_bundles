@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Beyond Reality: Sci-Fi & Surival VR Collection'
+tiers:
+- rank: 1
+  name: 2 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
+- rank: 3
+  name: 7 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16638/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16638/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16638/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Blair Witch VR
+  ids:
+  - steam:1576350
+  - isthereanydeal:blair-witch-vr
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Z.O.N.A Project X VR
+  ids:
+  - steam:2142450
+  - isthereanydeal:zona-project-x-vr
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Layers of Fear VR
+  ids:
+  - steam:1183030
+  - isthereanydeal:layers-of-fear-vr
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: A Rogue Escape
+  ids:
+  - steam:1476100
+  - isthereanydeal:a-rogue-escape
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Z.O.N.A: Origin'
+  ids:
+  - steam:2539520
+  - isthereanydeal:zona-origin
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Homeworld: Vast Reaches'
+  ids:
+  - steam:2949240
+  - isthereanydeal:homeworld-vast-reaches
+  requires: []
+  tiers:
+  - 3
+- name: 'Star Trek: Infection'
+  ids:
+  - steam:3954580
+  - isthereanydeal:star-trek-infection
+  requires: []
+  tiers:
+  - 3

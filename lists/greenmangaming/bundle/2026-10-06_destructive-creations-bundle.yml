@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Destructive Creations Bundle — Collector
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16634/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16634/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16634/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+  - isthereanydeal:ancestors-legacy
+  requires: []
+- name: IS Defense
+  ids:
+  - steam:448370
+  - isthereanydeal:is-defense
+  requires: []
+- name: Hatred
+  ids:
+  - steam:341940
+  - isthereanydeal:hatred
+  requires: []
+- name: Space Raiders in Space
+  ids:
+  - steam:1278210
+  - isthereanydeal:space-raiders-in-space
+  requires: []
+- name: War Mongrels
+  ids:
+  - steam:1101790
+  - isthereanydeal:war-mongrels
+  requires: []
+- name: Shame Legacy
+  ids:
+  - steam:2014690
+  - isthereanydeal:shame-legacy
+  requires: []
+- name: Smells Like a Mushroom
+  ids:
+  - steam:2199340
+  - isthereanydeal:smells-like-a-mushroom
+  requires: []

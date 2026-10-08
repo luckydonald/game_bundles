@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Indie Fighters Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: 8 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16637/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16637/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16637/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Lethal League Blaze
+  ids:
+  - steam:553310
+  - isthereanydeal:lethal-league-blaze
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Divekick
+  ids:
+  - steam:244730
+  - isthereanydeal:divekick
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Skullgirls 2nd Encore
+  ids:
+  - steam:245170
+  - isthereanydeal:skullgirls-2nd-encore
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Blazing Strike
+  ids:
+  - steam:1999500
+  - isthereanydeal:blazing-strike
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Rivals of Aether
+  ids:
+  - steam:383980
+  - isthereanydeal:rivals-of-aether
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Terrordrome - Reign of the Legends
+  ids:
+  - steam:1291170
+  - isthereanydeal:terrordrome-reign-of-the-legends
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Pocket Bravery
+  ids:
+  - steam:1555150
+  - isthereanydeal:pocket-bravery
+  requires: []
+  tiers:
+  - 3
+- name: Rivals of Aether II
+  ids:
+  - steam:2217000
+  - isthereanydeal:rivals-of-aether-ii
+  requires: []
+  tiers:
+  - 3
