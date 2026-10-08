@@ -3484,3 +3484,5 @@ url
 
 ❯ Use `md.md` /code-style
 
+❯ Add the end summary, `Wrote 48 file(s) for 17 offer(s); 105 unresolved game(s).`, include the errors written to disk, too
+

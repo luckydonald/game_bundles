@@ -647,6 +647,7 @@ def test_crawl_parks_a_failed_build_and_retries_it_without_fetching(tmp_path: Pa
     )
 
     assert len(first.errors) == 1
+    assert first.parked == (recovery_root / "sample-bundle.json",)
     parked = json.loads((recovery_root / "sample-bundle.json").read_text(encoding="utf-8"))["data"]
     assert parked["url"] == url
     assert parked["error"]["type"] == "ValidationError"
