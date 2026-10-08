@@ -879,6 +879,12 @@ def scrape_humblebundle_command(
             f"Wrote {written_count} file(s) for {len(report.offers)} offer(s); "
             f"{len(unresolved)} unresolved game(s)."
         )
+        if report.parked:
+            typer.echo(f"Saved {len(report.parked)} failed offer(s) with their errors for recovery:")
+            for parked_path in report.parked:
+                typer.echo(f"  {parked_path}")
+            # end for
+        # end if
         if report.errors:
             raise typer.Exit(1)
         # end if

@@ -131,6 +131,8 @@ class HumbleCrawlReport:
 
     offers: tuple[CrawledHumbleOffer, ...]
     errors: tuple[str, ...]
+    # Recovery files written for offers whose build failed (see `sources/recovery.py`).
+    parked: tuple[Path, ...] = ()
 
 # end class HumbleCrawlReport
 
@@ -189,6 +191,7 @@ def crawl_humble_offers(
         # end try
     # end if
     offers: list[CrawledHumbleOffer] = []
+    parked_paths: list[Path] = []
     total = len(targets)
     for index, (url, listing) in enumerate(targets, start=1):
         log(f"Offer {index}/{total}: {url}")
@@ -214,6 +217,7 @@ def crawl_humble_offers(
                     parked = write_recovery(
                         recovery_root, url, payload, error, version=CURRENT_VERSION, observed_at=observed
                     )
+                    parked_paths.append(parked)
                     log(f"Offer {index}/{total}: {url} (build failed, payload and error saved to {parked})")
                 # end if
                 raise
@@ -244,7 +248,7 @@ def crawl_humble_offers(
             errors.append(f"{url}: {error}")
         # end try
     # end for
-    return HumbleCrawlReport(offers=tuple(offers), errors=tuple(errors))
+    return HumbleCrawlReport(offers=tuple(offers), errors=tuple(errors), parked=tuple(parked_paths))
 # end def crawl_humble_offers
 
 
