@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../schemas/game-list.schema.json
 schema: 2
-name: '2D Rewind Collection: S2 Games Bundle'
+name: 2D Rewind Collection from S2 Games
 tiers:
 - rank: 1
   name: 4 Item Bundle
@@ -15,22 +15,29 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16618/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16618/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/2d-rewind-collection-from-s2-games
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-30_2d-rewind-collection-from-s2-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-30_2d-rewind-collection-from-s2-games/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
-- name: CHUCHEL
+- name: Samorost 3
   ids:
-  - steam:711660
-  - isthereanydeal:chuchel
+  - steam:421120
+  - isthereanydeal:samorost-3
   requires: []
   tiers:
   - 1
   - 2
   - 3
-- name: Not Tonight
+- name: CHUCHEL
   ids:
-  - steam:733790
-  - isthereanydeal:not-tonight
+  - steam:711660
+  - isthereanydeal:chuchel
   requires: []
   tiers:
   - 1
@@ -45,10 +52,10 @@ games:
   - 1
   - 2
   - 3
-- name: Samorost 3
+- name: Not Tonight
   ids:
-  - steam:421120
-  - isthereanydeal:samorost-3
+  - steam:733790
+  - isthereanydeal:not-tonight
   requires: []
   tiers:
   - 1
@@ -62,6 +69,14 @@ games:
   tiers:
   - 2
   - 3
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  - isthereanydeal:karate-survivor
+  requires: []
+  tiers:
+  - 2
+  - 3
 - name: NORCO
   ids:
   - steam:1221250
@@ -70,13 +85,19 @@ games:
   tiers:
   - 2
   - 3
-- name: Karate Survivor
+- name: River City Girls 2
   ids:
-  - steam:3027930
-  - isthereanydeal:karate-survivor
+  - steam:1920480
+  - isthereanydeal:river-city-girls-2
   requires: []
   tiers:
-  - 2
+  - 3
+- name: River City Girls
+  ids:
+  - steam:1049320
+  - isthereanydeal:river-city-girls
+  requires: []
+  tiers:
   - 3
 - name: Nova Drift
   ids:
@@ -92,17 +113,10 @@ games:
   requires: []
   tiers:
   - 3
-- name: River City Girls
+- name: Rainbow Legends
   ids:
-  - steam:1049320
-  - isthereanydeal:river-city-girls
-  requires: []
-  tiers:
-  - 3
-- name: River City Girls 2
-  ids:
-  - steam:1920480
-  - isthereanydeal:river-city-girls-2
+  - steam:3470370
+  - isthereanydeal:rainbow-legends
   requires: []
   tiers:
   - 3
@@ -110,13 +124,6 @@ games:
   ids:
   - steam:2282890
   - isthereanydeal:folklands
-  requires: []
-  tiers:
-  - 3
-- name: Rainbow Legends
-  ids:
-  - steam:3470370
-  - isthereanydeal:rainbow-legends
   requires: []
   tiers:
   - 3
