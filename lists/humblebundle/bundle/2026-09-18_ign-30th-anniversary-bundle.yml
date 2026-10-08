@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: IGN 30th Anniversary Bundle
+tiers:
+- rank: 1
+  name: 2 Item Bundle
+- rank: 2
+  name: 4 Item Bundle
+- rank: 3
+  name: Entire 7 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/ign-30th-anniversary-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-09-18_ign-30th-anniversary-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-09-18_ign-30th-anniversary-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16630/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16630/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16630/source.json
+crawlers:
+- humblebundle
+- isthereanydeal
+games:
+- name: 'Thronebreaker: The Witcher Tales'
+  ids:
+  - steam:973760
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sonic Adventure 2
+  ids:
+  - steam:213610
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ravenswatch
+  ids:
+  - steam:2071280
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Subnautica
+  ids:
+  - steam:264710
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: The Elder Scrolls Online - Elsweyr
+  ids:
+  - steam:925100
+  requires: []
+  tiers:
+  - 3
+- name: REMNANT II
+  ids:
+  - steam:1282100
+  requires: []
+  tiers:
+  - 3
+- name: BlazBlue Entropy Effect
+  ids:
+  - steam:2273430
+  requires: []
+  tiers:
+  - 3
