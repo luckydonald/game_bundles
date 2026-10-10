@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Gals and Pals: PQube Japanese Games'
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 7 Item Bundle
+- rank: 3
+  name: Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/gals-and-pals-pqube-japanese-games
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-09_gals-and-pals-pqube-japanese-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-09_gals-and-pals-pqube-japanese-games/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Gal*Gun: Double Peace'
+  ids:
+  - steam:511740
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Super Bullet Break
+  ids:
+  - steam:1767170
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Nippon Marathon
+  ids:
+  - steam:746940
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Lair Land Story
+  ids:
+  - steam:1268140
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Gal*Gun 2
+  ids:
+  - steam:851890
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Punch Line
+  ids:
+  - steam:766680
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Our World Is Ended
+  ids:
+  - steam:940650
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Gal*Gun Returns
+  ids:
+  - steam:1425730
+  requires: []
+  tiers:
+  - 3
+- name: Is It Wrong to Try to Pick Up Girls in a Dungeon? Infinite Combate
+  ids:
+  - steam:1187940
+  requires: []
+  tiers:
+  - 3
+- name: METAL MAX Xeno Reborn
+  ids:
+  - steam:1637230
+  requires: []
+  tiers:
+  - 3
+- name: Labyrinth of Zangetsu
+  ids:
+  - steam:1922960
+  requires: []
+  tiers:
+  - 3

@@ -1,23 +1,36 @@
 {
   "data": {
     "bundle_data": {
-      "at_risk_tpkds": {},
-      "at_time|datetime": "2026-10-02T16:02:40.996904",
+      "at_risk_tpkds": {
+        "blazblueentropyeffect_bundle_steam": {
+          "human_name": "BlazBlue Entropy Effect"
+        },
+        "remnant2_row_bundle_steam": {
+          "human_name": "REMNANT II®"
+        },
+        "sonic_adventure_2_bundle_steam": {
+          "human_name": "SONIC ADVENTURE 2"
+        },
+        "thronebreaker_thewitchertales_bundle_steam": {
+          "human_name": "Thronebreaker: The Witcher Tales"
+        }
+      },
+      "at_time|datetime": "2026-10-10T00:20:23.094230",
       "author": "Publishers",
       "average_data": {
-        "average_usd_amount|decimal": 15.075247541999298,
-        "average_usd_string": "15.07524754199929728932826344",
+        "average_usd_amount|decimal": 15.066895328997923,
+        "average_usd_string": "15.06689532899792291136808965",
         "average_usd|money": {
-          "amount": 15.075247541999298,
+          "amount": 15.066895328997923,
           "currency": "USD"
         },
         "average|money": {
-          "amount": 13.43,
+          "amount": 13.44,
           "currency": "EUR"
         },
-        "avghash": "6oJ2lVpE0lcrafW3HB/UlS2B+ISAg4G5Gy1ECs1RBOo=",
-        "avguuid": "Egf9bcKeG56nPupI",
-        "cleanavg": "15.07"
+        "avghash": "HIgZUieYaokwS0w0coyF70LlRkRYxX654h1gISmYkbM=",
+        "avguuid": "XNDdmlAYSXgXYtiP",
+        "cleanavg": "15.06"
       },
       "basic_data": {
         "allowed_payment_processors": [
@@ -40,7 +53,7 @@
         "logo": "https://hb.imgix.net/22e2bcdf74799fc26092051b99f19143b58107ae.png?auto=compress,format&h=340&w=1200&s=35fe248405cfe2a269d2bedc11d0e1e3",
         "media_type": "game",
         "msrp|money": {
-          "amount": 190.64587973273942,
+          "amount": 190.96912368374086,
           "currency": "EUR"
         },
         "newsletter_mailing_list_machine_name": "bundle_emails",
@@ -218,7 +231,13 @@
         "header": ""
       },
       "cyoc_data": {},
-      "empty_tpkds": {},
+      "empty_tpkds": {
+        "ravenswatch_bundle_steam": {
+          "human_name": "Ravenswatch",
+          "key_type_name": "Steam",
+          "permanently_depletable": false
+        }
+      },
       "is_all_charity_bundle": false,
       "jplayer_swf_path": "https://cdn.humblebundle.com/static/hashed/682bac84e8df7e444ab9127ce8e22f626caf0e41.swf",
       "leaderboard_data": [
@@ -230,10 +249,24 @@
           }
         },
         {
+          "name": "Azraelon",
+          "order_price|money": {
+            "amount": 25.0,
+            "currency": "USD"
+          }
+        },
+        {
           "name": "Ladynightwing58",
           "order_price|money": {
             "amount": 35.0,
             "currency": "AUD"
+          }
+        },
+        {
+          "name": "Magic",
+          "order_price|money": {
+            "amount": 20.0,
+            "currency": "USD"
           }
         },
         {
@@ -270,26 +303,1642 @@
             "amount": 16.0,
             "currency": "EUR"
           }
-        },
-        {
-          "name": "Tharnord",
-          "order_price|money": {
-            "amount": 15.87,
-            "currency": "EUR"
-          }
-        },
-        {
-          "name": "Damien_3v3",
-          "order_price|money": {
-            "amount": 15.87,
-            "currency": "EUR"
-          }
         }
       ],
       "machine_name": "ign30thanniversarybundle_bundle",
       "other_bundles_data": [
         {
-          "author": "Macmillan Publishers",
+          "author": "Publishers",
+          "cached_content_events": [
+            {
+              "display_counter": false,
+              "has_subproducts": true,
+              "has_tpkds": false,
+              "identifier": "less_than_initial",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": null,
+              "section_identifiers": [],
+              "start": null,
+              "type": "base"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "initial",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  12.85,
+                  "EUR"
+                ],
+                "AU": [
+                  18.96,
+                  "AUD"
+                ],
+                "BE": [
+                  12.95,
+                  "EUR"
+                ],
+                "BG": [
+                  12.85,
+                  "EUR"
+                ],
+                "BY": [
+                  14.16,
+                  "USD"
+                ],
+                "CA": [
+                  17.1,
+                  "CAD"
+                ],
+                "CH": [
+                  11.57,
+                  "EUR"
+                ],
+                "CL": [
+                  14.28,
+                  "USD"
+                ],
+                "CN": [
+                  80.45,
+                  "CNY"
+                ],
+                "CY": [
+                  12.74,
+                  "EUR"
+                ],
+                "CZ": [
+                  12.95,
+                  "EUR"
+                ],
+                "DE": [
+                  12.74,
+                  "EUR"
+                ],
+                "DK": [
+                  13.38,
+                  "EUR"
+                ],
+                "EE": [
+                  13.06,
+                  "EUR"
+                ],
+                "EG": [
+                  13.68,
+                  "USD"
+                ],
+                "ES": [
+                  12.95,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  10.71,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  9.07,
+                  "GBP"
+                ],
+                "FI": [
+                  13.44,
+                  "EUR"
+                ],
+                "FR": [
+                  12.85,
+                  "EUR"
+                ],
+                "GB": [
+                  10.88,
+                  "GBP"
+                ],
+                "GR": [
+                  13.28,
+                  "EUR"
+                ],
+                "HR": [
+                  13.38,
+                  "EUR"
+                ],
+                "HU": [
+                  13.6,
+                  "EUR"
+                ],
+                "IE": [
+                  13.17,
+                  "EUR"
+                ],
+                "IN": [
+                  14.16,
+                  "USD"
+                ],
+                "IS": [
+                  14.88,
+                  "USD"
+                ],
+                "IT": [
+                  13.06,
+                  "EUR"
+                ],
+                "JP": [
+                  13.2,
+                  "USD"
+                ],
+                "KR": [
+                  13.2,
+                  "USD"
+                ],
+                "LT": [
+                  12.63,
+                  "EUR"
+                ],
+                "LU": [
+                  12.53,
+                  "EUR"
+                ],
+                "LV": [
+                  12.95,
+                  "EUR"
+                ],
+                "MD": [
+                  14.4,
+                  "USD"
+                ],
+                "MT": [
+                  12.63,
+                  "EUR"
+                ],
+                "MX": [
+                  13.92,
+                  "USD"
+                ],
+                "NL": [
+                  12.95,
+                  "EUR"
+                ],
+                "NO": [
+                  13.38,
+                  "EUR"
+                ],
+                "NZ": [
+                  24.67,
+                  "NZD"
+                ],
+                "PH": [
+                  752.07,
+                  "PHP"
+                ],
+                "PL": [
+                  13.17,
+                  "EUR"
+                ],
+                "PT": [
+                  13.17,
+                  "EUR"
+                ],
+                "RO": [
+                  12.42,
+                  "EUR"
+                ],
+                "RU": [
+                  1640.81,
+                  "RUB"
+                ],
+                "SE": [
+                  13.38,
+                  "EUR"
+                ],
+                "SG": [
+                  13.08,
+                  "USD"
+                ],
+                "SI": [
+                  13.06,
+                  "EUR"
+                ],
+                "SK": [
+                  13.17,
+                  "EUR"
+                ],
+                "TH": [
+                  12.84,
+                  "USD"
+                ],
+                "TR": [
+                  589.88,
+                  "TRY"
+                ],
+                "TW": [
+                  12.6,
+                  "USD"
+                ],
+                "UA": [
+                  14.4,
+                  "USD"
+                ],
+                "US": [
+                  12.0,
+                  "USD"
+                ],
+                "ZA": [
+                  13.8,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "core_tier"
+              ],
+              "start": null,
+              "type": "price"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "bt15",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  16.05,
+                  "EUR"
+                ],
+                "AU": [
+                  23.7,
+                  "AUD"
+                ],
+                "BE": [
+                  16.18,
+                  "EUR"
+                ],
+                "BG": [
+                  16.05,
+                  "EUR"
+                ],
+                "BY": [
+                  17.7,
+                  "USD"
+                ],
+                "CA": [
+                  21.37,
+                  "CAD"
+                ],
+                "CH": [
+                  14.46,
+                  "EUR"
+                ],
+                "CL": [
+                  17.85,
+                  "USD"
+                ],
+                "CN": [
+                  100.56,
+                  "CNY"
+                ],
+                "CY": [
+                  15.92,
+                  "EUR"
+                ],
+                "CZ": [
+                  16.18,
+                  "EUR"
+                ],
+                "DE": [
+                  15.92,
+                  "EUR"
+                ],
+                "DK": [
+                  16.72,
+                  "EUR"
+                ],
+                "EE": [
+                  16.32,
+                  "EUR"
+                ],
+                "EG": [
+                  17.1,
+                  "USD"
+                ],
+                "ES": [
+                  16.18,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  13.38,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  11.34,
+                  "GBP"
+                ],
+                "FI": [
+                  16.79,
+                  "EUR"
+                ],
+                "FR": [
+                  16.05,
+                  "EUR"
+                ],
+                "GB": [
+                  13.6,
+                  "GBP"
+                ],
+                "GR": [
+                  16.59,
+                  "EUR"
+                ],
+                "HR": [
+                  16.72,
+                  "EUR"
+                ],
+                "HU": [
+                  16.99,
+                  "EUR"
+                ],
+                "IE": [
+                  16.45,
+                  "EUR"
+                ],
+                "IN": [
+                  17.7,
+                  "USD"
+                ],
+                "IS": [
+                  18.6,
+                  "USD"
+                ],
+                "IT": [
+                  16.32,
+                  "EUR"
+                ],
+                "JP": [
+                  16.5,
+                  "USD"
+                ],
+                "KR": [
+                  16.5,
+                  "USD"
+                ],
+                "LT": [
+                  15.78,
+                  "EUR"
+                ],
+                "LU": [
+                  15.65,
+                  "EUR"
+                ],
+                "LV": [
+                  16.18,
+                  "EUR"
+                ],
+                "MD": [
+                  18.0,
+                  "USD"
+                ],
+                "MT": [
+                  15.78,
+                  "EUR"
+                ],
+                "MX": [
+                  17.4,
+                  "USD"
+                ],
+                "NL": [
+                  16.18,
+                  "EUR"
+                ],
+                "NO": [
+                  16.72,
+                  "EUR"
+                ],
+                "NZ": [
+                  30.84,
+                  "NZD"
+                ],
+                "PH": [
+                  940.09,
+                  "PHP"
+                ],
+                "PL": [
+                  16.45,
+                  "EUR"
+                ],
+                "PT": [
+                  16.45,
+                  "EUR"
+                ],
+                "RO": [
+                  15.52,
+                  "EUR"
+                ],
+                "RU": [
+                  2051.01,
+                  "RUB"
+                ],
+                "SE": [
+                  16.72,
+                  "EUR"
+                ],
+                "SG": [
+                  16.35,
+                  "USD"
+                ],
+                "SI": [
+                  16.32,
+                  "EUR"
+                ],
+                "SK": [
+                  16.45,
+                  "EUR"
+                ],
+                "TH": [
+                  16.05,
+                  "USD"
+                ],
+                "TR": [
+                  737.35,
+                  "TRY"
+                ],
+                "TW": [
+                  15.75,
+                  "USD"
+                ],
+                "UA": [
+                  18.0,
+                  "USD"
+                ],
+                "US": [
+                  15.0,
+                  "USD"
+                ],
+                "ZA": [
+                  17.25,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "bt15_tier"
+              ],
+              "start": null,
+              "type": "price"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "bt20",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  21.42,
+                  "EUR"
+                ],
+                "AU": [
+                  31.6,
+                  "AUD"
+                ],
+                "BE": [
+                  21.59,
+                  "EUR"
+                ],
+                "BG": [
+                  21.42,
+                  "EUR"
+                ],
+                "BY": [
+                  23.6,
+                  "USD"
+                ],
+                "CA": [
+                  28.5,
+                  "CAD"
+                ],
+                "CH": [
+                  19.29,
+                  "EUR"
+                ],
+                "CL": [
+                  23.8,
+                  "USD"
+                ],
+                "CN": [
+                  134.09,
+                  "CNY"
+                ],
+                "CY": [
+                  21.24,
+                  "EUR"
+                ],
+                "CZ": [
+                  21.59,
+                  "EUR"
+                ],
+                "DE": [
+                  21.24,
+                  "EUR"
+                ],
+                "DK": [
+                  22.31,
+                  "EUR"
+                ],
+                "EE": [
+                  21.77,
+                  "EUR"
+                ],
+                "EG": [
+                  22.8,
+                  "USD"
+                ],
+                "ES": [
+                  21.59,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  17.85,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  15.12,
+                  "GBP"
+                ],
+                "FI": [
+                  22.4,
+                  "EUR"
+                ],
+                "FR": [
+                  21.42,
+                  "EUR"
+                ],
+                "GB": [
+                  18.14,
+                  "GBP"
+                ],
+                "GR": [
+                  22.13,
+                  "EUR"
+                ],
+                "HR": [
+                  22.31,
+                  "EUR"
+                ],
+                "HU": [
+                  22.66,
+                  "EUR"
+                ],
+                "IE": [
+                  21.95,
+                  "EUR"
+                ],
+                "IN": [
+                  23.6,
+                  "USD"
+                ],
+                "IS": [
+                  24.8,
+                  "USD"
+                ],
+                "IT": [
+                  21.77,
+                  "EUR"
+                ],
+                "JP": [
+                  22.0,
+                  "USD"
+                ],
+                "KR": [
+                  22.0,
+                  "USD"
+                ],
+                "LT": [
+                  21.06,
+                  "EUR"
+                ],
+                "LU": [
+                  20.88,
+                  "EUR"
+                ],
+                "LV": [
+                  21.59,
+                  "EUR"
+                ],
+                "MD": [
+                  24.0,
+                  "USD"
+                ],
+                "MT": [
+                  21.06,
+                  "EUR"
+                ],
+                "MX": [
+                  23.2,
+                  "USD"
+                ],
+                "NL": [
+                  21.59,
+                  "EUR"
+                ],
+                "NO": [
+                  22.31,
+                  "EUR"
+                ],
+                "NZ": [
+                  41.12,
+                  "NZD"
+                ],
+                "PH": [
+                  1253.46,
+                  "PHP"
+                ],
+                "PL": [
+                  21.95,
+                  "EUR"
+                ],
+                "PT": [
+                  21.95,
+                  "EUR"
+                ],
+                "RO": [
+                  20.7,
+                  "EUR"
+                ],
+                "RU": [
+                  2734.69,
+                  "RUB"
+                ],
+                "SE": [
+                  22.31,
+                  "EUR"
+                ],
+                "SG": [
+                  21.8,
+                  "USD"
+                ],
+                "SI": [
+                  21.77,
+                  "EUR"
+                ],
+                "SK": [
+                  21.95,
+                  "EUR"
+                ],
+                "TH": [
+                  21.4,
+                  "USD"
+                ],
+                "TR": [
+                  983.13,
+                  "TRY"
+                ],
+                "TW": [
+                  21.0,
+                  "USD"
+                ],
+                "UA": [
+                  24.0,
+                  "USD"
+                ],
+                "US": [
+                  20.0,
+                  "USD"
+                ],
+                "ZA": [
+                  23.0,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "bt20_tier"
+              ],
+              "start": null,
+              "type": "price"
+            }
+          ],
+          "category": "bundle",
+          "detailed_marketing_blurb": "<strong><span style=\"color: #ef9741;\">The content in this bundle is intended for mature audiences.</span></strong><br><br>Sink your teeth into the Twisted Trilogies and Terrors: Dark Visual Novel Bundle, a seasonal collection of scary games! Choose from a trio of <em>Spirit Hunter</em> titles, including the critically acclaimed <em>Death Mark II</em>. Spooky supernatural studies are in session within the halls of Tokyo’s Konoehara Academy, and it’s your duty as a Spirit Doctor to cleanse the prestigious academy’s classrooms with your partner. Or try <em>Class of '09</em>, a trilogy of anti-visual novel games where you play as a beautiful heroine who causes chaos for every suitor who tries to gain your affection. Plus, your purchase helps support Movember!<br><br><strong><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 30th, 2027.</span></strong>",
+          "disable_hero_tile": false,
+          "disallowed_countries": [],
+          "end_date|datetime": "2026-10-31T04:00:00",
+          "exclusive_countries": [],
+          "fallback_store_sale_logo": "",
+          "hero_highlights": [
+            {
+              "heading": "$264 worth of awesome stuff",
+              "tooltip": "Get games collectively valued at up to $264."
+            },
+            {
+              "heading": "Pay $12 or more",
+              "tooltip": "Name your price of $12 or more and increase your contribution to upgrade your bundle."
+            },
+            {
+              "heading": "Redeem on Steam",
+              "tooltip": "Pay $12 or more for access to content on Steam."
+            }
+          ],
+          "high_res_tile_image": "https://hb.imgix.net/5a97957c77183d5da63caae754eb248e42e5387a.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=9386d9e9bc3addc718c97b86298a33a6",
+          "high_res_tile_image_information": {
+            "config": {
+              "gcs": "images/humble_home/twistedtrilogiesandterrorsdarkvisualnovels_bundle-product.jpg",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "highlights": [
+            "Pay What You Want",
+            "9 games",
+            "$264 Value",
+            "Support Charity"
+          ],
+          "hover_highlights": [
+            "9 games",
+            "$264 Value"
+          ],
+          "hover_title": "Pay What You Want",
+          "machine_name": "twistedtrilogiesandterrorsdarkvisualnovels_bundle",
+          "marketing_blurb": "Get <em>Class of '09</em>, <em>Corpse Factory</em>, <em>ABYSS OF THE SACRIFICE</em>, <em>Class of '09: The Re-up</em>, <em>Spirit Hunter: Death Mark II</em>, <em>The Letter - Horror Visual Novel</em>, and more!",
+          "product_url": "/games/twisted-trilogies-and-terrors-dark-visual-novels",
+          "product_variables": {
+            "msrp": "$264",
+            "msrp|pricing": {
+              "US": [
+                264.0,
+                "USD"
+              ]
+            }
+          },
+          "short_marketing_blurb": "Twisted trilogies and terrifying tales await.",
+          "start_date|datetime": "2026-10-09T18:00:00",
+          "supports_partners": true,
+          "tile_image": "https://hb.imgix.net/5a97957c77183d5da63caae754eb248e42e5387a.jpg?auto=compress,format&fit=crop&h=353&w=616&s=166f81bb93e29824b4ae91c2d5648089",
+          "tile_image_information": {
+            "config": {
+              "gcs": "images/humble_home/twistedtrilogiesandterrorsdarkvisualnovels_bundle-product.jpg",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "tile_logo": "https://hb.imgix.net/abbbbf43e6dbca9d366b35555f85ffb89f3b645b.png?auto=compress,format&h=340&w=1200&s=68071e62c95aba8f77a42ed2a39f91c2",
+          "tile_logo_information": {
+            "config": {
+              "gcs": "images/logos/twistedtrilogiesandterrorsdarkvisualnovels_bundle-logo-product.png",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "tile_name": "Twisted Trilogies and Terrors: Dark Visual Novels",
+          "tile_short_name": "Twisted Trilogies and Terrors: Dark Visual Novels",
+          "tile_stamp": "games",
+          "type": "bundle"
+        },
+        {
+          "author": "DC Comics",
+          "cached_content_events": [
+            {
+              "display_counter": false,
+              "has_subproducts": true,
+              "has_tpkds": false,
+              "identifier": "less_than_initial",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": null,
+              "section_identifiers": [],
+              "start": null,
+              "type": "base"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "initial",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  4.74,
+                  "EUR"
+                ],
+                "AU": [
+                  7.68,
+                  "AUD"
+                ],
+                "BE": [
+                  4.56,
+                  "EUR"
+                ],
+                "BG": [
+                  5.17,
+                  "EUR"
+                ],
+                "BY": [
+                  5.9,
+                  "USD"
+                ],
+                "CA": [
+                  6.96,
+                  "CAD"
+                ],
+                "CH": [
+                  4.42,
+                  "EUR"
+                ],
+                "CL": [
+                  5.95,
+                  "USD"
+                ],
+                "CN": [
+                  33.6,
+                  "CNY"
+                ],
+                "CY": [
+                  5.12,
+                  "EUR"
+                ],
+                "CZ": [
+                  4.31,
+                  "EUR"
+                ],
+                "DE": [
+                  4.61,
+                  "EUR"
+                ],
+                "DK": [
+                  5.38,
+                  "EUR"
+                ],
+                "EE": [
+                  4.69,
+                  "EUR"
+                ],
+                "EG": [
+                  5.7,
+                  "USD"
+                ],
+                "ES": [
+                  4.48,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  4.31,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  3.7,
+                  "GBP"
+                ],
+                "FI": [
+                  4.74,
+                  "EUR"
+                ],
+                "FR": [
+                  4.54,
+                  "EUR"
+                ],
+                "GB": [
+                  3.7,
+                  "GBP"
+                ],
+                "GR": [
+                  4.56,
+                  "EUR"
+                ],
+                "HR": [
+                  4.52,
+                  "EUR"
+                ],
+                "HU": [
+                  5.47,
+                  "EUR"
+                ],
+                "IE": [
+                  4.31,
+                  "EUR"
+                ],
+                "IN": [
+                  5.9,
+                  "USD"
+                ],
+                "IS": [
+                  5.55,
+                  "USD"
+                ],
+                "IT": [
+                  4.48,
+                  "EUR"
+                ],
+                "JP": [
+                  5.5,
+                  "USD"
+                ],
+                "KR": [
+                  5.5,
+                  "USD"
+                ],
+                "LT": [
+                  4.69,
+                  "EUR"
+                ],
+                "LU": [
+                  4.43,
+                  "EUR"
+                ],
+                "LV": [
+                  4.52,
+                  "EUR"
+                ],
+                "MD": [
+                  6.0,
+                  "USD"
+                ],
+                "MT": [
+                  4.52,
+                  "EUR"
+                ],
+                "MX": [
+                  5.8,
+                  "USD"
+                ],
+                "NL": [
+                  4.69,
+                  "EUR"
+                ],
+                "NO": [
+                  4.31,
+                  "EUR"
+                ],
+                "NZ": [
+                  9.86,
+                  "NZD"
+                ],
+                "PH": [
+                  312.72,
+                  "PHP"
+                ],
+                "PL": [
+                  4.52,
+                  "EUR"
+                ],
+                "PT": [
+                  4.56,
+                  "EUR"
+                ],
+                "RO": [
+                  4.52,
+                  "EUR"
+                ],
+                "RU": [
+                  639.27,
+                  "RUB"
+                ],
+                "SE": [
+                  4.56,
+                  "EUR"
+                ],
+                "SG": [
+                  5.45,
+                  "USD"
+                ],
+                "SI": [
+                  4.52,
+                  "EUR"
+                ],
+                "SK": [
+                  5.3,
+                  "EUR"
+                ],
+                "TH": [
+                  5.0,
+                  "USD"
+                ],
+                "TR": [
+                  241.46,
+                  "TRY"
+                ],
+                "TW": [
+                  5.25,
+                  "USD"
+                ],
+                "UA": [
+                  6.0,
+                  "USD"
+                ],
+                "US": [
+                  5.0,
+                  "USD"
+                ],
+                "ZA": [
+                  5.75,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "core_tier"
+              ],
+              "start": null,
+              "type": "price"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "bt12",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  11.39,
+                  "EUR"
+                ],
+                "AU": [
+                  18.45,
+                  "AUD"
+                ],
+                "BE": [
+                  10.98,
+                  "EUR"
+                ],
+                "BG": [
+                  12.43,
+                  "EUR"
+                ],
+                "BY": [
+                  14.16,
+                  "USD"
+                ],
+                "CA": [
+                  16.7,
+                  "CAD"
+                ],
+                "CH": [
+                  10.62,
+                  "EUR"
+                ],
+                "CL": [
+                  14.28,
+                  "USD"
+                ],
+                "CN": [
+                  80.65,
+                  "CNY"
+                ],
+                "CY": [
+                  12.32,
+                  "EUR"
+                ],
+                "CZ": [
+                  10.36,
+                  "EUR"
+                ],
+                "DE": [
+                  11.08,
+                  "EUR"
+                ],
+                "DK": [
+                  12.95,
+                  "EUR"
+                ],
+                "EE": [
+                  11.29,
+                  "EUR"
+                ],
+                "EG": [
+                  13.68,
+                  "USD"
+                ],
+                "ES": [
+                  10.77,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  10.36,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  8.89,
+                  "GBP"
+                ],
+                "FI": [
+                  11.39,
+                  "EUR"
+                ],
+                "FR": [
+                  10.92,
+                  "EUR"
+                ],
+                "GB": [
+                  8.89,
+                  "GBP"
+                ],
+                "GR": [
+                  10.98,
+                  "EUR"
+                ],
+                "HR": [
+                  10.87,
+                  "EUR"
+                ],
+                "HU": [
+                  13.15,
+                  "EUR"
+                ],
+                "IE": [
+                  10.36,
+                  "EUR"
+                ],
+                "IN": [
+                  14.16,
+                  "USD"
+                ],
+                "IS": [
+                  13.32,
+                  "USD"
+                ],
+                "IT": [
+                  10.77,
+                  "EUR"
+                ],
+                "JP": [
+                  13.2,
+                  "USD"
+                ],
+                "KR": [
+                  13.2,
+                  "USD"
+                ],
+                "LT": [
+                  11.29,
+                  "EUR"
+                ],
+                "LU": [
+                  10.67,
+                  "EUR"
+                ],
+                "LV": [
+                  10.87,
+                  "EUR"
+                ],
+                "MD": [
+                  14.4,
+                  "USD"
+                ],
+                "MT": [
+                  10.87,
+                  "EUR"
+                ],
+                "MX": [
+                  13.92,
+                  "USD"
+                ],
+                "NL": [
+                  11.29,
+                  "EUR"
+                ],
+                "NO": [
+                  10.36,
+                  "EUR"
+                ],
+                "NZ": [
+                  23.67,
+                  "NZD"
+                ],
+                "PH": [
+                  750.54,
+                  "PHP"
+                ],
+                "PL": [
+                  10.87,
+                  "EUR"
+                ],
+                "PT": [
+                  10.98,
+                  "EUR"
+                ],
+                "RO": [
+                  10.87,
+                  "EUR"
+                ],
+                "RU": [
+                  1534.26,
+                  "RUB"
+                ],
+                "SE": [
+                  10.98,
+                  "EUR"
+                ],
+                "SG": [
+                  13.08,
+                  "USD"
+                ],
+                "SI": [
+                  10.87,
+                  "EUR"
+                ],
+                "SK": [
+                  12.74,
+                  "EUR"
+                ],
+                "TH": [
+                  12.0,
+                  "USD"
+                ],
+                "TR": [
+                  579.52,
+                  "TRY"
+                ],
+                "TW": [
+                  12.6,
+                  "USD"
+                ],
+                "UA": [
+                  14.4,
+                  "USD"
+                ],
+                "US": [
+                  12.0,
+                  "USD"
+                ],
+                "ZA": [
+                  13.8,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "bt12_tier"
+              ],
+              "start": null,
+              "type": "price"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "bt20",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  18.99,
+                  "EUR"
+                ],
+                "AU": [
+                  30.77,
+                  "AUD"
+                ],
+                "BE": [
+                  18.3,
+                  "EUR"
+                ],
+                "BG": [
+                  20.72,
+                  "EUR"
+                ],
+                "BY": [
+                  23.6,
+                  "USD"
+                ],
+                "CA": [
+                  27.84,
+                  "CAD"
+                ],
+                "CH": [
+                  17.71,
+                  "EUR"
+                ],
+                "CL": [
+                  23.8,
+                  "USD"
+                ],
+                "CN": [
+                  134.43,
+                  "CNY"
+                ],
+                "CY": [
+                  20.55,
+                  "EUR"
+                ],
+                "CZ": [
+                  17.27,
+                  "EUR"
+                ],
+                "DE": [
+                  18.47,
+                  "EUR"
+                ],
+                "DK": [
+                  21.58,
+                  "EUR"
+                ],
+                "EE": [
+                  18.82,
+                  "EUR"
+                ],
+                "EG": [
+                  22.8,
+                  "USD"
+                ],
+                "ES": [
+                  17.96,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  17.27,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  14.83,
+                  "GBP"
+                ],
+                "FI": [
+                  18.99,
+                  "EUR"
+                ],
+                "FR": [
+                  18.21,
+                  "EUR"
+                ],
+                "GB": [
+                  14.83,
+                  "GBP"
+                ],
+                "GR": [
+                  18.3,
+                  "EUR"
+                ],
+                "HR": [
+                  18.13,
+                  "EUR"
+                ],
+                "HU": [
+                  21.93,
+                  "EUR"
+                ],
+                "IE": [
+                  17.27,
+                  "EUR"
+                ],
+                "IN": [
+                  23.6,
+                  "USD"
+                ],
+                "IS": [
+                  22.2,
+                  "USD"
+                ],
+                "IT": [
+                  17.96,
+                  "EUR"
+                ],
+                "JP": [
+                  22.0,
+                  "USD"
+                ],
+                "KR": [
+                  22.0,
+                  "USD"
+                ],
+                "LT": [
+                  18.82,
+                  "EUR"
+                ],
+                "LU": [
+                  17.78,
+                  "EUR"
+                ],
+                "LV": [
+                  18.13,
+                  "EUR"
+                ],
+                "MD": [
+                  24.0,
+                  "USD"
+                ],
+                "MT": [
+                  18.13,
+                  "EUR"
+                ],
+                "MX": [
+                  23.2,
+                  "USD"
+                ],
+                "NL": [
+                  18.82,
+                  "EUR"
+                ],
+                "NO": [
+                  17.27,
+                  "EUR"
+                ],
+                "NZ": [
+                  39.46,
+                  "NZD"
+                ],
+                "PH": [
+                  1250.9,
+                  "PHP"
+                ],
+                "PL": [
+                  18.13,
+                  "EUR"
+                ],
+                "PT": [
+                  18.3,
+                  "EUR"
+                ],
+                "RO": [
+                  18.13,
+                  "EUR"
+                ],
+                "RU": [
+                  2557.11,
+                  "RUB"
+                ],
+                "SE": [
+                  18.3,
+                  "EUR"
+                ],
+                "SG": [
+                  21.8,
+                  "USD"
+                ],
+                "SI": [
+                  18.13,
+                  "EUR"
+                ],
+                "SK": [
+                  21.24,
+                  "EUR"
+                ],
+                "TH": [
+                  20.0,
+                  "USD"
+                ],
+                "TR": [
+                  965.87,
+                  "TRY"
+                ],
+                "TW": [
+                  21.0,
+                  "USD"
+                ],
+                "UA": [
+                  24.0,
+                  "USD"
+                ],
+                "US": [
+                  20.0,
+                  "USD"
+                ],
+                "ZA": [
+                  23.0,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "bt20_tier"
+              ],
+              "start": null,
+              "type": "price"
+            }
+          ],
+          "category": "bundle",
+          "detailed_marketing_blurb": "Own the night alongside the Caped Crusader with the Batman Day Comics Bundle 2026! Pay what you want for a catalog of modern classics by the biggest <em>Batman</em> artists and writers like Dan Watters, Scott Snyder, and Nick Dragotta. Read the Bat's action‑packed comics, including <em>Batman: Dark Patterns</em>, <em>Batman Vol. 1–10</em> (2011–2016), and <em>Absolute Batman Vol. 1: The Zoo</em>. Bring your imagination and celebrate Batman Day on September 19th with the Dark Knight’s greatest adventures, and help support the BINC Foundation with your purchase!<br><br><span style=\"color: #ef9741;\">Redeemed on GlobalComix. Keys expire. Please redeem and activate before October 10th, 2027. Titles are not available for download off of GlobalComix.</span>",
+          "disable_hero_tile": false,
+          "disallowed_countries": [],
+          "end_date|datetime": "2026-10-10T18:00:00",
+          "exclusive_countries": [],
+          "fallback_store_sale_logo": "",
+          "hero_highlights": [
+            {
+              "heading": "$487 worth of awesome stuff",
+              "tooltip": "Get comics collectively valued at up to $487."
+            },
+            {
+              "heading": "Pay $5 or more",
+              "tooltip": "Name your price of $5 or more and increase your contribution to upgrade your bundle."
+            },
+            {
+              "heading": "Redeem keys to access content",
+              "tooltip": "Pay $5 or more to access content."
+            },
+            {
+              "heading": "Multi-format",
+              "tooltip": ""
+            }
+          ],
+          "high_res_tile_image": "https://hb.imgix.net/61acb85588c28261b33429f73291b5cd0a417443.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=18f5f7fc1b4db69db32b4dc2c1931a4f",
+          "high_res_tile_image_information": {
+            "config": {
+              "gcs": "images/humble_home/batmandaycomicsbundledccomics_bookbundle-product.jpg",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "highlights": [
+            "Pay What You Want",
+            "31 comics",
+            "$487 Value",
+            "Support Charity"
+          ],
+          "hover_highlights": [
+            "31 comics",
+            "$487 Value"
+          ],
+          "hover_title": "Pay What You Want",
+          "machine_name": "batmandaycomicsbundledccomics_bookbundle",
+          "marketing_blurb": "Get <em>DCUI 30-day trial offer</em>, <em>Batman (2016-) Vol. 1: Failsafe</em>, <em>Batman: Hush (New Edition) (Batman (1940-2011))</em>, <em>Batman: Dark Patterns (Batman: Dark Patterns (2024-))</em>, and more!",
+          "product_url": "/books/batman-day-comics-bundle-dc-comics-books",
+          "product_variables": {
+            "msrp": "$487",
+            "msrp|pricing": {
+              "US": [
+                487.0,
+                "USD"
+              ]
+            }
+          },
+          "short_marketing_blurb": "Rule the Night",
+          "start_date|datetime": "2026-09-19T18:00:00",
+          "supports_partners": true,
+          "tile_image": "https://hb.imgix.net/61acb85588c28261b33429f73291b5cd0a417443.jpg?auto=compress,format&fit=crop&h=353&w=616&s=797c06ed31aeda2da9b60f18578bae5a",
+          "tile_image_information": {
+            "config": {
+              "gcs": "images/humble_home/batmandaycomicsbundledccomics_bookbundle-product.jpg",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "tile_logo": "https://hb.imgix.net/601fafabc3625b58c63771a53c29e8a50a8cdb9c.png?auto=compress,format&h=340&w=1200&s=e4a435ca648c24a05d9ebe585e28bc53",
+          "tile_logo_information": {
+            "config": {
+              "gcs": "images/logos/batmandaycomicsbundledccomics_bookbundle-logo-product.png",
+              "image_type": "gcs",
+              "imgix": {
+                "args": {},
+                "master_image": {
+                  "gcs": "",
+                  "image_type": "gcs",
+                  "imgix": {},
+                  "static": ""
+                }
+              }
+            }
+          },
+          "tile_name": "Humble Comics Bundle: Batman Day Comics Bundle by DC Comics",
+          "tile_short_name": "Batman Day Comics Bundle by DC Comics",
+          "tile_stamp": "comics",
+          "type": "bundle"
+        },
+        {
+          "author": "Insight Editions",
           "cached_content_events": [
             {
               "display_counter": false,
@@ -314,19 +1963,19 @@
               "mpa_time": null,
               "price": {
                 "AT": [
-                  4.75,
+                  4.81,
                   "EUR"
                 ],
                 "AU": [
-                  7.71,
+                  7.77,
                   "AUD"
                 ],
                 "BE": [
-                  4.57,
+                  4.64,
                   "EUR"
                 ],
                 "BG": [
-                  5.18,
+                  5.25,
                   "EUR"
                 ],
                 "BY": [
@@ -334,11 +1983,11 @@
                   "USD"
                 ],
                 "CA": [
-                  6.94,
+                  7.04,
                   "CAD"
                 ],
                 "CH": [
-                  4.43,
+                  4.49,
                   "EUR"
                 ],
                 "CL": [
@@ -346,27 +1995,27 @@
                   "USD"
                 ],
                 "CN": [
-                  33.54,
+                  33.53,
                   "CNY"
                 ],
                 "CY": [
-                  5.14,
+                  5.21,
                   "EUR"
                 ],
                 "CZ": [
-                  4.32,
+                  4.38,
                   "EUR"
                 ],
                 "DE": [
-                  4.62,
+                  4.68,
                   "EUR"
                 ],
                 "DK": [
-                  5.4,
+                  5.47,
                   "EUR"
                 ],
                 "EE": [
-                  4.7,
+                  4.77,
                   "EUR"
                 ],
                 "EG": [
@@ -374,43 +2023,43 @@
                   "USD"
                 ],
                 "ES": [
-                  4.49,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  4.32,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  3.7,
-                  "GBP"
-                ],
-                "FI": [
-                  4.75,
-                  "EUR"
-                ],
-                "FR": [
                   4.55,
                   "EUR"
                 ],
+                "EUROPE_EURO": [
+                  4.38,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  3.76,
+                  "GBP"
+                ],
+                "FI": [
+                  4.81,
+                  "EUR"
+                ],
+                "FR": [
+                  4.62,
+                  "EUR"
+                ],
                 "GB": [
-                  3.7,
+                  3.76,
                   "GBP"
                 ],
                 "GR": [
-                  4.57,
+                  4.64,
                   "EUR"
                 ],
                 "HR": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "HU": [
-                  5.48,
+                  5.56,
                   "EUR"
                 ],
                 "IE": [
-                  4.32,
+                  4.38,
                   "EUR"
                 ],
                 "IN": [
@@ -422,7 +2071,7 @@
                   "USD"
                 ],
                 "IT": [
-                  4.49,
+                  4.55,
                   "EUR"
                 ],
                 "JP": [
@@ -434,15 +2083,15 @@
                   "USD"
                 ],
                 "LT": [
-                  4.7,
+                  4.77,
                   "EUR"
                 ],
                 "LU": [
-                  4.44,
+                  4.51,
                   "EUR"
                 ],
                 "LV": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "MD": [
@@ -450,7 +2099,7 @@
                   "USD"
                 ],
                 "MT": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "MX": [
@@ -458,31 +2107,31 @@
                   "USD"
                 ],
                 "NL": [
-                  4.7,
+                  4.77,
                   "EUR"
                 ],
                 "NO": [
-                  4.32,
+                  4.38,
                   "EUR"
                 ],
                 "NZ": [
-                  9.95,
+                  10.09,
                   "NZD"
                 ],
                 "PH": [
-                  314.34,
+                  312.72,
                   "PHP"
                 ],
                 "PL": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "PT": [
-                  4.57,
+                  4.64,
                   "EUR"
                 ],
                 "RO": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "RU": [
@@ -490,7 +2139,7 @@
                   "RUB"
                 ],
                 "SE": [
-                  4.57,
+                  4.64,
                   "EUR"
                 ],
                 "SG": [
@@ -498,11 +2147,11 @@
                   "USD"
                 ],
                 "SI": [
-                  4.53,
+                  4.59,
                   "EUR"
                 ],
                 "SK": [
-                  5.31,
+                  5.38,
                   "EUR"
                 ],
                 "TH": [
@@ -510,7 +2159,7 @@
                   "USD"
                 ],
                 "TR": [
-                  243.11,
+                  244.18,
                   "TRY"
                 ],
                 "TW": [
@@ -546,19 +2195,19 @@
               "mpa_time": null,
               "price": {
                 "AT": [
-                  9.51,
+                  9.63,
                   "EUR"
                 ],
                 "AU": [
-                  15.42,
+                  15.55,
                   "AUD"
                 ],
                 "BE": [
-                  9.16,
+                  9.28,
                   "EUR"
                 ],
                 "BG": [
-                  10.38,
+                  10.51,
                   "EUR"
                 ],
                 "BY": [
@@ -566,11 +2215,11 @@
                   "USD"
                 ],
                 "CA": [
-                  13.88,
+                  14.08,
                   "CAD"
                 ],
                 "CH": [
-                  8.87,
+                  8.98,
                   "EUR"
                 ],
                 "CL": [
@@ -578,27 +2227,27 @@
                   "USD"
                 ],
                 "CN": [
-                  67.08,
+                  67.07,
                   "CNY"
                 ],
                 "CY": [
-                  10.29,
+                  10.42,
                   "EUR"
                 ],
                 "CZ": [
-                  8.65,
+                  8.76,
                   "EUR"
                 ],
                 "DE": [
-                  9.25,
+                  9.37,
                   "EUR"
                 ],
                 "DK": [
-                  10.81,
+                  10.95,
                   "EUR"
                 ],
                 "EE": [
-                  9.42,
+                  9.54,
                   "EUR"
                 ],
                 "EG": [
@@ -606,43 +2255,43 @@
                   "USD"
                 ],
                 "ES": [
-                  8.99,
+                  9.11,
                   "EUR"
                 ],
                 "EUROPE_EURO": [
-                  8.65,
+                  8.76,
                   "EUR"
                 ],
                 "EUROPE_GBP": [
-                  7.41,
+                  7.53,
                   "GBP"
                 ],
                 "FI": [
-                  9.51,
+                  9.63,
                   "EUR"
                 ],
                 "FR": [
-                  9.12,
+                  9.24,
                   "EUR"
                 ],
                 "GB": [
-                  7.41,
+                  7.53,
                   "GBP"
                 ],
                 "GR": [
-                  9.16,
+                  9.28,
                   "EUR"
                 ],
                 "HR": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "HU": [
-                  10.98,
+                  11.12,
                   "EUR"
                 ],
                 "IE": [
-                  8.65,
+                  8.76,
                   "EUR"
                 ],
                 "IN": [
@@ -654,7 +2303,7 @@
                   "USD"
                 ],
                 "IT": [
-                  8.99,
+                  9.11,
                   "EUR"
                 ],
                 "JP": [
@@ -666,15 +2315,15 @@
                   "USD"
                 ],
                 "LT": [
-                  9.42,
+                  9.54,
                   "EUR"
                 ],
                 "LU": [
-                  8.9,
+                  9.02,
                   "EUR"
                 ],
                 "LV": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "MD": [
@@ -682,7 +2331,7 @@
                   "USD"
                 ],
                 "MT": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "MX": [
@@ -690,31 +2339,31 @@
                   "USD"
                 ],
                 "NL": [
-                  9.42,
+                  9.54,
                   "EUR"
                 ],
                 "NO": [
-                  8.65,
+                  8.76,
                   "EUR"
                 ],
                 "NZ": [
-                  19.91,
+                  20.19,
                   "NZD"
                 ],
                 "PH": [
-                  628.68,
+                  625.45,
                   "PHP"
                 ],
                 "PL": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "PT": [
-                  9.16,
+                  9.28,
                   "EUR"
                 ],
                 "RO": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "RU": [
@@ -722,7 +2371,7 @@
                   "RUB"
                 ],
                 "SE": [
-                  9.16,
+                  9.28,
                   "EUR"
                 ],
                 "SG": [
@@ -730,11 +2379,11 @@
                   "USD"
                 ],
                 "SI": [
-                  9.08,
+                  9.19,
                   "EUR"
                 ],
                 "SK": [
-                  10.63,
+                  10.77,
                   "EUR"
                 ],
                 "TH": [
@@ -742,7 +2391,7 @@
                   "USD"
                 ],
                 "TR": [
-                  486.22,
+                  488.37,
                   "TRY"
                 ],
                 "TW": [
@@ -772,336 +2421,246 @@
               "display_counter": false,
               "has_subproducts": true,
               "has_tpkds": false,
-              "identifier": "bt20",
+              "identifier": "bt18",
               "is_base": false,
               "max_price": null,
               "mpa_time": null,
               "price": {
                 "AT": [
-                  19.04,
+                  17.34,
                   "EUR"
                 ],
                 "AU": [
-                  30.85,
+                  28.0,
                   "AUD"
                 ],
                 "BE": [
-                  18.34,
+                  16.71,
                   "EUR"
                 ],
                 "BG": [
-                  20.77,
+                  18.92,
                   "EUR"
                 ],
                 "BY": [
-                  23.6,
+                  21.24,
                   "USD"
                 ],
                 "CA": [
-                  27.77,
+                  25.36,
                   "CAD"
                 ],
                 "CH": [
-                  17.76,
+                  16.18,
                   "EUR"
                 ],
                 "CL": [
-                  23.8,
+                  21.42,
                   "USD"
                 ],
                 "CN": [
-                  134.16,
+                  120.73,
                   "CNY"
                 ],
                 "CY": [
-                  20.59,
+                  18.76,
                   "EUR"
                 ],
                 "CZ": [
-                  17.31,
+                  15.77,
                   "EUR"
                 ],
                 "DE": [
-                  18.52,
+                  16.87,
                   "EUR"
                 ],
                 "DK": [
-                  21.63,
+                  19.71,
                   "EUR"
                 ],
                 "EE": [
-                  18.86,
+                  17.18,
                   "EUR"
                 ],
                 "EG": [
-                  22.8,
+                  20.52,
                   "USD"
                 ],
                 "ES": [
-                  18.0,
+                  16.4,
                   "EUR"
                 ],
                 "EUROPE_EURO": [
-                  17.31,
+                  15.77,
                   "EUR"
                 ],
                 "EUROPE_GBP": [
-                  14.82,
+                  13.55,
                   "GBP"
                 ],
                 "FI": [
-                  19.04,
+                  17.34,
                   "EUR"
                 ],
                 "FR": [
-                  18.26,
+                  16.63,
                   "EUR"
                 ],
                 "GB": [
-                  14.82,
+                  13.55,
                   "GBP"
                 ],
                 "GR": [
-                  18.34,
+                  16.71,
                   "EUR"
                 ],
                 "HR": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "HU": [
-                  21.98,
+                  20.02,
                   "EUR"
                 ],
                 "IE": [
-                  17.31,
+                  15.77,
                   "EUR"
                 ],
                 "IN": [
-                  23.6,
+                  21.24,
                   "USD"
                 ],
                 "IS": [
-                  22.2,
+                  19.98,
                   "USD"
                 ],
                 "IT": [
-                  18.0,
+                  16.4,
                   "EUR"
                 ],
                 "JP": [
-                  22.0,
+                  19.8,
                   "USD"
                 ],
                 "KR": [
-                  22.0,
+                  19.8,
                   "USD"
                 ],
                 "LT": [
-                  18.86,
+                  17.18,
                   "EUR"
                 ],
                 "LU": [
-                  17.82,
+                  16.24,
                   "EUR"
                 ],
                 "LV": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "MD": [
-                  24.0,
+                  21.6,
                   "USD"
                 ],
                 "MT": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "MX": [
-                  23.2,
+                  20.88,
                   "USD"
                 ],
                 "NL": [
-                  18.86,
+                  17.18,
                   "EUR"
                 ],
                 "NO": [
-                  17.31,
+                  15.77,
                   "EUR"
                 ],
                 "NZ": [
-                  39.83,
+                  36.36,
                   "NZD"
                 ],
                 "PH": [
-                  1257.36,
+                  1125.82,
                   "PHP"
                 ],
                 "PL": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "PT": [
-                  18.34,
+                  16.71,
                   "EUR"
                 ],
                 "RO": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "RU": [
-                  2557.11,
+                  2301.39,
                   "RUB"
                 ],
                 "SE": [
-                  18.34,
+                  16.71,
                   "EUR"
                 ],
                 "SG": [
-                  21.8,
+                  19.62,
                   "USD"
                 ],
                 "SI": [
-                  18.17,
+                  16.55,
                   "EUR"
                 ],
                 "SK": [
-                  21.29,
+                  19.39,
                   "EUR"
                 ],
                 "TH": [
-                  20.0,
+                  18.0,
                   "USD"
                 ],
                 "TR": [
-                  972.44,
+                  879.07,
                   "TRY"
                 ],
                 "TW": [
-                  21.0,
+                  18.9,
                   "USD"
                 ],
                 "UA": [
-                  24.0,
+                  21.6,
                   "USD"
                 ],
                 "US": [
-                  20.0,
+                  18.0,
                   "USD"
                 ],
                 "ZA": [
-                  23.0,
+                  20.7,
                   "USD"
                 ]
               },
               "section_identifiers": [
-                "bt20_tier"
+                "bt18_tier"
               ],
               "start": null,
               "type": "price"
             }
           ],
           "category": "bundle",
-          "detailed_marketing_blurb": "Sci-fi and fantasy master Gene Wolfe’s novels and long-running series span all facets of genre fiction, each one unlike anything else ever written. For anyone looking to get into one of the greats, we’ve partnered with Tor Books to bring you the best of Gene Wolfe in one massive library! Enter the world of the genre-bending Book of the New Sun series with the Dying Earth fantasy of <em>Shadow and Claw</em>! Travel back to Ancient Greece with an amnesiac mercenary manipulated by the gods in <em>Soldier of the Mist</em>! Meet a young boy destined to become a warrior and more in the mythology remix <em>The Knight</em>! Nearly 40 novels, short story collections, and more are featured in this truly giant bundle, so grab them now at the price of your choosing, and support Alzheimer’s Research UK with your purchase!",
+          "detailed_marketing_blurb": "Cook your way through your favorite games with this bundle of official and unofficial video game recipe books! Fry up tasty street food and mix some criminally delicious cocktails with <em>An Unofficial Grand Theft Auto Cookbook</em>! Fill up on sweetrolls and brew an apple cabbage stew any tavern keeper would envy with <em>The Elder Scrolls: The Official Cookbook</em>! Quench your thirst with the Wasteland-inspired libations in <em>Fallout: The Official Drinks Book</em>! Throw a gamer dinner party or cook up a multi-course meal for one with the 27 recipe books included in this collection! Grab them now at the price of your choice, and support NatureBridge with your purchase!",
           "disable_hero_tile": false,
-          "disallowed_countries": [
-            "BD",
-            "BB",
-            "BM",
-            "BN",
-            "BT",
-            "JM",
-            "BW",
-            "WS",
-            "BS",
-            "JE",
-            "BZ",
-            "TK",
-            "GY",
-            "GG",
-            "GD",
-            "GB",
-            "GM",
-            "KW",
-            "GI",
-            "GH",
-            "IL",
-            "JO",
-            "HK",
-            "IQ",
-            "PG",
-            "PK",
-            "PN",
-            "ZM",
-            "EG",
-            "ZA",
-            "ZW",
-            "KY",
-            "MM",
-            "MU",
-            "MT",
-            "MW",
-            "MV",
-            "MQ",
-            "MS",
-            "IM",
-            "UG",
-            "MY",
-            "MZ",
-            "FJ",
-            "FK",
-            "NA",
-            "NF",
-            "NG",
-            "NZ",
-            "NP",
-            "NR",
-            "CM",
-            "CC",
-            "CA",
-            "CY",
-            "SZ",
-            "KE",
-            "SS",
-            "KI",
-            "KN",
-            "SH",
-            "SO",
-            "SL",
-            "SC",
-            "SB",
-            "SA",
-            "SG",
-            "SD",
-            "DM",
-            "YE",
-            "TZ",
-            "LC",
-            "TV",
-            "TT",
-            "TR",
-            "LK",
-            "TO",
-            "LS",
-            "TC",
-            "VC",
-            "AG",
-            "VG",
-            "AI",
-            "AQ",
-            "AU",
-            "VU",
-            "IO",
-            "IN",
-            "IE"
-          ],
-          "end_date|datetime": "2026-10-22T18:00:00",
+          "disallowed_countries": [],
+          "end_date|datetime": "2026-10-24T18:00:00",
           "exclusive_countries": [],
           "fallback_store_sale_logo": "",
           "hero_highlights": [
             {
-              "heading": "$514 worth of awesome stuff",
-              "tooltip": "Get ebooks collectively valued at up to $514."
+              "heading": "$355 worth of awesome stuff",
+              "tooltip": "Get ebooks collectively valued at up to $355."
             },
             {
               "heading": "Pay $5 or more",
@@ -1113,13 +2672,13 @@
             },
             {
               "heading": "Multi-format",
-              "tooltip": "These ebooks come in ePub file types to support many devices."
+              "tooltip": "These ebooks come in PDF, MOBI, ePub, and PRC file types to support many devices."
             }
           ],
-          "high_res_tile_image": "https://hb.imgix.net/9cb6d44a97ca58d776133ad26fbd87a5c616dde6.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=67c04ec9ae1bb713f99fae2f43c8d309",
+          "high_res_tile_image": "https://hb.imgix.net/5dddb96db4bfc7b717dfe54780277cd900172bb8.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=1aeb1430e837d6bde1cd24e12ecf15c3",
           "high_res_tile_image_information": {
             "config": {
-              "gcs": "images/humble_home/ultimategenewolfelibrarybytorbooks_bookbundle-product.jpg",
+              "gcs": "images/humble_home/gamerskitchencookbooksinsighteditions_bookbundle-product.jpg",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -1134,34 +2693,34 @@
           },
           "highlights": [
             "Pay What You Want",
-            "38 books",
-            "$514 Value",
+            "27 books",
+            "$355 Value",
             "Support Charity"
           ],
           "hover_highlights": [
-            "38 books",
-            "$514 Value"
+            "27 books",
+            "$355 Value"
           ],
           "hover_title": "Pay What You Want",
-          "machine_name": "ultimategenewolfelibrarybytorbooks_bookbundle",
-          "marketing_blurb": "Get <em>Peace</em>, <em>The Wizard</em>, <em>Shadow & Claw</em>, and more!",
-          "product_url": "/books/ultimate-gene-wolfe-library-by-tor-books-books",
+          "machine_name": "gamerskitchencookbooksinsighteditions_bookbundle",
+          "marketing_blurb": "Get <em>The Gamer's Bar</em>, <em>Fallout: The Official Drinks Book</em>, <em>An Unofficial Grand Theft Auto Cookbook</em>, <em>The Elder Scrolls: The Official Cookbook Vol. 2</em>, <em>Minecraft: Gather, Cook, Eat! Official Cookbook</em>, and more!",
+          "product_url": "/books/gamers-kitchen-cookbooks-insight-editions-books",
           "product_variables": {
-            "msrp": "$514",
+            "msrp": "$355",
             "msrp|pricing": {
               "US": [
-                514.0,
+                355.0,
                 "USD"
               ]
             }
           },
-          "short_marketing_blurb": "New suns, ancient lands, and beyond",
-          "start_date|datetime": "2026-10-01T18:00:00",
+          "short_marketing_blurb": "Games have never looked so delicious",
+          "start_date|datetime": "2026-10-03T18:00:00",
           "supports_partners": true,
-          "tile_image": "https://hb.imgix.net/9cb6d44a97ca58d776133ad26fbd87a5c616dde6.jpg?auto=compress,format&fit=crop&h=353&w=616&s=62834bc1046e4a677bec2db9057f451a",
+          "tile_image": "https://hb.imgix.net/5dddb96db4bfc7b717dfe54780277cd900172bb8.jpg?auto=compress,format&fit=crop&h=353&w=616&s=c7603a802f35bb772395d70039e3fef0",
           "tile_image_information": {
             "config": {
-              "gcs": "images/humble_home/ultimategenewolfelibrarybytorbooks_bookbundle-product.jpg",
+              "gcs": "images/humble_home/gamerskitchencookbooksinsighteditions_bookbundle-product.jpg",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -1174,10 +2733,10 @@
               }
             }
           },
-          "tile_logo": "https://hb.imgix.net/f183f5397848a3595ab2cd9e50b7dcbd891d988b.png?auto=compress,format&h=340&w=1200&s=408af3dffbeabc4a99c94565d85d1fa5",
+          "tile_logo": "https://hb.imgix.net/e0c87eb72d206df6fe79be20c63fc5d1475efcf1.png?auto=compress,format&h=340&w=1200&s=724e2f01f8118df64ca5f22a9a66d130",
           "tile_logo_information": {
             "config": {
-              "gcs": "images/humble_home/ultimategenewolfelibrarybytorbooks_bookbundle-logo-product.png",
+              "gcs": "images/logos/gamerskitchencookbooksinsighteditions_bookbundle-logo-product.png",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -1190,8 +2749,8 @@
               }
             }
           },
-          "tile_name": "Humble Book Bundle: The Ultimate Gene Wolfe Library by Tor Books",
-          "tile_short_name": "The Ultimate Gene Wolfe Library by Tor Books",
+          "tile_name": "Humble Cookbook Bundle: Gamer's Kitchen Cookbooks by Insight Editions",
+          "tile_short_name": "Gamer's Kitchen Cookbooks by Insight Editions",
           "tile_stamp": "books",
           "type": "bundle"
         },
@@ -1221,1645 +2780,19 @@
               "mpa_time": null,
               "price": {
                 "AT": [
-                  6.19,
+                  5.35,
                   "EUR"
                 ],
                 "AU": [
-                  9.14,
+                  7.89,
                   "AUD"
                 ],
                 "BE": [
-                  6.24,
-                  "EUR"
-                ],
-                "BG": [
-                  6.19,
-                  "EUR"
-                ],
-                "BY": [
-                  7.08,
-                  "USD"
-                ],
-                "CA": [
-                  8.28,
-                  "CAD"
-                ],
-                "CH": [
-                  5.57,
-                  "EUR"
-                ],
-                "CL": [
-                  7.14,
-                  "USD"
-                ],
-                "CN": [
-                  40.26,
-                  "CNY"
-                ],
-                "CY": [
-                  6.14,
-                  "EUR"
-                ],
-                "CZ": [
-                  6.24,
-                  "EUR"
-                ],
-                "DE": [
-                  6.14,
-                  "EUR"
-                ],
-                "DK": [
-                  6.45,
-                  "EUR"
-                ],
-                "EE": [
-                  6.29,
-                  "EUR"
-                ],
-                "EG": [
-                  6.84,
-                  "USD"
-                ],
-                "ES": [
-                  6.24,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  5.16,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  4.42,
-                  "GBP"
-                ],
-                "FI": [
-                  6.47,
-                  "EUR"
-                ],
-                "FR": [
-                  6.19,
-                  "EUR"
-                ],
-                "GB": [
-                  5.3,
-                  "GBP"
-                ],
-                "GR": [
-                  6.39,
-                  "EUR"
-                ],
-                "HR": [
-                  6.45,
-                  "EUR"
-                ],
-                "HU": [
-                  6.55,
-                  "EUR"
-                ],
-                "IE": [
-                  6.34,
-                  "EUR"
-                ],
-                "IN": [
-                  7.08,
-                  "USD"
-                ],
-                "IS": [
-                  7.44,
-                  "USD"
-                ],
-                "IT": [
-                  6.29,
-                  "EUR"
-                ],
-                "JP": [
-                  6.6,
-                  "USD"
-                ],
-                "KR": [
-                  6.6,
-                  "USD"
-                ],
-                "LT": [
-                  6.08,
-                  "EUR"
-                ],
-                "LU": [
-                  6.03,
-                  "EUR"
-                ],
-                "LV": [
-                  6.24,
-                  "EUR"
-                ],
-                "MD": [
-                  7.2,
-                  "USD"
-                ],
-                "MT": [
-                  6.08,
-                  "EUR"
-                ],
-                "MX": [
-                  6.96,
-                  "USD"
-                ],
-                "NL": [
-                  6.24,
-                  "EUR"
-                ],
-                "NO": [
-                  6.45,
-                  "EUR"
-                ],
-                "NZ": [
-                  11.79,
-                  "NZD"
-                ],
-                "PH": [
-                  375.04,
-                  "PHP"
-                ],
-                "PL": [
-                  6.34,
-                  "EUR"
-                ],
-                "PT": [
-                  6.34,
-                  "EUR"
-                ],
-                "RO": [
-                  5.98,
-                  "EUR"
-                ],
-                "RU": [
-                  820.4,
-                  "RUB"
-                ],
-                "SE": [
-                  6.45,
-                  "EUR"
-                ],
-                "SG": [
-                  6.54,
-                  "USD"
-                ],
-                "SI": [
-                  6.29,
-                  "EUR"
-                ],
-                "SK": [
-                  6.34,
-                  "EUR"
-                ],
-                "TH": [
-                  6.42,
-                  "USD"
-                ],
-                "TR": [
-                  290.75,
-                  "TRY"
-                ],
-                "TW": [
-                  6.3,
-                  "USD"
-                ],
-                "UA": [
-                  7.2,
-                  "USD"
-                ],
-                "US": [
-                  6.0,
-                  "USD"
-                ],
-                "ZA": [
-                  6.9,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "core_tier"
-              ],
-              "start": null,
-              "type": "price"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "bt9",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  9.28,
-                  "EUR"
-                ],
-                "AU": [
-                  13.71,
-                  "AUD"
-                ],
-                "BE": [
-                  9.36,
-                  "EUR"
-                ],
-                "BG": [
-                  9.28,
-                  "EUR"
-                ],
-                "BY": [
-                  10.62,
-                  "USD"
-                ],
-                "CA": [
-                  12.42,
-                  "CAD"
-                ],
-                "CH": [
-                  8.36,
-                  "EUR"
-                ],
-                "CL": [
-                  10.71,
-                  "USD"
-                ],
-                "CN": [
-                  60.39,
-                  "CNY"
-                ],
-                "CY": [
-                  9.21,
-                  "EUR"
-                ],
-                "CZ": [
-                  9.36,
-                  "EUR"
-                ],
-                "DE": [
-                  9.21,
-                  "EUR"
-                ],
-                "DK": [
-                  9.67,
-                  "EUR"
-                ],
-                "EE": [
-                  9.44,
-                  "EUR"
-                ],
-                "EG": [
-                  10.26,
-                  "USD"
-                ],
-                "ES": [
-                  9.36,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  7.74,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  6.64,
-                  "GBP"
-                ],
-                "FI": [
-                  9.71,
-                  "EUR"
-                ],
-                "FR": [
-                  9.28,
-                  "EUR"
-                ],
-                "GB": [
-                  7.96,
-                  "GBP"
-                ],
-                "GR": [
-                  9.59,
-                  "EUR"
-                ],
-                "HR": [
-                  9.67,
-                  "EUR"
-                ],
-                "HU": [
-                  9.82,
-                  "EUR"
-                ],
-                "IE": [
-                  9.52,
-                  "EUR"
-                ],
-                "IN": [
-                  10.62,
-                  "USD"
-                ],
-                "IS": [
-                  11.16,
-                  "USD"
-                ],
-                "IT": [
-                  9.44,
-                  "EUR"
-                ],
-                "JP": [
-                  9.9,
-                  "USD"
-                ],
-                "KR": [
-                  9.9,
-                  "USD"
-                ],
-                "LT": [
-                  9.13,
-                  "EUR"
-                ],
-                "LU": [
-                  9.05,
-                  "EUR"
-                ],
-                "LV": [
-                  9.36,
-                  "EUR"
-                ],
-                "MD": [
-                  10.8,
-                  "USD"
-                ],
-                "MT": [
-                  9.13,
-                  "EUR"
-                ],
-                "MX": [
-                  10.44,
-                  "USD"
-                ],
-                "NL": [
-                  9.36,
-                  "EUR"
-                ],
-                "NO": [
-                  9.67,
-                  "EUR"
-                ],
-                "NZ": [
-                  17.71,
-                  "NZD"
-                ],
-                "PH": [
-                  562.57,
-                  "PHP"
-                ],
-                "PL": [
-                  9.52,
-                  "EUR"
-                ],
-                "PT": [
-                  9.52,
-                  "EUR"
-                ],
-                "RO": [
-                  8.97,
-                  "EUR"
-                ],
-                "RU": [
-                  1230.6,
-                  "RUB"
-                ],
-                "SE": [
-                  9.67,
-                  "EUR"
-                ],
-                "SG": [
-                  9.81,
-                  "USD"
-                ],
-                "SI": [
-                  9.44,
-                  "EUR"
-                ],
-                "SK": [
-                  9.52,
-                  "EUR"
-                ],
-                "TH": [
-                  9.63,
-                  "USD"
-                ],
-                "TR": [
-                  436.13,
-                  "TRY"
-                ],
-                "TW": [
-                  9.45,
-                  "USD"
-                ],
-                "UA": [
-                  10.8,
-                  "USD"
-                ],
-                "US": [
-                  9.0,
-                  "USD"
-                ],
-                "ZA": [
-                  10.35,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "bt9_tier"
-              ],
-              "start": null,
-              "type": "price"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "bt12",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  12.39,
-                  "EUR"
-                ],
-                "AU": [
-                  18.29,
-                  "AUD"
-                ],
-                "BE": [
-                  12.49,
-                  "EUR"
-                ],
-                "BG": [
-                  12.39,
-                  "EUR"
-                ],
-                "BY": [
-                  14.16,
-                  "USD"
-                ],
-                "CA": [
-                  16.56,
-                  "CAD"
-                ],
-                "CH": [
-                  11.16,
-                  "EUR"
-                ],
-                "CL": [
-                  14.28,
-                  "USD"
-                ],
-                "CN": [
-                  80.52,
-                  "CNY"
-                ],
-                "CY": [
-                  12.29,
-                  "EUR"
-                ],
-                "CZ": [
-                  12.49,
-                  "EUR"
-                ],
-                "DE": [
-                  12.29,
-                  "EUR"
-                ],
-                "DK": [
-                  12.91,
-                  "EUR"
-                ],
-                "EE": [
-                  12.6,
-                  "EUR"
-                ],
-                "EG": [
-                  13.68,
-                  "USD"
-                ],
-                "ES": [
-                  12.49,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  10.33,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  8.85,
-                  "GBP"
-                ],
-                "FI": [
-                  12.96,
-                  "EUR"
-                ],
-                "FR": [
-                  12.39,
-                  "EUR"
-                ],
-                "GB": [
-                  10.62,
-                  "GBP"
-                ],
-                "GR": [
-                  12.8,
-                  "EUR"
-                ],
-                "HR": [
-                  12.91,
-                  "EUR"
-                ],
-                "HU": [
-                  13.11,
-                  "EUR"
-                ],
-                "IE": [
-                  12.7,
-                  "EUR"
-                ],
-                "IN": [
-                  14.16,
-                  "USD"
-                ],
-                "IS": [
-                  14.88,
-                  "USD"
-                ],
-                "IT": [
-                  12.6,
-                  "EUR"
-                ],
-                "JP": [
-                  13.2,
-                  "USD"
-                ],
-                "KR": [
-                  13.2,
-                  "USD"
-                ],
-                "LT": [
-                  12.18,
-                  "EUR"
-                ],
-                "LU": [
-                  12.08,
-                  "EUR"
-                ],
-                "LV": [
-                  12.49,
-                  "EUR"
-                ],
-                "MD": [
-                  14.4,
-                  "USD"
-                ],
-                "MT": [
-                  12.18,
-                  "EUR"
-                ],
-                "MX": [
-                  13.92,
-                  "USD"
-                ],
-                "NL": [
-                  12.49,
-                  "EUR"
-                ],
-                "NO": [
-                  12.91,
-                  "EUR"
-                ],
-                "NZ": [
-                  23.6,
-                  "NZD"
-                ],
-                "PH": [
-                  750.09,
-                  "PHP"
-                ],
-                "PL": [
-                  12.7,
-                  "EUR"
-                ],
-                "PT": [
-                  12.7,
-                  "EUR"
-                ],
-                "RO": [
-                  11.98,
-                  "EUR"
-                ],
-                "RU": [
-                  1640.81,
-                  "RUB"
-                ],
-                "SE": [
-                  12.91,
-                  "EUR"
-                ],
-                "SG": [
-                  13.08,
-                  "USD"
-                ],
-                "SI": [
-                  12.6,
-                  "EUR"
-                ],
-                "SK": [
-                  12.7,
-                  "EUR"
-                ],
-                "TH": [
-                  12.84,
-                  "USD"
-                ],
-                "TR": [
-                  581.51,
-                  "TRY"
-                ],
-                "TW": [
-                  12.6,
-                  "USD"
-                ],
-                "UA": [
-                  14.4,
-                  "USD"
-                ],
-                "US": [
-                  12.0,
-                  "USD"
-                ],
-                "ZA": [
-                  13.8,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "bt12_tier"
-              ],
-              "start": null,
-              "type": "price"
-            }
-          ],
-          "category": "bundle",
-          "detailed_marketing_blurb": "When the decks are stacked against you, there’s only one thing left to do—gather all the cards you can to build a bigger, better deck, and win! These deckbuilder games give players an opportunity to do just that, in a variety of different genres and exciting stories. The Roaring Twenties never looked as terrifying as they do in <em>Cultist Simulator: Anthology Edition</em>, where players summon otherworldly gods and steal hidden treasures. Lovecraftian occult reigns supreme in <em>Menace from the Deep</em>, where a secret society seeks the mythos of ancient monsters. Habitat preservation is the name of the game in <em>Wingspan</em>, where attracting as many birds to your deck as possible is your goal. There’s so much more to explore in this bundle of deckbuilders, so grab them now at the price of your choice, and support Worldreader with your purchase!!<br><br><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 2nd, 2027. </span>",
-          "disable_hero_tile": false,
-          "disallowed_countries": [],
-          "end_date|datetime": "2026-10-03T04:00:00",
-          "exclusive_countries": [],
-          "fallback_store_sale_logo": "",
-          "hero_highlights": [
-            {
-              "heading": "$252 worth of awesome stuff",
-              "tooltip": "Get games collectively valued at up to $252."
-            },
-            {
-              "heading": "Pay $6 or more",
-              "tooltip": "Name your price of $6 or more and increase your contribution to upgrade your bundle."
-            },
-            {
-              "heading": "Redeem on Steam",
-              "tooltip": "Pay $6 or more for access to content on Steam."
-            }
-          ],
-          "high_res_tile_image": "https://hb.imgix.net/4a6283328305339152c11558b939c9f1da85ae86.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=9daa7e1ebd7c25869c5b637e0ac7f55b",
-          "high_res_tile_image_information": {
-            "config": {
-              "gcs": "images/humble_home/deckedoutdeckbuilders_bundle-product.jpg",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "highlights": [
-            "Pay What You Want",
-            "11 games",
-            "$252 Value",
-            "Support Charity"
-          ],
-          "hover_highlights": [
-            "11 games",
-            "$252 Value"
-          ],
-          "hover_title": "Pay What You Want",
-          "machine_name": "deckedoutdeckbuilders_bundle",
-          "marketing_blurb": "Get <em>Hexarchy</em>, <em>WingSpan</em>, <em>Monster Train</em>, <em>Menace from the Deep</em>, <em>Tainted Grail: Conquest</em>, <em>Cultist Simulator: Anthology Edition</em>, and more!",
-          "product_url": "/games/decked-out-deckbuilders",
-          "product_variables": {
-            "msrp": "$252",
-            "msrp|pricing": {
-              "US": [
-                252.0,
-                "USD"
-              ]
-            }
-          },
-          "short_marketing_blurb": "Build your perfect deck",
-          "start_date|datetime": "2026-09-11T18:00:00",
-          "supports_partners": true,
-          "tile_image": "https://hb.imgix.net/4a6283328305339152c11558b939c9f1da85ae86.jpg?auto=compress,format&fit=crop&h=353&w=616&s=7520ac2c44a7fed97e38656934df5dba",
-          "tile_image_information": {
-            "config": {
-              "gcs": "images/humble_home/deckedoutdeckbuilders_bundle-product.jpg",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "tile_logo": "https://hb.imgix.net/b9fd5ede111f085d7244b2b2b75ebb29c6892f91.png?auto=compress,format&h=340&w=1200&s=264adf5edc0a5519938de81db3237906",
-          "tile_logo_information": {
-            "config": {
-              "gcs": "images/logos/deckedoutdeckbuilders_bundle-logo-product.png",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "tile_name": "Decked Out Deckbuilders",
-          "tile_short_name": "Decked Out Deckbuilders",
-          "tile_stamp": "games",
-          "type": "bundle"
-        },
-        {
-          "author": "Publishers",
-          "cached_content_events": [
-            {
-              "display_counter": false,
-              "has_subproducts": true,
-              "has_tpkds": false,
-              "identifier": "less_than_initial",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": null,
-              "section_identifiers": [],
-              "start": null,
-              "type": "base"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "initial",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  5.16,
-                  "EUR"
-                ],
-                "AU": [
-                  7.62,
-                  "AUD"
-                ],
-                "BE": [
-                  5.2,
-                  "EUR"
-                ],
-                "BG": [
-                  5.16,
-                  "EUR"
-                ],
-                "BY": [
-                  5.9,
-                  "USD"
-                ],
-                "CA": [
-                  6.9,
-                  "CAD"
-                ],
-                "CH": [
-                  4.64,
-                  "EUR"
-                ],
-                "CL": [
-                  5.95,
-                  "USD"
-                ],
-                "CN": [
-                  33.55,
-                  "CNY"
-                ],
-                "CY": [
-                  5.11,
-                  "EUR"
-                ],
-                "CZ": [
-                  5.2,
-                  "EUR"
-                ],
-                "DE": [
-                  5.11,
-                  "EUR"
-                ],
-                "DK": [
-                  5.37,
-                  "EUR"
-                ],
-                "EE": [
-                  5.24,
-                  "EUR"
-                ],
-                "EG": [
-                  5.7,
-                  "USD"
-                ],
-                "ES": [
-                  5.2,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  4.3,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  3.69,
-                  "GBP"
-                ],
-                "FI": [
                   5.39,
                   "EUR"
                 ],
-                "FR": [
-                  5.16,
-                  "EUR"
-                ],
-                "GB": [
-                  4.42,
-                  "GBP"
-                ],
-                "GR": [
-                  5.33,
-                  "EUR"
-                ],
-                "HR": [
-                  5.37,
-                  "EUR"
-                ],
-                "HU": [
-                  5.46,
-                  "EUR"
-                ],
-                "IE": [
-                  5.28,
-                  "EUR"
-                ],
-                "IN": [
-                  5.9,
-                  "USD"
-                ],
-                "IS": [
-                  6.2,
-                  "USD"
-                ],
-                "IT": [
-                  5.24,
-                  "EUR"
-                ],
-                "JP": [
-                  5.5,
-                  "USD"
-                ],
-                "KR": [
-                  5.5,
-                  "USD"
-                ],
-                "LT": [
-                  5.07,
-                  "EUR"
-                ],
-                "LU": [
-                  5.03,
-                  "EUR"
-                ],
-                "LV": [
-                  5.2,
-                  "EUR"
-                ],
-                "MD": [
-                  6.0,
-                  "USD"
-                ],
-                "MT": [
-                  5.07,
-                  "EUR"
-                ],
-                "MX": [
-                  5.8,
-                  "USD"
-                ],
-                "NL": [
-                  5.2,
-                  "EUR"
-                ],
-                "NO": [
-                  5.37,
-                  "EUR"
-                ],
-                "NZ": [
-                  9.83,
-                  "NZD"
-                ],
-                "PH": [
-                  312.54,
-                  "PHP"
-                ],
-                "PL": [
-                  5.28,
-                  "EUR"
-                ],
-                "PT": [
-                  5.28,
-                  "EUR"
-                ],
-                "RO": [
-                  4.98,
-                  "EUR"
-                ],
-                "RU": [
-                  683.66,
-                  "RUB"
-                ],
-                "SE": [
-                  5.37,
-                  "EUR"
-                ],
-                "SG": [
-                  5.45,
-                  "USD"
-                ],
-                "SI": [
-                  5.24,
-                  "EUR"
-                ],
-                "SK": [
-                  5.28,
-                  "EUR"
-                ],
-                "TH": [
+                "BG": [
                   5.35,
-                  "USD"
-                ],
-                "TR": [
-                  242.29,
-                  "TRY"
-                ],
-                "TW": [
-                  5.25,
-                  "USD"
-                ],
-                "UA": [
-                  6.0,
-                  "USD"
-                ],
-                "US": [
-                  5.0,
-                  "USD"
-                ],
-                "ZA": [
-                  5.75,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "core_tier"
-              ],
-              "start": null,
-              "type": "price"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "bt10",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  10.33,
-                  "EUR"
-                ],
-                "AU": [
-                  15.24,
-                  "AUD"
-                ],
-                "BE": [
-                  10.41,
-                  "EUR"
-                ],
-                "BG": [
-                  10.33,
-                  "EUR"
-                ],
-                "BY": [
-                  11.8,
-                  "USD"
-                ],
-                "CA": [
-                  13.8,
-                  "CAD"
-                ],
-                "CH": [
-                  9.3,
-                  "EUR"
-                ],
-                "CL": [
-                  11.9,
-                  "USD"
-                ],
-                "CN": [
-                  67.1,
-                  "CNY"
-                ],
-                "CY": [
-                  10.24,
-                  "EUR"
-                ],
-                "CZ": [
-                  10.41,
-                  "EUR"
-                ],
-                "DE": [
-                  10.24,
-                  "EUR"
-                ],
-                "DK": [
-                  10.76,
-                  "EUR"
-                ],
-                "EE": [
-                  10.5,
-                  "EUR"
-                ],
-                "EG": [
-                  11.4,
-                  "USD"
-                ],
-                "ES": [
-                  10.41,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  8.61,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  7.38,
-                  "GBP"
-                ],
-                "FI": [
-                  10.8,
-                  "EUR"
-                ],
-                "FR": [
-                  10.33,
-                  "EUR"
-                ],
-                "GB": [
-                  8.85,
-                  "GBP"
-                ],
-                "GR": [
-                  10.67,
-                  "EUR"
-                ],
-                "HR": [
-                  10.76,
-                  "EUR"
-                ],
-                "HU": [
-                  10.93,
-                  "EUR"
-                ],
-                "IE": [
-                  10.59,
-                  "EUR"
-                ],
-                "IN": [
-                  11.8,
-                  "USD"
-                ],
-                "IS": [
-                  12.4,
-                  "USD"
-                ],
-                "IT": [
-                  10.5,
-                  "EUR"
-                ],
-                "JP": [
-                  11.0,
-                  "USD"
-                ],
-                "KR": [
-                  11.0,
-                  "USD"
-                ],
-                "LT": [
-                  10.15,
-                  "EUR"
-                ],
-                "LU": [
-                  10.07,
-                  "EUR"
-                ],
-                "LV": [
-                  10.41,
-                  "EUR"
-                ],
-                "MD": [
-                  12.0,
-                  "USD"
-                ],
-                "MT": [
-                  10.15,
-                  "EUR"
-                ],
-                "MX": [
-                  11.6,
-                  "USD"
-                ],
-                "NL": [
-                  10.41,
-                  "EUR"
-                ],
-                "NO": [
-                  10.76,
-                  "EUR"
-                ],
-                "NZ": [
-                  19.67,
-                  "NZD"
-                ],
-                "PH": [
-                  625.08,
-                  "PHP"
-                ],
-                "PL": [
-                  10.59,
-                  "EUR"
-                ],
-                "PT": [
-                  10.59,
-                  "EUR"
-                ],
-                "RO": [
-                  9.98,
-                  "EUR"
-                ],
-                "RU": [
-                  1367.34,
-                  "RUB"
-                ],
-                "SE": [
-                  10.76,
-                  "EUR"
-                ],
-                "SG": [
-                  10.9,
-                  "USD"
-                ],
-                "SI": [
-                  10.5,
-                  "EUR"
-                ],
-                "SK": [
-                  10.59,
-                  "EUR"
-                ],
-                "TH": [
-                  10.7,
-                  "USD"
-                ],
-                "TR": [
-                  484.59,
-                  "TRY"
-                ],
-                "TW": [
-                  10.5,
-                  "USD"
-                ],
-                "UA": [
-                  12.0,
-                  "USD"
-                ],
-                "US": [
-                  10.0,
-                  "USD"
-                ],
-                "ZA": [
-                  11.5,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "bt10_tier"
-              ],
-              "start": null,
-              "type": "price"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "bt13",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  13.42,
-                  "EUR"
-                ],
-                "AU": [
-                  19.81,
-                  "AUD"
-                ],
-                "BE": [
-                  13.53,
-                  "EUR"
-                ],
-                "BG": [
-                  13.42,
-                  "EUR"
-                ],
-                "BY": [
-                  15.34,
-                  "USD"
-                ],
-                "CA": [
-                  17.94,
-                  "CAD"
-                ],
-                "CH": [
-                  12.09,
-                  "EUR"
-                ],
-                "CL": [
-                  15.47,
-                  "USD"
-                ],
-                "CN": [
-                  87.23,
-                  "CNY"
-                ],
-                "CY": [
-                  13.31,
-                  "EUR"
-                ],
-                "CZ": [
-                  13.53,
-                  "EUR"
-                ],
-                "DE": [
-                  13.31,
-                  "EUR"
-                ],
-                "DK": [
-                  13.98,
-                  "EUR"
-                ],
-                "EE": [
-                  13.65,
-                  "EUR"
-                ],
-                "EG": [
-                  14.82,
-                  "USD"
-                ],
-                "ES": [
-                  13.53,
-                  "EUR"
-                ],
-                "EUROPE_EURO": [
-                  11.19,
-                  "EUR"
-                ],
-                "EUROPE_GBP": [
-                  9.59,
-                  "GBP"
-                ],
-                "FI": [
-                  14.04,
-                  "EUR"
-                ],
-                "FR": [
-                  13.42,
-                  "EUR"
-                ],
-                "GB": [
-                  11.5,
-                  "GBP"
-                ],
-                "GR": [
-                  13.87,
-                  "EUR"
-                ],
-                "HR": [
-                  13.98,
-                  "EUR"
-                ],
-                "HU": [
-                  14.21,
-                  "EUR"
-                ],
-                "IE": [
-                  13.76,
-                  "EUR"
-                ],
-                "IN": [
-                  15.34,
-                  "USD"
-                ],
-                "IS": [
-                  16.12,
-                  "USD"
-                ],
-                "IT": [
-                  13.65,
-                  "EUR"
-                ],
-                "JP": [
-                  14.3,
-                  "USD"
-                ],
-                "KR": [
-                  14.3,
-                  "USD"
-                ],
-                "LT": [
-                  13.2,
-                  "EUR"
-                ],
-                "LU": [
-                  13.09,
-                  "EUR"
-                ],
-                "LV": [
-                  13.53,
-                  "EUR"
-                ],
-                "MD": [
-                  15.6,
-                  "USD"
-                ],
-                "MT": [
-                  13.2,
-                  "EUR"
-                ],
-                "MX": [
-                  15.08,
-                  "USD"
-                ],
-                "NL": [
-                  13.53,
-                  "EUR"
-                ],
-                "NO": [
-                  13.98,
-                  "EUR"
-                ],
-                "NZ": [
-                  25.57,
-                  "NZD"
-                ],
-                "PH": [
-                  812.6,
-                  "PHP"
-                ],
-                "PL": [
-                  13.76,
-                  "EUR"
-                ],
-                "PT": [
-                  13.76,
-                  "EUR"
-                ],
-                "RO": [
-                  12.98,
-                  "EUR"
-                ],
-                "RU": [
-                  1777.54,
-                  "RUB"
-                ],
-                "SE": [
-                  13.98,
-                  "EUR"
-                ],
-                "SG": [
-                  14.17,
-                  "USD"
-                ],
-                "SI": [
-                  13.65,
-                  "EUR"
-                ],
-                "SK": [
-                  13.76,
-                  "EUR"
-                ],
-                "TH": [
-                  13.91,
-                  "USD"
-                ],
-                "TR": [
-                  629.97,
-                  "TRY"
-                ],
-                "TW": [
-                  13.65,
-                  "USD"
-                ],
-                "UA": [
-                  15.6,
-                  "USD"
-                ],
-                "US": [
-                  13.0,
-                  "USD"
-                ],
-                "ZA": [
-                  14.95,
-                  "USD"
-                ]
-              },
-              "section_identifiers": [
-                "bt13_tier"
-              ],
-              "start": null,
-              "type": "price"
-            }
-          ],
-          "category": "bundle",
-          "detailed_marketing_blurb": "There are few things as high-octane as playing a fantastic roguelike game with real consequences, and to celebrate a few of our favorites we’ve collected them all in this convenient roguelike games bundle! Mine for resources to build your home and fight monsters on an alien planet in <em>Dome Keeper</em>! Battle your way to the top in the adorably rabbit-themed co-op game <em>Rabbit and Steel</em>! Save the Twisted World from falling into chaos in the single-player deckbuilder <em>Chrono Ark</em>! And if you die, just start all over again! There’s even more fun to be had in this bundle of roguelikes, so grab them now at the price of your choosing, and support Team Rubicon with your purchase! <br><br><strong><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 2nd, 2027.</span></strong>",
-          "disable_hero_tile": false,
-          "disallowed_countries": [],
-          "end_date|datetime": "2026-10-03T04:00:00",
-          "exclusive_countries": [],
-          "fallback_store_sale_logo": "",
-          "hero_highlights": [
-            {
-              "heading": "$181 worth of awesome stuff",
-              "tooltip": "Get games collectively valued at up to $181."
-            },
-            {
-              "heading": "Pay $5 or more",
-              "tooltip": "Name your price of $5 or more and increase your contribution to upgrade your bundle."
-            },
-            {
-              "heading": "Redeem on Steam",
-              "tooltip": "Pay $5 or more for access to content on Steam."
-            }
-          ],
-          "high_res_tile_image": "https://hb.imgix.net/784fd04df33d252f701750304d84133aa3eead69.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=5f54e1625bb23160f36026df5cf15d35",
-          "high_res_tile_image_information": {
-            "config": {
-              "gcs": "images/humble_home/runitbackroguelikesbundle-product.jpg",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "highlights": [
-            "Pay What You Want",
-            "9 games",
-            "$181 Value",
-            "Support Charity"
-          ],
-          "hover_highlights": [
-            "9 games",
-            "$181 Value"
-          ],
-          "hover_title": "Pay What You Want",
-          "machine_name": "runitbackroguelikes_bundle",
-          "marketing_blurb": "Get <em>Chrono Ark</em>, <em>Spellmasons</em>, <em>Dome Keeper</em>, <em>Battle Shapers</em>, <em>Rabbit and Steel</em>, <em>Lost in Random: The Eternal Die</em>, and more!",
-          "product_url": "/games/run-it-back-roguelikes-bundle",
-          "product_variables": {
-            "msrp": "$181",
-            "msrp|pricing": {
-              "US": [
-                181.0,
-                "USD"
-              ]
-            }
-          },
-          "short_marketing_blurb": "Don’t be afraid to start over",
-          "start_date|datetime": "2026-09-11T18:00:00",
-          "supports_partners": true,
-          "tile_image": "https://hb.imgix.net/784fd04df33d252f701750304d84133aa3eead69.jpg?auto=compress,format&fit=crop&h=353&w=616&s=2c2cf06d2f4ff76157e290a45a5cb91d",
-          "tile_image_information": {
-            "config": {
-              "gcs": "images/humble_home/runitbackroguelikesbundle-product.jpg",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "tile_logo": "https://hb.imgix.net/ff35e636f30aa5a8b5d631479b46d91354e8ce00.png?auto=compress,format&h=340&w=1200&s=042bacbd94c9f28e1a38b2d10701188d",
-          "tile_logo_information": {
-            "config": {
-              "gcs": "images/logos/runitbackroguelikesbundle-logo-product.png",
-              "image_type": "gcs",
-              "imgix": {
-                "args": {},
-                "master_image": {
-                  "gcs": "",
-                  "image_type": "gcs",
-                  "imgix": {},
-                  "static": ""
-                }
-              }
-            }
-          },
-          "tile_name": "Run It Back - Roguelikes Bundle",
-          "tile_short_name": "Run It Back - Roguelikes Bundle",
-          "tile_stamp": "games",
-          "type": "bundle"
-        },
-        {
-          "author": "Rebellion Interactive",
-          "cached_content_events": [
-            {
-              "display_counter": false,
-              "has_subproducts": true,
-              "has_tpkds": false,
-              "identifier": "less_than_initial",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": null,
-              "section_identifiers": [],
-              "start": null,
-              "type": "base"
-            },
-            {
-              "display_counter": false,
-              "has_subproducts": false,
-              "has_tpkds": true,
-              "identifier": "initial",
-              "is_base": false,
-              "max_price": null,
-              "mpa_time": null,
-              "price": {
-                "AT": [
-                  5.17,
-                  "EUR"
-                ],
-                "AU": [
-                  7.7,
-                  "AUD"
-                ],
-                "BE": [
-                  5.21,
-                  "EUR"
-                ],
-                "BG": [
-                  5.17,
                   "EUR"
                 ],
                 "BY": [
@@ -2867,11 +2800,11 @@
                   "USD"
                 ],
                 "CA": [
-                  6.94,
+                  7.12,
                   "CAD"
                 ],
                 "CH": [
-                  4.65,
+                  4.82,
                   "EUR"
                 ],
                 "CL": [
@@ -2879,27 +2812,27 @@
                   "USD"
                 ],
                 "CN": [
-                  33.61,
+                  33.52,
                   "CNY"
                 ],
                 "CY": [
-                  5.12,
+                  5.3,
                   "EUR"
                 ],
                 "CZ": [
-                  5.21,
+                  5.39,
                   "EUR"
                 ],
                 "DE": [
-                  5.12,
+                  5.3,
                   "EUR"
                 ],
                 "DK": [
-                  5.38,
+                  5.57,
                   "EUR"
                 ],
                 "EE": [
-                  5.25,
+                  5.44,
                   "EUR"
                 ],
                 "EG": [
@@ -2907,43 +2840,43 @@
                   "USD"
                 ],
                 "ES": [
-                  5.21,
+                  5.39,
                   "EUR"
                 ],
                 "EUROPE_EURO": [
-                  4.31,
+                  4.46,
                   "EUR"
                 ],
                 "EUROPE_GBP": [
-                  3.69,
+                  3.78,
                   "GBP"
                 ],
                 "FI": [
-                  5.4,
+                  5.59,
                   "EUR"
                 ],
                 "FR": [
-                  5.17,
+                  5.35,
                   "EUR"
                 ],
                 "GB": [
-                  4.42,
+                  4.53,
                   "GBP"
                 ],
                 "GR": [
-                  5.34,
+                  5.53,
                   "EUR"
                 ],
                 "HR": [
-                  5.38,
+                  5.57,
                   "EUR"
                 ],
                 "HU": [
-                  5.47,
+                  5.66,
                   "EUR"
                 ],
                 "IE": [
-                  5.3,
+                  5.48,
                   "EUR"
                 ],
                 "IN": [
@@ -2955,7 +2888,7 @@
                   "USD"
                 ],
                 "IT": [
-                  5.25,
+                  5.44,
                   "EUR"
                 ],
                 "JP": [
@@ -2967,15 +2900,15 @@
                   "USD"
                 ],
                 "LT": [
-                  5.08,
+                  5.26,
                   "EUR"
                 ],
                 "LU": [
-                  5.04,
+                  5.21,
                   "EUR"
                 ],
                 "LV": [
-                  5.21,
+                  5.39,
                   "EUR"
                 ],
                 "MD": [
@@ -2983,7 +2916,7 @@
                   "USD"
                 ],
                 "MT": [
-                  5.08,
+                  5.26,
                   "EUR"
                 ],
                 "MX": [
@@ -2991,31 +2924,31 @@
                   "USD"
                 ],
                 "NL": [
-                  5.21,
+                  5.39,
                   "EUR"
                 ],
                 "NO": [
-                  5.38,
+                  5.57,
                   "EUR"
                 ],
                 "NZ": [
-                  9.75,
+                  10.28,
                   "NZD"
                 ],
                 "PH": [
-                  312.14,
+                  313.36,
                   "PHP"
                 ],
                 "PL": [
-                  5.3,
+                  5.48,
                   "EUR"
                 ],
                 "PT": [
-                  5.3,
+                  5.48,
                   "EUR"
                 ],
                 "RO": [
-                  4.99,
+                  5.17,
                   "EUR"
                 ],
                 "RU": [
@@ -3023,7 +2956,7 @@
                   "RUB"
                 ],
                 "SE": [
-                  5.38,
+                  5.57,
                   "EUR"
                 ],
                 "SG": [
@@ -3031,11 +2964,11 @@
                   "USD"
                 ],
                 "SI": [
-                  5.25,
+                  5.44,
                   "EUR"
                 ],
                 "SK": [
-                  5.3,
+                  5.48,
                   "EUR"
                 ],
                 "TH": [
@@ -3043,7 +2976,7 @@
                   "USD"
                 ],
                 "TR": [
-                  241.37,
+                  245.78,
                   "TRY"
                 ],
                 "TW": [
@@ -3079,19 +3012,19 @@
               "mpa_time": null,
               "price": {
                 "AT": [
-                  10.34,
+                  10.7,
                   "EUR"
                 ],
                 "AU": [
-                  15.4,
+                  15.79,
                   "AUD"
                 ],
                 "BE": [
-                  10.43,
+                  10.79,
                   "EUR"
                 ],
                 "BG": [
-                  10.34,
+                  10.7,
                   "EUR"
                 ],
                 "BY": [
@@ -3099,11 +3032,11 @@
                   "USD"
                 ],
                 "CA": [
-                  13.88,
+                  14.25,
                   "CAD"
                 ],
                 "CH": [
-                  9.31,
+                  9.64,
                   "EUR"
                 ],
                 "CL": [
@@ -3111,27 +3044,27 @@
                   "USD"
                 ],
                 "CN": [
-                  67.22,
+                  67.04,
                   "CNY"
                 ],
                 "CY": [
-                  10.25,
+                  10.61,
                   "EUR"
                 ],
                 "CZ": [
-                  10.43,
+                  10.79,
                   "EUR"
                 ],
                 "DE": [
-                  10.25,
+                  10.61,
                   "EUR"
                 ],
                 "DK": [
-                  10.77,
+                  11.15,
                   "EUR"
                 ],
                 "EE": [
-                  10.51,
+                  10.88,
                   "EUR"
                 ],
                 "EG": [
@@ -3139,43 +3072,43 @@
                   "USD"
                 ],
                 "ES": [
-                  10.43,
+                  10.79,
                   "EUR"
                 ],
                 "EUROPE_EURO": [
-                  8.62,
+                  8.92,
                   "EUR"
                 ],
                 "EUROPE_GBP": [
-                  7.39,
+                  7.56,
                   "GBP"
                 ],
                 "FI": [
-                  10.81,
+                  11.19,
                   "EUR"
                 ],
                 "FR": [
-                  10.34,
+                  10.7,
                   "EUR"
                 ],
                 "GB": [
-                  8.86,
+                  9.07,
                   "GBP"
                 ],
                 "GR": [
-                  10.68,
+                  11.06,
                   "EUR"
                 ],
                 "HR": [
-                  10.77,
+                  11.15,
                   "EUR"
                 ],
                 "HU": [
-                  10.94,
+                  11.32,
                   "EUR"
                 ],
                 "IE": [
-                  10.6,
+                  10.97,
                   "EUR"
                 ],
                 "IN": [
@@ -3187,7 +3120,7 @@
                   "USD"
                 ],
                 "IT": [
-                  10.51,
+                  10.88,
                   "EUR"
                 ],
                 "JP": [
@@ -3199,15 +3132,15 @@
                   "USD"
                 ],
                 "LT": [
-                  10.17,
+                  10.52,
                   "EUR"
                 ],
                 "LU": [
-                  10.08,
+                  10.43,
                   "EUR"
                 ],
                 "LV": [
-                  10.43,
+                  10.79,
                   "EUR"
                 ],
                 "MD": [
@@ -3215,7 +3148,7 @@
                   "USD"
                 ],
                 "MT": [
-                  10.17,
+                  10.52,
                   "EUR"
                 ],
                 "MX": [
@@ -3223,31 +3156,31 @@
                   "USD"
                 ],
                 "NL": [
-                  10.43,
+                  10.79,
                   "EUR"
                 ],
                 "NO": [
-                  10.77,
+                  11.15,
                   "EUR"
                 ],
                 "NZ": [
-                  19.51,
+                  20.56,
                   "NZD"
                 ],
                 "PH": [
-                  624.28,
+                  626.73,
                   "PHP"
                 ],
                 "PL": [
-                  10.6,
+                  10.97,
                   "EUR"
                 ],
                 "PT": [
-                  10.6,
+                  10.97,
                   "EUR"
                 ],
                 "RO": [
-                  9.99,
+                  10.34,
                   "EUR"
                 ],
                 "RU": [
@@ -3255,7 +3188,7 @@
                   "RUB"
                 ],
                 "SE": [
-                  10.77,
+                  11.15,
                   "EUR"
                 ],
                 "SG": [
@@ -3263,11 +3196,11 @@
                   "USD"
                 ],
                 "SI": [
-                  10.51,
+                  10.88,
                   "EUR"
                 ],
                 "SK": [
-                  10.6,
+                  10.97,
                   "EUR"
                 ],
                 "TH": [
@@ -3275,7 +3208,7 @@
                   "USD"
                 ],
                 "TR": [
-                  482.74,
+                  491.56,
                   "TRY"
                 ],
                 "TW": [
@@ -3300,19 +3233,251 @@
               ],
               "start": null,
               "type": "price"
+            },
+            {
+              "display_counter": false,
+              "has_subproducts": false,
+              "has_tpkds": true,
+              "identifier": "bt15",
+              "is_base": false,
+              "max_price": null,
+              "mpa_time": null,
+              "price": {
+                "AT": [
+                  16.05,
+                  "EUR"
+                ],
+                "AU": [
+                  23.7,
+                  "AUD"
+                ],
+                "BE": [
+                  16.18,
+                  "EUR"
+                ],
+                "BG": [
+                  16.05,
+                  "EUR"
+                ],
+                "BY": [
+                  17.7,
+                  "USD"
+                ],
+                "CA": [
+                  21.37,
+                  "CAD"
+                ],
+                "CH": [
+                  14.46,
+                  "EUR"
+                ],
+                "CL": [
+                  17.85,
+                  "USD"
+                ],
+                "CN": [
+                  100.56,
+                  "CNY"
+                ],
+                "CY": [
+                  15.92,
+                  "EUR"
+                ],
+                "CZ": [
+                  16.18,
+                  "EUR"
+                ],
+                "DE": [
+                  15.92,
+                  "EUR"
+                ],
+                "DK": [
+                  16.72,
+                  "EUR"
+                ],
+                "EE": [
+                  16.32,
+                  "EUR"
+                ],
+                "EG": [
+                  17.1,
+                  "USD"
+                ],
+                "ES": [
+                  16.18,
+                  "EUR"
+                ],
+                "EUROPE_EURO": [
+                  13.38,
+                  "EUR"
+                ],
+                "EUROPE_GBP": [
+                  11.34,
+                  "GBP"
+                ],
+                "FI": [
+                  16.79,
+                  "EUR"
+                ],
+                "FR": [
+                  16.05,
+                  "EUR"
+                ],
+                "GB": [
+                  13.6,
+                  "GBP"
+                ],
+                "GR": [
+                  16.59,
+                  "EUR"
+                ],
+                "HR": [
+                  16.72,
+                  "EUR"
+                ],
+                "HU": [
+                  16.99,
+                  "EUR"
+                ],
+                "IE": [
+                  16.45,
+                  "EUR"
+                ],
+                "IN": [
+                  17.7,
+                  "USD"
+                ],
+                "IS": [
+                  18.6,
+                  "USD"
+                ],
+                "IT": [
+                  16.32,
+                  "EUR"
+                ],
+                "JP": [
+                  16.5,
+                  "USD"
+                ],
+                "KR": [
+                  16.5,
+                  "USD"
+                ],
+                "LT": [
+                  15.78,
+                  "EUR"
+                ],
+                "LU": [
+                  15.65,
+                  "EUR"
+                ],
+                "LV": [
+                  16.18,
+                  "EUR"
+                ],
+                "MD": [
+                  18.0,
+                  "USD"
+                ],
+                "MT": [
+                  15.78,
+                  "EUR"
+                ],
+                "MX": [
+                  17.4,
+                  "USD"
+                ],
+                "NL": [
+                  16.18,
+                  "EUR"
+                ],
+                "NO": [
+                  16.72,
+                  "EUR"
+                ],
+                "NZ": [
+                  30.84,
+                  "NZD"
+                ],
+                "PH": [
+                  940.09,
+                  "PHP"
+                ],
+                "PL": [
+                  16.45,
+                  "EUR"
+                ],
+                "PT": [
+                  16.45,
+                  "EUR"
+                ],
+                "RO": [
+                  15.52,
+                  "EUR"
+                ],
+                "RU": [
+                  2051.01,
+                  "RUB"
+                ],
+                "SE": [
+                  16.72,
+                  "EUR"
+                ],
+                "SG": [
+                  16.35,
+                  "USD"
+                ],
+                "SI": [
+                  16.32,
+                  "EUR"
+                ],
+                "SK": [
+                  16.45,
+                  "EUR"
+                ],
+                "TH": [
+                  16.05,
+                  "USD"
+                ],
+                "TR": [
+                  737.35,
+                  "TRY"
+                ],
+                "TW": [
+                  15.75,
+                  "USD"
+                ],
+                "UA": [
+                  18.0,
+                  "USD"
+                ],
+                "US": [
+                  15.0,
+                  "USD"
+                ],
+                "ZA": [
+                  17.25,
+                  "USD"
+                ]
+              },
+              "section_identifiers": [
+                "bt15_tier"
+              ],
+              "start": null,
+              "type": "price"
             }
           ],
           "category": "bundle",
-          "detailed_marketing_blurb": "Feel the exhilaration of lining up the perfect shot with the Sniper Elite: Classics Collection. Choose from dozens of rifles, maps, and targets across 5 complete <em>Sniper Elite</em> titles—including <em>Sniper Elite 5</em> and <em>Sniper Elite 4 Deluxe</em>. Relive sweet shots with the awesome Kill Cam and immerse yourself in the strategic gameplay. Pay what you want for hours of in-depth gunplay from the ultimate shooting simulation experience, and help support Special Effect with your purchase. <br><br><strong><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 6th, 2027.</span></strong>",
+          "detailed_marketing_blurb": "Blast off to faraway stars or stay home and hide from monsters in the woods with this bundle of sci-fi and horror (and sci-fi horror) VR games! Explore a derelict spaceship while fighting off an entity determined to mutate your own body in <em>Star Trek: Infection</em>! Command a fleet of ships through evolving stages of space battles in <em>Homeworld: Vast Reaches</em>! Run through the woods finding stick figures and hiding from a creature of terror and darkness in <em>Blair Witch VR</em>! Fully immerse yourself in outer space adventures and Earthbound terror with these VR games! Get them all now at the price of your choice and support HPV Cancers Alliance with your purchase!<br><br><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 28th, 2027. </span>",
           "disable_hero_tile": false,
           "disallowed_countries": [],
-          "end_date|datetime": "2026-10-07T04:00:00",
+          "end_date|datetime": "2026-10-29T04:00:00",
           "exclusive_countries": [],
           "fallback_store_sale_logo": "",
           "hero_highlights": [
             {
-              "heading": "$274 worth of awesome stuff",
-              "tooltip": "Get games collectively valued at up to $274."
+              "heading": "$169 worth of awesome stuff",
+              "tooltip": "Get games collectively valued at up to $169."
             },
             {
               "heading": "Pay $5 or more",
@@ -3323,10 +3488,10 @@
               "tooltip": "Pay $5 or more for access to content on Steam."
             }
           ],
-          "high_res_tile_image": "https://hb.imgix.net/32dca4041ea81a43877750e2d2b547e36c61b406.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=8e17b93e701d7a6782d55f80f35a3881",
+          "high_res_tile_image": "https://hb.imgix.net/2c340f6ebca8db9f918a8de608a82ebef559a8cf.jpg?auto=compress,format&fit=crop&h=600&w=1200&s=f76a8860efe47b3c13a43e73b4b79bd2",
           "high_res_tile_image_information": {
             "config": {
-              "gcs": "images/humble_home/bohsnipereliteclassicscollection_bundle-product.jpg",
+              "gcs": "images/humble_home/beyondrealityvr-product.jpg",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -3341,34 +3506,34 @@
           },
           "highlights": [
             "Pay What You Want",
-            "6 games",
-            "$274 Value",
+            "7 games",
+            "$169 Value",
             "Support Charity"
           ],
           "hover_highlights": [
-            "6 games",
-            "$274 Value"
+            "7 games",
+            "$169 Value"
           ],
           "hover_title": "Pay What You Want",
-          "machine_name": "bohsnipereliteclassicscollection_bundle",
-          "marketing_blurb": "Get <em>Sniper Elite</em>, <em>Sniper Elite 3</em>, <em>Sniper Elite 5</em>, <em>Sniper Elite 4 Deluxe</em>, <em>Sniper Elite V2 Remastered</em>, <em>Sniper Elite 3 - Season Pass</em>, and more!",
-          "product_url": "/games/boh-sniper-elite-classics-collection",
+          "machine_name": "beyondrealityscifisurvivalvrcollection_bundle",
+          "marketing_blurb": "Get <em>Blair Witch VR</em>, <em>Star Trek: Infection</em>, <em>Z.O.N.A Project X VR</em>, <em>Homeworld: Vast Reaches</em>, and more!",
+          "product_url": "/games/beyond-reality-scifi-survival-vr-collection",
           "product_variables": {
-            "msrp": "$274",
+            "msrp": "$169",
             "msrp|pricing": {
               "US": [
-                274.0,
+                169.0,
                 "USD"
               ]
             }
           },
-          "short_marketing_blurb": "Line up the perfect shot",
-          "start_date|datetime": "2026-09-15T18:00:00",
+          "short_marketing_blurb": "Adventure and terror in VR",
+          "start_date|datetime": "2026-10-07T18:00:00",
           "supports_partners": true,
-          "tile_image": "https://hb.imgix.net/32dca4041ea81a43877750e2d2b547e36c61b406.jpg?auto=compress,format&fit=crop&h=353&w=616&s=a91750734580c88fcadbc3d2fdb83336",
+          "tile_image": "https://hb.imgix.net/2c340f6ebca8db9f918a8de608a82ebef559a8cf.jpg?auto=compress,format&fit=crop&h=353&w=616&s=138b5177424e65e8b8150d6fa119cf30",
           "tile_image_information": {
             "config": {
-              "gcs": "images/humble_home/bohsnipereliteclassicscollection_bundle-product.jpg",
+              "gcs": "images/humble_home/beyondrealityvr-product.jpg",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -3381,10 +3546,10 @@
               }
             }
           },
-          "tile_logo": "https://hb.imgix.net/cbc3511aa4612e5fe16b4297e23359d101c07fa6.png?auto=compress,format&h=340&w=1200&s=535936d2577176b918485cd64775941b",
+          "tile_logo": "https://hb.imgix.net/2ae9dbe989b76a9c2c30846dc38a6b6d76b1db81.png?auto=compress,format&h=340&w=1200&s=9fda5f064a6d040df2ec75787c654d9f",
           "tile_logo_information": {
             "config": {
-              "gcs": "images/logos/bohsnipereliteclassicscollection_bundle-logo-product.png",
+              "gcs": "images/logos/beyondrealityvr-logo-product.png",
               "image_type": "gcs",
               "imgix": {
                 "args": {},
@@ -3397,8 +3562,8 @@
               }
             }
           },
-          "tile_name": "Best of Humble Bundle - Sniper Elite: Classics Collection",
-          "tile_short_name": "- Sniper Elite: Classics Collection",
+          "tile_name": "Beyond Reality: Sci-Fi & Survival VR Collection",
+          "tile_short_name": "Beyond Reality: Sci-Fi & Survival VR Collection",
           "tile_stamp": "games",
           "type": "bundle"
         }
@@ -3484,9 +3649,9 @@
         }
       ],
       "statistics_data": {
-        "num_purchases|decimal": 40043.0,
+        "num_purchases|decimal": 71724.0,
         "total_charity_raised|money": {
-          "amount": 36337.0,
+          "amount": 61726.0,
           "currency": "EUR"
         }
       },
@@ -4526,7 +4691,7 @@
             "currency": "EUR"
           },
           "msrp_price|money": {
-            "amount": 53.44320712694878,
+            "amount": 53.53382116723184,
             "currency": "EUR"
           },
           "payee_secondary_id": "",
@@ -4671,7 +4836,7 @@
             "currency": "EUR"
           },
           "msrp_price|money": {
-            "amount": 17.80846325167038,
+            "amount": 17.83865786185972,
             "currency": "EUR"
           },
           "payee_secondary_id": "",
@@ -4720,7 +4885,7 @@
       "tier_pricing_data": {
         "bt10": {
           "average_purchase_price|money": {
-            "amount": 13.43,
+            "amount": 13.45,
             "currency": "EUR"
           },
           "identifier": "bt10",
@@ -4736,7 +4901,7 @@
         },
         "bt15": {
           "average_purchase_price|money": {
-            "amount": 13.43,
+            "amount": 13.45,
             "currency": "EUR"
           },
           "identifier": "bt15",
@@ -4752,7 +4917,7 @@
         },
         "initial": {
           "average_purchase_price|money": {
-            "amount": 13.43,
+            "amount": 13.45,
             "currency": "EUR"
           },
           "identifier": "initial",
@@ -4769,8 +4934,8 @@
       },
       "upsell_data": {
         "monthly_v2_premium": {
-          "active_content_end_time|datetime": "2026-10-06T17:00:00",
-          "active_content_start_time|datetime": "2026-09-01T17:00:00",
+          "active_content_end_time|datetime": "2026-11-03T18:00:00",
+          "active_content_start_time|datetime": "2026-10-06T17:00:00",
           "category": "subscriptionplan",
           "current_price|money": {
             "amount": 12.34,
@@ -4784,17 +4949,17 @@
             "currency": "EUR"
           },
           "human_name": "Month-to-Month Plan",
-          "image_url": "https://hb.imgix.net/7ae2399c8bda060a6a1452381266766a7e8f060e.png?auto=compress,format&fit=crop&h=353&w=616&s=d03f0cdc7dfe032cfa2768a0c8ae9d4c",
+          "image_url": "https://hb.imgix.net/f21f4d6ebd6e3eeaf5eb85c917767d186a4e57e3.png?auto=compress,format&fit=crop&h=353&w=616&s=2a375a298a796a9003c1bd4655ecfe1d",
           "machine_name": "monthly_v2_premium",
-          "renewal_date|datetime": "2026-10-26T18:00:00",
-          "subscription_content_product": "september_2026_choice",
+          "renewal_date|datetime": "2026-11-24T18:00:00",
+          "subscription_content_product": "october_2026_choice",
           "subscription_credits": 1
         }
       }
     },
     "listing": {
       "author": "Publishers",
-      "bundles_sold|decimal": 40043.0,
+      "bundles_sold|decimal": 71723.0,
       "category": "bundle",
       "detailed_marketing_blurb": "September is a big month for many reasons—and this September is even bigger, because we’re celebrating IGN’s 30th Anniversary! That’s right, it’s been 30 years since the very first post on IGN’s website, and to kick off the festivities we’re bringing all of you a gift: A bundle of IGN favorites to enjoy all month long, and beyond! Wage war against the dragons of Tamriel and master the art of necromancy in <em>The Elder Scrolls Online - Elsweyr</em>! Brave the dark reefs and deep oceans and try your best not to get eaten in <em>Subnautica</em>! Protect reality itself from an unknown evil in post-apocalyptic horror game <em>REMNANT II</em>! There’s even more fun to be had in this fantastic bundle of fan-favorite games, so grab them now at the price of your choosing and support Child’s Play with your purchase!<br><br><span style=\"color: #ef9741;\">Keys expire. Please redeem and activate on Steam before April 9th, 2027. </span>",
       "disable_hero_tile": false,
