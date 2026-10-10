@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DESTRUCTIVE CREATIONS BUNDLE — Collector
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/destructive-creations-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/destructive-creations-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/destructive-creations-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Ancestors Legacy
+  ids:
+  - steam:620590
+  requires: []
+- name: War Mongrels
+  ids:
+  - steam:1101790
+  requires: []
+- name: Hatred
+  ids:
+  - steam:341940
+  requires: []
+- name: Smells Like a Mushroom
+  ids:
+  - steam:2199340
+  requires: []
+- name: Shame Legacy
+  ids:
+  - steam:2014690
+  requires: []
+- name: Space Raiders in Space
+  ids:
+  - steam:1278210
+  requires: []
+- name: IS Defense
+  ids:
+  - steam:448370
+  requires: []

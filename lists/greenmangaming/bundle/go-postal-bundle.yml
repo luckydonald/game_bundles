@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: GO POSTAL BUNDLE — Regret Nothing
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/go-postal-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/go-postal-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/go-postal-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  requires: []
+- name: POSTAL 2
+  ids:
+  - steam:223470
+  group:
+    id: '509'
+    name: 'POSTAL 2 + POSTAL 2: Paradise Lost'
+  requires: []
+- name: 'POSTAL 2: Paradise Lost'
+  ids:
+  - steam:360960
+  group:
+    id: '509'
+    name: 'POSTAL 2 + POSTAL 2: Paradise Lost'
+  requires: []
+- name: POSTAL Redux
+  ids:
+  - steam:401680
+  requires: []
+- name: 'Postal: Brain Damaged - Connoisseur Edition'
+  ids:
+  - steam:bundle/26678
+  requires: []
+- name: 'POSTAL: Brain Damaged - These Sunny Daze'
+  ids:
+  - steam:3768390
+  requires: []
