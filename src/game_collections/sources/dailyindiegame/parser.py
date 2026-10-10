@@ -30,6 +30,9 @@ STEAM_APP_PATTERN = re.compile(r"store\.steampowered\.com/app/(\d+)")
 TITLE_PATTERN = re.compile(
     r'<span class="DIG-contentOrangeBIG">(.*?)</span>', re.IGNORECASE | re.DOTALL
 )
+# Bundles still linked from the index after they expired (confirmed live, e.g. `site_weeklybundle_2420.html`)
+# only show this sentence instead of the usual title span, summary and games.
+BUNDLE_ENDED_PATTERN = re.compile(r"This bundle has ended\.", re.IGNORECASE)
 SUMMARY_PATTERN = re.compile(
     r"(\d+)\s+awesome STEAM games\s*,\s*worth a total of \$([\d.,]+)\.\s*"
     r"Grab them now for only \$([\d.,]+) and save (\d+)%\s*\(\$([\d.,]+)\)",
@@ -51,6 +54,12 @@ class DigParseError(ValueError):
     """A DailyIndieGame page did not contain the expected structure."""
 
 # end class DigParseError
+
+
+class DigBundleEndedError(DigParseError):
+    """The bundle page only says the bundle has ended, so there is nothing left to scrape."""
+
+# end class DigBundleEndedError
 
 
 class _VisibleTextParser(HTMLParser):
@@ -194,6 +203,9 @@ def bundle_number(url: str) -> str:
 def parse_bundle_page(html: str, url: str, crawled: datetime) -> tuple[DigArchive, dict[str, Any]]:
     """Normalize one weekly bundle detail page."""
     title_match = TITLE_PATTERN.search(html)
+    if not title_match and BUNDLE_ENDED_PATTERN.search(_visible_text(html)):
+        raise DigBundleEndedError("bundle has ended")
+    # end if
     if not title_match:
         raise DigParseError("bundle page is missing its DIG-contentOrangeBIG title span")
     # end if

@@ -167,6 +167,24 @@ def test_crawl_isolates_per_offer_failures() -> None:
 # end def test_crawl_isolates_per_offer_failures
 
 
+def test_crawl_skips_an_ended_bundle_without_an_error() -> None:
+    logged: list[str] = []
+
+    def fetch(url: str) -> str:
+        if url.endswith("site_weeklybundle_2351.html"):
+            return "<html><body>This bundle has ended.</body></html>"
+        # end if
+        return INDEX_PAGE
+    # end def fetch
+
+    report = crawl_dig_offers(fetch, crawled=datetime(2026, 7, 12, tzinfo=UTC), log=logged.append)
+
+    assert report.offers == ()
+    assert report.errors == ()
+    assert any("skipped (bundle has ended)" in line for line in logged)
+# end def test_crawl_skips_an_ended_bundle_without_an_error
+
+
 def test_crawl_explicit_url_skips_index_discovery() -> None:
     pages = {
         "https://www.dailyindiegame.com/site_weeklybundle_2351.html": BUNDLE_PAGE,

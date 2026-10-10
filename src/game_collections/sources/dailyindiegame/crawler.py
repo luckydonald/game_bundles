@@ -22,6 +22,7 @@ from game_collections.sources.dailyindiegame.models import CURRENT_VERSION, DigA
 from game_collections.sources.dailyindiegame.parser import (
     DIG_ROOT,
     BUNDLE_LINK_PATTERN,
+    DigBundleEndedError,
     bundle_number,
     parse_bundle_index_page,
     parse_bundle_page,
@@ -242,6 +243,8 @@ def crawl_dig_offers(
             if on_offer is not None:
                 on_offer(offer)
             # end if
+        except DigBundleEndedError:
+            log(f"Bundle {index}/{total}: {number} skipped (bundle has ended)")
         except (OSError, ValueError, DigCrawlError) as error:
             errors.append(f"{url}: {error}")
         # end try

@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from game_collections.sources.dailyindiegame.parser import (
+    DigBundleEndedError,
     DigParseError,
     parse_bundle_index_page,
     parse_bundle_page,
@@ -91,6 +92,16 @@ def test_bundle_page_without_adult_suffix_is_not_flagged() -> None:
     assert archive.name == "DIG Bundle 2200"
     assert archive.is_adult is False
 # end def test_bundle_page_without_adult_suffix_is_not_flagged
+
+
+def test_bundle_page_that_has_ended_raises_the_dedicated_error() -> None:
+    try:
+        parse_bundle_page("<html><body><p>This bundle has ended.</p></body></html>", BUNDLE_URL, CRAWLED)
+    except DigBundleEndedError:
+        return
+    # end try
+    raise AssertionError("expected DigBundleEndedError")
+# end def test_bundle_page_that_has_ended_raises_the_dedicated_error
 
 
 def test_bundle_page_requires_a_title() -> None:
