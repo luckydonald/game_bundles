@@ -1,0 +1,159 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own All Stars Bundle (Winter)
+tiers:
+- rank: 1
+  name: pick 5
+  pick_quota: 5
+- rank: 2
+  name: pick 7
+  pick_quota: 7
+- rank: 3
+  name: pick 12
+  pick_quota: 12
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-all-stars-bundle-winter
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-all-stars-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-all-stars-bundle-winter/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-all-stars-bundle-winter/source.json
+crawlers:
+- dekudeals
+games:
+- name: Chernobylite Premium Edition
+  ids:
+  - steam:bundle/21999
+  - dekudeals:chernobylite-complete-edition-chernobylite-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Zombie Army Trilogy
+  ids:
+  - steam:301640
+  - dekudeals:zombie-army-trilogy
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+  - dekudeals:sniper-elite-v2-remastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'BEYOND: Two Souls'
+  ids:
+  - steam:960990
+  - dekudeals:beyond-two-souls
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Heavy Rain
+  ids:
+  - steam:960910
+  - dekudeals:heavy-rain
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Evil Genius 2: World Domination Deluxe Edition'
+  ids:
+  - dekudeals:evil-genius-2-world-domination-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  - dekudeals:postal-brain-damaged
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  - dekudeals:postal-4-no-regerts
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+  - dekudeals:icewind-dale-enhanced-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Redout 2
+  ids:
+  - steam:1799930
+  - dekudeals:redout-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Frog Detective 3: Corruption at Cowboy County'
+  ids:
+  - steam:1171320
+  - dekudeals:frog-detective-3-corruption-at-cowboy-county
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: PC Tycoon 2
+  ids:
+  - steam:2832320
+  - dekudeals:pc-tycoon-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'This War of Mine: Complete Edition'
+  ids:
+  - steam:bundle/9717
+  - dekudeals:this-war-of-mine-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Asterix & Obelix XXL: Romastered'
+  ids:
+  - steam:1261520
+  - dekudeals:asterix-and-obelix-xxl-romastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hidden in my Paradise
+  ids:
+  - steam:2834330
+  - dekudeals:hidden-in-my-paradise
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

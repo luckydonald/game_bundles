@@ -21,14 +21,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16649/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16649/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/twisted-trilogies-and-terrors-dark-visual-novels
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/twisted-trilogies-and-terrors-dark-visual-novels/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/twisted-trilogies-and-terrors-dark-visual-novels/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Class of ''09: The Flip Side'
   ids:
   - steam:2757330
   - isthereanydeal:class-of-09-the-flip-side
+  - dekudeals:class-of-09-the-flip-side
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:2318310
   - isthereanydeal:class-of-09-the-re-up
+  - dekudeals:class-of-09-the-re-up
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:1443200
   - isthereanydeal:class-of-09
+  - dekudeals:class-of-09
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:460430
   - isthereanydeal:the-letter-horror-visual-novel
+  - dekudeals:the-letter-horror-visual-novel
   requires: []
   tiers:
   - 2
@@ -64,6 +75,7 @@ games:
   ids:
   - steam:1442160
   - isthereanydeal:abyss-of-the-sacrifice
+  - dekudeals:abyss-of-the-sacrifice
   requires: []
   tiers:
   - 2
@@ -72,6 +84,7 @@ games:
   ids:
   - steam:1414250
   - isthereanydeal:corpse-factory
+  - dekudeals:corpse-factory-switch
   requires: []
   tiers:
   - 2
@@ -80,6 +93,7 @@ games:
   ids:
   - steam:2080800
   - isthereanydeal:spirit-hunter-death-mark-ii
+  - dekudeals:spirit-hunter-death-mark-ii
   requires: []
   tiers:
   - 3
@@ -87,6 +101,7 @@ games:
   ids:
   - steam:980830
   - isthereanydeal:spirit-hunter-death-mark
+  - dekudeals:death-mark
   requires: []
   tiers:
   - 3
@@ -94,6 +109,7 @@ games:
   ids:
   - steam:1100430
   - isthereanydeal:spirit-hunter-ng
+  - dekudeals:spirit-hunter-ng
   requires: []
   tiers:
   - 3

@@ -23,14 +23,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-28_programming-puzzles-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-28_programming-puzzles-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/programming-puzzles-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/programming-puzzles-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/programming-puzzles-bundle/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: Replicube
   ids:
   - steam:3401490
   - isthereanydeal:replicube
+  - dekudeals:replicube
   requires: []
   tiers:
   - 1
@@ -41,6 +49,7 @@ games:
   ids:
   - steam:619150
   - isthereanydeal:while-true-learn
+  - dekudeals:while-true-learn
   requires: []
   tiers:
   - 1
@@ -51,6 +60,7 @@ games:
   ids:
   - steam:1257850
   - isthereanydeal:solas-128
+  - dekudeals:solas-128
   requires: []
   tiers:
   - 1
@@ -61,6 +71,7 @@ games:
   ids:
   - steam:2312770
   - isthereanydeal:linkito
+  - dekudeals:linkito
   requires: []
   tiers:
   - 2
@@ -70,6 +81,7 @@ games:
   ids:
   - steam:1577620
   - isthereanydeal:the-signal-state
+  - dekudeals:the-signal-state
   requires: []
   tiers:
   - 2
@@ -79,6 +91,7 @@ games:
   ids:
   - steam:2802710
   - isthereanydeal:quantum-odyssey
+  - dekudeals:quantum-odyssey
   requires: []
   tiers:
   - 3
@@ -87,6 +100,7 @@ games:
   ids:
   - steam:1730260
   - isthereanydeal:retro-gadgets
+  - dekudeals:retro-gadgets
   requires: []
   tiers:
   - 4

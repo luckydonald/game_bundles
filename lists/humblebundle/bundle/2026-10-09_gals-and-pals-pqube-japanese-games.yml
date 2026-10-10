@@ -21,14 +21,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16650/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16650/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/gals-and-pals-pqube-japanese-games
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/gals-and-pals-pqube-japanese-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/gals-and-pals-pqube-japanese-games/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Gal*Gun: Double Peace'
   ids:
   - steam:511740
   - isthereanydeal:gal-gun-double-peace
+  - dekudeals:galgun-double-peace
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:1767170
   - isthereanydeal:super-bullet-break
+  - dekudeals:super-bullet-break-switch
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:746940
   - isthereanydeal:nippon-marathon
+  - dekudeals:nippon-marathon
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:1268140
   - isthereanydeal:lair-land-story
+  - dekudeals:lair-land-story-switch
   requires: []
   tiers:
   - 1
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:851890
   - isthereanydeal:gal-gun-2
+  - dekudeals:gal-gun-2
   requires: []
   tiers:
   - 2
@@ -73,6 +85,7 @@ games:
   ids:
   - steam:766680
   - isthereanydeal:punch-line
+  - dekudeals:punch-line
   requires: []
   tiers:
   - 2
@@ -81,6 +94,7 @@ games:
   ids:
   - steam:940650
   - isthereanydeal:our-world-is-ended
+  - dekudeals:our-world-is-ended
   requires: []
   tiers:
   - 2
@@ -89,6 +103,7 @@ games:
   ids:
   - steam:1425730
   - isthereanydeal:gal-gun-returns
+  - dekudeals:galgun-returns
   requires: []
   tiers:
   - 3
@@ -96,6 +111,7 @@ games:
   ids:
   - steam:1187940
   - isthereanydeal:is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-infinite-combate
+  - dekudeals:is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-familia-myth-infinite-combate
   requires: []
   tiers:
   - 3
@@ -103,6 +119,7 @@ games:
   ids:
   - steam:1637230
   - isthereanydeal:metal-max-xeno-reborn
+  - dekudeals:metal-max-xeno-reborn
   requires: []
   tiers:
   - 3
@@ -110,6 +127,7 @@ games:
   ids:
   - steam:1922960
   - isthereanydeal:labyrinth-of-zangetsu
+  - dekudeals:labyrinth-of-zangetsu
   requires: []
   tiers:
   - 3

@@ -21,13 +21,21 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16595/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16595/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/run-it-back-roguelikes-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/run-it-back-roguelikes-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/run-it-back-roguelikes-bundle/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Spellmasons
   ids:
   - steam:1618380
+  - dekudeals:spellmasons
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
 - name: Source of Madness
   ids:
   - steam:1315610
+  - dekudeals:source-of-madness
   requires: []
   tiers:
   - 1
@@ -44,6 +53,7 @@ games:
 - name: Dome Keeper
   ids:
   - steam:1637320
+  - dekudeals:dome-keeper
   requires: []
   tiers:
   - 2
@@ -51,6 +61,7 @@ games:
 - name: Battle Shapers
   ids:
   - steam:1421290
+  - dekudeals:battle-shapers
   requires: []
   tiers:
   - 2
@@ -58,6 +69,7 @@ games:
 - name: Dungeons of Blood and Dream
   ids:
   - steam:2488590
+  - dekudeals:dungeons-of-blood-and-dream
   requires: []
   tiers:
   - 2
@@ -65,6 +77,7 @@ games:
 - name: OTXO
   ids:
   - steam:1608640
+  - dekudeals:otxo
   requires: []
   tiers:
   - 2
@@ -72,18 +85,21 @@ games:
 - name: Rabbit and Steel
   ids:
   - steam:2132850
+  - dekudeals:rabbit-and-steel
   requires: []
   tiers:
   - 3
 - name: Chrono Ark
   ids:
   - steam:1188930
+  - dekudeals:chrono-ark
   requires: []
   tiers:
   - 3
 - name: 'Lost in Random: The Eternal Die'
   ids:
   - steam:2564520
+  - dekudeals:lost-in-random-the-eternal-die
   requires: []
   tiers:
   - 3

@@ -1,0 +1,273 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Prestige Collection - Build your Own Bundle (Fall 2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/prestige-collection-build-your-own-bundle-fall-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fprestige-collection-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/prestige-collection-build-your-own-bundle-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/prestige-collection-build-your-own-bundle-fall-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: 'Fallout 76: Gone Fission Deluxe Edition'
+  ids:
+  - dekudeals:fallout-76-gone-fission-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Anomaly President
+  ids:
+  - steam:3156330
+  - dekudeals:anomaly-president
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Until Then: Deluxe Edition'
+  ids:
+  - steam:bundle/77562
+  - dekudeals:until-then-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The House Always Wins
+  ids:
+  - steam:3412160
+  - dekudeals:grand-casino-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'INDIKA: DELUXE EDITION'
+  ids:
+  - steam:bundle/40715
+  - dekudeals:indika-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CRYPT CUSTODIAN
+  ids:
+  - steam:2394650
+  - dekudeals:crypt-custodian
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Heroes of Science and Fiction
+  ids:
+  - steam:2147380
+  - dekudeals:silence-of-the-siren
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Tails of Iron 2: Whiskers of Winter - Deluxe Edition'
+  ids:
+  - dekudeals:tails-of-iron-2-whiskers-of-winter-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bye Sweet Carole
+  ids:
+  - steam:2428980
+  - dekudeals:bye-sweet-carole
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Kathy Rain 2: Soothsayer'
+  ids:
+  - steam:1466390
+  - dekudeals:kathy-rain-2-soothsayer
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Chernobylite 2: Exclusion Zone'
+  ids:
+  - steam:2075100
+  - dekudeals:chernobylite-2-exclusion-zone
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: DEATHLOOP Deluxe Edition
+  ids:
+  - dekudeals:deathloop-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: DEADLINE DELIVERY
+  ids:
+  - steam:3745310
+  - dekudeals:deadline-delivery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: House Party - Business and Pleasure Bundle
+  ids:
+  - dekudeals:house-party-business-and-pleasure-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: War for the Overworld Ultimate Edition
+  ids:
+  - steam:bundle/1724
+  - dekudeals:war-for-the-overworld-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'The Thaumaturge: Deluxe Edition'
+  ids:
+  - steam:bundle/37844
+  - dekudeals:the-thaumaturge-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'The Lord of the Rings: Return to Moria + Beorn''s Lodge Pack + Durin''s Folk
+    Expansion'
+  ids:
+  - dekudeals:the-lord-of-the-rings-return-to-moria-plus-beorns-lodge-pack-plus-durins-folk-expansion
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The RPG
+  ids:
+  - steam:2429270
+  - dekudeals:the-rpg
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Platypus Reclayed
+  ids:
+  - steam:2912430
+  - dekudeals:platypus-reclayed
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Daymare: 1994 Sandcastle'
+  ids:
+  - steam:1530470
+  - dekudeals:daymare-1994-sandcastle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: No Players Online
+  ids:
+  - steam:2701800
+  - dekudeals:no-players-online
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: ANTONBLAST
+  ids:
+  - steam:1887400
+  - dekudeals:antonblast
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Monument Valley 3
+  ids:
+  - steam:3132930
+  - dekudeals:monument-valley-3
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hell Clock
+  ids:
+  - steam:1782460
+  - dekudeals:hell-clock
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Redout 2 - Ultimate Edition
+  ids:
+  - steam:bundle/26668
+  - dekudeals:redout-2-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Oddsparks - An Automation Adventure
+  ids:
+  - steam:1817800
+  - dekudeals:oddsparks-an-automation-adventure
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cattle Country
+  ids:
+  - steam:2818150
+  - dekudeals:cattle-country
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: AirportSim
+  ids:
+  - steam:1715280
+  - dekudeals:airportsim
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

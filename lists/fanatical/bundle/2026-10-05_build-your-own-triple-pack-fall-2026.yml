@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Triple Pack (Fall 2026)
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 6
+  pick_quota: 6
+- rank: 3
+  name: pick 9
+  pick_quota: 9
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-triple-pack-fall-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-triple-pack-fall-2026
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-triple-pack-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-triple-pack-fall-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: 'Moonlighter: Complete Edition'
+  ids:
+  - steam:bundle/12262
+  - dekudeals:moonlighter-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Children of Morta: Complete Edition'
+  ids:
+  - steam:bundle/22978
+  - dekudeals:children-of-morta-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Biped
+  ids:
+  - steam:1071870
+  - dekudeals:biped
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dark Envoy
+  ids:
+  - steam:945770
+  - dekudeals:dark-envoy
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 9 Years of Shadows
+  ids:
+  - steam:1402120
+  - dekudeals:9-years-of-shadows
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Echoes of the Plum Grove
+  ids:
+  - steam:1536090
+  - dekudeals:echoes-of-the-plum-grove
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Gladiator Command
+  ids:
+  - steam:3845450
+  - dekudeals:gladiator-command
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Symphony of War: The Nephilim Saga'
+  ids:
+  - steam:1488200
+  - dekudeals:symphony-of-war-the-nephilim-saga
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Magical Bakery
+  ids:
+  - steam:2595940
+  - dekudeals:magical-bakery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Petit Island
+  ids:
+  - steam:1744970
+  - dekudeals:petit-island
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Aquatico
+  ids:
+  - steam:1812300
+  - dekudeals:aquatico
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: castle idler
+  ids:
+  - steam:4082900
+  - dekudeals:castle-idler
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Afterplace
+  ids:
+  - steam:2721530
+  - dekudeals:afterplace
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CODE Bunny
+  ids:
+  - steam:3303780
+  - dekudeals:code-bunny
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Lonesome Village
+  ids:
+  - steam:1418360
+  - dekudeals:lonesome-village
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Truck Driver
+  ids:
+  - steam:768180
+  - dekudeals:truck-driver
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dream Tactics
+  ids:
+  - steam:1897650
+  - dekudeals:dream-tactics
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Blind Fate: Edo no Yami'
+  ids:
+  - steam:1294880
+  - dekudeals:blind-fate-edo-no-yami
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

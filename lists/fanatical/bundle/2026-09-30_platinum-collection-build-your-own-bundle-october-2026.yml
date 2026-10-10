@@ -1,0 +1,186 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Platinum Collection - Build your own Bundle (October 2026)
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/platinum-collection-build-your-own-bundle-october-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fplatinum-collection-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/platinum-collection-build-your-own-bundle-october-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/platinum-collection-build-your-own-bundle-october-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Moldwasher
+  ids:
+  - steam:3688130
+  - dekudeals:moldwasher
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cozy Cleaner
+  ids:
+  - steam:2742710
+  - dekudeals:cozy-cleaner
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: All Hail the Orb
+  ids:
+  - steam:4262310
+  - dekudeals:all-hail-the-orb
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Horripilant
+  ids:
+  - steam:3525970
+  - dekudeals:horripilant
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Security 51
+  ids:
+  - steam:4246860
+  - dekudeals:security-51
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Don't Let It Starve
+  ids:
+  - steam:3930510
+  - dekudeals:dont-let-it-starve
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Curse of Pirates
+  ids:
+  - steam:3484940
+  - dekudeals:curse-of-pirates
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dungeons of Hinterberg
+  ids:
+  - steam:1983260
+  - dekudeals:dungeons-of-hinterberg
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: GlitchSPANKR
+  ids:
+  - steam:2727660
+  - dekudeals:glitchspankr
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Muffles' Life Sentence
+  ids:
+  - steam:3145370
+  - dekudeals:muffles-life-sentence
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Nobodies: Complete Bundle'
+  ids:
+  - dekudeals:nobodies-complete-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Frontier Paladin
+  ids:
+  - steam:2804970
+  - dekudeals:frontier-paladin
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bootleg Steamer
+  ids:
+  - steam:2492410
+  - dekudeals:bootleg-steamer
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Turnbound
+  ids:
+  - steam:3802470
+  - dekudeals:turnbound
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Slender Threads
+  ids:
+  - steam:1116480
+  - dekudeals:slender-threads
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Super Loco World - Cozy Train Automation
+  ids:
+  - steam:3109280
+  - dekudeals:super-loco-world
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Revolution Editions - Shadow & Steel
+  ids:
+  - steam:267390
+  - dekudeals:revolution-editions-shadow-and-steel
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'FORWARD: Escape the Fold - Ultimate Edition'
+  ids:
+  - steam:1766390
+  - dekudeals:forward-escape-the-fold-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

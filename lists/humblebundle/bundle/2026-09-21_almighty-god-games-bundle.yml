@@ -19,14 +19,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-21_almighty-god-games-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-21_almighty-god-games-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/the-almighty-god-games-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/the-almighty-god-games-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/the-almighty-god-games-bundle/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: Equilinox
   ids:
   - steam:853550
   - isthereanydeal:equilinox
+  - dekudeals:equilinox
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:2825110
   - isthereanydeal:technotopia
+  - dekudeals:technotopia
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:352720
   - isthereanydeal:the-universim
+  - dekudeals:the-universim
   requires: []
   tiers:
   - 2
@@ -50,6 +60,7 @@ games:
   ids:
   - steam:917150
   - isthereanydeal:godhood
+  - dekudeals:godhood
   requires: []
   tiers:
   - 2
@@ -57,6 +68,7 @@ games:
   ids:
   - steam:1741640
   - isthereanydeal:shadows-of-forbidden-gods
+  - dekudeals:shadows-of-forbidden-gods
   requires: []
   tiers:
   - 2
@@ -64,6 +76,7 @@ games:
   ids:
   - steam:525680
   - isthereanydeal:deisim
+  - dekudeals:deisim
   requires: []
   tiers:
   - 2
