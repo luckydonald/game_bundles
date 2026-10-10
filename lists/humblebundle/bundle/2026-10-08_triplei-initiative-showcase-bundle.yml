@@ -21,14 +21,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16640/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16640/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/the-triple-i-initiative-showcase-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/the-triple-i-initiative-showcase-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/the-triple-i-initiative-showcase-bundle/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Gestalt: Steam & Cinder'
   ids:
   - steam:1231990
   - isthereanydeal:gestalt-steam-and-cinder
+  - dekudeals:gestalt-steam-and-cinder
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:2727650
   - isthereanydeal:what-the-car
+  - dekudeals:what-the-car
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:2305840
   - isthereanydeal:cat-quest-iii
+  - dekudeals:cat-quest-3
   requires: []
   tiers:
   - 2
@@ -55,6 +65,7 @@ games:
   ids:
   - steam:958520
   - isthereanydeal:33-immortals
+  - dekudeals:33-immortals
   requires: []
   tiers:
   - 2
@@ -63,6 +74,7 @@ games:
   ids:
   - steam:2144640
   - isthereanydeal:endzone-2
+  - dekudeals:endzone-2
   requires: []
   tiers:
   - 2
@@ -71,6 +83,7 @@ games:
   ids:
   - steam:392160
   - isthereanydeal:x4-foundations
+  - dekudeals:x4-foundations
   requires: []
   tiers:
   - 3
@@ -78,6 +91,7 @@ games:
   ids:
   - steam:sub/1520362
   - isthereanydeal:the-last-spell
+  - dekudeals:the-last-spell-complete-edition
   requires: []
   tiers:
   - 3
@@ -85,6 +99,7 @@ games:
   ids:
   - steam:1084600
   - isthereanydeal:my-time-at-sandrock
+  - dekudeals:my-time-at-sandrock
   requires: []
   tiers:
   - 3

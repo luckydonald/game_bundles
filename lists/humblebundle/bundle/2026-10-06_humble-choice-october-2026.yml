@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Humble Choice - October 2026
+tiers:
+- rank: 1
+  name: €12,99
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/humble-choice-october-2026
+- name: Humble bundle
+  url: https://humblebundleinc.sjv.io/c/5782768/2059850/25796?u=https%3A%2F%2Fwww.humblebundle.com%2Fmembership%2Foctober-2026
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/humble-choice-october-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/humble-choice-october-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Cataclismo
+  ids:
+  - steam:1422440
+  - dekudeals:cataclismo
+  requires: []
+  tiers:
+  - 1
+- name: Dungeons & Degenerate Gamblers
+  ids:
+  - steam:2400510
+  - dekudeals:dungeons-and-degenerate-gamblers
+  requires: []
+  tiers:
+  - 1
+- name: Psychonauts 2
+  ids:
+  - steam:607080
+  - dekudeals:psychonauts-2
+  requires: []
+  tiers:
+  - 1
+- name: 'Deep Rock Galactic: Survivor'
+  ids:
+  - steam:2321470
+  - dekudeals:deep-rock-galactic-survivor
+  requires: []
+  tiers:
+  - 1
+- name: Prince of Persia The Lost Crown
+  ids:
+  - steam:2751000
+  - dekudeals:prince-of-persia-the-lost-crown
+  requires: []
+  tiers:
+  - 1
+- name: Toy Shire
+  ids:
+  - steam:2361460
+  - dekudeals:toy-shire
+  requires: []
+  tiers:
+  - 1
+- name: 'Like a Dragon: Pirate Yakuza in Hawaii'
+  ids:
+  - steam:3061810
+  - dekudeals:like-a-dragon-pirate-yakuza-in-hawaii
+  requires: []
+  tiers:
+  - 1
+- name: Asgard's Fall — Viking Survivors
+  ids:
+  - steam:2780710
+  - dekudeals:asgards-fall
+  requires: []
+  tiers:
+  - 1

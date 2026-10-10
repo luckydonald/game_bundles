@@ -21,14 +21,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-30_dying-light-2-stay-human-complete-dlc-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-30_dying-light-2-stay-human-complete-dlc-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/dying-light-2-stay-human-complete-dlc-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/dying-light-2-stay-human-complete-dlc-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/dying-light-2-stay-human-complete-dlc-bundle/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: 'Dying Light 2 Stay Human: Chicken Bundle'
   ids:
   - steam:2330980
   - isthereanydeal:dying-light-2-stay-human-chicken-bundle
+  - dekudeals:dying-light-2-stay-human-chicken-bundle
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:2269820
   - isthereanydeal:dying-light-2-stay-human-brecken-bundle
+  - dekudeals:dying-light-2-stay-human-brecken-bundle
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:2156750
   - isthereanydeal:dying-light-2-stay-human-dying-laugh-bundle
+  - dekudeals:dying-light-2-dying-laugh-bundle
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:2456710
   - isthereanydeal:dying-light-2-stay-human-hakon-bundle
+  - dekudeals:dying-light-2-stay-human-hakon-bundle
   requires: []
   tiers:
   - 2
@@ -64,6 +75,7 @@ games:
   ids:
   - steam:2370700
   - isthereanydeal:dying-light-2-stay-human-post-apo-bundle
+  - dekudeals:dying-light-2-stay-human-post-apo-bundle
   requires: []
   tiers:
   - 2
@@ -72,6 +84,7 @@ games:
   ids:
   - steam:2370710
   - isthereanydeal:dying-light-2-stay-human-nightrunner-bundle
+  - dekudeals:dying-light-2-stay-human-nightrunner-bundle
   requires: []
   tiers:
   - 2
@@ -80,6 +93,7 @@ games:
   ids:
   - steam:2370460
   - isthereanydeal:dying-light-2-stay-human-rahim-bundle
+  - dekudeals:dying-light-2-stay-human-rahim-bundle
   requires: []
   tiers:
   - 2
@@ -88,6 +102,7 @@ games:
   ids:
   - steam:4612850
   - isthereanydeal:dying-light-2-stay-human-welcome-offer-essential-starter-kit
+  - dekudeals:dying-light-2-stay-human-welcome-offer-essential-starter-kit
   requires: []
   tiers:
   - 3
@@ -104,6 +119,7 @@ games:
   ids:
   - steam:3453200
   - isthereanydeal:dying-light-2-stay-human-gre-hazmat-bundle
+  - dekudeals:dying-light-2-stay-human-g-r-e-hazmat-bundle
   requires: []
   tiers:
   - 3
@@ -111,12 +127,14 @@ games:
   ids:
   - steam:1888510
   - isthereanydeal:dying-light-2-soundtrack
+  - dekudeals:dying-light-2-soundtrack
   requires: []
   tiers:
   - 3
 - name: 'Dying Light 2 Stay Human: Goodies Pack-Arts'
   ids:
   - steam:1537622
+  - dekudeals:dying-light-2-stay-human-goodies-pack-arts
   requires: []
   tiers:
   - 3

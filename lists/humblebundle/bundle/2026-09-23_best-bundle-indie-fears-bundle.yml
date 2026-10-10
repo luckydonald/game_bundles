@@ -14,77 +14,98 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16600/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16600/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/best-of-humble-bundle-indie-fears-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/best-of-humble-bundle-indie-fears-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/best-of-humble-bundle-indie-fears-bundle/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Mouthwashing
   ids:
   - steam:2475490
   - isthereanydeal:mouthwashing
+  - dekudeals:mouthwashing
   requires: []
 - name: The Headliners
   ids:
   - steam:3059070
   - isthereanydeal:the-headliners
+  - dekudeals:headliners
   requires: []
 - name: Buckshot Roulette
   ids:
   - steam:2835570
   - isthereanydeal:buckshot-roulette
+  - dekudeals:buckshot-roulette
   requires: []
 - name: PANICORE
   ids:
   - steam:2695940
   - isthereanydeal:panicore
+  - dekudeals:panicore
   requires: []
 - name: Arctic Eggs
   ids:
   - steam:2763670
   - isthereanydeal:arctic-eggs
+  - dekudeals:arctic-eggs
   requires: []
 - name: Who's Lila?
   ids:
   - steam:1697700
   - isthereanydeal:whos-lila
+  - dekudeals:whos-lila
   requires: []
 - name: ORDER 13
   ids:
   - steam:2259310
   - isthereanydeal:order-13
+  - dekudeals:order-13
   requires: []
 - name: Mama's Sleeping Angels
   ids:
   - steam:2918310
   - isthereanydeal:mamas-sleeping-angels
+  - dekudeals:mamas-sleeping-angels
   requires: []
 - name: THRESHOLD
   ids:
   - steam:2580020
   - isthereanydeal:threshold--2
+  - dekudeals:threshold-pxcsr893c7
   requires: []
 - name: s.p.l.i.t
   ids:
   - steam:3684610
   - isthereanydeal:split--3
+  - dekudeals:split
   requires: []
 - name: NO-SKIN
   ids:
   - steam:3011030
   - isthereanydeal:no-skin
+  - dekudeals:no-skin
   requires: []
 - name: Kiosk
   ids:
   - steam:3126330
   - isthereanydeal:kiosk
+  - dekudeals:kiosk
   requires: []
 - name: The Skin Stapler
   ids:
   - steam:4310610
   - isthereanydeal:the-skin-stapler
+  - dekudeals:the-skin-stapler
   requires: []
 - name: Flesh Made Fear
   ids:
   - steam:3316350
   - isthereanydeal:flesh-made-fear
+  - dekudeals:flesh-made-fear
   requires: []
