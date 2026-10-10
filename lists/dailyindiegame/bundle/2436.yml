@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2436 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2436.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2436/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2436/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Hook Adventure
+  ids:
+  - steam:2527030
+  requires: []
+- name: The Arena Guy
+  ids:
+  - steam:1399270
+  requires: []
+- name: Liminal:Escape Route
+  ids:
+  - steam:4272200
+  requires: []
+- name: House Tidy
+  ids:
+  - steam:4288050
+  requires: []
+- name: Castle Defender
+  ids:
+  - steam:651520
+  requires: []
+- name: Survival story
+  ids:
+  - steam:2878060
+  requires: []
+- name: The Mighty Vikings
+  ids:
+  - steam:1509000
+  requires: []
+- name: Mighty forest
+  ids:
+  - steam:1523800
+  requires: []
+- name: Driver Night Trip
+  ids:
+  - steam:4232770
+  requires: []

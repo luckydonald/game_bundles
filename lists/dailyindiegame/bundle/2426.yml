@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2426
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2426.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2426/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2426/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Saylor Animals Puzzle
+  ids:
+  - steam:4343690
+  requires: []
+- name: Lawnmower Runner
+  ids:
+  - steam:4361410
+  requires: []
+- name: Who Is You
+  ids:
+  - steam:1152550
+  requires: []
+- name: Battle Royale Pixel Squad
+  ids:
+  - steam:931250
+  requires: []
+- name: Summer Nightmare
+  ids:
+  - steam:2867970
+  requires: []
+- name: Suzy Burger
+  ids:
+  - steam:1643550
+  requires: []
+- name: Jorji and Impossible Forest
+  ids:
+  - steam:883190
+  requires: []
+- name: Driftence
+  ids:
+  - steam:1786570
+  requires: []
+- name: YOU - God Mode
+  ids:
+  - steam:1142110
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2440
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2440.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2440/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2440/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Lack of Water
+  ids:
+  - steam:1769390
+  requires: []
+- name: Word of Kitchen
+  ids:
+  - steam:1785280
+  requires: []
+- name: Colorize Inspect
+  ids:
+  - steam:1589970
+  requires: []
+- name: Memorize Cards
+  ids:
+  - steam:1589420
+  requires: []
+- name: Upside
+  ids:
+  - steam:1605530
+  requires: []
+- name: Shape Boxed
+  ids:
+  - steam:1845780
+  requires: []
+- name: Downroll
+  ids:
+  - steam:1837870
+  requires: []
+- name: 'Maniac: Hunt or Be Hunted'
+  ids:
+  - steam:3738570
+  requires: []
+- name: The Test of Insanity
+  ids:
+  - steam:3083960
+  requires: []

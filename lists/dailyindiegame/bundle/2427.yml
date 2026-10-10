@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FRIDAY BARGAIN 2427
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2427.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2427/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2427/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Reaper's Odyssey
+  ids:
+  - steam:3083510
+  requires: []
+- name: The Legend of Azarias Rebith
+  ids:
+  - steam:2912530
+  requires: []
+- name: Sector 598
+  ids:
+  - steam:2296080
+  requires: []
+- name: Cyber Prison Management
+  ids:
+  - steam:2530080
+  requires: []
+- name: Kontrakt
+  ids:
+  - steam:924370
+  requires: []
+- name: Moto Roller
+  ids:
+  - steam:1830740
+  requires: []
+- name: Saylor Animals Puzzle
+  ids:
+  - steam:4343690
+  requires: []
+- name: Lawnmower Runner
+  ids:
+  - steam:4361410
+  requires: []
+- name: Number Tower
+  ids:
+  - steam:3109810
+  requires: []

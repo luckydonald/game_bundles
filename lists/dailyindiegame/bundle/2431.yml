@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2431
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2431.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2431/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2431/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Cognite
+  ids:
+  - steam:5147050
+  requires: []
+- name: Redline JDM Drift
+  ids:
+  - steam:4524460
+  requires: []
+- name: Horse Spirit Valley
+  ids:
+  - steam:4734410
+  requires: []
+- name: Jump King Clicker
+  ids:
+  - steam:4584450
+  requires: []
+- name: Worst Shop in Town
+  ids:
+  - steam:4778810
+  requires: []
+- name: Chushpan Simulator
+  ids:
+  - steam:2755330
+  requires: []
+- name: Athanasy
+  ids:
+  - steam:1769320
+  requires: []
+- name: ClayMonsters
+  ids:
+  - steam:5143390
+  requires: []
+- name: Persuasion RPG
+  ids:
+  - steam:4438740
+  requires: []

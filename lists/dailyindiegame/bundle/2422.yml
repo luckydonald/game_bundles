@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2422 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2422.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2422/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2422/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Restart Mode
+  ids:
+  - steam:4113460
+  requires: []
+- name: Ultrakanoid
+  ids:
+  - steam:2949850
+  requires: []
+- name: Shooty
+  ids:
+  - steam:1454060
+  requires: []
+- name: Commissar Catlov
+  ids:
+  - steam:1379470
+  requires: []
+- name: Hidden Object - Sweet Home
+  ids:
+  - steam:726070
+  requires: []
+- name: Cube Worlds Survival
+  ids:
+  - steam:1385840
+  requires: []
+- name: 70 Seconds! Adventure
+  ids:
+  - steam:1143420
+  requires: []
+- name: The lost dungeon of knight
+  ids:
+  - steam:1147620
+  requires: []
+- name: 'Caveman World: Mountains of Unga Boonga'
+  ids:
+  - steam:462960
+  requires: []
