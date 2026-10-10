@@ -137,6 +137,30 @@ def test_bundle_page_parses_price_per_item_byob_bundle() -> None:
 # end def test_bundle_page_parses_price_per_item_byob_bundle
 
 
+def test_bundle_page_parses_all_one_price_bundle() -> None:
+    props = _price_tier_bundle()
+    props["bundle"]["tiering_style"] = "all_one_price"
+    props["tiers"] = [{"id": 1325, "price": 799, "price_formatted": "€7,99"}]
+    props["items"] = [{"name": "Pimbolas", "slug": "pimbolas", "platform": "steam", "tiers": [1325]}]
+
+    draft, _source = parse_bundle_page(_inertia_page(props), "https://www.dekudeals.com/bundles/nuntius-games-bundle")
+
+    assert draft.tiering_style == "all_one_price"
+    assert [(tier.identifier, tier.price.raw if tier.price else None) for tier in draft.tiers] == [("1325", "€7,99")]
+    assert [(item.slug, item.tier_ids) for item in draft.items] == [("pimbolas", (1325,))]
+# end def test_bundle_page_parses_all_one_price_bundle
+
+
+def test_bundle_page_skips_a_named_item_without_a_slug() -> None:
+    props = _price_tier_bundle()
+    props["items"].append({"name": "RAT PACK random key", "platform": "steam", "tiers": [1367, 1368]})
+
+    draft, _source = parse_bundle_page(_inertia_page(props), "https://www.dekudeals.com/bundles/garbage-dwellers")
+
+    assert [item.slug for item in draft.items] == ["crawl", "the-bards-tale-trilogy"]
+# end def test_bundle_page_skips_a_named_item_without_a_slug
+
+
 def test_bundle_page_rejects_unrecognized_tiering_style() -> None:
     props = _price_tier_bundle()
     props["bundle"]["tiering_style"] = "something_new"
@@ -195,11 +219,6 @@ def test_item_page_returns_distinct_store_urls_in_order() -> None:
 # end def test_item_page_returns_distinct_store_urls_in_order
 
 
-def test_item_page_requires_at_least_one_store_link() -> None:
-    try:
-        parse_item_page("<html>no stores here</html>", "https://www.dekudeals.com/items/x")
-    except DekuParseError:
-        return
-    # end try
-    raise AssertionError("expected DekuParseError")
-# end def test_item_page_requires_at_least_one_store_link
+def test_item_page_without_store_links_returns_no_urls() -> None:
+    assert parse_item_page("<html>no stores here</html>", "https://www.dekudeals.com/items/x") == []
+# end def test_item_page_without_store_links_returns_no_urls

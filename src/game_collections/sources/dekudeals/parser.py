@@ -7,10 +7,10 @@ import json
 import re
 from dataclasses import dataclass
 from datetime import UTC, datetime
-from typing import Any, Literal
+from typing import Any, get_args
 from urllib.parse import urljoin
 
-from game_collections.sources.dekudeals.models import DekuPrice
+from game_collections.sources.dekudeals.models import DekuPrice, DekuTieringStyle
 
 
 DEKU_ROOT = "https://www.dekudeals.com/"
@@ -161,7 +161,7 @@ class DekuBundleDraft:
     url: str
     name: str
     store_name: str
-    tiering_style: Literal["price_per_tier", "price_per_item"]
+    tiering_style: DekuTieringStyle
     real_url: str | None
     end: datetime | None
     tiers: tuple[DekuTierDraft, ...]
@@ -198,7 +198,7 @@ def parse_bundle_page(html_text: str, url: str) -> tuple[DekuBundleDraft, dict[s
     # end if
 
     tiering_style = bundle.get("tiering_style")
-    if tiering_style not in ("price_per_tier", "price_per_item"):
+    if tiering_style not in get_args(DekuTieringStyle):
         raise DekuParseError(f"bundle page has an unrecognized tiering_style: {tiering_style!r} ({url})")
     # end if
     slug = bundle.get("slug")
@@ -236,8 +236,13 @@ def parse_bundle_page(html_text: str, url: str) -> tuple[DekuBundleDraft, dict[s
         # end if
         item_slug = item.get("slug")
         item_name = item.get("name")
-        if not isinstance(item_slug, str) or not item_slug or not isinstance(item_name, str) or not item_name:
+        if not isinstance(item_name, str) or not item_name:
             raise DekuParseError(f"bundle page has an item with no slug/name: {url}")
+        # end if
+        if not isinstance(item_slug, str) or not item_slug:
+            # A named item without a slug has no item page (confirmed live: a "RAT PACK random key" entry on
+            # `garbage-dwellers`), so it cannot be resolved to a storefront; it stays in the raw source only.
+            continue
         # end if
         tier_ids = item.get("tiers")
         item_drafts.append(
@@ -272,7 +277,11 @@ _ITEM_STORE_LINK_PATTERN = re.compile(r"data-out-analytics-id='([^']+)'\s+href='
 
 
 def parse_item_page(html_text: str, url: str) -> list[str]:
-    """Return every distinct storefront URL listed on a DekuDeals `/items/<slug>` page."""
+    """Return every distinct storefront URL listed on a DekuDeals `/items/<slug>` page.
+
+    Empty for items sold nowhere (e.g. a "goodies pack" of wallpapers); the caller still has the item's own
+    `dekudeals:<slug>` id.
+    """
     seen_ids: set[str] = set()
     urls: list[str] = []
     for analytics_id, href in _ITEM_STORE_LINK_PATTERN.findall(html_text):
@@ -282,8 +291,5 @@ def parse_item_page(html_text: str, url: str) -> list[str]:
         seen_ids.add(analytics_id)
         urls.append(urljoin(url, html.unescape(href)))
     # end for
-    if not urls:
-        raise DekuParseError(f"item page has no storefront links: {url}")
-    # end if
     return urls
 # end def parse_item_page
