@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Twisted Trilogies and Terrors: Dark Visual Novels'
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: Entire 9 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/twisted-trilogies-and-terrors-dark-visual-novels
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-09_twisted-trilogies-and-terrors-dark-visual-novels/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-09_twisted-trilogies-and-terrors-dark-visual-novels/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Class of ''09: The Flip Side'
+  ids:
+  - steam:2757330
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Class of ''09: The Re-up'
+  ids:
+  - steam:2318310
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Class of '09
+  ids:
+  - steam:1443200
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Letter - Horror Visual Novel
+  ids:
+  - steam:460430
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: ABYSS OF THE SACRIFICE
+  ids:
+  - steam:1442160
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Corpse Factory
+  ids:
+  - steam:1414250
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Spirit Hunter: Death Mark II'
+  ids:
+  - steam:2080800
+  requires: []
+  tiers:
+  - 3
+- name: 'Spirit Hunter: Death Mark'
+  ids:
+  - steam:980830
+  requires: []
+  tiers:
+  - 3
+- name: 'Spirit Hunter: NG'
+  ids:
+  - steam:1100430
+  requires: []
+  tiers:
+  - 3
