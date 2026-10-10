@@ -165,6 +165,16 @@ def test_blank_selection_persists_unresolved_fallback() -> None:
 # end def test_blank_selection_persists_unresolved_fallback
 
 
+def test_invalid_pasted_url_reprompts_instead_of_failing() -> None:
+    answers = iter(["https://steamcommunity.com/app/42", "https://store.steampowered.com/app/42/sample/"])
+    resolver = StorefrontResolver(lambda _url: "", lambda _item, _provider, _candidates, **_kwargs: next(answers))
+
+    ids = resolver.resolve_item(_item(), HumbleResolutionMap(schema=1, games={}))[0].ids
+
+    assert ids == ["steam:42"]
+# end def test_invalid_pasted_url_reprompts_instead_of_failing
+
+
 def test_unique_steampowered_match_skips_steamdb_fallback() -> None:
     steampowered_page = '<a href="https://store.steampowered.com/app/42/sample/">Sample Game</a>'
     steamdb_called = False

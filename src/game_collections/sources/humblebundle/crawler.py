@@ -367,6 +367,9 @@ def write_humble_offer(
             pool_games.extend(_games_for_item(item))
             seen_pool_ids.update(item_ids)
         # end for
+        if not pool_games:
+            return tuple(written)
+        # end if
         path = list_directory / f"{key}.yml"
         pick_quota: int | None = None
         if len(archive.choice_pick_options) == 1:
@@ -421,6 +424,11 @@ def write_humble_offer(
     # count); re-sort ascending so tier 1 is the smallest and the highest rank is
     # always the full bundle, matching isthereanydeal's convention.
     tiers_with_games.sort(key=lambda pair: pair[0].item_count)
+    if not tiers_with_games:
+        # Software/book-only offers (e.g. a Godot software bundle) have no games to list; a `GameList` requires at
+        # least one, so keep just the archives (they also make the next run resume from cache) and write no list.
+        return tuple(written)
+    # end if
     if archive.kind == "choice":
         # A Choice archive without pick options: single flat pool, no variations.
         path = list_directory / f"{key}.yml"

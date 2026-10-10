@@ -88,6 +88,17 @@ def _offer(kind: str = "bundle") -> CrawledHumbleOffer:
 # end def _offer
 
 
+def test_writer_skips_the_list_for_a_bundle_without_games(tmp_path: Path) -> None:
+    offer = _offer()
+    offer.archive.tiers[0].items = [offer.archive.tiers[0].items[1]]
+
+    paths = write_humble_offer(offer, tmp_path / "lists", tmp_path / "archives", tmp_path)
+
+    assert {path.name for path in paths} == {"metadata.json", "source.json"}
+    assert not (tmp_path / "lists").exists()
+# end def test_writer_skips_the_list_for_a_bundle_without_games
+
+
 def test_writer_creates_archive_and_games_only_bundle_list(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     archive_root = tmp_path / "archives"

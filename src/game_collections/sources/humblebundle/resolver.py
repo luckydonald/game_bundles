@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Annotated, Literal, Self, cast
 from urllib.parse import quote_plus, urljoin
 
+import typer
 import yaml
 from pydantic import Field, StringConstraints, model_validator
 
@@ -409,7 +410,13 @@ class StorefrontResolver:
                     # end if
                     return multiple_results
                 # end if
-                ids.append(parse_store_identity(typed_provider, selected))
+                try:
+                    ids.append(parse_store_identity(typed_provider, selected))
+                except ValueError as error:
+                    # A manually pasted value can be a non-store URL; ask again instead of losing the whole offer.
+                    typer.echo(f"  Invalid {typed_provider} value {selected!r}: {error}", err=True)
+                    continue
+                # end try
                 store_resolved = True
             # end while
         # end for
