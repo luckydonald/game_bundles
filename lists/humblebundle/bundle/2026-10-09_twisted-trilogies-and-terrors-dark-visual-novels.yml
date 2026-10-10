@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-09_twisted-trilogies-and-terrors-dark-visual-novels/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-09_twisted-trilogies-and-terrors-dark-visual-novels/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16649/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16649/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16649/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: 'Class of ''09: The Flip Side'
   ids:
   - steam:2757330
+  - isthereanydeal:class-of-09-the-flip-side
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: 'Class of ''09: The Re-up'
   ids:
   - steam:2318310
+  - isthereanydeal:class-of-09-the-re-up
   requires: []
   tiers:
   - 1
@@ -37,6 +46,7 @@ games:
 - name: Class of '09
   ids:
   - steam:1443200
+  - isthereanydeal:class-of-09
   requires: []
   tiers:
   - 1
@@ -45,6 +55,7 @@ games:
 - name: The Letter - Horror Visual Novel
   ids:
   - steam:460430
+  - isthereanydeal:the-letter-horror-visual-novel
   requires: []
   tiers:
   - 2
@@ -52,6 +63,7 @@ games:
 - name: ABYSS OF THE SACRIFICE
   ids:
   - steam:1442160
+  - isthereanydeal:abyss-of-the-sacrifice
   requires: []
   tiers:
   - 2
@@ -59,6 +71,7 @@ games:
 - name: Corpse Factory
   ids:
   - steam:1414250
+  - isthereanydeal:corpse-factory
   requires: []
   tiers:
   - 2
@@ -66,18 +79,21 @@ games:
 - name: 'Spirit Hunter: Death Mark II'
   ids:
   - steam:2080800
+  - isthereanydeal:spirit-hunter-death-mark-ii
   requires: []
   tiers:
   - 3
 - name: 'Spirit Hunter: Death Mark'
   ids:
   - steam:980830
+  - isthereanydeal:spirit-hunter-death-mark
   requires: []
   tiers:
   - 3
 - name: 'Spirit Hunter: NG'
   ids:
   - steam:1100430
+  - isthereanydeal:spirit-hunter-ng
   requires: []
   tiers:
   - 3

@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-08_triplei-initiative-showcase-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-08_triplei-initiative-showcase-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16640/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16640/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16640/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: 'Gestalt: Steam & Cinder'
   ids:
   - steam:1231990
+  - isthereanydeal:gestalt-steam-and-cinder
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: WHAT THE CAR?
   ids:
   - steam:2727650
+  - isthereanydeal:what-the-car
   requires: []
   tiers:
   - 1
@@ -37,6 +46,7 @@ games:
 - name: Cat Quest III
   ids:
   - steam:2305840
+  - isthereanydeal:cat-quest-iii
   requires: []
   tiers:
   - 2
@@ -44,6 +54,7 @@ games:
 - name: 33 Immortals
   ids:
   - steam:958520
+  - isthereanydeal:33-immortals
   requires: []
   tiers:
   - 2
@@ -51,6 +62,7 @@ games:
 - name: Endzone 2
   ids:
   - steam:2144640
+  - isthereanydeal:endzone-2
   requires: []
   tiers:
   - 2
@@ -58,18 +70,21 @@ games:
 - name: 'X4: Foundations'
   ids:
   - steam:392160
+  - isthereanydeal:x4-foundations
   requires: []
   tiers:
   - 3
 - name: The Last Spell - Complete Edition
   ids:
   - steam:sub/1520362
+  - isthereanydeal:the-last-spell
   requires: []
   tiers:
   - 3
 - name: My Time at Sandrock
   ids:
   - steam:1084600
+  - isthereanydeal:my-time-at-sandrock
   requires: []
   tiers:
   - 3

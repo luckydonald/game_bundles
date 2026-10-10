@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-02_akupara-10th-anniversary-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-02_akupara-10th-anniversary-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16630/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16630/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16630/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: 'Behind the Frame: The Finest Scenery'
   ids:
   - steam:1634150
+  - isthereanydeal:behind-the-frame-the-finest-scenery
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: Mutazione
   ids:
   - steam:1080750
+  - isthereanydeal:mutazione
   requires: []
   tiers:
   - 1
@@ -37,6 +46,7 @@ games:
 - name: REPOSE
   ids:
   - steam:3002510
+  - isthereanydeal:repose
   requires: []
   tiers:
   - 1
@@ -45,6 +55,7 @@ games:
 - name: The Darkside Detective
   ids:
   - steam:368390
+  - isthereanydeal:the-darkside-detective
   requires: []
   tiers:
   - 1
@@ -53,6 +64,7 @@ games:
 - name: Whispering Willows
   ids:
   - steam:288060
+  - isthereanydeal:whispering-willows
   requires: []
   tiers:
   - 1
@@ -61,6 +73,7 @@ games:
 - name: Rain World
   ids:
   - steam:312520
+  - isthereanydeal:rain-world
   requires: []
   tiers:
   - 2
@@ -68,6 +81,7 @@ games:
 - name: 'Rain World: Downpour'
   ids:
   - steam:1933390
+  - isthereanydeal:rain-world-downpour
   requires: []
   tiers:
   - 2
@@ -75,6 +89,7 @@ games:
 - name: Gigasword
   ids:
   - steam:1885930
+  - isthereanydeal:gigasword
   requires: []
   tiers:
   - 2
@@ -82,6 +97,7 @@ games:
 - name: Grime
   ids:
   - steam:1123050
+  - isthereanydeal:grime
   requires: []
   tiers:
   - 2
@@ -89,18 +105,21 @@ games:
 - name: Cryptmaster
   ids:
   - steam:1885110
+  - isthereanydeal:cryptmaster
   requires: []
   tiers:
   - 3
 - name: 'Astrea: Six-Sided Oracles'
   ids:
   - steam:1755830
+  - isthereanydeal:astrea-six-sided-oracles
   requires: []
   tiers:
   - 3
 - name: 'Dead Pets: A Punk Rock Slice of Life Sim'
   ids:
   - steam:1851720
+  - isthereanydeal:dead-pets-a-punk-rock-slice-of-life-sim
   requires: []
   tiers:
   - 3
