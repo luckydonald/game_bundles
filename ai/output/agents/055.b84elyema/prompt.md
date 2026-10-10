@@ -1,0 +1,2 @@
+Background command " python3 ai/git/make-todo.py && printf '#!/bin/sh\ncp ai/git/todo.txt "$1"\n' > ai/git/rebase-todo.sh && chmod +x ai/git/rebase-todo.sh && test "$(git rev-parse HEAD)" = db0ce415e3b41ead534c12e73cfce2d33fae54f5 &&
+  GIT_SEQUENCE_EDITOR=ai/git/rebase-todo.sh git rebase -i base/base" completed (exit code 0)

@@ -51,6 +51,7 @@ Backs `game-collections scrape dailyindiegame`. This source differs from Humble 
 
 Pipeline pieces:
 
+- Bundles still linked from the index after they expired only show "This bundle has ended." (confirmed live, e.g. `site_weeklybundle_2420.html`); `parse_bundle_page` raises `DigBundleEndedError` for them and `crawl_dig_offers` logs a skip instead of recording an error.
 - `models.py` — `DigArchive`/`DigItem`/`DigPrice`/`DigDates`: flatter than Humble's shape since there's one flat price tier per bundle (not cumulative tiers) and no resolver-produced fields.
 - `parser.py` — `parse_bundle_index_page` (weekly-bundle numbers from the `site_content_bundles.html` gallery), `parse_bundle_page` (title span, price-summary sentence, countdown, per-game Steam links via a small `<td>`-tracking `HTMLParser`), `parse_game_listing_page` (each game's own `site_gamelisting_<id>.html` for price/region/description/cover art).
 - `crawler.py` — `DigBrowserClient` (see above), `crawl_dig_offers(fetch, ...)` takes an **injectable `fetch` callable** exactly like Humble's crawler (plus `log`/`on_offer`/`archive_root`, see above), so every test exercises real parsing/orchestration logic with a fake `fetch` and never launches a browser; only the CLI wires in the real `DigBrowserClient.fetch`. `write_dig_offer(...)` writes `archives/dailyindiegame/bundle/<N>/{metadata.json,source.json}` and `lists/dailyindiegame/bundle/<N>.yml`.
