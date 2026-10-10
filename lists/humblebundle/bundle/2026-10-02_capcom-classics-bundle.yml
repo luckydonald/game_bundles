@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-02_capcom-classics-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-02_capcom-classics-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16629/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16629/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16629/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Resident Evil 3 Nemesis (1999)
   ids:
   - steam:4249120
+  - isthereanydeal:resident-evil-3-nemesis-1999
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Resident Evil 2 (1998)
   ids:
   - steam:4249110
+  - isthereanydeal:resident-evil-2-1999
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Resident Evil (1996)
   ids:
   - steam:4249100
+  - isthereanydeal:resident-evil-1997
   requires: []
   tiers:
   - 1
@@ -40,18 +50,21 @@ games:
 - name: Breath of Fire IV
   ids:
   - steam:4249150
+  - isthereanydeal:breath-of-fire-iv
   requires: []
   tiers:
   - 2
 - name: Dino Crisis 2
   ids:
   - steam:4249140
+  - isthereanydeal:dino-crisis-2
   requires: []
   tiers:
   - 2
 - name: Dino Crisis
   ids:
   - steam:4249130
+  - isthereanydeal:dino-crisis
   requires: []
   tiers:
   - 2
