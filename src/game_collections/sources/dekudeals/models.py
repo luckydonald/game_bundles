@@ -18,6 +18,10 @@ DekuVersions = Literal[LEGACY_VERSION, DEKU_V1, DEKU_V2]
 DekuCurrentVersion = Literal[DEKU_V2]
 CURRENT_VERSION: DekuCurrentVersion = DEKU_V2
 
+# `all_one_price` (confirmed live, e.g. `nuntius-games-bundle`) is one flat price for the whole set: a single tier
+# listing every item, shaped exactly like a one-tier `price_per_tier` bundle.
+DekuTieringStyle = Literal["price_per_tier", "price_per_item", "all_one_price"]
+
 
 class DekuPrice(StrictModel):
     """A localized tier/pick price as shown on a DekuDeals bundle page."""
@@ -50,13 +54,14 @@ class DekuItem(StrictModel):
 class DekuTier(StrictModel):
     """One purchase tier/pick-option on a DekuDeals bundle.
 
-    Covers both real `tiering_style` values seen live: `price_per_tier`
+    Covers every real `tiering_style` value seen live: `price_per_tier`
     (cumulative price breakpoints, e.g. "Crawling Through the Dungeons" -
     each tier's own `price` is fixed and `items` is that tier's full,
     cumulative unlock list) and `price_per_item` (a Build Your Own bundle -
     each tier instead fixes an `item_minimum` pick count over one shared
     pool, with `price` being the per-item price at that count; see
-    `DekuArchive.tiering_style`).
+    `DekuArchive.tiering_style`), plus `all_one_price` (one flat price: a single
+    tier holding every item, handled like a one-tier `price_per_tier`).
     """
 
     identifier: NonEmptyString
@@ -104,7 +109,7 @@ class DekuArchive(StrictModel):
     name: NonEmptyString
     store_name: NonEmptyString
     provider_slug: NonEmptyString
-    tiering_style: Literal["price_per_tier", "price_per_item"]
+    tiering_style: DekuTieringStyle
     real_url: HttpUrl | None = None
     dates: DekuDates
     tiers: list[DekuTier] = Field(min_length=1)

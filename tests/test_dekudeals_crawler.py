@@ -103,6 +103,29 @@ def test_crawl_reuses_resolution_map_without_refetching_item_page() -> None:
 # end def test_crawl_reuses_resolution_map_without_refetching_item_page
 
 
+def test_crawl_handles_all_one_price_bundle_and_item_without_store_links() -> None:
+    props = _bundle_props()
+    props["bundle"]["tiering_style"] = "all_one_price"
+    pages = {
+        BUNDLE_URL: _inertia_page(props),
+        "https://www.dekudeals.com/items/crawl?platform=all": _item_page(3157),
+        "https://www.dekudeals.com/items/dungeon-drafters?platform=all": "<html>goodies pack</html>",
+    }
+    mapping = DekuResolutionMap(schema=1, games={})
+    provider_config = DekuProviderConfig(schema=1, providers={"Humble": "humblebundle"})
+
+    report = crawl_deku_offers(lambda url: pages[url], provider_config, mapping, urls=[BUNDLE_URL], crawled=CRAWLED)
+
+    assert report.errors == ()
+    archive = report.offers[0].archive
+    assert archive.tiering_style == "all_one_price"
+    assert [item.ids for item in archive.tiers[0].items] == [
+        ["steam:3157", "dekudeals:crawl"],
+        ["dekudeals:dungeon-drafters"],
+    ]
+# end def test_crawl_handles_all_one_price_bundle_and_item_without_store_links
+
+
 def test_write_deku_offer_creates_list_and_archive(tmp_path: Path) -> None:
     lists_root = tmp_path / "lists"
     archive_root = tmp_path / "archives"

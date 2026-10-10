@@ -113,7 +113,7 @@
     },
     "DekuTier": {
       "additionalProperties": false,
-      "description": "One purchase tier/pick-option on a DekuDeals bundle.\n\nCovers both real `tiering_style` values seen live: `price_per_tier`\n(cumulative price breakpoints, e.g. \"Crawling Through the Dungeons\" -\neach tier's own `price` is fixed and `items` is that tier's full,\ncumulative unlock list) and `price_per_item` (a Build Your Own bundle -\neach tier instead fixes an `item_minimum` pick count over one shared\npool, with `price` being the per-item price at that count; see\n`DekuArchive.tiering_style`).",
+      "description": "One purchase tier/pick-option on a DekuDeals bundle.\n\nCovers every real `tiering_style` value seen live: `price_per_tier`\n(cumulative price breakpoints, e.g. \"Crawling Through the Dungeons\" -\neach tier's own `price` is fixed and `items` is that tier's full,\ncumulative unlock list) and `price_per_item` (a Build Your Own bundle -\neach tier instead fixes an `item_minimum` pick count over one shared\npool, with `price` being the per-item price at that count; see\n`DekuArchive.tiering_style`), plus `all_one_price` (one flat price: a single\ntier holding every item, handled like a one-tier `price_per_tier`).",
       "properties": {
         "identifier": {
           "minLength": 1,
@@ -248,7 +248,8 @@
     "tiering_style": {
       "enum": [
         "price_per_tier",
-        "price_per_item"
+        "price_per_item",
+        "all_one_price"
       ],
       "title": "Tiering Style",
       "type": "string"
