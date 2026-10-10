@@ -3525,3 +3525,11 @@ Yes, reword to `offer(s)` then, yes.
 
 ❯ Plan accepted, auto mode.
 
+❯ Yes,
+- Regarding `site_weeklybundle_2420.html`, it just says `This bundle has ended.` as expected.
+- The other ones seem to be fixed indeed.
+Now,
+- rebase everything unpushed to 
+  - clean up the remaining `ai: …` commits,
+  - have crawler code changes actually commit as `crawler` as opposed to `crawl` which is reserved for data writing.
+

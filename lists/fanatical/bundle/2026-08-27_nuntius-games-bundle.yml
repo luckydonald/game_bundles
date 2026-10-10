@@ -8,51 +8,67 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16520/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16520/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/nuntius-games-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/nuntius-games-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/nuntius-games-bundle/source.json
 crawlers:
 - isthereanydeal
+- dekudeals
 games:
 - name: Damned 2
   ids:
   - steam:2221390
   - isthereanydeal:damned-2
+  - dekudeals:damned-2
   requires: []
 - name: CODE Bunny
   ids:
   - steam:3303780
   - isthereanydeal:code-bunny
+  - dekudeals:code-bunny
   requires: []
 - name: 'Bloodrush: Undying Wish'
   ids:
   - steam:2471390
   - isthereanydeal:bloodrush-undying-wish
+  - dekudeals:bloodrush-undying-wish
   requires: []
 - name: 'Alien Strike: Blasting the Intruders'
   ids:
   - steam:2876150
   - isthereanydeal:alien-strike-blasting-the-intruders
+  - dekudeals:alien-strike-blasting-the-intruders
   requires: []
 - name: Ghetto Zombies - Graffiti Squad
   ids:
   - steam:3047820
   - isthereanydeal:ghetto-zombies-graffiti-squad
+  - dekudeals:ghetto-zombies
   requires: []
 - name: Arashi Gaiden
   ids:
   - steam:3040170
   - isthereanydeal:arashi-gaiden
+  - dekudeals:arashi-gaiden
   requires: []
 - name: Islets Defense
   ids:
   - steam:3235170
   - isthereanydeal:islets-defense
+  - dekudeals:islets-defense
   requires: []
 - name: Pimbolas
   ids:
   - steam:3621200
   - isthereanydeal:pimbolas
+  - dekudeals:pimbolas
   requires: []
 - name: DOCTOR VISCERA
   ids:
   - steam:3708660
   - isthereanydeal:doctor-viscera
+  - dekudeals:doctor-viscera
   requires: []

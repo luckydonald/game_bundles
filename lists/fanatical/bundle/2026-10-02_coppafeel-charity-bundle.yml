@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: CoppaFeel! Charity Bundle
+tiers:
+- rank: 1
+  name: €5,99
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/coppafeel-charity-bundle
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fbundle%2Fcoppafeel-charity-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/coppafeel-charity-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/coppafeel-charity-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Haste
+  ids:
+  - steam:1796470
+  - dekudeals:haste-broken-worlds
+  requires: []
+  tiers:
+  - 1
+- name: PlateUp!
+  ids:
+  - steam:1599600
+  - dekudeals:plateup
+  requires: []
+  tiers:
+  - 1
+- name: Overcooked
+  ids:
+  - steam:448510
+  - dekudeals:overcooked
+  requires: []
+  tiers:
+  - 1
+- name: KeyWe
+  ids:
+  - steam:1242980
+  - dekudeals:keywe
+  requires: []
+  tiers:
+  - 1
+- name: Pine Hearts
+  ids:
+  - steam:1781010
+  - dekudeals:pine-hearts
+  requires: []
+  tiers:
+  - 1
+- name: Critter Café
+  ids:
+  - steam:2367610
+  - dekudeals:critter-cafe
+  requires: []
+  tiers:
+  - 1
+- name: Tiny Garden
+  ids:
+  - steam:2812450
+  - dekudeals:tiny-garden
+  requires: []
+  tiers:
+  - 1
+- name: Dino Run DX
+  ids:
+  - steam:248330
+  - dekudeals:dino-run-dx
+  requires: []
+  tiers:
+  - 1
+- name: Brunch Club
+  ids:
+  - steam:1045120
+  - dekudeals:brunch-club
+  requires: []
+  tiers:
+  - 1
+- name: Completely Stretchy
+  ids:
+  - steam:1587570
+  - dekudeals:completely-stretchy
+  requires: []
+  tiers:
+  - 1

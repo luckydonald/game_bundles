@@ -23,9 +23,16 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-18_garbage-dwellers/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-18_garbage-dwellers/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/garbage-dwellers
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/garbage-dwellers/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/garbage-dwellers/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: RAT PACK
   ids:
@@ -40,6 +47,7 @@ games:
   ids:
   - steam:3290710
   - isthereanydeal:ratshaker
+  - dekudeals:ratshaker
   requires: []
   tiers:
   - 2
@@ -49,6 +57,7 @@ games:
   ids:
   - steam:3385370
   - isthereanydeal:maze-mice
+  - dekudeals:maze-mice
   requires: []
   tiers:
   - 2
@@ -58,6 +67,7 @@ games:
   ids:
   - steam:552500
   - isthereanydeal:warhammer-vermintide-2
+  - dekudeals:warhammer-vermintide-2
   requires: []
   tiers:
   - 2
@@ -67,6 +77,7 @@ games:
   ids:
   - steam:737040
   - isthereanydeal:warhammer-vermintide-2-collectors-edition-upgrade
+  - dekudeals:warhammer-vermintide-2-collectors-edition-upgrade
   requires: []
   tiers:
   - 2
@@ -76,6 +87,7 @@ games:
   ids:
   - steam:235540
   - isthereanydeal:warhammer-end-times-vermintide
+  - dekudeals:warhammer-end-times-vermintide
   requires: []
   tiers:
   - 2
@@ -85,6 +97,7 @@ games:
   ids:
   - steam:373540
   - isthereanydeal:warhammer-end-times-vermintide-collectors-edition-dlc-upgrade
+  - dekudeals:warhammer-end-times-vermintide-collectors-edition-upgrade
   requires: []
   tiers:
   - 2
@@ -94,6 +107,7 @@ games:
   ids:
   - steam:752590
   - isthereanydeal:a-plague-tale-innocence
+  - dekudeals:a-plague-tale-innocence
   requires: []
   tiers:
   - 3
@@ -102,6 +116,7 @@ games:
   ids:
   - steam:1679210
   - isthereanydeal:the-spirit-and-the-mouse
+  - dekudeals:the-spirit-and-the-mouse-switch
   requires: []
   tiers:
   - 3
@@ -110,6 +125,7 @@ games:
   ids:
   - steam:865610
   - isthereanydeal:tails-noir
+  - dekudeals:backbone
   requires: []
   tiers:
   - 3
@@ -118,6 +134,7 @@ games:
   ids:
   - steam:2020030
   - isthereanydeal:tails-noir-preludes
+  - dekudeals:tails-noir-preludes
   requires: []
   tiers:
   - 3
@@ -126,6 +143,7 @@ games:
   ids:
   - steam:1793330
   - isthereanydeal:brew
+  - dekudeals:brew
   requires: []
   tiers:
   - 4
@@ -133,6 +151,7 @@ games:
   ids:
   - steam:2407830
   - isthereanydeal:trash-goblin
+  - dekudeals:trash-goblin
   requires: []
   tiers:
   - 4
@@ -140,6 +159,7 @@ games:
   ids:
   - steam:3167260
   - isthereanydeal:war-rats-the-rat-em-up
+  - dekudeals:war-rats-the-rat-em-up
   requires: []
   tiers:
   - 4
