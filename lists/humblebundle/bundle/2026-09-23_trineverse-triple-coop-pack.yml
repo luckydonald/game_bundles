@@ -21,14 +21,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-23_trineverse-triple-coop-pack/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-23_trineverse-triple-coop-pack/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/trineverse-triple-co-op-pack
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/trineverse-triple-co-op-pack/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/trineverse-triple-co-op-pack/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: 'Trine 4: The Nightmare Prince'
   ids:
   - steam:690640
   - isthereanydeal:trine-4-the-nightmare-prince
+  - dekudeals:trine-4-the-nightmare-prince
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:471550
   - isthereanydeal:nine-parchments
+  - dekudeals:nine-parchments
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:319910
   - isthereanydeal:trine-3-the-artifacts-of-power
+  - dekudeals:trine-3-the-artifacts-of-power
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:35720
   - isthereanydeal:trine-2-complete-story
+  - dekudeals:trine-2-complete-story
   requires: []
   tiers:
   - 1
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:35700
   - isthereanydeal:trine-enchanted-edition
+  - dekudeals:trine-enchanted-edition
   requires: []
   tiers:
   - 1

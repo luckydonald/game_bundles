@@ -21,14 +21,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-07_beyond-reality-scifi-survival-vr-collection/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-07_beyond-reality-scifi-survival-vr-collection/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/beyond-reality-sci-fi-and-survival-vr-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/beyond-reality-sci-fi-and-survival-vr-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/beyond-reality-sci-fi-and-survival-vr-collection/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: Blair Witch VR
   ids:
   - steam:1576350
   - isthereanydeal:blair-witch-vr
+  - dekudeals:blair-witch-vr-standard-vr-edition
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:2142450
   - isthereanydeal:zona-project-x-vr
+  - dekudeals:z-o-n-a-project-x-vr
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:2539520
   - isthereanydeal:zona-origin
+  - dekudeals:z-o-n-a-origin
   requires: []
   tiers:
   - 2
@@ -55,6 +65,7 @@ games:
   ids:
   - steam:1183030
   - isthereanydeal:layers-of-fear-vr
+  - dekudeals:layers-of-fear-vr
   requires: []
   tiers:
   - 2
@@ -63,6 +74,7 @@ games:
   ids:
   - steam:1476100
   - isthereanydeal:a-rogue-escape
+  - dekudeals:a-rogue-escape
   requires: []
   tiers:
   - 2
@@ -71,6 +83,7 @@ games:
   ids:
   - steam:3954580
   - isthereanydeal:star-trek-infection
+  - dekudeals:star-trek-infection
   requires: []
   tiers:
   - 3
@@ -78,6 +91,7 @@ games:
   ids:
   - steam:2949240
   - isthereanydeal:homeworld-vast-reaches
+  - dekudeals:homeworld-vast-reaches
   requires: []
   tiers:
   - 3

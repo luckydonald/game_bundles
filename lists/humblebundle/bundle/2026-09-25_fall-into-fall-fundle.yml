@@ -19,14 +19,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-25_fall-into-fall-fundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-25_fall-into-fall-fundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/fall-into-fall-fun-dle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/fall-into-fall-fun-dle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/fall-into-fall-fun-dle/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: Sugar Shack
   ids:
   - steam:1813130
   - isthereanydeal:sugar-shack
+  - dekudeals:sugar-shack
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:1766720
   - isthereanydeal:outlanders
+  - dekudeals:outlanders
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:559650
   - isthereanydeal:witch-it
+  - dekudeals:witch-it
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:1208600
   - isthereanydeal:bunny-park
+  - dekudeals:bunny-park
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:1040630
   - isthereanydeal:alchemy-story
+  - dekudeals:alchemy-story
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:1080010
   - isthereanydeal:witchtastic
+  - dekudeals:witchtastic
   requires: []
   tiers:
   - 2
@@ -74,6 +87,7 @@ games:
   ids:
   - steam:1819460
   - isthereanydeal:mika-and-the-witchs-mountain
+  - dekudeals:mika-and-the-witchs-mountain
   requires: []
   tiers:
   - 2
@@ -81,6 +95,7 @@ games:
   ids:
   - steam:3043310
   - isthereanydeal:alchemist-shop-simulator
+  - dekudeals:alchemist-shop-simulator
   requires: []
   tiers:
   - 2

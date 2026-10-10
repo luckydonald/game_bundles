@@ -21,14 +21,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-25_gear-glory-action-rpgs/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-25_gear-glory-action-rpgs/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/gear-and-glory-action-rpgs
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/gear-and-glory-action-rpgs/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/gear-and-glory-action-rpgs/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: 'Clash: Artifacts of Chaos'
   ids:
   - steam:1430680
   - isthereanydeal:clash-artifacts-of-chaos
+  - dekudeals:clash-artifacts-of-chaos
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:1314000
   - isthereanydeal:achilles-legends-untold
+  - dekudeals:achilles-legends-untold
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:1717090
   - isthereanydeal:into-the-necrovale
+  - dekudeals:into-the-necrovale
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:2665680
   - isthereanydeal:tower-of-babel-survivors-of-chaos
+  - dekudeals:tower-of-babel-survivors-of-chaos
   requires: []
   tiers:
   - 2
@@ -64,6 +75,7 @@ games:
   ids:
   - steam:1119840
   - isthereanydeal:sands-of-aura
+  - dekudeals:sands-of-aura
   requires: []
   tiers:
   - 2
@@ -72,6 +84,7 @@ games:
   ids:
   - steam:1171690
   - isthereanydeal:wayfinder
+  - dekudeals:wayfinder
   requires: []
   tiers:
   - 3
@@ -79,6 +92,7 @@ games:
   ids:
   - steam:1656930
   - isthereanydeal:coridden
+  - dekudeals:coridden
   requires: []
   tiers:
   - 3
@@ -86,6 +100,7 @@ games:
   ids:
   - steam:2351860
   - isthereanydeal:tower-of-kalemonvo
+  - dekudeals:tower-of-kalemonvo
   requires: []
   tiers:
   - 3
@@ -93,6 +108,7 @@ games:
   ids:
   - steam:1783280
   - isthereanydeal:ghostlore
+  - dekudeals:ghostlore
   requires: []
   tiers:
   - 3

@@ -21,14 +21,22 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-09-30_2d-rewind-collection-from-s2-games/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-09-30_2d-rewind-collection-from-s2-games/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/2d-rewind-collection-from-s2-games
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/2d-rewind-collection-from-s2-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/2d-rewind-collection-from-s2-games/source.json
 crawlers:
 - isthereanydeal
 - humblebundle
+- dekudeals
 games:
 - name: Samorost 3
   ids:
   - steam:421120
   - isthereanydeal:samorost-3
+  - dekudeals:samorost-3
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:711660
   - isthereanydeal:chuchel
+  - dekudeals:chuchel
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:248310
   - isthereanydeal:freedom-planet
+  - dekudeals:freedom-planet
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:733790
   - isthereanydeal:not-tonight
+  - dekudeals:not-tonight
   requires: []
   tiers:
   - 1
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:1404850
   - isthereanydeal:luck-be-a-landlord
+  - dekudeals:luck-be-a-landlord
   requires: []
   tiers:
   - 2
@@ -73,6 +85,7 @@ games:
   ids:
   - steam:3027930
   - isthereanydeal:karate-survivor
+  - dekudeals:karate-survivor
   requires: []
   tiers:
   - 2
@@ -81,6 +94,7 @@ games:
   ids:
   - steam:1221250
   - isthereanydeal:norco
+  - dekudeals:norco
   requires: []
   tiers:
   - 2
@@ -89,6 +103,7 @@ games:
   ids:
   - steam:1920480
   - isthereanydeal:river-city-girls-2
+  - dekudeals:river-city-girls-2
   requires: []
   tiers:
   - 3
@@ -96,6 +111,7 @@ games:
   ids:
   - steam:1049320
   - isthereanydeal:river-city-girls
+  - dekudeals:river-city-girls
   requires: []
   tiers:
   - 3
@@ -103,6 +119,7 @@ games:
   ids:
   - steam:858210
   - isthereanydeal:nova-drift
+  - dekudeals:nova-drift
   requires: []
   tiers:
   - 3
@@ -110,6 +127,7 @@ games:
   ids:
   - steam:595500
   - isthereanydeal:freedom-planet-2
+  - dekudeals:freedom-planet-2
   requires: []
   tiers:
   - 3
@@ -117,6 +135,7 @@ games:
   ids:
   - steam:3470370
   - isthereanydeal:rainbow-legends
+  - dekudeals:pixelhero-rainbow-legend
   requires: []
   tiers:
   - 3
@@ -124,6 +143,7 @@ games:
   ids:
   - steam:2282890
   - isthereanydeal:folklands
+  - dekudeals:folklands
   requires: []
   tiers:
   - 3

@@ -19,14 +19,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16629/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16629/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/capcom-classics-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/capcom-classics-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/capcom-classics-bundle/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Resident Evil 3 Nemesis (1999)
   ids:
   - steam:4249120
   - isthereanydeal:resident-evil-3-nemesis-1999
+  - dekudeals:resident-evil-3-nemesis-1999
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:4249110
   - isthereanydeal:resident-evil-2-1999
+  - dekudeals:resident-evil-2-1998
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:4249100
   - isthereanydeal:resident-evil-1997
+  - dekudeals:resident-evil-1996
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:4249150
   - isthereanydeal:breath-of-fire-iv
+  - dekudeals:breath-of-fire-iv
   requires: []
   tiers:
   - 2
@@ -58,6 +69,7 @@ games:
   ids:
   - steam:4249140
   - isthereanydeal:dino-crisis-2
+  - dekudeals:dino-crisis-2
   requires: []
   tiers:
   - 2
@@ -65,6 +77,7 @@ games:
   ids:
   - steam:4249130
   - isthereanydeal:dino-crisis
+  - dekudeals:dino-crisis
   requires: []
   tiers:
   - 2

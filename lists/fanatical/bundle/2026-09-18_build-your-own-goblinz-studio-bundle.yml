@@ -1,0 +1,133 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Goblinz Studio Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 4
+  pick_quota: 4
+- rank: 3
+  name: pick 8
+  pick_quota: 8
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-goblinz-studio-bundle
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-goblinz-studio-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-goblinz-studio-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-goblinz-studio-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Sol Cesto
+  ids:
+  - steam:2738490
+  - dekudeals:sol-cesto
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hold The Mine
+  ids:
+  - steam:3164960
+  - dekudeals:hold-the-mine
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Knightica
+  ids:
+  - steam:3093400
+  - dekudeals:knightica
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Runeborn
+  ids:
+  - steam:3073990
+  - dekudeals:runeborn
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Microtopia
+  ids:
+  - steam:2750000
+  - dekudeals:microtopia
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Synergy
+  ids:
+  - steam:1989070
+  - dekudeals:synergy
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Smash it Wild
+  ids:
+  - steam:2432240
+  - dekudeals:smash-it-wild
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Luxman Moonlit Market
+  ids:
+  - steam:3642440
+  - dekudeals:luxman-moonlit-market
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Repel The Rifts
+  ids:
+  - steam:3686580
+  - dekudeals:repel-the-rifts
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Day of the Shell
+  ids:
+  - steam:3008340
+  - dekudeals:day-of-the-shell
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dungeon Tycoon
+  ids:
+  - steam:2400770
+  - dekudeals:dungeon-tycoon
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sandwalkers
+  ids:
+  - steam:1639080
+  - dekudeals:sandwalkers
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

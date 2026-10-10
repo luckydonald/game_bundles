@@ -21,13 +21,21 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16630/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16630/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/ign-30th-anniversary-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/ign-30th-anniversary-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/ign-30th-anniversary-bundle/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Thronebreaker: The Witcher Tales'
   ids:
   - steam:973760
+  - dekudeals:thronebreaker-the-witcher-tales
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
 - name: Sonic Adventure 2
   ids:
   - steam:213610
+  - dekudeals:sonic-adventure-2
   requires: []
   tiers:
   - 1
@@ -44,6 +53,7 @@ games:
 - name: Ravenswatch
   ids:
   - steam:2071280
+  - dekudeals:ravenswatch-standard-edition
   requires: []
   tiers:
   - 2
@@ -51,6 +61,7 @@ games:
 - name: Subnautica
   ids:
   - steam:264710
+  - dekudeals:subnautica
   requires: []
   tiers:
   - 2
@@ -58,18 +69,21 @@ games:
 - name: The Elder Scrolls Online - Elsweyr
   ids:
   - steam:925100
+  - dekudeals:the-elder-scrolls-online-elsweyr
   requires: []
   tiers:
   - 3
 - name: REMNANT II
   ids:
   - steam:1282100
+  - dekudeals:remnant-2
   requires: []
   tiers:
   - 3
 - name: BlazBlue Entropy Effect
   ids:
   - steam:2273430
+  - dekudeals:blazblue-entropy-effect
   requires: []
   tiers:
   - 3

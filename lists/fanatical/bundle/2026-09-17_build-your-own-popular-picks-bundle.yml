@@ -18,13 +18,21 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16586/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16586/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-popular-picks-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-popular-picks-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-popular-picks-bundle/source.json
 crawlers:
 - isthereanydeal
+- dekudeals
 games:
 - name: Tower Defense Strategy Double-Pack
   ids:
   - unresolved:source:isthereanydeal:16586:tower-defense-strategy-double-pack
   - isthereanydeal:tower-defense-strategy-double-pack
+  - dekudeals:tower-defense-strategy-double-pack
   requires: []
   tiers:
   - 1
@@ -34,6 +42,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:master-the-skies-double-pack
   - isthereanydeal:master-the-skies-double-pack
+  - dekudeals:master-the-skies-double-pack
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:dark-metroidvania-double-pack
   - isthereanydeal:dark-metroidvania-double-pack
+  - dekudeals:dark-metroidvania-double-pack
   requires: []
   tiers:
   - 1
@@ -52,6 +62,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:medieval-rts-and-tactics-double-pack
   - isthereanydeal:medieval-rts-and-tactics-double-pack
+  - dekudeals:medieval-rts-and-tactics-double-pack
   requires: []
   tiers:
   - 1
@@ -61,6 +72,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:cozy-and-chill-double-pack
   - isthereanydeal:cozy-and-chill-double-pack
+  - dekudeals:cozy-and-chill-double-pack
   requires: []
   tiers:
   - 1
@@ -70,6 +82,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:quirky-narrative-double-pack
   - isthereanydeal:quirky-narrative-double-pack
+  - dekudeals:quirky-narrative-double-pack
   requires: []
   tiers:
   - 1
@@ -79,6 +92,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:tactical-rpg-and-deckbuilder-double-pack
   - isthereanydeal:tactical-rpg-and-deckbuilder-double-pack
+  - dekudeals:tactical-rpg-and-deckbuilder-double-pack
   requires: []
   tiers:
   - 1
@@ -88,6 +102,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:action-roguelike-fantasy-double-pack
   - isthereanydeal:action-roguelike-fantasy-double-pack
+  - dekudeals:action-roguelike-fantasy-double-pack
   requires: []
   tiers:
   - 1
@@ -97,6 +112,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16586:charming-story-rich-double-pack
   - isthereanydeal:charming-story-rich-double-pack
+  - dekudeals:charming-story-rich-double-pack
   requires: []
   tiers:
   - 1

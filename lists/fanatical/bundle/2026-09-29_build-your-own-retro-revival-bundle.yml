@@ -18,13 +18,21 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16613/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16613/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-retro-revival-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-retro-revival-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-retro-revival-bundle/source.json
 crawlers:
 - isthereanydeal
+- dekudeals
 games:
 - name: Wild Guns Reloaded
   ids:
   - steam:585910
   - isthereanydeal:wild-guns-reloaded
+  - dekudeals:wild-guns-reloaded
   requires: []
   tiers:
   - 1
@@ -34,6 +42,7 @@ games:
   ids:
   - steam:1068360
   - isthereanydeal:fearmonium
+  - dekudeals:fearmonium
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:336300
   - isthereanydeal:hearthlands
+  - dekudeals:hearthlands
   requires: []
   tiers:
   - 1
@@ -52,6 +62,8 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16613:steam-rails-to-riches-golden-train-edition
   - isthereanydeal:steam-rails-to-riches-golden-train-edition
+  - steam:bundle/2958
+  - dekudeals:steam-rails-to-riches-golden-train-edition
   requires: []
   tiers:
   - 1
@@ -61,6 +73,7 @@ games:
   ids:
   - steam:1249480
   - isthereanydeal:ex-zodiac
+  - dekudeals:ex-zodiac
   requires: []
   tiers:
   - 1
@@ -70,6 +83,7 @@ games:
   ids:
   - steam:1426010
   - isthereanydeal:stasis-bone-totem
+  - dekudeals:stasis-bone-totem
   requires: []
   tiers:
   - 1
@@ -79,6 +93,7 @@ games:
   ids:
   - steam:1592490
   - isthereanydeal:bloodless
+  - dekudeals:bloodless
   requires: []
   tiers:
   - 1
@@ -88,6 +103,7 @@ games:
   ids:
   - steam:1587130
   - isthereanydeal:blood-west
+  - dekudeals:blood-west
   requires: []
   tiers:
   - 1
@@ -97,6 +113,8 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16613:redout-ultimate-edition
   - isthereanydeal:redout-ultimate-edition
+  - steam:bundle/10715
+  - dekudeals:redout-ultimate-edition
   requires: []
   tiers:
   - 1
@@ -106,6 +124,7 @@ games:
   ids:
   - steam:1891090
   - isthereanydeal:final-vendetta
+  - dekudeals:final-vendetta
   requires: []
   tiers:
   - 1
@@ -115,6 +134,7 @@ games:
   ids:
   - steam:1819460
   - isthereanydeal:mika-and-the-witchs-mountain
+  - dekudeals:mika-and-the-witchs-mountain
   requires: []
   tiers:
   - 1
@@ -124,6 +144,7 @@ games:
   ids:
   - steam:1819450
   - isthereanydeal:koa-and-the-five-pirates-of-mara
+  - dekudeals:koa-and-the-five-pirates-of-mara
   requires: []
   tiers:
   - 1
@@ -133,6 +154,7 @@ games:
   ids:
   - steam:2276980
   - isthereanydeal:faceminer
+  - dekudeals:faceminer
   requires: []
   tiers:
   - 1
@@ -142,6 +164,7 @@ games:
   ids:
   - steam:2278790
   - isthereanydeal:grapple-dogs-cosmic-canines
+  - dekudeals:grapple-dogs-cosmic-canines
   requires: []
   tiers:
   - 1
@@ -151,6 +174,8 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16613:the-pixel-pulps-collection
   - isthereanydeal:the-pixel-pulps-collection
+  - steam:bundle/25222
+  - dekudeals:the-pixel-pulps-collection
   requires: []
   tiers:
   - 1
@@ -160,6 +185,7 @@ games:
   ids:
   - steam:1219240
   - isthereanydeal:biogun
+  - dekudeals:biogun
   requires: []
   tiers:
   - 1
@@ -169,6 +195,7 @@ games:
   ids:
   - steam:2849680
   - isthereanydeal:utopia-must-fall
+  - dekudeals:utopia-must-fall
   requires: []
   tiers:
   - 1
@@ -178,6 +205,7 @@ games:
   ids:
   - steam:908060
   - isthereanydeal:talisman-digital-5th-edition
+  - dekudeals:talisman-digital-5th-edition
   requires: []
   tiers:
   - 1
@@ -187,6 +215,7 @@ games:
   ids:
   - steam:3555980
   - isthereanydeal:caput-mortum
+  - dekudeals:caput-mortum
   requires: []
   tiers:
   - 1
@@ -196,6 +225,7 @@ games:
   ids:
   - steam:3183730
   - isthereanydeal:driveloop-survivors
+  - dekudeals:driveloop
   requires: []
   tiers:
   - 1
@@ -205,6 +235,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16613:amid-evil-and-dusk-double-pack
   - isthereanydeal:amid-evil-and-dusk-double-pack
+  - dekudeals:amid-evil-and-dusk-double-pack
   requires: []
   tiers:
   - 1
@@ -214,6 +245,7 @@ games:
   ids:
   - steam:4244210
   - isthereanydeal:open-the-gate-just-a-little
+  - dekudeals:open-the-gate-just-a-little
   requires: []
   tiers:
   - 1
@@ -223,6 +255,7 @@ games:
   ids:
   - steam:4300870
   - isthereanydeal:gods-and-gore
+  - dekudeals:gods-and-gore
   requires: []
   tiers:
   - 1
@@ -232,6 +265,7 @@ games:
   ids:
   - unresolved:source:isthereanydeal:16613:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
   - isthereanydeal:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  - dekudeals:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
   requires: []
   tiers:
   - 1

@@ -1,0 +1,177 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Fall Bundle (2026)
+tiers:
+- rank: 1
+  name: pick 1
+  pick_quota: 1
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 10
+  pick_quota: 10
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-fall-bundle-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-fall-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-fall-bundle-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-fall-bundle-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Castle Of Alchemists
+  ids:
+  - steam:1724770
+  - dekudeals:castle-of-alchemists
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Archaeogem
+  ids:
+  - steam:2092730
+  - dekudeals:archaeogem
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Defense Grid: Containment Bundle'
+  ids:
+  - dekudeals:defense-grid-containment-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Defense Grid 2
+  ids:
+  - steam:221540
+  - dekudeals:defense-grid-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Police Stories - Complete Edition
+  ids:
+  - steam:bundle/12051
+  - dekudeals:police-stories-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cowboy 3030
+  ids:
+  - steam:2347550
+  - dekudeals:cowboy-3030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dreamscaper
+  ids:
+  - steam:1040420
+  - dekudeals:dreamscaper
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Saint Kotar
+  ids:
+  - steam:1358530
+  - dekudeals:saint-kotar
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: HammerHelm
+  ids:
+  - steam:664000
+  - dekudeals:hammerhelm
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cozy Space Survivors
+  ids:
+  - steam:2657850
+  - dekudeals:cozy-space-survivors
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Empires in Ruins
+  ids:
+  - steam:604510
+  - dekudeals:empires-in-ruins
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Retrowave 2
+  ids:
+  - steam:3331000
+  - dekudeals:retrowave-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Teslagrad 2
+  ids:
+  - steam:1698220
+  - dekudeals:teslagrad-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Teslagrad Remastered
+  ids:
+  - steam:2168150
+  - dekudeals:teslagrad-remastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: StormEdge
+  ids:
+  - steam:2321350
+  - dekudeals:stormedge
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Initial Drift Online
+  ids:
+  - steam:1456200
+  - dekudeals:initial-drift-online
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: One More Island
+  ids:
+  - steam:1454160
+  - dekudeals:one-more-island-switch
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
