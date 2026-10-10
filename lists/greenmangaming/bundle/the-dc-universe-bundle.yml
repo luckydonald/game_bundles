@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THE DC UNIVERSE BUNDLE
+tiers:
+- rank: 1
+  name: Recruit
+- rank: 2
+  name: Operative
+- rank: 3
+  name: Legend
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/the-dc-universe-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/the-dc-universe-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/the-dc-universe-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Batman: Arkham Asylum Game of the Year Edition'
+  ids:
+  - steam:35140
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Injustice: Gods Among Us Ultimate Edition'
+  ids:
+  - steam:242700
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Gotham Knights
+  ids:
+  - steam:1496790
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Batman: Arkham City - Game of the Year Edition'
+  ids:
+  - steam:200260
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Suicide Squad: Kill the Justice League - Digital Deluxe Edition'
+  ids:
+  - steam:sub/977022
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Batman: Arkham Knight Premium Edition'
+  ids:
+  - steam:sub/85500
+  requires: []
+  tiers:
+  - 3
+- name: 'Batman: Arkham Origins'
+  ids:
+  - steam:209000
+  requires: []
+  tiers:
+  - 3
+- name: Injustice 2 Legendary Edition
+  ids:
+  - steam:sub/413904
+  requires: []
+  tiers:
+  - 3
