@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FRIDAY BARGAIN 2434
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2434.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2434/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2434/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Sunset 20 Drone Racer
+  ids:
+  - steam:1334240
+  requires: []
+- name: ACT
+  ids:
+  - steam:1297320
+  requires: []
+- name: OnlyRun
+  ids:
+  - steam:2520180
+  requires: []
+- name: Soccer Battle Royale
+  ids:
+  - steam:868660
+  requires: []
+- name: 'Hieroglyph: Prologue'
+  ids:
+  - steam:1069150
+  requires: []
+- name: Give Me More Pills
+  ids:
+  - steam:1752610
+  requires: []
+- name: Abst Clicker Farm
+  ids:
+  - steam:1235480
+  requires: []
+- name: Garden Magic
+  ids:
+  - steam:1604370
+  requires: []
+- name: Cute Blocks
+  ids:
+  - steam:1147710
+  requires: []

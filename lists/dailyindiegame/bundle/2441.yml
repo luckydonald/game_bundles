@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FRIDAY BARGAIN 2441
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2441.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2441/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2441/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: A Dog Story
+  ids:
+  - steam:3870510
+  requires: []
+- name: Tower Survivor
+  ids:
+  - steam:2306960
+  requires: []
+- name: Cubic Juice
+  ids:
+  - steam:1245360
+  requires: []
+- name: Getting Out Alive
+  ids:
+  - steam:2560220
+  requires: []
+- name: Knife Quest
+  ids:
+  - steam:1303760
+  requires: []
+- name: Coffee Mania
+  ids:
+  - steam:2875450
+  requires: []
+- name: Software House Simulator
+  ids:
+  - steam:1293400
+  requires: []
+- name: Classic Snake
+  ids:
+  - steam:2109530
+  requires: []
+- name: Rhythm of Annihilation
+  ids:
+  - steam:3909700
+  requires: []

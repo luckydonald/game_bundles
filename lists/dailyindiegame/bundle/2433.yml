@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2433
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2433.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2433/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2433/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 'Lawnmower Game: 2024'
+  ids:
+  - steam:3251370
+  requires: []
+- name: Moonlit
+  ids:
+  - steam:1464390
+  requires: []
+- name: Ball Twist
+  ids:
+  - steam:1623220
+  requires: []
+- name: Breakdown
+  ids:
+  - steam:1807920
+  requires: []
+- name: HopHeaders
+  ids:
+  - steam:1652940
+  requires: []
+- name: Lost Astronaut
+  ids:
+  - steam:1481140
+  requires: []
+- name: Mine Safety
+  ids:
+  - steam:3795670
+  requires: []
+- name: Ghost Hunters
+  ids:
+  - steam:2641930
+  requires: []
+- name: Garden Magic
+  ids:
+  - steam:1604370
+  requires: []

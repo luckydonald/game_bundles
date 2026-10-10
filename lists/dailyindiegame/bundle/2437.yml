@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2437 - ADULT DISCOUNT
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2437.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2437/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2437/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Saylor Anime Puzzle
+  ids:
+  - steam:4182200
+  requires: []
+- name: Hentai Furry Unicorny
+  ids:
+  - steam:3665110
+  requires: []
+- name: Hentai Aqua Lorelei
+  ids:
+  - steam:3921320
+  requires: []
+- name: Hentai Furry Wolfy
+  ids:
+  - steam:3720970
+  requires: []
+- name: Hentai Sayo
+  ids:
+  - steam:3997330
+  requires: []
+- name: Hentai Furry Bunny
+  ids:
+  - steam:3665120
+  requires: []
+- name: 'Yuzi Lims: Hentai'
+  ids:
+  - steam:960360
+  requires: []
+- name: Hentai Yumiko
+  ids:
+  - steam:3519890
+  requires: []
+- name: 'Temptations X: Darkest Fantasy'
+  ids:
+  - steam:1539510
+  requires: []

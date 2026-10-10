@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2438
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2438.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2438/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2438/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: BrainRoom - Brainrot Backrooms
+  ids:
+  - steam:3723160
+  requires: []
+- name: Ten for the Descent
+  ids:
+  - steam:4524950
+  requires: []
+- name: Horse Spirit Valley 2
+  ids:
+  - steam:4951830
+  requires: []
+- name: HYAKKI YAKO Survivor
+  ids:
+  - steam:2910990
+  requires: []
+- name: NINJA REVENGER
+  ids:
+  - steam:3254460
+  requires: []
+- name: Car-Toon Chaos
+  ids:
+  - steam:2867200
+  requires: []
+- name: OverTheSpeedLimit
+  ids:
+  - steam:2098720
+  requires: []
+- name: WarZone
+  ids:
+  - steam:2298160
+  requires: []
+- name: Wolflord - Werewolf Online
+  ids:
+  - steam:657730
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2432 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2432.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2432/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2432/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 1/2 Red Riding Hood
+  ids:
+  - steam:1782130
+  requires: []
+- name: 'ROAD HOMEWARD: Open world'
+  ids:
+  - steam:1202810
+  requires: []
+- name: Glasses Nightmare
+  ids:
+  - steam:1254440
+  requires: []
+- name: Worm in horror place
+  ids:
+  - steam:4386270
+  requires: []
+- name: Dungeons of Uhr
+  ids:
+  - steam:3685280
+  requires: []
+- name: Pentavolt
+  ids:
+  - steam:3850010
+  requires: []
+- name: Zulup
+  ids:
+  - steam:1228730
+  requires: []
+- name: Xeno TD
+  ids:
+  - steam:3215310
+  requires: []
+- name: Battle
+  ids:
+  - steam:3557230
+  requires: []

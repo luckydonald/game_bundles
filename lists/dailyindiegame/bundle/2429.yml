@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2429 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2429.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2429/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2429/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Catch the Chiken
+  ids:
+  - steam:4256830
+  requires: []
+- name: 'Sweetie Candy Maze: Brown Chocolate'
+  ids:
+  - steam:4268740
+  requires: []
+- name: Ruthless Safari
+  ids:
+  - steam:685790
+  requires: []
+- name: 'Welcome To... Chichester 2 - Part 2 : No Regrets For The Future'
+  ids:
+  - steam:1105600
+  requires: []
+- name: 'Sweetie Candy Maze: Purple Grape'
+  ids:
+  - steam:4213300
+  requires: []
+- name: Axiom Alternative
+  ids:
+  - steam:1318730
+  requires: []
+- name: Tell Me Everything
+  ids:
+  - steam:846820
+  requires: []
+- name: I Am Quadrober!
+  ids:
+  - steam:3348590
+  requires: []
+- name: 'Trump VS Covid: Save The World Clicker'
+  ids:
+  - steam:1454580
+  requires: []

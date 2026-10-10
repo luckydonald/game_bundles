@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2424 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2424.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2424/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2424/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Dash Duels
+  ids:
+  - steam:4187910
+  requires: []
+- name: magical capture
+  ids:
+  - steam:3812840
+  requires: []
+- name: 'Mask of Dead 2: Shadow of Pelagius'
+  ids:
+  - steam:3439950
+  requires: []
+- name: 'Legendary Realms: A Fantasy World Odyssey'
+  ids:
+  - steam:2331150
+  requires: []
+- name: One Day of an Insurance Agent
+  ids:
+  - steam:1593250
+  requires: []
+- name: Space Avengers
+  ids:
+  - steam:1225220
+  requires: []
+- name: Cybercontrol
+  ids:
+  - steam:2186460
+  requires: []
+- name: Danger Gazers
+  ids:
+  - steam:1043150
+  requires: []
+- name: Square & Circles
+  ids:
+  - steam:3791250
+  requires: []

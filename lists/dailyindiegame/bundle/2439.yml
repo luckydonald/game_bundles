@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2439 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2439.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2439/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2439/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Rabbit Canyon
+  ids:
+  - steam:1860110
+  requires: []
+- name: Nullwake
+  ids:
+  - steam:4073560
+  requires: []
+- name: Killing Trials
+  ids:
+  - steam:993370
+  requires: []
+- name: 'Outlanders: Hunt and Survive'
+  ids:
+  - steam:3689550
+  requires: []
+- name: Under The Ground
+  ids:
+  - steam:1110670
+  requires: []
+- name: Craftoon
+  ids:
+  - steam:4862790
+  requires: []
+- name: Frostford
+  ids:
+  - steam:1213890
+  requires: []
+- name: Wrath Of Sweetheart
+  ids:
+  - steam:4485870
+  requires: []
+- name: Nori Game
+  ids:
+  - steam:4443470
+  requires: []
