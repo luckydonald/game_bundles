@@ -13,13 +13,21 @@ references:
   path: ../../../archives/dekudeals/bundle/coppafeel-charity-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/coppafeel-charity-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16627/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16627/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16627/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Haste
   ids:
   - steam:1796470
   - dekudeals:haste-broken-worlds
+  - isthereanydeal:haste
   requires: []
   tiers:
   - 1
@@ -27,6 +35,7 @@ games:
   ids:
   - steam:1599600
   - dekudeals:plateup
+  - isthereanydeal:plateup
   requires: []
   tiers:
   - 1
@@ -34,6 +43,7 @@ games:
   ids:
   - steam:448510
   - dekudeals:overcooked
+  - isthereanydeal:overcooked
   requires: []
   tiers:
   - 1
@@ -41,6 +51,7 @@ games:
   ids:
   - steam:1242980
   - dekudeals:keywe
+  - isthereanydeal:keywe
   requires: []
   tiers:
   - 1
@@ -48,6 +59,7 @@ games:
   ids:
   - steam:1781010
   - dekudeals:pine-hearts
+  - isthereanydeal:pine-hearts
   requires: []
   tiers:
   - 1
@@ -55,6 +67,7 @@ games:
   ids:
   - steam:2367610
   - dekudeals:critter-cafe
+  - isthereanydeal:critter-cafe
   requires: []
   tiers:
   - 1
@@ -62,6 +75,7 @@ games:
   ids:
   - steam:2812450
   - dekudeals:tiny-garden
+  - isthereanydeal:tiny-garden
   requires: []
   tiers:
   - 1
@@ -69,6 +83,7 @@ games:
   ids:
   - steam:248330
   - dekudeals:dino-run-dx
+  - isthereanydeal:dino-run-dx
   requires: []
   tiers:
   - 1
@@ -76,6 +91,7 @@ games:
   ids:
   - steam:1045120
   - dekudeals:brunch-club
+  - isthereanydeal:brunch-club
   requires: []
   tiers:
   - 1
@@ -83,6 +99,7 @@ games:
   ids:
   - steam:1587570
   - dekudeals:completely-stretchy
+  - isthereanydeal:completely-stretchy
   requires: []
   tiers:
   - 1

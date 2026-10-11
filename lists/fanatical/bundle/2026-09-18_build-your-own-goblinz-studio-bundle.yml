@@ -20,13 +20,21 @@ references:
   path: ../../../archives/dekudeals/bundle/build-your-own-goblinz-studio-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/build-your-own-goblinz-studio-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16592/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16592/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16592/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Sol Cesto
   ids:
   - steam:2738490
   - dekudeals:sol-cesto
+  - isthereanydeal:sol-cesto
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
   ids:
   - steam:3164960
   - dekudeals:hold-the-mine
+  - isthereanydeal:hold-the-mine
   requires: []
   tiers:
   - 1
@@ -45,6 +54,7 @@ games:
   ids:
   - steam:3093400
   - dekudeals:knightica
+  - isthereanydeal:knightica
   requires: []
   tiers:
   - 1
@@ -54,6 +64,7 @@ games:
   ids:
   - steam:3073990
   - dekudeals:runeborn
+  - isthereanydeal:runeborn
   requires: []
   tiers:
   - 1
@@ -63,6 +74,7 @@ games:
   ids:
   - steam:2750000
   - dekudeals:microtopia
+  - isthereanydeal:microtopia
   requires: []
   tiers:
   - 1
@@ -72,6 +84,7 @@ games:
   ids:
   - steam:1989070
   - dekudeals:synergy
+  - isthereanydeal:synergy
   requires: []
   tiers:
   - 1
@@ -81,6 +94,7 @@ games:
   ids:
   - steam:2432240
   - dekudeals:smash-it-wild
+  - isthereanydeal:smash-it-wild
   requires: []
   tiers:
   - 1
@@ -90,6 +104,7 @@ games:
   ids:
   - steam:3642440
   - dekudeals:luxman-moonlit-market
+  - isthereanydeal:luxman-moonlit-market
   requires: []
   tiers:
   - 1
@@ -99,6 +114,7 @@ games:
   ids:
   - steam:3686580
   - dekudeals:repel-the-rifts
+  - isthereanydeal:repel-the-rifts
   requires: []
   tiers:
   - 1
@@ -108,6 +124,7 @@ games:
   ids:
   - steam:3008340
   - dekudeals:day-of-the-shell
+  - isthereanydeal:day-of-the-shell
   requires: []
   tiers:
   - 1
@@ -117,6 +134,7 @@ games:
   ids:
   - steam:2400770
   - dekudeals:dungeon-tycoon
+  - isthereanydeal:dungeon-tycoon
   requires: []
   tiers:
   - 1
@@ -126,6 +144,7 @@ games:
   ids:
   - steam:1639080
   - dekudeals:sandwalkers
+  - isthereanydeal:sandwalkers
   requires: []
   tiers:
   - 1

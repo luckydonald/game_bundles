@@ -13,13 +13,21 @@ references:
   path: ../../../archives/dekudeals/bundle/humble-choice-october-2026/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/humble-choice-october-2026/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16635/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16635/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16635/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Cataclismo
   ids:
   - steam:1422440
   - dekudeals:cataclismo
+  - isthereanydeal:cataclismo
   requires: []
   tiers:
   - 1
@@ -27,6 +35,7 @@ games:
   ids:
   - steam:2400510
   - dekudeals:dungeons-and-degenerate-gamblers
+  - isthereanydeal:dungeons-and-degenerate-gamblers
   requires: []
   tiers:
   - 1
@@ -34,6 +43,7 @@ games:
   ids:
   - steam:607080
   - dekudeals:psychonauts-2
+  - isthereanydeal:psychonauts-2
   requires: []
   tiers:
   - 1
@@ -41,6 +51,7 @@ games:
   ids:
   - steam:2321470
   - dekudeals:deep-rock-galactic-survivor
+  - isthereanydeal:deep-rock-galactic-survivor
   requires: []
   tiers:
   - 1
@@ -48,6 +59,7 @@ games:
   ids:
   - steam:2751000
   - dekudeals:prince-of-persia-the-lost-crown
+  - isthereanydeal:prince-of-persia-the-lost-crown
   requires: []
   tiers:
   - 1
@@ -55,6 +67,7 @@ games:
   ids:
   - steam:2361460
   - dekudeals:toy-shire
+  - isthereanydeal:toy-shire
   requires: []
   tiers:
   - 1
@@ -62,6 +75,7 @@ games:
   ids:
   - steam:3061810
   - dekudeals:like-a-dragon-pirate-yakuza-in-hawaii
+  - isthereanydeal:like-a-dragon-pirate-yakuza-in-hawaii
   requires: []
   tiers:
   - 1
@@ -69,6 +83,7 @@ games:
   ids:
   - steam:2780710
   - dekudeals:asgards-fall
+  - isthereanydeal:asgards-fall-viking-survivors
   requires: []
   tiers:
   - 1
