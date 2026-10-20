@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Hamble's Fright or Fight Halloween Bundle
+tiers:
+- rank: 1
+  name: 5 Item Bundle
+- rank: 2
+  name: Entire 8 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/hambles-fright-or-fight-halloween-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-14_hambles-fright-or-fight-halloween-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-14_hambles-fright-or-fight-halloween-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Blair Witch
+  ids:
+  - steam:1092660
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Observer: System Redux'
+  ids:
+  - steam:1386900
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: DEVOUR
+  ids:
+  - steam:1274570
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Tales from Candleforth
+  ids:
+  - steam:2200410
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Below, Rusted Gods
+  ids:
+  - steam:2895680
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: The Medium
+  ids:
+  - steam:1293160
+  requires: []
+  tiers:
+  - 2
+- name: Layers of Fear
+  ids:
+  - steam:1946700
+  requires: []
+  tiers:
+  - 2
+- name: I Hate This Place
+  ids:
+  - steam:2604490
+  requires: []
+  tiers:
+  - 2

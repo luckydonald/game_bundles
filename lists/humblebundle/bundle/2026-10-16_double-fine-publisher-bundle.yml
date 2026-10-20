@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Double Fine Publisher Bundle
+tiers:
+- rank: 1
+  name: 7 Item Bundle
+- rank: 2
+  name: Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/double-fine-publisher-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-16_double-fine-publisher-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-16_double-fine-publisher-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Psychonauts in the Rhombus of Ruin
+  ids:
+  - steam:788690
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Massive Chalice
+  ids:
+  - steam:246110
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Costume Quest
+  ids:
+  - steam:115100
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Iron Brigade
+  ids:
+  - steam:115120
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Stacking
+  ids:
+  - steam:115110
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Hack 'n' Slash
+  ids:
+  - steam:246070
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Spacebase DF-9
+  ids:
+  - steam:246090
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Psychonauts
+  ids:
+  - steam:3830
+  requires: []
+  tiers:
+  - 2
+- name: Brutal Legend
+  ids:
+  - steam:225260
+  requires: []
+  tiers:
+  - 2
+- name: Broken Age
+  ids:
+  - steam:232790
+  requires: []
+  tiers:
+  - 2
+- name: Kiln
+  ids:
+  - steam:1165990
+  requires: []
+  tiers:
+  - 2

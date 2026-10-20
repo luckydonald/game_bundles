@@ -1,0 +1,143 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Serenity Forge Emotional Impact Bundle
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 11 Item Bundle
+- rank: 3
+  name: Entire 18 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/serenity-forge-emotional-impact-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-16_serenity-forge-emotional-impact-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-16_serenity-forge-emotional-impact-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: Paratopic
+  ids:
+  - steam:897030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Neversong
+  ids:
+  - steam:733210
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Four Sided Fantasy
+  ids:
+  - steam:337490
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Luna's Wandering Stars
+  ids:
+  - steam:330660
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Return to Ash
+  ids:
+  - steam:3445830
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Gone Home
+  ids:
+  - steam:232430
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Tacoma
+  ids:
+  - steam:343860
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LISA: The Joyful'
+  ids:
+  - steam:379310
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LISA: The Painful'
+  ids:
+  - steam:335670
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Smile For Me
+  ids:
+  - steam:1018850
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Lifeless Planet Premier Edition
+  ids:
+  - steam:261530
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Centum
+  ids:
+  - steam:2625550
+  requires: []
+  tiers:
+  - 3
+- name: Cyanide & Happiness - Freakpocalypse (Episode 1)
+  ids:
+  - steam:869880
+  requires: []
+  tiers:
+  - 3
+- name: 'Death''s Gambit: Afterlife - Ashes of Vados'
+  ids:
+  - steam:1866620
+  requires: []
+  tiers:
+  - 3
+- name: 'Death''s Gambit: Afterlife'
+  ids:
+  - steam:356650
+  requires: []
+  tiers:
+  - 3
+- name: Long Gone Days
+  ids:
+  - steam:510540
+  requires: []
+  tiers:
+  - 3
+- name: Lifeless Moon
+  ids:
+  - steam:1147330
+  requires: []
+  tiers:
+  - 3
+- name: Arcadian Atlas
+  ids:
+  - steam:691790
+  requires: []
+  tiers:
+  - 3
