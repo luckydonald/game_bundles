@@ -21,14 +21,22 @@ references:
   path: ../../../archives/dekudeals/bundle/serenity-forge-emotional-impact-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/serenity-forge-emotional-impact-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16679/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16679/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16679/source.json
 crawlers:
 - humblebundle
 - dekudeals
+- isthereanydeal
 games:
 - name: Paratopic
   ids:
   - steam:897030
   - dekudeals:paratopic
+  - isthereanydeal:paratopic
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:733210
   - dekudeals:neversong
+  - isthereanydeal:neversong
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:337490
   - dekudeals:four-sided-fantasy
+  - isthereanydeal:four-sided-fantasy
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:330660
   - dekudeals:lunas-wandering-stars
+  - isthereanydeal:lunas-wandering-stars
   requires: []
   tiers:
   - 1
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:3445830
   - dekudeals:return-to-ash
+  - isthereanydeal:return-to-ash
   requires: []
   tiers:
   - 2
@@ -73,6 +85,7 @@ games:
   ids:
   - steam:232430
   - dekudeals:gone-home
+  - isthereanydeal:gone-home
   requires: []
   tiers:
   - 2
@@ -81,6 +94,7 @@ games:
   ids:
   - steam:343860
   - dekudeals:tacoma
+  - isthereanydeal:tacoma
   requires: []
   tiers:
   - 2
@@ -89,6 +103,7 @@ games:
   ids:
   - steam:379310
   - dekudeals:lisa-the-joyful
+  - isthereanydeal:lisa-the-joyful
   requires: []
   tiers:
   - 2
@@ -97,6 +112,7 @@ games:
   ids:
   - steam:335670
   - dekudeals:lisa-the-painful
+  - isthereanydeal:lisa-the-painful
   requires: []
   tiers:
   - 2
@@ -105,6 +121,7 @@ games:
   ids:
   - steam:1018850
   - dekudeals:smile-for-me
+  - isthereanydeal:smile-for-me
   requires: []
   tiers:
   - 2
@@ -113,6 +130,7 @@ games:
   ids:
   - steam:261530
   - dekudeals:lifeless-planet-premiere-edition
+  - isthereanydeal:lifeless-planet-premier-edition
   requires: []
   tiers:
   - 2
@@ -121,6 +139,7 @@ games:
   ids:
   - steam:2625550
   - dekudeals:centum
+  - isthereanydeal:centum
   requires: []
   tiers:
   - 3
@@ -128,6 +147,7 @@ games:
   ids:
   - steam:869880
   - dekudeals:cyanide-and-happiness-freakpocalypse-part-1
+  - isthereanydeal:cyanide-and-happiness-freakpocalypse-episode-1
   requires: []
   tiers:
   - 3
@@ -135,6 +155,7 @@ games:
   ids:
   - steam:1866620
   - dekudeals:deaths-gambit-afterlife-ashes-of-vados-switch
+  - isthereanydeal:deaths-gambit-afterlife-ashes-of-vados
   requires: []
   tiers:
   - 3
@@ -142,6 +163,7 @@ games:
   ids:
   - steam:356650
   - dekudeals:deaths-gambit-afterlife
+  - isthereanydeal:deaths-gambit-afterlife
   requires: []
   tiers:
   - 3
@@ -149,6 +171,7 @@ games:
   ids:
   - steam:510540
   - dekudeals:long-gone-days
+  - isthereanydeal:long-gone-days
   requires: []
   tiers:
   - 3
@@ -156,6 +179,7 @@ games:
   ids:
   - steam:1147330
   - dekudeals:lifeless-moon
+  - isthereanydeal:lifeless-moon
   requires: []
   tiers:
   - 3
@@ -163,6 +187,7 @@ games:
   ids:
   - steam:691790
   - dekudeals:arcadian-atlas
+  - isthereanydeal:arcadian-atlas
   requires: []
   tiers:
   - 3

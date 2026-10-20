@@ -20,13 +20,21 @@ references:
   path: ../../../archives/dekudeals/bundle/build-your-own-fantasy-ages-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/build-your-own-fantasy-ages-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16684/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16684/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16684/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Dungeon Antiqua
   ids:
   - steam:3198540
   - dekudeals:dungeon-antiqua
+  - isthereanydeal:dungeon-antiqua
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
   ids:
   - steam:697550
   - dekudeals:it-lurks-below
+  - isthereanydeal:it-lurks-below
   requires: []
   tiers:
   - 1
@@ -45,6 +54,7 @@ games:
   ids:
   - steam:1866980
   - dekudeals:worlds-of-aria
+  - isthereanydeal:worlds-of-aria
   requires: []
   tiers:
   - 1
@@ -54,6 +64,7 @@ games:
   ids:
   - steam:4918800
   - dekudeals:pago-forest-2-frozen-memories
+  - isthereanydeal:pago-forest-2-frozen-memories
   requires: []
   tiers:
   - 1
@@ -63,6 +74,7 @@ games:
   ids:
   - steam:2412280
   - dekudeals:valiant-tactics
+  - isthereanydeal:valiant-tactics
   requires: []
   tiers:
   - 1
@@ -71,6 +83,8 @@ games:
 - name: The Enchanted Cave 2
   ids:
   - dekudeals:the-enchanted-cave-2
+  - steam:368610
+  - isthereanydeal:the-enchanted-cave-2
   requires: []
   tiers:
   - 1
@@ -80,6 +94,7 @@ games:
   ids:
   - steam:1590640
   - dekudeals:savior-of-the-abyss-switch
+  - isthereanydeal:savior-of-the-abyss
   requires: []
   tiers:
   - 1
@@ -88,6 +103,8 @@ games:
 - name: Hammerwatch Anniversary Edition & Hammerwatch II Double Pack
   ids:
   - dekudeals:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  - unresolved:source:isthereanydeal:16684:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  - isthereanydeal:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
   requires: []
   tiers:
   - 1
@@ -97,6 +114,7 @@ games:
   ids:
   - steam:404200
   - dekudeals:wartile-standard
+  - isthereanydeal:wartile
   requires: []
   tiers:
   - 1
@@ -106,6 +124,7 @@ games:
   ids:
   - steam:2797650
   - dekudeals:pip-my-dice
+  - isthereanydeal:pip-my-dice
   requires: []
   tiers:
   - 1
@@ -115,6 +134,7 @@ games:
   ids:
   - steam:1368870
   - dekudeals:field-of-glory-ii-medieval
+  - isthereanydeal:field-of-glory-ii-medieval
   requires: []
   tiers:
   - 1
@@ -124,6 +144,7 @@ games:
   ids:
   - steam:1413660
   - dekudeals:elderand
+  - isthereanydeal:elderand
   requires: []
   tiers:
   - 1
@@ -133,6 +154,7 @@ games:
   ids:
   - steam:2951580
   - dekudeals:rhythm-witch-beat-death
+  - isthereanydeal:rhythm-witch-beat-death
   requires: []
   tiers:
   - 1
@@ -142,6 +164,7 @@ games:
   ids:
   - steam:1134100
   - dekudeals:frozenheim
+  - isthereanydeal:frozenheim
   requires: []
   tiers:
   - 1
@@ -151,6 +174,7 @@ games:
   ids:
   - steam:894620
   - dekudeals:atone-heart-of-the-elder-tree
+  - isthereanydeal:atone-heart-of-the-elder-tree
   requires: []
   tiers:
   - 1
@@ -160,6 +184,7 @@ games:
   ids:
   - steam:924070
   - dekudeals:arboria
+  - isthereanydeal:arboria
   requires: []
   tiers:
   - 1
@@ -169,6 +194,7 @@ games:
   ids:
   - steam:270610
   - dekudeals:mages-initiation-reign-of-the-elements
+  - isthereanydeal:mages-initiation-reign-of-the-elements
   requires: []
   tiers:
   - 1
@@ -178,6 +204,8 @@ games:
   ids:
   - steam:bundle/19063
   - dekudeals:rustler-complete-edition
+  - unresolved:source:isthereanydeal:16684:rustler-complete-edition
+  - isthereanydeal:rustler-complete-edition
   requires: []
   tiers:
   - 1

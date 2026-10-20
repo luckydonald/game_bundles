@@ -19,14 +19,22 @@ references:
   path: ../../../archives/dekudeals/bundle/double-fine-publisher-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/double-fine-publisher-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16680/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16680/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16680/source.json
 crawlers:
 - humblebundle
 - dekudeals
+- isthereanydeal
 games:
 - name: Psychonauts in the Rhombus of Ruin
   ids:
   - steam:788690
   - dekudeals:psychonauts-in-the-rhombus-of-ruin
+  - isthereanydeal:psychonauts-in-the-rhombus-of-ruin
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:246110
   - dekudeals:massive-chalice
+  - isthereanydeal:massive-chalice
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:115100
   - dekudeals:costume-quest
+  - isthereanydeal:costume-quest
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:115120
   - dekudeals:iron-brigade
+  - isthereanydeal:iron-brigade
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:115110
   - dekudeals:stacking
+  - isthereanydeal:stacking
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:246070
   - dekudeals:hack-n-slash
+  - isthereanydeal:hack-n-slash
   requires: []
   tiers:
   - 1
@@ -75,6 +88,7 @@ games:
   ids:
   - steam:246090
   - dekudeals:spacebase-df-9
+  - isthereanydeal:spacebase-df-9
   requires: []
   tiers:
   - 1
@@ -83,6 +97,7 @@ games:
   ids:
   - steam:3830
   - dekudeals:psychonauts
+  - isthereanydeal:psychonauts
   requires: []
   tiers:
   - 2
@@ -90,6 +105,7 @@ games:
   ids:
   - steam:225260
   - dekudeals:brtal-legend
+  - isthereanydeal:brutal-legend
   requires: []
   tiers:
   - 2
@@ -97,6 +113,7 @@ games:
   ids:
   - steam:232790
   - dekudeals:broken-age
+  - isthereanydeal:broken-age
   requires: []
   tiers:
   - 2
@@ -104,6 +121,7 @@ games:
   ids:
   - steam:1165990
   - dekudeals:kiln
+  - isthereanydeal:kiln
   requires: []
   tiers:
   - 2

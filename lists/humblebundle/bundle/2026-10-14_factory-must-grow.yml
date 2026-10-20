@@ -19,14 +19,22 @@ references:
   path: ../../../archives/dekudeals/bundle/the-factory-must-grow/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/the-factory-must-grow/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16667/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16667/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16667/source.json
 crawlers:
 - humblebundle
 - dekudeals
+- isthereanydeal
 games:
 - name: Nova Lands
   ids:
   - steam:1501610
   - dekudeals:nova-lands
+  - isthereanydeal:nova-lands
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:1150090
   - dekudeals:learning-factory
+  - isthereanydeal:learning-factory
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:1318690
   - dekudeals:shapez
+  - isthereanydeal:shapez
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:2237970
   - dekudeals:outpath
+  - isthereanydeal:outpath
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:2061430
   - dekudeals:oxygen
+  - isthereanydeal:oxygen
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:2570210
   - dekudeals:eden-crafters
+  - isthereanydeal:eden-crafters
   requires: []
   tiers:
   - 2
@@ -74,6 +87,7 @@ games:
   ids:
   - steam:1817800
   - dekudeals:oddsparks-an-automation-adventure
+  - isthereanydeal:oddsparks-an-automation-adventure
   requires: []
   tiers:
   - 2
@@ -81,6 +95,7 @@ games:
   ids:
   - steam:3576870
   - dekudeals:blossom-the-seed-of-life
+  - isthereanydeal:blossom-the-seed-of-life
   requires: []
   tiers:
   - 2

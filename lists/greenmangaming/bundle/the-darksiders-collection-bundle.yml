@@ -8,22 +8,33 @@ references:
   path: ../../../archives/greenmangaming/bundle/the-darksiders-collection-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/greenmangaming/bundle/the-darksiders-collection-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16655/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16655/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16655/source.json
 crawlers:
 - greenmangaming
+- isthereanydeal
 games:
 - name: Darksiders Warmastered Edition
   ids:
   - steam:462780
+  - isthereanydeal:darksiders-warmastered-edition
   requires: []
 - name: Darksiders II Deathinitive Edition
   ids:
   - steam:388410
+  - isthereanydeal:darksiders-ii-deathinitive-edition
   requires: []
 - name: Darksiders III
   ids:
   - steam:606280
+  - isthereanydeal:darksiders-iii
   requires: []
 - name: Darksiders Genesis
   ids:
   - steam:710920
+  - isthereanydeal:darksiders-genesis
   requires: []

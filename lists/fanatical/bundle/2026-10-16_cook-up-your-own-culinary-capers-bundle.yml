@@ -20,13 +20,21 @@ references:
   path: ../../../archives/dekudeals/bundle/cook-up-your-own-culinary-capers-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/cook-up-your-own-culinary-capers-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16677/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16677/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16677/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Kebab Chefs! - Restaurant Simulator
   ids:
   - steam:1001270
   - dekudeals:kebab-chefs-restaurant-simulator
+  - isthereanydeal:kebab-chefs-restaurant-simulator
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
   ids:
   - steam:3584920
   - dekudeals:kaolengmian-legend
+  - isthereanydeal:chinese-street-food-legend
   requires: []
   tiers:
   - 1
@@ -54,6 +63,7 @@ games:
   ids:
   - steam:2749000
   - dekudeals:inn-tycoon
+  - isthereanydeal:inn-tycoon
   requires: []
   tiers:
   - 1
@@ -63,6 +73,7 @@ games:
   ids:
   - steam:1338330
   - dekudeals:lemon-cake
+  - isthereanydeal:lemon-cake
   requires: []
   tiers:
   - 1
@@ -72,6 +83,7 @@ games:
   ids:
   - steam:3950770
   - dekudeals:more-sushi
+  - isthereanydeal:more-sushi
   requires: []
   tiers:
   - 1
@@ -81,6 +93,8 @@ games:
   ids:
   - steam:bundle/69866
   - dekudeals:spongebob-krusty-cook-off-kelp-city-bundle
+  - unresolved:source:isthereanydeal:16677:spongebob-krusty-cook-off-kelp-city-bundle
+  - isthereanydeal:spongebob-krusty-cook-off-kelp-city-bundle
   requires: []
   tiers:
   - 1
@@ -90,6 +104,7 @@ games:
   ids:
   - steam:1433340
   - dekudeals:happys-humble-burger-farm
+  - isthereanydeal:happys-humble-burger-farm
   requires: []
   tiers:
   - 1
@@ -99,6 +114,8 @@ games:
   ids:
   - steam:bundle/13553
   - dekudeals:cook-serve-delicious-trilogy
+  - unresolved:source:isthereanydeal:16677:the-cook-serve-delicious-trilogy
+  - isthereanydeal:the-cook-serve-delicious-trilogy
   requires: []
   tiers:
   - 1
@@ -108,6 +125,7 @@ games:
   ids:
   - steam:3021530
   - dekudeals:abra-cooking-dabra
+  - isthereanydeal:abra-cooking-dabra
   requires: []
   tiers:
   - 1
@@ -117,6 +135,7 @@ games:
   ids:
   - steam:1492360
   - dekudeals:recipe-for-disaster
+  - isthereanydeal:recipe-for-disaster
   requires: []
   tiers:
   - 1

@@ -19,14 +19,22 @@ references:
   path: ../../../archives/dekudeals/bundle/cozy-after-dark-showcase-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/cozy-after-dark-showcase-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16652/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16652/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16652/source.json
 crawlers:
 - humblebundle
 - dekudeals
+- isthereanydeal
 games:
 - name: Paradise Killer
   ids:
   - steam:1160220
   - dekudeals:paradise-killer
+  - isthereanydeal:paradise-killer
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:2292650
   - dekudeals:escape-from-mystwood-mansion
+  - isthereanydeal:escape-from-mystwood-mansion
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:1934800
   - dekudeals:a-pet-shop-after-dark
+  - isthereanydeal:a-pet-shop-after-dark
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:368390
   - dekudeals:the-darkside-detective
+  - isthereanydeal:the-darkside-detective
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:1395030
   - dekudeals:kathy-rain-directors-cut
+  - isthereanydeal:kathy-rain-directors-cut
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:2667950
   - dekudeals:gloomy-eyes-the-game
+  - isthereanydeal:gloomy-eyes
   requires: []
   tiers:
   - 2
@@ -74,6 +87,7 @@ games:
   ids:
   - steam:2401410
   - dekudeals:cabernet
+  - isthereanydeal:cabernet
   requires: []
   tiers:
   - 2
@@ -81,6 +95,7 @@ games:
   ids:
   - steam:3352310
   - dekudeals:spooky-express
+  - isthereanydeal:spooky-express
   requires: []
   tiers:
   - 2
@@ -88,6 +103,7 @@ games:
   ids:
   - steam:1959390
   - dekudeals:fear-the-spotlight
+  - isthereanydeal:fear-the-spotlight
   requires: []
   tiers:
   - 2
@@ -95,6 +111,7 @@ games:
   ids:
   - steam:2246470
   - dekudeals:kulebra-and-the-souls-of-limbo
+  - isthereanydeal:kulebra-and-the-souls-of-limbo
   requires: []
   tiers:
   - 2

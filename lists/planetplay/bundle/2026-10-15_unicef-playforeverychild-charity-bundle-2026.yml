@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: PlayForEveryChild Charity Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16672/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16672/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16672/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Assetto Corsa Competizione
+  ids:
+  - steam:805550
+  - isthereanydeal:assetto-corsa-competizione
+  requires: []
+- name: Riders Republic
+  ids:
+  - steam:2290180
+  - isthereanydeal:riders-republic
+  requires: []
+- name: Blue Prince
+  ids:
+  - steam:1569580
+  - isthereanydeal:blue-prince
+  requires: []
+- name: 'Snufkin: Melody of Moominvalley'
+  ids:
+  - steam:1808680
+  - isthereanydeal:snufkin-melody-of-moominvalley
+  requires: []
+- name: Bahamut and the Waqwaq Tree
+  ids:
+  - steam:2525300
+  - isthereanydeal:bahamut-and-the-waqwaq-tree
+  requires: []
+- name: Roombattle
+  ids:
+  - steam:3223000
+  - isthereanydeal:roombattle
+  requires: []
+- name: PEAK
+  ids:
+  - steam:3527290
+  - isthereanydeal:peak
+  requires: []
+- name: Train Sim World® 6
+  ids:
+  - steam:3656800
+  - isthereanydeal:train-sim-world-6
+  requires: []
+- name: 'Everything is Crab: The Animal Evolution Roguelite'
+  ids:
+  - steam:3526710
+  - isthereanydeal:everything-is-crab-the-animal-evolution-roguelite
+  requires: []
+- name: 'Vampire Crawlers: The Turbo Wildcard from Vampire Survivors'
+  ids:
+  - steam:3265700
+  - isthereanydeal:vampire-crawlers-the-turbo-wildcard-from-vampire-survivors
+  requires: []

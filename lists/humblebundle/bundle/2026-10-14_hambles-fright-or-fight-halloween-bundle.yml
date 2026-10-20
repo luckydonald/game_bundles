@@ -19,14 +19,22 @@ references:
   path: ../../../archives/dekudeals/bundle/hambles-fright-or-fight-halloween-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/hambles-fright-or-fight-halloween-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16666/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16666/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16666/source.json
 crawlers:
 - humblebundle
 - dekudeals
+- isthereanydeal
 games:
 - name: Blair Witch
   ids:
   - steam:1092660
   - dekudeals:blair-witch
+  - isthereanydeal:blair-witch
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:1386900
   - dekudeals:observer-system-redux
+  - isthereanydeal:observer-system-redux
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:1274570
   - dekudeals:devour
+  - isthereanydeal:devour
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:2200410
   - dekudeals:tales-from-candleforth
+  - isthereanydeal:tales-from-candleforth
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:2895680
   - dekudeals:below-rusted-gods
+  - isthereanydeal:below-rusted-gods
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:1293160
   - dekudeals:the-medium
+  - isthereanydeal:the-medium
   requires: []
   tiers:
   - 2
@@ -74,6 +87,7 @@ games:
   ids:
   - steam:1946700
   - dekudeals:layers-of-fear-2023
+  - isthereanydeal:layers-of-fear-2023
   requires: []
   tiers:
   - 2
@@ -81,6 +95,7 @@ games:
   ids:
   - steam:2604490
   - dekudeals:i-hate-this-place
+  - isthereanydeal:i-hate-this-place
   requires: []
   tiers:
   - 2

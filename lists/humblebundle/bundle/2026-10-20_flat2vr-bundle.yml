@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Flat2VR Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: Entire 9 Item Bundle
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16690/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16690/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16690/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Audio Trip
+  ids:
+  - steam:826540
+  - isthereanydeal:audio-trip
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: RAGER
+  ids:
+  - steam:2489000
+  - isthereanydeal:rager
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Out of Sight VR
+  ids:
+  - steam:3558720
+  - isthereanydeal:out-of-sight-vr
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Genotype
+  ids:
+  - steam:2667980
+  - isthereanydeal:genotype
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Surviving Mars: Pioneer'
+  ids:
+  - steam:3558730
+  - isthereanydeal:surviving-mars-pioneer
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Wrath: Aeon of Ruin VR - Brutal Edition'
+  ids:
+  - steam:3430260
+  - isthereanydeal:wrath-aeon-of-ruin-vr-brutal-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Roboquest VR
+  ids:
+  - steam:3151760
+  - isthereanydeal:roboquest-vr
+  requires: []
+  tiers:
+  - 3
+- name: VRacer Hoverbike
+  ids:
+  - steam:668430
+  - isthereanydeal:vracer-hoverbike
+  requires: []
+  tiers:
+  - 3
+- name: I AM YOUR BEAST VR
+  ids:
+  - steam:3844740
+  - isthereanydeal:i-am-your-beast-vr
+  requires: []
+  tiers:
+  - 3

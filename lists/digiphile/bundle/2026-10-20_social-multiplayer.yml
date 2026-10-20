@@ -21,13 +21,21 @@ references:
   path: ../../../archives/dekudeals/bundle/social-multiplayer/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/social-multiplayer/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16689/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16689/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16689/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: Flock Around
   ids:
   - steam:3618030
   - dekudeals:flock-around
+  - isthereanydeal:flock-around
   requires: []
   tiers:
   - 1
@@ -39,6 +47,7 @@ games:
   ids:
   - steam:3892270
   - dekudeals:gamble-with-your-friends
+  - isthereanydeal:gamble-with-your-friends
   requires: []
   tiers:
   - 2
@@ -49,6 +58,7 @@ games:
   ids:
   - steam:3438850
   - dekudeals:sledding-game
+  - isthereanydeal:sledding-game
   requires: []
   tiers:
   - 2
@@ -59,6 +69,7 @@ games:
   ids:
   - steam:3643170
   - dekudeals:roadside-research
+  - isthereanydeal:roadside-research
   requires: []
   tiers:
   - 3
@@ -68,6 +79,7 @@ games:
   ids:
   - steam:1910150
   - dekudeals:walk-of-life
+  - isthereanydeal:walk-of-life
   requires: []
   tiers:
   - 4
@@ -76,6 +88,7 @@ games:
   ids:
   - steam:1211020
   - dekudeals:wobbly-life
+  - isthereanydeal:wobbly-life
   requires: []
   tiers:
   - 5
@@ -83,6 +96,7 @@ games:
   ids:
   - steam:2545360
   - dekudeals:lonely-mountains-snow-riders
+  - isthereanydeal:lonely-mountains-snow-riders
   requires: []
   tiers:
   - 5
