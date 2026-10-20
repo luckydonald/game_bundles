@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: HIDDEN GEMS BUNDLE — Hidden Gems
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/hidden-gems-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/hidden-gems-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Strayed Lights
+  ids:
+  - steam:2162020
+  requires: []
+- name: Nasty Zombies
+  ids:
+  - steam:2851700
+  requires: []
+- name: Project Absentia
+  ids:
+  - steam:1662010
+  requires: []
+- name: Cat Detective Albert Wilde
+  ids:
+  - steam:1810670
+  requires: []
+- name: Symphonia
+  ids:
+  - steam:1865960
+  requires: []
+- name: Robbie Swifthand and the Orb of Mysteries
+  ids:
+  - steam:718010
+  requires: []

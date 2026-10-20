@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THE DARKSIDERS COLLECTION BUNDLE — Horsemen Reunited
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/the-darksiders-collection-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/the-darksiders-collection-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/the-darksiders-collection-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: Darksiders Warmastered Edition
+  ids:
+  - steam:462780
+  requires: []
+- name: Darksiders II Deathinitive Edition
+  ids:
+  - steam:388410
+  requires: []
+- name: Darksiders III
+  ids:
+  - steam:606280
+  requires: []
+- name: Darksiders Genesis
+  ids:
+  - steam:710920
+  requires: []
