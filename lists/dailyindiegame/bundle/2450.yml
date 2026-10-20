@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2450 - SUNDAY
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2450.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2450/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2450/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: MEME EXAM 2025
+  ids:
+  - steam:4348920
+  requires: []
+- name: Infecto
+  ids:
+  - steam:815800
+  requires: []
+- name: Limit of defense
+  ids:
+  - steam:757690
+  requires: []
+- name: Assassin Of Dombardos
+  ids:
+  - steam:4546240
+  requires: []
+- name: House Tidy 2
+  ids:
+  - steam:4452690
+  requires: []
+- name: Curse in our heads
+  ids:
+  - steam:871300
+  requires: []
+- name: Hello your order...
+  ids:
+  - steam:2496130
+  requires: []
+- name: MEMESTEINE FILES
+  ids:
+  - steam:4569080
+  requires: []
+- name: 'Space Memory: Fairies'
+  ids:
+  - steam:4579860
+  requires: []

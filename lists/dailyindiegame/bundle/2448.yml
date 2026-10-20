@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FRIDAY BARGAIN 2448
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2448.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2448/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2448/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Rogventure
+  ids:
+  - steam:4277530
+  requires: []
+- name: Outworld Defence
+  ids:
+  - steam:4274950
+  requires: []
+- name: MadPug
+  ids:
+  - steam:4143380
+  requires: []
+- name: Flappy Alien
+  ids:
+  - steam:3102020
+  requires: []
+- name: ChicScape
+  ids:
+  - steam:1647280
+  requires: []
+- name: Color Flash
+  ids:
+  - steam:1832230
+  requires: []
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: Kontrakt
+  ids:
+  - steam:924370
+  requires: []
+- name: Silent Tweets
+  ids:
+  - steam:809320
+  requires: []

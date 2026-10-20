@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: WEDNESDAY BARGAIN 2446
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2446.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2446/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2446/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Gamma Space
+  ids:
+  - steam:1907620
+  requires: []
+- name: Memory Train
+  ids:
+  - steam:1843800
+  requires: []
+- name: Spleef Game
+  ids:
+  - steam:2547240
+  requires: []
+- name: This Picture
+  ids:
+  - steam:1148120
+  requires: []
+- name: Hexes
+  ids:
+  - steam:1623550
+  requires: []
+- name: Hot Roads
+  ids:
+  - steam:1819280
+  requires: []
+- name: In Shape
+  ids:
+  - steam:1781330
+  requires: []
+- name: Color Ball
+  ids:
+  - steam:1810720
+  requires: []
+- name: Haunted Service
+  ids:
+  - steam:3538840
+  requires: []

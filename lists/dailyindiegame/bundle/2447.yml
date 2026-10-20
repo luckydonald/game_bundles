@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2447
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2447.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2447/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2447/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Dungeons of Clay
+  ids:
+  - steam:1332940
+  requires: []
+- name: Car Soccer World Cup
+  ids:
+  - steam:1111200
+  requires: []
+- name: In Shape 2
+  ids:
+  - steam:1814100
+  requires: []
+- name: Go Rocket
+  ids:
+  - steam:1669120
+  requires: []
+- name: Timings
+  ids:
+  - steam:1853720
+  requires: []
+- name: ReBall
+  ids:
+  - steam:1646600
+  requires: []
+- name: Mathomatics
+  ids:
+  - steam:1847200
+  requires: []
+- name: Bad Dog, Good Nights
+  ids:
+  - steam:4018110
+  requires: []
+- name: Command-Ω Omega
+  ids:
+  - steam:3806090
+  requires: []

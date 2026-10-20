@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2445 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2445.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2445/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2445/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: SELF_DELETED
+  ids:
+  - steam:4502030
+  requires: []
+- name: Moot District
+  ids:
+  - steam:992040
+  requires: []
+- name: Knights and Castles
+  ids:
+  - steam:1734500
+  requires: []
+- name: Resurrection of mind
+  ids:
+  - steam:1825510
+  requires: []
+- name: KingLike
+  ids:
+  - steam:5044420
+  requires: []
+- name: FishDrop
+  ids:
+  - steam:5045480
+  requires: []
+- name: Wind of shuriken
+  ids:
+  - steam:1565030
+  requires: []
+- name: The Last Cowboy
+  ids:
+  - steam:1087100
+  requires: []
+- name: The Node
+  ids:
+  - steam:4474490
+  requires: []

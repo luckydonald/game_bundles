@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: TUESDAY BARGAIN 2452
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2452.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2452/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2452/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: iMemo
+  ids:
+  - steam:1265130
+  requires: []
+- name: Jack In Town
+  ids:
+  - steam:1175500
+  requires: []
+- name: SnL
+  ids:
+  - steam:1147200
+  requires: []
+- name: Thirty Two HardMod
+  ids:
+  - steam:1641790
+  requires: []
+- name: Everyone Moves With You
+  ids:
+  - steam:2009220
+  requires: []
+- name: Blast Ensemble
+  ids:
+  - steam:1617920
+  requires: []
+- name: Stapel
+  ids:
+  - steam:1863990
+  requires: []
+- name: Brain Test
+  ids:
+  - steam:1350390
+  requires: []
+- name: Power Brain Trainer
+  ids:
+  - steam:1070300
+  requires: []

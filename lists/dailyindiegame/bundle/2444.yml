@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2444 - ADULT DISCOUNT
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2444.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2444/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2444/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Hentai Evangeline
+  ids:
+  - steam:3962970
+  requires: []
+- name: Hentai Kai
+  ids:
+  - steam:3629750
+  requires: []
+- name: Hentai Quilm
+  ids:
+  - steam:1169880
+  requires: []
+- name: 'Yuzi Lims: Puzzle'
+  ids:
+  - steam:1747520
+  requires: []
+- name: Carnival and Girls
+  ids:
+  - steam:1573430
+  requires: []
+- name: Hentai Furry Sheepy
+  ids:
+  - steam:4411710
+  requires: []
+- name: Western Girls
+  ids:
+  - steam:2099000
+  requires: []
+- name: Gardens and Girls
+  ids:
+  - steam:1600080
+  requires: []
+- name: 'Flirtatious: Fallen Angels'
+  ids:
+  - steam:1682300
+  requires: []
