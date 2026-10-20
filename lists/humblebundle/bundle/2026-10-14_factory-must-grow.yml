@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-14_factory-must-grow/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-14_factory-must-grow/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/the-factory-must-grow
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/the-factory-must-grow/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/the-factory-must-grow/source.json
 crawlers:
 - humblebundle
+- dekudeals
 games:
 - name: Nova Lands
   ids:
   - steam:1501610
+  - dekudeals:nova-lands
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Learning Factory
   ids:
   - steam:1150090
+  - dekudeals:learning-factory
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: shapez
   ids:
   - steam:1318690
+  - dekudeals:shapez
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: Outpath
   ids:
   - steam:2237970
+  - dekudeals:outpath
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Oxygen
   ids:
   - steam:2061430
+  - dekudeals:oxygen
   requires: []
   tiers:
   - 1
@@ -54,18 +66,21 @@ games:
 - name: Eden Crafters
   ids:
   - steam:2570210
+  - dekudeals:eden-crafters
   requires: []
   tiers:
   - 2
 - name: 'Oddsparks: An Automation Adventure'
   ids:
   - steam:1817800
+  - dekudeals:oddsparks-an-automation-adventure
   requires: []
   tiers:
   - 2
 - name: 'Blossom: The Seed of Life'
   ids:
   - steam:3576870
+  - dekudeals:blossom-the-seed-of-life
   requires: []
   tiers:
   - 2

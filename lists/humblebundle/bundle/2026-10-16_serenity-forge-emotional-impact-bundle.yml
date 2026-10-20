@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-16_serenity-forge-emotional-impact-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-16_serenity-forge-emotional-impact-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/serenity-forge-emotional-impact-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/serenity-forge-emotional-impact-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/serenity-forge-emotional-impact-bundle/source.json
 crawlers:
 - humblebundle
+- dekudeals
 games:
 - name: Paratopic
   ids:
   - steam:897030
+  - dekudeals:paratopic
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: Neversong
   ids:
   - steam:733210
+  - dekudeals:neversong
   requires: []
   tiers:
   - 1
@@ -37,6 +46,7 @@ games:
 - name: Four Sided Fantasy
   ids:
   - steam:337490
+  - dekudeals:four-sided-fantasy
   requires: []
   tiers:
   - 1
@@ -45,6 +55,7 @@ games:
 - name: Luna's Wandering Stars
   ids:
   - steam:330660
+  - dekudeals:lunas-wandering-stars
   requires: []
   tiers:
   - 1
@@ -53,6 +64,7 @@ games:
 - name: Return to Ash
   ids:
   - steam:3445830
+  - dekudeals:return-to-ash
   requires: []
   tiers:
   - 2
@@ -60,6 +72,7 @@ games:
 - name: Gone Home
   ids:
   - steam:232430
+  - dekudeals:gone-home
   requires: []
   tiers:
   - 2
@@ -67,6 +80,7 @@ games:
 - name: Tacoma
   ids:
   - steam:343860
+  - dekudeals:tacoma
   requires: []
   tiers:
   - 2
@@ -74,6 +88,7 @@ games:
 - name: 'LISA: The Joyful'
   ids:
   - steam:379310
+  - dekudeals:lisa-the-joyful
   requires: []
   tiers:
   - 2
@@ -81,6 +96,7 @@ games:
 - name: 'LISA: The Painful'
   ids:
   - steam:335670
+  - dekudeals:lisa-the-painful
   requires: []
   tiers:
   - 2
@@ -88,6 +104,7 @@ games:
 - name: Smile For Me
   ids:
   - steam:1018850
+  - dekudeals:smile-for-me
   requires: []
   tiers:
   - 2
@@ -95,6 +112,7 @@ games:
 - name: Lifeless Planet Premier Edition
   ids:
   - steam:261530
+  - dekudeals:lifeless-planet-premiere-edition
   requires: []
   tiers:
   - 2
@@ -102,42 +120,49 @@ games:
 - name: Centum
   ids:
   - steam:2625550
+  - dekudeals:centum
   requires: []
   tiers:
   - 3
 - name: Cyanide & Happiness - Freakpocalypse (Episode 1)
   ids:
   - steam:869880
+  - dekudeals:cyanide-and-happiness-freakpocalypse-part-1
   requires: []
   tiers:
   - 3
 - name: 'Death''s Gambit: Afterlife - Ashes of Vados'
   ids:
   - steam:1866620
+  - dekudeals:deaths-gambit-afterlife-ashes-of-vados-switch
   requires: []
   tiers:
   - 3
 - name: 'Death''s Gambit: Afterlife'
   ids:
   - steam:356650
+  - dekudeals:deaths-gambit-afterlife
   requires: []
   tiers:
   - 3
 - name: Long Gone Days
   ids:
   - steam:510540
+  - dekudeals:long-gone-days
   requires: []
   tiers:
   - 3
 - name: Lifeless Moon
   ids:
   - steam:1147330
+  - dekudeals:lifeless-moon
   requires: []
   tiers:
   - 3
 - name: Arcadian Atlas
   ids:
   - steam:691790
+  - dekudeals:arcadian-atlas
   requires: []
   tiers:
   - 3

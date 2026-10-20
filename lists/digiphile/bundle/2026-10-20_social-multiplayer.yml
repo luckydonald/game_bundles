@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Social Multiplayer
+tiers:
+- rank: 1
+  name: $4.00 USD
+- rank: 2
+  name: $6.00 USD
+- rank: 3
+  name: $9.00 USD
+- rank: 4
+  name: $13.00 USD
+- rank: 5
+  name: $16.00 USD
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/social-multiplayer
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/social-multiplayer-games-collection-digiphile?linkId=lp_005301&sourceId=deku&tenantId=digiphile
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/social-multiplayer/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/social-multiplayer/source.json
+crawlers:
+- dekudeals
+games:
+- name: Flock Around
+  ids:
+  - steam:3618030
+  - dekudeals:flock-around
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+- name: Gamble With Your Friends
+  ids:
+  - steam:3892270
+  - dekudeals:gamble-with-your-friends
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+  - 5
+- name: Sledding Game
+  ids:
+  - steam:3438850
+  - dekudeals:sledding-game
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+  - 5
+- name: Roadside Research
+  ids:
+  - steam:3643170
+  - dekudeals:roadside-research
+  requires: []
+  tiers:
+  - 3
+  - 4
+  - 5
+- name: Walk of Life
+  ids:
+  - steam:1910150
+  - dekudeals:walk-of-life
+  requires: []
+  tiers:
+  - 4
+  - 5
+- name: Wobbly Life
+  ids:
+  - steam:1211020
+  - dekudeals:wobbly-life
+  requires: []
+  tiers:
+  - 5
+- name: 'Lonely Mountains: Snow Riders'
+  ids:
+  - steam:2545360
+  - dekudeals:lonely-mountains-snow-riders
+  requires: []
+  tiers:
+  - 5

@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Cook up your own Culinary Capers Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/cook-up-your-own-culinary-capers-bundle
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fcook-up-your-own-culinary-capers-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/cook-up-your-own-culinary-capers-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/cook-up-your-own-culinary-capers-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Kebab Chefs! - Restaurant Simulator
+  ids:
+  - steam:1001270
+  - dekudeals:kebab-chefs-restaurant-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Chinese Street Food Legend
+  ids:
+  - steam:3584920
+  - dekudeals:kaolengmian-legend
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Grind & Grill Bundle
+  ids:
+  - steam:bundle/30354
+  - dekudeals:grind-and-grill
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Inn Tycoon
+  ids:
+  - steam:2749000
+  - dekudeals:inn-tycoon
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Lemon Cake
+  ids:
+  - steam:1338330
+  - dekudeals:lemon-cake
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: More Sushi!
+  ids:
+  - steam:3950770
+  - dekudeals:more-sushi
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'SpongeBob: Krusty Cook-Off – Kelp City Bundle'
+  ids:
+  - steam:bundle/69866
+  - dekudeals:spongebob-krusty-cook-off-kelp-city-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Happy's Humble Burger Farm
+  ids:
+  - steam:1433340
+  - dekudeals:happys-humble-burger-farm
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cook, Serve, Delicious, Trilogy!
+  ids:
+  - steam:bundle/13553
+  - dekudeals:cook-serve-delicious-trilogy
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Abra-Cooking-Dabra
+  ids:
+  - steam:3021530
+  - dekudeals:abra-cooking-dabra
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Recipe for Disaster
+  ids:
+  - steam:1492360
+  - dekudeals:recipe-for-disaster
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

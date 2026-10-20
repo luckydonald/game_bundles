@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Orcatober Aquatic Horrors
+tiers:
+- rank: 1
+  name: $4.00 USD
+- rank: 2
+  name: $6.00 USD
+- rank: 3
+  name: $8.00 USD
+- rank: 4
+  name: $10.00 USD
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/orcatober-aquatic-horrors
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/orcatober-aquatic-horrors?linkId=lp_005301&sourceId=deku&tenantId=digiphile
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/orcatober-aquatic-horrors/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/orcatober-aquatic-horrors/source.json
+crawlers:
+- dekudeals
+games:
+- name: Murky Divers
+  ids:
+  - steam:2963880
+  - dekudeals:murky-divers
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Static Dread: The Lighthouse'
+  ids:
+  - steam:3298940
+  - dekudeals:static-dread
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+- name: Voodoo Fishin'
+  ids:
+  - steam:3071240
+  - dekudeals:voodoo-fishin
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Darkwater
+  ids:
+  - steam:619540
+  - dekudeals:darkwater
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Layers of Fear (2023)
+  ids:
+  - steam:1946700
+  - dekudeals:layers-of-fear-2023
+  requires: []
+  tiers:
+  - 4
+- name: 'Static Dread: The Submarine'
+  ids:
+  - steam:4042160
+  - dekudeals:static-dread-the-submarine
+  requires: []
+  tiers:
+  - 4
+- name: UMIGARI | ウミガリ
+  ids:
+  - steam:3772960
+  - dekudeals:umigari
+  requires: []
+  tiers:
+  - 4

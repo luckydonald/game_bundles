@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-16_double-fine-publisher-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-16_double-fine-publisher-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/double-fine-publisher-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/double-fine-publisher-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/double-fine-publisher-bundle/source.json
 crawlers:
 - humblebundle
+- dekudeals
 games:
 - name: Psychonauts in the Rhombus of Ruin
   ids:
   - steam:788690
+  - dekudeals:psychonauts-in-the-rhombus-of-ruin
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Massive Chalice
   ids:
   - steam:246110
+  - dekudeals:massive-chalice
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Costume Quest
   ids:
   - steam:115100
+  - dekudeals:costume-quest
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: Iron Brigade
   ids:
   - steam:115120
+  - dekudeals:iron-brigade
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Stacking
   ids:
   - steam:115110
+  - dekudeals:stacking
   requires: []
   tiers:
   - 1
@@ -54,6 +66,7 @@ games:
 - name: Hack 'n' Slash
   ids:
   - steam:246070
+  - dekudeals:hack-n-slash
   requires: []
   tiers:
   - 1
@@ -61,6 +74,7 @@ games:
 - name: Spacebase DF-9
   ids:
   - steam:246090
+  - dekudeals:spacebase-df-9
   requires: []
   tiers:
   - 1
@@ -68,24 +82,28 @@ games:
 - name: Psychonauts
   ids:
   - steam:3830
+  - dekudeals:psychonauts
   requires: []
   tiers:
   - 2
 - name: Brutal Legend
   ids:
   - steam:225260
+  - dekudeals:brtal-legend
   requires: []
   tiers:
   - 2
 - name: Broken Age
   ids:
   - steam:232790
+  - dekudeals:broken-age
   requires: []
   tiers:
   - 2
 - name: Kiln
   ids:
   - steam:1165990
+  - dekudeals:kiln
   requires: []
   tiers:
   - 2

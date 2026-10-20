@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-12_cozy-after-dark-showcase-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-12_cozy-after-dark-showcase-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/cozy-after-dark-showcase-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/cozy-after-dark-showcase-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/cozy-after-dark-showcase-bundle/source.json
 crawlers:
 - humblebundle
+- dekudeals
 games:
 - name: Paradise Killer
   ids:
   - steam:1160220
+  - dekudeals:paradise-killer
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Escape From Mystwood Mansion
   ids:
   - steam:2292650
+  - dekudeals:escape-from-mystwood-mansion
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: a pet shop after dark
   ids:
   - steam:1934800
+  - dekudeals:a-pet-shop-after-dark
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: The Darkside Detective
   ids:
   - steam:368390
+  - dekudeals:the-darkside-detective
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Kathy Rain Directors Cut
   ids:
   - steam:1395030
+  - dekudeals:kathy-rain-directors-cut
   requires: []
   tiers:
   - 1
@@ -54,30 +66,35 @@ games:
 - name: Gloomy Eyes
   ids:
   - steam:2667950
+  - dekudeals:gloomy-eyes-the-game
   requires: []
   tiers:
   - 2
 - name: Cabernet
   ids:
   - steam:2401410
+  - dekudeals:cabernet
   requires: []
   tiers:
   - 2
 - name: Spooky Express
   ids:
   - steam:3352310
+  - dekudeals:spooky-express
   requires: []
   tiers:
   - 2
 - name: Fear the Spotlight
   ids:
   - steam:1959390
+  - dekudeals:fear-the-spotlight
   requires: []
   tiers:
   - 2
 - name: Kulebra and the Souls of Limbo
   ids:
   - steam:2246470
+  - dekudeals:kulebra-and-the-souls-of-limbo
   requires: []
   tiers:
   - 2

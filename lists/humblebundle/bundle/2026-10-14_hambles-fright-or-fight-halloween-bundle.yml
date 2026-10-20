@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-14_hambles-fright-or-fight-halloween-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-14_hambles-fright-or-fight-halloween-bundle/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/hambles-fright-or-fight-halloween-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/hambles-fright-or-fight-halloween-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/hambles-fright-or-fight-halloween-bundle/source.json
 crawlers:
 - humblebundle
+- dekudeals
 games:
 - name: Blair Witch
   ids:
   - steam:1092660
+  - dekudeals:blair-witch
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: 'Observer: System Redux'
   ids:
   - steam:1386900
+  - dekudeals:observer-system-redux
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: DEVOUR
   ids:
   - steam:1274570
+  - dekudeals:devour
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: Tales from Candleforth
   ids:
   - steam:2200410
+  - dekudeals:tales-from-candleforth
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Below, Rusted Gods
   ids:
   - steam:2895680
+  - dekudeals:below-rusted-gods
   requires: []
   tiers:
   - 1
@@ -54,18 +66,21 @@ games:
 - name: The Medium
   ids:
   - steam:1293160
+  - dekudeals:the-medium
   requires: []
   tiers:
   - 2
 - name: Layers of Fear
   ids:
   - steam:1946700
+  - dekudeals:layers-of-fear-2023
   requires: []
   tiers:
   - 2
 - name: I Hate This Place
   ids:
   - steam:2604490
+  - dekudeals:i-hate-this-place
   requires: []
   tiers:
   - 2

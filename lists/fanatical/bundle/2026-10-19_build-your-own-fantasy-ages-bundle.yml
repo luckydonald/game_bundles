@@ -1,0 +1,185 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Fantasy Ages Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-fantasy-ages-bundle
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-fantasy-ages-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-fantasy-ages-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-fantasy-ages-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Dungeon Antiqua
+  ids:
+  - steam:3198540
+  - dekudeals:dungeon-antiqua
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: It Lurks Below
+  ids:
+  - steam:697550
+  - dekudeals:it-lurks-below
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Worlds of Aria
+  ids:
+  - steam:1866980
+  - dekudeals:worlds-of-aria
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Pago Forest 2: Frozen Memories'
+  ids:
+  - steam:4918800
+  - dekudeals:pago-forest-2-frozen-memories
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Valiant Tactics
+  ids:
+  - steam:2412280
+  - dekudeals:valiant-tactics
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Enchanted Cave 2
+  ids:
+  - dekudeals:the-enchanted-cave-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Savior of the Abyss
+  ids:
+  - steam:1590640
+  - dekudeals:savior-of-the-abyss-switch
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hammerwatch Anniversary Edition & Hammerwatch II Double Pack
+  ids:
+  - dekudeals:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: WARTILE
+  ids:
+  - steam:404200
+  - dekudeals:wartile-standard
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pip My Dice
+  ids:
+  - steam:2797650
+  - dekudeals:pip-my-dice
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Field of Glory II: Medieval'
+  ids:
+  - steam:1368870
+  - dekudeals:field-of-glory-ii-medieval
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Elderand
+  ids:
+  - steam:1413660
+  - dekudeals:elderand
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Rhythm Witch: Beat Death'
+  ids:
+  - steam:2951580
+  - dekudeals:rhythm-witch-beat-death
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Frozenheim
+  ids:
+  - steam:1134100
+  - dekudeals:frozenheim
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'ATONE: Heart of the Elder Tree'
+  ids:
+  - steam:894620
+  - dekudeals:atone-heart-of-the-elder-tree
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Arboria
+  ids:
+  - steam:924070
+  - dekudeals:arboria
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Mage''s Initiation: Reign of the Elements'
+  ids:
+  - steam:270610
+  - dekudeals:mages-initiation-reign-of-the-elements
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Rustler - Complete Edition
+  ids:
+  - steam:bundle/19063
+  - dekudeals:rustler-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
