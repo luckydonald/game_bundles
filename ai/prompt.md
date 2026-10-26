@@ -3660,3 +3660,13 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ Plan accepted, auto mode.
 
+❯ add scraper for Fanatical:
+- e.g. https://www.fanatical.com/en/bundle/coppafeel-charity-bundle
+- Bundle list: https://www.fanatical.com/en/bundle/games
+- enable plan mode once you gathered what you need to write it
+
+❯ Plan denied:
+> Holy heck, I'm in the wrong project entirely.
+> All those changes, including ai prompts, and exploration shall go to `~/Documents/programming/Python/game_bundles`. That would then follow the existing crawler standards there.
+
+❯ Plan accepted (title-search resolver for games without a Steam id; bundles plus pick-and-mix as `pick_quota`).

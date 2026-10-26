@@ -35,6 +35,8 @@ def _registry() -> dict[SourceName, _SourceRegistration]:
     from game_collections.sources.dailyindiegame import models as dig_models
     from game_collections.sources.dekudeals import migrations as deku_migrations
     from game_collections.sources.dekudeals import models as deku_models
+    from game_collections.sources.fanatical import migrations as fanatical_migrations
+    from game_collections.sources.fanatical import models as fanatical_models
     from game_collections.sources.greenmangaming import migrations as gmg_migrations
     from game_collections.sources.greenmangaming import models as gmg_models
     from game_collections.sources.humblebundle import migrations as humble_migrations
@@ -67,6 +69,11 @@ def _registry() -> dict[SourceName, _SourceRegistration]:
             deku_models.CURRENT_VERSION,
             tuple(deku_migrations.METADATA_MIGRATIONS),
             tuple(deku_migrations.SOURCE_MIGRATIONS),
+        ),
+        SourceName.FANATICAL: _SourceRegistration(
+            fanatical_models.CURRENT_VERSION,
+            tuple(fanatical_migrations.METADATA_MIGRATIONS),
+            tuple(fanatical_migrations.SOURCE_MIGRATIONS),
         ),
     }
 # end def _registry

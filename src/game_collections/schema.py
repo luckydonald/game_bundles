@@ -8,6 +8,7 @@ from pathlib import Path
 from game_collections.models import GameList
 from game_collections.sources.dailyindiegame.models import DigArchive
 from game_collections.sources.dekudeals.models import DekuArchive
+from game_collections.sources.fanatical.models import FanaticalArchive
 from game_collections.sources.greenmangaming.models import GmgArchive
 from game_collections.sources.humblebundle.models import HumbleArchive
 from game_collections.sources.isthereanydeal.models import ItadArchive, ItadGameArchive
@@ -174,3 +175,27 @@ def write_dekudeals_schema(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(render_dekudeals_schema(), encoding="utf-8")
 # end def write_dekudeals_schema
+
+
+def generate_fanatical_schema() -> dict[str, object]:
+    """Generate the normalized Fanatical archive schema."""
+    return FanaticalArchive.model_json_schema(by_alias=True, mode="validation")
+# end def generate_fanatical_schema
+
+
+def render_fanatical_schema() -> str:
+    """Render the Fanatical archive schema deterministically."""
+    return json.dumps(
+        generate_fanatical_schema(),
+        indent=2,
+        sort_keys=True,
+        ensure_ascii=True,
+    ) + "\n"
+# end def render_fanatical_schema
+
+
+def write_fanatical_schema(path: Path) -> None:
+    """Write the normalized Fanatical archive schema."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render_fanatical_schema(), encoding="utf-8")
+# end def write_fanatical_schema

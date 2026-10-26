@@ -1,0 +1,252 @@
+{
+  "$defs": {
+    "FanaticalDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.\n\n`start`/`end` are Fanatical's own `available_valid_from`/`available_valid_until` unix timestamps, hence\na confidence of 1.0. `first_seen` is set once, the first time this bundle is ever archived,\nand never overwritten afterward.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "first_seen": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Seen"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "FanaticalDates",
+      "type": "object"
+    },
+    "FanaticalItem": {
+      "additionalProperties": false,
+      "description": "One product advertised within a Fanatical bundle.\n\n`product_type` is Fanatical's own label (`game`, `bundle` for a nested edition/collection, `software`,\n`book`, `comic`, `audio`). `ids` always includes `fanatical:<slug>` as a stable anchor, plus a\n`steam:<appid>` when known, or `unresolved:source:fanatical:<bundle>:<slug>` for a Steam product\nwhose id could not be determined (see `resolver.py`).",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "product_type": {
+          "minLength": 1,
+          "title": "Product Type",
+          "type": "string"
+        },
+        "slug": {
+          "minLength": 1,
+          "title": "Slug",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "title",
+        "product_type",
+        "ids"
+      ],
+      "title": "FanaticalItem",
+      "type": "object"
+    },
+    "FanaticalTier": {
+      "additionalProperties": false,
+      "description": "One purchase tier of a Fanatical bundle.\n\n`display_total` is Fanatical's own \"number of products\" for the tier: the total unlocked so far for a\nregular `bundle`, the number of products which may be picked for a `pick-and-mix`. `items` is the\ntier's full, cumulative unlock list (regular) or the shared pool (pick-and-mix).",
+      "properties": {
+        "display_total": {
+          "minimum": 0,
+          "title": "Display Total",
+          "type": "integer"
+        },
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/FanaticalItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "price": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "propertyNames": {
+            "minLength": 1
+          },
+          "title": "Price",
+          "type": "object"
+        }
+      },
+      "required": [
+        "identifier",
+        "price",
+        "display_total",
+        "items"
+      ],
+      "title": "FanaticalTier",
+      "type": "object"
+    },
+    "ScrapedTimestamp": {
+      "additionalProperties": false,
+      "description": "One `start`/`end` value as actually derived from a source, plus how sure we are.\n\n`iso` preserves whatever precision the source gave us (date-only, or date+time\ndown to minute/second/fraction, always with an explicit UTC offset unless it's\ndate-only); `timestamp` is the same instant as a unix epoch float, cross-checked\nagainst `iso` on construction so the two can never silently drift apart.",
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "iso": {
+          "minLength": 1,
+          "title": "Iso",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceName"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "number"
+        }
+      },
+      "required": [
+        "iso",
+        "timestamp",
+        "confidence",
+        "source"
+      ],
+      "title": "ScrapedTimestamp",
+      "type": "object"
+    },
+    "SourceName": {
+      "description": "One entry per `sources/<name>/` crawler package.",
+      "enum": [
+        "humblebundle",
+        "greenmangaming",
+        "dailyindiegame",
+        "isthereanydeal",
+        "dekudeals",
+        "fanatical"
+      ],
+      "title": "SourceName",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one Fanatical bundle offer.",
+  "properties": {
+    "bundle_type": {
+      "enum": [
+        "bundle",
+        "pick-and-mix"
+      ],
+      "title": "Bundle Type",
+      "type": "string"
+    },
+    "dates": {
+      "$ref": "#/$defs/FanaticalDates"
+    },
+    "discount_percent": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Discount Percent",
+      "type": "integer"
+    },
+    "full_price": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "propertyNames": {
+        "minLength": 1
+      },
+      "title": "Full Price",
+      "type": "object"
+    },
+    "machine_name": {
+      "minLength": 1,
+      "title": "Machine Name",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "pay_what_you_want": {
+      "title": "Pay What You Want",
+      "type": "boolean"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/FanaticalTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "machine_name",
+    "url",
+    "name",
+    "bundle_type",
+    "pay_what_you_want",
+    "discount_percent",
+    "full_price",
+    "dates",
+    "tiers"
+  ],
+  "title": "FanaticalArchive",
+  "type": "object"
+}
