@@ -130,14 +130,17 @@ def _embedded(html: str) -> _EmbeddedDataParser:
 
 
 class _DlcPackDetailsParser(HTMLParser):
-    """Extract a DLC pack item's base-game link and bundled-DLC names from its raw description HTML."""
+    """Extract a DLC pack item's base-game link and each top-level `<ul>`'s bullets from its raw description HTML.
+
+    Every list is kept separate (never merged): whether one is a list of DLCs or just explainer
+    text is decided later, per list, by `humblebundle.dlc_lists` / the resolver.
+    """
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.base_game_url: str | None = None
-        self.dlc_names: list[str] = []
-        self._in_first_ul = False
-        self._first_ul_done = False
+        self.dlc_lists: list[list[str]] = []
+        self._ul_depth = 0
         self._in_li = False
         self._li_parts: list[str] = []
     # end def __init__
@@ -148,9 +151,12 @@ class _DlcPackDetailsParser(HTMLParser):
             if href and "store.steampowered.com/app/" in href:
                 self.base_game_url = href
             # end if
-        elif tag == "ul" and not self._first_ul_done:
-            self._in_first_ul = True
-        elif tag == "li" and self._in_first_ul:
+        elif tag == "ul":
+            if self._ul_depth == 0:
+                self.dlc_lists.append([])
+            # end if
+            self._ul_depth += 1
+        elif tag == "li" and self._ul_depth == 1:
             self._in_li = True
             self._li_parts = []
         # end if
@@ -166,13 +172,12 @@ class _DlcPackDetailsParser(HTMLParser):
         if tag == "li" and self._in_li:
             text = "".join(self._li_parts).strip()
             if text:
-                self.dlc_names.append(text)
+                self.dlc_lists[-1].append(text)
             # end if
             self._in_li = False
             self._li_parts = []
-        elif tag == "ul" and self._in_first_ul:
-            self._in_first_ul = False
-            self._first_ul_done = True
+        elif tag == "ul" and self._ul_depth > 0:
+            self._ul_depth -= 1
         # end if
     # end def handle_endtag
 
@@ -258,19 +263,20 @@ def _parse_edition_bundle_components(title: str, html: str) -> list[str]:
 # end def _parse_edition_bundle_components
 
 
-def _parse_dlc_pack_details(html: str) -> tuple[str | None, list[str]]:
-    """Extract a DLC pack item's base-game URL and bundled-DLC names from its raw description HTML.
+def _parse_dlc_pack_details(html: str) -> tuple[str | None, list[list[str]]]:
+    """Extract a DLC pack item's base-game URL and each `<ul>`'s bullets from its raw description HTML.
 
     Only call this for items already tagged as a DLC pack (`cta_badge.badge == "dlc"`) - a
     normal game's description commonly contains both a Steam link and an early feature-bullet
-    list, which this would misidentify as a base-game link and bundled-DLC names.
+    list, which this would misidentify as a base-game link and DLC names. Even for a DLC pack, a
+    returned list is only a candidate - it may be explainer text (see `humblebundle.dlc_lists`).
     """
     if not html.strip():
         return None, []
     # end if
     parser = _DlcPackDetailsParser()
     parser.feed(html)
-    return parser.base_game_url, parser.dlc_names
+    return parser.base_game_url, [bullets for bullets in parser.dlc_lists if bullets]
 # end def _parse_dlc_pack_details
 
 
@@ -470,7 +476,7 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
     rating = raw.get("user_ratings") if isinstance(raw.get("user_ratings"), dict) else {}
     excluded = raw.get("exclusive_countries")
     title = _required_string(raw.get("human_name"), f"item {machine_name} title")
-    base_game_url, bundled_dlc_names = (
+    base_game_url, dlc_lists = (
         _parse_dlc_pack_details(raw.get("description_text") or "") if "dlc" in tags else (None, [])
     )
     edition_component_titles = (
@@ -496,7 +502,7 @@ def _bundle_item(machine_name: str, value: object) -> HumbleItem:
         excluded_countries=[str(item) for item in excluded] if isinstance(excluded, list) else [],
         resolution=HumbleResolution(),
         base_game_url=base_game_url,
-        bundled_dlc_names=bundled_dlc_names,
+        dlc_lists=dlc_lists,
         edition_component_titles=edition_component_titles,
     )
 # end def _bundle_item

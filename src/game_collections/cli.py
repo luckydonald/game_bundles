@@ -120,7 +120,7 @@ from game_collections.sources.isthereanydeal.resolver import (
     write_itad_game_archive,
 )
 from game_collections.sources.isthereanydeal.shop_config import load_shop_config
-from game_collections.sources.prompting import choose_store_candidate
+from game_collections.sources.prompting import choose_store_candidate, confirm_dlc_list
 
 
 
@@ -852,7 +852,13 @@ def scrape_humblebundle_command(
     unresolved: list[str] = []
     try:
         mapping = load_resolution_map(resolution_map)
-        resolver = StorefrontResolver(client.fetch, choose, steamdb_fetch=steamdb_fetcher.fetch)
+        resolver = StorefrontResolver(
+            client.fetch,
+            choose,
+            steamdb_fetch=steamdb_fetcher.fetch,
+            # Non-interactive: an unsure DLC-pack list is explainer text, never a guess.
+            confirm_dlc_list=(lambda _title, _bullets: False) if non_interactive else confirm_dlc_list,
+        )
         report = crawl_humble_offers(
             client.fetch,
             resolver,

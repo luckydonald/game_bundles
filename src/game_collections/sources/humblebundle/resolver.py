@@ -13,6 +13,7 @@ import yaml
 from pydantic import Field, StringConstraints, model_validator
 
 from game_collections.models import QualifiedGameId, StrictModel
+from game_collections.sources.humblebundle.dlc_lists import DlcListChooser, classify_dlc_list
 from game_collections.sources.humblebundle.models import (
     HumbleArchive,
     HumbleItem,
@@ -77,6 +78,9 @@ class HumbleResolutionMap(StrictModel):
 
     schema_version: Literal[1] = Field(alias="schema", serialization_alias="schema")
     games: dict[NonEmptyString, list[NonEmptyString]] = Field(default_factory=dict)
+    # The user's answer per DLC-pack `<ul>` ("are these separate games/DLCs?"), keyed
+    # `<machine_name>::list<N>` (1-based). Only interactive answers are stored; heuristic ones are recomputed.
+    dlc_lists: dict[NonEmptyString, bool] = Field(default_factory=dict)
 
     @model_validator(mode="after")
     def validate_ids(self) -> Self:
@@ -196,6 +200,11 @@ def render_resolution_map(mapping: HumbleResolutionMap) -> str:
     """Render the reviewed mapping deterministically."""
     value = mapping.model_dump(by_alias=True, mode="json")
     value["games"] = dict(sorted(value["games"].items()))
+    if value["dlc_lists"]:
+        value["dlc_lists"] = dict(sorted(value["dlc_lists"].items()))
+    else:
+        del value["dlc_lists"]
+    # end if
     return yaml.safe_dump(value, sort_keys=False, allow_unicode=True)
 # end def render_resolution_map
 
@@ -228,12 +237,14 @@ class StorefrontResolver:
         steamdb_fetch: Fetcher | None = None,
         collect_name: NameCollector = _default_collect_one_name,
         announce_exact_match: AnnounceFn = _default_announce_exact_match,
+        confirm_dlc_list: DlcListChooser = lambda _title, _bullets: False,
     ) -> None:
         self._fetch = fetch
         self._choose = choose
         self._steamdb_fetch = steamdb_fetch
         self._collect_name = collect_name
         self._announce_exact_match = announce_exact_match
+        self._confirm_dlc_list = confirm_dlc_list
     # end def __init__
 
     def search(self, provider: StoreName, title: str) -> list[StoreCandidate]:
@@ -431,21 +442,64 @@ class StorefrontResolver:
         return [ResolvedGame(name=title, ids=deduped)]
     # end def _resolve_title
 
-    def resolve_item(
+    def confirmed_dlc_components(self, item: HumbleItem, mapping: HumbleResolutionMap) -> list[str]:
+        """Titles from every `<ul>` of `item` confirmed to list separate games/DLCs, each list decided alone.
+
+        A list is decided by `classify_dlc_list`: obvious prose is "no", a Steam base-game link plus
+        an exact Steam match for the first bullet is "yes", and anything else is "ask" - answered
+        via the injected `confirm_dlc_list` (a prompt, or a hard "no" when non-interactive) and
+        cached in `mapping.dlc_lists` so it's never asked twice.
+        """
+        components: list[str] = []
+        for index, bullets in enumerate(item.dlc_lists, start=1):
+            cache_key = f"{item.machine_name}::list{index}"
+            verdict = classify_dlc_list(
+                bullets, str(item.base_game_url) if item.base_game_url else None, self.search_steam_safely
+            )
+            # A DLC pack lists its DLCs once; once a list is confirmed, later undecidable lists
+            # (feature bullets after the DLC list, as on Our Life) are explainer text, not worth a prompt.
+            if verdict == "ask" and components:
+                verdict = "no"
+            # end if
+            if verdict == "ask":
+                cached = mapping.dlc_lists.get(cache_key)
+                if cached is None:
+                    cached = self._confirm_dlc_list(item.title, bullets)
+                    mapping.dlc_lists[cache_key] = cached
+                # end if
+                verdict = "yes" if cached else "no"
+            # end if
+            if verdict == "yes":
+                components.extend(bullets)
+            # end if
+        # end for
+        return components
+    # end def confirmed_dlc_components
+
+    def search_steam_safely(self, title: str) -> list[StoreCandidate]:
+        """`_search_steam`, treating a network failure as "no candidates" like `_resolve_title` does."""
+        try:
+            return self._search_steam(title)
+        except (OSError, RuntimeError):
+            return []
+        # end try
+    # end def search_steam_safely
+
+    def resolve_item_split(
         self, item: HumbleItem, mapping: HumbleResolutionMap, known_names: set[str] | None = None
-    ) -> list[ResolvedGame]:
-        """Resolve one item, possibly splitting into several games (a "DLC pack"/"Edition bundle",
-        a user-declared "Multiple…", or an auto-expanded Steam Sub - see `_resolve_title`)."""
+    ) -> tuple[list[ResolvedGame], bool]:
+        """Like `resolve_item`, also reporting whether the item was split by confirmed DLC/edition components."""
         stores = [store for store in item.redeem_on if store in ALLOWED_STORES]
+        component_titles = self.confirmed_dlc_components(item, mapping) or item.edition_component_titles
         requires: list[str] = []
-        if item.base_game_url is not None:
+        # The base game is only a requirement of components split out of a (confirmed) DLC list.
+        if component_titles and item.base_game_url is not None:
             try:
                 requires = [parse_store_identity("steam", str(item.base_game_url))]
             except ValueError:
                 requires = []
             # end try
         # end if
-        component_titles = item.bundled_dlc_names or item.edition_component_titles
         if component_titles:
             results: list[ResolvedGame] = []
             for index, component_title in enumerate(component_titles, start=1):
@@ -455,10 +509,18 @@ class StorefrontResolver:
                     results.append(resolved.model_copy(update={"requires": requires}))
                 # end for
             # end for
-            return results
+            return results, True
         # end if
         resolved = self._resolve_title(item.title, stores, item.machine_name, mapping, known_names=known_names)
-        return [entry.model_copy(update={"requires": requires}) for entry in resolved]
+        return [entry.model_copy(update={"requires": requires}) for entry in resolved], False
+    # end def resolve_item_split
+
+    def resolve_item(
+        self, item: HumbleItem, mapping: HumbleResolutionMap, known_names: set[str] | None = None
+    ) -> list[ResolvedGame]:
+        """Resolve one item, possibly splitting into several games (a "DLC pack"/"Edition bundle",
+        a user-declared "Multiple…", or an auto-expanded Steam Sub - see `_resolve_title`)."""
+        return self.resolve_item_split(item, mapping, known_names)[0]
     # end def resolve_item
 
     def resolve_archive(
@@ -483,19 +545,19 @@ class StorefrontResolver:
         total = len(distinct)
         for index, item in enumerate(distinct, start=1):
             log(f"  Game {index}/{total}: {item.title}")
-            results = self.resolve_item(item, mapping, known_names)
+            results, is_split = self.resolve_item_split(item, mapping, known_names)
             all_ids = [identifier for entry in results for identifier in entry.ids]
             unresolved_stores = [
                 store for store in item.redeem_on if not any(identifier.startswith(f"{store}:") for identifier in all_ids)
             ]
             requires = results[0].requires if results else []
             # `results` holds more than one entry not just for a parser-driven split
-            # (`bundled_dlc_names`/`edition_component_titles`), but also whenever resolution
+            # (confirmed `dlc_lists`/`edition_component_titles`), but also whenever resolution
             # itself discovered several distinct games from a single title - the user declaring
             # "Multiple…" interactively, or a Steam Sub auto-expanding into its member apps (see
             # `_resolve_title`) - each case needs its own `Game` entry, not one entry sharing all
             # their ids.
-            if item.bundled_dlc_names or item.edition_component_titles or len(results) > 1:
+            if is_split or len(results) > 1:
                 resolutions[item.machine_name] = HumbleResolution(
                     splits=[HumbleResolvedGame(name=entry.name, ids=entry.ids) for entry in results],
                     unresolved_stores=unresolved_stores,

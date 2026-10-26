@@ -3607,3 +3607,49 @@ done" completed (exit code 0)
 > - [Answer (`3002` chars, `2.93 KB`)](output/agents/055.b84elyema/result.md)
 > - [Raw log (`11172` chars, `10.9 KB`)](/private/tmp/claude-501/-Users-user-Documents-programming-Python-game-bundles/6d67a92a-4877-4a27-b85d-bbf17eac7433/tasks/b84elyema.output)
 
+❯ Currently the `humblebundle` scraper will pull in the DLCs' `<li>` etc.
+There shall be an question first to the user, if those items are actually games/DLCs, or just expainer text.
+Do that per list, not merging all list items.
+Furthermore, the non-interacive default shall be not to.
+Figure out why this was needed in the first place, maybe we can make that a yes based on the name of the DLC in Humblebundle (if that is a valid item) and the search result of the first `<li>`?
+
+❯ Task Notification:
+> - Task `a21a0e773e2d40c5e` <kbd>completed</kbd>
+> - Tool `toolu_01HtFZHzxwMZ92PSsP8hJpct`
+> - > Agent "Explore Humble DLC li handling" finished
+> - [Query (`1137` chars, `1.11 KB`)](output/agents/056.a21a0e773e2d40c5e/prompt.md)
+> - [Answer (`12808` chars, `12.6 KB`)](output/agents/056.a21a0e773e2d40c5e/result.md)
+> - [Raw log (`587249` chars, `575 KB`)](/private/tmp/claude-501/-Users-user-Documents-programming-Python-game-bundles/692c0e4b-7d72-4817-8a64-8636a4e9eada/tasks/a21a0e773e2d40c5e.output)
+> - `16` tools, `84866` tokens, `1.9336 s`
+
+❯ Question answered.
+> <details><summary>
+>
+>> 1. Which `<ul>` lists of a DLC-badged item should be asked about?
+>> 2. What should the non-interactive answer be when the heuristic is not confident?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **List scope** (1/2) <kbd>Single Select</kbd><br>
+>> Which `<ul>` lists of a DLC-badged item should be asked about?
+> - [x] 1\. Every <ul>, auto-skip obvious prose (Recommended)
+>   - _Parser keeps each <ul> as its own list. Lists with prose bullets (' — ', long sentences) are auto-'no' without a prompt, so Our Life's many feature <ul>s don't cause prompts._
+> - [ ] 2\. First <ul> only (as today)
+>   - _Keeps the current first-list rule; just adds the question/heuristic for that one list._
+> - [ ] 3\. _Type something._
+>
+>> **Non-interactive** (2/2) <kbd>Single Select</kbd><br>
+>> What should the non-interactive answer be when the heuristic is not confident?
+> - [x] 1\. No, i.e. explainer text (Recommended)
+>   - _As requested. Only lists passing the auto-yes heuristic (Steam base-game link + every <li> exact-matches a storefront result) become DLC splits; the rest keep the item as one game._
+> - [ ] 2\. No, but record as unresolved marker
+>   - _Same, but also writes an unresolved marker so a later interactive `complete` run can ask._
+> - [ ] 3\. _Type something._
+>
+> </details>
+>
+
+❯ Plan accepted, auto mode.
+

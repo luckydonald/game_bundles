@@ -170,25 +170,29 @@ def test_parse_dlc_pack_details_extracts_base_game_and_dlc_list() -> None:
         '<ul>\n<li>4 different periods of life to experience</li>\n</ul>'
     )
 
-    base_game_url, dlc_names = _parse_dlc_pack_details(description)
+    base_game_url, dlc_lists = _parse_dlc_pack_details(description)
 
     assert base_game_url == "https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/"
-    assert dlc_names == [
-        "Our Life: Beginnings & Always: Cove Wedding Story",
-        "Our Life: Beginnings & Always: Baxter's Story",
-        "Our Life: Beginnings & Always: Derek's Story",
-        "Our Life: Beginnings & Always: Step 3 Expansion",
-        "Our Life: Beginnings & Always: Step 2 Expansion",
-        "Our Life: Beginnings & Always: Step 1 Expansion",
+    # Each `<ul>` stays its own candidate list; the trailing feature bullet is not merged into the DLC list.
+    assert dlc_lists == [
+        [
+            "Our Life: Beginnings & Always: Cove Wedding Story",
+            "Our Life: Beginnings & Always: Baxter's Story",
+            "Our Life: Beginnings & Always: Derek's Story",
+            "Our Life: Beginnings & Always: Step 3 Expansion",
+            "Our Life: Beginnings & Always: Step 2 Expansion",
+            "Our Life: Beginnings & Always: Step 1 Expansion",
+        ],
+        ["4 different periods of life to experience"],
     ]
 # end def test_parse_dlc_pack_details_extracts_base_game_and_dlc_list
 
 
 def test_parse_dlc_pack_details_returns_none_for_plain_description() -> None:
-    base_game_url, dlc_names = _parse_dlc_pack_details("<p>A <strong>great</strong> game.</p>")
+    base_game_url, dlc_lists = _parse_dlc_pack_details("<p>A <strong>great</strong> game.</p>")
 
     assert base_game_url is None
-    assert dlc_names == []
+    assert dlc_lists == []
 # end def test_parse_dlc_pack_details_returns_none_for_plain_description
 
 
@@ -245,7 +249,7 @@ def test_bundle_page_wires_dlc_pack_details_onto_the_item() -> None:
     assert item.tags == ["dlc"]
     assert item.base_game_url is not None
     assert str(item.base_game_url) == "https://store.steampowered.com/app/2415010/A_Date_with_Death/"
-    assert item.bundled_dlc_names == []
+    assert item.dlc_lists == []
 # end def test_bundle_page_wires_dlc_pack_details_onto_the_item
 
 
@@ -303,7 +307,7 @@ def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item() -> None:
     item = archive.tiers[0].items[0]
     assert item.tags == []
     assert item.base_game_url is None
-    assert item.bundled_dlc_names == []
+    assert item.dlc_lists == []
 # end def test_bundle_page_ignores_dlc_pack_shape_on_a_non_dlc_item
 
 
@@ -384,7 +388,7 @@ def test_bundle_page_wires_edition_bundle_components_onto_the_item() -> None:
     item = archive.tiers[0].items[0]
     assert item.tags == []
     assert item.base_game_url is None
-    assert item.bundled_dlc_names == []
+    assert item.dlc_lists == []
     assert item.edition_component_titles == [
         "Steelrising",
         "Steelrising - Discus Chain",

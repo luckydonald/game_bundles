@@ -145,7 +145,7 @@ def test_writer_splits_a_dlc_pack_item_into_grouped_games(tmp_path: Path) -> Non
         redeem_on=["steam"],
         tags=["dlc"],
         base_game_url="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/",
-        bundled_dlc_names=["DLC One", "DLC Two"],
+        dlc_lists=[["DLC One", "DLC Two"]],
         resolution=HumbleResolution(
             splits=[
                 HumbleResolvedGame(name="DLC One", ids=["steam:11"]),

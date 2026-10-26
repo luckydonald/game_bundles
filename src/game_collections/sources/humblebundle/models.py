@@ -14,9 +14,10 @@ from game_collections.versioning import LEGACY_VERSION, SchemaDateVersion, Versi
 
 HUMBLE_V1 = SchemaDateVersion(2026, 6, 1)
 HUMBLE_V2 = SchemaDateVersion(2026, 9, 11, 14, 30)
-HumbleVersions = Literal[LEGACY_VERSION, HUMBLE_V1, HUMBLE_V2]
-HumbleCurrentVersion = Literal[HUMBLE_V2]
-CURRENT_VERSION: HumbleCurrentVersion = HUMBLE_V2
+HUMBLE_V3 = SchemaDateVersion(2026, 10, 26)
+HumbleVersions = Literal[LEGACY_VERSION, HUMBLE_V1, HUMBLE_V2, HUMBLE_V3]
+HumbleCurrentVersion = Literal[HUMBLE_V3]
+CURRENT_VERSION: HumbleCurrentVersion = HUMBLE_V3
 
 
 class HumblePrice(StrictModel):
@@ -88,9 +89,11 @@ class HumbleItem(StrictModel):
     excluded_countries: list[NonEmptyString] = Field(default_factory=list)
     resolution: HumbleResolution = Field(default_factory=HumbleResolution)
     # Populated for "DLC pack" items (see `cta_badge`/`tags` == "dlc") whose description
-    # links a free base game and lists the individual DLCs bundled together.
+    # links a free base game. Each top-level `<ul>` of the description is one candidate list - it may
+    # list the individual DLCs bundled together, or just be explainer text; the resolver decides
+    # (and asks) per list, see `humblebundle.dlc_lists`.
     base_game_url: HttpUrl | None = None
-    bundled_dlc_names: list[NonEmptyString] = Field(default_factory=list)
+    dlc_lists: list[list[NonEmptyString]] = Field(default_factory=list)
     # Populated for "Edition" items whose title ends "- <Edition> Edition" and whose description
     # states "Includes: Base game + <DLC> + <DLC>." (no `cta_badge`, unlike a "DLC pack" - Steam
     # only sells the base game + DLCs together via this edition, with no single matching app page).

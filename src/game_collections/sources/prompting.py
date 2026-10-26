@@ -73,6 +73,19 @@ def collect_one_name(count: int, known_names: set[str] | None = None) -> str | N
 # end def collect_one_name
 
 
+def confirm_dlc_list(item_title: str, bullets: list[str]) -> bool:
+    """Ask whether one `<ul>` of a Humble item's description lists separate games/DLCs.
+
+    Answering "no" (the default) means the list is explainer text and the item stays one game.
+    """
+    typer.echo(f"{item_title!r} has this list in its description:")
+    for bullet in bullets:
+        typer.echo(f"  - {bullet}")
+    # end for
+    return typer.confirm("Are these separate games/DLCs (not just explainer text)?", default=False)
+# end def confirm_dlc_list
+
+
 def choose_store_candidate(
     title: str,
     provider: StoreName,

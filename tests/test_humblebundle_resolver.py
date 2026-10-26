@@ -355,7 +355,7 @@ def test_resolve_item_splits_a_dlc_pack_and_attaches_requires() -> None:
         redeem_on=["steam"],
         tags=["dlc"],
         base_game_url="https://store.steampowered.com/app/1129190/Our_Life_Beginnings__Always/",
-        bundled_dlc_names=["DLC One"],
+        dlc_lists=[["DLC One"]],
         resolution=HumbleResolution(),
     )
     resolver = StorefrontResolver(lambda _url: page, lambda _title, _provider, _candidates, **_kwargs: None)
@@ -535,7 +535,7 @@ def test_choosing_multiple_never_offers_multiple_again_for_a_collected_name() ->
 
 
 def test_resolve_archive_writes_splits_for_a_plain_item_resolved_into_several_games() -> None:
-    # A plain item (no `bundled_dlc_names`/`edition_component_titles`) whose resolution still
+    # A plain item (no `dlc_lists`/`edition_component_titles`) whose resolution still
     # discovers several distinct games - e.g. the user declaring "Multiple…" for a title like
     # "Torchlight 1-3 Bundle" - must produce separate `Game` entries downstream, not one entry
     # whose `ids` silently mixes three unrelated games' appids together.
