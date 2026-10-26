@@ -1,0 +1,148 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Marmalade Games: Ultimate Digital Game Night'
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 11 Item Bundle
+- rank: 3
+  name: Entire 19 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/marmalade-games-ultimate-digital-game-night
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-26_marmalade-games-ultimate-digital-game-night/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-26_marmalade-games-ultimate-digital-game-night/source.json
+crawlers:
+- humblebundle
+games:
+- name: The Game of Life
+  ids:
+  - steam:403120
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hasbro's Battleship
+  ids:
+  - steam:893050
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hasbro's BATTLESHIP - Super Collection
+  ids:
+  - steam:896780
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Game of Life 2
+  ids:
+  - steam:1455630
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: The Game of Life 2 - The Ultimate Life Collection
+  ids:
+  - steam:1461050
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Clue/Cluedo: Classic Edition'
+  ids:
+  - steam:794800
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Clue/Cluedo: Classic Edition - The Ultimate Detectives Package'
+  ids:
+  - steam:850260
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Exploding Kittens 2
+  ids:
+  - steam:2999030
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Exploding Kittens 2: Mystic Mayhem Pack'
+  ids:
+  - steam:3276090
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Exploding Kittens 2: Explosive Expansions Pass'
+  ids:
+  - steam:3140320
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Exploding Kittens 2: Beach Day Pack'
+  ids:
+  - steam:3140310
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Clue/Cluedo
+  ids:
+  - steam:2506480
+  requires: []
+  tiers:
+  - 3
+- name: 'Clue/Cluedo: Noir Mansion Expansion'
+  ids:
+  - steam:3659490
+  requires: []
+  tiers:
+  - 3
+- name: 'Clue/Cluedo: Whispering Pines Retreat Expansion'
+  ids:
+  - steam:2880150
+  requires: []
+  tiers:
+  - 3
+- name: 'Clue/Cluedo: Polar Research Station Expansion'
+  ids:
+  - steam:3252340
+  requires: []
+  tiers:
+  - 3
+- name: 'Clue/Cluedo: Sherlock Suspect Pack'
+  ids:
+  - steam:4772090
+  requires: []
+  tiers:
+  - 3
+- name: 'Clue/Cluedo: Black Adder Resort Expansion'
+  ids:
+  - steam:2556790
+  requires: []
+  tiers:
+  - 3
+- name: Ticket to Ride
+  ids:
+  - steam:2477010
+  requires: []
+  tiers:
+  - 3
+- name: 'Ticket to Ride: Round the World Ticket'
+  ids:
+  - steam:2608230
+  requires: []
+  tiers:
+  - 3

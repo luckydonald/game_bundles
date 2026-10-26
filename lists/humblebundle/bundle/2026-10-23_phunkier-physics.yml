@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Phunkier Physics
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 9 Item Bundle
+- rank: 3
+  name: Entire 10 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/phunkier-physics
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-23_phunkier-physics/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-23_phunkier-physics/source.json
+crawlers:
+- humblebundle
+games:
+- name: Crawling Angels
+  ids:
+  - steam:3958640
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Juno: New Origins'
+  ids:
+  - steam:870200
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Exo One
+  ids:
+  - steam:773370
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'ΔV: Rings of Saturn'
+  ids:
+  - steam:846030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Space Engineers
+  ids:
+  - steam:244850
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Wobbledogs
+  ids:
+  - steam:1424330
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Instruments of Destruction
+  ids:
+  - steam:1428100
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: The Greatest Penguin Heist of All Time
+  ids:
+  - steam:1451480
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Badlands Crew - Drive, Command, Conquer
+  ids:
+  - steam:2078230
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Besiege Master Engineer Edition
+  ids:
+  - steam:bundle/78970
+  requires: []
+  tiers:
+  - 3

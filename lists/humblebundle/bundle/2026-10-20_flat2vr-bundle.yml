@@ -15,13 +15,20 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16690/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16690/source.json
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/flat2vr-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-20_flat2vr-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-20_flat2vr-bundle/source.json
 crawlers:
 - isthereanydeal
+- humblebundle
 games:
-- name: Audio Trip
+- name: Out of Sight VR
   ids:
-  - steam:826540
-  - isthereanydeal:audio-trip
+  - steam:3558720
+  - isthereanydeal:out-of-sight-vr
   requires: []
   tiers:
   - 1
@@ -36,19 +43,19 @@ games:
   - 1
   - 2
   - 3
-- name: Out of Sight VR
+- name: Audio Trip
   ids:
-  - steam:3558720
-  - isthereanydeal:out-of-sight-vr
+  - steam:826540
+  - isthereanydeal:audio-trip
   requires: []
   tiers:
   - 1
   - 2
   - 3
-- name: Genotype
+- name: 'Wrath: Aeon of Ruin VR - Brutal Edition'
   ids:
-  - steam:2667980
-  - isthereanydeal:genotype
+  - steam:3430260
+  - isthereanydeal:wrath-aeon-of-ruin-vr-brutal-edition
   requires: []
   tiers:
   - 2
@@ -61,10 +68,10 @@ games:
   tiers:
   - 2
   - 3
-- name: 'Wrath: Aeon of Ruin VR - Brutal Edition'
+- name: Genotype
   ids:
-  - steam:3430260
-  - isthereanydeal:wrath-aeon-of-ruin-vr-brutal-edition
+  - steam:2667980
+  - isthereanydeal:genotype
   requires: []
   tiers:
   - 2
@@ -76,17 +83,17 @@ games:
   requires: []
   tiers:
   - 3
-- name: VRacer Hoverbike
-  ids:
-  - steam:668430
-  - isthereanydeal:vracer-hoverbike
-  requires: []
-  tiers:
-  - 3
 - name: I AM YOUR BEAST VR
   ids:
   - steam:3844740
   - isthereanydeal:i-am-your-beast-vr
+  requires: []
+  tiers:
+  - 3
+- name: VRacer Hoverbike
+  ids:
+  - steam:668430
+  - isthereanydeal:vracer-hoverbike
   requires: []
   tiers:
   - 3

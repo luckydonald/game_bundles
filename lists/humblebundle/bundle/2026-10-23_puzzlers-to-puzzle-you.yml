@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Puzzlers to Puzzle You
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 5 Item Bundle
+- rank: 3
+  name: Entire 8 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/puzzlers-to-puzzle-you
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-23_puzzlers-to-puzzle-you/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-23_puzzlers-to-puzzle-you/source.json
+crawlers:
+- humblebundle
+games:
+- name: TR-49
+  ids:
+  - steam:3838370
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Escape Academy
+  ids:
+  - steam:1812090
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Dungeons of Hinterberg
+  ids:
+  - steam:1983260
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Braid, Anniversary Edition
+  ids:
+  - steam:499180
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: INDIKA
+  ids:
+  - steam:1373960
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: The 7th Guest Remake
+  ids:
+  - steam:4491360
+  requires: []
+  tiers:
+  - 3
+- name: A Monster's Expedition
+  ids:
+  - steam:1052990
+  requires: []
+  tiers:
+  - 3
+- name: Bonfire Peaks
+  ids:
+  - steam:1147890
+  requires: []
+  tiers:
+  - 3
