@@ -376,3 +376,29 @@ def test_existing_list_match_skips_the_prompt_once_the_crawler_is_recorded_on_th
     assert match == path
     assert len(prompts) == 1
 # end def test_existing_list_match_skips_the_prompt_once_the_crawler_is_recorded_on_the_list
+
+
+def test_existing_list_match_ignores_the_providers_type_container_directory(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    path = lists_root / "fanatical" / "bundle" / "2026-10-02_coppafeel-charity-bundle.yml"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        render_game_list_yaml(
+            GameList(name="CoppaFeel", crawlers=["fanatical"], games=[Game(name="Haste", ids=["steam:1796470"])]),
+            path,
+            tmp_path,
+        ),
+        encoding="utf-8",
+    )
+    # The `bundle/` directory holds a list this crawler already recorded itself on; it must not make
+    # an unrelated "...-bundle" slug look "already confirmed".
+    match = existing_list_match(
+        lists_root,
+        "fanatical",
+        "build-your-own-all-stars-bundle",
+        [Game(name="Other", ids=["steam:2"])],
+        interactive=False,
+        crawler_name="fanatical",
+    )
+    assert match is None
+# end def test_existing_list_match_ignores_the_providers_type_container_directory

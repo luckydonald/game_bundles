@@ -507,7 +507,11 @@ def existing_list_match(
         return None
     # end if
     needle = slug.casefold()
-    candidates = sorted(provider_root.rglob("*"))
+    # The provider's own top-level type directories (`bundle/`, `choice/`, ...) only group lists
+    # and are never a bundle themselves; as a fuzzy candidate one would score high against any
+    # slug ending in "bundle" and, once a crawler is recorded on a list inside it, count as
+    # "already confirmed" for every later slug.
+    candidates = sorted(path for path in provider_root.rglob("*") if not (path.is_dir() and path.parent == provider_root))
     for path in candidates:
         if needle and needle in path.name.casefold():
             return path
