@@ -3653,3 +3653,10 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ Plan accepted, auto mode.
 
+❯ The dailyindiegame has to launch chrome to process the pages. Can you make it so it's not plopping into the front on each side load (tab open) or other actions? It's fine to run _headfull_, just not in foreground. Especially not bringing it in foreground multiple times. Applies to all chromium launches.
+
+❯ Plan denied:
+> I guess `page.close()` is fine on the error case, just not always via `finally`. Skip `osascript`, I don't think that is needed.
+
+❯ Plan accepted, auto mode.
+

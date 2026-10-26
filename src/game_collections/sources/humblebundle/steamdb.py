@@ -69,22 +69,21 @@ class SteamDbBrowserClient:
 
         from patchright.sync_api import sync_playwright
 
+        from game_collections.sources.browser import first_or_new_page, launch_background_context
+
         self._attempts = attempts
         self._timeout_ms = timeout * 1000
         self._playwright = sync_playwright().start()
         self._user_data_dir = tempfile.mkdtemp(prefix="steamdb-patchright-")
-        self._context = self._playwright.chromium.launch_persistent_context(
-            self._user_data_dir,
-            headless=False,
-            no_viewport=True,
-        )
+        self._context = launch_background_context(self._playwright, self._user_data_dir)
+        self._page = first_or_new_page(self._context)
     # end def __init__
 
     def close(self) -> None:
         """Close the browser and its Playwright driver."""
         import shutil
 
-        self._context.close()
+        self._context.close()  # also closes the reused page
         self._playwright.stop()
         shutil.rmtree(self._user_data_dir, ignore_errors=True)
     # end def close
@@ -93,7 +92,11 @@ class SteamDbBrowserClient:
         """Fetch one page's rendered HTML, waiting out the Cloudflare challenge."""
         last_error: Exception | None = None
         for attempt in range(1, self._attempts + 1):
-            page = self._context.new_page()
+            # One reused tab: opening a new one per fetch re-activates the window.
+            if self._page.is_closed():
+                self._page = self._context.new_page()
+            # end if
+            page = self._page
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=self._timeout_ms)
                 deadline = time.monotonic() + self._timeout_ms / 1000
@@ -112,12 +115,16 @@ class SteamDbBrowserClient:
                 return page.content()
             except Exception as error:  # noqa: BLE001 - Playwright raises its own broad errors
                 last_error = error
+                # Drop a possibly wedged tab; the next attempt/fetch opens a fresh one.
+                try:
+                    page.close()
+                except Exception:  # noqa: BLE001 - already gone is fine
+                    pass
+                # end try
                 if attempt == self._attempts:
                     break
                 # end if
                 time.sleep(0.5 * (2 ** (attempt - 1)))
-            finally:
-                page.close()
             # end try
         # end for
         raise SteamDbCrawlError(f"request failed for {url}: {last_error}") from last_error
