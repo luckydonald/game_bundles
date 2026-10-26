@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Humble 15th Anniversary - Sci-Fi Exposure Bundle
+tiers:
+- rank: 1
+  name: 3 Item Bundle
+- rank: 2
+  name: 6 Item Bundle
+- rank: 3
+  name: Entire 8 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/15th-anniversary-scifi-exposure
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-21_15th-anniversary-scifi-exposure/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-21_15th-anniversary-scifi-exposure/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'RoboCop: Rogue City - Collection'
+  ids:
+  - steam:bundle/61116
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ghostrunner 2
+  ids:
+  - steam:2144740
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ghostrunner
+  ids:
+  - steam:1139900
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Crysis 3 Remastered
+  ids:
+  - steam:2096610
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Crysis 2 Remastered
+  ids:
+  - steam:2096600
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Crysis Remastered
+  ids:
+  - steam:1715130
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Marathon
+  ids:
+  - steam:3065800
+  requires: []
+  tiers:
+  - 3
+- name: Xenonauts 2
+  ids:
+  - steam:538030
+  requires: []
+  tiers:
+  - 3
