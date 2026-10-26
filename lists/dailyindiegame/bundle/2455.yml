@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FRIDAY BARGAIN 2455
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2455.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2455/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2455/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 'Jump Hero: Beginning'
+  ids:
+  - steam:1396390
+  requires: []
+- name: Figures Of Shadows
+  ids:
+  - steam:4068910
+  requires: []
+- name: Thief s Riddles
+  ids:
+  - steam:3716670
+  requires: []
+- name: PenBall
+  ids:
+  - steam:1850620
+  requires: []
+- name: Rabbit Runner
+  ids:
+  - steam:3215300
+  requires: []
+- name: Dojo Corridor
+  ids:
+  - steam:1623410
+  requires: []
+- name: Tank Impact
+  ids:
+  - steam:1167270
+  requires: []
+- name: Cannibal Chickens
+  ids:
+  - steam:1077390
+  requires: []
+- name: Click and Collect
+  ids:
+  - steam:1957070
+  requires: []

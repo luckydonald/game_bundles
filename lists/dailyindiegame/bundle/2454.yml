@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2454
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2454.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2454/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2454/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Blood City
+  ids:
+  - steam:922520
+  requires: []
+- name: Sediment
+  ids:
+  - steam:5219520
+  requires: []
+- name: Sprunki Horror Towers
+  ids:
+  - steam:3515560
+  requires: []
+- name: ELDR LEGACY
+  ids:
+  - steam:825480
+  requires: []
+- name: Catoscope
+  ids:
+  - steam:5208170
+  requires: []
+- name: The Legend of Stars
+  ids:
+  - steam:2797740
+  requires: []
+- name: 'Drift Highway: Retro Console Edition'
+  ids:
+  - steam:3892780
+  requires: []
+- name: REAL CAR Offroad Racing Drift
+  ids:
+  - steam:2938050
+  requires: []
+- name: We Are Busy Digging A Hole
+  ids:
+  - steam:3639240
+  requires: []

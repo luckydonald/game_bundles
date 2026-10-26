@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2453
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2453.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2453/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2453/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Saylor Animals Puzzle
+  ids:
+  - steam:4343690
+  requires: []
+- name: Lawnmower Runner
+  ids:
+  - steam:4361410
+  requires: []
+- name: Horrorillo Brainrotillo
+  ids:
+  - steam:3707660
+  requires: []
+- name: Destroying The Asteroids (Along With Unfair Hurdles)
+  ids:
+  - steam:1771960
+  requires: []
+- name: Exit Zone
+  ids:
+  - steam:3254020
+  requires: []
+- name: Hidden Shelter
+  ids:
+  - steam:1422820
+  requires: []
+- name: After Dark
+  ids:
+  - steam:4104020
+  requires: []
+- name: Romb
+  ids:
+  - steam:4043620
+  requires: []
+- name: GraveRunners
+  ids:
+  - steam:1653400
+  requires: []

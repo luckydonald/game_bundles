@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2457 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2457.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2457/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2457/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Five nights at Stalin
+  ids:
+  - steam:2059290
+  requires: []
+- name: Five nights at Floppa 0
+  ids:
+  - steam:2059250
+  requires: []
+- name: 'Animals Memory: Dinosaurs'
+  ids:
+  - steam:775520
+  requires: []
+- name: Nash Racing Pursuit 2
+  ids:
+  - steam:4404370
+  requires: []
+- name: PipeFlow
+  ids:
+  - steam:4271150
+  requires: []
+- name: Voxel Drive
+  ids:
+  - steam:4268210
+  requires: []
+- name: Paradise Corner
+  ids:
+  - steam:4279140
+  requires: []
+- name: Valkeala Climb Race
+  ids:
+  - steam:4443600
+  requires: []
+- name: Rapid Ascent
+  ids:
+  - steam:4381820
+  requires: []
