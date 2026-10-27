@@ -8,43 +8,30 @@ references:
   path: ../../../archives/greenmangaming/bundle/hidden-gems-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/greenmangaming/bundle/hidden-gems-bundle/source.json
-- name: isthereanydeal.com bundle
-  url: https://isthereanydeal.com/bundles/16685/
-- name: Crawl metadata
-  path: ../../../archives/isthereanydeal/bundle/16685/metadata.json
-- name: Crawl source
-  path: ../../../archives/isthereanydeal/bundle/16685/source.json
 crawlers:
 - greenmangaming
-- isthereanydeal
 games:
 - name: Strayed Lights
   ids:
   - steam:2162020
-  - isthereanydeal:strayed-lights
   requires: []
 - name: Nasty Zombies
   ids:
   - steam:2851700
-  - isthereanydeal:nasty-zombies
   requires: []
 - name: Project Absentia
   ids:
   - steam:1662010
-  - isthereanydeal:project-absentia
   requires: []
 - name: Cat Detective Albert Wilde
   ids:
   - steam:1810670
-  - isthereanydeal:cat-detective-albert-wilde
   requires: []
 - name: Symphonia
   ids:
   - steam:1865960
-  - isthereanydeal:symphonia
   requires: []
 - name: Robbie Swifthand and the Orb of Mysteries
   ids:
   - steam:718010
-  - isthereanydeal:robbie-swifthand-and-the-orb-of-mysteries
   requires: []
