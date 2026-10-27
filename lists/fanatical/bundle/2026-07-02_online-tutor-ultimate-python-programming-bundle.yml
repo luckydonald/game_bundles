@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Online Tutor-Ultimate Python Programming Bundle
+tiers:
+- rank: 1
+  name: 1.00 USD
+- rank: 2
+  name: 7.99 USD
+- rank: 3
+  name: 14.99 USD
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/online-tutor-ultimate-python-programming-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/online-tutor-ultimate-python-programming-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/online-tutor-ultimate-python-programming-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Python From Scratch
+  ids:
+  - fanatical:python-from-scratch
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Python Programming: Beginner To Expert'
+  ids:
+  - fanatical:python-programming-beginner-to-expert
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Generative AI for Beginners: Future of Innovation Unlocked'
+  ids:
+  - fanatical:generative-ai-for-beginners-future-of-innovation-unlocked
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Diploma In Python Programming
+  ids:
+  - fanatical:diploma-in-python-programming
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Python 3 For Beginners
+  ids:
+  - fanatical:python-3-for-beginners
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Coding With Python 3
+  ids:
+  - fanatical:coding-with-python-3
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Data Science & Machine Learning With Python
+  ids:
+  - fanatical:data-science-and-machine-learning-with-python
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Python for Deep Learning: Build Neural Networks in Python'
+  ids:
+  - fanatical:python-for-deep-learning-build-neural-networks-in-python
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Python Web Scraping: Data Extraction with Beautiful Soup'
+  ids:
+  - fanatical:python-web-scraping-data-extraction-with-beautiful-soup
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Python Data Science
+  ids:
+  - fanatical:python-data-science
+  requires: []
+  tiers:
+  - 3
+- name: Spatial Data Visualization And Machine Learning In Python
+  ids:
+  - fanatical:spatial-data-visualization-and-machine-learning-in-python
+  requires: []
+  tiers:
+  - 3
+- name: Generative AI for Dynamic Java Web Applications with ChatGPT
+  ids:
+  - fanatical:generative-ai-for-dynamic-java-web-applications-with-chatgpt
+  requires: []
+  tiers:
+  - 3
+- name: Deep Learning & Neural Networks Python - Keras
+  ids:
+  - fanatical:deep-learning-and-neural-networks-python-keras
+  requires: []
+  tiers:
+  - 3
+- name: Python Django Training
+  ids:
+  - fanatical:python-django-training
+  requires: []
+  tiers:
+  - 3
+- name: 'The Front-End Web Developer Bootcamp: HTML, CSS, JS & React'
+  ids:
+  - fanatical:the-front-end-web-developer-bootcamp-html-css-js-and-react
+  requires: []
+  tiers:
+  - 3
+- name: 'Data Manipulation in Python: Master Python, Numpy & Pandas'
+  ids:
+  - fanatical:data-manipulation-in-python-master-python-numpy-and-pandas
+  requires: []
+  tiers:
+  - 3
+- name: 'Python for Game Programming: Pygame from A to Z'
+  ids:
+  - fanatical:python-for-game-programming-pygame-from-a-to-z
+  requires: []
+  tiers:
+  - 3
+- name: Create Smart Maps in Python and Leaflet
+  ids:
+  - fanatical:create-smart-maps-in-python-and-leaflet
+  requires: []
+  tiers:
+  - 3
+- name: Python for Spatial Analysis in ArcGIS
+  ids:
+  - fanatical:python-for-spatial-analysis-in-arcgis
+  requires: []
+  tiers:
+  - 3
+- name: Diploma in C++ and Python Programming
+  ids:
+  - fanatical:diploma-in-c-and-python-programming
+  requires: []
+  tiers:
+  - 3
+- name: Lifetime Membership Discount Coupon
+  ids:
+  - fanatical:lifetime-membership-discount-coupon
+  requires: []
+  tiers:
+  - 3

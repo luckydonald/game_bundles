@@ -8,18 +8,28 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/14804/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/14804/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/monsters-den-collection-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/monsters-den-collection-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/monsters-den-collection-bundle/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: 'Monsters'' Den: Book of Dread'
   ids:
   - steam:502230
+  - fanatical:monsters-den-book-of-dread
   requires: []
 - name: 'Monsters'' Den: Godfall'
   ids:
   - steam:469720
+  - fanatical:monsters-den-godfall
   requires: []
 - name: Monsters' Den Chronicles
   ids:
   - steam:1121720
+  - fanatical:monsters-den-chronicles
   requires: []

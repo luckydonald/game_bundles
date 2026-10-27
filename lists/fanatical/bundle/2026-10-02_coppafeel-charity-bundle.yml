@@ -19,15 +19,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16627/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16627/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/coppafeel-charity-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/coppafeel-charity-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/coppafeel-charity-bundle/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- fanatical
 games:
 - name: Haste
   ids:
   - steam:1796470
   - dekudeals:haste-broken-worlds
   - isthereanydeal:haste
+  - fanatical:haste
   requires: []
   tiers:
   - 1
@@ -36,6 +44,7 @@ games:
   - steam:1599600
   - dekudeals:plateup
   - isthereanydeal:plateup
+  - fanatical:plateup
   requires: []
   tiers:
   - 1
@@ -44,6 +53,7 @@ games:
   - steam:448510
   - dekudeals:overcooked
   - isthereanydeal:overcooked
+  - fanatical:overcooked
   requires: []
   tiers:
   - 1
@@ -52,6 +62,7 @@ games:
   - steam:1242980
   - dekudeals:keywe
   - isthereanydeal:keywe
+  - fanatical:key-we
   requires: []
   tiers:
   - 1
@@ -60,6 +71,7 @@ games:
   - steam:1781010
   - dekudeals:pine-hearts
   - isthereanydeal:pine-hearts
+  - fanatical:pine-hearts
   requires: []
   tiers:
   - 1
@@ -68,6 +80,7 @@ games:
   - steam:2367610
   - dekudeals:critter-cafe
   - isthereanydeal:critter-cafe
+  - fanatical:critter-cafe
   requires: []
   tiers:
   - 1
@@ -76,6 +89,7 @@ games:
   - steam:2812450
   - dekudeals:tiny-garden
   - isthereanydeal:tiny-garden
+  - fanatical:tiny-garden
   requires: []
   tiers:
   - 1
@@ -84,6 +98,7 @@ games:
   - steam:248330
   - dekudeals:dino-run-dx
   - isthereanydeal:dino-run-dx
+  - fanatical:dino-run-dx
   requires: []
   tiers:
   - 1
@@ -92,6 +107,7 @@ games:
   - steam:1045120
   - dekudeals:brunch-club
   - isthereanydeal:brunch-club
+  - fanatical:brunch-club
   requires: []
   tiers:
   - 1
@@ -100,6 +116,7 @@ games:
   - steam:1587570
   - dekudeals:completely-stretchy
   - isthereanydeal:completely-stretchy
+  - fanatical:completely-stretchy
   requires: []
   tiers:
   - 1

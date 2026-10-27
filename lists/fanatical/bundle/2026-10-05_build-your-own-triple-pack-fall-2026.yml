@@ -26,9 +26,16 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16633/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16633/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-triple-pack-fall-2026
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-triple-pack-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-triple-pack-fall-2026/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- fanatical
 games:
 - name: 'Moonlighter: Complete Edition'
   ids:
@@ -36,6 +43,7 @@ games:
   - dekudeals:moonlighter-complete-edition
   - unresolved:source:isthereanydeal:16633:moonlighter-complete-edition
   - isthereanydeal:moonlighter-complete-edition
+  - fanatical:moonlighter-complete-edition
   requires: []
   tiers:
   - 1
@@ -47,6 +55,7 @@ games:
   - dekudeals:children-of-morta-complete-edition
   - unresolved:source:isthereanydeal:16633:children-of-morta-complete-edition
   - isthereanydeal:children-of-morta-complete-edition
+  - fanatical:children-of-morta-complete-edition
   requires: []
   tiers:
   - 1
@@ -57,6 +66,7 @@ games:
   - steam:1071870
   - dekudeals:biped
   - isthereanydeal:biped
+  - fanatical:biped
   requires: []
   tiers:
   - 1
@@ -67,6 +77,7 @@ games:
   - steam:945770
   - dekudeals:dark-envoy
   - isthereanydeal:dark-envoy
+  - fanatical:dark-envoy
   requires: []
   tiers:
   - 1
@@ -77,6 +88,7 @@ games:
   - steam:1402120
   - dekudeals:9-years-of-shadows
   - isthereanydeal:9-years-of-shadows
+  - fanatical:9-years-of-shadows
   requires: []
   tiers:
   - 1
@@ -87,6 +99,7 @@ games:
   - steam:1536090
   - dekudeals:echoes-of-the-plum-grove
   - isthereanydeal:echoes-of-the-plum-grove
+  - fanatical:echoes-of-the-plum-grove
   requires: []
   tiers:
   - 1
@@ -97,6 +110,7 @@ games:
   - steam:3845450
   - dekudeals:gladiator-command
   - isthereanydeal:gladiator-command
+  - fanatical:gladiator-command
   requires: []
   tiers:
   - 1
@@ -107,6 +121,7 @@ games:
   - steam:1488200
   - dekudeals:symphony-of-war-the-nephilim-saga
   - isthereanydeal:symphony-of-war-the-nephilim-saga
+  - fanatical:symphony-of-war-the-nephilim-saga
   requires: []
   tiers:
   - 1
@@ -117,6 +132,7 @@ games:
   - steam:2595940
   - dekudeals:magical-bakery
   - isthereanydeal:magical-bakery
+  - fanatical:magical-bakery
   requires: []
   tiers:
   - 1
@@ -127,6 +143,7 @@ games:
   - steam:1744970
   - dekudeals:petit-island
   - isthereanydeal:petit-island
+  - fanatical:petit-island
   requires: []
   tiers:
   - 1
@@ -137,6 +154,7 @@ games:
   - steam:1812300
   - dekudeals:aquatico
   - isthereanydeal:aquatico
+  - fanatical:aquatico
   requires: []
   tiers:
   - 1
@@ -147,6 +165,7 @@ games:
   - steam:4082900
   - dekudeals:castle-idler
   - isthereanydeal:castle-idler
+  - fanatical:castle-idler
   requires: []
   tiers:
   - 1
@@ -157,6 +176,7 @@ games:
   - steam:2721530
   - dekudeals:afterplace
   - isthereanydeal:afterplace
+  - fanatical:afterplace
   requires: []
   tiers:
   - 1
@@ -167,6 +187,7 @@ games:
   - steam:3303780
   - dekudeals:code-bunny
   - isthereanydeal:code-bunny
+  - fanatical:code-bunny
   requires: []
   tiers:
   - 1
@@ -177,6 +198,7 @@ games:
   - steam:1418360
   - dekudeals:lonesome-village
   - isthereanydeal:lonesome-village
+  - fanatical:lonesome-village
   requires: []
   tiers:
   - 1
@@ -187,6 +209,7 @@ games:
   - steam:768180
   - dekudeals:truck-driver
   - isthereanydeal:truck-driver
+  - fanatical:truck-driver
   requires: []
   tiers:
   - 1
@@ -197,6 +220,7 @@ games:
   - steam:1897650
   - dekudeals:dream-tactics
   - isthereanydeal:dream-tactics
+  - fanatical:dream-tactics
   requires: []
   tiers:
   - 1
@@ -207,6 +231,7 @@ games:
   - steam:1294880
   - dekudeals:blind-fate-edo-no-yami
   - isthereanydeal:blind-fate-edo-no-yami
+  - fanatical:blind-fate-edo-no-yami
   requires: []
   tiers:
   - 1

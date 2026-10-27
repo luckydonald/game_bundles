@@ -14,8 +14,15 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16592/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16592/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-legendary-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-legendary-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-legendary-bundle/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: Desperados III - Digital Deluxe Edition
   ids:
@@ -24,6 +31,7 @@ games:
 - name: Gloomwood
   ids:
   - steam:1150760
+  - fanatical:gloomwood
   requires: []
 - name: Frostpunk 2
   ids:
@@ -80,6 +88,7 @@ games:
 - name: Firefighting Simulator Ignite
   ids:
   - steam:1669480
+  - fanatical:firefighting-simulator-ignite
   requires: []
 - name: Formula Legends
   ids:

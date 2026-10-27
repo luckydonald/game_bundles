@@ -14,8 +14,15 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16557/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16557/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/prestige-collection-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/prestige-collection-build-your-own-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/prestige-collection-build-your-own-bundle/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: EVERSPACE™ 2
   ids:

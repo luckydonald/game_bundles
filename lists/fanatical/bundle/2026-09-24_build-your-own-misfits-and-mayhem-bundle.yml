@@ -24,15 +24,24 @@ references:
   path: ../../../archives/dekudeals/bundle/build-your-own-misfits-and-mayhem-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/build-your-own-misfits-and-mayhem-bundle/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-misfits-and-mayhem-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-misfits-and-mayhem-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-misfits-and-mayhem-bundle/source.json
 crawlers:
 - isthereanydeal
 - dekudeals
+- fanatical
 games:
 - name: 'Gori: Cuddly Carnage'
   ids:
   - steam:1299690
   - isthereanydeal:gori-cuddly-carnage
   - dekudeals:gori-cuddly-carnage
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:gori-cuddly-carnage
+  - fanatical:gori-cuddly-carnage
   requires: []
   tiers:
   - 1
@@ -43,6 +52,8 @@ games:
   - steam:1411020
   - isthereanydeal:perennial-order
   - dekudeals:perennial-order
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:perennial-order
+  - fanatical:perennial-order
   requires: []
   tiers:
   - 1
@@ -53,6 +64,8 @@ games:
   - steam:1227650
   - isthereanydeal:bang-on-balls-chronicles
   - dekudeals:bang-on-balls-chronicles
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:bang-on-balls-chronicles
+  - fanatical:bang-on-balls-chronicles
   requires: []
   tiers:
   - 1
@@ -63,6 +76,8 @@ games:
   - steam:2350460
   - isthereanydeal:chickenauts
   - dekudeals:chickenauts
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:chickenauts
+  - fanatical:chickenauts
   requires: []
   tiers:
   - 1
@@ -73,6 +88,8 @@ games:
   - steam:2010010
   - isthereanydeal:boomerang-jack
   - dekudeals:boomerang-jack
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:boomerang-jack
+  - fanatical:boomerang-jack
   requires: []
   tiers:
   - 1
@@ -83,6 +100,8 @@ games:
   - steam:2514400
   - isthereanydeal:servonauts
   - dekudeals:servonauts
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:servonauts
+  - fanatical:servonauts
   requires: []
   tiers:
   - 1
@@ -93,6 +112,8 @@ games:
   - steam:2535830
   - isthereanydeal:squirrel-stapler
   - dekudeals:squirrel-stapler
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:squirrel-stapler
+  - fanatical:squirrel-stapler
   requires: []
   tiers:
   - 1
@@ -103,6 +124,8 @@ games:
   - steam:2551920
   - isthereanydeal:tools-up-ultimate-edition
   - dekudeals:tools-up-ultimate-edition
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:tools-up-ultimate-edition
+  - fanatical:tools-up-ultimate-edition
   requires: []
   tiers:
   - 1
@@ -113,6 +136,8 @@ games:
   - steam:2494810
   - isthereanydeal:dark-hunting-ground
   - dekudeals:dark-hunting-ground
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:dark-hunting-ground
+  - fanatical:dark-hunting-ground
   requires: []
   tiers:
   - 1
@@ -123,6 +148,8 @@ games:
   - steam:3255860
   - isthereanydeal:hymer-2000
   - dekudeals:hymer-2000
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:hymer-2000
+  - fanatical:hymer-2000
   requires: []
   tiers:
   - 1
@@ -133,6 +160,8 @@ games:
   - steam:3395930
   - isthereanydeal:mashina
   - dekudeals:mashina
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:mashina
+  - fanatical:mashina
   requires: []
   tiers:
   - 1
@@ -143,6 +172,8 @@ games:
   - steam:2870710
   - isthereanydeal:pih
   - dekudeals:big-pig
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:pih
+  - fanatical:pih
   requires: []
   tiers:
   - 1
@@ -153,6 +184,8 @@ games:
   - steam:3805710
   - isthereanydeal:treasure-tiger
   - dekudeals:treasure-tiger
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:treasure-tiger
+  - fanatical:treasure-tiger
   requires: []
   tiers:
   - 1
@@ -163,6 +196,8 @@ games:
   - steam:3668430
   - isthereanydeal:abyss-veil
   - dekudeals:abyss-veil
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:abyss-veil
+  - fanatical:abyss-veil
   requires: []
   tiers:
   - 1
@@ -173,6 +208,8 @@ games:
   - steam:3512300
   - isthereanydeal:dead-finger-dice
   - dekudeals:dead-finger-dice-a-billionaire-killing-game
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:dead-finger-dice-a-billionaire-killing-game
+  - fanatical:dead-finger-dice-a-billionaire-killing-game
   requires: []
   tiers:
   - 1
@@ -183,6 +220,8 @@ games:
   - steam:4279880
   - isthereanydeal:misty-land
   - dekudeals:misty-land
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:misty-land
+  - fanatical:misty-land
   requires: []
   tiers:
   - 1
@@ -194,6 +233,8 @@ games:
   - isthereanydeal:elemental-witches
   - steam:4161420
   - dekudeals:witches-of-element
+  - unresolved:source:fanatical:build-your-own-misfits-and-mayhem-bundle:elemental-witches
+  - fanatical:elemental-witches
   requires: []
   tiers:
   - 1

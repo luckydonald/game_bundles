@@ -26,15 +26,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16677/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16677/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/cook-up-your-own-culinary-capers-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/cook-up-your-own-culinary-capers-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/cook-up-your-own-culinary-capers-bundle/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- fanatical
 games:
 - name: Kebab Chefs! - Restaurant Simulator
   ids:
   - steam:1001270
   - dekudeals:kebab-chefs-restaurant-simulator
   - isthereanydeal:kebab-chefs-restaurant-simulator
+  - fanatical:kebab-chefs-restaurant-simulator
   requires: []
   tiers:
   - 1
@@ -45,6 +53,7 @@ games:
   - steam:3584920
   - dekudeals:kaolengmian-legend
   - isthereanydeal:chinese-street-food-legend
+  - fanatical:chinese-street-food-legend
   requires: []
   tiers:
   - 1
@@ -64,6 +73,7 @@ games:
   - steam:2749000
   - dekudeals:inn-tycoon
   - isthereanydeal:inn-tycoon
+  - fanatical:inn-tycoon
   requires: []
   tiers:
   - 1
@@ -74,6 +84,7 @@ games:
   - steam:1338330
   - dekudeals:lemon-cake
   - isthereanydeal:lemon-cake
+  - fanatical:lemon-cake
   requires: []
   tiers:
   - 1
@@ -84,6 +95,7 @@ games:
   - steam:3950770
   - dekudeals:more-sushi
   - isthereanydeal:more-sushi
+  - fanatical:more-sushi
   requires: []
   tiers:
   - 1
@@ -95,6 +107,8 @@ games:
   - dekudeals:spongebob-krusty-cook-off-kelp-city-bundle
   - unresolved:source:isthereanydeal:16677:spongebob-krusty-cook-off-kelp-city-bundle
   - isthereanydeal:spongebob-krusty-cook-off-kelp-city-bundle
+  - unresolved:source:fanatical:cook-up-your-own-culinary-capers-bundle:spongebob-krusty-cook-off-kelp-city-bundle
+  - fanatical:spongebob-krusty-cook-off-kelp-city-bundle
   requires: []
   tiers:
   - 1
@@ -105,6 +119,7 @@ games:
   - steam:1433340
   - dekudeals:happys-humble-burger-farm
   - isthereanydeal:happys-humble-burger-farm
+  - fanatical:happy-s-humble-burger-farm
   requires: []
   tiers:
   - 1
@@ -116,6 +131,8 @@ games:
   - dekudeals:cook-serve-delicious-trilogy
   - unresolved:source:isthereanydeal:16677:the-cook-serve-delicious-trilogy
   - isthereanydeal:the-cook-serve-delicious-trilogy
+  - unresolved:source:fanatical:cook-up-your-own-culinary-capers-bundle:the-cook-serve-delicious-trilogy
+  - fanatical:the-cook-serve-delicious-trilogy
   requires: []
   tiers:
   - 1
@@ -126,6 +143,7 @@ games:
   - steam:3021530
   - dekudeals:abra-cooking-dabra
   - isthereanydeal:abra-cooking-dabra
+  - fanatical:abra-cooking-dabra
   requires: []
   tiers:
   - 1
@@ -136,6 +154,7 @@ games:
   - steam:1492360
   - dekudeals:recipe-for-disaster
   - isthereanydeal:recipe-for-disaster
+  - fanatical:recipe-for-disaster
   requires: []
   tiers:
   - 1

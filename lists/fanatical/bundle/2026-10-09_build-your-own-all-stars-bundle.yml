@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own All Stars Bundle (Winter)
+tiers:
+- rank: 1
+  name: pick 5
+  pick_quota: 5
+- rank: 2
+  name: pick 7
+  pick_quota: 7
+- rank: 3
+  name: pick 12
+  pick_quota: 12
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-all-stars-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-all-stars-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-all-stars-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Chernobylite Premium Edition
+  ids:
+  - steam:1016800
+  - fanatical:chernobylite-premium-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Zombie Army Trilogy
+  ids:
+  - steam:301640
+  - fanatical:zombie-army-trilogy
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sniper Elite V2 Remastered
+  ids:
+  - steam:728740
+  - fanatical:sniper-elite-v-2-remastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Beyond: Two Souls'
+  ids:
+  - steam:960990
+  - fanatical:beyond-two-souls
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Heavy Rain
+  ids:
+  - steam:960910
+  - fanatical:heavy-rain
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Evil Genius 2: World Domination Deluxe Edition'
+  ids:
+  - steam:700600
+  - fanatical:evil-genius-2-world-domination-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'POSTAL: Brain Damaged'
+  ids:
+  - steam:1359980
+  - fanatical:postal-brain-damaged
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'POSTAL 4: No Regerts'
+  ids:
+  - steam:707030
+  - fanatical:postal-4-no-regerts
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Icewind Dale: Enhanced Edition'
+  ids:
+  - steam:321800
+  - fanatical:icewind-dale-enhanced-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Redout 2
+  ids:
+  - steam:1799930
+  - fanatical:redout-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Frog Detective 3: Corruption at Cowboy County'
+  ids:
+  - steam:1171320
+  - fanatical:frog-detective-3-corruption-at-cowboy-county
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: PC Tycoon 2
+  ids:
+  - steam:2832320
+  - fanatical:pc-tycoon-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'THIS WAR OF MINE: COMPLETE EDITION'
+  ids:
+  - steam:282070
+  - fanatical:this-war-of-mine-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Asterix & Obelix XXL: Romastered'
+  ids:
+  - steam:1261520
+  - fanatical:asterix-obelix-xxl-romastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hidden in my Paradise
+  ids:
+  - steam:2834330
+  - fanatical:hidden-in-my-paradise
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

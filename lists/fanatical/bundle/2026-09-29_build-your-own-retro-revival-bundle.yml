@@ -24,15 +24,23 @@ references:
   path: ../../../archives/dekudeals/bundle/build-your-own-retro-revival-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/build-your-own-retro-revival-bundle/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-retro-revival-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-retro-revival-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-retro-revival-bundle/source.json
 crawlers:
 - isthereanydeal
 - dekudeals
+- fanatical
 games:
 - name: Wild Guns Reloaded
   ids:
   - steam:585910
   - isthereanydeal:wild-guns-reloaded
   - dekudeals:wild-guns-reloaded
+  - fanatical:wild-guns-reloaded
   requires: []
   tiers:
   - 1
@@ -43,6 +51,7 @@ games:
   - steam:1068360
   - isthereanydeal:fearmonium
   - dekudeals:fearmonium
+  - fanatical:fearmonium
   requires: []
   tiers:
   - 1
@@ -53,6 +62,7 @@ games:
   - steam:336300
   - isthereanydeal:hearthlands
   - dekudeals:hearthlands
+  - fanatical:hearthlands
   requires: []
   tiers:
   - 1
@@ -64,6 +74,8 @@ games:
   - isthereanydeal:steam-rails-to-riches-golden-train-edition
   - steam:bundle/2958
   - dekudeals:steam-rails-to-riches-golden-train-edition
+  - unresolved:source:fanatical:build-your-own-retro-revival-bundle:steam-rails-to-riches-golden-train-edition
+  - fanatical:steam-rails-to-riches-golden-train-edition
   requires: []
   tiers:
   - 1
@@ -74,6 +86,7 @@ games:
   - steam:1249480
   - isthereanydeal:ex-zodiac
   - dekudeals:ex-zodiac
+  - fanatical:ex-zodiac
   requires: []
   tiers:
   - 1
@@ -84,6 +97,7 @@ games:
   - steam:1426010
   - isthereanydeal:stasis-bone-totem
   - dekudeals:stasis-bone-totem
+  - fanatical:stasis-bone-totem
   requires: []
   tiers:
   - 1
@@ -94,6 +108,7 @@ games:
   - steam:1592490
   - isthereanydeal:bloodless
   - dekudeals:bloodless
+  - fanatical:bloodless
   requires: []
   tiers:
   - 1
@@ -104,6 +119,7 @@ games:
   - steam:1587130
   - isthereanydeal:blood-west
   - dekudeals:blood-west
+  - fanatical:blood-west
   requires: []
   tiers:
   - 1
@@ -115,6 +131,8 @@ games:
   - isthereanydeal:redout-ultimate-edition
   - steam:bundle/10715
   - dekudeals:redout-ultimate-edition
+  - unresolved:source:fanatical:build-your-own-retro-revival-bundle:redout-ultimate-edition
+  - fanatical:redout-ultimate-edition
   requires: []
   tiers:
   - 1
@@ -125,6 +143,7 @@ games:
   - steam:1891090
   - isthereanydeal:final-vendetta
   - dekudeals:final-vendetta
+  - fanatical:final-vendetta
   requires: []
   tiers:
   - 1
@@ -135,6 +154,7 @@ games:
   - steam:1819460
   - isthereanydeal:mika-and-the-witchs-mountain
   - dekudeals:mika-and-the-witchs-mountain
+  - fanatical:mika-and-the-witchs-mountain
   requires: []
   tiers:
   - 1
@@ -145,6 +165,7 @@ games:
   - steam:1819450
   - isthereanydeal:koa-and-the-five-pirates-of-mara
   - dekudeals:koa-and-the-five-pirates-of-mara
+  - fanatical:koa-and-the-five-pirates-of-mara
   requires: []
   tiers:
   - 1
@@ -155,6 +176,7 @@ games:
   - steam:2276980
   - isthereanydeal:faceminer
   - dekudeals:faceminer
+  - fanatical:faceminer
   requires: []
   tiers:
   - 1
@@ -165,6 +187,7 @@ games:
   - steam:2278790
   - isthereanydeal:grapple-dogs-cosmic-canines
   - dekudeals:grapple-dogs-cosmic-canines
+  - fanatical:grapple-dogs-cosmic-canines
   requires: []
   tiers:
   - 1
@@ -186,6 +209,7 @@ games:
   - steam:1219240
   - isthereanydeal:biogun
   - dekudeals:biogun
+  - fanatical:biogun
   requires: []
   tiers:
   - 1
@@ -196,6 +220,7 @@ games:
   - steam:2849680
   - isthereanydeal:utopia-must-fall
   - dekudeals:utopia-must-fall
+  - fanatical:utopia-must-fall
   requires: []
   tiers:
   - 1
@@ -206,6 +231,7 @@ games:
   - steam:908060
   - isthereanydeal:talisman-digital-5th-edition
   - dekudeals:talisman-digital-5th-edition
+  - fanatical:talisman-digital-5-th-edition
   requires: []
   tiers:
   - 1
@@ -216,6 +242,7 @@ games:
   - steam:3555980
   - isthereanydeal:caput-mortum
   - dekudeals:caput-mortum
+  - fanatical:caput-mortum
   requires: []
   tiers:
   - 1
@@ -226,6 +253,7 @@ games:
   - steam:3183730
   - isthereanydeal:driveloop-survivors
   - dekudeals:driveloop
+  - fanatical:driveloop-survivors
   requires: []
   tiers:
   - 1
@@ -236,6 +264,8 @@ games:
   - unresolved:source:isthereanydeal:16613:amid-evil-and-dusk-double-pack
   - isthereanydeal:amid-evil-and-dusk-double-pack
   - dekudeals:amid-evil-and-dusk-double-pack
+  - unresolved:source:fanatical:build-your-own-retro-revival-bundle:amid-evil-and-dusk-double-pack
+  - fanatical:amid-evil-and-dusk-double-pack
   requires: []
   tiers:
   - 1
@@ -246,6 +276,7 @@ games:
   - steam:4244210
   - isthereanydeal:open-the-gate-just-a-little
   - dekudeals:open-the-gate-just-a-little
+  - fanatical:open-the-gate-just-a-little
   requires: []
   tiers:
   - 1
@@ -256,6 +287,7 @@ games:
   - steam:4300870
   - isthereanydeal:gods-and-gore
   - dekudeals:gods-and-gore
+  - fanatical:gods-and-gore
   requires: []
   tiers:
   - 1
@@ -266,6 +298,8 @@ games:
   - unresolved:source:isthereanydeal:16613:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
   - isthereanydeal:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
   - dekudeals:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  - unresolved:source:fanatical:build-your-own-retro-revival-bundle:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
+  - fanatical:rogue-trooper-avp-classic-2000-and-dredd-triple-pack
   requires: []
   tiers:
   - 1

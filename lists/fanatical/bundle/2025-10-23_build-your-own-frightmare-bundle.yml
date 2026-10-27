@@ -14,8 +14,15 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16592/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16592/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-frightmare-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-frightmare-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-frightmare-bundle/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: Maid of Sker
   ids:

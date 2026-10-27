@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Cloud & Network Certification eLearning Bundle
+tiers:
+- rank: 1
+  name: 4.99 USD
+- rank: 2
+  name: 11.99 USD
+- rank: 3
+  name: 16.99 USD
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/cloud-and-network-certification-elearning-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/cloud-and-network-certification-elearning-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/cloud-and-network-certification-elearning-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: CompTIA A+ (220-1001)
+  ids:
+  - fanatical:comptia-a-220-1001
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cloud Computing / CompTIA Cloud+ (CV0-002)
+  ids:
+  - fanatical:cloud-computing-comptia-cloud-cv-0-002
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cyber Security And Virus Protection
+  ids:
+  - fanatical:cyber-security-and-virus-protection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CompTIA Security+ Certification
+  ids:
+  - fanatical:comptia-security-certification
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Information Systems Security Professional Certification - (CISSP) Course
+  ids:
+  - fanatical:information-systems-security-professional-certification-cissp-course
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Linux For Cloud And DevOps Engineers
+  ids:
+  - fanatical:linux-for-cloud-and-devops-engineers
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: AWS Cloud Practitioner
+  ids:
+  - fanatical:aws-cloud-practitioner
+  requires: []
+  tiers:
+  - 3
+- name: CompTIA A+ 900 Certification
+  ids:
+  - fanatical:comptia-a-900-certification
+  requires: []
+  tiers:
+  - 3
+- name: Computer Networks Security From Scratch To Advanced
+  ids:
+  - fanatical:computer-networks-security-from-scratch-to-advanced
+  requires: []
+  tiers:
+  - 3
+- name: CompTIA Security+ (SY0-601)
+  ids:
+  - fanatical:comptia-security-sy-0-601
+  requires: []
+  tiers:
+  - 3
+- name: BlackArch Linux For Hacking And Penetration Testing
+  ids:
+  - fanatical:blackarch-linux-for-hacking-and-penetration-testing
+  requires: []
+  tiers:
+  - 3
+- name: CompTIA Network+ Certification
+  ids:
+  - fanatical:comptia-network-certification
+  requires: []
+  tiers:
+  - 3

@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: CompTIA Certification Training Build your own Bundle 2025 Edition
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 6
+  pick_quota: 6
+- rank: 3
+  name: pick 12
+  pick_quota: 12
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/comptia-certification-training-build-your-own-bundle-2025-edition
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/comptia-certification-training-build-your-own-bundle-2025-edition/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/comptia-certification-training-build-your-own-bundle-2025-edition/source.json
+crawlers:
+- fanatical
+games:
+- name: CompTIA A+ (220-1002)
+  ids:
+  - fanatical:comptia-a-220-1002
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CompTIA A+ Core 2 (220-1102) Course
+  ids:
+  - fanatical:comptia-a-core-2-220-1102-course
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CompTIA A+ (220-1101 & 220-1102)
+  ids:
+  - fanatical:comptia-a-220-1101-and-220-1102
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: CompTIA PenTest+ (Ethical Hacking)
+  ids:
+  - fanatical:comptia-pentest-ethical-hacking
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

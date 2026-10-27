@@ -14,8 +14,15 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16542/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16542/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-killer-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-killer-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-killer-bundle/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: WARTILE
   ids:

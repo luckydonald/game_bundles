@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Puzzle Palooza 2 Build your own Bundle
+tiers:
+- rank: 1
+  name: pick 1
+  pick_quota: 1
+- rank: 2
+  name: pick 4
+  pick_quota: 4
+- rank: 3
+  name: pick 8
+  pick_quota: 8
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/puzzle-palooza-2-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/puzzle-palooza-2-build-your-own-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/puzzle-palooza-2-build-your-own-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Sudoku Pack 1
+  ids:
+  - fanatical:sudoku-pack-1
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sudoku Pack 2
+  ids:
+  - fanatical:sudoku-pack-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sudoku Pack 3
+  ids:
+  - fanatical:sudoku-pack-3
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puzzle Pack 1
+  ids:
+  - fanatical:puzzle-pack-1
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puzzle Pack 2
+  ids:
+  - fanatical:puzzle-pack-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puzzle Pack 3
+  ids:
+  - fanatical:puzzle-pack-3
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puzzle Pack 4
+  ids:
+  - fanatical:puzzle-pack-4
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Maze Puzzle Pack
+  ids:
+  - fanatical:maze-puzzle-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

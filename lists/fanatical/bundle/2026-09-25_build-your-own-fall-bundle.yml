@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Fall Bundle (2026)
+tiers:
+- rank: 1
+  name: pick 1
+  pick_quota: 1
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 10
+  pick_quota: 10
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-fall-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-fall-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-fall-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Dreamscaper
+  ids:
+  - steam:1040420
+  - fanatical:dreamscaper
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Police Stories - Complete Edition
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:police-stories-complete-edition
+  - fanatical:police-stories-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Teslagrad 2
+  ids:
+  - steam:1698220
+  - fanatical:teslagrad-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'DG2: Defense Grid 2'
+  ids:
+  - steam:221540
+  - fanatical:dg-2-defense-grid-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cowboy 3030
+  ids:
+  - steam:2347550
+  - fanatical:cowboy-3030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Saint Kotar
+  ids:
+  - steam:1358530
+  - fanatical:saint-kotar
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Castle Of Alchemists
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:castle-of-alchemists
+  - fanatical:castle-of-alchemists
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Archaeogem
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:archaeogem
+  - fanatical:archaeogem
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Retrowave 2
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:retrowave-2
+  - fanatical:retrowave-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Defense Grid: Containment Bundle'
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:defense-grid-containment-bundle
+  - fanatical:defense-grid-containment-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Empires in Ruins
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:empires-in-ruins
+  - fanatical:empires-in-ruins
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: StormEdge
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:stormedge
+  - fanatical:stormedge
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: HammerHelm
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:hammerhelm
+  - fanatical:hammerhelm
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Teslagrad Remastered
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:teslagrad-remastered
+  - fanatical:teslagrad-remastered
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cozy Space Survivors
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:cozy-space-survivors
+  - fanatical:cozy-space-survivors
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: One More Island
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:one-more-island
+  - fanatical:one-more-island
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Initial Drift Online
+  ids:
+  - unresolved:source:fanatical:build-your-own-fall-bundle:initial-drift-online
+  - fanatical:initial-drift-online
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

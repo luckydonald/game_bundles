@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Unity Programming Bundle
+tiers:
+- rank: 1
+  name: 9.99 USD
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/unity-programming-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/unity-programming-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/unity-programming-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Intro to Multiplayer Game Development
+  ids:
+  - fanatical:intro-to-multiplayer-game-development
+  requires: []
+  tiers:
+  - 1
+- name: The Complete 2D Roguelike Course
+  ids:
+  - fanatical:the-complete-2-d-roguelike-course
+  requires: []
+  tiers:
+  - 1
+- name: Game Audio Effects for Beginners
+  ids:
+  - fanatical:game-audio-effects-for-beginners
+  requires: []
+  tiers:
+  - 1
+- name: Craft a 2D Idle Clicker Game
+  ids:
+  - fanatical:craft-a-2-d-idle-clicker-game
+  requires: []
+  tiers:
+  - 1
+- name: Build a Mobile Road Crossing Game
+  ids:
+  - fanatical:build-a-mobile-road-crossing-game
+  requires: []
+  tiers:
+  - 1
+- name: Create a Micro Turn-Based RPG
+  ids:
+  - fanatical:create-a-micro-turn-based-rpg
+  requires: []
+  tiers:
+  - 1
+- name: Create a Retro Local Multiplayer Game
+  ids:
+  - fanatical:create-a-retro-local-multiplayer-game
+  requires: []
+  tiers:
+  - 1
+- name: Unity Mini-Projects – C# Fundamentals (2025 Version)
+  ids:
+  - fanatical:unity-mini-projects-c-fundamentals-2025-version
+  requires: []
+  tiers:
+  - 1

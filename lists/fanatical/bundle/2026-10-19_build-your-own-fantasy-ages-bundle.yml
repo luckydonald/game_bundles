@@ -26,15 +26,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16684/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16684/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-fantasy-ages-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-fantasy-ages-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-fantasy-ages-bundle/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- fanatical
 games:
 - name: Dungeon Antiqua
   ids:
   - steam:3198540
   - dekudeals:dungeon-antiqua
   - isthereanydeal:dungeon-antiqua
+  - fanatical:dungeon-antiqua
   requires: []
   tiers:
   - 1
@@ -45,6 +53,7 @@ games:
   - steam:697550
   - dekudeals:it-lurks-below
   - isthereanydeal:it-lurks-below
+  - fanatical:it-lurks-below
   requires: []
   tiers:
   - 1
@@ -55,6 +64,7 @@ games:
   - steam:1866980
   - dekudeals:worlds-of-aria
   - isthereanydeal:worlds-of-aria
+  - fanatical:worlds-of-aria
   requires: []
   tiers:
   - 1
@@ -65,6 +75,7 @@ games:
   - steam:4918800
   - dekudeals:pago-forest-2-frozen-memories
   - isthereanydeal:pago-forest-2-frozen-memories
+  - fanatical:pago-forest-2-frozen-memories
   requires: []
   tiers:
   - 1
@@ -75,6 +86,7 @@ games:
   - steam:2412280
   - dekudeals:valiant-tactics
   - isthereanydeal:valiant-tactics
+  - fanatical:valiant-tactics
   requires: []
   tiers:
   - 1
@@ -85,6 +97,7 @@ games:
   - dekudeals:the-enchanted-cave-2
   - steam:368610
   - isthereanydeal:the-enchanted-cave-2
+  - fanatical:the-enchanted-cave-2
   requires: []
   tiers:
   - 1
@@ -95,6 +108,7 @@ games:
   - steam:1590640
   - dekudeals:savior-of-the-abyss-switch
   - isthereanydeal:savior-of-the-abyss
+  - fanatical:savior-of-the-abyss
   requires: []
   tiers:
   - 1
@@ -105,6 +119,8 @@ games:
   - dekudeals:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
   - unresolved:source:isthereanydeal:16684:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
   - isthereanydeal:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  - unresolved:source:fanatical:build-your-own-fantasy-ages-bundle:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
+  - fanatical:hammerwatch-anniversary-edition-and-hammerwatch-ii-double-pack
   requires: []
   tiers:
   - 1
@@ -115,6 +131,7 @@ games:
   - steam:404200
   - dekudeals:wartile-standard
   - isthereanydeal:wartile
+  - fanatical:wartile
   requires: []
   tiers:
   - 1
@@ -125,6 +142,7 @@ games:
   - steam:2797650
   - dekudeals:pip-my-dice
   - isthereanydeal:pip-my-dice
+  - fanatical:pip-my-dice
   requires: []
   tiers:
   - 1
@@ -135,6 +153,7 @@ games:
   - steam:1368870
   - dekudeals:field-of-glory-ii-medieval
   - isthereanydeal:field-of-glory-ii-medieval
+  - fanatical:field-of-glory-ii-medieval
   requires: []
   tiers:
   - 1
@@ -145,6 +164,7 @@ games:
   - steam:1413660
   - dekudeals:elderand
   - isthereanydeal:elderand
+  - fanatical:elderand
   requires: []
   tiers:
   - 1
@@ -155,6 +175,7 @@ games:
   - steam:2951580
   - dekudeals:rhythm-witch-beat-death
   - isthereanydeal:rhythm-witch-beat-death
+  - fanatical:rhythm-witch-beat-death
   requires: []
   tiers:
   - 1
@@ -165,6 +186,7 @@ games:
   - steam:1134100
   - dekudeals:frozenheim
   - isthereanydeal:frozenheim
+  - fanatical:frozenheim
   requires: []
   tiers:
   - 1
@@ -175,6 +197,7 @@ games:
   - steam:894620
   - dekudeals:atone-heart-of-the-elder-tree
   - isthereanydeal:atone-heart-of-the-elder-tree
+  - fanatical:atone-heart-of-the-elder-tree
   requires: []
   tiers:
   - 1
@@ -185,6 +208,7 @@ games:
   - steam:924070
   - dekudeals:arboria
   - isthereanydeal:arboria
+  - fanatical:arboria
   requires: []
   tiers:
   - 1
@@ -195,6 +219,7 @@ games:
   - steam:270610
   - dekudeals:mages-initiation-reign-of-the-elements
   - isthereanydeal:mages-initiation-reign-of-the-elements
+  - fanatical:mages-initiation-reign-of-the-elements
   requires: []
   tiers:
   - 1
@@ -206,6 +231,8 @@ games:
   - dekudeals:rustler-complete-edition
   - unresolved:source:isthereanydeal:16684:rustler-complete-edition
   - isthereanydeal:rustler-complete-edition
+  - unresolved:source:fanatical:build-your-own-fantasy-ages-bundle:rustler-complete-edition
+  - fanatical:rustler-complete-edition
   requires: []
   tiers:
   - 1

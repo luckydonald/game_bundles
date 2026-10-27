@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Cisco Network Certification Training Build Your Own Bundle
+tiers:
+- rank: 1
+  name: pick 1
+  pick_quota: 1
+- rank: 2
+  name: pick 4
+  pick_quota: 4
+- rank: 3
+  name: pick 8
+  pick_quota: 8
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/cisco-network-certification-training-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/cisco-network-certification-training-build-your-own-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/cisco-network-certification-training-build-your-own-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: IT Administration and Networking
+  ids:
+  - fanatical:it-administration-and-networking
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cisco CCENT/CCNA Interconnecting Cisco Networking Devices Part 1 Advanced
+    Diploma
+  ids:
+  - fanatical:cisco-ccent-ccna-interconnecting-cisco-networking-devices-part-1-advanced-diploma
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Internet Tools & Networking Training Certificate
+  ids:
+  - fanatical:internet-tools-and-networking-training-certificate
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: (CWNA) Certified Wireless Network Administrator Training Diploma
+  ids:
+  - fanatical:cwna-certified-wireless-network-administrator-training-diploma
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cisco CCNP Implementing Cisco IP Switched Networks (Switch) v2.0 Training
+    Diploma
+  ids:
+  - fanatical:cisco-ccnp-implementing-cisco-ip-switched-networks-switch-v-2-0-training-diploma
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cisco CCNA Interconnecting Cisco Networking Devices Part 2 Video Training
+    Course
+  ids:
+  - fanatical:cisco-ccna-interconnecting-cisco-networking-devices-part-2-video-training-course
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cisco CCNP Troubleshoot and Maintain Cisco IP Switched Networks (TSHOOT) v2.0
+    Video Training Course
+  ids:
+  - fanatical:cisco-ccnp-troubleshoot-and-maintain-cisco-ip-switched-networks-tshoot-v-2-0-video-training-course
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Fundamentals of Network Communication
+  ids:
+  - fanatical:fundamentals-of-network-communication
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

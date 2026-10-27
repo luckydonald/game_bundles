@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Python Programming Bundle
+tiers:
+- rank: 1
+  name: 9.99 USD
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/python-programming-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/python-programming-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/python-programming-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Intro to Object-Oriented Programming with Python
+  ids:
+  - fanatical:python-programming-for-beginners
+  requires: []
+  tiers:
+  - 1
+- name: Learn Python and Pygame by Making a Game
+  ids:
+  - fanatical:learn-python-and-pygame-by-making-a-game
+  requires: []
+  tiers:
+  - 1
+- name: The Complete Kivy App Development Course
+  ids:
+  - fanatical:the-complete-kivy-app-development-course
+  requires: []
+  tiers:
+  - 1
+- name: Python GUIs with Tkinter for Beginners
+  ids:
+  - fanatical:python-guis-with-tkinter-for-beginners
+  requires: []
+  tiers:
+  - 1
+- name: Reading Data from APIs with Python
+  ids:
+  - fanatical:reading-data-from-apis-with-python
+  requires: []
+  tiers:
+  - 1
+- name: Build a Medical Diagnosis Bot with Python
+  ids:
+  - fanatical:build-a-medical-diagnosis-bot-with-python
+  requires: []
+  tiers:
+  - 1
+- name: Python Projects - Object-Oriented Game
+  ids:
+  - fanatical:python-projects-object-oriented-game
+  requires: []
+  tiers:
+  - 1

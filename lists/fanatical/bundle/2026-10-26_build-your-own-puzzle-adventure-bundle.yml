@@ -1,0 +1,194 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Puzzle Adventure Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-puzzle-adventure-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-puzzle-adventure-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-puzzle-adventure-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Feline Forensics and the Meowseum Mystery
+  ids:
+  - steam:2945150
+  - fanatical:feline-forensics-and-the-meowseum-mystery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Too Many Toys!
+  ids:
+  - steam:5028390
+  - fanatical:too-many-toys
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Is this Game Trying to Kill Me?
+  ids:
+  - steam:2658470
+  - fanatical:is-this-game-trying-to-kill-me
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mewseum Collection
+  ids:
+  - unresolved:source:fanatical:build-your-own-puzzle-adventure-bundle:mewseum-collection
+  - fanatical:mewseum-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Mythwrecked: Ambrosia Island'
+  ids:
+  - steam:2000210
+  - fanatical:mythwrecked-ambrosia-island
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Pyramids and Aliens: Escape Room'
+  ids:
+  - steam:2833640
+  - fanatical:pyramids-and-aliens-escape-room
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Superliminal
+  ids:
+  - steam:1049410
+  - fanatical:superliminal
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Escape Academy Deluxe Edition
+  ids:
+  - steam:1812090
+  - fanatical:escape-academy-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Lost in Play
+  ids:
+  - steam:1328840
+  - fanatical:lost-in-play
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Logic Town - Complete Edition
+  ids:
+  - steam:2333240
+  - fanatical:logic-town-complete-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puzzles Triple Pack
+  ids:
+  - unresolved:source:fanatical:build-your-own-puzzle-adventure-bundle:puzzles-triple-pack
+  - fanatical:puzzles-triple-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Parallel Experiment 2 Pack
+  ids:
+  - unresolved:source:fanatical:build-your-own-puzzle-adventure-bundle:parallel-experiment-2-pack
+  - fanatical:parallel-experiment-2-pack
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Botany Manor
+  ids:
+  - steam:1425350
+  - fanatical:botany-manor
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: '60 Minutes to Extinction: Escape Room'
+  ids:
+  - steam:3783210
+  - fanatical:60-minutes-to-extinction-escape-room
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Labyrinthine
+  ids:
+  - steam:1302240
+  - fanatical:labyrinthine
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Escape From Mystwood Mansion
+  ids:
+  - steam:2292650
+  - fanatical:escape-from-mystwood-mansion
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bytebond
+  ids:
+  - steam:1952690
+  - fanatical:bytebond
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: We Were Here Together
+  ids:
+  - steam:865360
+  - fanatical:we-were-here-together
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: How 2 Escape Collection
+  ids:
+  - unresolved:source:fanatical:build-your-own-puzzle-adventure-bundle:how-2-escape-collection
+  - fanatical:how-2-escape-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
