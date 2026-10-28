@@ -3670,3 +3670,11 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 > All those changes, including ai prompts, and exploration shall go to `~/Documents/programming/Python/game_bundles`. That would then follow the existing crawler standards there.
 
 ❯ Plan accepted (title-search resolver for games without a Steam id; bundles plus pick-and-mix as `pick_quota`).
+❯ check [`ai/plans/047_keep-patchright-chromium-out-of-the-foreground.md`](./plans/047_keep-patchright-chromium-out-of-the-foreground.md) if there's anything left to do. Commit and squash and such.
+
+❯ Fix the `sync_todos.local.json` & `sync_todos.json` to contain this project.
+
+❯ The tag is `#gamesBundles` (ammend)
+
+❯ The tag is `#gamesBundles` (amend commit)
+
