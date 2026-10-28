@@ -11,7 +11,7 @@ from typing import Any
 import yaml
 from pydantic import ValidationError
 
-from game_collections.models import GameList, validate_list_id
+from game_collections.models import GameList, TierDefinition, validate_list_id
 
 
 TIER_SUFFIX_PATTERN = re.compile(r"^(?P<base>.+)#tier-(?P<rank>[0-9]+)$")
@@ -30,6 +30,9 @@ class LoadedGameList:
     id: str
     path: Path
     data: GameList
+    # The tier definition this synthetic list was expanded from (see `expand_list_tiers`);
+    # `None` for a list which is not a tier of a multi-variation bundle.
+    tier: TierDefinition | None = None
 
 # end class LoadedGameList
 
@@ -48,12 +51,25 @@ def expand_list_tiers(game_list: LoadedGameList) -> list[LoadedGameList]:
     if not game_list.data.tiers:
         return [game_list]
     # end if
+    requires_by_rank = {tier.rank: tier.requires for tier in game_list.data.tiers}
     expanded: list[LoadedGameList] = []
     for tier in game_list.data.tiers:
+        # A dependent tier (e.g. a charity add-on) is sold on top of the tiers it requires, so its
+        # collection holds those tiers' games too. `GameList` validation guarantees no cycles.
+        included_ranks = {tier.rank}
+        pending = list(tier.requires)
+        while pending:
+            required_rank = pending.pop()
+            if required_rank in included_ranks:
+                continue
+            # end if
+            included_ranks.add(required_rank)
+            pending.extend(requires_by_rank[required_rank])
+        # end while
         games = [
             game.model_copy(update={"tiers": []})
             for game in game_list.data.games
-            if tier.rank in game.tiers
+            if included_ranks.intersection(game.tiers)
         ]
         data = game_list.data.model_copy(
             update={
@@ -63,7 +79,9 @@ def expand_list_tiers(game_list: LoadedGameList) -> list[LoadedGameList]:
                 "games": games,
             }
         )
-        expanded.append(LoadedGameList(id=f"{game_list.id}#tier-{tier.rank}", path=game_list.path, data=data))
+        expanded.append(
+            LoadedGameList(id=f"{game_list.id}#tier-{tier.rank}", path=game_list.path, data=data, tier=tier)
+        )
     # end for
     return expanded
 # end def expand_list_tiers

@@ -28,6 +28,8 @@ class BundleMetadata:
     date: str | None
     tier: int | None
     name: str
+    # A dependent add-on tier (its `requires` is non-empty); not a rung of the "highest tier" ladder.
+    dependent: bool = False
 
 # end class BundleMetadata
 
@@ -60,6 +62,7 @@ def load_bundle_metadata(game_lists: list[LoadedGameList]) -> list[BundleMetadat
                 date=_extract_date(game_list.id),
                 tier=split_tier_suffix(game_list.id)[1],
                 name=game_list.data.name,
+                dependent=game_list.tier is not None and bool(game_list.tier.requires),
             )
         )
     # end for

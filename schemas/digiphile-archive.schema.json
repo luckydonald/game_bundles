@@ -1,0 +1,284 @@
+{
+  "$defs": {
+    "DigiphileDates": {
+      "additionalProperties": false,
+      "description": "Offer availability and observation timestamps.\n\n`start`/`end` are Digiphile's own `startsAt`/`endsAt`, hence a confidence of 1.0. `first_seen` is the time this\nbundle was archived.",
+      "properties": {
+        "crawled": {
+          "format": "date-time",
+          "title": "Crawled",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "first_seen": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Seen"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScrapedTimestamp"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "crawled"
+      ],
+      "title": "DigiphileDates",
+      "type": "object"
+    },
+    "DigiphileItem": {
+      "additionalProperties": false,
+      "description": "One product of a Digiphile bundle.\n\n`product_type` is Digiphile's own label (`SteamGame`, `EBook`). `ids` always ends with the stable anchor\n`digiphile:<product ULID>` (products have no slug, and a game and its soundtrack can share a title prefix) and\nstarts with `steam:<appid>` for Steam products, whose app id Digiphile always states itself.",
+      "properties": {
+        "ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ids",
+          "type": "array"
+        },
+        "price": {
+          "minimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "product_type": {
+          "minLength": 1,
+          "title": "Product Type",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "product_type",
+        "price",
+        "ids"
+      ],
+      "title": "DigiphileItem",
+      "type": "object"
+    },
+    "DigiphileTier": {
+      "additionalProperties": false,
+      "description": "One purchase tier of a Digiphile bundle.\n\n`items` is the cumulative unlock list for a `base` tier (everything up to this price) and only the tier's own\nproducts for a `charity` or `upsell` add-on.",
+      "properties": {
+        "identifier": {
+          "minLength": 1,
+          "title": "Identifier",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/DigiphileItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "order": {
+          "title": "Order",
+          "type": "integer"
+        },
+        "price": {
+          "minimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "tier_type": {
+          "enum": [
+            "base",
+            "charity",
+            "upsell"
+          ],
+          "title": "Tier Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier",
+        "name",
+        "tier_type",
+        "price",
+        "order",
+        "items"
+      ],
+      "title": "DigiphileTier",
+      "type": "object"
+    },
+    "ScrapedTimestamp": {
+      "additionalProperties": false,
+      "description": "One `start`/`end` value as actually derived from a source, plus how sure we are.\n\n`iso` preserves whatever precision the source gave us (date-only, or date+time\ndown to minute/second/fraction, always with an explicit UTC offset unless it's\ndate-only); `timestamp` is the same instant as a unix epoch float, cross-checked\nagainst `iso` on construction so the two can never silently drift apart.",
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "iso": {
+          "minLength": 1,
+          "title": "Iso",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceName"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "number"
+        }
+      },
+      "required": [
+        "iso",
+        "timestamp",
+        "confidence",
+        "source"
+      ],
+      "title": "ScrapedTimestamp",
+      "type": "object"
+    },
+    "SourceName": {
+      "description": "One entry per `sources/<name>/` crawler package.",
+      "enum": [
+        "humblebundle",
+        "greenmangaming",
+        "dailyindiegame",
+        "isthereanydeal",
+        "dekudeals",
+        "fanatical",
+        "digiphile"
+      ],
+      "title": "SourceName",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Normalized metadata for one Digiphile bundle offer.",
+  "properties": {
+    "bundle_type": {
+      "enum": [
+        "steam-game",
+        "ebook"
+      ],
+      "title": "Bundle Type",
+      "type": "string"
+    },
+    "charities": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Charities",
+      "type": "array"
+    },
+    "curator_series": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Curator Series"
+    },
+    "dates": {
+      "$ref": "#/$defs/DigiphileDates"
+    },
+    "machine_name": {
+      "minLength": 1,
+      "title": "Machine Name",
+      "type": "string"
+    },
+    "min_price": {
+      "minimum": 0,
+      "title": "Min Price",
+      "type": "number"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "subtitle": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Subtitle"
+    },
+    "suggested_price": {
+      "minimum": 0,
+      "title": "Suggested Price",
+      "type": "number"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/DigiphileTier"
+      },
+      "minItems": 1,
+      "title": "Tiers",
+      "type": "array"
+    },
+    "url": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "machine_name",
+    "url",
+    "name",
+    "bundle_type",
+    "min_price",
+    "suggested_price",
+    "dates",
+    "tiers"
+  ],
+  "title": "DigiphileArchive",
+  "type": "object"
+}

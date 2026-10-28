@@ -145,12 +145,34 @@ class Reference(StrictModel):
 # end class Reference
 
 
+TierKind = Literal["base", "charity", "upsell"]
+
+
 class TierDefinition(StrictModel):
     """One purchase variation ("tier") of a bundle list."""
 
     rank: Annotated[int, Field(ge=1)]
     name: NonEmptyString
     pick_quota: Annotated[int, Field(ge=1)] | None = None
+    # Category of the variation: a regular (usually cumulative) `base` tier, or an optional
+    # `charity`/`upsell` add-on sold next to the base tiers. Informational, it labels the add-on
+    # in launcher collection names; the behavior comes from `requires`.
+    kind: TierKind = "base"
+    # Ranks of other tiers whose games this tier also includes, e.g. the first base tier an add-on
+    # can only be bought with. A tier with a non-empty `requires` is dependent: it is not a rung of
+    # the "highest tier I own" ladder but an extra which gets merged into the highest owned tier.
+    requires: list[Annotated[int, Field(ge=1)]] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def validate_requires(self) -> Self:
+        if len(self.requires) != len(set(self.requires)):
+            raise ValueError(f"tier {self.rank} lists a required tier more than once")
+        # end if
+        if self.rank in self.requires:
+            raise ValueError(f"tier {self.rank} cannot require itself")
+        # end if
+        return self
+    # end def validate_requires
 
 # end class TierDefinition
 
@@ -229,6 +251,29 @@ class GameList(StrictModel):
         # end if
 
         known_ranks = set(ranks)
+        requires_by_rank = {tier.rank: tier.requires for tier in self.tiers}
+        for tier in self.tiers:
+            unknown_required = [rank for rank in tier.requires if rank not in known_ranks]
+            if unknown_required:
+                raise ValueError(f"tier {tier.rank} requires unknown tier rank(s) {unknown_required}")
+            # end if
+        # end for
+        for tier in self.tiers:
+            # Walk the requirement chain; reaching the starting rank again is a cycle.
+            pending = list(tier.requires)
+            visited: set[int] = set()
+            while pending:
+                current = pending.pop()
+                if current == tier.rank:
+                    raise ValueError(f"tier {tier.rank} requires itself through a cycle")
+                # end if
+                if current in visited:
+                    continue
+                # end if
+                visited.add(current)
+                pending.extend(requires_by_rank[current])
+            # end while
+        # end for
         for game in self.games:
             if not self.tiers and game.tiers:
                 raise ValueError(f"game {game.name!r} has tiers but the list defines none")

@@ -131,6 +131,24 @@ Pipeline pieces:
 - `crawler.py` - `FanaticalHttpClient` (bounded-retry `httpx` wrapper, also used for the Steam search), `crawl_fanatical_offers(fetch, mapping, search, ...)` with the usual injectable `fetch`/`log`/`on_offer`/`archive_root` conventions, and `write_fanatical_offer`.
 - `migrations.py` - empty version-step lists (`FANATICAL_V1` is the first shape).
 
+## Digiphile (`digiphile/`)
+
+Backs `game-collections scrape digiphile`. Digiphile sells the bundles itself, so this source owns `lists/digiphile/bundle/<YYYY-MM-DD>_<slug>.yml` and `archives/digiphile/bundle/<slug>/{metadata,source}.json`, while dekudeals and isthereanydeal also mirror its bundles there.
+
+1. **Server-rendered Next.js, no browser.** digiphile.co embeds its data in the page as React Server Component flight chunks (`<script>self.__next_f.push([1,"..."])</script>`); concatenating their string fragments yields plain JSON (confirmed live; plain `httpx` works, no Cloudflare challenge). `parser.flight_text` does that and `parser.extract_bundle_slugs` / `extract_bundle` read `"bundles":[...]` from `/collections` and `"bundle":{...}` from `/collections/<slug>`. The list only carries summaries, so every bundle needs its detail page, whose raw bundle object becomes `source.json` verbatim. The list has no pagination, includes expired bundles (back to 2025-11) and reports `status: "Active"` for all of them, so the dates are the truth. An unknown slug answers HTTP 200 with a Next.js 404 page, so a missing payload, not the status code, means the bundle is gone.
+2. **Three tier types.** `Base` tiers are cumulative price breakpoints, each product points at exactly one tier through `bundleTierId` and lists only what the tier newly unlocks, so the archived base tiers accumulate (ordered by price). `Charity` (a donation add-on: soundtracks, art books, a cosmetic DLC) and `Upsell` (separately sold DLC or even a whole extra game) are optional add-ons which hold only their own products.
+3. **Dates are exact.** `start`/`end` come straight from `startsAt`/`endsAt` (confidence 1.0).
+4. **Ids need no resolver.** Every Steam product carries its `steamGameMetadata.steamAppId`, so there is no title search and no `unresolved:` marker; a Steam product without an app id fails the bundle loudly instead of being guessed. Products have no slug, so each item also carries the anchor `digiphile:<product ULID>`. Ebook (comic) bundles have no Steam ids and are archive-only.
+5. **What becomes a list.** Base tiers are named after their USD price (`4.00 USD`) and ranked first, like dekudeals and isthereanydeal ranked them. The add-ons follow, charity before upsell, each by price, and are written as dependent tiers: `kind: charity|upsell` and `requires: [1]`, the lowest base tier they can only be bought with (the dependency is the maintainers' knowledge, the payload only has `type` and `price`). `--tiers highest` merges the add-ons you own into the collection of your highest owned tier (see `lists/README.md`). A bundle with one base tier and no add-on is a plain list.
+6. **Dedup against the aggregators.** `crawler.find_covering_list` looks for an existing `lists/digiphile` list named exactly after the slug or the slugified title (`social-multiplayer` for `social-multiplayer-games-collection-digiphile`), ignoring the date prefix. The shared fuzzy/substring `existing_list_match` is deliberately not used: it hits older editions and prompts on a terminal. A match is backfilled through the shared `backfill_existing_lists` with the `digiphile:` ids it lacks and gets `digiphile` recorded in `crawlers`; its tier structure is kept as the aggregator wrote it (no add-on tiers). Otherwise a new list is written. The shared backfill never hands one id to two games, since aggregators list every DLC of a multi-DLC product separately and the fuzzy name match pairs them all with the one product.
+
+Pipeline pieces:
+
+- `models.py` - `DigiphileArchive`/`DigiphileTier`/`DigiphileItem`/`DigiphileDates`.
+- `parser.py` - `flight_text`, `extract_bundle_slugs`, `extract_bundle`, `parse_bundle`, `bundle_slug`, `page_url`.
+- `crawler.py` - `DigiphileHttpClient` (bounded-retry `httpx` wrapper), `crawl_digiphile_offers(fetch, ...)` with the usual injectable `fetch`/`log`/`on_offer`/`archive_root` conventions, and `write_digiphile_offer`.
+- `migrations.py` - empty version-step lists (`DIGIPHILE_V1` is the first shape).
+
 ## Adding a new source (e.g. another bundle shop)
 
 Use `humblebundle/` as the template for a source with resolver-based ID matching, or `dailyindiegame/` for one where the shop's own pages already give you a direct storefront ID. A new source is its own package `src/game_collections/sources/<source>/`, wired into the CLI the same way:

@@ -52,7 +52,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
 - [x] add memory that if we stumble over preexisting errors in unittests or typing, those should be fixed as a separate commit automatically, too. No need to explicitly seach for those though. — `todo:8ae825eb-3ef2-4d84-8180-a937d7e2bb3c` _(done)_
 - [x] Write memory to NEVER EVER run file searches from `/`. — `todo:d23bc543-c583-4dc1-a8ed-1141c92f6822` _(done)_
   > Also disallow `find / …` via [`ai/settings/settings.json`](./settings/settings.json).
-- [ ] add digiphile scraper — `todo:e1bfc5d1-e6e8-4eb9-9345-4b41f2436a61`
+- [x] add digiphile scraper — `todo:e1bfc5d1-e6e8-4eb9-9345-4b41f2436a61`
   > • List: https://www.digiphile.co/collections
   > • Bundle examples:
   >   • currently live: https://www.digiphile.co/collections/social-multiplayer-games-collection-digiphile

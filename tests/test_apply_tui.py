@@ -927,6 +927,46 @@ def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers(tmp_path: Path)
 # end def test_switching_tiers_to_highest_unchecks_lower_sibling_tiers
 
 
+def test_highest_tiers_keeps_dependent_add_on_tiers_checked(tmp_path: Path) -> None:
+    lists_root = _make_lists_root(tmp_path)
+    path = lists_root / "digiphile/bundle/2026-03-01_d.yml"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        yaml.safe_dump(
+            {
+                "name": "Add-on Bundle",
+                "tiers": [
+                    {"rank": 1, "name": "4.00 USD"},
+                    {"rank": 2, "name": "16.00 USD"},
+                    {"rank": 3, "name": "Relief", "kind": "charity", "requires": [1]},
+                ],
+                "games": [
+                    {"name": "One", "ids": ["steam:1"], "tiers": [1, 2]},
+                    {"name": "Two", "ids": ["steam:2"], "tiers": [2]},
+                    {"name": "Soundtrack", "ids": ["steam:3"], "tiers": [3]},
+                ],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    async def scenario() -> None:
+        app = ApplyPickerApp(lists_root, excluded=set(), tier_mode="all")
+        async with app.run_test() as pilot:
+            await _run_until_loaded(app, pilot)
+            app.query_one("#filter-tiers", Select).value = "highest"
+            await pilot.pause()
+            assert "digiphile/bundle/2026-03-01_d#tier-1" not in app._checked
+            assert "digiphile/bundle/2026-03-01_d#tier-2" in app._checked
+            assert "digiphile/bundle/2026-03-01_d#tier-3" in app._checked
+        # end async with
+    # end def scenario
+
+    asyncio.run(scenario())
+# end def test_highest_tiers_keeps_dependent_add_on_tiers_checked
+
+
 def test_missing_bounds_and_tiers_default_to_constructor_args_and_are_changeable(tmp_path: Path) -> None:
     async def scenario() -> None:
         app = ApplyPickerApp(

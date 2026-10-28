@@ -42,7 +42,23 @@ games:
     tiers: [2]
 ```
 
-A single-variation bundle omits `tiers` entirely (same as a plain list). Launcher sync/`apply` treat each tier as its own logical collection - see `--tiers` in the root `README.md`.
+A tier may also be an optional add-on sold next to the regular tiers, such as a charity add-on or an upsell DLC. Such a tier carries `kind` (`base`, the default, `charity` or `upsell`) and `requires`, the ranks of the tiers whose games it also includes, for example the first level the add-on can only be bought with. A tier with a non-empty `requires` is dependent: it is not a rung of the "highest tier" ladder, and its own collection holds the required tiers' games plus its own.
+
+```yaml
+tiers:
+  - {rank: 1, name: 4.00 USD}
+  - {rank: 2, name: 16.00 USD}
+  - {rank: 3, name: Venezuela Earthquake Relief, kind: charity, requires: [1]}
+games:
+  - name: In every base tier
+    ids: [steam:1]
+    tiers: [1, 2]
+  - name: Charity add-on
+    ids: [steam:3]
+    tiers: [3]
+```
+
+A single-variation bundle omits `tiers` entirely (same as a plain list). Launcher sync/`apply` treat each tier as its own logical collection - see `--tiers` under "Steam behavior" in the root `README.md`.
 
 Validate all lists with:
 
@@ -83,3 +99,7 @@ Humble's own site doesn't expose past Choice months to guests, so historical mon
 ## Generated DailyIndieGame lists
 
 `game-collections scrape dailyindiegame` writes one list per bundle to `dailyindiegame/bundle/<N>.yml`, where `<N>` is the bundle's own numeric ID on the site. Every game already carries a direct `steam:<appid>` ID from the bundle page, so there's no `unresolved:*` state for this source. Each list references its bundle page URL plus the matching normalized metadata and raw source archive files below `archives/dailyindiegame/bundle/<N>/`.
+
+## Generated Digiphile lists
+
+`game-collections scrape digiphile` writes one list per bundle that sells Steam games to `digiphile/bundle/<YYYY-MM-DD>_<slug>.yml`. Every game carries its `steam:<appid>` and a `digiphile:<product ULID>` anchor, so there's no `unresolved:*` state for this source. The regular price tiers are ranked first and named after their USD price; Digiphile's optional charity and upsell add-ons follow as dependent tiers (`kind: charity|upsell`, `requires: [1]`, see above). Each list references its bundle page URL plus the matching normalized metadata and raw source archive files below `archives/digiphile/bundle/<slug>/`.

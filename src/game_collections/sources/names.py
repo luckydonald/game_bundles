@@ -15,5 +15,6 @@ class SourceName(StrEnum):
     ISTHEREANYDEAL = "isthereanydeal"
     DEKUDEALS = "dekudeals"
     FANATICAL = "fanatical"
+    DIGIPHILE = "digiphile"
 
 # end class SourceName

@@ -363,3 +363,92 @@ def test_symlinked_lists_are_rejected(tmp_path: Path) -> None:
         derive_list_id(linked, lists_root)
     # end with
 # end def test_symlinked_lists_are_rejected
+
+
+ADDON_BUNDLE = (
+    "schema: 2\nname: Bundle\n"
+    "tiers:\n  - {rank: 1, name: 4.00 USD}\n  - {rank: 2, name: 16.00 USD}\n"
+    "  - {rank: 3, name: Venezuela Earthquake Relief, kind: charity, requires: [1]}\n"
+    "  - {rank: 4, name: Map DLC, kind: upsell, requires: [1]}\n"
+    "games:\n  - {name: One, ids: [steam:440], tiers: [1, 2]}\n"
+    "  - {name: Two, ids: [steam:441], tiers: [2]}\n"
+    "  - {name: Soundtrack, ids: [steam:442], tiers: [3]}\n"
+    "  - {name: DLC, ids: [steam:443], tiers: [4]}\n"
+)
+
+
+def test_tier_kind_and_requires_default_to_a_plain_base_tier(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(
+        "schema: 1\nname: Bundle\ntiers:\n  - {rank: 1, name: Bronze}\n"
+        "games:\n  - {name: One, ids: [steam:440], tiers: [1]}\n",
+        encoding="utf-8",
+    )
+
+    tier = load_game_list(path, lists_root).data.tiers[0]
+
+    assert tier.kind == "base"
+    assert tier.requires == []
+# end def test_tier_kind_and_requires_default_to_a_plain_base_tier
+
+
+def test_expand_list_tiers_adds_the_games_of_required_tiers(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(ADDON_BUNDLE, encoding="utf-8")
+
+    expanded = expand_list_tiers(load_game_list(path, lists_root))
+
+    assert [item.id for item in expanded] == ["bundle#tier-1", "bundle#tier-2", "bundle#tier-3", "bundle#tier-4"]
+    assert [game.name for game in expanded[1].data.games] == ["One", "Two"]
+    assert [game.name for game in expanded[2].data.games] == ["One", "Soundtrack"]
+    assert [game.name for game in expanded[3].data.games] == ["One", "DLC"]
+    assert expanded[2].tier is not None
+    assert (expanded[2].tier.kind, expanded[2].tier.requires) == ("charity", [1])
+    assert expanded[0].tier is not None and expanded[0].tier.kind == "base"
+# end def test_expand_list_tiers_adds_the_games_of_required_tiers
+
+
+def test_expand_list_tiers_follows_requirements_transitively(tmp_path: Path) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(
+        "schema: 2\nname: Bundle\n"
+        "tiers:\n  - {rank: 1, name: A}\n  - {rank: 2, name: B, requires: [1]}\n  - {rank: 3, name: C, requires: [2]}\n"
+        "games:\n  - {name: One, ids: [steam:1], tiers: [1]}\n  - {name: Two, ids: [steam:2], tiers: [2]}\n"
+        "  - {name: Three, ids: [steam:3], tiers: [3]}\n",
+        encoding="utf-8",
+    )
+
+    expanded = expand_list_tiers(load_game_list(path, lists_root))
+
+    assert [game.name for game in expanded[2].data.games] == ["One", "Two", "Three"]
+# end def test_expand_list_tiers_follows_requirements_transitively
+
+
+@pytest.mark.parametrize(
+    ("tiers", "message"),
+    [
+        ("  - {rank: 1, name: A, requires: [9]}\n", "unknown tier rank"),
+        ("  - {rank: 1, name: A, requires: [1]}\n", "cannot require itself"),
+        ("  - {rank: 1, name: A, requires: [2]}\n  - {rank: 2, name: B, requires: [1]}\n", "cycle"),
+        ("  - {rank: 1, name: A}\n  - {rank: 2, name: B, requires: [1, 1]}\n", "more than once"),
+    ],
+)
+def test_invalid_tier_requirements_are_rejected(tmp_path: Path, tiers: str, message: str) -> None:
+    lists_root = tmp_path / "lists"
+    lists_root.mkdir()
+    path = lists_root / "bundle.yml"
+    path.write_text(
+        f"schema: 2\nname: Bundle\ntiers:\n{tiers}games:\n  - {{name: One, ids: [steam:1], tiers: [1]}}\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ListLoadError, match=message):
+        load_game_list(path, lists_root)
+    # end with
+# end def test_invalid_tier_requirements_are_rejected

@@ -3,8 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 
 import pytest
+import yaml
 
-from game_collections.models import Game, GameGroup, GameList, Reference
+from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     dump_json,
     dump_versioned_json,
@@ -402,3 +403,50 @@ def test_existing_list_match_ignores_the_providers_type_container_directory(tmp_
     )
     assert match is None
 # end def test_existing_list_match_ignores_the_providers_type_container_directory
+
+
+def test_render_game_list_yaml_only_writes_tier_kind_and_requires_for_add_ons(tmp_path: Path) -> None:
+    game_list = GameList(
+        name="Bundle",
+        tiers=[
+            TierDefinition(rank=1, name="4.00 USD"),
+            TierDefinition(rank=2, name="Map DLC", kind="upsell", requires=[1]),
+        ],
+        games=[Game(name="One", ids=["steam:1"], tiers=[1]), Game(name="DLC", ids=["steam:2"], tiers=[2])],
+    )
+
+    rendered = yaml.safe_load(render_game_list_yaml(game_list, tmp_path / "lists/x/bundle.yml", tmp_path))
+
+    assert rendered["tiers"] == [
+        {"rank": 1, "name": "4.00 USD"},
+        {"rank": 2, "name": "Map DLC", "kind": "upsell", "requires": [1]},
+    ]
+# end def test_render_game_list_yaml_only_writes_tier_kind_and_requires_for_add_ons
+
+
+def test_backfill_never_gives_one_id_to_two_games(tmp_path: Path) -> None:
+    # An aggregator lists each DLC of a multi-DLC product separately, and the fuzzy name match pairs all
+    # of them with the one pooled product, which must not leave duplicate qualified ids behind.
+    from game_collections.sources.common import backfill_existing_lists
+
+    path = tmp_path / "lists/digiphile/bundle/2026-01-01_coaster.yml"
+    path.parent.mkdir(parents=True)
+    existing = GameList(
+        name="Coaster",
+        crawlers=["dekudeals"],
+        games=[
+            Game(name="Planet Coaster", ids=["steam:1"]),
+            Game(name="Planet Coaster - Spooky Pack", ids=["steam:2"]),
+        ],
+    )
+    path.write_text(render_game_list_yaml(existing, path, tmp_path), encoding="utf-8")
+    pool = [Game(name="Planet Coaster", ids=["steam:1", "digiphile:base"])]
+
+    backfill_existing_lists(
+        pool, path, "digiphile", "coaster", Reference(name="Digiphile bundle", url="https://example.com/c"),
+        tmp_path / "m.json", tmp_path / "s.json", tmp_path, lambda _message: None,
+    )
+
+    games = yaml.safe_load(path.read_text(encoding="utf-8"))["games"]
+    assert [game["ids"] for game in games] == [["steam:1", "digiphile:base"], ["steam:2"]]
+# end def test_backfill_never_gives_one_id_to_two_games

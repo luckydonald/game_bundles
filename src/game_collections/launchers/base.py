@@ -10,7 +10,7 @@ from typing import Literal, Self
 from pydantic import Field, model_validator
 
 from game_collections.lists import LoadedGameList
-from game_collections.models import StrictModel
+from game_collections.models import StrictModel, TierKind
 
 
 class CollectionEligibility(StrictModel):
@@ -19,6 +19,11 @@ class CollectionEligibility(StrictModel):
     list_id: str
     name: str
     tier: int | None = None
+    # Facts of the tier definition the list was expanded from (see `lists.expand_list_tiers`);
+    # only meaningful when `tier` is set. `tier_requires` non-empty means a dependent add-on tier.
+    tier_name: str | None = None
+    tier_kind: TierKind = "base"
+    tier_requires: list[int] = Field(default_factory=list)
     eligible: bool
     owned_ids: list[str]
     missing_ids: list[str]

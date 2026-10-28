@@ -62,6 +62,7 @@ from game_collections.schema import write_isthereanydeal_schema
 from game_collections.schema import write_isthereanydeal_game_schema
 from game_collections.schema import write_dekudeals_schema
 from game_collections.schema import write_fanatical_schema
+from game_collections.schema import write_digiphile_schema
 from game_collections.search import CompletionMode, Provider, complete_game_list, completion_mode, selected_providers
 from game_collections.sources.names import SourceName
 from game_collections.sources.dailyindiegame.crawler import (
@@ -80,6 +81,12 @@ from game_collections.sources.dekudeals.provider_config import load_provider_con
 from game_collections.sources.dekudeals.resolver import (
     load_resolution_map as load_deku_resolution_map,
     write_resolution_map as write_deku_resolution_map,
+)
+from game_collections.sources.digiphile.crawler import (
+    CrawledDigiphileOffer,
+    DigiphileHttpClient,
+    crawl_digiphile_offers,
+    write_digiphile_offer,
 )
 from game_collections.sources.fanatical.crawler import (
     CrawledFanaticalOffer,
@@ -457,6 +464,10 @@ def schema_command(
         Path,
         typer.Option("--fanatical-output", help="Generated Fanatical archive JSON Schema path."),
     ] = Path("schemas/fanatical-archive.schema.json"),
+    digiphile_output: Annotated[
+        Path,
+        typer.Option("--digiphile-output", help="Generated Digiphile archive JSON Schema path."),
+    ] = Path("schemas/digiphile-archive.schema.json"),
 ) -> None:
     """Generate JSON Schemas from the runtime Pydantic models."""
     write_schema(output)
@@ -467,6 +478,7 @@ def schema_command(
     write_isthereanydeal_game_schema(isthereanydeal_game_output)
     write_dekudeals_schema(dekudeals_output)
     write_fanatical_schema(fanatical_output)
+    write_digiphile_schema(digiphile_output)
     typer.echo(output)
     typer.echo(humblebundle_output)
     typer.echo(dailyindiegame_output)
@@ -475,6 +487,7 @@ def schema_command(
     typer.echo(isthereanydeal_game_output)
     typer.echo(dekudeals_output)
     typer.echo(fanatical_output)
+    typer.echo(digiphile_output)
 # end def schema_command
 
 
@@ -1364,6 +1377,74 @@ def scrape_fanatical_command(
         )
     # end try
 # end def scrape_fanatical_command
+
+
+@scrape_app.command("digiphile")
+def scrape_digiphile_command(
+    ctx: typer.Context,
+    urls: Annotated[
+        list[str] | None,
+        typer.Option("--url", help="Crawl only this bundle page URL; repeatable."),
+    ] = None,
+    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
+    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    refresh: Annotated[
+        bool,
+        typer.Option(
+            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
+        ),
+    ] = False,
+) -> None:
+    """Archive the bundles listed on digiphile.co (live and expired)."""
+    git_session: git_ops.ScrapeGitSession = ctx.obj
+    repository_root = git_session.repository_root
+    _migrate_source_archives(SourceName.DIGIPHILE, archive_root, repository_root, git_session)
+    client = DigiphileHttpClient()
+    written_count = 0
+
+    def on_offer(offer: CrawledDigiphileOffer) -> None:
+        nonlocal written_count
+        paths = write_digiphile_offer(
+            offer,
+            lists_root=lists_root,
+            archive_root=archive_root,
+            repository_root=repository_root,
+            log=typer.echo,
+        )
+        written_count += len(paths)
+        typer.echo(f"Archived {offer.archive.name}: {len(paths)} file(s)")
+    # end def on_offer
+
+    try:
+        report = crawl_digiphile_offers(
+            client.fetch,
+            urls,
+            archive_root=None if refresh else archive_root,
+            log=typer.echo,
+            on_offer=on_offer,
+        )
+        for error in report.errors:
+            typer.echo(f"error: {error}", err=True)
+        # end for
+        typer.echo(f"Wrote {written_count} file(s) for {len(report.offers)} offer(s).")
+        if report.errors:
+            raise typer.Exit(1)
+        # end if
+    except (OSError, ValueError, RuntimeError) as error:
+        typer.echo(str(error), err=True)
+        raise typer.Exit(1) from error
+    finally:
+        client.close()
+        message = _git_commit_message(
+            "digiphile",
+            git_session.style,
+            "Archived the Digiphile bundles",
+            "game-collections scrape --git digiphile",
+            "Charity and upsell add-ons are recorded as dependent tiers (`kind`, `requires`) of the bundle list.",
+        )
+        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/digiphile"], message)
+    # end try
+# end def scrape_digiphile_command
 
 
 def _maybe_refresh_dynamicstore_dump(dynamicstore_dump: Path | None, force: bool | None) -> None:

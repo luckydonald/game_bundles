@@ -123,6 +123,16 @@
       "additionalProperties": false,
       "description": "One purchase variation (\"tier\") of a bundle list.",
       "properties": {
+        "kind": {
+          "default": "base",
+          "enum": [
+            "base",
+            "charity",
+            "upsell"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
         "name": {
           "minLength": 1,
           "title": "Name",
@@ -145,6 +155,14 @@
           "minimum": 1,
           "title": "Rank",
           "type": "integer"
+        },
+        "requires": {
+          "items": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "title": "Requires",
+          "type": "array"
         }
       },
       "required": [

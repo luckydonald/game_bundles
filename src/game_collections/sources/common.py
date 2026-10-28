@@ -15,7 +15,15 @@ import yaml
 from pydantic import BaseModel, ValidationError
 from rapidfuzz import fuzz
 
-from game_collections.models import CURRENT_GAMELIST_VERSION, Game, GameList, Reference, TierDefinition, duplicate_qualified_ids
+from game_collections.models import (
+    CURRENT_GAMELIST_VERSION,
+    Game,
+    GameList,
+    Reference,
+    TierDefinition,
+    TierKind,
+    duplicate_qualified_ids,
+)
 from game_collections.sources.names import SourceName
 from game_collections.sources.storefronts import normalized_title
 from game_collections.versioning import SchemaDateVersion, Versioned, peek_version
@@ -324,6 +332,7 @@ def merge_game_list(existing: GameList | None, fresh: GameList, *, authoritative
 
 def merge_tiered_games(
     tiers: list[tuple[int, str, list[Game], int | None]],
+    add_ons: dict[int, tuple[TierKind, list[int]]] | None = None,
 ) -> tuple[list[TierDefinition], list[Game]]:
     """Combine one bundle's per-tier game lists into one deduped roster.
 
@@ -337,9 +346,20 @@ def merge_tiered_games(
     (e.g. a build-your-own-bundle tier sharing one identical pool across every
     rank) since membership is read directly off each rank's own list rather
     than assumed contiguous.
+
+    `add_ons` maps the rank of every dependent tier (a charity/upsell sold next to the regular
+    tiers) to its `(kind, requires)`; every other rank is a plain `base` tier.
     """
+    add_ons = add_ons or {}
     tier_definitions = [
-        TierDefinition(rank=rank, name=name, pick_quota=quota) for rank, name, _games, quota in tiers
+        TierDefinition(
+            rank=rank,
+            name=name,
+            pick_quota=quota,
+            kind=add_ons[rank][0] if rank in add_ons else "base",
+            requires=add_ons[rank][1] if rank in add_ons else [],
+        )
+        for rank, name, _games, quota in tiers
     ]
     merged: dict[tuple[str, ...], Game] = {}
     order: list[tuple[str, ...]] = []
@@ -378,6 +398,15 @@ def render_game_list_yaml(game_list: GameList, path: Path, repository_root: Path
     if not value.get("tiers"):
         value.pop("tiers", None)
     # end if
+    for tier in value.get("tiers", []):
+        # Keep plain tiers exactly as they always looked; only add-on tiers carry these keys.
+        if tier.get("kind") == "base":
+            tier.pop("kind", None)
+        # end if
+        if not tier.get("requires"):
+            tier.pop("requires", None)
+        # end if
+    # end for
     for game in [*value.get("games", []), *value.get("invalid", [])]:
         if not game.get("tiers"):
             game.pop("tiers", None)
@@ -597,6 +626,10 @@ def backfill_existing_lists(
         # end if
         added_ids = 0
         updated_games: list[Game] = []
+        # The fuzzy name match can pair several existing games with the one pooled game (an
+        # aggregator lists every DLC of a multi-DLC product on its own), so an id is only ever
+        # handed to the first game claiming it: duplicate qualified ids would make the list invalid.
+        taken_ids = {identifier for game in game_list.games for identifier in game.ids}
         for game in game_list.games:
             match = find_matching_game(game, pool)
             if match is None:
@@ -610,10 +643,11 @@ def backfill_existing_lists(
                     continue
                 # end if
                 compact = identifier.compact()
-                if compact in new_ids:
+                if compact in new_ids or compact in taken_ids:
                     continue
                 # end if
                 new_ids.append(compact)
+                taken_ids.add(compact)
                 added_ids += 1
             # end for
             updated_games.append(game if new_ids == game.ids else game.model_copy(update={"ids": new_ids}))

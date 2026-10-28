@@ -79,6 +79,12 @@ The normalized archive uses `schemas/humblebundle-archive.schema.json`. Both com
 
 Games get their Steam id from Fanatical itself or, failing that, from an exact Steam title search (cached in `config/fanatical-store-ids.yml`); the rest is recorded as `unresolved:source:fanatical:<bundle>:<slug>` for `game-collections complete`. Tiers land on one `lists/fanatical/bundle/<date>_<slug>.yml` per bundle (`pick N` tiers with a `pick_quota` for Build-Your-Own), the normalized record and raw payload go to `archives/fanatical/`, and book, comic and course bundles are archived without a list. See `src/game_collections/sources/README.md` for the details.
 
+## Digiphile imports
+
+`game-collections scrape digiphile` archives every bundle on [digiphile.co](https://www.digiphile.co/collections), live and expired, from the data embedded in its pages. Repeat `--url` to crawl only specific bundle pages.
+
+Every game already carries its Steam id, so nothing needs resolving. Tiers land on one `lists/digiphile/bundle/<date>_<slug>.yml` per bundle: the regular price tiers first, then the optional charity and upsell add-ons as dependent tiers (`kind`, `requires`, see `lists/README.md`). The normalized record and raw payload go to `archives/digiphile/`, comic bundles are archived without a list, and lists the aggregators already created for a bundle get the `digiphile:` ids backfilled. See `src/game_collections/sources/README.md` for the details.
+
 ## Steam behavior
 
 Steam does not expose a public API for creating library collections. Current clients store them in account-scoped cloud configuration:
@@ -101,6 +107,8 @@ This is an internal Steam format. Game Collections therefore models the complete
 7. Preserve backups and print the verified restore command.
 
 Restoration requires Steam to be stopped and the user to type `RESTORE`.
+
+`--tiers all` makes one collection per tier of a multi-tier bundle. `--tiers highest` (the default) makes one per bundle for the highest tier you own completely. Dependent add-on tiers (charity or upsell, see `lists/README.md`) of that bundle which you own as well are merged into that collection, and each one extends its name, e.g. `🗃️ Social Multiplayer — 16.00 USD + Charity: Venezuela Earthquake Relief`. The `apply steam` picker keeps add-on tiers checked under `highest`; they only end up in a collection if they are eligible.
 
 Synchronization is additive in version 1. It creates deterministic static collections, preserves manually added games, and never removes games or collections. Same-name collisions, dynamic collections, and system collection names fail closed.
 

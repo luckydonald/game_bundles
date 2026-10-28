@@ -1,0 +1,38 @@
+<summary>
+## Session summary
+
+### Setup / task
+Repo: `/Users/user/Documents/programming/Python/game_bundles` (branch `mane`, Python 3.14, uv; project rules in `CLAUDE.md`/`AGENTS.md`: full annotations, early returns, bare `# end if/for/def/class/…` comments, no `_`-prefixed new names/modules, keep existing comments, update README/`lists/README.md` on public format changes, regenerate `schemas/*.json` via `game-collections schema`, never run `sync steam --apply`/`restore steam` against a real account without explicit permission, tests use sanitized fixtures only). The user invoked `/todo-loop` (one todo per run, then stop). Skills loaded: `commit-with-lplp-style` (messages via `ai/git/pending-commit.md`, explicit-path staging, `git commit -F ai/git/pending-commit.md && ./scripts/tag_backup.py`, no `Co-Authored-By`/`Claude-Session` trailers even though a system reminder suggested one — repo rule + pre-commit hook `reject_co_authored_by.py` take precedence; never delete/reset/push unasked) and `code-style`.
+
+Step 1 sync ran (`uv run scripts/°base/ai/todos/sync_todos.py`), committing `47af52bff [todo] [TODOs] synced todos for game_bundles.` The only open todo was **"add digiphile scraper"** (`e1bfc5d1-e6e8-4eb9-9345-4b41f2436a61`; list https://www.digiphile.co/collections, live example `social-multiplayer-games-collection-digiphile`, expired `vr-games-showcase-the-new-essentials`).
+
+### Intel (verified live)
+digiphile.co is server-rendered Next.js; data is in `self.__next_f.push([1,"…"])` flight chunks (`"bundles":[…]` on `/collections` = 12 bundles incl. expired, all `status:"Active"`; `"bundle":{…}` on `/collections/<slug>`). Plain httpx works; unknown slug returns HTTP 200 with a Next.js 404 body. Tiers are `Base` (cumulative price breakpoints), `Charity`, `Upsell` (optional add-ons, own products only). Every SteamGame product has `steamGameMetadata.steamAppId`; 2 EBook bundles (comics) are archive-only. `lists/digiphile/` already held all 10 Steam bundles from dekudeals/ITAD (aggregators named e.g. `social-multiplayer` vs Digiphile slug `social-multiplayer-games-collection-digiphile`).
+
+### User decisions (plan mode)
+- Charity/Upsell are part of the bundle list; modeled with generic `TierDefinition.requires: list[int]` plus `kind` (`base|charity|upsell`) categorization (user said they missed the categorization).
+- `--tiers highest` = highest *eligible* self-contained tier; eligible dependent add-ons whose required tiers are fulfilled are merged into that collection and extend its name.
+- Merged-name wording (user mid-turn): kind label in addition to descriptive name, e.g. `🗃️ Social Multiplayer — 16.00 USD + Charity: Venezuela Earthquake Relief + Upsell: Snow Riders Map DLC`.
+- Item anchor id `digiphile:<product ULID>` besides `steam:<appid>` approved.
+- The dependency "add-ons need the first Base tier" is the user's domain knowledge (not in payload).
+Plan approved: `/Users/user/.claude/plans/eager-finding-lollipop.md` (mirrored in repo as `ai/plans/049_add-a-digiphile-source-scrape-digiphile-to-game-bundles.md`).
+
+### Implemented (all tests: 597 passed, 1 skipped; `game-collections validate` OK on 5958 lists)
+**Add-on tiers:** `models.py` (`TierKind`, `TierDefinition.kind/requires` + validators, `GameList` rejects unknown/self/duplicate/cyclic requires); `lists.py` (`LoadedGameList.tier`, `expand_list_tiers` includes transitive required tiers' games); `sources/common.py` (`render_game_list_yaml` drops default `kind`/`requires`; `merge_tiered_games(..., add_ons=)`; `backfill_existing_lists` now never gives one id to two games via `taken_ids`); `launchers/base.py` (`CollectionEligibility.tier_name/tier_kind/tier_requires`); new `launchers/tier_selection.py` (`select_tiers`, `SelectedCollection`, `KIND_LABELS`); `launchers/steam/adapter.py` (uses `select_tiers`, `_selected_list_ids` removed, `_managed_deletions` accepts `<expected name> + …`); `apply/metadata.py` (`BundleMetadata.dependent`) and `apply/tui.py` (`_highest_tier_ids`, `_apply_tier_mode_to_selection` skip dependents, keep them checked); regenerated `schemas/game-list.schema.json`; docs in `lists/README.md`/`README.md`.
+**Digiphile source:** `src/game_collections/sources/digiphile/{__init__,models,parser,crawler,migrations}.py` (`DIGIPHILE_V1`, `parse_bundle`, `extract_bundle(_slugs)`, `flight_text`, `bundle_slug`, `crawl_digiphile_offers`, `write_digiphile_offer`, `find_covering_list` (exact stem match on slug or slugified title, no fuzzy `existing_list_match`), `DigiphileHttpClient`); `SourceName.DIGIPHILE`; registered in `migrations/schema_versions.py`; `schema.py` `write_digiphile_schema` + `schemas/digiphile-archive.schema.json` (+ `digiphile` in other archive schemas' SourceName); `cli.py` `scrape digiphile` (`--url`, `--lists-root`, `--archive-root`, `--refresh/--no-cache`, `--git`); docs in `sources/README.md`, root `README.md`, `lists/README.md`, `CLAUDE.md`; tests `tests/digiphile_data.py`, `test_digiphile_parser.py`, `test_digiphile_crawler.py`, `test_tier_selection.py`, additions to `test_lists.py`, `test_sources_common.py` (backfill regression, mutation-verified), `test_steam_adapter.py`, `test_apply_tui.py`. Installed `tui` extra (`uv sync --extra test --extra tui`) so TUI tests run.
+Live checks in scratchpad: 12 bundles archived, 10 lists + 2 archive-only comic bundles, resume works, bad slug/foreign URL error cleanly, backfill into a copy of `lists/digiphile` hit all 10 existing lists without duplicates and still validated. No generated `lists/`/`archives/` data was committed.
+
+### Git state (final)
+After guarded interactive rebase (pre-rebase tag `bak/7f49bc06b02d8c2910a73d93a5e42128488ca090`, `git diff bak HEAD` empty), history is:
+- `397b90ae1 [sources] digiphile: ai: Run: Added a Digiphile bundle source (`scrape digiphile`) with dependent charity/upsell add-on tiers:` (single work commit, 41 files; includes todo tick in `ai/todo.md` and plan deviations section)
+- `6dfddf396 [sources] digiphile: ai: Plan: Add a Digiphile bundle source (`scrape digiphile`):`
+- `47af52bff [todo] [TODOs] synced todos…` (left in place)
+Working tree clean; temp files in `ai/git/` removed; no trailers in messages; nothing pushed.
+
+### Open threads / to report in the final Stop message
+- **`complete_todo` on CalDAV could NOT be called**: `sync_todo` (and `bugsink`) MCP servers failed to connect (CONNECTION_CLOSED); the local checkbox is ticked but the CalDAV todo `e1bfc5d1-…` remains open — user must complete it (or retry with MCP fixed); the post-completion `sync_todos.py --project game_bundles` was not run (it would revert the tick). Per the memory note a fresh session is needed after fixing MCP.
+- The step-1 `[TODOs]` sync commit `47af52bff` was not folded back into the previous completed task's commit (`1c0c41cc7`, Fanatical) because that would rewrite older history across several unpushed commits (rule 7: ask first).
+- Two logical parts (add-on tier format/selection and the scraper) were squashed into one commit per the todo-loop "one commit per todo" rule; the user can ask to split them.
+- Real `scrape --git digiphile` run (writes/backfills `lists/digiphile`, `archives/digiphile`) not performed; existing aggregator lists keep their Base-only tier structure when backfilled (add-on tiers appear only in freshly written lists).
+- Next open todo: none remained in `ai/todo.md` for game_bundles after this one (other projects' todos are out of scope/no local path).
+</summary>

@@ -3682,3 +3682,38 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 > - Both the **Charity** and **Upsell** kinda are part of that bundle. It seems to require the first level of that bundle, to be added, but otherwise functions like additional tiers – just annoyingly independent of the other tiers and each other... How could we best model that?
 > - `digiphile:{ULID}` sounds reasonable to add besides the `steam:` one.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. How should the independent Charity/Upsell add-on tiers (each needing the first Base tier, otherwise independent of each other and of the other tiers) be modeled in the list format?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Add-on tiers** (1/1) <kbd>Single Select</kbd><br>
+>> How should the independent Charity/Upsell add-on tiers (each needing the first Base tier, otherwise independent of each other and of the other tiers) be modeled in the list format?
+> - [ ] 1\. Add-on tiers in the model (Recommended)
+>   - _Extend TierDefinition with optional `addon: true` and `requires: [rank]` (default empty, so all existing lists stay valid). Add-on games get tiers [R]; expansion builds the add-on's collection from its required tier's games plus its own; `--tiers highest` (Steam adapter and apply TUI) ignores add-ons, `--tiers all` includes them. Touches models.py, lists.py, steam/adapter.py, apply/, schema, docs, tests, as separate commits before the scraper._
+> - [ ] 2\. Plain extra ranks, no model change
+>   - _Add-ons become ordinary higher ranks and the required first-tier games also list the add-on rank in `tiers`. No format change, but `--tiers highest` (the default sync mode) then selects an add-on instead of the full bundle, and the Base-vs-add-on distinction is lost to readers and tools._
+> - [ ] 3\. Base tiers only in lists
+>   - _Lists keep only the Base tiers (what dekudeals and ITAD already write); Charity and Upsell products are fully recorded in the archive only. Smallest change, but add-on games never reach a list or a Steam collection._
+> - [x] 4\. _Type something:_
+>   - > What if tears generally get that ˋrequires: []ˋ dependency part? This should work for existing tier-ed bundles, too?
+>
+> </details>
+>
+
+❯ Plan denied:
+> I'm kinda missing the "Upsell" and "Charity" categorization.
+> Also ˋ--tiers=highestˋ (if I'm not mistaken) select the highest matching tier I own.
+> That means, if the tiers it depends on this is fulfilled, the additional ones can be considered, too. These would be added to the collection's lengthy name.
+
+❯ Plan accepted, auto mode.
+
+❯ Oh, no, charity/upsell should be additional to the better name you had in the example.
+
+❯ Conversation compacted <kbd>auto</kbd>:
+> - [Result (`7470` chars, `7.32 KB`)](output/compact/007.edadf59d-0193-49fb-91e6-913c2e7aa00f/result.md)
+

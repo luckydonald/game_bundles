@@ -22,6 +22,7 @@ from game_collections.launchers.steam.io import (
     steam_collection_id,
 )
 from game_collections.launchers.steam.local_ownership import get_installed_app_ids
+from game_collections.launchers.tier_selection import select_tiers
 from game_collections.lists import LoadedGameList, split_tier_suffix
 
 
@@ -154,6 +155,7 @@ class SteamAdapter(LauncherAdapter):
         owned_app_ids = self.owned_app_ids_source()
         results: list[CollectionEligibility] = []
         for game_list in game_lists:
+            tier = game_list.tier
             if self.options.unverified_ownership:
                 # `--source none` deliberately writes every known Steam ID from the selected
                 # list. This is not an ownership result, so it bypasses every ownership-based
@@ -164,6 +166,9 @@ class SteamAdapter(LauncherAdapter):
                         list_id=game_list.id,
                         name=game_list.data.name,
                         tier=split_tier_suffix(game_list.id)[1],
+                        tier_name=tier.name if tier is not None else None,
+                        tier_kind=tier.kind if tier is not None else "base",
+                        tier_requires=list(tier.requires) if tier is not None else [],
                         eligible=True,
                         owned_ids=completion.missing_ids,
                         missing_ids=[],
@@ -205,6 +210,9 @@ class SteamAdapter(LauncherAdapter):
                     list_id=game_list.id,
                     name=game_list.data.name,
                     tier=split_tier_suffix(game_list.id)[1],
+                    tier_name=tier.name if tier is not None else None,
+                    tier_kind=tier.kind if tier is not None else "base",
+                    tier_requires=list(tier.requires) if tier is not None else [],
                     eligible=eligible,
                     owned_ids=completion.owned_ids,
                     missing_ids=completion.missing_ids,
@@ -217,17 +225,16 @@ class SteamAdapter(LauncherAdapter):
 
     def plan(self, game_lists: list[LoadedGameList]) -> SyncPlan:
         eligibility = self.evaluate(game_lists)
-        selected_ids = self._selected_list_ids(eligibility)
+        selected = select_tiers(eligibility, self.options.tier_mode)
         changes = [
             PlannedCollectionChange(
-                list_id=result.list_id,
-                target_id=steam_collection_id(result.list_id),
-                name=f"{STEAM_COLLECTION_PREFIX}{result.name}",
+                list_id=collection.primary.list_id,
+                target_id=steam_collection_id(collection.primary.list_id),
+                name=f"{STEAM_COLLECTION_PREFIX}{collection.name}",
                 action="create-or-update",
-                added_ids=result.owned_ids,
+                added_ids=collection.owned_ids,
             )
-            for result in eligibility
-            if result.list_id in selected_ids
+            for collection in selected
         ]
         if self.options.reconcile_managed:
             changes.extend(self._managed_deletions(game_lists, changes))
@@ -239,42 +246,6 @@ class SteamAdapter(LauncherAdapter):
             changes=changes,
         )
     # end def plan
-
-    def _selected_list_ids(self, eligibility: list[CollectionEligibility]) -> set[str]:
-        eligible_ids = {result.list_id for result in eligibility if result.eligible}
-        if self.options.tier_mode == "all":
-            return eligible_ids
-        # end if
-
-        tiers: dict[tuple[str, int], str] = {}
-        selected: set[str] = set()
-        highest: dict[str, tuple[int, str]] = {}
-        for result in eligibility:
-            if result.tier is None:
-                if result.eligible:
-                    selected.add(result.list_id)
-                # end if
-                continue
-            # end if
-            parent = split_tier_suffix(result.list_id)[0]
-            rank = result.tier
-            key = (parent, rank)
-            previous = tiers.get(key)
-            if previous is not None:
-                raise ValueError(f"ambiguous tier rank {rank} in {parent!r}: {previous!r} and {result.list_id!r}")
-            # end if
-            tiers[key] = result.list_id
-            if not result.eligible:
-                continue
-            # end if
-            current = highest.get(parent)
-            if current is None or rank > current[0]:
-                highest[parent] = (rank, result.list_id)
-            # end if
-        # end for
-        selected.update(list_id for _rank, list_id in highest.values())
-        return selected
-    # end def _selected_list_ids
 
     def _managed_deletions(
         self,
@@ -308,7 +279,11 @@ class SteamAdapter(LauncherAdapter):
             prefixed_managed = payload.name.startswith(STEAM_COLLECTION_PREFIX)
 
             if payload.id in selected_ids:
-                if payload.name not in (source_name, expected_name):
+                # A merged collection carries its add-on tiers after the list's own name
+                # (`<name> + Charity: …`, see `tier_selection.SelectedCollection.name`).
+                merged_prefix = f"{expected_name} + " if expected_name is not None else None
+                is_merged_name = merged_prefix is not None and payload.name.startswith(merged_prefix)
+                if payload.name not in (source_name, expected_name) and not is_merged_name:
                     raise ValueError(
                         f"managed Steam collection ID collision for {payload.id!r}: {payload.name!r}"
                     )

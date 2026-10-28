@@ -762,7 +762,10 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
     # end def _bundle_hidden_by_missing_bounds
 
     def _highest_tier_ids(self) -> set[str]:
-        """``list_id``s that are the numerically-highest tier within their bundle directory."""
+        """``list_id``s kept by ``tiers: highest``: per bundle directory the numerically-highest self-contained tier, plus its dependent add-on tiers.
+
+        Add-on tiers stay visible and checked because the adapter merges the eligible ones into the highest owned tier's collection.
+        """
         groups: dict[str, list[BundleMetadata]] = {}
         for bundle in self._bundles:
             if bundle.tier is None:
@@ -771,7 +774,15 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
             parent = split_tier_suffix(bundle.list_id)[0]
             groups.setdefault(parent, []).append(bundle)
         # end for
-        return {max(siblings, key=lambda bundle: bundle.tier or 0).list_id for siblings in groups.values()}
+        kept: set[str] = set()
+        for siblings in groups.values():
+            self_contained = [bundle for bundle in siblings if not bundle.dependent]
+            if self_contained:
+                kept.add(max(self_contained, key=lambda bundle: bundle.tier or 0).list_id)
+            # end if
+            kept.update(bundle.list_id for bundle in siblings if bundle.dependent)
+        # end for
+        return kept
     # end def _highest_tier_ids
 
     def _bundle_matches_tier_filter(self, bundle: BundleMetadata, highest_tier_ids: set[str]) -> bool:
@@ -1039,7 +1050,7 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
         """Recompute checked state for sibling tier lists to match ``tier_mode``.
 
         Mirrors ``SteamAdapter``'s own "highest tier per bundle directory" grouping
-        (see ``_selected_list_ids``) so the picker's checkmarks preview what `--tiers`
+        (see ``launchers.tier_selection.select_tiers``) so the picker's checkmarks preview what `--tiers`
         will actually keep, instead of silently disagreeing with it until plan time.
         """
         groups: dict[str, list[BundleMetadata]] = {}
@@ -1055,9 +1066,12 @@ class ApplyPickerApp(App[ApplyPickerResult | None]):
                 self._checked.update(bundle.list_id for bundle in siblings)
                 continue
             # end if
-            highest = max(siblings, key=lambda bundle: bundle.tier or 0)
+            self_contained = [bundle for bundle in siblings if not bundle.dependent]
+            highest = max(self_contained, key=lambda bundle: bundle.tier or 0) if self_contained else None
             for bundle in siblings:
-                if bundle.list_id == highest.list_id:
+                # Dependent add-on tiers stay checked: the adapter merges the eligible ones
+                # into the highest owned tier's collection.
+                if bundle.dependent or (highest is not None and bundle.list_id == highest.list_id):
                     self._checked.add(bundle.list_id)
                 else:
                     self._checked.discard(bundle.list_id)

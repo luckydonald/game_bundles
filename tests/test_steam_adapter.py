@@ -12,7 +12,7 @@ from game_collections.launchers.steam.adapter import (
     owned_app_ids_from_collection,
 )
 from game_collections.launchers.steam.io import NAMESPACE_NAME, SteamFileGateway, steam_collection_id
-from game_collections.lists import LoadedGameList, load_game_list
+from game_collections.lists import LoadedGameList, expand_list_tiers, load_game_list
 from game_collections.models import GameList
 from test_steam_io import ACCOUNT_ID, STEAM_ID, build_fake_steam
 
@@ -457,6 +457,69 @@ def test_reconciliation_deletes_superseded_lower_tier(tmp_path: Path) -> None:
         ("delete", "provider/bundle/example#tier-1"),
     ]
 # end def test_reconciliation_deletes_superseded_lower_tier
+
+
+def _add_on_bundle() -> list[LoadedGameList]:
+    data = GameList.model_validate(
+        {
+            "name": "Add-on Bundle",
+            "tiers": [
+                {"rank": 1, "name": "4.00 USD"},
+                {"rank": 2, "name": "16.00 USD"},
+                {"rank": 3, "name": "Relief", "kind": "charity", "requires": [1]},
+            ],
+            "games": [
+                {"name": "One", "ids": ["steam:10"], "tiers": [1, 2]},
+                {"name": "Two", "ids": ["steam:20"], "tiers": [2]},
+                {"name": "Soundtrack", "ids": ["steam:30"], "tiers": [3]},
+            ],
+        }
+    )
+    return expand_list_tiers(LoadedGameList(id="digiphile/bundle/add-on", path=Path("lists/x.yml"), data=data))
+# end def _add_on_bundle
+
+
+def test_highest_tier_merges_eligible_add_on_into_one_collection() -> None:
+    adapter = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, tier_mode="highest"),
+        owned_app_ids_source=_fake_source([10, 20, 30]),  # type: ignore[arg-type]
+    )
+
+    plan = adapter.plan(_add_on_bundle())
+
+    assert [(change.list_id, change.name, change.added_ids) for change in plan.changes] == [
+        (
+            "digiphile/bundle/add-on#tier-2",
+            "🗃️ Add-on Bundle — 16.00 USD + Charity: Relief",
+            ["steam:10", "steam:20", "steam:30"],
+        )
+    ]
+# end def test_highest_tier_merges_eligible_add_on_into_one_collection
+
+
+def test_reconciliation_accepts_the_merged_name_of_a_previous_run(tmp_path: Path) -> None:
+    steam_root = build_fake_steam(tmp_path)
+    gateway = SteamFileGateway(steam_root, STEAM_ID)
+    game_lists = _add_on_bundle()
+    first = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, tier_mode="highest"),
+        owned_app_ids_source=_fake_source([10, 20, 30]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+    gateway.apply(gateway.stage(first.plan(game_lists), tmp_path / "Desktop"), lambda _prompt: "REPLACE")
+    # The add-on is no longer eligible, so the same collection id is now planned under the plain name.
+    second = SteamAdapter(
+        SteamOptions(steam_id=STEAM_ID, tier_mode="highest", reconcile_managed=True),
+        owned_app_ids_source=_fake_source([10, 20]),  # type: ignore[arg-type]
+        gateway=gateway,
+    )
+
+    plan = second.plan(game_lists)
+
+    assert [(change.action, change.name) for change in plan.changes] == [
+        ("create-or-update", "🗃️ Add-on Bundle — 16.00 USD")
+    ]
+# end def test_reconciliation_accepts_the_merged_name_of_a_previous_run
 
 
 def test_reconciliation_recognizes_legacy_unprefixed_collection(tmp_path: Path) -> None:
