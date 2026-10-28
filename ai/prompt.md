@@ -3678,3 +3678,7 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ The tag is `#gamesBundles` (amend commit)
 
+❯ Plan denied:
+> - Both the **Charity** and **Upsell** kinda are part of that bundle. It seems to require the first level of that bundle, to be added, but otherwise functions like additional tiers – just annoyingly independent of the other tiers and each other... How could we best model that?
+> - `digiphile:{ULID}` sounds reasonable to add besides the `steam:` one.
+
