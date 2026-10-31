@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: LEGO DC VS MARVEL COLLECTION BUNDLE
+tiers:
+- rank: 1
+  name: Starter Brick
+- rank: 2
+  name: Master Builder
+- rank: 3
+  name: Grand Architect
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/lego-dc-vs-marvel-collection-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/lego-dc-vs-marvel-collection-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/lego-dc-vs-marvel-collection-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'LEGO Batman: The Videogame'
+  ids:
+  - steam:21000
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: LEGO Marvel Super Heroes
+  ids:
+  - steam:249130
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: LEGO Marvel's Avengers Deluxe Edition
+  ids:
+  - steam:sub/87894
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: LEGO Batman 2 DC Super Heroes
+  ids:
+  - steam:213330
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LEGO Marvel Super Heroes DLC: Super Pack'
+  ids:
+  - steam:256320
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LEGO Marvel Super Heroes: Asgard Pack'
+  ids:
+  - steam:256321
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LEGO Batman 3: Beyond Gotham Premium Edition'
+  ids:
+  - steam:330870
+  requires: []
+  tiers:
+  - 3
+- name: LEGO DC Super-Villains Deluxe Edition
+  ids:
+  - steam:sub/269255
+  requires: []
+  tiers:
+  - 3
+- name: LEGO Marvel Super Heroes 2 - Deluxe Edition
+  ids:
+  - steam:sub/216191
+  requires: []
+  tiers:
+  - 3
