@@ -3717,3 +3717,14 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 ❯ Conversation compacted <kbd>auto</kbd>:
 > - [Result (`7470` chars, `7.32 KB`)](output/compact/007.edadf59d-0193-49fb-91e6-913c2e7aa00f/result.md)
 
+❯ Plan denied:
+> - Both the **Charity** and **Upsell** kinda are part of that bundle. It seems to require the first level of that bundle, to be added, but otherwise functions like additional tiers – just annoyingly independent of the other tiers and each other... How could we best model that?
+> - `digiphile:{ULID}` sounds reasonable to add besides the `steam:` one.
+
+❯ Plan denied:
+> I'm kinda missing the "Upsell" and "Charity" categorization.
+> Also ˋ--tiers=highestˋ (if I'm not mistaken) select the highest matching tier I own.
+> That means, if the tiers it depends on this is fulfilled, the additional ones can be considered, too. These would be added to the collection's lengthy name.
+
+❯ Plan accepted, auto mode.
+

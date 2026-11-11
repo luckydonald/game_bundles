@@ -52,8 +52,19 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
 - [x] add memory that if we stumble over preexisting errors in unittests or typing, those should be fixed as a separate commit automatically, too. No need to explicitly seach for those though. — `todo:8ae825eb-3ef2-4d84-8180-a937d7e2bb3c` _(done)_
 - [x] Write memory to NEVER EVER run file searches from `/`. — `todo:d23bc543-c583-4dc1-a8ed-1141c92f6822` _(done)_
   > Also disallow `find / …` via [`ai/settings/settings.json`](./settings/settings.json).
-- [x] add digiphile scraper — `todo:e1bfc5d1-e6e8-4eb9-9345-4b41f2436a61`
+- [x] add digiphile scraper — `todo:e1bfc5d1-e6e8-4eb9-9345-4b41f2436a61` _(done)_
   > • List: https://www.digiphile.co/collections
   > • Bundle examples:
   >   • currently live: https://www.digiphile.co/collections/social-multiplayer-games-collection-digiphile
   >   • expired: https://www.digiphile.co/collections/vr-games-showcase-the-new-essentials
+- [ ] Add 'all' scraper command to run them all. — `todo:c3fbbd36-6809-4af7-b2a6-7633d839c37a`
+  > - It should run each of them after each other
+  > - but not crash but collect any errors 'til the end
+  > - Have two sets, pure providers and aggregate providers (but recommend better names)
+  > - both can be called independently (the lists) via `all-{type}`.
+  > - bare `all` runs both, the singular ones first, they are expected to bring the cleanest results.
+  > - Second commit: Add the type of scraper to the text when bash-completing / running help for `game-collections scrape`, remove/cleanup the duplicate/repeated text throughout the options
+- [ ] Fix Humblebundle — `todo:87654de1-5dcf-4b4c-8a7a-391c089e3937`
+- [ ] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823`
+  > - disable with `--no-git`
+  > - or `--git=no`, whatever

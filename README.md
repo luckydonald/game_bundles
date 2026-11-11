@@ -57,6 +57,16 @@ uv tool install .
 uv tool run --from game-collections patchright install chromium
 ```
 
+## Scraping everything
+
+`game-collections scrape all` runs every source one after another and never aborts at the first failure: errors are collected and listed at the end, and the exit code is 1 if any source failed.
+Sources come in two kinds.
+Direct sources crawl a store's own site (`humblebundle`, `greenmangaming`, `dailyindiegame`, `fanatical`, `digiphile`) and give the cleanest results, so they run first.
+Aggregate sources crawl third-party bundle listings and skip bundles a direct scraper already covers (`isthereanydeal`, `dekudeals`).
+`scrape all-direct` and `scrape all-aggregate` run just one kind.
+`--skip NAME` (repeatable) leaves a source out, e.g. `--skip dailyindiegame` for unattended runs since it opens a real browser window, and `--refresh` and `--non-interactive` are passed on to the sources that support them.
+With `scrape --git all`, every source still commits its own output, and the autostash is restored once after the last source.
+
 ## Humble Bundle imports
 
 `game-collections scrape humblebundle` discovers the current Humble Choice and every active Games bundle. Books and Software are ignored. Repeat `--url` to crawl only specific Choice or Games pages. If building an offer fails, its extracted payload and the error details are parked in `archives/humblebundle/recovery/` and reused on the next run instead of re-fetching the page (`--refresh` discards them).

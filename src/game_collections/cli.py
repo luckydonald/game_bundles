@@ -139,6 +139,7 @@ from game_collections.sources.isthereanydeal.resolver import (
     write_itad_game_archive,
 )
 from game_collections.sources.isthereanydeal.shop_config import load_shop_config
+from game_collections.scrape_all import ScraperSpec, ScrapeKind, report_failures, run_scrapers, select_scrapers
 from game_collections.sources.prompting import choose_store_candidate, confirm_dlc_list
 
 
@@ -1445,6 +1446,110 @@ def scrape_digiphile_command(
         git_ops.finish_scrape_git_session(git_session, ["lists", "archives/digiphile"], message)
     # end try
 # end def scrape_digiphile_command
+
+
+SCRAPERS: tuple[ScraperSpec, ...] = (
+    ScraperSpec(
+        "humblebundle",
+        ScrapeKind.DIRECT,
+        lambda ctx, refresh, non_interactive: scrape_humblebundle_command(
+            ctx, refresh=refresh, non_interactive=non_interactive
+        ),
+    ),
+    ScraperSpec(
+        "greenmangaming",
+        ScrapeKind.DIRECT,
+        lambda ctx, refresh, non_interactive: scrape_greenmangaming_command(
+            ctx, refresh=refresh, non_interactive=non_interactive
+        ),
+    ),
+    # Opens a real browser window (Cloudflare challenge), so unattended runs `--skip` it.
+    ScraperSpec(
+        "dailyindiegame",
+        ScrapeKind.DIRECT,
+        lambda ctx, refresh, non_interactive: scrape_dailyindiegame_command(ctx, refresh=refresh),
+    ),
+    ScraperSpec(
+        "fanatical",
+        ScrapeKind.DIRECT,
+        lambda ctx, refresh, non_interactive: scrape_fanatical_command(ctx, refresh=refresh),
+    ),
+    ScraperSpec(
+        "digiphile",
+        ScrapeKind.DIRECT,
+        lambda ctx, refresh, non_interactive: scrape_digiphile_command(ctx, refresh=refresh),
+    ),
+    ScraperSpec(
+        "isthereanydeal",
+        ScrapeKind.AGGREGATE,
+        lambda ctx, refresh, non_interactive: scrape_isthereanydeal_command(ctx, refresh=refresh),
+    ),
+    ScraperSpec(
+        "dekudeals",
+        ScrapeKind.AGGREGATE,
+        lambda ctx, refresh, non_interactive: scrape_dekudeals_command(ctx, refresh=refresh),
+    ),
+)
+
+
+def run_scrape_all(
+    ctx: typer.Context, kinds: list[ScrapeKind], skip: list[str] | None, refresh: bool, non_interactive: bool
+) -> None:
+    """Shared body of `scrape all`, `all-direct` and `all-aggregate`."""
+    specs = select_scrapers(SCRAPERS, kinds, skip or [])
+    failures = run_scrapers(ctx, specs, refresh, non_interactive)
+    report_failures(specs, failures)
+# end def run_scrape_all
+
+
+SkipOption = Annotated[
+    list[str] | None,
+    typer.Option("--skip", help="Leave this source out of the run; repeatable."),
+]
+AllRefreshOption = Annotated[
+    bool,
+    typer.Option("--refresh", "--no-cache", help="Pass --refresh to every source, ignoring already-archived output."),
+]
+AllNonInteractiveOption = Annotated[
+    bool,
+    typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting, for the sources that prompt."),
+]
+
+
+@scrape_app.command("all")
+def scrape_all_command(
+    ctx: typer.Context,
+    skip: SkipOption = None,
+    refresh: AllRefreshOption = False,
+    non_interactive: AllNonInteractiveOption = False,
+) -> None:
+    """Run every direct source, then every aggregate source; collect errors and report them at the end."""
+    run_scrape_all(ctx, [ScrapeKind.DIRECT, ScrapeKind.AGGREGATE], skip, refresh, non_interactive)
+# end def scrape_all_command
+
+
+@scrape_app.command("all-direct")
+def scrape_all_direct_command(
+    ctx: typer.Context,
+    skip: SkipOption = None,
+    refresh: AllRefreshOption = False,
+    non_interactive: AllNonInteractiveOption = False,
+) -> None:
+    """Run every direct source (a store's own site): humblebundle, greenmangaming, dailyindiegame, fanatical, digiphile."""
+    run_scrape_all(ctx, [ScrapeKind.DIRECT], skip, refresh, non_interactive)
+# end def scrape_all_direct_command
+
+
+@scrape_app.command("all-aggregate")
+def scrape_all_aggregate_command(
+    ctx: typer.Context,
+    skip: SkipOption = None,
+    refresh: AllRefreshOption = False,
+    non_interactive: AllNonInteractiveOption = False,
+) -> None:
+    """Run every aggregate source (third-party listings): isthereanydeal, dekudeals."""
+    run_scrape_all(ctx, [ScrapeKind.AGGREGATE], skip, refresh, non_interactive)
+# end def scrape_all_aggregate_command
 
 
 def _maybe_refresh_dynamicstore_dump(dynamicstore_dump: Path | None, force: bool | None) -> None:
