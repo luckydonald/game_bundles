@@ -60,7 +60,7 @@ jobs:
         id: crawl
         run: |
           set +e
-          uv run game-collections scrape isthereanydeal --tab=live --git --git-style auto | tee /tmp/scrape-output.txt
+          uv run game-collections scrape --git --git-style auto --no-git-worktree isthereanydeal --tab=live | tee /tmp/scrape-output.txt
           rc=${PIPESTATUS[0]}
           set -e
           echo "exit_code=${rc}" >> "$GITHUB_OUTPUT"
