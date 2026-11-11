@@ -25,6 +25,15 @@ from game_collections.sources.common import (
     render_game_list_yaml,
 )
 from game_collections.sources.humblebundle.models import CURRENT_VERSION, HumbleArchive, HumbleItem, HumbleTier
+from game_collections.sources.humblebundle.nextjs import (
+    NEXTJS_FORMAT,
+    build_bundle_archive_nextjs,
+    build_choice_archive_nextjs,
+    extract_bundle_payload_nextjs,
+    extract_choice_payload_nextjs,
+    is_nextjs_page,
+    parse_bundle_index_nextjs,
+)
 from game_collections.sources.humblebundle.parser import (
     HUMBLE_ROOT,
     build_bundle_archive,
@@ -184,7 +193,8 @@ def crawl_humble_offers(
     else:
         targets.append((CHOICE_URL, None))
         try:
-            index = parse_bundle_index(fetch(BUNDLES_URL))
+            bundles_page = fetch(BUNDLES_URL)
+            index = parse_bundle_index_nextjs(bundles_page) if is_nextjs_page(bundles_page) else parse_bundle_index(bundles_page)
             targets.extend((urljoin(HUMBLE_ROOT, item["product_url"]), item) for item in index)
         except (OSError, ValueError, HumbleCrawlError) as error:
             errors.append(f"{BUNDLES_URL}: {error}")
@@ -199,18 +209,15 @@ def crawl_humble_offers(
             payload = _recovered_payload(recovery_root, url, reuse_recovery, log)
             if payload is None:
                 page = fetch(url)
+                nextjs = is_nextjs_page(page)
                 if urlparse(url).path == "/membership":
-                    payload = extract_choice_payload(page)
+                    payload = extract_choice_payload_nextjs(page) if nextjs else extract_choice_payload(page)
                 else:
-                    payload = extract_bundle_payload(page, listing)
+                    payload = extract_bundle_payload_nextjs(page, listing) if nextjs else extract_bundle_payload(page, listing)
                 # end if
             # end if
             try:
-                archive, source = (
-                    build_choice_archive(payload, observed)
-                    if payload.get("kind") == "choice"
-                    else build_bundle_archive(payload, observed)
-                )
+                archive, source = build_offer_archive(payload, observed)
             except ValueError as error:
                 # Park the already-fetched payload so the next run can retry the build offline.
                 if recovery_root is not None:
@@ -250,6 +257,16 @@ def crawl_humble_offers(
     # end for
     return HumbleCrawlReport(offers=tuple(offers), errors=tuple(errors), parked=tuple(parked_paths))
 # end def crawl_humble_offers
+
+
+def build_offer_archive(payload: dict[str, Any], observed: datetime) -> tuple[HumbleArchive, dict[str, Any]]:
+    """Build an archive from an extracted payload, whichever page flavour (Next.js or the former webpack one) it came from."""
+    is_choice = payload.get("kind") == "choice"
+    if payload.get("format") == NEXTJS_FORMAT:
+        return build_choice_archive_nextjs(payload, observed) if is_choice else build_bundle_archive_nextjs(payload, observed)
+    # end if
+    return build_choice_archive(payload, observed) if is_choice else build_bundle_archive(payload, observed)
+# end def build_offer_archive
 
 
 def _recovered_payload(recovery_root: Path | None, url: str, reuse: bool, log: LogFn) -> dict[str, Any] | None:

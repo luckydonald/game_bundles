@@ -64,7 +64,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
   > - both can be called independently (the lists) via `all-{type}`.
   > - bare `all` runs both, the singular ones first, they are expected to bring the cleanest results.
   > - Second commit: Add the type of scraper to the text when bash-completing / running help for `game-collections scrape`, remove/cleanup the duplicate/repeated text throughout the options
-- [ ] Fix Humblebundle — `todo:87654de1-5dcf-4b4c-8a7a-391c089e3937`
+- [x] Fix Humblebundle — `todo:87654de1-5dcf-4b4c-8a7a-391c089e3937` _(done)_
 - [ ] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823`
   > - disable with `--no-git`
   > - or `--git=no`, whatever
