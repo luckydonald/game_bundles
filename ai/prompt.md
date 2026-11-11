@@ -3776,3 +3776,35 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ For `apply`, remove the implication so it can be enabled by default too, with the same turnoff option, and commit that additionally, too.
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. A worktree starts from HEAD, so it can't see your uncommitted changes (e.g. an edited config/humblebundle-store-ids.yml or not-yet-committed archives), and the final cherry-pick can collide with those same dirty files in the root. How should `--git-worktree` handle the root's pending changes?
+>> 2. Where should the worktree live, and what if the cherry-pick conflicts?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Dirty root** (1/2) <kbd>Single Select</kbd><br>
+>> A worktree starts from HEAD, so it can't see your uncommitted changes (e.g. an edited config/humblebundle-store-ids.yml or not-yet-committed archives), and the final cherry-pick can collide with those same dirty files in the root. How should `--git-worktree` handle the root's pending changes?
+> - [ ] 1\. Autostash around the cherry-pick (Recommended)
+>   - _Worktree runs from HEAD (isolated, root stays usable during the long scrape). Only for the cherry-pick: autostash the root, cherry-pick, restore the stash using the existing restore_autostash conflict fallback._
+> - [ ] 2\. Copy dirty state into the worktree
+>   - _Seed the worktree with the root's uncommitted tracked/untracked files so the scrape sees them; riskier, duplicates changes into the scrape commit paths._
+> - [x] 3\. Refuse when the root is dirty
+>   - _Abort with a clear message; simple but makes the default (--git on) unusable in a normal working state._
+> - [ ] 4\. _Type something._
+>
+>> **Location** (2/2) <kbd>Single Select</kbd><br>
+>> Where should the worktree live, and what if the cherry-pick conflicts?
+> - [ ] 1\. Temp dir; keep on conflict (Recommended)
+>   - _Create under the system temp dir on a throwaway branch `scrape/<timestamp>`. On cherry-pick failure abort the pick, keep the branch and worktree, and print their path so nothing is lost._
+> - [ ] 2\. Sibling of the repo
+>   - _E.g. ../game_bundles.scrape-<ts>; same keep-on-conflict behaviour, but clutters the parent directory._
+> - [x] 3\. _Type something:_
+>   - > repo: `scripts/.worktrees/scrape/{all,humblebundle,isthereanydeal,…}/YYYY-MM-DD_HH-MM-SS_+ZZZZ/`
+>
+> </details>
+>
+
