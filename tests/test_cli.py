@@ -1092,3 +1092,50 @@ def test_deinstall_alias_behaves_identically_to_uninstall(tmp_path: Path, monkey
 
     assert result.exit_code == 0, result.output
 # end def test_deinstall_alias_behaves_identically_to_uninstall
+
+
+def install_fake_migrate_git(monkeypatch: MonkeyPatch, tmp_path: Path) -> list[str]:
+    """Run `migrate` in an empty directory with every git call faked; the returned list records the call order."""
+    calls: list[str] = []
+    (tmp_path / "archives").mkdir()
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: calls.append("head") or "deadbeef")
+    monkeypatch.setattr("game_collections.cli.git_ops.autostash", lambda root: calls.append("autostash") or True)
+    monkeypatch.setattr(
+        "game_collections.cli.git_ops.restore_autostash", lambda root, head: calls.append("restore")
+    )
+    return calls
+# end def install_fake_migrate_git
+
+
+def test_migrate_dry_run_never_touches_git_even_though_git_is_the_default(
+    tmp_path: Path, monkeypatch: MonkeyPatch
+) -> None:
+    calls = install_fake_migrate_git(monkeypatch, tmp_path)
+
+    result = CliRunner().invoke(app, ["migrate", "--type", "metadata"])
+
+    assert result.exit_code == 0, result.output
+    assert "Dry run only" in result.output
+    assert calls == []
+# end def test_migrate_dry_run_never_touches_git_even_though_git_is_the_default
+
+
+def test_migrate_apply_uses_git_by_default_and_no_git_opts_out(tmp_path: Path, monkeypatch: MonkeyPatch) -> None:
+    calls = install_fake_migrate_git(monkeypatch, tmp_path)
+
+    assert CliRunner().invoke(app, ["migrate", "--type", "metadata", "--apply"]).exit_code == 0
+    assert calls == ["head", "autostash", "restore"]
+
+    calls.clear()
+    assert CliRunner().invoke(app, ["migrate", "--type", "metadata", "--apply", "--no-git"]).exit_code == 0
+    assert calls == []
+# end def test_migrate_apply_uses_git_by_default_and_no_git_opts_out
+
+
+def test_migrate_rejects_dry_run_together_with_apply() -> None:
+    result = CliRunner().invoke(app, ["migrate", "--dry-run", "--apply"])
+
+    assert result.exit_code == 2
+    assert "--dry-run is invalid together with --apply" in result.output
+# end def test_migrate_rejects_dry_run_together_with_apply

@@ -3774,3 +3774,5 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ Plan accepted, auto mode.
 
+❯ For `apply`, remove the implication so it can be enabled by default too, with the same turnoff option, and commit that additionally, too.
+

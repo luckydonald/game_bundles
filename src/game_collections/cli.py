@@ -318,24 +318,31 @@ def migrate_command(
         list[SourceName] | None,
         typer.Option("--source", help="Restrict metadata/source scanning to these crawlers; repeatable."),
     ] = None,
-    apply: Annotated[bool, typer.Option("--apply", help="Write changes without committing.")] = False,
-    dry_run: Annotated[bool, typer.Option("--dry-run", help="Explicit dry-run; the default, invalid with --apply/--git.")] = False,
+    apply: Annotated[
+        bool, typer.Option("--apply", help="Write changes; committed per the usual batching rules unless --no-git.")
+    ] = False,
+    dry_run: Annotated[bool, typer.Option("--dry-run", help="Explicit dry-run; the default, invalid with --apply.")] = False,
     git: Annotated[
         bool,
-        typer.Option("--git", help="Write and commit changes, batched per the usual rules (implies --apply)."),
-    ] = False,
+        typer.Option(
+            "--git/--no-git",
+            help="On by default: with --apply, autostash, commit the migrated files in batches, then restore the stash. "
+            "--no-git only writes. Has no effect on a dry run.",
+        ),
+    ] = True,
     git_style: Annotated[str, typer.Option("--git-style")] = "manual",
 ) -> None:
     """Migrate every outstanding bundle list and/or archived metadata/source to its current version."""
-    if dry_run and (apply or git):
-        typer.echo("--dry-run is invalid together with --apply/--git", err=True)
+    if dry_run and apply:
+        typer.echo("--dry-run is invalid together with --apply", err=True)
         raise typer.Exit(2)
     # end if
     if git_style not in {"auto", "manual"}:
         typer.echo("--git-style must be 'auto' or 'manual'", err=True)
         raise typer.Exit(2)
     # end if
-    apply = apply or git
+    # `--git` is on by default, so it must not imply `--apply`: a dry run stays read-only (no stash, no commits).
+    git = git and apply
     kinds = set(kind) if kind else {"bundle", "metadata", "source"}
     unknown_kinds = kinds - {"bundle", "metadata", "source"}
     if unknown_kinds:
@@ -432,7 +439,7 @@ def migrate_command(
         else:
             typer.echo(
                 f"Dry run only: {total_bundle_units} bundle unit(s) and {total_archive_files} archive file(s) "
-                "would migrate. Pass --apply to write and --git to autocommit the migrated files."
+                "would migrate. Pass --apply to write and commit the migrated files (--no-git to skip the commits)."
             )
         # end if
     finally:
