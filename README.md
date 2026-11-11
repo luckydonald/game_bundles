@@ -65,7 +65,9 @@ Direct sources crawl a store's own site (`humblebundle`, `greenmangaming`, `dail
 Aggregate sources crawl third-party bundle listings and skip bundles a direct scraper already covers (`isthereanydeal`, `dekudeals`).
 `scrape all-direct` and `scrape all-aggregate` run just one kind.
 `--skip NAME` (repeatable) leaves a source out, e.g. `--skip dailyindiegame` for unattended runs since it opens a real browser window, and `--refresh` and `--non-interactive` are passed on to the sources that support them.
-With `scrape --git all`, every source still commits its own output, and the autostash is restored once after the last source.
+Scraping runs with `--git` by default (autostash, scrape, commit, restore the stash); pass `--no-git` to leave git alone.
+`migrate` is unaffected: it stays dry-run unless `--apply` or `--git` is given.
+With `scrape all`, every source still commits its own output, and the autostash is restored once after the last source.
 
 ## Humble Bundle imports
 

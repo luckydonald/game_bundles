@@ -40,7 +40,7 @@ def test_all_runs_direct_before_aggregate_and_passes_options(monkeypatch: Monkey
     calls: list[str] = []
     install_fake_registry(monkeypatch, calls)
 
-    result = CliRunner().invoke(app, ["scrape", "all", "--refresh", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--no-git", "all", "--refresh", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert calls == [
@@ -55,10 +55,10 @@ def test_all_direct_and_all_aggregate_select_their_kind(monkeypatch: MonkeyPatch
     calls: list[str] = []
     install_fake_registry(monkeypatch, calls)
 
-    assert CliRunner().invoke(app, ["scrape", "all-direct"]).exit_code == 0
+    assert CliRunner().invoke(app, ["scrape", "--no-git", "all-direct"]).exit_code == 0
     assert [call.split(":")[0] for call in calls] == ["one", "two"]
     calls.clear()
-    assert CliRunner().invoke(app, ["scrape", "all-aggregate"]).exit_code == 0
+    assert CliRunner().invoke(app, ["scrape", "--no-git", "all-aggregate"]).exit_code == 0
     assert [call.split(":")[0] for call in calls] == ["agg"]
 # end def test_all_direct_and_all_aggregate_select_their_kind
 
@@ -69,7 +69,7 @@ def test_failure_does_not_stop_the_run_and_is_reported_at_the_end(monkeypatch: M
     calls: list[str] = []
     install_fake_registry(monkeypatch, calls, {"one": typer.Exit(1), "agg": RuntimeError("boom")})
 
-    result = CliRunner().invoke(app, ["scrape", "all"])
+    result = CliRunner().invoke(app, ["scrape", "--no-git", "all"])
 
     assert result.exit_code == 1
     assert [call.split(":")[0] for call in calls] == ["one", "two", "agg"]
@@ -83,9 +83,9 @@ def test_skip_leaves_a_source_out_and_rejects_unknown_names(monkeypatch: MonkeyP
     calls: list[str] = []
     install_fake_registry(monkeypatch, calls)
 
-    assert CliRunner().invoke(app, ["scrape", "all", "--skip", "two"]).exit_code == 0
+    assert CliRunner().invoke(app, ["scrape", "--no-git", "all", "--skip", "two"]).exit_code == 0
     assert [call.split(":")[0] for call in calls] == ["one", "agg"]
-    assert CliRunner().invoke(app, ["scrape", "all", "--skip", "nope"]).exit_code != 0
+    assert CliRunner().invoke(app, ["scrape", "--no-git", "all", "--skip", "nope"]).exit_code != 0
 # end def test_skip_leaves_a_source_out_and_rejects_unknown_names
 
 

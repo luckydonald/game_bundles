@@ -198,10 +198,13 @@ def scrape_callback(
     git: Annotated[
         bool,
         typer.Option(
-            "--git",
-            help="Autostash pending changes, run the scrape, commit its own output, then restore the stash.",
+            "--git/--no-git",
+            help=(
+                "On by default: autostash pending changes, run the scrape, commit its own output, then restore the stash. "
+                "--no-git runs the scrape without touching git."
+            ),
         ),
-    ] = False,
+    ] = True,
     git_style: Annotated[
         str,
         typer.Option(

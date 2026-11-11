@@ -65,7 +65,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
   > - bare `all` runs both, the singular ones first, they are expected to bring the cleanest results.
   > - Second commit: Add the type of scraper to the text when bash-completing / running help for `game-collections scrape`, remove/cleanup the duplicate/repeated text throughout the options
 - [x] Fix Humblebundle — `todo:87654de1-5dcf-4b4c-8a7a-391c089e3937` _(done)_
-- [ ] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823`
+- [x] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823` _(done)_
   > - disable with `--no-git`
   > - or `--git=no`, whatever
 - [ ] have the `--git` option create worktrees — `todo:6ef5b7c0-7bf5-4454-9d1f-4fdcd9f115fc`

@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
 from typer.testing import CliRunner
 from pytest import CaptureFixture, MonkeyPatch
 
@@ -246,9 +247,8 @@ def test_complete_all_sweeps_every_list_under_lists_root(tmp_path: Path, monkeyp
 # end def test_complete_all_sweeps_every_list_under_lists_root
 
 
-def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
-    tmp_path: Path, monkeypatch: MonkeyPatch
-) -> None:
+def install_fake_humble_scrape(monkeypatch: MonkeyPatch) -> list[str]:
+    """Fake every git and crawl call of `scrape humblebundle`; the returned list records the call order."""
     from game_collections.sources.humblebundle.crawler import HumbleCrawlReport
     from game_collections.sources.humblebundle.resolver import HumbleResolutionMap
 
@@ -278,11 +278,31 @@ def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores(
         lambda *args, **kwargs: calls.append("scrape") or HumbleCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
+    return calls
+# end def install_fake_humble_scrape
+
+
+@pytest.mark.parametrize("git_args", [["--git"], []], ids=["explicit-git", "default-is-git"])
+def test_scrape_humblebundle_git_stashes_scrapes_commits_then_restores(
+    git_args: list[str], monkeypatch: MonkeyPatch
+) -> None:
+    calls = install_fake_humble_scrape(monkeypatch)
+
+    result = CliRunner().invoke(app, ["scrape", *git_args, "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
-# end def test_scrape_humblebundle_git_flag_stashes_scrapes_commits_then_restores
+# end def test_scrape_humblebundle_git_stashes_scrapes_commits_then_restores
+
+
+def test_scrape_humblebundle_no_git_flag_never_touches_git(monkeypatch: MonkeyPatch) -> None:
+    calls = install_fake_humble_scrape(monkeypatch)
+
+    result = CliRunner().invoke(app, ["scrape", "--no-git", "humblebundle", "--non-interactive"])
+
+    assert result.exit_code == 0, result.output
+    assert calls == ["scrape"]
+# end def test_scrape_humblebundle_no_git_flag_never_touches_git
 
 
 def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
@@ -405,7 +425,7 @@ def test_scrape_greenmangaming_persists_resolution_map_before_a_failed_offer_wri
 
     monkeypatch.setattr("game_collections.cli.crawl_gmg_offers", fake_crawl_gmg_offers)
 
-    result = CliRunner().invoke(app, ["scrape", "greenmangaming", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--no-git", "greenmangaming", "--non-interactive"])
 
     assert result.exit_code == 1
     assert calls == ["write_map", "write_offer"]
