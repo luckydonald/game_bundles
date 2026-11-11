@@ -8,20 +8,32 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15909/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15909/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/indie-boomer-shooters
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/indie-boomer-shooters/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/indie-boomer-shooters/source.json
+crawlers:
+- digiphile
 games:
 - name: KILLBUG
   ids:
   - steam:2211730
+  - digiphile:01KHTD6FW1P3GTR6WF8M9MTV2A
   requires: []
 - name: TEXNOPLAZM
   ids:
   - steam:2527710
+  - digiphile:01KHTD6FW1RJ3BD4BPR87058WH
   requires: []
 - name: Hands of Necromancy II
   ids:
   - steam:2706450
+  - digiphile:01KHV81XNAWQZA78GFER758A2P
   requires: []
 - name: 'Wrack: Reclamation'
   ids:
   - steam:3709080
+  - digiphile:01KHTD6FW1JFAHVJ5Z9BDTCA21
   requires: []

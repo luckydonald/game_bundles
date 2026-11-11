@@ -27,15 +27,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16689/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16689/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/social-multiplayer-games-collection-digiphile
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/social-multiplayer-games-collection-digiphile/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/social-multiplayer-games-collection-digiphile/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- digiphile
 games:
 - name: Flock Around
   ids:
   - steam:3618030
   - dekudeals:flock-around
   - isthereanydeal:flock-around
+  - digiphile:01M36M4WV5MPFC6XDWAXN0NPT1
   requires: []
   tiers:
   - 1
@@ -48,6 +56,7 @@ games:
   - steam:3892270
   - dekudeals:gamble-with-your-friends
   - isthereanydeal:gamble-with-your-friends
+  - digiphile:01M36M4WV5D7MMEYFFDV88464K
   requires: []
   tiers:
   - 2
@@ -59,6 +68,7 @@ games:
   - steam:3438850
   - dekudeals:sledding-game
   - isthereanydeal:sledding-game
+  - digiphile:01M36M4WV559SNJNF4JT07ABXM
   requires: []
   tiers:
   - 2
@@ -70,6 +80,7 @@ games:
   - steam:3643170
   - dekudeals:roadside-research
   - isthereanydeal:roadside-research
+  - digiphile:01M36M4WV5STK2X640M8RW2JTX
   requires: []
   tiers:
   - 3
@@ -80,6 +91,7 @@ games:
   - steam:1910150
   - dekudeals:walk-of-life
   - isthereanydeal:walk-of-life
+  - digiphile:01M36M4WV5WTQMHAC35VJ94V25
   requires: []
   tiers:
   - 4
@@ -89,6 +101,7 @@ games:
   - steam:1211020
   - dekudeals:wobbly-life
   - isthereanydeal:wobbly-life
+  - digiphile:01M36M4WV54BMDX9Q2K4HZ0MTE
   requires: []
   tiers:
   - 5
@@ -97,6 +110,7 @@ games:
   - steam:2545360
   - dekudeals:lonely-mountains-snow-riders
   - isthereanydeal:lonely-mountains-snow-riders
+  - digiphile:01M36M4WV57A8VSTP3YQ6ZNNXB
   requires: []
   tiers:
   - 5

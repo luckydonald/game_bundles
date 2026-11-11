@@ -8,20 +8,32 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15611/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15611/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/indie-imsim-spotlight
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/indie-imsim-spotlight/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/indie-imsim-spotlight/source.json
+crawlers:
+- digiphile
 games:
 - name: Ad Infernum
   ids:
   - steam:1390070
+  - digiphile:01K9APTSF27QVGK2N89MN1THMC
   requires: []
 - name: Filcher
   ids:
   - steam:1355650
+  - digiphile:01K8XW20BHZ8MS09W7BTYSACRD
   requires: []
 - name: Corpus Edax
   ids:
   - steam:2017610
+  - digiphile:01K8S0DJ5KWG5HHCQJPB79XAPX
   requires: []
 - name: Envelope
   ids:
   - steam:2717480
+  - digiphile:01K9APTSF39SWE3MDT9J1MS690
   requires: []

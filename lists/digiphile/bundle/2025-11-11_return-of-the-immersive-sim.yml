@@ -19,10 +19,19 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15590/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15590/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/return-of-the-immersive-sim
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/return-of-the-immersive-sim/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/return-of-the-immersive-sim/source.json
+crawlers:
+- digiphile
 games:
 - name: Ctrl Alt Ego
   ids:
   - steam:1571940
+  - digiphile:01K8XWM82QRWREXZ097CAEWS5N
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Blood West
   ids:
   - steam:1587130
+  - digiphile:01K8XWM82RH7CGEQ3TCJ0QYFE0
   requires: []
   tiers:
   - 1
@@ -43,6 +53,7 @@ games:
 - name: Shadows of Doubt
   ids:
   - steam:986130
+  - digiphile:01K8XWM82R607BQSS66BD4Y2V4
   requires: []
   tiers:
   - 2
@@ -52,6 +63,7 @@ games:
 - name: System Shock
   ids:
   - steam:482400
+  - digiphile:01K8XWM82RN3TVGR6WQ9MC2HN8
   requires: []
   tiers:
   - 2
@@ -61,6 +73,7 @@ games:
 - name: Fallen Aces
   ids:
   - steam:1411910
+  - digiphile:01K8XWM82RWHYT6XQ932KHQX2F
   requires: []
   tiers:
   - 2
@@ -70,6 +83,7 @@ games:
 - name: Peripeteia
   ids:
   - steam:1437760
+  - digiphile:01K961KF8F3BHTVPQQFGSTS5RX
   requires: []
   tiers:
   - 3
@@ -78,6 +92,7 @@ games:
 - name: 'System Shock 2: 25th Anniversary Remaster'
   ids:
   - steam:866570
+  - digiphile:01K8XWM82RCZ9NF5RMBQ5MH2P2
   requires: []
   tiers:
   - 3
@@ -86,6 +101,7 @@ games:
 - name: System Shock Soundtrack
   ids:
   - steam:2456840
+  - digiphile:01K8ZYSNC12AZRK44BNMY76XP9
   requires: []
   tiers:
   - 4
@@ -93,6 +109,7 @@ games:
 - name: Shadows of Doubt - Digital Artbook
   ids:
   - steam:3229880
+  - digiphile:01K8ZYSNC1Z1YKHRDH9N0PHRDY
   requires: []
   tiers:
   - 4
@@ -100,6 +117,7 @@ games:
 - name: 'Blood West: Dead Man''s Promise'
   ids:
   - steam:3158590
+  - digiphile:01K8ZYSNBTMFH7M7E0FXH42FG3
   requires: []
   tiers:
   - 5

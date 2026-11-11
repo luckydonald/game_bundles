@@ -27,10 +27,19 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15908/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15908/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/boomer-shooter-blueprint
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/boomer-shooter-blueprint/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/boomer-shooter-blueprint/source.json
+crawlers:
+- digiphile
 games:
 - name: CULTIC
   ids:
   - steam:1684930
+  - digiphile:01KH97KE0JDV2NEMFKKX5PY64A
   requires: []
   tiers:
   - 1
@@ -45,6 +54,7 @@ games:
 - name: INCISION
   ids:
   - steam:1734680
+  - digiphile:01KH97KE0J929X6KE0ZHYSRY0C
   requires: []
   tiers:
   - 2
@@ -58,6 +68,7 @@ games:
 - name: 'Warhammer 40,000: Boltgun'
   ids:
   - steam:2005010
+  - digiphile:01KH97KE0JBEPXP37YT463Q5KR
   requires: []
   tiers:
   - 2
@@ -71,6 +82,7 @@ games:
 - name: Beyond Citadel
   ids:
   - steam:3371240
+  - digiphile:01KH97KE0JDCEKY60M27K75MZT
   requires: []
   tiers:
   - 3
@@ -83,6 +95,7 @@ games:
 - name: MULLET MADJACK
   ids:
   - steam:2111190
+  - digiphile:01KH97KE0JFN4CDHNKV3C1XE9J
   requires: []
   tiers:
   - 4
@@ -94,6 +107,7 @@ games:
 - name: I Am Your Beast
   ids:
   - steam:1876590
+  - digiphile:01KH97KE0JXHXTN02WYE1ZJTPR
   requires: []
   tiers:
   - 4
@@ -105,6 +119,7 @@ games:
 - name: Selaco
   ids:
   - steam:1592280
+  - digiphile:01KH97KE0JR1DHTD13ABB9R5TX
   requires: []
   tiers:
   - 5
@@ -115,6 +130,7 @@ games:
 - name: CULTIC Soundtrack
   ids:
   - steam:2176420
+  - digiphile:01KH97KE0J2DM26TSQ9PH7PCR8
   requires: []
   tiers:
   - 6
@@ -124,6 +140,7 @@ games:
 - name: INCISION Soundtrack
   ids:
   - steam:2247520
+  - digiphile:01KJ5ZH02B4ASV7ZKM9S99DV2E
   requires: []
   tiers:
   - 6
@@ -133,6 +150,7 @@ games:
 - name: Mullet Mad Jack SOUNDTRACK
   ids:
   - steam:2902110
+  - digiphile:01KH97KE0J34AXBJH0CV59TK8Q
   requires: []
   tiers:
   - 6
@@ -142,6 +160,7 @@ games:
 - name: Mullet Mad Jack ARTBOOK
   ids:
   - steam:2902200
+  - digiphile:01KH97KE0JGP1EA7W5JN6HGAAW
   requires: []
   tiers:
   - 6
@@ -151,6 +170,7 @@ games:
 - name: Selaco Official Soundtrack
   ids:
   - steam:3047790
+  - digiphile:01KH97KE0J29AZSHK7W0B7Q2GA
   requires: []
   tiers:
   - 6
@@ -160,6 +180,7 @@ games:
 - name: CULTIC - Chapter Two
   ids:
   - steam:3918090
+  - digiphile:01KH9VSSJXH71RMAEKK3FEVBTM
   requires: []
   tiers:
   - 7
@@ -168,6 +189,7 @@ games:
 - name: 'Warhammer 40,000: Boltgun - Forges Of Corruption Expansion'
   ids:
   - steam:2668290
+  - digiphile:01KH97KE0JXKVYREHSWCE6PCQV
   requires: []
   tiers:
   - 8
@@ -175,6 +197,7 @@ games:
 - name: El Paso, Elsewhere
   ids:
   - steam:1546310
+  - digiphile:01KH97KE082FD7N443V2GREPX7
   requires: []
   tiers:
   - 9

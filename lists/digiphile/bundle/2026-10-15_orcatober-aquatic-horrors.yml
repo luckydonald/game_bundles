@@ -25,15 +25,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16675/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16675/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/orcatober-aquatic-horrors
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/orcatober-aquatic-horrors/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/orcatober-aquatic-horrors/source.json
 crawlers:
 - dekudeals
 - isthereanydeal
+- digiphile
 games:
 - name: Murky Divers
   ids:
   - steam:2963880
   - dekudeals:murky-divers
   - isthereanydeal:murky-divers
+  - digiphile:01M3557B7NRCFVRJ15Y1F2RVME
   requires: []
   tiers:
   - 1
@@ -45,6 +53,7 @@ games:
   - steam:3298940
   - dekudeals:static-dread
   - isthereanydeal:static-dread-the-lighthouse
+  - digiphile:01M3557B7N8N7V6TSR2S2M6FX8
   requires: []
   tiers:
   - 2
@@ -55,6 +64,7 @@ games:
   - steam:3071240
   - dekudeals:voodoo-fishin
   - isthereanydeal:voodoo-fishin
+  - digiphile:01M3557B7N2ANG64R90HNEXKTG
   requires: []
   tiers:
   - 3
@@ -64,6 +74,7 @@ games:
   - steam:619540
   - dekudeals:darkwater
   - isthereanydeal:darkwater
+  - digiphile:01M3557B7NKG23KBDE55WE6PAS
   requires: []
   tiers:
   - 3
@@ -73,6 +84,7 @@ games:
   - steam:1946700
   - dekudeals:layers-of-fear-2023
   - isthereanydeal:layers-of-fear-2023
+  - digiphile:01M4GS8QFSYWFCATDHQVCJ8R3M
   requires: []
   tiers:
   - 4
@@ -81,6 +93,7 @@ games:
   - steam:4042160
   - dekudeals:static-dread-the-submarine
   - isthereanydeal:static-dread-the-submarine
+  - digiphile:01M4GS8QFSG24T8M0XERGD8QKC
   requires: []
   tiers:
   - 4
@@ -89,6 +102,7 @@ games:
   - steam:3772960
   - dekudeals:umigari
   - isthereanydeal:umigari-umigari
+  - digiphile:01M3557B7NSB913GRK3EYRBMX6
   requires: []
   tiers:
   - 4

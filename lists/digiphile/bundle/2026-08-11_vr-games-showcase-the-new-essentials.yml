@@ -23,11 +23,20 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16473/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16473/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/vr-games-showcase-the-new-essentials
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/vr-games-showcase-the-new-essentials/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/vr-games-showcase-the-new-essentials/source.json
+crawlers:
+- digiphile
 games:
 - name: UnLoop
   ids:
   - steam:2672470
   - isthereanydeal:unloop--1
+  - digiphile:01KYK025MH3BG6S2RQPT2HYFS0
   requires: []
   tiers:
   - 1
@@ -41,6 +50,7 @@ games:
   ids:
   - steam:2609610
   - isthereanydeal:convrgence
+  - digiphile:01KYRMAN7AZ712DMEQN3H1J0PP
   requires: []
   tiers:
   - 2
@@ -53,6 +63,7 @@ games:
   ids:
   - steam:1540210
   - isthereanydeal:arizona-sunshine-vr-2
+  - digiphile:01KYK025MHY4GDTPNV3DX37CG2
   requires: []
   tiers:
   - 2
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:1942110
   - isthereanydeal:bootstrap-island
+  - digiphile:01KYK025MHCTEZ2Z30RB6NNS21
   requires: []
   tiers:
   - 3
@@ -76,6 +88,7 @@ games:
   ids:
   - steam:2441700
   - isthereanydeal:underdogs
+  - digiphile:01KYK025MHZY9MJ0WEM567BYAQ
   requires: []
   tiers:
   - 4
@@ -86,6 +99,7 @@ games:
   ids:
   - steam:3962020
   - isthereanydeal:exd-extra-dimensional
+  - digiphile:01KZ76HB7WYEJ1VTKA2TW4D19G
   requires: []
   tiers:
   - 5
@@ -95,6 +109,7 @@ games:
   ids:
   - steam:2307350
   - isthereanydeal:into-the-radius-2
+  - digiphile:01KYK025MH5QV5T338R6B2JWPZ
   requires: []
   tiers:
   - 6
@@ -103,6 +118,7 @@ games:
   ids:
   - steam:2925670
   - isthereanydeal:convrgence-supporter-pack
+  - digiphile:01KZ954S7KMEJDKTYQ37TMJ221
   requires: []
   tiers:
   - 7
@@ -110,6 +126,7 @@ games:
   ids:
   - steam:3207600
   - isthereanydeal:underdogs-soundtrack
+  - digiphile:01KYK1TXEEJ7MR3PBC31HS5HQ5
   requires: []
   tiers:
   - 7
@@ -117,6 +134,7 @@ games:
   ids:
   - steam:4456430
   - isthereanydeal:bootstrap-island-ornate-arms-collections
+  - digiphile:01KYK2YQFFW06HXJ6FV5YS8RV2
   requires: []
   tiers:
   - 7
@@ -124,6 +142,7 @@ games:
   ids:
   - steam:4767560
   - isthereanydeal:into-the-radius-2-classic-explorer-kit
+  - digiphile:01KZ773DR200000VJEGW445E05
   requires: []
   tiers:
   - 7

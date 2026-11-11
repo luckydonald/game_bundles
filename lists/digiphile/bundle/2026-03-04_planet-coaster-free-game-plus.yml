@@ -17,10 +17,19 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/15929/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/15929/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/planet-coaster-free-game-plus
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/planet-coaster-free-game-plus/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/planet-coaster-free-game-plus/source.json
+crawlers:
+- digiphile
 games:
 - name: Planet Coaster
   ids:
   - steam:493340
+  - digiphile:01KHAD04FF7Q5DFNXWKA6T8614
   requires: []
   tiers:
   - 1
@@ -38,6 +47,7 @@ games:
 - name: Planet Coaster - Adventure Pack
   ids:
   - steam:768830
+  - digiphile:01KJRT4TNWXZTAX9EEG8X3VA9T
   requires: []
   tiers:
   - 2
@@ -93,6 +103,7 @@ games:
 - name: Planet Coaster - Back to the Future™ Time Machine Construction Kit
   ids:
   - steam:611421
+  - digiphile:01KHAD04FMDR37CD6K5TVZ9Q8X
   requires: []
   tiers:
   - 3
@@ -107,6 +118,7 @@ games:
 - name: Planet Coaster 2
   ids:
   - steam:2688950
+  - digiphile:01KK791QGFPBMTNWZV9YP0TPD1
   requires: []
   tiers:
   - 4

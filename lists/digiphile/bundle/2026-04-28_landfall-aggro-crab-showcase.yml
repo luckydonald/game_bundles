@@ -19,10 +19,19 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16099/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16099/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/landfall-aggro-crab-showcase
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/landfall-aggro-crab-showcase/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/landfall-aggro-crab-showcase/source.json
+crawlers:
+- digiphile
 games:
 - name: 'Stick Fight: The Game'
   ids:
   - steam:674940
+  - digiphile:01KNTJNCTATJYBYT7MSW6GXVB4
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Going Under
   ids:
   - steam:1154810
+  - digiphile:01KNTJNCTAS55DWYG17HWWRKXD
   requires: []
   tiers:
   - 1
@@ -43,6 +53,7 @@ games:
 - name: Subway Midnight
   ids:
   - steam:1750570
+  - digiphile:01KNTJNCTATH5G98K80BPX9M2W
   requires: []
   tiers:
   - 1
@@ -53,6 +64,7 @@ games:
 - name: Totally Accurate Battle Simulator
   ids:
   - steam:508440
+  - digiphile:01KNTJNCTAAX96PDE7JVK2S2SM
   requires: []
   tiers:
   - 2
@@ -62,6 +74,7 @@ games:
 - name: Content Warning
   ids:
   - steam:2881650
+  - digiphile:01KNTJNCTA2BVJVRHWCP6Q9C0S
   requires: []
   tiers:
   - 2
@@ -71,6 +84,7 @@ games:
 - name: PEAK
   ids:
   - steam:3527290
+  - digiphile:01KNTJNCTA92EX86TDB7PNAQRK
   requires: []
   tiers:
   - 2
@@ -80,6 +94,7 @@ games:
 - name: HASTE
   ids:
   - steam:1796470
+  - digiphile:01KNTJNCT9PE4HPVCCHN502NF4
   requires: []
   tiers:
   - 3
@@ -88,6 +103,7 @@ games:
 - name: Another Crab's Treasure
   ids:
   - steam:1887840
+  - digiphile:01KNTJNCR6PJYGEMQ2S5G41YJB
   requires: []
   tiers:
   - 4
@@ -95,24 +111,28 @@ games:
 - name: 'Stick Fight: The Game OST'
   ids:
   - steam:726050
+  - digiphile:01KNTJNCTB6QM4SH27NTN829NW
   requires: []
   tiers:
   - 5
 - name: Going Under - Soundtrack
   ids:
   - steam:1394870
+  - digiphile:01KNTJNCTANVWFJSEGKR9M0C48
   requires: []
   tiers:
   - 5
 - name: Another Crab's Treasure Soundtrack
   ids:
   - steam:2944800
+  - digiphile:01KNTJNCTA711XF66V2C72HBHS
   requires: []
   tiers:
   - 5
 - name: Haste Soundtrack
   ids:
   - steam:3587100
+  - digiphile:01KNTJNCTA4KBRD7D798NK9V13
   requires: []
   tiers:
   - 5

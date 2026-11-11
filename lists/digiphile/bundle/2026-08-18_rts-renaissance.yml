@@ -27,13 +27,21 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/16491/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/16491/source.json
+- name: Digiphile bundle
+  url: https://www.digiphile.co/collections/rts-renaissance
+- name: Crawl metadata
+  path: ../../../archives/digiphile/bundle/rts-renaissance/metadata.json
+- name: Crawl source
+  path: ../../../archives/digiphile/bundle/rts-renaissance/source.json
 crawlers:
 - isthereanydeal
+- digiphile
 games:
 - name: From Glory To Goo
   ids:
   - steam:2607060
   - isthereanydeal:from-glory-to-goo
+  - digiphile:01KYK3VJ0R34A1B767Z5ATEW4Z
   requires: []
   tiers:
   - 1
@@ -49,6 +57,7 @@ games:
   ids:
   - steam:1439750
   - isthereanydeal:9-bit-armies-a-bit-too-far
+  - digiphile:01KYK3VJ0MDC7KD16EHQRXRX5D
   requires: []
   tiers:
   - 2
@@ -63,6 +72,7 @@ games:
   ids:
   - steam:3024040
   - isthereanydeal:stronghold-crusader-definitive-edition
+  - digiphile:01KYK3VJ0Q12H5PPHXRGA2GD4J
   requires: []
   tiers:
   - 3
@@ -76,6 +86,7 @@ games:
   ids:
   - steam:1461910
   - isthereanydeal:rogue-command
+  - digiphile:01KYK3VJ0RFBQ96ZG93RE192RK
   requires: []
   tiers:
   - 4
@@ -88,6 +99,7 @@ games:
   ids:
   - steam:3338950
   - isthereanydeal:the-scouring
+  - digiphile:01KYK3VJ0QMVFE1JW2W80FJCV4
   requires: []
   tiers:
   - 5
@@ -99,6 +111,7 @@ games:
   ids:
   - steam:1643310
   - isthereanydeal:dungeons-4
+  - digiphile:01KYK3ZAEH1RW937QVW9MR8BHR
   requires: []
   tiers:
   - 6
@@ -109,6 +122,7 @@ games:
   ids:
   - steam:1328990
   - isthereanydeal:godsworn
+  - digiphile:01KYK3VJ0NVSC4AXW7ETXHP08Q
   requires: []
   tiers:
   - 6
@@ -119,6 +133,7 @@ games:
   ids:
   - steam:2796830
   - isthereanydeal:9-bit-armies-a-bit-too-far-soundtrack
+  - digiphile:01KYK3VJ0PAWHD70MX5KP0GV12
   requires: []
   tiers:
   - 7
@@ -128,6 +143,7 @@ games:
   ids:
   - steam:2904500
   - isthereanydeal:godsworn-original-soundtrack
+  - digiphile:01KYK3VJ0RHPM7MF600MQS51ZS
   requires: []
   tiers:
   - 7
@@ -137,6 +153,7 @@ games:
   ids:
   - steam:4152240
   - isthereanydeal:rogue-command-official-soundtrack
+  - digiphile:01KYK3VJ0S0HF2NQ9YMF4T3520
   requires: []
   tiers:
   - 7
@@ -146,6 +163,7 @@ games:
   ids:
   - steam:3030340
   - isthereanydeal:stronghold-crusader-definitive-edition-the-canary-and-the-trader
+  - digiphile:01KZW2V62BM8Y194G1D0WJ4C3W
   requires: []
   tiers:
   - 8
@@ -154,6 +172,7 @@ games:
   ids:
   - steam:2964020
   - isthereanydeal:dungeons-4-the-good-the-bad-and-the-evil
+  - digiphile:01KYK3ZAEHF96C47VA7AD1NCCJ
   requires: []
   tiers:
   - 9
