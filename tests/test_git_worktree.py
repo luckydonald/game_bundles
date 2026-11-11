@@ -114,19 +114,92 @@ def test_integrate_refuses_to_remove_a_worktree_with_stray_files(tmp_path: Path)
 # end def test_integrate_refuses_to_remove_a_worktree_with_stray_files
 
 
-def test_integrate_aborts_the_pick_and_keeps_the_branch_on_conflict(tmp_path: Path) -> None:
+def conflicting_worktree(tmp_path: Path) -> tuple[Path, git_worktree.ScrapeWorktree]:
     root = init_repo(tmp_path)
     worktree = git_worktree.create_scrape_worktree(root, "all", NOW)
     (worktree.path / "lists" / "keep.txt").write_text("from scrape\n", encoding="utf-8")
     git_ops.commit_changed_paths(worktree.path, ["lists"], "scrape output")
     (root / "lists" / "keep.txt").write_text("from root\n", encoding="utf-8")
     git(root, "commit", "-q", "-am", "conflicting root change")
+    return root, worktree
+# end def conflicting_worktree
 
-    with pytest.raises(GitAutocommitError, match="Cherry-picking"):
-        git_worktree.integrate_scrape_worktree(worktree)
-    # end with
 
+def assert_commits_preserved(root: Path, worktree: git_worktree.ScrapeWorktree) -> None:
     assert (root / "lists" / "keep.txt").read_text(encoding="utf-8") == "from root\n"
     assert git(root, "status", "--porcelain").strip() == ""
     assert git(root, "branch", "--list", worktree.branch).strip() != ""
-# end def test_integrate_aborts_the_pick_and_keeps_the_branch_on_conflict
+    tip = git(root, "rev-parse", worktree.branch).strip()
+    assert git(root, "tag", "--list", f"bak/{tip}").strip() == f"bak/{tip}"
+# end def assert_commits_preserved
+
+
+def test_conflict_non_interactive_discards_the_directory_but_keeps_branch_and_tag(tmp_path: Path) -> None:
+    root, worktree = conflicting_worktree(tmp_path)
+    messages: list[str] = []
+
+    with pytest.raises(GitAutocommitError, match="Cherry-picking"):
+        git_worktree.integrate_scrape_worktree(worktree, interactive=False, echo=messages.append)
+    # end with
+
+    assert_commits_preserved(root, worktree)
+    assert not worktree.path.exists()
+    printed = "\n".join(messages)
+    assert "lists" in printed and "1 file changed" in printed
+    assert f"Status of {worktree.path}" in printed
+# end def test_conflict_non_interactive_discards_the_directory_but_keeps_branch_and_tag
+
+
+@pytest.mark.parametrize("answers", [["y"], ["Y"], [""], ["maybe", "", ]])
+def test_conflict_interactive_discards_on_yes_enter_and_after_invalid_answers(
+    tmp_path: Path, answers: list[str]
+) -> None:
+    root, worktree = conflicting_worktree(tmp_path)
+    queue = list(answers)
+
+    with pytest.raises(GitAutocommitError):
+        git_worktree.integrate_scrape_worktree(
+            worktree, interactive=True, ask=lambda _prompt: queue.pop(0), echo=lambda _message: None
+        )
+    # end with
+
+    assert queue == []
+    assert_commits_preserved(root, worktree)
+    assert not worktree.path.exists()
+# end def test_conflict_interactive_discards_on_yes_enter_and_after_invalid_answers
+
+
+@pytest.mark.parametrize("answer", ["n", "N"])
+def test_conflict_interactive_keeps_the_directory_on_no(tmp_path: Path, answer: str) -> None:
+    root, worktree = conflicting_worktree(tmp_path)
+
+    with pytest.raises(GitAutocommitError):
+        git_worktree.integrate_scrape_worktree(
+            worktree, interactive=True, ask=lambda _prompt: answer, echo=lambda _message: None
+        )
+    # end with
+
+    assert_commits_preserved(root, worktree)
+    assert worktree.path.exists()
+# end def test_conflict_interactive_keeps_the_directory_on_no
+
+
+def test_confirm_discard_repeats_until_a_valid_answer_and_defaults_on_eof() -> None:
+    prompts: list[str] = []
+    answers = iter(["what", "??", "N"])
+
+    def ask(prompt: str) -> str:
+        prompts.append(prompt)
+        return next(answers)
+    # end def ask
+
+    assert git_worktree.confirm_discard(True, ask) is False
+    assert prompts == [git_worktree.DISCARD_PROMPT] * 3
+
+    def closed(_prompt: str) -> str:
+        raise EOFError
+    # end def closed
+
+    assert git_worktree.confirm_discard(True, closed) is True
+    assert git_worktree.confirm_discard(False, closed) is True
+# end def test_confirm_discard_repeats_until_a_valid_answer_and_defaults_on_eof
