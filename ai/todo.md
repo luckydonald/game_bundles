@@ -57,7 +57,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
   > • Bundle examples:
   >   • currently live: https://www.digiphile.co/collections/social-multiplayer-games-collection-digiphile
   >   • expired: https://www.digiphile.co/collections/vr-games-showcase-the-new-essentials
-- [ ] Add 'all' scraper command to run them all. — `todo:c3fbbd36-6809-4af7-b2a6-7633d839c37a`
+- [x] Add 'all' scraper command to run them all. — `todo:c3fbbd36-6809-4af7-b2a6-7633d839c37a` _(done)_
   > - It should run each of them after each other
   > - but not crash but collect any errors 'til the end
   > - Have two sets, pure providers and aggregate providers (but recommend better names)
@@ -68,3 +68,11 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
 - [ ] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823`
   > - disable with `--no-git`
   > - or `--git=no`, whatever
+- [ ] have the `--git` option create worktrees — `todo:6ef5b7c0-7bf5-4454-9d1f-4fdcd9f115fc`
+  > - `--git-worktree` (default with `--git`)
+  > - `--no-git-worktree` or `--git-no-worktree` to turn off
+  > - Full lifecycle:
+  >   1. create && cd
+  >   2. run
+  >   3. commit
+  >   4. cherry pick into root git && remove branch and worktree dir.

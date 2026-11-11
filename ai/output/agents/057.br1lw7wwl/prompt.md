@@ -1,0 +1,1 @@
+Background command "git status --short; git fetch -q 2>&1|tail -1; git rev-parse origin/mane; for s in $(git log --reverse --format=%h @{upstream}..HEAD); do echo "$s $(git log -1 --format=%s $s | cut -c1-90): $(git show --name-only --format= $s | head -3 | tr '\n' ' ')"; done" completed (exit code 0)

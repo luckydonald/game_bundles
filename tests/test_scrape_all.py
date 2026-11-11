@@ -106,3 +106,14 @@ def test_git_flag_restores_the_stash_once_after_all_sources(monkeypatch: MonkeyP
     assert calls == ["one:refresh=False:ni=False:stashed=False", "two:refresh=False:ni=False:stashed=False"]
     assert git_calls == ["head", "autostash", "restore"]
 # end def test_git_flag_restores_the_stash_once_after_all_sources
+
+
+def test_scrape_help_groups_sources_by_kind() -> None:
+    result = CliRunner().invoke(app, ["scrape", "--help"])
+
+    assert result.exit_code == 0, result.output
+    assert "Direct sources" in result.output
+    assert "Aggregate sources" in result.output
+    assert "(direct)" in result.output
+    assert "(aggregate)" in result.output
+# end def test_scrape_help_groups_sources_by_kind

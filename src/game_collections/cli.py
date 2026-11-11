@@ -139,6 +139,13 @@ from game_collections.sources.isthereanydeal.resolver import (
     write_itad_game_archive,
 )
 from game_collections.sources.isthereanydeal.shop_config import load_shop_config
+from game_collections.scrape_options import (
+    ArchiveRootOption,
+    ListsRootOption,
+    NonInteractiveOption,
+    RefreshOption,
+    UrlsOption,
+)
 from game_collections.scrape_all import ScraperSpec, ScrapeKind, report_failures, run_scrapers, select_scrapers
 from game_collections.sources.prompting import choose_store_candidate, confirm_dlc_list
 
@@ -152,7 +159,13 @@ from game_collections.sources.prompting import choose_store_candidate, confirm_d
 sys.stdout.reconfigure(line_buffering=True)
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
-scrape_app = typer.Typer(no_args_is_help=True)
+scrape_app = typer.Typer(
+    no_args_is_help=True,
+    help=(
+        "Archive bundles from a source. Direct sources crawl a store's own site; aggregate sources crawl "
+        "third-party listings and skip bundles a direct source already covers."
+    ),
+)
 app.add_typer(scrape_app, name="scrape")
 
 
@@ -829,30 +842,19 @@ def _git_commit_message(source: str, style: str, summary: str, invocation: str, 
 # end def _git_commit_message
 
 
-@scrape_app.command("humblebundle")
+@scrape_app.command("humblebundle", rich_help_panel="Direct sources")
 def scrape_humblebundle_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this Choice or Games URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
     resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path(
         "config/humblebundle-store-ids.yml"
     ),
-    non_interactive: Annotated[
-        bool,
-        typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting."),
-    ] = False,
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-resolve every offer, ignoring already-archived output."
-        ),
-    ] = False,
+    non_interactive: NonInteractiveOption = False,
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive current Humble Choice and active Games bundles."""
+    """(direct) Archive current Humble Choice and active Games bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.HUMBLEBUNDLE, archive_root, repository_root, git_session)
@@ -953,23 +955,15 @@ def scrape_humblebundle_command(
 # end def scrape_humblebundle_command
 
 
-@scrape_app.command("dailyindiegame")
+@scrape_app.command("dailyindiegame", rich_help_panel="Direct sources")
 def scrape_dailyindiegame_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this weekly bundle URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive currently listed DailyIndieGame Steam bundles."""
+    """(direct) Archive currently listed DailyIndieGame Steam bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DAILYINDIEGAME, archive_root, repository_root, git_session)
@@ -1020,30 +1014,19 @@ def scrape_dailyindiegame_command(
 # end def scrape_dailyindiegame_command
 
 
-@scrape_app.command("greenmangaming")
+@scrape_app.command("greenmangaming", rich_help_panel="Direct sources")
 def scrape_greenmangaming_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this bundle detail URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
     resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path(
         "config/greenmangaming-store-ids.yml"
     ),
-    non_interactive: Annotated[
-        bool,
-        typer.Option("--non-interactive", help="Record unresolved IDs instead of prompting."),
-    ] = False,
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    non_interactive: NonInteractiveOption = False,
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive currently listed Green Man Gaming video-games bundles."""
+    """(direct) Archive currently listed Green Man Gaming video-games bundles."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.GREENMANGAMING, archive_root, repository_root, git_session)
@@ -1129,27 +1112,22 @@ def scrape_greenmangaming_command(
 # end def scrape_greenmangaming_command
 
 
-@scrape_app.command("isthereanydeal")
+@scrape_app.command("isthereanydeal", rich_help_panel="Aggregate sources")
 def scrape_isthereanydeal_command(
     ctx: typer.Context,
     tabs: Annotated[
         list[str] | None,
         typer.Option("--tab", help="Discovery tab(s) to crawl: live, expired, pending. Repeatable."),
     ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
     provider_config_path: Annotated[Path, typer.Option("--provider-config")] = Path(
         "config/isthereanydeal-providers.yml"
     ),
     shop_config_path: Annotated[Path, typer.Option("--shop-config")] = Path("config/isthereanydeal-shops.yml"),
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
+    """(aggregate) Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.ISTHEREANYDEAL, archive_root, repository_root, git_session)
@@ -1221,27 +1199,19 @@ def scrape_isthereanydeal_command(
 # end def scrape_isthereanydeal_command
 
 
-@scrape_app.command("dekudeals")
+@scrape_app.command("dekudeals", rich_help_panel="Aggregate sources")
 def scrape_dekudeals_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this bundle detail URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
     resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path("config/dekudeals-store-ids.yml"),
     provider_config_path: Annotated[Path, typer.Option("--provider-config")] = Path(
         "config/dekudeals-providers.yml"
     ),
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
+    """(aggregate) Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DEKUDEALS, archive_root, repository_root, git_session)
@@ -1303,24 +1273,16 @@ def scrape_dekudeals_command(
 # end def scrape_dekudeals_command
 
 
-@scrape_app.command("fanatical")
+@scrape_app.command("fanatical", rich_help_panel="Direct sources")
 def scrape_fanatical_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this bundle or pick-and-mix page URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
     resolution_map: Annotated[Path, typer.Option("--resolution-map")] = Path("config/fanatical-store-ids.yml"),
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-resolve every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive the bundles currently listed on fanatical.com (regular and build-your-own)."""
+    """(direct) Archive the bundles currently listed on fanatical.com (regular and build-your-own)."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.FANATICAL, archive_root, repository_root, git_session)
@@ -1380,23 +1342,15 @@ def scrape_fanatical_command(
 # end def scrape_fanatical_command
 
 
-@scrape_app.command("digiphile")
+@scrape_app.command("digiphile", rich_help_panel="Direct sources")
 def scrape_digiphile_command(
     ctx: typer.Context,
-    urls: Annotated[
-        list[str] | None,
-        typer.Option("--url", help="Crawl only this bundle page URL; repeatable."),
-    ] = None,
-    lists_root: Annotated[Path, typer.Option("--lists-root")] = Path("lists"),
-    archive_root: Annotated[Path, typer.Option("--archive-root")] = Path("archives"),
-    refresh: Annotated[
-        bool,
-        typer.Option(
-            "--refresh", "--no-cache", help="Re-fetch every bundle, ignoring already-archived output."
-        ),
-    ] = False,
+    urls: UrlsOption = None,
+    lists_root: ListsRootOption = Path("lists"),
+    archive_root: ArchiveRootOption = Path("archives"),
+    refresh: RefreshOption = False,
 ) -> None:
-    """Archive the bundles listed on digiphile.co (live and expired)."""
+    """(direct) Archive the bundles listed on digiphile.co (live and expired)."""
     git_session: git_ops.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DIGIPHILE, archive_root, repository_root, git_session)
@@ -1516,7 +1470,7 @@ AllNonInteractiveOption = Annotated[
 ]
 
 
-@scrape_app.command("all")
+@scrape_app.command("all", rich_help_panel="Run many sources")
 def scrape_all_command(
     ctx: typer.Context,
     skip: SkipOption = None,
@@ -1528,7 +1482,7 @@ def scrape_all_command(
 # end def scrape_all_command
 
 
-@scrape_app.command("all-direct")
+@scrape_app.command("all-direct", rich_help_panel="Run many sources")
 def scrape_all_direct_command(
     ctx: typer.Context,
     skip: SkipOption = None,
@@ -1540,7 +1494,7 @@ def scrape_all_direct_command(
 # end def scrape_all_direct_command
 
 
-@scrape_app.command("all-aggregate")
+@scrape_app.command("all-aggregate", rich_help_panel="Run many sources")
 def scrape_all_aggregate_command(
     ctx: typer.Context,
     skip: SkipOption = None,
