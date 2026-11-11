@@ -13,6 +13,7 @@ from pathlib import Path
 
 from game_collections import git_ops
 from game_collections.git_ops import GitAutocommitError
+from game_collections.worktree_unignore import UnignoreEntry, link_local_state, load_unignore, unlink_local_state
 
 DEFAULT_WORKTREE_BASE = Path("scripts/.worktrees/scrape")
 """Where worktrees go relative to the repository root, below `<subcommand>/<timestamp>/`."""
@@ -29,6 +30,8 @@ class ScrapeWorktree:
     path: Path
     branch: str
     base_head: str
+    linked: tuple[UnignoreEntry, ...] = ()
+    """Gitignored local state brought over from the root, removed again before the worktree is."""
 
 # end class ScrapeWorktree
 
@@ -57,13 +60,16 @@ def worktree_directory(root: Path, base: Path | None, subcommand: str, stamp: st
 
 def create_scrape_worktree(root: Path, subcommand: str, now: datetime, base: Path | None = None) -> ScrapeWorktree:
     """Create the worktree and its branch from the checkout's current `HEAD`."""
+    # Validate `.worktree_unignore` first so a configuration problem aborts before anything is created.
+    entries = load_unignore(root)
     stamp = worktree_stamp(now)
     branch = worktree_branch(subcommand, stamp)
     path = worktree_directory(root, base, subcommand, stamp)
     path.parent.mkdir(parents=True, exist_ok=True)
     base_head = git_ops.head(root)
     git_ops.run_git(root, "worktree", "add", "-q", "-b", branch, str(path), base_head)
-    return ScrapeWorktree(root=root, path=path, branch=branch, base_head=base_head)
+    link_local_state(root, path, entries)
+    return ScrapeWorktree(root=root, path=path, branch=branch, base_head=base_head, linked=tuple(entries))
 # end def create_scrape_worktree
 
 
@@ -83,6 +89,7 @@ def remove_scrape_worktree(worktree: ScrapeWorktree) -> None:
     commit that means the scrape wrote something outside the committed paths, and force-removing
     it would silently lose that file, so the refusal is surfaced and the directory is kept.
     """
+    unlink_local_state(worktree.path, list(worktree.linked))
     result = subprocess.run(
         ["git", "worktree", "remove", str(worktree.path)],
         cwd=worktree.root,

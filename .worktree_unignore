@@ -1,0 +1,10 @@
+# Gitignored local state that `scrape --git` worktrees still need.
+# A fresh worktree only holds tracked files, so list anything gitignored that a scrape reads here.
+#
+# One path per line, relative to the repository root, `#` starts a comment.
+# An optional last word picks how the path is brought over: `symlink` (the default), `hardlink` (files only) or `copy`.
+# Every entry must exist and be gitignored, otherwise the scrape aborts with a configuration error.
+#
+# Example:
+#   .env
+#   some/local/cache copy
