@@ -3808,3 +3808,11 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 > </details>
 >
 
+❯ Plan denied.
+
+❯ On cherry pick failure, it should keep the commit/branch (if needed under a new name) but ask to already clean up the directory etc. Because those are annoying to clean up manually.
+
+❯ Plan denied.
+
+❯ With ask to clean up, I mean that the user should in case of a TTY being asked whether to keep it or already throw it away, showing both the diff to the main directory (not recursive) and the status in that working tree to inform the User best. Automatically cleaning up the default action, including when in a non-User environment.
+

@@ -16,7 +16,9 @@ Decisions from the user:
 
 My defaults for the unanswered parts:
 
-- On a cherry-pick conflict: `cherry-pick --abort`, keep the branch and worktree, print their paths and exit non-zero, so no work is lost.
+- On a cherry-pick conflict (per the user's correction): `cherry-pick --abort`, keep the commits on a branch, but still remove the worktree directory (and prune), since leftover worktree dirs are annoying to clean up by hand.
+  The branch is renamed to `scrape-conflict/<subcommand>/<timestamp>` (so it is distinguishable from in-flight `scrape/...` branches, with a numeric suffix if that name exists).
+  Print the branch name and a ready-made `git cherry-pick <base>..<branch>` hint, then exit non-zero.
 - Scope is `scrape` only. `migrate --git` keeps the autostash path (its flow is unchanged).
 
 ## Design
@@ -31,7 +33,7 @@ New module `src/game_collections/git_worktree.py` (own concern, per the "split m
   - No commits in `base_head..branch`: remove worktree and branch.
   - Otherwise `git cherry-pick base_head..branch` in the root.
   - On success: `git worktree remove --force`, `git branch -D`.
-  - On conflict: abort the pick, keep everything, raise `GitAutocommitError` naming path and branch.
+  - On conflict: abort the pick, `git worktree remove --force` the directory, rename the branch to `scrape-conflict/...` (`git branch -m`), raise `GitAutocommitError` naming the branch and the cherry-pick command.
 
 Changes in `git_ops.py`:
 
@@ -66,7 +68,7 @@ Other:
 - creates the worktree at the expected path and branch from HEAD;
 - commit in the worktree, integrate: the commit appears on the root branch, the worktree dir and the branch are gone, the root working tree is clean;
 - no-change run removes worktree and branch without a commit;
-- cherry-pick conflict keeps worktree and branch, leaves the root with no pick in progress, and raises;
+- cherry-pick conflict removes the worktree dir, keeps the commits on a `scrape-conflict/...` branch, leaves the root with no pick in progress, and raises;
 - `scrape all` produces several commits and integrates once, at the end;
 - the CLI flag combinations: `--no-git`, `--no-git-worktree` (old autostash path unchanged).
 
