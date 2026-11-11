@@ -200,8 +200,8 @@ def scrape_callback(
         typer.Option(
             "--git/--no-git",
             help=(
-                "On by default: autostash pending changes, run the scrape, commit its own output, then restore the stash. "
-                "--no-git runs the scrape without touching git."
+                "On by default: run the scrape in a throwaway git worktree, commit its own output there, then cherry-pick it "
+                "into this checkout (see --git-worktree). --no-git runs the scrape in place without touching git."
             ),
         ),
     ] = True,
@@ -212,14 +212,77 @@ def scrape_callback(
             help="Commit message flavor for --git: 'manual' (a human ran this) or 'auto' (scheduled CI).",
         ),
     ] = "manual",
+    git_worktree: Annotated[
+        str,
+        typer.Option(
+            "--git-worktree",
+            help=(
+                "Base directory for the worktree, which is created as <base>/<subcommand>/<timestamp>; "
+                "'' keeps the default scripts/.worktrees/scrape. Needs a clean checkout unless --git-worktree-allow-dirty. "
+                "Gitignored files listed in .worktree_unignore are linked or copied into it."
+            ),
+        ),
+    ] = "",
+    no_git_worktree: Annotated[
+        bool,
+        typer.Option(
+            "--no-git-worktree",
+            help="With --git, scrape in place: autostash pending changes, run, commit, restore the stash.",
+        ),
+    ] = False,
+    git_worktree_allow_dirty: Annotated[
+        bool,
+        typer.Option(
+            "--git-worktree-allow-dirty",
+            help="Start the worktree even if this checkout has uncommitted changes, stashing them around the final cherry-pick.",
+        ),
+    ] = False,
 ) -> None:
     """Shared options for every `scrape` subcommand."""
     if git_style not in {"auto", "manual"}:
         typer.echo("--git-style must be 'auto' or 'manual'", err=True)
         raise typer.Exit(2)
     # end if
+    # A value alone cannot tell "--git-style manual" from the default, so ask where each value came from.
+    # Compared by enum member name since Typer only vendors `ParameterSource` in a private module.
+    explicit = {
+        name: flag
+        for name, flag in (
+            ("git_style", "--git-style"),
+            ("git_worktree", "--git-worktree"),
+            ("no_git_worktree", "--no-git-worktree"),
+            ("git_worktree_allow_dirty", "--git-worktree-allow-dirty"),
+        )
+        if getattr(ctx.get_parameter_source(name), "name", "DEFAULT") in {"COMMANDLINE", "ENVIRONMENT"}
+    }
+    if not git and explicit:
+        typer.echo(f"{', '.join(explicit.values())} cannot be combined with --no-git", err=True)
+        raise typer.Exit(2)
+    # end if
+    if no_git_worktree and {"git_worktree", "git_worktree_allow_dirty"} & explicit.keys():
+        typer.echo("--no-git-worktree cannot be combined with --git-worktree or --git-worktree-allow-dirty", err=True)
+        raise typer.Exit(2)
+    # end if
     repository_root = Path.cwd().resolve()
-    ctx.obj = scrape_git.begin_scrape_git_session(repository_root, git, git_style)
+    use_worktree = git and not no_git_worktree
+    try:
+        ctx.obj = scrape_git.begin_scrape_git_session(
+            repository_root,
+            git,
+            git_style,
+            worktree_subcommand=ctx.invoked_subcommand if use_worktree else None,
+            worktree_base=Path(git_worktree) if git_worktree else None,
+            allow_dirty=git_worktree_allow_dirty,
+        )
+    except git_ops.GitAutocommitError as error:
+        typer.echo(f"error: {error}", err=True)
+        raise typer.Exit(1) from error
+    # end try
+    # Safety net for subcommands that exit before reaching their own finish step, so no worktree is left behind.
+    session: scrape_git.ScrapeGitSession = ctx.obj
+    if session.handle is not None:
+        ctx.call_on_close(lambda: scrape_git.close_scrape_git_session(session))
+    # end if
 # end def scrape_callback
 
 

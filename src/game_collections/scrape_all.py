@@ -13,7 +13,7 @@ from enum import StrEnum
 
 import typer
 
-from game_collections import git_ops, scrape_git
+from game_collections import scrape_git
 
 
 class ScrapeKind(StrEnum):
@@ -80,9 +80,9 @@ def run_scrapers(
         for index, spec in enumerate(specs, start=1):
             typer.echo(f"=== Source {index}/{len(specs)}: {spec.name} ({spec.kind.value}) ===")
             # Each source still commits its own output, but only the very end of the whole
-            # run may restore the autostash - a restore after the first source would hand
-            # the user's pending changes back while later sources are still writing.
-            ctx.obj = dataclasses.replace(session, stashed=False)
+            # run may restore the autostash or integrate the worktree - doing either after the
+            # first source would hand the checkout back while later sources are still writing.
+            ctx.obj = dataclasses.replace(session, stashed=False, defer_close=True)
             try:
                 spec.run(ctx, refresh, non_interactive)
             except typer.Exit as error:
@@ -99,10 +99,7 @@ def run_scrapers(
         # end for
     finally:
         ctx.obj = session
-        if session.enabled and session.stashed:
-            assert session.pre_crawl_head is not None
-            git_ops.restore_autostash(session.repository_root, session.pre_crawl_head)
-        # end if
+        scrape_git.close_scrape_git_session(session)
     # end try
     return failures
 # end def run_scrapers

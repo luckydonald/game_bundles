@@ -288,7 +288,7 @@ def test_scrape_humblebundle_git_stashes_scrapes_commits_then_restores(
 ) -> None:
     calls = install_fake_humble_scrape(monkeypatch)
 
-    result = CliRunner().invoke(app, ["scrape", *git_args, "humblebundle", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", *git_args, "--no-git-worktree", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
@@ -339,7 +339,7 @@ def test_scrape_humblebundle_git_flag_restores_even_when_scrape_raises(
 
     monkeypatch.setattr("game_collections.cli.crawl_humble_offers", raising_crawl)
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 1, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
@@ -378,7 +378,7 @@ def test_scrape_greenmangaming_git_flag_stashes_scrapes_commits_then_restores(
         lambda *args, **kwargs: calls.append("scrape") or GmgCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "greenmangaming", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "greenmangaming", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
@@ -459,7 +459,7 @@ def test_scrape_dailyindiegame_git_flag_stashes_scrapes_commits_then_restores(
         lambda *args, **kwargs: calls.append("scrape") or DigCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "dailyindiegame"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "dailyindiegame"])
 
     assert result.exit_code == 0, result.output
     assert calls == ["head", "autostash", "scrape", "commit", "restore"]
@@ -503,7 +503,7 @@ def test_git_commit_message_auto_style_omits_run_note_outside_ci(monkeypatch: Mo
 
 
 def test_scrape_humblebundle_git_style_rejects_invalid_value() -> None:
-    result = CliRunner().invoke(app, ["scrape", "--git", "--git-style", "bogus", "humblebundle"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "--git-style", "bogus", "humblebundle"])
 
     assert result.exit_code == 2
     assert "--git-style must be 'auto' or 'manual'" in result.output
@@ -536,7 +536,7 @@ def test_scrape_humblebundle_git_style_defaults_to_manual_wording(monkeypatch: M
         lambda *args, **kwargs: HumbleCrawlReport(offers=(), errors=()),
     )
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "humblebundle", "--non-interactive"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "humblebundle", "--non-interactive"])
 
     assert result.exit_code == 0, result.output
     assert captured_messages == ["[crawl|humblebundle] manual scrape:\nManual `game-collections scrape --git humblebundle` run.\n\nNone unresolved.\n"]

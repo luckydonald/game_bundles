@@ -988,3 +988,6 @@ config/steam-dynamicstore-dump.json
 
 # Parked scrape payloads whose archive build failed (see sources/recovery.py).
 archives/*/recovery/
+
+# Throwaway worktrees that `scrape --git` runs in (see git_worktree.py).
+scripts/.worktrees/

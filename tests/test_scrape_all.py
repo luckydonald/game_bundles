@@ -96,10 +96,10 @@ def test_git_flag_restores_the_stash_once_after_all_sources(monkeypatch: MonkeyP
     monkeypatch.setattr("game_collections.cli.git_ops.head", lambda root: git_calls.append("head") or "deadbeef")
     monkeypatch.setattr("game_collections.cli.git_ops.autostash", lambda root: git_calls.append("autostash") or True)
     monkeypatch.setattr(
-        "game_collections.scrape_all.git_ops.restore_autostash", lambda root, head: git_calls.append("restore")
+        "game_collections.git_ops.restore_autostash", lambda root, head: git_calls.append("restore")
     )
 
-    result = CliRunner().invoke(app, ["scrape", "--git", "all-direct"])
+    result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "all-direct"])
 
     assert result.exit_code == 0, result.output
     # Sources see `stashed=False` (they must not restore) and the restore happens exactly once, last.
