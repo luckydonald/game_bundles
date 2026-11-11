@@ -3744,3 +3744,29 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ ! git status
 
+❯ Question answered.
+> <details><summary>
+>
+>> 1. The todo "Fix Humblebundle" (87654de1) has no description, and the 87 humble tests pass. What is broken?
+>
+> (click to expand)
+>
+> </summary>
+>
+>> **Humble bug** (1/1) <kbd>Single Select</kbd><br>
+>> The todo "Fix Humblebundle" (87654de1) has no description, and the 87 humble tests pass. What is broken?
+> - [x] 1\. Live scrape fails
+>   - _`scrape humblebundle` errors or misparses against the current Humble site. I'd run a live scrape to reproduce, which writes into lists/ and archives/._
+> - [ ] 2\. Wrong list output
+>   - _Scraped lists have wrong or missing games, tiers or dates. Tell me the bundle and I'll compare it._
+> - [ ] 3\. Skip it
+>   - _Take the next open todo (`--git` default) instead and leave this one open._
+> - [ ] 4\. _Type something._
+>
+> </details>
+>
+
+❯ Plan denied.
+
+❯ Finish planning `/membership`, too
+
