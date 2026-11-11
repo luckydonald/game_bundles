@@ -10,7 +10,6 @@ code, means the bundle is gone.
 
 from __future__ import annotations
 
-import json
 import re
 from datetime import UTC, datetime
 from typing import Any, cast
@@ -24,6 +23,7 @@ from game_collections.sources.digiphile.models import (
     DigiphileTier,
     DigiphileTierType,
 )
+from game_collections.sources.flight import decode_after_key, flight_text
 from game_collections.sources.names import SourceName
 from game_collections.sources.timestamps import build_scraped_timestamp
 
@@ -33,7 +33,6 @@ COLLECTIONS_URL = f"{DIGIPHILE_ROOT}collections"
 DIGIPHILE_HOSTS = {"digiphile.co", "www.digiphile.co"}
 
 PAGE_PATH_PATTERN = re.compile(r"^/collections/(?P<slug>[a-z0-9][a-z0-9-]*)/?$")
-FLIGHT_PUSH_MARKER = "self.__next_f.push("
 
 BUNDLE_TYPES: dict[str, DigiphileBundleType] = {"SteamGame": "steam-game", "EBook": "ebook"}
 TIER_TYPES: dict[str, DigiphileTierType] = {"Base": "base", "Charity": "charity", "Upsell": "upsell"}
@@ -65,52 +64,6 @@ def bundle_slug(url: str) -> str:
     # end if
     return match.group("slug")
 # end def bundle_slug
-
-
-def flight_text(html: str) -> str:
-    """Concatenate the string fragments of every `self.__next_f.push([<n>, "<fragment>"])` call."""
-    decoder = json.JSONDecoder()
-    fragments: list[str] = []
-    position = html.find(FLIGHT_PUSH_MARKER)
-    while position != -1:
-        start = position + len(FLIGHT_PUSH_MARKER)
-        try:
-            chunk, end = decoder.raw_decode(html, start)
-        except json.JSONDecodeError as error:
-            raise DigiphileParseError(f"malformed flight chunk at offset {start}: {error}") from error
-        # end try
-        if isinstance(chunk, list) and len(chunk) > 1 and isinstance(chunk[1], str):
-            fragments.append(chunk[1])
-        # end if
-        position = html.find(FLIGHT_PUSH_MARKER, end)
-    # end while
-    return "".join(fragments)
-# end def flight_text
-
-
-def decode_after_key(text: str, key: str, expected: type) -> list[Any]:
-    """Every JSON value of type `expected` which directly follows a `"<key>":` in the flight text."""
-    decoder = json.JSONDecoder()
-    marker = f'"{key}":'
-    values: list[Any] = []
-    position = text.find(marker)
-    while position != -1:
-        start = position + len(marker)
-        position = text.find(marker, start)
-        if start >= len(text) or text[start] != ("{" if expected is dict else "["):
-            continue
-        # end if
-        try:
-            value, _end = decoder.raw_decode(text, start)
-        except json.JSONDecodeError:
-            continue
-        # end try
-        if isinstance(value, expected):
-            values.append(value)
-        # end if
-    # end while
-    return values
-# end def decode_after_key
 
 
 def extract_bundle_slugs(html: str) -> list[str]:

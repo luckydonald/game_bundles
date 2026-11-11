@@ -31,8 +31,16 @@ The data is now in React Server Component flight data, pushed through `self.__ne
 3. **Index:** rewrite `parse_bundle_index` in `sources/humblebundle/parser.py` to read `algolia-hit` records from flight data and return the same record shape the crawler consumes (map `url`→`product_url`, etc.), filtering to `/games/` and `productType == humble-bundle`.
 4. **Bundle page:** rewrite `extract_bundle_payload`/`_bundle_item` input handling to read `tiers[].bundleItems[]` (steam skus in `tpkdSkus`, `msrp`, platforms, delivery methods, HTML description for the existing DLC-list and edition-component logic) and keep producing the existing `HumbleArchive`/list output so lists and archives stay byte-compatible for already-scraped bundles.
    Anything the new payload no longer carries (e.g. a field that archive models require) is checked live first; no guessing, per the "verify, don't guess external shapes" rule.
-5. **Choice (`/membership` and `/membership/<month>`):** inspect the live flight data, then rewrite the Choice parser the same way.
-   If the Choice shape turns out to be a large separate effort, split it into a follow-up todo (`create_todo`, tag `gameBundles`) and land index + bundle pages first; I'd ask before doing that.
+5. **Choice (`/membership`):** rewrite `extract_choice_payload`/`build_choice_archive` to read the flight data.
+   Verified live (2026-11-11): the page has a CMS block `"blockType":"choice-media-carousel"` ("This Month's Games") whose items are `{"id":"<machine_name>_choice","productType":"humble-choice","title","thumbnail","description":"$NN","displayPrice","genres","deliveryMethods","platforms","developers","endDate"}`.
+   There are 8 items today, for November 2026 (`Get November 2026 Humble Choice …` text, plus `2026-10-31` / `2026-11-10` dates in the block).
+   - Mapping onto `HumbleItem`: `id`→`machine_name` (as before: the old pages used the same `…_choice` machine names), `deliveryMethods`→`redeem_on`, `platforms`, `genres`, `thumbnail`→cover art, `displayPrice`→retail price (EUR now, the old `msrp` was USD; I'll keep the currency the page states and verify the archive price model copes).
+   - `description` is a flight text reference (`"$73"` → a `73:T…,<text>` chunk), so `sources/flight.py` also needs a `resolve_reference()` that follows `$<hex>` ids to their text chunk.
+   - Month: parsed from the "`<Month> <year> Humble Choice`" text on the page (replaces the old marketing JSON month); the existing `<month>_<year>_choice` machine-name regex in `crawler.py` (line ~270) stays.
+   - **Known gaps, no guessing:** the new page has no pick quota (`tierInfo`/`uses_choices`) and no per-game YouTube links or recommendation copy.
+     `choice_pick_options` therefore becomes empty for the live scrape (the old pick-option lists `choice/<key>/…` are only produced from archives that already have them), and the plan is to log a warning rather than invent quotas.
+     If you know where the quota shows now (e.g. only visible to members), tell me; otherwise it stays unknown.
+   - Past months: `/membership/<month>-<year>` is 404 now, so only the current month can be scraped live; archived months stay as they are.
 6. **Archive schema:** if the archive models change, regenerate `schemas/humblebundle-archive.schema.json` via `game-collections schema`; `migrate --type source` handles any version bump.
 7. **Docs:** update `sources/README.md` (Humble section: flight data instead of embedded JSON scripts) and the root `README.md` if behaviour text mentions the old format.
 
