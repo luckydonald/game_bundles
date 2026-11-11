@@ -68,7 +68,7 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
 - [x] Make `--git` default, — `todo:efd91050-12b0-4a02-b37c-a180aef6d823` _(done)_
   > - disable with `--no-git`
   > - or `--git=no`, whatever
-- [ ] have the `--git` option create worktrees — `todo:6ef5b7c0-7bf5-4454-9d1f-4fdcd9f115fc`
+- [x] have the `--git` option create worktrees — `todo:6ef5b7c0-7bf5-4454-9d1f-4fdcd9f115fc` _(done)_
   > - `--git-worktree` (default with `--git`)
   > - `--no-git-worktree` or `--git-no-worktree` to turn off
   > - Full lifecycle:

@@ -65,9 +65,22 @@ Direct sources crawl a store's own site (`humblebundle`, `greenmangaming`, `dail
 Aggregate sources crawl third-party bundle listings and skip bundles a direct scraper already covers (`isthereanydeal`, `dekudeals`).
 `scrape all-direct` and `scrape all-aggregate` run just one kind.
 `--skip NAME` (repeatable) leaves a source out, e.g. `--skip dailyindiegame` for unattended runs since it opens a real browser window, and `--refresh` and `--non-interactive` are passed on to the sources that support them.
-Scraping runs with `--git` by default (autostash, scrape, commit, restore the stash); pass `--no-git` to leave git alone.
+Scraping runs with `--git` by default: the scrape happens in a throwaway git worktree at `scripts/.worktrees/scrape/<subcommand>/<YYYY-MM-DD_HH-MM-SS_+ZZZZ>/` on the branch `scrape/<subcommand>/<same stamp>`, its output is committed there, and the commits are then cherry-picked into your checkout and the worktree and branch removed.
+Your checkout stays usable while a long scrape runs, but it has to be clean when the scrape starts (`ai/errors/` is ignored for that check).
+The related options go before the subcommand:
+
+- `--git-worktree PATH` changes the base directory the `<subcommand>/<stamp>` folders are created under; `--git-worktree ''` keeps the default.
+- `--git-worktree-allow-dirty` starts anyway from a dirty checkout; the worktree starts from `HEAD` and cannot see those changes, and they are stashed around the final cherry-pick and restored afterwards.
+- `--no-git-worktree` scrapes in place instead (autostash, scrape, commit, restore the stash), as CI does.
+- `--no-git` leaves git alone, and is an error together with any explicit `--git-*` option.
+
+A worktree only holds tracked files.
+Gitignored local state a scrape needs is listed in the tracked `.worktree_unignore` at the repository root: one path per line, `#` comments, an optional last word `symlink` (default), `hardlink` or `copy`.
+Every entry must exist and be gitignored, otherwise the scrape aborts before starting; the entries are removed from the worktree again before it is deleted.
+If the final cherry-pick conflicts, the root is left untouched, the scrape branch is kept and its tip tagged `bak/<sha>`, and the diff plus the worktree status are printed.
+On a terminal you are then asked whether to discard the no longer needed worktree directory (Enter or `y` does, `n` keeps it); without a terminal it is discarded.
 `migrate` also has `--git/--no-git` on by default, but `--git` no longer implies `--apply`: it stays a read-only dry run until `--apply` is given, which then commits the migrated files (`--apply --no-git` only writes).
-With `scrape all`, every source still commits its own output, and the autostash is restored once after the last source.
+With `scrape all`, every source still commits its own output, and the worktree is cherry-picked back (or the autostash restored with `--no-git-worktree`) once after the last source.
 
 ## Humble Bundle imports
 
