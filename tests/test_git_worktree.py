@@ -203,3 +203,52 @@ def test_confirm_discard_repeats_until_a_valid_answer_and_defaults_on_eof() -> N
     assert git_worktree.confirm_discard(True, closed) is True
     assert git_worktree.confirm_discard(False, closed) is True
 # end def test_confirm_discard_repeats_until_a_valid_answer_and_defaults_on_eof
+
+
+def test_create_refuses_a_dirty_checkout_but_ignores_ai_errors(tmp_path: Path) -> None:
+    root = init_repo(tmp_path)
+    (root / "ai" / "errors").mkdir(parents=True)
+    (root / "ai" / "errors" / "run.log").write_text("being written\n", encoding="utf-8")
+    assert git_worktree.root_is_dirty(root) is False
+
+    (root / "lists" / "keep.txt").write_text("edited\n", encoding="utf-8")
+    with pytest.raises(GitAutocommitError, match="--git-worktree-allow-dirty"):
+        git_worktree.create_scrape_worktree(root, "all", NOW)
+    # end with
+
+    assert not (root / "scripts" / ".worktrees").exists()
+    (root / "lists" / "keep.txt").write_text("initial\n", encoding="utf-8")
+    (root / "untracked.txt").write_text("new\n", encoding="utf-8")
+    assert git_worktree.root_is_dirty(root) is True
+# end def test_create_refuses_a_dirty_checkout_but_ignores_ai_errors
+
+
+def test_allow_dirty_restores_the_roots_pending_changes_after_the_cherry_pick(tmp_path: Path) -> None:
+    root = init_repo(tmp_path)
+    (root / "lists" / "keep.txt").write_text("pending edit\n", encoding="utf-8")
+    (root / "untracked.txt").write_text("pending file\n", encoding="utf-8")
+    worktree = git_worktree.create_scrape_worktree(root, "all", NOW, allow_dirty=True)
+    (worktree.path / "lists" / "scraped.txt").write_text("scraped\n", encoding="utf-8")
+    git_ops.commit_changed_paths(worktree.path, ["lists"], "scrape output")
+
+    git_worktree.integrate_scrape_worktree(worktree, allow_dirty=True)
+
+    assert (root / "lists" / "scraped.txt").read_text(encoding="utf-8") == "scraped\n"
+    assert (root / "lists" / "keep.txt").read_text(encoding="utf-8") == "pending edit\n"
+    assert (root / "untracked.txt").read_text(encoding="utf-8") == "pending file\n"
+    assert git(root, "stash", "list").strip() == ""
+    assert not worktree.path.exists()
+# end def test_allow_dirty_restores_the_roots_pending_changes_after_the_cherry_pick
+
+
+def test_allow_dirty_also_restores_pending_changes_when_the_cherry_pick_fails(tmp_path: Path) -> None:
+    root, worktree = conflicting_worktree(tmp_path)
+    (root / "untracked.txt").write_text("pending file\n", encoding="utf-8")
+
+    with pytest.raises(GitAutocommitError, match="Cherry-picking"):
+        git_worktree.integrate_scrape_worktree(worktree, allow_dirty=True, echo=lambda _message: None)
+    # end with
+
+    assert (root / "untracked.txt").read_text(encoding="utf-8") == "pending file\n"
+    assert git(root, "stash", "list").strip() == ""
+# end def test_allow_dirty_also_restores_pending_changes_when_the_cherry_pick_fails

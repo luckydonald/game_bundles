@@ -58,8 +58,33 @@ def worktree_directory(root: Path, base: Path | None, subcommand: str, stamp: st
 # end def worktree_directory
 
 
-def create_scrape_worktree(root: Path, subcommand: str, now: datetime, base: Path | None = None) -> ScrapeWorktree:
-    """Create the worktree and its branch from the checkout's current `HEAD`."""
+def root_is_dirty(root: Path) -> bool:
+    """Return whether the checkout has uncommitted or untracked changes.
+
+    `ai/errors/` is excluded, matching `git_ops.autostash`: it is where a user may be `tee`-ing
+    this very invocation's output, so a log file growing there must not count as pending work.
+    """
+    status = git_ops.run_git(root, "status", "--porcelain", "--", ".", ":!ai/errors").stdout
+    return bool(status.strip())
+# end def root_is_dirty
+
+
+def create_scrape_worktree(
+    root: Path, subcommand: str, now: datetime, base: Path | None = None, allow_dirty: bool = False
+) -> ScrapeWorktree:
+    """Create the worktree and its branch from the checkout's current `HEAD`.
+
+    The worktree cannot see the checkout's uncommitted changes, and the final cherry-pick could
+    collide with them, so a dirty checkout is refused unless `allow_dirty` is given (in which
+    case `integrate_scrape_worktree` autostashes it around the cherry-pick).
+    """
+    if not allow_dirty and root_is_dirty(root):
+        raise GitAutocommitError(
+            f"{root} has uncommitted changes, which a scrape worktree cannot see. "
+            "Commit or stash them, pass --git-worktree-allow-dirty to stash them around the final cherry-pick, "
+            "or --no-git-worktree to scrape in place."
+        )
+    # end if
     # Validate `.worktree_unignore` first so a configuration problem aborts before anything is created.
     entries = load_unignore(root)
     stamp = worktree_stamp(now)
@@ -206,8 +231,46 @@ def handle_failed_integration(
 # end def handle_failed_integration
 
 
+def cherry_pick_commits(
+    worktree: ScrapeWorktree,
+    commits: list[str],
+    allow_dirty: bool,
+    interactive: bool,
+    ask: Callable[[str], str],
+    echo: Callable[[str], None],
+) -> None:
+    """Cherry-pick `commits` into the root, stashing the root's pending changes around it when `allow_dirty`.
+
+    The stash is restored whether or not the pick succeeds, so the user's pending changes always
+    come back; `restore_autostash` reverts a path to its pre-pick content only when the pick
+    itself changed it, which keeps the changes the scrape's commits made.
+    """
+    pre_pick_head = git_ops.head(worktree.root)
+    stashed = git_ops.autostash(worktree.root) if allow_dirty else False
+    try:
+        pick = subprocess.run(
+            ["git", "cherry-pick", *commits], cwd=worktree.root, text=True, capture_output=True
+        )
+        if pick.returncode == 0:
+            return
+        # end if
+        subprocess.run(["git", "cherry-pick", "--abort"], cwd=worktree.root, capture_output=True)
+        handle_failed_integration(worktree, interactive, ask, echo)
+        raise GitAutocommitError(
+            f"Cherry-picking {worktree.branch} into {worktree.root} failed: {pick.stderr.strip()}\n"
+            f"Retry by hand with `git cherry-pick {worktree.base_head}..{worktree.branch}`."
+        )
+    finally:
+        if stashed:
+            git_ops.restore_autostash(worktree.root, pre_pick_head)
+        # end if
+    # end try
+# end def cherry_pick_commits
+
+
 def integrate_scrape_worktree(
     worktree: ScrapeWorktree,
+    allow_dirty: bool = False,
     interactive: bool = False,
     ask: Callable[[str], str] = input,
     echo: Callable[[str], None] = echo_stderr,
@@ -215,17 +278,7 @@ def integrate_scrape_worktree(
     """Cherry-pick the scrape's commits into the root checkout, then remove worktree and branch."""
     commits = commits_to_integrate(worktree)
     if commits:
-        pick = subprocess.run(
-            ["git", "cherry-pick", *commits], cwd=worktree.root, text=True, capture_output=True
-        )
-        if pick.returncode != 0:
-            subprocess.run(["git", "cherry-pick", "--abort"], cwd=worktree.root, capture_output=True)
-            handle_failed_integration(worktree, interactive, ask, echo)
-            raise GitAutocommitError(
-                f"Cherry-picking {worktree.branch} into {worktree.root} failed: {pick.stderr.strip()}\n"
-                f"Retry by hand with `git cherry-pick {worktree.base_head}..{worktree.branch}`."
-            )
-        # end if
+        cherry_pick_commits(worktree, commits, allow_dirty, interactive, ask, echo)
     # end if
     remove_scrape_worktree(worktree)
     # `-D`, not `-d`: the cherry-picked commits are copies, so git does not consider the branch merged.
