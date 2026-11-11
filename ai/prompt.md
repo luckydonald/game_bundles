@@ -3828,3 +3828,13 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
   - add a root git tracked`.worktree_unignore` listing the files for that
 - split this implementation into some usefully separated commits
 
+❯ Plan denied.
+
+❯ - if you supply `--no-git` with one of those `--git-*` flags, that is an error (if `typer`￼ can properly distinguish that from the defaults)
+- `.worktree_unignore` files are checked for existence and to actually be ignored, otherwise that is an configuration issue and means aborting the run.
+￼￼- clean up the unignored files before cleaning up the worktree to remove the need for the `--force`
+- removal of the worktree does not remove its branch automatically?
+￼
+
+❯ Plan accepted, auto mode.
+

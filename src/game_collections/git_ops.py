@@ -67,7 +67,8 @@ _UNMERGED_STATUS = re.compile(r"^(?:DD|AU|UD|UA|DU|AA|UU) ")
 _UNTRACKED_COLLISION = "could not restore untracked files from stash"
 
 
-def _run(repository_root: Path, *args: str) -> subprocess.CompletedProcess[str]:
+def run_git(repository_root: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    """Run `git <args>` in `repository_root`, raising `CalledProcessError` on failure."""
     return subprocess.run(
         ["git", *args],
         cwd=repository_root,
@@ -75,12 +76,12 @@ def _run(repository_root: Path, *args: str) -> subprocess.CompletedProcess[str]:
         text=True,
         capture_output=True,
     )
-# end def _run
+# end def run_git
 
 
 def head(repository_root: Path) -> str:
     """Return the current `HEAD` commit hash."""
-    return _run(repository_root, "rev-parse", "HEAD").stdout.strip()
+    return run_git(repository_root, "rev-parse", "HEAD").stdout.strip()
 # end def head
 
 
@@ -117,7 +118,7 @@ def autostash(repository_root: Path) -> bool:
     Returns whether anything was actually stashed, so a later restore step
     knows whether to bother.
     """
-    result = _run(
+    result = run_git(
         repository_root,
         "stash", "push", "--include-untracked", "-m", "pre-scrape autostash",
         "--", ".", ":!ai/errors",
@@ -138,8 +139,8 @@ def commit_changed_paths(repository_root: Path, paths: Sequence[str], message: s
     if not status.stdout.strip():
         return False
     # end if
-    _run(repository_root, "add", "--", *paths)
-    _run(repository_root, "commit", "-m", message)
+    run_git(repository_root, "add", "--", *paths)
+    run_git(repository_root, "commit", "-m", message)
     return True
 # end def commit_changed_paths
 
@@ -175,18 +176,18 @@ def restore_autostash(repository_root: Path, pre_crawl_head: str) -> None:
         # untracked files from the stash collide with untracked files already
         # sitting in the working tree (unrelated to this stash). Nothing was
         # lost, so the stash is redundant now.
-        _run(repository_root, "stash", "drop")
+        run_git(repository_root, "stash", "drop")
         return
     # end if
     if conflicting:
-        _run(repository_root, "checkout", pre_crawl_head, "--", *conflicting)
+        run_git(repository_root, "checkout", pre_crawl_head, "--", *conflicting)
         apply_result = subprocess.run(
             ["git", "stash", "apply"], cwd=repository_root, text=True, capture_output=True
         )
         if apply_result.returncode == 0 or (
             not _unmerged_paths(repository_root) and _UNTRACKED_COLLISION in apply_result.stderr
         ):
-            _run(repository_root, "stash", "drop")
+            run_git(repository_root, "stash", "drop")
             return
         # end if
     # end if
