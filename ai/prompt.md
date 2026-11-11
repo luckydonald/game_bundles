@@ -3816,3 +3816,15 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ With ask to clean up, I mean that the user should in case of a TTY being asked whether to keep it or already throw it away, showing both the diff to the main directory (not recursive) and the status in that working tree to inform the User best. Automatically cleaning up the default action, including when in a non-User environment.
 
+❯ Plan denied.
+
+❯ - replace `keep or discard? [d/k]` with `Cherry pick failed (details above). Already dis￼card no longer needed worktree? [Y/n]`.
+- Enter and y/Y proceed, and n/N to reject. Everything else repeats the question.
+- why force when using `git worktree remove --force`? Especially when failing to cherry pick? ￼Please explain.
+- the leftover tip should be tagged `bak/{sha1￼}` and get the branch`.scrape/{all,humblebundle,…}/{date}` (formatted like the folder parameters)
+￼- have `--git-worktree` accept a different path (and `--git-worktree=''` would keep it unchanged)
+- have `--git-worktree-allow-dirty` to still allow that scrape even with an unclean starting directory. It will then use the usual auto stash whatever thing for the cherry pick.
+- symlink/hardlink/copy `.gitignore`d required local state files (e.g. the DailyIndieGame browser profile)
+  - add a root git tracked`.worktree_unignore` listing the files for that
+- split this implementation into some usefully separated commits
+
