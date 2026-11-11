@@ -13,7 +13,7 @@ from enum import StrEnum
 
 import typer
 
-from game_collections import git_ops
+from game_collections import git_ops, scrape_git
 
 
 class ScrapeKind(StrEnum):
@@ -74,7 +74,7 @@ def run_scrapers(
     non_interactive: bool,
 ) -> list[ScraperFailure]:
     """Run every spec in order and return the failures; never stops at the first one."""
-    session: git_ops.ScrapeGitSession = ctx.obj
+    session: scrape_git.ScrapeGitSession = ctx.obj
     failures: list[ScraperFailure] = []
     try:
         for index, spec in enumerate(specs, start=1):

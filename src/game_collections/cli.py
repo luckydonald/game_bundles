@@ -32,7 +32,7 @@ from game_collections.migrations.schema_versions import (
     plan_migrations,
 )
 from game_collections.completion import MissingHandling
-from game_collections import git_ops
+from game_collections import git_ops, scrape_git
 from game_collections.install import shell_completion, tool_install
 from game_collections.os_open import open_url
 from game_collections.launchers.steam.adapter import (
@@ -169,7 +169,7 @@ scrape_app = typer.Typer(
 app.add_typer(scrape_app, name="scrape")
 
 
-def _migrate_source_archives(source: SourceName, archive_root: Path, repository_root: Path, git_session: "git_ops.ScrapeGitSession") -> None:
+def _migrate_source_archives(source: SourceName, archive_root: Path, repository_root: Path, git_session: "scrape_git.ScrapeGitSession") -> None:
     """Bring every archived `metadata.json`/`source.json` for `source` up to its current version.
 
     Run once at the top of every `scrape` command, before any of the crawl's own
@@ -219,7 +219,7 @@ def scrape_callback(
         raise typer.Exit(2)
     # end if
     repository_root = Path.cwd().resolve()
-    ctx.obj = git_ops.begin_scrape_git_session(repository_root, git, git_style)
+    ctx.obj = scrape_git.begin_scrape_git_session(repository_root, git, git_style)
 # end def scrape_callback
 
 
@@ -356,7 +356,7 @@ def migrate_command(
 
     mode_label = "git" if git else "apply" if apply else "dry-run"
     repository_root = Path.cwd().resolve()
-    git_session = git_ops.begin_scrape_git_session(repository_root, git, git_style)
+    git_session = scrape_git.begin_scrape_git_session(repository_root, git, git_style)
     try:
         total_bundle_units = 0
         if "bundle" in kinds:
@@ -865,7 +865,7 @@ def scrape_humblebundle_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive current Humble Choice and active Games bundles."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.HUMBLEBUNDLE, archive_root, repository_root, git_session)
     client = HumbleHttpClient()
@@ -958,7 +958,7 @@ def scrape_humblebundle_command(
             "game-collections scrape --git humblebundle",
             unresolved_line,
         )
-        git_ops.finish_scrape_git_session(
+        scrape_git.finish_scrape_git_session(
             git_session, ["lists", "archives", str(resolution_map)], message
         )
     # end try
@@ -974,7 +974,7 @@ def scrape_dailyindiegame_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive currently listed DailyIndieGame Steam bundles."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DAILYINDIEGAME, archive_root, repository_root, git_session)
     client = DigBrowserClient()
@@ -1019,7 +1019,7 @@ def scrape_dailyindiegame_command(
             "game-collections scrape --git dailyindiegame",
             "No storefront resolution needed for this source.",
         )
-        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/dailyindiegame"], message)
+        scrape_git.finish_scrape_git_session(git_session, ["lists", "archives/dailyindiegame"], message)
     # end try
 # end def scrape_dailyindiegame_command
 
@@ -1037,7 +1037,7 @@ def scrape_greenmangaming_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive currently listed Green Man Gaming video-games bundles."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.GREENMANGAMING, archive_root, repository_root, git_session)
     client = GmgHttpClient()
@@ -1115,7 +1115,7 @@ def scrape_greenmangaming_command(
             "game-collections scrape --git greenmangaming",
             unresolved_line,
         )
-        git_ops.finish_scrape_git_session(
+        scrape_git.finish_scrape_git_session(
             git_session, ["lists", "archives/greenmangaming", str(resolution_map)], message
         )
     # end try
@@ -1138,7 +1138,7 @@ def scrape_isthereanydeal_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(aggregate) Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.ISTHEREANYDEAL, archive_root, repository_root, git_session)
     client = ItadHttpClient()
@@ -1204,7 +1204,7 @@ def scrape_isthereanydeal_command(
             "game-collections scrape --git isthereanydeal",
             unresolved_line,
         )
-        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/isthereanydeal"], message)
+        scrape_git.finish_scrape_git_session(git_session, ["lists", "archives/isthereanydeal"], message)
     # end try
 # end def scrape_isthereanydeal_command
 
@@ -1222,7 +1222,7 @@ def scrape_dekudeals_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(aggregate) Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DEKUDEALS, archive_root, repository_root, git_session)
     client = DekuHttpClient()
@@ -1276,7 +1276,7 @@ def scrape_dekudeals_command(
             "game-collections scrape --git dekudeals",
             "No manual resolution needed for this source.",
         )
-        git_ops.finish_scrape_git_session(
+        scrape_git.finish_scrape_git_session(
             git_session, ["lists", "archives/dekudeals", str(resolution_map)], message
         )
     # end try
@@ -1293,7 +1293,7 @@ def scrape_fanatical_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive the bundles currently listed on fanatical.com (regular and build-your-own)."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.FANATICAL, archive_root, repository_root, git_session)
     client = FanaticalHttpClient()
@@ -1345,7 +1345,7 @@ def scrape_fanatical_command(
             "game-collections scrape --git fanatical",
             "Games without a Steam id are recorded as `unresolved:source:fanatical:<bundle>:<slug>` for `game-collections complete`.",
         )
-        git_ops.finish_scrape_git_session(
+        scrape_git.finish_scrape_git_session(
             git_session, ["lists", "archives/fanatical", str(resolution_map)], message
         )
     # end try
@@ -1361,7 +1361,7 @@ def scrape_digiphile_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive the bundles listed on digiphile.co (live and expired)."""
-    git_session: git_ops.ScrapeGitSession = ctx.obj
+    git_session: scrape_git.ScrapeGitSession = ctx.obj
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DIGIPHILE, archive_root, repository_root, git_session)
     client = DigiphileHttpClient()
@@ -1407,7 +1407,7 @@ def scrape_digiphile_command(
             "game-collections scrape --git digiphile",
             "Charity and upsell add-ons are recorded as dependent tiers (`kind`, `requires`) of the bundle list.",
         )
-        git_ops.finish_scrape_git_session(git_session, ["lists", "archives/digiphile"], message)
+        scrape_git.finish_scrape_git_session(git_session, ["lists", "archives/digiphile"], message)
     # end try
 # end def scrape_digiphile_command
 
