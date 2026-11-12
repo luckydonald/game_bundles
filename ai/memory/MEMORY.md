@@ -20,3 +20,4 @@
 - [project todo md evolves mid session](project_todo_md_evolves_mid_session.md) — TODO: summarize this file.
 - [reference typer optional value flag limitation](reference_typer_optional_value_flag_limitation.md) — TODO: summarize this file.
 - [User's ITAD domain expertise](user_isthereanydeal_domain_expertise.md) — user does own live research on isthereanydeal/storefronts, expect iterating scope
+- [No CLI experiments in the real checkout](feedback_no_cli_experiments_in_real_checkout.md) — `scrape` can autostash the user's work; test on temp repos only

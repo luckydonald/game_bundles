@@ -67,6 +67,7 @@ Aggregate sources crawl third-party bundle listings and skip bundles a direct sc
 `--skip NAME` (repeatable) leaves a source out, e.g. `--skip dailyindiegame` for unattended runs since it opens a real browser window, and `--refresh` and `--non-interactive` are passed on to the sources that support them.
 Scraping runs with `--git` by default: the scrape happens in a throwaway git worktree at `scripts/.worktrees/scrape/<subcommand>/<YYYY-MM-DD_HH-MM-SS_+ZZZZ>/` on the branch `scrape/<subcommand>/<same stamp>`, its output is committed there, and the commits are then cherry-picked into your checkout and the worktree and branch removed.
 Your checkout stays usable while a long scrape runs, but it has to be clean when the scrape starts (`ai/errors/` is ignored for that check).
+Git is only touched once the subcommand actually runs, so `--help` and option errors never stash, create a worktree or change anything.
 The related options go before the subcommand:
 
 - `--git-worktree PATH` changes the base directory the `<subcommand>/<stamp>` folders are created under; `--git-worktree ''` keeps the default.
