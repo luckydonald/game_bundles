@@ -74,7 +74,7 @@ def run_scrapers(
     non_interactive: bool,
 ) -> list[ScraperFailure]:
     """Run every spec in order and return the failures; never stops at the first one."""
-    session: scrape_git.ScrapeGitSession = ctx.obj
+    session = scrape_git.start_scrape_git_session(ctx)
     failures: list[ScraperFailure] = []
     try:
         for index, spec in enumerate(specs, start=1):
@@ -82,7 +82,7 @@ def run_scrapers(
             # Each source still commits its own output, but only the very end of the whole
             # run may restore the autostash or integrate the worktree - doing either after the
             # first source would hand the checkout back while later sources are still writing.
-            ctx.obj = dataclasses.replace(session, stashed=False, defer_close=True)
+            ctx.obj = dataclasses.replace(session, defer_close=True)
             try:
                 spec.run(ctx, refresh, non_interactive)
             except typer.Exit as error:

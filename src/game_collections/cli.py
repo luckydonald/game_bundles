@@ -263,26 +263,17 @@ def scrape_callback(
         typer.echo("--no-git-worktree cannot be combined with --git-worktree or --git-worktree-allow-dirty", err=True)
         raise typer.Exit(2)
     # end if
-    repository_root = Path.cwd().resolve()
     use_worktree = git and not no_git_worktree
-    try:
-        ctx.obj = scrape_git.begin_scrape_git_session(
-            repository_root,
-            git,
-            git_style,
-            worktree_subcommand=ctx.invoked_subcommand if use_worktree else None,
-            worktree_base=Path(git_worktree) if git_worktree else None,
-            allow_dirty=git_worktree_allow_dirty,
-        )
-    except git_ops.GitAutocommitError as error:
-        typer.echo(f"error: {error}", err=True)
-        raise typer.Exit(1) from error
-    # end try
-    # Safety net for subcommands that exit before reaching their own finish step, so no worktree is left behind.
-    session: scrape_git.ScrapeGitSession = ctx.obj
-    if session.handle is not None:
-        ctx.call_on_close(lambda: scrape_git.close_scrape_git_session(session))
-    # end if
+    # Only record what was asked for: Click has not parsed the subcommand's own options (or its `--help`) yet,
+    # so touching git here would leave a stash or worktree behind whenever that parsing then fails.
+    ctx.obj = scrape_git.ScrapeGitConfig(
+        enabled=git,
+        style=git_style,
+        repository_root=Path.cwd().resolve(),
+        worktree_subcommand=ctx.invoked_subcommand if use_worktree else None,
+        worktree_base=Path(git_worktree) if git_worktree else None,
+        allow_dirty=git_worktree_allow_dirty,
+    )
 # end def scrape_callback
 
 
@@ -928,7 +919,7 @@ def scrape_humblebundle_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive current Humble Choice and active Games bundles."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.HUMBLEBUNDLE, archive_root, repository_root, git_session)
     client = HumbleHttpClient()
@@ -1037,7 +1028,7 @@ def scrape_dailyindiegame_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive currently listed DailyIndieGame Steam bundles."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DAILYINDIEGAME, archive_root, repository_root, git_session)
     client = DigBrowserClient()
@@ -1100,7 +1091,7 @@ def scrape_greenmangaming_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive currently listed Green Man Gaming video-games bundles."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.GREENMANGAMING, archive_root, repository_root, git_session)
     client = GmgHttpClient()
@@ -1201,7 +1192,7 @@ def scrape_isthereanydeal_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(aggregate) Archive bundles discovered via isthereanydeal.com, writing into each provider's own lists."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.ISTHEREANYDEAL, archive_root, repository_root, git_session)
     client = ItadHttpClient()
@@ -1285,7 +1276,7 @@ def scrape_dekudeals_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(aggregate) Archive currently listed dekudeals.com bundles, skipping ones a dedicated scraper already covers."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DEKUDEALS, archive_root, repository_root, git_session)
     client = DekuHttpClient()
@@ -1356,7 +1347,7 @@ def scrape_fanatical_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive the bundles currently listed on fanatical.com (regular and build-your-own)."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.FANATICAL, archive_root, repository_root, git_session)
     client = FanaticalHttpClient()
@@ -1424,7 +1415,7 @@ def scrape_digiphile_command(
     refresh: RefreshOption = False,
 ) -> None:
     """(direct) Archive the bundles listed on digiphile.co (live and expired)."""
-    git_session: scrape_git.ScrapeGitSession = ctx.obj
+    git_session = scrape_git.start_scrape_git_session(ctx)
     repository_root = git_session.repository_root
     _migrate_source_archives(SourceName.DIGIPHILE, archive_root, repository_root, git_session)
     client = DigiphileHttpClient()

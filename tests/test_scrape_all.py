@@ -15,7 +15,7 @@ def install_fake_registry(
 
     def make(name: str, kind: ScrapeKind) -> ScraperSpec:
         def run(ctx, refresh: bool, non_interactive: bool) -> None:  # noqa: ANN001
-            calls.append(f"{name}:refresh={refresh}:ni={non_interactive}:stashed={ctx.obj.stashed}")
+            calls.append(f"{name}:refresh={refresh}:ni={non_interactive}:deferred={ctx.obj.defer_close}")
             if name in failing:
                 raise failing[name]
             # end if
@@ -44,9 +44,9 @@ def test_all_runs_direct_before_aggregate_and_passes_options(monkeypatch: Monkey
 
     assert result.exit_code == 0, result.output
     assert calls == [
-        "one:refresh=True:ni=True:stashed=False",
-        "two:refresh=True:ni=True:stashed=False",
-        "agg:refresh=True:ni=True:stashed=False",
+        "one:refresh=True:ni=True:deferred=True",
+        "two:refresh=True:ni=True:deferred=True",
+        "agg:refresh=True:ni=True:deferred=True",
     ]
 # end def test_all_runs_direct_before_aggregate_and_passes_options
 
@@ -102,8 +102,8 @@ def test_git_flag_restores_the_stash_once_after_all_sources(monkeypatch: MonkeyP
     result = CliRunner().invoke(app, ["scrape", "--git", "--no-git-worktree", "all-direct"])
 
     assert result.exit_code == 0, result.output
-    # Sources see `stashed=False` (they must not restore) and the restore happens exactly once, last.
-    assert calls == ["one:refresh=False:ni=False:stashed=False", "two:refresh=False:ni=False:stashed=False"]
+    # Sources run with a deferred close (they must not restore) and the restore happens exactly once, last.
+    assert calls == ["one:refresh=False:ni=False:deferred=True", "two:refresh=False:ni=False:deferred=True"]
     assert git_calls == ["head", "autostash", "restore"]
 # end def test_git_flag_restores_the_stash_once_after_all_sources
 
