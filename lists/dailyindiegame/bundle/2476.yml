@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2476
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2476.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2476/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2476/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: The Watchmaker
+  ids:
+  - steam:504430
+  requires: []
+- name: Suika Sprunki Edition
+  ids:
+  - steam:3886860
+  requires: []
+- name: 'Backrooms: Splatter'
+  ids:
+  - steam:4835760
+  requires: []
+- name: Forsaken Manor
+  ids:
+  - steam:3721570
+  requires: []
+- name: Night Seeker
+  ids:
+  - steam:3721500
+  requires: []
+- name: Owl Bounce
+  ids:
+  - steam:3724540
+  requires: []
+- name: Sky Sorcerer
+  ids:
+  - steam:3626470
+  requires: []
+- name: Sorcerer's Fortitude
+  ids:
+  - steam:3730630
+  requires: []
+- name: Sorcery and Survival
+  ids:
+  - steam:3730670
+  requires: []

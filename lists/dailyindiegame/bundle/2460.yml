@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2460 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2460.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2460/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2460/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Truck Clash Duel
+  ids:
+  - steam:4216730
+  requires: []
+- name: Bookbound
+  ids:
+  - steam:4050460
+  requires: []
+- name: ShellPieces
+  ids:
+  - steam:3882560
+  requires: []
+- name: Tiny Wizard Tavern
+  ids:
+  - steam:4583740
+  requires: []
+- name: KINGDOM RULES
+  ids:
+  - steam:4591300
+  requires: []
+- name: Horus IDLE
+  ids:
+  - steam:1507510
+  requires: []
+- name: Axe And Claw
+  ids:
+  - steam:4466830
+  requires: []
+- name: Redline JDM Drift
+  ids:
+  - steam:4524460
+  requires: []
+- name: Horse Spirit Valley
+  ids:
+  - steam:4734410
+  requires: []

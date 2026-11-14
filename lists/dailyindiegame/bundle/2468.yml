@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: TUESDAY BARGAIN 2468
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2468.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2468/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2468/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Crypto Mining
+  ids:
+  - steam:3225300
+  requires: []
+- name: The Duduk Master
+  ids:
+  - steam:2279270
+  requires: []
+- name: Puzzlection
+  ids:
+  - steam:1161660
+  requires: []
+- name: Dice Keeper
+  ids:
+  - steam:1047020
+  requires: []
+- name: Last Defenders
+  ids:
+  - steam:1750690
+  requires: []
+- name: black idea
+  ids:
+  - steam:2225060
+  requires: []
+- name: Sheptun
+  ids:
+  - steam:1234900
+  requires: []
+- name: Infected Dawn
+  ids:
+  - steam:1760710
+  requires: []
+- name: 'Parkour Assassin: Sprint Run 2'
+  ids:
+  - steam:4064600
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2473 - SUNDAY BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2473.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2473/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2473/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Sad Virus Asia
+  ids:
+  - steam:4542820
+  requires: []
+- name: Rubble Rampage
+  ids:
+  - steam:4450730
+  requires: []
+- name: Warp Rush
+  ids:
+  - steam:4450710
+  requires: []
+- name: Cool Thief Guy
+  ids:
+  - steam:4580060
+  requires: []
+- name: I m not a robot!
+  ids:
+  - steam:3954370
+  requires: []
+- name: 'Lovely Anime Puzzle: Winter'
+  ids:
+  - steam:4591630
+  requires: []
+- name: City Cleaning
+  ids:
+  - steam:4597470
+  requires: []
+- name: Path of Survival
+  ids:
+  - steam:4597510
+  requires: []
+- name: Sand Witch Adventures
+  ids:
+  - steam:1393620
+  requires: []

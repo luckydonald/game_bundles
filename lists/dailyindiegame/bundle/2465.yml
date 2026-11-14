@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2465
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2465.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2465/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2465/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 'Space Pilgrim Episode III: Delta Pavonis'
+  ids:
+  - steam:439250
+  requires: []
+- name: Regimental Chess
+  ids:
+  - steam:362400
+  requires: []
+- name: 'Space Pilgrim Episode IV: Sol'
+  ids:
+  - steam:446640
+  requires: []
+- name: Slavistan
+  ids:
+  - steam:504770
+  requires: []
+- name: Linked
+  ids:
+  - steam:596590
+  requires: []
+- name: Colorful Colore
+  ids:
+  - steam:1444090
+  requires: []
+- name: 'PERFECT ANGLE: The puzzle game based on optical illusions'
+  ids:
+  - steam:427780
+  requires: []
+- name: Crazy Sapper 3D
+  ids:
+  - steam:529420
+  requires: []
+- name: OMON Simulator
+  ids:
+  - steam:1140440
+  requires: []

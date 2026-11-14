@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 19 CENT BARGAIN 1
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2479.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2479/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2479/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: I Am Busy Digging A Hole
+  ids:
+  - steam:3639230
+  requires: []
+- name: Timings
+  ids:
+  - steam:1853720
+  requires: []
+- name: Enigma Quest
+  ids:
+  - steam:2591270
+  requires: []
+- name: Monkey Hit
+  ids:
+  - steam:1618000
+  requires: []
+- name: Blinky
+  ids:
+  - steam:1842130
+  requires: []
+- name: Jorji and Impossible Forest
+  ids:
+  - steam:883190
+  requires: []
+- name: Breakdown
+  ids:
+  - steam:1807920
+  requires: []
+- name: Upside
+  ids:
+  - steam:1605530
+  requires: []
+- name: Memory Train
+  ids:
+  - steam:1843800
+  requires: []

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 15 CENT BARGAIN 1
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2478.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2478/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2478/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 'Powder Runners: Maze Quest'
+  ids:
+  - steam:3433410
+  requires: []
+- name: Order from Caos
+  ids:
+  - steam:1332540
+  requires: []
+- name: Mega Mash Mons
+  ids:
+  - steam:3689950
+  requires: []
+- name: Success In Progress
+  ids:
+  - steam:3238190
+  requires: []
+- name: Dude The Dark Agent
+  ids:
+  - steam:4547950
+  requires: []
+- name: Super Star Adventure
+  ids:
+  - steam:3555860
+  requires: []
+- name: Saylor Animals Puzzle
+  ids:
+  - steam:4343690
+  requires: []
+- name: Lawnmower Runner
+  ids:
+  - steam:4361410
+  requires: []
+- name: Kontrakt
+  ids:
+  - steam:924370
+  requires: []

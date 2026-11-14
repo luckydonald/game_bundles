@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: THURSDAY BARGAIN 2462
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2462.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2462/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2462/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Eternal Decay Souls
+  ids:
+  - steam:3583680
+  requires: []
+- name: Air defenders
+  ids:
+  - steam:2143160
+  requires: []
+- name: 'Vigaro Runner 2: Return'
+  ids:
+  - steam:3376620
+  requires: []
+- name: Ancient Demon Shadow
+  ids:
+  - steam:3033180
+  requires: []
+- name: Agross
+  ids:
+  - steam:1145430
+  requires: []
+- name: Guess Colors
+  ids:
+  - steam:1473100
+  requires: []
+- name: Crystal Sequence
+  ids:
+  - steam:1630800
+  requires: []
+- name: أنتم السابقون
+  ids:
+  - steam:3666640
+  requires: []
+- name: Desstroke
+  ids:
+  - steam:2057820
+  requires: []

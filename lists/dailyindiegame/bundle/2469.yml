@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: WEDNESDAY BARGAIN 2469
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2469.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2469/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2469/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Dead Ground
+  ids:
+  - steam:778410
+  requires: []
+- name: Silent Tweets
+  ids:
+  - steam:809320
+  requires: []
+- name: Go Rocket
+  ids:
+  - steam:1669120
+  requires: []
+- name: Backroom Beyond
+  ids:
+  - steam:2062820
+  requires: []
+- name: 'Mosaica: Arboreal'
+  ids:
+  - steam:3192050
+  requires: []
+- name: Give Me More Pills
+  ids:
+  - steam:1752610
+  requires: []
+- name: The Lucky Stray Cat
+  ids:
+  - steam:4270080
+  requires: []
+- name: Me And Dungeons
+  ids:
+  - steam:874330
+  requires: []
+- name: MadPug
+  ids:
+  - steam:4143380
+  requires: []

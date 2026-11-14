@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2463
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2463.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2463/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2463/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Bloomstead
+  ids:
+  - steam:5137200
+  requires: []
+- name: Block Tower TD 2
+  ids:
+  - steam:2837350
+  requires: []
+- name: Dino Goodbye
+  ids:
+  - steam:4594000
+  requires: []
+- name: DEADLINE
+  ids:
+  - steam:4968450
+  requires: []
+- name: INCREDECK
+  ids:
+  - steam:4402810
+  requires: []
+- name: COLORIZED
+  ids:
+  - steam:4746090
+  requires: []
+- name: 'JQ: countries'
+  ids:
+  - steam:796360
+  requires: []
+- name: Lawnmower Puzzle
+  ids:
+  - steam:5094210
+  requires: []
+- name: Lumber Tycoon Island
+  ids:
+  - steam:5015570
+  requires: []

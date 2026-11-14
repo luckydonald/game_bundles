@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: WEDNESDAY BARGAIN 2461
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2461.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2461/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2461/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: Cookie Space
+  ids:
+  - steam:876560
+  requires: []
+- name: OnlyRun
+  ids:
+  - steam:2520180
+  requires: []
+- name: In Shape 2
+  ids:
+  - steam:1814100
+  requires: []
+- name: Knife Quest
+  ids:
+  - steam:1303760
+  requires: []
+- name: Getting Out Alive
+  ids:
+  - steam:2560220
+  requires: []
+- name: Cubic Juice
+  ids:
+  - steam:1245360
+  requires: []
+- name: Garden Magic
+  ids:
+  - steam:1604370
+  requires: []
+- name: Tower Survivor
+  ids:
+  - steam:2306960
+  requires: []
+- name: Color Flash
+  ids:
+  - steam:1832230
+  requires: []
