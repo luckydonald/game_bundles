@@ -21,14 +21,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16798/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16798/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/seriously-unserious-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/seriously-unserious-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/seriously-unserious-collection/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Pilgrims
   ids:
   - steam:1049280
   - isthereanydeal:pilgrims
+  - dekudeals:pilgrims-switch
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:1347030
   - isthereanydeal:the-corridor
+  - dekudeals:the-corridor
   requires: []
   tiers:
   - 1
@@ -47,6 +56,7 @@ games:
   ids:
   - steam:881040
   - isthereanydeal:bug-academy
+  - dekudeals:bug-academy
   requires: []
   tiers:
   - 1
@@ -56,6 +66,7 @@ games:
   ids:
   - steam:3930150
   - isthereanydeal:mr-toilet
+  - dekudeals:mr-toilet
   requires: []
   tiers:
   - 1
@@ -65,6 +76,7 @@ games:
   ids:
   - steam:3128220
   - isthereanydeal:nerd-simulator
+  - dekudeals:wtf-wacky-things-fiesta
   requires: []
   tiers:
   - 1
@@ -74,6 +86,7 @@ games:
   ids:
   - steam:665360
   - isthereanydeal:comedy-night
+  - dekudeals:comedy-night
   requires: []
   tiers:
   - 1
@@ -83,6 +96,7 @@ games:
   ids:
   - steam:991170
   - isthereanydeal:barn-finders
+  - dekudeals:barn-finders
   requires: []
   tiers:
   - 2
@@ -91,6 +105,7 @@ games:
   ids:
   - steam:2535830
   - isthereanydeal:squirrel-stapler
+  - dekudeals:squirrel-stapler
   requires: []
   tiers:
   - 2
@@ -99,6 +114,7 @@ games:
   ids:
   - steam:2708880
   - isthereanydeal:ghost-keeper
+  - dekudeals:ghost-keeper
   requires: []
   tiers:
   - 2
@@ -107,6 +123,7 @@ games:
   ids:
   - steam:742520
   - isthereanydeal:astrologaster
+  - dekudeals:astrologaster
   requires: []
   tiers:
   - 2
@@ -115,6 +132,7 @@ games:
   ids:
   - steam:973810
   - isthereanydeal:journey-to-the-savage-planet
+  - dekudeals:journey-to-the-savage-planet
   requires: []
   tiers:
   - 3
@@ -122,6 +140,7 @@ games:
   ids:
   - steam:427730
   - isthereanydeal:whos-your-daddy
+  - dekudeals:whos-your-daddy
   requires: []
   tiers:
   - 3
@@ -129,6 +148,7 @@ games:
   ids:
   - steam:1059990
   - isthereanydeal:trombone-champ
+  - dekudeals:trombone-champ
   requires: []
   tiers:
   - 3

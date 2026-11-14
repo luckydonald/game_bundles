@@ -19,15 +19,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16783/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16783/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/unhinged-and-unsettling-visual-novels
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/unhinged-and-unsettling-visual-novels/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/unhinged-and-unsettling-visual-novels/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Bad End Theater
   ids:
   - unresolved:source:humblebundle:badendtheater
   - steam:1764390
   - isthereanydeal:bad-end-theater
+  - dekudeals:bad-end-theater
   requires: []
   tiers:
   - 1
@@ -37,6 +45,7 @@ games:
   - unresolved:source:humblebundle:amelie
   - steam:1835810
   - isthereanydeal:amelie
+  - dekudeals:amelie
   requires: []
   tiers:
   - 1
@@ -46,6 +55,7 @@ games:
   - unresolved:source:humblebundle:crimsongray
   - steam:655770
   - isthereanydeal:crimson-gray
+  - dekudeals:crimson-gray
   requires: []
   tiers:
   - 1
@@ -55,6 +65,7 @@ games:
   - unresolved:source:humblebundle:soundofdrop_fallintopoison
   - steam:383460
   - isthereanydeal:sound-of-drop-fall-into-poison
+  - dekudeals:sound-of-drop-fall-into-poison
   requires: []
   tiers:
   - 1
@@ -64,6 +75,7 @@ games:
   - unresolved:source:humblebundle:sweetestmonster
   - steam:585890
   - isthereanydeal:sweetest-monster
+  - dekudeals:sweetest-monster
   requires: []
   tiers:
   - 1
@@ -73,6 +85,7 @@ games:
   - unresolved:source:humblebundle:crosschannel_steamedition
   - steam:812560
   - isthereanydeal:cross-channel-steam-edition
+  - dekudeals:cross-channel-steam-edition
   requires: []
   tiers:
   - 1
@@ -82,6 +95,7 @@ games:
   - unresolved:source:humblebundle:hushhush___onlyyourlovecansavethem
   - steam:782250
   - isthereanydeal:hush-hush-only-your-love-can-save-them
+  - dekudeals:hush-hush
   requires: []
   tiers:
   - 2
@@ -90,6 +104,7 @@ games:
   - unresolved:source:humblebundle:atitheinblood
   - steam:2989270
   - isthereanydeal:a-tithe-in-blood
+  - dekudeals:a-tithe-in-blood
   requires: []
   tiers:
   - 2
@@ -98,6 +113,7 @@ games:
   - unresolved:source:humblebundle:enigma
   - steam:494100
   - isthereanydeal:enigma
+  - dekudeals:enigma
   requires: []
   tiers:
   - 2
@@ -106,6 +122,7 @@ games:
   - unresolved:source:humblebundle:magicaleyes_redisforanguish
   - steam:366780
   - isthereanydeal:magical-eyes-red-is-for-anguish
+  - dekudeals:magical-eyes-red-is-for-anguish
   requires: []
   tiers:
   - 2
@@ -114,6 +131,7 @@ games:
   - unresolved:source:humblebundle:miniaturegarden
   - steam:494170
   - isthereanydeal:miniature-garden
+  - dekudeals:miniature-garden
   requires: []
   tiers:
   - 2

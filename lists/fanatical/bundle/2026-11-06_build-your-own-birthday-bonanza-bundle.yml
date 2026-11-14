@@ -27,15 +27,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16781/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16781/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-birthday-bonanza-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-birthday-bonanza-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-birthday-bonanza-bundle/source.json
 crawlers:
 - fanatical
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Astor: Blade of the Monolith'
   ids:
   - steam:1989320
   - fanatical:astor-blade-of-the-monolith
   - isthereanydeal:astor-blade-of-the-monolith
+  - dekudeals:astor-blade-of-the-monolith
   requires: []
   tiers:
   - 1
@@ -47,6 +55,7 @@ games:
   - steam:4197890
   - fanatical:the-last-cat-in-the-universe
   - isthereanydeal:the-last-cat-in-the-universe
+  - dekudeals:the-last-cat-in-the-universe
   requires: []
   tiers:
   - 1
@@ -58,6 +67,7 @@ games:
   - steam:810040
   - fanatical:swords-n-magic-and-stuff
   - isthereanydeal:swords-n-magic-and-stuff
+  - dekudeals:swords-n-magic-and-stuff
   requires: []
   tiers:
   - 1
@@ -69,6 +79,7 @@ games:
   - steam:3670580
   - fanatical:townsfolk
   - isthereanydeal:townsfolk
+  - dekudeals:townsfolk
   requires: []
   tiers:
   - 1
@@ -80,6 +91,7 @@ games:
   - steam:3496000
   - fanatical:ship-inc
   - isthereanydeal:ship-inc
+  - dekudeals:ship-inc
   requires: []
   tiers:
   - 1
@@ -91,6 +103,7 @@ games:
   - steam:2299660
   - fanatical:fossilfuel-2
   - isthereanydeal:fossilfuel-2
+  - dekudeals:fossilfuel-2
   requires: []
   tiers:
   - 1
@@ -102,6 +115,7 @@ games:
   - steam:1556790
   - fanatical:isonzo
   - isthereanydeal:isonzo
+  - dekudeals:isonzo
   requires: []
   tiers:
   - 1
@@ -113,6 +127,7 @@ games:
   - steam:2653470
   - fanatical:little-problems-a-cozy-detective-game
   - isthereanydeal:little-problems
+  - dekudeals:little-problems-a-cozy-detective-game
   requires: []
   tiers:
   - 1
@@ -124,6 +139,7 @@ games:
   - steam:2097230
   - fanatical:turnip-boy-robs-a-bank
   - isthereanydeal:turnip-boy-robs-a-bank
+  - dekudeals:turnip-boy-robs-a-bank
   requires: []
   tiers:
   - 1
@@ -135,6 +151,7 @@ games:
   - steam:3336240
   - fanatical:walk-the-frog
   - isthereanydeal:walk-the-frog
+  - dekudeals:walk-the-frog
   requires: []
   tiers:
   - 1
@@ -146,6 +163,7 @@ games:
   - steam:1589120
   - fanatical:above-snakes
   - isthereanydeal:above-snakes
+  - dekudeals:above-snakes
   requires: []
   tiers:
   - 1
@@ -157,6 +175,7 @@ games:
   - steam:2826800
   - fanatical:amanda-the-adventurer-2
   - isthereanydeal:amanda-the-adventurer-2
+  - dekudeals:amanda-the-adventurer-2
   requires: []
   tiers:
   - 1
@@ -168,6 +187,7 @@ games:
   - steam:2693930
   - fanatical:dice-and-fold
   - isthereanydeal:dice-and-fold
+  - dekudeals:dice-and-fold
   requires: []
   tiers:
   - 1
@@ -179,6 +199,7 @@ games:
   - steam:2245180
   - fanatical:voron-ravens-story
   - isthereanydeal:voron
+  - dekudeals:voron
   requires: []
   tiers:
   - 1
@@ -190,6 +211,7 @@ games:
   - steam:2518630
   - fanatical:none-shall-intrude
   - isthereanydeal:none-shall-intrude
+  - dekudeals:none-shall-intrude
   requires: []
   tiers:
   - 1
@@ -201,6 +223,7 @@ games:
   - steam:3079970
   - fanatical:airport-x-ray-simulator
   - isthereanydeal:airport-x-ray-simulator
+  - dekudeals:airport-x-ray-simulator
   requires: []
   tiers:
   - 1
@@ -212,6 +235,7 @@ games:
   - steam:2398170
   - fanatical:bore-blasters
   - isthereanydeal:bore-blasters
+  - dekudeals:bore-blasters
   requires: []
   tiers:
   - 1
@@ -223,6 +247,7 @@ games:
   - steam:2736840
   - fanatical:the-august-before
   - isthereanydeal:the-august-before
+  - dekudeals:the-august-before
   requires: []
   tiers:
   - 1
@@ -234,6 +259,7 @@ games:
   - steam:949200
   - fanatical:ambition-a-minuet-in-power
   - isthereanydeal:ambition-a-minuet-in-power
+  - dekudeals:ambition-a-minuet-in-power-switch
   requires: []
   tiers:
   - 1
@@ -245,6 +271,7 @@ games:
   - steam:2084000
   - fanatical:shogun-showdown
   - isthereanydeal:shogun-showdown
+  - dekudeals:shogun-showdown
   requires: []
   tiers:
   - 1
@@ -256,6 +283,7 @@ games:
   - steam:1550730
   - fanatical:ikonei-island-an-earthlock-adventure
   - isthereanydeal:ikonei-island-an-earthlock-adventure
+  - dekudeals:ikonei-island-an-earthlock-adventure
   requires: []
   tiers:
   - 1
@@ -267,6 +295,7 @@ games:
   - steam:3362750
   - fanatical:stormbridge
   - isthereanydeal:stormbridge
+  - dekudeals:stormbridge
   requires: []
   tiers:
   - 1
@@ -278,6 +307,7 @@ games:
   - steam:2786650
   - fanatical:pieces-of-the-past
   - isthereanydeal:pieces-of-the-past
+  - dekudeals:pieces-of-the-past
   requires: []
   tiers:
   - 1
@@ -289,6 +319,7 @@ games:
   - steam:2361460
   - fanatical:toy-shire
   - isthereanydeal:toy-shire
+  - dekudeals:toy-shire
   requires: []
   tiers:
   - 1
@@ -300,6 +331,7 @@ games:
   - steam:1273440
   - fanatical:overdrift-festival
   - isthereanydeal:overdrift-festival
+  - dekudeals:overdrift-festival
   requires: []
   tiers:
   - 1
@@ -311,6 +343,7 @@ games:
   - steam:2881800
   - fanatical:supertaxcity
   - isthereanydeal:supertaxcity
+  - dekudeals:supertaxcity
   requires: []
   tiers:
   - 1
@@ -322,6 +355,7 @@ games:
   - steam:520950
   - fanatical:drift-21
   - isthereanydeal:drift-ce
+  - dekudeals:driftce
   requires: []
   tiers:
   - 1
@@ -333,6 +367,7 @@ games:
   - steam:2884190
   - fanatical:fight-school-simulator
   - isthereanydeal:fight-school-simulator
+  - dekudeals:fight-school-simulator
   requires: []
   tiers:
   - 1

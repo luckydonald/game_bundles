@@ -21,79 +21,100 @@ references:
   path: ../../../archives/fanatical/bundle/build-your-own-resident-evil-bundle-demonic-edition/metadata.json
 - name: Crawl source
   path: ../../../archives/fanatical/bundle/build-your-own-resident-evil-bundle-demonic-edition/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-resident-evil-bundle-demonic-edition-frightfest
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-resident-evil-bundle-demonic-edition-frightfest/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-resident-evil-bundle-demonic-edition-frightfest/source.json
 crawlers:
 - isthereanydeal
 - fanatical
+- dekudeals
 games:
 - name: DMC - Devil May Cry
   ids:
   - steam:220440
   - fanatical:dmc-devil-may-cry
+  - dekudeals:dmc-devil-may-cry
   requires: []
 - name: Devil May Cry HD Collection
   ids:
   - steam:631510
   - fanatical:devil-may-cry-hd-collection
+  - dekudeals:devil-may-cry-hd-collection
   requires: []
 - name: Devil May Cry® 4 Special Edition
   ids:
   - steam:329050
   - fanatical:devil-may-cry-4-special-edition
+  - dekudeals:devil-may-cry-4-special-edition
   requires: []
 - name: Dead Rising 3 Apocalypse Edition
   ids:
   - steam:265550
+  - dekudeals:dead-rising-3-apocalypse-edition
   requires: []
 - name: Dead Rising 4
   ids:
   - steam:543460
   - fanatical:deadrising-4-franks-big-package
+  - dekudeals:dead-rising-4-franks-big-package
   requires: []
 - name: Resident Evil Village
   ids:
   - steam:1196590
   - fanatical:resident-evil-village-gold-edition
+  - dekudeals:resident-evil-village-gold-edition
   requires: []
 - name: Devil May Cry 5 + Vergil
   ids:
   - steam:601150
   - fanatical:devil-may-cry-5-vergil
+  - dekudeals:devil-may-cry-5-plus-vergil
   requires: []
 - name: RESIDENT EVIL 2 (2019)
   ids:
   - steam:883710
   - fanatical:resident-evil-2-biohazard-re-2
+  - dekudeals:resident-evil-2
   requires: []
 - name: RESIDENT EVIL 3 (2020)
   ids:
   - steam:952060
   - fanatical:resident-evil-3
+  - dekudeals:resident-evil-3
   requires: []
 - name: Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack
   ids:
   - unresolved:source:isthereanydeal:15802:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
   - unresolved:source:fanatical:build-your-own-resident-evil-bundle-demonic-edition:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
   - fanatical:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
+  - dekudeals:resident-evil-4-2005-and-resident-evil-5-gold-edition-double-pack
   requires: []
 - name: 'Resident Evil: Revelations 1 & 2 Deluxe Double Pack'
   ids:
   - unresolved:source:isthereanydeal:15802:resident-evil-revelations-1-and-2-deluxe-double-pack
   - unresolved:source:fanatical:build-your-own-resident-evil-bundle-demonic-edition:resident-evil-revelations-1-and-2-deluxe-double-pack
   - fanatical:resident-evil-revelations-1-and-2-deluxe-double-pack
+  - dekudeals:resident-evil-revelations-1-and-2-deluxe-double-pack
   requires: []
 - name: Resident Evil & Resident Evil 0 Double Pack
   ids:
   - unresolved:source:isthereanydeal:15802:resident-evil-and-resident-evil-0-double-pack
   - unresolved:source:fanatical:build-your-own-resident-evil-bundle-demonic-edition:resident-evil-and-resident-evil-0-double-pack
   - fanatical:resident-evil-and-resident-evil-0-double-pack
+  - dekudeals:resident-evil-and-resident-evil-0-double-pack
   requires: []
 - name: Resident Evil 6 Complete & Resident Evil 7 Biohazard Double Pack
   ids:
   - unresolved:source:isthereanydeal:15802:resident-evil-6-complete-and-resident-evil-7-biohazard-double-pack
   - unresolved:source:fanatical:build-your-own-resident-evil-bundle-demonic-edition:resident-evil-6-complete-and-resident-evil-7-biohazard-double-pack
   - fanatical:resident-evil-6-complete-and-resident-evil-7-biohazard-double-pack
+  - dekudeals:resident-evil-6-complete-and-resident-evil-7-biohazard-double-pack
   requires: []
 - name: 'Dead Rising 2 & Dead Rising 2: Off the Record Double Pack'
   ids:
   - unresolved:source:isthereanydeal:15802:dead-rising-2-and-dead-rising-2-off-the-record-double-pack
+  - dekudeals:dead-rising-2-and-dead-rising-2-off-the-record-double-pack
   requires: []

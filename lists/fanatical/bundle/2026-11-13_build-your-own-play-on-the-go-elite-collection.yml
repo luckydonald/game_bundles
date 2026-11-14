@@ -24,15 +24,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16795/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16795/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-play-on-the-go-elite-collection-fall-2026
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-play-on-the-go-elite-collection-fall-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-play-on-the-go-elite-collection-fall-2026/source.json
 crawlers:
 - fanatical
 - isthereanydeal
+- dekudeals
 games:
 - name: Silly Polly Beast
   ids:
   - steam:1598780
   - fanatical:silly-polly-beast
   - isthereanydeal:silly-polly-beast
+  - dekudeals:silly-polly-beast
   requires: []
   tiers:
   - 1
@@ -44,6 +52,7 @@ games:
   - fanatical:the-elder-scrolls-online-deluxe-collection-necrom
   - unresolved:source:isthereanydeal:16795:the-elder-scrolls-online-deluxe-collection-necrom
   - isthereanydeal:the-elder-scrolls-online-deluxe-collection-necrom
+  - dekudeals:the-elder-scrolls-online-deluxe-collection-necrom
   requires: []
   tiers:
   - 1
@@ -55,6 +64,7 @@ games:
   - fanatical:high-on-life-dlc-bundle
   - unresolved:source:isthereanydeal:16795:high-on-life-dlc-bundle
   - isthereanydeal:high-on-life-dlc-bundle
+  - dekudeals:high-on-life-dlc-bundle
   requires: []
   tiers:
   - 1
@@ -66,6 +76,7 @@ games:
   - fanatical:construction-simulator-gold-edition
   - unresolved:source:isthereanydeal:16795:construction-simulator-gold-edition
   - isthereanydeal:construction-simulator-gold-edition
+  - dekudeals:construction-simulator-gold-edition
   requires: []
   tiers:
   - 1
@@ -76,6 +87,7 @@ games:
   - steam:2885870
   - fanatical:strange-antiquities
   - isthereanydeal:strange-antiquities
+  - dekudeals:strange-antiquities
   requires: []
   tiers:
   - 1
@@ -86,6 +98,7 @@ games:
   - steam:1295920
   - fanatical:the-mortuary-assistant
   - isthereanydeal:the-mortuary-assistant
+  - dekudeals:the-mortuary-assistant
   requires: []
   tiers:
   - 1
@@ -96,6 +109,7 @@ games:
   - steam:2119830
   - fanatical:misery
   - isthereanydeal:misery
+  - dekudeals:misery
   requires: []
   tiers:
   - 1
@@ -106,6 +120,7 @@ games:
   - steam:1714900
   - fanatical:first-dwarf
   - isthereanydeal:first-dwarf
+  - dekudeals:first-dwarf
   requires: []
   tiers:
   - 1
@@ -117,6 +132,8 @@ games:
   - fanatical:kuloniku-bowl-up-deluxe-edition
   - unresolved:source:isthereanydeal:16795:kuloniku-bowl-up-deluxe-edition
   - isthereanydeal:kuloniku-bowl-up-deluxe-edition
+  - steam:bundle/67650
+  - dekudeals:kuloniku-bowl-up-deluxe-edition
   requires: []
   tiers:
   - 1
@@ -128,6 +145,8 @@ games:
   - fanatical:bus-simulator-21-next-stop-gold-edition
   - unresolved:source:isthereanydeal:16795:bus-simulator-21-next-stop-gold-edition
   - isthereanydeal:bus-simulator-21-next-stop-gold-edition
+  - steam:bundle/31911
+  - dekudeals:bus-simulator-21-next-stop-gold-edition
   requires: []
   tiers:
   - 1
@@ -139,6 +158,7 @@ games:
   - fanatical:police-simulator-patrol-officers-gold-edition
   - unresolved:source:isthereanydeal:16795:police-simulator-patrol-officers-gold-edition
   - isthereanydeal:police-simulator-patrol-officers-gold-edition
+  - dekudeals:police-simulator-patrol-officers-gold-edition
   requires: []
   tiers:
   - 1
@@ -149,6 +169,7 @@ games:
   - steam:3065030
   - fanatical:the-caribou-trail
   - isthereanydeal:the-caribou-trail
+  - dekudeals:the-caribou-trail
   requires: []
   tiers:
   - 1
@@ -159,6 +180,7 @@ games:
   - steam:2783370
   - fanatical:teeto
   - isthereanydeal:teeto
+  - dekudeals:teeto
   requires: []
   tiers:
   - 1
@@ -169,6 +191,7 @@ games:
   - steam:1656930
   - fanatical:coridden
   - isthereanydeal:coridden
+  - dekudeals:coridden
   requires: []
   tiers:
   - 1
@@ -179,6 +202,7 @@ games:
   - steam:2147380
   - fanatical:silence-of-the-siren
   - isthereanydeal:heroes-of-science-and-fiction
+  - dekudeals:silence-of-the-siren
   requires: []
   tiers:
   - 1
@@ -189,6 +213,7 @@ games:
   - steam:3224540
   - fanatical:voidface
   - isthereanydeal:voidface
+  - dekudeals:voidface
   requires: []
   tiers:
   - 1
@@ -199,6 +224,7 @@ games:
   - steam:2545360
   - fanatical:lonely-mountains-snow-riders
   - isthereanydeal:lonely-mountains-snow-riders
+  - dekudeals:lonely-mountains-snow-riders
   requires: []
   tiers:
   - 1
@@ -209,6 +235,7 @@ games:
   - steam:1350200
   - fanatical:immortality
   - isthereanydeal:immortality
+  - dekudeals:immortality
   requires: []
   tiers:
   - 1
@@ -219,6 +246,7 @@ games:
   - steam:3590560
   - fanatical:nutmeg-a-nostalgic-deckbuilding-football-manager
   - isthereanydeal:nutmeg-a-nostalgic-deckbuilding-football-manager
+  - dekudeals:nutmeg-a-retro-football-management-game
   requires: []
   tiers:
   - 1
@@ -229,6 +257,7 @@ games:
   - steam:334540
   - fanatical:vox-machinae
   - isthereanydeal:vox-machinae
+  - dekudeals:vox-machinae
   requires: []
   tiers:
   - 1

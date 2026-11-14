@@ -1,0 +1,94 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Humble Choice - November 2026
+tiers:
+- rank: 1
+  name: €12,99
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/humble-choice-november-2026
+- name: Humble bundle
+  url: https://humblebundleinc.sjv.io/c/5782768/2059850/25796?u=https%3A%2F%2Fwww.humblebundle.com%2Fmembership%2Fnovember-2026
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/humble-choice-november-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/humble-choice-november-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: 'Yakuza 6: The Song of Life'
+  ids:
+  - steam:1388590
+  - dekudeals:yakuza-6-the-song-of-life
+  requires: []
+  tiers:
+  - 1
+- name: 'Squeakross: Home Squeak Home'
+  ids:
+  - steam:2871440
+  - dekudeals:squeakross-home-squeak-home
+  requires: []
+  tiers:
+  - 1
+- name: Space Haven
+  ids:
+  - steam:979110
+  - dekudeals:space-haven
+  requires: []
+  tiers:
+  - 1
+- name: 'Crisol: Theater of Idols'
+  ids:
+  - steam:1790930
+  - dekudeals:crisol-theater-of-idols
+  requires: []
+  tiers:
+  - 1
+- name: 'Mafia: The Old Country'
+  ids:
+  - steam:1941540
+  - dekudeals:mafia-the-old-country
+  requires: []
+  tiers:
+  - 1
+- name: 'Mafia: The Old Country - Gatto Nero Pack'
+  ids:
+  - steam:3269270
+  - dekudeals:mafia-the-old-country-gatto-nero-pack
+  requires: []
+  tiers:
+  - 1
+- name: 'Mafia: The Old Country - Padrino Pack'
+  ids:
+  - steam:3269260
+  - dekudeals:mafia-the-old-country-padrino-pack
+  requires: []
+  tiers:
+  - 1
+- name: 'SHINOBI: Art of Vengeance'
+  ids:
+  - steam:2361770
+  - dekudeals:shinobi-art-of-vengeance
+  requires: []
+  tiers:
+  - 1
+- name: DYSMANTLE
+  ids:
+  - steam:846770
+  - dekudeals:dysmantle
+  requires: []
+  tiers:
+  - 1
+- name: The Outer Worlds 2
+  ids:
+  - steam:1449110
+  - dekudeals:the-outer-worlds-2
+  requires: []
+  tiers:
+  - 1
+- name: Check In, Please
+  ids:
+  - dekudeals:check-in-please
+  requires: []
+  tiers:
+  - 1

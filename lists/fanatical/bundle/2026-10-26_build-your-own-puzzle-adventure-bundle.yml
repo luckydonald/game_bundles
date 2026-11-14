@@ -24,15 +24,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16710/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16710/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-puzzle-adventure-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-puzzle-adventure-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-puzzle-adventure-bundle/source.json
 crawlers:
 - fanatical
 - isthereanydeal
+- dekudeals
 games:
 - name: Feline Forensics and the Meowseum Mystery
   ids:
   - steam:2945150
   - fanatical:feline-forensics-and-the-meowseum-mystery
   - isthereanydeal:feline-forensics-and-the-meowseum-mystery
+  - dekudeals:feline-forensics-and-the-meowseum-mystery
   requires: []
   tiers:
   - 1
@@ -43,6 +51,7 @@ games:
   - steam:5028390
   - fanatical:too-many-toys
   - isthereanydeal:too-many-toys
+  - dekudeals:too-many-toys
   requires: []
   tiers:
   - 1
@@ -53,6 +62,7 @@ games:
   - steam:2658470
   - fanatical:is-this-game-trying-to-kill-me
   - isthereanydeal:is-this-game-trying-to-kill-me
+  - dekudeals:is-this-game-trying-to-kill-me
   requires: []
   tiers:
   - 1
@@ -64,6 +74,8 @@ games:
   - fanatical:mewseum-collection
   - unresolved:source:isthereanydeal:16710:mewseum-collection
   - isthereanydeal:mewseum-collection
+  - steam:bundle/70316
+  - dekudeals:mewseum-collection
   requires: []
   tiers:
   - 1
@@ -74,6 +86,7 @@ games:
   - steam:2000210
   - fanatical:mythwrecked-ambrosia-island
   - isthereanydeal:mythwrecked-ambrosia-island
+  - dekudeals:mythwrecked-ambrosia-island
   requires: []
   tiers:
   - 1
@@ -84,6 +97,7 @@ games:
   - steam:2833640
   - fanatical:pyramids-and-aliens-escape-room
   - isthereanydeal:pyramids-and-aliens-escape-room
+  - dekudeals:pyramids-and-aliens-escape-room
   requires: []
   tiers:
   - 1
@@ -94,6 +108,7 @@ games:
   - steam:1049410
   - fanatical:superliminal
   - isthereanydeal:superliminal
+  - dekudeals:superliminal
   requires: []
   tiers:
   - 1
@@ -105,6 +120,7 @@ games:
   - fanatical:escape-academy-deluxe-edition
   - unresolved:source:isthereanydeal:16710:escape-academy-deluxe-edition
   - isthereanydeal:escape-academy-deluxe-edition
+  - dekudeals:escape-academy-deluxe-edition
   requires: []
   tiers:
   - 1
@@ -115,6 +131,7 @@ games:
   - steam:1328840
   - fanatical:lost-in-play
   - isthereanydeal:lost-in-play
+  - dekudeals:lost-in-play-switch
   requires: []
   tiers:
   - 1
@@ -126,6 +143,7 @@ games:
   - fanatical:logic-town-complete-edition
   - unresolved:source:isthereanydeal:16710:logic-town-complete-edition
   - isthereanydeal:logic-town-complete-edition
+  - dekudeals:complete-edition-kcnxymxnrv
   requires: []
   tiers:
   - 1
@@ -137,6 +155,7 @@ games:
   - fanatical:puzzles-triple-pack
   - unresolved:source:isthereanydeal:16710:puzzles-triple-pack
   - isthereanydeal:puzzles-triple-pack
+  - dekudeals:puzzles-triple-pack
   requires: []
   tiers:
   - 1
@@ -158,6 +177,7 @@ games:
   - steam:1425350
   - fanatical:botany-manor
   - isthereanydeal:botany-manor
+  - dekudeals:botany-manor-switch
   requires: []
   tiers:
   - 1
@@ -168,6 +188,7 @@ games:
   - steam:3783210
   - fanatical:60-minutes-to-extinction-escape-room
   - isthereanydeal:60-minutes-to-extinction-escape-room
+  - dekudeals:60-minutes-to-extinction-escape-room
   requires: []
   tiers:
   - 1
@@ -178,6 +199,7 @@ games:
   - steam:1302240
   - fanatical:labyrinthine
   - isthereanydeal:labyrinthine
+  - dekudeals:labyrinthine
   requires: []
   tiers:
   - 1
@@ -188,6 +210,7 @@ games:
   - steam:2292650
   - fanatical:escape-from-mystwood-mansion
   - isthereanydeal:escape-from-mystwood-mansion
+  - dekudeals:escape-from-mystwood-mansion
   requires: []
   tiers:
   - 1
@@ -198,6 +221,7 @@ games:
   - steam:1952690
   - fanatical:bytebond
   - isthereanydeal:bytebond
+  - dekudeals:bytebond
   requires: []
   tiers:
   - 1
@@ -208,6 +232,7 @@ games:
   - steam:865360
   - fanatical:we-were-here-together
   - isthereanydeal:we-were-here-together
+  - dekudeals:we-were-here-together
   requires: []
   tiers:
   - 1
@@ -219,6 +244,8 @@ games:
   - fanatical:how-2-escape-collection
   - unresolved:source:isthereanydeal:16710:how-2-escape-collection
   - isthereanydeal:how-2-escape-collection
+  - steam:bundle/53879
+  - dekudeals:how-2-escape-collection
   requires: []
   tiers:
   - 1

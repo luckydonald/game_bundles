@@ -19,14 +19,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16778/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16778/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/hambles-farming-games-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/hambles-farming-games-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/hambles-farming-games-collection/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Robert on Earth
   ids:
   - steam:3003050
   - isthereanydeal:robert-on-earth
+  - dekudeals:robert-on-earth
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:2127570
   - isthereanydeal:greenhearth-necromancer
+  - dekudeals:greenheart-necromancer
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:1954160
   - isthereanydeal:to-pixelia
+  - dekudeals:to-pixelia
   requires: []
   tiers:
   - 1
@@ -52,6 +62,7 @@ games:
   - unresolved:source:humblebundle:seedsofcalamity
   - steam:1780070
   - isthereanydeal:seeds-of-calamity
+  - dekudeals:pine-lily-village
   requires: []
   tiers:
   - 1
@@ -61,6 +72,7 @@ games:
   - unresolved:source:humblebundle:immortallife
   - steam:1201230
   - isthereanydeal:immortal-life
+  - dekudeals:immortal-life
   requires: []
   tiers:
   - 1
@@ -69,6 +81,7 @@ games:
   ids:
   - steam:787860
   - isthereanydeal:farming-simulator-19
+  - dekudeals:farming-simulator-19
   requires: []
   tiers:
   - 2
@@ -76,6 +89,7 @@ games:
   ids:
   - steam:2230110
   - isthereanydeal:fae-farm
+  - dekudeals:fae-farm-switch
   requires: []
   tiers:
   - 2
@@ -83,6 +97,7 @@ games:
   ids:
   - steam:1125510
   - isthereanydeal:snacko
+  - dekudeals:snacko
   requires: []
   tiers:
   - 2
@@ -90,6 +105,7 @@ games:
   ids:
   - steam:1681600
   - isthereanydeal:cornucopia
+  - dekudeals:cornucopia
   requires: []
   tiers:
   - 2
@@ -97,6 +113,7 @@ games:
   ids:
   - steam:2206350
   - isthereanydeal:farm-manager-world
+  - dekudeals:farm-manager-world
   requires: []
   tiers:
   - 2
@@ -104,6 +121,7 @@ games:
   ids:
   - steam:1967820
   - isthereanydeal:border-town
+  - dekudeals:border-town
   requires: []
   tiers:
   - 2

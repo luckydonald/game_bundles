@@ -17,15 +17,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16740/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16740/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/frightfest-ripper-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/frightfest-ripper-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/frightfest-ripper-bundle/source.json
 crawlers:
 - fanatical
 - isthereanydeal
+- dekudeals
 games:
 - name: '[HERROR] Gas Station Case'
   ids:
   - steam:3902800
   - fanatical:herror-gas-station-case
   - isthereanydeal:herror-gas-station-case
+  - dekudeals:herror-gas-station-case
   requires: []
   tiers:
   - 1
@@ -34,6 +42,7 @@ games:
   - steam:3648730
   - fanatical:blood-vial
   - isthereanydeal:blood-vial
+  - dekudeals:blood-vial
   requires: []
   tiers:
   - 1
@@ -42,6 +51,7 @@ games:
   - steam:2512560
   - fanatical:butchers-creek
   - isthereanydeal:butchers-creek
+  - dekudeals:butchers-creek
   requires: []
   tiers:
   - 1
@@ -50,6 +60,7 @@ games:
   - steam:3588490
   - fanatical:bogos-binted
   - isthereanydeal:bogos-binted
+  - dekudeals:bogos-binted
   requires: []
   tiers:
   - 1
@@ -58,6 +69,7 @@ games:
   - steam:3979350
   - fanatical:butcherman
   - isthereanydeal:butcherman
+  - dekudeals:butcherman
   requires: []
   tiers:
   - 1
@@ -66,6 +78,7 @@ games:
   - steam:3985060
   - fanatical:flash-and-die
   - isthereanydeal:flash-and-die
+  - dekudeals:flash-and-die
   requires: []
   tiers:
   - 1
@@ -74,6 +87,7 @@ games:
   - steam:3498650
   - fanatical:cut-that-wire
   - isthereanydeal:cut-that-wire
+  - dekudeals:cut-that-wire
   requires: []
   tiers:
   - 1
@@ -82,6 +96,7 @@ games:
   - steam:2822980
   - fanatical:arsonate
   - isthereanydeal:arsonate
+  - dekudeals:arsonate
   requires: []
   tiers:
   - 1
@@ -90,6 +105,7 @@ games:
   - steam:1647310
   - fanatical:trench-lord-eastern-front
   - isthereanydeal:trench-lord-eastern-front
+  - dekudeals:the-patriotic-war
   requires: []
   tiers:
   - 1
@@ -98,6 +114,7 @@ games:
   - steam:2794610
   - fanatical:massacre-at-the-mirage
   - isthereanydeal:massacre-at-the-mirage
+  - dekudeals:massacre-at-the-mirage
   requires: []
   tiers:
   - 1
@@ -106,6 +123,7 @@ games:
   - steam:3011030
   - fanatical:no-skin
   - isthereanydeal:no-skin
+  - dekudeals:no-skin
   requires: []
   tiers:
   - 1
@@ -114,6 +132,7 @@ games:
   - steam:2587770
   - fanatical:the-stalked
   - isthereanydeal:the-stalked
+  - dekudeals:the-stalked
   requires: []
   tiers:
   - 1
@@ -122,6 +141,7 @@ games:
   - steam:2976490
   - fanatical:the-stalked-2
   - isthereanydeal:the-stalked-2
+  - dekudeals:the-stalked-2
   requires: []
   tiers:
   - 1
@@ -130,6 +150,7 @@ games:
   - steam:3565980
   - fanatical:the-stalked-3
   - isthereanydeal:the-stalked-3
+  - dekudeals:the-stalked-3
   requires: []
   tiers:
   - 1
@@ -138,6 +159,7 @@ games:
   - steam:2608210
   - fanatical:bloodkill
   - isthereanydeal:bloodkill
+  - dekudeals:bloodkill
   requires: []
   tiers:
   - 1
@@ -146,6 +168,7 @@ games:
   - steam:3547010
   - fanatical:occlude
   - isthereanydeal:occlude
+  - dekudeals:occlude
   requires: []
   tiers:
   - 1
@@ -154,6 +177,7 @@ games:
   - steam:3992580
   - fanatical:7-nights-with-vroombi
   - isthereanydeal:7-nights-with-vroombi
+  - dekudeals:7-nights-with-vroombi
   requires: []
   tiers:
   - 1
@@ -162,6 +186,7 @@ games:
   - steam:1907230
   - fanatical:an-uninvited-guest
   - isthereanydeal:an-uninvited-guest
+  - dekudeals:an-uninvited-guest
   requires: []
   tiers:
   - 1

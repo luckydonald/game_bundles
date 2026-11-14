@@ -19,14 +19,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16731/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16731/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/horror-trifectas
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/horror-trifectas/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/horror-trifectas/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Bendy and the Dark Revival
   ids:
   - steam:1063660
   - isthereanydeal:bendy-and-the-dark-revival
+  - dekudeals:bendy-and-the-dark-revival
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:622650
   - isthereanydeal:bendy-and-the-ink-machine
+  - dekudeals:bendy-and-the-ink-machine
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:935580
   - isthereanydeal:true-fear-forsaken-souls-part-2
+  - dekudeals:true-fear-forsaken-souls-part-2
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:440420
   - isthereanydeal:true-fear-forsaken-souls
+  - dekudeals:true-fear-forsaken-souls-part-1
   group:
     id: truefear_forsakensouls_part1
     name: 'True Fear: Forsaken Souls'
@@ -73,6 +84,7 @@ games:
   ids:
   - steam:418950
   - isthereanydeal:dreadout-keepers-of-the-dark
+  - dekudeals:dreadout-keepers-of-the-dark
   requires: []
   tiers:
   - 1
@@ -81,6 +93,7 @@ games:
   ids:
   - steam:269790
   - isthereanydeal:dreadout
+  - dekudeals:dreadout
   requires: []
   tiers:
   - 1
@@ -89,6 +102,7 @@ games:
   ids:
   - steam:1045720
   - isthereanydeal:the-coma-2-vicious-sisters
+  - dekudeals:the-coma-2-vicious-sisters
   requires: []
   tiers:
   - 1
@@ -97,6 +111,7 @@ games:
   ids:
   - steam:600090
   - isthereanydeal:the-coma-recut
+  - dekudeals:the-coma-recut
   requires: []
   tiers:
   - 1
@@ -105,6 +120,7 @@ games:
   ids:
   - steam:21100
   - isthereanydeal:fear-3
+  - dekudeals:fear-3
   requires: []
   tiers:
   - 2
@@ -112,6 +128,7 @@ games:
   ids:
   - steam:3232610
   - isthereanydeal:bendy-lone-wolf
+  - dekudeals:bendy-lone-wolf
   requires: []
   tiers:
   - 2
@@ -119,6 +136,7 @@ games:
   ids:
   - steam:945710
   - isthereanydeal:dreadout-2
+  - dekudeals:dreadout-2
   requires: []
   tiers:
   - 2
@@ -126,6 +144,7 @@ games:
   ids:
   - steam:3168310
   - isthereanydeal:true-fear-forsaken-souls-part-3
+  - dekudeals:true-fear-forsaken-souls-part-3
   requires: []
   tiers:
   - 2
@@ -133,6 +152,7 @@ games:
   ids:
   - steam:1781890
   - isthereanydeal:the-coma-2b-catacomb
+  - dekudeals:the-coma-2b-catacomb
   requires: []
   tiers:
   - 2
@@ -140,6 +160,7 @@ games:
   ids:
   - steam:16450
   - isthereanydeal:fear-2-project-origin
+  - dekudeals:f-e-a-r-2-project-origin
   requires: []
   tiers:
   - 2
@@ -147,12 +168,14 @@ games:
   ids:
   - steam:16465
   - isthereanydeal:fear-2-reborn
+  - dekudeals:fear-2-reborn
   requires: []
   tiers:
   - 2
 - name: 'F.E.A.R.: Extraction Point (F.E.A.R.)'
   ids:
   - steam:21110
+  - dekudeals:fear
   group:
     id: fear
     name: 'FEAR: Ultimate Shooter Edition'

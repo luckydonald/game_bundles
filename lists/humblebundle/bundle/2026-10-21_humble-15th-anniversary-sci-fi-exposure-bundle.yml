@@ -1,0 +1,87 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Humble 15th Anniversary - Sci-Fi Exposure Bundle
+tiers:
+- rank: 1
+  name: €10,56
+- rank: 2
+  name: €15,85
+- rank: 3
+  name: €26,42
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/humble-15th-anniversary-sci-fi-exposure-bundle
+- name: Humble bundle
+  url: https://humblebundleinc.sjv.io/c/5782768/2059850/25796?u=https%3A%2F%2Fwww.humblebundle.com%2Fgames%2F15th-anniversary-scifi-exposure
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/humble-15th-anniversary-sci-fi-exposure-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/humble-15th-anniversary-sci-fi-exposure-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: Ghostrunner 2
+  ids:
+  - steam:2144740
+  - dekudeals:ghostrunner-ii
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ghostrunner
+  ids:
+  - steam:1139900
+  - dekudeals:ghostrunner
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'RoboCop: Rogue City - Collection'
+  ids:
+  - steam:bundle/61116
+  - dekudeals:robocop-complete-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Crysis 3 Remastered
+  ids:
+  - steam:2096610
+  - dekudeals:crysis-3-remastered
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Crysis Remastered
+  ids:
+  - steam:1715130
+  - dekudeals:crysis-remastered
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Crysis 2 Remastered
+  ids:
+  - steam:2096600
+  - dekudeals:crysis-2-remastered
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Xenonauts 2
+  ids:
+  - steam:538030
+  - dekudeals:xenonauts-2
+  requires: []
+  tiers:
+  - 3
+- name: Marathon
+  ids:
+  - steam:3065800
+  - dekudeals:marathon
+  requires: []
+  tiers:
+  - 3

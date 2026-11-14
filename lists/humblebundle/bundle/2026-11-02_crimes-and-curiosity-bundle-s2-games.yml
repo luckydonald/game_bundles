@@ -21,15 +21,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16765/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16765/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/crimes-and-curiosity-bundle-by-s2-games
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/crimes-and-curiosity-bundle-by-s2-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/crimes-and-curiosity-bundle-by-s2-games/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: 'Frog Detective 3: Corruption at Cowboy County'
   ids:
   - unresolved:source:humblebundle:frogdetective3_corruptionatcowboycounty
   - steam:1171320
   - isthereanydeal:frog-detective-3-corruption-at-cowboy-county
+  - dekudeals:frog-detective-3-corruption-at-cowboy-county
   requires: []
   tiers:
   - 1
@@ -40,6 +48,7 @@ games:
   - unresolved:source:humblebundle:frogdetective2_thecaseoftheinvisiblewizard
   - steam:1047220
   - isthereanydeal:frog-detective-2-the-case-of-the-invisible-wizard
+  - dekudeals:frog-detective-2-the-case-of-the-invisible-wizard
   requires: []
   tiers:
   - 1
@@ -50,6 +59,7 @@ games:
   - unresolved:source:humblebundle:frogdetective1_thehauntedisland
   - steam:963000
   - isthereanydeal:frog-detective-1-the-haunted-island
+  - dekudeals:frog-detective-1-the-haunted-island
   requires: []
   tiers:
   - 1
@@ -60,6 +70,7 @@ games:
   - unresolved:source:humblebundle:puppethouse
   - steam:1707710
   - isthereanydeal:puppet-house
+  - dekudeals:puppet-house
   requires: []
   tiers:
   - 1
@@ -70,6 +81,7 @@ games:
   - unresolved:source:humblebundle:unboxingthecryptickiller
   - steam:2069040
   - isthereanydeal:unboxing-the-cryptic-killer
+  - dekudeals:unboxing-the-cryptic-killer
   requires: []
   tiers:
   - 1
@@ -79,6 +91,7 @@ games:
   ids:
   - steam:1155970
   - isthereanydeal:roadwarden
+  - dekudeals:roadwarden
   requires: []
   tiers:
   - 1
@@ -88,6 +101,7 @@ games:
   ids:
   - steam:949480
   - isthereanydeal:brok-the-investigator
+  - dekudeals:brok-the-investigator
   requires: []
   tiers:
   - 2
@@ -97,6 +111,7 @@ games:
   - unresolved:source:humblebundle:agathachristie___murderontheorientexpress
   - steam:1904790
   - isthereanydeal:agatha-christie-murder-on-the-orient-express
+  - dekudeals:agatha-christie-murder-on-the-orient-express
   requires: []
   tiers:
   - 2
@@ -106,6 +121,7 @@ games:
   - unresolved:source:humblebundle:brokensword___shadowofthetemplars_reforged
   - steam:2544110
   - isthereanydeal:broken-sword-shadow-of-the-templars-reforged
+  - dekudeals:broken-sword-shadow-of-the-templars-reforged
   requires: []
   tiers:
   - 3
@@ -114,6 +130,7 @@ games:
   - unresolved:source:humblebundle:gamedec___definitiveedition
   - steam:917720
   - isthereanydeal:gamedec-definitive-edition
+  - dekudeals:gamedec-switch
   requires: []
   tiers:
   - 3
@@ -122,6 +139,7 @@ games:
   - unresolved:source:humblebundle:thedarkestfiles
   - steam:2058730
   - isthereanydeal:the-darkest-files
+  - dekudeals:the-darkest-files
   requires: []
   tiers:
   - 3
@@ -130,6 +148,7 @@ games:
   - unresolved:source:humblebundle:mercuryabbey
   - steam:1689080
   - isthereanydeal:mercury-abbey
+  - dekudeals:mercury-abbey
   requires: []
   tiers:
   - 3
@@ -138,6 +157,7 @@ games:
   - unresolved:source:humblebundle:alexhill_whispersatwhiteoakinn
   - steam:2859200
   - isthereanydeal:alex-hill-whispers-at-white-oak-inn
+  - dekudeals:alex-hill-whispers-at-white-oak-inn
   requires: []
   tiers:
   - 3

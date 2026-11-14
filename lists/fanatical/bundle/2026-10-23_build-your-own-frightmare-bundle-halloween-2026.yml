@@ -1,0 +1,149 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Frightmare Bundle (Halloween 2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 4
+  pick_quota: 4
+- rank: 3
+  name: pick 6
+  pick_quota: 6
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-frightmare-bundle-halloween-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fbuild-your-own-frightmare-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-frightmare-bundle-halloween-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-frightmare-bundle-halloween-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Feed The Pit
+  ids:
+  - steam:3278290
+  - dekudeals:feed-the-pit
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Prey: Digital Deluxe Edition'
+  ids:
+  - dekudeals:prey-digital-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: RUNT
+  ids:
+  - steam:4141350
+  - dekudeals:runt
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Lacerator
+  ids:
+  - steam:2339330
+  - dekudeals:the-lacerator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Amanda the Adventurer 3
+  ids:
+  - steam:3657210
+  - dekudeals:amanda-the-adventurer-3
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Uncanny Tales: The Watcher'
+  ids:
+  - steam:4217690
+  - dekudeals:uncanny-tales-the-watcher
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: TurnVex Horror Collection
+  ids:
+  - dekudeals:turnvex-horror-collection
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Evil Within
+  ids:
+  - steam:268050
+  - dekudeals:the-evil-within
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Evil Within 2
+  ids:
+  - steam:601430
+  - dekudeals:the-evil-within-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: DOOM + DOOM II
+  ids:
+  - steam:2280
+  - dekudeals:doom-plus-doom-ii
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Night Swarm
+  ids:
+  - steam:3668370
+  - dekudeals:night-swarm
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Birds Watching
+  ids:
+  - steam:3979870
+  - dekudeals:birds-watching
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Midnight Swamp
+  ids:
+  - steam:3025310
+  - dekudeals:midnight-swamp
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: You Will Die Here Tonight
+  ids:
+  - steam:1446350
+  - dekudeals:you-will-die-here-tonight
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

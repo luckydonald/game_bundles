@@ -19,14 +19,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16797/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16797/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/generation-zero-complete-bundle-2026
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/generation-zero-complete-bundle-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/generation-zero-complete-bundle-2026/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Generation Zero - FNIX Rising
   ids:
   - steam:1301740
   - isthereanydeal:generation-zero-fnix-rising
+  - dekudeals:generation-zero-fnix-rising
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:2144761
   - isthereanydeal:generation-zero-motorbikes-pack
+  - dekudeals:generation-zero-motorbikes-pack
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:2955520
   - isthereanydeal:generation-zero-heavy-weapons-pack
+  - dekudeals:generation-zero-heavy-weapons-pack
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:2591100
   - isthereanydeal:generation-zero-advanced-intelligence-cosmetics-pack
+  - dekudeals:generation-zero-advanced-intelligence-cosmetics-pack
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:2009530
   - isthereanydeal:generation-zero-tactical-equipment-pack
+  - dekudeals:generation-zero-tactical-equipment-pack
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:1157550
   - isthereanydeal:generation-zero-alpine-unrest
+  - dekudeals:generation-zero-alpine-unrest
   requires: []
   tiers:
   - 1
@@ -75,6 +88,7 @@ games:
   ids:
   - steam:2473770
   - isthereanydeal:generation-zero-companion-accessories-pack
+  - dekudeals:generation-zero-companion-accessories-pack
   requires: []
   tiers:
   - 1
@@ -83,6 +97,7 @@ games:
   ids:
   - steam:2689180
   - isthereanydeal:generation-zero-reinforced-flakmoped-pack
+  - dekudeals:generation-zero-reinforced-flakmoped-pack
   requires: []
   tiers:
   - 1
@@ -91,6 +106,7 @@ games:
   ids:
   - steam:1610690
   - isthereanydeal:generation-zero-us-weapons-pack-2
+  - dekudeals:generation-zero-us-weapons-pack-2
   requires: []
   tiers:
   - 1
@@ -99,6 +115,7 @@ games:
   ids:
   - steam:2200740
   - isthereanydeal:generation-zero-eastern-european-weapons-pack
+  - dekudeals:generation-zero-eastern-european-weapons-pack
   requires: []
   tiers:
   - 1
@@ -107,6 +124,7 @@ games:
   ids:
   - steam:704270
   - isthereanydeal:generation-zero
+  - dekudeals:generation-zero
   requires: []
   tiers:
   - 1
@@ -115,6 +133,7 @@ games:
   ids:
   - steam:2144760
   - isthereanydeal:generation-zero-camo-weapon-skins-pack
+  - dekudeals:generation-zero-camo-weapon-skins-pack
   requires: []
   tiers:
   - 2
@@ -122,6 +141,7 @@ games:
   ids:
   - steam:1850670
   - isthereanydeal:generation-zero-base-support-pack
+  - dekudeals:generation-zero-base-support-pack
   requires: []
   tiers:
   - 2
@@ -129,6 +149,7 @@ games:
   ids:
   - steam:1771050
   - isthereanydeal:generation-zero-resistance-weapons-pack
+  - dekudeals:generation-zero-resistance-weapons-pack
   requires: []
   tiers:
   - 2
@@ -136,6 +157,7 @@ games:
   ids:
   - steam:1450340
   - isthereanydeal:generation-zero-us-weapons-pack
+  - dekudeals:generation-zero-us-weapons-pack
   requires: []
   tiers:
   - 2
@@ -143,6 +165,7 @@ games:
   ids:
   - steam:1610720
   - isthereanydeal:generation-zero-base-defense-pack
+  - dekudeals:generation-zero-base-defense-pack
   requires: []
   tiers:
   - 2
@@ -150,6 +173,7 @@ games:
   ids:
   - steam:1580920
   - isthereanydeal:generation-zero-soviet-weapons-pack
+  - dekudeals:generation-zero-soviet-weapons-pack
   requires: []
   tiers:
   - 2
@@ -157,6 +181,7 @@ games:
   ids:
   - steam:1062420
   - isthereanydeal:generation-zero-schweet-vanity-pack
+  - dekudeals:generation-zero-schweet-vanity-pack
   requires: []
   tiers:
   - 2
@@ -164,6 +189,7 @@ games:
   ids:
   - steam:2334430
   - isthereanydeal:generation-zero-tactical-equipment-pack-2
+  - dekudeals:generation-zero-tactical-equipment-pack-2
   requires: []
   tiers:
   - 2

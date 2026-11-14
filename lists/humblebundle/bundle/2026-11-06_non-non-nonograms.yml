@@ -14,83 +14,103 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16784/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16784/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/non-non-nonograms
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/non-non-nonograms/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/non-non-nonograms/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Homgard
   ids:
   - steam:4287570
   - isthereanydeal:homgard
+  - dekudeals:homgard
   requires: []
 - name: Nekograms
   ids:
   - steam:2478120
   - isthereanydeal:nekograms
+  - dekudeals:nekograms
   requires: []
 - name: Piczle Cross Adventure
   ids:
   - unresolved:source:humblebundle:piczlecrossadventure
   - steam:1215320
   - isthereanydeal:piczle-cross-adventure
+  - dekudeals:piczle-cross-adventure
   requires: []
 - name: Pixel Puzzle Makeout League
   ids:
   - unresolved:source:humblebundle:pixelpuzzlemakeoutleague
   - steam:1131800
   - isthereanydeal:pixel-puzzle-makeout-league
+  - dekudeals:pixel-puzzle-makeout-league
   requires: []
 - name: SherloCAT Holmes Nonogram
   ids:
   - unresolved:source:humblebundle:sherlocatholmesnonogram
   - steam:2728040
   - isthereanydeal:sherlocat-holmes-nonogram
+  - dekudeals:sherlocat-holmes-nonogram
   requires: []
 - name: Paint it Back
   ids:
   - unresolved:source:humblebundle:paintitback
   - steam:385250
   - isthereanydeal:paint-it-back
+  - dekudeals:paint-it-back
   requires: []
 - name: Polimines
   ids:
   - unresolved:source:humblebundle:polimines
   - steam:1892790
   - isthereanydeal:polimines
+  - dekudeals:polimines
   requires: []
 - name: Polimines 2
   ids:
   - unresolved:source:humblebundle:polimines2
   - steam:2328730
   - isthereanydeal:polimines-2
+  - dekudeals:polimines-2
   requires: []
 - name: Charm Studies
   ids:
   - unresolved:source:humblebundle:charmstudies
   - steam:4541930
   - isthereanydeal:charm-studies
+  - dekudeals:charm-studies
   requires: []
 - name: Voxelgram
   ids:
   - unresolved:source:humblebundle:voxelgram
   - steam:1158470
   - isthereanydeal:voxelgram
+  - dekudeals:voxelgram
   requires: []
 - name: Mega Mosaic
   ids:
   - unresolved:source:humblebundle:megamosaic
   - steam:2915950
   - isthereanydeal:mega-mosaic
+  - dekudeals:mega-mosaic
   requires: []
 - name: Tents and Trees
   ids:
   - unresolved:source:humblebundle:tentsandtrees
   - steam:2310810
   - isthereanydeal:tents-and-trees
+  - dekudeals:tents-and-trees
   requires: []
 - name: LYNE
   ids:
   - unresolved:source:humblebundle:lyne
   - steam:266010
   - isthereanydeal:lyne
+  - dekudeals:lyne
   requires: []

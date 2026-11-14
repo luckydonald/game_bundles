@@ -24,15 +24,23 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16793/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16793/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/build-your-own-idler-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/build-your-own-idler-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/build-your-own-idler-bundle/source.json
 crawlers:
 - fanatical
 - isthereanydeal
+- dekudeals
 games:
 - name: Budgie's Bug Shop
   ids:
   - steam:4279120
   - fanatical:budgies-bug-shop
   - isthereanydeal:budgies-bug-shop
+  - dekudeals:budgies-bug-shop
   requires: []
   tiers:
   - 1
@@ -43,6 +51,7 @@ games:
   - steam:4247760
   - fanatical:angel-clicker
   - isthereanydeal:angel-clicker
+  - dekudeals:angel-clicker
   requires: []
   tiers:
   - 1
@@ -53,6 +62,7 @@ games:
   - steam:2963540
   - fanatical:idle-waters
   - isthereanydeal:idle-waters
+  - dekudeals:idle-waters
   requires: []
   tiers:
   - 1
@@ -64,6 +74,7 @@ games:
   - fanatical:focus-grove-deluxe-edition
   - steam:4030830
   - isthereanydeal:focus-grove-deluxe-edition
+  - dekudeals:focus-grove-deluxe-edition
   requires: []
   tiers:
   - 1
@@ -74,6 +85,7 @@ games:
   - steam:4038320
   - fanatical:this-aint-even-poker-ya-joker
   - isthereanydeal:this-ain-t-even-poker-ya-joker
+  - dekudeals:this-ain-t-even-poker-ya-joker
   requires: []
   tiers:
   - 1
@@ -84,6 +96,7 @@ games:
   - steam:3314340
   - fanatical:burgies-cozy-kitchen
   - isthereanydeal:burgies-cozy-kitchen
+  - dekudeals:streamers-cozy-restaurant
   requires: []
   tiers:
   - 1
@@ -94,6 +107,7 @@ games:
   - steam:3505770
   - fanatical:kin-and-quarry
   - isthereanydeal:kin-and-quarry
+  - dekudeals:kin-and-quarry
   requires: []
   tiers:
   - 1
@@ -104,6 +118,7 @@ games:
   - steam:2237970
   - fanatical:outpath
   - isthereanydeal:outpath
+  - dekudeals:outpath
   requires: []
   tiers:
   - 1
@@ -114,6 +129,7 @@ games:
   - steam:4356780
   - fanatical:screen-stocks
   - isthereanydeal:screen-stocks
+  - dekudeals:screen-stocks
   requires: []
   tiers:
   - 1
@@ -124,6 +140,7 @@ games:
   - steam:4628250
   - fanatical:how-to-grow-your-sausage
   - isthereanydeal:how-to-grow-your-sausage
+  - dekudeals:how-to-grow-your-sausage
   requires: []
   tiers:
   - 1
@@ -133,6 +150,7 @@ games:
   ids:
   - steam:3751430
   - fanatical:pocket-gecko
+  - dekudeals:pocket-gecko
   requires: []
   tiers:
   - 1
@@ -143,6 +161,7 @@ games:
   - steam:3488840
   - fanatical:cats-are-money
   - isthereanydeal:cats-are-money
+  - dekudeals:cats-are-money
   requires: []
   tiers:
   - 1
@@ -153,6 +172,7 @@ games:
   - steam:3469750
   - fanatical:military-incremental-complex
   - isthereanydeal:military-incremental-complex
+  - dekudeals:military-incremental-complex
   requires: []
   tiers:
   - 1
@@ -163,6 +183,7 @@ games:
   - steam:3416070
   - fanatical:ropukas-idle-island
   - isthereanydeal:ropukas-idle-island
+  - dekudeals:ropukas-idle-island
   requires: []
   tiers:
   - 1
@@ -173,6 +194,7 @@ games:
   - steam:3673060
   - fanatical:how-to-train-your-cock
   - isthereanydeal:how-to-train-your-cock
+  - dekudeals:how-to-train-your-cock
   requires: []
   tiers:
   - 1
@@ -183,6 +205,7 @@ games:
   - steam:1091920
   - fanatical:plantera-2-golden-acorn
   - isthereanydeal:plantera-2-golden-acorn
+  - dekudeals:plantera-2-golden-acorn
   requires: []
   tiers:
   - 1
@@ -193,6 +216,7 @@ games:
   - steam:3720880
   - fanatical:aquaville
   - isthereanydeal:aquaville
+  - dekudeals:aquaville
   requires: []
   tiers:
   - 1
