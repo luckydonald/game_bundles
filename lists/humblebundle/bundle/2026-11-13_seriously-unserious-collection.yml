@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Seriously Unserious Collection
+tiers:
+- rank: 1
+  name: 6 Item Bundle
+- rank: 2
+  name: 10 Item Bundle
+- rank: 3
+  name: Entire 13 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/seriously-unserious-collection
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-13_seriously-unserious-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-13_seriously-unserious-collection/source.json
+crawlers:
+- humblebundle
+games:
+- name: Pilgrims
+  ids:
+  - steam:1049280
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: THE CORRIDOR
+  ids:
+  - steam:1347030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bug Academy
+  ids:
+  - steam:881040
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mr Toilet
+  ids:
+  - steam:3930150
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Nerd Simulator
+  ids:
+  - steam:3128220
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Comedy Night
+  ids:
+  - steam:665360
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Barn Finders
+  ids:
+  - steam:991170
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Squirrel Stapler
+  ids:
+  - steam:2535830
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Ghost Keeper
+  ids:
+  - steam:2708880
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Astrologaster
+  ids:
+  - steam:742520
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Journey To The Savage Planet
+  ids:
+  - steam:973810
+  requires: []
+  tiers:
+  - 3
+- name: Who's Your Daddy?!
+  ids:
+  - steam:427730
+  requires: []
+  tiers:
+  - 3
+- name: Trombone Champ
+  ids:
+  - steam:1059990
+  requires: []
+  tiers:
+  - 3
