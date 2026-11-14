@@ -13,13 +13,21 @@ references:
   path: ../../../archives/dekudeals/bundle/humble-choice-november-2026/metadata.json
 - name: Crawl source
   path: ../../../archives/dekudeals/bundle/humble-choice-november-2026/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16767/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16767/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16767/source.json
 crawlers:
 - dekudeals
+- isthereanydeal
 games:
 - name: 'Yakuza 6: The Song of Life'
   ids:
   - steam:1388590
   - dekudeals:yakuza-6-the-song-of-life
+  - isthereanydeal:yakuza-6-the-song-of-life
   requires: []
   tiers:
   - 1
@@ -27,6 +35,7 @@ games:
   ids:
   - steam:2871440
   - dekudeals:squeakross-home-squeak-home
+  - isthereanydeal:squeakross-home-squeak-home
   requires: []
   tiers:
   - 1
@@ -34,6 +43,7 @@ games:
   ids:
   - steam:979110
   - dekudeals:space-haven
+  - isthereanydeal:space-haven
   requires: []
   tiers:
   - 1
@@ -41,6 +51,7 @@ games:
   ids:
   - steam:1790930
   - dekudeals:crisol-theater-of-idols
+  - isthereanydeal:crisol-theater-of-idols
   requires: []
   tiers:
   - 1
@@ -48,6 +59,7 @@ games:
   ids:
   - steam:1941540
   - dekudeals:mafia-the-old-country
+  - isthereanydeal:mafia-the-old-country
   requires: []
   tiers:
   - 1
@@ -55,6 +67,7 @@ games:
   ids:
   - steam:3269270
   - dekudeals:mafia-the-old-country-gatto-nero-pack
+  - isthereanydeal:mafia-the-old-country-gatto-nero-pack
   requires: []
   tiers:
   - 1
@@ -62,6 +75,7 @@ games:
   ids:
   - steam:3269260
   - dekudeals:mafia-the-old-country-padrino-pack
+  - isthereanydeal:mafia-the-old-country-padrino-pack
   requires: []
   tiers:
   - 1
@@ -69,6 +83,7 @@ games:
   ids:
   - steam:2361770
   - dekudeals:shinobi-art-of-vengeance
+  - isthereanydeal:shinobi-art-of-vengeance
   requires: []
   tiers:
   - 1
@@ -76,6 +91,7 @@ games:
   ids:
   - steam:846770
   - dekudeals:dysmantle
+  - isthereanydeal:dysmantle
   requires: []
   tiers:
   - 1
@@ -83,6 +99,7 @@ games:
   ids:
   - steam:1449110
   - dekudeals:the-outer-worlds-2
+  - isthereanydeal:the-outer-worlds-2
   requires: []
   tiers:
   - 1
