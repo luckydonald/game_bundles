@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Girls Just Wanna Have Guns! Bundle
+tiers:
+- rank: 1
+  name: €15,00
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/girls-just-wanna-have-guns-bundle
+- name: Green Man Gaming Bundles bundle
+  url: https://greenmangaming.sjv.io/c/5782768/1219987/15105?u=https%3A%2F%2Fwww.greenmangamingbundles.com%2Fbundles%2Fgirls-just-wanna-have-guns-bundle%2F
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/girls-just-wanna-have-guns-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/girls-just-wanna-have-guns-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: CONTROL Ultimate Edition
+  ids:
+  - steam:870780
+  - dekudeals:control-ultimate-edition
+  requires: []
+  tiers:
+  - 1
+- name: Skin Deep
+  ids:
+  - steam:301280
+  - dekudeals:skin-deep
+  requires: []
+  tiers:
+  - 1
+- name: Nightmare Reaper
+  ids:
+  - steam:1051690
+  - dekudeals:nightmare-reaper
+  requires: []
+  tiers:
+  - 1
+- name: 'Wanted: Dead'
+  ids:
+  - steam:1981610
+  - dekudeals:wanted-dead
+  requires: []
+  tiers:
+  - 1
+- name: Beyond Sunset
+  ids:
+  - steam:1665260
+  - dekudeals:beyond-sunset
+  requires: []
+  tiers:
+  - 1
+- name: Severed Steel
+  ids:
+  - steam:1227690
+  - dekudeals:severed-steel
+  requires: []
+  tiers:
+  - 1

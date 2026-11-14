@@ -19,14 +19,22 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16787/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16787/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/beholder-10th-anniversary-the-alawar-collection
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/beholder-10th-anniversary-the-alawar-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/beholder-10th-anniversary-the-alawar-collection/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Looking for Aliens
   ids:
   - steam:1733500
   - isthereanydeal:looking-for-aliens
+  - dekudeals:looking-for-aliens
   requires: []
   tiers:
   - 1
@@ -35,6 +43,7 @@ games:
   ids:
   - steam:635200
   - isthereanydeal:distrust
+  - dekudeals:distrust
   requires: []
   tiers:
   - 1
@@ -43,6 +52,7 @@ games:
   ids:
   - steam:2187290
   - isthereanydeal:wall-world
+  - dekudeals:wall-world
   requires: []
   tiers:
   - 1
@@ -51,6 +61,7 @@ games:
   ids:
   - steam:2474860
   - isthereanydeal:wall-world-deep-threat
+  - dekudeals:wall-world-deep-threat
   requires: []
   tiers:
   - 1
@@ -59,6 +70,7 @@ games:
   ids:
   - steam:1570070
   - isthereanydeal:beholder-3
+  - dekudeals:beholder-3
   requires: []
   tiers:
   - 1
@@ -67,6 +79,7 @@ games:
   ids:
   - steam:761620
   - isthereanydeal:beholder-2
+  - dekudeals:beholder-2
   requires: []
   tiers:
   - 1
@@ -75,6 +88,7 @@ games:
   ids:
   - steam:475550
   - isthereanydeal:beholder
+  - dekudeals:beholder
   requires: []
   tiers:
   - 1
@@ -83,6 +97,7 @@ games:
   ids:
   - steam:616950
   - isthereanydeal:beholder-blissful-sleep
+  - dekudeals:beholder-blissful-sleep
   requires: []
   tiers:
   - 1
@@ -91,6 +106,7 @@ games:
   ids:
   - steam:1949190
   - isthereanydeal:necrosmith
+  - dekudeals:necrosmith
   requires: []
   tiers:
   - 1
@@ -99,6 +115,7 @@ games:
   ids:
   - steam:658850
   - isthereanydeal:do-not-feed-the-monkeys
+  - dekudeals:do-not-feed-the-monkeys
   requires: []
   tiers:
   - 1
@@ -107,6 +124,7 @@ games:
   ids:
   - steam:953870
   - isthereanydeal:space-robinson
+  - dekudeals:space-robinson
   requires: []
   tiers:
   - 1
@@ -115,6 +133,7 @@ games:
   ids:
   - steam:1435670
   - isthereanydeal:song-of-farca
+  - dekudeals:song-of-farca
   requires: []
   tiers:
   - 1
@@ -124,6 +143,7 @@ games:
   - unresolved:source:humblebundle:wallworld2
   - steam:3467710
   - isthereanydeal:wall-world-2
+  - dekudeals:wall-world-2
   requires: []
   tiers:
   - 2
@@ -132,6 +152,7 @@ games:
   - unresolved:source:humblebundle:beholder_conductor
   - steam:2825530
   - isthereanydeal:beholder-conductor
+  - dekudeals:beholder-conductor
   requires: []
   tiers:
   - 2
@@ -140,6 +161,7 @@ games:
   - unresolved:source:humblebundle:necrosmith2
   - steam:2277320
   - isthereanydeal:necrosmith-2
+  - dekudeals:necrosmith-2
   requires: []
   tiers:
   - 2
@@ -148,6 +170,7 @@ games:
   - unresolved:source:humblebundle:security51
   - steam:4246860
   - isthereanydeal:security-51
+  - dekudeals:security-51
   requires: []
   tiers:
   - 2
@@ -156,6 +179,7 @@ games:
   - unresolved:source:humblebundle:hauntedlands
   - steam:2980900
   - isthereanydeal:haunted-lands
+  - dekudeals:haunted-lands
   requires: []
   tiers:
   - 2
@@ -163,6 +187,7 @@ games:
   ids:
   - steam:3027930
   - isthereanydeal:karate-survivor
+  - dekudeals:karate-survivor
   requires: []
   tiers:
   - 2
@@ -170,6 +195,7 @@ games:
   ids:
   - steam:2825110
   - isthereanydeal:technotopia
+  - dekudeals:technotopia
   requires: []
   tiers:
   - 2
@@ -177,6 +203,7 @@ games:
   ids:
   - steam:2852980
   - isthereanydeal:necroking
+  - dekudeals:necroking
   requires: []
   tiers:
   - 2
@@ -184,6 +211,7 @@ games:
   ids:
   - steam:2644360
   - isthereanydeal:kingsgrave
+  - dekudeals:kingsgrave
   requires: []
   tiers:
   - 2
@@ -191,6 +219,7 @@ games:
   ids:
   - steam:1585440
   - isthereanydeal:they-always-run
+  - dekudeals:they-always-run
   requires: []
   tiers:
   - 2

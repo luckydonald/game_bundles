@@ -14,37 +14,50 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16789/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16789/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/11-11-singles-day-celebration-of-chinese-gaming
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/11-11-singles-day-celebration-of-chinese-gaming/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/11-11-singles-day-celebration-of-chinese-gaming/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Ascend From Nine Mountains
   ids:
   - steam:3992260
   - isthereanydeal:ascend-from-nine-mountains
+  - dekudeals:ascend-from-nine-mountains
   requires: []
 - name: Murders on the Yangtze River
   ids:
   - steam:1746030
   - isthereanydeal:murders-on-the-yangtze-river
+  - dekudeals:murders-on-the-yangtze-river
   requires: []
 - name: 'Three Kingdom: The Journey'
   ids:
   - steam:1314770
   - isthereanydeal:three-kingdom-the-journey
+  - dekudeals:three-kingdom-the-journey
   requires: []
 - name: Dust to the End
   ids:
   - steam:1074070
   - isthereanydeal:dust-to-the-end
+  - dekudeals:dust-to-the-end
   requires: []
 - name: Roulette Hero
   ids:
   - steam:3371510
   - isthereanydeal:roulette-hero
+  - dekudeals:roulette-hero
   requires: []
 - name: My Lovely Daughter
   ids:
   - steam:580170
   - isthereanydeal:my-lovely-daughter
+  - dekudeals:my-lovely-daughter-yf93sw3n8m
   requires: []

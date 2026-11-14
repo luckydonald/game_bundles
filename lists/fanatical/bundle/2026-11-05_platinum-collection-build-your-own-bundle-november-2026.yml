@@ -1,0 +1,169 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Platinum Collection - Build your own Bundle (November 2026)
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/platinum-collection-build-your-own-bundle-november-2026
+- name: Fanatical bundle
+  url: https://www.awin1.com/cread.php?awinmid=118821&awinaffid=2864917&ued=https%3A%2F%2Fwww.fanatical.com%2Fen%2Fpick-and-mix%2Fplatinum-collection-build-your-own-bundle
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/platinum-collection-build-your-own-bundle-november-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/platinum-collection-build-your-own-bundle-november-2026/source.json
+crawlers:
+- dekudeals
+games:
+- name: Contract Rush DX
+  ids:
+  - steam:1775960
+  - dekudeals:contract-rush-dx
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The people of Sea, Sun & Salt
+  ids:
+  - steam:3617200
+  - dekudeals:the-people-of-sea-sun-and-salt
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Kin and Conquest
+  ids:
+  - steam:4540820
+  - dekudeals:kin-and-conquest
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Apocalypse Express
+  ids:
+  - steam:3223160
+  - dekudeals:apocalypse-express
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Parisian Bistro Simulator
+  ids:
+  - steam:3058360
+  - dekudeals:parisian-brasserie-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Heaven Does Not Respond
+  ids:
+  - steam:3817240
+  - dekudeals:heaven-does-not-respond
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'LEGO Star Wars: The Skywalker Saga'
+  ids:
+  - steam:920210
+  - dekudeals:lego-star-wars-the-skywalker-saga
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Friendly Steps
+  ids:
+  - steam:4279630
+  - dekudeals:friendly-steps
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: GYLT
+  ids:
+  - steam:2206210
+  - dekudeals:gylt
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Medieval Juice Crafter
+  ids:
+  - steam:4668870
+  - dekudeals:medieval-juice-crafter
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sporting Goods Shop
+  ids:
+  - steam:3653250
+  - dekudeals:sporting-goods-shop
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Sky Harvest
+  ids:
+  - steam:2482840
+  - dekudeals:sky-harvest
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Holy Shoot
+  ids:
+  - steam:2881660
+  - dekudeals:holy-shoot
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Chained Together
+  ids:
+  - steam:2567870
+  - dekudeals:chained-together
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ballionaire
+  ids:
+  - steam:2667120
+  - dekudeals:ballionaire
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Phantom Squad
+  ids:
+  - steam:2841770
+  - dekudeals:phantom-squad
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

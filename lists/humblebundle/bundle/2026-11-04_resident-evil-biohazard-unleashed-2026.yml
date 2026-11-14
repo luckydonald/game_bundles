@@ -23,13 +23,21 @@ references:
   path: ../../../archives/isthereanydeal/bundle/16771/metadata.json
 - name: Crawl source
   path: ../../../archives/isthereanydeal/bundle/16771/source.json
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/resident-evil-biohazard-unleashed
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/resident-evil-biohazard-unleashed/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/resident-evil-biohazard-unleashed/source.json
 crawlers:
 - humblebundle
 - isthereanydeal
+- dekudeals
 games:
 - name: Resident Evil Village - Winters’ Expansion
   ids:
   - steam:1731080
+  - dekudeals:resident-evil
   group:
     id: residentevilvillage_goldedition
     name: Resident Evil Village Gold Edition
@@ -43,6 +51,7 @@ games:
   ids:
   - steam:1196590
   - isthereanydeal:resident-evil-village-gold-edition
+  - dekudeals:resident-evil-village-gold-edition
   group:
     id: residentevilvillage_goldedition
     name: Resident Evil Village Gold Edition
@@ -69,6 +78,8 @@ games:
   - unresolved:source:humblebundle:residentevil7_gold
   - unresolved:source:isthereanydeal:16771:resident-evil-7-biohazard-gold-edition
   - isthereanydeal:resident-evil-7-biohazard-gold-edition
+  - steam:bundle/18463
+  - dekudeals:resident-evil-7-biohazard-gold-edition
   requires: []
   tiers:
   - 2
@@ -79,6 +90,7 @@ games:
   - unresolved:source:humblebundle:residentevil42005
   - steam:254700
   - isthereanydeal:resident-evil-4-2005
+  - dekudeals:resident-evil-4
   requires: []
   tiers:
   - 3
@@ -87,6 +99,7 @@ games:
   ids:
   - steam:21690
   - isthereanydeal:resident-evil-5-gold-edition
+  - dekudeals:resident-evil-5
   group:
     id: residentevil5_gold
     name: Resident Evil 5 Gold Edition
@@ -107,6 +120,7 @@ games:
 - name: 'Resident Evil 6: Siege Mode'
   ids:
   - steam:232570
+  - dekudeals:resident-evil-6
   group:
     id: residentevil6
     name: Resident Evil 6 Complete
@@ -210,6 +224,7 @@ games:
   - unresolved:source:humblebundle:residentevil0_hdremaster
   - steam:339340
   - isthereanydeal:resident-evil-0-hd-remaster
+  - dekudeals:resident-evil-0
   requires: []
   tiers:
   - 4
@@ -225,6 +240,7 @@ games:
   ids:
   - steam:883710
   - isthereanydeal:resident-evil-2-2019
+  - dekudeals:resident-evil-2
   requires: []
   tiers:
   - 4
@@ -232,6 +248,7 @@ games:
   ids:
   - steam:952060
   - isthereanydeal:resident-evil-3-2020
+  - dekudeals:resident-evil-3
   requires: []
   tiers:
   - 4

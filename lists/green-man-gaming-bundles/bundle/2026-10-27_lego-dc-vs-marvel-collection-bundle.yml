@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: LEGO DC vs Marvel Collection Bundle
+tiers:
+- rank: 1
+  name: €1,00
+- rank: 2
+  name: €5,00
+- rank: 3
+  name: €8,00
+references:
+- name: DekuDeals bundle
+  url: https://www.dekudeals.com/bundles/lego-dc-vs-marvel-collection-bundle
+- name: Green Man Gaming Bundles bundle
+  url: https://greenmangaming.sjv.io/c/5782768/1219987/15105?u=https%3A%2F%2Fwww.greenmangamingbundles.com%2Fbundles%2Flego-dc-vs-marvel-collection-bundle%2F
+- name: Crawl metadata
+  path: ../../../archives/dekudeals/bundle/lego-dc-vs-marvel-collection-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/dekudeals/bundle/lego-dc-vs-marvel-collection-bundle/source.json
+crawlers:
+- dekudeals
+games:
+- name: LEGO Batman
+  ids:
+  - steam:21000
+  - dekudeals:lego-batman
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: LEGO Marvel Super Heroes
+  ids:
+  - steam:249130
+  - dekudeals:lego-marvel-super-heroes
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: LEGO Marvel’s Avengers Deluxe Edition
+  ids:
+  - dekudeals:lego-marvels-avengers-deluxe-edition
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: LEGO Batman 2
+  ids:
+  - steam:213330
+  - dekudeals:lego-batman-2
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LEGO Marvel Super Heroes: Super Pack'
+  ids:
+  - steam:256320
+  - dekudeals:lego-marvel-super-heroes-super-pack
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: LEGO Marvel Super Heroes Asgard Pack
+  ids:
+  - steam:256321
+  - dekudeals:lego-marvel-super-heroes-asgard-pack
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'LEGO BATMAN 3: BEYOND GOTHAM PREMIUM EDITION'
+  ids:
+  - dekudeals:lego-batman-3-beyond-gotham-premium-edition
+  requires: []
+  tiers:
+  - 3
+- name: LEGO DC Super-Villains Deluxe Edition
+  ids:
+  - steam:829110
+  - dekudeals:lego-dc-super-villains-deluxe
+  requires: []
+  tiers:
+  - 3
+- name: LEGO Marvel Super Heroes 2 Deluxe Edition
+  ids:
+  - steam:647830
+  - dekudeals:lego-marvel-super-heroes-2-deluxe-edition2
+  requires: []
+  tiers:
+  - 3
