@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Idler Bundle
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-idler-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-idler-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Budgie's Bug Shop
+  ids:
+  - steam:4279120
+  - fanatical:budgies-bug-shop
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Angel Clicker
+  ids:
+  - steam:4247760
+  - fanatical:angel-clicker
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Idle Waters
+  ids:
+  - steam:2963540
+  - fanatical:idle-waters
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Focus Grove - Deluxe Edition
+  ids:
+  - unresolved:source:fanatical:build-your-own-idler-bundle:focus-grove-deluxe-edition
+  - fanatical:focus-grove-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: This Ain’t Even Poker, Ya Joker
+  ids:
+  - steam:4038320
+  - fanatical:this-aint-even-poker-ya-joker
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Burgie's cozy kitchen
+  ids:
+  - steam:3314340
+  - fanatical:burgies-cozy-kitchen
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Kin and Quarry
+  ids:
+  - steam:3505770
+  - fanatical:kin-and-quarry
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Outpath
+  ids:
+  - steam:2237970
+  - fanatical:outpath
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Screen Stocks
+  ids:
+  - steam:4356780
+  - fanatical:screen-stocks
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: How to Grow Your Sausage
+  ids:
+  - steam:4628250
+  - fanatical:how-to-grow-your-sausage
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Pocket Gecko
+  ids:
+  - steam:3751430
+  - fanatical:pocket-gecko
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Cats Are Money
+  ids:
+  - steam:3488840
+  - fanatical:cats-are-money
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Military Incremental Complex
+  ids:
+  - steam:3469750
+  - fanatical:military-incremental-complex
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Ropuka's Idle Island
+  ids:
+  - steam:3416070
+  - fanatical:ropukas-idle-island
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: How to Train Your Cock
+  ids:
+  - steam:3673060
+  - fanatical:how-to-train-your-cock
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Plantera 2: Golden Acorn'
+  ids:
+  - steam:1091920
+  - fanatical:plantera-2-golden-acorn
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Aquaville
+  ids:
+  - steam:3720880
+  - fanatical:aquaville
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

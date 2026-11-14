@@ -1,0 +1,142 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: FrightFest Ripper Bundle
+tiers:
+- rank: 1
+  name: 14.99 USD
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/frightfest-ripper-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/frightfest-ripper-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/frightfest-ripper-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: '[HERROR] Gas Station Case'
+  ids:
+  - steam:3902800
+  - fanatical:herror-gas-station-case
+  requires: []
+  tiers:
+  - 1
+- name: Blood Vial
+  ids:
+  - steam:3648730
+  - fanatical:blood-vial
+  requires: []
+  tiers:
+  - 1
+- name: Butcher's Creek
+  ids:
+  - steam:2512560
+  - fanatical:butchers-creek
+  requires: []
+  tiers:
+  - 1
+- name: Bogos Binted?
+  ids:
+  - steam:3588490
+  - fanatical:bogos-binted
+  requires: []
+  tiers:
+  - 1
+- name: Butcherman
+  ids:
+  - steam:3979350
+  - fanatical:butcherman
+  requires: []
+  tiers:
+  - 1
+- name: FLASH AND DIE
+  ids:
+  - steam:3985060
+  - fanatical:flash-and-die
+  requires: []
+  tiers:
+  - 1
+- name: Cut That Wire
+  ids:
+  - steam:3498650
+  - fanatical:cut-that-wire
+  requires: []
+  tiers:
+  - 1
+- name: ARSONATE
+  ids:
+  - steam:2822980
+  - fanatical:arsonate
+  requires: []
+  tiers:
+  - 1
+- name: 'Trench Lord: Eastern Front'
+  ids:
+  - steam:1647310
+  - fanatical:trench-lord-eastern-front
+  requires: []
+  tiers:
+  - 1
+- name: Massacre At The Mirage
+  ids:
+  - steam:2794610
+  - fanatical:massacre-at-the-mirage
+  requires: []
+  tiers:
+  - 1
+- name: NO-SKIN
+  ids:
+  - steam:3011030
+  - fanatical:no-skin
+  requires: []
+  tiers:
+  - 1
+- name: The Stalked
+  ids:
+  - steam:2587770
+  - fanatical:the-stalked
+  requires: []
+  tiers:
+  - 1
+- name: The Stalked 2
+  ids:
+  - steam:2976490
+  - fanatical:the-stalked-2
+  requires: []
+  tiers:
+  - 1
+- name: The Stalked 3
+  ids:
+  - steam:3565980
+  - fanatical:the-stalked-3
+  requires: []
+  tiers:
+  - 1
+- name: BLOODKILL
+  ids:
+  - steam:2608210
+  - fanatical:bloodkill
+  requires: []
+  tiers:
+  - 1
+- name: Occlude
+  ids:
+  - steam:3547010
+  - fanatical:occlude
+  requires: []
+  tiers:
+  - 1
+- name: 7 Nights with Vroombi
+  ids:
+  - steam:3992580
+  - fanatical:7-nights-with-vroombi
+  requires: []
+  tiers:
+  - 1
+- name: An Uninvited Guest
+  ids:
+  - steam:1907230
+  - fanatical:an-uninvited-guest
+  requires: []
+  tiers:
+  - 1

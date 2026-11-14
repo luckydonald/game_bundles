@@ -1,0 +1,306 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Birthday Bonanza Bundle
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+- rank: 4
+  name: pick 10
+  pick_quota: 10
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-birthday-bonanza-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-birthday-bonanza-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-birthday-bonanza-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: 'Astor: Blade of the Monolith'
+  ids:
+  - steam:1989320
+  - fanatical:astor-blade-of-the-monolith
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: The Last Cat in the Universe
+  ids:
+  - steam:4197890
+  - fanatical:the-last-cat-in-the-universe
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Swords 'n Magic and Stuff
+  ids:
+  - steam:810040
+  - fanatical:swords-n-magic-and-stuff
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: TownsFolk
+  ids:
+  - steam:3670580
+  - fanatical:townsfolk
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Ship, Inc.
+  ids:
+  - steam:3496000
+  - fanatical:ship-inc
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Fossilfuel 2
+  ids:
+  - steam:2299660
+  - fanatical:fossilfuel-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Isonzo
+  ids:
+  - steam:1556790
+  - fanatical:isonzo
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Little Problems: A Cozy Detective Game'
+  ids:
+  - steam:2653470
+  - fanatical:little-problems-a-cozy-detective-game
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Turnip Boy Robs a Bank
+  ids:
+  - steam:2097230
+  - fanatical:turnip-boy-robs-a-bank
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Walk The Frog
+  ids:
+  - steam:3336240
+  - fanatical:walk-the-frog
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Above Snakes
+  ids:
+  - steam:1589120
+  - fanatical:above-snakes
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Amanda the Adventurer 2
+  ids:
+  - steam:2826800
+  - fanatical:amanda-the-adventurer-2
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Dice & Fold
+  ids:
+  - steam:2693930
+  - fanatical:dice-and-fold
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'VORON: Raven’s Story'
+  ids:
+  - steam:2245180
+  - fanatical:voron-ravens-story
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: None Shall Intrude
+  ids:
+  - steam:2518630
+  - fanatical:none-shall-intrude
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Airport X-Ray Simulator
+  ids:
+  - steam:3079970
+  - fanatical:airport-x-ray-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: BORE BLASTERS
+  ids:
+  - steam:2398170
+  - fanatical:bore-blasters
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: The August Before
+  ids:
+  - steam:2736840
+  - fanatical:the-august-before
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Ambition: A Minuet in Power'
+  ids:
+  - steam:949200
+  - fanatical:ambition-a-minuet-in-power
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Shogun Showdown
+  ids:
+  - steam:2084000
+  - fanatical:shogun-showdown
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: 'Ikonei Island: An Earthlock Adventure'
+  ids:
+  - steam:1550730
+  - fanatical:ikonei-island-an-earthlock-adventure
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Stormbridge
+  ids:
+  - steam:3362750
+  - fanatical:stormbridge
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Pieces of the Past
+  ids:
+  - steam:2786650
+  - fanatical:pieces-of-the-past
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Toy Shire
+  ids:
+  - steam:2361460
+  - fanatical:toy-shire
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: OverDrift Festival
+  ids:
+  - steam:1273440
+  - fanatical:overdrift-festival
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: SuperTaxCity
+  ids:
+  - steam:2881800
+  - fanatical:supertaxcity
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: DRIFT CE
+  ids:
+  - steam:520950
+  - fanatical:drift-21
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Fight School Simulator
+  ids:
+  - steam:2884190
+  - fanatical:fight-school-simulator
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4

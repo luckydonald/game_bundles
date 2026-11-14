@@ -8,18 +8,29 @@ references:
   path: ../../../../archives/isthereanydeal/bundle/7052/metadata.json
 - name: Crawl source
   path: ../../../../archives/isthereanydeal/bundle/7052/source.json
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/bundle/batman-arkham-collection
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/batman-arkham-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/batman-arkham-collection/source.json
 crawlers:
 - isthereanydeal
+- fanatical
 games:
 - name: 'Batman™: Arkham Knight Premium Edition'
   ids:
   - unresolved:source:isthereanydeal:7052:batman-arkham-knight-premium-edition
+  - steam:85500
+  - fanatical:batman-arkham-knight-premium-edition
   requires: []
 - name: 'Batman: Arkham Asylum Game of the Year Edition'
   ids:
   - steam:35140
+  - fanatical:batman-arkham-asylum-game-of-the-year-edition
   requires: []
 - name: Batman Arkham City Game of the Year Edition
   ids:
   - steam:200260
+  - fanatical:batman-arkham-city-game-of-the-year-edition
   requires: []

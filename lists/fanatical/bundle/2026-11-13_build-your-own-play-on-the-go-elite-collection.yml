@@ -1,0 +1,203 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Play on the Go Elite Collection (Fall 2026)
+tiers:
+- rank: 1
+  name: pick 2
+  pick_quota: 2
+- rank: 2
+  name: pick 3
+  pick_quota: 3
+- rank: 3
+  name: pick 5
+  pick_quota: 5
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-play-on-the-go-elite-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-play-on-the-go-elite-collection/source.json
+crawlers:
+- fanatical
+games:
+- name: Silly Polly Beast
+  ids:
+  - steam:1598780
+  - fanatical:silly-polly-beast
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'The Elder Scrolls Online Deluxe Collection: Necrom'
+  ids:
+  - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:the-elder-scrolls-online-deluxe-collection-necrom
+  - fanatical:the-elder-scrolls-online-deluxe-collection-necrom
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'High On Life: DLC Bundle'
+  ids:
+  - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:high-on-life-dlc-bundle
+  - fanatical:high-on-life-dlc-bundle
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Construction Simulator - Gold Edition
+  ids:
+  - steam:1273400
+  - fanatical:construction-simulator-gold-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Strange Antiquities
+  ids:
+  - steam:2885870
+  - fanatical:strange-antiquities
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Mortuary Assistant
+  ids:
+  - steam:1295920
+  - fanatical:the-mortuary-assistant
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: MISERY
+  ids:
+  - steam:2119830
+  - fanatical:misery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: First Dwarf
+  ids:
+  - steam:1714900
+  - fanatical:first-dwarf
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'KuloNiku: Bowl Up! Deluxe Edition'
+  ids:
+  - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:kuloniku-bowl-up-deluxe-edition
+  - fanatical:kuloniku-bowl-up-deluxe-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bus Simulator 21 Next Stop – Gold Edition
+  ids:
+  - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:bus-simulator-21-next-stop-gold-edition
+  - fanatical:bus-simulator-21-next-stop-gold-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Police Simulator: Patrol Officers: Gold Edition'
+  ids:
+  - steam:997010
+  - fanatical:police-simulator-patrol-officers-gold-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: The Caribou Trail
+  ids:
+  - steam:3065030
+  - fanatical:the-caribou-trail
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Teeto
+  ids:
+  - steam:2783370
+  - fanatical:teeto
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Coridden
+  ids:
+  - steam:1656930
+  - fanatical:coridden
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Heroes of Science and Fiction
+  ids:
+  - steam:2147380
+  - fanatical:silence-of-the-siren
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: VOIDFACE
+  ids:
+  - steam:3224540
+  - fanatical:voidface
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Lonely Mountains: Snow Riders'
+  ids:
+  - steam:2545360
+  - fanatical:lonely-mountains-snow-riders
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: IMMORTALITY
+  ids:
+  - steam:1350200
+  - fanatical:immortality
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: NUTMEG! A Nostalgic Deckbuilding Football Manager
+  ids:
+  - steam:3590560
+  - fanatical:nutmeg-a-nostalgic-deckbuilding-football-manager
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Vox Machinae
+  ids:
+  - steam:334540
+  - fanatical:vox-machinae
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3

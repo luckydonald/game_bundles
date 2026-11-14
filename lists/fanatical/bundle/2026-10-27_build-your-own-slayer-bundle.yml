@@ -1,0 +1,185 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Build your own Slayer Bundle (FrightFest)
+tiers:
+- rank: 1
+  name: pick 3
+  pick_quota: 3
+- rank: 2
+  name: pick 5
+  pick_quota: 5
+- rank: 3
+  name: pick 7
+  pick_quota: 7
+references:
+- name: Fanatical bundle
+  url: https://www.fanatical.com/en/pick-and-mix/build-your-own-slayer-bundle
+- name: Crawl metadata
+  path: ../../../archives/fanatical/bundle/build-your-own-slayer-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/fanatical/bundle/build-your-own-slayer-bundle/source.json
+crawlers:
+- fanatical
+games:
+- name: Dungeons of Blood and Dream
+  ids:
+  - steam:2488590
+  - fanatical:dungeons-of-blood-and-dream
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: FEED IT
+  ids:
+  - unresolved:source:fanatical:build-your-own-slayer-bundle:feed-it
+  - fanatical:feed-it
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Late Homework | 遅れた宿題
+  ids:
+  - steam:3215660
+  - fanatical:late-homework-or
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Bendy and the Dark Revival
+  ids:
+  - steam:1063660
+  - fanatical:bendy-and-the-dark-revival
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: House
+  ids:
+  - unresolved:source:fanatical:build-your-own-slayer-bundle:house
+  - fanatical:house
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Choo-Choo Charles
+  ids:
+  - steam:1766740
+  - fanatical:choo-choo-charles
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Happy Game
+  ids:
+  - steam:1206060
+  - fanatical:happy-game
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: ZERO PROTOCOL
+  ids:
+  - steam:2840250
+  - fanatical:zero-protocol
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Unemployment Simulator 2018
+  ids:
+  - steam:3252360
+  - fanatical:unemployment-simulator-2018
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Apartment No 129
+  ids:
+  - steam:2895340
+  - fanatical:apartment-no-129
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Jack Holmes : Master of Puppets'
+  ids:
+  - steam:2235820
+  - fanatical:jack-holmes-master-of-puppets
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Jewel Match Dracula Collector's Edition
+  ids:
+  - steam:3217090
+  - fanatical:jewel-match-dracula-collectors-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Panic Delivery
+  ids:
+  - steam:2887450
+  - fanatical:panic-delivery
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Aooni The Horror of Blueberry Onsen
+  ids:
+  - steam:3388870
+  - fanatical:aooni-the-horror-of-blueberry-onsen
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Eyes of Hellfire
+  ids:
+  - steam:1724030
+  - fanatical:eyes-of-hellfire
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Last Pirates: Die Together'
+  ids:
+  - steam:4317790
+  - fanatical:last-pirates-die-together
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Mimic Busters
+  ids:
+  - steam:5167420
+  - fanatical:mimic-busters
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Hauntsville
+  ids:
+  - steam:2348730
+  - fanatical:hauntsville
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
