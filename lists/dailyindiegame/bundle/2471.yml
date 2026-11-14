@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2471
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2471.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2471/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2471/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: REVOLT 1917
+  ids:
+  - steam:598030
+  requires: []
+- name: Pirate Cannons AHOY!
+  ids:
+  - steam:1037850
+  requires: []
+- name: Deck Combo
+  ids:
+  - steam:3460570
+  requires: []
+- name: Stop Right There
+  ids:
+  - steam:4274960
+  requires: []
+- name: X-Ninja
+  ids:
+  - steam:5343280
+  requires: []
+- name: Saturday Night Racing
+  ids:
+  - steam:3283590
+  requires: []
+- name: Olive Raiders
+  ids:
+  - steam:3841570
+  requires: []
+- name: 星之传说
+  ids:
+  - steam:1949170
+  requires: []
+- name: 创世法则
+  ids:
+  - steam:3151110
+  requires: []

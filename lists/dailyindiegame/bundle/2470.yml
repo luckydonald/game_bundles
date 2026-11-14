@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: DIG Bundle 2470 - BARGAIN
+references:
+- name: DailyIndieGame bundle
+  url: https://www.dailyindiegame.com/site_weeklybundle_2470.html
+- name: Crawl metadata
+  path: ../../../archives/dailyindiegame/bundle/2470/metadata.json
+- name: Crawl source
+  path: ../../../archives/dailyindiegame/bundle/2470/source.json
+crawlers:
+- dailyindiegame
+games:
+- name: 30 minutes to rescue
+  ids:
+  - steam:4529520
+  requires: []
+- name: Mad Jyacer
+  ids:
+  - steam:2690780
+  requires: []
+- name: Greed and Grind
+  ids:
+  - steam:2426330
+  requires: []
+- name: Mission IDLE
+  ids:
+  - steam:1503540
+  requires: []
+- name: Jump King Clicker
+  ids:
+  - steam:4584450
+  requires: []
+- name: Worst Shop in Town
+  ids:
+  - steam:4778810
+  requires: []
+- name: BrainRoom - Brainrot Backrooms
+  ids:
+  - steam:3723160
+  requires: []
+- name: After the first station
+  ids:
+  - steam:1790760
+  requires: []
+- name: Idle Tycoon Manufacturing
+  ids:
+  - steam:3913140
+  requires: []
