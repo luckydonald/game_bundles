@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: November 2026 Humble Choice
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/membership
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/choice/2026-11/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/choice/2026-11/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Mafia: The Old Country'
+  ids:
+  - steam:1941540
+  requires: []
+- name: The Outer Worlds 2
+  ids:
+  - unresolved:source:humblebundle:theouterworlds2_choice
+  requires: []
+- name: 'SHINOBI: Art of Vengeance'
+  ids:
+  - steam:2361770
+  requires: []
+- name: 'Yakuza 6: The Song of Life'
+  ids:
+  - steam:1388590
+  requires: []
+- name: 'Crisol: Theater of Idols'
+  ids:
+  - steam:1790930
+  requires: []
+- name: DYSMANTLE
+  ids:
+  - steam:846770
+  requires: []
+- name: Space Haven
+  ids:
+  - steam:979110
+  requires: []
+- name: 'Squeakross: Home Squeak Home'
+  ids:
+  - steam:2871440
+  requires: []

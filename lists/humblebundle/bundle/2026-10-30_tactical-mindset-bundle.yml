@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Tactical Mindset Bundle
+tiers:
+- rank: 1
+  name: 4 Item Bundle
+- rank: 2
+  name: 8 Item Bundle
+- rank: 3
+  name: Entire 10 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/tactical-mindset-bundle
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-30_tactical-mindset-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-30_tactical-mindset-bundle/source.json
+crawlers:
+- humblebundle
+games:
+- name: The Ouroboros King
+  ids:
+  - steam:2096510
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Planetiles
+  ids:
+  - steam:2447030
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Break the Loop
+  ids:
+  - unresolved:source:humblebundle:breaktheloop
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Vandals
+  ids:
+  - steam:809240
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Space Prison
+  ids:
+  - unresolved:source:humblebundle:spaceprison
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'The Dungeon of Naheulbeuk: The Amulet of Chaos - Deluxe Edition'
+  ids:
+  - unresolved:source:humblebundle:thedungeonofnaheulbeuk_theamuletofchaos_deluxe
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Lost Eidolons
+  ids:
+  - unresolved:source:humblebundle:losteidolons
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: The Land Beneath Us
+  ids:
+  - unresolved:source:humblebundle:thelandbeneathus
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Terrinoth: Heroes of Descent'
+  ids:
+  - unresolved:source:humblebundle:terrinoth_heroesofdescent
+  requires: []
+  tiers:
+  - 3
+- name: 'One More Gate : A Wakfu Legend'
+  ids:
+  - unresolved:source:humblebundle:onemoregate_awakfulegend
+  requires: []
+  tiers:
+  - 3

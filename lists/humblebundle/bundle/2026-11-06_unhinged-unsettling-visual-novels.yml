@@ -1,0 +1,90 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Unhinged & Unsettling Visual Novels
+tiers:
+- rank: 1
+  name: 6 Item Bundle
+- rank: 2
+  name: Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/unhinged-unsettling-visual-novels
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-06_unhinged-unsettling-visual-novels/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-06_unhinged-unsettling-visual-novels/source.json
+crawlers:
+- humblebundle
+games:
+- name: Bad End Theater
+  ids:
+  - unresolved:source:humblebundle:badendtheater
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Amelie
+  ids:
+  - unresolved:source:humblebundle:amelie
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Crimson Gray
+  ids:
+  - unresolved:source:humblebundle:crimsongray
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Sound of Drop -fall into poison-
+  ids:
+  - unresolved:source:humblebundle:soundofdrop_fallintopoison
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Sweetest Monster
+  ids:
+  - unresolved:source:humblebundle:sweetestmonster
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'CROSS+CHANNEL: Steam Edition'
+  ids:
+  - unresolved:source:humblebundle:crosschannel_steamedition
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Hush Hush - Only Your Love Can Save Them
+  ids:
+  - unresolved:source:humblebundle:hushhush___onlyyourlovecansavethem
+  requires: []
+  tiers:
+  - 2
+- name: A Tithe in Blood
+  ids:
+  - unresolved:source:humblebundle:atitheinblood
+  requires: []
+  tiers:
+  - 2
+- name: Enigma
+  ids:
+  - unresolved:source:humblebundle:enigma
+  requires: []
+  tiers:
+  - 2
+- name: Magical Eyes - Red is for Anguish
+  ids:
+  - unresolved:source:humblebundle:magicaleyes_redisforanguish
+  requires: []
+  tiers:
+  - 2
+- name: Miniature Garden
+  ids:
+  - unresolved:source:humblebundle:miniaturegarden
+  requires: []
+  tiers:
+  - 2

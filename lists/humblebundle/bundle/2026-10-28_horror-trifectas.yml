@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Horror Trifectas
+tiers:
+- rank: 1
+  name: 8 Item Bundle
+- rank: 2
+  name: Entire 16 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/horror-trifectas
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-28_horror-trifectas/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-28_horror-trifectas/source.json
+crawlers:
+- humblebundle
+games:
+- name: Bendy and the Dark Revival
+  ids:
+  - steam:1063660
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Bendy and the Ink Machine
+  ids:
+  - steam:622650
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'True Fear: Forsaken Souls Part 2'
+  ids:
+  - steam:935580
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'True Fear: Forsaken Souls Part 1'
+  ids:
+  - steam:440420
+  group:
+    id: truefear_forsakensouls_part1
+    name: 'True Fear: Forsaken Souls'
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'SteamDB Unknown App 526700 (Хранилище True Fear: Forsaken Souls Part 1 DLC
+    (526700))'
+  ids:
+  - steam:526700
+  group:
+    id: truefear_forsakensouls_part1
+    name: 'True Fear: Forsaken Souls'
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'DreadOut: Keepers of The Dark'
+  ids:
+  - steam:418950
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: DreadOut
+  ids:
+  - steam:269790
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'The Coma 2: Vicious Sisters'
+  ids:
+  - steam:1045720
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'The Coma: Recut'
+  ids:
+  - steam:600090
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: F.E.A.R. 3
+  ids:
+  - steam:21100
+  requires: []
+  tiers:
+  - 2
+- name: 'Bendy: Lone Wolf'
+  ids:
+  - steam:3232610
+  requires: []
+  tiers:
+  - 2
+- name: DreadOut 2
+  ids:
+  - steam:945710
+  requires: []
+  tiers:
+  - 2
+- name: 'True Fear: Forsaken Souls Part 3'
+  ids:
+  - steam:3168310
+  requires: []
+  tiers:
+  - 2
+- name: 'The Coma 2B: Catacomb'
+  ids:
+  - steam:1781890
+  requires: []
+  tiers:
+  - 2
+- name: 'FEAR 2: Project Origin'
+  ids:
+  - steam:16450
+  requires: []
+  tiers:
+  - 2
+- name: 'F.E.A.R. 2: Reborn (DLC'
+  ids:
+  - steam:16465
+  requires: []
+  tiers:
+  - 2
+- name: 'F.E.A.R.: Extraction Point (F.E.A.R.)'
+  ids:
+  - steam:21110
+  group:
+    id: fear
+    name: 'FEAR: Ultimate Shooter Edition'
+  requires: []
+  tiers:
+  - 2
+- name: F.E.A.R.
+  ids:
+  - steam:21090
+  group:
+    id: fear
+    name: 'FEAR: Ultimate Shooter Edition'
+  requires: []
+  tiers:
+  - 2
+- name: 'F.E.A.R.: Perseus Mandate (F.E.A.R.)'
+  ids:
+  - steam:21120
+  group:
+    id: fear
+    name: 'FEAR: Ultimate Shooter Edition'
+  requires: []
+  tiers:
+  - 2

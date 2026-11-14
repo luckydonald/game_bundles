@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Hamble's Farming Games Collection
+tiers:
+- rank: 1
+  name: 5 Item Bundle
+- rank: 2
+  name: Entire 11 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/hambles-farming-games-collection
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-05_hambles-farming-games-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-05_hambles-farming-games-collection/source.json
+crawlers:
+- humblebundle
+games:
+- name: Robert on Earth
+  ids:
+  - steam:3003050
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Greenhearth Necromancer
+  ids:
+  - steam:2127570
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: To Pixelia
+  ids:
+  - steam:1954160
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Seeds of Calamity
+  ids:
+  - unresolved:source:humblebundle:seedsofcalamity
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Immortal Life
+  ids:
+  - unresolved:source:humblebundle:immortallife
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Farming Simulator 19
+  ids:
+  - steam:787860
+  requires: []
+  tiers:
+  - 2
+- name: Fae Farm
+  ids:
+  - steam:2230110
+  requires: []
+  tiers:
+  - 2
+- name: Snacko
+  ids:
+  - steam:1125510
+  requires: []
+  tiers:
+  - 2
+- name: Cornucopia
+  ids:
+  - steam:1681600
+  requires: []
+  tiers:
+  - 2
+- name: Farm Manager World
+  ids:
+  - steam:2206350
+  requires: []
+  tiers:
+  - 2
+- name: Border Town
+  ids:
+  - steam:1967820
+  requires: []
+  tiers:
+  - 2

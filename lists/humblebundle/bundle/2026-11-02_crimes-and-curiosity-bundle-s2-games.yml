@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Crimes and Curiosity Bundle by S2 Games
+tiers:
+- rank: 1
+  name: 6 Item Bundle
+- rank: 2
+  name: 8 Item Bundle
+- rank: 3
+  name: Entire 13 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/crimes-and-curiosity-bundle-s2-games
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-02_crimes-and-curiosity-bundle-s2-games/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-02_crimes-and-curiosity-bundle-s2-games/source.json
+crawlers:
+- humblebundle
+games:
+- name: 'Frog Detective 3: Corruption at Cowboy County'
+  ids:
+  - unresolved:source:humblebundle:frogdetective3_corruptionatcowboycounty
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Frog Detective 2: The Case of the Invisible Wizard'
+  ids:
+  - unresolved:source:humblebundle:frogdetective2_thecaseoftheinvisiblewizard
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'Frog Detective 1: The Haunted Island'
+  ids:
+  - unresolved:source:humblebundle:frogdetective1_thehauntedisland
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Puppet House
+  ids:
+  - unresolved:source:humblebundle:puppethouse
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Unboxing the Cryptic Killer
+  ids:
+  - unresolved:source:humblebundle:unboxingthecryptickiller
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Roadwarden
+  ids:
+  - steam:1155970
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: BROK the InvestiGator
+  ids:
+  - steam:949480
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: Agatha Christie - Murder on the Orient Express
+  ids:
+  - unresolved:source:humblebundle:agathachristie___murderontheorientexpress
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Broken Sword - Shadow of the Templars: Reforged'
+  ids:
+  - unresolved:source:humblebundle:brokensword___shadowofthetemplars_reforged
+  requires: []
+  tiers:
+  - 3
+- name: Gamedec - Definitive Edition
+  ids:
+  - unresolved:source:humblebundle:gamedec___definitiveedition
+  requires: []
+  tiers:
+  - 3
+- name: The Darkest Files
+  ids:
+  - unresolved:source:humblebundle:thedarkestfiles
+  requires: []
+  tiers:
+  - 3
+- name: Mercury Abbey
+  ids:
+  - unresolved:source:humblebundle:mercuryabbey
+  requires: []
+  tiers:
+  - 3
+- name: 'Alex Hill: Whispers at White Oak Inn'
+  ids:
+  - unresolved:source:humblebundle:alexhill_whispersatwhiteoakinn
+  requires: []
+  tiers:
+  - 3

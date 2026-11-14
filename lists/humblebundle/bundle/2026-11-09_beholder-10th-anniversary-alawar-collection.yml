@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Beholder 10th Anniversary: The Alawar Collection'
+tiers:
+- rank: 1
+  name: 12 Item Bundle
+- rank: 2
+  name: Entire 22 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/beholder-10th-anniversary-alawar-collection
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-09_beholder-10th-anniversary-alawar-collection/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-09_beholder-10th-anniversary-alawar-collection/source.json
+crawlers:
+- humblebundle
+games:
+- name: Looking for Aliens
+  ids:
+  - steam:1733500
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Distrust: Polar Survival'
+  ids:
+  - steam:635200
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Wall World
+  ids:
+  - steam:2187290
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Wall World: Deep Threat'
+  ids:
+  - steam:2474860
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Beholder 3
+  ids:
+  - steam:1570070
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Beholder 2
+  ids:
+  - steam:761620
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Beholder
+  ids:
+  - steam:475550
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Beholder - Blissful Sleep
+  ids:
+  - steam:616950
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Necrosmith
+  ids:
+  - steam:1949190
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Do Not Feed the Monkeys
+  ids:
+  - steam:658850
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: 'Space Robinson: Hardcore Roguelike Action'
+  ids:
+  - steam:953870
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Song of Farca
+  ids:
+  - steam:1435670
+  requires: []
+  tiers:
+  - 1
+  - 2
+- name: Wall World 2
+  ids:
+  - unresolved:source:humblebundle:wallworld2
+  requires: []
+  tiers:
+  - 2
+- name: 'Beholder: Conductor'
+  ids:
+  - unresolved:source:humblebundle:beholder_conductor
+  requires: []
+  tiers:
+  - 2
+- name: Necrosmith 2
+  ids:
+  - unresolved:source:humblebundle:necrosmith2
+  requires: []
+  tiers:
+  - 2
+- name: Security 51
+  ids:
+  - unresolved:source:humblebundle:security51
+  requires: []
+  tiers:
+  - 2
+- name: Haunted Lands
+  ids:
+  - unresolved:source:humblebundle:hauntedlands
+  requires: []
+  tiers:
+  - 2
+- name: Karate Survivor
+  ids:
+  - steam:3027930
+  requires: []
+  tiers:
+  - 2
+- name: Technotopia
+  ids:
+  - steam:2825110
+  requires: []
+  tiers:
+  - 2
+- name: Necroking
+  ids:
+  - steam:2852980
+  requires: []
+  tiers:
+  - 2
+- name: Kingsgrave
+  ids:
+  - steam:2644360
+  requires: []
+  tiers:
+  - 2
+- name: They Always Run
+  ids:
+  - steam:1585440
+  requires: []
+  tiers:
+  - 2

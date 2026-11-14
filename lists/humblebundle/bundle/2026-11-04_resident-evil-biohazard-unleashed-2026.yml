@@ -1,0 +1,217 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'Resident Evil: Biohazard Unleashed'
+tiers:
+- rank: 1
+  name: 1 Item Bundle
+- rank: 2
+  name: 2 Item Bundle
+- rank: 3
+  name: 5 Item Bundle
+- rank: 4
+  name: Entire 9 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/resident-evil-biohazard-unleashed-2026
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-04_resident-evil-biohazard-unleashed-2026/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-04_resident-evil-biohazard-unleashed-2026/source.json
+crawlers:
+- humblebundle
+games:
+- name: Resident Evil Village - Winters’ Expansion
+  ids:
+  - steam:1731080
+  group:
+    id: residentevilvillage_goldedition
+    name: Resident Evil Village Gold Edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Resident Evil Village
+  ids:
+  - steam:1196590
+  group:
+    id: residentevilvillage_goldedition
+    name: Resident Evil Village Gold Edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: Resident Evil Village - Trauma Pack
+  ids:
+  - steam:1456360
+  group:
+    id: residentevilvillage_goldedition
+    name: Resident Evil Village Gold Edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+  - 4
+- name: RESIDENT EVIL 7 biohazard Gold Edition
+  ids:
+  - unresolved:source:humblebundle:residentevil7_gold
+  requires: []
+  tiers:
+  - 2
+  - 3
+  - 4
+- name: Resident Evil 4 HD (2005)
+  ids:
+  - unresolved:source:humblebundle:residentevil42005
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Resident Evil 5
+  ids:
+  - steam:21690
+  group:
+    id: residentevil5_gold
+    name: Resident Evil 5 Gold Edition
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Resident Evil 5 - UNTOLD STORIES BUNDLE
+  ids:
+  - steam:352000
+  group:
+    id: residentevil5_gold
+    name: Resident Evil 5 Gold Edition
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Siege Mode'
+  ids:
+  - steam:232570
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Survivors Mode'
+  ids:
+  - steam:232590
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Onslaught mode'
+  ids:
+  - steam:232530
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Predator mode'
+  ids:
+  - steam:232550
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Resident Evil 6
+  ids:
+  - steam:221040
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Mercenaries No Mercy (RE6 / BH6: Mercenaries No Mercy)'
+  ids:
+  - steam:228580
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Art Book'
+  ids:
+  - steam:232490
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Soundtrack'
+  ids:
+  - steam:232510
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: 'Resident Evil 6: Left 4 Dead Content'
+  ids:
+  - steam:232610
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Resident Evil 6 Wallpaper
+  ids:
+  - steam:236080
+  group:
+    id: residentevil6
+    name: Resident Evil 6 Complete
+  requires: []
+  tiers:
+  - 3
+  - 4
+- name: Resident Evil 0 HD Remaster
+  ids:
+  - unresolved:source:humblebundle:residentevil0_hdremaster
+  requires: []
+  tiers:
+  - 4
+- name: Resident Evil HD Remaster
+  ids:
+  - unresolved:source:humblebundle:residentevil_hdremaster
+  requires: []
+  tiers:
+  - 4
+- name: Resident Evil 2
+  ids:
+  - steam:883710
+  requires: []
+  tiers:
+  - 4
+- name: Resident Evil 3
+  ids:
+  - steam:952060
+  requires: []
+  tiers:
+  - 4

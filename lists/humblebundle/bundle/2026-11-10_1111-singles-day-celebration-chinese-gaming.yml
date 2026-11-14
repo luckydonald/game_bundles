@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 11.11 Singles Day - Celebration of Chinese Gaming! — Entire 6 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-10_1111-singles-day-celebration-chinese-gaming/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-10_1111-singles-day-celebration-chinese-gaming/source.json
+crawlers:
+- humblebundle
+games:
+- name: Ascend From Nine Mountains
+  ids:
+  - steam:3992260
+  requires: []
+- name: Murders on the Yangtze River
+  ids:
+  - steam:1746030
+  requires: []
+- name: 'Three Kingdom: The Journey'
+  ids:
+  - steam:1314770
+  requires: []
+- name: Dust to the End
+  ids:
+  - steam:1074070
+  requires: []
+- name: Roulette Hero
+  ids:
+  - steam:3371510
+  requires: []
+- name: My Lovely Daughter
+  ids:
+  - steam:580170
+  requires: []

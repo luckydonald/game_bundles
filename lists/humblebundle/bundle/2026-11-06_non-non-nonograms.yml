@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Non Non Nonograms! — Entire 13 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/non-non-nonograms
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-11-06_non-non-nonograms/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-11-06_non-non-nonograms/source.json
+crawlers:
+- humblebundle
+games:
+- name: Homgard
+  ids:
+  - steam:4287570
+  requires: []
+- name: Nekograms
+  ids:
+  - steam:2478120
+  requires: []
+- name: Piczle Cross Adventure
+  ids:
+  - unresolved:source:humblebundle:piczlecrossadventure
+  requires: []
+- name: Pixel Puzzle Makeout League
+  ids:
+  - unresolved:source:humblebundle:pixelpuzzlemakeoutleague
+  requires: []
+- name: SherloCAT Holmes Nonogram
+  ids:
+  - unresolved:source:humblebundle:sherlocatholmesnonogram
+  requires: []
+- name: Paint it Back
+  ids:
+  - unresolved:source:humblebundle:paintitback
+  requires: []
+- name: Polimines
+  ids:
+  - unresolved:source:humblebundle:polimines
+  requires: []
+- name: Polimines 2
+  ids:
+  - unresolved:source:humblebundle:polimines2
+  requires: []
+- name: Charm Studies
+  ids:
+  - unresolved:source:humblebundle:charmstudies
+  requires: []
+- name: Voxelgram
+  ids:
+  - unresolved:source:humblebundle:voxelgram
+  requires: []
+- name: Mega Mosaic
+  ids:
+  - unresolved:source:humblebundle:megamosaic
+  requires: []
+- name: Tents and Trees
+  ids:
+  - unresolved:source:humblebundle:tentsandtrees
+  requires: []
+- name: LYNE
+  ids:
+  - unresolved:source:humblebundle:lyne
+  requires: []

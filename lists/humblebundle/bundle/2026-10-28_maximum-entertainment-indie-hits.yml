@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Maximum Entertainment Indie Hits — Entire 8 Item Bundle
+references:
+- name: Humble Bundle offer
+  url: https://www.humblebundle.com/games/maximum-entertainment-indie-hits
+- name: Crawl metadata
+  path: ../../../archives/humblebundle/bundle/2026-10-28_maximum-entertainment-indie-hits/metadata.json
+- name: Crawl source
+  path: ../../../archives/humblebundle/bundle/2026-10-28_maximum-entertainment-indie-hits/source.json
+crawlers:
+- humblebundle
+games:
+- name: Until Then
+  ids:
+  - steam:1574820
+  requires: []
+- name: Afterimage
+  ids:
+  - unresolved:source:humblebundle:afterimage
+  requires: []
+- name: 'Bramble: The Mountain King'
+  ids:
+  - steam:1623940
+  requires: []
+- name: 'Double Dragon Gaiden: Rise Of The Dragons'
+  ids:
+  - steam:1967260
+  requires: []
+- name: 'Morbid: Lords of the Ire'
+  ids:
+  - unresolved:source:humblebundle:morbid_lordsoftheire
+  requires: []
+- name: Squirrel with a Gun
+  ids:
+  - steam:2067050
+  requires: []
+- name: Cris Tales
+  ids:
+  - steam:1079830
+  requires: []
+- name: How 2 Escape
+  ids:
+  - steam:2264140
+  requires: []
