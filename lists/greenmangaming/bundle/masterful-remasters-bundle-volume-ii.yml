@@ -1,0 +1,68 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: 'MASTERFUL REMASTERS BUNDLE: VOLUME II'
+tiers:
+- rank: 1
+  name: Rediscovered
+- rank: 2
+  name: Restored
+- rank: 3
+  name: Definitive
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/masterful-remasters-bundle-volume-ii/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/masterful-remasters-bundle-volume-ii/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'STAR WARS™: Bounty Hunter™'
+  ids:
+  - steam:2419090
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'System Shock: Enhanced Edition'
+  ids:
+  - steam:410710
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: 'STAR WARS™: Episode I: Jedi Power Battles™'
+  ids:
+  - steam:2443630
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: System Shock
+  ids:
+  - steam:482400
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Dungeons & Dragons Neverwinter Nights 2: Enhanced Edition'
+  ids:
+  - steam:2738630
+  requires: []
+  tiers:
+  - 3
+- name: 'The Thing: Remastered'
+  ids:
+  - steam:2958970
+  requires: []
+  tiers:
+  - 3
+- name: 'System Shock 2: 25th Anniversary Remaster'
+  ids:
+  - steam:866570
+  requires: []
+  tiers:
+  - 3

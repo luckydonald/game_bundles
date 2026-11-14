@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: GIRLS JUST WANNA HAVE GUNS! BUNDLE — Just Wanna!
+references:
+- name: Green Man Gaming bundle
+  url: https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/
+- name: Crawl metadata
+  path: ../../../archives/greenmangaming/bundle/girls-just-wanna-have-guns-bundle/metadata.json
+- name: Crawl source
+  path: ../../../archives/greenmangaming/bundle/girls-just-wanna-have-guns-bundle/source.json
+crawlers:
+- greenmangaming
+games:
+- name: 'Control: Ultimate Edition'
+  ids:
+  - steam:870780
+  requires: []
+- name: Skin Deep
+  ids:
+  - steam:301280
+  requires: []
+- name: Nightmare Reaper
+  ids:
+  - steam:1051690
+  requires: []
+- name: 'Wanted: Dead'
+  ids:
+  - steam:1981610
+  requires: []
+- name: Beyond Sunset
+  ids:
+  - steam:1665260
+  requires: []
+- name: Severed Steel
+  ids:
+  - steam:1227690
+  requires: []
