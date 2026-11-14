@@ -8,30 +8,43 @@ references:
   path: ../../../archives/greenmangaming/bundle/girls-just-wanna-have-guns-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/greenmangaming/bundle/girls-just-wanna-have-guns-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16788/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16788/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16788/source.json
 crawlers:
 - greenmangaming
+- isthereanydeal
 games:
 - name: 'Control: Ultimate Edition'
   ids:
   - steam:870780
+  - isthereanydeal:control-ultimate-edition
   requires: []
 - name: Skin Deep
   ids:
   - steam:301280
+  - isthereanydeal:skin-deep
   requires: []
 - name: Nightmare Reaper
   ids:
   - steam:1051690
+  - isthereanydeal:nightmare-reaper
   requires: []
 - name: 'Wanted: Dead'
   ids:
   - steam:1981610
+  - isthereanydeal:wanted-dead
   requires: []
 - name: Beyond Sunset
   ids:
   - steam:1665260
+  - isthereanydeal:beyond-sunset
   requires: []
 - name: Severed Steel
   ids:
   - steam:1227690
+  - isthereanydeal:severed-steel
   requires: []
