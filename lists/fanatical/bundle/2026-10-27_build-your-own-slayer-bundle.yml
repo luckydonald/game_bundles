@@ -18,21 +18,13 @@ references:
   path: ../../../archives/fanatical/bundle/build-your-own-slayer-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/fanatical/bundle/build-your-own-slayer-bundle/source.json
-- name: DekuDeals bundle
-  url: https://www.dekudeals.com/bundles/build-your-own-slayer-bundle-frightfest
-- name: Crawl metadata
-  path: ../../../archives/dekudeals/bundle/build-your-own-slayer-bundle-frightfest/metadata.json
-- name: Crawl source
-  path: ../../../archives/dekudeals/bundle/build-your-own-slayer-bundle-frightfest/source.json
 crawlers:
 - fanatical
-- dekudeals
 games:
 - name: Dungeons of Blood and Dream
   ids:
   - steam:2488590
   - fanatical:dungeons-of-blood-and-dream
-  - dekudeals:dungeons-of-blood-and-dream
   requires: []
   tiers:
   - 1
@@ -42,8 +34,6 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-slayer-bundle:feed-it
   - fanatical:feed-it
-  - steam:4370990
-  - dekudeals:feed-it-87cwcx5mfv
   requires: []
   tiers:
   - 1
@@ -53,7 +43,6 @@ games:
   ids:
   - steam:3215660
   - fanatical:late-homework-or
-  - dekudeals:late-homework
   requires: []
   tiers:
   - 1
@@ -63,7 +52,6 @@ games:
   ids:
   - steam:1063660
   - fanatical:bendy-and-the-dark-revival
-  - dekudeals:bendy-and-the-dark-revival
   requires: []
   tiers:
   - 1
@@ -73,8 +61,6 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-slayer-bundle:house
   - fanatical:house
-  - steam:1444350
-  - dekudeals:house
   requires: []
   tiers:
   - 1
@@ -84,7 +70,6 @@ games:
   ids:
   - steam:1766740
   - fanatical:choo-choo-charles
-  - dekudeals:choo-choo-charles
   requires: []
   tiers:
   - 1
@@ -94,7 +79,6 @@ games:
   ids:
   - steam:1206060
   - fanatical:happy-game
-  - dekudeals:happy-game
   requires: []
   tiers:
   - 1
@@ -104,7 +88,6 @@ games:
   ids:
   - steam:2840250
   - fanatical:zero-protocol
-  - dekudeals:zero-protocol
   requires: []
   tiers:
   - 1
@@ -114,7 +97,6 @@ games:
   ids:
   - steam:3252360
   - fanatical:unemployment-simulator-2018
-  - dekudeals:unemployment-simulator-2018
   requires: []
   tiers:
   - 1
@@ -124,7 +106,6 @@ games:
   ids:
   - steam:2895340
   - fanatical:apartment-no-129
-  - dekudeals:apartment-no-129
   requires: []
   tiers:
   - 1
@@ -134,7 +115,6 @@ games:
   ids:
   - steam:2235820
   - fanatical:jack-holmes-master-of-puppets
-  - dekudeals:jack-holmes-master-of-puppets
   requires: []
   tiers:
   - 1
@@ -144,7 +124,6 @@ games:
   ids:
   - steam:3217090
   - fanatical:jewel-match-dracula-collectors-edition
-  - dekudeals:jewel-match-dracula-collectors-edition
   requires: []
   tiers:
   - 1
@@ -154,7 +133,6 @@ games:
   ids:
   - steam:2887450
   - fanatical:panic-delivery
-  - dekudeals:panic-delivery
   requires: []
   tiers:
   - 1
@@ -164,7 +142,6 @@ games:
   ids:
   - steam:3388870
   - fanatical:aooni-the-horror-of-blueberry-onsen
-  - dekudeals:the-horror-of-blueberry-onsen
   requires: []
   tiers:
   - 1
@@ -174,7 +151,6 @@ games:
   ids:
   - steam:1724030
   - fanatical:eyes-of-hellfire
-  - dekudeals:eyes-of-hellfire
   requires: []
   tiers:
   - 1
@@ -184,7 +160,6 @@ games:
   ids:
   - steam:4317790
   - fanatical:last-pirates-die-together
-  - dekudeals:last-pirates-die-together
   requires: []
   tiers:
   - 1
@@ -194,7 +169,6 @@ games:
   ids:
   - steam:5167420
   - fanatical:mimic-busters
-  - dekudeals:mimic-busters
   requires: []
   tiers:
   - 1
@@ -204,7 +178,6 @@ games:
   ids:
   - steam:2348730
   - fanatical:hauntsville
-  - dekudeals:hauntsville
   requires: []
   tiers:
   - 1
