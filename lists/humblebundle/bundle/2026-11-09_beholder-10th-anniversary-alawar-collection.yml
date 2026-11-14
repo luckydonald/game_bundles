@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-09_beholder-10th-anniversary-alawar-collection/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-09_beholder-10th-anniversary-alawar-collection/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16787/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16787/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16787/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Looking for Aliens
   ids:
   - steam:1733500
+  - isthereanydeal:looking-for-aliens
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: 'Distrust: Polar Survival'
   ids:
   - steam:635200
+  - isthereanydeal:distrust
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Wall World
   ids:
   - steam:2187290
+  - isthereanydeal:wall-world
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: 'Wall World: Deep Threat'
   ids:
   - steam:2474860
+  - isthereanydeal:wall-world-deep-threat
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Beholder 3
   ids:
   - steam:1570070
+  - isthereanydeal:beholder-3
   requires: []
   tiers:
   - 1
@@ -54,6 +66,7 @@ games:
 - name: Beholder 2
   ids:
   - steam:761620
+  - isthereanydeal:beholder-2
   requires: []
   tiers:
   - 1
@@ -61,6 +74,7 @@ games:
 - name: Beholder
   ids:
   - steam:475550
+  - isthereanydeal:beholder
   requires: []
   tiers:
   - 1
@@ -68,6 +82,7 @@ games:
 - name: Beholder - Blissful Sleep
   ids:
   - steam:616950
+  - isthereanydeal:beholder-blissful-sleep
   requires: []
   tiers:
   - 1
@@ -75,6 +90,7 @@ games:
 - name: Necrosmith
   ids:
   - steam:1949190
+  - isthereanydeal:necrosmith
   requires: []
   tiers:
   - 1
@@ -82,6 +98,7 @@ games:
 - name: Do Not Feed the Monkeys
   ids:
   - steam:658850
+  - isthereanydeal:do-not-feed-the-monkeys
   requires: []
   tiers:
   - 1
@@ -89,6 +106,7 @@ games:
 - name: 'Space Robinson: Hardcore Roguelike Action'
   ids:
   - steam:953870
+  - isthereanydeal:space-robinson
   requires: []
   tiers:
   - 1
@@ -96,6 +114,7 @@ games:
 - name: Song of Farca
   ids:
   - steam:1435670
+  - isthereanydeal:song-of-farca
   requires: []
   tiers:
   - 1
@@ -103,60 +122,75 @@ games:
 - name: Wall World 2
   ids:
   - unresolved:source:humblebundle:wallworld2
+  - steam:3467710
+  - isthereanydeal:wall-world-2
   requires: []
   tiers:
   - 2
 - name: 'Beholder: Conductor'
   ids:
   - unresolved:source:humblebundle:beholder_conductor
+  - steam:2825530
+  - isthereanydeal:beholder-conductor
   requires: []
   tiers:
   - 2
 - name: Necrosmith 2
   ids:
   - unresolved:source:humblebundle:necrosmith2
+  - steam:2277320
+  - isthereanydeal:necrosmith-2
   requires: []
   tiers:
   - 2
 - name: Security 51
   ids:
   - unresolved:source:humblebundle:security51
+  - steam:4246860
+  - isthereanydeal:security-51
   requires: []
   tiers:
   - 2
 - name: Haunted Lands
   ids:
   - unresolved:source:humblebundle:hauntedlands
+  - steam:2980900
+  - isthereanydeal:haunted-lands
   requires: []
   tiers:
   - 2
 - name: Karate Survivor
   ids:
   - steam:3027930
+  - isthereanydeal:karate-survivor
   requires: []
   tiers:
   - 2
 - name: Technotopia
   ids:
   - steam:2825110
+  - isthereanydeal:technotopia
   requires: []
   tiers:
   - 2
 - name: Necroking
   ids:
   - steam:2852980
+  - isthereanydeal:necroking
   requires: []
   tiers:
   - 2
 - name: Kingsgrave
   ids:
   - steam:2644360
+  - isthereanydeal:kingsgrave
   requires: []
   tiers:
   - 2
 - name: They Always Run
   ids:
   - steam:1585440
+  - isthereanydeal:they-always-run
   requires: []
   tiers:
   - 2

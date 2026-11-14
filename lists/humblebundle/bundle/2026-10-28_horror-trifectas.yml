@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-28_horror-trifectas/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-28_horror-trifectas/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16731/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16731/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16731/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Bendy and the Dark Revival
   ids:
   - steam:1063660
+  - isthereanydeal:bendy-and-the-dark-revival
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Bendy and the Ink Machine
   ids:
   - steam:622650
+  - isthereanydeal:bendy-and-the-ink-machine
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: 'True Fear: Forsaken Souls Part 2'
   ids:
   - steam:935580
+  - isthereanydeal:true-fear-forsaken-souls-part-2
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: 'True Fear: Forsaken Souls Part 1'
   ids:
   - steam:440420
+  - isthereanydeal:true-fear-forsaken-souls
   group:
     id: truefear_forsakensouls_part1
     name: 'True Fear: Forsaken Souls'
@@ -61,6 +72,7 @@ games:
 - name: 'DreadOut: Keepers of The Dark'
   ids:
   - steam:418950
+  - isthereanydeal:dreadout-keepers-of-the-dark
   requires: []
   tiers:
   - 1
@@ -68,6 +80,7 @@ games:
 - name: DreadOut
   ids:
   - steam:269790
+  - isthereanydeal:dreadout
   requires: []
   tiers:
   - 1
@@ -75,6 +88,7 @@ games:
 - name: 'The Coma 2: Vicious Sisters'
   ids:
   - steam:1045720
+  - isthereanydeal:the-coma-2-vicious-sisters
   requires: []
   tiers:
   - 1
@@ -82,6 +96,7 @@ games:
 - name: 'The Coma: Recut'
   ids:
   - steam:600090
+  - isthereanydeal:the-coma-recut
   requires: []
   tiers:
   - 1
@@ -89,42 +104,49 @@ games:
 - name: F.E.A.R. 3
   ids:
   - steam:21100
+  - isthereanydeal:fear-3
   requires: []
   tiers:
   - 2
 - name: 'Bendy: Lone Wolf'
   ids:
   - steam:3232610
+  - isthereanydeal:bendy-lone-wolf
   requires: []
   tiers:
   - 2
 - name: DreadOut 2
   ids:
   - steam:945710
+  - isthereanydeal:dreadout-2
   requires: []
   tiers:
   - 2
 - name: 'True Fear: Forsaken Souls Part 3'
   ids:
   - steam:3168310
+  - isthereanydeal:true-fear-forsaken-souls-part-3
   requires: []
   tiers:
   - 2
 - name: 'The Coma 2B: Catacomb'
   ids:
   - steam:1781890
+  - isthereanydeal:the-coma-2b-catacomb
   requires: []
   tiers:
   - 2
 - name: 'FEAR 2: Project Origin'
   ids:
   - steam:16450
+  - isthereanydeal:fear-2-project-origin
   requires: []
   tiers:
   - 2
 - name: 'F.E.A.R. 2: Reborn (DLC'
   ids:
   - steam:16465
+  - isthereanydeal:fear-2-reborn
   requires: []
   tiers:
   - 2
@@ -140,6 +162,7 @@ games:
 - name: F.E.A.R.
   ids:
   - steam:21090
+  - isthereanydeal:fear-ultimate-shooter-edition
   group:
     id: fear
     name: 'FEAR: Ultimate Shooter Edition'

@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Ascension Saga - Bundle Sale — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16775/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16775/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16775/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Sapphire City
+  ids:
+  - unresolved:source:isthereanydeal:16775:sapphire-city
+  - isthereanydeal:sapphire-city
+  requires: []
+- name: Sapphire City Part 2
+  ids:
+  - unresolved:source:isthereanydeal:16775:sapphire-city-part-2
+  - isthereanydeal:sapphire-city-part-2
+  requires: []
+- name: The Sons
+  ids:
+  - unresolved:source:isthereanydeal:16775:the-sons
+  - isthereanydeal:the-sons
+  requires: []
+- name: Sapphire City Part 3
+  ids:
+  - unresolved:source:isthereanydeal:16775:sapphire-city-part-3
+  - isthereanydeal:sapphire-city-part-3
+  requires: []
+- name: 'Penance: Alba'
+  ids:
+  - unresolved:source:isthereanydeal:16775:penance-alba
+  - isthereanydeal:penance-alba
+  requires: []
+- name: Penance 1
+  ids:
+  - unresolved:source:isthereanydeal:16775:penance-1
+  - isthereanydeal:penance-1
+  requires: []
+- name: Astra's Call
+  ids:
+  - unresolved:source:isthereanydeal:16775:astras-call
+  - isthereanydeal:astras-call
+  requires: []

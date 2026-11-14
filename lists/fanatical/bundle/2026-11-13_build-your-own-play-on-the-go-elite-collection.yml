@@ -18,13 +18,21 @@ references:
   path: ../../../archives/fanatical/bundle/build-your-own-play-on-the-go-elite-collection/metadata.json
 - name: Crawl source
   path: ../../../archives/fanatical/bundle/build-your-own-play-on-the-go-elite-collection/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16795/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16795/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16795/source.json
 crawlers:
 - fanatical
+- isthereanydeal
 games:
 - name: Silly Polly Beast
   ids:
   - steam:1598780
   - fanatical:silly-polly-beast
+  - isthereanydeal:silly-polly-beast
   requires: []
   tiers:
   - 1
@@ -34,6 +42,8 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:the-elder-scrolls-online-deluxe-collection-necrom
   - fanatical:the-elder-scrolls-online-deluxe-collection-necrom
+  - unresolved:source:isthereanydeal:16795:the-elder-scrolls-online-deluxe-collection-necrom
+  - isthereanydeal:the-elder-scrolls-online-deluxe-collection-necrom
   requires: []
   tiers:
   - 1
@@ -43,6 +53,8 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:high-on-life-dlc-bundle
   - fanatical:high-on-life-dlc-bundle
+  - unresolved:source:isthereanydeal:16795:high-on-life-dlc-bundle
+  - isthereanydeal:high-on-life-dlc-bundle
   requires: []
   tiers:
   - 1
@@ -52,6 +64,8 @@ games:
   ids:
   - steam:1273400
   - fanatical:construction-simulator-gold-edition
+  - unresolved:source:isthereanydeal:16795:construction-simulator-gold-edition
+  - isthereanydeal:construction-simulator-gold-edition
   requires: []
   tiers:
   - 1
@@ -61,6 +75,7 @@ games:
   ids:
   - steam:2885870
   - fanatical:strange-antiquities
+  - isthereanydeal:strange-antiquities
   requires: []
   tiers:
   - 1
@@ -70,6 +85,7 @@ games:
   ids:
   - steam:1295920
   - fanatical:the-mortuary-assistant
+  - isthereanydeal:the-mortuary-assistant
   requires: []
   tiers:
   - 1
@@ -79,6 +95,7 @@ games:
   ids:
   - steam:2119830
   - fanatical:misery
+  - isthereanydeal:misery
   requires: []
   tiers:
   - 1
@@ -88,6 +105,7 @@ games:
   ids:
   - steam:1714900
   - fanatical:first-dwarf
+  - isthereanydeal:first-dwarf
   requires: []
   tiers:
   - 1
@@ -97,6 +115,8 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:kuloniku-bowl-up-deluxe-edition
   - fanatical:kuloniku-bowl-up-deluxe-edition
+  - unresolved:source:isthereanydeal:16795:kuloniku-bowl-up-deluxe-edition
+  - isthereanydeal:kuloniku-bowl-up-deluxe-edition
   requires: []
   tiers:
   - 1
@@ -106,6 +126,8 @@ games:
   ids:
   - unresolved:source:fanatical:build-your-own-play-on-the-go-elite-collection:bus-simulator-21-next-stop-gold-edition
   - fanatical:bus-simulator-21-next-stop-gold-edition
+  - unresolved:source:isthereanydeal:16795:bus-simulator-21-next-stop-gold-edition
+  - isthereanydeal:bus-simulator-21-next-stop-gold-edition
   requires: []
   tiers:
   - 1
@@ -115,6 +137,8 @@ games:
   ids:
   - steam:997010
   - fanatical:police-simulator-patrol-officers-gold-edition
+  - unresolved:source:isthereanydeal:16795:police-simulator-patrol-officers-gold-edition
+  - isthereanydeal:police-simulator-patrol-officers-gold-edition
   requires: []
   tiers:
   - 1
@@ -124,6 +148,7 @@ games:
   ids:
   - steam:3065030
   - fanatical:the-caribou-trail
+  - isthereanydeal:the-caribou-trail
   requires: []
   tiers:
   - 1
@@ -133,6 +158,7 @@ games:
   ids:
   - steam:2783370
   - fanatical:teeto
+  - isthereanydeal:teeto
   requires: []
   tiers:
   - 1
@@ -142,6 +168,7 @@ games:
   ids:
   - steam:1656930
   - fanatical:coridden
+  - isthereanydeal:coridden
   requires: []
   tiers:
   - 1
@@ -151,6 +178,7 @@ games:
   ids:
   - steam:2147380
   - fanatical:silence-of-the-siren
+  - isthereanydeal:heroes-of-science-and-fiction
   requires: []
   tiers:
   - 1
@@ -160,6 +188,7 @@ games:
   ids:
   - steam:3224540
   - fanatical:voidface
+  - isthereanydeal:voidface
   requires: []
   tiers:
   - 1
@@ -169,6 +198,7 @@ games:
   ids:
   - steam:2545360
   - fanatical:lonely-mountains-snow-riders
+  - isthereanydeal:lonely-mountains-snow-riders
   requires: []
   tiers:
   - 1
@@ -178,6 +208,7 @@ games:
   ids:
   - steam:1350200
   - fanatical:immortality
+  - isthereanydeal:immortality
   requires: []
   tiers:
   - 1
@@ -187,6 +218,7 @@ games:
   ids:
   - steam:3590560
   - fanatical:nutmeg-a-nostalgic-deckbuilding-football-manager
+  - isthereanydeal:nutmeg-a-nostalgic-deckbuilding-football-manager
   requires: []
   tiers:
   - 1
@@ -196,6 +228,7 @@ games:
   ids:
   - steam:334540
   - fanatical:vox-machinae
+  - isthereanydeal:vox-machinae
   requires: []
   tiers:
   - 1

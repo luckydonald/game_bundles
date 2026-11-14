@@ -8,58 +8,89 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-06_non-non-nonograms/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-06_non-non-nonograms/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16784/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16784/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16784/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Homgard
   ids:
   - steam:4287570
+  - isthereanydeal:homgard
   requires: []
 - name: Nekograms
   ids:
   - steam:2478120
+  - isthereanydeal:nekograms
   requires: []
 - name: Piczle Cross Adventure
   ids:
   - unresolved:source:humblebundle:piczlecrossadventure
+  - steam:1215320
+  - isthereanydeal:piczle-cross-adventure
   requires: []
 - name: Pixel Puzzle Makeout League
   ids:
   - unresolved:source:humblebundle:pixelpuzzlemakeoutleague
+  - steam:1131800
+  - isthereanydeal:pixel-puzzle-makeout-league
   requires: []
 - name: SherloCAT Holmes Nonogram
   ids:
   - unresolved:source:humblebundle:sherlocatholmesnonogram
+  - steam:2728040
+  - isthereanydeal:sherlocat-holmes-nonogram
   requires: []
 - name: Paint it Back
   ids:
   - unresolved:source:humblebundle:paintitback
+  - steam:385250
+  - isthereanydeal:paint-it-back
   requires: []
 - name: Polimines
   ids:
   - unresolved:source:humblebundle:polimines
+  - steam:1892790
+  - isthereanydeal:polimines
   requires: []
 - name: Polimines 2
   ids:
   - unresolved:source:humblebundle:polimines2
+  - steam:2328730
+  - isthereanydeal:polimines-2
   requires: []
 - name: Charm Studies
   ids:
   - unresolved:source:humblebundle:charmstudies
+  - steam:4541930
+  - isthereanydeal:charm-studies
   requires: []
 - name: Voxelgram
   ids:
   - unresolved:source:humblebundle:voxelgram
+  - steam:1158470
+  - isthereanydeal:voxelgram
   requires: []
 - name: Mega Mosaic
   ids:
   - unresolved:source:humblebundle:megamosaic
+  - steam:2915950
+  - isthereanydeal:mega-mosaic
   requires: []
 - name: Tents and Trees
   ids:
   - unresolved:source:humblebundle:tentsandtrees
+  - steam:2310810
+  - isthereanydeal:tents-and-trees
   requires: []
 - name: LYNE
   ids:
   - unresolved:source:humblebundle:lyne
+  - steam:266010
+  - isthereanydeal:lyne
   requires: []

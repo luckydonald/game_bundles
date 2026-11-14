@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Wicked Stardust Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16734/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16734/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16734/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: Lenin - The Lion
+  ids:
+  - steam:839850
+  - isthereanydeal:lenin-the-lion
+  requires: []
+- name: Vostok 2061
+  ids:
+  - steam:1463830
+  - isthereanydeal:vostok-2061
+  requires: []
+- name: Stardust Exile
+  ids:
+  - steam:1858900
+  - isthereanydeal:stardust-exile
+  requires: []
+- name: Tales of Vogar - Lost Descendants
+  ids:
+  - steam:1887070
+  - isthereanydeal:tales-of-vogar-lost-descendants
+  requires: []
+- name: 'Grey Heritage: Noble Duty'
+  ids:
+  - steam:2424300
+  - isthereanydeal:grey-heritage-noble-duty
+  requires: []
+- name: Rondoku
+  ids:
+  - steam:3791600
+  - isthereanydeal:rondoku
+  requires: []

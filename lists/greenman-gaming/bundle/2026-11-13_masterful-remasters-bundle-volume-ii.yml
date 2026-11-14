@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Masterful Remasters Bundle II
+tiers:
+- rank: 1
+  name: Rediscovered
+- rank: 2
+  name: Restored
+- rank: 3
+  name: Definitive
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16796/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16796/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16796/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: 'System Shock: Enhanced Edition'
+  ids:
+  - steam:410710
+  - isthereanydeal:system-shock-enhanced-edition
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: Star Wars - Bounty Hunter
+  ids:
+  - steam:2419090
+  - isthereanydeal:star-wars-bounty-hunter
+  requires: []
+  tiers:
+  - 1
+  - 2
+  - 3
+- name: System Shock
+  ids:
+  - steam:482400
+  - isthereanydeal:system-shock
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'Star Wars™: Episode I: Jedi Power Battles™'
+  ids:
+  - steam:2443630
+  - isthereanydeal:star-wars-episode-i-jedi-power-battles
+  requires: []
+  tiers:
+  - 2
+  - 3
+- name: 'The Thing: Remastered'
+  ids:
+  - steam:2958970
+  - isthereanydeal:the-thing-remastered
+  requires: []
+  tiers:
+  - 3
+- name: 'System Shock 2: 25th Anniversary Remaster'
+  ids:
+  - steam:866570
+  - isthereanydeal:system-shock-2-25th-anniversary-remaster
+  requires: []
+  tiers:
+  - 3
+- name: 'Dungeons & Dragons Neverwinter Nights 2: Enhanced Edition'
+  ids:
+  - steam:2738630
+  - isthereanydeal:dungeons-and-dragons-neverwinter-nights-2-enhanced-edition
+  requires: []
+  tiers:
+  - 3

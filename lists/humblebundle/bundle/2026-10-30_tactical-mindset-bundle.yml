@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-10-30_tactical-mindset-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-10-30_tactical-mindset-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16747/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16747/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16747/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: The Ouroboros King
   ids:
   - steam:2096510
+  - isthereanydeal:the-ouroboros-king
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: Planetiles
   ids:
   - steam:2447030
+  - isthereanydeal:planetiles
   requires: []
   tiers:
   - 1
@@ -37,6 +46,8 @@ games:
 - name: Break the Loop
   ids:
   - unresolved:source:humblebundle:breaktheloop
+  - steam:1331340
+  - isthereanydeal:break-the-loop
   requires: []
   tiers:
   - 1
@@ -45,6 +56,7 @@ games:
 - name: Vandals
   ids:
   - steam:809240
+  - isthereanydeal:vandals
   requires: []
   tiers:
   - 1
@@ -53,6 +65,8 @@ games:
 - name: Space Prison
   ids:
   - unresolved:source:humblebundle:spaceprison
+  - steam:1865930
+  - isthereanydeal:space-prison
   requires: []
   tiers:
   - 2
@@ -60,6 +74,8 @@ games:
 - name: 'The Dungeon of Naheulbeuk: The Amulet of Chaos - Deluxe Edition'
   ids:
   - unresolved:source:humblebundle:thedungeonofnaheulbeuk_theamuletofchaos_deluxe
+  - unresolved:source:isthereanydeal:16747:the-dungeon-of-naheulbeuk-the-amulet-of-chaos-deluxe-edition
+  - isthereanydeal:the-dungeon-of-naheulbeuk-the-amulet-of-chaos-deluxe-edition
   requires: []
   tiers:
   - 2
@@ -67,6 +83,8 @@ games:
 - name: Lost Eidolons
   ids:
   - unresolved:source:humblebundle:losteidolons
+  - steam:1580520
+  - isthereanydeal:lost-eidolons
   requires: []
   tiers:
   - 2
@@ -74,6 +92,8 @@ games:
 - name: The Land Beneath Us
   ids:
   - unresolved:source:humblebundle:thelandbeneathus
+  - steam:2131010
+  - isthereanydeal:the-land-beneath-us
   requires: []
   tiers:
   - 2
@@ -81,12 +101,16 @@ games:
 - name: 'Terrinoth: Heroes of Descent'
   ids:
   - unresolved:source:humblebundle:terrinoth_heroesofdescent
+  - steam:3929630
+  - isthereanydeal:terrinoth-heroes-of-descent
   requires: []
   tiers:
   - 3
 - name: 'One More Gate : A Wakfu Legend'
   ids:
   - unresolved:source:humblebundle:onemoregate_awakfulegend
+  - steam:1832950
+  - isthereanydeal:one-more-gate-a-wakfu-legend
   requires: []
   tiers:
   - 3

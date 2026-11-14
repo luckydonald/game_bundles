@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-13_generation-zero-complete-bundle-2026/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-13_generation-zero-complete-bundle-2026/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16797/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16797/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16797/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Generation Zero - FNIX Rising
   ids:
   - steam:1301740
+  - isthereanydeal:generation-zero-fnix-rising
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Generation Zero - Motorbikes Pack
   ids:
   - steam:2144761
+  - isthereanydeal:generation-zero-motorbikes-pack
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: Generation Zero - Heavy Weapons Pack
   ids:
   - steam:2955520
+  - isthereanydeal:generation-zero-heavy-weapons-pack
   requires: []
   tiers:
   - 1
@@ -40,6 +50,7 @@ games:
 - name: Generation Zero - Advanced Intelligence Cosmetics Pack
   ids:
   - steam:2591100
+  - isthereanydeal:generation-zero-advanced-intelligence-cosmetics-pack
   requires: []
   tiers:
   - 1
@@ -47,6 +58,7 @@ games:
 - name: Generation Zero - Tactical Equipment Pack
   ids:
   - steam:2009530
+  - isthereanydeal:generation-zero-tactical-equipment-pack
   requires: []
   tiers:
   - 1
@@ -54,6 +66,7 @@ games:
 - name: Generation Zero - Alpine Unrest
   ids:
   - steam:1157550
+  - isthereanydeal:generation-zero-alpine-unrest
   requires: []
   tiers:
   - 1
@@ -61,6 +74,7 @@ games:
 - name: Generation Zero - Companion Accessories Pack
   ids:
   - steam:2473770
+  - isthereanydeal:generation-zero-companion-accessories-pack
   requires: []
   tiers:
   - 1
@@ -68,6 +82,7 @@ games:
 - name: Generation Zero - Reinforced Flakmoped Pack
   ids:
   - steam:2689180
+  - isthereanydeal:generation-zero-reinforced-flakmoped-pack
   requires: []
   tiers:
   - 1
@@ -75,6 +90,7 @@ games:
 - name: Generation Zero - US Weapons Pack 2
   ids:
   - steam:1610690
+  - isthereanydeal:generation-zero-us-weapons-pack-2
   requires: []
   tiers:
   - 1
@@ -82,6 +98,7 @@ games:
 - name: Generation Zero - Eastern European Weapons Pack
   ids:
   - steam:2200740
+  - isthereanydeal:generation-zero-eastern-european-weapons-pack
   requires: []
   tiers:
   - 1
@@ -89,6 +106,7 @@ games:
 - name: Generation Zero
   ids:
   - steam:704270
+  - isthereanydeal:generation-zero
   requires: []
   tiers:
   - 1
@@ -96,48 +114,56 @@ games:
 - name: Generation Zero - Camo Weapon Skins Pack
   ids:
   - steam:2144760
+  - isthereanydeal:generation-zero-camo-weapon-skins-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Base Support Pack
   ids:
   - steam:1850670
+  - isthereanydeal:generation-zero-base-support-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Resistance Weapons Pack
   ids:
   - steam:1771050
+  - isthereanydeal:generation-zero-resistance-weapons-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - US Weapons Pack
   ids:
   - steam:1450340
+  - isthereanydeal:generation-zero-us-weapons-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Base Defense Pack
   ids:
   - steam:1610720
+  - isthereanydeal:generation-zero-base-defense-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Soviet Weapons Pack
   ids:
   - steam:1580920
+  - isthereanydeal:generation-zero-soviet-weapons-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Schweet Vanity Pack
   ids:
   - steam:1062420
+  - isthereanydeal:generation-zero-schweet-vanity-pack
   requires: []
   tiers:
   - 2
 - name: Generation Zero - Tactical Equipment Pack 2
   ids:
   - steam:2334430
+  - isthereanydeal:generation-zero-tactical-equipment-pack-2
   requires: []
   tiers:
   - 2

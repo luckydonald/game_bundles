@@ -13,12 +13,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-05_hambles-farming-games-collection/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-05_hambles-farming-games-collection/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16778/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16778/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16778/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Robert on Earth
   ids:
   - steam:3003050
+  - isthereanydeal:robert-on-earth
   requires: []
   tiers:
   - 1
@@ -26,6 +34,7 @@ games:
 - name: Greenhearth Necromancer
   ids:
   - steam:2127570
+  - isthereanydeal:greenhearth-necromancer
   requires: []
   tiers:
   - 1
@@ -33,6 +42,7 @@ games:
 - name: To Pixelia
   ids:
   - steam:1954160
+  - isthereanydeal:to-pixelia
   requires: []
   tiers:
   - 1
@@ -40,6 +50,8 @@ games:
 - name: Seeds of Calamity
   ids:
   - unresolved:source:humblebundle:seedsofcalamity
+  - steam:1780070
+  - isthereanydeal:seeds-of-calamity
   requires: []
   tiers:
   - 1
@@ -47,6 +59,8 @@ games:
 - name: Immortal Life
   ids:
   - unresolved:source:humblebundle:immortallife
+  - steam:1201230
+  - isthereanydeal:immortal-life
   requires: []
   tiers:
   - 1
@@ -54,36 +68,42 @@ games:
 - name: Farming Simulator 19
   ids:
   - steam:787860
+  - isthereanydeal:farming-simulator-19
   requires: []
   tiers:
   - 2
 - name: Fae Farm
   ids:
   - steam:2230110
+  - isthereanydeal:fae-farm
   requires: []
   tiers:
   - 2
 - name: Snacko
   ids:
   - steam:1125510
+  - isthereanydeal:snacko
   requires: []
   tiers:
   - 2
 - name: Cornucopia
   ids:
   - steam:1681600
+  - isthereanydeal:cornucopia
   requires: []
   tiers:
   - 2
 - name: Farm Manager World
   ids:
   - steam:2206350
+  - isthereanydeal:farm-manager-world
   requires: []
   tiers:
   - 2
 - name: Border Town
   ids:
   - steam:1967820
+  - isthereanydeal:border-town
   requires: []
   tiers:
   - 2

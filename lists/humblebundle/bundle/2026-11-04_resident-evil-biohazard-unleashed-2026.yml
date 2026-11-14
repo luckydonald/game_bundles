@@ -17,8 +17,15 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-04_resident-evil-biohazard-unleashed-2026/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-04_resident-evil-biohazard-unleashed-2026/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16771/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16771/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16771/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Resident Evil Village - Winters’ Expansion
   ids:
@@ -35,6 +42,7 @@ games:
 - name: Resident Evil Village
   ids:
   - steam:1196590
+  - isthereanydeal:resident-evil-village-gold-edition
   group:
     id: residentevilvillage_goldedition
     name: Resident Evil Village Gold Edition
@@ -59,6 +67,8 @@ games:
 - name: RESIDENT EVIL 7 biohazard Gold Edition
   ids:
   - unresolved:source:humblebundle:residentevil7_gold
+  - unresolved:source:isthereanydeal:16771:resident-evil-7-biohazard-gold-edition
+  - isthereanydeal:resident-evil-7-biohazard-gold-edition
   requires: []
   tiers:
   - 2
@@ -67,6 +77,8 @@ games:
 - name: Resident Evil 4 HD (2005)
   ids:
   - unresolved:source:humblebundle:residentevil42005
+  - steam:254700
+  - isthereanydeal:resident-evil-4-2005
   requires: []
   tiers:
   - 3
@@ -74,6 +86,7 @@ games:
 - name: Resident Evil 5
   ids:
   - steam:21690
+  - isthereanydeal:resident-evil-5-gold-edition
   group:
     id: residentevil5_gold
     name: Resident Evil 5 Gold Edition
@@ -134,6 +147,7 @@ games:
 - name: Resident Evil 6
   ids:
   - steam:221040
+  - isthereanydeal:resident-evil-6-complete
   group:
     id: residentevil6
     name: Resident Evil 6 Complete
@@ -194,24 +208,30 @@ games:
 - name: Resident Evil 0 HD Remaster
   ids:
   - unresolved:source:humblebundle:residentevil0_hdremaster
+  - steam:339340
+  - isthereanydeal:resident-evil-0-hd-remaster
   requires: []
   tiers:
   - 4
 - name: Resident Evil HD Remaster
   ids:
   - unresolved:source:humblebundle:residentevil_hdremaster
+  - steam:304240
+  - isthereanydeal:resident-evil-hd-remaster
   requires: []
   tiers:
   - 4
 - name: Resident Evil 2
   ids:
   - steam:883710
+  - isthereanydeal:resident-evil-2-2019
   requires: []
   tiers:
   - 4
 - name: Resident Evil 3
   ids:
   - steam:952060
+  - isthereanydeal:resident-evil-3-2020
   requires: []
   tiers:
   - 4

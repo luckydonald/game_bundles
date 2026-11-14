@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../schemas/game-list.schema.json
+schema: 2
+name: Power Halt Bundle — Tier 1
+references:
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16665/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16665/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16665/source.json
+crawlers:
+- isthereanydeal
+games:
+- name: HALT
+  ids:
+  - steam:2206680
+  - isthereanydeal:halt
+  requires: []
+- name: Black blood
+  ids:
+  - steam:1262080
+  - isthereanydeal:black-blood
+  requires: []
+- name: Defense high
+  ids:
+  - steam:1280550
+  - isthereanydeal:defense-high
+  requires: []
+- name: Agent Murphy
+  ids:
+  - steam:1518200
+  - isthereanydeal:agent-murphy
+  requires: []
+- name: Bloody Rampage City
+  ids:
+  - steam:1888000
+  - isthereanydeal:bloody-rampage-city
+  requires: []
+- name: FETUS
+  ids:
+  - steam:2059650
+  - isthereanydeal:fetus
+  requires: []
+- name: Lab Inspect
+  ids:
+  - steam:2206720
+  - isthereanydeal:lab-inspect
+  requires: []
+- name: Power Drive
+  ids:
+  - steam:2207110
+  - isthereanydeal:power-drive
+  requires: []
+- name: Wanderer
+  ids:
+  - steam:2027350
+  - isthereanydeal:wanderer--1
+  requires: []

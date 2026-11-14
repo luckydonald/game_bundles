@@ -15,12 +15,20 @@ references:
   path: ../../../archives/humblebundle/bundle/2026-11-13_seriously-unserious-collection/metadata.json
 - name: Crawl source
   path: ../../../archives/humblebundle/bundle/2026-11-13_seriously-unserious-collection/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16798/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16798/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16798/source.json
 crawlers:
 - humblebundle
+- isthereanydeal
 games:
 - name: Pilgrims
   ids:
   - steam:1049280
+  - isthereanydeal:pilgrims
   requires: []
   tiers:
   - 1
@@ -29,6 +37,7 @@ games:
 - name: THE CORRIDOR
   ids:
   - steam:1347030
+  - isthereanydeal:the-corridor
   requires: []
   tiers:
   - 1
@@ -37,6 +46,7 @@ games:
 - name: Bug Academy
   ids:
   - steam:881040
+  - isthereanydeal:bug-academy
   requires: []
   tiers:
   - 1
@@ -45,6 +55,7 @@ games:
 - name: Mr Toilet
   ids:
   - steam:3930150
+  - isthereanydeal:mr-toilet
   requires: []
   tiers:
   - 1
@@ -53,6 +64,7 @@ games:
 - name: Nerd Simulator
   ids:
   - steam:3128220
+  - isthereanydeal:nerd-simulator
   requires: []
   tiers:
   - 1
@@ -61,6 +73,7 @@ games:
 - name: Comedy Night
   ids:
   - steam:665360
+  - isthereanydeal:comedy-night
   requires: []
   tiers:
   - 1
@@ -69,6 +82,7 @@ games:
 - name: Barn Finders
   ids:
   - steam:991170
+  - isthereanydeal:barn-finders
   requires: []
   tiers:
   - 2
@@ -76,6 +90,7 @@ games:
 - name: Squirrel Stapler
   ids:
   - steam:2535830
+  - isthereanydeal:squirrel-stapler
   requires: []
   tiers:
   - 2
@@ -83,6 +98,7 @@ games:
 - name: Ghost Keeper
   ids:
   - steam:2708880
+  - isthereanydeal:ghost-keeper
   requires: []
   tiers:
   - 2
@@ -90,6 +106,7 @@ games:
 - name: Astrologaster
   ids:
   - steam:742520
+  - isthereanydeal:astrologaster
   requires: []
   tiers:
   - 2
@@ -97,18 +114,21 @@ games:
 - name: Journey To The Savage Planet
   ids:
   - steam:973810
+  - isthereanydeal:journey-to-the-savage-planet
   requires: []
   tiers:
   - 3
 - name: Who's Your Daddy?!
   ids:
   - steam:427730
+  - isthereanydeal:whos-your-daddy
   requires: []
   tiers:
   - 3
 - name: Trombone Champ
   ids:
   - steam:1059990
+  - isthereanydeal:trombone-champ
   requires: []
   tiers:
   - 3

@@ -21,13 +21,21 @@ references:
   path: ../../../archives/fanatical/bundle/build-your-own-birthday-bonanza-bundle/metadata.json
 - name: Crawl source
   path: ../../../archives/fanatical/bundle/build-your-own-birthday-bonanza-bundle/source.json
+- name: isthereanydeal.com bundle
+  url: https://isthereanydeal.com/bundles/16781/
+- name: Crawl metadata
+  path: ../../../archives/isthereanydeal/bundle/16781/metadata.json
+- name: Crawl source
+  path: ../../../archives/isthereanydeal/bundle/16781/source.json
 crawlers:
 - fanatical
+- isthereanydeal
 games:
 - name: 'Astor: Blade of the Monolith'
   ids:
   - steam:1989320
   - fanatical:astor-blade-of-the-monolith
+  - isthereanydeal:astor-blade-of-the-monolith
   requires: []
   tiers:
   - 1
@@ -38,6 +46,7 @@ games:
   ids:
   - steam:4197890
   - fanatical:the-last-cat-in-the-universe
+  - isthereanydeal:the-last-cat-in-the-universe
   requires: []
   tiers:
   - 1
@@ -48,6 +57,7 @@ games:
   ids:
   - steam:810040
   - fanatical:swords-n-magic-and-stuff
+  - isthereanydeal:swords-n-magic-and-stuff
   requires: []
   tiers:
   - 1
@@ -58,6 +68,7 @@ games:
   ids:
   - steam:3670580
   - fanatical:townsfolk
+  - isthereanydeal:townsfolk
   requires: []
   tiers:
   - 1
@@ -68,6 +79,7 @@ games:
   ids:
   - steam:3496000
   - fanatical:ship-inc
+  - isthereanydeal:ship-inc
   requires: []
   tiers:
   - 1
@@ -78,6 +90,7 @@ games:
   ids:
   - steam:2299660
   - fanatical:fossilfuel-2
+  - isthereanydeal:fossilfuel-2
   requires: []
   tiers:
   - 1
@@ -88,6 +101,7 @@ games:
   ids:
   - steam:1556790
   - fanatical:isonzo
+  - isthereanydeal:isonzo
   requires: []
   tiers:
   - 1
@@ -98,6 +112,7 @@ games:
   ids:
   - steam:2653470
   - fanatical:little-problems-a-cozy-detective-game
+  - isthereanydeal:little-problems
   requires: []
   tiers:
   - 1
@@ -108,6 +123,7 @@ games:
   ids:
   - steam:2097230
   - fanatical:turnip-boy-robs-a-bank
+  - isthereanydeal:turnip-boy-robs-a-bank
   requires: []
   tiers:
   - 1
@@ -118,6 +134,7 @@ games:
   ids:
   - steam:3336240
   - fanatical:walk-the-frog
+  - isthereanydeal:walk-the-frog
   requires: []
   tiers:
   - 1
@@ -128,6 +145,7 @@ games:
   ids:
   - steam:1589120
   - fanatical:above-snakes
+  - isthereanydeal:above-snakes
   requires: []
   tiers:
   - 1
@@ -138,6 +156,7 @@ games:
   ids:
   - steam:2826800
   - fanatical:amanda-the-adventurer-2
+  - isthereanydeal:amanda-the-adventurer-2
   requires: []
   tiers:
   - 1
@@ -148,6 +167,7 @@ games:
   ids:
   - steam:2693930
   - fanatical:dice-and-fold
+  - isthereanydeal:dice-and-fold
   requires: []
   tiers:
   - 1
@@ -158,6 +178,7 @@ games:
   ids:
   - steam:2245180
   - fanatical:voron-ravens-story
+  - isthereanydeal:voron
   requires: []
   tiers:
   - 1
@@ -168,6 +189,7 @@ games:
   ids:
   - steam:2518630
   - fanatical:none-shall-intrude
+  - isthereanydeal:none-shall-intrude
   requires: []
   tiers:
   - 1
@@ -178,6 +200,7 @@ games:
   ids:
   - steam:3079970
   - fanatical:airport-x-ray-simulator
+  - isthereanydeal:airport-x-ray-simulator
   requires: []
   tiers:
   - 1
@@ -188,6 +211,7 @@ games:
   ids:
   - steam:2398170
   - fanatical:bore-blasters
+  - isthereanydeal:bore-blasters
   requires: []
   tiers:
   - 1
@@ -198,6 +222,7 @@ games:
   ids:
   - steam:2736840
   - fanatical:the-august-before
+  - isthereanydeal:the-august-before
   requires: []
   tiers:
   - 1
@@ -208,6 +233,7 @@ games:
   ids:
   - steam:949200
   - fanatical:ambition-a-minuet-in-power
+  - isthereanydeal:ambition-a-minuet-in-power
   requires: []
   tiers:
   - 1
@@ -218,6 +244,7 @@ games:
   ids:
   - steam:2084000
   - fanatical:shogun-showdown
+  - isthereanydeal:shogun-showdown
   requires: []
   tiers:
   - 1
@@ -228,6 +255,7 @@ games:
   ids:
   - steam:1550730
   - fanatical:ikonei-island-an-earthlock-adventure
+  - isthereanydeal:ikonei-island-an-earthlock-adventure
   requires: []
   tiers:
   - 1
@@ -238,6 +266,7 @@ games:
   ids:
   - steam:3362750
   - fanatical:stormbridge
+  - isthereanydeal:stormbridge
   requires: []
   tiers:
   - 1
@@ -248,6 +277,7 @@ games:
   ids:
   - steam:2786650
   - fanatical:pieces-of-the-past
+  - isthereanydeal:pieces-of-the-past
   requires: []
   tiers:
   - 1
@@ -258,6 +288,7 @@ games:
   ids:
   - steam:2361460
   - fanatical:toy-shire
+  - isthereanydeal:toy-shire
   requires: []
   tiers:
   - 1
@@ -268,6 +299,7 @@ games:
   ids:
   - steam:1273440
   - fanatical:overdrift-festival
+  - isthereanydeal:overdrift-festival
   requires: []
   tiers:
   - 1
@@ -278,6 +310,7 @@ games:
   ids:
   - steam:2881800
   - fanatical:supertaxcity
+  - isthereanydeal:supertaxcity
   requires: []
   tiers:
   - 1
@@ -288,6 +321,7 @@ games:
   ids:
   - steam:520950
   - fanatical:drift-21
+  - isthereanydeal:drift-ce
   requires: []
   tiers:
   - 1
@@ -298,6 +332,7 @@ games:
   ids:
   - steam:2884190
   - fanatical:fight-school-simulator
+  - isthereanydeal:fight-school-simulator
   requires: []
   tiers:
   - 1
