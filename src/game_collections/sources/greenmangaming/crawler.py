@@ -19,7 +19,6 @@ from game_collections.sources.common import (
     dump_versioned_json,
     load_cached_archive,
     merge_tiered_games,
-    render_game_list_yaml,
 )
 from game_collections.sources.greenmangaming.models import CURRENT_VERSION, GmgArchive, GmgItem, GmgTier
 from game_collections.sources.greenmangaming.parser import (
@@ -34,6 +33,7 @@ from game_collections.sources.greenmangaming.resolver import (
     StorefrontResolver,
     render_resolution_map,
 )
+from game_collections.sources.merged_write import write_merged_game_list
 
 
 LogFn = Callable[[str], None]
@@ -309,7 +309,7 @@ def write_gmg_offer(
         crawlers=["greenmangaming"],
         games=games,
     )
-    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_gmg_offer

@@ -3842,3 +3842,8 @@ Figure out why this was needed in the first place, maybe we can make that a yes 
 
 ❯ Plan accepted, auto mode.
 
+❯ While at it, remove the underscore of `_write_merged_game_list` to apply the py code style.
+How is that function different to aggregators' `backfill_existing_lists`?
+
+❯ Plan accepted, auto mode.
+

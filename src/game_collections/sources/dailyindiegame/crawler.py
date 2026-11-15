@@ -16,7 +16,6 @@ from game_collections.sources.common import (
     atomic_write,
     dump_versioned_json,
     load_cached_archive,
-    render_game_list_yaml,
 )
 from game_collections.sources.dailyindiegame.models import CURRENT_VERSION, DigArchive, DigItem
 from game_collections.sources.dailyindiegame.parser import (
@@ -28,6 +27,7 @@ from game_collections.sources.dailyindiegame.parser import (
     parse_bundle_page,
     parse_game_listing_page,
 )
+from game_collections.sources.merged_write import write_merged_game_list
 
 
 LogFn = Callable[[str], None]
@@ -294,7 +294,7 @@ def write_dig_offer(
         crawlers=["dailyindiegame"],
         games=games,
     )
-    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_dig_offer

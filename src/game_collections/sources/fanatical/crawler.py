@@ -21,7 +21,6 @@ from game_collections.sources.common import (
     existing_list_match,
     load_cached_archive,
     merge_tiered_games,
-    render_game_list_yaml,
 )
 from game_collections.sources.fanatical.models import (
     CURRENT_VERSION,
@@ -45,6 +44,7 @@ from game_collections.sources.fanatical.resolver import (
     SteamSearch,
     resolve_product_ids,
 )
+from game_collections.sources.merged_write import write_merged_game_list
 from game_collections.sources.names import SourceName
 from game_collections.sources.timestamps import build_scraped_timestamp
 
@@ -338,8 +338,18 @@ def write_fanatical_offer(
         log(f"  No Steam-deliverable products in {archive.machine_name}: archive only")
         return tuple(written)
     # end if
-    existing = existing_list_match(
-        lists_root, PROVIDER_SLUG, archive.machine_name, pool, crawler_name="fanatical"
+    effective_start = (
+        datetime.fromtimestamp(archive.dates.start.timestamp, tz=UTC) if archive.dates.start else archive.dates.crawled
+    )
+    path = lists_root / PROVIDER_SLUG / "bundle" / f"{effective_start.date().isoformat()}_{archive.machine_name}.yml"
+
+    # A list already sitting at this bundle's own dated path is this very bundle: merge into it below. Only
+    # without one is the slug looked up, since that lookup returns the first substring hit in sorted order,
+    # which can be an older edition of the same slug (`2025-08-11_<slug>.yml`) or a `<slug>-2` sibling.
+    existing = (
+        None
+        if path.exists()
+        else existing_list_match(lists_root, PROVIDER_SLUG, archive.machine_name, pool, crawler_name="fanatical")
     )
     if existing is not None and not is_same_bundle(existing, archive.machine_name):
         # `existing_list_match` also substring-matches (`all-stars-bundle` inside the older edition
@@ -361,11 +371,6 @@ def write_fanatical_offer(
         )
         return tuple(written)
     # end if
-
-    effective_start = (
-        datetime.fromtimestamp(archive.dates.start.timestamp, tz=UTC) if archive.dates.start else archive.dates.crawled
-    )
-    path = lists_root / PROVIDER_SLUG / "bundle" / f"{effective_start.date().isoformat()}_{archive.machine_name}.yml"
 
     pick_quota: int | None = None
     tier_definitions: list[TierDefinition] = []
@@ -399,7 +404,7 @@ def write_fanatical_offer(
         crawlers=["fanatical"],
         games=games,
     )
-    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_fanatical_offer

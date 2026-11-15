@@ -24,7 +24,8 @@ Real cases: `e7b80401f` (greenmangaming dropped the isthereanydeal references, c
 
 1. New module `src/game_collections/sources/merged_write.py` with `write_merged_game_list(game_list, path, repository_root)`.
    It loads the existing file at `path` if any (via `lists.load_game_list`, failing loudly on an invalid existing file), merges with `merge_game_list(..., authoritative=True)` and writes through `atomic_write`/`render_game_list_yaml`.
-   It moves Humble's helper body here; Humble's `_write_merged_game_list` becomes a thin call to it so behaviour stays identical.
+   It is Humble's `_write_merged_game_list` moved here and renamed without the underscore (code style: no private-prefixed names); the Humble crawler imports and calls it directly, so its behaviour stays identical.
+   Its `lists_root` parameter is dropped if `load_game_list` can work without it, otherwise kept.
 2. Use it at the final write of `greenmangaming`, `fanatical`, `dekudeals`, `digiphile` and `dailyindiegame` crawlers (the "no existing match, write own list" branch), replacing the bare `atomic_write(path, render_game_list_yaml(...))`.
    `isthereanydeal` writes into other providers' directories and already has its own backfill/merge flow, so it is left alone (verify with a read of its two write sites).
 3. Fanatical: in `write_fanatical_offer`, when the computed own path already exists, treat it as the existing list (it is by construction the same bundle) before consulting `existing_list_match`, so the substring-hit-on-a-different-edition problem cannot misroute.

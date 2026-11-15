@@ -5,6 +5,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from game_collections.lists import load_game_list
+from game_collections.models import Reference
+from game_collections.sources.common import render_game_list_yaml
 from game_collections.sources.greenmangaming.crawler import (
     CrawledGmgOffer,
     crawl_gmg_offers,
@@ -127,6 +129,33 @@ def test_writer_is_idempotent(tmp_path: Path) -> None:
     assert first == second
     assert {path: path.read_bytes() for path in second} == first_contents
 # end def test_writer_is_idempotent
+
+
+def test_writer_keeps_what_an_aggregator_added_to_its_list(tmp_path: Path) -> None:
+    (tmp_path / "schemas").mkdir()
+    (tmp_path / "schemas/game-list.schema.json").write_text("{}\n", encoding="utf-8")
+    lists_root = tmp_path / "lists"
+    list_path = lists_root / "greenmangaming/bundle/metroidvania-madness.yml"
+    write_gmg_offer(_offer(), lists_root, tmp_path / "archives", tmp_path)
+
+    # Another scraper (isthereanydeal) backfills its reference, crawler and ids into the list.
+    seeded = load_game_list(list_path, lists_root).data
+    seeded = seeded.model_copy(
+        update={
+            "references": [*seeded.references, Reference(name="isthereanydeal.com bundle", url="https://isthereanydeal.com/bundles/1/")],
+            "crawlers": [*seeded.crawlers, "isthereanydeal"],
+            "games": [seeded.games[0].model_copy(update={"ids": [*seeded.games[0].ids, "isthereanydeal:afterimage"]})],
+        }
+    )
+    list_path.write_text(render_game_list_yaml(seeded, list_path, tmp_path), encoding="utf-8")
+
+    write_gmg_offer(_offer(), lists_root, tmp_path / "archives", tmp_path)
+
+    merged = load_game_list(list_path, lists_root).data
+    assert merged.crawlers == ["greenmangaming", "isthereanydeal"]
+    assert "isthereanydeal.com bundle" in [reference.name for reference in merged.references]
+    assert [game.ids for game in merged.games] == [["steam:1235140", "isthereanydeal:afterimage"]]
+# end def test_writer_keeps_what_an_aggregator_added_to_its_list
 
 
 def _bundle_item(product_id: str, tier_name: str, title: str) -> str:

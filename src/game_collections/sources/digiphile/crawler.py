@@ -20,7 +20,6 @@ from game_collections.sources.common import (
     dump_versioned_json,
     load_cached_archive,
     merge_tiered_games,
-    render_game_list_yaml,
 )
 from game_collections.sources.digiphile.models import (
     CURRENT_VERSION,
@@ -37,6 +36,7 @@ from game_collections.sources.digiphile.parser import (
     page_url,
     parse_bundle,
 )
+from game_collections.sources.merged_write import write_merged_game_list
 
 
 LogFn = Callable[[str], None]
@@ -322,7 +322,7 @@ def write_digiphile_offer(
         crawlers=[PROVIDER_SLUG],
         games=games,
     )
-    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_digiphile_offer

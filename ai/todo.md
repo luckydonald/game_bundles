@@ -76,3 +76,10 @@ Each of those tasks shall be a commit of its own, following the LPLP commit styl
   >   2. run
   >   3. commit
   >   4. cherry pick into root git && remove branch and worktree dir.
+- [x] detect already scraped bundles and merge — `todo:30adb33d-8a12-4441-9f87-32ef664cf2de` _(done; prio 1₍₉₎ highest)_
+  > - currently some scrapers reset the ids (of other scrapers)
+  >   - greenmangaming
+  >     - e.g. e7b80401f86d58518e8402dbecd0ebdb796e2fa5
+  >   - fanatical
+  >     - e.g. 0108645934bedbc4882cc308db50a3dd72f7e055
+  > - probably generally speaking the direct scrapers while the aggregate ones seem fine.

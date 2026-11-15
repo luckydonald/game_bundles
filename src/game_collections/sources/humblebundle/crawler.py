@@ -14,15 +14,12 @@ from urllib.parse import urljoin, urlparse
 
 import httpx
 
-from game_collections.lists import load_game_list
 from game_collections.models import Game, GameGroup, GameList, Reference, TierDefinition
 from game_collections.sources.common import (
     atomic_write,
     dump_versioned_json,
     load_cached_archive,
-    merge_game_list,
     merge_tiered_games,
-    render_game_list_yaml,
 )
 from game_collections.sources.humblebundle.models import CURRENT_VERSION, HumbleArchive, HumbleItem, HumbleTier
 from game_collections.sources.humblebundle.nextjs import (
@@ -47,6 +44,7 @@ from game_collections.sources.humblebundle.resolver import (
     StorefrontResolver,
     render_resolution_map,
 )
+from game_collections.sources.merged_write import write_merged_game_list
 from game_collections.sources.recovery import clear_recovery, load_recovery, write_recovery
 
 
@@ -336,23 +334,6 @@ def _games_for_item(item: HumbleItem) -> list[Game]:
 # end def _games_for_item
 
 
-def _write_merged_game_list(game_list: GameList, path: Path, lists_root: Path, repository_root: Path) -> None:
-    """Merge with any already-committed list at `path` (see `merge_game_list`) before writing.
-
-    Humble is authoritative for its own bundles: a game no longer present in
-    the fresh crawl is quarantined into `invalid` (never hard-deleted, and
-    restored if a later crawl lists it again), while a game still present
-    keeps its existing `ids:`/`group` state rather than being replaced. An
-    existing file that fails to load is a real problem (hand-edited into an
-    invalid state, or a stale schema) and should fail loudly rather than being
-    silently discarded and overwritten.
-    """
-    existing = load_game_list(path, lists_root).data if path.exists() else None
-    merged = merge_game_list(existing, game_list, authoritative=True)
-    atomic_write(path, render_game_list_yaml(merged, path, repository_root))
-# end def _write_merged_game_list
-
-
 def write_humble_offer(
     offer: CrawledHumbleOffer,
     lists_root: Path,
@@ -416,7 +397,7 @@ def write_humble_offer(
             crawlers=["humblebundle"],
             games=games,
         )
-        _write_merged_game_list(game_list, path, lists_root, repository_root)
+        write_merged_game_list(game_list, path, lists_root, repository_root)
         written.append(path)
         return tuple(written)
     # end if
@@ -484,7 +465,7 @@ def write_humble_offer(
         crawlers=["humblebundle"],
         games=games,
     )
-    _write_merged_game_list(game_list, path, lists_root, repository_root)
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_humble_offer

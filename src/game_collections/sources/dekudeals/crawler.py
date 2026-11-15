@@ -20,7 +20,6 @@ from game_collections.sources.common import (
     existing_list_match,
     load_cached_archive,
     merge_tiered_games,
-    render_game_list_yaml,
 )
 from game_collections.sources.dekudeals.models import CURRENT_VERSION, DekuArchive, DekuDates, DekuItem, DekuTier
 from game_collections.sources.dekudeals.parser import (
@@ -33,6 +32,7 @@ from game_collections.sources.dekudeals.parser import (
 )
 from game_collections.sources.dekudeals.provider_config import DekuProviderConfig, resolve_provider_slug
 from game_collections.sources.dekudeals.resolver import DekuResolutionMap
+from game_collections.sources.merged_write import write_merged_game_list
 from game_collections.sources.names import SourceName
 from game_collections.sources.storefronts import qualified_ids_from_urls
 from game_collections.sources.timestamps import build_scraped_timestamp
@@ -373,7 +373,7 @@ def write_deku_offer(
         crawlers=["dekudeals"],
         games=games,
     )
-    atomic_write(path, render_game_list_yaml(game_list, path, repository_root))
+    write_merged_game_list(game_list, path, lists_root, repository_root)
     written.append(path)
     return tuple(written)
 # end def write_deku_offer

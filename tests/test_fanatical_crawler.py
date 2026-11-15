@@ -16,7 +16,7 @@ from game_collections.sources.fanatical.crawler import (
 from game_collections.sources.fanatical.parser import BUNDLES_API_URL
 from game_collections.sources.fanatical.resolver import FanaticalResolutionMap
 from game_collections.sources.storefronts import StoreCandidate
-from game_collections.models import Game, GameList
+from game_collections.models import Game, GameList, Reference
 
 
 CRAWLED = datetime(2026, 10, 26, tzinfo=UTC)
@@ -247,3 +247,37 @@ def test_an_older_edition_list_is_neither_matched_nor_backfilled(tmp_path: Path)
     assert any(path.name == "2026-10-02_tiny-bundle.yml" for path in paths)
     assert older.read_text(encoding="utf-8") == before
 # end def test_an_older_edition_list_is_neither_matched_nor_backfilled
+
+
+def test_a_rescrape_keeps_what_an_aggregator_backfilled_into_its_own_list(tmp_path: Path) -> None:
+    # The older `-2` edition sorts first and used to hide the real list from the lookup, so the
+    # fresh list overwrote the file at its own dated path and lost the aggregator's data.
+    older = tmp_path / "lists/fanatical/bundle/2021-05-30_tiny-bundle-2.yml"
+    older.parent.mkdir(parents=True)
+    older.write_text(
+        render_game_list_yaml(GameList(name="Tiny Bundle 2", games=[Game(name="Old", ids=["steam:5"])]), older, tmp_path),
+        encoding="utf-8",
+    )
+    path = tmp_path / "lists/fanatical/bundle/2026-10-02_tiny-bundle.yml"
+    path.write_text(
+        render_game_list_yaml(
+            GameList(
+                name="Tiny Bundle",
+                crawlers=["fanatical", "dekudeals"],
+                references=[Reference(name="DekuDeals bundle", url="https://www.dekudeals.com/bundles/tiny")],
+                games=[Game(name="One", ids=["steam:11", "fanatical:one", "dekudeals:one"])],
+            ),
+            path,
+            tmp_path,
+        ),
+        encoding="utf-8",
+    )
+
+    write(crawl(listing(raw_bundle())).offers[0], tmp_path)
+
+    merged = load_game_list(path, tmp_path / "lists").data
+    assert merged.crawlers == ["fanatical", "dekudeals"]
+    assert [reference.name for reference in merged.references][0] == "DekuDeals bundle"
+    assert {game.name: game.ids for game in merged.games}["One"] == ["steam:11", "fanatical:one", "dekudeals:one"]
+    assert {game.name for game in merged.games} == {"One", "Two", "Three"}
+# end def test_a_rescrape_keeps_what_an_aggregator_backfilled_into_its_own_list
